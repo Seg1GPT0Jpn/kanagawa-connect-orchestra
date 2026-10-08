@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>曲目候補の管理｜かながわコネクトオーケストラ</title>
+  <title>会計報告の作成｜かながわコネクトオーケストラ</title>
   <meta name="description" content="かながわコネクトオーケストラ 管理者用ページ">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1c2a48">
@@ -11,16 +11,16 @@
   <!-- OGP / SNS -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="かながわコネクトオーケストラ">
-  <meta property="og:title" content="曲目候補の管理｜かながわコネクトオーケストラ">
+  <meta property="og:title" content="会計報告の作成｜かながわコネクトオーケストラ">
   <meta property="og:description" content="かながわコネクトオーケストラ 管理者用ページ">
-  <meta property="og:url" content="https://kanagawa-connect-orchestra.web.app/admin.html">
+  <meta property="og:url" content="https://kanagawa-connect-orchestra.web.app/report-admin.html">
   <meta property="og:image" content="https://kanagawa-connect-orchestra.web.app/images/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="かながわコネクトオーケストラ｜すべてのひとのためのオーケストラ">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="曲目候補の管理｜かながわコネクトオーケストラ">
+  <meta name="twitter:title" content="会計報告の作成｜かながわコネクトオーケストラ">
   <meta name="twitter:description" content="かながわコネクトオーケストラ 管理者用ページ">
   <meta name="twitter:image" content="https://kanagawa-connect-orchestra.web.app/images/ogp.png">
 
@@ -37,7 +37,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
-  <script src="js/admin.bundle.js" defer></script>
+  <script src="js/report-admin.bundle.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -70,12 +70,12 @@
     <div class="page-header page-header--compact">
       <div class="container">
         <span class="page-header__en" aria-hidden="true">Admin</span>
-        <h1 class="page-header__title">曲目候補の管理</h1>
-        <p class="page-header__lead">このページは運営の管理者専用です。</p>
+        <h1 class="page-header__title">会計報告の作成</h1>
+        <p class="page-header__lead">このページは運営の管理者・成人の確認者専用です。</p>
       </div>
     </div>
 
-    <section class="section admin" data-admin aria-label="曲目候補の管理">
+    <section class="section admin" data-staff aria-label="会計報告の作成">
       <div class="container">
         <div data-admin-loading>
           <p class="text-center muted">読み込み中…</p>
@@ -83,13 +83,13 @@
 
         <div class="card admin-gate" data-admin-signed-out hidden>
           <h2 class="card__title">管理者ログイン</h2>
-          <p>曲目候補を確認するには、管理者として登録されたGoogleアカウントでログインしてください。</p>
+          <p>会計報告を確認するには、登録されたGoogleアカウントでログインしてください。</p>
           <button class="btn btn--primary" type="button" data-signin>Googleアカウントでログイン</button>
         </div>
 
         <div class="card admin-gate" data-admin-denied hidden>
           <h2 class="card__title">閲覧権限がありません</h2>
-          <p>ログイン中のアカウント（<span data-admin-email></span>）には、曲目候補を閲覧する権限がありません。管理者のアカウントでログインし直してください。</p>
+          <p>ログイン中のアカウント（<span data-admin-email></span>）には、会計報告を閲覧する権限がありません。</p>
           <div class="btn-group">
             <button class="btn btn--outline" type="button" data-signout>ログアウト</button>
             <button class="btn btn--primary" type="button" data-signin>別のアカウントでログイン</button>
@@ -101,41 +101,16 @@
             <p class="admin-toolbar__user">ログイン中：<span data-admin-email></span></p>
             <div class="admin-toolbar__actions">
               <button class="btn btn--outline btn--sm" type="button" data-reload>再読み込み</button>
-              <button class="btn btn--outline btn--sm" type="button" data-csv>CSVをダウンロード</button>
               <button class="btn btn--outline btn--sm" type="button" data-signout>ログアウト</button>
             </div>
           </div>
-
-          <div class="filter-group" role="group" aria-label="カテゴリーで絞り込む">
-            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">すべて<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="opening" aria-pressed="false">オープニング<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="submain" aria-pressed="false">サブメイン<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="encore1" aria-pressed="false">アンコール1<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="encore2" aria-pressed="false">アンコール2<span class="filter-btn__count" data-count>0</span></button>
+          <div class="notice-box admin-notice">
+            <p>「成人の確認者のみ」と書かれた操作は、Security Rules に登録された成人の確認者のアカウントでなければ保存できません（画面で操作できても、サーバー側で拒否されます）。</p>
           </div>
-
-          <p class="admin-count" data-admin-count aria-live="polite"></p>
-
-          <div class="table-wrap" role="region" aria-label="曲目候補の一覧（横にスクロールできます）" tabindex="0">
-            <table class="admin-table">
-              <thead>
-                <tr>
-                  <th scope="col">カテゴリー</th>
-                  <th scope="col">曲名</th>
-                  <th scope="col">作曲者</th>
-                  <th scope="col">提案者</th>
-                  <th scope="col">理由</th>
-                  <th scope="col">投稿日</th>
-                  <th scope="col"><span class="visually-hidden">操作</span></th>
-                </tr>
-              </thead>
-              <tbody data-admin-rows></tbody>
-            </table>
-          </div>
-          <p class="text-center muted" data-admin-empty hidden>このカテゴリーの提案はまだありません。</p>
+          <div data-panel-body></div>
         </div>
 
-        <p class="admin-status" data-admin-status role="status"></p>
+        <p class="admin-status" data-admin-status role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>

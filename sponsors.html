@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>曲目候補の管理｜かながわコネクトオーケストラ</title>
-  <meta name="description" content="かながわコネクトオーケストラ 管理者用ページ">
-  <meta name="robots" content="noindex, nofollow">
+  <title>協賛者一覧｜かながわコネクトオーケストラ</title>
+  <meta name="description" content="かながわコネクトオーケストラにご協賛いただいている皆さまの一覧です。掲載への同意をいただいた方のみ掲載しています。">
+  <link rel="canonical" href="https://kanagawa-connect-orchestra.web.app/sponsors.html">
   <meta name="theme-color" content="#1c2a48">
 
   <!-- OGP / SNS -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="かながわコネクトオーケストラ">
-  <meta property="og:title" content="曲目候補の管理｜かながわコネクトオーケストラ">
-  <meta property="og:description" content="かながわコネクトオーケストラ 管理者用ページ">
-  <meta property="og:url" content="https://kanagawa-connect-orchestra.web.app/admin.html">
+  <meta property="og:title" content="協賛者一覧｜かながわコネクトオーケストラ">
+  <meta property="og:description" content="かながわコネクトオーケストラにご協賛いただいている皆さまの一覧です。掲載への同意をいただいた方のみ掲載しています。">
+  <meta property="og:url" content="https://kanagawa-connect-orchestra.web.app/sponsors.html">
   <meta property="og:image" content="https://kanagawa-connect-orchestra.web.app/images/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="かながわコネクトオーケストラ｜すべてのひとのためのオーケストラ">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="曲目候補の管理｜かながわコネクトオーケストラ">
-  <meta name="twitter:description" content="かながわコネクトオーケストラ 管理者用ページ">
+  <meta name="twitter:title" content="協賛者一覧｜かながわコネクトオーケストラ">
+  <meta name="twitter:description" content="かながわコネクトオーケストラにご協賛いただいている皆さまの一覧です。掲載への同意をいただいた方のみ掲載しています。">
   <meta name="twitter:image" content="https://kanagawa-connect-orchestra.web.app/images/ogp.png">
 
   <!-- Favicon -->
@@ -37,7 +37,27 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
-  <script src="js/admin.bundle.js" defer></script>
+  <script src="js/sponsors-list.bundle.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://kanagawa-connect-orchestra.web.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "協賛者一覧",
+      "item": "https://kanagawa-connect-orchestra.web.app/sponsors.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へスキップ</a>
@@ -67,75 +87,38 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <div class="page-header page-header--compact">
+    <div class="page-header">
       <div class="container">
-        <span class="page-header__en" aria-hidden="true">Admin</span>
-        <h1 class="page-header__title">曲目候補の管理</h1>
-        <p class="page-header__lead">このページは運営の管理者専用です。</p>
+        <span class="page-header__en" aria-hidden="true">Supporters</span>
+        <h1 class="page-header__title">協賛者一覧</h1>
+        <p class="page-header__lead">かながわコネクトオーケストラを<br>支えてくださっている皆さまです。</p>
       </div>
     </div>
+    <nav class="breadcrumb container" aria-label="パンくずリスト">
+      <ol>
+        <li><a href="./">ホーム</a></li>
+        <li><span aria-current="page">協賛者一覧</span></li>
+      </ol>
+    </nav>
 
-    <section class="section admin" data-admin aria-label="曲目候補の管理">
+    <section class="section" aria-labelledby="supporters-title">
       <div class="container">
-        <div data-admin-loading>
-          <p class="text-center muted">読み込み中…</p>
+        <div class="section-title">
+          <span class="section-title__en" aria-hidden="true">Thank you</span>
+          <h2 id="supporters-title">ご協賛いただいている皆さま</h2>
         </div>
-
-        <div class="card admin-gate" data-admin-signed-out hidden>
-          <h2 class="card__title">管理者ログイン</h2>
-          <p>曲目候補を確認するには、管理者として登録されたGoogleアカウントでログインしてください。</p>
-          <button class="btn btn--primary" type="button" data-signin>Googleアカウントでログイン</button>
+        <p class="text-center">掲載への同意をいただいた方のみ掲載しています。匿名を希望された方は「匿名の方」と表示しています。</p>
+        <noscript>
+          <p class="form-alert">協賛者一覧の表示にはJavaScriptが必要です。</p>
+        </noscript>
+        <div class="supporters" data-supporters aria-live="polite">
+          <p class="text-center muted" data-supporters-loading>読み込み中…</p>
         </div>
-
-        <div class="card admin-gate" data-admin-denied hidden>
-          <h2 class="card__title">閲覧権限がありません</h2>
-          <p>ログイン中のアカウント（<span data-admin-email></span>）には、曲目候補を閲覧する権限がありません。管理者のアカウントでログインし直してください。</p>
-          <div class="btn-group">
-            <button class="btn btn--outline" type="button" data-signout>ログアウト</button>
-            <button class="btn btn--primary" type="button" data-signin>別のアカウントでログイン</button>
-          </div>
+        <p class="text-center muted" data-supporters-empty hidden>現在、掲載している協賛者はいません。<br>協賛制度は準備中です。</p>
+        <p class="text-center admin-status is-error" data-supporters-error hidden>一覧を読み込めませんでした。時間をおいて再度お試しください。</p>
+        <div class="section-more">
+          <a class="btn btn--outline" href="sponsor.html">ご支援・協賛のご案内</a>
         </div>
-
-        <div data-admin-panel hidden>
-          <div class="admin-toolbar">
-            <p class="admin-toolbar__user">ログイン中：<span data-admin-email></span></p>
-            <div class="admin-toolbar__actions">
-              <button class="btn btn--outline btn--sm" type="button" data-reload>再読み込み</button>
-              <button class="btn btn--outline btn--sm" type="button" data-csv>CSVをダウンロード</button>
-              <button class="btn btn--outline btn--sm" type="button" data-signout>ログアウト</button>
-            </div>
-          </div>
-
-          <div class="filter-group" role="group" aria-label="カテゴリーで絞り込む">
-            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">すべて<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="opening" aria-pressed="false">オープニング<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="submain" aria-pressed="false">サブメイン<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="encore1" aria-pressed="false">アンコール1<span class="filter-btn__count" data-count>0</span></button>
-            <button type="button" class="filter-btn" data-filter="encore2" aria-pressed="false">アンコール2<span class="filter-btn__count" data-count>0</span></button>
-          </div>
-
-          <p class="admin-count" data-admin-count aria-live="polite"></p>
-
-          <div class="table-wrap" role="region" aria-label="曲目候補の一覧（横にスクロールできます）" tabindex="0">
-            <table class="admin-table">
-              <thead>
-                <tr>
-                  <th scope="col">カテゴリー</th>
-                  <th scope="col">曲名</th>
-                  <th scope="col">作曲者</th>
-                  <th scope="col">提案者</th>
-                  <th scope="col">理由</th>
-                  <th scope="col">投稿日</th>
-                  <th scope="col"><span class="visually-hidden">操作</span></th>
-                </tr>
-              </thead>
-              <tbody data-admin-rows></tbody>
-            </table>
-          </div>
-          <p class="text-center muted" data-admin-empty hidden>このカテゴリーの提案はまだありません。</p>
-        </div>
-
-        <p class="admin-status" data-admin-status role="status"></p>
       </div>
     </section>
   </main>

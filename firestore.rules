@@ -6,20 +6,82 @@ rules_version = '2';
 // ※ このファイルをデプロイすると、Firebase プロジェクトの
 //    Firestore ルールは「このファイルの内容」に置き換わります。
 //    コンソールで別のルールを使っている場合は、先に統合してください。
+//
+// ※ 協賛・会計の判定は _tools/firebase/src/sponsor-logic.js と同じ条件です。
+//    変更したときは両方と _tools/firebase/test/ を更新し、
+//    `npm test`（_tools/firebase で実行）が通ることを確認してからデプロイしてください。
 // =========================================================
 
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // 管理者（曲目候補を閲覧できる Google アカウント）
+    // ---------------------------------------------------------------- 権限
+
+    function isVerified() {
+      return request.auth != null && request.auth.token.email_verified == true;
+    }
+
+    // 運営管理者（曲目候補の閲覧、協賛記録の入力・入金確認、会計報告の下書き）
     // 管理者を追加・変更する場合は、このリストを編集して再デプロイしてください。
     function isAdmin() {
-      return request.auth != null
-        && request.auth.token.email_verified == true
+      return isVerified()
         && request.auth.token.email in [
           'kanagawaorchestra2026renraku@gmail.com'
         ];
     }
+
+    // 成人の確認者（保護者などの信頼できる成人）
+    // 会計報告の確定・公開、返金の承認、協賛の申込み受付の開始は、この確認者だけができます。
+    // 確認者が決まったら、その人の Google アカウントのメールアドレスを追加して再デプロイしてください。
+    // （運営管理者と同じアカウントを登録しないでください）
+    function isReviewer() {
+      return isVerified()
+        && request.auth.token.email in [
+          /*REVIEWERS*/
+        ];
+    }
+
+    function isStaff() {
+      return isAdmin() || isReviewer();
+    }
+
+    // ---------------------------------------------------------------- 共通の検証
+
+    function isText(s, min, max) {
+      return s is string && s.size() >= min && s.size() <= max;
+    }
+
+    function isDate(s) {
+      return s is string && s.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$');
+    }
+
+    function isOptDate(s) {
+      return s == '' || isDate(s);
+    }
+
+    function isEmail(s) {
+      return isText(s, 3, 254) && s.matches('^[^@\\s]+@[^@\\s]+[.][^@\\s]+$');
+    }
+
+    function isHttpsUrl(s) {
+      return isText(s, 9, 300)
+        && s.matches('^https://[A-Za-z0-9.-]+[.][A-Za-z0-9-]+(:[0-9]{1,5})?(/[^\\s"\'<>\\\\]*)?$');
+    }
+
+    function isLogoFile(s) {
+      return s is string && s.matches('^[a-z0-9][a-z0-9_-]{0,60}[.](png|jpg|jpeg|webp)$');
+    }
+
+    // 公開資料に入れてはいけない情報（メールアドレス、口座番号のような長い数字）
+    function hasSensitive(s) {
+      return s.matches('(?s).*@.*') || s.matches('(?s).*[0-9０-９]{7,}.*');
+    }
+
+    function isInt(n, min) {
+      return n is int && n >= min;
+    }
+
+    // ---------------------------------------------------------------- 曲目候補
 
     // 曲目候補 1件分のデータ検証
     function isValidSuggestion(d) {
@@ -45,7 +107,400 @@ service cloud.firestore {
       allow update: if false;
     }
 
-    // 上記以外はすべて拒否
+    // ---------------------------------------------------------------- 協賛：設定
+
+    function settingsPath() {
+      return /databases/$(database)/documents/settings/sponsorship;
+    }
+
+    function isValidSettings(d) {
+      return d.keys().hasOnly(['acceptingApplications', 'benefitsConfirmed', 'benefits', 'updatedAt'])
+        && d.keys().hasAll(['acceptingApplications', 'benefitsConfirmed', 'benefits', 'updatedAt'])
+        && d.acceptingApplications is bool
+        && d.benefitsConfirmed is bool
+        && d.benefits is map
+        && d.benefits.keys().hasOnly(['standard', 'preferred', 'special'])
+        && d.benefits.keys().hasAll(['standard', 'preferred', 'special'])
+        && isText(d.benefits.standard, 0, 300)
+        && isText(d.benefits.preferred, 0, 300)
+        && isText(d.benefits.special, 0, 300)
+        && d.updatedAt == request.time
+        // 掲載特典が確認済みでなければ、申込みの受付は開始できない
+        && (d.acceptingApplications == false || d.benefitsConfirmed == true);
+    }
+
+    // 運営管理者ができるのは「特典の文言の編集（確認済みは解除される）」と「受付の停止」だけ
+    function adminSettingsChangeOk(d, prev) {
+      return (d.acceptingApplications == false
+               || (prev.acceptingApplications == true && d.benefitsConfirmed == prev.benefitsConfirmed
+                   && d.benefits == prev.benefits))
+        && (d.benefitsConfirmed == false
+               || (prev.benefitsConfirmed == true && d.benefits == prev.benefits));
+    }
+
+    match /settings/sponsorship {
+      allow read: if true;
+      allow create: if isStaff() && isValidSettings(request.resource.data)
+        && (isReviewer() || (request.resource.data.acceptingApplications == false
+                             && request.resource.data.benefitsConfirmed == false));
+      allow update: if isStaff() && isValidSettings(request.resource.data)
+        && (isReviewer() || adminSettingsChangeOk(request.resource.data, resource.data));
+      allow delete: if false;
+    }
+
+    // ---------------------------------------------------------------- 協賛：申込み
+
+    function isValidApplication(d) {
+      return d.keys().hasOnly(['createdAt', 'kind', 'contactName', 'orgName', 'email', 'units', 'listing',
+                               'displayName', 'websiteUrl', 'message', 'consentListing', 'consentPrivacy',
+                               'ageConfirmed'])
+        && d.keys().hasAll(['createdAt', 'kind', 'contactName', 'orgName', 'email', 'units', 'listing',
+                            'displayName', 'websiteUrl', 'message', 'consentListing', 'consentPrivacy',
+                            'ageConfirmed'])
+        && d.createdAt == request.time
+        && d.kind in ['individual', 'organization']
+        && isText(d.contactName, 1, 100)
+        && ((d.kind == 'organization' && isText(d.orgName, 1, 100)) || (d.kind == 'individual' && d.orgName == ''))
+        && isEmail(d.email)
+        && d.units is int && d.units >= 1 && d.units <= 1000
+        && d.listing in ['named', 'anonymous', 'none']
+        && ((d.listing == 'named' && isText(d.displayName, 1, 100)) || (d.listing != 'named' && d.displayName == ''))
+        && (d.websiteUrl == '' || (d.kind == 'organization' && d.listing == 'named' && isHttpsUrl(d.websiteUrl)))
+        && isText(d.message, 0, 500)
+        && d.consentListing == (d.listing != 'none')
+        && d.consentPrivacy == true
+        && d.ageConfirmed is bool
+        && (d.kind == 'organization' || d.ageConfirmed == true);
+    }
+
+    // 申込みフォームは、成人の確認者が受付を開始するまでサーバー側で拒否する
+    match /sponsorApplications/{appId} {
+      allow create: if exists(settingsPath())
+        && get(settingsPath()).data.acceptingApplications == true
+        && isValidApplication(request.resource.data);
+      allow read: if isStaff();
+      allow update: if false;
+      // 保存期間の経過や本人からの削除依頼への対応（協賛記録は別に残る）
+      allow delete: if isAdmin();
+    }
+
+    // ---------------------------------------------------------------- 協賛：記録（非公開）
+
+    function recordPath(id) {
+      return /databases/$(database)/documents/sponsorRecords/$(id);
+    }
+
+    function recordHistoryPath(id, h) {
+      return /databases/$(database)/documents/sponsorRecords/$(id)/history/$(h);
+    }
+
+    function publicPath(id) {
+      return /databases/$(database)/documents/publicSponsors/$(id);
+    }
+
+    function unitPrice(kind) {
+      return kind == 'organization' ? 10000 : 1000;
+    }
+
+    function rankFor(units) {
+      return units >= 10 ? 'special' : (units >= 5 ? 'preferred' : 'standard');
+    }
+
+    function isValidRecord(d) {
+      let keys = ['kind', 'internalId', 'appliedOn', 'contactName', 'email', 'units', 'amount', 'rank',
+                  'status', 'paidAmount', 'paymentConfirmedOn', 'listing', 'consentListing',
+                  'consentRecordedOn', 'displayName', 'websiteUrl', 'logoFile', 'intro', 'listingStart',
+                  'listingEnd', 'contactStatus', 'notes', 'refundAmount', 'refundApprovedOn',
+                  'sourceApplicationId', 'lastHistoryId', 'createdAt', 'updatedAt'];
+      return d.keys().hasOnly(keys) && d.keys().hasAll(keys)
+        && d.kind in ['individual', 'organization']
+        && d.internalId is string && d.internalId.matches('^[A-Za-z0-9_-]{1,40}$')
+        && isDate(d.appliedOn)
+        && isText(d.contactName, 0, 100)
+        && (d.email == '' || isEmail(d.email))
+        && d.units is int && d.units >= 1 && d.units <= 1000
+        && d.amount == d.units * unitPrice(d.kind)
+        && d.rank == rankFor(d.units)
+        && d.status in ['received', 'awaiting_payment', 'payment_confirmed', 'awaiting_listing',
+                        'listed', 'listing_ended', 'cancelled']
+        && isInt(d.paidAmount, 0)
+        && isOptDate(d.paymentConfirmedOn)
+        && d.listing in ['named', 'anonymous', 'none']
+        && d.consentListing is bool
+        && isOptDate(d.consentRecordedOn)
+        && isText(d.displayName, 0, 100)
+        && (d.websiteUrl == '' || isHttpsUrl(d.websiteUrl))
+        && (d.logoFile == '' || isLogoFile(d.logoFile))
+        && isText(d.intro, 0, 300)
+        && isOptDate(d.listingStart)
+        && isOptDate(d.listingEnd)
+        && d.contactStatus in ['not_contacted', 'contacted', 'awaiting_reply', 'completed']
+        && isText(d.notes, 0, 500)
+        && isInt(d.refundAmount, 0) && d.refundAmount <= d.paidAmount
+        && isOptDate(d.refundApprovedOn)
+        && isText(d.sourceApplicationId, 0, 60)
+        && isText(d.lastHistoryId, 1, 60)
+        && d.updatedAt == request.time
+        // 入金前の状態では入金額を記録しない（フォーム送信だけで入金済みにならない）
+        && (!(d.status in ['received', 'awaiting_payment'])
+              || (d.paidAmount == 0 && d.paymentConfirmedOn == ''))
+        // 入金確認後の状態には、入金額と入金確認日が必要
+        && (!(d.status in ['payment_confirmed', 'awaiting_listing', 'listed', 'listing_ended'])
+              || (d.paidAmount > 0 && isDate(d.paymentConfirmedOn)))
+        // 掲載の準備・掲載には、掲載希望と同意の記録が必要
+        && (!(d.status in ['awaiting_listing', 'listed'])
+              || (d.listing != 'none' && d.consentListing == true && isDate(d.consentRecordedOn)))
+        && (d.status != 'listed' || canBeListed(d));
+    }
+
+    function canBeListed(d) {
+      return d.paidAmount == d.amount
+        && isDate(d.listingStart)
+        && (d.listingEnd == '' || d.listingEnd >= d.listingStart)
+        && (d.listing != 'named' || d.displayName.size() > 0);
+    }
+
+    // 公開用の文書が、記録の内容・掲載ランク・匿名の選択と一致しているか
+    function publicMatches(r, p) {
+      let keys = ['kind', 'anonymous', 'displayName', 'rank', 'websiteUrl', 'logoFile', 'intro',
+                  'listingStart', 'listingEnd'];
+      let named = r.listing == 'named';
+      let org = r.kind == 'organization';
+      let allowUrl = named && org && r.rank in ['preferred', 'special'];
+      let allowLogo = named && org && r.rank == 'special';
+      let allowIntro = named && r.rank == 'special';
+      return p.keys().hasOnly(keys) && p.keys().hasAll(keys)
+        && p.kind == r.kind
+        && p.rank == r.rank
+        && p.anonymous == (r.listing == 'anonymous')
+        && ((named && p.displayName == r.displayName) || (!named && p.displayName == ''))
+        && ((allowUrl && p.websiteUrl == r.websiteUrl) || (!allowUrl && p.websiteUrl == ''))
+        && ((allowLogo && p.logoFile == r.logoFile) || (!allowLogo && p.logoFile == ''))
+        && ((allowIntro && p.intro == r.intro) || (!allowIntro && p.intro == ''))
+        && p.listingStart == r.listingStart
+        && p.listingEnd == r.listingEnd;
+    }
+
+    // 書き込みのたびに、同じ処理の中で履歴が1件追加されていること
+    function recordHistoryAdded(id, d) {
+      return existsAfter(recordHistoryPath(id, d.lastHistoryId))
+        && getAfter(recordHistoryPath(id, d.lastHistoryId)).data.at == request.time;
+    }
+
+    // 「掲載中」の記録だけが公開用の文書を持ち、内容が一致していること
+    function publicConsistent(id, d) {
+      return (d.status == 'listed'
+                && existsAfter(publicPath(id))
+                && publicMatches(d, getAfter(publicPath(id)).data))
+        || (d.status != 'listed' && !existsAfter(publicPath(id)));
+    }
+
+    match /sponsorRecords/{recordId} {
+      allow read: if isStaff();
+
+      // 新規の記録は「申込受付」または「入金確認待ち」から（入金済みの状態では作れない）
+      allow create: if isStaff()
+        && isValidRecord(request.resource.data)
+        && request.resource.data.status in ['received', 'awaiting_payment']
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.refundAmount == 0
+        && request.resource.data.refundApprovedOn == ''
+        && recordHistoryAdded(recordId, request.resource.data)
+        && publicConsistent(recordId, request.resource.data);
+
+      allow update: if isStaff()
+        && isValidRecord(request.resource.data)
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.lastHistoryId != resource.data.lastHistoryId
+        && recordHistoryAdded(recordId, request.resource.data)
+        && publicConsistent(recordId, request.resource.data)
+        // 返金の承認と、入金済みの記録の取消は成人の確認者だけ
+        && (isReviewer()
+              || (!request.resource.data.diff(resource.data).affectedKeys()
+                     .hasAny(['refundAmount', 'refundApprovedOn'])
+                  && !(request.resource.data.status == 'cancelled'
+                       && resource.data.status != 'cancelled'
+                       && request.resource.data.paidAmount > 0)));
+
+      // 記録は削除できない（取消・訂正も履歴として残す）
+      allow delete: if false;
+
+      // 変更履歴（追加のみ。更新・削除はできない）
+      match /history/{historyId} {
+        allow read: if isStaff();
+        allow create: if isStaff()
+          && request.resource.data.keys().hasOnly(['at', 'by', 'action', 'note', 'status', 'units',
+                                                   'amount', 'paidAmount', 'refundAmount', 'listing',
+                                                   'consentListing'])
+          && request.resource.data.keys().hasAll(['at', 'by', 'action', 'note', 'status', 'units',
+                                                  'amount', 'paidAmount', 'refundAmount', 'listing',
+                                                  'consentListing'])
+          && request.resource.data.at == request.time
+          && request.resource.data.by == request.auth.token.email
+          && isText(request.resource.data.action, 1, 40)
+          && isText(request.resource.data.note, 0, 300)
+          && getAfter(recordPath(recordId)).data.lastHistoryId == historyId
+          && getAfter(recordPath(recordId)).data.status == request.resource.data.status
+          && getAfter(recordPath(recordId)).data.units == request.resource.data.units
+          && getAfter(recordPath(recordId)).data.amount == request.resource.data.amount
+          && getAfter(recordPath(recordId)).data.paidAmount == request.resource.data.paidAmount
+          && getAfter(recordPath(recordId)).data.refundAmount == request.resource.data.refundAmount
+          && getAfter(recordPath(recordId)).data.listing == request.resource.data.listing
+          && getAfter(recordPath(recordId)).data.consentListing == request.resource.data.consentListing;
+        allow update, delete: if false;
+      }
+    }
+
+    // ---------------------------------------------------------------- 協賛者一覧（公開）
+
+    // 公開してよい項目だけを持つ。「掲載中」の記録と一緒にしか書き込めない
+    match /publicSponsors/{recordId} {
+      allow read: if true;
+      allow create, update: if isStaff()
+        && existsAfter(recordPath(recordId))
+        && getAfter(recordPath(recordId)).data.status == 'listed'
+        && publicMatches(getAfter(recordPath(recordId)).data, request.resource.data);
+      allow delete: if isStaff()
+        && getAfter(recordPath(recordId)).data.status != 'listed';
+    }
+
+    // ---------------------------------------------------------------- 会計報告
+
+    function reportPath(id) {
+      return /databases/$(database)/documents/financeReports/$(id);
+    }
+
+    function reportHistoryPath(id, h) {
+      return /databases/$(database)/documents/financeReports/$(id)/history/$(h);
+    }
+
+    function isValidReport(d) {
+      let keys = ['title', 'periodStart', 'periodEnd', 'openingBalance', 'incomeSponsorship', 'incomeOther',
+                  'expPractice', 'expConcert', 'expMusic', 'expPublicity', 'expMemberSupport', 'expOther',
+                  'expFees', 'totalIncome', 'totalExpense', 'closingBalance', 'carryover', 'reserve',
+                  'achievements', 'status', 'publishedOn', 'corrections', 'confirmedAt', 'lastHistoryId',
+                  'createdAt', 'updatedAt'];
+      return d.keys().hasOnly(keys) && d.keys().hasAll(keys)
+        && isText(d.title, 1, 40) && !hasSensitive(d.title)
+        && isDate(d.periodStart) && isDate(d.periodEnd) && d.periodStart <= d.periodEnd
+        && isInt(d.openingBalance, 0)
+        && isInt(d.incomeSponsorship, 0) && isInt(d.incomeOther, 0)
+        && isInt(d.expPractice, 0) && isInt(d.expConcert, 0) && isInt(d.expMusic, 0)
+        && isInt(d.expPublicity, 0) && isInt(d.expMemberSupport, 0) && isInt(d.expOther, 0)
+        && isInt(d.expFees, 0)
+        // 合計と残高の整合性
+        && d.totalIncome == d.incomeSponsorship + d.incomeOther
+        && d.totalExpense == d.expPractice + d.expConcert + d.expMusic + d.expPublicity
+                             + d.expMemberSupport + d.expOther + d.expFees
+        && d.closingBalance == d.openingBalance + d.totalIncome - d.totalExpense
+        && isInt(d.carryover, 0) && isInt(d.reserve, 0)
+        && d.carryover <= d.closingBalance
+        && d.reserve <= d.carryover
+        && isText(d.achievements, 0, 3000) && !hasSensitive(d.achievements)
+        && d.status in ['draft', 'review_requested', 'confirmed', 'published']
+        && ((d.status == 'published' && isDate(d.publishedOn)) || (d.status != 'published' && d.publishedOn == ''))
+        && d.corrections is list && d.corrections.size() <= 20
+        && ((d.status in ['confirmed', 'published'] && d.confirmedAt is timestamp)
+              || (d.status in ['draft', 'review_requested'] && d.confirmedAt == null))
+        && isText(d.lastHistoryId, 1, 60)
+        && d.updatedAt == request.time;
+    }
+
+    function isValidCorrection(c) {
+      return c is map && c.keys().hasOnly(['date', 'text']) && c.keys().hasAll(['date', 'text'])
+        && isDate(c.date) && isText(c.text, 1, 500) && !hasSensitive(c.text);
+    }
+
+    function reportHistoryAdded(id, d) {
+      return existsAfter(reportHistoryPath(id, d.lastHistoryId))
+        && getAfter(reportHistoryPath(id, d.lastHistoryId)).data.at == request.time;
+    }
+
+    function onlyChanged(d, prev, allowed) {
+      return d.diff(prev).affectedKeys().hasOnly(allowed);
+    }
+
+    // 状態の移り変わり
+    function reportTransitionOk(d, prev) {
+      return (
+          // 下書き・確認依頼：運営管理者・確認者が編集できる
+          prev.status in ['draft', 'review_requested']
+          && d.status in ['draft', 'review_requested']
+          && d.corrections == prev.corrections
+        ) || (
+          // 確認済みにできるのは成人の確認者だけ
+          prev.status in ['draft', 'review_requested']
+          && d.status == 'confirmed'
+          && isReviewer()
+          && d.confirmedAt == request.time
+          && d.corrections == prev.corrections
+        ) || (
+          // 公開できるのは成人の確認者だけ。数値は変えられない
+          prev.status == 'confirmed'
+          && d.status == 'published'
+          && isReviewer()
+          && onlyChanged(d, prev, ['status', 'publishedOn', 'lastHistoryId', 'updatedAt'])
+        ) || (
+          // 確認者による差し戻し
+          prev.status == 'confirmed'
+          && d.status == 'draft'
+          && isReviewer()
+          && d.corrections == prev.corrections
+        ) || (
+          // 公開の取り下げ（緊急時に運営管理者もできる）。数値は変えられない
+          prev.status == 'published'
+          && d.status == 'confirmed'
+          && onlyChanged(d, prev, ['status', 'publishedOn', 'lastHistoryId', 'updatedAt'])
+        ) || (
+          // 公開後の訂正：成人の確認者が、訂正履歴を1件追加して行う
+          prev.status == 'published'
+          && d.status == 'published'
+          && isReviewer()
+          && d.corrections.size() == prev.corrections.size() + 1
+          && (prev.corrections.size() == 0 || d.corrections[0:prev.corrections.size()] == prev.corrections)
+          && isValidCorrection(d.corrections[prev.corrections.size()])
+          && d.confirmedAt == request.time
+          && d.publishedOn == prev.publishedOn
+        );
+    }
+
+    match /financeReports/{reportId} {
+      // 一般公開されるのは「公開中」の報告だけ
+      allow read: if isStaff() || resource.data.status == 'published';
+
+      allow create: if isStaff()
+        && isValidReport(request.resource.data)
+        && request.resource.data.status in ['draft', 'review_requested']
+        && request.resource.data.corrections.size() == 0
+        && request.resource.data.createdAt == request.time
+        && reportHistoryAdded(reportId, request.resource.data);
+
+      allow update: if isStaff()
+        && isValidReport(request.resource.data)
+        && request.resource.data.createdAt == resource.data.createdAt
+        && request.resource.data.lastHistoryId != resource.data.lastHistoryId
+        && reportHistoryAdded(reportId, request.resource.data)
+        && reportTransitionOk(request.resource.data, resource.data);
+
+      // 削除できるのは、確定前の下書きだけ
+      allow delete: if isStaff() && resource.data.status in ['draft', 'review_requested'];
+
+      match /history/{historyId} {
+        allow read: if isStaff();
+        allow create: if isStaff()
+          && request.resource.data.keys().hasOnly(['at', 'by', 'action', 'note', 'status'])
+          && request.resource.data.keys().hasAll(['at', 'by', 'action', 'note', 'status'])
+          && request.resource.data.at == request.time
+          && request.resource.data.by == request.auth.token.email
+          && isText(request.resource.data.action, 1, 40)
+          && isText(request.resource.data.note, 0, 300)
+          && getAfter(reportPath(reportId)).data.lastHistoryId == historyId
+          && getAfter(reportPath(reportId)).data.status == request.resource.data.status;
+        allow update, delete: if false;
+      }
+    }
+
+    // ---------------------------------------------------------------- 上記以外はすべて拒否
     match /{document=**} {
       allow read, write: if false;
     }

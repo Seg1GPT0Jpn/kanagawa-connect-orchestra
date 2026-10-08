@@ -22,7 +22,7 @@ INSTAGRAM = "https://www.instagram.com/for.all.people_orch.kanagawa/"
 INSTAGRAM_ID = "@for.all.people_orch.kanagawa"
 MAIL = "kanagawaorchestra2026renraku@gmail.com"
 PDF = "docs/recruitment-guidelines.pdf"
-LASTMOD = "2026-10-05"
+LASTMOD = "2026-10-08"
 
 NAV = [
     ("index.html", "ホーム"),
@@ -34,7 +34,8 @@ NAV = [
 ]
 
 # フッターにのみ表示するリンク
-FOOTER_EXTRA = [("suggest.html", "曲目候補の提案")]
+FOOTER_EXTRA = [("suggest.html", "曲目候補の提案"), ("sponsor.html", "ご支援・協賛"), ("sponsors.html", "協賛者一覧"),
+                ("report.html", "会計報告")]
 
 NEW_TAB = '<span class="visually-hidden">（新しいタブで開きます）</span>'
 ICON_EXT = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'
@@ -523,6 +524,7 @@ about_body = page_header("About", "私たちについて", "年齢や経験に�
 {row("活動地域", "神奈川県を中心に活動予定")}
 {row("活動開始", "2026年12月頃から合奏開始予定")}
         </dl>
+        <p class="note">活動を支えていただける協賛制度を準備しています。{'<a href="sponsor.html">ご支援・協賛のご案内</a>'}／{'<a href="report.html">会計報告</a>'}</p>
       </div>
     </section>
 
@@ -1083,6 +1085,441 @@ admin_body = '''    <div class="page-header page-header--compact">
 '''
 
 
+# ================================================================ SPONSOR（ご支援・協賛）
+# ※ 協賛金の受け入れ準備（成人の協力者による口座・契約・記録方法の確認）が完了するまで、
+#    振込先・支払いボタン・決済リンクは掲載しないでください。
+
+PREPARING_NOTICE = '''        <div class="status-banner" data-sponsor-status role="status">
+          <p class="status-banner__label">協賛制度準備中</p>
+          <p class="status-banner__text" data-sponsor-status-text>現在、協賛制度の準備を進めています。協賛金の受け入れはまだ開始していません。<br class="u-pc">振込先やお支払い方法は、受け入れの準備が整ってからお知らせします。</p>
+        </div>'''
+
+RANK_ROWS = [("standard", "通常掲載", "1〜4口", "1〜4口", "氏名または企業・団体名を掲載"),
+             ("preferred", "優遇掲載", "5〜9口", "5〜9口", "目立つ位置への掲載、企業・団体の公式サイトへのリンク"),
+             ("special", "特別優遇掲載", "10口以上", "10口以上", "ロゴ（企業・団体）、紹介文、目立つ位置への掲載")]
+
+rank_rows_html = "\n".join(f'''              <tr>
+                <th scope="row">{ja}</th>
+                <td>{ind}</td>
+                <td>{org}</td>
+                <td data-benefit="{key}">{ex}</td>
+              </tr>''' for key, ja, ind, org, ex in RANK_ROWS)
+
+USES = [
+    ("練習会場費", "合奏練習やセクション練習のための会場費"),
+    ("演奏会場費", "演奏会の会場費・付帯設備費"),
+    ("楽譜関連費", "楽譜の購入・レンタルなど"),
+    ("広報費", "演奏会や団員募集の広報"),
+    ("ウェブサイト維持費", "公式サイトの運営・維持"),
+    ("団員の負担軽減", "参加費など、団員一人ひとりの負担を軽くするため"),
+    ("翌年度の活動費・予備費", "翌年度の運営費や、急な出費に備える予備費"),
+]
+uses_html = "\n".join(f'          <li><span class="uses-list__name">{a}</span><span class="uses-list__text">{b}</span></li>' for a, b in USES)
+
+SPONSOR_FAQ = [
+    ("協賛すると、曲目や演奏者の決定に関われますか？",
+     "<p>いいえ。協賛の金額や口数によって、選曲・演奏者・音楽的な判断・団体の運営上の決定に関する権利が生じることはありません。曲目などは、これまでどおり団員と運営が話し合って決めます。</p>"),
+    ("名前を出さずに協賛できますか？",
+     "<p>はい。個人の方は「匿名で掲載」または「掲載しない」を選べます。名前・ロゴ・リンク・紹介文は、ご本人の明確な同意をいただいたものだけを掲載します。</p>"),
+    ("寄附金控除などの税制上の優遇は受けられますか？",
+     "<p>現時点では、税務上の扱いを確認できていません。そのため、寄附金控除などの対象になるとはお約束できません。確認ができた場合は、このページでお知らせします。</p>"),
+    ("いつから協賛できますか？どうやって支払いますか？",
+     "<p>現在は準備中で、協賛金の受け入れはまだ開始していません。お支払い方法は、成人の協力者とともに口座・契約・記録方法を確認したうえで決定し、このページでお知らせします。それまでは、お振り込みなどをなさらないようお願いします。</p>"),
+    ("協賛金は何に使われますか？",
+     "<p>練習会場費・演奏会場費・楽譜関連費・広報費・ウェブサイト維持費・団員の負担軽減・翌年度の活動費や予備費などに使います。使い道は、年1回の会計報告で公開します。</p>"),
+    ("団費（参加費）は無料になりますか？",
+     "<p>団費を無料にするとはお約束できません。協賛金を活用して、将来的に団員の負担を軽くし、団費ゼロを目指していきます。</p>"),
+    ("代表が高校生ですが、お金の管理は大丈夫ですか？",
+     "<p>口座の開設、契約、決済サービスの利用、税務の判断、返金、会計報告の最終確認は、保護者などの信頼できる成人と一緒に確認する体制で行います。成人による確認が完了するまでは、協賛金の受け入れを開始しません。</p>"),
+    ("取消や返金はできますか？",
+     "<p>協賛制度規定に従って対応します。返金は成人の確認者の承認を得て行い、元の記録を消さずに履歴として残します。</p>"),
+]
+sponsor_faq_html = "\n".join(details(q, a) for q, a in SPONSOR_FAQ)
+
+UNIT_OPTS = "\n".join(f'              <option value="{n}">{n}口</option>' for n in range(1, 21))
+
+sponsor_form = f'''    <section class="section section--tinted" aria-labelledby="apply-title" data-sponsor-form-section hidden>
+      <div class="container container--narrow">
+{title("Apply", "apply-title", "協賛のお申込み")}
+        <p>お申込みいただいた後、担当者からメールでご連絡します。<strong>この時点ではお振り込みなどをなさらないでください。</strong>お支払い方法は、ご連絡の際にご案内します。</p>
+        <noscript>
+          <p class="form-alert">お申込みフォームの送信にはJavaScriptが必要です。メールでもお申込みいただけます。</p>
+        </noscript>
+
+        <form class="form card" data-sponsor-form novalidate>
+          <div class="form-error-summary" data-error-summary role="alert" tabindex="-1" hidden>
+            <p class="form-error-summary__title">入力内容を確認してください</p>
+            <ul></ul>
+          </div>
+
+          <fieldset class="field" id="sp-kind">
+            <legend>協賛の種類<span class="req">必須</span></legend>
+            <div class="choices choices--grid">
+              <label class="choice"><input type="radio" name="kind" value="individual" checked><span>個人協賛（1口 1,000円）</span></label>
+              <label class="choice"><input type="radio" name="kind" value="organization"><span>企業・団体協賛（1口 10,000円）</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field" data-org-only hidden>
+            <label for="sp-org">企業・団体名<span class="req">必須</span></label>
+            <input type="text" id="sp-org" name="orgName" maxlength="100" autocomplete="organization" aria-describedby="sp-org-error">
+            <p class="field__error" id="sp-org-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="sp-name"><span data-label-name>お名前</span><span class="req">必須</span></label>
+            <input type="text" id="sp-name" name="contactName" maxlength="100" autocomplete="name" aria-describedby="sp-name-error">
+            <p class="field__error" id="sp-name-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="sp-email">メールアドレス<span class="req">必須</span></label>
+            <p class="field__hint" id="sp-email-hint">お申込みについてのご連絡に使用します。サイト上には公開しません。</p>
+            <input type="email" id="sp-email" name="email" maxlength="254" autocomplete="email" inputmode="email" aria-describedby="sp-email-hint sp-email-error">
+            <p class="field__error" id="sp-email-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="sp-units">口数<span class="req">必須</span></label>
+            <select id="sp-units" name="units" class="select">
+{UNIT_OPTS}
+            </select>
+            <p class="field__hint" data-sponsor-summary aria-live="polite"></p>
+          </div>
+
+          <fieldset class="field" id="sp-listing" aria-describedby="sp-listing-hint">
+            <legend>サイトへの掲載<span class="req">必須</span></legend>
+            <p class="field__hint" id="sp-listing-hint">協賛者一覧ページへの掲載方法を選んでください。</p>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="listing" value="named" checked><span>名前を掲載する</span></label>
+              <label class="choice"><input type="radio" name="listing" value="anonymous"><span>匿名で掲載する（「匿名の方」と表示）</span></label>
+              <label class="choice"><input type="radio" name="listing" value="none"><span>掲載しない</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field" data-named-only>
+            <label for="sp-display">掲載する名前<span class="req">必須</span></label>
+            <p class="field__hint" id="sp-display-hint">サイトに表示される名前です。ニックネームでも構いません。</p>
+            <input type="text" id="sp-display" name="displayName" maxlength="100" aria-describedby="sp-display-hint sp-display-error">
+            <p class="field__error" id="sp-display-error" hidden></p>
+          </div>
+
+          <div class="field" data-org-only hidden>
+            <label for="sp-url">公式サイトのURL<span class="opt">任意</span></label>
+            <p class="field__hint" id="sp-url-hint">優遇掲載・特別優遇掲載の企業・団体のみ、リンクを掲載します。https:// から始まるURLを入力してください。ロゴ・紹介文は、お申込み後にメールで確認させていただきます。</p>
+            <input type="url" id="sp-url" name="websiteUrl" maxlength="300" inputmode="url" aria-describedby="sp-url-hint sp-url-error">
+            <p class="field__error" id="sp-url-error" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="sp-message">ご連絡事項<span class="opt">任意</span></label>
+            <textarea id="sp-message" name="message" rows="3" maxlength="500"></textarea>
+          </div>
+
+          <fieldset class="field" id="sp-consent">
+            <legend>確認事項<span class="req">必須</span></legend>
+            <div class="choices">
+              <label class="choice" data-consent-listing><input type="checkbox" name="consentListing"><span>上で選んだ内容（名前・匿名）で協賛者一覧に掲載することに同意します。</span></label>
+              <label class="choice"><input type="checkbox" name="consentPrivacy"><span><a href="sponsor-policy.html#privacy">協賛制度規定（個人情報の取り扱い）</a>を確認し、同意します。</span></label>
+              <label class="choice" data-individual-only><input type="checkbox" name="ageConfirmed"><span>18歳以上です。または、保護者の同意を得ています。</span></label>
+            </div>
+            <p class="field__error" id="sp-consent-error" hidden></p>
+          </fieldset>
+
+          <div class="hp" aria-hidden="true">
+            <label>このフィールドは空欄のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <p class="form-privacy">協賛の金額によって、選曲・演奏者・音楽的な判断・団体の運営上の決定に関する権利が生じることはありません。税務上の扱い（寄附金控除など）はお約束できません。</p>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">この内容で申し込む</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div class="thanks card" data-thanks tabindex="-1" hidden>
+          <p class="thanks__mark" aria-hidden="true">♪</p>
+          <h2 class="thanks__title">お申込みいただき、<br>ありがとうございます。</h2>
+          <p>担当者から、お申込みいただいたメールアドレスにご連絡します。<br>ご連絡までは、お振り込みなどをなさらないようお願いします。</p>
+        </div>
+      </div>
+    </section>
+'''
+
+sponsor_body = page_header("Support", "ご支援・協賛のご案内", "音楽を通して、ともに成長する場所を、<br>一緒に支えていただけませんか。") + f'''
+    <section class="section" aria-labelledby="sp-purpose-title">
+      <div class="container container--narrow">
+{PREPARING_NOTICE}
+{title("Purpose", "sp-purpose-title", "協賛を募る目的")}
+        <p>かながわコネクトオーケストラは、学生を中心に活動する、年齢・経験を問わないオーケストラです。練習会場や演奏会場、楽譜など、オーケストラの活動には多くの費用がかかります。</p>
+        <p>協賛金は、こうした活動費にあてるとともに、団員一人ひとりの負担を軽くするために活用します。お金の心配から音楽を諦める人を減らし、<strong>将来的には団員の負担軽減・団費ゼロを目指します。</strong></p>
+        <p class="note">※ 団費を無料にすることをお約束するものではありません。</p>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="sp-plan-title">
+      <div class="container container--narrow">
+{title("Our plan", "sp-plan-title", "団体の理念と活動計画")}
+        <dl class="info-list">
+{row("コンセプト", CONCEPT)}
+{row("理念", PHILOSOPHY)}
+{row("活動地域", "神奈川県を中心に活動予定")}
+{row("活動開始", "2026年12月頃から合奏開始予定")}
+{row("練習頻度", "通常は月1〜2回程度を想定（演奏会前は月2〜4回程度に増える予定）")}
+{row("当面の目標", "第1回演奏会（メインプログラム：ドヴォルザーク 交響曲第7番を予定）")}
+{row("開催日・会場", pending("決定次第お知らせします"))}
+        </dl>
+        <div class="section-more">
+          {btn("about.html", "私たちについて")}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sp-units-title">
+      <div class="container container--narrow">
+{title("Units", "sp-units-title", "協賛の口数と金額")}
+        <div class="grid-2">
+          <div class="card price-card">
+            <p class="card__eyebrow">個人の方</p>
+            <h3 class="card__title">個人協賛</h3>
+            <p class="price-card__price"><span>1口</span> 1,000<span>円</span></p>
+          </div>
+          <div class="card price-card">
+            <p class="card__eyebrow">企業・団体の方</p>
+            <h3 class="card__title">企業・団体協賛</h3>
+            <p class="price-card__price"><span>1口</span> 10,000<span>円</span></p>
+          </div>
+        </div>
+        <p class="note">※ 何口からでもお申込みいただけます。</p>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="sp-rank-title">
+      <div class="container container--narrow">
+{title("Recognition", "sp-rank-title", "掲載ランクと掲載特典")}
+        <p>口数に応じて、<a href="sponsors.html">協賛者一覧ページ</a>への掲載方法が変わります。</p>
+        <div class="table-wrap" role="region" aria-label="掲載ランクの一覧（横にスクロールできます）" tabindex="0">
+          <table class="data-table">
+            <caption class="visually-hidden">掲載ランクと掲載特典</caption>
+            <thead>
+              <tr><th scope="col">掲載ランク</th><th scope="col">個人協賛</th><th scope="col">企業・団体協賛</th><th scope="col">掲載特典</th></tr>
+            </thead>
+            <tbody>
+{rank_rows_html}
+            </tbody>
+          </table>
+        </div>
+        <p class="note" data-benefits-note>※ 掲載特典の内容は掲載例です。具体的な内容は、受け入れ開始までに確定してお知らせします。</p>
+        <ul class="check-list u-mt-md">
+          <li>個人の方は「匿名で掲載」または「掲載しない」を選べます。</li>
+          <li>名前・ロゴ・リンク・紹介文は、ご本人の明確な同意をいただいたものだけを掲載します。</li>
+          <li>協賛の金額によって、選曲・演奏者・音楽的な判断・団体の運営上の決定に関する権利が生じることはありません。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sp-uses-title">
+      <div class="container container--narrow">
+{title("Uses", "sp-uses-title", "協賛金の使い道")}
+        <ul class="uses-list">
+{uses_html}
+        </ul>
+        <p class="note">※ 団体の資金は個人の資金と分けて管理し、収入・支出・手数料・残高を記録します。領収書・請求書・振込記録なども保存します。</p>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="sp-report-title">
+      <div class="container container--narrow">
+{title("Transparency", "sp-report-title", "会計報告について")}
+        <p>年1回、会計報告を作成し、このウェブサイトで公開します。協賛金収入・その他の収入、会場費や楽譜代などの支出、手数料、年度末残高、翌年度への繰越額などをお知らせします。</p>
+        <p>会計報告は、保護者などの成人の確認者が内容を確認してから公開します。公開する資料には、個人情報・口座番号・個別の取引明細などは含めません。</p>
+        <div class="section-more">
+          {btn("report.html", "会計報告を見る")}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sp-surplus-title">
+      <div class="container container--narrow">
+{title("Surplus", "sp-surplus-title", "余剰金と予備費について")}
+        <ul class="dash-list">
+          <li>年度末に残った協賛金は、翌年度の運営費・予備費・団員の負担軽減に活用します。</li>
+          <li>今後1年分の運営資金と、合理的な予備費を確保できる見通しになった場合は、新しい協賛の募集の一時停止・終了を検討します。</li>
+          <li>募集を終了した後も、会計報告と、お約束した掲載はきちんと続けます。</li>
+        </ul>
+      </div>
+    </section>
+
+{sponsor_form}
+    <section class="section" aria-labelledby="sp-faq-title">
+      <div class="container container--narrow">
+{title("FAQ", "sp-faq-title", "協賛に関するよくある質問")}
+        <div class="accordion">
+{sponsor_faq_html}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="sp-contact-title">
+      <div class="container container--narrow text-center">
+{title("Contact", "sp-contact-title", "お問い合わせ")}
+        <p>協賛についてのご質問は、メールでお問い合わせください。</p>
+        <p><a class="contact-card__link" href="mailto:{MAIL}">{ICON_MAIL}<span>{MAIL.replace("@", "<wbr>@")}</span></a></p>
+        <div class="btn-group btn-group--center">
+          {btn("sponsor-policy.html", "協賛制度規定を読む")}
+          {btn("sponsors.html", "協賛者一覧")}
+        </div>
+      </div>
+    </section>
+'''
+
+# ---------------------------------------------------------------- 協賛制度規定
+POLICY = [
+    ("目的", "<p>この規定は、かながわコネクトオーケストラ（以下「当団」）が受け入れる協賛について、協賛の種類・掲載・資金の管理・会計報告・個人情報の取り扱いなどを定め、資金管理の透明性と協賛者の安心を確保することを目的とします。</p>"),
+    ("協賛の種類と金額", "<ul class=\"dash-list\"><li>個人協賛：1口 1,000円</li><li>企業・団体協賛：1口 10,000円</li><li>口数に応じた掲載ランク：1〜4口 通常掲載／5〜9口 優遇掲載／10口以上 特別優遇掲載</li></ul>"),
+    ("掲載", "<p>掲載特典の具体的な内容は、受け入れ開始前に確定し、協賛のご案内ページでお知らせします。個人協賛者は、名前の掲載・匿名での掲載・掲載しないのいずれかを選べます。名前・ロゴ・リンク・紹介文は、協賛者の明確な同意を得たものだけを掲載し、掲載期間を定めて管理します。当団は、掲載内容が公序良俗に反する場合や安全上の問題がある場合、掲載を見合わせることがあります。</p>"),
+    ("協賛者の権利の範囲", "<p>協賛の金額や口数によって、選曲・演奏者・音楽的な判断・当団の運営上の決定に関する権利は生じません。</p>"),
+    ("受け入れの開始", "<p>当団の代表は未成年です。口座の開設、契約の締結、決済サービスの利用、税務の判断、返金、会計報告の最終確認は、保護者などの信頼できる成人の確認者とともに行います。成人による確認が完了するまで、協賛金の受け入れは開始しません。</p>"),
+    ("申込みと入金の確認", "<p>申込みフォームの送信だけでは、協賛（入金）は完了しません。お支払いは、当団からご案内する方法でのみ受け付けます。権限を持つ管理者が実際の入金を確認したうえで、入金確認済みとして記録します。</p>"),
+    ("資金の管理", "<p>当団の資金は個人の資金と明確に分けて管理し、可能な限り団体活動用の口座を利用します。収入・支出・手数料・残高を記録し、領収書・請求書・振込記録などを保存します。</p>"),
+    ("会計報告", "<p>年1回、会計報告を作成し、成人の確認者による確認を経てウェブサイトで公開します。公開資料には、個人情報・口座番号・メールアドレス・取引IDなどを含めず、取引明細や領収書をそのまま公開することはしません。公開後に誤りが分かった場合は、訂正の内容と日付を訂正履歴として公開します。</p>"),
+    ("余剰金・予備費・募集の停止", "<p>余剰金は、翌年度の運営費・予備費・団員の負担軽減に活用します。今後1年分の運営資金と合理的な予備費を確保できる見通しとなった場合は、新規募集の一時停止・終了を検討します。募集の終了後も、会計報告とすでにお約束した掲載は継続します。</p>"),
+    ("取消・返金", "<p>取消・返金は、成人の確認者の承認を得て行います。返金や訂正を行った場合も、元の記録は削除せず、履歴として残します。</p>"),
+    ("税務上の扱い", "<p>協賛金の税務上の扱い（寄附金控除の対象となるかなど）は確認できていないため、これを保証しません。また、単なる寄附と、広告掲載などの対価を伴う協賛とを、会計上無条件に同じものとしては扱いません。</p>"),
+    ("個人情報の取り扱い", """<p>協賛のお申込みでは、次の情報をお預かりします：協賛の種類、お名前（企業・団体の場合は企業・団体名と担当者名）、メールアドレス、口数、掲載方法と掲載する名前、公式サイトのURL（企業・団体のみ・任意）、ご連絡事項（任意）。</p>
+              <ul class="dash-list">
+                <li><strong>利用目的：</strong>協賛の手続き、入金の確認、掲載内容の確認、会計報告の作成のため</li>
+                <li><strong>公開しない情報：</strong>メールアドレス、住所、口座情報、個別の入金記録など。協賛者一覧には、同意をいただいた掲載内容だけを表示します</li>
+                <li><strong>閲覧できる人：</strong>運営の管理者と成人の確認者のみ（サーバー側のアクセス制限で管理します）</li>
+                <li><strong>第三者への提供：</strong>法令に基づく場合を除き、本人の同意なく第三者に提供しません</li>
+                <li><strong>保存期間（案）：</strong>メールアドレスなどの連絡先は、協賛に関する手続きと掲載がすべて終わってから1年を目安に削除します。会計の根拠となる記録（金額・日付・管理用ID）は、会計報告の確認のために保存します。具体的な期間は、受け入れ開始までに成人の確認者と決定し、この規定に明記します</li>
+                <li><strong>訂正・削除・掲載の取り下げ：</strong>お問い合わせのメールアドレスまでご連絡ください。ご本人であることを確認したうえで対応します</li>
+              </ul>"""),
+    ("規定の改定", "<p>この規定は、必要に応じて、成人の確認者の確認を経て改定します。改定した場合は、このページでお知らせします。</p>"),
+]
+policy_html = "\n".join(f'''          <section class="policy__article" aria-labelledby="policy-{i}"{' id="privacy"' if h == "個人情報の取り扱い" else ''}>
+            <h3 id="policy-{i}">第{i}条　{h}</h3>
+            {b}
+          </section>''' for i, (h, b) in enumerate(POLICY, 1))
+
+policy_body = page_header("Policy", "協賛制度規定") + f'''
+    <section class="section" aria-labelledby="policy-title">
+      <div class="container container--narrow">
+        <div class="status-banner" role="note">
+          <p class="status-banner__label">準備中（案）</p>
+          <p class="status-banner__text">この規定は案です。成人の確認者による確認を経て、協賛金の受け入れ開始前に確定します。</p>
+        </div>
+{title("Policy", "policy-title", "協賛制度規定")}
+        <div class="policy">
+{policy_html}
+        </div>
+        <p class="note">制定日：{pending("受け入れ開始前に確定します")}</p>
+        <div class="section-more">
+          {btn("sponsor.html", "ご支援・協賛のご案内へ")}
+        </div>
+      </div>
+    </section>
+'''
+
+# ---------------------------------------------------------------- 協賛者一覧
+sponsors_body = page_header("Supporters", "協賛者一覧", "かながわコネクトオーケストラを<br>支えてくださっている皆さまです。") + f'''
+    <section class="section" aria-labelledby="supporters-title">
+      <div class="container">
+{title("Thank you", "supporters-title", "ご協賛いただいている皆さま")}
+        <p class="text-center">掲載への同意をいただいた方のみ掲載しています。匿名を希望された方は「匿名の方」と表示しています。</p>
+        <noscript>
+          <p class="form-alert">協賛者一覧の表示にはJavaScriptが必要です。</p>
+        </noscript>
+        <div class="supporters" data-supporters aria-live="polite">
+          <p class="text-center muted" data-supporters-loading>読み込み中…</p>
+        </div>
+        <p class="text-center muted" data-supporters-empty hidden>現在、掲載している協賛者はいません。<br>協賛制度は準備中です。</p>
+        <p class="text-center admin-status is-error" data-supporters-error hidden>一覧を読み込めませんでした。時間をおいて再度お試しください。</p>
+        <div class="section-more">
+          {btn("sponsor.html", "ご支援・協賛のご案内")}
+        </div>
+      </div>
+    </section>
+'''
+
+# ---------------------------------------------------------------- 会計報告
+report_body = page_header("Financial report", "会計報告", "いただいた協賛金の使い道を、<br>年1回お知らせします。") + f'''
+    <section class="section" aria-labelledby="report-title">
+      <div class="container container--narrow">
+{title("Report", "report-title", "会計報告")}
+        <p>会計報告は、実際の会計記録にもとづいて作成し、保護者などの成人の確認者が確認したものだけを公開しています。個人情報・口座番号・個別の取引明細などは掲載していません。</p>
+        <noscript>
+          <p class="form-alert">会計報告の表示にはJavaScriptが必要です。</p>
+        </noscript>
+        <div data-reports aria-live="polite">
+          <p class="text-center muted" data-reports-loading>読み込み中…</p>
+        </div>
+        <p class="text-center muted" data-reports-empty hidden>公開中の会計報告はまだありません。<br>協賛金の受け入れを開始した後、会計年度ごとに公開します。</p>
+        <p class="text-center admin-status is-error" data-reports-error hidden>会計報告を読み込めませんでした。時間をおいて再度お試しください。</p>
+        <div class="section-more">
+          {btn("sponsor.html", "ご支援・協賛のご案内")}
+        </div>
+      </div>
+    </section>
+'''
+
+
+# ---------------------------------------------------------------- 管理画面（共通の入口）
+def admin_gate(page_title, what):
+    return f'''    <div class="page-header page-header--compact">
+      <div class="container">
+        <span class="page-header__en" aria-hidden="true">Admin</span>
+        <h1 class="page-header__title">{page_title}</h1>
+        <p class="page-header__lead">このページは運営の管理者・成人の確認者専用です。</p>
+      </div>
+    </div>
+
+    <section class="section admin" data-staff aria-label="{page_title}">
+      <div class="container">
+        <div data-admin-loading>
+          <p class="text-center muted">読み込み中…</p>
+        </div>
+
+        <div class="card admin-gate" data-admin-signed-out hidden>
+          <h2 class="card__title">管理者ログイン</h2>
+          <p>{what}を確認するには、登録されたGoogleアカウントでログインしてください。</p>
+          <button class="btn btn--primary" type="button" data-signin>Googleアカウントでログイン</button>
+        </div>
+
+        <div class="card admin-gate" data-admin-denied hidden>
+          <h2 class="card__title">閲覧権限がありません</h2>
+          <p>ログイン中のアカウント（<span data-admin-email></span>）には、{what}を閲覧する権限がありません。</p>
+          <div class="btn-group">
+            <button class="btn btn--outline" type="button" data-signout>ログアウト</button>
+            <button class="btn btn--primary" type="button" data-signin>別のアカウントでログイン</button>
+          </div>
+        </div>
+
+        <div data-admin-panel hidden>
+          <div class="admin-toolbar">
+            <p class="admin-toolbar__user">ログイン中：<span data-admin-email></span></p>
+            <div class="admin-toolbar__actions">
+              <button class="btn btn--outline btn--sm" type="button" data-reload>再読み込み</button>
+              <button class="btn btn--outline btn--sm" type="button" data-signout>ログアウト</button>
+            </div>
+          </div>
+          <div class="notice-box admin-notice">
+            <p>「成人の確認者のみ」と書かれた操作は、Security Rules に登録された成人の確認者のアカウントでなければ保存できません（画面で操作できても、サーバー側で拒否されます）。</p>
+          </div>
+          <div data-panel-body></div>
+        </div>
+
+        <p class="admin-status" data-admin-status role="status" aria-live="polite"></p>
+      </div>
+    </section>
+'''
+
+
+sponsor_admin_body = admin_gate("協賛の管理", "協賛の記録")
+report_admin_body = admin_gate("会計報告の作成", "会計報告")
+
+
 PAGES = [
     ("index.html", "ホーム",
      "神奈川県を中心に活動する「かながわコネクトオーケストラ」。学生を中心に活動する、年齢・経験を問わないオーケストラです。初心者も経験者も、音楽を通してともに成長する仲間を募集しています。",
@@ -1106,6 +1543,21 @@ PAGES = [
      "かながわコネクトオーケストラ第1回演奏会の曲目候補を募集しています。オープニング・サブメイン・アンコールで演奏してみたい曲を教えてください。参加希望フォームを送っていない方も提案できます。",
      suggest_body, breadcrumb_ld("曲目候補の提案", "suggest.html"),
      '\n  <script src="js/suggest.bundle.js" defer></script>'),
+    ("sponsor.html", "ご支援・協賛のご案内",
+     "かながわコネクトオーケストラの協賛制度のご案内。個人協賛は1口1,000円、企業・団体協賛は1口10,000円。協賛金の使い道、掲載特典、年1回の会計報告の方針をご紹介します。現在、協賛制度は準備中です。",
+     sponsor_body, breadcrumb_ld("ご支援・協賛のご案内", "sponsor.html"),
+     '\n  <script src="js/sponsor-page.bundle.js" defer></script>'),
+    ("sponsors.html", "協賛者一覧",
+     "かながわコネクトオーケストラにご協賛いただいている皆さまの一覧です。掲載への同意をいただいた方のみ掲載しています。",
+     sponsors_body, breadcrumb_ld("協賛者一覧", "sponsors.html"),
+     '\n  <script src="js/sponsors-list.bundle.js" defer></script>'),
+    ("report.html", "会計報告",
+     "かながわコネクトオーケストラの会計報告。協賛金などの収入と、会場費・楽譜代などの支出、年度末残高を年1回公開します。",
+     report_body, breadcrumb_ld("会計報告", "report.html"),
+     '\n  <script src="js/report.bundle.js" defer></script>'),
+    ("sponsor-policy.html", "協賛制度規定",
+     "かながわコネクトオーケストラの協賛制度規定（案）。協賛の種類、掲載、資金の管理、会計報告、取消・返金、個人情報の取り扱いについて定めています。",
+     policy_body, breadcrumb_ld("協賛制度規定", "sponsor-policy.html")),
 ]
 
 for fn, t, d, body, ld, *extra in PAGES:
@@ -1117,6 +1569,14 @@ for fn, t, d, body, ld, *extra in PAGES:
         scripts='\n  <script src="js/admin.bundle.js" defer></script>'),
     encoding="utf-8")
 
+# 協賛・会計の管理画面（検索エンジンに載せない・サイトマップに含めない）
+for fn, t, body, js in [("sponsor-admin.html", "協賛の管理", sponsor_admin_body, "sponsor-admin"),
+                        ("report-admin.html", "会計報告の作成", report_admin_body, "report-admin")]:
+    (OUT / fn).write_text(
+        doc(fn, t, "かながわコネクトオーケストラ 管理者用ページ", body, None, noindex=True,
+            scripts=f'\n  <script src="js/{js}.bundle.js" defer></script>'),
+        encoding="utf-8")
+
 (OUT / "404.html").write_text(
     doc("404.html", "ページが見つかりません", PAGES[0][2], nf_body, None, root="/", noindex=True), encoding="utf-8")
 
@@ -1127,4 +1587,4 @@ for fn, *_ in PAGES:
     sitemap.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{LASTMOD}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{pr}</priority>\n  </url>")
 sitemap.append("</urlset>\n")
 (OUT / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
-print("built", len(PAGES) + 2, "pages + sitemap")
+print("built", len(PAGES) + 4, "pages + sitemap")
