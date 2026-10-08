@@ -6,7 +6,7 @@ HTML / CSS / JavaScript のみで構成された軽量な静的サイトで、Fi
 ## ファイル構成
 
 ```
-kanagawa_connect_orchestra/
+kanagawa-connect-orchestra/
 ├── index.html          ホーム
 ├── about.html          私たちについて
 ├── recruit.html        団員募集
@@ -40,7 +40,6 @@ kanagawa_connect_orchestra/
 **方法1：Python（多くの環境に標準で入っています）**
 
 ```bash
-cd kanagawa_connect_orchestra
 python -m http.server 8080
 ```
 
@@ -49,7 +48,6 @@ python -m http.server 8080
 **方法2：Firebase CLI（本番と同じ設定で確認できます）**
 
 ```bash
-cd kanagawa_connect_orchestra
 firebase serve --only hosting
 # または
 firebase emulators:start --only hosting
@@ -75,7 +73,6 @@ firebase emulators:start --only hosting
 ### 2. デプロイ
 
 ```bash
-cd kanagawa_connect_orchestra
 firebase deploy --only hosting
 ```
 
@@ -118,7 +115,6 @@ canonical・OGP・サイトマップには絶対URLが必要なため、仮のUR
 ### デプロイ
 
 ```bash
-cd kanagawa_connect_orchestra
 firebase deploy --only firestore:rules   # セキュリティルール
 firebase deploy --only hosting           # サイト
 ```
@@ -136,7 +132,7 @@ firebase deploy --only hosting           # サイト
 フォーム・管理画面のソースは `_tools/firebase/src/` にあります。編集後に次のコマンドで `js/*.bundle.js` を作り直します。
 
 ```bash
-cd kanagawa_connect_orchestra/_tools/firebase
+cd _tools/firebase
 npm install
 npm run build
 ```
@@ -146,7 +142,7 @@ npm run build
 本物のデータベースを使わずに、フォーム送信や管理画面を試せます（Java が必要です）。
 
 ```bash
-cd kanagawa_connect_orchestra/_tools/firebase
+cd _tools/firebase
 npm install
 npm run emulators
 ```
@@ -161,7 +157,6 @@ http://127.0.0.1:5000/suggest.html を開くと、エミュレーターの Fires
 文章やリンクを変えるときはこのファイルを編集し、次のコマンドで全ページを作り直してください。
 
 ```bash
-cd kanagawa_connect_orchestra
 python _tools/build_site.py
 ```
 

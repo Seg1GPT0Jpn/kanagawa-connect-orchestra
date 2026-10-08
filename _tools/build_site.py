@@ -3,7 +3,7 @@
 全ページ共通のヘッダー・フッター・head（SEO/OGP）と各ページ本文をここで一元管理し、
 HTML と sitemap.xml を出力します。
 
-使い方（kanagawa_connect_orchestra フォルダで実行）:
+使い方（リポジトリの一番上のフォルダで実行）:
     python _tools/build_site.py
 
 ※ このスクリプトを実行すると HTML は上書きされます。
@@ -12,7 +12,7 @@ HTML と sitemap.xml を出力します。
 import json
 import pathlib
 
-OUT = pathlib.Path(__file__).resolve().parent.parent  # kanagawa_connect_orchestra/
+OUT = pathlib.Path(__file__).resolve().parent.parent  # リポジトリの一番上のフォルダ
 BASE = "https://kanagawa-connect-orchestra.web.app"
 SITE = "かながわコネクトオーケストラ"
 CONCEPT = "すべてのひとのためのオーケストラ"
