@@ -15,6 +15,13 @@ kanagawa-connect-orchestra/
 ├── contact.html        お問い合わせ
 ├── suggest.html        曲目候補の提案フォーム（Firestore に保存）
 ├── admin.html          曲目候補の管理画面（管理者のみ・検索エンジン非掲載）
+├── sponsor.html        ご支援・協賛のご案内（現在は「協賛制度準備中」）
+├── sponsors.html       協賛者一覧（掲載に同意した協賛者のみ）
+├── report.html         会計報告（成人の確認者が確認・公開したもののみ）
+├── sponsor-policy.html 協賛制度規定（案）
+├── sponsor-admin.html  協賛の管理画面（管理者のみ・検索エンジン非掲載）
+├── report-admin.html   会計報告の作成画面（管理者のみ・検索エンジン非掲載）
+├── images/sponsors/    協賛者のロゴ画像（運営が確認したものだけを置く）
 ├── 404.html            ページが見つからない場合の表示（Firebase が自動で使用）
 ├── css/style.css       スタイル（配色・余白などは先頭の :root 変数で管理）
 ├── js/main.js          スマホメニュー、フッターの年表示、表示アニメーション
@@ -26,7 +33,8 @@ kanagawa-connect-orchestra/
 ├── robots.txt
 ├── sitemap.xml
 ├── _tools/build_site.py  全ページのHTMLとsitemap.xmlを生成するスクリプト（公開対象外）
-├── _tools/firebase/    曲目候補フォーム・管理画面のJavaScriptソースとビルド設定（公開対象外）
+├── _tools/firebase/    フォーム・管理画面のJavaScriptソース、ビルド設定、テスト（公開対象外）
+├── _tools/sponsorship-operations.md  協賛制度・会計報告の運用手順（公開対象外）
 ├── firestore.rules     Firestore セキュリティルール（公開対象外）
 ├── firebase.json       Firebase Hosting 設定
 └── .firebaserc         Firebase プロジェクトID 設定
@@ -148,6 +156,27 @@ npm run emulators
 ```
 
 http://127.0.0.1:5000/suggest.html を開くと、エミュレーターの Firestore に保存されます。
+
+## 協賛制度・会計報告
+
+協賛のご案内・協賛者一覧・会計報告と、その管理画面です。運用の手順と、受け入れ開始までに成人と確認することは
+[`_tools/sponsorship-operations.md`](_tools/sponsorship-operations.md) にまとめています。
+
+- 現在は **準備中** です。振込先・支払いボタン・決済リンクは実装していません。
+- 権限は2つです。**運営管理者**（`firestore.rules` の `isAdmin()`）と、**成人の確認者**（`isReviewer()`・未登録）。
+  会計報告の確定・公開、返金の承認、申込み受付の開始は、成人の確認者だけができます。
+- 公開用（`publicSponsors`・公開済みの `financeReports`・`settings/sponsorship`）と、
+  非公開（`sponsorApplications`・`sponsorRecords`・各 `history`）のデータを分け、Security Rules で読み書きを制限しています。
+
+### テスト
+
+```bash
+cd _tools/firebase
+npm install
+npm test      # 判定ロジックのテストと、Firestore エミュレーター上での Security Rules のテスト（Java が必要）
+```
+
+`firestore.rules` を変更したときは、デプロイ前に必ず `npm test` を実行してください。
 
 ## 後から情報を更新する
 

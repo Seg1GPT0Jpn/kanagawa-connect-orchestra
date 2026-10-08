@@ -1857,3 +1857,468 @@ strong {
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
+
+/* =========================================================
+   ご支援・協賛／協賛者一覧／会計報告
+   ========================================================= */
+
+.status-banner {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) 1.25rem;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius);
+  background: var(--color-white);
+  text-align: center;
+}
+
+.status-banner__label {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  padding: 0.1rem 0.9rem;
+  border-radius: 999px;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.status-banner__text {
+  font-size: 0.92rem;
+}
+
+.price-card {
+  text-align: center;
+}
+
+.price-card__price {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 7vw, 2.4rem);
+  color: var(--color-navy);
+  line-height: 1.3;
+}
+
+.price-card__price span {
+  font-size: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--color-ivory-deep);
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table thead th {
+  background: var(--color-ivory-deep);
+  color: var(--color-navy);
+  white-space: nowrap;
+}
+
+.data-table tbody th {
+  color: var(--color-navy);
+  white-space: nowrap;
+}
+
+.uses-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.uses-list li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--color-gold);
+  background: var(--color-white);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+@media (min-width: 600px) {
+  .uses-list li {
+    grid-template-columns: 11rem 1fr;
+    gap: 1rem;
+  }
+}
+
+.uses-list__name {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.select {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.6rem 0.9rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-ivory);
+  border: 1px solid #b9ae95;
+  border-radius: var(--radius);
+}
+
+.form input[type="url"],
+.form input[type="number"],
+.form input[type="date"],
+.admin-form input,
+.admin-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.55rem 0.8rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-ivory);
+  border: 1px solid #b9ae95;
+  border-radius: var(--radius);
+}
+
+.admin-form input[type="checkbox"] {
+  display: inline-block;
+  width: 1.2rem;
+  min-height: 0;
+  height: 1.2rem;
+  padding: 0;
+}
+
+.admin-form input:disabled,
+.admin-form textarea:disabled {
+  background: var(--color-ivory-deep);
+  color: var(--color-text-muted);
+}
+
+.policy__article + .policy__article {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-gold-soft);
+}
+
+.policy__article h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 協賛者一覧 */
+.supporters__group + .supporters__group {
+  margin-top: var(--space-lg);
+}
+
+.supporters__heading {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.supporters__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr));
+}
+
+.supporters__group--special .supporters__list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
+.supporter {
+  padding: var(--space-sm) 1rem;
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius);
+  background: var(--color-white);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.supporter--special {
+  border: 2px solid var(--color-gold);
+  padding: var(--space-md) 1.25rem;
+}
+
+.supporter--preferred {
+  border-color: var(--color-gold);
+}
+
+.supporter__logo {
+  display: block;
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  margin: 0 auto 0.5rem;
+  object-fit: contain;
+}
+
+.supporter__name {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.supporter--special .supporter__name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.supporter__kind {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.supporter__intro {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+/* 会計報告 */
+.report + .report {
+  margin-top: var(--space-lg);
+}
+
+.report__title {
+  font-size: 1.2rem;
+}
+
+.report__meta {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.report__badge {
+  display: inline-block;
+  padding: 0.1rem 0.75rem;
+  border: 1px solid var(--color-navy);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.report-table {
+  min-width: 0;
+}
+
+.report .table-wrap {
+  margin-top: var(--space-sm);
+}
+
+.report-table caption {
+  padding: 0.5rem 0.9rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--color-navy);
+  background: var(--color-ivory-deep);
+}
+
+.report-table .num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.report-table .is-total th,
+.report-table .is-total td {
+  font-weight: 700;
+  border-top: 2px solid var(--color-gold-soft);
+}
+
+.report__subtitle {
+  margin-top: var(--space-md);
+  font-size: 1rem;
+  color: var(--color-navy);
+}
+
+.report__text {
+  white-space: pre-wrap;
+}
+
+/* =========================================================
+   協賛・会計の管理画面
+   ========================================================= */
+
+.admin-notice {
+  margin: 0 0 var(--space-md);
+}
+
+.notice-box--warn {
+  border-left-color: #b3261e;
+}
+
+.admin-section + .admin-section {
+  margin-top: var(--space-xl);
+}
+
+.admin-section__title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.admin-subtitle {
+  margin-top: var(--space-md);
+  font-size: 1rem;
+}
+
+.admin-chips {
+  list-style: none;
+  margin: 0 0 var(--space-sm);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.admin-chips li {
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-gold-soft);
+  background: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.admin-chips li.is-on {
+  border-color: var(--color-navy);
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.admin-form {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.admin-fieldset {
+  margin: 0;
+  padding: var(--space-sm) 1rem;
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius);
+  min-width: 0;
+}
+
+.admin-fieldset > legend {
+  padding: 0 0.4rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.admin-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 700px) {
+  .admin-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.admin-form .field > label {
+  display: block;
+  font-weight: 700;
+  color: var(--color-navy);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.admin-computed {
+  margin: var(--space-xs) 0 0;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.admin-preview {
+  margin-top: var(--space-sm);
+  padding: 0.75rem 1rem;
+  border: 1px dashed var(--color-gold);
+  border-radius: var(--radius);
+}
+
+.admin-totals {
+  margin-bottom: var(--space-sm);
+}
+
+.admin-table--wide {
+  min-width: 1200px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.warn-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #8a4b00;
+  font-size: 0.82rem;
+}
+
+.warn-list--error {
+  color: #b3261e;
+  font-weight: 700;
+}
+
+.ok-mark {
+  margin: 0;
+  color: #2e6b3a;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-tag {
+  display: inline-block;
+  padding: 0 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-gold-soft);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.status-tag--listed,
+.status-tag--report-published {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.status-tag--cancelled {
+  border-color: #b3261e;
+  color: #b3261e;
+}
+
+.history-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.history-list li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-ivory-deep);
+}
+
+.history-list__when {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.history-list__note {
+  white-space: pre-wrap;
+}
