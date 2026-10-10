@@ -394,7 +394,8 @@ def run_phase(phase: int, only: set[str] | None, pdf: bool, tablet: bool, today:
     }
     rdir = ROOT / "output" / "reports"
     rdir.mkdir(parents=True, exist_ok=True)
-    name = f"phase{phase}_report.json" if not only else f"phase{phase}_partial_report.json"
+    # フェーズ全体を PDF まで処理したときだけ正式なレポートを更新する
+    name = f"phase{phase}_report.json" if (pdf and not only) else f"phase{phase}_partial_report.json"
     (rdir / name).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return report
 
