@@ -309,6 +309,8 @@ function onOpen() {
     .addSeparator()
     .addSubMenu(
       ui.createMenu('📱 団員アプリ')
+        .addItem('🔑 このアカウントで連携を設定（最初に1回）', 'menuAppSyncSetupAccount')
+        .addSeparator()
         .addItem('同期の内容を確認（お試し・書き込みなし）', 'menuAppSyncPreview')
         .addItem('団員アプリへ同期', 'menuAppSyncRun')
         .addItem('自動同期を設定（15分ごと）', 'menuAppSyncInstallTrigger')
@@ -342,6 +344,7 @@ function onOpen() {
 /*
  * 団員アプリ連携のメニュー（AppSync.gs が追加されていない場合は案内を出す）
  */
+function menuAppSyncSetupAccount() { return callAppSync_('appSyncSetupAccount'); }
 function menuAppSyncPreview() { return callAppSync_('appSyncPreview'); }
 function menuAppSyncRun() { return callAppSync_('appSyncRun'); }
 function menuAppSyncInstallTrigger() { return callAppSync_('appSyncInstallTrigger'); }

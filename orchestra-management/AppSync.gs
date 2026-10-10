@@ -67,6 +67,8 @@ const APP_SYNC_ITEMS_ = [
 /** 書き込まずに、同期すると何が変わるかだけ表示する */
 function appSyncPreview() {
 
+  if (appSyncAskAuthIfNeeded_()) return { error: 'このアカウントはまだ承認していません' };
+
   const result = appSyncCore_({ dryRun: true });
 
   alert_(appSyncDescribe_(result, true));
@@ -77,6 +79,8 @@ function appSyncPreview() {
 
 /** 確認のうえ同期する */
 function appSyncRun() {
+
+  if (appSyncAskAuthIfNeeded_()) return { error: 'このアカウントはまだ承認していません' };
 
   const preview = appSyncCore_({ dryRun: true });
 
@@ -135,6 +139,16 @@ function appSyncScheduled() {
 
   if (!settings.autoSync) return null;
 
+  // 参加希望フォームの新しい回答も取り込む（フォーム送信トリガーが動かなかった場合の保険。
+  // 取り込み済みの回答は二重に登録されない）→ 応募した人が参加希望者としてアプリを使えるようになる
+  if (settings.applicantAccess) {
+    try {
+      syncWithoutDialog();
+    } catch (e) {
+      console.error('参加希望フォームの回答の取り込みに失敗: ' + e.message);
+    }
+  }
+
   // 自動実行では、大量の利用停止は行わない（人が確認する）
   const result = appSyncCore_({ dryRun: false, allowMassDeactivation: false });
 
@@ -162,6 +176,138 @@ function appSyncOnFormSubmit_() {
   if (result.error && !result.busy) console.error('応募時の団員アプリ同期に失敗: ' + result.error);
 
   return result;
+}
+
+
+/*******************************************************
+ * アカウントの連携設定（最初に1回）
+ *
+ * 複数の Google アカウントでログインしているとき、メニューから実行すると
+ * 承認の画面が出ずに「UrlFetchApp.fetch を呼び出す権限がありません」となることがある。
+ * そのため、承認されていなければ承認用のリンクを表示する。
+ *******************************************************/
+
+/** このアカウントがまだ承認していなければ承認用のリンクを表示して true を返す */
+function appSyncAskAuthIfNeeded_() {
+
+  let url = null;
+
+  try {
+    const info = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL);
+    if (info.getAuthorizationStatus() === ScriptApp.AuthorizationStatus.REQUIRED) url = info.getAuthorizationUrl();
+  } catch (e) {
+    url = null;
+  }
+
+  if (!url) return false;
+
+  appSyncShowAuthDialog_(url, appSyncCurrentUserEmail_());
+
+  return true;
+}
+
+
+function appSyncShowAuthDialog_(url, me) {
+
+  const esc = v => String(v || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const html =
+    '<div style="font-family:sans-serif;line-height:1.8;font-size:14px">' +
+    '<p>このアカウント（<b>' + esc(me || '不明') + '</b>）は、まだ団員アプリとの連携を承認していません。</p>' +
+    '<p style="margin:16px 0"><a href="' + esc(url) + '" target="_blank" rel="noopener" ' +
+    'style="background:#1c2a48;color:#fff;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:bold">承認する（新しいタブで開きます）</a></p>' +
+    '<ol style="padding-left:1.2em"><li>開いた画面で、<b>上と同じアカウント</b>を選ぶ</li>' +
+    '<li>「このアプリは Google で確認されていません」と出たら「詳細」→「（安全ではないページ）に移動」</li>' +
+    '<li>「許可」を押す</li>' +
+    '<li>この画面を閉じて、もう一度メニューを実行する</li></ol>' +
+    '<p style="color:#555">うまくいかない場合は、シークレットウィンドウでこのアカウントだけでログインしてお試しください。</p></div>';
+
+  try {
+    SpreadsheetApp.getUi().showModalDialog(HtmlService.createHtmlOutput(html).setWidth(460).setHeight(360), '団員アプリとの連携の承認');
+  } catch (e) {
+    alert_('このアカウント（' + (me || '不明') + '）は、まだ団員アプリとの連携を承認していません。\n次の URL をブラウザで開いて許可してください：\n' + url);
+  }
+}
+
+
+/**
+ * 「🔑 このアカウントで連携を設定（最初に1回）」
+ *  1. 承認の確認（まだならリンクを表示）
+ *  2. Firebase に書き込めるか確認
+ *  3. このアカウントを管理者に追加（確認あり）
+ *  4. 15分ごとの自動同期をこのアカウントで設定（確認あり。新しい応募の取り込みも含む）
+ *  5. いますぐ同期
+ */
+function appSyncSetupAccount() {
+
+  if (appSyncAskAuthIfNeeded_()) return { status: 'auth-required' };
+
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const me = appSyncCurrentUserEmail_();
+  const settings = appSyncSettings_(ss);
+  const lines = ['【このアカウントでの連携設定】', 'アカウント：' + (me || '不明'), ''];
+
+  // 2. Firebase に書き込めるか（読み取りで確認）
+  try {
+    appSyncClient_(settings.projectId).get('stats/summary');
+    lines.push('✅ Firebase（' + settings.projectId + '）に接続できました');
+  } catch (e) {
+    alert_(lines.concat([
+      '⚠️ Firebase に接続できませんでした。',
+      'このアカウントを Firebase プロジェクトのメンバー（オーナーまたは編集者）に追加してください：',
+      'https://console.firebase.google.com/project/' + settings.projectId + '/settings/iam',
+      '',
+      '（' + appSyncErrorMessage_(e) + '）'
+    ]).join('\n'));
+    return { status: 'firebase-denied' };
+  }
+
+  // 3. 管理者に追加
+  if (me && settings.adminEmails.indexOf(me) < 0) {
+    if (confirm_('管理者に追加', 'このアカウント（' + me + '）を団員アプリの管理者に追加しますか？\n（「アプリ連携設定」シートの「管理者のメールアドレス」に追記します）')) {
+      appSyncSetSetting_(ss, 'adminEmails', settings.adminEmails.concat([me]).join(', '));
+      lines.push('✅ 管理者に追加しました');
+    }
+  } else if (me) {
+    lines.push('✅ 管理者に登録済みです');
+  }
+
+  // 4. 自動同期（このアカウントで動く）
+  const hasTrigger = ScriptApp.getProjectTriggers().some(t => t.getHandlerFunction() === APP_SYNC.triggerHandler);
+  if (hasTrigger && settings.autoSync) {
+    lines.push('✅ 自動同期（15分ごと）は設定済みです');
+  } else if (confirm_('自動同期', '15分ごとに、新しい応募の取り込みと団員アプリへの同期を自動で行いますか？\n（このアカウントで実行されます。応募した人は最長15分で参加希望者としてアプリを使えるようになります）')) {
+    appSyncSetSetting_(ss, 'autoSync', 'はい');
+    ScriptApp.getProjectTriggers()
+      .filter(t => t.getHandlerFunction() === APP_SYNC.triggerHandler)
+      .forEach(t => ScriptApp.deleteTrigger(t));
+    ScriptApp.newTrigger(APP_SYNC.triggerHandler).timeBased().everyMinutes(15).create();
+    lines.push('✅ 自動同期（15分ごと）を設定しました');
+  }
+
+  // 5. いますぐ同期（新しい応募の取り込み → 同期）
+  try {
+    syncWithoutDialog();
+  } catch (e) {
+    console.error('参加希望フォームの回答の取り込みに失敗: ' + e.message);
+  }
+
+  const result = appSyncCore_({ dryRun: false, allowMassDeactivation: false });
+
+  lines.push('', appSyncDescribe_(result, false));
+  alert_(lines.join('\n'));
+
+  return { status: result.error ? 'sync-error' : 'ok', result };
+}
+
+
+function appSyncSetSetting_(ss, key, value) {
+
+  const sheet = appSyncEnsureSettingsSheet_(ss);
+  const item = APP_SYNC_ITEMS_.find(i => i.key === key);
+  const labels = sheet.getRange(1, 1, sheet.getLastRow(), 1).getValues().map(r => toStr_(r[0]));
+  const i = labels.indexOf(item.label);
+
+  if (i >= 0) sheet.getRange(i + 1, 2).setValue(value);
 }
 
 
@@ -804,6 +950,12 @@ function appSyncApiError_(text) {
 function appSyncErrorMessage_(err) {
 
   const msg = String((err && err.message) || err);
+
+  // このアカウントがスクリプトを承認していない（複数アカウントでログインしているときに起きやすい）
+  if (/UrlFetchApp|script\.external_request|Authorization is required|権限が必要/.test(msg)) {
+    return 'このアカウント（' + (appSyncCurrentUserEmail_() || '不明') + '）は、まだ団員アプリとの連携を承認していません。\n' +
+      '「📱 団員アプリ」→「🔑 このアカウントで連携を設定（最初に1回）」を実行してください。';
+  }
 
   if (/HTTP 403/.test(msg)) {
     return 'Firebase に書き込む権限がありません。実行している Google アカウントが Firebase プロジェクトのオーナー（または編集者）か、appsscript.json に datastore の権限があるか確認してください。（' + msg.slice(0, 160) + '）';
