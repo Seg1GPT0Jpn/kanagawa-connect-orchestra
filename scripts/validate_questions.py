@@ -34,7 +34,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterable
 
-VALIDATOR_VERSION = "1.0.0"
+VALIDATOR_VERSION = "2.0.0"
+MIN_PACK_QUESTIONS = 50  # 問題プリント（単元パック）の最低問題数
+REQUIRED_PERSPECTIVES = ("computation", "condition_check", "cross_unit", "written_reasoning", "common_error")
+LEVELS = ("basic_check", "standard_practice", "thinking_writing", "error_correction")
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = ROOT / "schemas" / "question_schema.json"
 CURRICULUM_PATH = ROOT / "schemas" / "curriculum_map.json"
@@ -560,6 +563,26 @@ _LATEX_PITFALLS = [
 ]
 
 
+# よく使う KaTeX コマンド。これに含まれず、これらで始まる名前は「コマンドの直後に文字が続いた」誤りとみなす。
+KNOWN_TEX = set("""leqq geqq leq geq le ge neq ne lt gt times cdot div pm mp pi theta alpha beta gamma delta varepsilon epsilon lambda mu sigma omega phi
+infty int iint oint sum prod lim log ln sin cos tan sec csc cot exp sqrt frac dfrac tfrac left right begin end text textrm mathrm mathbf mathit
+overrightarrow overline underline vec angle triangle circ degree cases quad qquad dots cdots ldots vdots ddots to rightarrow leftarrow Rightarrow
+Leftarrow iff implies Longrightarrow longrightarrow fallingdotseq equiv sim simeq approx parallel perp in notin subset subseteq supset cup cap emptyset
+forall exists neg land lor displaystyle hat bar dot ddot prime partial nabla mid not boxed underbrace overbrace binom choose operatorname
+Delta Gamma Theta Lambda Sigma Omega Phi Pi Psi psi chi rho tau eta zeta xi nu kappa iota upsilon
+langle rangle lfloor rfloor lceil rceil lbrace rbrace vert Vert backslash setminus""".split())
+
+
+def glued_commands(seg: str) -> list[str]:
+    bad = []
+    for name in re.findall(r"\\([A-Za-z]+)", seg):
+        if name in KNOWN_TEX:
+            continue
+        if any(name.startswith(k) and len(name) > len(k) for k in KNOWN_TEX if len(k) >= 2):
+            bad.append(name)
+    return bad
+
+
 def latex_problems(s: str) -> list[str]:
     """$...$ 内の LaTeX について、KaTeX でエラーになりやすい書き方を検出する（簡易検査）。"""
     out = []
@@ -584,6 +607,8 @@ def latex_problems(s: str) -> list[str]:
         for pat, msg in _LATEX_PITFALLS:
             if pat.search(seg):
                 out.append(f"{msg}: ${seg[:40]}$")
+        for name in glued_commands(seg):
+            out.append(f"\\{name} は未定義のコマンドです（コマンドの直後に文字が続いている可能性。例: \\leqqx → \\leqq x）: ${seg[:40]}$")
         if len(re.findall(r"\\left(?![a-zA-Z])", seg)) != len(re.findall(r"\\right(?![a-zA-Z])", seg)):
             out.append(f"\\left と \\right の数が一致しません: ${seg[:40]}$")
         if seg.count("\\begin{") != seg.count("\\end{"):
@@ -655,13 +680,15 @@ def check_file(fr: FileResult, rep: Reporter, validator, units: dict, run_calc: 
             rep.add(fr, "ERROR", "encoding", path, "置換文字 U+FFFD を含みます（文字化けの可能性）")
         if re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", s):
             rep.add(fr, "ERROR", "encoding", path, "制御文字を含みます")
-        if path and (path[-1] in ("stem", "explanation", "text", "content", "display", "caption", "criterion")
-                     or (len(path) > 2 and path[-3] in ("rows", "header"))):
+        if path and "calc_check" not in path and path[-1] not in ("id", "source", "set_id", "unit_id", "pack_id", "label"):
             if not math_delimiters_balanced(s):
                 rep.add(fr, "ERROR", "latex", path, "数式デリミタ $ の数が対応していません")
             else:
                 for msg in latex_problems(s):
                     rep.add(fr, "ERROR", "latex", path, msg)
+
+    # --- 授業プリント・問題プリント（版2.0） ---
+    check_pack(fr, rep, data, units)
 
     # --- 整合性 ---
     stim_ids = [s.get("id") for s in data.get("stimuli", []) if isinstance(s, dict)]
@@ -800,6 +827,100 @@ def check_file(fr: FileResult, rep: Reporter, validator, units: dict, run_calc: 
             rep.add(fr, "ERROR", "revision", ("revision_history", k, "date"), f"日付 {d} が不正です")
 
 
+def check_pack(fr: FileResult, rep: Reporter, data: dict, units: dict) -> None:
+    """print_type が lesson / exercise のセットに固有の検査。"""
+    pt = data.get("print_type", "worksheet")
+    ctx = data.get("unit_context") if isinstance(data.get("unit_context"), dict) else {}
+    for key in ("prerequisites", "extensions"):
+        for k, link in enumerate(ctx.get(key, []) or []):
+            if isinstance(link, dict) and link.get("unit_id") not in units:
+                rep.add(fr, "ERROR", "curriculum", ("unit_context", key, k, "unit_id"), f"単元ID {link.get('unit_id')} は curriculum_map.json に定義されていません")
+    if pt in ("lesson", "exercise") and not (ctx.get("prerequisites")):
+        rep.add(fr, "ERROR", "pack", ("unit_context",), "前提条件（prerequisites）が1つもありません")
+
+    if pt == "lesson":
+        lesson = data.get("lesson") if isinstance(data.get("lesson"), dict) else {}
+        secs = [x for x in lesson.get("sections", []) if isinstance(x, dict)]
+        kinds = [x.get("kind") for x in secs]
+        for need, label in (("intro", "導入"), ("example", "例題"), ("board_plan", "板書案"), ("teacher_guide", "指導ガイド")):
+            if need not in kinds:
+                rep.add(fr, "ERROR", "lesson", ("lesson", "sections"), f"授業プリントに「{label}」（kind={need}）のセクションがありません")
+        if not ({"definition", "theorem"} & set(kinds)):
+            rep.add(fr, "ERROR", "lesson", ("lesson", "sections"), "授業プリントに定義・定理（kind=definition / theorem）のセクションがありません")
+        if not ({"proof", "derivation"} & set(kinds)) and not any(x.get("proof_steps") for x in secs):
+            rep.add(fr, "ERROR", "lesson", ("lesson", "sections"), "公式・定理の証明または導出（proof / derivation、proof_steps）がありません")
+        for k, x in enumerate(secs):
+            if x.get("kind") == "example" and not x.get("example"):
+                rep.add(fr, "ERROR", "lesson", ("lesson", "sections", k), "例題セクションに example（問題・手順・答え）がありません")
+            if x.get("kind") == "board_plan" and not x.get("board"):
+                rep.add(fr, "ERROR", "lesson", ("lesson", "sections", k), "板書案セクションに board がありません")
+        tp = sum(len(x.get("teacher_points", []) or []) for x in secs)
+        if tp < 5:
+            rep.add(fr, "ERROR", "lesson", ("lesson",), f"教師が口頭で解説すべきポイント（teacher_points）が {tp} 件しかありません（5件以上）")
+        flow = lesson.get("flow") or []
+        total = sum(f.get("minutes", 0) for f in flow if isinstance(f, dict))
+        if flow and lesson.get("duration_minutes") and total != lesson["duration_minutes"]:
+            rep.add(fr, "WARNING", "lesson", ("lesson", "flow"), f"授業の流れの合計 {total} 分が授業時間 {lesson['duration_minutes']} 分と一致しません")
+        return
+
+    if pt != "exercise":
+        return
+    qs = [q for q in data.get("questions", []) if isinstance(q, dict)]
+    if len(qs) < MIN_PACK_QUESTIONS:
+        rep.add(fr, "ERROR", "pack", ("questions",), f"問題プリントの問題数が {len(qs)} 問です（1単元あたり {MIN_PACK_QUESTIONS} 問以上が必要）")
+    counts = {lv: 0 for lv in LEVELS}
+    persp: set = set()
+    for i, q in enumerate(qs):
+        base = ("questions", i)
+        lv = q.get("exercise_level")
+        if lv not in counts:
+            rep.add(fr, "ERROR", "pack", base, "問題プリントの問題に段階（exercise_level）がありません")
+        else:
+            counts[lv] += 1
+        ps = q.get("perspectives") or []
+        if not ps:
+            rep.add(fr, "ERROR", "pack", base, "観点タグ（perspectives）がありません")
+        persp.update(ps)
+        if "cross_unit" in ps:
+            rel = q.get("related_units") or []
+            if not rel:
+                rep.add(fr, "ERROR", "pack", base, "融合問題（cross_unit）に関連単元（related_units）がありません")
+            for u in rel:
+                if u not in units:
+                    rep.add(fr, "ERROR", "curriculum", base + ("related_units",), f"関連単元 {u} は curriculum_map.json に定義されていません")
+        ed = q.get("explanation_detail") if isinstance(q.get("explanation_detail"), dict) else None
+        if not ed:
+            rep.add(fr, "ERROR", "explanation", base, "詳細解説（explanation_detail）がありません")
+        else:
+            for key, label in (("approach", "思考の糸口"), ("steps", "解法の手順"), ("alternatives", "別解・別の確かめ方"), ("partial_credit", "部分点のポイント")):
+                if _empty(ed.get(key)):
+                    rep.add(fr, "ERROR", "explanation", base + ("explanation_detail",), f"詳細解説に「{label}」（{key}）がありません")
+            pc = ed.get("partial_credit") or []
+            pts = (q.get("scoring") or {}).get("points")
+            if pc and isinstance(pts, (int, float)) and sum(x.get("points", 0) for x in pc if isinstance(x, dict)) > pts + 1e-9:
+                rep.add(fr, "ERROR", "explanation", base + ("explanation_detail", "partial_credit"), "部分点の合計が配点を超えています")
+        if q.get("question_type") in ("multiple_choice", "true_false", "multiple_select"):
+            ans = (q.get("answer") or {}).get("value")
+            correct = set(map(str, ans if isinstance(ans, list) else [ans]))
+            wrong = {c.get("label") for c in q.get("choices", []) if isinstance(c, dict)} - correct
+            analysed = {d.get("label") for d in q.get("distractor_analysis", []) or [] if isinstance(d, dict)}
+            miss = sorted(wrong - analysed)
+            if miss:
+                rep.add(fr, "ERROR", "explanation", base + ("distractor_analysis",), f"誤りの選択肢 {miss} に、誤りである理由（distractor_analysis）がありません")
+            extra = sorted(analysed - wrong)
+            if extra:
+                rep.add(fr, "ERROR", "explanation", base + ("distractor_analysis",), f"distractor_analysis のラベル {extra} が誤りの選択肢と対応していません")
+    plan = data.get("exercise_plan") or {}
+    for lv in LEVELS:
+        if counts[lv] == 0:
+            rep.add(fr, "ERROR", "pack", ("questions",), f"段階「{lv}」の問題がありません（4段階すべてが必要）")
+        if lv in plan and plan[lv] != counts[lv]:
+            rep.add(fr, "ERROR", "pack", ("exercise_plan", lv), f"exercise_plan の {lv}={plan[lv]} が実際の問題数 {counts[lv]} と一致しません")
+    for need in REQUIRED_PERSPECTIVES:
+        if need not in persp:
+            rep.add(fr, "ERROR", "pack", ("questions",), f"観点「{need}」の問題がありません")
+
+
 def _schema_message(err) -> str:
     v = err.validator
     if v == "required":
@@ -888,6 +1009,14 @@ def validate_paths(targets: list[str], similarity: float = 0.85, run_calc: bool 
             rep.files.append(fr)
         loaded.append((fr, is_target))
 
+    # --- 授業プリントと問題プリントの対応 ---
+    set_ids = {fr.data.get("set_id") for fr, _ in loaded if isinstance(fr.data, dict)}
+    for fr, is_target in loaded:
+        d = fr.data if isinstance(fr.data, dict) else {}
+        pair = d.get("pair_set_id")
+        if is_target and pair and pair not in set_ids:
+            rep.add(fr, "WARNING", "pack", ("pair_set_id",), f"対になるプリント {pair} が検査対象に見つかりません")
+
     # --- ID の全体重複・類似問題 ---
     items = []
     owners = []
@@ -922,6 +1051,9 @@ def validate_paths(targets: list[str], similarity: float = 0.85, run_calc: bool 
         fb, ib, tb = owners[b]
         if not (ta or tb):
             continue
+        vga = fa.data["questions"][ia].get("variant_group")
+        if vga and fa is fb and vga == fb.data["questions"][ib].get("variant_group"):
+            continue  # 同じ型のパラメータ違い（反復演習）は意図した類似
         fr, i, other = (fb, ib, a) if tb else (fa, ia, b)
         rep.add(fr, "WARNING", "similar", ("questions", i), f"問題 {items[b if tb else a][1]} は {items[other][0]} の {items[other][1]} と類似しています（類似度 {j:.2f}）")
     return rep

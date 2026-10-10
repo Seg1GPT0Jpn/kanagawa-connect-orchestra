@@ -1,0 +1,28 @@
+{# 単元パック（授業プリント・問題プリント）共通の部品 #}
+{% macro pack_header(qs, units, badge, edition, edition_class) -%}
+<header class="cover">
+  <div class="meta">
+    <span>{{ qs.grade | grade_label }}</span>
+    {% for u in units %}<span>{{ u.unit_id }}　{{ u.title }}</span>{% endfor %}
+  </div>
+  <h1><span class="badge{% if edition_class == 'teacher' %} answer{% endif %}">{{ badge }}</span>{{ qs.title }}<span class="edition {{ edition_class }}">{{ edition }}</span></h1>
+  {% if qs.subtitle %}<p class="subtitle">{{ qs.subtitle }}</p>{% endif %}
+  {% if qs.lesson %}<div class="meta"><span>授業時間 {{ qs.lesson.duration_minutes }} 分</span><span>対応する問題プリント：{{ qs.pair_set_id }}</span></div>
+  {% else %}<div class="meta"><span>全 {{ qs.questions | length }} 問</span><span>{{ qs.total_points | num }} 点</span><span>対応する授業プリント：{{ qs.pair_set_id }}</span></div>{% endif %}
+  {% if edition_class == 'student' or edition_class == 'questions' %}<div class="namebox"><div class="grow">組　　番　氏名</div>{% if not qs.lesson %}<div class="score">／{{ qs.total_points | num }} 点</div>{% endif %}</div>{% endif %}
+</header>
+{%- endmacro %}
+
+{% macro unit_context(ctx) -%}
+<div class="ctx">
+  <div>
+    <h4>前提となる学習（未習なら先に復習）</h4>
+    <ul>{% for l in ctx.prerequisites %}<li>{{ l.title or l.unit_id }}：{{ l.point | rich_inline }} <span class="uid">{{ l.unit_id }}</span></li>{% endfor %}</ul>
+    {% if ctx.readiness_check %}<h4 style="margin-top:1.5mm">授業前の確認</h4><ul>{% for c in ctx.readiness_check %}<li>{{ c | rich_inline }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+  <div>
+    <h4>発展・応用への接続</h4>
+    <ul>{% for l in ctx.extensions %}<li>{{ l.title or l.unit_id }}：{{ l.point | rich_inline }} <span class="uid">{{ l.unit_id }}</span></li>{% else %}<li>（この単元が到達点です）</li>{% endfor %}</ul>
+  </div>
+</div>
+{%- endmacro %}

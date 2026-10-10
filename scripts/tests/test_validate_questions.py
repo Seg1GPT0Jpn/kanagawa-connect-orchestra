@@ -82,6 +82,8 @@ class ValidatorTest(unittest.TestCase):
         self.assertFalse(vq.latex_problems("$20\\,{}^\\circ$ と $\\dfrac{1}{2}x$"))
         self.assertFalse(vq.latex_problems("$\\mathrm{A}\\rightarrow\\left(x\\right)$"))
         self.assertTrue(vq.latex_problems("$\\left(x$"))
+        self.assertTrue(vq.latex_problems("$-2\\leqqx\\leqq4$"))
+        self.assertFalse(vq.latex_problems("$-2\\leqq x\\leqq 4$ $\\infty$ $\\int_0^1$ $\\tan\\theta$ $a\\geqq0$"))
 
     def test_similarity_normalization(self):
         self.assertEqual(vq.normalize_text("Ｘ＋１、 です。"), vq.normalize_text("x+1です"))

@@ -1,0 +1,413 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U04-LESSON",
+  "title": "図形と計量　授業プリント",
+  "subtitle": "図形と計量｜三角比・正弦定理・余弦定理・三角形の面積",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U04"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATH1-U04-PACK",
+  "pair_set_id": "HS-MATH1-U04-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G3-U07",
+        "point": "三平方の定理",
+        "title": "三平方の定理"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U05",
+        "point": "相似と比",
+        "title": "相似な図形"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH2-U04",
+        "point": "一般角の三角関数・加法定理",
+        "title": "三角関数"
+      },
+      {
+        "unit_id": "HS-MATHC-U01",
+        "point": "ベクトルの内積と角",
+        "title": "ベクトル"
+      }
+    ],
+    "readiness_check": [
+      "三平方の定理と特別な直角三角形の辺の比（$1:1:\\sqrt{2}$、$1:2:\\sqrt{3}$）を使える。",
+      "相似の考え方と円周角の定理を使える。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "座標を用いて $0^\\circ\\leqq\\theta\\leqq180^\\circ$ の三角比を定義し、相互関係・$180^\\circ-\\theta$ の公式を説明できる。",
+      "正弦定理・余弦定理を証明し、与えられた条件に応じて使い分けて三角形を解ける。",
+      "三角形の面積を $\\dfrac{1}{2}bc\\sin A$ で求め、他の単元（二次関数など）と組み合わせて活用できる。"
+    ],
+    "duration_minutes": 150,
+    "flow": [
+      {
+        "phase": "導入：測れない高さを測る",
+        "minutes": 10,
+        "activity": "木の高さを影の長さと角度から求める場面で、三角比の必要性を示す"
+      },
+      {
+        "phase": "鋭角の三角比",
+        "minutes": 20,
+        "activity": "直角三角形での定義、特別な角の値の表をつくる"
+      },
+      {
+        "phase": "鈍角への拡張と相互関係",
+        "minutes": 30,
+        "activity": "単位円（半径1の半円）で定義を拡張し、相互関係・180°−θ の公式を導く"
+      },
+      {
+        "phase": "正弦定理",
+        "minutes": 25,
+        "activity": "外接円を使って証明し、例題で使い方を確認"
+      },
+      {
+        "phase": "余弦定理",
+        "minutes": 30,
+        "activity": "座標を使って証明し、辺・角を求める例題"
+      },
+      {
+        "phase": "面積と活用",
+        "minutes": 25,
+        "activity": "S=½bc sinA の導出、二次関数との融合問題を紹介"
+      },
+      {
+        "phase": "まとめ",
+        "minutes": 10,
+        "activity": "使い分けの表を板書し、問題プリントの課題を指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "三角比は「角」と「長さ」をつなぐ道具",
+        "body": "直角三角形では、1つの鋭角が決まると辺の長さの比が決まる（相似）。この比に名前をつけたものが三角比である。三角比を使うと、直接測れない長さや角を計算で求められる。",
+        "bullets": [
+          "測量・建築・物理（力の分解）など多くの場面で使われる。",
+          "後に学ぶ三角関数（数学Ⅱ）・ベクトルの内積（数学C）の土台になる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "相似な直角三角形をいくつか示し、「角が同じなら比は同じ」ことを実測で確かめさせる。",
+            "ask": "大きさの違う2つの直角三角形で、（高さ）÷（斜辺）を比べるとどうなるか。",
+            "expect": "ほぼ同じ値になる。"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "三角比の定義（$0^\\circ\\leqq\\theta\\leqq180^\\circ$）",
+        "body": "原点 O を中心とする半径 $r$ の円の上半分に点 P$(x,\\,y)$ をとり、$x$ 軸の正の向きと OP のなす角を $\\theta$ とする。",
+        "formula": "$$\\sin\\theta=\\dfrac{y}{r},\\qquad \\cos\\theta=\\dfrac{x}{r},\\qquad \\tan\\theta=\\dfrac{y}{x}\\ (x\\neq0)$$",
+        "conditions": [
+          "$\\theta=90^\\circ$ のとき $x=0$ なので $\\tan90^\\circ$ は定義されない。",
+          "$r=1$（単位円）にとると $\\sin\\theta=y,\\ \\cos\\theta=x$ となり、座標そのものになる。",
+          "鈍角では $x<0$ なので $\\cos\\theta<0,\\ \\tan\\theta<0$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "直角三角形による定義と座標による定義が、鋭角では一致することを図で確認させる。"
+          },
+          {
+            "point": "鈍角の $\\cos$ が負になることを「点 P が $y$ 軸の左にある」ことと結びつける。",
+            "caution": "「長さだから正」と考えて符号を落とす誤りが多い。"
+          }
+        ],
+        "figure": {
+          "alt": "単位円の上半分と点P(cosθ, sinθ)",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 210 140\" width=\"210\" height=\"140\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"105\" x2=\"202\" y2=\"105\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"105\" y1=\"126\" x2=\"105\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"198\" y=\"118\" font-style=\"italic\">x</text><text x=\"110\" y=\"12\" font-style=\"italic\">y</text><text x=\"94\" y=\"117\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"182\" height=\"112\"/></clipPath><path d=\"M35.84,94.19 L36.75,89.45 L37.66,85.89 L38.57,82.93 L39.48,80.36 L40.39,78.06 L41.3,75.98 L42.21,74.06 L43.12,72.28 L44.03,70.61 L44.94,69.04 L45.85,67.57 L46.76,66.17 L47.67,64.83 L48.58,63.57 L49.49,62.35 L50.4,61.2 L51.31,60.08 L52.22,59.02 L53.13,57.99 L54.04,57.01 L54.95,56.06 L55.86,55.15 L56.77,54.27 L57.68,53.42 L58.59,52.6 L59.5,51.8 L60.41,51.04 L61.32,50.3 L62.23,49.59 L63.14,48.9 L64.05,48.23 L64.96,47.58 L65.87,46.96 L66.78,46.36 L67.69,45.77 L68.6,45.21 L69.51,44.66 L70.42,44.14 L71.33,43.63 L72.24,43.14 L73.15,42.67 L74.06,42.21 L74.97,41.77 L75.88,41.34 L76.79,40.94 L77.7,40.54 L78.61,40.17 L79.52,39.8 L80.43,39.45 L81.34,39.12 L82.25,38.8 L83.16,38.49 L84.07,38.2 L84.98,37.92 L85.89,37.66 L86.8,37.41 L87.71,37.17 L88.62,36.94 L89.53,36.73 L90.44,36.53 L91.35,36.34 L92.26,36.17 L93.17,36.01 L94.08,35.86 L94.99,35.72 L95.9,35.59 L96.81,35.48 L97.72,35.38 L98.63,35.29 L99.54,35.21 L100.45,35.15 L101.36,35.09 L102.27,35.05 L103.18,35.02 L104.09,35.01 L105,35 L105.91,35.01 L106.82,35.02 L107.73,35.05 L108.64,35.09 L109.55,35.15 L110.46,35.21 L111.37,35.29 L112.28,35.38 L113.19,35.48 L114.1,35.59 L115.01,35.72 L115.92,35.86 L116.83,36.01 L117.74,36.17 L118.65,36.34 L119.56,36.53 L120.47,36.73 L121.38,36.94 L122.29,37.17 L123.2,37.41 L124.11,37.66 L125.02,37.92 L125.93,38.2 L126.84,38.49 L127.75,38.8 L128.66,39.12 L129.57,39.45 L130.48,39.8 L131.39,40.17 L132.3,40.54 L133.21,40.94 L134.12,41.34 L135.03,41.77 L135.94,42.21 L136.85,42.67 L137.76,43.14 L138.67,43.63 L139.58,44.14 L140.49,44.66 L141.4,45.21 L142.31,45.77 L143.22,46.36 L144.13,46.96 L145.04,47.58 L145.95,48.23 L146.86,48.9 L147.77,49.59 L148.68,50.3 L149.59,51.04 L150.5,51.8 L151.41,52.6 L152.32,53.42 L153.23,54.27 L154.14,55.15 L155.05,56.06 L155.96,57.01 L156.87,57.99 L157.78,59.02 L158.69,60.08 L159.6,61.2 L160.51,62.35 L161.42,63.57 L162.33,64.83 L163.24,66.17 L164.15,67.57 L165.06,69.04 L165.97,70.61 L166.88,72.28 L167.79,74.06 L168.7,75.98 L169.61,78.06 L170.52,80.36 L171.43,82.93 L172.34,85.89 L173.25,89.45 L174.16,94.19\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><line x1=\"105\" y1=\"105\" x2=\"70\" y2=\"44.38\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"70\" y1=\"105\" x2=\"70\" y2=\"44.38\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"70\" cy=\"44.38\" r=\"2.3\" fill=\"#000\"/><text x=\"74\" y=\"40.38\">P(cosθ, sinθ)</text></svg>"
+        }
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "三角比の相互関係",
+        "formula": "$$\\sin^2\\theta+\\cos^2\\theta=1,\\qquad \\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta},\\qquad 1+\\tan^2\\theta=\\dfrac{1}{\\cos^2\\theta}$$",
+        "conditions": [
+          "$\\tan$ を含む式は $\\theta\\neq90^\\circ$ のとき",
+          "$\\sin\\theta$ から $\\cos\\theta$ を求めるときは、$\\theta$ が鋭角か鈍角かで符号が決まる"
+        ],
+        "proof_steps": [
+          "単位円上の点 P$(\\cos\\theta,\\,\\sin\\theta)$ は $x^2+y^2=1$ を満たすので $\\cos^2\\theta+\\sin^2\\theta=1$。",
+          "定義より $\\tan\\theta=\\dfrac{y}{x}=\\dfrac{\\sin\\theta}{\\cos\\theta}$。",
+          "第1式の両辺を $\\cos^2\\theta\\ (\\neq0)$ で割ると $\\tan^2\\theta+1=\\dfrac{1}{\\cos^2\\theta}$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "3つの式は暗記ではなく「単位円の方程式」から1行で導けることを強調する。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "$180^\\circ-\\theta$ の三角比",
+        "proof_steps": [
+          "点 P$(\\cos\\theta,\\,\\sin\\theta)$ と $y$ 軸に関して対称な点は Q$(-\\cos\\theta,\\,\\sin\\theta)$。",
+          "OQ と $x$ 軸の正の向きのなす角は $180^\\circ-\\theta$。",
+          "よって $\\sin(180^\\circ-\\theta)=\\sin\\theta,\\ \\cos(180^\\circ-\\theta)=-\\cos\\theta,\\ \\tan(180^\\circ-\\theta)=-\\tan\\theta$。"
+        ],
+        "body": "鈍角の三角比は、この公式で鋭角の三角比に直して求める。",
+        "teacher_points": [
+          {
+            "point": "$\\sin$ だけ符号が変わらない理由を、点の $y$ 座標が変わらないことで説明する。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "正弦定理",
+        "formula": "$$\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=\\dfrac{c}{\\sin C}=2R\\qquad(R\\text{ は外接円の半径})$$",
+        "conditions": [
+          "1辺とその両端の角（または対角）が分かるとき、ほかの辺を求めるのに使う",
+          "$\\sin B$ から $B$ を求めるときは、鋭角・鈍角の2通りがありうる"
+        ],
+        "proof_steps": [
+          "$A$ が鋭角のとき：外接円の直径 BD を引くと、円周角の定理より $\\angle\\mathrm{BDC}=A$、$\\angle\\mathrm{BCD}=90^\\circ$。",
+          "直角三角形 BCD で $\\sin A=\\dfrac{a}{2R}$、よって $\\dfrac{a}{\\sin A}=2R$。",
+          "$A$ が鈍角のときは円に内接する四角形の性質から $\\angle\\mathrm{BDC}=180^\\circ-A$ となり、$\\sin(180^\\circ-A)=\\sin A$ より同じ式が成り立つ（直角のときは $a=2R$）。",
+          "B・C についても同様なので定理が成り立つ。"
+        ],
+        "teacher_points": [
+          {
+            "point": "証明の要点は「直径に対する円周角は直角」。中学の円周角の定理を想起させる。",
+            "ask": "直径 BD を引くと、どの角が直角になるか。"
+          }
+        ],
+        "figure": {
+          "alt": "外接円と直径BD",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 144 144\" width=\"144\" height=\"144\" font-family=\"serif\" font-size=\"12\"><circle cx=\"72\" cy=\"72\" r=\"56\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"38.4\" y1=\"27.2\" x2=\"23.56\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"23.56\" y1=\"100\" x2=\"120.44\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"120.44\" y1=\"100\" x2=\"38.4\" y2=\"27.2\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"23.56\" y1=\"100\" x2=\"120.44\" y2=\"44\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"120.44\" y1=\"44\" x2=\"120.44\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"27.12\" y=\"22.95\">A</text><text x=\"10.17\" y=\"109.73\">B</text><text x=\"125.5\" y=\"110.25\">C</text><text x=\"126.11\" y=\"42.76\">D</text><text x=\"60.72\" y=\"84.24\">O</text></svg>"
+        }
+      },
+      {
+        "id": "th3",
+        "kind": "theorem",
+        "title": "余弦定理",
+        "formula": "$$a^2=b^2+c^2-2bc\\cos A,\\qquad \\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$$",
+        "conditions": [
+          "2辺とその間の角から残りの辺を求めるとき",
+          "3辺から角を求めるとき",
+          "$A=90^\\circ$ のとき三平方の定理になる"
+        ],
+        "proof_steps": [
+          "A を原点、AB を $x$ 軸上にとり、B$(c,\\,0)$、C$(b\\cos A,\\,b\\sin A)$ とする。",
+          "$a^2=\\mathrm{BC}^2=(b\\cos A-c)^2+(b\\sin A)^2=b^2(\\cos^2A+\\sin^2A)-2bc\\cos A+c^2$。",
+          "$\\cos^2A+\\sin^2A=1$ より $a^2=b^2+c^2-2bc\\cos A$。$A$ が鈍角でも同じ計算が成り立つ。"
+        ],
+        "teacher_points": [
+          {
+            "point": "三平方の定理の「補正項」が $-2bc\\cos A$ であり、$A$ が鈍角なら $\\cos A<0$ で $a^2$ が大きくなることを図で確認させる。"
+          }
+        ]
+      },
+      {
+        "id": "th4",
+        "kind": "theorem",
+        "title": "三角形の面積",
+        "formula": "$$S=\\dfrac{1}{2}bc\\sin A=\\dfrac{1}{2}ca\\sin B=\\dfrac{1}{2}ab\\sin C$$",
+        "conditions": [
+          "2辺とその間の角が分かるとき",
+          "$\\sin$ を使う（$\\cos$ ではない）"
+        ],
+        "proof_steps": [
+          "辺 AB を底辺とすると、高さは C から直線 AB に下ろした垂線の長さ $h=b\\sin A$（鈍角でも $\\sin(180^\\circ-A)=\\sin A$ より同じ）。",
+          "$S=\\dfrac{1}{2}ch=\\dfrac{1}{2}bc\\sin A$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「高さ ＝ 斜辺 × sin」という見方を、図に高さを書き込ませて定着させる。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　正弦定理",
+        "example": {
+          "problem": "$\\triangle\\mathrm{ABC}$ で $a=6,\\ A=45^\\circ,\\ B=60^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めよ。",
+          "steps": [
+            "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$ より $b=\\dfrac{6\\sin60^\\circ}{\\sin45^\\circ}=\\dfrac{6\\cdot\\frac{\\sqrt3}{2}}{\\frac{\\sqrt2}{2}}=3\\sqrt6$。",
+            "$2R=\\dfrac{a}{\\sin A}=\\dfrac{6}{\\frac{\\sqrt2}{2}}=6\\sqrt2$ より $R=3\\sqrt2$。"
+          ],
+          "answer": "$b=3\\sqrt6,\\ R=3\\sqrt2$",
+          "thinking": "1辺と2角が分かっている → 正弦定理。"
+        },
+        "teacher_points": [
+          {
+            "point": "分数の中の分数の処理を丁寧に板書する。"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　余弦定理で角を求める",
+        "example": {
+          "problem": "$\\triangle\\mathrm{ABC}$ で $a=7,\\ b=5,\\ c=3$ のとき、$A$ を求めよ。",
+          "steps": [
+            "$\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\dfrac{25+9-49}{30}=-\\dfrac{1}{2}$。",
+            "$0^\\circ<A<180^\\circ$ より $A=120^\\circ$。"
+          ],
+          "answer": "$A=120^\\circ$",
+          "thinking": "3辺が分かっている → 余弦定理の変形 $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$。"
+        },
+        "misconceptions": [
+          {
+            "wrong": "$\\cos A=-\\dfrac12$ だから $A=60^\\circ$",
+            "correct": "$\\cos$ が負なら鈍角。$A=120^\\circ$"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　面積",
+        "example": {
+          "problem": "$\\triangle\\mathrm{ABC}$ で $b=4,\\ c=5,\\ A=120^\\circ$ のとき、面積 $S$ を求めよ。",
+          "steps": [
+            "$S=\\dfrac12bc\\sin A=\\dfrac12\\cdot4\\cdot5\\cdot\\sin120^\\circ$。",
+            "$\\sin120^\\circ=\\sin60^\\circ=\\dfrac{\\sqrt3}{2}$ より $S=5\\sqrt3$。"
+          ],
+          "answer": "$5\\sqrt3$"
+        }
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 定義と相互関係",
+              "lines": [
+                "単位円 P$(\\cos\\theta,\\sin\\theta)$",
+                "$\\sin^2\\theta+\\cos^2\\theta=1$",
+                "$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}$",
+                "$\\sin(180^\\circ-\\theta)=\\sin\\theta$",
+                "$\\cos(180^\\circ-\\theta)=-\\cos\\theta$"
+              ]
+            },
+            {
+              "title": "② 正弦定理・余弦定理",
+              "lines": [
+                "$\\dfrac{a}{\\sin A}=2R$",
+                "$a^2=b^2+c^2-2bc\\cos A$",
+                "使い分け：",
+                "1辺＋2角 → 正弦",
+                "2辺＋間の角／3辺 → 余弦"
+              ]
+            },
+            {
+              "title": "③ 面積と活用",
+              "lines": [
+                "$S=\\dfrac12bc\\sin A$",
+                "例 $b=4,c=5,A=120^\\circ$",
+                "$S=5\\sqrt3$",
+                "最大・最小 → 二次関数へ"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "$\\sin\\theta=\\dfrac12$ のような方程式では、$0^\\circ\\leqq\\theta\\leqq180^\\circ$ で解が2つあることを単位円の図で必ず確認させる。",
+            "caution": "$30^\\circ$ だけを答える誤りが最も多い。"
+          },
+          {
+            "point": "どの定理を使うかは「分かっているもの」と「求めたいもの」の組で決まることを、表にして整理させる。",
+            "ask": "2辺とその間の角が分かっているとき、残りの辺は何で求めるか。",
+            "expect": "余弦定理"
+          },
+          {
+            "point": "答えの吟味（三角形の成立条件：2辺の和は他の1辺より大きい、角の和は $180^\\circ$）を習慣づける。"
+          },
+          {
+            "point": "$\\sin$ の値から角を求めるときに2通りの候補が出たら、角の和や辺の大小関係でふるいにかける手順を示す。",
+            "timing": "正弦定理の例題の後"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\sin\\theta=\\dfrac35$ のとき $\\cos\\theta=\\dfrac45$ と決めつける",
+            "correct": "$\\theta$ が鈍角なら $\\cos\\theta=-\\dfrac45$"
+          },
+          {
+            "wrong": "面積を $\\dfrac12bc\\cos A$ で計算する",
+            "correct": "高さは $b\\sin A$。面積は $\\sin$ を使う"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "三角比は単位円上の点の座標として定義すると鈍角まで扱える。",
+          "正弦定理は外接円、余弦定理は座標（三平方の拡張）で証明できる。",
+          "条件から定理を選ぶ：1辺＋2角 → 正弦定理、2辺＋間の角・3辺 → 余弦定理。面積は $\\dfrac12bc\\sin A$。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\cos150^\\circ$ の値は？",
+            "a": "$-\\dfrac{\\sqrt3}{2}$"
+          },
+          {
+            "q": "$\\sin\\theta=\\dfrac{\\sqrt2}{2}\\ (0^\\circ\\leqq\\theta\\leqq180^\\circ)$ を解け。",
+            "a": "$\\theta=45^\\circ,\\ 135^\\circ$"
+          },
+          {
+            "q": "$b=3,\\ c=8,\\ A=60^\\circ$ のとき $a$ は？",
+            "a": "$a^2=9+64-24=49$ より $a=7$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "c695ab7604eba100047004641dc69c55897d6fba8575fec1b637e5d78db0fac7"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:51:40+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "724ab7a5d1491ee1215081c62dd4e3601bba9508eb6eaa83dbce81623827b13b"
+  }
+}

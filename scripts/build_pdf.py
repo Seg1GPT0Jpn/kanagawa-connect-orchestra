@@ -61,6 +61,7 @@ def _load_masters():
         "grade": lab("grades"), "subject": lab("subjects"), "skill": lab("skills"),
         "aspect": lab("evaluation_aspects"), "difficulty": lab("difficulty_levels"),
         "status": lab("verification_statuses"), "track": lab("tracks"),
+        "level": {x["code"]: f"{x['letter']}　{x['label']}" for x in ms["exercise_levels"]}, "perspective": lab("perspectives"),
     }, vq.load_curriculum()
 
 
@@ -218,15 +219,42 @@ def make_env():
         "difficulty_label": lambda c: MASTERS["difficulty"].get(c, c),
         "status_label": lambda c: MASTERS["status"].get(c, c),
         "track_label": lambda c: MASTERS["track"].get(c, c),
+        "level_label": lambda c: MASTERS["level"].get(c, c),
+        "perspective_label": lambda c: MASTERS["perspective"].get(c, c),
+        "lesson_kind": lambda c: LESSON_KINDS.get(c, c),
+        "error_type_label": lambda c: ERROR_TYPES.get(c, c),
     })
     return env
+
+
+LESSON_KINDS = {"intro": "導入", "definition": "定義", "theorem": "定理・公式", "proof": "証明", "derivation": "導出",
+                "example": "例題", "figure_explain": "図解", "board_plan": "板書案", "teacher_guide": "指導ガイド", "summary": "まとめ", "check": "確認"}
+ERROR_TYPES = {"sign": "符号の誤り", "condition": "条件の見落とし", "formula": "公式の誤用", "concept": "概念の誤解", "calculation": "計算ミス",
+               "interpretation": "題意の読み違い", "notation": "表記の誤り", "logic": "論理の誤り", "unit": "単位の誤り"}
+
+
+def edition_of(data: dict, kind: str) -> str:
+    """出力する冊子の種類。授業プリントは questions→生徒用、answers→教師用 に読みかえる。"""
+    if data.get("print_type") == "lesson":
+        return "student" if kind == "questions" else "teacher"
+    return kind
+
+
+EDITION_TITLES = {"questions": "問題", "answers": "解答・解説", "student": "生徒用", "teacher": "教師用"}
 
 
 def render_html(env, data: dict, kind: str, paper: str) -> str:
     w, h, (mt, mr, mb, ml), fs = PAPERS[paper]
     groups, units = prepare(data, paper)
     build = data.get("build", {})
-    tpl = env.get_template("question_template.html" if kind == "questions" else "answer_template.html")
+    pt = data.get("print_type", "worksheet")
+    kind = edition_of(data, kind)
+    if pt == "lesson":
+        tpl = env.get_template("lesson_print_template.html")
+    elif pt == "exercise":
+        tpl = env.get_template("exercise_print_template.html")
+    else:
+        tpl = env.get_template("question_template.html" if kind == "questions" else "answer_template.html")
     page_css = f"@page {{ size: {w}mm {h}mm; }}\n:root {{ --fs: {fs}; }}"
     if paper == "tablet":
         page_css += "\n.choices.cols-4 { grid-template-columns: 1fr 1fr; }"
@@ -239,7 +267,7 @@ def render_html(env, data: dict, kind: str, paper: str) -> str:
         css=(TEMPLATES / "print.css").read_text(encoding="utf-8"),
         page_css=page_css,
         asset_base=TEMPLATES.as_uri() + "/",
-        doc_title=f"{data['title']}（{'問題' if kind == 'questions' else '解答・解説'}）",
+        doc_title=f"{data['title']}（{EDITION_TITLES[kind]}）",
         show_points=build.get("show_points", True),
         show_difficulty=build.get("show_difficulty", data.get("track") not in ("mock_exam",)),
         answer_sheet=data.get("track") == "mock_exam",
@@ -394,7 +422,7 @@ def build(files: list[Path], kinds: list[str], paper: str, out_dir: Path, keep_h
                 continue
             for kind in kinds:
                 html_doc = render_html(env, data, kind, paper)
-                pdf_path = output_path(f, kind, paper, out_dir)
+                pdf_path = output_path(f, edition_of(data, kind), paper, out_dir)
                 pdf_path.parent.mkdir(parents=True, exist_ok=True)
                 with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as tmp:
                     tmp.write(html_doc)
@@ -415,7 +443,7 @@ def build(files: list[Path], kinds: list[str], paper: str, out_dir: Path, keep_h
                         header_template=(
                             '<div style="width:100%;font-size:7px;color:#888;padding:0 '
                             f'{ml}mm;text-align:right;font-family:\'IPAGothic\',\'Noto Sans CJK JP\',sans-serif;">'
-                            f'{title_short}{"（解答・解説）" if kind == "answers" else ""}</div>'
+                            f'{title_short}（{EDITION_TITLES[edition_of(data, kind)]}）</div>'
                         ),
                         footer_template=(
                             '<div style="width:100%;font-size:8px;color:#666;text-align:center;'

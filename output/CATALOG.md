@@ -1,6 +1,6 @@
 # 教材カタログ
 
-全 171 セット・1380 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
+全 175 セット・1500 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
 
 検証状態 `auto_checked` は自動検査（スキーマ・整合性・重複・検算）に合格した状態です。教科担当者のレビュー（`expert_reviewed`）を経てから配布してください。
 
@@ -209,4 +209,13 @@
 | SS-MATH-U02-S1 | 数学　記述式計算問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-math-u02_questions.pdf) [解答](second_stage/ss-math-u02_answers.pdf) |
 | SS-SCI-U01-S1 | 理科　論述・計算問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-sci-u01_questions.pdf) [解答](second_stage/ss-sci-u01_answers.pdf) |
 | SS-SOC-U01-S1 | 地歴公民　論述問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-soc-u01_questions.pdf) [解答](second_stage/ss-soc-u01_answers.pdf) |
+
+## 高校 単元パック（授業プリント＋問題プリント）（4 セット）
+
+| セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |
+|---|---|---|---|---|---|---|---|---|
+| HS-MATH1-U03-EX | 二次関数　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u03/exercise_questions.pdf) [解答](hs_packs/hs-math1-u03/exercise_answers.pdf) |
+| HS-MATH1-U03-LESSON | 二次関数　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH1-U04-EX | 図形と計量　問題プリント | HS1 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u04/exercise_questions.pdf) [解答](hs_packs/hs-math1-u04/exercise_answers.pdf) |
+| HS-MATH1-U04-LESSON | 図形と計量　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
 

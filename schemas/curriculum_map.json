@@ -304,6 +304,81 @@
         "code": "second_stage",
         "label": "難関大 個別試験（二次試験）対策",
         "data_dir": "data/second_stage"
+      },
+      {
+        "code": "hs_pack",
+        "label": "高校 単元パック（授業プリント＋問題プリント）",
+        "data_dir": "data/hs_packs"
+      }
+    ],
+    "print_types": [
+      {
+        "code": "worksheet",
+        "label": "単元プリント（従来型）"
+      },
+      {
+        "code": "lesson",
+        "label": "授業プリント（概念導入・証明・例題・板書案・指導ガイド）"
+      },
+      {
+        "code": "exercise",
+        "label": "問題プリント（4段階の演習・詳細解説）"
+      }
+    ],
+    "exercise_levels": [
+      {
+        "code": "basic_check",
+        "label": "基本確認",
+        "letter": "A"
+      },
+      {
+        "code": "standard_practice",
+        "label": "標準演習",
+        "letter": "B"
+      },
+      {
+        "code": "thinking_writing",
+        "label": "思考力・記述応用",
+        "letter": "C"
+      },
+      {
+        "code": "error_correction",
+        "label": "典型誤答訂正",
+        "letter": "D"
+      }
+    ],
+    "perspectives": [
+      {
+        "code": "computation",
+        "label": "計算力・基本操作の反復"
+      },
+      {
+        "code": "condition_check",
+        "label": "定義・公式の適用条件の確認"
+      },
+      {
+        "code": "concept",
+        "label": "概念理解"
+      },
+      {
+        "code": "cross_unit",
+        "label": "複数単元の融合・応用"
+      },
+      {
+        "code": "written_reasoning",
+        "label": "記述答案・論証・途中式の評価"
+      },
+      {
+        "code": "common_error",
+        "label": "典型ミス・誤答分析"
+      },
+      {
+        "code": "application",
+        "label": "日常・他教科への応用"
+      },
+      {
+        "code": "multiple_solutions",
+        "label": "別解・複数の解法"
       }
     ]
   },
@@ -1863,7 +1938,27 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_1"
+              "course": "math_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G3-U01",
+                  "point": "乗法公式・因数分解"
+                },
+                {
+                  "unit_id": "JH-MATH-G3-U02",
+                  "point": "平方根の計算"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH1-U03",
+                  "point": "平方完成・因数分解"
+                },
+                {
+                  "unit_id": "HS-MATH2-U01",
+                  "point": "整式の除法・恒等式"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH1-U02",
@@ -1881,7 +1976,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_1"
+              "course": "math_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G2-U04",
+                  "point": "仮定と結論・証明の書き方"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHB-U01",
+                  "point": "数学的帰納法"
+                },
+                {
+                  "unit_id": "SS-MATH-U01",
+                  "point": "背理法による証明"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH1-U03",
@@ -1899,7 +2010,35 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_1"
+              "course": "math_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G3-U04",
+                  "point": "y=ax^2 のグラフ"
+                },
+                {
+                  "unit_id": "HS-MATH1-U01",
+                  "point": "平方完成・因数分解・不等式"
+                },
+                {
+                  "unit_id": "JH-MATH-G3-U03",
+                  "point": "二次方程式の解法"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH2-U03",
+                  "point": "放物線と直線・領域"
+                },
+                {
+                  "unit_id": "HS-MATH2-U06",
+                  "point": "3次関数の増減と最大・最小"
+                },
+                {
+                  "unit_id": "CT-MATH1A-U01",
+                  "point": "日常の事象の最大化"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH1-U04",
@@ -1917,7 +2056,27 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_1"
+              "course": "math_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G3-U07",
+                  "point": "三平方の定理"
+                },
+                {
+                  "unit_id": "JH-MATH-G3-U05",
+                  "point": "相似と比"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH2-U04",
+                  "point": "一般角の三角関数・加法定理"
+                },
+                {
+                  "unit_id": "HS-MATHC-U01",
+                  "point": "ベクトルの内積と角"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH1-U05",
@@ -1934,7 +2093,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_1"
+              "course": "math_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G2-U07",
+                  "point": "四分位数・箱ひげ図"
+                },
+                {
+                  "unit_id": "JH-MATH-G1-U07",
+                  "point": "代表値"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHB-U02",
+                  "point": "確率分布と統計的推測"
+                }
+              ]
             }
           ]
         },
@@ -1960,7 +2135,27 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_a"
+              "course": "math_a",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G2-U06",
+                  "point": "確率の基本"
+                },
+                {
+                  "unit_id": "HS-MATH1-U02",
+                  "point": "集合の要素の個数"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHB-U02",
+                  "point": "確率変数・二項分布"
+                },
+                {
+                  "unit_id": "HS-MATH2-U01",
+                  "point": "二項定理"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATHA-U02",
@@ -1978,7 +2173,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_a"
+              "course": "math_a",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G3-U05",
+                  "point": "相似"
+                },
+                {
+                  "unit_id": "JH-MATH-G3-U06",
+                  "point": "円周角の定理"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHC-U01",
+                  "point": "位置ベクトルによる図形の証明"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATHA-U03",
@@ -1996,7 +2207,19 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_a"
+              "course": "math_a",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G1-U01",
+                  "point": "素因数分解"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHB-U01",
+                  "point": "漸化式と整数の性質"
+                }
+              ]
             }
           ]
         },
@@ -2021,7 +2244,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_2"
+              "course": "math_2",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH1-U01",
+                  "point": "展開・因数分解"
+                },
+                {
+                  "unit_id": "HS-MATHA-U01",
+                  "point": "組合せ"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH2-U02",
+                  "point": "因数定理と高次方程式"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH2-U02",
@@ -2039,7 +2278,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_2"
+              "course": "math_2",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH1-U03",
+                  "point": "判別式"
+                },
+                {
+                  "unit_id": "HS-MATH2-U01",
+                  "point": "整式の除法"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHC-U02",
+                  "point": "複素数平面"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH2-U03",
@@ -2056,7 +2311,27 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_2"
+              "course": "math_2",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G2-U03",
+                  "point": "一次関数と直線"
+                },
+                {
+                  "unit_id": "HS-MATH1-U03",
+                  "point": "二次関数"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATHC-U02",
+                  "point": "二次曲線"
+                },
+                {
+                  "unit_id": "HS-MATH2-U06",
+                  "point": "接線"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH2-U04",
@@ -2074,7 +2349,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_2"
+              "course": "math_2",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH1-U04",
+                  "point": "三角比"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U02",
+                  "point": "三角関数の微分"
+                },
+                {
+                  "unit_id": "HS-MATHC-U02",
+                  "point": "極形式"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH2-U05",
@@ -2092,7 +2383,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_2"
+              "course": "math_2",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G1-U01",
+                  "point": "累乗"
+                },
+                {
+                  "unit_id": "HS-MATH1-U01",
+                  "point": "指数法則"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U02",
+                  "point": "指数・対数関数の微分"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATH2-U06",
@@ -2111,7 +2418,31 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_2"
+              "course": "math_2",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH1-U03",
+                  "point": "二次関数と最大・最小"
+                },
+                {
+                  "unit_id": "HS-MATH2-U03",
+                  "point": "直線の方程式"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U02",
+                  "point": "数学Ⅲの微分法"
+                },
+                {
+                  "unit_id": "HS-MATH3-U03",
+                  "point": "数学Ⅲの積分法"
+                },
+                {
+                  "unit_id": "HS-PHYB-U01",
+                  "point": "速度・加速度と微分"
+                }
+              ]
             }
           ]
         },
@@ -2137,7 +2468,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_b"
+              "course": "math_b",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-MATH-G1-U02",
+                  "point": "文字式"
+                },
+                {
+                  "unit_id": "HS-MATH1-U02",
+                  "point": "命題と証明"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U01",
+                  "point": "数列の極限・無限級数"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATHB-U02",
@@ -2155,7 +2502,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_b"
+              "course": "math_b",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATHA-U01",
+                  "point": "確率"
+                },
+                {
+                  "unit_id": "HS-MATH1-U05",
+                  "point": "分散・標準偏差"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-MATH2BC-U02",
+                  "point": "推定・検定"
+                }
+              ]
             }
           ]
         },
@@ -2181,7 +2544,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_c"
+              "course": "math_c",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH1-U04",
+                  "point": "三角比"
+                },
+                {
+                  "unit_id": "HS-MATHA-U02",
+                  "point": "図形の性質"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-MATH2BC-U02",
+                  "point": "ベクトルの応用"
+                }
+              ]
             },
             {
               "unit_id": "HS-MATHC-U02",
@@ -2199,7 +2578,23 @@
                 "calculation"
               ],
               "subject": "math",
-              "course": "math_c"
+              "course": "math_c",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH2-U02",
+                  "point": "複素数"
+                },
+                {
+                  "unit_id": "HS-MATH2-U04",
+                  "point": "三角関数"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U02",
+                  "point": "媒介変数表示の微分"
+                }
+              ]
             }
           ]
         },
@@ -2223,7 +2618,19 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U04",
+                  "point": "SVOO・SVOC"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U09",
+                  "point": "長文での文構造の把握"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U02",
@@ -2240,7 +2647,27 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U01",
+                  "point": "現在完了"
+                },
+                {
+                  "unit_id": "JH-ENG-G1-U05",
+                  "point": "過去形"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U08",
+                  "point": "仮定法の時制"
+                },
+                {
+                  "unit_id": "HS-ENG-U10",
+                  "point": "英作文での時制の一貫性"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U03",
@@ -2257,7 +2684,19 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G2-U03",
+                  "point": "must / have to / should"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U08",
+                  "point": "仮定法の助動詞"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U04",
@@ -2274,7 +2713,19 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G2-U02",
+                  "point": "不定詞と動名詞"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U05",
+                  "point": "分詞構文"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U05",
@@ -2291,7 +2742,19 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U02",
+                  "point": "分詞の後置修飾"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U09",
+                  "point": "長文の読解"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U06",
@@ -2309,7 +2772,19 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U03",
+                  "point": "関係代名詞"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U10",
+                  "point": "英作文での名詞修飾"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U07",
@@ -2326,7 +2801,19 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G2-U04",
+                  "point": "比較"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-ENG-U09",
+                  "point": "論説文の比較表現"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U08",
@@ -2344,7 +2831,23 @@
                 "grammar"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U05",
+                  "point": "仮定法過去"
+                },
+                {
+                  "unit_id": "HS-ENG-U02",
+                  "point": "完了形"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "SS-ENG-U01",
+                  "point": "和訳での仮定法"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U09",
@@ -2361,7 +2864,23 @@
                 "reading"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U06",
+                  "point": "中学の長文読解"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-ENG-U01",
+                  "point": "共通テストのリーディング"
+                },
+                {
+                  "unit_id": "SS-ENG-U01",
+                  "point": "和訳・内容説明"
+                }
+              ]
             },
             {
               "unit_id": "HS-ENG-U10",
@@ -2378,7 +2897,19 @@
                 "writing"
               ],
               "subject": "english",
-              "course": "english_comm_1"
+              "course": "english_comm_1",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-ENG-G3-U07",
+                  "point": "条件英作文"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "SS-ENG-U02",
+                  "point": "自由英作文"
+                }
+              ]
             }
           ]
         },
@@ -2402,7 +2933,23 @@
                 "reading"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G3-U04",
+                  "point": "論説文の読解"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MOD-U01",
+                  "point": "評論の論理構造"
+                },
+                {
+                  "unit_id": "CT-JPN-U01",
+                  "point": "共通テスト現代文"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U02",
@@ -2419,7 +2966,19 @@
                 "reading"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G1-U05",
+                  "point": "文学的文章の読解"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MOD-U02",
+                  "point": "小説の表現と視点"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U03",
@@ -2437,7 +2996,27 @@
                 "grammar"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G2-U02",
+                  "point": "口語の用言の活用"
+                },
+                {
+                  "unit_id": "JH-JPN-G1-U06",
+                  "point": "歴史的仮名遣い"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-JPN-U04",
+                  "point": "助動詞の接続"
+                },
+                {
+                  "unit_id": "HS-CLS-U01",
+                  "point": "古文読解"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U04",
@@ -2454,7 +3033,27 @@
                 "grammar"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U03",
+                  "point": "用言の活用形"
+                },
+                {
+                  "unit_id": "JH-JPN-G3-U02",
+                  "point": "口語の助動詞"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-JPN-U05",
+                  "point": "敬語と読解"
+                },
+                {
+                  "unit_id": "HS-CLS-U01",
+                  "point": "古文読解"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U05",
@@ -2472,7 +3071,23 @@
                 "reading"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G2-U03",
+                  "point": "現代語の敬語"
+                },
+                {
+                  "unit_id": "HS-JPN-U04",
+                  "point": "助動詞"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CLS-U01",
+                  "point": "人物関係の把握"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U06",
@@ -2491,7 +3106,23 @@
                 "classics"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G2-U06",
+                  "point": "返り点・書き下し"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CLS-U03",
+                  "point": "漢文読解"
+                },
+                {
+                  "unit_id": "HS-CLS-U04",
+                  "point": "漢詩"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U07",
@@ -2508,7 +3139,19 @@
                 "vocabulary"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G3-U01",
+                  "point": "慣用句・四字熟語"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MOD-U01",
+                  "point": "評論語彙"
+                }
+              ]
             },
             {
               "unit_id": "HS-JPN-U08",
@@ -2525,7 +3168,19 @@
                 "writing"
               ],
               "subject": "japanese",
-              "course": "japanese_basic"
+              "course": "japanese_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G3-U06",
+                  "point": "条件作文"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MOD-U03",
+                  "point": "小論文"
+                }
+              ]
             }
           ]
         },
@@ -2551,7 +3206,27 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "physics_basic"
+              "course": "physics_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G3-U03",
+                  "point": "運動とエネルギー"
+                },
+                {
+                  "unit_id": "JH-MATH-G2-U03",
+                  "point": "一次関数とグラフ"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PHYB-U02",
+                  "point": "仕事とエネルギー"
+                },
+                {
+                  "unit_id": "HS-PHY-U01",
+                  "point": "運動量・円運動"
+                }
+              ]
             },
             {
               "unit_id": "HS-PHYB-U02",
@@ -2570,7 +3245,27 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "physics_basic"
+              "course": "physics_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-PHYB-U01",
+                  "point": "運動の法則"
+                },
+                {
+                  "unit_id": "JH-SCI-G3-U03",
+                  "point": "仕事"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PHY-U01",
+                  "point": "力学的エネルギーと運動量"
+                },
+                {
+                  "unit_id": "HS-PHY-U02",
+                  "point": "熱力学"
+                }
+              ]
             },
             {
               "unit_id": "HS-PHYB-U03",
@@ -2589,7 +3284,27 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "physics_basic"
+              "course": "physics_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G1-U03",
+                  "point": "音"
+                },
+                {
+                  "unit_id": "JH-SCI-G2-U03",
+                  "point": "電流"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PHY-U03",
+                  "point": "波動"
+                },
+                {
+                  "unit_id": "HS-PHY-U04",
+                  "point": "電磁気"
+                }
+              ]
             }
           ]
         },
@@ -2614,7 +3329,27 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "chemistry_basic"
+              "course": "chemistry_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G3-U01",
+                  "point": "イオン"
+                },
+                {
+                  "unit_id": "JH-SCI-G2-U01",
+                  "point": "原子・分子"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHEB-U02",
+                  "point": "物質量"
+                },
+                {
+                  "unit_id": "HS-CHE-U03",
+                  "point": "無機物質"
+                }
+              ]
             },
             {
               "unit_id": "HS-CHEB-U02",
@@ -2632,7 +3367,31 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "chemistry_basic"
+              "course": "chemistry_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHEB-U01",
+                  "point": "原子の構造と化学式"
+                },
+                {
+                  "unit_id": "JH-SCI-G2-U01",
+                  "point": "化学反応式・質量保存"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHEB-U03",
+                  "point": "中和・酸化還元の量的関係"
+                },
+                {
+                  "unit_id": "HS-CHE-U01",
+                  "point": "気体の法則"
+                },
+                {
+                  "unit_id": "HS-CHE-U02",
+                  "point": "反応エンタルピー"
+                }
+              ]
             },
             {
               "unit_id": "HS-CHEB-U03",
@@ -2651,7 +3410,23 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "chemistry_basic"
+              "course": "chemistry_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHEB-U02",
+                  "point": "物質量・モル濃度"
+                },
+                {
+                  "unit_id": "JH-SCI-G3-U01",
+                  "point": "酸・アルカリ"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHE-U02",
+                  "point": "電離平衡"
+                }
+              ]
             }
           ]
         },
@@ -2676,7 +3451,27 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "biology_basic"
+              "course": "biology_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G3-U02",
+                  "point": "細胞分裂・遺伝"
+                },
+                {
+                  "unit_id": "JH-SCI-G2-U02",
+                  "point": "細胞のつくり"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U01",
+                  "point": "細胞と分子"
+                },
+                {
+                  "unit_id": "HS-BIO-U03",
+                  "point": "遺伝情報の発現"
+                }
+              ]
             },
             {
               "unit_id": "HS-BIOB-U02",
@@ -2694,7 +3489,19 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "biology_basic"
+              "course": "biology_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G2-U02",
+                  "point": "刺激と反応・血液"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U04",
+                  "point": "神経と行動"
+                }
+              ]
             },
             {
               "unit_id": "HS-BIOB-U03",
@@ -2712,7 +3519,19 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "biology_basic"
+              "course": "biology_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G3-U05",
+                  "point": "食物連鎖"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U05",
+                  "point": "生態と進化"
+                }
+              ]
             }
           ]
         },
@@ -2737,7 +3556,14 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "earth_basic"
+              "course": "earth_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G1-U04",
+                  "point": "火山と地震"
+                }
+              ],
+              "extensions": []
             },
             {
               "unit_id": "HS-EARB-U02",
@@ -2755,7 +3581,18 @@
                 "knowledge"
               ],
               "subject": "science",
-              "course": "earth_basic"
+              "course": "earth_basic",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SCI-G2-U04",
+                  "point": "気象"
+                },
+                {
+                  "unit_id": "JH-SCI-G3-U04",
+                  "point": "地球と宇宙"
+                }
+              ],
+              "extensions": []
             }
           ]
         },
@@ -2780,7 +3617,19 @@
                 "knowledge"
               ],
               "subject": "social",
-              "course": "history_general"
+              "course": "history_general",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SOC-G2-U04",
+                  "point": "近代の日本と世界"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-HIST-U02",
+                  "point": "大衆化"
+                }
+              ]
             },
             {
               "unit_id": "HS-HIST-U02",
@@ -2798,7 +3647,23 @@
                 "knowledge"
               ],
               "subject": "social",
-              "course": "history_general"
+              "course": "history_general",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-HIST-U01",
+                  "point": "近代化"
+                },
+                {
+                  "unit_id": "JH-SOC-G3-U01",
+                  "point": "二度の世界大戦"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-HIST-U03",
+                  "point": "グローバル化"
+                }
+              ]
             },
             {
               "unit_id": "HS-HIST-U03",
@@ -2816,7 +3681,23 @@
                 "knowledge"
               ],
               "subject": "social",
-              "course": "history_general"
+              "course": "history_general",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-HIST-U02",
+                  "point": "国際秩序"
+                },
+                {
+                  "unit_id": "JH-SOC-G3-U02",
+                  "point": "現代の日本と世界"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-SOC-U01",
+                  "point": "史料読解"
+                }
+              ]
             }
           ]
         },
@@ -2841,7 +3722,19 @@
                 "data_interpretation"
               ],
               "subject": "social",
-              "course": "geography_general"
+              "course": "geography_general",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SOC-G1-U01",
+                  "point": "地図の図法"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-GEOG-U03",
+                  "point": "ハザードマップ"
+                }
+              ]
             },
             {
               "unit_id": "HS-GEOG-U02",
@@ -2858,7 +3751,14 @@
                 "data_interpretation"
               ],
               "subject": "social",
-              "course": "geography_general"
+              "course": "geography_general",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SOC-G1-U02",
+                  "point": "世界の生活と環境"
+                }
+              ],
+              "extensions": []
             },
             {
               "unit_id": "HS-GEOG-U03",
@@ -2875,7 +3775,14 @@
                 "data_interpretation"
               ],
               "subject": "social",
-              "course": "geography_general"
+              "course": "geography_general",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-GEOG-U01",
+                  "point": "地形図"
+                }
+              ],
+              "extensions": []
             }
           ]
         },
@@ -2900,7 +3807,19 @@
                 "thinking"
               ],
               "subject": "social",
-              "course": "public"
+              "course": "public",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SOC-G3-U03",
+                  "point": "現代社会の見方"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PUBL-U02",
+                  "point": "法・政治"
+                }
+              ]
             },
             {
               "unit_id": "HS-PUBL-U02",
@@ -2919,7 +3838,19 @@
                 "thinking"
               ],
               "subject": "social",
-              "course": "public"
+              "course": "public",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SOC-G3-U05",
+                  "point": "民主政治"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-SOC-U02",
+                  "point": "公共の資料読解"
+                }
+              ]
             },
             {
               "unit_id": "HS-PUBL-U03",
@@ -2938,7 +3869,883 @@
                 "thinking"
               ],
               "subject": "social",
-              "course": "public"
+              "course": "public",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-SOC-G3-U06",
+                  "point": "経済"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "SS-SOC-U01",
+                  "point": "政治経済の論述"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "math",
+          "course": "math_3",
+          "label": "数学Ⅲ",
+          "units": [
+            {
+              "unit_id": "HS-MATH3-U01",
+              "grade": "HS3",
+              "domain": "極限",
+              "title": "極限",
+              "topics": [
+                "数列の極限",
+                "無限等比級数",
+                "関数の極限",
+                "連続性"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅲ (1)",
+              "default_skills": [
+                "calculation",
+                "proof"
+              ],
+              "subject": "math",
+              "course": "math_3",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATHB-U01",
+                  "point": "数列・漸化式"
+                },
+                {
+                  "unit_id": "HS-MATH2-U05",
+                  "point": "指数関数"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U02",
+                  "point": "微分係数の定義"
+                },
+                {
+                  "unit_id": "HS-MATH3-U03",
+                  "point": "区分求積"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-MATH3-U02",
+              "grade": "HS3",
+              "domain": "微分法",
+              "title": "微分法とその応用",
+              "topics": [
+                "合成関数・逆関数の微分",
+                "三角・指数・対数関数の導関数",
+                "接線・法線",
+                "グラフの概形",
+                "速度・加速度"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅲ (2)",
+              "default_skills": [
+                "calculation",
+                "proof"
+              ],
+              "subject": "math",
+              "course": "math_3",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH3-U01",
+                  "point": "関数の極限"
+                },
+                {
+                  "unit_id": "HS-MATH2-U06",
+                  "point": "数学Ⅱの微分"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-MATH3-U03",
+                  "point": "積分との関係"
+                },
+                {
+                  "unit_id": "HS-PHY-U01",
+                  "point": "単振動の解析"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-MATH3-U03",
+              "grade": "HS3",
+              "domain": "積分法",
+              "title": "積分法とその応用",
+              "topics": [
+                "置換積分・部分積分",
+                "定積分と面積",
+                "体積",
+                "曲線の長さ"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅲ (3)",
+              "default_skills": [
+                "calculation",
+                "proof"
+              ],
+              "subject": "math",
+              "course": "math_3",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-MATH3-U02",
+                  "point": "導関数"
+                },
+                {
+                  "unit_id": "HS-MATH2-U06",
+                  "point": "定積分と面積"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "SS-MATH-U02",
+                  "point": "二次試験の求積問題"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "physics",
+          "label": "物理",
+          "units": [
+            {
+              "unit_id": "HS-PHY-U01",
+              "grade": "HS3",
+              "domain": "様々な運動",
+              "title": "力学（運動量・円運動・単振動・万有引力）",
+              "topics": [
+                "運動量保存",
+                "反発係数",
+                "等速円運動",
+                "単振動",
+                "万有引力"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理 (1)",
+              "default_skills": [
+                "calculation",
+                "thinking"
+              ],
+              "subject": "science",
+              "course": "physics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-PHYB-U01",
+                  "point": "運動方程式"
+                },
+                {
+                  "unit_id": "HS-PHYB-U02",
+                  "point": "エネルギー保存"
+                },
+                {
+                  "unit_id": "HS-MATH2-U04",
+                  "point": "三角関数"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PHY-U04",
+                  "point": "荷電粒子の運動"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-PHY-U02",
+              "grade": "HS3",
+              "domain": "熱",
+              "title": "熱力学",
+              "topics": [
+                "気体の状態方程式",
+                "気体分子運動論",
+                "熱力学第一法則"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理 (1)",
+              "default_skills": [
+                "calculation",
+                "thinking"
+              ],
+              "subject": "science",
+              "course": "physics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-PHYB-U02",
+                  "point": "熱と仕事"
+                },
+                {
+                  "unit_id": "HS-CHEB-U02",
+                  "point": "物質量"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHE-U01",
+                  "point": "気体の法則"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-PHY-U03",
+              "grade": "HS3",
+              "domain": "波",
+              "title": "波動",
+              "topics": [
+                "波の式",
+                "ドップラー効果",
+                "干渉",
+                "光の回折"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理 (2)",
+              "default_skills": [
+                "calculation",
+                "thinking"
+              ],
+              "subject": "science",
+              "course": "physics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-PHYB-U03",
+                  "point": "波の基本"
+                },
+                {
+                  "unit_id": "HS-MATH2-U04",
+                  "point": "三角関数"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PHY-U05",
+                  "point": "物質波"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-PHY-U04",
+              "grade": "HS3",
+              "domain": "電気と磁気",
+              "title": "電磁気",
+              "topics": [
+                "電場と電位",
+                "コンデンサー",
+                "電磁誘導",
+                "交流回路"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理 (3)",
+              "default_skills": [
+                "calculation",
+                "thinking"
+              ],
+              "subject": "science",
+              "course": "physics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-PHYB-U03",
+                  "point": "電気回路"
+                },
+                {
+                  "unit_id": "HS-PHY-U01",
+                  "point": "力学"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-PHY-U05",
+                  "point": "原子"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-PHY-U05",
+              "grade": "HS3",
+              "domain": "原子",
+              "title": "原子",
+              "topics": [
+                "光電効果",
+                "物質波",
+                "原子核と放射線"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理 (4)",
+              "default_skills": [
+                "calculation",
+                "thinking"
+              ],
+              "subject": "science",
+              "course": "physics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-PHY-U03",
+                  "point": "波動"
+                },
+                {
+                  "unit_id": "HS-PHY-U04",
+                  "point": "電磁気"
+                }
+              ],
+              "extensions": []
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "chemistry",
+          "label": "化学",
+          "units": [
+            {
+              "unit_id": "HS-CHE-U01",
+              "grade": "HS3",
+              "domain": "物質の状態と平衡",
+              "title": "物質の状態（気体・溶液）",
+              "topics": [
+                "気体の法則",
+                "蒸気圧",
+                "希薄溶液の性質"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学 (1)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHEB-U02",
+                  "point": "物質量"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHE-U02",
+                  "point": "化学平衡"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-CHE-U02",
+              "grade": "HS3",
+              "domain": "物質の変化と平衡",
+              "title": "化学反応とエネルギー・化学平衡",
+              "topics": [
+                "反応エンタルピー",
+                "反応速度",
+                "化学平衡",
+                "電離平衡"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学 (2)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHEB-U03",
+                  "point": "酸と塩基"
+                },
+                {
+                  "unit_id": "HS-CHE-U01",
+                  "point": "物質の状態"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHE-U03",
+                  "point": "無機物質の反応"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-CHE-U03",
+              "grade": "HS3",
+              "domain": "無機物質の性質",
+              "title": "無機物質",
+              "topics": [
+                "典型元素",
+                "遷移元素",
+                "イオンの分離"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学 (3)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHEB-U01",
+                  "point": "周期表"
+                },
+                {
+                  "unit_id": "HS-CHEB-U03",
+                  "point": "酸化還元"
+                }
+              ],
+              "extensions": []
+            },
+            {
+              "unit_id": "HS-CHE-U04",
+              "grade": "HS3",
+              "domain": "有機化合物の性質",
+              "title": "有機化合物",
+              "topics": [
+                "異性体",
+                "官能基",
+                "芳香族化合物"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学 (3)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHEB-U01",
+                  "point": "共有結合"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CHE-U05",
+                  "point": "高分子化合物"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-CHE-U05",
+              "grade": "HS3",
+              "domain": "高分子化合物",
+              "title": "高分子化合物",
+              "topics": [
+                "合成高分子",
+                "天然高分子"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学 (4)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-CHE-U04",
+                  "point": "有機化合物"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U01",
+                  "point": "タンパク質の構造"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "biology",
+          "label": "生物",
+          "units": [
+            {
+              "unit_id": "HS-BIO-U01",
+              "grade": "HS3",
+              "domain": "生物の進化（細胞・分子）",
+              "title": "細胞と分子",
+              "topics": [
+                "タンパク質の構造",
+                "酵素",
+                "膜輸送"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物 (2)",
+              "default_skills": [
+                "knowledge",
+                "experiment"
+              ],
+              "subject": "science",
+              "course": "biology",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-BIOB-U01",
+                  "point": "細胞と遺伝子"
+                },
+                {
+                  "unit_id": "HS-CHEB-U01",
+                  "point": "化学結合"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U02",
+                  "point": "代謝"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-BIO-U02",
+              "grade": "HS3",
+              "domain": "代謝",
+              "title": "代謝",
+              "topics": [
+                "呼吸",
+                "光合成",
+                "窒素同化"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物 (2)",
+              "default_skills": [
+                "knowledge",
+                "experiment"
+              ],
+              "subject": "science",
+              "course": "biology",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-BIOB-U01",
+                  "point": "代謝とATP"
+                },
+                {
+                  "unit_id": "HS-BIO-U01",
+                  "point": "酵素"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U05",
+                  "point": "物質循環"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-BIO-U03",
+              "grade": "HS3",
+              "domain": "遺伝情報の発現と発生",
+              "title": "遺伝情報の発現と発生",
+              "topics": [
+                "転写調節",
+                "発生のしくみ",
+                "遺伝子工学"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物 (3)",
+              "default_skills": [
+                "knowledge",
+                "experiment"
+              ],
+              "subject": "science",
+              "course": "biology",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-BIOB-U01",
+                  "point": "セントラルドグマ"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-BIO-U05",
+                  "point": "進化"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-BIO-U04",
+              "grade": "HS3",
+              "domain": "生物の環境応答",
+              "title": "生物の環境応答",
+              "topics": [
+                "神経と行動",
+                "植物の環境応答"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物 (4)",
+              "default_skills": [
+                "knowledge",
+                "experiment"
+              ],
+              "subject": "science",
+              "course": "biology",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-BIOB-U02",
+                  "point": "神経とホルモン"
+                }
+              ],
+              "extensions": []
+            },
+            {
+              "unit_id": "HS-BIO-U05",
+              "grade": "HS3",
+              "domain": "生態と環境",
+              "title": "生態と環境・生物の進化",
+              "topics": [
+                "個体群",
+                "生物群集",
+                "進化のしくみ",
+                "系統"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物 (1)(5)",
+              "default_skills": [
+                "knowledge",
+                "experiment"
+              ],
+              "subject": "science",
+              "course": "biology",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-BIOB-U03",
+                  "point": "生態系"
+                },
+                {
+                  "unit_id": "HS-BIO-U03",
+                  "point": "遺伝子"
+                }
+              ],
+              "extensions": []
+            }
+          ]
+        },
+        {
+          "subject": "japanese",
+          "course": "classics",
+          "label": "古典探究",
+          "units": [
+            {
+              "unit_id": "HS-CLS-U01",
+              "grade": "HS2",
+              "domain": "古典探究 読むこと",
+              "title": "古文読解（物語・日記・随筆）",
+              "topics": [
+                "主語の判定",
+                "敬語と人物関係",
+                "心情の読解"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 古典探究 A",
+              "default_skills": [
+                "classics",
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "classics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U04",
+                  "point": "助動詞"
+                },
+                {
+                  "unit_id": "HS-JPN-U05",
+                  "point": "敬語"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-JPN-U02",
+                  "point": "共通テスト古文"
+                },
+                {
+                  "unit_id": "SS-JPN-U02",
+                  "point": "古文記述"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-CLS-U02",
+              "grade": "HS2",
+              "domain": "古典探究 読むこと",
+              "title": "和歌と修辞",
+              "topics": [
+                "掛詞・縁語・序詞",
+                "歌の解釈"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 古典探究 A",
+              "default_skills": [
+                "classics",
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "classics",
+              "prerequisites": [
+                {
+                  "unit_id": "JH-JPN-G3-U03",
+                  "point": "和歌の基礎"
+                },
+                {
+                  "unit_id": "HS-JPN-U04",
+                  "point": "助動詞"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CLS-U01",
+                  "point": "物語中の和歌"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-CLS-U03",
+              "grade": "HS2",
+              "domain": "古典探究 読むこと",
+              "title": "漢文読解（史伝・思想）",
+              "topics": [
+                "句法の総合",
+                "思想の読解"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 古典探究 A",
+              "default_skills": [
+                "classics",
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "classics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U06",
+                  "point": "漢文句法"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-JPN-U02",
+                  "point": "共通テスト漢文"
+                },
+                {
+                  "unit_id": "SS-JPN-U02",
+                  "point": "漢文記述"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-CLS-U04",
+              "grade": "HS2",
+              "domain": "古典探究 読むこと",
+              "title": "漢詩",
+              "topics": [
+                "詩形と押韻",
+                "対句",
+                "鑑賞"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 古典探究 A",
+              "default_skills": [
+                "classics",
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "classics",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U06",
+                  "point": "訓読"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "HS-CLS-U03",
+                  "point": "漢文読解"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "japanese",
+          "course": "modern_japanese",
+          "label": "論理国語・文学国語（現代文）",
+          "units": [
+            {
+              "unit_id": "HS-MOD-U01",
+              "grade": "HS2",
+              "domain": "論理国語 読むこと",
+              "title": "評論読解（論理構造の把握）",
+              "topics": [
+                "論証の構造",
+                "複数の文章の比較"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 論理国語",
+              "default_skills": [
+                "reading",
+                "essay"
+              ],
+              "subject": "japanese",
+              "course": "modern_japanese",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U01",
+                  "point": "評論の読解"
+                },
+                {
+                  "unit_id": "HS-JPN-U07",
+                  "point": "評論語彙"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "CT-JPN-U01",
+                  "point": "共通テスト現代文"
+                },
+                {
+                  "unit_id": "SS-JPN-U01",
+                  "point": "現代文記述"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-MOD-U02",
+              "grade": "HS2",
+              "domain": "文学国語 読むこと",
+              "title": "小説読解（表現と心情）",
+              "topics": [
+                "語りと視点",
+                "表現の効果"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 文学国語",
+              "default_skills": [
+                "reading",
+                "essay"
+              ],
+              "subject": "japanese",
+              "course": "modern_japanese",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U02",
+                  "point": "小説の読解"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "SS-JPN-U01",
+                  "point": "表現の説明問題"
+                }
+              ]
+            },
+            {
+              "unit_id": "HS-MOD-U03",
+              "grade": "HS2",
+              "domain": "論理国語 書くこと",
+              "title": "小論文",
+              "topics": [
+                "課題文型",
+                "資料型",
+                "論証の型"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 論理国語",
+              "default_skills": [
+                "reading",
+                "essay"
+              ],
+              "subject": "japanese",
+              "course": "modern_japanese",
+              "prerequisites": [
+                {
+                  "unit_id": "HS-JPN-U08",
+                  "point": "論理的な文章を書く"
+                }
+              ],
+              "extensions": [
+                {
+                  "unit_id": "SS-SOC-U01",
+                  "point": "論述問題"
+                }
+              ]
             }
           ]
         }

@@ -169,6 +169,43 @@ def expand_item(spec: dict, item: dict, n: int) -> dict:
             q["calc_check"]["compare"] = c[2]
         if len(c) > 3:
             q["calc_check"]["target"] = c[3]
+    # --- 版2.0：問題プリント用の拡張項目 ---
+    if item.get("lvl"):
+        q["exercise_level"] = item["lvl"]
+    if item.get("ps"):
+        q["perspectives"] = list(dict.fromkeys(item["ps"]))
+    if item.get("vg"):
+        q["variant_group"] = item["vg"]
+    if item.get("rel"):
+        q["related_units"] = list(item["rel"])
+    if item.get("ap"):
+        ed = {"approach": item["ap"], "steps": list(item.get("steps") or [item["e"]])}
+        if item.get("alt"):
+            ed["alternatives"] = list(item["alt"])
+        if item.get("pc"):
+            ed["partial_credit"] = [{"point": a, "points": b} for a, b in item["pc"]]
+        if item.get("pit"):
+            ed["pitfalls"] = list(item["pit"])
+        if item.get("ver"):
+            ed["verification"] = item["ver"]
+        q["explanation_detail"] = ed
+    if item.get("why") and q.get("choices"):
+        by_text = {c["text"]: c["label"] for c in q["choices"]}
+        correct = q["answer"]["value"] if isinstance(q["answer"]["value"], list) else [q["answer"]["value"]]
+        da = []
+        for text, reason in item["why"].items():
+            lab = by_text.get(text)
+            if lab is None:
+                raise ValueError(f"{qid}: 誤答分析の選択肢「{text}」が選択肢にありません")
+            if lab in correct:
+                raise ValueError(f"{qid}: 正答の選択肢に誤答分析が付いています")
+            da.append({"label": lab, "why_wrong": reason[0] if isinstance(reason, tuple) else reason}
+                      | ({"misconception": reason[1]} if isinstance(reason, tuple) else {}))
+        q["distractor_analysis"] = sorted(da, key=lambda x: labels.index(x["label"]) if x["label"] in labels else 99)
+    if item.get("err"):
+        e = item["err"]
+        q["error_analysis"] = {"erroneous_solution": e["sol"], "error_step": e["step"], "error_type": e["type"],
+                               "why_tempting": e["tempt"], "correction": e["fix"]}
     if item.get("tags"):
         q["tags"] = list(item["tags"])
     q["verification"] = {"status": "draft"}
@@ -183,7 +220,7 @@ def expand_item(spec: dict, item: dict, n: int) -> dict:
 
 def expand_set(spec: dict) -> dict:
     data = {
-        "schema_version": SCHEMA_VERSION,
+        "schema_version": spec.get("schema_version", SCHEMA_VERSION),
         "set_id": spec["set_id"],
         "title": spec["title"],
     }
@@ -200,18 +237,16 @@ def expand_set(spec: dict) -> dict:
         data["course"] = spec["course"]
     data["grade"] = spec["grade"]
     data["unit_ids"] = spec["unit_ids"]
-    for key in ("time_limit_minutes", "instructions", "exam_spec", "sections", "stimuli", "build"):
+    for key in ("print_type", "pack_id", "pair_set_id", "unit_context", "lesson", "exercise_plan",
+                "time_limit_minutes", "instructions", "exam_spec", "sections", "stimuli", "build"):
         if spec.get(key):
             data[key] = copy.deepcopy(spec[key])
     data["questions"] = [expand_item(spec, it, i) for i, it in enumerate(spec["items"], 1)]
-    if spec.get("total_points") is True:
-        data["total_points"] = sum(q["scoring"]["points"] for q in data["questions"])
-    elif spec.get("total_points"):
-        data["total_points"] = spec["total_points"]
-    else:
-        data["total_points"] = sum(q["scoring"]["points"] for q in data["questions"])
-    if spec.get("track") == "mock_exam" or spec.get("total_points"):
-        pass
+    if data["questions"]:
+        if spec.get("total_points") and spec["total_points"] is not True:
+            data["total_points"] = spec["total_points"]
+        else:
+            data["total_points"] = sum(q["scoring"]["points"] for q in data["questions"])
     data["copyright"] = {
         "status": spec.get("copyright_status", "original"),
         "holder": COPYRIGHT_HOLDER,
@@ -237,13 +272,15 @@ def set_hash(data: dict) -> str:
     return hashlib.sha256(json.dumps(body, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
-def merge_with_existing(new: dict, path: Path, phase: int, today: str, note: str | None = None) -> tuple[dict, str]:
+def merge_with_existing(new: dict, path: Path, phase, today: str, note: str | None = None, author: str | None = None) -> tuple[dict, str]:
     """既存ファイルと比較して revision_history を更新する。戻り値の第2要素は変更概要。"""
     h = set_hash(new)
+    author = author or f"{GENERATOR}（フェーズ{phase}）"
     if not path.exists():
         new["revision_history"] = [{
-            "version": "1.0.0", "date": today, "author": f"{GENERATOR}（フェーズ{phase}）",
-            "changes": f"初版作成（{len(new['questions'])}問）。自動検査（スキーマ・重複・検算）実施予定。",
+            "version": "1.0.0", "date": today, "author": author,
+            "changes": (f"初版作成（{len(new['questions'])}問）。自動検査（スキーマ・重複・検算）実施予定。" if new["questions"]
+                        else "初版作成。自動検査（スキーマ・構成）実施予定。"),
             "content_hash": h,
         }]
         return new, "new"
@@ -283,7 +320,7 @@ def merge_with_existing(new: dict, path: Path, phase: int, today: str, note: str
     if note:
         changes = f"{note}：{changes}"
     new["revision_history"] = hist + [{
-        "version": version, "date": today, "author": f"{GENERATOR}（フェーズ{phase}）",
+        "version": version, "date": today, "author": author,
         "changes": changes, "content_hash": h,
     }]
     return new, "updated"

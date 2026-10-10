@@ -1,0 +1,82 @@
+{% extends "_layout.html" %}
+{% from "_macros.html" import figure_block, table_block, answer_space, stimulus_block %}
+{% from "_pack_macros.html" import pack_header, unit_context %}
+{#
+  問題プリント（print_type = exercise）
+  kind = "questions"：問題冊子（A 基本確認／B 標準演習／C 思考力・記述応用／D 典型誤答訂正）
+  kind = "answers"  ：解答解説冊子（正答・思考の糸口・解法の手順・別解・部分点・誤答分析・典型ミス・検算）
+#}
+{% set answers = kind == 'answers' %}
+{% block body %}
+{{ pack_header(qs, units, '問題プリント', '解答・詳細解説' if answers else '問題', 'teacher' if answers else 'questions') }}
+{% if not answers %}{{ unit_context(qs.unit_context) }}{% endif %}
+
+<div class="plan">
+  {% for lv, n in qs.exercise_plan.items() %}<div><b>{{ lv | level_label }}</b>{{ n }} 問</div>{% endfor %}
+</div>
+
+{% if qs.instructions and not answers %}
+<ol class="instructions">{% for i in qs.instructions %}<li>{{ i | rich_inline }}</li>{% endfor %}</ol>
+{% endif %}
+
+{% if answers %}
+<section class="section">
+  <h2>解答一覧</h2>
+  <table class="answer-key"><thead><tr><th>番号</th><th>正答</th><th>配点</th></tr></thead><tbody>
+  {% for g in groups %}{% for item in g['items'] if item.kind == 'question' %}{% set q = item.question %}
+    <tr><td class="num">{{ q._number }}</td><td><span class="ans">{{ q | answer_display | truncate_plain(70) | rich_inline }}</span></td><td class="pts">{{ q.scoring.points | num }}</td></tr>
+  {% endfor %}{% endfor %}
+  <tr class="total"><td class="num">合計</td><td></td><td class="pts">{{ qs.total_points | num }}</td></tr>
+  </tbody></table>
+</section>
+{% endif %}
+
+{% for g in groups %}
+<section class="section{% if answers and not loop.first %} page-break{% endif %}">
+  {% if g.section %}<h2>{{ g.section.title }}</h2>{% if g.section.instructions and not answers %}<p class="section-instructions">{{ g.section.instructions | rich_inline }}</p>{% endif %}{% endif %}
+  {% for item in g['items'] %}
+  {% if item.kind == 'question' %}{% set q = item.question %}{% set ed = q.explanation_detail or {} %}
+  <article class="{{ 'exp-item' if answers else 'question' }}{% if q._long or (answers and q._long_exp) %} long{% endif %}" id="{{ q.id }}">
+    <div class="q-head">
+      <span class="q-num lv">{{ q._number }}</span>
+      <div class="q-stem">
+        {% if answers %}<span class="label">正答</span><span class="ans">{{ q | answer_display | rich_inline }}</span>
+        {% else %}<div class="stem-text">{{ q.stem | rich_block }}</div>{% endif %}
+      </div>
+      <span class="q-meta">{{ q.scoring.points | num }}点</span>
+    </div>
+    <div class="q-body">
+      <span class="ptags">{% for p in q.perspectives %}<span class="ptag">{{ p | perspective_label }}</span>{% endfor %}{% for u in q.related_units or [] %}<span class="ptag">関連 {{ u }}</span>{% endfor %}</span>
+      {% if answers %}
+        <div class="q-recap">{{ q.stem | truncate_plain(110) | rich_inline }}</div>
+        <div class="detail">
+          <div class="row"><span class="k ap">思考の糸口</span>{{ ed.approach | rich_inline }}</div>
+          <div class="row"><span class="k st">解法</span><ol>{% for s in ed.steps %}<li>{{ s | rich_inline }}</li>{% endfor %}</ol></div>
+          {% if q.error_analysis %}{% set e = q.error_analysis %}
+          <div class="errbox"><div class="t">誤答分析（{{ e.error_type | error_type_label }}）</div>
+            <div>誤りの箇所：{{ e.error_step | rich_inline }}</div>
+            <div>なぜ誤りやすいか：{{ e.why_tempting | rich_inline }}</div>
+            <div>正しい解答：{{ e.correction | rich_inline }}</div></div>
+          {% endif %}
+          {% if q.distractor_analysis %}
+          <div class="row"><span class="k da">選択肢の分析</span>
+            <table class="dist">{% for d in q.distractor_analysis %}<tr><td class="lb">{{ d.label }}</td><td>{{ d.why_wrong | rich_inline }}{% if d.misconception %}<div class="mis">誤概念：{{ d.misconception }}</div>{% endif %}</td></tr>{% endfor %}</table></div>
+          {% endif %}
+          {% if ed.alternatives %}<div class="row"><span class="k alt">別解・別の確かめ方</span><ul>{% for a in ed.alternatives %}<li>{{ a | rich_inline }}</li>{% endfor %}</ul></div>{% endif %}
+          {% if ed.partial_credit %}<div class="row"><span class="k pc">部分点のポイント</span><ul>{% for p in ed.partial_credit %}<li>{{ p.point | rich_inline }}（{{ p.points | num }}点）</li>{% endfor %}</ul></div>{% endif %}
+          {% if ed.pitfalls %}<div class="row"><span class="k pit">よくあるミス</span><ul>{% for p in ed.pitfalls %}<li>{{ p | rich_inline }}</li>{% endfor %}</ul></div>{% endif %}
+          {% if ed.verification %}<div class="row"><span class="k ver">検算</span>{{ ed.verification | rich_inline }}</div>{% endif %}
+        </div>
+      {% else %}
+        {% if q.figure %}{{ figure_block(q.figure) }}{% endif %}
+        {% if q.table %}{{ table_block(q.table) }}{% endif %}
+        {% if q.choices %}<ul class="choices cols-{{ q._cols }}">{% for c in q.choices %}<li><span class="label">{{ c.label }}</span><span>{{ c.text | rich_inline }}</span></li>{% endfor %}</ul>{% endif %}
+        {{ answer_space(q) }}
+      {% endif %}
+    </div>
+  </article>
+  {% endif %}
+  {% endfor %}
+</section>
+{% endfor %}
+{% endblock %}

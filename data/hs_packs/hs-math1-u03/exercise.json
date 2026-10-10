@@ -1,0 +1,5585 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U03-EX",
+  "title": "二次関数　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U03"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH1-U03-PACK",
+  "pair_set_id": "HS-MATH1-U03-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G3-U04",
+        "point": "y=ax^2 のグラフ",
+        "title": "関数 y=ax^2"
+      },
+      {
+        "unit_id": "HS-MATH1-U01",
+        "point": "平方完成・因数分解・不等式",
+        "title": "数と式"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U03",
+        "point": "二次方程式の解法",
+        "title": "二次方程式"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH2-U03",
+        "point": "放物線と直線・領域",
+        "title": "図形と方程式"
+      },
+      {
+        "unit_id": "HS-MATH2-U06",
+        "point": "3次関数の増減と最大・最小",
+        "title": "微分法・積分法"
+      },
+      {
+        "unit_id": "CT-MATH1A-U01",
+        "point": "日常の事象の最大化",
+        "title": "数学Ⅰ・A　数と式・二次関数・図形と計量"
+      }
+    ],
+    "readiness_check": [
+      "$y=ax^2$ のグラフ（中学3年）をかける。",
+      "乗法公式 $(x+m)^2=x^2+2mx+m^2$ を使える。",
+      "因数分解と二次方程式の解の公式を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U03-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=2x^2-4x-2$ の頂点の座標と軸の方程式を求めなさい。",
+      "answer": {
+        "value": "頂点 $(1,\\,-4)$、軸 $x=1$",
+        "accepted": [
+          "(1,-4), x=1"
+        ]
+      },
+      "explanation": "平方完成すると $y=2(x-1)^2-4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[solve(diff((2)*x**2+(-4)*x+(-2), x), x)[0], (2)*(1)**2+(-4)*(1)+(-2)]",
+        "expected": "[1, -4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex",
+      "explanation_detail": {
+        "approach": "頂点・軸は基本形 $a(x-p)^2+q$ から読み取れるので、平方完成する。",
+        "steps": [
+          "$x$ を含む項を $x^2$ の係数 $2$ でくくる。",
+          "$x$ の係数の半分の2乗を足して引き、$y=2(x-1)^2-4$ とする。",
+          "頂点 $(1,\\,-4)$、軸 $x=1$。"
+        ],
+        "alternatives": [
+          "軸は公式 $x=-\\dfrac{b}{2a}=-\\dfrac{-4}{2\\cdot2}=1$。頂点の $y$ 座標は $x=1$ を代入して $-4$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成の途中式が正しい",
+            "points": 1
+          },
+          {
+            "point": "頂点と軸を両方正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(x-p)^2$ の符号を逆にして頂点を $(-p,\\,q)$ とする誤り。",
+          "軸を「$x=1$」の方程式で書かない誤り。"
+        ],
+        "verification": "$x=1$ を元の式に代入して $y=-4$ になることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-x^2+6x-3$ の頂点の座標と軸の方程式を求めなさい。",
+      "answer": {
+        "value": "頂点 $(3,\\,6)$、軸 $x=3$",
+        "accepted": [
+          "(3,6), x=3"
+        ]
+      },
+      "explanation": "平方完成すると $y=-(x-3)^2+6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[solve(diff((-1)*x**2+(6)*x+(-3), x), x)[0], (-1)*(3)**2+(6)*(3)+(-3)]",
+        "expected": "[3, 6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex",
+      "explanation_detail": {
+        "approach": "頂点・軸は基本形 $a(x-p)^2+q$ から読み取れるので、平方完成する。",
+        "steps": [
+          "$x$ を含む項を $x^2$ の係数 $-1$ でくくる。",
+          "$x$ の係数の半分の2乗を足して引き、$y=-(x-3)^2+6$ とする。",
+          "頂点 $(3,\\,6)$、軸 $x=3$。"
+        ],
+        "alternatives": [
+          "軸は公式 $x=-\\dfrac{b}{2a}=-\\dfrac{6}{2\\cdot-1}=3$。頂点の $y$ 座標は $x=3$ を代入して $6$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成の途中式が正しい",
+            "points": 1
+          },
+          {
+            "point": "頂点と軸を両方正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(x-p)^2$ の符号を逆にして頂点を $(-p,\\,q)$ とする誤り。",
+          "軸を「$x=3$」の方程式で書かない誤り。"
+        ],
+        "verification": "$x=3$ を元の式に代入して $y=6$ になることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=x^2+4x+1$ の頂点の座標と軸の方程式を求めなさい。",
+      "answer": {
+        "value": "頂点 $(-2,\\,-3)$、軸 $x=-2$",
+        "accepted": [
+          "(-2,-3), x=-2"
+        ]
+      },
+      "explanation": "平方完成すると $y=(x+2)^2-3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[solve(diff((1)*x**2+(4)*x+(1), x), x)[0], (1)*(-2)**2+(4)*(-2)+(1)]",
+        "expected": "[-2, -3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex",
+      "explanation_detail": {
+        "approach": "頂点・軸は基本形 $a(x-p)^2+q$ から読み取れるので、平方完成する。",
+        "steps": [
+          "$x^2$ の係数は 1 なので、そのまま平方完成する。",
+          "$x$ の係数の半分の2乗を足して引き、$y=(x+2)^2-3$ とする。",
+          "頂点 $(-2,\\,-3)$、軸 $x=-2$。"
+        ],
+        "alternatives": [
+          "軸は公式 $x=-\\dfrac{b}{2a}=-\\dfrac{4}{2\\cdot1}=-2$。頂点の $y$ 座標は $x=-2$ を代入して $-3$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成の途中式が正しい",
+            "points": 1
+          },
+          {
+            "point": "頂点と軸を両方正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(x-p)^2$ の符号を逆にして頂点を $(-p,\\,q)$ とする誤り。",
+          "軸を「$x=-2$」の方程式で書かない誤り。"
+        ],
+        "verification": "$x=-2$ を元の式に代入して $y=-3$ になることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=3x^2+3$ の頂点の座標と軸の方程式を求めなさい。",
+      "answer": {
+        "value": "頂点 $(0,\\,3)$、軸 $x=0$",
+        "accepted": [
+          "(0,3), x=0"
+        ]
+      },
+      "explanation": "平方完成すると $y=3x^2+3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[solve(diff((3)*x**2+(0)*x+(3), x), x)[0], (3)*(0)**2+(0)*(0)+(3)]",
+        "expected": "[0, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex",
+      "explanation_detail": {
+        "approach": "頂点・軸は基本形 $a(x-p)^2+q$ から読み取れるので、平方完成する。",
+        "steps": [
+          "$x$ を含む項を $x^2$ の係数 $3$ でくくる。",
+          "$x$ の係数の半分の2乗を足して引き、$y=3x^2+3$ とする。",
+          "頂点 $(0,\\,3)$、軸 $x=0$。"
+        ],
+        "alternatives": [
+          "軸は公式 $x=-\\dfrac{b}{2a}=-\\dfrac{0}{2\\cdot3}=0$。頂点の $y$ 座標は $x=0$ を代入して $3$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成の途中式が正しい",
+            "points": 1
+          },
+          {
+            "point": "頂点と軸を両方正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(x-p)^2$ の符号を逆にして頂点を $(-p,\\,q)$ とする誤り。",
+          "軸を「$x=0$」の方程式で書かない誤り。"
+        ],
+        "verification": "$x=0$ を元の式に代入して $y=3$ になることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=x^2-2x-3$ の頂点の座標と軸の方程式を求めなさい。",
+      "answer": {
+        "value": "頂点 $(1,\\,-4)$、軸 $x=1$",
+        "accepted": [
+          "(1,-4), x=1"
+        ]
+      },
+      "explanation": "平方完成すると $y=(x-1)^2-4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[solve(diff((1)*x**2+(-2)*x+(-3), x), x)[0], (1)*(1)**2+(-2)*(1)+(-3)]",
+        "expected": "[1, -4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex",
+      "explanation_detail": {
+        "approach": "頂点・軸は基本形 $a(x-p)^2+q$ から読み取れるので、平方完成する。",
+        "steps": [
+          "$x^2$ の係数は 1 なので、そのまま平方完成する。",
+          "$x$ の係数の半分の2乗を足して引き、$y=(x-1)^2-4$ とする。",
+          "頂点 $(1,\\,-4)$、軸 $x=1$。"
+        ],
+        "alternatives": [
+          "軸は公式 $x=-\\dfrac{b}{2a}=-\\dfrac{-2}{2\\cdot1}=1$。頂点の $y$ 座標は $x=1$ を代入して $-4$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成の途中式が正しい",
+            "points": 1
+          },
+          {
+            "point": "頂点と軸を両方正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(x-p)^2$ の符号を逆にして頂点を $(-p,\\,q)$ とする誤り。",
+          "軸を「$x=1$」の方程式で書かない誤り。"
+        ],
+        "verification": "$x=1$ を元の式に代入して $y=-4$ になることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-x^2+8x-18$ の頂点の座標と軸の方程式を求めなさい。",
+      "answer": {
+        "value": "頂点 $(4,\\,-2)$、軸 $x=4$",
+        "accepted": [
+          "(4,-2), x=4"
+        ]
+      },
+      "explanation": "平方完成すると $y=-(x-4)^2-2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[solve(diff((-1)*x**2+(8)*x+(-18), x), x)[0], (-1)*(4)**2+(8)*(4)+(-18)]",
+        "expected": "[4, -2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex",
+      "explanation_detail": {
+        "approach": "頂点・軸は基本形 $a(x-p)^2+q$ から読み取れるので、平方完成する。",
+        "steps": [
+          "$x$ を含む項を $x^2$ の係数 $-1$ でくくる。",
+          "$x$ の係数の半分の2乗を足して引き、$y=-(x-4)^2-2$ とする。",
+          "頂点 $(4,\\,-2)$、軸 $x=4$。"
+        ],
+        "alternatives": [
+          "軸は公式 $x=-\\dfrac{b}{2a}=-\\dfrac{8}{2\\cdot-1}=4$。頂点の $y$ 座標は $x=4$ を代入して $-2$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成の途中式が正しい",
+            "points": 1
+          },
+          {
+            "point": "頂点と軸を両方正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(x-p)^2$ の符号を逆にして頂点を $(-p,\\,q)$ とする誤り。",
+          "軸を「$x=4$」の方程式で書かない誤り。"
+        ],
+        "verification": "$x=4$ を元の式に代入して $y=-2$ になることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=2(x-5)^2-5$ について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "頂点 $(5,\\,-5)$、上に凸"
+        },
+        {
+          "label": "イ",
+          "text": "頂点 $(5,\\,-5)$、下に凸"
+        },
+        {
+          "label": "ウ",
+          "text": "頂点 $(-5,\\,-5)$、下に凸"
+        },
+        {
+          "label": "エ",
+          "text": "頂点 $(5,\\,5)$、下に凸"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$y=a(x-p)^2+q$ の頂点は $(p,\\,q)$。$a=2$ ＞ 0 なので下に凸。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-read_vform",
+      "explanation_detail": {
+        "approach": "基本形の $p,\\ q$ と $a$ の符号を読むだけでよい。式の符号と座標の符号の対応に注意する。",
+        "steps": [
+          "$x-5=x-(5)$ なので $p=5$。",
+          "定数項から $q=-5$。",
+          "$a=2$ の符号から下に凸。"
+        ],
+        "alternatives": [
+          "$x=5$ を代入すると $(x-p)^2=0$ となり $y=-5$。ここが最小（または最大）の点なので頂点と確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点の符号を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "グラフの向きを正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$a=2$ の符号とグラフの向きの対応が逆。$a>0$ で下に凸、$a<0$ で上に凸。",
+          "misconception": "凸の向きの混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$x$ 座標の符号を逆に読んでいる。$(x-p)^2$ の形では、かっこ内の符号と頂点の $x$ 座標の符号は逆になる。",
+          "misconception": "かっこ内の数をそのまま座標とする"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$y$ 座標の符号を逆にしている。定数項 $q$ はそのまま頂点の $y$ 座標になる。",
+          "misconception": "定数項の符号の誤読"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=4(x-4)^2+4$ について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "頂点 $(-4,\\,4)$、下に凸"
+        },
+        {
+          "label": "イ",
+          "text": "頂点 $(4,\\,4)$、下に凸"
+        },
+        {
+          "label": "ウ",
+          "text": "頂点 $(4,\\,4)$、上に凸"
+        },
+        {
+          "label": "エ",
+          "text": "頂点 $(4,\\,-4)$、下に凸"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$y=a(x-p)^2+q$ の頂点は $(p,\\,q)$。$a=4$ ＞ 0 なので下に凸。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-read_vform",
+      "explanation_detail": {
+        "approach": "基本形の $p,\\ q$ と $a$ の符号を読むだけでよい。式の符号と座標の符号の対応に注意する。",
+        "steps": [
+          "$x-4=x-(4)$ なので $p=4$。",
+          "定数項から $q=4$。",
+          "$a=4$ の符号から下に凸。"
+        ],
+        "alternatives": [
+          "$x=4$ を代入すると $(x-p)^2=0$ となり $y=4$。ここが最小（または最大）の点なので頂点と確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点の符号を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "グラフの向きを正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x$ 座標の符号を逆に読んでいる。$(x-p)^2$ の形では、かっこ内の符号と頂点の $x$ 座標の符号は逆になる。",
+          "misconception": "かっこ内の数をそのまま座標とする"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$a=4$ の符号とグラフの向きの対応が逆。$a>0$ で下に凸、$a<0$ で上に凸。",
+          "misconception": "凸の向きの混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$y$ 座標の符号を逆にしている。定数項 $q$ はそのまま頂点の $y$ 座標になる。",
+          "misconception": "定数項の符号の誤読"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=2(x-2)^2-4$ について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "頂点 $(-2,\\,-4)$、下に凸"
+        },
+        {
+          "label": "イ",
+          "text": "頂点 $(2,\\,-4)$、上に凸"
+        },
+        {
+          "label": "ウ",
+          "text": "頂点 $(2,\\,-4)$、下に凸"
+        },
+        {
+          "label": "エ",
+          "text": "頂点 $(2,\\,4)$、下に凸"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$y=a(x-p)^2+q$ の頂点は $(p,\\,q)$。$a=2$ ＞ 0 なので下に凸。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-read_vform",
+      "explanation_detail": {
+        "approach": "基本形の $p,\\ q$ と $a$ の符号を読むだけでよい。式の符号と座標の符号の対応に注意する。",
+        "steps": [
+          "$x-2=x-(2)$ なので $p=2$。",
+          "定数項から $q=-4$。",
+          "$a=2$ の符号から下に凸。"
+        ],
+        "alternatives": [
+          "$x=2$ を代入すると $(x-p)^2=0$ となり $y=-4$。ここが最小（または最大）の点なので頂点と確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点の符号を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "グラフの向きを正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x$ 座標の符号を逆に読んでいる。$(x-p)^2$ の形では、かっこ内の符号と頂点の $x$ 座標の符号は逆になる。",
+          "misconception": "かっこ内の数をそのまま座標とする"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$a=2$ の符号とグラフの向きの対応が逆。$a>0$ で下に凸、$a<0$ で上に凸。",
+          "misconception": "凸の向きの混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$y$ 座標の符号を逆にしている。定数項 $q$ はそのまま頂点の $y$ 座標になる。",
+          "misconception": "定数項の符号の誤読"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=-2(x+1)^2-6$ について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "頂点 $(1,\\,-6)$、上に凸"
+        },
+        {
+          "label": "イ",
+          "text": "頂点 $(-1,\\,-6)$、下に凸"
+        },
+        {
+          "label": "ウ",
+          "text": "頂点 $(-1,\\,-6)$、上に凸"
+        },
+        {
+          "label": "エ",
+          "text": "頂点 $(-1,\\,6)$、上に凸"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$y=a(x-p)^2+q$ の頂点は $(p,\\,q)$。$a=-2$ ＜ 0 なので上に凸。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-read_vform",
+      "explanation_detail": {
+        "approach": "基本形の $p,\\ q$ と $a$ の符号を読むだけでよい。式の符号と座標の符号の対応に注意する。",
+        "steps": [
+          "$x+1=x-(-1)$ なので $p=-1$。",
+          "定数項から $q=-6$。",
+          "$a=-2$ の符号から上に凸。"
+        ],
+        "alternatives": [
+          "$x=-1$ を代入すると $(x-p)^2=0$ となり $y=-6$。ここが最小（または最大）の点なので頂点と確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点の符号を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "グラフの向きを正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x$ 座標の符号を逆に読んでいる。$(x-p)^2$ の形では、かっこ内の符号と頂点の $x$ 座標の符号は逆になる。",
+          "misconception": "かっこ内の数をそのまま座標とする"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$a=-2$ の符号とグラフの向きの対応が逆。$a>0$ で下に凸、$a<0$ で上に凸。",
+          "misconception": "凸の向きの混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$y$ 座標の符号を逆にしている。定数項 $q$ はそのまま頂点の $y$ 座標になる。",
+          "misconception": "定数項の符号の誤読"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次関数 $y=-3x^2-1$ の最大値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "-1",
+        "display": "最大値 $-1$（$x=0$）"
+      },
+      "explanation": "$y=-3x^2-1$ より、$x=0$ のとき最大値 $-1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-3)*(0)**2+(0)*(0)+(-1)",
+        "expected": "-1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-extreme_all",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が負なのでグラフは上に凸。頂点で最大値をとるので、平方完成して頂点を求める。",
+        "steps": [
+          "$y=-3x^2-1$ と平方完成する。",
+          "上に凸なので、頂点 $(0,\\,-1)$ で最大値。"
+        ],
+        "alternatives": [
+          "$x=-\\dfrac{b}{2a}=0$ を代入して $y=-1$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大・最小の判断と、そのときの $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定義域がないときに「最大値」と「最小値」の両方があると考えてしまう（一方は存在しない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次関数 $y=-3x^2-24x-43$ の最大値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "5",
+        "display": "最大値 $5$（$x=-4$）"
+      },
+      "explanation": "$y=-3(x+4)^2+5$ より、$x=-4$ のとき最大値 $5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-3)*(-4)**2+(-24)*(-4)+(-43)",
+        "expected": "5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-extreme_all",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が負なのでグラフは上に凸。頂点で最大値をとるので、平方完成して頂点を求める。",
+        "steps": [
+          "$y=-3(x+4)^2+5$ と平方完成する。",
+          "上に凸なので、頂点 $(-4,\\,5)$ で最大値。"
+        ],
+        "alternatives": [
+          "$x=-\\dfrac{b}{2a}=-4$ を代入して $y=5$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大・最小の判断と、そのときの $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定義域がないときに「最大値」と「最小値」の両方があると考えてしまう（一方は存在しない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次関数 $y=-x^2-6x-10$ の最大値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "-1",
+        "display": "最大値 $-1$（$x=-3$）"
+      },
+      "explanation": "$y=-(x+3)^2-1$ より、$x=-3$ のとき最大値 $-1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-1)*(-3)**2+(-6)*(-3)+(-10)",
+        "expected": "-1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-extreme_all",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が負なのでグラフは上に凸。頂点で最大値をとるので、平方完成して頂点を求める。",
+        "steps": [
+          "$y=-(x+3)^2-1$ と平方完成する。",
+          "上に凸なので、頂点 $(-3,\\,-1)$ で最大値。"
+        ],
+        "alternatives": [
+          "$x=-\\dfrac{b}{2a}=-3$ を代入して $y=-1$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大・最小の判断と、そのときの $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定義域がないときに「最大値」と「最小値」の両方があると考えてしまう（一方は存在しない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次関数 $y=3x^2+24x+54$ の最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "6",
+        "display": "最小値 $6$（$x=-4$）"
+      },
+      "explanation": "$y=3(x+4)^2+6$ より、$x=-4$ のとき最小値 $6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(3)*(-4)**2+(24)*(-4)+(54)",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-extreme_all",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が正なのでグラフは下に凸。頂点で最小値をとるので、平方完成して頂点を求める。",
+        "steps": [
+          "$y=3(x+4)^2+6$ と平方完成する。",
+          "下に凸なので、頂点 $(-4,\\,6)$ で最小値。"
+        ],
+        "alternatives": [
+          "$x=-\\dfrac{b}{2a}=-4$ を代入して $y=6$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大・最小の判断と、そのときの $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定義域がないときに「最大値」と「最小値」の両方があると考えてしまう（一方は存在しない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次関数 $y=x^2-6x+7$ の最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "-2",
+        "display": "最小値 $-2$（$x=3$）"
+      },
+      "explanation": "$y=(x-3)^2-2$ より、$x=3$ のとき最小値 $-2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1)*(3)**2+(-6)*(3)+(7)",
+        "expected": "-2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-extreme_all",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が正なのでグラフは下に凸。頂点で最小値をとるので、平方完成して頂点を求める。",
+        "steps": [
+          "$y=(x-3)^2-2$ と平方完成する。",
+          "下に凸なので、頂点 $(3,\\,-2)$ で最小値。"
+        ],
+        "alternatives": [
+          "$x=-\\dfrac{b}{2a}=3$ を代入して $y=-2$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大・最小の判断と、そのときの $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定義域がないときに「最大値」と「最小値」の両方があると考えてしまう（一方は存在しない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=2x^2+10x$ と $x$ 軸の共有点の個数を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0個"
+        },
+        {
+          "label": "イ",
+          "text": "2個"
+        },
+        {
+          "label": "ウ",
+          "text": "1個"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "判別式 $D=(10)^2-4\\cdot(2)\\cdot(0)=100$。$D>0$ なので2個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(10)**2-4*(2)*(0)",
+        "expected": "100",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-discriminant_count",
+      "explanation_detail": {
+        "approach": "共有点の $x$ 座標は $ax^2+bx+c=0$ の実数解なので、実数解の個数を判別式の符号で調べる。",
+        "steps": [
+          "$D=b^2-4ac=100-(0)=100$。",
+          "$D>0$ → 異なる2つの実数解 → 共有点2個。"
+        ],
+        "alternatives": [
+          "平方完成して頂点の $y$ 座標と凸の向きから判断してもよい（頂点の $y$ 座標は $-\\dfrac{D}{4a}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から個数を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$D<0$ のときに限り共有点がない。この問題では $D\\geqq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$D=0$ のときに限り接する（共有点1個）。この問題では $D\\neq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=3x^2+2$ と $x$ 軸の共有点の個数を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0個"
+        },
+        {
+          "label": "イ",
+          "text": "1個"
+        },
+        {
+          "label": "ウ",
+          "text": "2個"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "判別式 $D=(0)^2-4\\cdot(3)\\cdot(2)=-24$。$D<0$ なので0個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(0)**2-4*(3)*(2)",
+        "expected": "-24",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-discriminant_count",
+      "explanation_detail": {
+        "approach": "共有点の $x$ 座標は $ax^2+bx+c=0$ の実数解なので、実数解の個数を判別式の符号で調べる。",
+        "steps": [
+          "$D=b^2-4ac=0-(24)=-24$。",
+          "$D<0$ → 実数解なし → 共有点0個。"
+        ],
+        "alternatives": [
+          "平方完成して頂点の $y$ 座標と凸の向きから判断してもよい（頂点の $y$ 座標は $-\\dfrac{D}{4a}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から個数を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "$D=0$ のときに限り接する（共有点1個）。この問題では $D\\neq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$D>0$ のときに限り2点で交わる。この問題では $D\\leqq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=2x^2+14x+20$ と $x$ 軸の共有点の個数を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0個"
+        },
+        {
+          "label": "イ",
+          "text": "1個"
+        },
+        {
+          "label": "ウ",
+          "text": "2個"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "判別式 $D=(14)^2-4\\cdot(2)\\cdot(20)=36$。$D>0$ なので2個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(14)**2-4*(2)*(20)",
+        "expected": "36",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-discriminant_count",
+      "explanation_detail": {
+        "approach": "共有点の $x$ 座標は $ax^2+bx+c=0$ の実数解なので、実数解の個数を判別式の符号で調べる。",
+        "steps": [
+          "$D=b^2-4ac=196-(160)=36$。",
+          "$D>0$ → 異なる2つの実数解 → 共有点2個。"
+        ],
+        "alternatives": [
+          "平方完成して頂点の $y$ 座標と凸の向きから判断してもよい（頂点の $y$ 座標は $-\\dfrac{D}{4a}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から個数を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$D<0$ のときに限り共有点がない。この問題では $D\\geqq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$D=0$ のときに限り接する（共有点1個）。この問題では $D\\neq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=2x^2-16x+32$ と $x$ 軸の共有点の個数を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "2個"
+        },
+        {
+          "label": "イ",
+          "text": "1個"
+        },
+        {
+          "label": "ウ",
+          "text": "0個"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "判別式 $D=(-16)^2-4\\cdot(2)\\cdot(32)=0$。$D=0$ なので1個（接する）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-16)**2-4*(2)*(32)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-discriminant_count",
+      "explanation_detail": {
+        "approach": "共有点の $x$ 座標は $ax^2+bx+c=0$ の実数解なので、実数解の個数を判別式の符号で調べる。",
+        "steps": [
+          "$D=b^2-4ac=256-(256)=0$。",
+          "$D=0$ → 重解 → 共有点1個。"
+        ],
+        "alternatives": [
+          "平方完成して頂点の $y$ 座標と凸の向きから判断してもよい（頂点の $y$ 座標は $-\\dfrac{D}{4a}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から個数を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$D>0$ のときに限り2点で交わる。この問題では $D\\leqq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$D<0$ のときに限り共有点がない。この問題では $D\\geqq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "放物線 $y=3x^2+18x+24$ と $x$ 軸の共有点の個数を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0個"
+        },
+        {
+          "label": "イ",
+          "text": "2個"
+        },
+        {
+          "label": "ウ",
+          "text": "1個"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "判別式 $D=(18)^2-4\\cdot(3)\\cdot(24)=36$。$D>0$ なので2個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(18)**2-4*(3)*(24)",
+        "expected": "36",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-discriminant_count",
+      "explanation_detail": {
+        "approach": "共有点の $x$ 座標は $ax^2+bx+c=0$ の実数解なので、実数解の個数を判別式の符号で調べる。",
+        "steps": [
+          "$D=b^2-4ac=324-(288)=36$。",
+          "$D>0$ → 異なる2つの実数解 → 共有点2個。"
+        ],
+        "alternatives": [
+          "平方完成して頂点の $y$ 座標と凸の向きから判断してもよい（頂点の $y$ 座標は $-\\dfrac{D}{4a}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から個数を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$D<0$ のときに限り共有点がない。この問題では $D\\geqq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$D=0$ のときに限り接する（共有点1個）。この問題では $D\\neq0$。",
+          "misconception": "判別式の符号と個数の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次関数 $y=x^2+4x+4\\ (3\\leqq x\\leqq5)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $49$（$x=5$）、最小値 $25$（$x=3$）"
+      },
+      "explanation": "$y=(x+2)^2$。軸 $x=-2$ は区間より左にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((1)*(3)**2+(4)*(3)+(4), (1)*(5)**2+(4)*(5)+(4)), Min((1)*(3)**2+(4)*(3)+(4), (1)*(5)**2+(4)*(5)+(4))]",
+        "expected": "[49, 25]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-interval_maxmin",
+      "explanation_detail": {
+        "approach": "グラフの向きと、軸 $x=p$ が定義域のどこにあるかで、最大・最小をとる点が決まる。平方完成してから略図をかく。",
+        "steps": [
+          "$y=(x+2)^2$、軸 $x=-2$、下に凸。",
+          "軸は区間より左にある。",
+          "候補の値：$f(3)=25$、$f(5)=49$",
+          "最大値 $49$、最小値 $25$。"
+        ],
+        "alternatives": [
+          "候補（両端と、区間内にあれば頂点）の値をすべて計算して比べれば、場合分けを意識しなくても確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成して軸の位置を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大値と最小値を、そのときの $x$ とともに正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軸が定義域の外にあるのに頂点の値を答える。",
+          "最大値を、軸に近い方の端点で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次関数 $y=2x^2-8x+6\\ (0\\leqq x\\leqq2)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $6$（$x=0$）、最小値 $-2$（$x=2$）"
+      },
+      "explanation": "$y=2(x-2)^2-2$。軸 $x=2$ は区間の中にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((2)*(0)**2+(-8)*(0)+(6), (2)*(2)**2+(-8)*(2)+(6), (2)*(2)**2+(-8)*(2)+(6)), Min((2)*(0)**2+(-8)*(0)+(6), (2)*(2)**2+(-8)*(2)+(6), (2)*(2)**2+(-8)*(2)+(6))]",
+        "expected": "[6, -2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-interval_maxmin",
+      "explanation_detail": {
+        "approach": "グラフの向きと、軸 $x=p$ が定義域のどこにあるかで、最大・最小をとる点が決まる。平方完成してから略図をかく。",
+        "steps": [
+          "$y=2(x-2)^2-2$、軸 $x=2$、下に凸。",
+          "軸は区間の中にある。",
+          "候補の値：$f(0)=6$、$f(2)=-2$",
+          "最大値 $6$、最小値 $-2$。"
+        ],
+        "alternatives": [
+          "候補（両端と、区間内にあれば頂点）の値をすべて計算して比べれば、場合分けを意識しなくても確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成して軸の位置を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大値と最小値を、そのときの $x$ とともに正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軸が定義域の外にあるのに頂点の値を答える。",
+          "最大値を、軸に近い方の端点で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次関数 $y=-2x^2+8x-13\\ (-3\\leqq x\\leqq1)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $-7$（$x=1$）、最小値 $-55$（$x=-3$）"
+      },
+      "explanation": "$y=-2(x-2)^2-5$。軸 $x=2$ は区間より右にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-2)*(-3)**2+(8)*(-3)+(-13), (-2)*(1)**2+(8)*(1)+(-13)), Min((-2)*(-3)**2+(8)*(-3)+(-13), (-2)*(1)**2+(8)*(1)+(-13))]",
+        "expected": "[-7, -55]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-interval_maxmin",
+      "explanation_detail": {
+        "approach": "グラフの向きと、軸 $x=p$ が定義域のどこにあるかで、最大・最小をとる点が決まる。平方完成してから略図をかく。",
+        "steps": [
+          "$y=-2(x-2)^2-5$、軸 $x=2$、上に凸。",
+          "軸は区間より右にある。",
+          "候補の値：$f(-3)=-55$、$f(1)=-7$",
+          "最大値 $-7$、最小値 $-55$。"
+        ],
+        "alternatives": [
+          "候補（両端と、区間内にあれば頂点）の値をすべて計算して比べれば、場合分けを意識しなくても確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成して軸の位置を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大値と最小値を、そのときの $x$ とともに正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軸が定義域の外にあるのに頂点の値を答える。",
+          "最大値を、軸に近い方の端点で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次関数 $y=-2x^2+8x-9\\ (2\\leqq x\\leqq6)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $-1$（$x=2$）、最小値 $-33$（$x=6$）"
+      },
+      "explanation": "$y=-2(x-2)^2-1$。軸 $x=2$ は区間の中にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-2)*(2)**2+(8)*(2)+(-9), (-2)*(6)**2+(8)*(6)+(-9), (-2)*(2)**2+(8)*(2)+(-9)), Min((-2)*(2)**2+(8)*(2)+(-9), (-2)*(6)**2+(8)*(6)+(-9), (-2)*(2)**2+(8)*(2)+(-9))]",
+        "expected": "[-1, -33]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-interval_maxmin",
+      "explanation_detail": {
+        "approach": "グラフの向きと、軸 $x=p$ が定義域のどこにあるかで、最大・最小をとる点が決まる。平方完成してから略図をかく。",
+        "steps": [
+          "$y=-2(x-2)^2-1$、軸 $x=2$、上に凸。",
+          "軸は区間の中にある。",
+          "候補の値：$f(2)=-1$、$f(6)=-33$",
+          "最大値 $-1$、最小値 $-33$。"
+        ],
+        "alternatives": [
+          "候補（両端と、区間内にあれば頂点）の値をすべて計算して比べれば、場合分けを意識しなくても確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成して軸の位置を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大値と最小値を、そのときの $x$ とともに正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軸が定義域の外にあるのに頂点の値を答える。",
+          "最大値を、軸に近い方の端点で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次関数 $y=x^2-2x+3\\ (-3\\leqq x\\leqq0)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $18$（$x=-3$）、最小値 $3$（$x=0$）"
+      },
+      "explanation": "$y=(x-1)^2+2$。軸 $x=1$ は区間より右にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((1)*(-3)**2+(-2)*(-3)+(3), (1)*(0)**2+(-2)*(0)+(3)), Min((1)*(-3)**2+(-2)*(-3)+(3), (1)*(0)**2+(-2)*(0)+(3))]",
+        "expected": "[18, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-interval_maxmin",
+      "explanation_detail": {
+        "approach": "グラフの向きと、軸 $x=p$ が定義域のどこにあるかで、最大・最小をとる点が決まる。平方完成してから略図をかく。",
+        "steps": [
+          "$y=(x-1)^2+2$、軸 $x=1$、下に凸。",
+          "軸は区間より右にある。",
+          "候補の値：$f(-3)=18$、$f(0)=3$",
+          "最大値 $18$、最小値 $3$。"
+        ],
+        "alternatives": [
+          "候補（両端と、区間内にあれば頂点）の値をすべて計算して比べれば、場合分けを意識しなくても確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成して軸の位置を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大値と最小値を、そのときの $x$ とともに正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軸が定義域の外にあるのに頂点の値を答える。",
+          "最大値を、軸に近い方の端点で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次関数 $y=-2x^2+8x-10\\ (1\\leqq x\\leqq6)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $-2$（$x=2$）、最小値 $-34$（$x=6$）"
+      },
+      "explanation": "$y=-2(x-2)^2-2$。軸 $x=2$ は区間の中にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-2)*(1)**2+(8)*(1)+(-10), (-2)*(6)**2+(8)*(6)+(-10), (-2)*(2)**2+(8)*(2)+(-10)), Min((-2)*(1)**2+(8)*(1)+(-10), (-2)*(6)**2+(8)*(6)+(-10), (-2)*(2)**2+(8)*(2)+(-10))]",
+        "expected": "[-2, -34]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-interval_maxmin",
+      "explanation_detail": {
+        "approach": "グラフの向きと、軸 $x=p$ が定義域のどこにあるかで、最大・最小をとる点が決まる。平方完成してから略図をかく。",
+        "steps": [
+          "$y=-2(x-2)^2-2$、軸 $x=2$、上に凸。",
+          "軸は区間の中にある。",
+          "候補の値：$f(1)=-4$、$f(6)=-34$、$f(2)=-2$",
+          "最大値 $-2$、最小値 $-34$。"
+        ],
+        "alternatives": [
+          "候補（両端と、区間内にあれば頂点）の値をすべて計算して比べれば、場合分けを意識しなくても確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成して軸の位置を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大値と最小値を、そのときの $x$ とともに正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軸が定義域の外にあるのに頂点の値を答える。",
+          "最大値を、軸に近い方の端点で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3点 $(-1,\\,3)$、$(0,\\,1)$、$(1,\\,3)$ を通る放物線をグラフとする二次関数を求めなさい。",
+      "answer": {
+        "value": "$y=2x^2+1$",
+        "accepted": [
+          "y=2x^2+1"
+        ]
+      },
+      "explanation": "$y=ax^2+bx+c$ に3点を代入した連立方程式を解いて $a=2,\\ b=0,\\ c=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a*(-1)**2+b*(-1)+c-(3), a*(0)**2+b*(0)+c-(1), a*(1)**2+b*(1)+c-(3)], [a, b, c])",
+        "expected": "{a: 2, b: 0, c: 1}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-three_points",
+      "explanation_detail": {
+        "approach": "頂点や軸の情報がなく、通る3点が与えられているので、一般形 $y=ax^2+bx+c$ とおいて連立方程式をつくる。",
+        "steps": [
+          "$y=ax^2+bx+c$ に3点の座標を代入して3つの式をつくる。",
+          "2式ずつひいて $c$ を消去し、$a,\\ b$ の連立方程式にする。",
+          "$a=2,\\ b=0,\\ c=1$。"
+        ],
+        "alternatives": [
+          "$x=0$ の点があれば $c$ がすぐ決まり、残り2式で $a,\\ b$ を求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3つの式を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "答えを $y=$ の形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "代入するとき $x^2$ の符号（$(-2)^2=4$）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3点 $(-1,\\,10)$、$(1,\\,0)$、$(2,\\,-2)$ を通る放物線をグラフとする二次関数を求めなさい。",
+      "answer": {
+        "value": "$y=x^2-5x+4$",
+        "accepted": [
+          "y=x^2-5x+4"
+        ]
+      },
+      "explanation": "$y=ax^2+bx+c$ に3点を代入した連立方程式を解いて $a=1,\\ b=-5,\\ c=4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a*(-1)**2+b*(-1)+c-(10), a*(1)**2+b*(1)+c-(0), a*(2)**2+b*(2)+c-(-2)], [a, b, c])",
+        "expected": "{a: 1, b: -5, c: 4}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-three_points",
+      "explanation_detail": {
+        "approach": "頂点や軸の情報がなく、通る3点が与えられているので、一般形 $y=ax^2+bx+c$ とおいて連立方程式をつくる。",
+        "steps": [
+          "$y=ax^2+bx+c$ に3点の座標を代入して3つの式をつくる。",
+          "2式ずつひいて $c$ を消去し、$a,\\ b$ の連立方程式にする。",
+          "$a=1,\\ b=-5,\\ c=4$。"
+        ],
+        "alternatives": [
+          "2点の $y$ 座標の差を使うと $c$ が消え、計算が簡単になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3つの式を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "答えを $y=$ の形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "代入するとき $x^2$ の符号（$(-2)^2=4$）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3点 $(-3,\\,-9)$、$(-2,\\,-2)$、$(-1,\\,3)$ を通る放物線をグラフとする二次関数を求めなさい。",
+      "answer": {
+        "value": "$y=-x^2+2x+6$",
+        "accepted": [
+          "y=-x^2+2x+6"
+        ]
+      },
+      "explanation": "$y=ax^2+bx+c$ に3点を代入した連立方程式を解いて $a=-1,\\ b=2,\\ c=6$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a*(-3)**2+b*(-3)+c-(-9), a*(-2)**2+b*(-2)+c-(-2), a*(-1)**2+b*(-1)+c-(3)], [a, b, c])",
+        "expected": "{a: -1, b: 2, c: 6}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-three_points",
+      "explanation_detail": {
+        "approach": "頂点や軸の情報がなく、通る3点が与えられているので、一般形 $y=ax^2+bx+c$ とおいて連立方程式をつくる。",
+        "steps": [
+          "$y=ax^2+bx+c$ に3点の座標を代入して3つの式をつくる。",
+          "2式ずつひいて $c$ を消去し、$a,\\ b$ の連立方程式にする。",
+          "$a=-1,\\ b=2,\\ c=6$。"
+        ],
+        "alternatives": [
+          "2点の $y$ 座標の差を使うと $c$ が消え、計算が簡単になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3つの式を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "答えを $y=$ の形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "代入するとき $x^2$ の符号（$(-2)^2=4$）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3点 $(-3,\\,20)$、$(0,\\,5)$、$(1,\\,4)$ を通る放物線をグラフとする二次関数を求めなさい。",
+      "answer": {
+        "value": "$y=x^2-2x+5$",
+        "accepted": [
+          "y=x^2-2x+5"
+        ]
+      },
+      "explanation": "$y=ax^2+bx+c$ に3点を代入した連立方程式を解いて $a=1,\\ b=-2,\\ c=5$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a*(-3)**2+b*(-3)+c-(20), a*(0)**2+b*(0)+c-(5), a*(1)**2+b*(1)+c-(4)], [a, b, c])",
+        "expected": "{a: 1, b: -2, c: 5}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-three_points",
+      "explanation_detail": {
+        "approach": "頂点や軸の情報がなく、通る3点が与えられているので、一般形 $y=ax^2+bx+c$ とおいて連立方程式をつくる。",
+        "steps": [
+          "$y=ax^2+bx+c$ に3点の座標を代入して3つの式をつくる。",
+          "2式ずつひいて $c$ を消去し、$a,\\ b$ の連立方程式にする。",
+          "$a=1,\\ b=-2,\\ c=5$。"
+        ],
+        "alternatives": [
+          "$x=0$ の点があれば $c$ がすぐ決まり、残り2式で $a,\\ b$ を求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3つの式を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "答えを $y=$ の形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "代入するとき $x^2$ の符号（$(-2)^2=4$）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次不等式 $x^2+3x-18<0$ を解きなさい。",
+      "answer": {
+        "value": "$-6<x<3$"
+      },
+      "explanation": "$x^2+3x-18=0$ の解は $x=-6,\\ 3$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((1)*x**2+(3)*x+(-18), x)",
+        "expected": "[-6, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-quad_ineq",
+      "explanation_detail": {
+        "approach": "不等式を、グラフが $x$ 軸より上（下）にある $x$ の範囲として読む。そのために $x$ 軸との交点（方程式の解）を求める。",
+        "steps": [
+          "因数分解して $x=-6,\\ 3$ が境目。",
+          "グラフ（下に凸）が x 軸以下 になる範囲を読み、$-6<x<3$。"
+        ],
+        "alternatives": [
+          "数直線上に $x=-6$、$x=3$ を取り、各区間の代表値を代入して符号を調べる（符号表）方法でも解ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式の解（境目）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き・等号の有無を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "解を正しい形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数が負のまま解き、範囲の内外を逆にする。",
+          "$\\leqq$ のとき端点を含めるのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次不等式 $x^2+6x+5<0$ を解きなさい。",
+      "answer": {
+        "value": "$-5<x<-1$"
+      },
+      "explanation": "$x^2+6x+5=0$ の解は $x=-5,\\ -1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((1)*x**2+(6)*x+(5), x)",
+        "expected": "[-5, -1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-quad_ineq",
+      "explanation_detail": {
+        "approach": "不等式を、グラフが $x$ 軸より上（下）にある $x$ の範囲として読む。そのために $x$ 軸との交点（方程式の解）を求める。",
+        "steps": [
+          "因数分解して $x=-5,\\ -1$ が境目。",
+          "グラフ（下に凸）が x 軸以下 になる範囲を読み、$-5<x<-1$。"
+        ],
+        "alternatives": [
+          "数直線上に $x=-5$、$x=-1$ を取り、各区間の代表値を代入して符号を調べる（符号表）方法でも解ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式の解（境目）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き・等号の有無を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "解を正しい形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数が負のまま解き、範囲の内外を逆にする。",
+          "$\\leqq$ のとき端点を含めるのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次不等式 $x^2-2x-8\\leqq0$ を解きなさい。",
+      "answer": {
+        "value": "$-2\\leqq x\\leqq 4$"
+      },
+      "explanation": "$x^2-2x-8=0$ の解は $x=-2,\\ 4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((1)*x**2+(-2)*x+(-8), x)",
+        "expected": "[-2, 4]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-quad_ineq",
+      "explanation_detail": {
+        "approach": "不等式を、グラフが $x$ 軸より上（下）にある $x$ の範囲として読む。そのために $x$ 軸との交点（方程式の解）を求める。",
+        "steps": [
+          "因数分解して $x=-2,\\ 4$ が境目。",
+          "グラフ（下に凸）が x 軸以下 になる範囲を読み、$-2\\leqq x\\leqq 4$。"
+        ],
+        "alternatives": [
+          "数直線上に $x=-2$、$x=4$ を取り、各区間の代表値を代入して符号を調べる（符号表）方法でも解ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式の解（境目）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き・等号の有無を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "解を正しい形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数が負のまま解き、範囲の内外を逆にする。",
+          "$\\leqq$ のとき端点を含めるのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次不等式 $2x^2+6x>0$ を解きなさい。",
+      "answer": {
+        "value": "$x<-3,\\ 0<x$"
+      },
+      "explanation": "$2x^2+6x=0$ の解は $x=-3,\\ 0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((2)*x**2+(6)*x+(0), x)",
+        "expected": "[-3, 0]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-quad_ineq",
+      "explanation_detail": {
+        "approach": "不等式を、グラフが $x$ 軸より上（下）にある $x$ の範囲として読む。そのために $x$ 軸との交点（方程式の解）を求める。",
+        "steps": [
+          "因数分解して $x=-3,\\ 0$ が境目。",
+          "グラフ（下に凸）が x 軸以上 になる範囲を読み、$x<-3,\\ 0<x$。"
+        ],
+        "alternatives": [
+          "数直線上に $x=-3$、$x=0$ を取り、各区間の代表値を代入して符号を調べる（符号表）方法でも解ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式の解（境目）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き・等号の有無を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "解を正しい形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数が負のまま解き、範囲の内外を逆にする。",
+          "$\\leqq$ のとき端点を含めるのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次不等式 $-x^2+4x-3<0$ を解きなさい。",
+      "answer": {
+        "value": "$x<1,\\ 3<x$"
+      },
+      "explanation": "$-x^2+4x-3=0$ の解は $x=1,\\ 3$。$x^2$ の係数が負なので、両辺に $-1$ をかけて不等号の向きを変えてから考える。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((-1)*x**2+(4)*x+(-3), x)",
+        "expected": "[1, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-quad_ineq",
+      "explanation_detail": {
+        "approach": "不等式を、グラフが $x$ 軸より上（下）にある $x$ の範囲として読む。そのために $x$ 軸との交点（方程式の解）を求める。",
+        "steps": [
+          "両辺に $-1$ をかけ、$x^2-4x+3>0$ とする。",
+          "因数分解して $x=1,\\ 3$ が境目。",
+          "グラフ（下に凸）が x 軸以上 になる範囲を読み、$x<1,\\ 3<x$。"
+        ],
+        "alternatives": [
+          "数直線上に $x=1$、$x=3$ を取り、各区間の代表値を代入して符号を調べる（符号表）方法でも解ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式の解（境目）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き・等号の有無を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "解を正しい形で答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数が負のまま解き、範囲の内外を逆にする。",
+          "$\\leqq$ のとき端点を含めるのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=2x^2+12x+17$ を $x$ 軸方向に $4$、$y$ 軸方向に $-1$ だけ平行移動した放物線の方程式を、$y=ax^2+bx+c$ の形で答えなさい。",
+      "answer": {
+        "value": "$y=2x^2-4x$",
+        "accepted": [
+          "y=2x^2-4x"
+        ]
+      },
+      "explanation": "頂点 $(-3,\\,-1)$ が $(1,\\,-2)$ に移り、$y=2(x-1)^2-2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((2)*(x-(4))**2+(12)*(x-(4))+(17)+(-1))",
+        "expected": "(2)*x**2+(-4)*x+(0)",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-translate",
+      "explanation_detail": {
+        "approach": "放物線の形（$x^2$ の係数）は平行移動で変わらないので、頂点の移動だけを考えればよい。",
+        "steps": [
+          "平方完成して頂点 $(-3,\\,-1)$。",
+          "頂点を移動して $(1,\\,-2)$。",
+          "$y=2(x-1)^2-2=2x^2-4x$。"
+        ],
+        "alternatives": [
+          "$x$ を $x-(4)$、$y$ を $y-(-1)$ におきかえる方法：$y-(-1)=2(x-(4))^2+(12)(x-(4))+(17)$ を展開しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めて移動している",
+            "points": 2
+          },
+          {
+            "point": "展開して正しい式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x$ を $x+h$ とおきかえてしまう（移動の向きが逆）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-x^2-2x+2$ を $x$ 軸方向に $-3$、$y$ 軸方向に $-3$ だけ平行移動した放物線の方程式を、$y=ax^2+bx+c$ の形で答えなさい。",
+      "answer": {
+        "value": "$y=-x^2-8x-16$",
+        "accepted": [
+          "y=-x^2-8x-16"
+        ]
+      },
+      "explanation": "頂点 $(-1,\\,3)$ が $(-4,\\,0)$ に移り、$y=-(x+4)^2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-1)*(x-(-3))**2+(-2)*(x-(-3))+(2)+(-3))",
+        "expected": "(-1)*x**2+(-8)*x+(-16)",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-translate",
+      "explanation_detail": {
+        "approach": "放物線の形（$x^2$ の係数）は平行移動で変わらないので、頂点の移動だけを考えればよい。",
+        "steps": [
+          "平方完成して頂点 $(-1,\\,3)$。",
+          "頂点を移動して $(-4,\\,0)$。",
+          "$y=-(x+4)^2=-x^2-8x-16$。"
+        ],
+        "alternatives": [
+          "$x$ を $x-(-3)$、$y$ を $y-(-3)$ におきかえる方法：$y-(-3)=-1(x-(-3))^2+(-2)(x-(-3))+(2)$ を展開しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めて移動している",
+            "points": 2
+          },
+          {
+            "point": "展開して正しい式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x$ を $x+h$ とおきかえてしまう（移動の向きが逆）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=2x^2+12x+17$ を $x$ 軸方向に $-2$、$y$ 軸方向に $2$ だけ平行移動した放物線の方程式を、$y=ax^2+bx+c$ の形で答えなさい。",
+      "answer": {
+        "value": "$y=2x^2+20x+51$",
+        "accepted": [
+          "y=2x^2+20x+51"
+        ]
+      },
+      "explanation": "頂点 $(-3,\\,-1)$ が $(-5,\\,1)$ に移り、$y=2(x+5)^2+1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((2)*(x-(-2))**2+(12)*(x-(-2))+(17)+(2))",
+        "expected": "(2)*x**2+(20)*x+(51)",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-translate",
+      "explanation_detail": {
+        "approach": "放物線の形（$x^2$ の係数）は平行移動で変わらないので、頂点の移動だけを考えればよい。",
+        "steps": [
+          "平方完成して頂点 $(-3,\\,-1)$。",
+          "頂点を移動して $(-5,\\,1)$。",
+          "$y=2(x+5)^2+1=2x^2+20x+51$。"
+        ],
+        "alternatives": [
+          "$x$ を $x-(-2)$、$y$ を $y-(2)$ におきかえる方法：$y-(2)=2(x-(-2))^2+(12)(x-(-2))+(17)$ を展開しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めて移動している",
+            "points": 2
+          },
+          {
+            "point": "展開して正しい式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x$ を $x+h$ とおきかえてしまう（移動の向きが逆）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-2x^2+8x-5$ を $x$ 軸方向に $3$、$y$ 軸方向に $-4$ だけ平行移動した放物線の方程式を、$y=ax^2+bx+c$ の形で答えなさい。",
+      "answer": {
+        "value": "$y=-2x^2+20x-51$",
+        "accepted": [
+          "y=-2x^2+20x-51"
+        ]
+      },
+      "explanation": "頂点 $(2,\\,3)$ が $(5,\\,-1)$ に移り、$y=-2(x-5)^2-1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-2)*(x-(3))**2+(8)*(x-(3))+(-5)+(-4))",
+        "expected": "(-2)*x**2+(20)*x+(-51)",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-translate",
+      "explanation_detail": {
+        "approach": "放物線の形（$x^2$ の係数）は平行移動で変わらないので、頂点の移動だけを考えればよい。",
+        "steps": [
+          "平方完成して頂点 $(2,\\,3)$。",
+          "頂点を移動して $(5,\\,-1)$。",
+          "$y=-2(x-5)^2-1=-2x^2+20x-51$。"
+        ],
+        "alternatives": [
+          "$x$ を $x-(3)$、$y$ を $y-(-4)$ におきかえる方法：$y-(-4)=-2(x-(3))^2+(8)(x-(3))+(-5)$ を展開しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めて移動している",
+            "points": 2
+          },
+          {
+            "point": "展開して正しい式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x$ を $x+h$ とおきかえてしまう（移動の向きが逆）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-x^2-4x-1$ を $x$ 軸方向に $-4$、$y$ 軸方向に $1$ だけ平行移動した放物線の方程式を、$y=ax^2+bx+c$ の形で答えなさい。",
+      "answer": {
+        "value": "$y=-x^2-12x-32$",
+        "accepted": [
+          "y=-x^2-12x-32"
+        ]
+      },
+      "explanation": "頂点 $(-2,\\,3)$ が $(-6,\\,4)$ に移り、$y=-(x+6)^2+4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-1)*(x-(-4))**2+(-4)*(x-(-4))+(-1)+(1))",
+        "expected": "(-1)*x**2+(-12)*x+(-32)",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-translate",
+      "explanation_detail": {
+        "approach": "放物線の形（$x^2$ の係数）は平行移動で変わらないので、頂点の移動だけを考えればよい。",
+        "steps": [
+          "平方完成して頂点 $(-2,\\,3)$。",
+          "頂点を移動して $(-6,\\,4)$。",
+          "$y=-(x+6)^2+4=-x^2-12x-32$。"
+        ],
+        "alternatives": [
+          "$x$ を $x-(-4)$、$y$ を $y-(1)$ におきかえる方法：$y-(1)=-1(x-(-4))^2+(-4)(x-(-4))+(-1)$ を展開しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "頂点を正しく求めて移動している",
+            "points": 2
+          },
+          {
+            "point": "展開して正しい式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x$ を $x+h$ とおきかえてしまう（移動の向きが逆）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。二次関数 $f(x)=x^2-2ax\\ (0\\leqq x\\leqq 2)$ の最小値 $m(a)$ を求めなさい。",
+      "answer": {
+        "value": "$a<0$ のとき $m(a)=0$（$x=0$）、$0\\leqq a\\leqq 2$ のとき $m(a)=-a^2$（$x=a$）、$2<a$ のとき $m(a)=4-4a$（$x=2$）"
+      },
+      "explanation": "$f(x)=(x-a)^2-a^2$。軸 $x=a$ と区間 $0\\leqq x\\leqq 2$ の位置関係で3つに場合分けする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "平方完成して軸が $x=a$ であることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "軸の位置による3つの場合分けが正しい（境界のもれ・重複がない）",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の最小値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "結論をまとめて答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(0)**2-2*a*(0)+(0), expand((a)**2-2*a*(a)+(0)), expand((2)**2-2*a*(2)+(0))]",
+        "expected": "[0, -a**2+(0), 4-4*a]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-param_min",
+      "explanation_detail": {
+        "approach": "軸 $x=a$ が動くので、区間に対して「左・中・右」のどこにあるかで最小値をとる点が変わる。下に凸なので、軸が区間内なら頂点、外なら軸に近い端点。",
+        "steps": [
+          "$f(x)=(x-a)^2-a^2$、軸 $x=a$。",
+          "(i) $a<0$：区間で増加、$m(a)=f(0)=0$。",
+          "(ii) $0\\leqq a\\leqq 2$：頂点で $m(a)=-a^2$。",
+          "(iii) $2<a$：区間で減少、$m(a)=f(2)=4-4a=4-4a$。"
+        ],
+        "alternatives": [
+          "$m(a)$ のグラフ（$a$ の関数）をかくと、場合分けの境界で値がつながっていることが確かめられる（$a=0$ で $0$、$a=2$ で $-4$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成と軸の確認",
+            "points": 2
+          },
+          {
+            "point": "場合分けの基準と境界",
+            "points": 2
+          },
+          {
+            "point": "各場合の最小値",
+            "points": 3
+          },
+          {
+            "point": "結論のまとめ",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "場合分けの境界 $a=0,\\ a=2$ をどの場合にも含めない（もれ）。",
+          "(iii) で $f(2)$ の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。二次関数 $f(x)=x^2-2ax+2\\ (0\\leqq x\\leqq 3)$ の最小値 $m(a)$ を求めなさい。",
+      "answer": {
+        "value": "$a<0$ のとき $m(a)=2$（$x=0$）、$0\\leqq a\\leqq 3$ のとき $m(a)=-a^2+2$（$x=a$）、$3<a$ のとき $m(a)=11-6a$（$x=3$）"
+      },
+      "explanation": "$f(x)=(x-a)^2-a^2+2$。軸 $x=a$ と区間 $0\\leqq x\\leqq 3$ の位置関係で3つに場合分けする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "平方完成して軸が $x=a$ であることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "軸の位置による3つの場合分けが正しい（境界のもれ・重複がない）",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の最小値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "結論をまとめて答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(0)**2-2*a*(0)+(2), expand((a)**2-2*a*(a)+(2)), expand((3)**2-2*a*(3)+(2))]",
+        "expected": "[2, -a**2+(2), 11-6*a]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-param_min",
+      "explanation_detail": {
+        "approach": "軸 $x=a$ が動くので、区間に対して「左・中・右」のどこにあるかで最小値をとる点が変わる。下に凸なので、軸が区間内なら頂点、外なら軸に近い端点。",
+        "steps": [
+          "$f(x)=(x-a)^2-a^2+2$、軸 $x=a$。",
+          "(i) $a<0$：区間で増加、$m(a)=f(0)=2$。",
+          "(ii) $0\\leqq a\\leqq 3$：頂点で $m(a)=-a^2+2$。",
+          "(iii) $3<a$：区間で減少、$m(a)=f(3)=9-6a+2=11-6a$。"
+        ],
+        "alternatives": [
+          "$m(a)$ のグラフ（$a$ の関数）をかくと、場合分けの境界で値がつながっていることが確かめられる（$a=0$ で $2$、$a=3$ で $-7$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成と軸の確認",
+            "points": 2
+          },
+          {
+            "point": "場合分けの基準と境界",
+            "points": 2
+          },
+          {
+            "point": "各場合の最小値",
+            "points": 3
+          },
+          {
+            "point": "結論のまとめ",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "場合分けの境界 $a=0,\\ a=3$ をどの場合にも含めない（もれ）。",
+          "(iii) で $f(3)$ の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。二次関数 $f(x)=x^2-2ax-1\\ (0\\leqq x\\leqq 4)$ の最小値 $m(a)$ を求めなさい。",
+      "answer": {
+        "value": "$a<0$ のとき $m(a)=-1$（$x=0$）、$0\\leqq a\\leqq 4$ のとき $m(a)=-a^2-1$（$x=a$）、$4<a$ のとき $m(a)=15-8a$（$x=4$）"
+      },
+      "explanation": "$f(x)=(x-a)^2-a^2-1$。軸 $x=a$ と区間 $0\\leqq x\\leqq 4$ の位置関係で3つに場合分けする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "平方完成して軸が $x=a$ であることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "軸の位置による3つの場合分けが正しい（境界のもれ・重複がない）",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の最小値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "結論をまとめて答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(0)**2-2*a*(0)+(-1), expand((a)**2-2*a*(a)+(-1)), expand((4)**2-2*a*(4)+(-1))]",
+        "expected": "[-1, -a**2+(-1), 15-8*a]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-param_min",
+      "explanation_detail": {
+        "approach": "軸 $x=a$ が動くので、区間に対して「左・中・右」のどこにあるかで最小値をとる点が変わる。下に凸なので、軸が区間内なら頂点、外なら軸に近い端点。",
+        "steps": [
+          "$f(x)=(x-a)^2-a^2-1$、軸 $x=a$。",
+          "(i) $a<0$：区間で増加、$m(a)=f(0)=-1$。",
+          "(ii) $0\\leqq a\\leqq 4$：頂点で $m(a)=-a^2-1$。",
+          "(iii) $4<a$：区間で減少、$m(a)=f(4)=16-8a-1=15-8a$。"
+        ],
+        "alternatives": [
+          "$m(a)$ のグラフ（$a$ の関数）をかくと、場合分けの境界で値がつながっていることが確かめられる（$a=0$ で $-1$、$a=4$ で $-17$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成と軸の確認",
+            "points": 2
+          },
+          {
+            "point": "場合分けの基準と境界",
+            "points": 2
+          },
+          {
+            "point": "各場合の最小値",
+            "points": 3
+          },
+          {
+            "point": "結論のまとめ",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "場合分けの境界 $a=0,\\ a=4$ をどの場合にも含めない（もれ）。",
+          "(iii) で $f(4)$ の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "すべての実数 $x$ について、不等式 $x^2+2mx-m+12>0$ が成り立つような定数 $m$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-4<m<3$",
+        "accepted": [
+          "-4<m<3"
+        ]
+      },
+      "explanation": "$x^2$ の係数が正なので、グラフが $x$ 軸と共有点をもたない条件 $D/4=m^2-(-m+12)<0$ を解く。$(m-(-4))(m-(3))<0$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(m**2-(-1)*m-(12), m)",
+        "expected": "[-4, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH1-U03-always_positive",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で正」は「下に凸の放物線が常に $x$ 軸より上にある」と言いかえられる。これは $x$ 軸と共有点をもたないこと、すなわち $D<0$ と同値。",
+        "steps": [
+          "$x^2$ の係数は $1>0$（下に凸）であることを確認する。",
+          "$\\dfrac{D}{4}=m^2-(-m+12)=m^2+m-12$。",
+          "因数分解して $(m-(-4))(m-(3))<0$。",
+          "$-4<m<3$。"
+        ],
+        "alternatives": [
+          "平方完成すると最小値は $-m^2-m+12$。これが正である条件として同じ不等式が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "下に凸であることを確認し、$D<0$ が条件になると述べている",
+            "points": 3
+          },
+          {
+            "point": "判別式を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$D\\leqq0$ としてしまう（$D=0$ では接して値が $0$ になる点があり、「$>0$」を満たさない）。",
+          "$x^2$ の係数の符号を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "すべての実数 $x$ について、不等式 $x^2+2mx+m+42>0$ が成り立つような定数 $m$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-6<m<7$",
+        "accepted": [
+          "-6<m<7"
+        ]
+      },
+      "explanation": "$x^2$ の係数が正なので、グラフが $x$ 軸と共有点をもたない条件 $D/4=m^2-(m+42)<0$ を解く。$(m-(-6))(m-(7))<0$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(m**2-(1)*m-(42), m)",
+        "expected": "[-6, 7]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH1-U03-always_positive",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で正」は「下に凸の放物線が常に $x$ 軸より上にある」と言いかえられる。これは $x$ 軸と共有点をもたないこと、すなわち $D<0$ と同値。",
+        "steps": [
+          "$x^2$ の係数は $1>0$（下に凸）であることを確認する。",
+          "$\\dfrac{D}{4}=m^2-(m+42)=m^2-m-42$。",
+          "因数分解して $(m-(-6))(m-(7))<0$。",
+          "$-6<m<7$。"
+        ],
+        "alternatives": [
+          "平方完成すると最小値は $-m^2+m+42$。これが正である条件として同じ不等式が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "下に凸であることを確認し、$D<0$ が条件になると述べている",
+            "points": 3
+          },
+          {
+            "point": "判別式を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$D\\leqq0$ としてしまう（$D=0$ では接して値が $0$ になる点があり、「$>0$」を満たさない）。",
+          "$x^2$ の係数の符号を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "すべての実数 $x$ について、不等式 $x^2+2mx-m+56>0$ が成り立つような定数 $m$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-8<m<7$",
+        "accepted": [
+          "-8<m<7"
+        ]
+      },
+      "explanation": "$x^2$ の係数が正なので、グラフが $x$ 軸と共有点をもたない条件 $D/4=m^2-(-m+56)<0$ を解く。$(m-(-8))(m-(7))<0$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(m**2-(-1)*m-(56), m)",
+        "expected": "[-8, 7]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH1-U03-always_positive",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で正」は「下に凸の放物線が常に $x$ 軸より上にある」と言いかえられる。これは $x$ 軸と共有点をもたないこと、すなわち $D<0$ と同値。",
+        "steps": [
+          "$x^2$ の係数は $1>0$（下に凸）であることを確認する。",
+          "$\\dfrac{D}{4}=m^2-(-m+56)=m^2+m-56$。",
+          "因数分解して $(m-(-8))(m-(7))<0$。",
+          "$-8<m<7$。"
+        ],
+        "alternatives": [
+          "平方完成すると最小値は $-m^2-m+56$。これが正である条件として同じ不等式が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "下に凸であることを確認し、$D<0$ が条件になると述べている",
+            "points": 3
+          },
+          {
+            "point": "判別式を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$D\\leqq0$ としてしまう（$D=0$ では接して値が $0$ になる点があり、「$>0$」を満たさない）。",
+          "$x^2$ の係数の符号を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "二次関数 $y=x^2-6x+13\\ (5\\leqq x\\leqq7)$ の最小値について、ある生徒は「平方完成すると $y=(x-3)^2+4$ だから、最小値は $4$」と答えた。正しい判断を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "頂点の $y$ 座標 $4$ が最小値なので、生徒の答えは正しい"
+        },
+        {
+          "label": "イ",
+          "text": "定義域がある場合は最小値は存在しない"
+        },
+        {
+          "label": "ウ",
+          "text": "最小値は $x=7$ のときの $20$"
+        },
+        {
+          "label": "エ",
+          "text": "軸 $x=3$ が定義域の外（左）にあり、定義域で増加するので、最小値は $x=5$ のときの $8$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "軸 $x=3$ は定義域 $5\\leqq x\\leqq7$ の左外にある。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Min((1)*(5)**2+(-6)*(5)+(13), (1)*(7)**2+(-6)*(7)+(13))",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "common_error"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex_outside",
+      "explanation_detail": {
+        "approach": "頂点の値が最小値になるのは「軸が定義域内にあるとき」だけ。公式が使える条件を確かめる。",
+        "steps": [
+          "平方完成：$y=(x-3)^2+4$、軸 $x=3$。",
+          "$3<5$ なので軸は定義域の左外。",
+          "定義域で増加するので、最小値は左端 $x=5$ で $8$。"
+        ],
+        "alternatives": [
+          "定義域の両端の値 $f(5)=8$、$f(7)=20$ を比べるだけでも、頂点が区間外のときは最小値が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "軸と定義域の位置関係を確認している",
+            "points": 4
+          },
+          {
+            "point": "正しい最小値を求めている",
+            "points": 4
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "頂点 $x=3$ は定義域に含まれないので、そのときの値はとれない。",
+          "misconception": "頂点＝最小という公式の条件の無視"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "閉区間（端点を含む）で定義された二次関数は必ず最大値・最小値をもつ。",
+          "misconception": "定義域があると最大・最小がないという誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "下に凸で軸が左にあるとき、右端は最大値をとる点である。",
+          "misconception": "最大・最小の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "二次関数 $y=x^2-6x+12\\ (6\\leqq x\\leqq9)$ の最小値について、ある生徒は「平方完成すると $y=(x-3)^2+3$ だから、最小値は $3$」と答えた。正しい判断を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "定義域がある場合は最小値は存在しない"
+        },
+        {
+          "label": "イ",
+          "text": "頂点の $y$ 座標 $3$ が最小値なので、生徒の答えは正しい"
+        },
+        {
+          "label": "ウ",
+          "text": "最小値は $x=9$ のときの $39$"
+        },
+        {
+          "label": "エ",
+          "text": "軸 $x=3$ が定義域の外（左）にあり、定義域で増加するので、最小値は $x=6$ のときの $12$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "軸 $x=3$ は定義域 $6\\leqq x\\leqq9$ の左外にある。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Min((1)*(6)**2+(-6)*(6)+(12), (1)*(9)**2+(-6)*(9)+(12))",
+        "expected": "12",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "common_error"
+      ],
+      "variant_group": "HS-MATH1-U03-vertex_outside",
+      "explanation_detail": {
+        "approach": "頂点の値が最小値になるのは「軸が定義域内にあるとき」だけ。公式が使える条件を確かめる。",
+        "steps": [
+          "平方完成：$y=(x-3)^2+3$、軸 $x=3$。",
+          "$3<6$ なので軸は定義域の左外。",
+          "定義域で増加するので、最小値は左端 $x=6$ で $12$。"
+        ],
+        "alternatives": [
+          "定義域の両端の値 $f(6)=12$、$f(9)=39$ を比べるだけでも、頂点が区間外のときは最小値が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "軸と定義域の位置関係を確認している",
+            "points": 4
+          },
+          {
+            "point": "正しい最小値を求めている",
+            "points": 4
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "閉区間（端点を含む）で定義された二次関数は必ず最大値・最小値をもつ。",
+          "misconception": "定義域があると最大・最小がないという誤解"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "頂点 $x=3$ は定義域に含まれないので、そのときの値はとれない。",
+          "misconception": "頂点＝最小という公式の条件の無視"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "下に凸で軸が左にあるとき、右端は最大値をとる点である。",
+          "misconception": "最大・最小の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において $\\mathrm{AB}+\\mathrm{AC}=4$、$\\angle\\mathrm{A}=150^\\circ$ である。$\\mathrm{AB}=x$ とするとき、$\\triangle\\mathrm{ABC}$ の面積の最大値を求めなさい。",
+      "answer": {
+        "value": "$1$（$x=2$）"
+      },
+      "explanation": "面積 $S=\\dfrac{1}{2}x(4-x)\\sin150^\\circ$ は $x$ の二次関数で、$x=2$ のとき最大。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*Rational(1,2)*(2)*(4-2)",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U03-triangle_area",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "面積を1つの変数 $x$ で表すと二次関数になる。三角比の面積公式 $S=\\dfrac{1}{2}bc\\sin A$（図形と計量）を使って式を立て、二次関数の最大値の問題に帰着させる。",
+        "steps": [
+          "$\\mathrm{AC}=4-x$（$0<x<4$）。",
+          "$S=\\dfrac{1}{2}x(4-x)\\sin150^\\circ=\\dfrac{1}{2}\\cdot\\dfrac{1}{2}(-x^2+4x)$。",
+          "$-x^2+4x=-(x-2)^2+4$ より $x=2$ で最大。",
+          "最大値 $S=1$。"
+        ],
+        "alternatives": [
+          "相加平均と相乗平均の関係（数学Ⅱ）$x(4-x)\\leqq\\left(\\dfrac{x+(4-x)}{2}\\right)^2=4$ を使っても同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積を $x$ の式で表している（三角比の面積公式）",
+            "points": 3
+          },
+          {
+            "point": "定義域 $0<x<4$ を確認している",
+            "points": 1
+          },
+          {
+            "point": "平方完成して最大値を求めている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$\\sin150^\\circ$ の値を誤る。",
+          "$x$ の変域（辺の長さは正）を考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において $\\mathrm{AB}+\\mathrm{AC}=12$、$\\angle\\mathrm{A}=120^\\circ$ である。$\\mathrm{AB}=x$ とするとき、$\\triangle\\mathrm{ABC}$ の面積の最大値を求めなさい。",
+      "answer": {
+        "value": "$9 \\sqrt{3}$（$x=6$）"
+      },
+      "explanation": "面積 $S=\\dfrac{1}{2}x(12-x)\\sin120^\\circ$ は $x$ の二次関数で、$x=6$ のとき最大。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*sqrt(3)/2*(6)*(12-6)",
+        "expected": "9*sqrt(3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U03-triangle_area",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "面積を1つの変数 $x$ で表すと二次関数になる。三角比の面積公式 $S=\\dfrac{1}{2}bc\\sin A$（図形と計量）を使って式を立て、二次関数の最大値の問題に帰着させる。",
+        "steps": [
+          "$\\mathrm{AC}=12-x$（$0<x<12$）。",
+          "$S=\\dfrac{1}{2}x(12-x)\\sin120^\\circ=\\dfrac{\\sqrt{3}}{2}\\cdot\\dfrac{1}{2}(-x^2+12x)$。",
+          "$-x^2+12x=-(x-6)^2+36$ より $x=6$ で最大。",
+          "最大値 $S=9 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "相加平均と相乗平均の関係（数学Ⅱ）$x(12-x)\\leqq\\left(\\dfrac{x+(12-x)}{2}\\right)^2=36$ を使っても同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積を $x$ の式で表している（三角比の面積公式）",
+            "points": 3
+          },
+          {
+            "point": "定義域 $0<x<12$ を確認している",
+            "points": 1
+          },
+          {
+            "point": "平方完成して最大値を求めている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$\\sin120^\\circ$ の値を誤る。",
+          "$x$ の変域（辺の長さは正）を考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=x^2+4x+7$ の頂点を求めなさい。\n［ある生徒の解答］\n$y=x^2+4x+7=(x-2)^2-4+7=(x-2)^2+3$　よって頂点は $(2,\\,3)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "頂点 $(-2,\\,3)$"
+      },
+      "explanation": "$(x+2)^2=x^2+4x+4$ なので、$x^2+4x=(x+2)^2-4$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((x+2)**2+(3))",
+        "expected": "x**2+4*x+(7)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-err_sign",
+      "explanation_detail": {
+        "approach": "平方完成の結果は、展開して元の式にもどるかで必ず確かめられる。",
+        "steps": [
+          "$x^2+4x$ の $x$ の係数の半分は $+2$。",
+          "$x^2+4x=(x+2)^2-4$。",
+          "$y=(x+2)^2+3$、頂点 $(-2,\\,3)$。"
+        ],
+        "alternatives": [
+          "生徒の式 $(x-2)^2$ を展開すると $x^2-4x+\\cdots$ となり、元の式と $x$ の係数が合わない。展開による検算で誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "かっこ内の符号は「$x$ の係数の半分」をそのまま入れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=x^2+4x+7=(x-2)^2-4+7=(x-2)^2+3$　よって頂点は $(2,\\,3)$",
+        "error_step": "1行目の平方完成",
+        "error_type": "sign",
+        "why_tempting": "$x$ の係数 $+4$ の半分 $+2$ を、かっこの中で $-2$ と書いてしまった。「$(x-p)^2$ の形にする」という意識が強いと符号を機械的に負にしやすい。",
+        "correction": "$y=(x+2)^2-4+7=(x+2)^2+3$　頂点 $(-2,\\,3)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=x^2+2x-3$ の頂点を求めなさい。\n［ある生徒の解答］\n$y=x^2+2x+-3=(x-1)^2-1+-3=(x-1)^2-4$　よって頂点は $(1,\\,-4)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "頂点 $(-1,\\,-4)$"
+      },
+      "explanation": "$(x+1)^2=x^2+2x+1$ なので、$x^2+2x=(x+1)^2-1$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((x+1)**2+(-4))",
+        "expected": "x**2+2*x+(-3)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-err_sign",
+      "explanation_detail": {
+        "approach": "平方完成の結果は、展開して元の式にもどるかで必ず確かめられる。",
+        "steps": [
+          "$x^2+2x$ の $x$ の係数の半分は $+1$。",
+          "$x^2+2x=(x+1)^2-1$。",
+          "$y=(x+1)^2-4$、頂点 $(-1,\\,-4)$。"
+        ],
+        "alternatives": [
+          "生徒の式 $(x-1)^2$ を展開すると $x^2-2x+\\cdots$ となり、元の式と $x$ の係数が合わない。展開による検算で誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "かっこ内の符号は「$x$ の係数の半分」をそのまま入れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=x^2+2x+-3=(x-1)^2-1+-3=(x-1)^2-4$　よって頂点は $(1,\\,-4)$",
+        "error_step": "1行目の平方完成",
+        "error_type": "sign",
+        "why_tempting": "$x$ の係数 $+2$ の半分 $+1$ を、かっこの中で $-1$ と書いてしまった。「$(x-p)^2$ の形にする」という意識が強いと符号を機械的に負にしやすい。",
+        "correction": "$y=(x+1)^2-1+-3=(x+1)^2-4$　頂点 $(-1,\\,-4)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=x^2+8x+5$ の頂点を求めなさい。\n［ある生徒の解答］\n$y=x^2+8x+5=(x-4)^2-16+5=(x-4)^2-11$　よって頂点は $(4,\\,-11)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "頂点 $(-4,\\,-11)$"
+      },
+      "explanation": "$(x+4)^2=x^2+8x+16$ なので、$x^2+8x=(x+4)^2-16$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((x+4)**2+(-11))",
+        "expected": "x**2+8*x+(5)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U03-err_sign",
+      "explanation_detail": {
+        "approach": "平方完成の結果は、展開して元の式にもどるかで必ず確かめられる。",
+        "steps": [
+          "$x^2+8x$ の $x$ の係数の半分は $+4$。",
+          "$x^2+8x=(x+4)^2-16$。",
+          "$y=(x+4)^2-11$、頂点 $(-4,\\,-11)$。"
+        ],
+        "alternatives": [
+          "生徒の式 $(x-4)^2$ を展開すると $x^2-8x+\\cdots$ となり、元の式と $x$ の係数が合わない。展開による検算で誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "かっこ内の符号は「$x$ の係数の半分」をそのまま入れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=x^2+8x+5=(x-4)^2-16+5=(x-4)^2-11$　よって頂点は $(4,\\,-11)$",
+        "error_step": "1行目の平方完成",
+        "error_type": "sign",
+        "why_tempting": "$x$ の係数 $+8$ の半分 $+4$ を、かっこの中で $-4$ と書いてしまった。「$(x-p)^2$ の形にする」という意識が強いと符号を機械的に負にしやすい。",
+        "correction": "$y=(x+4)^2-16+5=(x+4)^2-11$　頂点 $(-4,\\,-11)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次関数 $y=x^2-2x+3\\ (-2\\leqq x\\leqq3)$ の最大値と最小値を求めなさい。\n［ある生徒の解答］\n$y=(x-1)^2+2$ より、最小値は $2$（$x=1$）。最大値は右端 $x=3$ のときの $6$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最大値 $11$（$x=-2$）、最小値 $2$（$x=1$）"
+      },
+      "explanation": "軸 $x=1$ からの距離は、左端 $x=-2$ が $3$、右端 $x=3$ が $2$。遠い左端で最大。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Max((1)*(-2)**2+(-2)*(-2)+(3), (1)*(3)**2+(-2)*(3)+(3))",
+        "expected": "11",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-err_endpoint",
+      "explanation_detail": {
+        "approach": "下に凸の放物線では、軸から遠いほど $y$ の値が大きい。最大値は端点の比較で決める。",
+        "steps": [
+          "軸 $x=1$ は区間内なので最小値は頂点の $2$。",
+          "軸からの距離：$|-2-(1)|=3$、$|3-(1)|=2$。",
+          "遠い $x=-2$ で最大値 $f(-2)=11$。"
+        ],
+        "alternatives": [
+          "両端の値 $f(-2)=11$、$f(3)=6$ を実際に計算して比べれば、場合分けをしなくても確実。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点の値を計算して比べたことを答案に残す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=(x-1)^2+2$ より、最小値は $2$（$x=1$）。最大値は右端 $x=3$ のときの $6$。",
+        "error_step": "最大値の判断（右端を選んだ部分）",
+        "error_type": "condition",
+        "why_tempting": "「最大値は端点でとる」ことは覚えていても、どちらの端点かを軸からの距離で判断していない。右端を選ぶ根拠がない。",
+        "correction": "最小値 $2$（$x=1$）。最大値は軸から遠い左端 $x=-2$ のときの $11$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次関数 $y=x^2+1\\ (-2\\leqq x\\leqq1)$ の最大値と最小値を求めなさい。\n［ある生徒の解答］\n$y=x^2+1$ より、最小値は $1$（$x=0$）。最大値は右端 $x=1$ のときの $2$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最大値 $5$（$x=-2$）、最小値 $1$（$x=0$）"
+      },
+      "explanation": "軸 $x=0$ からの距離は、左端 $x=-2$ が $2$、右端 $x=1$ が $1$。遠い左端で最大。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Max((1)*(-2)**2+(0)*(-2)+(1), (1)*(1)**2+(0)*(1)+(1))",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-err_endpoint",
+      "explanation_detail": {
+        "approach": "下に凸の放物線では、軸から遠いほど $y$ の値が大きい。最大値は端点の比較で決める。",
+        "steps": [
+          "軸 $x=0$ は区間内なので最小値は頂点の $1$。",
+          "軸からの距離：$|-2-(0)|=2$、$|1-(0)|=1$。",
+          "遠い $x=-2$ で最大値 $f(-2)=5$。"
+        ],
+        "alternatives": [
+          "両端の値 $f(-2)=5$、$f(1)=2$ を実際に計算して比べれば、場合分けをしなくても確実。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点の値を計算して比べたことを答案に残す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=x^2+1$ より、最小値は $1$（$x=0$）。最大値は右端 $x=1$ のときの $2$。",
+        "error_step": "最大値の判断（右端を選んだ部分）",
+        "error_type": "condition",
+        "why_tempting": "「最大値は端点でとる」ことは覚えていても、どちらの端点かを軸からの距離で判断していない。右端を選ぶ根拠がない。",
+        "correction": "最小値 $1$（$x=0$）。最大値は軸から遠い左端 $x=-2$ のときの $5$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次関数 $y=x^2-6x+6\\ (0\\leqq x\\leqq5)$ の最大値と最小値を求めなさい。\n［ある生徒の解答］\n$y=(x-3)^2-3$ より、最小値は $-3$（$x=3$）。最大値は右端 $x=5$ のときの $1$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最大値 $6$（$x=0$）、最小値 $-3$（$x=3$）"
+      },
+      "explanation": "軸 $x=3$ からの距離は、左端 $x=0$ が $3$、右端 $x=5$ が $2$。遠い左端で最大。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Max((1)*(0)**2+(-6)*(0)+(6), (1)*(5)**2+(-6)*(5)+(6))",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-err_endpoint",
+      "explanation_detail": {
+        "approach": "下に凸の放物線では、軸から遠いほど $y$ の値が大きい。最大値は端点の比較で決める。",
+        "steps": [
+          "軸 $x=3$ は区間内なので最小値は頂点の $-3$。",
+          "軸からの距離：$|0-(3)|=3$、$|5-(3)|=2$。",
+          "遠い $x=0$ で最大値 $f(0)=6$。"
+        ],
+        "alternatives": [
+          "両端の値 $f(0)=6$、$f(5)=1$ を実際に計算して比べれば、場合分けをしなくても確実。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点の値を計算して比べたことを答案に残す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=(x-3)^2-3$ より、最小値は $-3$（$x=3$）。最大値は右端 $x=5$ のときの $1$。",
+        "error_step": "最大値の判断（右端を選んだ部分）",
+        "error_type": "condition",
+        "why_tempting": "「最大値は端点でとる」ことは覚えていても、どちらの端点かを軸からの距離で判断していない。右端を選ぶ根拠がない。",
+        "correction": "最小値 $-3$（$x=3$）。最大値は軸から遠い左端 $x=0$ のときの $6$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次不等式 $-x^2-7x-12>0$ を解きなさい。\n［ある生徒の解答］\n$-x^2-7x-12>0$ の解は、$-x^2-7x-12=0$ の解が $x=-4,\\ -3$ なので $x<-4,\\ -3<x$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-4<x<-3$"
+      },
+      "explanation": "$x^2$ の係数が負のグラフは上に凸なので、$y>0$ となるのは2つの解の間。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(-x**2+(-7)*x+(-12), x)",
+        "expected": "[-4, -3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-err_neg_ineq",
+      "explanation_detail": {
+        "approach": "「内側・外側」の判断は、$x^2$ の係数を正にしてから行う。",
+        "steps": [
+          "$x^2$ の係数が負であることを確認する。",
+          "両辺に $-1$ をかけ、不等号の向きを変える。",
+          "$(x-(-4))(x-(-3))<0$ より $-4<x<-3$。"
+        ],
+        "alternatives": [
+          "上に凸のグラフをかき、$x$ 軸より上にある部分を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数が負のまま「外側」と判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$-x^2-7x-12>0$ の解は、$-x^2-7x-12=0$ の解が $x=-4,\\ -3$ なので $x<-4,\\ -3<x$",
+        "error_step": "解の範囲を決める部分",
+        "error_type": "sign",
+        "why_tempting": "「$>0$ なら外側」という覚え方を、$x^2$ の係数が負の場合にもそのまま当てはめている。",
+        "correction": "両辺に $-1$ をかけて $x^2+7x+12<0$、すなわち $(x-(-4))(x-(-3))<0$ より $-4<x<-3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次不等式 $-x^2-4x+5>0$ を解きなさい。\n［ある生徒の解答］\n$-x^2-4x+5>0$ の解は、$-x^2-4x+5=0$ の解が $x=-5,\\ 1$ なので $x<-5,\\ 1<x$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-5<x<1$"
+      },
+      "explanation": "$x^2$ の係数が負のグラフは上に凸なので、$y>0$ となるのは2つの解の間。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(-x**2+(-4)*x+(5), x)",
+        "expected": "[-5, 1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U03-err_neg_ineq",
+      "explanation_detail": {
+        "approach": "「内側・外側」の判断は、$x^2$ の係数を正にしてから行う。",
+        "steps": [
+          "$x^2$ の係数が負であることを確認する。",
+          "両辺に $-1$ をかけ、不等号の向きを変える。",
+          "$(x-(-5))(x-(1))<0$ より $-5<x<1$。"
+        ],
+        "alternatives": [
+          "上に凸のグラフをかき、$x$ 軸より上にある部分を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数が負のまま「外側」と判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$-x^2-4x+5>0$ の解は、$-x^2-4x+5=0$ の解が $x=-5,\\ 1$ なので $x<-5,\\ 1<x$",
+        "error_step": "解の範囲を決める部分",
+        "error_type": "sign",
+        "why_tempting": "「$>0$ なら外側」という覚え方を、$x^2$ の係数が負の場合にもそのまま当てはめている。",
+        "correction": "両辺に $-1$ をかけて $x^2+4x-5<0$、すなわち $(x-(-5))(x-(1))<0$ より $-5<x<1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$y=kx^2+8x+k$ のグラフが放物線であり、$x$ 軸と異なる2点で交わるような定数 $k$ の値の範囲を求めなさい。\n［ある生徒の解答］\n放物線 $y=kx^2+8x+k$ が $x$ 軸と2点で交わる条件は $D/4=16-k^2>0$ より $-4<k<4$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-4<k<0,\\ 0<k<4$"
+      },
+      "explanation": "$k=0$ のとき $y=8x$ は直線で、$x$ 軸との共有点は1個しかない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(16-k**2, k)",
+        "expected": "[-4, 4]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-err_a_zero",
+      "explanation_detail": {
+        "approach": "判別式は「二次方程式」の解の個数を判定する道具なので、使う前に最高次の係数が 0 でないことを確認する。",
+        "steps": [
+          "二次関数であるために $k\\neq0$。",
+          "$D/4=16-k^2>0$ より $-4<k<4$。",
+          "両方を満たす範囲は $-4<k<0,\\ 0<k<4$。"
+        ],
+        "alternatives": [
+          "答えを数直線上で表し、$k=0$ に白丸をつけて除く。$k=0$ を代入して実際に共有点が1個になることを確かめると、除外の理由がはっきりする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数に文字があるときは、0 になる場合を必ず検討する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "放物線 $y=kx^2+8x+k$ が $x$ 軸と2点で交わる条件は $D/4=16-k^2>0$ より $-4<k<4$",
+        "error_step": "条件の設定（$k=0$ の場合の検討もれ）",
+        "error_type": "condition",
+        "why_tempting": "判別式の計算に気をとられ、「$x^2$ の係数が 0 でない（二次関数である）」という前提条件を確かめていない。",
+        "correction": "放物線であるためには $k\\neq0$。$D/4=16-k^2>0$ と合わせて $-4<k<0,\\ 0<k<4$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U03-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$y=kx^2+12x+k$ のグラフが放物線であり、$x$ 軸と異なる2点で交わるような定数 $k$ の値の範囲を求めなさい。\n［ある生徒の解答］\n放物線 $y=kx^2+12x+k$ が $x$ 軸と2点で交わる条件は $D/4=36-k^2>0$ より $-6<k<6$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-6<k<0,\\ 0<k<6$"
+      },
+      "explanation": "$k=0$ のとき $y=12x$ は直線で、$x$ 軸との共有点は1個しかない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(36-k**2, k)",
+        "expected": "[-6, 6]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U03-err_a_zero",
+      "explanation_detail": {
+        "approach": "判別式は「二次方程式」の解の個数を判定する道具なので、使う前に最高次の係数が 0 でないことを確認する。",
+        "steps": [
+          "二次関数であるために $k\\neq0$。",
+          "$D/4=36-k^2>0$ より $-6<k<6$。",
+          "両方を満たす範囲は $-6<k<0,\\ 0<k<6$。"
+        ],
+        "alternatives": [
+          "答えを数直線上で表し、$k=0$ に白丸をつけて除く。$k=0$ を代入して実際に共有点が1個になることを確かめると、除外の理由がはっきりする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数に文字があるときは、0 になる場合を必ず検討する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "放物線 $y=kx^2+12x+k$ が $x$ 軸と2点で交わる条件は $D/4=36-k^2>0$ より $-6<k<6$",
+        "error_step": "条件の設定（$k=0$ の場合の検討もれ）",
+        "error_type": "condition",
+        "why_tempting": "判別式の計算に気をとられ、「$x^2$ の係数が 0 でない（二次関数である）」という前提条件を確かめていない。",
+        "correction": "放物線であるためには $k\\neq0$。$D/4=36-k^2>0$ と合わせて $-6<k<0,\\ 0<k<6$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "270af3843990c3c7b5616ead95b5781a904820dda6e4c69bca4a17ff935478c7"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 7 問（Q033, Q041, Q042, Q043, Q044, Q045, Q046）",
+      "content_hash": "860dcf2a7b438778574d57ba370d0d71aa5b86df3c7987b432ab433821e87300"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:50:23+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "a42682eb87a97edc768930e212d550e137e96951f23bd0fa922e42767bd680b3"
+  }
+}

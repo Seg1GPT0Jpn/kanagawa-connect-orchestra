@@ -14,17 +14,23 @@ data/                      マスターデータ（1ファイル＝1問題セッ
   pilot/                   パイロット（5教科×20問）と 5教科オリジナル模試、レビュー記録 REVIEW.md
   junior_high/             中学生版 全単元（教科別）、tokushoku/ 特色検査対策
   high_school/             高校 自習プリント（科目別）
+  hs_packs/                高校 単元パック（単元ごとに lesson.json＝授業プリント、exercise.json＝問題プリント）
   common_test/             大学入学共通テスト対策
   second_stage/            難関大 個別試験（二次試験）対策
 templates/
   question_template.html   問題冊子テンプレート（大問・資料・図・表・選択肢・解答欄・解答用紙）
   answer_template.html     解答・解説冊子テンプレート（配点表・解答一覧・解説・採点基準）
+  lesson_print_template.html    授業プリント（教師用：指導の流れ・口頭解説のポイント／生徒用：板書を写す欄・メモ欄）
+  exercise_print_template.html  問題プリント（A〜D の4段階・観点タグ／解答解説：思考の糸口・別解・部分点・誤答分析）
   _layout.html / _macros.html / print.css   共通レイアウト・部品・印刷用 CSS
   vendor/katex/            数式組版ライブラリ KaTeX（MIT License）
 scripts/
   validate_questions.py    自動検査（スキーマ・必須項目・整合性・重複/類似・検算・LaTeX）
   build_pdf.py             PDF 生成（Chromium + KaTeX、レイアウト検査・PDF 検査つき）
   generate_batch.py        作問バンク → JSON 生成 → 検査 → PDF → カタログ をフェーズ単位で一括実行
+  generate_highschool_unit.py   高校 単元パック（授業プリント＋問題プリント 50〜100問以上）を生成
+  hs_pack_lib.py           単元パックの作問ライブラリ（授業プリントの部品・問題ジェネレータの登録と配分）
+  hs_packs/                単元パックのモジュール（1単元1ファイル）
   banks/                   作問バンク（問題の生成元。フェーズごとのモジュール）
   tests/                   検査スクリプトのテストとダミー JSON
 output/                    生成物（PDF・CATALOG.md・reports/phase*_report.json）
@@ -93,6 +99,37 @@ python -m unittest discover -s scripts/tests
 - 統計資料は出典を確認できる実データか、「架空の資料」と明記したデータを使う。
 
 `data/` の JSON を直接編集してもかまいません。ただしバンクから再生成すると上書きされるため、恒久的な修正はバンク側に入れてください。
+
+## 高校 単元パック（generate_highschool_unit.py）
+
+高校の1単元を「授業プリント」と「問題プリント」の2つの独立したセットとして作ります。どちらも `pack_id` と
+`pair_set_id` で対になり、`unit_context` に前提条件（Prerequisites）と発展・応用への接続（`curriculum_map.json` の高校全単元に定義）を持ちます。
+
+```bash
+python scripts/generate_highschool_unit.py --list
+python scripts/generate_highschool_unit.py --unit HS-MATH1-U03              # 既定 60 問
+python scripts/generate_highschool_unit.py --unit HS-MATH1-U04 --count 100
+python scripts/generate_highschool_unit.py --all --no-pdf --note "レビュー指摘対応"
+```
+
+| 出力（output/hs_packs/<単元>/） | 内容 |
+|---|---|
+| `lesson_teacher.pdf` | 授業プリント 教師用：指導の流れ、概念導入、定義・定理、証明・導出、図解つき例題と解答、板書案、口頭で解説すべきポイント（発問・予想反応・注意）、典型的な誤概念 |
+| `lesson_student.pdf` | 授業プリント 生徒用：例題の解答欄・メモ欄・確認問題の解答欄（教師用の指導メモは載せない） |
+| `exercise_questions.pdf` | 問題プリント：A 基本確認／B 標準演習／C 思考力・記述応用／D 典型誤答訂正、各問に観点タグ |
+| `exercise_answers.pdf` | 解答解説：正答一覧、思考の糸口、解法、別解、部分点の基準、選択肢ごとの誤りの理由、誤答例の分析、よくあるミス |
+
+観点タグ（`perspectives`）は 計算力反復 `computation`／定義・公式の条件確認 `condition_check`／複数単元融合 `cross_unit`／
+記述・論証・途中式 `written_reasoning`／典型ミス `common_error` を必須とし、`concept`・`application`・`multiple_solutions` も使えます。
+
+新しい単元は `scripts/hs_packs/<単元>.py` に `UNIT_ID`・`LESSON`・`GENERATORS` を定義して追加します（書き方は `hs_pack_lib.py` の冒頭と既存モジュールを参照）。
+ジェネレータはパラメータを変えて問題を作り、同じ問題文は自動で除かれます。`--count` に対して変種が足りない場合はエラーで知らせます。
+
+パック固有の自動検査（`print_type` が lesson / exercise のセット）：授業プリントに導入・定義/定理・証明/導出・例題・板書案・指導ガイドがそろっているか、
+口頭解説ポイントが5つ以上あるか。問題プリントが50問以上か、4段階と必須の観点がすべてあるか、各問に段階・観点・詳細解説（糸口・手順・別解・部分点）があるか、
+選択式で誤答の選択肢すべてに誤りの理由があるか、典型誤答訂正の問題に誤答分析があるか、部分点の合計が配点を超えないか。
+
+作成済みの単元パック：`HS-MATH1-U03`（二次関数）、`HS-MATH1-U04`（図形と計量）。いずれも 100 問まで検査に合格することを確認済みです。
 
 ## 版管理と検証状態
 

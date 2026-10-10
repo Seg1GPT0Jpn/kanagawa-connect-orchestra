@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://kanagawa-connect-orchestra.local/schemas/question_schema.json",
   "title": "問題セット（マスターデータ）",
-  "description": "1つのJSONファイル＝1つの問題セット（単元プリント・模試など）。各問題は questions 配列に格納する。数式は LaTeX を $...$（インライン）または $$...$$（ディスプレイ）で記述する。",
+  "description": "1つのJSONファイル＝1つの問題セット（単元プリント・模試など）。各問題は questions 配列に格納する。数式は LaTeX を $...$（インライン）または $$...$$（ディスプレイ）で記述する。 版2.0 で、授業プリント（print_type=lesson）と問題プリント（print_type=exercise）、問題の段階・観点タグ・詳細解説・誤答分析を追加した。",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -24,7 +24,7 @@
     },
     "schema_version": {
       "type": "string",
-      "pattern": "^1\\.\\d+\\.\\d+$"
+      "pattern": "^[12]\\.\\d+\\.\\d+$"
     },
     "set_id": {
       "$ref": "#/$defs/set_id"
@@ -140,7 +140,7 @@
     },
     "questions": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "$ref": "#/$defs/question"
       }
@@ -217,6 +217,53 @@
           "type": "boolean"
         }
       }
+    },
+    "print_type": {
+      "enum": [
+        "worksheet",
+        "lesson",
+        "exercise"
+      ],
+      "default": "worksheet",
+      "description": "worksheet: 従来の単元プリント。lesson: 授業プリント。exercise: 問題プリント（4段階）。"
+    },
+    "pack_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]*(-[A-Z0-9]+)+$",
+      "description": "授業プリントと問題プリントを束ねる単元パックの ID。"
+    },
+    "pair_set_id": {
+      "$ref": "#/$defs/set_id",
+      "description": "対になるプリントの set_id（授業⇔問題）。"
+    },
+    "unit_context": {
+      "$ref": "#/$defs/unit_context"
+    },
+    "lesson": {
+      "$ref": "#/$defs/lesson"
+    },
+    "exercise_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "問題プリントの段階別の問題数。",
+      "properties": {
+        "basic_check": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "standard_practice": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "thinking_writing": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "error_correction": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
     }
   },
   "$defs": {
@@ -261,7 +308,8 @@
         "mock_exam",
         "high_school",
         "common_test",
-        "second_stage"
+        "second_stage",
+        "hs_pack"
       ]
     },
     "skill": {
@@ -945,6 +993,53 @@
         },
         "copyright": {
           "$ref": "#/$defs/copyright"
+        },
+        "exercise_level": {
+          "enum": [
+            "basic_check",
+            "standard_practice",
+            "thinking_writing",
+            "error_correction"
+          ]
+        },
+        "perspectives": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "computation",
+              "condition_check",
+              "concept",
+              "cross_unit",
+              "written_reasoning",
+              "common_error",
+              "application",
+              "multiple_solutions"
+            ]
+          }
+        },
+        "variant_group": {
+          "type": "string",
+          "description": "同じ型のパラメータ違いの問題をまとめる ID（類似問題の警告を出さない）。"
+        },
+        "related_units": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unit_id"
+          }
+        },
+        "explanation_detail": {
+          "$ref": "#/$defs/explanation_detail"
+        },
+        "distractor_analysis": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/distractor"
+          }
+        },
+        "error_analysis": {
+          "$ref": "#/$defs/error_analysis"
         }
       },
       "allOf": [
@@ -1015,8 +1110,498 @@
               }
             }
           }
+        },
+        {
+          "if": {
+            "properties": {
+              "exercise_level": {
+                "const": "error_correction"
+              }
+            },
+            "required": [
+              "exercise_level"
+            ]
+          },
+          "then": {
+            "required": [
+              "error_analysis"
+            ]
+          }
         }
       ]
+    },
+    "unit_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unit_id",
+        "point"
+      ],
+      "properties": {
+        "unit_id": {
+          "$ref": "#/$defs/unit_id"
+        },
+        "title": {
+          "type": "string"
+        },
+        "point": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "unit_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prerequisites",
+        "extensions"
+      ],
+      "description": "学校ごとの進度の違いに対応するための前提条件と発展・応用への接続。",
+      "properties": {
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unit_link"
+          }
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unit_link"
+          }
+        },
+        "readiness_check": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          },
+          "description": "授業前に確認する前提事項。"
+        }
+      }
+    },
+    "teacher_point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "point"
+      ],
+      "properties": {
+        "point": {
+          "$ref": "#/$defs/rich_text"
+        },
+        "ask": {
+          "type": "string",
+          "description": "発問例"
+        },
+        "expect": {
+          "type": "string",
+          "description": "予想される生徒の反応"
+        },
+        "timing": {
+          "type": "string"
+        },
+        "caution": {
+          "type": "string"
+        }
+      }
+    },
+    "lesson_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+$"
+        },
+        "kind": {
+          "enum": [
+            "intro",
+            "definition",
+            "theorem",
+            "proof",
+            "derivation",
+            "example",
+            "figure_explain",
+            "board_plan",
+            "teacher_guide",
+            "summary",
+            "check"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "$ref": "#/$defs/rich_text"
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          }
+        },
+        "formula": {
+          "$ref": "#/$defs/rich_text"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          },
+          "description": "定理・公式が使える条件"
+        },
+        "proof_steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          }
+        },
+        "figure": {
+          "$ref": "#/$defs/figure"
+        },
+        "table": {
+          "$ref": "#/$defs/table"
+        },
+        "example": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "problem",
+            "steps",
+            "answer"
+          ],
+          "properties": {
+            "problem": {
+              "$ref": "#/$defs/rich_text"
+            },
+            "thinking": {
+              "$ref": "#/$defs/rich_text"
+            },
+            "steps": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/rich_text"
+              }
+            },
+            "answer": {
+              "$ref": "#/$defs/rich_text"
+            },
+            "figure": {
+              "$ref": "#/$defs/figure"
+            }
+          }
+        },
+        "board": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "columns"
+          ],
+          "properties": {
+            "columns": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "lines"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "lines": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/rich_text"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "teacher_points": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/teacher_point"
+          }
+        },
+        "misconceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "wrong",
+              "correct"
+            ],
+            "properties": {
+              "wrong": {
+                "$ref": "#/$defs/rich_text"
+              },
+              "correct": {
+                "$ref": "#/$defs/rich_text"
+              }
+            }
+          }
+        },
+        "check_items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "q",
+              "a"
+            ],
+            "properties": {
+              "q": {
+                "$ref": "#/$defs/rich_text"
+              },
+              "a": {
+                "$ref": "#/$defs/rich_text"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "goals",
+        "duration_minutes",
+        "flow",
+        "sections"
+      ],
+      "properties": {
+        "goals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          }
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 300
+        },
+        "flow": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "phase",
+              "minutes",
+              "activity"
+            ],
+            "properties": {
+              "phase": {
+                "type": "string"
+              },
+              "minutes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "activity": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "$ref": "#/$defs/lesson_section"
+          }
+        }
+      }
+    },
+    "explanation_detail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "approach",
+        "steps"
+      ],
+      "properties": {
+        "approach": {
+          "$ref": "#/$defs/rich_text",
+          "description": "思考の糸口：なぜその解法を選ぶのか"
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          }
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          },
+          "description": "別解・別の確かめ方"
+        },
+        "partial_credit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "point",
+              "points"
+            ],
+            "properties": {
+              "point": {
+                "$ref": "#/$defs/rich_text"
+              },
+              "points": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "pitfalls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rich_text"
+          }
+        },
+        "verification": {
+          "$ref": "#/$defs/rich_text",
+          "description": "答えの検算・吟味"
+        }
+      }
+    },
+    "distractor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "why_wrong"
+      ],
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "why_wrong": {
+          "$ref": "#/$defs/rich_text"
+        },
+        "misconception": {
+          "type": "string"
+        }
+      }
+    },
+    "error_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "erroneous_solution",
+        "error_step",
+        "error_type",
+        "why_tempting",
+        "correction"
+      ],
+      "properties": {
+        "erroneous_solution": {
+          "$ref": "#/$defs/rich_text"
+        },
+        "error_step": {
+          "type": "string",
+          "minLength": 1
+        },
+        "error_type": {
+          "enum": [
+            "sign",
+            "condition",
+            "formula",
+            "concept",
+            "calculation",
+            "interpretation",
+            "notation",
+            "logic",
+            "unit"
+          ]
+        },
+        "why_tempting": {
+          "$ref": "#/$defs/rich_text"
+        },
+        "correction": {
+          "$ref": "#/$defs/rich_text"
+        }
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "print_type": {
+            "const": "lesson"
+          }
+        },
+        "required": [
+          "print_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "lesson",
+          "unit_context",
+          "pack_id",
+          "pair_set_id"
+        ],
+        "properties": {
+          "questions": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "questions": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "print_type": {
+            "const": "exercise"
+          }
+        },
+        "required": [
+          "print_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "unit_context",
+          "pack_id",
+          "pair_set_id",
+          "exercise_plan"
+        ]
+      }
+    }
+  ]
 }

@@ -1,0 +1,5404 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U04-EX",
+  "title": "図形と計量　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U04"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH1-U04-PACK",
+  "pair_set_id": "HS-MATH1-U04-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G3-U07",
+        "point": "三平方の定理",
+        "title": "三平方の定理"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U05",
+        "point": "相似と比",
+        "title": "相似な図形"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH2-U04",
+        "point": "一般角の三角関数・加法定理",
+        "title": "三角関数"
+      },
+      {
+        "unit_id": "HS-MATHC-U01",
+        "point": "ベクトルの内積と角",
+        "title": "ベクトル"
+      }
+    ],
+    "readiness_check": [
+      "三平方の定理と特別な直角三角形の辺の比（$1:1:\\sqrt{2}$、$1:2:\\sqrt{3}$）を使える。",
+      "相似の考え方と円周角の定理を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U04-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "単位円を用いて、$\\tan60^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{3}$"
+      },
+      "explanation": "$\\tan60^\\circ=\\sqrt{3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "tan(deg(60))",
+        "expected": "sqrt(3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-trig_value",
+      "explanation_detail": {
+        "approach": "単位円上で角 $60^\\circ$ の点の座標を考える（$\\cos$ は $x$ 座標、$\\sin$ は $y$ 座標、$\\tan$ は傾き）。",
+        "steps": [
+          "角 $60^\\circ$ の点は単位円上の $(\\frac{1}{2},\\,\\frac{\\sqrt{3}}{2})$。",
+          "$\\tan60^\\circ=\\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "鈍角は $180^\\circ-\\theta$ の公式で鋭角に直して、特別な直角三角形の辺の比から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の座標（または鋭角への変換）を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "値（符号を含む）が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の $\\cos,\\ \\tan$ の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "単位円を用いて、$\\sin120^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\frac{\\sqrt{3}}{2}$"
+      },
+      "explanation": "$\\sin120^\\circ=\\frac{\\sqrt{3}}{2}$。$\\sin(120^\\circ)=\\sin(180^\\circ-60^\\circ)=\\sin60^\\circ$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sin(deg(120))",
+        "expected": "sqrt(3)/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-trig_value",
+      "explanation_detail": {
+        "approach": "単位円上で角 $120^\\circ$ の点の座標を考える（$\\cos$ は $x$ 座標、$\\sin$ は $y$ 座標、$\\tan$ は傾き）。",
+        "steps": [
+          "角 $120^\\circ$ の点は単位円上の $(- \\frac{1}{2},\\,\\frac{\\sqrt{3}}{2})$。",
+          "$\\sin120^\\circ=\\frac{\\sqrt{3}}{2}$。"
+        ],
+        "alternatives": [
+          "鈍角は $180^\\circ-\\theta$ の公式で鋭角に直して、特別な直角三角形の辺の比から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の座標（または鋭角への変換）を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "値（符号を含む）が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の $\\cos,\\ \\tan$ の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "単位円を用いて、$\\cos90^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$0$"
+      },
+      "explanation": "$\\cos90^\\circ=0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "cos(deg(90))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-trig_value",
+      "explanation_detail": {
+        "approach": "単位円上で角 $90^\\circ$ の点の座標を考える（$\\cos$ は $x$ 座標、$\\sin$ は $y$ 座標、$\\tan$ は傾き）。",
+        "steps": [
+          "角 $90^\\circ$ の点は単位円上の $(0,\\,1)$。",
+          "$\\cos90^\\circ=0$。"
+        ],
+        "alternatives": [
+          "鈍角は $180^\\circ-\\theta$ の公式で鋭角に直して、特別な直角三角形の辺の比から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の座標（または鋭角への変換）を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "値（符号を含む）が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の $\\cos,\\ \\tan$ の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "単位円を用いて、$\\sin180^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$0$"
+      },
+      "explanation": "$\\sin180^\\circ=0$。$\\sin(180^\\circ)=\\sin(180^\\circ-0^\\circ)=\\sin0^\\circ$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sin(deg(180))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-trig_value",
+      "explanation_detail": {
+        "approach": "単位円上で角 $180^\\circ$ の点の座標を考える（$\\cos$ は $x$ 座標、$\\sin$ は $y$ 座標、$\\tan$ は傾き）。",
+        "steps": [
+          "角 $180^\\circ$ の点は単位円上の $(-1,\\,0)$。",
+          "$\\sin180^\\circ=0$。"
+        ],
+        "alternatives": [
+          "鈍角は $180^\\circ-\\theta$ の公式で鋭角に直して、特別な直角三角形の辺の比から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の座標（または鋭角への変換）を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "値（符号を含む）が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の $\\cos,\\ \\tan$ の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "単位円を用いて、$\\cos60^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\frac{1}{2}$"
+      },
+      "explanation": "$\\cos60^\\circ=\\frac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "cos(deg(60))",
+        "expected": "1/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-trig_value",
+      "explanation_detail": {
+        "approach": "単位円上で角 $60^\\circ$ の点の座標を考える（$\\cos$ は $x$ 座標、$\\sin$ は $y$ 座標、$\\tan$ は傾き）。",
+        "steps": [
+          "角 $60^\\circ$ の点は単位円上の $(\\frac{1}{2},\\,\\frac{\\sqrt{3}}{2})$。",
+          "$\\cos60^\\circ=\\frac{1}{2}$。"
+        ],
+        "alternatives": [
+          "鈍角は $180^\\circ-\\theta$ の公式で鋭角に直して、特別な直角三角形の辺の比から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の座標（または鋭角への変換）を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "値（符号を含む）が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の $\\cos,\\ \\tan$ の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "単位円を用いて、$\\cos0^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "$\\cos0^\\circ=1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "cos(deg(0))",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-trig_value",
+      "explanation_detail": {
+        "approach": "単位円上で角 $0^\\circ$ の点の座標を考える（$\\cos$ は $x$ 座標、$\\sin$ は $y$ 座標、$\\tan$ は傾き）。",
+        "steps": [
+          "角 $0^\\circ$ の点は単位円上の $(1,\\,0)$。",
+          "$\\cos0^\\circ=1$。"
+        ],
+        "alternatives": [
+          "鈍角は $180^\\circ-\\theta$ の公式で鋭角に直して、特別な直角三角形の辺の比から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の座標（または鋭角への変換）を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "値（符号を含む）が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の $\\cos,\\ \\tan$ の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\theta$ は $0^\\circ<\\theta<90^\\circ$ を満たし、$\\sin\\theta=\\dfrac{3}{5}$ である。相互関係を用いて $\\cos\\theta,\\ \\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=\\frac{4}{5},\\ \\tan\\theta=\\frac{3}{4}$"
+      },
+      "explanation": "$\\cos^2\\theta=1-\\sin^2\\theta=\\dfrac{16}{25}$。鋭角なので $\\cos\\theta>0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(1-Rational(3,5)**2)",
+        "expected": "Rational(4,5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-from_sin",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ を結ぶ式 $\\sin^2\\theta+\\cos^2\\theta=1$ を使う。$\\cos\\theta$ の符号は $\\theta$ の範囲で決める。",
+        "steps": [
+          "$\\cos^2\\theta=1-\\left(\\dfrac{3}{5}\\right)^2=\\dfrac{16}{25}$。",
+          "鋭角なので $\\cos\\theta=\\frac{4}{5}$。",
+          "$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=\\frac{3}{4}$。"
+        ],
+        "alternatives": [
+          "斜辺 $5$、高さ $3$ の直角三角形をかき、三平方の定理で底辺 $4$ を求めてから、鈍角なら符号を負にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos^2\\theta$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を範囲から正しく決めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角なのに $\\cos\\theta$ を正にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\theta$ は $90^\\circ<\\theta<180^\\circ$ を満たし、$\\sin\\theta=\\dfrac{3}{5}$ である。相互関係を用いて $\\cos\\theta,\\ \\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=- \\frac{4}{5},\\ \\tan\\theta=- \\frac{3}{4}$"
+      },
+      "explanation": "$\\cos^2\\theta=1-\\sin^2\\theta=\\dfrac{16}{25}$。鈍角なので $\\cos\\theta<0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(1-Rational(3,5)**2)",
+        "expected": "Rational(4,5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-from_sin",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ を結ぶ式 $\\sin^2\\theta+\\cos^2\\theta=1$ を使う。$\\cos\\theta$ の符号は $\\theta$ の範囲で決める。",
+        "steps": [
+          "$\\cos^2\\theta=1-\\left(\\dfrac{3}{5}\\right)^2=\\dfrac{16}{25}$。",
+          "鈍角なので $\\cos\\theta=- \\frac{4}{5}$。",
+          "$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=- \\frac{3}{4}$。"
+        ],
+        "alternatives": [
+          "斜辺 $5$、高さ $3$ の直角三角形をかき、三平方の定理で底辺 $4$ を求めてから、鈍角なら符号を負にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos^2\\theta$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を範囲から正しく決めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角なのに $\\cos\\theta$ を正にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\theta$ は $90^\\circ<\\theta<180^\\circ$ を満たし、$\\sin\\theta=\\dfrac{40}{41}$ である。相互関係を用いて $\\cos\\theta,\\ \\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=- \\frac{9}{41},\\ \\tan\\theta=- \\frac{40}{9}$"
+      },
+      "explanation": "$\\cos^2\\theta=1-\\sin^2\\theta=\\dfrac{81}{1681}$。鈍角なので $\\cos\\theta<0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(1-Rational(40,41)**2)",
+        "expected": "Rational(9,41)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-from_sin",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ を結ぶ式 $\\sin^2\\theta+\\cos^2\\theta=1$ を使う。$\\cos\\theta$ の符号は $\\theta$ の範囲で決める。",
+        "steps": [
+          "$\\cos^2\\theta=1-\\left(\\dfrac{40}{41}\\right)^2=\\dfrac{81}{1681}$。",
+          "鈍角なので $\\cos\\theta=- \\frac{9}{41}$。",
+          "$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=- \\frac{40}{9}$。"
+        ],
+        "alternatives": [
+          "斜辺 $41$、高さ $40$ の直角三角形をかき、三平方の定理で底辺 $9$ を求めてから、鈍角なら符号を負にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos^2\\theta$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を範囲から正しく決めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角なのに $\\cos\\theta$ を正にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\theta$ は $90^\\circ<\\theta<180^\\circ$ を満たし、$\\sin\\theta=\\dfrac{21}{29}$ である。相互関係を用いて $\\cos\\theta,\\ \\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=- \\frac{20}{29},\\ \\tan\\theta=- \\frac{21}{20}$"
+      },
+      "explanation": "$\\cos^2\\theta=1-\\sin^2\\theta=\\dfrac{400}{841}$。鈍角なので $\\cos\\theta<0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(1-Rational(21,29)**2)",
+        "expected": "Rational(20,29)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-from_sin",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ を結ぶ式 $\\sin^2\\theta+\\cos^2\\theta=1$ を使う。$\\cos\\theta$ の符号は $\\theta$ の範囲で決める。",
+        "steps": [
+          "$\\cos^2\\theta=1-\\left(\\dfrac{21}{29}\\right)^2=\\dfrac{400}{841}$。",
+          "鈍角なので $\\cos\\theta=- \\frac{20}{29}$。",
+          "$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=- \\frac{21}{20}$。"
+        ],
+        "alternatives": [
+          "斜辺 $29$、高さ $21$ の直角三角形をかき、三平方の定理で底辺 $20$ を求めてから、鈍角なら符号を負にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos^2\\theta$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を範囲から正しく決めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角なのに $\\cos\\theta$ を正にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\theta$ は $0^\\circ<\\theta<90^\\circ$ を満たし、$\\sin\\theta=\\dfrac{24}{25}$ である。相互関係を用いて $\\cos\\theta,\\ \\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=\\frac{7}{25},\\ \\tan\\theta=\\frac{24}{7}$"
+      },
+      "explanation": "$\\cos^2\\theta=1-\\sin^2\\theta=\\dfrac{49}{625}$。鋭角なので $\\cos\\theta>0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(1-Rational(24,25)**2)",
+        "expected": "Rational(7,25)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-from_sin",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ を結ぶ式 $\\sin^2\\theta+\\cos^2\\theta=1$ を使う。$\\cos\\theta$ の符号は $\\theta$ の範囲で決める。",
+        "steps": [
+          "$\\cos^2\\theta=1-\\left(\\dfrac{24}{25}\\right)^2=\\dfrac{49}{625}$。",
+          "鋭角なので $\\cos\\theta=\\frac{7}{25}$。",
+          "$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=\\frac{24}{7}$。"
+        ],
+        "alternatives": [
+          "斜辺 $25$、高さ $24$ の直角三角形をかき、三平方の定理で底辺 $7$ を求めてから、鈍角なら符号を負にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos^2\\theta$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を範囲から正しく決めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角なのに $\\cos\\theta$ を正にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\tan155^\\circ$ と等しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$-\\tan25^\\circ$"
+        },
+        {
+          "label": "イ",
+          "text": "$-\\sin25^\\circ$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\sin25^\\circ$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\tan25^\\circ$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "$\\tan(180^\\circ-\\theta)$ の公式を使う。$\\tan155^\\circ=-\\tan25^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "tan(deg(155))-(-tan(deg(25)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-supplementary",
+      "explanation_detail": {
+        "approach": "鈍角 $155^\\circ$ を $180^\\circ-25^\\circ$ と見て、$180^\\circ-\\theta$ の公式を使う。",
+        "steps": [
+          "$155^\\circ=180^\\circ-25^\\circ$。",
+          "$\\sin(180^\\circ-\\theta)=\\sin\\theta,\\ \\cos(180^\\circ-\\theta)=-\\cos\\theta,\\ \\tan(180^\\circ-\\theta)=-\\tan\\theta$。",
+          "よって $-\\tan25^\\circ$。"
+        ],
+        "alternatives": [
+          "単位円上で角 $155^\\circ$ と $25^\\circ$ の点が $y$ 軸に関して対称であることを図で確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$180^\\circ-\\theta$ の形に直している",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて正しい",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "符号が逆。点を $y$ 軸について折り返すと $x$ 座標の符号だけが変わる（$\\sin$ は変わらず、$\\cos,\\ \\tan$ は符号が変わる）。",
+          "misconception": "$180^\\circ-\\theta$ の公式の符号の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\sin155^\\circ$ と等しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$-\\sin25^\\circ$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\cos25^\\circ$"
+        },
+        {
+          "label": "ウ",
+          "text": "$-\\cos25^\\circ$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\sin25^\\circ$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$\\sin(180^\\circ-\\theta)$ の公式を使う。$\\sin155^\\circ=\\sin25^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sin(deg(155))-(sin(deg(25)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-supplementary",
+      "explanation_detail": {
+        "approach": "鈍角 $155^\\circ$ を $180^\\circ-25^\\circ$ と見て、$180^\\circ-\\theta$ の公式を使う。",
+        "steps": [
+          "$155^\\circ=180^\\circ-25^\\circ$。",
+          "$\\sin(180^\\circ-\\theta)=\\sin\\theta,\\ \\cos(180^\\circ-\\theta)=-\\cos\\theta,\\ \\tan(180^\\circ-\\theta)=-\\tan\\theta$。",
+          "よって $\\sin25^\\circ$。"
+        ],
+        "alternatives": [
+          "単位円上で角 $155^\\circ$ と $25^\\circ$ の点が $y$ 軸に関して対称であることを図で確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$180^\\circ-\\theta$ の形に直している",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて正しい",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "符号が逆。点を $y$ 軸について折り返すと $x$ 座標の符号だけが変わる（$\\sin$ は変わらず、$\\cos,\\ \\tan$ は符号が変わる）。",
+          "misconception": "$180^\\circ-\\theta$ の公式の符号の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\tan110^\\circ$ と等しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\sin70^\\circ$"
+        },
+        {
+          "label": "イ",
+          "text": "$-\\tan70^\\circ$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\tan70^\\circ$"
+        },
+        {
+          "label": "エ",
+          "text": "$-\\sin70^\\circ$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$\\tan(180^\\circ-\\theta)$ の公式を使う。$\\tan110^\\circ=-\\tan70^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "tan(deg(110))-(-tan(deg(70)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-supplementary",
+      "explanation_detail": {
+        "approach": "鈍角 $110^\\circ$ を $180^\\circ-70^\\circ$ と見て、$180^\\circ-\\theta$ の公式を使う。",
+        "steps": [
+          "$110^\\circ=180^\\circ-70^\\circ$。",
+          "$\\sin(180^\\circ-\\theta)=\\sin\\theta,\\ \\cos(180^\\circ-\\theta)=-\\cos\\theta,\\ \\tan(180^\\circ-\\theta)=-\\tan\\theta$。",
+          "よって $-\\tan70^\\circ$。"
+        ],
+        "alternatives": [
+          "単位円上で角 $110^\\circ$ と $70^\\circ$ の点が $y$ 軸に関して対称であることを図で確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$180^\\circ-\\theta$ の形に直している",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて正しい",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "符号が逆。点を $y$ 軸について折り返すと $x$ 座標の符号だけが変わる（$\\sin$ は変わらず、$\\cos,\\ \\tan$ は符号が変わる）。",
+          "misconception": "$180^\\circ-\\theta$ の公式の符号の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\tan140^\\circ$ と等しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$-\\sin40^\\circ$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\tan40^\\circ$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\sin40^\\circ$"
+        },
+        {
+          "label": "エ",
+          "text": "$-\\tan40^\\circ$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$\\tan(180^\\circ-\\theta)$ の公式を使う。$\\tan140^\\circ=-\\tan40^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "tan(deg(140))-(-tan(deg(40)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-supplementary",
+      "explanation_detail": {
+        "approach": "鈍角 $140^\\circ$ を $180^\\circ-40^\\circ$ と見て、$180^\\circ-\\theta$ の公式を使う。",
+        "steps": [
+          "$140^\\circ=180^\\circ-40^\\circ$。",
+          "$\\sin(180^\\circ-\\theta)=\\sin\\theta,\\ \\cos(180^\\circ-\\theta)=-\\cos\\theta,\\ \\tan(180^\\circ-\\theta)=-\\tan\\theta$。",
+          "よって $-\\tan40^\\circ$。"
+        ],
+        "alternatives": [
+          "単位円上で角 $140^\\circ$ と $40^\\circ$ の点が $y$ 軸に関して対称であることを図で確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$180^\\circ-\\theta$ の形に直している",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて正しい",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "符号が逆。点を $y$ 軸について折り返すと $x$ 座標の符号だけが変わる（$\\sin$ は変わらず、$\\cos,\\ \\tan$ は符号が変わる）。",
+          "misconception": "$180^\\circ-\\theta$ の公式の符号の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$180^\\circ-\\theta$ の公式では三角比の種類は変わらない（$\\sin$ と $\\cos$ が入れかわるのは $90^\\circ-\\theta$ の公式）。",
+          "misconception": "$90^\\circ-\\theta$ の公式との混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ のとき、$\\tan\\theta=\\sqrt{3}$ を満たす $\\theta$ をすべて求めなさい。",
+      "answer": {
+        "value": "$\\theta=60^\\circ$"
+      },
+      "explanation": "単位円で傾きが $\\sqrt{3}$ になる点を探す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[tan(deg(60))]",
+        "expected": "[sqrt(3)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-solve_eq",
+      "explanation_detail": {
+        "approach": "$\\sin$ は $y$ 座標、$\\cos$ は $x$ 座標なので、単位円と直線の交点として角を読み取る。$\\sin$ では解が2つになることが多い。",
+        "steps": [
+          "原点を通る傾き $\\sqrt{3}$ の直線と単位円の交点を考える。",
+          "交点に対応する角は $\\theta=60^\\circ$。"
+        ],
+        "alternatives": [
+          "鋭角の解 $\\alpha$ を求め、$\\sin$ のときは $180^\\circ-\\alpha$ も解になるか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "単位円（または公式）を使って角を考えている",
+            "points": 1
+          },
+          {
+            "point": "すべての解を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin\\theta=\\dfrac12$ で $30^\\circ$ だけを答える（$150^\\circ$ のもれ）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ のとき、$\\sin\\theta=\\dfrac{\\sqrt{3}}{2}$ を満たす $\\theta$ をすべて求めなさい。",
+      "answer": {
+        "value": "$\\theta=60^\\circ,\\ 120^\\circ$"
+      },
+      "explanation": "単位円で$y$ 座標が $\\dfrac{\\sqrt{3}}{2}$ になる点を探す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[sin(deg(60)), sin(deg(120))]",
+        "expected": "[sqrt(3)/2, sqrt(3)/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-solve_eq",
+      "explanation_detail": {
+        "approach": "$\\sin$ は $y$ 座標、$\\cos$ は $x$ 座標なので、単位円と直線の交点として角を読み取る。$\\sin$ では解が2つになることが多い。",
+        "steps": [
+          "直線 $y=\\dfrac{\\sqrt{3}}{2}$ と単位円（上半分）の交点を考える。",
+          "交点に対応する角は $\\theta=60^\\circ,\\ 120^\\circ$。"
+        ],
+        "alternatives": [
+          "鋭角の解 $\\alpha$ を求め、$\\sin$ のときは $180^\\circ-\\alpha$ も解になるか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "単位円（または公式）を使って角を考えている",
+            "points": 1
+          },
+          {
+            "point": "すべての解を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin\\theta=\\dfrac12$ で $30^\\circ$ だけを答える（$150^\\circ$ のもれ）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ のとき、$\\cos\\theta=-\\dfrac{1}{2}$ を満たす $\\theta$ をすべて求めなさい。",
+      "answer": {
+        "value": "$\\theta=120^\\circ$"
+      },
+      "explanation": "単位円で$x$ 座標が $-\\dfrac{1}{2}$ になる点を探す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[cos(deg(120))]",
+        "expected": "[-Rational(1,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-solve_eq",
+      "explanation_detail": {
+        "approach": "$\\sin$ は $y$ 座標、$\\cos$ は $x$ 座標なので、単位円と直線の交点として角を読み取る。$\\sin$ では解が2つになることが多い。",
+        "steps": [
+          "直線 $x=-\\dfrac{1}{2}$ と単位円の交点を考える。",
+          "交点に対応する角は $\\theta=120^\\circ$。"
+        ],
+        "alternatives": [
+          "鋭角の解 $\\alpha$ を求め、$\\sin$ のときは $180^\\circ-\\alpha$ も解になるか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "単位円（または公式）を使って角を考えている",
+            "points": 1
+          },
+          {
+            "point": "すべての解を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin\\theta=\\dfrac12$ で $30^\\circ$ だけを答える（$150^\\circ$ のもれ）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ のとき、$\\sin\\theta=\\dfrac{1}{2}$ を満たす $\\theta$ をすべて求めなさい。",
+      "answer": {
+        "value": "$\\theta=30^\\circ,\\ 150^\\circ$"
+      },
+      "explanation": "単位円で$y$ 座標が $\\dfrac{1}{2}$ になる点を探す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[sin(deg(30)), sin(deg(150))]",
+        "expected": "[Rational(1,2), Rational(1,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-solve_eq",
+      "explanation_detail": {
+        "approach": "$\\sin$ は $y$ 座標、$\\cos$ は $x$ 座標なので、単位円と直線の交点として角を読み取る。$\\sin$ では解が2つになることが多い。",
+        "steps": [
+          "直線 $y=\\dfrac{1}{2}$ と単位円（上半分）の交点を考える。",
+          "交点に対応する角は $\\theta=30^\\circ,\\ 150^\\circ$。"
+        ],
+        "alternatives": [
+          "鋭角の解 $\\alpha$ を求め、$\\sin$ のときは $180^\\circ-\\alpha$ も解になるか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "単位円（または公式）を使って角を考えている",
+            "points": 1
+          },
+          {
+            "point": "すべての解を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin\\theta=\\dfrac12$ で $30^\\circ$ だけを答える（$150^\\circ$ のもれ）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ のとき、$\\sin\\theta=0$ を満たす $\\theta$ をすべて求めなさい。",
+      "answer": {
+        "value": "$\\theta=0^\\circ,\\ 180^\\circ$"
+      },
+      "explanation": "単位円で$y$ 座標が $0$ になる点を探す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[sin(deg(0)), sin(deg(180))]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-solve_eq",
+      "explanation_detail": {
+        "approach": "$\\sin$ は $y$ 座標、$\\cos$ は $x$ 座標なので、単位円と直線の交点として角を読み取る。$\\sin$ では解が2つになることが多い。",
+        "steps": [
+          "直線 $y=0$ と単位円（上半分）の交点を考える。",
+          "交点に対応する角は $\\theta=0^\\circ,\\ 180^\\circ$。"
+        ],
+        "alternatives": [
+          "鋭角の解 $\\alpha$ を求め、$\\sin$ のときは $180^\\circ-\\alpha$ も解になるか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "単位円（または公式）を使って角を考えている",
+            "points": 1
+          },
+          {
+            "point": "すべての解を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin\\theta=\\dfrac12$ で $30^\\circ$ だけを答える（$150^\\circ$ のもれ）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=4,\\ A=45^\\circ,\\ B=105^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$b=2 + 2 \\sqrt{3},\\ R=2 \\sqrt{2}$"
+      },
+      "explanation": "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=2R$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[4*sin(deg(105))/sin(deg(45)), 4/(2*sin(deg(45)))]",
+        "expected": "[2 + 2*sqrt(3), 2*sqrt(2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-sine_rule",
+      "explanation_detail": {
+        "approach": "1辺 $a$ と、その対角 $A$ と、求める辺の対角 $B$ が分かっている → 正弦定理。",
+        "steps": [
+          "$b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{4\\cdot\\sqrt{\\frac{\\sqrt{3}}{4} + \\frac{1}{2}}}{\\frac{\\sqrt{2}}{2}}=2 + 2 \\sqrt{3}$。",
+          "$2R=\\dfrac{a}{\\sin A}$ より $R=2 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "$C=180^\\circ-45^\\circ-105^\\circ=30^\\circ$ も求めておくと、余弦定理で $b$ を検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$b$ を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$R$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2R$ を $R$ と取り違える。",
+          "分母の有理化を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=3,\\ A=135^\\circ,\\ B=30^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$b=\\frac{3 \\sqrt{2}}{2},\\ R=\\frac{3 \\sqrt{2}}{2}$"
+      },
+      "explanation": "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=2R$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[3*sin(deg(30))/sin(deg(135)), 3/(2*sin(deg(135)))]",
+        "expected": "[3*sqrt(2)/2, 3*sqrt(2)/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-sine_rule",
+      "explanation_detail": {
+        "approach": "1辺 $a$ と、その対角 $A$ と、求める辺の対角 $B$ が分かっている → 正弦定理。",
+        "steps": [
+          "$b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{3\\cdot\\frac{1}{2}}{\\frac{\\sqrt{2}}{2}}=\\frac{3 \\sqrt{2}}{2}$。",
+          "$2R=\\dfrac{a}{\\sin A}$ より $R=\\frac{3 \\sqrt{2}}{2}$。"
+        ],
+        "alternatives": [
+          "$C=180^\\circ-135^\\circ-30^\\circ=15^\\circ$ も求めておくと、余弦定理で $b$ を検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$b$ を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$R$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2R$ を $R$ と取り違える。",
+          "分母の有理化を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=8,\\ A=45^\\circ,\\ B=60^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$b=4 \\sqrt{6},\\ R=4 \\sqrt{2}$"
+      },
+      "explanation": "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=2R$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[8*sin(deg(60))/sin(deg(45)), 8/(2*sin(deg(45)))]",
+        "expected": "[4*sqrt(6), 4*sqrt(2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-sine_rule",
+      "explanation_detail": {
+        "approach": "1辺 $a$ と、その対角 $A$ と、求める辺の対角 $B$ が分かっている → 正弦定理。",
+        "steps": [
+          "$b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{8\\cdot\\frac{\\sqrt{3}}{2}}{\\frac{\\sqrt{2}}{2}}=4 \\sqrt{6}$。",
+          "$2R=\\dfrac{a}{\\sin A}$ より $R=4 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "$C=180^\\circ-45^\\circ-60^\\circ=75^\\circ$ も求めておくと、余弦定理で $b$ を検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$b$ を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$R$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2R$ を $R$ と取り違える。",
+          "分母の有理化を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=10,\\ A=30^\\circ,\\ B=120^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$b=10 \\sqrt{3},\\ R=10$"
+      },
+      "explanation": "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=2R$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[10*sin(deg(120))/sin(deg(30)), 10/(2*sin(deg(30)))]",
+        "expected": "[10*sqrt(3), 10]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-sine_rule",
+      "explanation_detail": {
+        "approach": "1辺 $a$ と、その対角 $A$ と、求める辺の対角 $B$ が分かっている → 正弦定理。",
+        "steps": [
+          "$b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{10\\cdot\\frac{\\sqrt{3}}{2}}{\\frac{1}{2}}=10 \\sqrt{3}$。",
+          "$2R=\\dfrac{a}{\\sin A}$ より $R=10$。"
+        ],
+        "alternatives": [
+          "$C=180^\\circ-30^\\circ-120^\\circ=30^\\circ$ も求めておくと、余弦定理で $b$ を検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$b$ を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$R$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2R$ を $R$ と取り違える。",
+          "分母の有理化を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=6,\\ A=45^\\circ,\\ B=30^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$b=3 \\sqrt{2},\\ R=3 \\sqrt{2}$"
+      },
+      "explanation": "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=2R$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[6*sin(deg(30))/sin(deg(45)), 6/(2*sin(deg(45)))]",
+        "expected": "[3*sqrt(2), 3*sqrt(2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-sine_rule",
+      "explanation_detail": {
+        "approach": "1辺 $a$ と、その対角 $A$ と、求める辺の対角 $B$ が分かっている → 正弦定理。",
+        "steps": [
+          "$b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{6\\cdot\\frac{1}{2}}{\\frac{\\sqrt{2}}{2}}=3 \\sqrt{2}$。",
+          "$2R=\\dfrac{a}{\\sin A}$ より $R=3 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "$C=180^\\circ-45^\\circ-30^\\circ=105^\\circ$ も求めておくと、余弦定理で $b$ を検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$b$ を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$R$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2R$ を $R$ と取り違える。",
+          "分母の有理化を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=10,\\ A=45^\\circ,\\ B=60^\\circ$ のとき、$b$ と外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$b=5 \\sqrt{6},\\ R=5 \\sqrt{2}$"
+      },
+      "explanation": "正弦定理 $\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}=2R$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[10*sin(deg(60))/sin(deg(45)), 10/(2*sin(deg(45)))]",
+        "expected": "[5*sqrt(6), 5*sqrt(2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-sine_rule",
+      "explanation_detail": {
+        "approach": "1辺 $a$ と、その対角 $A$ と、求める辺の対角 $B$ が分かっている → 正弦定理。",
+        "steps": [
+          "$b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{10\\cdot\\frac{\\sqrt{3}}{2}}{\\frac{\\sqrt{2}}{2}}=5 \\sqrt{6}$。",
+          "$2R=\\dfrac{a}{\\sin A}$ より $R=5 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "$C=180^\\circ-45^\\circ-60^\\circ=75^\\circ$ も求めておくと、余弦定理で $b$ を検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$b$ を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$R$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2R$ を $R$ と取り違える。",
+          "分母の有理化を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=5,\\ c=9,\\ A=45^\\circ$ のとき、$a$ を求めなさい。",
+      "answer": {
+        "value": "$a=\\sqrt{106 - 45 \\sqrt{2}}$"
+      },
+      "explanation": "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(5**2+9**2-2*5*9*cos(deg(45)))",
+        "expected": "sqrt(106 - 45*sqrt(2))",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_side",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 余弦定理で対辺を求める。",
+        "steps": [
+          "$a^2=5^2+9^2-2\\cdot5\\cdot9\\cos45^\\circ$。",
+          "$\\cos45^\\circ=\\frac{\\sqrt{2}}{2}$ を代入して $a^2=106 - 45 \\sqrt{2}$。",
+          "$a>0$ より $a=\\sqrt{106 - 45 \\sqrt{2}}$。"
+        ],
+        "alternatives": [
+          "座標を使う：A を原点、B を $(c,\\,0)$、C を $(b\\cos A,\\,b\\sin A)$ として BC の長さを2点間の距離で求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$\\cos A$ の値（符号）を正しく代入している",
+            "points": 2
+          },
+          {
+            "point": "$a$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角で $\\cos A$ の符号を誤り、$-2bc\\cos A$ の符号処理を間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=9,\\ c=4,\\ A=60^\\circ$ のとき、$a$ を求めなさい。",
+      "answer": {
+        "value": "$a=\\sqrt{61}$"
+      },
+      "explanation": "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(9**2+4**2-2*9*4*cos(deg(60)))",
+        "expected": "sqrt(61)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_side",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 余弦定理で対辺を求める。",
+        "steps": [
+          "$a^2=9^2+4^2-2\\cdot9\\cdot4\\cos60^\\circ$。",
+          "$\\cos60^\\circ=\\frac{1}{2}$ を代入して $a^2=61$。",
+          "$a>0$ より $a=\\sqrt{61}$。"
+        ],
+        "alternatives": [
+          "座標を使う：A を原点、B を $(c,\\,0)$、C を $(b\\cos A,\\,b\\sin A)$ として BC の長さを2点間の距離で求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$\\cos A$ の値（符号）を正しく代入している",
+            "points": 2
+          },
+          {
+            "point": "$a$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角で $\\cos A$ の符号を誤り、$-2bc\\cos A$ の符号処理を間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=6,\\ c=9,\\ A=90^\\circ$ のとき、$a$ を求めなさい。",
+      "answer": {
+        "value": "$a=3 \\sqrt{13}$"
+      },
+      "explanation": "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(6**2+9**2-2*6*9*cos(deg(90)))",
+        "expected": "3*sqrt(13)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_side",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 余弦定理で対辺を求める。",
+        "steps": [
+          "$a^2=6^2+9^2-2\\cdot6\\cdot9\\cos90^\\circ$。",
+          "$\\cos90^\\circ=0$ を代入して $a^2=117$。",
+          "$a>0$ より $a=3 \\sqrt{13}$。"
+        ],
+        "alternatives": [
+          "座標を使う：A を原点、B を $(c,\\,0)$、C を $(b\\cos A,\\,b\\sin A)$ として BC の長さを2点間の距離で求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$\\cos A$ の値（符号）を正しく代入している",
+            "points": 2
+          },
+          {
+            "point": "$a$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角で $\\cos A$ の符号を誤り、$-2bc\\cos A$ の符号処理を間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=2,\\ c=7,\\ A=120^\\circ$ のとき、$a$ を求めなさい。",
+      "answer": {
+        "value": "$a=\\sqrt{67}$"
+      },
+      "explanation": "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(2**2+7**2-2*2*7*cos(deg(120)))",
+        "expected": "sqrt(67)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_side",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 余弦定理で対辺を求める。",
+        "steps": [
+          "$a^2=2^2+7^2-2\\cdot2\\cdot7\\cos120^\\circ$。",
+          "$\\cos120^\\circ=- \\frac{1}{2}$ を代入して $a^2=67$。",
+          "$a>0$ より $a=\\sqrt{67}$。"
+        ],
+        "alternatives": [
+          "座標を使う：A を原点、B を $(c,\\,0)$、C を $(b\\cos A,\\,b\\sin A)$ として BC の長さを2点間の距離で求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$\\cos A$ の値（符号）を正しく代入している",
+            "points": 2
+          },
+          {
+            "point": "$a$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角で $\\cos A$ の符号を誤り、$-2bc\\cos A$ の符号処理を間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=7,\\ c=7,\\ A=60^\\circ$ のとき、$a$ を求めなさい。",
+      "answer": {
+        "value": "$a=7$"
+      },
+      "explanation": "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(7**2+7**2-2*7*7*cos(deg(60)))",
+        "expected": "7",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_side",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 余弦定理で対辺を求める。",
+        "steps": [
+          "$a^2=7^2+7^2-2\\cdot7\\cdot7\\cos60^\\circ$。",
+          "$\\cos60^\\circ=\\frac{1}{2}$ を代入して $a^2=49$。",
+          "$a>0$ より $a=7$。"
+        ],
+        "alternatives": [
+          "座標を使う：A を原点、B を $(c,\\,0)$、C を $(b\\cos A,\\,b\\sin A)$ として BC の長さを2点間の距離で求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余弦定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$\\cos A$ の値（符号）を正しく代入している",
+            "points": 2
+          },
+          {
+            "point": "$a$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角で $\\cos A$ の符号を誤り、$-2bc\\cos A$ の符号処理を間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=28,\\ b=12,\\ c=20$ のとき、$A$ を求めなさい。",
+      "answer": {
+        "value": "$A=120^\\circ$"
+      },
+      "explanation": "$\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=- \\frac{1}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "acos(Rational(-240,480))*180/pi",
+        "expected": "120",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_angle",
+      "explanation_detail": {
+        "approach": "3辺が分かっていて角を求める → 余弦定理を $\\cos A$ について解いた形を使う。",
+        "steps": [
+          "$\\cos A=\\dfrac{144+400-784}{2\\cdot12\\cdot20}=- \\frac{1}{2}$。",
+          "$0^\\circ<A<180^\\circ$ より $A=120^\\circ$。"
+        ],
+        "alternatives": [
+          "最大辺の対角が最大角。$a$ が最大辺なので、$\\cos A$ の符号で鋭角・直角・鈍角の判定もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$ の式を正しく立てて計算している",
+            "points": 2
+          },
+          {
+            "point": "角を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A<0$ なのに鋭角を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=13,\\ b=8,\\ c=15$ のとき、$A$ を求めなさい。",
+      "answer": {
+        "value": "$A=60^\\circ$"
+      },
+      "explanation": "$\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=\\frac{1}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "acos(Rational(120,240))*180/pi",
+        "expected": "60",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_angle",
+      "explanation_detail": {
+        "approach": "3辺が分かっていて角を求める → 余弦定理を $\\cos A$ について解いた形を使う。",
+        "steps": [
+          "$\\cos A=\\dfrac{64+225-169}{2\\cdot8\\cdot15}=\\frac{1}{2}$。",
+          "$0^\\circ<A<180^\\circ$ より $A=60^\\circ$。"
+        ],
+        "alternatives": [
+          "最大辺の対角が最大角。$a$ が最大辺なので、$\\cos A$ の符号で鋭角・直角・鈍角の判定もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$ の式を正しく立てて計算している",
+            "points": 2
+          },
+          {
+            "point": "角を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A<0$ なのに鋭角を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=13,\\ b=5,\\ c=12$ のとき、$A$ を求めなさい。",
+      "answer": {
+        "value": "$A=90^\\circ$"
+      },
+      "explanation": "$\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "acos(Rational(0,120))*180/pi",
+        "expected": "90",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_angle",
+      "explanation_detail": {
+        "approach": "3辺が分かっていて角を求める → 余弦定理を $\\cos A$ について解いた形を使う。",
+        "steps": [
+          "$\\cos A=\\dfrac{25+144-169}{2\\cdot5\\cdot12}=0$。",
+          "$0^\\circ<A<180^\\circ$ より $A=90^\\circ$。"
+        ],
+        "alternatives": [
+          "最大辺の対角が最大角。$a$ が最大辺なので、$\\cos A$ の符号で鋭角・直角・鈍角の判定もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$ の式を正しく立てて計算している",
+            "points": 2
+          },
+          {
+            "point": "角を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A<0$ なのに鋭角を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=26,\\ b=14,\\ c=16$ のとき、$A$ を求めなさい。",
+      "answer": {
+        "value": "$A=120^\\circ$"
+      },
+      "explanation": "$\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}=- \\frac{1}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "acos(Rational(-224,448))*180/pi",
+        "expected": "120",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-cosine_angle",
+      "explanation_detail": {
+        "approach": "3辺が分かっていて角を求める → 余弦定理を $\\cos A$ について解いた形を使う。",
+        "steps": [
+          "$\\cos A=\\dfrac{196+256-676}{2\\cdot14\\cdot16}=- \\frac{1}{2}$。",
+          "$0^\\circ<A<180^\\circ$ より $A=120^\\circ$。"
+        ],
+        "alternatives": [
+          "最大辺の対角が最大角。$a$ が最大辺なので、$\\cos A$ の符号で鋭角・直角・鈍角の判定もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$ の式を正しく立てて計算している",
+            "points": 2
+          },
+          {
+            "point": "角を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A<0$ なのに鋭角を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=7,\\ c=9,\\ A=120^\\circ$ のとき、面積 $S$ を求めなさい。",
+      "answer": {
+        "value": "$\\frac{63 \\sqrt{3}}{4}$"
+      },
+      "explanation": "$S=\\dfrac{1}{2}bc\\sin A$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*7*9*sin(deg(120))",
+        "expected": "63*sqrt(3)/4",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-area",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 面積公式 $S=\\dfrac12bc\\sin A$。",
+        "steps": [
+          "$S=\\dfrac{1}{2}\\cdot7\\cdot9\\cdot\\sin120^\\circ$。",
+          "$\\sin120^\\circ=\\frac{\\sqrt{3}}{2}$ より $S=\\frac{63 \\sqrt{3}}{4}$。"
+        ],
+        "alternatives": [
+          "高さ $h=b\\sin A=\\frac{7 \\sqrt{3}}{2}$ を求めてから $\\dfrac12\\cdot c\\cdot h$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A$ を使ってしまう。",
+          "$\\dfrac12$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=2,\\ c=10,\\ A=120^\\circ$ のとき、面積 $S$ を求めなさい。",
+      "answer": {
+        "value": "$5 \\sqrt{3}$"
+      },
+      "explanation": "$S=\\dfrac{1}{2}bc\\sin A$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*2*10*sin(deg(120))",
+        "expected": "5*sqrt(3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-area",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 面積公式 $S=\\dfrac12bc\\sin A$。",
+        "steps": [
+          "$S=\\dfrac{1}{2}\\cdot2\\cdot10\\cdot\\sin120^\\circ$。",
+          "$\\sin120^\\circ=\\frac{\\sqrt{3}}{2}$ より $S=5 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "高さ $h=b\\sin A=\\sqrt{3}$ を求めてから $\\dfrac12\\cdot c\\cdot h$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A$ を使ってしまう。",
+          "$\\dfrac12$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=6,\\ c=8,\\ A=120^\\circ$ のとき、面積 $S$ を求めなさい。",
+      "answer": {
+        "value": "$12 \\sqrt{3}$"
+      },
+      "explanation": "$S=\\dfrac{1}{2}bc\\sin A$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*6*8*sin(deg(120))",
+        "expected": "12*sqrt(3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-area",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 面積公式 $S=\\dfrac12bc\\sin A$。",
+        "steps": [
+          "$S=\\dfrac{1}{2}\\cdot6\\cdot8\\cdot\\sin120^\\circ$。",
+          "$\\sin120^\\circ=\\frac{\\sqrt{3}}{2}$ より $S=12 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "高さ $h=b\\sin A=3 \\sqrt{3}$ を求めてから $\\dfrac12\\cdot c\\cdot h$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A$ を使ってしまう。",
+          "$\\dfrac12$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=9,\\ c=4,\\ A=60^\\circ$ のとき、面積 $S$ を求めなさい。",
+      "answer": {
+        "value": "$9 \\sqrt{3}$"
+      },
+      "explanation": "$S=\\dfrac{1}{2}bc\\sin A$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*9*4*sin(deg(60))",
+        "expected": "9*sqrt(3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-area",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 面積公式 $S=\\dfrac12bc\\sin A$。",
+        "steps": [
+          "$S=\\dfrac{1}{2}\\cdot9\\cdot4\\cdot\\sin60^\\circ$。",
+          "$\\sin60^\\circ=\\frac{\\sqrt{3}}{2}$ より $S=9 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "高さ $h=b\\sin A=\\frac{9 \\sqrt{3}}{2}$ を求めてから $\\dfrac12\\cdot c\\cdot h$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A$ を使ってしまう。",
+          "$\\dfrac12$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$b=9,\\ c=7,\\ A=60^\\circ$ のとき、面積 $S$ を求めなさい。",
+      "answer": {
+        "value": "$\\frac{63 \\sqrt{3}}{4}$"
+      },
+      "explanation": "$S=\\dfrac{1}{2}bc\\sin A$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*9*7*sin(deg(60))",
+        "expected": "63*sqrt(3)/4",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-area",
+      "explanation_detail": {
+        "approach": "2辺とその間の角が分かっている → 面積公式 $S=\\dfrac12bc\\sin A$。",
+        "steps": [
+          "$S=\\dfrac{1}{2}\\cdot9\\cdot7\\cdot\\sin60^\\circ$。",
+          "$\\sin60^\\circ=\\frac{\\sqrt{3}}{2}$ より $S=\\frac{63 \\sqrt{3}}{4}$。"
+        ],
+        "alternatives": [
+          "高さ $h=b\\sin A=\\frac{9 \\sqrt{3}}{2}$ を求めてから $\\dfrac12\\cdot c\\cdot h$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\cos A$ を使ってしまう。",
+          "$\\dfrac12$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=6,\\ b=6\\sqrt{2},\\ A=30^\\circ$ のとき、$B$ と $c$ を求めなさい。",
+      "answer": {
+        "value": "$B=45^\\circ$ のとき $c=3 \\sqrt{2} + 3 \\sqrt{6}$、$B=135^\\circ$ のとき $c=- 3 \\sqrt{2} + 3 \\sqrt{6}$"
+      },
+      "explanation": "正弦定理から $\\sin B=\\dfrac{\\sqrt2}{2}$。$B=45^\\circ,\\ 135^\\circ$ のどちらも $A+B<180^\\circ$ を満たすので、三角形は2つある。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "正弦定理で $\\sin B$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "$B$ の2つの候補を挙げ、どちらも適することを確かめている",
+            "points": 3
+          },
+          {
+            "criterion": "それぞれの場合の $c$ を正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(c**2-6*sqrt(6)*c+36, c)",
+        "expected": "[-3*sqrt(2) + 3*sqrt(6), 3*sqrt(2) + 3*sqrt(6)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH1-U04-ambiguous",
+      "explanation_detail": {
+        "approach": "2辺と、その一方の対角が分かっている（2辺夾角ではない）ので、正弦定理で $\\sin B$ を求める。$\\sin$ の値から角を求めると2通りの候補が出るので、両方が三角形として成り立つか確かめる。",
+        "steps": [
+          "$\\dfrac{6}{\\sin30^\\circ}=\\dfrac{6\\sqrt2}{\\sin B}$ より $\\sin B=\\dfrac{\\sqrt2}{2}$。",
+          "$B=45^\\circ$ または $135^\\circ$。どちらも $30^\\circ+B<180^\\circ$。",
+          "$B=45^\\circ$ のとき $C=105^\\circ$。余弦定理 $a^2=b^2+c^2-2bc\\cos A$ より $c^2-6\\sqrt6\\,c+36=0$、大きい方の解 $c=3 \\sqrt{2} + 3 \\sqrt{6}$。",
+          "$B=135^\\circ$ のとき $C=15^\\circ$ で、小さい方の解 $c=- 3 \\sqrt{2} + 3 \\sqrt{6}$。"
+        ],
+        "alternatives": [
+          "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を $c$ の二次方程式として解くと、2つの正の解が2つの三角形に対応する（正弦定理を使わない解法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\sin B$ の計算",
+            "points": 2
+          },
+          {
+            "point": "2通りの $B$ の吟味",
+            "points": 3
+          },
+          {
+            "point": "それぞれの $c$",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$B=45^\\circ$ だけを答える。",
+          "2つの $c$ と2つの $B$ の対応を取り違える（$B$ が大きいほど $C$ は小さく、$c$ も小さい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$a=3,\\ b=3\\sqrt{2},\\ A=30^\\circ$ のとき、$B$ と $c$ を求めなさい。",
+      "answer": {
+        "value": "$B=45^\\circ$ のとき $c=\\sqrt{9 \\sqrt{3} + 18}$、$B=135^\\circ$ のとき $c=\\sqrt{18 - 9 \\sqrt{3}}$"
+      },
+      "explanation": "正弦定理から $\\sin B=\\dfrac{\\sqrt2}{2}$。$B=45^\\circ,\\ 135^\\circ$ のどちらも $A+B<180^\\circ$ を満たすので、三角形は2つある。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "正弦定理で $\\sin B$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "$B$ の2つの候補を挙げ、どちらも適することを確かめている",
+            "points": 3
+          },
+          {
+            "criterion": "それぞれの場合の $c$ を正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(c**2-3*sqrt(6)*c+9, c)",
+        "expected": "[sqrt(18 - 9*sqrt(3)), sqrt(9*sqrt(3) + 18)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH1-U04-ambiguous",
+      "explanation_detail": {
+        "approach": "2辺と、その一方の対角が分かっている（2辺夾角ではない）ので、正弦定理で $\\sin B$ を求める。$\\sin$ の値から角を求めると2通りの候補が出るので、両方が三角形として成り立つか確かめる。",
+        "steps": [
+          "$\\dfrac{3}{\\sin30^\\circ}=\\dfrac{3\\sqrt2}{\\sin B}$ より $\\sin B=\\dfrac{\\sqrt2}{2}$。",
+          "$B=45^\\circ$ または $135^\\circ$。どちらも $30^\\circ+B<180^\\circ$。",
+          "$B=45^\\circ$ のとき $C=105^\\circ$。余弦定理 $a^2=b^2+c^2-2bc\\cos A$ より $c^2-3\\sqrt6\\,c+9=0$、大きい方の解 $c=\\sqrt{9 \\sqrt{3} + 18}$。",
+          "$B=135^\\circ$ のとき $C=15^\\circ$ で、小さい方の解 $c=\\sqrt{18 - 9 \\sqrt{3}}$。"
+        ],
+        "alternatives": [
+          "余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を $c$ の二次方程式として解くと、2つの正の解が2つの三角形に対応する（正弦定理を使わない解法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\sin B$ の計算",
+            "points": 2
+          },
+          {
+            "point": "2通りの $B$ の吟味",
+            "points": 3
+          },
+          {
+            "point": "それぞれの $c$",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$B=45^\\circ$ だけを答える。",
+          "2つの $c$ と2つの $B$ の対応を取り違える（$B$ が大きいほど $C$ は小さく、$c$ も小さい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$\\mathrm{AB}+\\mathrm{AC}=12$、$\\angle\\mathrm{A}=90^\\circ$ である。$\\mathrm{AB}=x$ とするとき、辺 BC の長さの最小値と、そのときの $x$ を求めなさい。",
+      "answer": {
+        "value": "$x=6$ のとき最小値 $6 \\sqrt{2}$"
+      },
+      "explanation": "余弦定理で $\\mathrm{BC}^2$ を $x$ の二次関数で表し、平方完成して最小値を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "余弦定理で $\\mathrm{BC}^2$ を $x$ で表している",
+            "points": 3
+          },
+          {
+            "criterion": "$x$ の変域を示している",
+            "points": 1
+          },
+          {
+            "criterion": "平方完成して最小値と $x$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$\\mathrm{BC}>0$ から平方根をとって答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(x**2+(12-x)**2-2*x*(12-x)*cos(deg(90)))",
+        "expected": "2*x**2 - 24*x + 144",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH1-U04-min_bc",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "BC は2辺とその間の角から余弦定理で表せる。すると $\\mathrm{BC}^2$ が $x$ の二次関数になるので、二次関数の最小値の問題に帰着する（BC が最小 ⇔ $\\mathrm{BC}^2$ が最小）。",
+        "steps": [
+          "$\\mathrm{AC}=12-x\\ (0<x<12)$。",
+          "$\\mathrm{BC}^2=x^2+(12-x)^2-2x(12-x)\\cos90^\\circ=2 x^{2} - 24 x + 144$。",
+          "平方完成すると $x=6$ で最小値 $72$。",
+          "よって BC の最小値は $6 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "AB＝AC（二等辺三角形）のとき最小になることは、対称性からも予想できる。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\mathrm{BC}^2$ の式",
+            "points": 3
+          },
+          {
+            "point": "変域",
+            "points": 1
+          },
+          {
+            "point": "最小値の計算",
+            "points": 3
+          },
+          {
+            "point": "平方根",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "BC そのものではなく $\\mathrm{BC}^2$ の最小値を答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$\\mathrm{AB}+\\mathrm{AC}=10$、$\\angle\\mathrm{A}=120^\\circ$ である。$\\mathrm{AB}=x$ とするとき、辺 BC の長さの最小値と、そのときの $x$ を求めなさい。",
+      "answer": {
+        "value": "$x=5$ のとき最小値 $5 \\sqrt{3}$"
+      },
+      "explanation": "余弦定理で $\\mathrm{BC}^2$ を $x$ の二次関数で表し、平方完成して最小値を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "余弦定理で $\\mathrm{BC}^2$ を $x$ で表している",
+            "points": 3
+          },
+          {
+            "criterion": "$x$ の変域を示している",
+            "points": 1
+          },
+          {
+            "criterion": "平方完成して最小値と $x$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$\\mathrm{BC}>0$ から平方根をとって答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(x**2+(10-x)**2-2*x*(10-x)*cos(deg(120)))",
+        "expected": "x**2 - 10*x + 100",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH1-U04-min_bc",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "BC は2辺とその間の角から余弦定理で表せる。すると $\\mathrm{BC}^2$ が $x$ の二次関数になるので、二次関数の最小値の問題に帰着する（BC が最小 ⇔ $\\mathrm{BC}^2$ が最小）。",
+        "steps": [
+          "$\\mathrm{AC}=10-x\\ (0<x<10)$。",
+          "$\\mathrm{BC}^2=x^2+(10-x)^2-2x(10-x)\\cos120^\\circ=x^{2} - 10 x + 100$。",
+          "平方完成すると $x=5$ で最小値 $75$。",
+          "よって BC の最小値は $5 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "AB＝AC（二等辺三角形）のとき最小になることは、対称性からも予想できる。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\mathrm{BC}^2$ の式",
+            "points": 3
+          },
+          {
+            "point": "変域",
+            "points": 1
+          },
+          {
+            "point": "最小値の計算",
+            "points": 3
+          },
+          {
+            "point": "平方根",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "BC そのものではなく $\\mathrm{BC}^2$ の最小値を答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、$\\mathrm{AB}+\\mathrm{AC}=14$、$\\angle\\mathrm{A}=90^\\circ$ である。$\\mathrm{AB}=x$ とするとき、辺 BC の長さの最小値と、そのときの $x$ を求めなさい。",
+      "answer": {
+        "value": "$x=7$ のとき最小値 $7 \\sqrt{2}$"
+      },
+      "explanation": "余弦定理で $\\mathrm{BC}^2$ を $x$ の二次関数で表し、平方完成して最小値を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "余弦定理で $\\mathrm{BC}^2$ を $x$ で表している",
+            "points": 3
+          },
+          {
+            "criterion": "$x$ の変域を示している",
+            "points": 1
+          },
+          {
+            "criterion": "平方完成して最小値と $x$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$\\mathrm{BC}>0$ から平方根をとって答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(x**2+(14-x)**2-2*x*(14-x)*cos(deg(90)))",
+        "expected": "2*x**2 - 28*x + 196",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH1-U04-min_bc",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "BC は2辺とその間の角から余弦定理で表せる。すると $\\mathrm{BC}^2$ が $x$ の二次関数になるので、二次関数の最小値の問題に帰着する（BC が最小 ⇔ $\\mathrm{BC}^2$ が最小）。",
+        "steps": [
+          "$\\mathrm{AC}=14-x\\ (0<x<14)$。",
+          "$\\mathrm{BC}^2=x^2+(14-x)^2-2x(14-x)\\cos90^\\circ=2 x^{2} - 28 x + 196$。",
+          "平方完成すると $x=7$ で最小値 $98$。",
+          "よって BC の最小値は $7 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "AB＝AC（二等辺三角形）のとき最小になることは、対称性からも予想できる。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\mathrm{BC}^2$ の式",
+            "points": 3
+          },
+          {
+            "point": "変域",
+            "points": 1
+          },
+          {
+            "point": "最小値の計算",
+            "points": 3
+          },
+          {
+            "point": "平方根",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "BC そのものではなく $\\mathrm{BC}^2$ の最小値を答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "三角形について「3辺」が分かっているとき、残りの辺や角を求めるために最初に使うのに最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "余弦定理（$\\cos A$ を求める）"
+        },
+        {
+          "label": "イ",
+          "text": "正弦定理"
+        },
+        {
+          "label": "ウ",
+          "text": "面積公式 $\\dfrac12bc\\sin A$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "「3辺」の条件に合うのは余弦定理（$\\cos A$ を求める）。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-choose_law",
+      "explanation_detail": {
+        "approach": "各定理の式に含まれる量を確認し、分かっている量だけで未知数が1つになる式を選ぶ。",
+        "steps": [
+          "正弦定理：$\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$（辺と対角の組が2つ）。",
+          "余弦定理：$a^2=b^2+c^2-2bc\\cos A$（3辺と1角）。",
+          "「3辺」なら余弦定理（$\\cos A$ を求める）。"
+        ],
+        "alternatives": [
+          "迷ったら三角形を描いて、分かっている辺・角に印をつけ、どの式なら未知数が1つになるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各定理に含まれる量を確認している",
+            "points": 4
+          },
+          {
+            "point": "適切な定理を選んでいる",
+            "points": 4
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "正弦定理はこの条件では未知数が2つ以上残り、直接は使えない（使うには他の量を先に求める必要がある）。",
+          "misconception": "定理の適用条件の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "面積公式 $\\dfrac12bc\\sin A$は条件が合わない（直角三角形でない／角を求める道具ではない）。",
+          "misconception": "公式の適用条件の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "三角形について「2辺とその間の角」が分かっているとき、残りの辺や角を求めるために最初に使うのに最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "三平方の定理"
+        },
+        {
+          "label": "イ",
+          "text": "余弦定理"
+        },
+        {
+          "label": "ウ",
+          "text": "正弦定理"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "「2辺とその間の角」の条件に合うのは余弦定理。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-choose_law",
+      "explanation_detail": {
+        "approach": "各定理の式に含まれる量を確認し、分かっている量だけで未知数が1つになる式を選ぶ。",
+        "steps": [
+          "正弦定理：$\\dfrac{a}{\\sin A}=\\dfrac{b}{\\sin B}$（辺と対角の組が2つ）。",
+          "余弦定理：$a^2=b^2+c^2-2bc\\cos A$（3辺と1角）。",
+          "「2辺とその間の角」なら余弦定理。"
+        ],
+        "alternatives": [
+          "迷ったら三角形を描いて、分かっている辺・角に印をつけ、どの式なら未知数が1つになるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各定理に含まれる量を確認している",
+            "points": 4
+          },
+          {
+            "point": "適切な定理を選んでいる",
+            "points": 4
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "三平方の定理は条件が合わない（直角三角形でない／角を求める道具ではない）。",
+          "misconception": "公式の適用条件の誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "正弦定理はこの条件では未知数が2つ以上残り、直接は使えない（使うには他の量を先に求める必要がある）。",
+          "misconception": "定理の適用条件の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、座標平面を用いて余弦定理 $a^2=b^2+c^2-2bc\\cos A$ を証明しなさい。",
+      "answer": {
+        "value": "A を原点、B$(c,\\,0)$、C$(b\\cos A,\\,b\\sin A)$ とおく。$a^2=\\mathrm{BC}^2=(b\\cos A-c)^2+(b\\sin A)^2=b^2(\\sin^2A+\\cos^2A)-2bc\\cos A+c^2=b^2+c^2-2bc\\cos A$。"
+      },
+      "explanation": "頂点を座標で表し、2点間の距離の公式で $a^2$ を計算する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "座標の設定（特に C の座標）が正しい",
+            "points": 3
+          },
+          {
+            "criterion": "2点間の距離で $a^2$ を展開している",
+            "points": 3
+          },
+          {
+            "criterion": "$\\sin^2A+\\cos^2A=1$ を用いて結論を導いている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "trigsimp(expand((b*cos(theta)-c)**2+(b*sin(theta))**2-(b**2+c**2-2*b*c*cos(theta))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-proof_item",
+      "explanation_detail": {
+        "approach": "三角比の定義から、A から長さ $b$、角 $A$ の位置にある点 C の座標は $(b\\cos A,\\,b\\sin A)$。",
+        "steps": [
+          "A$(0,0)$、B$(c,0)$、C$(b\\cos A,b\\sin A)$。",
+          "$a^2=(b\\cos A-c)^2+b^2\\sin^2A$。",
+          "展開して相互関係を使う。"
+        ],
+        "alternatives": [
+          "C から AB に垂線を下ろし、鋭角・鈍角で場合分けして三平方の定理を使う方法もある（座標を使うと場合分けが不要）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "座標",
+            "points": 3
+          },
+          {
+            "point": "距離の計算",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "C の座標を $(b\\sin A,\\,b\\cos A)$ と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "単位円を用いて、$\\sin(180^\\circ-\\theta)=\\sin\\theta,\\ \\cos(180^\\circ-\\theta)=-\\cos\\theta$ を証明しなさい。",
+      "answer": {
+        "value": "角 $\\theta$ に対応する単位円上の点を P$(\\cos\\theta,\\,\\sin\\theta)$ とする。P と $y$ 軸に関して対称な点 Q$(-\\cos\\theta,\\,\\sin\\theta)$ は単位円上にあり、OQ が $x$ 軸の正の向きとなす角は $180^\\circ-\\theta$。よって Q の座標は $(\\cos(180^\\circ-\\theta),\\,\\sin(180^\\circ-\\theta))$ でもあり、比べて示される。"
+      },
+      "explanation": "$y$ 軸に関する対称移動で、$x$ 座標だけ符号が変わることを用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "点 P と、$y$ 軸に関して対称な点 Q を正しく設定している",
+            "points": 3
+          },
+          {
+            "criterion": "OQ のなす角が $180^\\circ-\\theta$ であることを示している",
+            "points": 3
+          },
+          {
+            "criterion": "座標の比較から結論を導いている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-proof_item",
+      "explanation_detail": {
+        "approach": "三角比を単位円上の点の座標として定義していることに立ち返る。",
+        "steps": [
+          "P$(\\cos\\theta,\\sin\\theta)$ をとる。",
+          "$y$ 軸対称な点 Q$(-\\cos\\theta,\\sin\\theta)$ は角 $180^\\circ-\\theta$ に対応。",
+          "Q の座標を2通りに表して比べる。"
+        ],
+        "alternatives": [
+          "鋭角 $\\theta$ のとき、直角三角形を左右に折り返した図で説明してもよい（ただし鈍角まで含む一般の証明には座標を用いる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "点の設定",
+            "points": 3
+          },
+          {
+            "point": "角の対応",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "図だけで説明し、座標の比較を書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\triangle\\mathrm{ABC}$ の面積 $S$ が $S=\\dfrac12bc\\sin A$ で表されることを、$A$ が鋭角の場合と鈍角の場合に分けて証明しなさい。",
+      "answer": {
+        "value": "C から直線 AB に垂線 CH を下ろす。$A$ が鋭角のとき、直角三角形 ACH で $\\mathrm{CH}=b\\sin A$。$A$ が鈍角のとき、H は BA の延長上にあり $\\mathrm{CH}=b\\sin(180^\\circ-A)=b\\sin A$。どちらの場合も $S=\\dfrac12\\cdot c\\cdot b\\sin A$。"
+      },
+      "explanation": "高さを $b$ と $A$ で表す。鈍角のときは外角 $180^\\circ-A$ を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "垂線を下ろして高さを考えている",
+            "points": 2
+          },
+          {
+            "criterion": "鋭角の場合の高さを正しく表している",
+            "points": 2
+          },
+          {
+            "criterion": "鈍角の場合を $180^\\circ-A$ を用いて正しく扱っている",
+            "points": 3
+          },
+          {
+            "criterion": "結論",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-proof_item",
+      "explanation_detail": {
+        "approach": "三角形の面積＝底辺×高さ÷2。高さを三角比で表す。",
+        "steps": [
+          "垂線 CH を引く。",
+          "鋭角：$\\mathrm{CH}=b\\sin A$。",
+          "鈍角：$\\mathrm{CH}=b\\sin(180^\\circ-A)=b\\sin A$。",
+          "$S=\\dfrac12c\\,\\mathrm{CH}=\\dfrac12bc\\sin A$。"
+        ],
+        "alternatives": [
+          "座標で A$(0,0)$、B$(c,0)$、C$(b\\cos A,\\,b\\sin A)$ とおけば、C の $y$ 座標が高さになり、場合分けなしで示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "垂線",
+            "points": 2
+          },
+          {
+            "point": "鋭角",
+            "points": 2
+          },
+          {
+            "point": "鈍角",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角の場合を省略する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$0^\\circ<\\theta<180^\\circ$ のとき、$\\sin\\theta=\\dfrac{\\sqrt{3}}{2}$ を解きなさい。\n［ある生徒の解答］\n$\\sin60^\\circ=\\dfrac{\\sqrt{3}}{2}$ なので $\\theta=60^\\circ$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\theta=60^\\circ,\\ 120^\\circ$"
+      },
+      "explanation": "単位円で直線 $y=\\dfrac{\\sqrt{3}}{2}$ と交わる点は2つある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[sin(deg(60)), sin(deg(120))]",
+        "expected": "[sqrt(3)/2, sqrt(3)/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-err_one_solution",
+      "explanation_detail": {
+        "approach": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ では、$\\sin\\theta=k\\ (0<k<1)$ の解は必ず2つあることを単位円で確認する。",
+        "steps": [
+          "単位円と直線 $y=\\dfrac{\\sqrt{3}}{2}$ の交点は2つ。",
+          "それぞれの角は $60^\\circ$ と $120^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\sin120^\\circ$ を計算して $\\dfrac{\\sqrt{3}}{2}$ になることを確かめれば、もれに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "範囲が $0^\\circ\\sim180^\\circ$ なら鈍角の解も探す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\sin60^\\circ=\\dfrac{\\sqrt{3}}{2}$ なので $\\theta=60^\\circ$",
+        "error_step": "解を1つしか求めていない部分",
+        "error_type": "condition",
+        "why_tempting": "特別な直角三角形の知識で $\\sin60^\\circ=\\dfrac{\\sqrt{3}}{2}$ はすぐ思い出せるが、鈍角の範囲にも $\\sin$ が正になる角があることを意識していない。",
+        "correction": "$\\sin(180^\\circ-60^\\circ)=\\sin60^\\circ$ なので $\\theta=60^\\circ,\\ 120^\\circ$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ のとき、$\\sin\\theta=\\dfrac{\\sqrt{3}}{2}$ を解きなさい。\n［ある生徒の解答］\n$\\sin60^\\circ=\\dfrac{\\sqrt{3}}{2}$ なので $\\theta=60^\\circ$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\theta=60^\\circ,\\ 120^\\circ$"
+      },
+      "explanation": "単位円で直線 $y=\\dfrac{\\sqrt{3}}{2}$ と交わる点は2つある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[sin(deg(60)), sin(deg(120))]",
+        "expected": "[sqrt(3)/2, sqrt(3)/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-err_one_solution",
+      "explanation_detail": {
+        "approach": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ では、$\\sin\\theta=k\\ (0<k<1)$ の解は必ず2つあることを単位円で確認する。",
+        "steps": [
+          "単位円と直線 $y=\\dfrac{\\sqrt{3}}{2}$ の交点は2つ。",
+          "それぞれの角は $60^\\circ$ と $120^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\sin120^\\circ$ を計算して $\\dfrac{\\sqrt{3}}{2}$ になることを確かめれば、もれに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "範囲が $0^\\circ\\sim180^\\circ$ なら鈍角の解も探す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\sin60^\\circ=\\dfrac{\\sqrt{3}}{2}$ なので $\\theta=60^\\circ$",
+        "error_step": "解を1つしか求めていない部分",
+        "error_type": "condition",
+        "why_tempting": "特別な直角三角形の知識で $\\sin60^\\circ=\\dfrac{\\sqrt{3}}{2}$ はすぐ思い出せるが、鈍角の範囲にも $\\sin$ が正になる角があることを意識していない。",
+        "correction": "$\\sin(180^\\circ-60^\\circ)=\\sin60^\\circ$ なので $\\theta=60^\\circ,\\ 120^\\circ$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$0^\\circ<\\theta<180^\\circ$ のとき、$\\sin\\theta=\\dfrac{\\sqrt{2}}{2}$ を解きなさい。\n［ある生徒の解答］\n$\\sin45^\\circ=\\dfrac{\\sqrt{2}}{2}$ なので $\\theta=45^\\circ$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\theta=45^\\circ,\\ 135^\\circ$"
+      },
+      "explanation": "単位円で直線 $y=\\dfrac{\\sqrt{2}}{2}$ と交わる点は2つある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[sin(deg(45)), sin(deg(135))]",
+        "expected": "[sqrt(2)/2, sqrt(2)/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-err_one_solution",
+      "explanation_detail": {
+        "approach": "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ では、$\\sin\\theta=k\\ (0<k<1)$ の解は必ず2つあることを単位円で確認する。",
+        "steps": [
+          "単位円と直線 $y=\\dfrac{\\sqrt{2}}{2}$ の交点は2つ。",
+          "それぞれの角は $45^\\circ$ と $135^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\sin135^\\circ$ を計算して $\\dfrac{\\sqrt{2}}{2}$ になることを確かめれば、もれに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "範囲が $0^\\circ\\sim180^\\circ$ なら鈍角の解も探す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\sin45^\\circ=\\dfrac{\\sqrt{2}}{2}$ なので $\\theta=45^\\circ$",
+        "error_step": "解を1つしか求めていない部分",
+        "error_type": "condition",
+        "why_tempting": "特別な直角三角形の知識で $\\sin45^\\circ=\\dfrac{\\sqrt{2}}{2}$ はすぐ思い出せるが、鈍角の範囲にも $\\sin$ が正になる角があることを意識していない。",
+        "correction": "$\\sin(180^\\circ-45^\\circ)=\\sin45^\\circ$ なので $\\theta=45^\\circ,\\ 135^\\circ$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\sin\\theta=\\dfrac{12}{13}\\ (90^\\circ<\\theta<180^\\circ)$ のとき、$\\cos\\theta$ の値を求めなさい。\n［ある生徒の解答］\n$\\cos^2\\theta=1-\\dfrac{144}{169}=\\dfrac{25}{169}$ より $\\cos\\theta=\\dfrac{5}{13}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=-\\dfrac{5}{13}$"
+      },
+      "explanation": "平方根をとると $\\pm$ の2つが候補になり、範囲で符号を決める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-sqrt(1-Rational(12,13)**2)",
+        "expected": "-Rational(5,13)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-err_cos_sign",
+      "explanation_detail": {
+        "approach": "平方根をとるときは必ず $\\pm$ を書いてから、範囲で一方を選ぶ。",
+        "steps": [
+          "$\\cos^2\\theta=\\dfrac{25}{169}$ より $\\cos\\theta=\\pm\\dfrac{5}{13}$。",
+          "$90^\\circ<\\theta<180^\\circ$ では $\\cos\\theta<0$。",
+          "$\\cos\\theta=-\\dfrac{5}{13}$。"
+        ],
+        "alternatives": [
+          "単位円で鈍角の点は $y$ 軸の左側にあるので $x$ 座標（$\\cos$）は負、と図で確認できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "範囲の条件を最後に見直す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\cos^2\\theta=1-\\dfrac{144}{169}=\\dfrac{25}{169}$ より $\\cos\\theta=\\dfrac{5}{13}$",
+        "error_step": "最後に平方根をとる部分（符号の決定）",
+        "error_type": "sign",
+        "why_tempting": "$\\cos^2\\theta$ から平方根をとるとき、正の値だけを書く習慣がある。$\\theta$ の範囲を見直していない。",
+        "correction": "$\\theta$ は鈍角なので $\\cos\\theta<0$。$\\cos\\theta=-\\dfrac{5}{13}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\sin\\theta=\\dfrac{9}{41}\\ (90^\\circ<\\theta<180^\\circ)$ のとき、$\\cos\\theta$ の値を求めなさい。\n［ある生徒の解答］\n$\\cos^2\\theta=1-\\dfrac{81}{1681}=\\dfrac{1600}{1681}$ より $\\cos\\theta=\\dfrac{40}{41}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=-\\dfrac{40}{41}$"
+      },
+      "explanation": "平方根をとると $\\pm$ の2つが候補になり、範囲で符号を決める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-sqrt(1-Rational(9,41)**2)",
+        "expected": "-Rational(40,41)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-err_cos_sign",
+      "explanation_detail": {
+        "approach": "平方根をとるときは必ず $\\pm$ を書いてから、範囲で一方を選ぶ。",
+        "steps": [
+          "$\\cos^2\\theta=\\dfrac{1600}{1681}$ より $\\cos\\theta=\\pm\\dfrac{40}{41}$。",
+          "$90^\\circ<\\theta<180^\\circ$ では $\\cos\\theta<0$。",
+          "$\\cos\\theta=-\\dfrac{40}{41}$。"
+        ],
+        "alternatives": [
+          "単位円で鈍角の点は $y$ 軸の左側にあるので $x$ 座標（$\\cos$）は負、と図で確認できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "範囲の条件を最後に見直す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\cos^2\\theta=1-\\dfrac{81}{1681}=\\dfrac{1600}{1681}$ より $\\cos\\theta=\\dfrac{40}{41}$",
+        "error_step": "最後に平方根をとる部分（符号の決定）",
+        "error_type": "sign",
+        "why_tempting": "$\\cos^2\\theta$ から平方根をとるとき、正の値だけを書く習慣がある。$\\theta$ の範囲を見直していない。",
+        "correction": "$\\theta$ は鈍角なので $\\cos\\theta<0$。$\\cos\\theta=-\\dfrac{40}{41}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\sin\\theta=\\dfrac{7}{25}\\ (90^\\circ<\\theta<180^\\circ)$ のとき、$\\cos\\theta$ の値を求めなさい。\n［ある生徒の解答］\n$\\cos^2\\theta=1-\\dfrac{49}{625}=\\dfrac{576}{625}$ より $\\cos\\theta=\\dfrac{24}{25}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=-\\dfrac{24}{25}$"
+      },
+      "explanation": "平方根をとると $\\pm$ の2つが候補になり、範囲で符号を決める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-sqrt(1-Rational(7,25)**2)",
+        "expected": "-Rational(24,25)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U04-err_cos_sign",
+      "explanation_detail": {
+        "approach": "平方根をとるときは必ず $\\pm$ を書いてから、範囲で一方を選ぶ。",
+        "steps": [
+          "$\\cos^2\\theta=\\dfrac{576}{625}$ より $\\cos\\theta=\\pm\\dfrac{24}{25}$。",
+          "$90^\\circ<\\theta<180^\\circ$ では $\\cos\\theta<0$。",
+          "$\\cos\\theta=-\\dfrac{24}{25}$。"
+        ],
+        "alternatives": [
+          "単位円で鈍角の点は $y$ 軸の左側にあるので $x$ 座標（$\\cos$）は負、と図で確認できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "範囲の条件を最後に見直す。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\cos^2\\theta=1-\\dfrac{49}{625}=\\dfrac{576}{625}$ より $\\cos\\theta=\\dfrac{24}{25}$",
+        "error_step": "最後に平方根をとる部分（符号の決定）",
+        "error_type": "sign",
+        "why_tempting": "$\\cos^2\\theta$ から平方根をとるとき、正の値だけを書く習慣がある。$\\theta$ の範囲を見直していない。",
+        "correction": "$\\theta$ は鈍角なので $\\cos\\theta<0$。$\\cos\\theta=-\\dfrac{24}{25}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $b=7,\\ c=8,\\ A=120^\\circ$ のとき、$a$ を求めなさい。\n［ある生徒の解答］\n$a^2=7^2+8^2-2\\cdot7\\cdot8\\cdot\\dfrac12=57$ より $a=\\sqrt{57}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a=13$"
+      },
+      "explanation": "鈍角の余弦は負。$-2bc\\cos A$ は正の値になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "7**2+8**2-2*7*8*cos(deg(120))",
+        "expected": "169",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-err_cos_rule",
+      "explanation_detail": {
+        "approach": "$\\cos$ の値は符号まで確認してから代入する。",
+        "steps": [
+          "$\\cos120^\\circ=-\\cos60^\\circ=-\\dfrac12$。",
+          "$a^2=49+64-2\\cdot7\\cdot8\\cdot\\left(-\\dfrac12\\right)=169$。",
+          "$a=13$。"
+        ],
+        "alternatives": [
+          "$A$ が鈍角なら $a$ は最大辺で、$a^2>b^2+c^2=113$ になるはず。生徒の答え $a^2=57$ はこれに反する（大小関係による検算）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角のとき $a^2>b^2+c^2$ になるかを確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a^2=7^2+8^2-2\\cdot7\\cdot8\\cdot\\dfrac12=57$ より $a=\\sqrt{57}$",
+        "error_step": "$\\cos120^\\circ$ の値を代入した部分",
+        "error_type": "sign",
+        "why_tempting": "$\\cos60^\\circ=\\dfrac12$ をそのまま使ってしまい、$120^\\circ$ が鈍角で $\\cos$ が負になることを見落としている。",
+        "correction": "$\\cos120^\\circ=-\\dfrac12$ より $a^2=49+64+56=169$、$a=13$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $b=6,\\ c=10,\\ A=120^\\circ$ のとき、$a$ を求めなさい。\n［ある生徒の解答］\n$a^2=6^2+10^2-2\\cdot6\\cdot10\\cdot\\dfrac12=76$ より $a=2 \\sqrt{19}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a=14$"
+      },
+      "explanation": "鈍角の余弦は負。$-2bc\\cos A$ は正の値になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "6**2+10**2-2*6*10*cos(deg(120))",
+        "expected": "196",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U04-err_cos_rule",
+      "explanation_detail": {
+        "approach": "$\\cos$ の値は符号まで確認してから代入する。",
+        "steps": [
+          "$\\cos120^\\circ=-\\cos60^\\circ=-\\dfrac12$。",
+          "$a^2=36+100-2\\cdot6\\cdot10\\cdot\\left(-\\dfrac12\\right)=196$。",
+          "$a=14$。"
+        ],
+        "alternatives": [
+          "$A$ が鈍角なら $a$ は最大辺で、$a^2>b^2+c^2=136$ になるはず。生徒の答え $a^2=76$ はこれに反する（大小関係による検算）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "鈍角のとき $a^2>b^2+c^2$ になるかを確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a^2=6^2+10^2-2\\cdot6\\cdot10\\cdot\\dfrac12=76$ より $a=2 \\sqrt{19}$",
+        "error_step": "$\\cos120^\\circ$ の値を代入した部分",
+        "error_type": "sign",
+        "why_tempting": "$\\cos60^\\circ=\\dfrac12$ をそのまま使ってしまい、$120^\\circ$ が鈍角で $\\cos$ が負になることを見落としている。",
+        "correction": "$\\cos120^\\circ=-\\dfrac12$ より $a^2=36+100+60=196$、$a=14$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $b=6,\\ c=9,\\ A=60^\\circ$ のとき、面積 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\dfrac12\\cdot6\\cdot9\\cos60^\\circ=\\frac{27}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=\\frac{27 \\sqrt{3}}{2}$"
+      },
+      "explanation": "面積の高さは $b\\sin A$ なので、面積公式は $\\sin$ を使う。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*6*9*sin(deg(60))",
+        "expected": "27*sqrt(3)/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-err_area",
+      "explanation_detail": {
+        "approach": "公式を思い出すときは「高さ＝斜辺×$\\sin$」という図の意味から復元する。",
+        "steps": [
+          "高さは $b\\sin A$。",
+          "$S=\\dfrac12bc\\sin A=\\dfrac12\\cdot6\\cdot9\\cdot\\frac{\\sqrt{3}}{2}=\\frac{27 \\sqrt{3}}{2}$。"
+        ],
+        "alternatives": [
+          "面積は必ず正。$\\cos$ を使うと鈍角で負になることからも誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式を意味（高さ）とセットで覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\dfrac12\\cdot6\\cdot9\\cos60^\\circ=\\frac{27}{2}$",
+        "error_step": "面積公式で $\\cos$ を用いた部分",
+        "error_type": "formula",
+        "why_tempting": "余弦定理と面積公式がどちらも「2辺とその間の角」を使うため、$\\sin$ と $\\cos$ を混同しやすい。",
+        "correction": "$S=\\dfrac12\\cdot6\\cdot9\\sin60^\\circ=\\frac{27 \\sqrt{3}}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $b=4,\\ c=9,\\ A=45^\\circ$ のとき、面積 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\dfrac12\\cdot4\\cdot9\\cos45^\\circ=9 \\sqrt{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=9 \\sqrt{2}$"
+      },
+      "explanation": "面積の高さは $b\\sin A$ なので、面積公式は $\\sin$ を使う。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*4*9*sin(deg(45))",
+        "expected": "9*sqrt(2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U04-err_area",
+      "explanation_detail": {
+        "approach": "公式を思い出すときは「高さ＝斜辺×$\\sin$」という図の意味から復元する。",
+        "steps": [
+          "高さは $b\\sin A$。",
+          "$S=\\dfrac12bc\\sin A=\\dfrac12\\cdot4\\cdot9\\cdot\\frac{\\sqrt{2}}{2}=9 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "面積は必ず正。$\\cos$ を使うと鈍角で負になることからも誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式を意味（高さ）とセットで覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\dfrac12\\cdot4\\cdot9\\cos45^\\circ=9 \\sqrt{2}$",
+        "error_step": "面積公式で $\\cos$ を用いた部分",
+        "error_type": "formula",
+        "why_tempting": "余弦定理と面積公式がどちらも「2辺とその間の角」を使うため、$\\sin$ と $\\cos$ を混同しやすい。",
+        "correction": "$S=\\dfrac12\\cdot4\\cdot9\\sin45^\\circ=9 \\sqrt{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "a67a67cedca8111247c7b51d5e67a1aa6edd7066076d42650cae8f855981c7cd"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 7 問（Q001, Q002, Q003, Q004, Q005, Q006, Q044）",
+      "content_hash": "a524cfe7fe7bece3c7e6541c473e1d4b3f316abd36bf7c56df1876e57057eea0"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 5 問（Q007, Q008, Q009, Q010, Q011）",
+      "content_hash": "961fd028d319ce7503b6acd34254b209cfd2c07a290151e01c08f05b6566bdba"
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 6 問（Q048, Q049, Q050, Q051, Q052, Q053）",
+      "content_hash": "5ad13b8f082a9572240fabacc41b66b10a827138a607f29cb18ff20211ce6d18"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:51:40+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "1b8ee8bf913011bd19379ac7aab62f5b1e5f884c7d82d950a64141b6003a88e9"
+  }
+}

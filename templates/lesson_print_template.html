@@ -1,0 +1,71 @@
+{% extends "_layout.html" %}
+{% from "_macros.html" import figure_block, table_block %}
+{% from "_pack_macros.html" import pack_header, unit_context %}
+{#
+  授業プリント（print_type = lesson）
+  kind = "teacher"：教師用（授業の流れ・例題の解答・板書案・口頭で解説すべきポイントをすべて表示）
+  kind = "student"：生徒用（指導ガイドと教師向けの注記を除き、例題は解答欄つき）
+#}
+{% set teacher = kind == 'teacher' %}
+{% block body %}
+{{ pack_header(qs, units, '授業プリント', '教師用・指導ガイド付き' if teacher else '生徒用', 'teacher' if teacher else 'student') }}
+{{ unit_context(qs.unit_context) }}
+
+<div class="goals"><h4>この授業の目標</h4><ol>{% for g in qs.lesson.goals %}<li>{{ g | rich_inline }}</li>{% endfor %}</ol></div>
+
+{% if teacher %}
+<table class="flow-t">
+  <thead><tr><th>段階</th><th>時間</th><th>主な活動</th></tr></thead>
+  <tbody>{% for f in qs.lesson.flow %}<tr><td>{{ f.phase }}</td><td class="min">{{ f.minutes }}分</td><td>{{ f.activity | rich_inline }}</td></tr>{% endfor %}</tbody>
+</table>
+{% endif %}
+
+{% for s in qs.lesson.sections %}
+{% if s.kind != 'teacher_guide' or teacher %}
+<section class="lsec k-{{ s.kind }}" id="{{ s.id }}">
+  <h3><span class="kind">{{ s.kind | lesson_kind }}</span>{{ s.title }}</h3>
+  {% if s.body %}<div>{{ s.body | rich_block }}</div>{% endif %}
+  {% if s.formula %}<div class="formula-box">{{ s.formula | rich_block }}</div>{% endif %}
+  {% if s.conditions %}<div class="cond"><b>使える条件・注意</b><ul>{% for c in s.conditions %}<li>{{ c | rich_inline }}</li>{% endfor %}</ul></div>{% endif %}
+  {% if s.proof_steps %}<div class="label-s">{{ '証明' if s.kind in ['theorem', 'proof'] else '導出' }}</div><ol class="proof">{% for p in s.proof_steps %}<li>{{ p | rich_inline }}</li>{% endfor %}</ol>{% endif %}
+  {% if s.bullets %}<ul>{% for b in s.bullets %}<li>{{ b | rich_inline }}</li>{% endfor %}</ul>{% endif %}
+  {% if s.figure %}{{ figure_block(s.figure) }}{% endif %}
+  {% if s.table %}{{ table_block(s.table) }}{% endif %}
+  {% if s.example %}{% set ex = s.example %}
+  <div class="ex-box">
+    <div class="prob">{{ ex.problem | rich_block }}</div>
+    {% if ex.figure %}{{ figure_block(ex.figure) }}{% endif %}
+    {% if teacher %}
+      {% if ex.thinking %}<div class="think">思考の糸口：{{ ex.thinking | rich_inline }}</div>{% endif %}
+      <ol class="proof">{% for st in ex.steps %}<li>{{ st | rich_inline }}</li>{% endfor %}</ol>
+      <div class="ans"><span class="ans">答　{{ ex.answer | rich_inline }}</span></div>
+    {% else %}
+      {% if ex.thinking %}<div class="think">ヒント：{{ ex.thinking | rich_inline }}</div>{% endif %}
+      <div class="blank-sol"><div class="answer-lines">{% for i in range([ex.steps | length + 1, 6] | min) %}<div></div>{% endfor %}</div></div>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if s.board %}
+  <div class="board">{% for c in s.board.columns %}<div class="col"><h5>{{ c.title }}</h5>{% for l in c.lines %}<p>{{ l | rich_inline }}</p>{% endfor %}</div>{% endfor %}</div>
+  {% endif %}
+  {% if s.misconceptions %}
+  <table class="miscon"><thead><tr><th>よくある誤り</th><th>正しい考え方</th></tr></thead>
+    <tbody>{% for m in s.misconceptions %}<tr><td>{{ m.wrong | rich_inline }}</td><td>{{ m.correct | rich_inline }}</td></tr>{% endfor %}</tbody></table>
+  {% endif %}
+  {% if s.check_items %}
+  <ol class="proof">{% for c in s.check_items %}<li>{{ c.q | rich_inline }}{% if teacher %}<br><span class="ans">→ {{ c.a | rich_inline }}</span>{% else %}<div class="answer-box" style="min-height:9mm"></div>{% endif %}</li>{% endfor %}</ol>
+  {% endif %}
+  {% if teacher and s.teacher_points %}
+  <div class="tpoint"><h5>口頭で解説すべきポイント</h5><ul>
+    {% for t in s.teacher_points %}<li>{{ t.point | rich_inline }}
+      {% if t.ask %}<div class="ask">{{ t.ask | rich_inline }}</div>{% endif %}
+      {% if t.expect %}<div class="exp">{{ t.expect | rich_inline }}</div>{% endif %}
+      {% if t.caution %}<div class="cau">{{ t.caution | rich_inline }}</div>{% endif %}
+      {% if t.timing %}<div class="tim">{{ t.timing }}</div>{% endif %}</li>{% endfor %}
+  </ul></div>
+  {% endif %}
+  {% if not teacher and s.kind in ['definition', 'theorem', 'example'] %}<div class="memo answer-lines"><div></div><div></div></div>{% endif %}
+</section>
+{% endif %}
+{% endfor %}
+{% endblock %}
