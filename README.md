@@ -226,3 +226,50 @@ HTMLを直接編集しても構いませんが、その後にスクリプトを�
   フォーカス表示、十分な文字コントラスト、`prefers-reduced-motion` 対応、JS無効時もメニュー表示
 - **SEO**：ページごとの title / description、canonical、OGP / Twitterカード、構造化データ（JSON-LD）、sitemap.xml
 - **軽量**：フレームワーク不使用、ページ内の装飾はCSSとインラインSVGのみ。Webフォントは Google Fonts（Noto Serif JP / Noto Sans JP / Cormorant Garamond）のみ。読み込み中は端末のフォントで先に表示します
+
+---
+
+## 団員アプリ・応募者管理（同じリポジトリの別フォルダ）
+
+| フォルダ | 内容 | 公開先 |
+|---|---|---|
+| `kco-member-app/` | 団員専用アプリ（団員・参加希望者がログインして使う） | 別の Firebase プロジェクト `kanagawa-connect-official`（https://kanagawa-connect-official.web.app/） |
+| `orchestra-management/` | 応募者管理スプレッドシートの Apps Script | Google スプレッドシート（エディタに貼り付けて更新） |
+
+- この2つのフォルダは公式サイトには**公開されません**（`firebase.json` の `ignore` で除外。公開されるファイルは移す前と同じです）。
+- 詳しくは各フォルダの README を参照してください。
+- もともと別のリポジトリ（ToDoList.App）で作っていたもので、2026年10月にこちらへ移しました。
+
+## 自動公開の設定（GitHub Actions）
+
+`main` に変更が入ると、GitHub が自動でチェック・テストを行い、すべて通ったら公開します。プルリクエストの段階ではテストだけ行い、公開はしません。
+
+| ワークフロー | 対象 | 公開先 | 必要な Secret |
+|---|---|---|---|
+| 公式サイト（`.github/workflows/deploy.yml`） | 公式サイト（HTML・JS・Firestore ルール） | `kanagawa-connect-orchestra` | `FIREBASE_SERVICE_ACCOUNT_SITE` |
+| 団員アプリ（`.github/workflows/member-app.yml`） | `kco-member-app/`（`orchestra-management/` はテストのみ） | `kanagawa-connect-official` | `FIREBASE_SERVICE_ACCOUNT_MEMBER_APP` |
+
+公式サイトのチェック：HTML が `_tools/build_site.py` と一致しているか、`js/*.bundle.js` がソースと一致しているか、ロジック・ルールのテスト。
+
+### 最初に1回だけ：公開用の鍵を GitHub に登録する
+
+2つの Firebase プロジェクトそれぞれで、次の作業をします（鍵はコードには書かず、GitHub の Secrets にだけ保存します）。
+
+1. Google Cloud コンソールの「サービスアカウント」を開く
+   - 公式サイト用：https://console.cloud.google.com/iam-admin/serviceaccounts?project=kanagawa-connect-orchestra
+   - 団員アプリ用：https://console.cloud.google.com/iam-admin/serviceaccounts?project=kanagawa-connect-official
+2. 「＋ サービス アカウントを作成」→ 名前に `github-deploy` → 「作成して続行」
+3. ロールで **「Firebase 管理者」** を選ぶ →「続行」→「完了」
+4. 作成した `github-deploy` を開く →「鍵」タブ →「鍵を追加」→「新しい鍵を作成」→「JSON」→「作成」（ファイルがダウンロードされます）
+5. GitHub でこのリポジトリを開く →「Settings」→「Secrets and variables」→「Actions」→「New repository secret」
+   - Name：公式サイト用は `FIREBASE_SERVICE_ACCOUNT_SITE`、団員アプリ用は `FIREBASE_SERVICE_ACCOUNT_MEMBER_APP`
+   - Secret：ダウンロードした JSON ファイルをメモ帳で開き、**中身をすべて**貼り付け →「Add secret」
+6. ダウンロードした JSON ファイルは削除し、ごみ箱も空にする（GitHub に登録したので不要です。メールやチャットで送らないでください）
+
+登録後、「Actions」タブ → ワークフローを選ぶ →「Run workflow」で、手動で公開を試せます。
+
+| うまくいかないとき | 対処 |
+|---|---|
+| `Secrets に FIREBASE_SERVICE_ACCOUNT_… がありません` | 手順 5 の名前が正しいか確認 |
+| `Permission denied` ・ `403` | 手順 3 のロールが「Firebase 管理者」か確認。インデックスで止まる場合は「Cloud Datastore インデックス管理者」も追加 |
+| HTML／JS が一致しない | HTML を直接編集した可能性があります。`python _tools/build_site.py`、`cd _tools/firebase && npm run build` を実行してから入れてください |
