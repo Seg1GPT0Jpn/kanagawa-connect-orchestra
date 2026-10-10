@@ -1,0 +1,95 @@
+# 公式サイトのチェックと自動公開
+#
+#  ・プルリクエスト：チェックとテストだけ（公開しない・秘密情報は使わない）
+#  ・main に入ったとき：すべて通ったら Firebase（kanagawa-connect-orchestra）へ公開
+#    （サイト＝hosting と、Firestore のセキュリティルール。README の「デプロイ」と同じ内容）
+#
+# 公開には GitHub の Secrets に FIREBASE_SERVICE_ACCOUNT_SITE（サービスアカウントの JSON 鍵）が必要です。
+# 鍵はリポジトリに書かず、Secrets にだけ保存します（手順は README.md の「自動公開の設定」）。
+name: 公式サイト
+
+# 団員アプリ・応募者管理のフォルダだけが変わったときは、公式サイトは公開し直さない（別のワークフロー）
+on:
+  pull_request:
+    paths-ignore:
+      - 'kco-member-app/**'
+      - 'orchestra-management/**'
+      - '.github/workflows/member-app.yml'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'kco-member-app/**'
+      - 'orchestra-management/**'
+      - '.github/workflows/member-app.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: チェックと公開
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: _tools/firebase/package-lock.json
+
+      # Firebase エミュレータ（ルールのテスト）に Java が必要
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: HTML が生成スクリプト（_tools/build_site.py）と一致しているか
+        run: |
+          python _tools/build_site.py
+          git diff --exit-code || { echo "::error::HTML を直接編集していませんか？ _tools/build_site.py を直して python _tools/build_site.py を実行してください。"; exit 1; }
+
+      - name: 部品のインストール
+        working-directory: _tools/firebase
+        run: npm ci
+
+      - name: JavaScript（js/*.bundle.js）がソースと一致しているか
+        working-directory: _tools/firebase
+        run: |
+          npm run build
+          git diff --exit-code || { echo "::error::js/*.bundle.js が _tools/firebase/src と一致しません。cd _tools/firebase && npm run build を実行してください。"; exit 1; }
+
+      - name: テスト（ロジック・セキュリティルール）
+        working-directory: _tools/firebase
+        run: npm test
+
+      # ---- ここから下は main に入ったときだけ ----
+      - name: 公開用の鍵があるか確認
+        if: github.event_name != 'pull_request'
+        env:
+          KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SITE }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::error::GitHub の Secrets に FIREBASE_SERVICE_ACCOUNT_SITE がありません。README.md の「自動公開の設定」を参照してください。"
+            exit 1
+          fi
+
+      - name: Google Cloud にログイン（サービスアカウント）
+        if: github.event_name != 'pull_request'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SITE }}
+
+      - name: Firebase に公開（サイト・Firestore ルール）
+        if: github.event_name != 'pull_request'
+        run: _tools/firebase/node_modules/.bin/firebase deploy --only hosting,firestore:rules --project kanagawa-connect-orchestra --non-interactive
