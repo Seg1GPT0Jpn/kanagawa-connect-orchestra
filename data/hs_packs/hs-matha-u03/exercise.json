@@ -4240,9 +4240,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "descriptive",
-      "stem": "$33$ の正の約数の個数を求めなさい。\n［ある生徒の解答］\n$33=3\\cdot 11$ だから、約数の個数は指数を掛けて $1\\times1=1$ 個\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "stem": "$1125$ の正の約数の個数を求めなさい。\n［ある生徒の解答］\n$1125=3^{2}\\cdot 5^{3}$ だから、約数の個数は指数を掛けて $2\\times3=6$ 個\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
       "answer": {
-        "value": "$4$ 個"
+        "value": "$12$ 個"
       },
       "explanation": "約数は各素因数の指数を $0$ から選ぶので、選び方は（指数＋1）通り。",
       "scoring": {
@@ -4271,8 +4271,8 @@
         "lines": 6
       },
       "calc_check": {
-        "expression": "len(divisors(33))",
-        "expected": "4",
+        "expression": "len(divisors(1125))",
+        "expected": "12",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -4284,9 +4284,9 @@
       "explanation_detail": {
         "approach": "約数 $1$ はどの素因数も含まない（指数がすべて $0$）。$1$ を数えられているかで公式の正しさを確かめられる。",
         "steps": [
-          "$33=3\\cdot 11$。",
+          "$1125=3^{2}\\cdot 5^{3}$。",
           "各素因数の指数は $0$ から最大の指数まで選べる。",
-          "$(1+1)\\times(1+1)=4$。"
+          "$(2+1)\\times(3+1)=12$。"
         ],
         "alternatives": [
           "小さい数（例：$12=2^2\\cdot3$ の約数 $1,2,3,4,6,12$ の6個）で公式を確かめる。"
@@ -4310,11 +4310,11 @@
         ]
       },
       "error_analysis": {
-        "erroneous_solution": "$33=3\\cdot 11$ だから、約数の個数は指数を掛けて $1\\times1=1$ 個",
+        "erroneous_solution": "$1125=3^{2}\\cdot 5^{3}$ だから、約数の個数は指数を掛けて $2\\times3=6$ 個",
         "error_step": "個数の公式（指数をそのまま掛けた部分）",
         "error_type": "formula",
         "why_tempting": "素因数分解の指数がそのまま目に入るので、「指数を掛ける」と覚え違えやすい。指数 $0$（その素因数を含まない約数）の存在を意識していない。",
-        "correction": "指数 $0$ の場合も含めて、$(1+1)\\times(1+1)=4$ 個"
+        "correction": "指数 $0$ の場合も含めて、$(2+1)\\times(3+1)=12$ 個"
       },
       "verification": {
         "status": "auto_checked",
@@ -5304,14 +5304,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "修正 11 問（Q001, Q002, Q003, Q004, Q031, Q032, Q033, Q038, Q051, Q052 他）",
       "content_hash": "cbb46283d74cc13f0977d4ffd5a3b8462363b64554ffa1ae445ba690845dc0de"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 1 問（Q051）",
+      "content_hash": "1088153a43c0d6f26c0f962947bb2a09d6b8f3b024df421101c2aeb5564344c7"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-10T09:00:36+00:00",
+    "validated_at": "2026-10-10T09:13:32+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "42dc78f8a31f40470639c22d7dbec52886781ce769ee6cfcac9b11139785b593"
+    "content_hash": "a1b604fef0d13e6b0f77bcd24edac2f115736a9901ee8e74a3ac700901aed1ec"
   }
 }

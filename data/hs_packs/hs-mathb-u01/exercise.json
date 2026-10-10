@@ -386,7 +386,7 @@
       "answer": {
         "value": "128"
       },
-      "explanation": "$a_n=2\\cdot 2^{n-1}$ より $a_{7}=2\\cdot(2)^{6}=128$。",
+      "explanation": "$a_n=2^{n}$ より $a_{7}=2\\cdot(2)^{6}=128$。",
       "scoring": {
         "points": 2,
         "method": "exact"
@@ -407,7 +407,7 @@
       "explanation_detail": {
         "approach": "等比数列の一般項は $a_n=ar^{n-1}$。第 $n$ 項までに公比を掛ける回数は $n-1$ 回。",
         "steps": [
-          "$a_n=2\\cdot 2^{n-1}$。",
+          "$a_n=2^{n}$。",
           "$a_{7}=2\\times(2)^{6}=128$。"
         ],
         "alternatives": [
@@ -2341,7 +2341,7 @@
       "question_type": "short_answer",
       "stem": "数列 $7$，$7$，$8$，$10$，$13$，$17$，$\\cdots$ の一般項 $a_n$ を求めなさい。",
       "answer": {
-        "value": "$a_n=\\frac{n^{2}}{2} - \\frac{3 n}{2} + 8$",
+        "value": "$a_n=\\frac{n^{2} - 3 n + 16}{2}$",
         "accepted": [
           "a_n=n**2/2 - 3*n/2 + 8"
         ]
@@ -2372,7 +2372,7 @@
         "steps": [
           "階差数列 $b_n=n - 1$。",
           "$n\\geqq2$ のとき $a_n=7+\\displaystyle\\sum_{k=1}^{n-1}(k - 1)$。",
-          "計算して $a_n=\\frac{n^{2}}{2} - \\frac{3 n}{2} + 8$。",
+          "計算して $a_n=\\frac{n^{2} - 3 n + 16}{2}$。",
           "$n=1$ を代入すると $7$ となり $a_1$ と一致するので、$n=1$ でも成り立つ。"
         ],
         "alternatives": [
@@ -2602,7 +2602,7 @@
       "question_type": "short_answer",
       "stem": "数列 $3$，$6$，$10$，$15$，$21$，$28$，$\\cdots$ の一般項 $a_n$ を求めなさい。",
       "answer": {
-        "value": "$a_n=\\frac{n^{2}}{2} + \\frac{3 n}{2} + 1$",
+        "value": "$a_n=\\frac{n^{2} + 3 n + 2}{2}$",
         "accepted": [
           "a_n=n**2/2 + 3*n/2 + 1"
         ]
@@ -2633,7 +2633,7 @@
         "steps": [
           "階差数列 $b_n=n + 2$。",
           "$n\\geqq2$ のとき $a_n=3+\\displaystyle\\sum_{k=1}^{n-1}(k + 2)$。",
-          "計算して $a_n=\\frac{n^{2}}{2} + \\frac{3 n}{2} + 1$。",
+          "計算して $a_n=\\frac{n^{2} + 3 n + 2}{2}$。",
           "$n=1$ を代入すると $3$ となり $a_1$ と一致するので、$n=1$ でも成り立つ。"
         ],
         "alternatives": [
@@ -2776,7 +2776,7 @@
       "question_type": "short_answer",
       "stem": "$a_1=6,\\ a_{n+1}=2a_n-4$ で定められる数列 $\\{a_n\\}$ の一般項を求めなさい。",
       "answer": {
-        "value": "$a_n=2\\cdot 2^{n-1}+4$",
+        "value": "$a_n=2^{n}+4$",
         "accepted": [
           "a_n=2*(2)**(n-1)+(4)"
         ]
@@ -2807,8 +2807,8 @@
         "steps": [
           "$\\alpha=2\\alpha-4$ を解いて $\\alpha=4$。",
           "$a_{n+1}-(4)=2\\{a_n-(4)\\}$。数列 $\\{a_n-(4)\\}$ は初項 $6-(4)=2$、公比 $2$ の等比数列。",
-          "$a_n-(4)=2\\cdot 2^{n-1}$。",
-          "$a_n=2\\cdot 2^{n-1}+4$。"
+          "$a_n-(4)=2^{n}$。",
+          "$a_n=2^{n}+4$。"
         ],
         "alternatives": [
           "求めた一般項に $n=1,\\ 2,\\ 3$ を代入し、漸化式から順に計算した値 $6$，$8$，$12$ と一致するか確かめる。"
@@ -3987,7 +3987,7 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "descriptive",
-      "stem": "$S_n=\\displaystyle\\sum_{k=1}^{n}(k)\\cdot 2^{k-1}$ を求めなさい。途中の考え方も書きなさい。",
+      "stem": "$S_n=\\displaystyle\\sum_{k=1}^{n}k\\cdot 2^{k-1}$ を求めなさい。途中の考え方も書きなさい。",
       "answer": {
         "value": "$S_n=2^{n} \\left(n - 1\\right) + 1$"
       },
@@ -5244,14 +5244,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "b3ef362d00b125da01f454ea48cc1619dea04da07b98dda13e2eb872dac96363"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 5 問（Q005, Q030, Q033, Q035, Q049）",
+      "content_hash": "1b8d939dbb74d7ed07eddd0b46f9043e0b708404f8efe97615935fef8cb1e5b9"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-10T09:05:51+00:00",
+    "validated_at": "2026-10-10T09:13:32+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "fb83c2b0c3f5162c91b5153cea46fe359f397b8afa2941c9220620b37b3dca19"
+    "content_hash": "bbaaef23038df46269bcf81d52bb6e8701d8bb46b18f22c19d16464f822ec178"
   }
 }

@@ -1,0 +1,5329 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHB-U02-EX",
+  "title": "統計的な推測　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_b",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHB-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATHB-U02-PACK",
+  "pair_set_id": "HS-MATHB-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATHA-U01",
+        "point": "確率",
+        "title": "場合の数と確率"
+      },
+      {
+        "unit_id": "HS-MATH1-U05",
+        "point": "分散・標準偏差",
+        "title": "データの分析"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "CT-MATH2BC-U02",
+        "point": "推定・検定",
+        "title": "数学Ⅱ・B・C　数列・統計的な推測・ベクトル"
+      }
+    ],
+    "readiness_check": [
+      "確率の計算（数学A「場合の数と確率」）、反復試行の確率 ${}_n\\mathrm{C}_rp^r(1-p)^{n-r}$ を使える。",
+      "データの平均・分散・標準偏差（数学Ⅰ「データの分析」）の意味を説明できる。",
+      "平方根の計算ができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHB-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の確率分布は $P(X=1)=\\dfrac{1}{10}$、$P(X=2)=\\dfrac{1}{2}$、$P(X=7)=\\dfrac{2}{5}$ である（下の表）。$X$ の期待値 $E(X)$を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$X$",
+            "$1$",
+            "$2$",
+            "$7$",
+            "計"
+          ],
+          [
+            "$P$",
+            "$\\dfrac{1}{10}$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{2}{5}$",
+            "$1$"
+          ]
+        ]
+      },
+      "answer": {
+        "value": "39/10",
+        "display": "$\\dfrac{39}{10}$"
+      },
+      "explanation": "$E(X)=\\dfrac{39}{10}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sum([(1)*(1/10), (2)*(1/2), (7)*(2/5)])",
+        "expected": "39/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-expect_var",
+      "explanation_detail": {
+        "approach": "期待値は「値×確率」の和。分散は $E(X^2)-\\{E(X)\\}^2$ で計算すると速い。",
+        "steps": [
+          "$E(X)=1\\cdot\\dfrac{1}{10}+2\\cdot\\dfrac{1}{2}+7\\cdot\\dfrac{2}{5}=\\dfrac{39}{10}$。"
+        ],
+        "alternatives": [
+          "確率をすべて分母 $10$ にそろえて、分子だけで「値×重み」の和を計算し、最後に分母で割ると計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $E(X^2)$ だけで止める。",
+          "負の値の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の確率分布は $P(X=-1)=\\dfrac{1}{5}$、$P(X=3)=\\dfrac{1}{10}$、$P(X=5)=\\dfrac{7}{10}$ である（下の表）。$X$ の期待値 $E(X)$を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$X$",
+            "$-1$",
+            "$3$",
+            "$5$",
+            "計"
+          ],
+          [
+            "$P$",
+            "$\\dfrac{1}{5}$",
+            "$\\dfrac{1}{10}$",
+            "$\\dfrac{7}{10}$",
+            "$1$"
+          ]
+        ]
+      },
+      "answer": {
+        "value": "18/5",
+        "display": "$\\dfrac{18}{5}$"
+      },
+      "explanation": "$E(X)=\\dfrac{18}{5}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sum([(-1)*(1/5), (3)*(1/10), (5)*(7/10)])",
+        "expected": "18/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-expect_var",
+      "explanation_detail": {
+        "approach": "期待値は「値×確率」の和。分散は $E(X^2)-\\{E(X)\\}^2$ で計算すると速い。",
+        "steps": [
+          "$E(X)=(-1)\\cdot\\dfrac{1}{5}+3\\cdot\\dfrac{1}{10}+5\\cdot\\dfrac{7}{10}=\\dfrac{18}{5}$。"
+        ],
+        "alternatives": [
+          "確率をすべて分母 $10$ にそろえて、分子だけで「値×重み」の和を計算し、最後に分母で割ると計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $E(X^2)$ だけで止める。",
+          "負の値の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の確率分布は $P(X=2)=\\dfrac{1}{6}$、$P(X=7)=\\dfrac{2}{3}$、$P(X=9)=\\dfrac{1}{6}$ である（下の表）。$X$ の分散 $V(X)$を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$X$",
+            "$2$",
+            "$7$",
+            "$9$",
+            "計"
+          ],
+          [
+            "$P$",
+            "$\\dfrac{1}{6}$",
+            "$\\dfrac{2}{3}$",
+            "$\\dfrac{1}{6}$",
+            "$1$"
+          ]
+        ]
+      },
+      "answer": {
+        "value": "55/12",
+        "display": "$\\dfrac{55}{12}$"
+      },
+      "explanation": "$E(X)=\\dfrac{13}{2}$、$E(X^2)=\\dfrac{281}{6}$、$V(X)=E(X^2)-\\{E(X)\\}^2=\\dfrac{55}{12}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sum([(2)**2*(1/6), (7)**2*(2/3), (9)**2*(1/6)])-(13/2)**2",
+        "expected": "55/12"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-expect_var",
+      "explanation_detail": {
+        "approach": "期待値は「値×確率」の和。分散は $E(X^2)-\\{E(X)\\}^2$ で計算すると速い。",
+        "steps": [
+          "$E(X)=2\\cdot\\dfrac{1}{6}+7\\cdot\\dfrac{2}{3}+9\\cdot\\dfrac{1}{6}=\\dfrac{13}{2}$。",
+          "$E(X^2)=4\\cdot\\dfrac{1}{6}+49\\cdot\\dfrac{2}{3}+81\\cdot\\dfrac{1}{6}=\\dfrac{281}{6}$。",
+          "$V(X)=\\dfrac{281}{6}-\\left(\\dfrac{13}{2}\\right)^2=\\dfrac{55}{12}$。"
+        ],
+        "alternatives": [
+          "分散は定義どおり $\\sum(x_k-m)^2p_k$ で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $E(X^2)$ だけで止める。",
+          "負の値の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の確率分布は $P(X=-2)=\\dfrac{1}{2}$、$P(X=-1)=\\dfrac{1}{4}$、$P(X=3)=\\dfrac{1}{12}$、$P(X=4)=\\dfrac{1}{6}$ である（下の表）。$X$ の分散 $V(X)$を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$X$",
+            "$-2$",
+            "$-1$",
+            "$3$",
+            "$4$",
+            "計"
+          ],
+          [
+            "$P$",
+            "$\\dfrac{1}{2}$",
+            "$\\dfrac{1}{4}$",
+            "$\\dfrac{1}{12}$",
+            "$\\dfrac{1}{6}$",
+            "$1$"
+          ]
+        ]
+      },
+      "answer": {
+        "value": "50/9",
+        "display": "$\\dfrac{50}{9}$"
+      },
+      "explanation": "$E(X)=-\\dfrac{1}{3}$、$E(X^2)=\\dfrac{17}{3}$、$V(X)=E(X^2)-\\{E(X)\\}^2=\\dfrac{50}{9}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sum([(-2)**2*(1/2), (-1)**2*(1/4), (3)**2*(1/12), (4)**2*(1/6)])-(-1/3)**2",
+        "expected": "50/9"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-expect_var",
+      "explanation_detail": {
+        "approach": "期待値は「値×確率」の和。分散は $E(X^2)-\\{E(X)\\}^2$ で計算すると速い。",
+        "steps": [
+          "$E(X)=(-2)\\cdot\\dfrac{1}{2}+(-1)\\cdot\\dfrac{1}{4}+3\\cdot\\dfrac{1}{12}+4\\cdot\\dfrac{1}{6}=-\\dfrac{1}{3}$。",
+          "$E(X^2)=4\\cdot\\dfrac{1}{2}+1\\cdot\\dfrac{1}{4}+9\\cdot\\dfrac{1}{12}+16\\cdot\\dfrac{1}{6}=\\dfrac{17}{3}$。",
+          "$V(X)=\\dfrac{17}{3}-\\left(-\\dfrac{1}{3}\\right)^2=\\dfrac{50}{9}$。"
+        ],
+        "alternatives": [
+          "分散は定義どおり $\\sum(x_k-m)^2p_k$ で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $E(X^2)$ だけで止める。",
+          "負の値の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の期待値が $-1$、分散が $16$ である。$Y=-5X-8$ の期待値 $E(Y)$を求めなさい。",
+      "answer": {
+        "value": "-3"
+      },
+      "explanation": "$E(Y)=-5E(X)-8=-3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-5*-1+(-8)",
+        "expected": "-3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-linear_transform",
+      "explanation_detail": {
+        "approach": "$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$、$\\sigma(aX+b)=|a|\\sigma(X)$。定数 $b$ は散らばりに影響しない。",
+        "steps": [
+          "$Y=-5X-8$ で $a=-5$、$b=-8$。",
+          "$E(Y)=-5E(X)-8=-3$。"
+        ],
+        "alternatives": [
+          "分散は「ずれの2乗」の平均なので、$X$ を $a$ 倍するとずれも $a$ 倍、2乗して $a^2$ 倍になる、と意味から確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい性質を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$V(aX+b)=aV(X)+b$ とする。",
+          "$\\sigma(aX+b)$ で $a$ が負のとき絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の期待値が $7$、分散が $16$ である。$Y=-3X-2$ の標準偏差 $\\sigma(Y)$を求めなさい。",
+      "answer": {
+        "value": "12"
+      },
+      "explanation": "$\\sigma(Y)=|-3|\\sigma(X)=|-3|\\times4=12$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Abs(-3)*sqrt(16)",
+        "expected": "12"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-linear_transform",
+      "explanation_detail": {
+        "approach": "$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$、$\\sigma(aX+b)=|a|\\sigma(X)$。定数 $b$ は散らばりに影響しない。",
+        "steps": [
+          "$Y=-3X-2$ で $a=-3$、$b=-2$。",
+          "$\\sigma(Y)=|-3|\\sigma(X)=|-3|\\times4=12$。"
+        ],
+        "alternatives": [
+          "分散は「ずれの2乗」の平均なので、$X$ を $a$ 倍するとずれも $a$ 倍、2乗して $a^2$ 倍になる、と意味から確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい性質を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$V(aX+b)=aV(X)+b$ とする。",
+          "$\\sigma(aX+b)$ で $a$ が負のとき絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の期待値が $-5$、分散が $2$ である。$Y=-4X+1$ の分散 $V(Y)$を求めなさい。",
+      "answer": {
+        "value": "32"
+      },
+      "explanation": "$V(Y)=(-4)^2V(X)=32$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-4)**2*2",
+        "expected": "32"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-linear_transform",
+      "explanation_detail": {
+        "approach": "$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$、$\\sigma(aX+b)=|a|\\sigma(X)$。定数 $b$ は散らばりに影響しない。",
+        "steps": [
+          "$Y=-4X+1$ で $a=-4$、$b=1$。",
+          "$V(Y)=(-4)^2V(X)=32$。"
+        ],
+        "alternatives": [
+          "分散は「ずれの2乗」の平均なので、$X$ を $a$ 倍するとずれも $a$ 倍、2乗して $a^2$ 倍になる、と意味から確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい性質を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$V(aX+b)=aV(X)+b$ とする。",
+          "$\\sigma(aX+b)$ で $a$ が負のとき絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の期待値が $10$、分散が $1$ である。$Y=-5X-9$ の期待値 $E(Y)$を求めなさい。",
+      "answer": {
+        "value": "-59"
+      },
+      "explanation": "$E(Y)=-5E(X)-9=-59$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-5*10+(-9)",
+        "expected": "-59"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-linear_transform",
+      "explanation_detail": {
+        "approach": "$E(aX+b)=aE(X)+b$、$V(aX+b)=a^2V(X)$、$\\sigma(aX+b)=|a|\\sigma(X)$。定数 $b$ は散らばりに影響しない。",
+        "steps": [
+          "$Y=-5X-9$ で $a=-5$、$b=-9$。",
+          "$E(Y)=-5E(X)-9=-59$。"
+        ],
+        "alternatives": [
+          "分散は「ずれの2乗」の平均なので、$X$ を $a$ 倍するとずれも $a$ 倍、2乗して $a^2$ 倍になる、と意味から確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい性質を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$V(aX+b)=aV(X)+b$ とする。",
+          "$\\sigma(aX+b)$ で $a$ が負のとき絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1枚の硬貨を投げる試行を $100$ 回くり返すとき、表が出る回数を $X$ とする。$X$ の分散を求めなさい。",
+      "answer": {
+        "value": "25",
+        "display": "$25$"
+      },
+      "explanation": "$X$ は二項分布 $B\\left(100,\\ \\dfrac{1}{2}\\right)$ に従う。$V(X)=np(1-p)=25$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "100*1/2*(1-1/2)",
+        "expected": "25"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_ev",
+      "explanation_detail": {
+        "approach": "独立な試行のくり返しで、ある事象の起こる回数は二項分布に従う。$E(X)=np$、$V(X)=np(1-p)$。",
+        "steps": [
+          "$X$ は $B\\left(100,\\ \\dfrac{1}{2}\\right)$ に従う。",
+          "$V(X)=100\\times\\dfrac{1}{2}\\times\\dfrac{1}{2}=25$。"
+        ],
+        "alternatives": [
+          "$X=X_1+\\cdots+X_n$（各回の成功を $1$、失敗を $0$）と分けて、1回分の期待値 $p$・分散 $p(1-p)$ の $n$ 倍として確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "二項分布であることと $n,\\ p$ を正しく捉えている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $np$ とする。",
+          "標準偏差の平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1個のさいころを投げる試行を $288$ 回くり返すとき、5以上の目が出る回数を $X$ とする。$X$ の期待値を求めなさい。",
+      "answer": {
+        "value": "96",
+        "display": "$96$"
+      },
+      "explanation": "$X$ は二項分布 $B\\left(288,\\ \\dfrac{1}{3}\\right)$ に従う。$E(X)=np=96$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "288*1/3",
+        "expected": "96"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_ev",
+      "explanation_detail": {
+        "approach": "独立な試行のくり返しで、ある事象の起こる回数は二項分布に従う。$E(X)=np$、$V(X)=np(1-p)$。",
+        "steps": [
+          "$X$ は $B\\left(288,\\ \\dfrac{1}{3}\\right)$ に従う。",
+          "$E(X)=288\\times\\dfrac{1}{3}=96$。"
+        ],
+        "alternatives": [
+          "$X=X_1+\\cdots+X_n$（各回の成功を $1$、失敗を $0$）と分けて、1回分の期待値 $p$・分散 $p(1-p)$ の $n$ 倍として確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "二項分布であることと $n,\\ p$ を正しく捉えている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $np$ とする。",
+          "標準偏差の平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1枚の硬貨を投げる試行を $900$ 回くり返すとき、表が出る回数を $X$ とする。$X$ の分散を求めなさい。",
+      "answer": {
+        "value": "225",
+        "display": "$225$"
+      },
+      "explanation": "$X$ は二項分布 $B\\left(900,\\ \\dfrac{1}{2}\\right)$ に従う。$V(X)=np(1-p)=225$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "900*1/2*(1-1/2)",
+        "expected": "225"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_ev",
+      "explanation_detail": {
+        "approach": "独立な試行のくり返しで、ある事象の起こる回数は二項分布に従う。$E(X)=np$、$V(X)=np(1-p)$。",
+        "steps": [
+          "$X$ は $B\\left(900,\\ \\dfrac{1}{2}\\right)$ に従う。",
+          "$V(X)=900\\times\\dfrac{1}{2}\\times\\dfrac{1}{2}=225$。"
+        ],
+        "alternatives": [
+          "$X=X_1+\\cdots+X_n$（各回の成功を $1$、失敗を $0$）と分けて、1回分の期待値 $p$・分散 $p(1-p)$ の $n$ 倍として確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "二項分布であることと $n,\\ p$ を正しく捉えている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $np$ とする。",
+          "標準偏差の平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1枚の硬貨を投げる試行を $900$ 回くり返すとき、表が出る回数を $X$ とする。$X$ の標準偏差を求めなさい。",
+      "answer": {
+        "value": "15",
+        "display": "$15$"
+      },
+      "explanation": "$X$ は二項分布 $B\\left(900,\\ \\dfrac{1}{2}\\right)$ に従う。$\\sigma(X)=\\sqrt{np(1-p)}=\\sqrt{225}=15$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(900*1/2*(1-1/2))",
+        "expected": "15"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_ev",
+      "explanation_detail": {
+        "approach": "独立な試行のくり返しで、ある事象の起こる回数は二項分布に従う。$E(X)=np$、$V(X)=np(1-p)$。",
+        "steps": [
+          "$X$ は $B\\left(900,\\ \\dfrac{1}{2}\\right)$ に従う。",
+          "$V(X)=225$、$\\sigma(X)=\\sqrt{225}=15$。"
+        ],
+        "alternatives": [
+          "$X=X_1+\\cdots+X_n$（各回の成功を $1$、失敗を $0$）と分けて、1回分の期待値 $p$・分散 $p(1-p)$ の $n$ 倍として確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "二項分布であることと $n,\\ p$ を正しく捉えている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散を $np$ とする。",
+          "標準偏差の平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ が正規分布 $N(65,\\,2^2)$ に従うとする。$X=69$ を標準化した値 $Z=\\dfrac{X-m}{\\sigma}$ を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "$Z=\\dfrac{69-65}{2}=2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(69-65)/2",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-standardize",
+      "explanation_detail": {
+        "approach": "標準化は「平均からのずれが標準偏差の何倍か」を表す。$N(m,\\,\\sigma^2)$ の $\\sigma^2$ は分散なので、$\\sigma$ はその平方根。",
+        "steps": [
+          "$m=65$、$\\sigma=2$。",
+          "$Z=\\dfrac{69-65}{2}=2$。"
+        ],
+        "alternatives": [
+          "逆に $X=m+Z\\sigma=65+(2)\\times2=69$ となることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$m$ と $\\sigma$ を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "$Z$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散 $\\sigma^2$ で割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ が正規分布 $N(300,\\,2^2)$ に従うとする。$X=295$ を標準化した値 $Z=\\dfrac{X-m}{\\sigma}$ を求めなさい。",
+      "answer": {
+        "value": "-2.5"
+      },
+      "explanation": "$Z=\\dfrac{295-300}{2}=-2.5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(295-300)/2",
+        "expected": "-2.5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-standardize",
+      "explanation_detail": {
+        "approach": "標準化は「平均からのずれが標準偏差の何倍か」を表す。$N(m,\\,\\sigma^2)$ の $\\sigma^2$ は分散なので、$\\sigma$ はその平方根。",
+        "steps": [
+          "$m=300$、$\\sigma=2$。",
+          "$Z=\\dfrac{295-300}{2}=-2.5$。"
+        ],
+        "alternatives": [
+          "逆に $X=m+Z\\sigma=300+(-2.5)\\times2=295$ となることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$m$ と $\\sigma$ を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "$Z$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散 $\\sigma^2$ で割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ が正規分布 $N(160,\\,4^2)$ に従うとする。$X=152$ を標準化した値 $Z=\\dfrac{X-m}{\\sigma}$ を求めなさい。",
+      "answer": {
+        "value": "-2"
+      },
+      "explanation": "$Z=\\dfrac{152-160}{4}=-2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(152-160)/4",
+        "expected": "-2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-standardize",
+      "explanation_detail": {
+        "approach": "標準化は「平均からのずれが標準偏差の何倍か」を表す。$N(m,\\,\\sigma^2)$ の $\\sigma^2$ は分散なので、$\\sigma$ はその平方根。",
+        "steps": [
+          "$m=160$、$\\sigma=4$。",
+          "$Z=\\dfrac{152-160}{4}=-2$。"
+        ],
+        "alternatives": [
+          "逆に $X=m+Z\\sigma=160+(-2)\\times4=152$ となることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$m$ と $\\sigma$ を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "$Z$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散 $\\sigma^2$ で割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ が正規分布 $N(60,\\,4^2)$ に従うとする。$X=68$ を標準化した値 $Z=\\dfrac{X-m}{\\sigma}$ を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "$Z=\\dfrac{68-60}{4}=2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(68-60)/4",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-standardize",
+      "explanation_detail": {
+        "approach": "標準化は「平均からのずれが標準偏差の何倍か」を表す。$N(m,\\,\\sigma^2)$ の $\\sigma^2$ は分散なので、$\\sigma$ はその平方根。",
+        "steps": [
+          "$m=60$、$\\sigma=4$。",
+          "$Z=\\dfrac{68-60}{4}=2$。"
+        ],
+        "alternatives": [
+          "逆に $X=m+Z\\sigma=60+(2)\\times4=68$ となることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$m$ と $\\sigma$ を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "$Z$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散 $\\sigma^2$ で割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $Z$ が標準正規分布 $N(0,\\,1)$ に従うとき、$P(-1.2\\leqq Z\\leqq0)$ を求めなさい。ただし、$p(1.2)=0.3849$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.3849"
+      },
+      "explanation": "曲線の対称性と、片側の面積が $0.5$ であることを使って $p(1.2)=0.3849$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.3849",
+        "expected": "0.3849"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_prob",
+      "explanation_detail": {
+        "approach": "標準正規分布の曲線は $z=0$ に関して対称。表の値 $p(z)$ は $0$ から $z$ までの面積なので、求める部分を $0.5$ と $p(z)$ の足し引きで表す。",
+        "steps": [
+          "曲線をかき、求める部分に斜線を引く。",
+          "対称性から $P(-1.2\\leqq Z\\leqq0)=p(1.2)$。",
+          "$=0.3849$。"
+        ],
+        "alternatives": [
+          "求めた値が $0$ から $1$ の間にあり、図の面積の見当（$0.5$ より大きいか小さいか）と合うかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積を $p(z)$ で正しく表している",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$P(Z\\geqq a)$ を $p(a)$ とする。",
+          "負の側の範囲を、対称性を使わずに表の値をそのまま負にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $Z$ が標準正規分布 $N(0,\\,1)$ に従うとき、$P(Z\\leqq-1)$ を求めなさい。ただし、$p(1)=0.3413$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.1587"
+      },
+      "explanation": "曲線の対称性と、片側の面積が $0.5$ であることを使って $0.5-p(1)=0.1587$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.5-0.3413",
+        "expected": "0.1587"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_prob",
+      "explanation_detail": {
+        "approach": "標準正規分布の曲線は $z=0$ に関して対称。表の値 $p(z)$ は $0$ から $z$ までの面積なので、求める部分を $0.5$ と $p(z)$ の足し引きで表す。",
+        "steps": [
+          "曲線をかき、求める部分に斜線を引く。",
+          "対称性から $P(Z\\leqq-1)=0.5-p(1)$。",
+          "$=0.1587$。"
+        ],
+        "alternatives": [
+          "求めた値が $0$ から $1$ の間にあり、図の面積の見当（$0.5$ より大きいか小さいか）と合うかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積を $p(z)$ で正しく表している",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$P(Z\\geqq a)$ を $p(a)$ とする。",
+          "負の側の範囲を、対称性を使わずに表の値をそのまま負にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $Z$ が標準正規分布 $N(0,\\,1)$ に従うとき、$P(|Z|\\leqq2.5)$ を求めなさい。ただし、$p(2.5)=0.4938$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.9876"
+      },
+      "explanation": "曲線の対称性と、片側の面積が $0.5$ であることを使って $2p(2.5)=0.9876$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*0.4938",
+        "expected": "0.9876"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_prob",
+      "explanation_detail": {
+        "approach": "標準正規分布の曲線は $z=0$ に関して対称。表の値 $p(z)$ は $0$ から $z$ までの面積なので、求める部分を $0.5$ と $p(z)$ の足し引きで表す。",
+        "steps": [
+          "曲線をかき、求める部分に斜線を引く。",
+          "対称性から $P(|Z|\\leqq2.5)=2p(2.5)$。",
+          "$=0.9876$。"
+        ],
+        "alternatives": [
+          "求めた値が $0$ から $1$ の間にあり、図の面積の見当（$0.5$ より大きいか小さいか）と合うかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積を $p(z)$ で正しく表している",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$P(Z\\geqq a)$ を $p(a)$ とする。",
+          "負の側の範囲を、対称性を使わずに表の値をそのまま負にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $Z$ が標準正規分布 $N(0,\\,1)$ に従うとき、$P(Z\\leqq-3)$ を求めなさい。ただし、$p(3)=0.4987$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.0013"
+      },
+      "explanation": "曲線の対称性と、片側の面積が $0.5$ であることを使って $0.5-p(3)=0.0013$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.5-0.4987",
+        "expected": "0.0013"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_prob",
+      "explanation_detail": {
+        "approach": "標準正規分布の曲線は $z=0$ に関して対称。表の値 $p(z)$ は $0$ から $z$ までの面積なので、求める部分を $0.5$ と $p(z)$ の足し引きで表す。",
+        "steps": [
+          "曲線をかき、求める部分に斜線を引く。",
+          "対称性から $P(Z\\leqq-3)=0.5-p(3)$。",
+          "$=0.0013$。"
+        ],
+        "alternatives": [
+          "求めた値が $0$ から $1$ の間にあり、図の面積の見当（$0.5$ より大きいか小さいか）と合うかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積を $p(z)$ で正しく表している",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$P(Z\\geqq a)$ を $p(a)$ とする。",
+          "負の側の範囲を、対称性を使わずに表の値をそのまま負にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある工場で作られる製品の重さ $X$（g）は、平均 $210$、標準偏差 $10$ の正規分布に従うとする。$P(X\\leqq205)$ を求めなさい。ただし、$p(0.5)=0.1915$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.3085"
+      },
+      "explanation": "$Z=\\dfrac{X-210}{10}$ と標準化すると $P(Z\\leqq-0.5)=0.5-p(0.5)=0.3085$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(205-210)/10, 0.5-0.1915]",
+        "expected": "[-0.5, 0.3085]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_x_prob",
+      "explanation_detail": {
+        "approach": "正規分布の確率は、標準化 $Z=\\dfrac{X-m}{\\sigma}$ で標準正規分布に直してから、正規分布表を使う。",
+        "steps": [
+          "$Z=\\dfrac{X-210}{10}$ とおくと、$Z$ は $N(0,\\,1)$ に従う。",
+          "$X$ の範囲を $Z$ の範囲に直す。",
+          "$P(Z\\leqq-0.5)=0.5-p(0.5)=0.3085$。"
+        ],
+        "alternatives": [
+          "標準化した $Z$ の範囲を図にかき、面積の見当（$0.5$ より大きいか小さいか）と答えが合うか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく標準化している",
+            "points": 2
+          },
+          {
+            "point": "表を使って確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$X$ の範囲を $Z$ に直すとき、平均を引き忘れる。",
+          "片側の確率で $0.5$ から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある試験の得点 $X$（点）は、平均 $60$、標準偏差 $12$ の正規分布に従うとする。$P(X\\geqq66)$ を求めなさい。ただし、$p(0.5)=0.1915$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.3085"
+      },
+      "explanation": "$Z=\\dfrac{X-60}{12}$ と標準化すると $P(Z\\geqq0.5)=0.5-p(0.5)=0.3085$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(66-60)/12, 0.5-0.1915]",
+        "expected": "[0.5, 0.3085]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_x_prob",
+      "explanation_detail": {
+        "approach": "正規分布の確率は、標準化 $Z=\\dfrac{X-m}{\\sigma}$ で標準正規分布に直してから、正規分布表を使う。",
+        "steps": [
+          "$Z=\\dfrac{X-60}{12}$ とおくと、$Z$ は $N(0,\\,1)$ に従う。",
+          "$X$ の範囲を $Z$ の範囲に直す。",
+          "$P(Z\\geqq0.5)=0.5-p(0.5)=0.3085$。"
+        ],
+        "alternatives": [
+          "標準化した $Z$ の範囲を図にかき、面積の見当（$0.5$ より大きいか小さいか）と答えが合うか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく標準化している",
+            "points": 2
+          },
+          {
+            "point": "表を使って確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$X$ の範囲を $Z$ に直すとき、平均を引き忘れる。",
+          "片側の確率で $0.5$ から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある農園のみかん1個の重さ $X$（g）は、平均 $100$、標準偏差 $5$ の正規分布に従うとする。$P(105\\leqq X\\leqq107.5)$ を求めなさい。ただし、$p(1)=0.3413$、$p(1.5)=0.4332$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.0919"
+      },
+      "explanation": "$Z=\\dfrac{X-100}{5}$ と標準化すると $P(1\\leqq Z\\leqq1.5)=p(1.5)-p(1)=0.0919$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(105-100)/5, (215/2-100)/5, 0.4332-0.3413]",
+        "expected": "[1, 1.5, 0.0919]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_x_prob",
+      "explanation_detail": {
+        "approach": "正規分布の確率は、標準化 $Z=\\dfrac{X-m}{\\sigma}$ で標準正規分布に直してから、正規分布表を使う。",
+        "steps": [
+          "$Z=\\dfrac{X-100}{5}$ とおくと、$Z$ は $N(0,\\,1)$ に従う。",
+          "$X$ の範囲を $Z$ の範囲に直す。",
+          "$P(1\\leqq Z\\leqq1.5)=p(1.5)-p(1)=0.0919$。"
+        ],
+        "alternatives": [
+          "標準化した $Z$ の範囲を図にかき、面積の見当（$0.5$ より大きいか小さいか）と答えが合うか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく標準化している",
+            "points": 2
+          },
+          {
+            "point": "表を使って確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$X$ の範囲を $Z$ に直すとき、平均を引き忘れる。",
+          "片側の確率で $0.5$ から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある地域の 1 日の最高気温 $X$（℃）は、平均 $27$、標準偏差 $2$ の正規分布に従うとする。$P(X\\geqq28)$ を求めなさい。ただし、$p(0.5)=0.1915$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.3085"
+      },
+      "explanation": "$Z=\\dfrac{X-27}{2}$ と標準化すると $P(Z\\geqq0.5)=0.5-p(0.5)=0.3085$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(28-27)/2, 0.5-0.1915]",
+        "expected": "[0.5, 0.3085]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_x_prob",
+      "explanation_detail": {
+        "approach": "正規分布の確率は、標準化 $Z=\\dfrac{X-m}{\\sigma}$ で標準正規分布に直してから、正規分布表を使う。",
+        "steps": [
+          "$Z=\\dfrac{X-27}{2}$ とおくと、$Z$ は $N(0,\\,1)$ に従う。",
+          "$X$ の範囲を $Z$ の範囲に直す。",
+          "$P(Z\\geqq0.5)=0.5-p(0.5)=0.3085$。"
+        ],
+        "alternatives": [
+          "標準化した $Z$ の範囲を図にかき、面積の見当（$0.5$ より大きいか小さいか）と答えが合うか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく標準化している",
+            "points": 2
+          },
+          {
+            "point": "表を使って確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$X$ の範囲を $Z$ に直すとき、平均を引き忘れる。",
+          "片側の確率で $0.5$ から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある高校の男子の身長 $X$（cm）は、平均 $170$、標準偏差 $4$ の正規分布に従うとする。$P(X\\leqq166)$ を求めなさい。ただし、$p(1)=0.3413$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.1587"
+      },
+      "explanation": "$Z=\\dfrac{X-170}{4}$ と標準化すると $P(Z\\leqq-1)=0.5-p(1)=0.1587$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(166-170)/4, 0.5-0.3413]",
+        "expected": "[-1, 0.1587]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-normal_x_prob",
+      "explanation_detail": {
+        "approach": "正規分布の確率は、標準化 $Z=\\dfrac{X-m}{\\sigma}$ で標準正規分布に直してから、正規分布表を使う。",
+        "steps": [
+          "$Z=\\dfrac{X-170}{4}$ とおくと、$Z$ は $N(0,\\,1)$ に従う。",
+          "$X$ の範囲を $Z$ の範囲に直す。",
+          "$P(Z\\leqq-1)=0.5-p(1)=0.1587$。"
+        ],
+        "alternatives": [
+          "標準化した $Z$ の範囲を図にかき、面積の見当（$0.5$ より大きいか小さいか）と答えが合うか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく標準化している",
+            "points": 2
+          },
+          {
+            "point": "表を使って確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$X$ の範囲を $Z$ に直すとき、平均を引き忘れる。",
+          "片側の確率で $0.5$ から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1個のさいころを投げる試行を $288$ 回くり返すとき、5以上の目が出る回数が $88$ 回以下 となる確率を、正規分布で近似して求めなさい。ただし、$p(1)=0.3413$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.1587"
+      },
+      "explanation": "回数 $X$ は $B\\left(288,\\ \\dfrac{1}{3}\\right)$ に従い、$E(X)=96$、$\\sigma(X)=8$。$n$ が大きいので近似的に $N(96,\\,8^2)$ に従う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[288*1/3, sqrt(288*1/3*(1-1/3)), 0.5-0.3413]",
+        "expected": "[96, 8, 0.1587]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_normal",
+      "explanation_detail": {
+        "approach": "回数が多い二項分布は、同じ平均・分散をもつ正規分布で近似できる。期待値と標準偏差を求めて標準化する。",
+        "steps": [
+          "$E(X)=288\\times\\dfrac{1}{3}=96$、$\\sigma(X)=\\sqrt{288\\times\\dfrac{1}{3}\\times\\dfrac{2}{3}}=8$。",
+          "$Z=\\dfrac{X-96}{8}$ とおくと、$X=88$ は $Z=-1$ に対応する。",
+          "$P(Z\\leqq-1)=0.5-p(1)=0.1587$。"
+        ],
+        "alternatives": [
+          "求めた確率が小さいことは、観測値が期待値から標準偏差の $1$ 倍離れていることからも見当がつく（約68%が ±1σ、約95%が ±2σ の範囲に入る）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値と標準偏差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "標準化して確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違えて標準化する。",
+          "片側の確率を $p(z)$ のままにする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1枚の硬貨を投げる試行を $1600$ 回くり返すとき、表が出る回数が $750$ 回以下 となる確率を、正規分布で近似して求めなさい。ただし、$p(2.5)=0.4938$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.0062"
+      },
+      "explanation": "回数 $X$ は $B\\left(1600,\\ \\dfrac{1}{2}\\right)$ に従い、$E(X)=800$、$\\sigma(X)=20$。$n$ が大きいので近似的に $N(800,\\,20^2)$ に従う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[1600*1/2, sqrt(1600*1/2*(1-1/2)), 0.5-0.4938]",
+        "expected": "[800, 20, 0.0062]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_normal",
+      "explanation_detail": {
+        "approach": "回数が多い二項分布は、同じ平均・分散をもつ正規分布で近似できる。期待値と標準偏差を求めて標準化する。",
+        "steps": [
+          "$E(X)=1600\\times\\dfrac{1}{2}=800$、$\\sigma(X)=\\sqrt{1600\\times\\dfrac{1}{2}\\times\\dfrac{1}{2}}=20$。",
+          "$Z=\\dfrac{X-800}{20}$ とおくと、$X=750$ は $Z=-2.5$ に対応する。",
+          "$P(Z\\leqq-2.5)=0.5-p(2.5)=0.0062$。"
+        ],
+        "alternatives": [
+          "求めた確率が小さいことは、観測値が期待値から標準偏差の $2.5$ 倍離れていることからも見当がつく（約68%が ±1σ、約95%が ±2σ の範囲に入る）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値と標準偏差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "標準化して確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違えて標準化する。",
+          "片側の確率を $p(z)$ のままにする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "成功する確率が $\\dfrac{1}{5}$ である試行を $625$ 回くり返すとき、成功する回数が $105$ 回以下 となる確率を、正規分布で近似して求めなさい。ただし、$p(2)=0.4772$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.0228"
+      },
+      "explanation": "回数 $X$ は $B\\left(625,\\ \\dfrac{1}{5}\\right)$ に従い、$E(X)=125$、$\\sigma(X)=10$。$n$ が大きいので近似的に $N(125,\\,10^2)$ に従う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[625*1/5, sqrt(625*1/5*(1-1/5)), 0.5-0.4772]",
+        "expected": "[125, 10, 0.0228]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_normal",
+      "explanation_detail": {
+        "approach": "回数が多い二項分布は、同じ平均・分散をもつ正規分布で近似できる。期待値と標準偏差を求めて標準化する。",
+        "steps": [
+          "$E(X)=625\\times\\dfrac{1}{5}=125$、$\\sigma(X)=\\sqrt{625\\times\\dfrac{1}{5}\\times\\dfrac{4}{5}}=10$。",
+          "$Z=\\dfrac{X-125}{10}$ とおくと、$X=105$ は $Z=-2$ に対応する。",
+          "$P(Z\\leqq-2)=0.5-p(2)=0.0228$。"
+        ],
+        "alternatives": [
+          "求めた確率が小さいことは、観測値が期待値から標準偏差の $2$ 倍離れていることからも見当がつく（約68%が ±1σ、約95%が ±2σ の範囲に入る）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値と標準偏差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "標準化して確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違えて標準化する。",
+          "片側の確率を $p(z)$ のままにする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1個のさいころを投げる試行を $450$ 回くり返すとき、3の倍数の目が出る回数が $140$ 回以下 となる確率を、正規分布で近似して求めなさい。ただし、$p(1)=0.3413$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。",
+      "answer": {
+        "value": "0.1587"
+      },
+      "explanation": "回数 $X$ は $B\\left(450,\\ \\dfrac{1}{3}\\right)$ に従い、$E(X)=150$、$\\sigma(X)=10$。$n$ が大きいので近似的に $N(150,\\,10^2)$ に従う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[450*1/3, sqrt(450*1/3*(1-1/3)), 0.5-0.3413]",
+        "expected": "[150, 10, 0.1587]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-binom_normal",
+      "explanation_detail": {
+        "approach": "回数が多い二項分布は、同じ平均・分散をもつ正規分布で近似できる。期待値と標準偏差を求めて標準化する。",
+        "steps": [
+          "$E(X)=450\\times\\dfrac{1}{3}=150$、$\\sigma(X)=\\sqrt{450\\times\\dfrac{1}{3}\\times\\dfrac{2}{3}}=10$。",
+          "$Z=\\dfrac{X-150}{10}$ とおくと、$X=140$ は $Z=-1$ に対応する。",
+          "$P(Z\\leqq-1)=0.5-p(1)=0.1587$。"
+        ],
+        "alternatives": [
+          "求めた確率が小さいことは、観測値が期待値から標準偏差の $1$ 倍離れていることからも見当がつく（約68%が ±1σ、約95%が ±2σ の範囲に入る）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値と標準偏差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "標準化して確率を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違えて標準化する。",
+          "片側の確率を $p(z)$ のままにする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "母平均 $50$、母標準偏差 $30$ の母集団から、大きさ $36$ の無作為標本を抽出する。標本平均 $\\overline{X}$ の期待値と分散 $V(\\overline{X})$を求めなさい。",
+      "answer": {
+        "value": "25",
+        "display": "$E(\\overline{X})=50$、$V(\\overline{X})=25$"
+      },
+      "explanation": "$E(\\overline{X})=50$、$V(\\overline{X})=\\dfrac{30^2}{36}=25$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "30**2/36",
+        "expected": "25"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-sample_mean",
+      "explanation_detail": {
+        "approach": "標本平均の期待値は母平均と等しく、標準偏差は母標準偏差の $\\dfrac{1}{\\sqrt{n}}$ 倍（分散は $\\dfrac{1}{n}$ 倍）になる。",
+        "steps": [
+          "$E(\\overline{X})=m=50$。",
+          "$\\sigma(\\overline{X})=\\dfrac{30}{\\sqrt{36}}=5$。",
+          "$V(\\overline{X})=\\left(5\\right)^2=25$。"
+        ],
+        "alternatives": [
+          "$V(\\overline{X})=\\dfrac{1}{n^2}\\{V(X_1)+\\cdots+V(X_n)\\}=\\dfrac{\\sigma^2}{n}$ と、独立な確率変数の和の分散から導いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "標準偏差（分散）を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ ではなく $n$ で割る（標準偏差の場合）。",
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "母平均 $30$、母標準偏差 $10$ の母集団から、大きさ $25$ の無作為標本を抽出する。標本平均 $\\overline{X}$ の期待値と標準偏差 $\\sigma(\\overline{X})$を求めなさい。",
+      "answer": {
+        "value": "2",
+        "display": "$E(\\overline{X})=30$、$\\sigma(\\overline{X})=2$"
+      },
+      "explanation": "$E(\\overline{X})=30$、$\\sigma(\\overline{X})=\\dfrac{10}{\\sqrt{25}}=2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "10/sqrt(25)",
+        "expected": "2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-sample_mean",
+      "explanation_detail": {
+        "approach": "標本平均の期待値は母平均と等しく、標準偏差は母標準偏差の $\\dfrac{1}{\\sqrt{n}}$ 倍（分散は $\\dfrac{1}{n}$ 倍）になる。",
+        "steps": [
+          "$E(\\overline{X})=m=30$。",
+          "$\\sigma(\\overline{X})=\\dfrac{10}{\\sqrt{25}}=2$。"
+        ],
+        "alternatives": [
+          "$V(\\overline{X})=\\dfrac{1}{n^2}\\{V(X_1)+\\cdots+V(X_n)\\}=\\dfrac{\\sigma^2}{n}$ と、独立な確率変数の和の分散から導いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "標準偏差（分散）を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ ではなく $n$ で割る（標準偏差の場合）。",
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "母平均 $250$、母標準偏差 $15$ の母集団から、大きさ $100$ の無作為標本を抽出する。標本平均 $\\overline{X}$ の期待値と分散 $V(\\overline{X})$を求めなさい。",
+      "answer": {
+        "value": "9/4",
+        "display": "$E(\\overline{X})=250$、$V(\\overline{X})=\\dfrac{9}{4}$"
+      },
+      "explanation": "$E(\\overline{X})=250$、$V(\\overline{X})=\\dfrac{15^2}{100}=\\dfrac{9}{4}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "15**2/100",
+        "expected": "9/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-sample_mean",
+      "explanation_detail": {
+        "approach": "標本平均の期待値は母平均と等しく、標準偏差は母標準偏差の $\\dfrac{1}{\\sqrt{n}}$ 倍（分散は $\\dfrac{1}{n}$ 倍）になる。",
+        "steps": [
+          "$E(\\overline{X})=m=250$。",
+          "$\\sigma(\\overline{X})=\\dfrac{15}{\\sqrt{100}}=\\dfrac{3}{2}$。",
+          "$V(\\overline{X})=\\left(\\dfrac{3}{2}\\right)^2=\\dfrac{9}{4}$。"
+        ],
+        "alternatives": [
+          "$V(\\overline{X})=\\dfrac{1}{n^2}\\{V(X_1)+\\cdots+V(X_n)\\}=\\dfrac{\\sigma^2}{n}$ と、独立な確率変数の和の分散から導いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "標準偏差（分散）を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ ではなく $n$ で割る（標準偏差の場合）。",
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "母平均 $30$、母標準偏差 $15$ の母集団から、大きさ $9$ の無作為標本を抽出する。標本平均 $\\overline{X}$ の期待値と標準偏差 $\\sigma(\\overline{X})$を求めなさい。",
+      "answer": {
+        "value": "5",
+        "display": "$E(\\overline{X})=30$、$\\sigma(\\overline{X})=5$"
+      },
+      "explanation": "$E(\\overline{X})=30$、$\\sigma(\\overline{X})=\\dfrac{15}{\\sqrt{9}}=5$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "15/sqrt(9)",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-sample_mean",
+      "explanation_detail": {
+        "approach": "標本平均の期待値は母平均と等しく、標準偏差は母標準偏差の $\\dfrac{1}{\\sqrt{n}}$ 倍（分散は $\\dfrac{1}{n}$ 倍）になる。",
+        "steps": [
+          "$E(\\overline{X})=m=30$。",
+          "$\\sigma(\\overline{X})=\\dfrac{15}{\\sqrt{9}}=5$。"
+        ],
+        "alternatives": [
+          "$V(\\overline{X})=\\dfrac{1}{n^2}\\{V(X_1)+\\cdots+V(X_n)\\}=\\dfrac{\\sigma^2}{n}$ と、独立な確率変数の和の分散から導いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "期待値を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "標準偏差（分散）を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ ではなく $n$ で割る（標準偏差の場合）。",
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある農園のトマトから無作為に $256$ 個を選んで糖度を調べたところ、標本平均は $8.8$ 度であった。母標準偏差を $5$ 度として、母平均を信頼度 95% で推定しなさい。答えは小数第2位を四捨五入して小数第1位まで求めなさい。",
+      "answer": {
+        "value": "$[8.2,\\ 9.4]$（単位 度）",
+        "accepted": [
+          "[8.2, 9.4]"
+        ]
+      },
+      "explanation": "信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}=8.8\\pm1.96\\times\\dfrac{5}{16}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[44/5-196/100*5/sqrt(256), 44/5+196/100*5/sqrt(256)]",
+        "expected": "[131/16, 753/80]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_mean",
+      "explanation_detail": {
+        "approach": "標本平均 $\\overline{X}$ は近似的に $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$ に従う。信頼度 95% の信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$。",
+        "steps": [
+          "$\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{5}{16}$。",
+          "$1.96\\times\\dfrac{5}{16}=0.6125$。",
+          "$8.8-0.6125=8.1875$、$8.8+0.6125=9.4125$。",
+          "四捨五入して $[8.2,\\ 9.4]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本平均、半分の幅が $1.96\\times$（標本平均の標準偏差）になっているかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "信頼区間の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間の両端を正しく計算し、指示どおりに四捨五入している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ で割り忘れる。",
+          "区間ではなく1つの値で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある農園のトマトから無作為に $256$ 個を選んで糖度を調べたところ、標本平均は $6.7$ 度であった。母標準偏差を $5$ 度として、母平均を信頼度 95% で推定しなさい。答えは小数第2位を四捨五入して小数第1位まで求めなさい。",
+      "answer": {
+        "value": "$[6.1,\\ 7.3]$（単位 度）",
+        "accepted": [
+          "[6.1, 7.3]"
+        ]
+      },
+      "explanation": "信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}=6.7\\pm1.96\\times\\dfrac{5}{16}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[67/10-196/100*5/sqrt(256), 67/10+196/100*5/sqrt(256)]",
+        "expected": "[487/80, 117/16]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_mean",
+      "explanation_detail": {
+        "approach": "標本平均 $\\overline{X}$ は近似的に $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$ に従う。信頼度 95% の信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$。",
+        "steps": [
+          "$\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{5}{16}$。",
+          "$1.96\\times\\dfrac{5}{16}=0.6125$。",
+          "$6.7-0.6125=6.0875$、$6.7+0.6125=7.3125$。",
+          "四捨五入して $[6.1,\\ 7.3]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本平均、半分の幅が $1.96\\times$（標本平均の標準偏差）になっているかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "信頼区間の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間の両端を正しく計算し、指示どおりに四捨五入している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ で割り忘れる。",
+          "区間ではなく1つの値で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある工場で作られた菓子袋から無作為に $225$ 袋を選んで内容量を調べたところ、標本平均は $184.9$ gであった。母標準偏差を $15$ gとして、母平均を信頼度 95% で推定しなさい。答えは小数第2位を四捨五入して小数第1位まで求めなさい。",
+      "answer": {
+        "value": "$[182.9,\\ 186.9]$（単位 g）",
+        "accepted": [
+          "[182.9, 186.9]"
+        ]
+      },
+      "explanation": "信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}=184.9\\pm1.96\\times\\dfrac{15}{15}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[1849/10-196/100*15/sqrt(225), 1849/10+196/100*15/sqrt(225)]",
+        "expected": "[9147/50, 9343/50]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_mean",
+      "explanation_detail": {
+        "approach": "標本平均 $\\overline{X}$ は近似的に $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$ に従う。信頼度 95% の信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$。",
+        "steps": [
+          "$\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{15}{15}$。",
+          "$1.96\\times\\dfrac{15}{15}=1.96$。",
+          "$184.9-1.96=182.94$、$184.9+1.96=186.86$。",
+          "四捨五入して $[182.9,\\ 186.9]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本平均、半分の幅が $1.96\\times$（標本平均の標準偏差）になっているかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "信頼区間の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間の両端を正しく計算し、指示どおりに四捨五入している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ で割り忘れる。",
+          "区間ではなく1つの値で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある養鶏場の卵から無作為に $225$ 個を選んで重さを調べたところ、標本平均は $177.8$ gであった。母標準偏差を $14$ gとして、母平均を信頼度 95% で推定しなさい。答えは小数第2位を四捨五入して小数第1位まで求めなさい。",
+      "answer": {
+        "value": "$[176.0,\\ 179.6]$（単位 g）",
+        "accepted": [
+          "[176.0, 179.6]"
+        ]
+      },
+      "explanation": "信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}=177.8\\pm1.96\\times\\dfrac{14}{15}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[889/5-196/100*14/sqrt(225), 889/5+196/100*14/sqrt(225)]",
+        "expected": "[65989/375, 67361/375]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_mean",
+      "explanation_detail": {
+        "approach": "標本平均 $\\overline{X}$ は近似的に $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$ に従う。信頼度 95% の信頼区間は $\\overline{x}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$。",
+        "steps": [
+          "$\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{14}{15}$。",
+          "$1.96\\times\\dfrac{14}{15}=1.82933$。",
+          "$177.8-1.82933=175.971$、$177.8+1.82933=179.629$。",
+          "四捨五入して $[176.0,\\ 179.6]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本平均、半分の幅が $1.96\\times$（標本平均の標準偏差）になっているかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "信頼区間の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間の両端を正しく計算し、指示どおりに四捨五入している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{n}$ で割り忘れる。",
+          "区間ではなく1つの値で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある町の世帯から無作為に $1600$ 世帯を抽出して調べたところ、$320$ 世帯が家庭菜園をしていると答えた。全体のうち家庭菜園をしていると答えたものの割合（母比率）$p$ を信頼度 95% で推定しなさい。答えは小数第4位を四捨五入して小数第3位まで求めなさい。",
+      "answer": {
+        "value": "$[0.180,\\ 0.220]$",
+        "accepted": [
+          "[0.180, 0.220]"
+        ]
+      },
+      "explanation": "標本比率 $R=0.2$、$\\sqrt{\\dfrac{R(1-R)}{n}}=0.01$。$R\\pm1.96\\times0.01$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[1/5-196/100*sqrt(1/5*(1-1/5)/1600), 1/5+196/100*sqrt(1/5*(1-1/5)/1600)]",
+        "expected": "[451/2500, 549/2500]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_prop",
+      "explanation_detail": {
+        "approach": "$n$ が大きいとき、標本比率 $R$ は近似的に $N\\left(p,\\ \\dfrac{p(1-p)}{n}\\right)$ に従う。母比率 $p$ の代わりに $R$ を用いて信頼区間をつくる。",
+        "steps": [
+          "$R=\\dfrac{320}{1600}=0.2$。",
+          "$\\sqrt{\\dfrac{0.2\\times0.8}{1600}}=0.01$。",
+          "$1.96\\times0.01=0.0196$。",
+          "$[0.1804,\\ 0.2196]$ を四捨五入して $[0.180,\\ 0.220]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本比率 $R$ になっていること、区間の幅が $n$ を大きくすると狭くなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "標本比率と標準偏差の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{\\ }$ をとり忘れる。",
+          "人数 $k$ をそのまま比率として使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある高校の生徒から無作為に $400$ 人を抽出して調べたところ、$320$ 人が毎朝朝食をとると答えた。全体のうち毎朝朝食をとると答えたものの割合（母比率）$p$ を信頼度 95% で推定しなさい。答えは小数第4位を四捨五入して小数第3位まで求めなさい。",
+      "answer": {
+        "value": "$[0.761,\\ 0.839]$",
+        "accepted": [
+          "[0.761, 0.839]"
+        ]
+      },
+      "explanation": "標本比率 $R=0.8$、$\\sqrt{\\dfrac{R(1-R)}{n}}=0.02$。$R\\pm1.96\\times0.02$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[4/5-196/100*sqrt(4/5*(1-4/5)/400), 4/5+196/100*sqrt(4/5*(1-4/5)/400)]",
+        "expected": "[951/1250, 1049/1250]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_prop",
+      "explanation_detail": {
+        "approach": "$n$ が大きいとき、標本比率 $R$ は近似的に $N\\left(p,\\ \\dfrac{p(1-p)}{n}\\right)$ に従う。母比率 $p$ の代わりに $R$ を用いて信頼区間をつくる。",
+        "steps": [
+          "$R=\\dfrac{320}{400}=0.8$。",
+          "$\\sqrt{\\dfrac{0.8\\times0.2}{400}}=0.02$。",
+          "$1.96\\times0.02=0.0392$。",
+          "$[0.7608,\\ 0.8392]$ を四捨五入して $[0.761,\\ 0.839]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本比率 $R$ になっていること、区間の幅が $n$ を大きくすると狭くなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "標本比率と標準偏差の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{\\ }$ をとり忘れる。",
+          "人数 $k$ をそのまま比率として使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ある地域の住民から無作為に $600$ 人を抽出して調べたところ、$240$ 人が路線バスを利用していると答えた。全体のうち路線バスを利用していると答えたものの割合（母比率）$p$ を信頼度 95% で推定しなさい。答えは小数第4位を四捨五入して小数第3位まで求めなさい。",
+      "answer": {
+        "value": "$[0.361,\\ 0.439]$",
+        "accepted": [
+          "[0.361, 0.439]"
+        ]
+      },
+      "explanation": "標本比率 $R=0.4$、$\\sqrt{\\dfrac{R(1-R)}{n}}=0.02$。$R\\pm1.96\\times0.02$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[2/5-196/100*sqrt(2/5*(1-2/5)/600), 2/5+196/100*sqrt(2/5*(1-2/5)/600)]",
+        "expected": "[451/1250, 549/1250]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-ci_prop",
+      "explanation_detail": {
+        "approach": "$n$ が大きいとき、標本比率 $R$ は近似的に $N\\left(p,\\ \\dfrac{p(1-p)}{n}\\right)$ に従う。母比率 $p$ の代わりに $R$ を用いて信頼区間をつくる。",
+        "steps": [
+          "$R=\\dfrac{240}{600}=0.4$。",
+          "$\\sqrt{\\dfrac{0.4\\times0.6}{600}}=0.02$。",
+          "$1.96\\times0.02=0.0392$。",
+          "$[0.3608,\\ 0.4392]$ を四捨五入して $[0.361,\\ 0.439]$。"
+        ],
+        "alternatives": [
+          "区間の中央が標本比率 $R$ になっていること、区間の幅が $n$ を大きくすると狭くなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "標本比率と標準偏差の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "区間を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{\\ }$ をとり忘れる。",
+          "人数 $k$ をそのまま比率として使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1枚の硬貨を投げる試行を $2500$ 回くり返したところ、表が出る回数は $1275$ 回であった。表が出る確率は $\\dfrac{1}{2}$ であるといえるか。有意水準 5% で仮説検定しなさい。ただし、二項分布は正規分布で近似し、$P(|Z|\\leqq1.96)=0.95$ を用いること。",
+      "answer": {
+        "value": "$z=1.00$。帰無仮説は棄却されない。よって、表が出る確率は $\\dfrac{1}{2}$ ではないとは判断できない。"
+      },
+      "explanation": "帰無仮説「確率は $\\dfrac{1}{2}$」のもとで、回数 $X$ は近似的に $N(1250,\\,25^2)$ に従う。$z=\\dfrac{1275-1250}{25}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帰無仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "帰無仮説のもとでの期待値・標準偏差を正しく求め、標準化している",
+            "points": 3
+          },
+          {
+            "criterion": "棄却域と比べて正しく判断している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を適切な言葉で述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(1275-1250)/25",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-test_binom",
+      "explanation_detail": {
+        "approach": "主張したいこと（確率が $\\dfrac{1}{2}$ でない）の反対を帰無仮説にする。帰無仮説のもとで観測値がどのくらい「まれ」かを $|z|$ と $1.96$ の比較で判断する。",
+        "steps": [
+          "帰無仮説：確率は $\\dfrac{1}{2}$ である。",
+          "帰無仮説のもとで $X$ は $B\\left(2500,\\ \\dfrac{1}{2}\\right)$ に従い、$E(X)=1250$、$\\sigma(X)=25$。",
+          "$z=\\dfrac{1275-1250}{25}=1.00$。",
+          "$|z|\\leqq1.96$ なので、帰無仮説は棄却されない。よって、表が出る確率は $\\dfrac{1}{2}$ ではないとは判断できない。"
+        ],
+        "alternatives": [
+          "棄却域を回数で表してもよい：$|X-1250|>1.96\\times25=49$、すなわち $X<1201$ または $X>1299$ なら棄却。"
+        ],
+        "partial_credit": [
+          {
+            "point": "帰無仮説",
+            "points": 2
+          },
+          {
+            "point": "標準化",
+            "points": 3
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "結論の表現",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "棄却されないときに「確率は $\\dfrac{1}{2}$ であることが示された」と書く。",
+          "片側の確率 $0.025$ と両側の $0.05$ を混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1枚の硬貨を投げる試行を $2500$ 回くり返したところ、表が出る回数は $1285$ 回であった。表が出る確率は $\\dfrac{1}{2}$ であるといえるか。有意水準 5% で仮説検定しなさい。ただし、二項分布は正規分布で近似し、$P(|Z|\\leqq1.96)=0.95$ を用いること。",
+      "answer": {
+        "value": "$z=1.40$。帰無仮説は棄却されない。よって、表が出る確率は $\\dfrac{1}{2}$ ではないとは判断できない。"
+      },
+      "explanation": "帰無仮説「確率は $\\dfrac{1}{2}$」のもとで、回数 $X$ は近似的に $N(1250,\\,25^2)$ に従う。$z=\\dfrac{1285-1250}{25}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帰無仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "帰無仮説のもとでの期待値・標準偏差を正しく求め、標準化している",
+            "points": 3
+          },
+          {
+            "criterion": "棄却域と比べて正しく判断している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を適切な言葉で述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(1285-1250)/25",
+        "expected": "7/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-test_binom",
+      "explanation_detail": {
+        "approach": "主張したいこと（確率が $\\dfrac{1}{2}$ でない）の反対を帰無仮説にする。帰無仮説のもとで観測値がどのくらい「まれ」かを $|z|$ と $1.96$ の比較で判断する。",
+        "steps": [
+          "帰無仮説：確率は $\\dfrac{1}{2}$ である。",
+          "帰無仮説のもとで $X$ は $B\\left(2500,\\ \\dfrac{1}{2}\\right)$ に従い、$E(X)=1250$、$\\sigma(X)=25$。",
+          "$z=\\dfrac{1285-1250}{25}=1.40$。",
+          "$|z|\\leqq1.96$ なので、帰無仮説は棄却されない。よって、表が出る確率は $\\dfrac{1}{2}$ ではないとは判断できない。"
+        ],
+        "alternatives": [
+          "棄却域を回数で表してもよい：$|X-1250|>1.96\\times25=49$、すなわち $X<1201$ または $X>1299$ なら棄却。"
+        ],
+        "partial_credit": [
+          {
+            "point": "帰無仮説",
+            "points": 2
+          },
+          {
+            "point": "標準化",
+            "points": 3
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "結論の表現",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "棄却されないときに「確率は $\\dfrac{1}{2}$ であることが示された」と書く。",
+          "片側の確率 $0.025$ と両側の $0.05$ を混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "成功する確率が $\\dfrac{1}{5}$ である試行を $625$ 回くり返したところ、成功する回数は $101$ 回であった。成功する確率は $\\dfrac{1}{5}$ であるといえるか。有意水準 5% で仮説検定しなさい。ただし、二項分布は正規分布で近似し、$P(|Z|\\leqq1.96)=0.95$ を用いること。",
+      "answer": {
+        "value": "$z=-2.40$。帰無仮説は棄却される。よって、成功する確率は $\\dfrac{1}{5}$ ではないと判断できる。"
+      },
+      "explanation": "帰無仮説「確率は $\\dfrac{1}{5}$」のもとで、回数 $X$ は近似的に $N(125,\\,10^2)$ に従う。$z=\\dfrac{101-125}{10}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帰無仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "帰無仮説のもとでの期待値・標準偏差を正しく求め、標準化している",
+            "points": 3
+          },
+          {
+            "criterion": "棄却域と比べて正しく判断している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を適切な言葉で述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(101-125)/10",
+        "expected": "-12/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-test_binom",
+      "explanation_detail": {
+        "approach": "主張したいこと（確率が $\\dfrac{1}{5}$ でない）の反対を帰無仮説にする。帰無仮説のもとで観測値がどのくらい「まれ」かを $|z|$ と $1.96$ の比較で判断する。",
+        "steps": [
+          "帰無仮説：確率は $\\dfrac{1}{5}$ である。",
+          "帰無仮説のもとで $X$ は $B\\left(625,\\ \\dfrac{1}{5}\\right)$ に従い、$E(X)=125$、$\\sigma(X)=10$。",
+          "$z=\\dfrac{101-125}{10}=-2.40$。",
+          "$|z|>1.96$ なので、帰無仮説は棄却される。よって、成功する確率は $\\dfrac{1}{5}$ ではないと判断できる。"
+        ],
+        "alternatives": [
+          "棄却域を回数で表してもよい：$|X-125|>1.96\\times10=19.6$、すなわち $X<105.4$ または $X>144.6$ なら棄却。"
+        ],
+        "partial_credit": [
+          {
+            "point": "帰無仮説",
+            "points": 2
+          },
+          {
+            "point": "標準化",
+            "points": 3
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "結論の表現",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "棄却されないときに「確率は $\\dfrac{1}{5}$ であることが示された」と書く。",
+          "片側の確率 $0.025$ と両側の $0.05$ を混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "内容量が $500$ g と表示された製品から無作為に $36$ 個を抽出したところ、内容量の標本平均は $497.6$ g であった。母標準偏差を $12$ g として、内容量の母平均は表示どおり $500$ g であるといえるか。有意水準 5% で仮説検定しなさい。",
+      "answer": {
+        "value": "$z=-1.20$。帰無仮説は棄却されない。よって、内容量の平均が表示どおりでないとは判断できない。"
+      },
+      "explanation": "帰無仮説「母平均は $500$ g」のもとで、$\\overline{X}$ は近似的に $N\\left(500,\\ \\left(2\\right)^2\\right)$ に従う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帰無仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "標本平均の標準偏差を求めて標準化している",
+            "points": 3
+          },
+          {
+            "criterion": "$1.96$ と比べて正しく判断している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を適切に述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(2488/5-500)/(12/sqrt(36))",
+        "expected": "-6/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-test_mean",
+      "explanation_detail": {
+        "approach": "標本平均 $\\overline{X}$ の分布は $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$。帰無仮説の母平均を使って標準化し、$|z|>1.96$ かどうかで判断する。",
+        "steps": [
+          "帰無仮説：母平均は $500$ g である。",
+          "$\\sigma(\\overline{X})=\\dfrac{12}{\\sqrt{36}}=2$。",
+          "$z=\\dfrac{497.6-500}{2}=-1.20$。",
+          "$|z|\\leqq1.96$ なので、帰無仮説は棄却されない。よって、内容量の平均が表示どおりでないとは判断できない。"
+        ],
+        "alternatives": [
+          "信頼度 95% の信頼区間 $\\overline{x}\\pm1.96\\times2$ に $500$ が含まれるかどうかで判断しても、同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "帰無仮説",
+            "points": 2
+          },
+          {
+            "point": "標準化",
+            "points": 3
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "母標準偏差 $\\sigma$ のまま標準化し、$\\sqrt{n}$ で割り忘れる。",
+          "棄却されないことを「表示どおりであることが証明された」と書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "内容量が $300$ g と表示された製品から無作為に $144$ 個を抽出したところ、内容量の標本平均は $301.2$ g であった。母標準偏差を $10$ g として、内容量の母平均は表示どおり $300$ g であるといえるか。有意水準 5% で仮説検定しなさい。",
+      "answer": {
+        "value": "$z=1.44$。帰無仮説は棄却されない。よって、内容量の平均が表示どおりでないとは判断できない。"
+      },
+      "explanation": "帰無仮説「母平均は $300$ g」のもとで、$\\overline{X}$ は近似的に $N\\left(300,\\ \\left(\\dfrac{5}{6}\\right)^2\\right)$ に従う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帰無仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "標本平均の標準偏差を求めて標準化している",
+            "points": 3
+          },
+          {
+            "criterion": "$1.96$ と比べて正しく判断している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を適切に述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(1506/5-300)/(10/sqrt(144))",
+        "expected": "36/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U02-test_mean",
+      "explanation_detail": {
+        "approach": "標本平均 $\\overline{X}$ の分布は $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$。帰無仮説の母平均を使って標準化し、$|z|>1.96$ かどうかで判断する。",
+        "steps": [
+          "帰無仮説：母平均は $300$ g である。",
+          "$\\sigma(\\overline{X})=\\dfrac{10}{\\sqrt{144}}=\\dfrac{5}{6}$。",
+          "$z=\\dfrac{301.2-300}{\\dfrac{5}{6}}=1.44$。",
+          "$|z|\\leqq1.96$ なので、帰無仮説は棄却されない。よって、内容量の平均が表示どおりでないとは判断できない。"
+        ],
+        "alternatives": [
+          "信頼度 95% の信頼区間 $\\overline{x}\\pm1.96\\times\\dfrac{5}{6}$ に $300$ が含まれるかどうかで判断しても、同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "帰無仮説",
+            "points": 2
+          },
+          {
+            "point": "標準化",
+            "points": 3
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "母標準偏差 $\\sigma$ のまま標準化し、$\\sqrt{n}$ で割り忘れる。",
+          "棄却されないことを「表示どおりであることが証明された」と書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "赤玉 $3$ 個、白玉 $2$ 個が入った袋から、同時に $2$ 個の玉を取り出す。取り出した赤玉の個数を $X$ とするとき、$X$ の確率分布を求め、期待値 $E(X)$ を求めなさい。",
+      "answer": {
+        "value": "$P(X=0)=\\dfrac{1}{10}$、$P(X=1)=\\dfrac{3}{5}$、$P(X=2)=\\dfrac{3}{10}$、$E(X)=\\dfrac{6}{5}$",
+        "accepted": [
+          "6/5"
+        ]
+      },
+      "explanation": "組合せで確率を求める：$P(X=k)=\\dfrac{{}_{3}\\mathrm{C}_k\\cdot{}_{2}\\mathrm{C}_{2-k}}{{}_{5}\\mathrm{C}_{2}}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[binomial(3,0)*binomial(2,2)/binomial(5,2), binomial(3,1)*binomial(2,1)/binomial(5,2), binomial(3,2)*binomial(2,0)/binomial(5,2)]",
+        "expected": "[1/10, 3/5, 3/10]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-hyper_dist",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "確率分布は「場合の数と確率」の組合せ ${}_n\\mathrm{C}_r$ で求める。各値の確率を表にまとめ、確率の和が $1$ になることを確かめてから期待値を計算する。",
+        "steps": [
+          "全体の取り出し方は ${}_{5}\\mathrm{C}_{2}=10$ 通り。",
+          "$X=0$：${}_{3}\\mathrm{C}_{0}\\times{}_{2}\\mathrm{C}_{2}=1$ 通りで $\\dfrac{1}{10}$。",
+          "$X=1$：${}_{3}\\mathrm{C}_{1}\\times{}_{2}\\mathrm{C}_{1}=6$ 通りで $\\dfrac{3}{5}$。",
+          "$X=2$：${}_{3}\\mathrm{C}_{2}\\times{}_{2}\\mathrm{C}_{0}=3$ 通りで $\\dfrac{3}{10}$。",
+          "確率の和が $1$ になることを確認する。",
+          "$E(X)=0\\cdot\\dfrac{1}{10}+1\\cdot\\dfrac{3}{5}+2\\cdot\\dfrac{3}{10}=\\dfrac{6}{5}$。"
+        ],
+        "alternatives": [
+          "1個ずつ取り出すと考え、$i$ 番目が赤なら $1$ をとる確率変数 $Y_i$ を使うと $E(X)=2\\times\\dfrac{3}{5}=\\dfrac{6}{5}$ と求められる（期待値の和の性質）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各値の確率を組合せで正しく求めている",
+            "points": 4
+          },
+          {
+            "point": "確率の和が $1$ であることを確認している",
+            "points": 1
+          },
+          {
+            "point": "期待値を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "取り出す順序を区別する数え方と区別しない数え方を混在させる。",
+          "$X=0$ の場合を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "赤玉 $3$ 個、白玉 $5$ 個が入った袋から、同時に $3$ 個の玉を取り出す。取り出した赤玉の個数を $X$ とするとき、$X$ の確率分布を求め、期待値 $E(X)$ を求めなさい。",
+      "answer": {
+        "value": "$P(X=0)=\\dfrac{5}{28}$、$P(X=1)=\\dfrac{15}{28}$、$P(X=2)=\\dfrac{15}{56}$、$P(X=3)=\\dfrac{1}{56}$、$E(X)=\\dfrac{9}{8}$",
+        "accepted": [
+          "9/8"
+        ]
+      },
+      "explanation": "組合せで確率を求める：$P(X=k)=\\dfrac{{}_{3}\\mathrm{C}_k\\cdot{}_{5}\\mathrm{C}_{3-k}}{{}_{8}\\mathrm{C}_{3}}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[binomial(3,0)*binomial(5,3)/binomial(8,3), binomial(3,1)*binomial(5,2)/binomial(8,3), binomial(3,2)*binomial(5,1)/binomial(8,3), binomial(3,3)*binomial(5,0)/binomial(8,3)]",
+        "expected": "[5/28, 15/28, 15/56, 1/56]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-hyper_dist",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "確率分布は「場合の数と確率」の組合せ ${}_n\\mathrm{C}_r$ で求める。各値の確率を表にまとめ、確率の和が $1$ になることを確かめてから期待値を計算する。",
+        "steps": [
+          "全体の取り出し方は ${}_{8}\\mathrm{C}_{3}=56$ 通り。",
+          "$X=0$：${}_{3}\\mathrm{C}_{0}\\times{}_{5}\\mathrm{C}_{3}=10$ 通りで $\\dfrac{5}{28}$。",
+          "$X=1$：${}_{3}\\mathrm{C}_{1}\\times{}_{5}\\mathrm{C}_{2}=30$ 通りで $\\dfrac{15}{28}$。",
+          "$X=2$：${}_{3}\\mathrm{C}_{2}\\times{}_{5}\\mathrm{C}_{1}=15$ 通りで $\\dfrac{15}{56}$。",
+          "$X=3$：${}_{3}\\mathrm{C}_{3}\\times{}_{5}\\mathrm{C}_{0}=1$ 通りで $\\dfrac{1}{56}$。",
+          "確率の和が $1$ になることを確認する。",
+          "$E(X)=0\\cdot\\dfrac{5}{28}+1\\cdot\\dfrac{15}{28}+2\\cdot\\dfrac{15}{56}+3\\cdot\\dfrac{1}{56}=\\dfrac{9}{8}$。"
+        ],
+        "alternatives": [
+          "1個ずつ取り出すと考え、$i$ 番目が赤なら $1$ をとる確率変数 $Y_i$ を使うと $E(X)=3\\times\\dfrac{3}{8}=\\dfrac{9}{8}$ と求められる（期待値の和の性質）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各値の確率を組合せで正しく求めている",
+            "points": 4
+          },
+          {
+            "point": "確率の和が $1$ であることを確認している",
+            "points": 1
+          },
+          {
+            "point": "期待値を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "取り出す順序を区別する数え方と区別しない数え方を混在させる。",
+          "$X=0$ の場合を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "赤玉 $5$ 個、白玉 $5$ 個が入った袋から、同時に $2$ 個の玉を取り出す。取り出した赤玉の個数を $X$ とするとき、$X$ の確率分布を求め、期待値 $E(X)$ を求めなさい。",
+      "answer": {
+        "value": "$P(X=0)=\\dfrac{2}{9}$、$P(X=1)=\\dfrac{5}{9}$、$P(X=2)=\\dfrac{2}{9}$、$E(X)=1$",
+        "accepted": [
+          "1"
+        ]
+      },
+      "explanation": "組合せで確率を求める：$P(X=k)=\\dfrac{{}_{5}\\mathrm{C}_k\\cdot{}_{5}\\mathrm{C}_{2-k}}{{}_{10}\\mathrm{C}_{2}}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[binomial(5,0)*binomial(5,2)/binomial(10,2), binomial(5,1)*binomial(5,1)/binomial(10,2), binomial(5,2)*binomial(5,0)/binomial(10,2)]",
+        "expected": "[2/9, 5/9, 2/9]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-hyper_dist",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "確率分布は「場合の数と確率」の組合せ ${}_n\\mathrm{C}_r$ で求める。各値の確率を表にまとめ、確率の和が $1$ になることを確かめてから期待値を計算する。",
+        "steps": [
+          "全体の取り出し方は ${}_{10}\\mathrm{C}_{2}=45$ 通り。",
+          "$X=0$：${}_{5}\\mathrm{C}_{0}\\times{}_{5}\\mathrm{C}_{2}=10$ 通りで $\\dfrac{2}{9}$。",
+          "$X=1$：${}_{5}\\mathrm{C}_{1}\\times{}_{5}\\mathrm{C}_{1}=25$ 通りで $\\dfrac{5}{9}$。",
+          "$X=2$：${}_{5}\\mathrm{C}_{2}\\times{}_{5}\\mathrm{C}_{0}=10$ 通りで $\\dfrac{2}{9}$。",
+          "確率の和が $1$ になることを確認する。",
+          "$E(X)=0\\cdot\\dfrac{2}{9}+1\\cdot\\dfrac{5}{9}+2\\cdot\\dfrac{2}{9}=1$。"
+        ],
+        "alternatives": [
+          "1個ずつ取り出すと考え、$i$ 番目が赤なら $1$ をとる確率変数 $Y_i$ を使うと $E(X)=2\\times\\dfrac{5}{10}=1$ と求められる（期待値の和の性質）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各値の確率を組合せで正しく求めている",
+            "points": 4
+          },
+          {
+            "point": "確率の和が $1$ であることを確認している",
+            "points": 1
+          },
+          {
+            "point": "期待値を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "取り出す順序を区別する数え方と区別しない数え方を混在させる。",
+          "$X=0$ の場合を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "母標準偏差が $10$ である母集団の母平均を、信頼度 95% で推定したい。信頼区間の幅（上端と下端の差）を $5$ 以下にするには、標本の大きさ $n$ を少なくともいくつにすればよいか。",
+      "answer": {
+        "value": "62"
+      },
+      "explanation": "幅は $2\\times1.96\\cdot\\dfrac{10}{\\sqrt{n}}$。$\\dfrac{3.92\\times10}{\\sqrt{n}}\\leqq5$ より $n\\geqq61.4656$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "ceiling((392*10/(100*5))**2)",
+        "expected": "62"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U02-sample_size",
+      "explanation_detail": {
+        "approach": "信頼区間の幅は $2\\times1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$ で、$n$ が大きいほど狭くなる。幅についての不等式を $n$ について解く。",
+        "steps": [
+          "幅 $=\\dfrac{3.92\\times10}{\\sqrt{n}}\\leqq5$。",
+          "$\\sqrt{n}\\geqq\\dfrac{3.92\\times10}{5}=7.84$。",
+          "両辺を2乗して $n\\geqq61.4656$。",
+          "$n$ は自然数なので、最小の $n$ は $62$。"
+        ],
+        "alternatives": [
+          "$n=62$ と $n=61$ を代入して幅を計算し、$5$ 以下になるかどうかで境目を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "幅を $2\\times1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$ と正しく表している",
+            "points": 3
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          },
+          {
+            "point": "自然数の条件から最小値を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "幅を片側（$1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$）だけで考える。",
+          "小数を切り捨てて条件を満たさない $n$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "母標準偏差が $8$ である母集団の母平均を、信頼度 95% で推定したい。信頼区間の幅（上端と下端の差）を $5$ 以下にするには、標本の大きさ $n$ を少なくともいくつにすればよいか。",
+      "answer": {
+        "value": "40"
+      },
+      "explanation": "幅は $2\\times1.96\\cdot\\dfrac{8}{\\sqrt{n}}$。$\\dfrac{3.92\\times8}{\\sqrt{n}}\\leqq5$ より $n\\geqq39.338$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "ceiling((392*8/(100*5))**2)",
+        "expected": "40"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U02-sample_size",
+      "explanation_detail": {
+        "approach": "信頼区間の幅は $2\\times1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$ で、$n$ が大きいほど狭くなる。幅についての不等式を $n$ について解く。",
+        "steps": [
+          "幅 $=\\dfrac{3.92\\times8}{\\sqrt{n}}\\leqq5$。",
+          "$\\sqrt{n}\\geqq\\dfrac{3.92\\times8}{5}=6.272$。",
+          "両辺を2乗して $n\\geqq39.338$。",
+          "$n$ は自然数なので、最小の $n$ は $40$。"
+        ],
+        "alternatives": [
+          "$n=40$ と $n=39$ を代入して幅を計算し、$5$ 以下になるかどうかで境目を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "幅を $2\\times1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$ と正しく表している",
+            "points": 3
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          },
+          {
+            "point": "自然数の条件から最小値を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "幅を片側（$1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$）だけで考える。",
+          "小数を切り捨てて条件を満たさない $n$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "確率変数 $X$ の期待値が $5$、分散が $2$ のとき、$Y=-3X-7$ の分散を求めなさい。\n［ある生徒の解答］\n$V(Y)=-3V(X)-7=-13$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$V(Y)=18$"
+      },
+      "explanation": "分散は平均からのずれの2乗の期待値。$X$ を $a$ 倍するとずれは $a$ 倍、2乗は $a^2$ 倍。$b$ を加えてもずれは変わらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(-3)**2*2",
+        "expected": "18",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-err_var_linear",
+      "explanation_detail": {
+        "approach": "性質の証明（ずれ $a(x_k-m)$ を2乗する）にもどれば、$a^2$ になり $b$ が消える理由が分かる。",
+        "steps": [
+          "$V(aX+b)=a^2V(X)$。",
+          "$V(Y)=(-3)^2\\times2=18$。"
+        ],
+        "alternatives": [
+          "具体例：$X$ が $0,\\ 2$ を確率 $\\dfrac{1}{2}$ ずつとる（分散 $1$）とき、$-3X-7$ の値を計算して分散を直接求めると $9$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散に定数 $b$ を加える。",
+          "$a$ を2乗しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$V(Y)=-3V(X)-7=-13$",
+        "error_step": "分散の性質（期待値の性質と同じ形にした部分）",
+        "error_type": "formula",
+        "why_tempting": "期待値の性質 $E(aX+b)=aE(X)+b$ と同じ形で分散も計算できると思いこんでいる。分散が「ずれの2乗」であることを意識していない。",
+        "correction": "$V(Y)=(-3)^2V(X)=18$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "確率変数 $X$ の期待値が $-3$、分散が $5$ のとき、$Y=2X-2$ の分散を求めなさい。\n［ある生徒の解答］\n$V(Y)=2V(X)-2=8$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$V(Y)=20$"
+      },
+      "explanation": "分散は平均からのずれの2乗の期待値。$X$ を $a$ 倍するとずれは $a$ 倍、2乗は $a^2$ 倍。$b$ を加えてもずれは変わらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(2)**2*5",
+        "expected": "20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-err_var_linear",
+      "explanation_detail": {
+        "approach": "性質の証明（ずれ $a(x_k-m)$ を2乗する）にもどれば、$a^2$ になり $b$ が消える理由が分かる。",
+        "steps": [
+          "$V(aX+b)=a^2V(X)$。",
+          "$V(Y)=(2)^2\\times5=20$。"
+        ],
+        "alternatives": [
+          "具体例：$X$ が $0,\\ 2$ を確率 $\\dfrac{1}{2}$ ずつとる（分散 $1$）とき、$2X-2$ の値を計算して分散を直接求めると $4$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散に定数 $b$ を加える。",
+          "$a$ を2乗しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$V(Y)=2V(X)-2=8$",
+        "error_step": "分散の性質（期待値の性質と同じ形にした部分）",
+        "error_type": "formula",
+        "why_tempting": "期待値の性質 $E(aX+b)=aE(X)+b$ と同じ形で分散も計算できると思いこんでいる。分散が「ずれの2乗」であることを意識していない。",
+        "correction": "$V(Y)=(2)^2V(X)=20$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "確率変数 $X$ の期待値が $7$、分散が $3$ のとき、$Y=3X+2$ の分散を求めなさい。\n［ある生徒の解答］\n$V(Y)=3V(X)+2=11$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$V(Y)=27$"
+      },
+      "explanation": "分散は平均からのずれの2乗の期待値。$X$ を $a$ 倍するとずれは $a$ 倍、2乗は $a^2$ 倍。$b$ を加えてもずれは変わらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(3)**2*3",
+        "expected": "27",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U02-err_var_linear",
+      "explanation_detail": {
+        "approach": "性質の証明（ずれ $a(x_k-m)$ を2乗する）にもどれば、$a^2$ になり $b$ が消える理由が分かる。",
+        "steps": [
+          "$V(aX+b)=a^2V(X)$。",
+          "$V(Y)=(3)^2\\times3=27$。"
+        ],
+        "alternatives": [
+          "具体例：$X$ が $0,\\ 2$ を確率 $\\dfrac{1}{2}$ ずつとる（分散 $1$）とき、$3X+2$ の値を計算して分散を直接求めると $9$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散に定数 $b$ を加える。",
+          "$a$ を2乗しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$V(Y)=3V(X)+2=11$",
+        "error_step": "分散の性質（期待値の性質と同じ形にした部分）",
+        "error_type": "formula",
+        "why_tempting": "期待値の性質 $E(aX+b)=aE(X)+b$ と同じ形で分散も計算できると思いこんでいる。分散が「ずれの2乗」であることを意識していない。",
+        "correction": "$V(Y)=(3)^2V(X)=27$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1枚の硬貨を投げる試行を $100$ 回くり返すとき、表が出る回数 $X$ の標準偏差を求めなさい。\n［ある生徒の解答］\n$X$ は $B\\left(100,\\ \\dfrac{1}{2}\\right)$ に従うので、標準偏差は $np(1-p)=25$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\sigma(X)=5$"
+      },
+      "explanation": "二項分布では $V(X)=np(1-p)$、$\\sigma(X)=\\sqrt{np(1-p)}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(100*1/2*(1-1/2))",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-err_binom_sd",
+      "explanation_detail": {
+        "approach": "1回分の分散 $p(1-p)$ を $n$ 倍したものが分散で、その平方根が標準偏差、と構造で覚える。",
+        "steps": [
+          "$V(X)=100\\times\\dfrac{1}{2}\\times\\dfrac{1}{2}=25$。",
+          "$\\sigma(X)=\\sqrt{25}=5$。"
+        ],
+        "alternatives": [
+          "$p=1$（必ず起こる）のとき回数は常に $n$ でばらつきは $0$ のはず。$np(1-p)$ なら $0$ になるが、$np$ では $0$ にならないことから公式を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$X$ は $B\\left(100,\\ \\dfrac{1}{2}\\right)$ に従うので、標準偏差は $np(1-p)=25$",
+        "error_step": "分散と標準偏差の区別（平方根をとっていない部分）",
+        "error_type": "formula",
+        "why_tempting": "分散の公式 $np(1-p)$ を覚えていて、そのまま標準偏差として答えてしまう。",
+        "correction": "$V(X)=np(1-p)=25$、$\\sigma(X)=\\sqrt{25}=5$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1枚の硬貨を投げる試行を $3600$ 回くり返すとき、表が出る回数 $X$ の標準偏差を求めなさい。\n［ある生徒の解答］\n$X$ は $B\\left(3600,\\ \\dfrac{1}{2}\\right)$ に従うので、標準偏差は $\\sqrt{np}=\\sqrt{1800}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\sigma(X)=30$"
+      },
+      "explanation": "二項分布では $V(X)=np(1-p)$、$\\sigma(X)=\\sqrt{np(1-p)}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(3600*1/2*(1-1/2))",
+        "expected": "30",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-err_binom_sd",
+      "explanation_detail": {
+        "approach": "1回分の分散 $p(1-p)$ を $n$ 倍したものが分散で、その平方根が標準偏差、と構造で覚える。",
+        "steps": [
+          "$V(X)=3600\\times\\dfrac{1}{2}\\times\\dfrac{1}{2}=900$。",
+          "$\\sigma(X)=\\sqrt{900}=30$。"
+        ],
+        "alternatives": [
+          "$p=1$（必ず起こる）のとき回数は常に $n$ でばらつきは $0$ のはず。$np(1-p)$ なら $0$ になるが、$np$ では $0$ にならないことから公式を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$X$ は $B\\left(3600,\\ \\dfrac{1}{2}\\right)$ に従うので、標準偏差は $\\sqrt{np}=\\sqrt{1800}$",
+        "error_step": "分散の公式（$1-p$ を掛け忘れた部分）",
+        "error_type": "formula",
+        "why_tempting": "期待値 $np$ の形に引きずられ、分散も $np$ と覚え違えている。",
+        "correction": "$V(X)=np(1-p)=900$、$\\sigma(X)=\\sqrt{900}=30$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "成功する確率が $\\dfrac{1}{5}$ である試行を $400$ 回くり返すとき、成功する回数 $X$ の標準偏差を求めなさい。\n［ある生徒の解答］\n$X$ は $B\\left(400,\\ \\dfrac{1}{5}\\right)$ に従うので、標準偏差は $np(1-p)=64$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\sigma(X)=8$"
+      },
+      "explanation": "二項分布では $V(X)=np(1-p)$、$\\sigma(X)=\\sqrt{np(1-p)}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(400*1/5*(1-1/5))",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-err_binom_sd",
+      "explanation_detail": {
+        "approach": "1回分の分散 $p(1-p)$ を $n$ 倍したものが分散で、その平方根が標準偏差、と構造で覚える。",
+        "steps": [
+          "$V(X)=400\\times\\dfrac{1}{5}\\times\\dfrac{4}{5}=64$。",
+          "$\\sigma(X)=\\sqrt{64}=8$。"
+        ],
+        "alternatives": [
+          "$p=1$（必ず起こる）のとき回数は常に $n$ でばらつきは $0$ のはず。$np(1-p)$ なら $0$ になるが、$np$ では $0$ にならないことから公式を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散と標準偏差を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$X$ は $B\\left(400,\\ \\dfrac{1}{5}\\right)$ に従うので、標準偏差は $np(1-p)=64$",
+        "error_step": "分散と標準偏差の区別（平方根をとっていない部分）",
+        "error_type": "formula",
+        "why_tempting": "分散の公式 $np(1-p)$ を覚えていて、そのまま標準偏差として答えてしまう。",
+        "correction": "$V(X)=np(1-p)=64$、$\\sigma(X)=\\sqrt{64}=8$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$Z$ が標準正規分布 $N(0,\\,1)$ に従うとき、$P(Z\\geqq1)$ を求めなさい。ただし、$p(1)=0.3413$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。\n［ある生徒の解答］\n$P(Z\\geqq1)=0.5+p(1)=0.8413$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.1587$"
+      },
+      "explanation": "$p(1)$ は $0$ から $1$ までの面積。求めるのはその外側なので、片側全体 $0.5$ から引く。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.5-0.3413",
+        "expected": "0.1587",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-err_normal_tail",
+      "explanation_detail": {
+        "approach": "答えが $0.5$ より大きいか小さいかを図で見当をつけてから計算する。",
+        "steps": [
+          "曲線をかき、求める部分に斜線を引く。",
+          "片側の面積 $0.5$ から $p(1)$ を引く。",
+          "$0.5-0.3413=0.1587$。"
+        ],
+        "alternatives": [
+          "$z=1$ は平均より右（左）にあるので、その外側の確率は $0.5$ より小さいはず。生徒の答えはこの見当と合わない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "表の値をそのまま答える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$P(Z\\geqq1)=0.5+p(1)=0.8413$",
+        "error_step": "求める面積の表し方",
+        "error_type": "concept",
+        "why_tempting": "表の値 $p(z)$ が「どの部分の面積か」を図で確かめずに、数値だけを使っている。",
+        "correction": "$P(Z\\geqq1)=0.5-p(1)=0.1587$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$Z$ が標準正規分布 $N(0,\\,1)$ に従うとき、$P(Z\\geqq1.25)$ を求めなさい。ただし、$p(1.25)=0.3944$ とする（$p(z)=P(0\\leqq Z\\leqq z)$、$Z$ は標準正規分布に従う確率変数）。\n［ある生徒の解答］\n$P(Z\\geqq1.25)=p(1.25)=0.3944$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.1056$"
+      },
+      "explanation": "$p(1.25)$ は $0$ から $1.25$ までの面積。求めるのはその外側なので、片側全体 $0.5$ から引く。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.5-0.3944",
+        "expected": "0.1056",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U02-err_normal_tail",
+      "explanation_detail": {
+        "approach": "答えが $0.5$ より大きいか小さいかを図で見当をつけてから計算する。",
+        "steps": [
+          "曲線をかき、求める部分に斜線を引く。",
+          "片側の面積 $0.5$ から $p(1.25)$ を引く。",
+          "$0.5-0.3944=0.1056$。"
+        ],
+        "alternatives": [
+          "$z=1.25$ は平均より右（左）にあるので、その外側の確率は $0.5$ より小さいはず。生徒の答えはこの見当と合わない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "表の値をそのまま答える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$P(Z\\geqq1.25)=p(1.25)=0.3944$",
+        "error_step": "求める面積の表し方",
+        "error_type": "concept",
+        "why_tempting": "表の値 $p(z)$ が「どの部分の面積か」を図で確かめずに、数値だけを使っている。",
+        "correction": "$P(Z\\geqq1.25)=0.5-p(1.25)=0.1056$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1枚の硬貨を投げる試行を $1600$ 回くり返したところ、表が出る回数は $820$ 回であった。表が出る確率は $\\dfrac{1}{2}$ でないといえるか。有意水準 5% で仮説検定しなさい（二項分布は正規分布で近似する）。\n［ある生徒の解答］\n$z=\\dfrac{820-800}{20}=1.00$ で $|z|\\leqq1.96$ だから帰無仮説は正しい。よって、確率は $\\dfrac{1}{2}$ であることが証明された。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "帰無仮説は棄却されず、確率が $\\dfrac{1}{2}$ でないとは判断できない"
+      },
+      "explanation": "検定で帰無仮説が棄却されないのは「データが帰無仮説と矛盾するとまではいえない」というだけで、帰無仮説が正しいことの証明にはならない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(820-800)/20",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-err_test_concl",
+      "explanation_detail": {
+        "approach": "結論は「〜と判断できる」「〜とは判断できない」のどちらかの形で書く。",
+        "steps": [
+          "帰無仮説：確率は $\\dfrac{1}{2}$。$E(X)=800$、$\\sigma(X)=20$。",
+          "$z=1.00$、$|z|\\leqq1.96$。",
+          "帰無仮説は棄却されない。",
+          "結論：確率が $\\dfrac{1}{2}$ でないとは判断できない。"
+        ],
+        "alternatives": [
+          "同じデータでも、確率が少しだけ違う値（例えば $\\dfrac{1}{2}$ に近い別の値）を帰無仮説にしても棄却されないことがある。棄却されないことが「その値で正しい」ことを意味しないのはこのため。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「棄却されない」を「正しいと証明された」と言いかえる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$z=\\dfrac{820-800}{20}=1.00$ で $|z|\\leqq1.96$ だから帰無仮説は正しい。よって、確率は $\\dfrac{1}{2}$ であることが証明された。",
+        "error_step": "結論の述べ方（棄却されないことを「正しいと証明された」とした部分）",
+        "error_type": "interpretation",
+        "why_tempting": "「棄却されない」を「正しい」と同じ意味に受け取りやすい。検定は帰無仮説を否定できるかどうかを調べる方法であり、肯定する方法ではない。",
+        "correction": "$|z|=1.00\\leqq1.96$ なので帰無仮説は棄却されない。確率が $\\dfrac{1}{2}$ でないとは判断できない（確率が $\\dfrac{1}{2}$ であると証明されたわけではない）。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを投げる試行を $288$ 回くり返したところ、5以上の目が出る回数は $105$ 回であった。5以上の目が出る確率は $\\dfrac{1}{3}$ でないといえるか。有意水準 5% で仮説検定しなさい（二項分布は正規分布で近似する）。\n［ある生徒の解答］\n$z=\\dfrac{105-96}{8}=1.12$ で $|z|\\leqq1.96$ だから帰無仮説は正しい。よって、確率は $\\dfrac{1}{3}$ であることが証明された。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "帰無仮説は棄却されず、確率が $\\dfrac{1}{3}$ でないとは判断できない"
+      },
+      "explanation": "検定で帰無仮説が棄却されないのは「データが帰無仮説と矛盾するとまではいえない」というだけで、帰無仮説が正しいことの証明にはならない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(105-96)/8",
+        "expected": "9/8",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U02-err_test_concl",
+      "explanation_detail": {
+        "approach": "結論は「〜と判断できる」「〜とは判断できない」のどちらかの形で書く。",
+        "steps": [
+          "帰無仮説：確率は $\\dfrac{1}{3}$。$E(X)=96$、$\\sigma(X)=8$。",
+          "$z=1.12$、$|z|\\leqq1.96$。",
+          "帰無仮説は棄却されない。",
+          "結論：確率が $\\dfrac{1}{3}$ でないとは判断できない。"
+        ],
+        "alternatives": [
+          "同じデータでも、確率が少しだけ違う値（例えば $\\dfrac{1}{3}$ に近い別の値）を帰無仮説にしても棄却されないことがある。棄却されないことが「その値で正しい」ことを意味しないのはこのため。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「棄却されない」を「正しいと証明された」と言いかえる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$z=\\dfrac{105-96}{8}=1.12$ で $|z|\\leqq1.96$ だから帰無仮説は正しい。よって、確率は $\\dfrac{1}{3}$ であることが証明された。",
+        "error_step": "結論の述べ方（棄却されないことを「正しいと証明された」とした部分）",
+        "error_type": "interpretation",
+        "why_tempting": "「棄却されない」を「正しい」と同じ意味に受け取りやすい。検定は帰無仮説を否定できるかどうかを調べる方法であり、肯定する方法ではない。",
+        "correction": "$|z|=1.12\\leqq1.96$ なので帰無仮説は棄却されない。確率が $\\dfrac{1}{3}$ でないとは判断できない（確率が $\\dfrac{1}{3}$ であると証明されたわけではない）。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b5f5f30096d5b2bd8c833f79bfd8f647e31e621fd93b335c64a52382bcde7b08"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 1 問（Q055）",
+      "content_hash": "dd598c5ddb14b41b3a19f402b9d37a60c554fb5e9a4304151cdc0bc12ed17695"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 27 問（Q009, Q010, Q011, Q012, Q026, Q027, Q028, Q029, Q030, Q031 他）",
+      "content_hash": "ef17955c00364d09184deb2fdf646aa39550f064d3763dfbfa1b098247ec9927"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:13:32+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "a592b027179f127e7de7c0a3fe06a17669cf7ed0625059489c1d9fb2a0076bc3"
+  }
+}
