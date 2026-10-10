@@ -324,6 +324,8 @@ function onOpen() {
         .addItem('正式加入確認フォームを作成', 'menuMembershipCreateForm')
         .addItem('テスト送信（自分宛て）', 'menuMembershipSendTest')
         .addItem('正式加入確認メールを送信', 'menuMembershipSendEmails')
+        .addItem('テスト送信：団員アプリの案内（自分宛て）', 'menuMembershipSendInviteTest')
+        .addItem('団員アプリの案内メールを送信', 'menuMembershipSendAppInvite')
         .addSeparator()
         .addItem('正式加入回答を同期', 'menuMembershipSyncResponses')
         .addItem('正式参加者一覧を更新', 'menuMembershipUpdateMemberList')
@@ -354,6 +356,8 @@ function menuAppNotifyInstallTrigger() { return callAppSync_('appNotifyInstallTr
 function menuMembershipCreateForm() { return callAppSync_('membershipCreateForm'); }
 function menuMembershipSendTest() { return callAppSync_('membershipSendTest'); }
 function menuMembershipSendEmails() { return callAppSync_('membershipSendEmails'); }
+function menuMembershipSendInviteTest() { return callAppSync_('membershipSendInviteTest'); }
+function menuMembershipSendAppInvite() { return callAppSync_('membershipSendAppInvite'); }
 function menuMembershipSyncResponses() { return callAppSync_('membershipSyncResponses'); }
 function menuMembershipUpdateMemberList() { return callAppSync_('membershipUpdateMemberList'); }
 function menuMembershipUpdateAppUsage() { return callAppSync_('membershipUpdateAppUsage'); }

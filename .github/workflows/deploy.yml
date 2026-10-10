@@ -37,6 +37,9 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 認証情報を .git に残さない（公開するフォルダに .git が含まれても漏れないように）
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -68,6 +71,9 @@ jobs:
         run: |
           npm run build
           git diff --exit-code || { echo "::error::js/*.bundle.js が _tools/firebase/src と一致しません。cd _tools/firebase && npm run build を実行してください。"; exit 1; }
+
+      - name: 公開されるファイルにサイト以外のもの（.git・ソース・設定など）が含まれていないか
+        run: node _tools/check_public_files.cjs
 
       - name: テスト（ロジック・セキュリティルール）
         working-directory: _tools/firebase

@@ -41,6 +41,9 @@ jobs:
       TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 認証情報を .git に残さない（公開するフォルダに .git が含まれても漏れないように）
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -58,6 +61,9 @@ jobs:
         working-directory: kco-member-app
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 認証情報を .git に残さない（公開するフォルダに .git が含まれても漏れないように）
+          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:

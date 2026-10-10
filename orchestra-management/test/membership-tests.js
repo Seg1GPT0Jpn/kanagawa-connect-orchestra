@@ -351,7 +351,7 @@ section('J. 既存機能への影響なし・個人情報');
   const menu = env.menus[env.menus.length - 1];
   check('既存メニュー（①〜⑩）はそのまま', menu.items.filter(i => i.fn).map(i => i.label).slice(0, 10).map(n => n.slice(0, 1)), ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩']);
   const sub = menu.items.find(i => i.submenu && i.submenu.name === '✉️ 正式加入確認');
-  check('「✉️ 正式加入確認」メニュー', sub.submenu.items.filter(i => i.fn).map(i => i.label), ['正式加入確認フォームを作成', 'テスト送信（自分宛て）', '正式加入確認メールを送信', '正式加入回答を同期', '正式参加者一覧を更新', 'アプリ利用対象者を更新', '同期状況を確認', '加入確認設定を開く']);
+  check('「✉️ 正式加入確認」メニュー', sub.submenu.items.filter(i => i.fn).map(i => i.label), ['正式加入確認フォームを作成', 'テスト送信（自分宛て）', '正式加入確認メールを送信', 'テスト送信：団員アプリの案内（自分宛て）', '団員アプリの案内メールを送信', '正式加入回答を同期', '正式参加者一覧を更新', 'アプリ利用対象者を更新', '同期状況を確認', '加入確認設定を開く']);
   ctx.membershipStatus();
   check('同期状況の表示にメールアドレスを出さない（送信元の表示を除く）', /@/.test(lastAlert(env)), false);
   check('ログにメールアドレスを出さない', env.logs.some(l => /@example\.com/.test(l)), false);
@@ -369,6 +369,38 @@ section('K. アプリでの正式加入の承認を連絡記録に残す');
   check('対応状況が「正式参加」に', byNo(e.app, 2, '対応状況'), '正式参加');
   check('連絡記録に「アプリで申請 → 承認」を記録（本人のひとことも）', [!!row && /管理者が承認/.test(row[4]), row && row[5]], [true, 'がんばります']);
   check('正式加入の意思も「希望」に', byNo(e.app, 2, '正式加入の意思'), '希望');
+}
+
+/* ============================================================ */
+section('L. 団員アプリの案内メール（一斉送信）');
+{
+  const e = makeEnv();   // 正式加入確認フォームを作っていなくても送れる
+  const s0 = e.ctx.membershipSettings_(e.ss);
+  check('案内メールの既定の本文に {名前}・{アプリURL}・ログイン方法・正式加入の申し込み', ['{名前}', '{アプリURL}', 'ログイン用リンクを送る', '正式加入を申し込む'].every(x => s0.inviteBody.indexOf(x) >= 0), true);
+  check('既定の本文に日時・会場などの未確定の情報を入れない', /会場|会費|\d+月\d+日/.test(s0.inviteBody), false);
+  e.ctx.membershipSendInviteTest();
+  check('テスト送信は自分宛て・アプリのURLが入る', [e.env.mail.sent[0].to, e.env.mail.sent[0].body.indexOf('https://kanagawa-connect-official.web.app/') >= 0], [OWNER, true]);
+  e.env.mail.sent.length = 0;
+  e.env.alerts.length = 0;
+  e.ctx.membershipSendAppInvite();
+  const to = e.env.mail.sent.map(x => x.to).sort();
+  check('辞退・代表・メールなしを除き、重複行は1通（正式加入確認と同じ対象）', to, ['p1@example.com', 'p2@example.com', 'p3@example.com', 'p7@example.com', 'p9@example.com']);
+  check('1通に宛先は1人・ほかの人のアドレスを含めない', e.env.mail.sent.every(x => x.to.indexOf(',') < 0 && !x.cc && !x.bcc && (x.body.match(/[\w.+-]+@[\w.-]+/g) || []).length === 0), true);
+  check('本文に本人の名前とアプリのURL', [e.env.mail.sent.find(x => x.to === 'p1@example.com').body.indexOf('まぐ さん') === 0, e.env.mail.sent[0].body.indexOf('https://kanagawa-connect-official.web.app/') >= 0], [true, true]);
+  check('件名', /団員アプリ/.test(e.env.mail.sent[0].subject), true);
+  check('「加入確認メール」の列は変えない（正式加入確認メールとは別）', byNo(e.app, 1, '加入確認メール') || '', '');
+  check('連絡記録に「団員アプリの案内メールを送信」', e.contacts._rows().slice(1).filter(x => /団員アプリの案内メールを送信/.test(x[4])).length, 5);
+  e.env.mail.sent.length = 0;
+  e.ctx.membershipSendAppInvite();
+  check('もう一度実行しても送らない（重複送信防止）', e.env.mail.sent.length, 0);
+  e.ctx.membershipCreateForm();
+  e.ctx.membershipSendEmails();
+  check('正式加入確認メールは別の送信回として送れる', e.env.mail.sent.length, 5);
+  const other = makeEnv('other.staff@example.com');
+  other.ctx.membershipEnsureSettingsSheet_(other.ss);
+  setSetting(other.ss, '送信元アカウント', OWNER);
+  other.ctx.membershipSendAppInvite();
+  check('別のアカウントで実行したら送らない', other.env.mail.sent.length, 0);
 }
 
 console.log('\n============================');

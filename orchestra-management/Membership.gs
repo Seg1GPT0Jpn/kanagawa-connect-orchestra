@@ -76,6 +76,39 @@ const MEMBERSHIP_DEFAULT_BODY_ = [
   'かながわコネクトオーケストラ 運営'
 ].join('\n');
 
+const MEMBERSHIP_DEFAULT_INVITE_BODY_ = [
+  '{名前} さん',
+  '',
+  'かながわコネクトオーケストラ 運営です。',
+  '参加希望フォームへのご回答、ありがとうございます。',
+  '',
+  'このたび、参加希望の方と団員のためのページ「団員アプリ」を用意しました。',
+  '練習予定や演奏会の情報、参加希望の方向けのお知らせを確認できます。',
+  '練習の見学・体験を希望される場合は、アプリから出欠（参加予定）を登録することもできます。',
+  '',
+  '▼ 団員アプリ',
+  '{アプリURL}',
+  '',
+  '【はじめての使い方】',
+  '1. 上のリンクを開きます',
+  '2. 参加希望フォームで回答したメールアドレスを入力し、「ログイン用リンクを送る」を押します',
+  '3. 届いたメールのリンクを開くとログインできます（パスワードは不要です）',
+  '   ※ 同じメールアドレスの Google アカウントをお持ちの方は「Google でログイン」も使えます',
+  '4. スマートフォンでは「ホーム画面に追加」すると、アプリのように使えます',
+  '',
+  '【正式加入について】',
+  '正式に加入を希望される方は、アプリのホームにある「正式加入を申し込む」からお申し込みください。',
+  '運営が確認したあと、団員一覧や楽譜などもご覧いただけるようになります。',
+  'まだ迷っている方は、申し込まずにそのままお使いいただいて大丈夫です。',
+  '',
+  'ログイン用のメールが届かない場合は、迷惑メールフォルダもご確認ください。',
+  '学校のメールアドレスなどで届かない場合は、このメールにご返信いただければ、別のアドレスで使えるようにします。',
+  '',
+  'ご不明な点があれば、このメールにご返信ください。',
+  '',
+  'かながわコネクトオーケストラ 運営'
+].join('\n');
+
 const MEMBERSHIP_ITEMS_ = [
   { key: 'senderEmail', label: '送信元アカウント', def: () => membershipCurrentUser_(), desc: 'このアカウントでメニューを実行したときだけ送信します（別のアカウントでの誤送信を防止）' },
   { key: 'senderName', label: '送信者名', def: () => 'かながわコネクトオーケストラ 運営', desc: '受信者に表示される差出人名' },
@@ -86,7 +119,11 @@ const MEMBERSHIP_ITEMS_ = [
   { key: 'excludeStatuses', label: '送信しない対応状況', def: () => '辞退', desc: 'カンマ区切り' },
   { key: 'maxPerRun', label: '1回に送る上限（通）', def: () => 50, desc: 'Gmail の1日の送信上限（無料アカウントは約100通）より小さくしてください。残りは次回送ります' },
   { key: 'subject', label: 'メールの件名', def: () => '【かながわコネクトオーケストラ】正式加入の意思確認のお願い', desc: '' },
-  { key: 'body', label: 'メールの本文', def: () => MEMBERSHIP_DEFAULT_BODY_, desc: '{名前} と {フォームURL} が置き換わります' }
+  { key: 'body', label: 'メールの本文', def: () => MEMBERSHIP_DEFAULT_BODY_, desc: '{名前} と {フォームURL} が置き換わります' },
+  { key: 'appUrl', label: '団員アプリのURL', def: () => 'https://kanagawa-connect-official.web.app/', desc: 'メール本文の {アプリURL} に入ります' },
+  { key: 'inviteCampaign', label: '団員アプリ案内の送信回の名前', def: () => '団員アプリのご案内', desc: '同じ送信回では1人1通だけ。あとから応募した人には、同じ名前のままもう一度実行すると、まだ送っていない人にだけ送ります' },
+  { key: 'inviteSubject', label: '団員アプリ案内メールの件名', def: () => '【かながわコネクトオーケストラ】参加希望者・団員向けページ（団員アプリ）のご案内', desc: '' },
+  { key: 'inviteBody', label: '団員アプリ案内メールの本文', def: () => MEMBERSHIP_DEFAULT_INVITE_BODY_, desc: '{名前} と {アプリURL} が置き換わります' }
 ];
 
 
@@ -175,11 +212,45 @@ function membershipCreateForm() {
 }
 
 
+/**
+ * 送るメールの種類ごとの設定
+ *  confirm … 正式加入確認メール（{フォームURL}）
+ *  invite  … 団員アプリの案内メール（{アプリURL}）
+ */
+function membershipTemplate_(settings, kind) {
+
+  if (kind !== 'invite') return Object.assign({}, settings, { kind: 'confirm' });
+
+  return Object.assign({}, settings, {
+    kind: 'invite',
+    campaign: settings.inviteCampaign,
+    subject: settings.inviteSubject,
+    body: settings.inviteBody
+  });
+}
+
+
+const MEMBERSHIP_KIND_LABELS_ = { confirm: '正式加入確認メール', invite: '団員アプリの案内メール' };
+
+
+/** 団員アプリの案内メールを、送信元アカウント自身に1通送る */
+function membershipSendInviteTest() {
+
+  return membershipSendTestOf_('invite');
+}
+
+
 /** 送信元アカウント自身にテストメールを1通送る（送信履歴・連絡記録には残さない） */
 function membershipSendTest() {
 
+  return membershipSendTestOf_('confirm');
+}
+
+
+function membershipSendTestOf_(kind) {
+
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const settings = membershipSettings_(ss);
+  const settings = membershipTemplate_(membershipSettings_(ss), kind);
   const me = membershipCurrentUser_();
   const problem = membershipCheckSendSettings_(settings, me);
 
@@ -190,7 +261,7 @@ function membershipSendTest() {
 
   MailApp.sendEmail(membershipMessage_(settings, me, '（テスト）'));
 
-  alert_('テストメールを送信元アカウント（' + me + '）に送りました。\n受信箱で、件名・本文・フォームのリンクを確認してください。');
+  alert_('テストメール（' + MEMBERSHIP_KIND_LABELS_[settings.kind] + '）を送信元アカウント（' + me + '）に送りました。\n受信箱で、件名・本文・リンクを確認してください。');
 
   return me;
 }
@@ -199,8 +270,22 @@ function membershipSendTest() {
 /** 正式加入確認メールを送る（確認画面あり・1人ずつ個別送信） */
 function membershipSendEmails() {
 
+  return membershipSendCampaign_('confirm');
+}
+
+
+/** 団員アプリの案内メールを送る（確認画面あり・1人ずつ個別送信） */
+function membershipSendAppInvite() {
+
+  return membershipSendCampaign_('invite');
+}
+
+
+function membershipSendCampaign_(kind) {
+
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const settings = membershipSettings_(ss);
+  const settings = membershipTemplate_(membershipSettings_(ss), kind);
+  const label = MEMBERSHIP_KIND_LABELS_[settings.kind];
   const me = membershipCurrentUser_();
   const problem = membershipCheckSendSettings_(settings, me);
 
@@ -251,7 +336,7 @@ function membershipSendEmails() {
       return { sent: 0, plan };
     }
 
-    const ok = confirm_('正式加入確認メールを送信',
+    const ok = confirm_(label + 'を送信',
       summary + '\n\n' +
       '送信元：' + me + '\n' +
       '今回送るのは ' + count + '通' + (count < plan.targets.length ? '（残り ' + (plan.targets.length - count) + '人は次回）' : '') + 'です。\n' +
@@ -267,7 +352,7 @@ function membershipSendEmails() {
     updateDashboardQuietly_(ss);
 
     alert_(
-      '【正式加入確認メール】\n' +
+      '【' + label + '】\n' +
       '送信：' + result.sent.length + '通' +
       (result.failed.length ? '\n送信できなかった：' + result.failed.length + '件（' + noLabel_(result.failed.map(t => t.record)) + '）' : '') +
       (plan.targets.length > count ? '\n\nまだ送っていない人が ' + (plan.targets.length - count) + '人います。もう一度実行すると続きを送ります。' : '') +
@@ -491,7 +576,7 @@ function membershipDeliver_(ss, sheet, targets, settings, me) {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   sent.forEach(t => t.rows.forEach(row => {
-    if (mailCol !== undefined) sheet.getRange(row, mailCol + 1).setValue(now);
+    if (mailCol !== undefined && settings.kind !== 'invite') sheet.getRange(row, mailCol + 1).setValue(now);
     if (lastCol !== undefined) sheet.getRange(row, lastCol + 1).setValue(today);
   }));
 
@@ -501,9 +586,9 @@ function membershipDeliver_(ss, sheet, targets, settings, me) {
     no: t.record.no,
     name: membershipDisplayName_(t.record),
     method: 'メール',
-    content: '正式加入確認メールを送信（' + settings.campaign + '）',
+    content: MEMBERSHIP_KIND_LABELS_[settings.kind] + 'を送信（' + settings.campaign + '）',
     staff: settings.senderName,
-    nextAction: '正式加入確認フォームの回答待ち',
+    nextAction: settings.kind === 'invite' ? '' : '正式加入確認フォームの回答待ち',
     state: '完了'
   })));
 
@@ -515,7 +600,8 @@ function membershipMessage_(settings, to, name) {
 
   const fill = text => String(text)
     .split('{名前}').join(name || '参加希望者')
-    .split('{フォームURL}').join(settings.formUrl);
+    .split('{フォームURL}').join(settings.formUrl)
+    .split('{アプリURL}').join(settings.appUrl || '');
 
   const message = {
     to,
@@ -538,8 +624,17 @@ function membershipCheckSendSettings_(settings, me) {
     return '送信元アカウントは「' + settings.senderEmail + '」に設定されていますが、いまメニューを実行しているのは別のアカウントです。\n' +
       '誤送信を防ぐため送信しません。送信元アカウントでスプレッドシートを開き直して実行してください。';
   }
-  if (!/^https:\/\/\S+$/.test(settings.formUrl)) return '正式加入確認フォームのURLが設定されていません。先に「正式加入確認フォームを作成」を実行してください。';
-  if (settings.body.indexOf('{フォームURL}') < 0 && settings.body.indexOf(settings.formUrl) < 0) return 'メールの本文にフォームのURL（{フォームURL}）が入っていません。';
+  const usesForm = (settings.subject + settings.body).indexOf('{フォームURL}') >= 0;
+  const usesApp = (settings.subject + settings.body).indexOf('{アプリURL}') >= 0;
+
+  if (settings.kind !== 'invite') {
+    if (!/^https:\/\/\S+$/.test(settings.formUrl)) return '正式加入確認フォームのURLが設定されていません。先に「正式加入確認フォームを作成」を実行してください。';
+    if (!usesForm && settings.body.indexOf(settings.formUrl) < 0) return 'メールの本文にフォームのURL（{フォームURL}）が入っていません。';
+  } else if (!usesApp) {
+    return 'メールの本文に団員アプリのURL（{アプリURL}）が入っていません。';
+  }
+  if (usesForm && !/^https:\/\/\S+$/.test(settings.formUrl)) return '本文に {フォームURL} がありますが、正式加入確認フォームのURLが設定されていません。';
+  if (usesApp && !/^https:\/\/\S+$/.test(settings.appUrl)) return '「加入確認設定」の団員アプリのURLが正しくありません。';
   if (!settings.subject) return 'メールの件名が空欄です。';
   if (settings.replyTo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(settings.replyTo)) return '返信先のメールアドレスが正しくありません。';
 
@@ -993,6 +1088,21 @@ function membershipRefreshAppUsage_(sheet, syncedRows) {
 }
 
 
+/** 「加入確認設定」の団員アプリの URL（設定シートが無ければ空欄。シートは作らない） */
+function membershipAppUrlForApp_(ss) {
+
+  const sheet = findOwnedSheet_(ss, MEMBERSHIP.settingsSheet, MEMBERSHIP.settingsTitle);
+
+  if (!sheet || sheet.getLastRow() < 1) return '';
+
+  const label = MEMBERSHIP_ITEMS_.find(i => i.key === 'appUrl').label;
+  const row = sheet.getRange(1, 1, sheet.getLastRow(), 2).getValues().find(r => toStr_(r[0]) === label);
+  const url = row ? toStr_(row[1]) : '';
+
+  return /^https:\/\/\S+$/.test(url) ? url : '';
+}
+
+
 /** 団員アプリに送る正式加入確認フォームの URL（設定シートが無ければ空欄。シートは作らない） */
 function membershipFormUrlForApp_(ss) {
 
@@ -1152,7 +1262,12 @@ function membershipSettings_(ss) {
     excludeStatuses: list(raw.excludeStatuses),
     maxPerRun: Number.isInteger(max) && max > 0 ? Math.min(max, 1500) : 50,
     subject: toStr_(raw.subject),
-    body: String(raw.body === null || raw.body === undefined ? '' : raw.body)
+    body: String(raw.body === null || raw.body === undefined ? '' : raw.body),
+    appUrl: toStr_(raw.appUrl),
+    inviteCampaign: toStr_(raw.inviteCampaign) || '団員アプリのご案内',
+    inviteSubject: toStr_(raw.inviteSubject),
+    inviteBody: String(raw.inviteBody === null || raw.inviteBody === undefined ? '' : raw.inviteBody),
+    kind: 'confirm'
   };
 }
 

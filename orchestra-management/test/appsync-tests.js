@@ -683,9 +683,16 @@ section('T. アプリでの正式加入の申請 → 管理者が承認 → 応�
   check('応募者一覧に無いアプリIDは反映せず理由を返す', /見つかりませんでした/.test(req('mghost000000000').applyError), true);
   check('結果メッセージに反映した人数', /1人を「正式参加」に変更しました/.test(allAlerts(env)), true);
 
+  const mails = env.mail.sent.filter(m => /正式加入が承認されました/.test(m.subject));
+  check('承認された本人にお知らせのメールを1通', mails.map(m => m.to), ['p4@example.com']);
+  check('メールに名前とアプリのURL', [mails[0].body.indexOf('じゅん さん') === 0, mails[0].body.indexOf('https://kanagawa-connect-official.web.app/') >= 0], [true, true]);
+  check('メールを送ったことを申請に記録', !!req(id(4)).notifiedAt, true);
+  check('承認待ち・見つからない人にはメールを送らない', env.mail.sent.length, 1);
+
   // もう一度同期しても二重に処理しない
   setStatus(app, 4, '保留');
   ctx.appSyncRun();
+  check('もう一度同期してもメールは送り直さない', env.mail.sent.length, 1);
   check('反映済みの申請は二度と処理しない（運営があとで変えた状態を上書きしない）', col(app, '対応状況')[3], '保留');
 }
 {
@@ -697,7 +704,27 @@ section('T. アプリでの正式加入の申請 → 管理者が承認 → 応�
   env.firestore.docs.set('joinRequests/' + id9, ctx.appSyncEncodeFields_({ status: 'approved', message: '', concert: '', createdAt: new Date() }));
   ctx.appSyncRun();
   check('「辞退」の人は正式参加にしない', col(app, '対応状況')[8], '辞退');
+  check('「辞退」の人にはメールを送らない', env.mail.sent.length, 0);
   check('理由をアプリに返す', /辞退/.test(fsDocs(env, 'joinRequests')[id9].applyError), true);
+}
+
+{
+  // 「承認時に本人へメール」が「いいえ」なら送らない／送れなかったら理由を記録して反映は続ける
+  const { env, app, ctx } = makeEnv(PEOPLE, { applicants: true });
+  ctx.appSyncRun();
+  const id = no => col(app, 'アプリID')[no - 1];
+  setAppSetting(env.spreadsheet, '正式加入の承認時に本人へメール', 'いいえ');
+  env.firestore.docs.set('joinRequests/' + id(4), ctx.appSyncEncodeFields_({ status: 'approved', message: '', concert: '', createdAt: new Date() }));
+  ctx.appSyncRun();
+  check('設定が「いいえ」ならメールを送らない（反映はする）', [env.mail.sent.length, col(app, '対応状況')[3]], [0, '正式参加']);
+  setAppSetting(env.spreadsheet, '正式加入の承認時に本人へメール', 'はい');
+  env.mail.quota = 0;
+  env.firestore.docs.set('joinRequests/' + id(9), ctx.appSyncEncodeFields_({ status: 'approved', message: '', concert: '', createdAt: new Date() }));
+  env.logs.length = 0;
+  ctx.appSyncRun();
+  const r9 = fsDocs(env, 'joinRequests')[id(9)];
+  check('メールを送れなくても正式参加には反映し、理由を記録', [col(app, '対応状況')[8], /送れませんでした/.test(r9.mailError), !!r9.appliedAt], ['正式参加', true, true]);
+  check('ログにメールアドレスを出さない', env.logs.some(l => /@example\.com/.test(l)), false);
 }
 
 console.log('\n============================');

@@ -33,6 +33,7 @@ export function AdminJoinRequests() {
       <p className="small muted">
         参加希望者がアプリから申し込んだ正式加入です。「承認」すると、次の同期（自動同期なら15分以内）で
         スプレッドシートの対応状況が「正式参加」に変わり、本人のアプリが団員用に切り替わります。
+        本人のメールアドレスにも、承認のお知らせが届きます。
       </p>
       <ErrorNote message={requests.error || applicants.error} />
 
@@ -59,9 +60,11 @@ export function AdminJoinRequests() {
                       {r.status === 'approved' && (r.applyError
                         ? <span className="badge badge--important">反映できませんでした</span>
                         : r.appliedAt ? <span className="badge">スプレッドシートに反映済み</span> : <span className="badge badge--gold">次の同期で反映</span>)}
+                      {r.notifiedAt && <span className="badge">お知らせメール送信済み</span>}
                     </span>
                     <p className="list__title">{p?.displayName ?? '（団員に切り替わり済み・または停止中）'}</p>
                     {r.applyError && <p className="small">{r.applyError}</p>}
+                    {r.mailError && <p className="small">{r.mailError}</p>}
                     <p className="small muted">{formatDate(r.decidedAt)}</p>
                   </div>
                 </li>
