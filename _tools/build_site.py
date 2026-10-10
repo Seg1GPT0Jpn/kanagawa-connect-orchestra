@@ -21,6 +21,8 @@ FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeNVFDq4rLClPT58n83vJLcjM70ODNX
 INSTAGRAM = "https://www.instagram.com/for.all.people_orch.kanagawa/"
 INSTAGRAM_ID = "@for.all.people_orch.kanagawa"
 MAIL = "kanagawaorchestra2026renraku@gmail.com"
+# 団員専用アプリ（別の Firebase プロジェクト。加入が確定した団員だけがログインできる）
+MEMBER_APP = "https://kanagawa-connect-official.web.app/"
 PDF = "docs/recruitment-guidelines.pdf"
 LASTMOD = "2026-10-08"
 
@@ -41,6 +43,7 @@ NEW_TAB = '<span class="visually-hidden">（新しいタブで開きます）</s
 ICON_EXT = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'
 ICON_DL = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'
 ICON_IG = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.6"/></svg>'
+ICON_MEMBER = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1-3.6 4-5.6 7.5-5.6s6.5 2 7.5 5.6"/></svg>'
 ICON_MAIL = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>'
 
 
@@ -237,6 +240,7 @@ def footer(root=""):
       <div class="site-footer__links">
         <a class="site-footer__join" href="{href("recruit.html", root)}">団員募集中｜詳しくはこちら</a>
         <a class="site-footer__sns" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">{ICON_IG}<span>Instagram</span>{NEW_TAB}</a>
+        <a class="site-footer__sns" href="{MEMBER_APP}" target="_blank" rel="noopener noreferrer">{ICON_MEMBER}<span>団員専用ページ（団員の方）</span>{NEW_TAB}</a>
       </div>
       <p class="site-footer__copy"><small>&copy; <span data-year>2026</span> {SITE}</small></p>
     </div>
