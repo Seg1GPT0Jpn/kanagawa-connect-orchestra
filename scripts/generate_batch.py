@@ -24,6 +24,7 @@ import datetime as dt
 import hashlib
 import importlib
 import json
+import os
 import random
 import sys
 from pathlib import Path
@@ -328,7 +329,9 @@ def merge_with_existing(new: dict, path: Path, phase, today: str, note: str | No
 
 def write_json(path: Path, data: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.tmp")  # 一時ファイル経由で置き換え（並行実行中の検査が書きかけを読まないように）
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(tmp, path)
 
 
 def promote_checked(paths: list[Path], rep: vq.Reporter, today: str) -> None:

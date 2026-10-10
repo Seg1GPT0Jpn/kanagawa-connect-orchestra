@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""高校の単元パック（授業プリント＋問題プリント）を一括生成する。
+"""単元パック（授業プリント＋問題プリント）を一括生成する（高校が主対象。中学・入試対策の単元にも使える）。
 
   python scripts/generate_highschool_unit.py --list                     # 作成済みの単元パック
   python scripts/generate_highschool_unit.py --unit HS-MATH1-U03        # 1単元（既定 60 問）
@@ -7,7 +7,7 @@
   python scripts/generate_highschool_unit.py --all --count 80
   python scripts/generate_highschool_unit.py --all --no-pdf --note "レビュー指摘 No.5 対応"
 
-1単元あたり次の2つのセットを data/hs_packs/<単元ID>/ に書き出す。
+1単元あたり次の2つのセットを data/hs_packs/<単元ID>/（中学の単元は data/jh_packs/<単元ID>/）に書き出す。
 
   lesson.json    授業プリント（概念導入・定義/定理・証明/導出・例題・板書案・教師の指導ガイド・確認問題）
   exercise.json  問題プリント（A 基本確認／B 標準演習／C 思考力・記述応用／D 典型誤答訂正、50〜100 問以上）
@@ -48,15 +48,21 @@ def list_packs() -> dict[str, str]:
     return out
 
 
-def unit_context(unit: dict, readiness: list) -> dict:
+def unit_context(unit: dict, readiness: list, mod=None) -> dict:
+    """前提条件・発展への接続。curriculum_map.json の定義を使い、なければパックの PREREQUISITES / EXTENSIONS を使う。"""
     def link(x):
-        u = UNITS.get(x["unit_id"], {})
+        if isinstance(x, (tuple, list)):
+            x = {"unit_id": x[0], "point": x[1]}
+        if x["unit_id"] not in UNITS:
+            raise SystemExit(f"{unit['unit_id']}: 前提・発展の単元 ID {x['unit_id']} が curriculum_map.json にありません")
+        u = UNITS[x["unit_id"]]
         d = {"unit_id": x["unit_id"], "point": x["point"]}
         if u.get("title"):
             d["title"] = u["title"]
         return d
-    ctx = {"prerequisites": [link(x) for x in unit.get("prerequisites", [])],
-           "extensions": [link(x) for x in unit.get("extensions", [])]}
+    pre = unit.get("prerequisites") or getattr(mod, "PREREQUISITES", [])
+    ext = unit.get("extensions") or getattr(mod, "EXTENSIONS", [])
+    ctx = {"prerequisites": [link(x) for x in pre], "extensions": [link(x) for x in ext]}
     if readiness:
         ctx["readiness_check"] = list(readiness)
     return ctx
@@ -69,9 +75,11 @@ def build_specs(unit_id: str, mod, count: int) -> tuple[dict, dict]:
     lesson_id, ex_id = f"{unit_id}-LESSON", f"{unit_id}-EX"
     lesson = dict(mod.LESSON)
     readiness = lesson.pop("readiness", [])
-    ctx = unit_context(unit, readiness)
+    ctx = unit_context(unit, readiness, mod)
+    jh = unit.get("stage") == "junior_high"
+    track, root = ("jh_pack", "data/jh_packs") if jh else ("hs_pack", "data/hs_packs")
     common = {
-        "track": "hs_pack", "stage": "high_school", "subject": unit["subject"], "grade": unit["grade"],
+        "track": track, "stage": unit.get("stage", "high_school"), "subject": unit["subject"], "grade": unit["grade"],
         "unit_ids": [unit_id], "default_skills": unit["default_skills"], "pack_id": pack_id, "unit_context": ctx,
         "schema_version": "2.0.0", "labels": "kana",
     }
@@ -80,7 +88,7 @@ def build_specs(unit_id: str, mod, count: int) -> tuple[dict, dict]:
     title = getattr(mod, "TITLE", unit["title"])
     lesson_spec = dict(common, set_id=lesson_id, print_type="lesson", pair_set_id=ex_id, title=f"{title}　授業プリント",
                        subtitle=f"{unit['domain']}｜{'・'.join(unit['topics'][:4])}", lesson=lesson, items=[],
-                       out=f"data/hs_packs/{unit_id.lower()}/lesson.json")
+                       out=f"{root}/{unit_id.lower()}/lesson.json")
     items, sections, plan = [], [], {}
     for lv, (letter, name, desc) in hl.LEVELS.items():
         lv_items = items_by_level[lv]
@@ -96,7 +104,7 @@ def build_specs(unit_id: str, mod, count: int) -> tuple[dict, dict]:
                    instructions=["A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
                                  "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
                                  "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"],
-                   out=f"data/hs_packs/{unit_id.lower()}/exercise.json")
+                   out=f"{root}/{unit_id.lower()}/exercise.json")
     return lesson_spec, ex_spec
 
 
@@ -115,7 +123,7 @@ def run(unit_ids: list[str], count: int, pdf: bool, today: str, note: str | None
             summary[state] += 1
             gb.write_json(path, data)
             written.append(path)
-    print(f"== 高校 単元パック: {len(unit_ids)} 単元 / {len(written)} セット（新規 {summary['new']} / 更新 {summary['updated']} / 変更なし {summary['unchanged']}）")
+    print(f"== 単元パック: {len(unit_ids)} 単元 / {len(written)} セット（新規 {summary['new']} / 更新 {summary['updated']} / 変更なし {summary['unchanged']}）")
 
     rep = vq.validate_paths([str(p) for p in written], corpus=[str(ROOT / "data")])
     errs = sum(f.errors for f in rep.files)

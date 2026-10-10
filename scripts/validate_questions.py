@@ -26,6 +26,7 @@ import bisect
 import datetime as _dt
 import hashlib
 import json
+import os
 import re
 import signal
 import sys
@@ -1074,7 +1075,9 @@ def stamp_files(rep: Reporter) -> None:
             "warnings": fr.warnings,
             "content_hash": content_hash(data),
         }
-        fr.path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp = fr.path.with_name(f".{fr.path.name}.{os.getpid()}.tmp")
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        os.replace(tmp, fr.path)
 
 
 def print_report(rep: Reporter, quiet: bool = False, max_per_file: int = 200) -> None:
