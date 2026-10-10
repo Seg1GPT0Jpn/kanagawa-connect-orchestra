@@ -319,7 +319,7 @@ section('L. 既存機能への影響なし');
   ctx.onOpen();
   const menu = env.menus[env.menus.length - 1];
   const sub = menu.items.find(i => i.submenu && i.submenu.name === '📱 団員アプリ');
-  check('メニューに「📱 団員アプリ」', sub.submenu.items.map(i => i.fn), ['menuAppSyncPreview', 'menuAppSyncRun', 'menuAppSyncInstallTrigger', 'menuAppSyncOpenSettings', null, 'menuAppNotifyRunNow', 'menuAppNotifyInstallTrigger']);
+  check('メニューに「📱 団員アプリ」', sub.submenu.items.map(i => i.fn), ['menuAppSyncSetupAccount', null, 'menuAppSyncPreview', 'menuAppSyncRun', 'menuAppSyncInstallTrigger', 'menuAppSyncOpenSettings', null, 'menuAppNotifyRunNow', 'menuAppNotifyInstallTrigger']);
   check('メニューから呼べる', !!ctx.menuAppSyncPreview(), true);
 }
 
@@ -585,6 +585,65 @@ section('R. 参加希望者（応募しただけの人）もアプリを使え�
   put('rehearsals/r1', Object.assign({ title: '合奏', date: '2026-10-08', startTime: '', endTime: '', venue: '', published: true }, base));
   ctx.appNotifyCore_({ now: new Date(2026, 9, 7, 19, 0) });
   check('練習の前日通知は参加希望者にも', to('明日は練習です'), ['tok-applicant', 'tok-member']);
+}
+
+/* ============================================================ */
+section('S. 別のアカウント（代表）で連携する・応募した人を自動で使えるように');
+{
+  // まだ承認していないアカウントでメニューを実行
+  const { env, ctx } = makeEnv(PEOPLE, { applicants: true });
+  env.auth.required = true;
+  const r = ctx.appSyncRun();
+  check('承認していなければ同期せず、承認用のリンクを表示', [env.firestore.requests.length, env.dialogs.length, env.dialogs[0] && env.dialogs[0].html.indexOf(env.auth.url) >= 0], [0, 1, true]);
+  check('承認の画面に実行中のアカウントを表示', env.dialogs[0].html.indexOf('owner@example.com') >= 0, true);
+  check('結果はエラー扱い', !!r.error, true);
+  ctx.appSyncSetupAccount();
+  check('「連携を設定」でも承認していなければリンクだけ表示', [env.dialogs.length, env.firestore.requests.length], [2, 0]);
+}
+{
+  // 承認後：代表のアカウントで連携を設定
+  const env0 = createGasEnvironment({ effectiveUser: 'rep@example.com' });
+  const ss = env0.spreadsheet;
+  ss.insertSheet('応募者一覧')._setTable([HEADERS].concat(PEOPLE.map(row)));
+  const form = ss.insertSheet('フォームの回答 1');
+  form.formUrl = 'https://docs.google.com/forms/d/mock/viewform';
+  form._setTable([FORM_HEADERS].concat(PEOPLE.map(p => [p.ts, p.email, p.name, '', '社会人', '横浜市', p.inst, '', '', '', '', '', '', '', '', ''])));
+  const ctx = load(env0);
+  ctx.appSyncEnsureSettingsSheet_(ss);
+  setAppSetting(ss, '管理者のメールアドレス', 'owner@example.com');
+  setAppSetting(ss, '応募時に自動でアプリに登録', 'いいえ');
+  // 新しい応募（フォーム送信トリガーが動かなかった想定：応募者一覧にはまだ無い）
+  form.appendRow([new Date(2026, 9, 10, 9), 'new@example.com', 'あたらしい', '', '中学生', '横浜市', 'Fl', '', '', '', '', '', '', '', '', '']);
+  env0.setConfirmAnswer('YES');
+  const res = ctx.appSyncSetupAccount();
+  const access = fsDocs(env0, 'memberAccess');
+  check('連携の設定が完了', res.status, 'ok');
+  check('代表のアカウントを管理者に追加（確認のうえ）', ctx.appSyncSettings_(ss).adminEmails, ['owner@example.com', 'rep@example.com']);
+  check('代表は管理者として団員アプリに登録', [access['rep@example.com'] && access['rep@example.com'].role, access['rep@example.com'] && access['rep@example.com'].stage], ['admin', 'member']);
+  check('15分ごとの自動同期を1本だけ設定', env0.triggers.filter(t => t.getHandlerFunction() === 'appSyncScheduled').length, 1);
+  check('自動同期の設定を「はい」に', ctx.appSyncSettings_(ss).autoSync, true);
+  check('新しい応募も取り込み、参加希望者として使えるように', access['new@example.com'] && access['new@example.com'].stage, 'applicant');
+  ctx.appSyncSetupAccount();
+  check('もう一度実行してもトリガーは増えない', env0.triggers.filter(t => t.getHandlerFunction() === 'appSyncScheduled').length, 1);
+
+  // 15分ごとの自動実行：フォーム送信トリガーが動かなくても、新しい応募者が使えるようになる
+  form.appendRow([new Date(2026, 9, 10, 10), 'later@example.com', 'あとから', '', '高校生', '横浜市', 'Vc', '', '', '', '', '', '', '', '', '']);
+  ctx.appSyncScheduled();
+  check('自動同期で新しい応募を取り込み、参加希望者として登録', fsDocs(env0, 'memberAccess')['later@example.com'] && fsDocs(env0, 'memberAccess')['later@example.com'].stage, 'applicant');
+  const before = env0.spreadsheet.getSheetByName('応募者一覧')._rows().length;
+  ctx.appSyncScheduled();
+  check('何度動いても応募者は二重に登録されない', env0.spreadsheet.getSheetByName('応募者一覧')._rows().length, before);
+}
+{
+  // Firebase のメンバーでないアカウント
+  const { env, ctx } = makeEnv(PEOPLE, { applicants: true });
+  env.firestore.denied = true;
+  const r = ctx.appSyncSetupAccount();
+  check('Firebase に接続できなければ、メンバーに追加する場所を案内', [r.status, /console\.firebase\.google\.com\/project\/kanagawa-connect-official\/settings\/iam/.test(allAlerts(env))], ['firebase-denied', true]);
+}
+{
+  const { ctx } = makeEnv(PEOPLE);
+  check('承認エラーは分かりやすい案内に置き換える', /まだ団員アプリとの連携を承認していません[\s\S]*このアカウントで連携を設定/.test(ctx.appSyncErrorMessage_(new Error('UrlFetchApp.fetch を呼び出す権限がありません。必要な権限: https://www.googleapis.com/auth/script.external_request'))), true);
 }
 
 console.log('\n============================');

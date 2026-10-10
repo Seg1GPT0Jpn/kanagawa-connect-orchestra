@@ -405,8 +405,18 @@ function createGasEnvironment(options) {
     getTriggerSourceId() { return this.sourceId; }
     getUniqueId() { return this.id; }
   }
+  // 承認状態（auth.required = true で「このアカウントはまだ承認していない」状態を再現）
+  const auth = { required: false, url: 'https://script.google.com/macros/d/mock/authorize' };
   const ScriptApp = {
     EventType,
+    AuthMode: { FULL: 'FULL', LIMITED: 'LIMITED' },
+    AuthorizationStatus: { REQUIRED: 'REQUIRED', NOT_REQUIRED: 'NOT_REQUIRED' },
+    getAuthorizationInfo() {
+      return {
+        getAuthorizationStatus() { return auth.required ? 'REQUIRED' : 'NOT_REQUIRED'; },
+        getAuthorizationUrl() { return auth.required ? auth.url : null; }
+      };
+    },
     getOAuthToken() { return 'mock-oauth-token'; },
     getProjectTriggers() { return triggers.slice(); },
     deleteTrigger(t) {
@@ -435,8 +445,10 @@ function createGasEnvironment(options) {
   const Button = { YES: 'YES', NO: 'NO', OK: 'OK', CANCEL: 'CANCEL' };
   const ButtonSet = { YES_NO: 'YES_NO', OK: 'OK', OK_CANCEL: 'OK_CANCEL' };
   const menus = [];
+  const dialogs = [];
   const ui = {
     Button, ButtonSet,
+    showModalDialog(html, title) { dialogs.push({ title, html: html.getContent() }); },
     alert(a, b, c) {
       if (c === ButtonSet.YES_NO || b === ButtonSet.YES_NO) {
         alerts.push({ title: a, message: c ? b : a, confirm: true });
@@ -680,8 +692,13 @@ function createGasEnvironment(options) {
   };
 
   return {
-    globals: { SpreadsheetApp, ScriptApp, LockService, PropertiesService, Utilities, Session, Logger, UrlFetchApp, MailApp, FormApp, console: consoleProxy, Date },
-    firestore, fcm, sleeps, mail, forms, user,
+    globals: { HtmlService: {
+      createHtmlOutput(content) {
+        const out = { content, setWidth() { return out; }, setHeight() { return out; }, getContent() { return out.content; } };
+        return out;
+      }
+    }, SpreadsheetApp, ScriptApp, LockService, PropertiesService, Utilities, Session, Logger, UrlFetchApp, MailApp, FormApp, console: consoleProxy, Date },
+    firestore, fcm, sleeps, mail, forms, user, auth, dialogs,
     spreadsheet, stats, alerts, toasts, logs, triggers, menus, props,
     setUiAvailable(v) { uiAvailable = v; },
     setConfirmAnswer(v) { confirmAnswer = v; },
