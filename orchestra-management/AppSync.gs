@@ -54,6 +54,7 @@ const APP_SYNC_ITEMS_ = [
   { key: 'autoSync', label: '自動同期（15分ごと）', def: () => 'いいえ', desc: 'はい／いいえ。「はい」にして「自動同期を設定」を実行すると定期的に同期します' },
   { key: 'applicantAccess', label: '参加希望者もアプリを使える', def: () => 'はい', desc: 'はい／いいえ。「はい」なら、応募した人（辞退以外）も「参加希望者」としてログインできます（練習予定・出欠・演奏会・参加希望者向けのお知らせのみ。団員一覧・楽譜などは見られません）' },
   { key: 'syncOnSubmit', label: '応募時に自動でアプリに登録', def: () => 'はい', desc: 'はい／いいえ。「はい」なら、参加希望フォームが送信されたときに自動で団員アプリへ同期します' },
+  { key: 'approveMail', label: '正式加入の承認時に本人へメール', def: () => 'はい', desc: 'はい／いいえ。アプリで承認した正式加入を応募者一覧に反映したとき、本人のメールアドレスにお知らせを1通送ります（同期を実行したアカウントから送信）' },
   { key: 'pushEnabled', label: 'プッシュ通知の送信', def: () => 'いいえ', desc: 'はい／いいえ。「はい」にして「通知の送信を設定」を実行すると、アプリで予約した通知を10分ごとに送ります' },
   { key: 'reminderEnabled', label: '練習の前日通知', def: () => 'はい', desc: 'はい／いいえ。公開中の練習の前日に「明日は練習です」と通知します（プッシュ通知の送信が「はい」のとき）' },
   { key: 'reminderHour', label: '前日通知の時刻（時）', def: () => 18, desc: '0〜23。この時刻以降の最初の送信で前日通知を送ります' }
@@ -188,7 +189,7 @@ function appSyncOnFormSubmit_() {
  *  ・承認待ちの申請は「正式加入の意思」を「希望」にする（空欄のときだけ）
  * 戻り値：応募者一覧を書き換えたら true
  *******************************************************/
-function appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result) {
+function appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result, settings) {
 
   let approved = [];
   let pending = [];
@@ -252,7 +253,14 @@ function appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result) {
       nextAction: '団員アプリの利用開始',
       state: '完了'
     });
-    writes.push(appSyncWrite_('joinRequests/' + d.id, { appliedAt: now.toISOString() }, ['appliedAt']));
+    // 本人へお知らせのメール（1件につき1回。失敗しても反映は続ける）
+    const done = { appliedAt: now.toISOString() };
+    if (settings && settings.approveMail) {
+      const mailError = appSyncSendApprovalMail_(ss, r);
+      if (mailError) done.mailError = mailError;
+      else done.notifiedAt = now.toISOString();
+    }
+    writes.push(appSyncWrite_('joinRequests/' + d.id, done, Object.keys(done)));
     result.joinApplied = (result.joinApplied || 0) + 1;
   });
 
@@ -279,6 +287,53 @@ function appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result) {
   if (writes.length) client.commit(writes);
 
   return changed;
+}
+
+
+const APP_SYNC_APPROVAL_MAIL_ = {
+  subject: '【かながわコネクトオーケストラ】正式加入が承認されました',
+  body: [
+    '{名前} さん',
+    '',
+    'かながわコネクトオーケストラ 運営です。',
+    '正式加入のお申し込みを承認しました。これからどうぞよろしくお願いします！',
+    '',
+    '団員アプリを開くと、団員用の画面に切り替わっています。',
+    '（切り替わっていない場合は、ページを再読み込みしてください）',
+    '団員一覧・楽譜・アンケートなども使えるようになりました。',
+    '',
+    '▼ 団員アプリ',
+    '{アプリURL}',
+    '',
+    'マイページで「呼ばれたい名前」と自己紹介を設定すると、団員一覧に表示されます。',
+    '',
+    'ご不明な点があれば、このメールにご返信ください。',
+    '',
+    'かながわコネクトオーケストラ 運営'
+  ].join('\n'),
+  senderName: 'かながわコネクトオーケストラ 運営',
+  defaultAppUrl: 'https://kanagawa-connect-official.web.app/'
+};
+
+
+/** 承認のお知らせを本人（ログインに使うアドレス）に送る。失敗したら理由を返す（メールアドレスは含めない） */
+function appSyncSendApprovalMail_(ss, r) {
+
+  const to = emailKey_(toStr_(r.appEmail) || toStr_(r.email));
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) return 'メールアドレスが無いため、承認のお知らせを送れませんでした';
+
+  const appUrl = (typeof globalThis.membershipAppUrlForApp_ === 'function' && globalThis.membershipAppUrlForApp_(ss)) || APP_SYNC_APPROVAL_MAIL_.defaultAppUrl;
+  const name = toStr_(r.nickname) || toStr_(r.name) || '団員';
+  const fill = t => t.split('{名前}').join(name).split('{アプリURL}').join(appUrl);
+
+  try {
+    MailApp.sendEmail({ to, subject: fill(APP_SYNC_APPROVAL_MAIL_.subject), body: fill(APP_SYNC_APPROVAL_MAIL_.body), name: APP_SYNC_APPROVAL_MAIL_.senderName });
+    return '';
+  } catch (e) {
+    console.error('承認のお知らせを送れませんでした: ' + String(e && e.message).replace(/[^\s@]+@[^\s@]+/g, '（メールアドレス）'));
+    return '承認のお知らせのメールを送れませんでした（1日の送信上限などの可能性）';
+  }
 }
 
 
@@ -490,7 +545,7 @@ function appSyncCore_(options) {
     const client = appSyncClient_(settings.projectId);
 
     // 0. アプリで管理者が承認した正式加入を、応募者一覧に反映（対応状況 → 正式参加）
-    if (appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result)) app = readApplicants_(sheet);
+    if (appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result, settings)) app = readApplicants_(sheet);
 
     // 1. 加入確定者を決める（アプリIDが無い人には新しく振る）
     const desired = appSyncDesiredMembers_(app, settings, result);
@@ -1151,6 +1206,7 @@ function appSyncSettings_(ss) {
     autoSync: parseSettingValue_({ type: 'bool' }, raw.autoSync) === true,
     applicantAccess: parseSettingValue_({ type: 'bool' }, raw.applicantAccess) !== false,
     syncOnSubmit: parseSettingValue_({ type: 'bool' }, raw.syncOnSubmit) !== false,
+    approveMail: parseSettingValue_({ type: 'bool' }, raw.approveMail) !== false,
     pushEnabled: parseSettingValue_({ type: 'bool' }, raw.pushEnabled) === true,
     reminderEnabled: parseSettingValue_({ type: 'bool' }, raw.reminderEnabled) !== false,
     reminderHour: appSyncHour_(raw.reminderHour)
