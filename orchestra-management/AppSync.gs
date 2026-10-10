@@ -695,7 +695,10 @@ function appSyncPlan_(desired, settings, existingAccess, existingMembers, extra)
   const s = loadSettings_(SpreadsheetApp.getActiveSpreadsheet());
   const index = buildInstrumentIndex_(s);
   const byPart = appSyncPartStats_(desired.members, index);
+  // 申し込み数（重複を除いた実人数のうち、辞退など集計から除外する人を除く。団員を含む）
+  const st = computeStats_(extra.applicants, s, index, now);
   const stats = {
+    applicationCount: st.active,
     memberCount: desired.members.length,
     pausedCount: desired.members.filter(m => m.status === 'paused').length,
     applicantCount: applicants.length,
@@ -711,7 +714,6 @@ function appSyncPlan_(desired, settings, existingAccess, existingMembers, extra)
   }
 
   // ---- adminStats（運営のみ：参加希望者数・対応状況別）----
-  const st = computeStats_(extra.applicants, s, index, now);
   const adminStats = {
     applicantCount: st.total,
     activeApplicantCount: st.active,

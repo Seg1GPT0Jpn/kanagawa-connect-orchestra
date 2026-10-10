@@ -646,6 +646,15 @@ section('S. 別のアカウント（代表）で連携する・応募した人�
   check('承認エラーは分かりやすい案内に置き換える', /まだ団員アプリとの連携を承認していません[\s\S]*このアカウントで連携を設定/.test(ctx.appSyncErrorMessage_(new Error('UrlFetchApp.fetch を呼び出す権限がありません。必要な権限: https://www.googleapis.com/auth/script.external_request'))), true);
 }
 
+{
+  const { env, app, ctx } = makeEnv(PEOPLE, { applicants: true });
+  ctx.appSyncRun();
+  check('申し込み数（辞退を除く実人数・団員を含む）をアプリに送る', fsDocs(env, 'stats').summary.applicationCount, 8);
+  setStatus(app, 1, '辞退');
+  ctx.appSyncRun();
+  check('辞退が増えると申し込み数も減る', fsDocs(env, 'stats').summary.applicationCount, 7);
+}
+
 console.log('\n============================');
 console.log('団員アプリ同期テスト：成功 ' + passed + '件 ／ 失敗 ' + failed + '件');
 process.exit(failed ? 1 : 0);

@@ -72,6 +72,15 @@ export function HomePage() {
 
       <div className="home-grid">
         <section className="card card--navy span-2" aria-labelledby="count-title">
+          {stats.data?.applicationCount != null && (
+            <div className="application-count" aria-label={`現在の申し込み数 ${stats.data.applicationCount}人`}>
+              <p className="card__eyebrow">現在の申し込み数</p>
+              <p className="application-count__value">
+                <span className="application-count__num">{stats.data.applicationCount}</span>
+                <span className="member-count__unit">人</span>
+              </p>
+            </div>
+          )}
           <p className="card__eyebrow" id="count-title">現在の団員数</p>
           <p className="member-count" aria-label={`現在の団員数 ${count}人、目標 ${target}人`}>
             <span className="member-count__num">{count}</span>

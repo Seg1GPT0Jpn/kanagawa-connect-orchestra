@@ -59,7 +59,7 @@ await env.withSecurityRulesDisabled(async ctx => {
   await member('m-c', 'しー', 'Fl', 'フルート', 'Fl', 'woodwind');
   await member('m-d', 'でぃー', 'Tuba', 'テューバ', 'Tuba', 'brass');
   await setDoc(doc(db, 'stats', 'summary'), {
-    memberCount: 4, targetMembers: 80, decisionMembers: 60, minimumMembers: 46, updatedAt: now,
+    applicationCount: 9, memberCount: 4, targetMembers: 80, decisionMembers: 60, minimumMembers: 46, updatedAt: now,
     byPart: [
       { part: 'Fl', label: 'フルート', count: 1, target: 4, min: 2 },
       { part: 'Tuba', label: 'テューバ', count: 1, target: 1, min: 1 },
@@ -143,6 +143,13 @@ try {
     await page.getByText('現在の団員数').waitFor();
     const count = await page.locator('.member-count').getAttribute('aria-label');
     check('ホームに団員数「4 / 80人」', count === '現在の団員数 4人、目標 80人', count);
+    check('団員数の上に申し込み数「9人」', (await page.locator('.application-count').getAttribute('aria-label')) === '現在の申し込み数 9人');
+    const order = await page.evaluate(() => {
+      const a = document.querySelector('.application-count');
+      const m = document.querySelector('.member-count');
+      return !!(a && m && (a.compareDocumentPosition(m) & Node.DOCUMENT_POSITION_FOLLOWING));
+    });
+    check('申し込み数は団員数より上', order);
     check('重要なお知らせが表示', await page.getByText('団員専用ページを公開しました').isVisible());
     check('次回練習の会場は「未定」', (await page.locator('#next-title').locator('..').innerText()).includes('未定'));
     check('自分のパート向け（弦楽器）のお知らせは表示', await page.getByText('弦楽器の皆さんへ').isVisible());

@@ -159,6 +159,7 @@ export function toConcert(id: string, d: DocumentData): Concert {
 
 export function useStats() {
   return useDocData<Stats>(['stats', 'summary'], (_id, d) => ({
+    applicationCount: typeof d.applicationCount === 'number' ? d.applicationCount : null,
     memberCount: d.memberCount ?? 0,
     pausedCount: d.pausedCount ?? 0,
     applicantCount: d.applicantCount ?? 0,

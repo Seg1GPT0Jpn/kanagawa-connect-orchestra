@@ -941,3 +941,23 @@ table.table {
 .join__member-link { text-align: center; margin-top: 2.5rem; }
 
 .auth-official { margin-top: 1.25rem; }
+
+/* 現在の申し込み数（団員数の上） */
+.application-count {
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(230, 215, 179, 0.3);
+}
+.application-count__value {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0;
+  font-family: var(--font-latin);
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.1;
+}
+.application-count__num {
+  font-size: 2.2rem;
+  color: var(--color-ivory);
+}
