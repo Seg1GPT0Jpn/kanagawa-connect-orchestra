@@ -37,6 +37,8 @@ export interface PartStat {
 }
 
 export interface Stats {
+  /** 申し込み数（辞退を除く。団員を含む）。古い同期では無い */
+  applicationCount: number | null;
   /** 団員数（在籍中＋活動休止中） */
   memberCount: number;
   pausedCount: number;
