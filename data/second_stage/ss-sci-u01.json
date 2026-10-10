@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "SS-SCI-U01-S1",
+  "title": "理科　論述・計算問題",
+  "subtitle": "試験対策｜物理の導出・化学の論述・生物の考察",
+  "track": "second_stage",
+  "stage": "high_school",
+  "subject": "science",
+  "grade": "HS3",
+  "unit_ids": [
+    "SS-SCI-U01"
+  ],
+  "time_limit_minutes": 90,
+  "instructions": [
+    "解答は、結論だけでなく、考え方の過程（論理・式・根拠）が採点者に伝わるように記述しなさい。",
+    "部分点は採点基準に示した観点ごとに与える。"
+  ],
+  "questions": [
+    {
+      "id": "SS-SCI-U01-S1-Q001",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "SS-SCI-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水平な地面から、初速度の大きさ $v_0$、水平と角 $\\theta$ をなす向きに小球を投げ上げた。重力加速度の大きさを $g$ として、小球が達する最高点の高さ $H$ を導きなさい。空気抵抗は無視する。",
+      "answer": {
+        "value": "鉛直方向の初速度は $v_0\\sin\\theta$。最高点では鉛直方向の速度が 0 になるので、$0^2-(v_0\\sin\\theta)^2=-2gH$ より $H=\\dfrac{v_0^2\\sin^2\\theta}{2g}$。"
+      },
+      "explanation": "運動を水平・鉛直に分けて考える。鉛直方向は加速度 $-g$ の等加速度運動。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "運動を水平・鉛直に分解している",
+            "points": 8
+          },
+          {
+            "criterion": "最高点で鉛直方向の速度が 0 になることを用いている",
+            "points": 8
+          },
+          {
+            "criterion": "正しい式を導いている",
+            "points": 9
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "solve(0-(v*sin(theta))**2+2*a*h, h)",
+        "expected": "[v**2*sin(theta)**2/(2*a)]",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-SCI-U01-S1-Q002",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "SS-SCI-U01",
+      "skills": [
+        "knowledge",
+        "essay"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "塩化ナトリウムの固体は電気を通さないが、水溶液にすると電気を通す。その理由を、粒子の状態にふれて説明しなさい（百字以内）。",
+      "answer": {
+        "value": "固体の塩化ナトリウムでは、ナトリウムイオンと塩化物イオンが規則正しく並んで固定されていて動けない。水溶液中では電離したイオンが自由に移動できるため、電荷を運んで電流が流れる。"
+      },
+      "explanation": "電気伝導には電荷をもつ粒子が移動できることが必要。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "固体ではイオンが固定されていることを述べている",
+            "points": 10
+          },
+          {
+            "criterion": "水溶液ではイオンが自由に動けることを述べている",
+            "points": 10
+          },
+          {
+            "criterion": "イオンの移動が電荷を運ぶことにふれている",
+            "points": 5
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "char_grid": 100
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-SCI-U01-S1-Q003",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "SS-SCI-U01",
+      "skills": [
+        "experiment",
+        "essay",
+        "data_interpretation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある酵素の反応速度を温度を変えて測定したところ、表の結果を得た。結果を説明し、40 ℃ をこえると反応速度が低下する理由を述べなさい（百二十字以内）。",
+      "table": {
+        "rows": [
+          [
+            "20",
+            "0.30"
+          ],
+          [
+            "30",
+            "0.55"
+          ],
+          [
+            "40",
+            "0.80"
+          ],
+          [
+            "50",
+            "0.40"
+          ],
+          [
+            "60",
+            "0.05"
+          ]
+        ],
+        "header": [
+          "温度（℃）",
+          "反応速度（相対値）"
+        ]
+      },
+      "answer": {
+        "value": "反応速度は 40 ℃ まで温度とともに上昇し、40 ℃ で最大となり、それ以上では低下した。酵素の主成分はタンパク質で、高温では立体構造が変化（変性）し、基質と結合する活性部位がはたらかなくなるため、反応速度が低下する。"
+      },
+      "explanation": "最適温度の存在と、タンパク質の熱変性による失活を説明する。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "表の傾向（最適温度）を正しく読み取っている",
+            "points": 8
+          },
+          {
+            "criterion": "酵素がタンパク質であることにふれている",
+            "points": 7
+          },
+          {
+            "criterion": "熱変性によって活性を失うことを説明している",
+            "points": 10
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "char_grid": 120
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-SCI-U01-S1-Q004",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "SS-SCI-U01",
+      "skills": [
+        "knowledge",
+        "essay"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "日本列島で地震や火山活動が多い理由を、プレートの動きにふれて説明しなさい（百二十字以内）。",
+      "answer": {
+        "value": "日本列島は、太平洋プレートやフィリピン海プレートなどの海洋プレートが大陸側のプレートの下に沈みこむ境界付近にある。沈みこみにともなってひずみがたまって地震が起こり、また沈みこんだプレートの上方でマグマが生じるため、火山活動も活発になる。"
+      },
+      "explanation": "沈みこみ帯であること、地震（ひずみの解放）と火山（マグマの発生）の両方のしくみを説明する。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "プレートの沈みこみ境界にあることを述べている",
+            "points": 10
+          },
+          {
+            "criterion": "地震が起こるしくみを説明している",
+            "points": 8
+          },
+          {
+            "criterion": "火山活動が起こるしくみを説明している",
+            "points": 7
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "char_grid": 120
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 100,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ5）",
+      "changes": "初版作成（4問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "f563bc1c08f6350ae70661e65a02843886ed69f11e37ceca8ba201dcc2dd95df"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:29+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "2b074dbbb863a808e4508dafce065da54dc768ef01b60eadfaa64cc45fe35642"
+  }
+}

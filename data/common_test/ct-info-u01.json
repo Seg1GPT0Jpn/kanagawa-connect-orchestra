@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "CT-INFO-U01-S1",
+  "title": "情報Ⅰ　プログラミングとデータの活用",
+  "subtitle": "試験対策｜アルゴリズム・2進数・データの分析・情報セキュリティ",
+  "track": "common_test",
+  "stage": "high_school",
+  "subject": "information",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-INFO-U01"
+  ],
+  "time_limit_minutes": 20,
+  "instructions": [
+    "大学入学共通テストの出題形式を参考にしたオリジナル問題です。",
+    "選択肢は番号で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "CT-INFO-U01-S1-Q001",
+      "grade": "HS3",
+      "subject": "information",
+      "unit_id": "CT-INFO-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "2進数 $1101_{(2)}$ を10進数で表しなさい。",
+      "answer": {
+        "value": "13"
+      },
+      "explanation": "$8+4+0+1=13$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "8+4+1",
+        "expected": "13"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-INFO-U01-S1-Q002",
+      "grade": "HS3",
+      "subject": "information",
+      "unit_id": "CT-INFO-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "1 バイトで表すことができる異なる値の個数を求めなさい。",
+      "answer": {
+        "value": "256",
+        "unit": "通り"
+      },
+      "explanation": "1 バイト＝8 ビット。$2^8=256$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2**8",
+        "expected": "256"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-INFO-U01-S1-Q003",
+      "grade": "HS3",
+      "subject": "information",
+      "unit_id": "CT-INFO-U01",
+      "skills": [
+        "thinking",
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "次のプログラムを実行したとき、表示される値を選びなさい。\n（1）goukei = 0\n（2）i を 1 から 5 まで 1 ずつ増やしながら繰り返す:\n（3）　　goukei = goukei + i × 2\n（4）表示する(goukei)",
+      "choices": [
+        {
+          "label": "1",
+          "text": "25"
+        },
+        {
+          "label": "2",
+          "text": "15"
+        },
+        {
+          "label": "3",
+          "text": "30"
+        },
+        {
+          "label": "4",
+          "text": "10"
+        }
+      ],
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$2(1+2+3+4+5)=30$。繰り返しの各回で $i\\times2$ を加える。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(2*k, (k, 1, 5))",
+        "expected": "30"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-INFO-U01-S1-Q004",
+      "grade": "HS3",
+      "subject": "information",
+      "unit_id": "CT-INFO-U01",
+      "skills": [
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "配列 Data = [5, 3, 8, 1, 7] の最大値を求めるアルゴリズムとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "最初の要素を暫定の最大値とし、残りの要素と順に比べて大きければ置きかえる"
+        },
+        {
+          "label": "2",
+          "text": "最初と最後の要素だけを比べる"
+        },
+        {
+          "label": "3",
+          "text": "最も小さい要素を探す"
+        },
+        {
+          "label": "4",
+          "text": "要素の合計を要素数で割る"
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "線形探索による最大値の求め方。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-INFO-U01-S1-Q005",
+      "grade": "HS3",
+      "subject": "information",
+      "unit_id": "CT-INFO-U01",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "公開鍵暗号方式の説明として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "暗号化と復号に同じ鍵を用いる"
+        },
+        {
+          "label": "2",
+          "text": "暗号化に公開鍵、復号に秘密鍵を用いるので、鍵を安全に配送する問題を解決できる"
+        },
+        {
+          "label": "3",
+          "text": "鍵を使わずに暗号化する"
+        },
+        {
+          "label": "4",
+          "text": "復号に公開鍵を用いる"
+        }
+      ],
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "共通鍵暗号方式は暗号化と復号に同じ鍵を用いる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-INFO-U01-S1-Q006",
+      "grade": "HS3",
+      "subject": "information",
+      "unit_id": "CT-INFO-U01",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "表のデータについて、勉強時間とテストの得点の関係を調べるのに最も適したグラフを選びなさい。",
+      "table": {
+        "rows": [
+          [
+            "A",
+            30,
+            55
+          ],
+          [
+            "B",
+            60,
+            70
+          ],
+          [
+            "C",
+            90,
+            82
+          ],
+          [
+            "D",
+            120,
+            88
+          ]
+        ],
+        "header": [
+          "生徒",
+          "勉強時間（分）",
+          "得点"
+        ]
+      },
+      "choices": [
+        {
+          "label": "1",
+          "text": "帯グラフ"
+        },
+        {
+          "label": "2",
+          "text": "散布図"
+        },
+        {
+          "label": "3",
+          "text": "円グラフ"
+        },
+        {
+          "label": "4",
+          "text": "レーダーチャート"
+        }
+      ],
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "2つの量の関係（相関）を見るには散布図が適している。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "87620fefd7238d785bb35587b056e60562bf1b888138f7674d771909f6994a96"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:20+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "939881d98a0a4f7f0e06c856222057bce3a3170a0206eda49e95478fd7990edc"
+  }
+}

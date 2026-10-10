@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "CT-MATH1A-U02-S1",
+  "title": "数学Ⅰ・A　データの分析・場合の数と確率・図形の性質",
+  "subtitle": "試験対策｜箱ひげ図と相関・条件付き確率・図形の性質",
+  "track": "common_test",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-MATH1A-U02"
+  ],
+  "time_limit_minutes": 20,
+  "instructions": [
+    "大学入学共通テストの出題形式を参考にしたオリジナル問題です。",
+    "選択肢は番号で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "CT-MATH1A-U02-S1-Q001",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U02",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "2つのクラスの数学の得点について、A 組は平均 60 点・標準偏差 10 点、B 組は平均 60 点・標準偏差 20 点であった。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "B 組のほうが得点の散らばりが大きい"
+        },
+        {
+          "label": "2",
+          "text": "B 組のほうが平均点が高い"
+        },
+        {
+          "label": "3",
+          "text": "両クラスの得点の分布は同じである"
+        },
+        {
+          "label": "4",
+          "text": "A 組のほうが得点の散らばりが大きい"
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "標準偏差が大きいほど散らばりが大きい。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U02-S1-Q002",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "あるデータの各値から 50 をひいて 2 で割った値の平均が 3、分散が 4 であった。もとのデータの平均を求めなさい。",
+      "answer": {
+        "value": "56"
+      },
+      "explanation": "$u=\\dfrac{x-50}{2}$ より $x=2u+50$。平均は $2\\cdot3+50=56$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*3+50",
+        "expected": "56"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U02-S1-Q003",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "前の問題で、もとのデータの分散を求めなさい。",
+      "answer": {
+        "value": "16"
+      },
+      "explanation": "分散は $2^2\\cdot4=16$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2**2*4",
+        "expected": "16"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U02-S1-Q004",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "赤玉 3 個と白玉 2 個が入った袋から1個取り出し、色を確認してから袋に戻さずに、もう1個取り出す。2個目が赤玉である確率を求めなさい。",
+      "answer": {
+        "value": "3/5",
+        "display": "$\\dfrac{3}{5}$"
+      },
+      "explanation": "1個目赤→2個目赤：$\\dfrac{3}{5}\\cdot\\dfrac{2}{4}$、1個目白→2個目赤：$\\dfrac{2}{5}\\cdot\\dfrac{3}{4}$。和は $\\dfrac{6+6}{20}=\\dfrac{3}{5}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(3,5)*Rational(2,4)+Rational(2,5)*Rational(3,4)",
+        "expected": "3/5"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U02-S1-Q005",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "前の問題で、2個目が赤玉であったとき、1個目も赤玉であった条件付き確率を求めなさい。",
+      "answer": {
+        "value": "1/2",
+        "display": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\dfrac{\\frac{3}{5}\\cdot\\frac{2}{4}}{\\frac{3}{5}}=\\dfrac{3/10}{3/5}=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(Rational(3,5)*Rational(2,4))/Rational(3,5)",
+        "expected": "1/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U02-S1-Q006",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U02",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "散布図で、2つの変量の相関係数が $-0.85$ であった。この散布図について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "点がばらばらに散らばっている"
+        },
+        {
+          "label": "2",
+          "text": "点が右下がりの直線に沿って分布している（強い負の相関）"
+        },
+        {
+          "label": "3",
+          "text": "点が右上がりの直線に沿って分布している"
+        },
+        {
+          "label": "4",
+          "text": "点が水平な直線上に並んでいる"
+        }
+      ],
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "相関係数が $-1$ に近いほど強い負の相関（右下がり）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "5e39c0c231bd25b36d20f0857c678fa4aada8a1016570a74708b4f8aea219b12"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:20+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "42bbaf89e390e47581b72f6f094f7aacab3ac0473d284719055a6f62efb331e6"
+  }
+}

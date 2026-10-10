@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "CT-MATH1A-U01-S1",
+  "title": "数学Ⅰ・A　数と式・二次関数・図形と計量",
+  "subtitle": "試験対策｜日常の事象の数学化・二次関数の最大・最小・三角比の活用",
+  "track": "common_test",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-MATH1A-U01"
+  ],
+  "time_limit_minutes": 20,
+  "instructions": [
+    "大学入学共通テストの出題形式を参考にしたオリジナル問題です。",
+    "選択肢は番号で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "CT-MATH1A-U01-S1-Q001",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある商品の価格を $x$ 円にすると、1日あたり $(600-2x)$ 個売れることがわかっている（$0<x<300$）。1日の売上金額 $y$ 円が最大になるときの価格 $x$ を求めなさい。",
+      "answer": {
+        "value": "150",
+        "unit": "円"
+      },
+      "explanation": "$y=x(600-2x)=-2x^2+600x=-2(x-150)^2+45000$。$x=150$ のとき最大。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(diff(x*(600-2*x), x), x)[0]",
+        "expected": "150"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U01-S1-Q002",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "前の問題で、売上金額の最大値を求めなさい。",
+      "answer": {
+        "value": "45000",
+        "unit": "円"
+      },
+      "explanation": "$y=-2(x-150)^2+45000$ より最大値は 45000 円。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "150*(600-2*150)",
+        "expected": "45000"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U01-S1-Q003",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "仕入れ値が1個あたり 100 円のとき、1日の利益 $z=(x-100)(600-2x)$ が最大になる価格 $x$ を求めなさい。",
+      "answer": {
+        "value": "200",
+        "unit": "円"
+      },
+      "explanation": "$z=-2x^2+800x-60000=-2(x-200)^2+20000$。$x=200$ で最大。売上最大の価格（150 円）と利益最大の価格は異なることに注意。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(diff((x-100)*(600-2*x), x), x)[0]",
+        "expected": "200"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U01-S1-Q004",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "高さ 10 m の位置にある展望台から、水平方向に 30 m 離れた地点にある木の根元を見下ろした俯角を $\\theta$ とするとき、$\\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "1/3",
+        "display": "$\\dfrac{1}{3}$"
+      },
+      "explanation": "$\\tan\\theta=\\dfrac{10}{30}=\\dfrac{1}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(10,30)",
+        "expected": "1/3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U01-S1-Q005",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $\\mathrm{AB}=5,\\ \\mathrm{AC}=8,\\ A=60^\\circ$ のとき、BC の長さを求めなさい。",
+      "answer": {
+        "value": "$7$",
+        "accepted": [
+          "7"
+        ]
+      },
+      "explanation": "余弦定理 $\\mathrm{BC}^2=25+64-2\\cdot5\\cdot8\\cdot\\dfrac{1}{2}=49$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(5**2+8**2-2*5*8*cos(deg(60)))",
+        "expected": "7"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH1A-U01-S1-Q006",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH1A-U01",
+      "skills": [
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "2次関数 $y=ax^2+bx+c$ のグラフが下に凸で、頂点が第4象限にあるとき、正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "$a<0$ で、$b^2-4ac>0$"
+        },
+        {
+          "label": "2",
+          "text": "$a>0$ で、$b^2-4ac<0$"
+        },
+        {
+          "label": "3",
+          "text": "$a>0$ で、$b^2-4ac>0$"
+        },
+        {
+          "label": "4",
+          "text": "$a<0$ で、$b^2-4ac<0$"
+        }
+      ],
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "下に凸なので $a>0$。頂点の $y$ 座標が負なので、グラフは $x$ 軸と2点で交わり、判別式 $b^2-4ac>0$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "864dff106ba2781f1fdea07866165d5ef83d53435752898af36d862c276eef26"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:20+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "20bf8c6f54f9f10561caee38ce51f64587a9e431eb98319595dac61960c10fc1"
+  }
+}

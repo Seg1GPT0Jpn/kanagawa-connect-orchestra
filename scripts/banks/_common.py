@@ -152,7 +152,7 @@ def _fmt(v):
 
 
 def plane(xr=(-5, 5), yr=(-5, 5), unit=18, lines=(), curves=(), points=(), segments=(), grid=True,
-          ticks=True, polygons=(), labels=()):
+          ticks=True, polygons=(), labels=(), xl="x", yl="y"):
     """座標平面。lines=[(傾き, 切片, ラベル)], curves=[(関数, ラベル)], points=[(x, y, ラベル)],
     segments=[((x1,y1),(x2,y2))], polygons=[[(x,y),...]] (薄く塗る), labels=[(x, y, 文字)]。"""
     x0, x1 = xr
@@ -172,12 +172,12 @@ def plane(xr=(-5, 5), yr=(-5, 5), unit=18, lines=(), curves=(), points=(), segme
         pts = " ".join(f"{_fmt(X(x))},{_fmt(Y(y))}" for x, y in poly)
         out.append(f'<polygon points="{pts}" fill="#cfdcec" fill-opacity="0.6" stroke="#333" stroke-width="1"/>')
     # 軸
-    if x0 <= 0 <= x1 or True:
+    if True:  # 軸（原点が範囲外でも描く）
         out.append(f'<line x1="{_fmt(X(x0))}" y1="{_fmt(Y(0))}" x2="{_fmt(X(x1) + 6)}" y2="{_fmt(Y(0))}" stroke="#000" stroke-width="1" marker-end="url(#ar)"/>')
         out.append(f'<line x1="{_fmt(X(0))}" y1="{_fmt(Y(y0))}" x2="{_fmt(X(0))}" y2="{_fmt(Y(y1) - 6)}" stroke="#000" stroke-width="1" marker-end="url(#ar)"/>')
     out.insert(1, '<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#000"/></marker></defs>')
-    out.append(f'<text x="{_fmt(X(x1) + 2)}" y="{_fmt(Y(0) + 13)}" font-style="italic">x</text>')
-    out.append(f'<text x="{_fmt(X(0) + 5)}" y="{_fmt(Y(y1) - 2)}" font-style="italic">y</text>')
+    out.append(f'<text x="{_fmt(X(x1) + 2)}" y="{_fmt(Y(0) + 13)}" font-style="italic">{xl}</text>')
+    out.append(f'<text x="{_fmt(X(0) + 5)}" y="{_fmt(Y(y1) - 2)}" font-style="italic">{yl}</text>')
     out.append(f'<text x="{_fmt(X(0) - 11)}" y="{_fmt(Y(0) + 12)}">O</text>')
     if ticks:
         for gx in range(math.ceil(x0), math.floor(x1) + 1):
@@ -214,8 +214,7 @@ def plane(xr=(-5, 5), yr=(-5, 5), unit=18, lines=(), curves=(), points=(), segme
                 d.append(("M" if not d or d[-1][0] == "break" else "L", X(x), Y(y)))
             else:
                 d.append(("break", 0, 0))
-        path = " ".join(f"{c}{_fmt(px)},{_fmt(py)}" for c, px, py in d if c != "break")
-        # break 後は M にする
+        # 範囲外で途切れる部分ごとに別の線分にする
         segs, cur = [], []
         for c, px, py in d:
             if c == "break":

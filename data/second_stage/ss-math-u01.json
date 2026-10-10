@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "SS-MATH-U01-S1",
+  "title": "数学　証明問題",
+  "subtitle": "試験対策｜整数の証明・数学的帰納法・不等式の証明・背理法",
+  "track": "second_stage",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "SS-MATH-U01"
+  ],
+  "time_limit_minutes": 100,
+  "instructions": [
+    "解答は、結論だけでなく、考え方の過程（論理・式・根拠）が採点者に伝わるように記述しなさい。",
+    "部分点は採点基準に示した観点ごとに与える。"
+  ],
+  "questions": [
+    {
+      "id": "SS-MATH-U01-S1-Q001",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\sqrt{2}$ が無理数であることを証明しなさい。",
+      "answer": {
+        "value": "$\\sqrt{2}$ が有理数であると仮定すると、互いに素な自然数 $p,\\ q$ を用いて $\\sqrt{2}=\\dfrac{p}{q}$ と表せる。両辺を2乗して $p^2=2q^2$。右辺は偶数なので $p^2$ は偶数で、$p$ も偶数（奇数の2乗は奇数）。$p=2r$ とおくと $4r^2=2q^2$、$q^2=2r^2$ より $q$ も偶数。これは $p,\\ q$ が互いに素であることに矛盾する。よって $\\sqrt{2}$ は無理数である。"
+      },
+      "explanation": "背理法の典型。「互いに素」と仮定しておくことで矛盾を導く。「$p^2$ が偶数ならば $p$ は偶数」の根拠（対偶）も示すとよい。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "有理数と仮定し、互いに素な $p,\\ q$ で表している",
+            "points": 5
+          },
+          {
+            "criterion": "$p$ が偶数であることを根拠とともに示している",
+            "points": 8
+          },
+          {
+            "criterion": "$q$ も偶数であることを示している",
+            "points": 7
+          },
+          {
+            "criterion": "矛盾を指摘して結論を述べている",
+            "points": 5
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-S1-Q002",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "すべての自然数 $n$ について、$7^n-1$ は 6 の倍数であることを数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "[1] $n=1$ のとき $7-1=6$ で成り立つ。[2] $n=k$ のとき $7^k-1=6m$（$m$ は整数）と仮定する。$n=k+1$ のとき $7^{k+1}-1=7\\cdot7^k-1=7(6m+1)-1=42m+6=6(7m+1)$ となり、6 の倍数である。[1][2] より、すべての自然数 $n$ について成り立つ。"
+      },
+      "explanation": "仮定 $7^k=6m+1$ を $7^{k+1}$ の式に代入する。二項定理 $7^n=(6+1)^n$ を用いる別解もある。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$n=1$ のときを確認している",
+            "points": 5
+          },
+          {
+            "criterion": "$n=k$ の仮定を式で正しく表している",
+            "points": 5
+          },
+          {
+            "criterion": "$n=k+1$ のときに 6 の倍数であることを導いている",
+            "points": 10
+          },
+          {
+            "criterion": "結論を述べている",
+            "points": 5
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(7*(6*m+1)-1-6*(7*m+1))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-S1-Q003",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "実数 $a,\\ b,\\ c$ について、不等式 $a^2+b^2+c^2\\geqq ab+bc+ca$ を証明し、等号が成り立つ条件を求めなさい。",
+      "answer": {
+        "value": "（左辺）－（右辺）$=\\dfrac{1}{2}\\{(a-b)^2+(b-c)^2+(c-a)^2\\}\\geqq0$。よって不等式は成り立つ。等号は $a-b=b-c=c-a=0$、すなわち $a=b=c$ のとき。"
+      },
+      "explanation": "差を2倍すると平方の和に変形できる。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "差をとって平方の和に正しく変形している",
+            "points": 15
+          },
+          {
+            "criterion": "0 以上であることを述べている",
+            "points": 5
+          },
+          {
+            "criterion": "等号成立条件を正しく求めている",
+            "points": 5
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand(2*(a**2+b**2+c**2-a*b-b*c-c*a)-((a-b)**2+(b-c)**2+(c-a)**2))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-S1-Q004",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$n$ が奇数のとき、$n^2-1$ は 8 の倍数であることを証明しなさい。",
+      "answer": {
+        "value": "$n$ は奇数なので $n=2k+1$（$k$ は整数）と表せる。$n^2-1=(2k+1)^2-1=4k^2+4k=4k(k+1)$。$k(k+1)$ は連続する2つの整数の積なので偶数であり、$k(k+1)=2l$（$l$ は整数）とおける。よって $n^2-1=8l$ となり、8 の倍数である。"
+      },
+      "explanation": "連続する2整数の積が偶数であることがポイント。$n$ を 8 で割った余りで場合分けしてもよい。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "奇数を文字で表し $4k(k+1)$ と変形している",
+            "points": 10
+          },
+          {
+            "criterion": "$k(k+1)$ が偶数であることを根拠とともに示している",
+            "points": 10
+          },
+          {
+            "criterion": "8 の倍数と結論づけている",
+            "points": 5
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((2*k+1)**2-1-4*k*(k+1))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 100,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ5）",
+      "changes": "初版作成（4問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b89ee11bf19779fcf23e357b183da849612400cb8cba7aa399a4a25b57d820dc"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:29+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "43dc684d043aa30d8797531843d689b0089abf8f6ca7d83c08fbaeb7b295e4e6"
+  }
+}

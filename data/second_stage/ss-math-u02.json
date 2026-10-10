@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "SS-MATH-U02-S1",
+  "title": "数学　記述式計算問題",
+  "subtitle": "試験対策｜微積分・確率・ベクトル",
+  "track": "second_stage",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "SS-MATH-U02"
+  ],
+  "time_limit_minutes": 100,
+  "instructions": [
+    "解答は、結論だけでなく、考え方の過程（論理・式・根拠）が採点者に伝わるように記述しなさい。",
+    "部分点は採点基準に示した観点ごとに与える。"
+  ],
+  "questions": [
+    {
+      "id": "SS-MATH-U02-S1-Q001",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $C:\\ y=x^3-3x$ 上の点 $(1,\\,-2)$ における接線を $\\ell$ とする。$C$ と $\\ell$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$y'=3x^2-3$ より $x=1$ での傾きは 0。$\\ell:\\ y=-2$。$x^3-3x+2=(x-1)^2(x+2)=0$ より交点の $x$ 座標は $-2,\\ 1$。$-2\\leqq x\\leqq1$ で $x^3-3x\\geqq-2$ なので、面積は $\\displaystyle\\int_{-2}^{1}(x^3-3x+2)\\,dx=\\left[\\dfrac{x^4}{4}-\\dfrac{3x^2}{2}+2x\\right]_{-2}^{1}=\\dfrac{3}{4}-(-6)=\\dfrac{27}{4}$。"
+      },
+      "explanation": "接線と3次関数の交点は、接点を重解にもつ。$\\dfrac{1}{12}(\\beta-\\alpha)^4$ の公式で検算できる（$\\dfrac{3^4}{12}=\\dfrac{27}{4}$）。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接線の方程式を求めている",
+            "points": 5
+          },
+          {
+            "criterion": "交点の $x$ 座標を求めている（因数分解）",
+            "points": 6
+          },
+          {
+            "criterion": "上下関係を確認し、定積分の式を立てている",
+            "points": 7
+          },
+          {
+            "criterion": "正しい値 $\\dfrac{27}{4}$ を得ている",
+            "points": 7
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "integrate(x**3-3*x+2, (x, -2, 1))",
+        "expected": "27/4",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U02-S1-Q002",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを3回投げるとき、出た目の最大値がちょうど 4 である確率を求めなさい。",
+      "answer": {
+        "value": "最大値が 4 以下である確率は $\\left(\\dfrac{4}{6}\\right)^3=\\dfrac{64}{216}$、3 以下である確率は $\\left(\\dfrac{3}{6}\\right)^3=\\dfrac{27}{216}$。最大値がちょうど 4 である確率は、その差で $\\dfrac{37}{216}$。"
+      },
+      "explanation": "「最大値がちょうど $k$」は「最大値が $k$ 以下」から「最大値が $k-1$ 以下」を除いて求める。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「4 以下」の確率を求めている",
+            "points": 8
+          },
+          {
+            "criterion": "「3 以下」の確率を求めている",
+            "points": 7
+          },
+          {
+            "criterion": "差をとる考え方を説明し、正しい値を得ている",
+            "points": 10
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(4,6)**3-Rational(3,6)**3",
+        "expected": "37/216",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U02-S1-Q003",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{OAB}$ で $\\overrightarrow{\\mathrm{OA}}=\\vec{a},\\ \\overrightarrow{\\mathrm{OB}}=\\vec{b}$ とする。辺 AB を $2:1$ に内分する点を P、辺 OA の中点を Q とし、線分 OP と BQ の交点を R とする。$\\overrightarrow{\\mathrm{OR}}$ を $\\vec{a},\\ \\vec{b}$ で表しなさい。",
+      "answer": {
+        "value": "$\\overrightarrow{\\mathrm{OP}}=\\dfrac{\\vec{a}+2\\vec{b}}{3}$。R は OP 上なので $\\overrightarrow{\\mathrm{OR}}=t\\cdot\\dfrac{\\vec{a}+2\\vec{b}}{3}$。R は BQ 上なので $\\overrightarrow{\\mathrm{OR}}=(1-s)\\vec{b}+\\dfrac{s}{2}\\vec{a}$。$\\vec{a},\\ \\vec{b}$ は1次独立なので係数を比べて $\\dfrac{t}{3}=\\dfrac{s}{2}$、$\\dfrac{2t}{3}=1-s$。これを解いて $t=\\dfrac{3}{4},\\ s=\\dfrac{1}{2}$。よって $\\overrightarrow{\\mathrm{OR}}=\\dfrac{1}{4}\\vec{a}+\\dfrac{1}{2}\\vec{b}$。"
+      },
+      "explanation": "2通りに表して係数比較する。その際「$\\vec{a},\\ \\vec{b}$ が1次独立（$\\vec{0}$ でなく平行でない）」ことを明記する。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\overrightarrow{\\mathrm{OP}}$ を正しく表している",
+            "points": 5
+          },
+          {
+            "criterion": "R を2通りに表している",
+            "points": 8
+          },
+          {
+            "criterion": "1次独立に言及して係数比較している",
+            "points": 5
+          },
+          {
+            "criterion": "正しい結果を得ている",
+            "points": 7
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve([t/3-s/2, 2*t/3-(1-s)], [t, s])",
+        "expected": "{t: 3/4, s: 1/2}",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U02-S1-Q004",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$S_n=\\displaystyle\\sum_{k=1}^{n}k\\cdot2^{k-1}$ を求めなさい。",
+      "answer": {
+        "value": "$S_n=1+2\\cdot2+3\\cdot2^2+\\cdots+n\\cdot2^{n-1}$、$2S_n=1\\cdot2+2\\cdot2^2+\\cdots+n\\cdot2^n$。辺々ひくと $-S_n=1+2+2^2+\\cdots+2^{n-1}-n\\cdot2^n=2^n-1-n\\cdot2^n$。よって $S_n=(n-1)2^n+1$。"
+      },
+      "explanation": "（等差）×（等比）型の和は、公比をかけてずらしてひく。",
+      "scoring": {
+        "points": 25,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$2S_n$ を作ってずらしてひく方針を示している",
+            "points": 8
+          },
+          {
+            "criterion": "等比数列の和を正しく計算している",
+            "points": 9
+          },
+          {
+            "criterion": "正しい結果を得ている",
+            "points": 8
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "simplify(summation(k*2**(k-1), (k, 1, n))-((n-1)*2**n+1))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 100,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ5）",
+      "changes": "初版作成（4問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "d7910f9785a374f17d2390f490258c136466834aa066204111d47ecb172efa24"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:29+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "7425eba94dedd0adfd2d65fc86d2a0dfc63e6e59313c83f47d93b39429d777f1"
+  }
+}

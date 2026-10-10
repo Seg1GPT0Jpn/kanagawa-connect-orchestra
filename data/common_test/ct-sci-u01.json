@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "CT-SCI-U01-S1",
+  "title": "理科基礎　物理基礎・化学基礎",
+  "subtitle": "試験対策｜グラフの読み取り・量的関係・実験考察",
+  "track": "common_test",
+  "stage": "high_school",
+  "subject": "science",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-SCI-U01"
+  ],
+  "time_limit_minutes": 30,
+  "instructions": [
+    "大学入学共通テストの出題形式を参考にしたオリジナル問題です。",
+    "選択肢は番号で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "CT-SCI-U01-S1-Q001",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "CT-SCI-U01",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "図は、直線上を運動する台車の速度 $v$ と時刻 $t$ の関係である。0〜4 s で台車が進んだ距離を選びなさい。",
+      "figure": {
+        "alt": "v-tグラフ：原点から(4,4)まで直線的に増加",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"114\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"34\" y1=\"114\" x2=\"34\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"54\" y1=\"114\" x2=\"54\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"114\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"94\" y1=\"114\" x2=\"94\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"114\" y1=\"114\" x2=\"114\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"114\" x2=\"114\" y2=\"114\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"94\" x2=\"114\" y2=\"94\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"114\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"54\" x2=\"114\" y2=\"54\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"34\" x2=\"114\" y2=\"34\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"114\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"114\" x2=\"120\" y2=\"114\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"114\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"116\" y=\"127\" font-style=\"italic\">t</text><text x=\"19\" y=\"12\" font-style=\"italic\">v</text><text x=\"3\" y=\"126\">O</text><text x=\"31\" y=\"126\" font-size=\"8\" fill=\"#555\">1</text><text x=\"51\" y=\"126\" font-size=\"8\" fill=\"#555\">2</text><text x=\"71\" y=\"126\" font-size=\"8\" fill=\"#555\">3</text><text x=\"91\" y=\"126\" font-size=\"8\" fill=\"#555\">4</text><text x=\"111\" y=\"126\" font-size=\"8\" fill=\"#555\">5</text><text x=\"1\" y=\"97\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"57\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"37\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">5</text><line x1=\"14\" y1=\"114\" x2=\"94\" y2=\"34\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"94\" y1=\"114\" x2=\"94\" y2=\"34\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"94\" cy=\"34\" r=\"2.3\" fill=\"#000\"/></svg>",
+        "caption": "横軸：時刻 t（s）、縦軸：速度 v（m/s）"
+      },
+      "choices": [
+        {
+          "label": "1",
+          "text": "8 m"
+        },
+        {
+          "label": "2",
+          "text": "4 m"
+        },
+        {
+          "label": "3",
+          "text": "2 m"
+        },
+        {
+          "label": "4",
+          "text": "16 m"
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "$v$-$t$ グラフの面積が移動距離。0〜4 s で速度が 0 から 4 m/s に一様に増えているので $\\dfrac{1}{2}\\times4\\times4=8$（m）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*4*4",
+        "expected": "8"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-SCI-U01-S1-Q002",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "CT-SCI-U01",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "前の問題の台車の加速度の大きさを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "16 m/s²"
+        },
+        {
+          "label": "2",
+          "text": "4 m/s²"
+        },
+        {
+          "label": "3",
+          "text": "0.25 m/s²"
+        },
+        {
+          "label": "4",
+          "text": "1 m/s²"
+        }
+      ],
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$v$-$t$ グラフの傾き $\\dfrac{4}{4}=1$（m/s²）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4/4",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-SCI-U01-S1-Q003",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "CT-SCI-U01",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "表は、ある金属の質量と、それと結びついた酸素の質量の関係を測定した結果である。この金属 2.4 g と結びつく酸素の質量を選びなさい。",
+      "table": {
+        "rows": [
+          [
+            "0.6",
+            "0.4"
+          ],
+          [
+            "1.2",
+            "0.8"
+          ],
+          [
+            "1.8",
+            "1.2"
+          ]
+        ],
+        "header": [
+          "金属の質量（g）",
+          "結びついた酸素の質量（g）"
+        ]
+      },
+      "choices": [
+        {
+          "label": "1",
+          "text": "0.8 g"
+        },
+        {
+          "label": "2",
+          "text": "3.2 g"
+        },
+        {
+          "label": "3",
+          "text": "1.6 g"
+        },
+        {
+          "label": "4",
+          "text": "2.4 g"
+        }
+      ],
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "表より金属と酸素の質量比は 3：2。$2.4\\times\\dfrac{2}{3}=1.6$（g）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2.4*2/3",
+        "expected": "1.6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-SCI-U01-S1-Q004",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "CT-SCI-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "0.10 mol/L の酢酸水溶液の pH として最も適切なものを選びなさい。ただし、酢酸の電離度を 0.010 とする。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "pH 1"
+        },
+        {
+          "label": "2",
+          "text": "pH 2"
+        },
+        {
+          "label": "3",
+          "text": "pH 7"
+        },
+        {
+          "label": "4",
+          "text": "pH 3"
+        }
+      ],
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$[\\mathrm{H^+}]=0.10\\times0.010=1.0\\times10^{-3}$ mol/L なので pH＝3。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "-log(Rational(10,100)*Rational(1,100), 10)",
+        "expected": "3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-SCI-U01-S1-Q005",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "CT-SCI-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "ばね定数 50 N/m のばねを 0.20 m 伸ばしたときの弾性エネルギーを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "1.0 J"
+        },
+        {
+          "label": "2",
+          "text": "0.5 J"
+        },
+        {
+          "label": "3",
+          "text": "10 J"
+        },
+        {
+          "label": "4",
+          "text": "5.0 J"
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "$\\dfrac{1}{2}kx^2=\\dfrac{1}{2}\\times50\\times0.20^2=1.0$（J）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*50*Rational(2,10)**2",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-SCI-U01-S1-Q006",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "CT-SCI-U01",
+      "skills": [
+        "experiment",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "実験結果から結論を導くときの考え方として最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "予想と違う結果は記録しない"
+        },
+        {
+          "label": "2",
+          "text": "1回の実験結果だけで結論を出す"
+        },
+        {
+          "label": "3",
+          "text": "複数の条件を同時に変えて比べる"
+        },
+        {
+          "label": "4",
+          "text": "条件を1つだけ変えた対照実験を行い、結果の違いがその条件によるものかを確かめる"
+        }
+      ],
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "科学的な探究では、調べたい条件以外をそろえた対照実験と、再現性の確認が重要。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "0de05a48d527c60aa3d894c85fed23732ea3f17c7dc294c0e1960facf652c870"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "PDF確認で、グラフの軸記号と選択肢の表記を修正：修正 2 問（Q001, Q004）",
+      "content_hash": "e81673b8aaedca83349af8588f8af99074418e99d39400d2ce0a5805723803bc"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:20+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "edbef33d4380f3aa9b203a3b179d16d0c8143be2cf4ab4819294de06429da5e7"
+  }
+}

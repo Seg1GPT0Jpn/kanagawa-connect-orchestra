@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "CT-ENG-U01-S1",
+  "title": "英語リーディング　情報の検索と要旨把握",
+  "subtitle": "試験対策｜広告・掲示の読み取り・事実と意見の区別・論説文の要旨",
+  "track": "common_test",
+  "stage": "high_school",
+  "subject": "english",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-ENG-U01"
+  ],
+  "time_limit_minutes": 20,
+  "instructions": [
+    "大学入学共通テストの出題形式を参考にしたオリジナル問題です。",
+    "選択肢は番号で答えなさい。"
+  ],
+  "stimuli": [
+    {
+      "id": "AD",
+      "type": "data",
+      "content": "Midori City Library — New E-book App!\n・Free for all city residents (library card required)\n・Borrow up to 5 e-books at once\n・Loan period: 2 weeks (can be renewed once)\n・Books are returned automatically on the due date — no late fees!",
+      "title": "Advertisement",
+      "source": "オリジナル"
+    },
+    {
+      "id": "ARTICLE",
+      "type": "passage",
+      "content": "Should libraries replace paper books with e-books? In a recent survey of 500 high school students, over 60% of the respondents said they read e-books on their phones. E-books are convenient: you can carry hundreds of them in one device.\n\nHowever, paper books still have strengths. Some readers say it is easier to remember what they read on paper, and many people simply enjoy turning pages.\n\nRather than choosing one, libraries should offer both. That way, every reader can choose the style that suits them best.",
+      "title": "Article",
+      "source": "オリジナル"
+    }
+  ],
+  "questions": [
+    {
+      "id": "CT-ENG-U01-S1-Q001",
+      "grade": "HS3",
+      "subject": "english",
+      "unit_id": "CT-ENG-U01",
+      "skills": [
+        "reading"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "AD",
+      "stem": "According to the advertisement, which is true?",
+      "choices": [
+        {
+          "label": "1",
+          "text": "Only high school students can use the app."
+        },
+        {
+          "label": "2",
+          "text": "The app is free only for the first month."
+        },
+        {
+          "label": "3",
+          "text": "Members can borrow up to five e-books at a time."
+        },
+        {
+          "label": "4",
+          "text": "E-books must be returned within one week."
+        }
+      ],
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "広告に Borrow up to 5 e-books at once とある。アプリは市民なら無料、貸出期間は2週間。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-ENG-U01-S1-Q002",
+      "grade": "HS3",
+      "subject": "english",
+      "unit_id": "CT-ENG-U01",
+      "skills": [
+        "reading",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "AD",
+      "stem": "A student wants to read a book on the app for three weeks. What should the student do?",
+      "choices": [
+        {
+          "label": "1",
+          "text": "Renew the loan once before the due date."
+        },
+        {
+          "label": "2",
+          "text": "Download the book again after it expires."
+        },
+        {
+          "label": "3",
+          "text": "Borrow a paper copy instead."
+        },
+        {
+          "label": "4",
+          "text": "Pay a late fee."
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "Loan period: 2 weeks (can be renewed once) なので、期限前に1回延長すれば最長4週間読める。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-ENG-U01-S1-Q003",
+      "grade": "HS3",
+      "subject": "english",
+      "unit_id": "CT-ENG-U01",
+      "skills": [
+        "reading",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "ARTICLE",
+      "stem": "In the article, which is a FACT, not an opinion?",
+      "choices": [
+        {
+          "label": "1",
+          "text": "Reading on a screen is more enjoyable."
+        },
+        {
+          "label": "2",
+          "text": "Over 60% of the survey respondents said they read e-books on their phones."
+        },
+        {
+          "label": "3",
+          "text": "E-books are better than paper books."
+        },
+        {
+          "label": "4",
+          "text": "Libraries should stop buying paper books."
+        }
+      ],
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "調査結果の数値は事実（fact）。better / should / more enjoyable を含む文は意見（opinion）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-ENG-U01-S1-Q004",
+      "grade": "HS3",
+      "subject": "english",
+      "unit_id": "CT-ENG-U01",
+      "skills": [
+        "reading"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "ARTICLE",
+      "stem": "What is the writer's main point?",
+      "choices": [
+        {
+          "label": "1",
+          "text": "Students should not use phones for reading."
+        },
+        {
+          "label": "2",
+          "text": "Paper books will soon disappear."
+        },
+        {
+          "label": "3",
+          "text": "E-books are too expensive for libraries."
+        },
+        {
+          "label": "4",
+          "text": "Both e-books and paper books have strengths, and libraries should offer both."
+        }
+      ],
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "最終段落 Rather than choosing one, libraries should offer both が主張。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-ENG-U01-S1-Q005",
+      "grade": "HS3",
+      "subject": "english",
+      "unit_id": "CT-ENG-U01",
+      "skills": [
+        "reading"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "ARTICLE",
+      "stem": "According to the article, why do some readers prefer paper books?",
+      "choices": [
+        {
+          "label": "1",
+          "text": "Libraries have no e-books."
+        },
+        {
+          "label": "2",
+          "text": "They find it easier to remember what they read."
+        },
+        {
+          "label": "3",
+          "text": "Paper books are always cheaper."
+        },
+        {
+          "label": "4",
+          "text": "They cannot use smartphones."
+        }
+      ],
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "第2段落に some readers say it is easier to remember what they read on paper とある。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-ENG-U01-S1-Q006",
+      "grade": "HS3",
+      "subject": "english",
+      "unit_id": "CT-ENG-U01",
+      "skills": [
+        "reading",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "ARTICLE",
+      "stem": "広告と記事の両方の内容をふまえると、記事の筆者はこのアプリについてどのように考えると推測できるか。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "紙の本の貸出と並行して提供されるなら、読書の選択肢を広げるよいサービスだ"
+        },
+        {
+          "label": "2",
+          "text": "電子書籍は記憶に残らないので、導入すべきではない"
+        },
+        {
+          "label": "3",
+          "text": "料金が高いので、利用者は増えない"
+        },
+        {
+          "label": "4",
+          "text": "紙の本を置かなくてよくなるので、ぜひ導入すべきだ"
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "記事の筆者は両方を提供すべきだと主張しているので、紙の本と併存する電子書籍サービスには肯定的と考えられる。複数テクストの統合を問う設問。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "4ab132b3bab1e06f442e38410b1338a1c58287026c24775463f255af608d81de"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:20+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "9234617faccee0b2e04c491a4b1c357ee2dc40c8d480a9e1ce256ef67fd9d9e4"
+  }
+}

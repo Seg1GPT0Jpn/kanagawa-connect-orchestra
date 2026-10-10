@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "CT-MATH2BC-U02-S1",
+  "title": "数学Ⅱ・B・C　数列・統計的な推測・ベクトル",
+  "subtitle": "試験対策｜漸化式・推定・ベクトルの内積",
+  "track": "common_test",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-MATH2BC-U02"
+  ],
+  "time_limit_minutes": 20,
+  "instructions": [
+    "大学入学共通テストの出題形式を参考にしたオリジナル問題です。",
+    "選択肢は番号で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "CT-MATH2BC-U02-S1-Q001",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "毎年初めに 10 万円ずつ積み立て、年利 2 %（1年ごとの複利）で運用する。10 年目の終わりの元利合計を万円単位で求めなさい。$1.02^{10}=1.219$ とし、小数第1位を四捨五入すること。",
+      "answer": {
+        "value": "112",
+        "unit": "万円"
+      },
+      "explanation": "元利合計は $10\\cdot1.02\\cdot\\dfrac{1.02^{10}-1}{1.02-1}=10\\cdot1.02\\cdot\\dfrac{0.219}{0.02}=111.69$（万円）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "floor(10*1.02*(1.219-1)/0.02+0.5)",
+        "expected": "112"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U02-S1-Q002",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$a_1=2,\\ a_{n+1}=3a_n-2$ で定められる数列の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=3^{n-1}+1$"
+      },
+      "explanation": "$a_{n+1}-1=3(a_n-1)$。$\\{a_n-1\\}$ は初項 1、公比 3 の等比数列。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[3**0+1, 3*(3**0+1)-2, 3*(3*(3**0+1)-2)-2]",
+        "expected": "[2, 4, 10]",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U02-S1-Q003",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある工場の製品の重さは母平均 200 g、母標準偏差 6 g の正規分布に従う。無作為に 36 個抽出したときの標本平均の標準偏差を求めなさい。",
+      "answer": {
+        "value": "1",
+        "unit": "g"
+      },
+      "explanation": "$\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{6}{6}=1$（g）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "6/sqrt(36)",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U02-S1-Q004",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "ある政策への賛成率について、無作為に選んだ 400 人の調査で賛成が 240 人であった。母比率の信頼度 95 % の信頼区間の幅（上限－下限）に最も近いものを選びなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "0.096"
+        },
+        {
+          "label": "2",
+          "text": "0.192"
+        },
+        {
+          "label": "3",
+          "text": "0.024"
+        },
+        {
+          "label": "4",
+          "text": "0.048"
+        }
+      ],
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "標本比率 0.6。幅 $=2\\times1.96\\sqrt{\\dfrac{0.6\\cdot0.4}{400}}=2\\times1.96\\times0.0245\\fallingdotseq0.096$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "floor(2*1.96*sqrt(0.6*0.4/400)*1000+Rational(1,2))/1000",
+        "expected": "0.096"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U02-S1-Q005",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "平面上で $|\\vec{a}|=3,\\ |\\vec{b}|=2,\\ |\\vec{a}-\\vec{b}|=\\sqrt{7}$ のとき、内積 $\\vec{a}\\cdot\\vec{b}$ を求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$|\\vec{a}-\\vec{b}|^2=9-2\\vec{a}\\cdot\\vec{b}+4=7$ より $\\vec{a}\\cdot\\vec{b}=3$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(9-2*x+4-7, x)[0]",
+        "expected": "3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U02-S1-Q006",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "前の問題で、$\\vec{a}$ と $\\vec{b}$ のなす角を度で求めなさい。",
+      "answer": {
+        "value": "60",
+        "unit": "度"
+      },
+      "explanation": "$\\cos\\theta=\\dfrac{3}{3\\cdot2}=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "acos(Rational(3,6))*180/pi",
+        "expected": "60"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "c5c365256ff5d29952d4ff407cbc32e061ea0eb7556284c9a8f594d447cb65eb"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ4）",
+      "changes": "自動検査の検算（calc_check）で丸め方の指定漏れを検出したため検算式を修正：修正 1 問（Q004）",
+      "content_hash": "07fc0e8950925f7ea114fd4cba23531d6c032a2ea07c0f3afd49d46b26813cba"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T05:01:20+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "a6128b0d592b973405fbb74e0b7af166127570719d62c161abb55535f71b8fb9"
+  }
+}

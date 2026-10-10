@@ -399,6 +399,54 @@ def run_phase(phase: int, only: set[str] | None, pdf: bool, tablet: bool, today:
     return report
 
 
+TRACK_ORDER = ["pilot", "mock_exam", "junior_high", "tokushoku", "high_school", "common_test", "second_stage"]
+
+
+def write_catalog() -> Path:
+    """data/ 以下の全セットの一覧（版・検査結果・PDF へのリンク）を output/CATALOG.md に書き出す。"""
+    import build_pdf
+
+    labels = build_pdf.MASTERS["track"]
+    rows: dict[str, list] = {}
+    totals = {"sets": 0, "questions": 0}
+    for f in sorted((ROOT / "data").rglob("*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(d, dict) or "questions" not in d:
+            continue
+        status = {}
+        for q in d["questions"]:
+            st = q.get("verification", {}).get("status", "?")
+            status[st] = status.get(st, 0) + 1
+        pdfs = []
+        for kind, label in (("questions", "問題"), ("answers", "解答"), ("questions_tablet", "問題(タブレット)"), ("answers_tablet", "解答(タブレット)")):
+            k, _, paper = kind.partition("_")
+            pp = build_pdf.output_path(f, k, paper or "A4", build_pdf.OUTPUT)
+            if pp.exists():
+                pdfs.append(f"[{label}]({pp.relative_to(build_pdf.OUTPUT).as_posix()})")
+        rows.setdefault(d.get("track", "?"), []).append(
+            f"| {d['set_id']} | {d['title']} | {d['grade']} | {len(d['questions'])} | {d.get('total_points', '')} | "
+            f"{d['revision_history'][-1]['version']} | {d.get('validation', {}).get('result', '未検査')} | "
+            f"{'・'.join(f'{k} {v}' for k, v in sorted(status.items()))} | {' '.join(pdfs)} |")
+        totals["sets"] += 1
+        totals["questions"] += len(d["questions"])
+    lines = ["# 教材カタログ", "",
+             f"全 {totals['sets']} セット・{totals['questions']} 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）", "",
+             "検証状態 `auto_checked` は自動検査（スキーマ・整合性・重複・検算）に合格した状態です。教科担当者のレビュー（`expert_reviewed`）を経てから配布してください。", ""]
+    for tr in TRACK_ORDER + sorted(set(rows) - set(TRACK_ORDER)):
+        if tr not in rows:
+            continue
+        lines += [f"## {labels.get(tr, tr)}（{len(rows[tr])} セット）", "",
+                  "| セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |", "|---|---|---|---|---|---|---|---|---|"]
+        lines += rows[tr] + [""]
+    out = build_pdf.OUTPUT / "CATALOG.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return out
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="作問バンクから問題マスターを生成し、検査・PDF ビルドを行う")
     ap.add_argument("--phase", type=int, nargs="+", required=True, choices=sorted(PHASE_MODULES))
@@ -412,6 +460,7 @@ def main(argv=None) -> int:
     for ph in args.phase:
         r = run_phase(ph, set(args.only) if args.only else None, not args.no_pdf, args.tablet, args.date, args.note)
         ok = ok and r["ok"]
+    print(f"カタログを更新しました: {vq.relpath(write_catalog())}")
     return 0 if ok else 1
 
 
