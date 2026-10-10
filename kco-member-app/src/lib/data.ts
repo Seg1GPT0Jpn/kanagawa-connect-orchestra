@@ -430,7 +430,9 @@ export function toJoinRequest(id: string, d: DocumentData): JoinRequest {
     createdAt: d.createdAt ?? null,
     decidedAt: d.decidedAt ?? null,
     appliedAt: typeof d.appliedAt === 'string' ? d.appliedAt : d.appliedAt ? String(d.appliedAt) : null,
-    applyError: s(d.applyError)
+    applyError: s(d.applyError),
+    notifiedAt: typeof d.notifiedAt === 'string' ? d.notifiedAt : null,
+    mailError: s(d.mailError)
   };
 }
 

@@ -253,4 +253,7 @@ export interface JoinRequest {
   /** スプレッドシートに反映された日時（同期が書き込む） */
   appliedAt: string | null;
   applyError: string;
+  /** 承認のお知らせメールを送った日時／送れなかった理由（同期が書き込む） */
+  notifiedAt: string | null;
+  mailError: string;
 }
