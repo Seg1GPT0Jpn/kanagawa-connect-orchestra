@@ -1,0 +1,5710 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U03-EX",
+  "title": "図形と方程式　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U03"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH2-U03-PACK",
+  "pair_set_id": "HS-MATH2-U03-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G2-U03",
+        "point": "一次関数と直線",
+        "title": "一次関数"
+      },
+      {
+        "unit_id": "HS-MATH1-U03",
+        "point": "二次関数",
+        "title": "二次関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHC-U02",
+        "point": "二次曲線",
+        "title": "平面上の曲線と複素数平面"
+      },
+      {
+        "unit_id": "HS-MATH2-U06",
+        "point": "接線",
+        "title": "微分法・積分法"
+      }
+    ],
+    "readiness_check": [
+      "一次関数のグラフと傾き・切片（中学2年）を理解している。",
+      "三平方の定理（中学3年）を使える。",
+      "平方完成（数学Ⅰ 二次関数）ができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U03-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $\\mathrm{A}(2,\\,-3)$、$\\mathrm{B}(1,\\,0)$ に対して、線分 $\\mathrm{AB}$ を $3:1$ に内分する点の座標を求めなさい。",
+      "answer": {
+        "value": "$\\left(\\dfrac{5}{4},\\,-\\dfrac{3}{4}\\right)$",
+        "accepted": [
+          "(\\dfrac{5}{4},-\\dfrac{3}{4})"
+        ]
+      },
+      "explanation": "公式より $\\left(\\dfrac{1\\cdot(2)+3\\cdot(1)}{4},\\ \\dfrac{1\\cdot(-3)+3\\cdot(0)}{4}\\right)=\\left(\\dfrac{5}{4},\\,-\\dfrac{3}{4}\\right)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(1*(2)+3*(1))/4, (1*(-3)+3*(0))/4]",
+        "expected": "[Rational(5,4), Rational(-3,4)]"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-points_basic",
+      "explanation_detail": {
+        "approach": "内分点の公式では、$x_1$ に「$\\mathrm{B}$ 側の比」$n$、$x_2$ に「$\\mathrm{A}$ 側の比」$m$ を掛ける（たすきがけ）。",
+        "steps": [
+          "公式に代入：$\\left(\\dfrac{1\\cdot(2)+3\\cdot(1)}{4},\\ \\dfrac{1\\cdot(-3)+3\\cdot(0)}{4}\\right)$。",
+          "計算して $\\left(\\dfrac{5}{4},\\,-\\dfrac{3}{4}\\right)$。"
+        ],
+        "alternatives": [
+          "$x$ 座標だけを数直線上で考え、比の位置にあるかを確かめる（$y$ 座標も同様）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "座標を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$m$ と $n$ を掛ける相手を逆にする。",
+          "負の座標のかっこを忘れて符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $\\mathrm{A}(-5,\\,-5)$、$\\mathrm{B}(-4,\\,-4)$ に対して、線分 $\\mathrm{AB}$ を $1:2$ に内分する点の座標を求めなさい。",
+      "answer": {
+        "value": "$\\left(-\\dfrac{14}{3},\\,-\\dfrac{14}{3}\\right)$",
+        "accepted": [
+          "(-\\dfrac{14}{3},-\\dfrac{14}{3})"
+        ]
+      },
+      "explanation": "公式より $\\left(\\dfrac{2\\cdot(-5)+1\\cdot(-4)}{3},\\ \\dfrac{2\\cdot(-5)+1\\cdot(-4)}{3}\\right)=\\left(-\\dfrac{14}{3},\\,-\\dfrac{14}{3}\\right)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(2*(-5)+1*(-4))/3, (2*(-5)+1*(-4))/3]",
+        "expected": "[Rational(-14,3), Rational(-14,3)]"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-points_basic",
+      "explanation_detail": {
+        "approach": "内分点の公式では、$x_1$ に「$\\mathrm{B}$ 側の比」$n$、$x_2$ に「$\\mathrm{A}$ 側の比」$m$ を掛ける（たすきがけ）。",
+        "steps": [
+          "公式に代入：$\\left(\\dfrac{2\\cdot(-5)+1\\cdot(-4)}{3},\\ \\dfrac{2\\cdot(-5)+1\\cdot(-4)}{3}\\right)$。",
+          "計算して $\\left(-\\dfrac{14}{3},\\,-\\dfrac{14}{3}\\right)$。"
+        ],
+        "alternatives": [
+          "$x$ 座標だけを数直線上で考え、比の位置にあるかを確かめる（$y$ 座標も同様）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "座標を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$m$ と $n$ を掛ける相手を逆にする。",
+          "負の座標のかっこを忘れて符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $\\mathrm{A}(-3,\\,4)$、$\\mathrm{B}(4,\\,4)$ に対して、線分 $\\mathrm{AB}$ を $1:2$ に外分する点の座標を求めなさい。",
+      "answer": {
+        "value": "$(-10,\\,4)$",
+        "accepted": [
+          "(-10,4)"
+        ]
+      },
+      "explanation": "公式より $\\left(\\dfrac{-2\\cdot(-3)+1\\cdot(4)}{1-2},\\ \\dfrac{-2\\cdot(4)+1\\cdot(4)}{1-2}\\right)=(-10,\\,4)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(-2*(-3)+1*(4))/(1-2), (-2*(4)+1*(4))/(1-2)]",
+        "expected": "[-10, 4]"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-points_basic",
+      "explanation_detail": {
+        "approach": "外分点は、内分点の公式の $n$ を $-n$ におきかえる。",
+        "steps": [
+          "公式に代入：$\\left(\\dfrac{-2\\cdot(-3)+1\\cdot(4)}{1-2},\\ \\dfrac{-2\\cdot(4)+1\\cdot(4)}{1-2}\\right)$。",
+          "計算して $(-10,\\,4)$。"
+        ],
+        "alternatives": [
+          "$x$ 座標だけを数直線上で考え、比の位置にあるかを確かめる（$y$ 座標も同様）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "座標を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$m$ と $n$ を掛ける相手を逆にする。",
+          "外分で $m-n$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "座標平面上の2点 $\\mathrm{A}(1,\\,5)$、$\\mathrm{B}(0,\\,0)$ について、線分 $\\mathrm{AB}$ の長さを求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{26}$",
+        "accepted": [
+          "\\sqrt{26}"
+        ]
+      },
+      "explanation": "$\\mathrm{AB}=\\sqrt{(0-(1))^2+(0-(5))^2}=\\sqrt{26}=\\sqrt{26}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sqrt((0-(1))**2+(0-(5))**2)",
+        "expected": "sqrt(26)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-points_basic",
+      "explanation_detail": {
+        "approach": "2点の $x$ 座標の差と $y$ 座標の差を2辺とする直角三角形を考え、三平方の定理を使う。",
+        "steps": [
+          "$x$ 座標の差 $-1$、$y$ 座標の差 $-5$。",
+          "$\\mathrm{AB}^2=(-1)^2+(-5)^2=26$。",
+          "$\\mathrm{AB}=\\sqrt{26}$。"
+        ],
+        "alternatives": [
+          "方眼に2点をとり、直角三角形をかいて三平方の定理を確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差の2乗の和を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "根号を正しく簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "差をとる前に座標の符号を誤る（$5-(-2)$ を $3$ とする）。",
+          "根号の中を簡約し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "座標平面上の2点 $\\mathrm{A}(-3,\\,4)$、$\\mathrm{B}(-1,\\,1)$ について、線分 $\\mathrm{AB}$ の長さを求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{13}$",
+        "accepted": [
+          "\\sqrt{13}"
+        ]
+      },
+      "explanation": "$\\mathrm{AB}=\\sqrt{(-1-(-3))^2+(1-(4))^2}=\\sqrt{13}=\\sqrt{13}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sqrt((-1-(-3))**2+(1-(4))**2)",
+        "expected": "sqrt(13)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-points_basic",
+      "explanation_detail": {
+        "approach": "2点の $x$ 座標の差と $y$ 座標の差を2辺とする直角三角形を考え、三平方の定理を使う。",
+        "steps": [
+          "$x$ 座標の差 $2$、$y$ 座標の差 $-3$。",
+          "$\\mathrm{AB}^2=(2)^2+(-3)^2=13$。",
+          "$\\mathrm{AB}=\\sqrt{13}$。"
+        ],
+        "alternatives": [
+          "方眼に2点をとり、直角三角形をかいて三平方の定理を確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差の2乗の和を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "根号を正しく簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "差をとる前に座標の符号を誤る（$5-(-2)$ を $3$ とする）。",
+          "根号の中を簡約し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $\\mathrm{A}(4,\\,4)$、$\\mathrm{B}(-4,\\,-5)$ に対して、線分 $\\mathrm{AB}$ を $3:2$ に外分する点の座標を求めなさい。",
+      "answer": {
+        "value": "$(-20,\\,-23)$",
+        "accepted": [
+          "(-20,-23)"
+        ]
+      },
+      "explanation": "公式より $\\left(\\dfrac{-2\\cdot(4)+3\\cdot(-4)}{3-2},\\ \\dfrac{-2\\cdot(4)+3\\cdot(-5)}{3-2}\\right)=(-20,\\,-23)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(-2*(4)+3*(-4))/(3-2), (-2*(4)+3*(-5))/(3-2)]",
+        "expected": "[-20, -23]"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-points_basic",
+      "explanation_detail": {
+        "approach": "外分点は、内分点の公式の $n$ を $-n$ におきかえる。",
+        "steps": [
+          "公式に代入：$\\left(\\dfrac{-2\\cdot(4)+3\\cdot(-4)}{3-2},\\ \\dfrac{-2\\cdot(4)+3\\cdot(-5)}{3-2}\\right)$。",
+          "計算して $(-20,\\,-23)$。"
+        ],
+        "alternatives": [
+          "$x$ 座標だけを数直線上で考え、比の位置にあるかを確かめる（$y$ 座標も同様）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "座標を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$m$ と $n$ を掛ける相手を逆にする。",
+          "外分で $m-n$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $(4,\\,-4)$、$(4,\\,-7)$ を通る直線の方程式を求めなさい。",
+      "answer": {
+        "value": "$x=4$",
+        "accepted": [
+          "x=4",
+          "x-(4)=0"
+        ]
+      },
+      "explanation": "2点の $x$ 座標がともに $4$ なので、$y$ 軸に平行な直線 $x=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-line_through",
+      "explanation_detail": {
+        "approach": "2点の $x$ 座標が等しいときは傾きが定義できない（分母が $0$）。$y$ 軸に平行な直線になる。",
+        "steps": [
+          "2点の $x$ 座標はどちらも $4$。",
+          "傾きの式 $\\dfrac{y_2-y_1}{x_2-x_1}$ は分母が $0$ で使えない。",
+          "求める直線は $x=4$。"
+        ],
+        "alternatives": [
+          "一般形 $ax+by+c=0$ で $b=0$ の場合にあたる。$1\\cdot x+0\\cdot y-(4)=0$ と書ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きが存在しないことに気づいている",
+            "points": 1
+          },
+          {
+            "point": "$x=4$ と答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを $\\dfrac{-3}{0}$ として計算を進めてしまう。",
+          "$y=4$ と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $(-1,\\,-1)$、$(-1,\\,-2)$ を通る直線の方程式を求めなさい。",
+      "answer": {
+        "value": "$x=-1$",
+        "accepted": [
+          "x=-1",
+          "x-(-1)=0"
+        ]
+      },
+      "explanation": "2点の $x$ 座標がともに $-1$ なので、$y$ 軸に平行な直線 $x=-1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-1",
+        "expected": "-1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-line_through",
+      "explanation_detail": {
+        "approach": "2点の $x$ 座標が等しいときは傾きが定義できない（分母が $0$）。$y$ 軸に平行な直線になる。",
+        "steps": [
+          "2点の $x$ 座標はどちらも $-1$。",
+          "傾きの式 $\\dfrac{y_2-y_1}{x_2-x_1}$ は分母が $0$ で使えない。",
+          "求める直線は $x=-1$。"
+        ],
+        "alternatives": [
+          "一般形 $ax+by+c=0$ で $b=0$ の場合にあたる。$1\\cdot x+0\\cdot y-(-1)=0$ と書ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きが存在しないことに気づいている",
+            "points": 1
+          },
+          {
+            "point": "$x=-1$ と答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを $\\dfrac{-1}{0}$ として計算を進めてしまう。",
+          "$y=-1$ と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $(-3,\\,1)$、$(-3,\\,0)$ を通る直線の方程式を求めなさい。",
+      "answer": {
+        "value": "$x=-3$",
+        "accepted": [
+          "x=-3",
+          "x-(-3)=0"
+        ]
+      },
+      "explanation": "2点の $x$ 座標がともに $-3$ なので、$y$ 軸に平行な直線 $x=-3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-3",
+        "expected": "-3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-line_through",
+      "explanation_detail": {
+        "approach": "2点の $x$ 座標が等しいときは傾きが定義できない（分母が $0$）。$y$ 軸に平行な直線になる。",
+        "steps": [
+          "2点の $x$ 座標はどちらも $-3$。",
+          "傾きの式 $\\dfrac{y_2-y_1}{x_2-x_1}$ は分母が $0$ で使えない。",
+          "求める直線は $x=-3$。"
+        ],
+        "alternatives": [
+          "一般形 $ax+by+c=0$ で $b=0$ の場合にあたる。$1\\cdot x+0\\cdot y-(-3)=0$ と書ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きが存在しないことに気づいている",
+            "points": 1
+          },
+          {
+            "point": "$x=-3$ と答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを $\\dfrac{-1}{0}$ として計算を進めてしまう。",
+          "$y=-3$ と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $(4,\\,1)$、$(7,\\,-8)$ を通る直線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=-3x+13$",
+        "accepted": [
+          "y=-3x+13",
+          "3x+y-13=0"
+        ]
+      },
+      "explanation": "$y-(1)=-3(x-(4))$ を整理して $y=-3x+13$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(-8-(1))/(7-(4)), 1-(-3)*(4)]",
+        "expected": "[-3, 13]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-line_through",
+      "explanation_detail": {
+        "approach": "点 $(x_1,\\,y_1)$ を通り傾き $m$ の直線は $y-y_1=m(x-x_1)$。まず傾きを求める。",
+        "steps": [
+          "傾きは $\\dfrac{-8-(1)}{7-(4)}=\\dfrac{-9}{3}=-3$。",
+          "$y-(1)=-3(x-(4))$。",
+          "整理して $y=-3x+13$。"
+        ],
+        "alternatives": [
+          "$y=mx+n$ に2点（または1点と傾き）を代入して $m,\\ n$ の連立方程式を解いてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "直線の方程式を正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きの分子と分母で引く順序をそろえない。",
+          "$y-y_1=m(x-x_1)$ の符号を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $(1,\\,-2)$、$(2,\\,-3)$ を通る直線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=-x-1$",
+        "accepted": [
+          "y=-x-1",
+          "x+y+1=0"
+        ]
+      },
+      "explanation": "$y-(-2)=-1(x-(1))$ を整理して $y=-x-1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(-3-(-2))/(2-(1)), -2-(-1)*(1)]",
+        "expected": "[-1, -1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-line_through",
+      "explanation_detail": {
+        "approach": "点 $(x_1,\\,y_1)$ を通り傾き $m$ の直線は $y-y_1=m(x-x_1)$。まず傾きを求める。",
+        "steps": [
+          "傾きは $\\dfrac{-3-(-2)}{2-(1)}=\\dfrac{-1}{1}=-1$。",
+          "$y-(-2)=-1(x-(1))$。",
+          "整理して $y=-x-1$。"
+        ],
+        "alternatives": [
+          "$y=mx+n$ に2点（または1点と傾き）を代入して $m,\\ n$ の連立方程式を解いてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "直線の方程式を正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きの分子と分母で引く順序をそろえない。",
+          "$y-y_1=m(x-x_1)$ の符号を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "直線 $\\ell:2x-3y-4=0$ に平行で、点 $(3,\\,3)$ を通る直線の方程式として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$3x-2y-3=0$"
+        },
+        {
+          "label": "イ",
+          "text": "$2x-3y-3=0$"
+        },
+        {
+          "label": "ウ",
+          "text": "$3x+2y-15=0$"
+        },
+        {
+          "label": "エ",
+          "text": "$2x-3y+3=0$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$\\ell$ の係数は $(a,\\,b)=(2,\\,-3)$。平行な直線は $2x+(-3)y+c'=0$ の形で、点 $(3,\\,3)$ を通るように $c'$ を決めると $2x-3y+3=0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-perp_parallel",
+      "explanation_detail": {
+        "approach": "一般形 $ax+by+c=0$ に平行な直線は $ax+by+c'=0$、垂直な直線は $bx-ay+c'=0$。最後に通る点を代入して定数項を決める。",
+        "steps": [
+          "$\\ell$ の傾きは $-\\dfrac{a}{b}=\\dfrac{2}{3}$。",
+          "平行な直線の傾きは $\\dfrac{2}{3}$。",
+          "点 $(3,\\,3)$ を通るので $2x-3y+3=0$。"
+        ],
+        "alternatives": [
+          "選択肢の直線に点の座標を代入して成り立つか、さらに係数から傾きの関係を確かめる、という2段階の検算で選べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平行・垂直の条件を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "通る点の条件を確かめている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x$ と $y$ の係数を入れかえただけで、符号を変えていない。$a_1a_2+b_1b_2=-12\\neq0$、$a_1b_2-a_2b_1=-5\\neq0$ なので、$\\ell$ と垂直にも平行にもならない。",
+          "misconception": "垂直条件の符号の付け忘れ"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "向きは正しいが、点 $(3,\\,3)$ を代入すると成り立たない（通る点を誤っている）。",
+          "misconception": "定数項の符号・計算の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "これは (3,\\,3) を通り、$\\ell$ に垂直な直線である。",
+          "misconception": "平行と垂直の条件の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "直線 $\\ell:-2x-3y+4=0$ に平行で、点 $(3,\\,0)$ を通る直線の方程式として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$2x+3y-6=0$"
+        },
+        {
+          "label": "イ",
+          "text": "$2x+3y+6=0$"
+        },
+        {
+          "label": "ウ",
+          "text": "$3x+2y-9=0$"
+        },
+        {
+          "label": "エ",
+          "text": "$3x-2y-9=0$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "$\\ell$ の係数は $(a,\\,b)=(-2,\\,-3)$。平行な直線は $-2x+(-3)y+c'=0$ の形で、点 $(3,\\,0)$ を通るように $c'$ を決めると $2x+3y-6=0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-perp_parallel",
+      "explanation_detail": {
+        "approach": "一般形 $ax+by+c=0$ に平行な直線は $ax+by+c'=0$、垂直な直線は $bx-ay+c'=0$。最後に通る点を代入して定数項を決める。",
+        "steps": [
+          "$\\ell$ の傾きは $-\\dfrac{a}{b}=-\\dfrac{2}{3}$。",
+          "平行な直線の傾きは $-\\dfrac{2}{3}$。",
+          "点 $(3,\\,0)$ を通るので $2x+3y-6=0$。"
+        ],
+        "alternatives": [
+          "選択肢の直線に点の座標を代入して成り立つか、さらに係数から傾きの関係を確かめる、という2段階の検算で選べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平行・垂直の条件を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "通る点の条件を確かめている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "向きは正しいが、点 $(3,\\,0)$ を代入すると成り立たない（通る点を誤っている）。",
+          "misconception": "定数項の符号・計算の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$x$ と $y$ の係数を入れかえただけで、符号を変えていない。$a_1a_2+b_1b_2=12\\neq0$、$a_1b_2-a_2b_1=-5\\neq0$ なので、$\\ell$ と垂直にも平行にもならない。",
+          "misconception": "垂直条件の符号の付け忘れ"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "これは (3,\\,0) を通り、$\\ell$ に垂直な直線である。",
+          "misconception": "平行と垂直の条件の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "直線 $\\ell:-2x-3y+5=0$ に平行で、点 $(-2,\\,3)$ を通る直線の方程式として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$2x+3y+5=0$"
+        },
+        {
+          "label": "イ",
+          "text": "$3x+2y=0$"
+        },
+        {
+          "label": "ウ",
+          "text": "$2x+3y-5=0$"
+        },
+        {
+          "label": "エ",
+          "text": "$3x-2y+12=0$"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$\\ell$ の係数は $(a,\\,b)=(-2,\\,-3)$。平行な直線は $-2x+(-3)y+c'=0$ の形で、点 $(-2,\\,3)$ を通るように $c'$ を決めると $2x+3y-5=0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-perp_parallel",
+      "explanation_detail": {
+        "approach": "一般形 $ax+by+c=0$ に平行な直線は $ax+by+c'=0$、垂直な直線は $bx-ay+c'=0$。最後に通る点を代入して定数項を決める。",
+        "steps": [
+          "$\\ell$ の傾きは $-\\dfrac{a}{b}=-\\dfrac{2}{3}$。",
+          "平行な直線の傾きは $-\\dfrac{2}{3}$。",
+          "点 $(-2,\\,3)$ を通るので $2x+3y-5=0$。"
+        ],
+        "alternatives": [
+          "選択肢の直線に点の座標を代入して成り立つか、さらに係数から傾きの関係を確かめる、という2段階の検算で選べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平行・垂直の条件を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "通る点の条件を確かめている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "向きは正しいが、点 $(-2,\\,3)$ を代入すると成り立たない（通る点を誤っている）。",
+          "misconception": "定数項の符号・計算の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$x$ と $y$ の係数を入れかえただけで、符号を変えていない。$a_1a_2+b_1b_2=12\\neq0$、$a_1b_2-a_2b_1=-5\\neq0$ なので、$\\ell$ と垂直にも平行にもならない。",
+          "misconception": "垂直条件の符号の付け忘れ"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "これは (-2,\\,3) を通り、$\\ell$ に垂直な直線である。",
+          "misconception": "平行と垂直の条件の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "直線 $\\ell:2x+3y-1=0$ に平行で、点 $(1,\\,0)$ を通る直線の方程式として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$2x+3y+2=0$"
+        },
+        {
+          "label": "イ",
+          "text": "$2x+3y-2=0$"
+        },
+        {
+          "label": "ウ",
+          "text": "$3x+2y-3=0$"
+        },
+        {
+          "label": "エ",
+          "text": "$3x-2y-3=0$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$\\ell$ の係数は $(a,\\,b)=(2,\\,3)$。平行な直線は $2x+(3)y+c'=0$ の形で、点 $(1,\\,0)$ を通るように $c'$ を決めると $2x+3y-2=0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-perp_parallel",
+      "explanation_detail": {
+        "approach": "一般形 $ax+by+c=0$ に平行な直線は $ax+by+c'=0$、垂直な直線は $bx-ay+c'=0$。最後に通る点を代入して定数項を決める。",
+        "steps": [
+          "$\\ell$ の傾きは $-\\dfrac{a}{b}=-\\dfrac{2}{3}$。",
+          "平行な直線の傾きは $-\\dfrac{2}{3}$。",
+          "点 $(1,\\,0)$ を通るので $2x+3y-2=0$。"
+        ],
+        "alternatives": [
+          "選択肢の直線に点の座標を代入して成り立つか、さらに係数から傾きの関係を確かめる、という2段階の検算で選べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平行・垂直の条件を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "通る点の条件を確かめている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "向きは正しいが、点 $(1,\\,0)$ を代入すると成り立たない（通る点を誤っている）。",
+          "misconception": "定数項の符号・計算の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$x$ と $y$ の係数を入れかえただけで、符号を変えていない。$a_1a_2+b_1b_2=12\\neq0$、$a_1b_2-a_2b_1=-5\\neq0$ なので、$\\ell$ と垂直にも平行にもならない。",
+          "misconception": "垂直条件の符号の付け忘れ"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "これは (1,\\,0) を通り、$\\ell$ に垂直な直線である。",
+          "misconception": "平行と垂直の条件の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $x^2+y^2+2x-2y-11=0$ が表す円の中心の座標と半径を答えなさい。",
+      "answer": {
+        "value": "中心 $(-1,\\,1)$、半径 $\\sqrt{13}$",
+        "accepted": [
+          "(-1,1), \\sqrt{13}"
+        ]
+      },
+      "explanation": "平方完成すると $(x+1)^2+(y-1)^2=13$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[-(2)/2, -(-2)/2, sqrt((2)**2/4+(-2)**2/4-(-11))]",
+        "expected": "[-1, 1, sqrt(13)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_center",
+      "explanation_detail": {
+        "approach": "$x$ の項、$y$ の項をそれぞれ平方完成して、標準形 $(x-a)^2+(y-b)^2=r^2$ に直す。",
+        "steps": [
+          "$x$ について：$x^2+2x=(x+1)^2-1$。",
+          "$y$ について：$y^2-2y=(y-1)^2-1$。",
+          "$(x+1)^2+(y-1)^2=1+1+11=13$。",
+          "中心 $(-1,\\,1)$、半径 $\\sqrt{13}$。"
+        ],
+        "alternatives": [
+          "公式：$x^2+y^2+lx+my+n=0$ の中心は $\\left(-\\dfrac{l}{2},\\ -\\dfrac{m}{2}\\right)$、半径は $\\sqrt{\\dfrac{l^2+m^2}{4}-n}$。$l=2,\\ m=-2,\\ n=-11$ を代入しても同じ結果。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "中心と半径を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に移項するときの定数項の符号を誤る。",
+          "半径を $r^2$ の値のまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $x^2+y^2+4x+2y-15=0$ が表す円の中心の座標と半径を答えなさい。",
+      "answer": {
+        "value": "中心 $(-2,\\,-1)$、半径 $2 \\sqrt{5}$",
+        "accepted": [
+          "(-2,-1), 2\\sqrt{5}"
+        ]
+      },
+      "explanation": "平方完成すると $(x+2)^2+(y+1)^2=20$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[-(4)/2, -(2)/2, sqrt((4)**2/4+(2)**2/4-(-15))]",
+        "expected": "[-2, -1, sqrt(20)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_center",
+      "explanation_detail": {
+        "approach": "$x$ の項、$y$ の項をそれぞれ平方完成して、標準形 $(x-a)^2+(y-b)^2=r^2$ に直す。",
+        "steps": [
+          "$x$ について：$x^2+4x=(x+2)^2-4$。",
+          "$y$ について：$y^2+2y=(y+1)^2-1$。",
+          "$(x+2)^2+(y+1)^2=4+1+15=20$。",
+          "中心 $(-2,\\,-1)$、半径 $\\sqrt{20}=2 \\sqrt{5}$。"
+        ],
+        "alternatives": [
+          "公式：$x^2+y^2+lx+my+n=0$ の中心は $\\left(-\\dfrac{l}{2},\\ -\\dfrac{m}{2}\\right)$、半径は $\\sqrt{\\dfrac{l^2+m^2}{4}-n}$。$l=4,\\ m=2,\\ n=-15$ を代入しても同じ結果。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "中心と半径を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に移項するときの定数項の符号を誤る。",
+          "半径を $r^2$ の値のまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $x^2+y^2+8x-2=0$ が表す円の中心の座標と半径を答えなさい。",
+      "answer": {
+        "value": "中心 $(-4,\\,0)$、半径 $3 \\sqrt{2}$",
+        "accepted": [
+          "(-4,0), 3\\sqrt{2}"
+        ]
+      },
+      "explanation": "平方完成すると $(x+4)^2+y^2=18$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[-(8)/2, -(0)/2, sqrt((8)**2/4+(0)**2/4-(-2))]",
+        "expected": "[-4, 0, sqrt(18)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_center",
+      "explanation_detail": {
+        "approach": "$x$ の項、$y$ の項をそれぞれ平方完成して、標準形 $(x-a)^2+(y-b)^2=r^2$ に直す。",
+        "steps": [
+          "$x$ について：$x^2+8x=(x+4)^2-16$。",
+          "$y$ の1次の項はないので $y^2$ のまま。",
+          "$(x+4)^2+y^2=16+0+2=18$。",
+          "中心 $(-4,\\,0)$、半径 $\\sqrt{18}=3 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "公式：$x^2+y^2+lx+my+n=0$ の中心は $\\left(-\\dfrac{l}{2},\\ -\\dfrac{m}{2}\\right)$、半径は $\\sqrt{\\dfrac{l^2+m^2}{4}-n}$。$l=8,\\ m=0,\\ n=-2$ を代入しても同じ結果。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "中心と半径を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に移項するときの定数項の符号を誤る。",
+          "半径を $r^2$ の値のまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $x^2+y^2-6x+4y+9=0$ が表す円の中心の座標と半径を答えなさい。",
+      "answer": {
+        "value": "中心 $(3,\\,-2)$、半径 $2$",
+        "accepted": [
+          "(3,-2), 2"
+        ]
+      },
+      "explanation": "平方完成すると $(x-3)^2+(y+2)^2=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[-(-6)/2, -(4)/2, sqrt((-6)**2/4+(4)**2/4-(9))]",
+        "expected": "[3, -2, sqrt(4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_center",
+      "explanation_detail": {
+        "approach": "$x$ の項、$y$ の項をそれぞれ平方完成して、標準形 $(x-a)^2+(y-b)^2=r^2$ に直す。",
+        "steps": [
+          "$x$ について：$x^2-6x=(x-3)^2-9$。",
+          "$y$ について：$y^2+4y=(y+2)^2-4$。",
+          "$(x-3)^2+(y+2)^2=9+4-9=4$。",
+          "中心 $(3,\\,-2)$、半径 $\\sqrt{4}=2$。"
+        ],
+        "alternatives": [
+          "公式：$x^2+y^2+lx+my+n=0$ の中心は $\\left(-\\dfrac{l}{2},\\ -\\dfrac{m}{2}\\right)$、半径は $\\sqrt{\\dfrac{l^2+m^2}{4}-n}$。$l=-6,\\ m=4,\\ n=9$ を代入しても同じ結果。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "中心と半径を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に移項するときの定数項の符号を誤る。",
+          "半径を $r^2$ の値のまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $x^2+y^2+10x-4y+25=0$ が表す円の中心の座標と半径を答えなさい。",
+      "answer": {
+        "value": "中心 $(-5,\\,2)$、半径 $2$",
+        "accepted": [
+          "(-5,2), 2"
+        ]
+      },
+      "explanation": "平方完成すると $(x+5)^2+(y-2)^2=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[-(10)/2, -(-4)/2, sqrt((10)**2/4+(-4)**2/4-(25))]",
+        "expected": "[-5, 2, sqrt(4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_center",
+      "explanation_detail": {
+        "approach": "$x$ の項、$y$ の項をそれぞれ平方完成して、標準形 $(x-a)^2+(y-b)^2=r^2$ に直す。",
+        "steps": [
+          "$x$ について：$x^2+10x=(x+5)^2-25$。",
+          "$y$ について：$y^2-4y=(y-2)^2-4$。",
+          "$(x+5)^2+(y-2)^2=25+4-25=4$。",
+          "中心 $(-5,\\,2)$、半径 $\\sqrt{4}=2$。"
+        ],
+        "alternatives": [
+          "公式：$x^2+y^2+lx+my+n=0$ の中心は $\\left(-\\dfrac{l}{2},\\ -\\dfrac{m}{2}\\right)$、半径は $\\sqrt{\\dfrac{l^2+m^2}{4}-n}$。$l=10,\\ m=-4,\\ n=25$ を代入しても同じ結果。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方完成を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "中心と半径を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に移項するときの定数項の符号を誤る。",
+          "半径を $r^2$ の値のまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{A}(2,\\,-1)$ から直線 $2x+y=0$ までの距離を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{3 \\sqrt{5}}{5}$",
+        "accepted": [
+          "\\dfrac{3\\sqrt{5}}{5}"
+        ]
+      },
+      "explanation": "$d=\\dfrac{|2\\cdot(2)+(1)\\cdot(-1)+(0)|}{\\sqrt{2^2+(1)^2}}=\\dfrac{3 \\sqrt{5}}{5}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((2)*(2)+(1)*(-1)+(0))/sqrt((2)**2+(1)**2)",
+        "expected": "3*sqrt(5)/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-point_line_dist",
+      "explanation_detail": {
+        "approach": "点と直線の距離の公式 $d=\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ を使う。直線は $ax+by+c=0$ の形にしてから代入する。",
+        "steps": [
+          "分子：$|2\\cdot(2)+(1)\\cdot(-1)+(0)|=|3|=3$。",
+          "分母：$\\sqrt{4+1}=\\sqrt{5}$。",
+          "$d=\\dfrac{3 \\sqrt{5}}{5}$（分母を有理化）。"
+        ],
+        "alternatives": [
+          "点 $\\mathrm{A}$ を通り直線に垂直な直線との交点 $\\mathrm{H}$ を求め、$\\mathrm{AH}$ を2点間の距離として計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線を $ax+by+c=0$ の形にして公式に代入している",
+            "points": 2
+          },
+          {
+            "point": "分子の絶対値・分母の根号を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "答えを簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y=mx+n$ の形のまま係数を読み取り、$y$ の係数の符号を誤る。",
+          "分子の絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{A}(4,\\,1)$ から直線 $y=-\\dfrac{5}{12}x+\\dfrac{1}{3}$ までの距離を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{28}{13}$",
+        "accepted": [
+          "\\dfrac{28}{13}"
+        ]
+      },
+      "explanation": "$d=\\dfrac{|5\\cdot(4)+(12)\\cdot(1)+(-4)|}{\\sqrt{5^2+(12)^2}}=\\dfrac{28}{13}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((5)*(4)+(12)*(1)+(-4))/sqrt((5)**2+(12)**2)",
+        "expected": "28/13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-point_line_dist",
+      "explanation_detail": {
+        "approach": "点と直線の距離の公式 $d=\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ を使う。直線は $ax+by+c=0$ の形にしてから代入する。",
+        "steps": [
+          "直線を $ax+by+c=0$ の形に直すと $5x+12y-4=0$。",
+          "分子：$|5\\cdot(4)+(12)\\cdot(1)+(-4)|=|28|=28$。",
+          "分母：$\\sqrt{25+144}=\\sqrt{169}$。",
+          "$d=\\dfrac{28}{13}$。"
+        ],
+        "alternatives": [
+          "点 $\\mathrm{A}$ を通り直線に垂直な直線との交点 $\\mathrm{H}$ を求め、$\\mathrm{AH}$ を2点間の距離として計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線を $ax+by+c=0$ の形にして公式に代入している",
+            "points": 2
+          },
+          {
+            "point": "分子の絶対値・分母の根号を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "答えを簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y=mx+n$ の形のまま係数を読み取り、$y$ の係数の符号を誤る。",
+          "分子の絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{A}(-2,\\,-1)$ から直線 $x+3y-5=0$ までの距離を求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{10}$",
+        "accepted": [
+          "\\sqrt{10}"
+        ]
+      },
+      "explanation": "$d=\\dfrac{|1\\cdot(-2)+(3)\\cdot(-1)+(-5)|}{\\sqrt{1^2+(3)^2}}=\\sqrt{10}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((1)*(-2)+(3)*(-1)+(-5))/sqrt((1)**2+(3)**2)",
+        "expected": "sqrt(10)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-point_line_dist",
+      "explanation_detail": {
+        "approach": "点と直線の距離の公式 $d=\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ を使う。直線は $ax+by+c=0$ の形にしてから代入する。",
+        "steps": [
+          "分子：$|1\\cdot(-2)+(3)\\cdot(-1)+(-5)|=|-10|=10$。",
+          "分母：$\\sqrt{1+9}=\\sqrt{10}$。",
+          "$d=\\sqrt{10}$（分母を有理化）。"
+        ],
+        "alternatives": [
+          "点 $\\mathrm{A}$ を通り直線に垂直な直線との交点 $\\mathrm{H}$ を求め、$\\mathrm{AH}$ を2点間の距離として計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線を $ax+by+c=0$ の形にして公式に代入している",
+            "points": 2
+          },
+          {
+            "point": "分子の絶対値・分母の根号を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "答えを簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y=mx+n$ の形のまま係数を読み取り、$y$ の係数の符号を誤る。",
+          "分子の絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{A}(-4,\\,1)$ から直線 $5x+12y+3=0$ までの距離を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{13}$",
+        "accepted": [
+          "\\dfrac{5}{13}"
+        ]
+      },
+      "explanation": "$d=\\dfrac{|5\\cdot(-4)+(12)\\cdot(1)+(3)|}{\\sqrt{5^2+(12)^2}}=\\dfrac{5}{13}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((5)*(-4)+(12)*(1)+(3))/sqrt((5)**2+(12)**2)",
+        "expected": "5/13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-point_line_dist",
+      "explanation_detail": {
+        "approach": "点と直線の距離の公式 $d=\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ を使う。直線は $ax+by+c=0$ の形にしてから代入する。",
+        "steps": [
+          "分子：$|5\\cdot(-4)+(12)\\cdot(1)+(3)|=|-5|=5$。",
+          "分母：$\\sqrt{25+144}=\\sqrt{169}$。",
+          "$d=\\dfrac{5}{13}$。"
+        ],
+        "alternatives": [
+          "点 $\\mathrm{A}$ を通り直線に垂直な直線との交点 $\\mathrm{H}$ を求め、$\\mathrm{AH}$ を2点間の距離として計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線を $ax+by+c=0$ の形にして公式に代入している",
+            "points": 2
+          },
+          {
+            "point": "分子の絶対値・分母の根号を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "答えを簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y=mx+n$ の形のまま係数を読み取り、$y$ の係数の符号を誤る。",
+          "分子の絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{A}(5,\\,5)$ から直線 $y=-\\dfrac{5}{12}x-\\dfrac{2}{3}$ までの距離を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{93}{13}$",
+        "accepted": [
+          "\\dfrac{93}{13}"
+        ]
+      },
+      "explanation": "$d=\\dfrac{|5\\cdot(5)+(12)\\cdot(5)+(8)|}{\\sqrt{5^2+(12)^2}}=\\dfrac{93}{13}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((5)*(5)+(12)*(5)+(8))/sqrt((5)**2+(12)**2)",
+        "expected": "93/13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-point_line_dist",
+      "explanation_detail": {
+        "approach": "点と直線の距離の公式 $d=\\dfrac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$ を使う。直線は $ax+by+c=0$ の形にしてから代入する。",
+        "steps": [
+          "直線を $ax+by+c=0$ の形に直すと $5x+12y+8=0$。",
+          "分子：$|5\\cdot(5)+(12)\\cdot(5)+(8)|=|93|=93$。",
+          "分母：$\\sqrt{25+144}=\\sqrt{169}$。",
+          "$d=\\dfrac{93}{13}$。"
+        ],
+        "alternatives": [
+          "点 $\\mathrm{A}$ を通り直線に垂直な直線との交点 $\\mathrm{H}$ を求め、$\\mathrm{AH}$ を2点間の距離として計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線を $ax+by+c=0$ の形にして公式に代入している",
+            "points": 2
+          },
+          {
+            "point": "分子の絶対値・分母の根号を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "答えを簡約している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y=mx+n$ の形のまま係数を読み取り、$y$ の係数の符号を誤る。",
+          "分子の絶対値をつけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "中心が $(0,\\,-1)$ で、$x$ 軸に接する円の方程式を求めなさい。",
+      "answer": {
+        "value": "$x^2+(y+1)^2=1$",
+        "accepted": [
+          "x^2+(y+1)^2=1"
+        ]
+      },
+      "explanation": "中心 $(0,\\,-1)$、半径の2乗 $1$ より $x^2+(y+1)^2=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(-1)**2",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_equation",
+      "explanation_detail": {
+        "approach": "$x$ 軸に接する円では、中心から $x$ 軸までの距離（$y$ 座標の絶対値）が半径になる。",
+        "steps": [
+          "$x$ 軸に接するので、半径は中心の $y$ 座標の絶対値 $|-1|=1$。",
+          "$x^2+(y+1)^2=1$。"
+        ],
+        "alternatives": [
+          "$x$ 軸 $y=0$ と連立すると $(x-(0))^2=1-1=0$ となり重解をもつので、接していることが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心を正しく決めている",
+            "points": 1
+          },
+          {
+            "point": "半径（の2乗）を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "円の方程式を正しく書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に $r$ を書き、$r^2$ にし忘れる。",
+          "中心の座標の符号を式の中で逆にし忘れる（$(x-a)^2$ の $a$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "中心が $(0,\\,0)$ で、直線 $4x-3y+20=0$ に接する円の方程式を求めなさい。",
+      "answer": {
+        "value": "$x^2+y^2=16$",
+        "accepted": [
+          "x^2+y^2=16"
+        ]
+      },
+      "explanation": "中心 $(0,\\,0)$、半径の2乗 $16$ より $x^2+y^2=16$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(Abs((4)*(0)+(-3)*(0)+(20))/sqrt(25))**2",
+        "expected": "16",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_equation",
+      "explanation_detail": {
+        "approach": "円が直線に接するとき、中心と直線の距離が半径に等しい。点と直線の距離の公式を使う。",
+        "steps": [
+          "半径は中心と直線の距離：$\\dfrac{|4\\cdot(0)+(-3)\\cdot(0)+(20)|}{\\sqrt{16+9}}=\\dfrac{20}{5}=4$。",
+          "$x^2+y^2=16$。"
+        ],
+        "alternatives": [
+          "円の方程式と直線の方程式を連立して判別式 $D=0$ となることを確かめてもよい（計算は重くなる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心を正しく決めている",
+            "points": 1
+          },
+          {
+            "point": "半径（の2乗）を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "円の方程式を正しく書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に $r$ を書き、$r^2$ にし忘れる。",
+          "中心の座標の符号を式の中で逆にし忘れる（$(x-a)^2$ の $a$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 $\\mathrm{A}(-6,\\,-5)$、$\\mathrm{B}(0,\\,-3)$ を直径の両端とする円の方程式を求めなさい。",
+      "answer": {
+        "value": "$(x+3)^2+(y+4)^2=10$",
+        "accepted": [
+          "(x+3)^2+(y+4)^2=10"
+        ]
+      },
+      "explanation": "中心 $(-3,\\,-4)$、半径の2乗 $10$ より $(x+3)^2+(y+4)^2=10$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((0)-(-6))**2/4+((-3)-(-5))**2/4",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_equation",
+      "explanation_detail": {
+        "approach": "直径の両端が分かっているので、中心は中点、半径は直径の半分（中心から端点までの距離）。",
+        "steps": [
+          "中心は $\\mathrm{AB}$ の中点 $(-3,\\,-4)$。",
+          "半径は中点と $\\mathrm{A}$ の距離で、$r^2=(3)^2+(1)^2=10$。",
+          "$(x+3)^2+(y+4)^2=10$。"
+        ],
+        "alternatives": [
+          "円周角の定理（直径に対する円周角は直角）から、円周上の点 $\\mathrm{P}(x,\\,y)$ について $\\mathrm{AP}\\perp\\mathrm{BP}$。$(x-(-6))(x-(0))+(y-(-5))(y-(-3))=0$ を整理しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心を正しく決めている",
+            "points": 1
+          },
+          {
+            "point": "半径（の2乗）を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "円の方程式を正しく書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に $r$ を書き、$r^2$ にし忘れる。",
+          "中心の座標の符号を式の中で逆にし忘れる（$(x-a)^2$ の $a$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "中心が $(0,\\,-3)$ で、点 $(4,\\,0)$ を通る円の方程式を求めなさい。",
+      "answer": {
+        "value": "$x^2+(y+3)^2=25$",
+        "accepted": [
+          "x^2+(y+3)^2=25"
+        ]
+      },
+      "explanation": "中心 $(0,\\,-3)$、半径の2乗 $25$ より $x^2+(y+3)^2=25$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(4-(0))**2+(0-(-3))**2",
+        "expected": "25",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_equation",
+      "explanation_detail": {
+        "approach": "半径は中心から通る点までの距離。標準形 $(x-a)^2+(y-b)^2=r^2$ に代入する。",
+        "steps": [
+          "半径の2乗は中心と点の距離の2乗：$(4-(0))^2+(0-(-3))^2=25$。",
+          "$x^2+(y+3)^2=25$。"
+        ],
+        "alternatives": [
+          "$(x-(0))^2+(y-(-3))^2=r^2$ に点 $(4,\\,0)$ を代入して $r^2$ を求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心を正しく決めている",
+            "points": 1
+          },
+          {
+            "point": "半径（の2乗）を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "円の方程式を正しく書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に $r$ を書き、$r^2$ にし忘れる。",
+          "中心の座標の符号を式の中で逆にし忘れる（$(x-a)^2$ の $a$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "中心が $(4,\\,0)$ で、直線 $3x+4y-2=0$ に接する円の方程式を求めなさい。",
+      "answer": {
+        "value": "$(x-4)^2+y^2=4$",
+        "accepted": [
+          "(x-4)^2+y^2=4"
+        ]
+      },
+      "explanation": "中心 $(4,\\,0)$、半径の2乗 $4$ より $(x-4)^2+y^2=4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(Abs((3)*(4)+(4)*(0)+(-2))/sqrt(25))**2",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_equation",
+      "explanation_detail": {
+        "approach": "円が直線に接するとき、中心と直線の距離が半径に等しい。点と直線の距離の公式を使う。",
+        "steps": [
+          "半径は中心と直線の距離：$\\dfrac{|3\\cdot(4)+(4)\\cdot(0)+(-2)|}{\\sqrt{9+16}}=\\dfrac{10}{5}=2$。",
+          "$(x-4)^2+y^2=4$。"
+        ],
+        "alternatives": [
+          "円の方程式と直線の方程式を連立して判別式 $D=0$ となることを確かめてもよい（計算は重くなる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心を正しく決めている",
+            "points": 1
+          },
+          {
+            "point": "半径（の2乗）を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "円の方程式を正しく書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "右辺に $r$ を書き、$r^2$ にし忘れる。",
+          "中心の座標の符号を式の中で逆にし忘れる（$(x-a)^2$ の $a$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{P}(1,\\,4)$ は円 $(x+3)^2+(y-2)^2=20$ 上にある。点 $\\mathrm{P}$ における円の接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$2x+y=6$",
+        "accepted": [
+          "2x+y=6",
+          "2x+y-6=0"
+        ]
+      },
+      "explanation": "接線は半径 $\\mathrm{CP}$（$\\mathrm{C}(-3,\\,2)$）に垂直で $\\mathrm{P}$ を通る直線。公式 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ より $2x+y=6$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(4)*(1-(-3))+(2)*(4-(2))",
+        "expected": "20",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_at",
+      "explanation_detail": {
+        "approach": "円の接線は接点を通る半径に垂直。中心が原点なら公式 $x_1x+y_1y=r^2$、中心が $(a,\\,b)$ なら $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ を使う。",
+        "steps": [
+          "中心 $\\mathrm{C}(-3,\\,2)$、$\\mathrm{P}-\\mathrm{C}=(4,\\,2)$。",
+          "公式より $(4)(x-(-3))+(2)(y-(2))=20$。",
+          "整理して $2x+y=6$。"
+        ],
+        "alternatives": [
+          "半径 $\\mathrm{CP}$ の傾き $\\dfrac{1}{2}$ に垂直な傾きをもち $\\mathrm{P}$ を通る直線として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の公式（または半径との垂直）を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中心が原点でない円に $x_1x+y_1y=r^2$ をそのまま使う。",
+          "接点の座標の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{P}(-1,\\,4)$ は円 $x^2+(y-1)^2=10$ 上にある。点 $\\mathrm{P}$ における円の接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$x-3y=-13$",
+        "accepted": [
+          "x-3y=-13",
+          "x-3y+13=0"
+        ]
+      },
+      "explanation": "接線は半径 $\\mathrm{CP}$（$\\mathrm{C}(0,\\,1)$）に垂直で $\\mathrm{P}$ を通る直線。公式 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ より $x-3y=-13$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(-1)*(-1-(0))+(3)*(4-(1))",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_at",
+      "explanation_detail": {
+        "approach": "円の接線は接点を通る半径に垂直。中心が原点なら公式 $x_1x+y_1y=r^2$、中心が $(a,\\,b)$ なら $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ を使う。",
+        "steps": [
+          "中心 $\\mathrm{C}(0,\\,1)$、$\\mathrm{P}-\\mathrm{C}=(-1,\\,3)$。",
+          "公式より $(-1)(x-(0))+(3)(y-(1))=10$。",
+          "整理して $x-3y=-13$。"
+        ],
+        "alternatives": [
+          "半径 $\\mathrm{CP}$ の傾き $-3$ に垂直な傾きをもち $\\mathrm{P}$ を通る直線として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の公式（または半径との垂直）を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中心が原点でない円に $x_1x+y_1y=r^2$ をそのまま使う。",
+          "接点の座標の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{P}(1,\\,1)$ は円 $x^2+y^2=2$ 上にある。点 $\\mathrm{P}$ における円の接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$x+y=2$",
+        "accepted": [
+          "x+y=2",
+          "x+y-2=0"
+        ]
+      },
+      "explanation": "接線は半径 $\\mathrm{CP}$（$\\mathrm{C}(0,\\,0)$）に垂直で $\\mathrm{P}$ を通る直線。公式 $x_1x+y_1y=r^2$ より $x+y=2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(1)*(1-(0))+(1)*(1-(0))",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_at",
+      "explanation_detail": {
+        "approach": "円の接線は接点を通る半径に垂直。中心が原点なら公式 $x_1x+y_1y=r^2$、中心が $(a,\\,b)$ なら $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ を使う。",
+        "steps": [
+          "公式 $x_1x+y_1y=r^2$ に $x_1=1,\\ y_1=1,\\ r^2=2$ を代入して $x+y=2$。",
+          "整理して $x+y=2$。"
+        ],
+        "alternatives": [
+          "半径 $\\mathrm{CP}$ の傾き $1$ に垂直な傾きをもち $\\mathrm{P}$ を通る直線として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の公式（または半径との垂直）を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "右辺を $r$ とする（正しくは $r^2$）。",
+          "接点の座標の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{P}(2,\\,-5)$ は円 $x^2+y^2=29$ 上にある。点 $\\mathrm{P}$ における円の接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$2x-5y=29$",
+        "accepted": [
+          "2x-5y=29",
+          "2x-5y-29=0"
+        ]
+      },
+      "explanation": "接線は半径 $\\mathrm{CP}$（$\\mathrm{C}(0,\\,0)$）に垂直で $\\mathrm{P}$ を通る直線。公式 $x_1x+y_1y=r^2$ より $2x-5y=29$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2)*(2-(0))+(-5)*(-5-(0))",
+        "expected": "29",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_at",
+      "explanation_detail": {
+        "approach": "円の接線は接点を通る半径に垂直。中心が原点なら公式 $x_1x+y_1y=r^2$、中心が $(a,\\,b)$ なら $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ を使う。",
+        "steps": [
+          "公式 $x_1x+y_1y=r^2$ に $x_1=2,\\ y_1=-5,\\ r^2=29$ を代入して $2x-5y=29$。",
+          "整理して $2x-5y=29$。"
+        ],
+        "alternatives": [
+          "半径 $\\mathrm{CP}$ の傾き $-\\dfrac{5}{2}$ に垂直な傾きをもち $\\mathrm{P}$ を通る直線として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の公式（または半径との垂直）を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "右辺を $r$ とする（正しくは $r^2$）。",
+          "接点の座標の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $\\mathrm{P}(5,\\,2)$ は円 $(x-3)^2+(y-1)^2=5$ 上にある。点 $\\mathrm{P}$ における円の接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$2x+y=12$",
+        "accepted": [
+          "2x+y=12",
+          "2x+y-12=0"
+        ]
+      },
+      "explanation": "接線は半径 $\\mathrm{CP}$（$\\mathrm{C}(3,\\,1)$）に垂直で $\\mathrm{P}$ を通る直線。公式 $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ より $2x+y=12$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2)*(5-(3))+(1)*(2-(1))",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_at",
+      "explanation_detail": {
+        "approach": "円の接線は接点を通る半径に垂直。中心が原点なら公式 $x_1x+y_1y=r^2$、中心が $(a,\\,b)$ なら $(x_1-a)(x-a)+(y_1-b)(y-b)=r^2$ を使う。",
+        "steps": [
+          "中心 $\\mathrm{C}(3,\\,1)$、$\\mathrm{P}-\\mathrm{C}=(2,\\,1)$。",
+          "公式より $(2)(x-(3))+(1)(y-(1))=5$。",
+          "整理して $2x+y=12$。"
+        ],
+        "alternatives": [
+          "半径 $\\mathrm{CP}$ の傾き $\\dfrac{1}{2}$ に垂直な傾きをもち $\\mathrm{P}$ を通る直線として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の公式（または半径との垂直）を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中心が原点でない円に $x_1x+y_1y=r^2$ をそのまま使う。",
+          "接点の座標の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "円 $(x-2)^2+(y+2)^2=9$ と直線 $4x+3y+23=0$ の位置関係として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "接する"
+        },
+        {
+          "label": "イ",
+          "text": "直線が円の中心を通る"
+        },
+        {
+          "label": "ウ",
+          "text": "共有点をもたない"
+        },
+        {
+          "label": "エ",
+          "text": "異なる2点で交わる"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "中心 $(2,\\,-2)$ と直線の距離 $d=\\dfrac{|25|}{5}=5$、半径 $r=3$。$d>r$ より共有点をもたない。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((4)*(2)+(3)*(-2)+(23))/5",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_line_pos",
+      "explanation_detail": {
+        "approach": "円と直線の位置関係は、中心と直線の距離 $d$ と半径 $r$ の大小で決まる。",
+        "steps": [
+          "中心 $(2,\\,-2)$、半径 $3$。",
+          "$d=\\dfrac{|4\\cdot(2)+(3)\\cdot(-2)+(23)|}{\\sqrt{16+9}}=5$。",
+          "$5>3$ より $d>r$。"
+        ],
+        "alternatives": [
+          "円と直線の方程式を連立して1文字を消去し、2次方程式の判別式の符号で判定してもよい（$D>0$：2点、$D=0$：接する、$D<0$：共有点なし）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心と半径を読み取り、距離を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$d$ と $r$ を比べて正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "接するのは $d=r$ のとき。この問題では $d\\neq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "中心を通るなら $d=0$。この問題では $d=5\\neq0$。",
+          "misconception": "中心の座標を直線の式に代入していない"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "2点で交わるのは $d<r$ のとき。この問題では $d\\geqq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "円 $(x-1)^2+(y+2)^2=25$ と直線 $3x+4y=0$ の位置関係として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "異なる2点で交わる"
+        },
+        {
+          "label": "イ",
+          "text": "共有点をもたない"
+        },
+        {
+          "label": "ウ",
+          "text": "接する"
+        },
+        {
+          "label": "エ",
+          "text": "直線が円の中心を通る"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "中心 $(1,\\,-2)$ と直線の距離 $d=\\dfrac{|-5|}{5}=1$、半径 $r=5$。$d<r$ より2点で交わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((3)*(1)+(4)*(-2)+(0))/5",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_line_pos",
+      "explanation_detail": {
+        "approach": "円と直線の位置関係は、中心と直線の距離 $d$ と半径 $r$ の大小で決まる。",
+        "steps": [
+          "中心 $(1,\\,-2)$、半径 $5$。",
+          "$d=\\dfrac{|3\\cdot(1)+(4)\\cdot(-2)+(0)|}{\\sqrt{9+16}}=1$。",
+          "$1<5$ より $d<r$。"
+        ],
+        "alternatives": [
+          "円と直線の方程式を連立して1文字を消去し、2次方程式の判別式の符号で判定してもよい（$D>0$：2点、$D=0$：接する、$D<0$：共有点なし）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心と半径を読み取り、距離を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$d$ と $r$ を比べて正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "共有点をもたないのは $d>r$ のとき。この問題では $d\\leqq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "接するのは $d=r$ のとき。この問題では $d\\neq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "中心を通るなら $d=0$。この問題では $d=1\\neq0$。",
+          "misconception": "中心の座標を直線の式に代入していない"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "円 $(x-3)^2+(y+3)^2=9$ と直線 $3x+4y-17=0$ の位置関係として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "直線が円の中心を通る"
+        },
+        {
+          "label": "イ",
+          "text": "接する"
+        },
+        {
+          "label": "ウ",
+          "text": "異なる2点で交わる"
+        },
+        {
+          "label": "エ",
+          "text": "共有点をもたない"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "中心 $(3,\\,-3)$ と直線の距離 $d=\\dfrac{|-20|}{5}=4$、半径 $r=3$。$d>r$ より共有点をもたない。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((3)*(3)+(4)*(-3)+(-17))/5",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_line_pos",
+      "explanation_detail": {
+        "approach": "円と直線の位置関係は、中心と直線の距離 $d$ と半径 $r$ の大小で決まる。",
+        "steps": [
+          "中心 $(3,\\,-3)$、半径 $3$。",
+          "$d=\\dfrac{|3\\cdot(3)+(4)\\cdot(-3)+(-17)|}{\\sqrt{9+16}}=4$。",
+          "$4>3$ より $d>r$。"
+        ],
+        "alternatives": [
+          "円と直線の方程式を連立して1文字を消去し、2次方程式の判別式の符号で判定してもよい（$D>0$：2点、$D=0$：接する、$D<0$：共有点なし）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心と半径を読み取り、距離を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$d$ と $r$ を比べて正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "中心を通るなら $d=0$。この問題では $d=4\\neq0$。",
+          "misconception": "中心の座標を直線の式に代入していない"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "接するのは $d=r$ のとき。この問題では $d\\neq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "2点で交わるのは $d<r$ のとき。この問題では $d\\geqq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "円 $x^2+(y-1)^2=16$ と直線 $3x+4y+21=0$ の位置関係として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "共有点をもたない"
+        },
+        {
+          "label": "イ",
+          "text": "直線が円の中心を通る"
+        },
+        {
+          "label": "ウ",
+          "text": "接する"
+        },
+        {
+          "label": "エ",
+          "text": "異なる2点で交わる"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "中心 $(0,\\,1)$ と直線の距離 $d=\\dfrac{|25|}{5}=5$、半径 $r=4$。$d>r$ より共有点をもたない。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((3)*(0)+(4)*(1)+(21))/5",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_line_pos",
+      "explanation_detail": {
+        "approach": "円と直線の位置関係は、中心と直線の距離 $d$ と半径 $r$ の大小で決まる。",
+        "steps": [
+          "中心 $(0,\\,1)$、半径 $4$。",
+          "$d=\\dfrac{|3\\cdot(0)+(4)\\cdot(1)+(21)|}{\\sqrt{9+16}}=5$。",
+          "$5>4$ より $d>r$。"
+        ],
+        "alternatives": [
+          "円と直線の方程式を連立して1文字を消去し、2次方程式の判別式の符号で判定してもよい（$D>0$：2点、$D=0$：接する、$D<0$：共有点なし）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心と半径を読み取り、距離を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$d$ と $r$ を比べて正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "中心を通るなら $d=0$。この問題では $d=5\\neq0$。",
+          "misconception": "中心の座標を直線の式に代入していない"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "接するのは $d=r$ のとき。この問題では $d\\neq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "2点で交わるのは $d<r$ のとき。この問題では $d\\geqq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "円 $(x+1)^2+(y+2)^2=16$ と直線 $4x+3y-20=0$ の位置関係として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "共有点をもたない"
+        },
+        {
+          "label": "イ",
+          "text": "直線が円の中心を通る"
+        },
+        {
+          "label": "ウ",
+          "text": "異なる2点で交わる"
+        },
+        {
+          "label": "エ",
+          "text": "接する"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "中心 $(-1,\\,-2)$ と直線の距離 $d=\\dfrac{|-30|}{5}=6$、半径 $r=4$。$d>r$ より共有点をもたない。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs((4)*(-1)+(3)*(-2)+(-20))/5",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-circle_line_pos",
+      "explanation_detail": {
+        "approach": "円と直線の位置関係は、中心と直線の距離 $d$ と半径 $r$ の大小で決まる。",
+        "steps": [
+          "中心 $(-1,\\,-2)$、半径 $4$。",
+          "$d=\\dfrac{|4\\cdot(-1)+(3)\\cdot(-2)+(-20)|}{\\sqrt{16+9}}=6$。",
+          "$6>4$ より $d>r$。"
+        ],
+        "alternatives": [
+          "円と直線の方程式を連立して1文字を消去し、2次方程式の判別式の符号で判定してもよい（$D>0$：2点、$D=0$：接する、$D<0$：共有点なし）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中心と半径を読み取り、距離を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "$d$ と $r$ を比べて正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "中心を通るなら $d=0$。この問題では $d=6\\neq0$。",
+          "misconception": "中心の座標を直線の式に代入していない"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "2点で交わるのは $d<r$ のとき。この問題では $d\\geqq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "接するのは $d=r$ のとき。この問題では $d\\neq r$。",
+          "misconception": "距離と半径の比較の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2点 $\\mathrm{A}(-2,\\,3)$、$\\mathrm{B}(8,\\,3)$ に対して、$\\mathrm{AP}:\\mathrm{BP}=2:3$ を満たす点 $\\mathrm{P}$ の軌跡を求めなさい。",
+      "answer": {
+        "value": "中心 $(-10,\\,3)$、半径 $12$ の円（方程式 $(x+10)^2+(y-3)^2=144$）"
+      },
+      "explanation": "$\\mathrm{P}(x,\\,y)$ とおき、$3\\mathrm{AP}=2\\mathrm{BP}$ の両辺を2乗した式を整理すると $(x+10)^2+(y-3)^2=144$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{P}(x,\\,y)$ とおき、条件を2乗した式で表している",
+            "points": 3
+          },
+          {
+            "criterion": "式を正しく整理して円の方程式を得ている",
+            "points": 3
+          },
+          {
+            "criterion": "軌跡を図形として答えている（逆の確認を含む）",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand((9)*((x-(-2))**2+(y-(3))**2)-(4)*((x-(8))**2+(y-(3))**2))",
+        "expected": "expand((5)*((x-(-10))**2+(y-(3))**2-(144)))",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-apollonius",
+      "explanation_detail": {
+        "approach": "距離の比の条件は、根号を避けるために $n\\mathrm{AP}=m\\mathrm{BP}$ を2乗して $n^2\\mathrm{AP}^2=m^2\\mathrm{BP}^2$ として式にする。",
+        "steps": [
+          "$\\mathrm{P}(x,\\,y)$ とおく。条件は $3\\mathrm{AP}=2\\mathrm{BP}$、両辺は $0$ 以上なので2乗して $9\\mathrm{AP}^2=4\\mathrm{BP}^2$ と同値。",
+          "$9\\{(x+2)^2+(y-3)^2\\}=4\\{(x-8)^2+(y-3)^2\\}$。",
+          "展開して整理すると $(x+10)^2+(y-3)^2=144$。",
+          "逆にこの円上の点は条件を満たす。よって軌跡は中心 $(-10,\\,3)$、半径 $12$ の円。"
+        ],
+        "alternatives": [
+          "検算：線分 $\\mathrm{AB}$ を $2:3$ に内分する点 $(2,\\,3)$ と外分する点 $(-22,\\,3)$ は条件を満たし、この2点を直径の両端とする円が答えの円に一致する（中心の $x$ 座標 $-10$、半径 $12$ の円）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の式",
+            "points": 3
+          },
+          {
+            "point": "整理",
+            "points": 3
+          },
+          {
+            "point": "図形として答える",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AP}:\\mathrm{BP}=m:n$ を $m\\mathrm{AP}=n\\mathrm{BP}$ と逆に立てる。",
+          "方程式だけを書き、中心と半径を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2点 $\\mathrm{A}(-3,\\,2)$、$\\mathrm{B}(5,\\,2)$ に対して、$\\mathrm{AP}:\\mathrm{BP}=1:3$ を満たす点 $\\mathrm{P}$ の軌跡を求めなさい。",
+      "answer": {
+        "value": "中心 $(-4,\\,2)$、半径 $3$ の円（方程式 $(x+4)^2+(y-2)^2=9$）"
+      },
+      "explanation": "$\\mathrm{P}(x,\\,y)$ とおき、$3\\mathrm{AP}=\\mathrm{BP}$ の両辺を2乗した式を整理すると $(x+4)^2+(y-2)^2=9$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{P}(x,\\,y)$ とおき、条件を2乗した式で表している",
+            "points": 3
+          },
+          {
+            "criterion": "式を正しく整理して円の方程式を得ている",
+            "points": 3
+          },
+          {
+            "criterion": "軌跡を図形として答えている（逆の確認を含む）",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand((9)*((x-(-3))**2+(y-(2))**2)-(1)*((x-(5))**2+(y-(2))**2))",
+        "expected": "expand((8)*((x-(-4))**2+(y-(2))**2-(9)))",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-apollonius",
+      "explanation_detail": {
+        "approach": "距離の比の条件は、根号を避けるために $n\\mathrm{AP}=m\\mathrm{BP}$ を2乗して $n^2\\mathrm{AP}^2=m^2\\mathrm{BP}^2$ として式にする。",
+        "steps": [
+          "$\\mathrm{P}(x,\\,y)$ とおく。条件は $3\\mathrm{AP}=\\mathrm{BP}$、両辺は $0$ 以上なので2乗して $9\\mathrm{AP}^2=\\mathrm{BP}^2$ と同値。",
+          "$9\\{(x+3)^2+(y-2)^2\\}=\\{(x-5)^2+(y-2)^2\\}$。",
+          "展開して整理すると $(x+4)^2+(y-2)^2=9$。",
+          "逆にこの円上の点は条件を満たす。よって軌跡は中心 $(-4,\\,2)$、半径 $3$ の円。"
+        ],
+        "alternatives": [
+          "検算：線分 $\\mathrm{AB}$ を $1:3$ に内分する点 $(-1,\\,2)$ と外分する点 $(-7,\\,2)$ は条件を満たし、この2点を直径の両端とする円が答えの円に一致する（中心の $x$ 座標 $-4$、半径 $3$ の円）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の式",
+            "points": 3
+          },
+          {
+            "point": "整理",
+            "points": 3
+          },
+          {
+            "point": "図形として答える",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AP}:\\mathrm{BP}=m:n$ を $m\\mathrm{AP}=n\\mathrm{BP}$ と逆に立てる。",
+          "方程式だけを書き、中心と半径を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2点 $\\mathrm{A}(-3,\\,0)$、$\\mathrm{B}(5,\\,0)$ に対して、$\\mathrm{AP}:\\mathrm{BP}=1:3$ を満たす点 $\\mathrm{P}$ の軌跡を求めなさい。",
+      "answer": {
+        "value": "中心 $(-4,\\,0)$、半径 $3$ の円（方程式 $(x+4)^2+y^2=9$）"
+      },
+      "explanation": "$\\mathrm{P}(x,\\,y)$ とおき、$3\\mathrm{AP}=\\mathrm{BP}$ の両辺を2乗した式を整理すると $(x+4)^2+y^2=9$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{P}(x,\\,y)$ とおき、条件を2乗した式で表している",
+            "points": 3
+          },
+          {
+            "criterion": "式を正しく整理して円の方程式を得ている",
+            "points": 3
+          },
+          {
+            "criterion": "軌跡を図形として答えている（逆の確認を含む）",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand((9)*((x-(-3))**2+(y-(0))**2)-(1)*((x-(5))**2+(y-(0))**2))",
+        "expected": "expand((8)*((x-(-4))**2+(y-(0))**2-(9)))",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-apollonius",
+      "explanation_detail": {
+        "approach": "距離の比の条件は、根号を避けるために $n\\mathrm{AP}=m\\mathrm{BP}$ を2乗して $n^2\\mathrm{AP}^2=m^2\\mathrm{BP}^2$ として式にする。",
+        "steps": [
+          "$\\mathrm{P}(x,\\,y)$ とおく。条件は $3\\mathrm{AP}=\\mathrm{BP}$、両辺は $0$ 以上なので2乗して $9\\mathrm{AP}^2=\\mathrm{BP}^2$ と同値。",
+          "$9\\{(x+3)^2+y^2\\}=\\{(x-5)^2+y^2\\}$。",
+          "展開して整理すると $(x+4)^2+y^2=9$。",
+          "逆にこの円上の点は条件を満たす。よって軌跡は中心 $(-4,\\,0)$、半径 $3$ の円。"
+        ],
+        "alternatives": [
+          "検算：線分 $\\mathrm{AB}$ を $1:3$ に内分する点 $(-1,\\,0)$ と外分する点 $(-7,\\,0)$ は条件を満たし、この2点を直径の両端とする円が答えの円に一致する（中心の $x$ 座標 $-4$、半径 $3$ の円）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の式",
+            "points": 3
+          },
+          {
+            "point": "整理",
+            "points": 3
+          },
+          {
+            "point": "図形として答える",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AP}:\\mathrm{BP}=m:n$ を $m\\mathrm{AP}=n\\mathrm{BP}$ と逆に立てる。",
+          "方程式だけを書き、中心と半径を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $\\mathrm{Q}$ が放物線 $y=x^2-2x+3$ 上を動くとき、点 $\\mathrm{A}(1,\\,2)$ と $\\mathrm{Q}$ を結ぶ線分 $\\mathrm{AQ}$ の中点 $\\mathrm{M}$ の軌跡を求めなさい。",
+      "answer": {
+        "value": "放物線 $y=2x^2-4x+4$"
+      },
+      "explanation": "$\\mathrm{Q}(s,\\,t)$、$\\mathrm{M}(x,\\,y)$ とおくと $s=2x-1$、$t=2y-2$。これを $t=s^2-2s+3$ に代入して整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "動く点 $\\mathrm{Q}$ と中点 $\\mathrm{M}$ の座標を文字でおき、中点の関係式を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$\\mathrm{Q}$ の座標を $\\mathrm{M}$ の座標で表し、放物線の式に代入している",
+            "points": 3
+          },
+          {
+            "criterion": "整理して軌跡を答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(((2*x-(1))**2+(-2)*(2*x-(1))+(3)+(2))/2)",
+        "expected": "2*x**2+(-4)*x+(4)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U03-locus_midpoint",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "軌跡を求めたい点 $\\mathrm{M}(x,\\,y)$ と、条件が分かっている点 $\\mathrm{Q}(s,\\,t)$ の関係を式にし、$s,\\ t$ を消去する（つなぎの文字の消去）。",
+        "steps": [
+          "$\\mathrm{Q}(s,\\,t)$ とおくと $t=s^2-2s+3$ …①。",
+          "$\\mathrm{M}(x,\\,y)$ は中点なので $x=\\dfrac{s+1}{2}$、$y=\\dfrac{t+2}{2}$。",
+          "$s=2x-1$、$t=2y-2$ を①に代入：$2y-2=(2x-1)^2-2(2x-1)+3$。",
+          "整理して $y=2x^2-4x+4$。$s$ はすべての実数をとるので、$x$ もすべての実数をとり、軌跡は放物線全体。"
+        ],
+        "alternatives": [
+          "検算：$\\mathrm{Q}$ が放物線の頂点など具体的な点のとき、中点 $\\mathrm{M}$ が答えの放物線上にあるかを確かめる。例えば $s=0$ のとき $\\mathrm{Q}(0,\\,3)$、中点 $\\left(\\dfrac{1}{2},\\,\\dfrac{5}{2}\\right)$ は $y=2x^2-4x+4$ を満たす。二次関数（数学Ⅰ）の平行移動・拡大の見方でも、$x^2$ の係数が $2$ になる理由が説明できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中点の関係式",
+            "points": 3
+          },
+          {
+            "point": "代入と消去",
+            "points": 3
+          },
+          {
+            "point": "軌跡の答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中点の座標を $\\dfrac{s-a}{2}$ のように差で書く。",
+          "代入後の展開で $(2x)^2=4x^2$ の係数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $\\mathrm{Q}$ が放物線 $y=x^2-3x-4$ 上を動くとき、点 $\\mathrm{A}(1,\\,2)$ と $\\mathrm{Q}$ を結ぶ線分 $\\mathrm{AQ}$ の中点 $\\mathrm{M}$ の軌跡を求めなさい。",
+      "answer": {
+        "value": "放物線 $y=2x^2-5x+1$"
+      },
+      "explanation": "$\\mathrm{Q}(s,\\,t)$、$\\mathrm{M}(x,\\,y)$ とおくと $s=2x-1$、$t=2y-2$。これを $t=s^2-3s-4$ に代入して整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "動く点 $\\mathrm{Q}$ と中点 $\\mathrm{M}$ の座標を文字でおき、中点の関係式を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$\\mathrm{Q}$ の座標を $\\mathrm{M}$ の座標で表し、放物線の式に代入している",
+            "points": 3
+          },
+          {
+            "criterion": "整理して軌跡を答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(((2*x-(1))**2+(-3)*(2*x-(1))+(-4)+(2))/2)",
+        "expected": "2*x**2+(-5)*x+(1)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U03-locus_midpoint",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "軌跡を求めたい点 $\\mathrm{M}(x,\\,y)$ と、条件が分かっている点 $\\mathrm{Q}(s,\\,t)$ の関係を式にし、$s,\\ t$ を消去する（つなぎの文字の消去）。",
+        "steps": [
+          "$\\mathrm{Q}(s,\\,t)$ とおくと $t=s^2-3s-4$ …①。",
+          "$\\mathrm{M}(x,\\,y)$ は中点なので $x=\\dfrac{s+1}{2}$、$y=\\dfrac{t+2}{2}$。",
+          "$s=2x-1$、$t=2y-2$ を①に代入：$2y-2=(2x-1)^2-3(2x-1)-4$。",
+          "整理して $y=2x^2-5x+1$。$s$ はすべての実数をとるので、$x$ もすべての実数をとり、軌跡は放物線全体。"
+        ],
+        "alternatives": [
+          "検算：$\\mathrm{Q}$ が放物線の頂点など具体的な点のとき、中点 $\\mathrm{M}$ が答えの放物線上にあるかを確かめる。例えば $s=0$ のとき $\\mathrm{Q}(0,\\,-4)$、中点 $\\left(\\dfrac{1}{2},\\,-1\\right)$ は $y=2x^2-5x+1$ を満たす。二次関数（数学Ⅰ）の平行移動・拡大の見方でも、$x^2$ の係数が $2$ になる理由が説明できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中点の関係式",
+            "points": 3
+          },
+          {
+            "point": "代入と消去",
+            "points": 3
+          },
+          {
+            "point": "軌跡の答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中点の座標を $\\dfrac{s-a}{2}$ のように差で書く。",
+          "代入後の展開で $(2x)^2=4x^2$ の係数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $\\mathrm{Q}$ が放物線 $y=x^2+x+2$ 上を動くとき、点 $\\mathrm{A}(-2,\\,4)$ と $\\mathrm{Q}$ を結ぶ線分 $\\mathrm{AQ}$ の中点 $\\mathrm{M}$ の軌跡を求めなさい。",
+      "answer": {
+        "value": "放物線 $y=2x^2+5x+6$"
+      },
+      "explanation": "$\\mathrm{Q}(s,\\,t)$、$\\mathrm{M}(x,\\,y)$ とおくと $s=2x+2$、$t=2y-4$。これを $t=s^2+s+2$ に代入して整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "動く点 $\\mathrm{Q}$ と中点 $\\mathrm{M}$ の座標を文字でおき、中点の関係式を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$\\mathrm{Q}$ の座標を $\\mathrm{M}$ の座標で表し、放物線の式に代入している",
+            "points": 3
+          },
+          {
+            "criterion": "整理して軌跡を答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(((2*x-(-2))**2+(1)*(2*x-(-2))+(2)+(4))/2)",
+        "expected": "2*x**2+(5)*x+(6)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U03-locus_midpoint",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "軌跡を求めたい点 $\\mathrm{M}(x,\\,y)$ と、条件が分かっている点 $\\mathrm{Q}(s,\\,t)$ の関係を式にし、$s,\\ t$ を消去する（つなぎの文字の消去）。",
+        "steps": [
+          "$\\mathrm{Q}(s,\\,t)$ とおくと $t=s^2+s+2$ …①。",
+          "$\\mathrm{M}(x,\\,y)$ は中点なので $x=\\dfrac{s-2}{2}$、$y=\\dfrac{t+4}{2}$。",
+          "$s=2x+2$、$t=2y-4$ を①に代入：$2y-4=(2x+2)^2+(2x+2)+2$。",
+          "整理して $y=2x^2+5x+6$。$s$ はすべての実数をとるので、$x$ もすべての実数をとり、軌跡は放物線全体。"
+        ],
+        "alternatives": [
+          "検算：$\\mathrm{Q}$ が放物線の頂点など具体的な点のとき、中点 $\\mathrm{M}$ が答えの放物線上にあるかを確かめる。例えば $s=0$ のとき $\\mathrm{Q}(0,\\,2)$、中点 $\\left(-1,\\,3\\right)$ は $y=2x^2+5x+6$ を満たす。二次関数（数学Ⅰ）の平行移動・拡大の見方でも、$x^2$ の係数が $2$ になる理由が説明できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中点の関係式",
+            "points": 3
+          },
+          {
+            "point": "代入と消去",
+            "points": 3
+          },
+          {
+            "point": "軌跡の答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中点の座標を $\\dfrac{s-a}{2}$ のように差で書く。",
+          "代入後の展開で $(2x)^2=4x^2$ の係数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x,\\ y$ が4つの不等式 $x\\geqq0$、$y\\geqq0$、$3x+y\\leqq13$、$x+3y\\leqq7$ を満たすとき、$4x+3y$ の最大値と、そのときの $x,\\ y$ の値を求めなさい。",
+      "figure": {
+        "alt": "連立不等式の表す領域（四角形）",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 156 156\" width=\"156\" height=\"156\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"142\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"30\" y1=\"142\" x2=\"30\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"46\" y1=\"142\" x2=\"46\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"62\" y1=\"142\" x2=\"62\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"78\" y1=\"142\" x2=\"78\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"94\" y1=\"142\" x2=\"94\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"110\" y1=\"142\" x2=\"110\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"126\" y1=\"142\" x2=\"126\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"142\" y1=\"142\" x2=\"142\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"142\" x2=\"142\" y2=\"142\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"126\" x2=\"142\" y2=\"126\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"110\" x2=\"142\" y2=\"110\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"94\" x2=\"142\" y2=\"94\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"78\" x2=\"142\" y2=\"78\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"62\" x2=\"142\" y2=\"62\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"46\" x2=\"142\" y2=\"46\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"30\" x2=\"142\" y2=\"30\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"142\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><polygon points=\"30,126 99.33,126 94,110 30,88.67\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"14\" y1=\"126\" x2=\"148\" y2=\"126\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"30\" y1=\"142\" x2=\"30\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"144\" y=\"139\" font-style=\"italic\">x</text><text x=\"35\" y=\"12\" font-style=\"italic\">y</text><text x=\"19\" y=\"138\">O</text><text x=\"11\" y=\"138\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"43\" y=\"138\" font-size=\"8\" fill=\"#555\">1</text><text x=\"59\" y=\"138\" font-size=\"8\" fill=\"#555\">2</text><text x=\"75\" y=\"138\" font-size=\"8\" fill=\"#555\">3</text><text x=\"91\" y=\"138\" font-size=\"8\" fill=\"#555\">4</text><text x=\"107\" y=\"138\" font-size=\"8\" fill=\"#555\">5</text><text x=\"123\" y=\"138\" font-size=\"8\" fill=\"#555\">6</text><text x=\"139\" y=\"138\" font-size=\"8\" fill=\"#555\">7</text><text x=\"17\" y=\"145\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"17\" y=\"113\" font-size=\"8\" fill=\"#555\">1</text><text x=\"17\" y=\"97\" font-size=\"8\" fill=\"#555\">2</text><text x=\"17\" y=\"81\" font-size=\"8\" fill=\"#555\">3</text><text x=\"17\" y=\"65\" font-size=\"8\" fill=\"#555\">4</text><text x=\"17\" y=\"49\" font-size=\"8\" fill=\"#555\">5</text><text x=\"17\" y=\"33\" font-size=\"8\" fill=\"#555\">6</text><text x=\"17\" y=\"17\" font-size=\"8\" fill=\"#555\">7</text><clipPath id=\"c42\"><rect x=\"14\" y=\"14\" width=\"128\" height=\"128\"/></clipPath><line x1=\"14\" y1=\"-130\" x2=\"142\" y2=\"254\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c42)\"/><clipPath id=\"c44\"><rect x=\"14\" y=\"14\" width=\"128\" height=\"128\"/></clipPath><line x1=\"14\" y1=\"83.33\" x2=\"142\" y2=\"126\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c44)\"/><circle cx=\"94\" cy=\"110\" r=\"2.3\" fill=\"#000\"/><text x=\"98\" y=\"106\">(4,1)</text></svg>"
+      },
+      "answer": {
+        "value": "最大値 $19$（$x=4,\\ y=1$）"
+      },
+      "explanation": "領域は4点 $(0,\\,0)$、$(\\dfrac{13}{3},\\,0)$、$(4,\\,1)$、$(0,\\,\\dfrac{7}{3})$ を頂点とする四角形。$4x+3y=k$ とおいた直線を平行移動し、$k$ が最大になる点を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "領域を正しく図示し、頂点の座標を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "${obj}=k$ とおいた直線の動きで最大となる点を判断している",
+            "points": 3
+          },
+          {
+            "criterion": "最大値とそのときの $x,\\ y$ を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "Max(0, 4*Rational(13,3), 4*4+3*1, 3*Rational(7,3))",
+        "expected": "19",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U03-lp_region",
+      "explanation_detail": {
+        "approach": "$4x+3y=k$ とおくと、これは傾き $-\\dfrac{4}{3}$、$y$ 切片 $\\dfrac{1}{3}k$ の直線。領域と共有点をもつ範囲で $y$ 切片が最大になるときを考える。",
+        "steps": [
+          "境界線 $3x+y=13$ と $x+3y=7$ の交点は $(4,\\,1)$。領域の頂点は $(0,\\,0)$、$(\\dfrac{13}{3},\\,0)$、$(4,\\,1)$、$(0,\\,\\dfrac{7}{3})$。",
+          "$4x+3y=k$ は傾き $-\\dfrac{4}{3}$ の直線。境界線の傾き $-3$、$-\\dfrac{1}{3}$ と比べて、直線が最後に領域から離れる点を判断する。",
+          "各頂点での値：$(0,\\,0)$ で $0$、$(\\dfrac{13}{3},\\,0)$ で $\\dfrac{52}{3}$、$(4,\\,1)$ で $19$、$(0,\\,\\dfrac{7}{3})$ で $7$。",
+          "最大値 $19$（$x=4,\\ y=1$）。"
+        ],
+        "alternatives": [
+          "領域が多角形で目的の式が一次式のとき、最大値・最小値は必ず頂点でとる。頂点の値をすべて計算して比べる方法でも確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "領域と頂点",
+            "points": 3
+          },
+          {
+            "point": "直線の平行移動による判断",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "交点 $(4,1)$ だけで最大と決めつけ、他の頂点と比べない。",
+          "不等号の向きを誤り、境界線の反対側を領域とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x,\\ y$ が4つの不等式 $x\\geqq0$、$y\\geqq0$、$2x+y\\leqq11$、$x+3y\\leqq13$ を満たすとき、$3x+2y$ の最大値と、そのときの $x,\\ y$ の値を求めなさい。",
+      "figure": {
+        "alt": "連立不等式の表す領域（四角形）",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 156 156\" width=\"156\" height=\"156\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"142\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"30\" y1=\"142\" x2=\"30\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"46\" y1=\"142\" x2=\"46\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"62\" y1=\"142\" x2=\"62\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"78\" y1=\"142\" x2=\"78\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"94\" y1=\"142\" x2=\"94\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"110\" y1=\"142\" x2=\"110\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"126\" y1=\"142\" x2=\"126\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"142\" y1=\"142\" x2=\"142\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"142\" x2=\"142\" y2=\"142\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"126\" x2=\"142\" y2=\"126\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"110\" x2=\"142\" y2=\"110\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"94\" x2=\"142\" y2=\"94\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"78\" x2=\"142\" y2=\"78\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"62\" x2=\"142\" y2=\"62\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"46\" x2=\"142\" y2=\"46\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"30\" x2=\"142\" y2=\"30\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"142\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><polygon points=\"30,126 118,126 94,78 30,56.67\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"14\" y1=\"126\" x2=\"148\" y2=\"126\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"30\" y1=\"142\" x2=\"30\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"144\" y=\"139\" font-style=\"italic\">x</text><text x=\"35\" y=\"12\" font-style=\"italic\">y</text><text x=\"19\" y=\"138\">O</text><text x=\"11\" y=\"138\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"43\" y=\"138\" font-size=\"8\" fill=\"#555\">1</text><text x=\"59\" y=\"138\" font-size=\"8\" fill=\"#555\">2</text><text x=\"75\" y=\"138\" font-size=\"8\" fill=\"#555\">3</text><text x=\"91\" y=\"138\" font-size=\"8\" fill=\"#555\">4</text><text x=\"107\" y=\"138\" font-size=\"8\" fill=\"#555\">5</text><text x=\"123\" y=\"138\" font-size=\"8\" fill=\"#555\">6</text><text x=\"139\" y=\"138\" font-size=\"8\" fill=\"#555\">7</text><text x=\"17\" y=\"145\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"17\" y=\"113\" font-size=\"8\" fill=\"#555\">1</text><text x=\"17\" y=\"97\" font-size=\"8\" fill=\"#555\">2</text><text x=\"17\" y=\"81\" font-size=\"8\" fill=\"#555\">3</text><text x=\"17\" y=\"65\" font-size=\"8\" fill=\"#555\">4</text><text x=\"17\" y=\"49\" font-size=\"8\" fill=\"#555\">5</text><text x=\"17\" y=\"33\" font-size=\"8\" fill=\"#555\">6</text><text x=\"17\" y=\"17\" font-size=\"8\" fill=\"#555\">7</text><clipPath id=\"c42\"><rect x=\"14\" y=\"14\" width=\"128\" height=\"128\"/></clipPath><line x1=\"14\" y1=\"-82\" x2=\"142\" y2=\"174\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c42)\"/><clipPath id=\"c44\"><rect x=\"14\" y=\"14\" width=\"128\" height=\"128\"/></clipPath><line x1=\"14\" y1=\"51.33\" x2=\"142\" y2=\"94\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c44)\"/><circle cx=\"94\" cy=\"78\" r=\"2.3\" fill=\"#000\"/><text x=\"98\" y=\"74\">(4,3)</text></svg>"
+      },
+      "answer": {
+        "value": "最大値 $18$（$x=4,\\ y=3$）"
+      },
+      "explanation": "領域は4点 $(0,\\,0)$、$(\\dfrac{11}{2},\\,0)$、$(4,\\,3)$、$(0,\\,\\dfrac{13}{3})$ を頂点とする四角形。$3x+2y=k$ とおいた直線を平行移動し、$k$ が最大になる点を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "領域を正しく図示し、頂点の座標を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "${obj}=k$ とおいた直線の動きで最大となる点を判断している",
+            "points": 3
+          },
+          {
+            "criterion": "最大値とそのときの $x,\\ y$ を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "Max(0, 3*Rational(11,2), 3*4+2*3, 2*Rational(13,3))",
+        "expected": "18",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U03-lp_region",
+      "explanation_detail": {
+        "approach": "$3x+2y=k$ とおくと、これは傾き $-\\dfrac{3}{2}$、$y$ 切片 $\\dfrac{1}{2}k$ の直線。領域と共有点をもつ範囲で $y$ 切片が最大になるときを考える。",
+        "steps": [
+          "境界線 $2x+y=11$ と $x+3y=13$ の交点は $(4,\\,3)$。領域の頂点は $(0,\\,0)$、$(\\dfrac{11}{2},\\,0)$、$(4,\\,3)$、$(0,\\,\\dfrac{13}{3})$。",
+          "$3x+2y=k$ は傾き $-\\dfrac{3}{2}$ の直線。境界線の傾き $-2$、$-\\dfrac{1}{3}$ と比べて、直線が最後に領域から離れる点を判断する。",
+          "各頂点での値：$(0,\\,0)$ で $0$、$(\\dfrac{11}{2},\\,0)$ で $\\dfrac{33}{2}$、$(4,\\,3)$ で $18$、$(0,\\,\\dfrac{13}{3})$ で $\\dfrac{26}{3}$。",
+          "最大値 $18$（$x=4,\\ y=3$）。"
+        ],
+        "alternatives": [
+          "領域が多角形で目的の式が一次式のとき、最大値・最小値は必ず頂点でとる。頂点の値をすべて計算して比べる方法でも確実に求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "領域と頂点",
+            "points": 3
+          },
+          {
+            "point": "直線の平行移動による判断",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "交点 $(4,3)$ だけで最大と決めつけ、他の頂点と比べない。",
+          "不等号の向きを誤り、境界線の反対側を領域とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $\\mathrm{A}(5,\\,-1)$ から円 $x^2+y^2=13$ に引いた接線の方程式と、接点の座標を求めなさい。",
+      "answer": {
+        "value": "接線 $2x-3y=13$（接点 $(2,\\,-3)$）、$3x+2y=13$（接点 $(3,\\,2)$）"
+      },
+      "explanation": "接点を $(x_1,\\,y_1)$ とおくと接線は $x_1x+y_1y=13$。これが $\\mathrm{A}$ を通り、接点が円周上にある条件から求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接点を $(x_1,\\,y_1)$ とおいて接線の方程式を立てている（または傾きをおいて距離の条件を立てている）",
+            "points": 3
+          },
+          {
+            "criterion": "連立方程式を解いて接点を2つとも求めている",
+            "points": 3
+          },
+          {
+            "criterion": "接線と接点を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[(2)*(5)+(-3)*(-1), (3)*(5)+(2)*(-1), (2)**2+(-3)**2, (3)**2+(2)**2]",
+        "expected": "[13, 13, 13, 13]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_external",
+      "explanation_detail": {
+        "approach": "接点を文字でおけば接線の公式が使える。「$\\mathrm{A}$ を通る」「接点は円周上」の2条件で接点が決まる。",
+        "steps": [
+          "接点 $(x_1,\\,y_1)$ とおくと、接線は $x_1x+y_1y=13$、かつ $x_1^2+y_1^2=13$ …①。",
+          "接線が $\\mathrm{A}(5,\\,-1)$ を通るので $5x_1-y_1=13$ …②。",
+          "①②を連立して $(x_1,\\,y_1)=(2,\\,-3),\\ (3,\\,2)$。",
+          "接線は $2x-3y=13$、$3x+2y=13$。"
+        ],
+        "alternatives": [
+          "傾き $m$ の直線 $y-(-1)=m(x-(5))$ とおき、原点との距離が $\\sqrt{13}$ に等しい条件から $m$ を求める方法もある。ただし、この方法では $y$ 軸に平行な接線（傾きをもたない直線）があるときに見落とすので、別に確かめる必要がある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針と式の設定",
+            "points": 3
+          },
+          {
+            "point": "連立方程式の解",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾き $m$ でおく方法で、$y$ 軸に平行な接線の有無を確かめない。",
+          "接点を1つしか求めない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $\\mathrm{A}(-5,\\,5)$ から円 $x^2+y^2=5$ に引いた接線の方程式と、接点の座標を求めなさい。",
+      "answer": {
+        "value": "接線 $2x+y=-5$（接点 $(-2,\\,-1)$）、$x+2y=5$（接点 $(1,\\,2)$）"
+      },
+      "explanation": "接点を $(x_1,\\,y_1)$ とおくと接線は $x_1x+y_1y=5$。これが $\\mathrm{A}$ を通り、接点が円周上にある条件から求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接点を $(x_1,\\,y_1)$ とおいて接線の方程式を立てている（または傾きをおいて距離の条件を立てている）",
+            "points": 3
+          },
+          {
+            "criterion": "連立方程式を解いて接点を2つとも求めている",
+            "points": 3
+          },
+          {
+            "criterion": "接線と接点を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[(-2)*(-5)+(-1)*(5), (1)*(-5)+(2)*(5), (-2)**2+(-1)**2, (1)**2+(2)**2]",
+        "expected": "[5, 5, 5, 5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U03-tangent_external",
+      "explanation_detail": {
+        "approach": "接点を文字でおけば接線の公式が使える。「$\\mathrm{A}$ を通る」「接点は円周上」の2条件で接点が決まる。",
+        "steps": [
+          "接点 $(x_1,\\,y_1)$ とおくと、接線は $x_1x+y_1y=5$、かつ $x_1^2+y_1^2=5$ …①。",
+          "接線が $\\mathrm{A}(-5,\\,5)$ を通るので $-5x_1+5y_1=5$ …②。",
+          "①②を連立して $(x_1,\\,y_1)=(-2,\\,-1),\\ (1,\\,2)$。",
+          "接線は $2x+y=-5$、$x+2y=5$。"
+        ],
+        "alternatives": [
+          "傾き $m$ の直線 $y-(5)=m(x-(-5))$ とおき、原点との距離が $\\sqrt{5}$ に等しい条件から $m$ を求める方法もある。ただし、この方法では $y$ 軸に平行な接線（傾きをもたない直線）があるときに見落とすので、別に確かめる必要がある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針と式の設定",
+            "points": 3
+          },
+          {
+            "point": "連立方程式の解",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾き $m$ でおく方法で、$y$ 軸に平行な接線の有無を確かめない。",
+          "接点を1つしか求めない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(-1,\\,-3)$ を通り、直線 $y=-2x-5$ に垂直な直線の方程式を求めなさい。\n［ある生徒の解答］\n垂直な直線の傾きは $-2$ の逆数で $-\\dfrac{1}{2}$。$y-(-3)=-\\dfrac{1}{2}(x-(-1))$ より $y=-\\dfrac{1}{2}x-\\dfrac{7}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=\\dfrac{1}{2}x-\\dfrac{5}{2}$"
+      },
+      "explanation": "2直線が垂直 $\\iff$ 傾きの積が $-1$。$-2\\times\\left(-\\dfrac{1}{2}\\right)=1\\neq-1$ なので、生徒の直線は垂直ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(-2)*(Rational(1,2))",
+        "expected": "-1",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-err_perp_slope",
+      "explanation_detail": {
+        "approach": "垂直条件は「傾きの積が $-1$」。逆数にして符号を変える。",
+        "steps": [
+          "与えられた直線の傾きは $-2$。",
+          "垂直な直線の傾き $m'$ は $-2m'=-1$ より $m'=\\dfrac{1}{2}$。",
+          "$y-(-3)=\\dfrac{1}{2}(x-(-1))$ を整理して $y=\\dfrac{1}{2}x-\\dfrac{5}{2}$。"
+        ],
+        "alternatives": [
+          "求めた2直線の傾きの積が $-2\\times\\left(\\dfrac{1}{2}\\right)=-1$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "符号を変え忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "垂直な直線の傾きは $-2$ の逆数で $-\\dfrac{1}{2}$。$y-(-3)=-\\dfrac{1}{2}(x-(-1))$ より $y=-\\dfrac{1}{2}x-\\dfrac{7}{2}$",
+        "error_step": "垂直な直線の傾きを決める部分",
+        "error_type": "formula",
+        "why_tempting": "「垂直なら逆数」という覚え方が中途半端で、符号を変えることを忘れている。",
+        "correction": "傾きを $m'$ とすると $-2m'=-1$ より $m'=\\dfrac{1}{2}$。$y-(-3)=\\dfrac{1}{2}(x-(-1))$ より $y=\\dfrac{1}{2}x-\\dfrac{5}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(2,\\,-2)$ を通り、直線 $y=2x+1$ に垂直な直線の方程式を求めなさい。\n［ある生徒の解答］\n垂直な直線の傾きは $2$ の逆数で $\\dfrac{1}{2}$。$y-(-2)=\\dfrac{1}{2}(x-(2))$ より $y=\\dfrac{1}{2}x-3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=-\\dfrac{1}{2}x-1$"
+      },
+      "explanation": "2直線が垂直 $\\iff$ 傾きの積が $-1$。$2\\times\\left(\\dfrac{1}{2}\\right)=1\\neq-1$ なので、生徒の直線は垂直ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(2)*(Rational(-1,2))",
+        "expected": "-1",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-err_perp_slope",
+      "explanation_detail": {
+        "approach": "垂直条件は「傾きの積が $-1$」。逆数にして符号を変える。",
+        "steps": [
+          "与えられた直線の傾きは $2$。",
+          "垂直な直線の傾き $m'$ は $2m'=-1$ より $m'=-\\dfrac{1}{2}$。",
+          "$y-(-2)=-\\dfrac{1}{2}(x-(2))$ を整理して $y=-\\dfrac{1}{2}x-1$。"
+        ],
+        "alternatives": [
+          "求めた2直線の傾きの積が $2\\times\\left(-\\dfrac{1}{2}\\right)=-1$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "符号を変え忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "垂直な直線の傾きは $2$ の逆数で $\\dfrac{1}{2}$。$y-(-2)=\\dfrac{1}{2}(x-(2))$ より $y=\\dfrac{1}{2}x-3$",
+        "error_step": "垂直な直線の傾きを決める部分",
+        "error_type": "formula",
+        "why_tempting": "「垂直なら逆数」という覚え方が中途半端で、符号を変えることを忘れている。",
+        "correction": "傾きを $m'$ とすると $2m'=-1$ より $m'=-\\dfrac{1}{2}$。$y-(-2)=-\\dfrac{1}{2}(x-(2))$ より $y=-\\dfrac{1}{2}x-1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(-3,\\,-2)$ を通り、直線 $y=2x+4$ に垂直な直線の方程式を求めなさい。\n［ある生徒の解答］\n垂直な直線の傾きは $2$ の逆数で $\\dfrac{1}{2}$。$y-(-2)=\\dfrac{1}{2}(x-(-3))$ より $y=\\dfrac{1}{2}x-\\dfrac{1}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=-\\dfrac{1}{2}x-\\dfrac{7}{2}$"
+      },
+      "explanation": "2直線が垂直 $\\iff$ 傾きの積が $-1$。$2\\times\\left(\\dfrac{1}{2}\\right)=1\\neq-1$ なので、生徒の直線は垂直ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(2)*(Rational(-1,2))",
+        "expected": "-1",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-err_perp_slope",
+      "explanation_detail": {
+        "approach": "垂直条件は「傾きの積が $-1$」。逆数にして符号を変える。",
+        "steps": [
+          "与えられた直線の傾きは $2$。",
+          "垂直な直線の傾き $m'$ は $2m'=-1$ より $m'=-\\dfrac{1}{2}$。",
+          "$y-(-2)=-\\dfrac{1}{2}(x-(-3))$ を整理して $y=-\\dfrac{1}{2}x-\\dfrac{7}{2}$。"
+        ],
+        "alternatives": [
+          "求めた2直線の傾きの積が $2\\times\\left(-\\dfrac{1}{2}\\right)=-1$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "符号を変え忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "垂直な直線の傾きは $2$ の逆数で $\\dfrac{1}{2}$。$y-(-2)=\\dfrac{1}{2}(x-(-3))$ より $y=\\dfrac{1}{2}x-\\dfrac{1}{2}$",
+        "error_step": "垂直な直線の傾きを決める部分",
+        "error_type": "formula",
+        "why_tempting": "「垂直なら逆数」という覚え方が中途半端で、符号を変えることを忘れている。",
+        "correction": "傾きを $m'$ とすると $2m'=-1$ より $m'=-\\dfrac{1}{2}$。$y-(-2)=-\\dfrac{1}{2}(x-(-3))$ より $y=-\\dfrac{1}{2}x-\\dfrac{7}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $x^2+y^2+8x+4y+11=0$ が表す円の中心と半径を求めなさい。\n［ある生徒の解答］\n$(x+4)^2+(y+2)^2=16+4+11=31$ より、中心 $(-4,\\,-2)$、半径 $\\sqrt{31}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "中心 $(-4,\\,-2)$、半径 $3$"
+      },
+      "explanation": "定数項 $11$ は左辺にあるので、右辺に移すと $-11$ になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((x-(-4))**2+(y-(-2))**2-9)",
+        "expected": "x**2+y**2+(8)*x+(4)*y+(11)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-err_circle_radius",
+      "explanation_detail": {
+        "approach": "平方完成したら、左辺に残る定数をすべて書いてから右辺へ移項する。",
+        "steps": [
+          "$(x+4)^2-16+(y+2)^2-4+11=0$。",
+          "定数を右辺に移項：$16+4-11=9$。",
+          "中心 $(-4,\\,-2)$、半径 $3$。"
+        ],
+        "alternatives": [
+          "答えの円 $(x+4)^2+(y+2)^2=9$ を展開すると、もとの方程式にもどることで確かめられる。生徒の答えを展開すると定数項が $-11$ になり一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "移項の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x+4)^2+(y+2)^2=16+4+11=31$ より、中心 $(-4,\\,-2)$、半径 $\\sqrt{31}$",
+        "error_step": "右辺の定数項（移項したときの符号）",
+        "error_type": "sign",
+        "why_tempting": "平方完成で出てきた定数 $16,\\ 4$ と、もとの定数項 $11$ を、どちらも同じ符号で右辺に集めてしまった。移項で符号が変わることを意識していない。",
+        "correction": "$(x+4)^2-16+(y+2)^2-4+11=0$ より $(x+4)^2+(y+2)^2=16+4-11=9$。中心 $(-4,\\,-2)$、半径 $3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $x^2+y^2-4x+8y+4=0$ が表す円の中心と半径を求めなさい。\n［ある生徒の解答］\n$(x-2)^2+(y+4)^2=4+16+4=24$ より、中心 $(2,\\,-4)$、半径 $2 \\sqrt{6}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "中心 $(2,\\,-4)$、半径 $4$"
+      },
+      "explanation": "定数項 $4$ は左辺にあるので、右辺に移すと $-4$ になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((x-(2))**2+(y-(-4))**2-16)",
+        "expected": "x**2+y**2+(-4)*x+(8)*y+(4)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-err_circle_radius",
+      "explanation_detail": {
+        "approach": "平方完成したら、左辺に残る定数をすべて書いてから右辺へ移項する。",
+        "steps": [
+          "$(x-2)^2-4+(y+4)^2-16+4=0$。",
+          "定数を右辺に移項：$4+16-4=16$。",
+          "中心 $(2,\\,-4)$、半径 $4$。"
+        ],
+        "alternatives": [
+          "答えの円 $(x-2)^2+(y+4)^2=16$ を展開すると、もとの方程式にもどることで確かめられる。生徒の答えを展開すると定数項が $-4$ になり一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "移項の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x-2)^2+(y+4)^2=4+16+4=24$ より、中心 $(2,\\,-4)$、半径 $2 \\sqrt{6}$",
+        "error_step": "右辺の定数項（移項したときの符号）",
+        "error_type": "sign",
+        "why_tempting": "平方完成で出てきた定数 $4,\\ 16$ と、もとの定数項 $4$ を、どちらも同じ符号で右辺に集めてしまった。移項で符号が変わることを意識していない。",
+        "correction": "$(x-2)^2-4+(y+4)^2-16+4=0$ より $(x-2)^2+(y+4)^2=4+16-4=16$。中心 $(2,\\,-4)$、半径 $4$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $x^2+y^2-8x-6y+9=0$ が表す円の中心と半径を求めなさい。\n［ある生徒の解答］\n$(x-4)^2+(y-3)^2=16+9+9=34$ より、中心 $(4,\\,3)$、半径 $\\sqrt{34}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "中心 $(4,\\,3)$、半径 $4$"
+      },
+      "explanation": "定数項 $9$ は左辺にあるので、右辺に移すと $-9$ になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((x-(4))**2+(y-(3))**2-16)",
+        "expected": "x**2+y**2+(-8)*x+(-6)*y+(9)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-err_circle_radius",
+      "explanation_detail": {
+        "approach": "平方完成したら、左辺に残る定数をすべて書いてから右辺へ移項する。",
+        "steps": [
+          "$(x-4)^2-16+(y-3)^2-9+9=0$。",
+          "定数を右辺に移項：$16+9-9=16$。",
+          "中心 $(4,\\,3)$、半径 $4$。"
+        ],
+        "alternatives": [
+          "答えの円 $(x-4)^2+(y-3)^2=16$ を展開すると、もとの方程式にもどることで確かめられる。生徒の答えを展開すると定数項が $-9$ になり一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "移項の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x-4)^2+(y-3)^2=16+9+9=34$ より、中心 $(4,\\,3)$、半径 $\\sqrt{34}$",
+        "error_step": "右辺の定数項（移項したときの符号）",
+        "error_type": "sign",
+        "why_tempting": "平方完成で出てきた定数 $16,\\ 9$ と、もとの定数項 $9$ を、どちらも同じ符号で右辺に集めてしまった。移項で符号が変わることを意識していない。",
+        "correction": "$(x-4)^2-16+(y-3)^2-9+9=0$ より $(x-4)^2+(y-3)^2=16+9-9=16$。中心 $(4,\\,3)$、半径 $4$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(1,\\,1)$ と直線 $y=-3x-5$ の距離を求めなさい。\n［ある生徒の解答］\n直線を $-3x+y-5=0$ として、$d=\\dfrac{|-3\\cdot(1)+(1)+(-5)|}{\\sqrt{(-3)^2+1^2}}=\\dfrac{7 \\sqrt{10}}{10}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{9 \\sqrt{10}}{10}$"
+      },
+      "explanation": "$y=-3x-5$ を移項すると $-3x-y-5=0$ で、$a=-3,\\ b=-1,\\ c=-5$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Abs((-3)*(1)-(1)+(-5))/sqrt(10)",
+        "expected": "9*sqrt(10)/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-err_dist_sign",
+      "explanation_detail": {
+        "approach": "公式を使う前に、直線を必ず「$ax+by+c=0$」（右辺 $0$）の形に書き直す。",
+        "steps": [
+          "$y=-3x-5$ より $-3x-y-5=0$。",
+          "分子：$|-3\\cdot(1)-(1)+(-5)|=9$。",
+          "分母：$\\sqrt{10}$。$d=\\dfrac{9 \\sqrt{10}}{10}$。"
+        ],
+        "alternatives": [
+          "点 $(1,\\,1)$ を通り直線に垂直な直線との交点を求め、2点間の距離として計算しても $\\dfrac{9 \\sqrt{10}}{10}$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y$ の係数の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "直線を $-3x+y-5=0$ として、$d=\\dfrac{|-3\\cdot(1)+(1)+(-5)|}{\\sqrt{(-3)^2+1^2}}=\\dfrac{7 \\sqrt{10}}{10}$",
+        "error_step": "直線を $ax+by+c=0$ の形に直す部分（$y$ の係数の符号）",
+        "error_type": "sign",
+        "why_tempting": "$y=-3x\\cdots$ の $y$ を左辺に残したまま、右辺の項を同じ符号で並べてしまった。移項すると $y$ の係数は $-1$ になる。",
+        "correction": "直線は $-3x-y-5=0$。$d=\\dfrac{|-3\\cdot(1)-(1)+(-5)|}{\\sqrt{(-3)^2+(-1)^2}}=\\dfrac{9 \\sqrt{10}}{10}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(0,\\,-1)$ と直線 $y=-2x+2$ の距離を求めなさい。\n［ある生徒の解答］\n直線を $-2x+y+2=0$ として、$d=\\dfrac{|-2\\cdot(0)+(-1)+(2)|}{\\sqrt{(-2)^2+1^2}}=\\dfrac{\\sqrt{5}}{5}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{3 \\sqrt{5}}{5}$"
+      },
+      "explanation": "$y=-2x+2$ を移項すると $-2x-y+2=0$ で、$a=-2,\\ b=-1,\\ c=2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Abs((-2)*(0)-(-1)+(2))/sqrt(5)",
+        "expected": "3*sqrt(5)/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U03-err_dist_sign",
+      "explanation_detail": {
+        "approach": "公式を使う前に、直線を必ず「$ax+by+c=0$」（右辺 $0$）の形に書き直す。",
+        "steps": [
+          "$y=-2x+2$ より $-2x-y+2=0$。",
+          "分子：$|-2\\cdot(0)-(-1)+(2)|=3$。",
+          "分母：$\\sqrt{5}$。$d=\\dfrac{3 \\sqrt{5}}{5}$。"
+        ],
+        "alternatives": [
+          "点 $(0,\\,-1)$ を通り直線に垂直な直線との交点を求め、2点間の距離として計算しても $\\dfrac{3 \\sqrt{5}}{5}$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y$ の係数の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "直線を $-2x+y+2=0$ として、$d=\\dfrac{|-2\\cdot(0)+(-1)+(2)|}{\\sqrt{(-2)^2+1^2}}=\\dfrac{\\sqrt{5}}{5}$",
+        "error_step": "直線を $ax+by+c=0$ の形に直す部分（$y$ の係数の符号）",
+        "error_type": "sign",
+        "why_tempting": "$y=-2x\\cdots$ の $y$ を左辺に残したまま、右辺の項を同じ符号で並べてしまった。移項すると $y$ の係数は $-1$ になる。",
+        "correction": "直線は $-2x-y+2=0$。$d=\\dfrac{|-2\\cdot(0)-(-1)+(2)|}{\\sqrt{(-2)^2+(-1)^2}}=\\dfrac{3 \\sqrt{5}}{5}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(4,\\,6)$ から円 $x^2+y^2=16$ に引いた接線の方程式をすべて求めなさい。\n［ある生徒の解答］\n接線を $y-(6)=m(x-4)$ とおく。原点との距離が $4$ なので $\\dfrac{|4m-(6)|}{\\sqrt{m^2+1}}=4$。2乗して整理すると $m=\\dfrac{5}{12}$。よって接線は1本で $5x-12y+52=0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=4$、$5x-12y+52=0$"
+      },
+      "explanation": "円の外の点からは接線が2本引ける。傾き $m$ でおいた方法で1本しか得られないときは、$y$ 軸に平行な直線を別に調べる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((4*m-(6))**2-16*(m**2+1), m)",
+        "expected": "[Rational(5,12)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-err_tangent_vertical",
+      "explanation_detail": {
+        "approach": "直線を傾きでおくときは、傾きをもたない場合を必ず別に確かめる。",
+        "steps": [
+          "$y$ 軸に平行な直線 $x=4$ は点 $(4,\\,6)$ を通り、原点との距離は $4$（半径）なので接線。",
+          "傾き $m$ の場合：$(4m-(6))^2=16(m^2+1)$ を整理すると $m$ の1次方程式になり $m=\\dfrac{5}{12}$。",
+          "接線は $x=4$ と $5x-12y+52=0$。"
+        ],
+        "alternatives": [
+          "接点を $(x_1,\\,y_1)$ とおいて $x_1x+y_1y=16$ が $(4,\\,6)$ を通る条件から求めると、接点 $(4,\\,0)$ が得られ、$x=4$ が漏れなく出てくる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きをもたない接線を見落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "接線を $y-(6)=m(x-4)$ とおく。原点との距離が $4$ なので $\\dfrac{|4m-(6)|}{\\sqrt{m^2+1}}=4$。2乗して整理すると $m=\\dfrac{5}{12}$。よって接線は1本で $5x-12y+52=0$",
+        "error_step": "接線を傾き $m$ でおいた最初の段階（$y$ 軸に平行な直線の見落とし）",
+        "error_type": "condition",
+        "why_tempting": "「直線は $y-y_1=m(x-x_1)$ とおける」と思い込み、傾きが存在しない（$y$ 軸に平行な）直線がこの形で表せないことを忘れている。2乗した方程式が1次方程式になったことも、見落としの合図である。",
+        "correction": "傾きをもたない直線 $x=4$ も点 $(4,\\,6)$ を通り、原点との距離が $4$ なので接線。接線は $x=4$ と $5x-12y+52=0$ の2本"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U03-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "点 $(1,\\,6)$ から円 $x^2+y^2=1$ に引いた接線の方程式をすべて求めなさい。\n［ある生徒の解答］\n接線を $y-(6)=m(x-1)$ とおく。原点との距離が $1$ なので $\\dfrac{|m-(6)|}{\\sqrt{m^2+1}}=1$。2乗して整理すると $m=\\dfrac{35}{12}$。よって接線は1本で $35x-12y+37=0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=1$、$35x-12y+37=0$"
+      },
+      "explanation": "円の外の点からは接線が2本引ける。傾き $m$ でおいた方法で1本しか得られないときは、$y$ 軸に平行な直線を別に調べる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((1*m-(6))**2-1*(m**2+1), m)",
+        "expected": "[Rational(35,12)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U03-err_tangent_vertical",
+      "explanation_detail": {
+        "approach": "直線を傾きでおくときは、傾きをもたない場合を必ず別に確かめる。",
+        "steps": [
+          "$y$ 軸に平行な直線 $x=1$ は点 $(1,\\,6)$ を通り、原点との距離は $1$（半径）なので接線。",
+          "傾き $m$ の場合：$(m-(6))^2=(m^2+1)$ を整理すると $m$ の1次方程式になり $m=\\dfrac{35}{12}$。",
+          "接線は $x=1$ と $35x-12y+37=0$。"
+        ],
+        "alternatives": [
+          "接点を $(x_1,\\,y_1)$ とおいて $x_1x+y_1y=1$ が $(1,\\,6)$ を通る条件から求めると、接点 $(1,\\,0)$ が得られ、$x=1$ が漏れなく出てくる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きをもたない接線を見落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "接線を $y-(6)=m(x-1)$ とおく。原点との距離が $1$ なので $\\dfrac{|m-(6)|}{\\sqrt{m^2+1}}=1$。2乗して整理すると $m=\\dfrac{35}{12}$。よって接線は1本で $35x-12y+37=0$",
+        "error_step": "接線を傾き $m$ でおいた最初の段階（$y$ 軸に平行な直線の見落とし）",
+        "error_type": "condition",
+        "why_tempting": "「直線は $y-y_1=m(x-x_1)$ とおける」と思い込み、傾きが存在しない（$y$ 軸に平行な）直線がこの形で表せないことを忘れている。2乗した方程式が1次方程式になったことも、見落としの合図である。",
+        "correction": "傾きをもたない直線 $x=1$ も点 $(1,\\,6)$ を通り、原点との距離が $1$ なので接線。接線は $x=1$ と $35x-12y+37=0$ の2本"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "e1cc18bc5bd9aae5888049c0e8d65b8871930a0aa874e510d3c8cd04a54c3ce9"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 18 問（Q001, Q002, Q016, Q031, Q032, Q033, Q034, Q035, Q041, Q042 他）",
+      "content_hash": "d9416901cdd3fbd8169c50dad4a1ddbdf3d05c3f7f62a8e52baf71bb45c4d107"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:08:15+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "70119fe71e07810bcebdea893bdd20bbc6deb124fe368ac055984c2875bd7c91"
+  }
+}

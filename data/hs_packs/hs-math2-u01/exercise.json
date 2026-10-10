@@ -1,0 +1,5443 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U01-EX",
+  "title": "式と証明　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH2-U01-PACK",
+  "pair_set_id": "HS-MATH2-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH1-U01",
+        "point": "展開・因数分解",
+        "title": "数と式"
+      },
+      {
+        "unit_id": "HS-MATHA-U01",
+        "point": "組合せ",
+        "title": "場合の数と確率"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH2-U02",
+        "point": "因数定理と高次方程式",
+        "title": "複素数と方程式"
+      }
+    ],
+    "readiness_check": [
+      "乗法公式・因数分解（数学Ⅰ）を正確に使える。",
+      "組合せ ${}_n\\mathrm{C}_r$ の意味と計算（数学A）を理解している。",
+      "実数の2乗は $0$ 以上であることを知っている。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(2x-4)^{6}$ を展開したとき、$x^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "15360"
+      },
+      "explanation": "一般項は ${}_{6}\\mathrm{C}_{r}(2x)^{6-r}\\cdot(-4)^r$。$x$ の指数が $2$ になるのは $r=4$ のときで、係数は ${}_{6}\\mathrm{C}_{4}\\cdot(2)^{2}\\cdot(-4)^{4}=15360$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(6,2)*(2)**2*(-4)**4",
+        "expected": "15360"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_coef",
+      "explanation_detail": {
+        "approach": "展開式全体を書く必要はない。二項定理の一般項を書き、$x$ の指数が求めたい次数になる $r$ を決める。",
+        "steps": [
+          "一般項 ${}_{6}\\mathrm{C}_{r}(2x)^{6-r}(-4)^r={}_{6}\\mathrm{C}_{r}(2)^{6-r}(-4)^rx^{6-r}$。",
+          "$6-r=2$ より $r=4$。",
+          "係数 ${}_{6}\\mathrm{C}_{4}\\cdot(2)^{2}\\cdot(-4)^{4}=15\\cdot(4)\\cdot(256)=15360$。"
+        ],
+        "alternatives": [
+          "${}_{6}\\mathrm{C}_{4}={}_{6}\\mathrm{C}_{2}=15$ はパスカルの三角形の第 $6$ 段からも読み取れる。符号は $(-4)^{4}$ と $(2)^{2}$ の符号の積で決まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項を正しく書き、$r$ を決めている",
+            "points": 1
+          },
+          {
+            "point": "係数を符号も含めて正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ の係数 $2$ を累乗し忘れる。",
+          "負の数の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(3x-4)^{5}$ を展開したとき、$x^{4}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "-1620"
+      },
+      "explanation": "一般項は ${}_{5}\\mathrm{C}_{r}(3x)^{5-r}\\cdot(-4)^r$。$x$ の指数が $4$ になるのは $r=1$ のときで、係数は ${}_{5}\\mathrm{C}_{1}\\cdot(3)^{4}\\cdot(-4)^{1}=-1620$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(5,4)*(3)**4*(-4)**1",
+        "expected": "-1620"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_coef",
+      "explanation_detail": {
+        "approach": "展開式全体を書く必要はない。二項定理の一般項を書き、$x$ の指数が求めたい次数になる $r$ を決める。",
+        "steps": [
+          "一般項 ${}_{5}\\mathrm{C}_{r}(3x)^{5-r}(-4)^r={}_{5}\\mathrm{C}_{r}(3)^{5-r}(-4)^rx^{5-r}$。",
+          "$5-r=4$ より $r=1$。",
+          "係数 ${}_{5}\\mathrm{C}_{1}\\cdot(3)^{4}\\cdot(-4)^{1}=5\\cdot(81)\\cdot(-4)=-1620$。"
+        ],
+        "alternatives": [
+          "${}_{5}\\mathrm{C}_{1}={}_{5}\\mathrm{C}_{4}=5$ はパスカルの三角形の第 $5$ 段からも読み取れる。符号は $(-4)^{1}$ と $(3)^{4}$ の符号の積で決まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項を正しく書き、$r$ を決めている",
+            "points": 1
+          },
+          {
+            "point": "係数を符号も含めて正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ の係数 $3$ を累乗し忘れる。",
+          "負の数の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(-2x+1)^{4}$ を展開したとき、$x^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "24"
+      },
+      "explanation": "一般項は ${}_{4}\\mathrm{C}_{r}(-2x)^{4-r}\\cdot(1)^r$。$x$ の指数が $2$ になるのは $r=2$ のときで、係数は ${}_{4}\\mathrm{C}_{2}\\cdot(-2)^{2}\\cdot(1)^{2}=24$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(4,2)*(-2)**2*(1)**2",
+        "expected": "24"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_coef",
+      "explanation_detail": {
+        "approach": "展開式全体を書く必要はない。二項定理の一般項を書き、$x$ の指数が求めたい次数になる $r$ を決める。",
+        "steps": [
+          "一般項 ${}_{4}\\mathrm{C}_{r}(-2x)^{4-r}(1)^r={}_{4}\\mathrm{C}_{r}(-2)^{4-r}(1)^rx^{4-r}$。",
+          "$4-r=2$ より $r=2$。",
+          "係数 ${}_{4}\\mathrm{C}_{2}\\cdot(-2)^{2}\\cdot(1)^{2}=6\\cdot(4)\\cdot(1)=24$。"
+        ],
+        "alternatives": [
+          "${}_{4}\\mathrm{C}_{2}={}_{4}\\mathrm{C}_{2}=6$ はパスカルの三角形の第 $4$ 段からも読み取れる。符号は $(1)^{2}$ と $(-2)^{2}$ の符号の積で決まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項を正しく書き、$r$ を決めている",
+            "points": 1
+          },
+          {
+            "point": "係数を符号も含めて正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ の係数 $-2$ を累乗し忘れる。",
+          "負の数の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(x+3)^{7}$ を展開したとき、$x$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "5103"
+      },
+      "explanation": "一般項は ${}_{7}\\mathrm{C}_{r}(x)^{7-r}\\cdot(3)^r$。$x$ の指数が $1$ になるのは $r=6$ のときで、係数は ${}_{7}\\mathrm{C}_{6}\\cdot(1)^{1}\\cdot(3)^{6}=5103$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(7,1)*(1)**1*(3)**6",
+        "expected": "5103"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_coef",
+      "explanation_detail": {
+        "approach": "展開式全体を書く必要はない。二項定理の一般項を書き、$x$ の指数が求めたい次数になる $r$ を決める。",
+        "steps": [
+          "一般項 ${}_{7}\\mathrm{C}_{r}(x)^{7-r}(3)^r={}_{7}\\mathrm{C}_{r}(1)^{7-r}(3)^rx^{7-r}$。",
+          "$7-r=1$ より $r=6$。",
+          "係数 ${}_{7}\\mathrm{C}_{6}\\cdot(1)^{1}\\cdot(3)^{6}=7\\cdot(1)\\cdot(729)=5103$。"
+        ],
+        "alternatives": [
+          "${}_{7}\\mathrm{C}_{6}={}_{7}\\mathrm{C}_{1}=7$ はパスカルの三角形の第 $7$ 段からも読み取れる。符号は $(3)^{6}$ と $(1)^{1}$ の符号の積で決まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項を正しく書き、$r$ を決めている",
+            "points": 1
+          },
+          {
+            "point": "係数を符号も含めて正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項 $3$ の累乗の指数を $1$ と取り違える。",
+          "負の数の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(-x+3)^{4}$ を展開したとき、$x^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "54"
+      },
+      "explanation": "一般項は ${}_{4}\\mathrm{C}_{r}(-x)^{4-r}\\cdot(3)^r$。$x$ の指数が $2$ になるのは $r=2$ のときで、係数は ${}_{4}\\mathrm{C}_{2}\\cdot(-1)^{2}\\cdot(3)^{2}=54$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(4,2)*(-1)**2*(3)**2",
+        "expected": "54"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_coef",
+      "explanation_detail": {
+        "approach": "展開式全体を書く必要はない。二項定理の一般項を書き、$x$ の指数が求めたい次数になる $r$ を決める。",
+        "steps": [
+          "一般項 ${}_{4}\\mathrm{C}_{r}(-x)^{4-r}(3)^r={}_{4}\\mathrm{C}_{r}(-1)^{4-r}(3)^rx^{4-r}$。",
+          "$4-r=2$ より $r=2$。",
+          "係数 ${}_{4}\\mathrm{C}_{2}\\cdot(-1)^{2}\\cdot(3)^{2}=6\\cdot(1)\\cdot(9)=54$。"
+        ],
+        "alternatives": [
+          "${}_{4}\\mathrm{C}_{2}={}_{4}\\mathrm{C}_{2}=6$ はパスカルの三角形の第 $4$ 段からも読み取れる。符号は $(3)^{2}$ と $(-1)^{2}$ の符号の積で決まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項を正しく書き、$r$ を決めている",
+            "points": 1
+          },
+          {
+            "point": "係数を符号も含めて正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$-x$ の符号を累乗に反映させ忘れる。",
+          "負の数の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(2x+3)^{4}$ を展開したとき、$x^{3}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "96"
+      },
+      "explanation": "一般項は ${}_{4}\\mathrm{C}_{r}(2x)^{4-r}\\cdot(3)^r$。$x$ の指数が $3$ になるのは $r=1$ のときで、係数は ${}_{4}\\mathrm{C}_{1}\\cdot(2)^{3}\\cdot(3)^{1}=96$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(4,3)*(2)**3*(3)**1",
+        "expected": "96"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_coef",
+      "explanation_detail": {
+        "approach": "展開式全体を書く必要はない。二項定理の一般項を書き、$x$ の指数が求めたい次数になる $r$ を決める。",
+        "steps": [
+          "一般項 ${}_{4}\\mathrm{C}_{r}(2x)^{4-r}(3)^r={}_{4}\\mathrm{C}_{r}(2)^{4-r}(3)^rx^{4-r}$。",
+          "$4-r=3$ より $r=1$。",
+          "係数 ${}_{4}\\mathrm{C}_{1}\\cdot(2)^{3}\\cdot(3)^{1}=4\\cdot(8)\\cdot(3)=96$。"
+        ],
+        "alternatives": [
+          "${}_{4}\\mathrm{C}_{1}={}_{4}\\mathrm{C}_{3}=4$ はパスカルの三角形の第 $4$ 段からも読み取れる。符号は $(3)^{1}$ と $(2)^{3}$ の符号の積で決まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項を正しく書き、$r$ を決めている",
+            "points": 1
+          },
+          {
+            "point": "係数を符号も含めて正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ の係数 $2$ を累乗し忘れる。",
+          "負の数の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $A=x^3-6x^2+5x+11$ を整式 $B=x^2-2x-3$ で割ったときの商 $Q$ と余り $R$ を求めなさい。",
+      "answer": {
+        "value": "商 $x-4$、余り $-1$",
+        "accepted": [
+          "Q=x-4, R=-1"
+        ]
+      },
+      "explanation": "筆算で最高次の項に注目して商を立てていくと、$A=(x^2-2x-3)(x-4)+(-1)$ と表せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**2+(-2)*x**1+(-3)*x**0)*((1)*x**1+(-4)*x**0)+((-1)*x**0))",
+        "expected": "((1)*x**3+(-6)*x**2+(5)*x**1+(11)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-poly_division",
+      "explanation_detail": {
+        "approach": "最高次の項どうしを割って商の項を立て、掛けて引く操作を、余りの次数が $B$ の次数より低くなるまでくり返す。",
+        "steps": [
+          "商に $x$ を立て、$x\\times(x^2-2x-3)$ を引くと $-4x^2+8x+11$。",
+          "商に $-4$ を立て、$-4\\times(x^2-2x-3)$ を引くと $-1$。",
+          "余り $-1$ の次数は $B$ の次数より低いので終了。商 $x-4$、余り $-1$。"
+        ],
+        "alternatives": [
+          "検算：$BQ+R=(x^2-2x-3)(x-4)+(-1)$ を展開すると $A$ に一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "商を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で符号を誤る（引く式全体にかっこをつけていない）。",
+          "抜けている次数の欄を空けずに筆算する。"
+        ],
+        "verification": "$BQ+R$ を展開して $A$ にもどることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $A=2x^3+3x^2+2x+5$ を整式 $B=x^2+x+2$ で割ったときの商 $Q$ と余り $R$ を求めなさい。",
+      "answer": {
+        "value": "商 $2x+1$、余り $-3x+3$",
+        "accepted": [
+          "Q=2x+1, R=-3x+3"
+        ]
+      },
+      "explanation": "筆算で最高次の項に注目して商を立てていくと、$A=(x^2+x+2)(2x+1)+(-3x+3)$ と表せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**2+(1)*x**1+(2)*x**0)*((2)*x**1+(1)*x**0)+((-3)*x**1+(3)*x**0))",
+        "expected": "((2)*x**3+(3)*x**2+(2)*x**1+(5)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-poly_division",
+      "explanation_detail": {
+        "approach": "最高次の項どうしを割って商の項を立て、掛けて引く操作を、余りの次数が $B$ の次数より低くなるまでくり返す。",
+        "steps": [
+          "商に $2x$ を立て、$2x\\times(x^2+x+2)$ を引くと $x^2-2x+5$。",
+          "商に $1$ を立て、$1\\times(x^2+x+2)$ を引くと $-3x+3$。",
+          "余り $-3x+3$ の次数は $B$ の次数より低いので終了。商 $2x+1$、余り $-3x+3$。"
+        ],
+        "alternatives": [
+          "検算：$BQ+R=(x^2+x+2)(2x+1)+(-3x+3)$ を展開すると $A$ に一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "商を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で符号を誤る（引く式全体にかっこをつけていない）。",
+          "抜けている次数の欄を空けずに筆算する。"
+        ],
+        "verification": "$BQ+R$ を展開して $A$ にもどることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $A=3x^3+7x^2+6x+6$ を整式 $B=x+2$ で割ったときの商 $Q$ と余り $R$ を求めなさい。",
+      "answer": {
+        "value": "商 $3x^2+x+4$、余り $-2$",
+        "accepted": [
+          "Q=3x^2+x+4, R=-2"
+        ]
+      },
+      "explanation": "筆算で最高次の項に注目して商を立てていくと、$A=(x+2)(3x^2+x+4)+(-2)$ と表せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**1+(2)*x**0)*((3)*x**2+(1)*x**1+(4)*x**0)+((-2)*x**0))",
+        "expected": "((3)*x**3+(7)*x**2+(6)*x**1+(6)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-poly_division",
+      "explanation_detail": {
+        "approach": "最高次の項どうしを割って商の項を立て、掛けて引く操作を、余りの次数が $B$ の次数より低くなるまでくり返す。",
+        "steps": [
+          "商に $3x^2$ を立て、$3x^2\\times(x+2)$ を引くと $x^2+6x+6$。",
+          "商に $x$ を立て、$x\\times(x+2)$ を引くと $4x+6$。",
+          "商に $4$ を立て、$4\\times(x+2)$ を引くと $-2$。",
+          "余り $-2$ の次数は $B$ の次数より低いので終了。商 $3x^2+x+4$、余り $-2$。"
+        ],
+        "alternatives": [
+          "検算：$BQ+R=(x+2)(3x^2+x+4)+(-2)$ を展開すると $A$ に一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "商を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で符号を誤る（引く式全体にかっこをつけていない）。",
+          "抜けている次数の欄を空けずに筆算する。"
+        ],
+        "verification": "$BQ+R$ を展開して $A$ にもどることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $A=3x^3+4x^2+9x+3$ を整式 $B=x^2+x+3$ で割ったときの商 $Q$ と余り $R$ を求めなさい。",
+      "answer": {
+        "value": "商 $3x+1$、余り $-x$",
+        "accepted": [
+          "Q=3x+1, R=-x"
+        ]
+      },
+      "explanation": "筆算で最高次の項に注目して商を立てていくと、$A=(x^2+x+3)(3x+1)+(-x)$ と表せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**2+(1)*x**1+(3)*x**0)*((3)*x**1+(1)*x**0)+((-1)*x**1+(0)*x**0))",
+        "expected": "((3)*x**3+(4)*x**2+(9)*x**1+(3)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-poly_division",
+      "explanation_detail": {
+        "approach": "最高次の項どうしを割って商の項を立て、掛けて引く操作を、余りの次数が $B$ の次数より低くなるまでくり返す。",
+        "steps": [
+          "商に $3x$ を立て、$3x\\times(x^2+x+3)$ を引くと $x^2+3$。",
+          "商に $1$ を立て、$1\\times(x^2+x+3)$ を引くと $-x$。",
+          "余り $-x$ の次数は $B$ の次数より低いので終了。商 $3x+1$、余り $-x$。"
+        ],
+        "alternatives": [
+          "検算：$BQ+R=(x^2+x+3)(3x+1)+(-x)$ を展開すると $A$ に一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "商を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で符号を誤る（引く式全体にかっこをつけていない）。",
+          "抜けている次数の欄を空けずに筆算する。"
+        ],
+        "verification": "$BQ+R$ を展開して $A$ にもどることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $A=-x^3-7x^2-11x+5$ を整式 $B=x+3$ で割ったときの商 $Q$ と余り $R$ を求めなさい。",
+      "answer": {
+        "value": "商 $-x^2-4x+1$、余り $2$",
+        "accepted": [
+          "Q=-x^2-4x+1, R=2"
+        ]
+      },
+      "explanation": "筆算で最高次の項に注目して商を立てていくと、$A=(x+3)(-x^2-4x+1)+(2)$ と表せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**1+(3)*x**0)*((-1)*x**2+(-4)*x**1+(1)*x**0)+((2)*x**0))",
+        "expected": "((-1)*x**3+(-7)*x**2+(-11)*x**1+(5)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-poly_division",
+      "explanation_detail": {
+        "approach": "最高次の項どうしを割って商の項を立て、掛けて引く操作を、余りの次数が $B$ の次数より低くなるまでくり返す。",
+        "steps": [
+          "商に $-x^2$ を立て、$-x^2\\times(x+3)$ を引くと $-4x^2-11x+5$。",
+          "商に $-4x$ を立て、$-4x\\times(x+3)$ を引くと $x+5$。",
+          "商に $1$ を立て、$1\\times(x+3)$ を引くと $2$。",
+          "余り $2$ の次数は $B$ の次数より低いので終了。商 $-x^2-4x+1$、余り $2$。"
+        ],
+        "alternatives": [
+          "検算：$BQ+R=(x+3)(-x^2-4x+1)+(2)$ を展開すると $A$ に一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "商を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で符号を誤る（引く式全体にかっこをつけていない）。",
+          "抜けている次数の欄を空けずに筆算する。"
+        ],
+        "verification": "$BQ+R$ を展開して $A$ にもどることを確かめる。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $-x^2+4x-11=a(x-2)^2+b(x-2)+c$ が $x$ についての恒等式となるように、定数 $a,\\ b,\\ c$ の値を求めなさい。",
+      "answer": {
+        "value": "$a=-1,\\ b=0,\\ c=-7$",
+        "accepted": [
+          "a=-1, b=0, c=-7"
+        ]
+      },
+      "explanation": "右辺を展開して係数を比較する（または $t=x-2$ とおいて $x=t+2$ を左辺に代入する）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((-1)*(x-(2))**2+(0)*(x-(2))+(-7))",
+        "expected": "((-1)*x**2+(4)*x**1+(-11)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-identity_coef",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で成り立つ」ので、両辺の同じ次数の係数がそれぞれ等しい。展開して比べるか、都合のよい値を代入する。",
+        "steps": [
+          "右辺を展開：$ax^2+(-4a+b)x+(4a-2b+c)$。",
+          "$x^2$ の係数から $a=-1$。",
+          "$x$ の係数から $-4a+b=4$ より $b=0$。",
+          "定数項から $c=-7$。"
+        ],
+        "alternatives": [
+          "数値代入法：$x=2$ を代入すると右辺は $c$ だけになり、$c=-7$ がすぐ求まる。ただし代入で得た値は必要条件なので、最後に係数比較などで恒等式になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "係数比較（または代入）の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b,\\ c$ をすべて正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "展開したときの $x$ の係数の符号を誤る。",
+          "数値代入法で求めた値の十分性を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $3x^2+8x+9=a(x+2)^2+b(x+2)+c$ が $x$ についての恒等式となるように、定数 $a,\\ b,\\ c$ の値を求めなさい。",
+      "answer": {
+        "value": "$a=3,\\ b=-4,\\ c=5$",
+        "accepted": [
+          "a=3, b=-4, c=5"
+        ]
+      },
+      "explanation": "右辺を展開して係数を比較する（または $t=x+2$ とおいて $x=t-2$ を左辺に代入する）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((3)*(x-(-2))**2+(-4)*(x-(-2))+(5))",
+        "expected": "((3)*x**2+(8)*x**1+(9)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-identity_coef",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で成り立つ」ので、両辺の同じ次数の係数がそれぞれ等しい。展開して比べるか、都合のよい値を代入する。",
+        "steps": [
+          "右辺を展開：$ax^2+(4a+b)x+(4a+2b+c)$。",
+          "$x^2$ の係数から $a=3$。",
+          "$x$ の係数から $4a+b=8$ より $b=-4$。",
+          "定数項から $c=5$。"
+        ],
+        "alternatives": [
+          "数値代入法：$x=-2$ を代入すると右辺は $c$ だけになり、$c=5$ がすぐ求まる。ただし代入で得た値は必要条件なので、最後に係数比較などで恒等式になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "係数比較（または代入）の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b,\\ c$ をすべて正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "展開したときの $x$ の係数の符号を誤る。",
+          "数値代入法で求めた値の十分性を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $3x^2+6x+3=a(x+1)^2+b(x+1)+c$ が $x$ についての恒等式となるように、定数 $a,\\ b,\\ c$ の値を求めなさい。",
+      "answer": {
+        "value": "$a=3,\\ b=0,\\ c=0$",
+        "accepted": [
+          "a=3, b=0, c=0"
+        ]
+      },
+      "explanation": "右辺を展開して係数を比較する（または $t=x+1$ とおいて $x=t-1$ を左辺に代入する）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((3)*(x-(-1))**2+(0)*(x-(-1))+(0))",
+        "expected": "((3)*x**2+(6)*x**1+(3)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-identity_coef",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で成り立つ」ので、両辺の同じ次数の係数がそれぞれ等しい。展開して比べるか、都合のよい値を代入する。",
+        "steps": [
+          "右辺を展開：$ax^2+(2a+b)x+(1a+b+c)$。",
+          "$x^2$ の係数から $a=3$。",
+          "$x$ の係数から $2a+b=6$ より $b=0$。",
+          "定数項から $c=0$。"
+        ],
+        "alternatives": [
+          "数値代入法：$x=-1$ を代入すると右辺は $c$ だけになり、$c=0$ がすぐ求まる。ただし代入で得た値は必要条件なので、最後に係数比較などで恒等式になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "係数比較（または代入）の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b,\\ c$ をすべて正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "展開したときの $x$ の係数の符号を誤る。",
+          "数値代入法で求めた値の十分性を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $3x^2-21x+29=a(x-3)^2+b(x-3)+c$ が $x$ についての恒等式となるように、定数 $a,\\ b,\\ c$ の値を求めなさい。",
+      "answer": {
+        "value": "$a=3,\\ b=-3,\\ c=-7$",
+        "accepted": [
+          "a=3, b=-3, c=-7"
+        ]
+      },
+      "explanation": "右辺を展開して係数を比較する（または $t=x-3$ とおいて $x=t+3$ を左辺に代入する）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((3)*(x-(3))**2+(-3)*(x-(3))+(-7))",
+        "expected": "((3)*x**2+(-21)*x**1+(29)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-identity_coef",
+      "explanation_detail": {
+        "approach": "「すべての $x$ で成り立つ」ので、両辺の同じ次数の係数がそれぞれ等しい。展開して比べるか、都合のよい値を代入する。",
+        "steps": [
+          "右辺を展開：$ax^2+(-6a+b)x+(9a-3b+c)$。",
+          "$x^2$ の係数から $a=3$。",
+          "$x$ の係数から $-6a+b=-21$ より $b=-3$。",
+          "定数項から $c=-7$。"
+        ],
+        "alternatives": [
+          "数値代入法：$x=3$ を代入すると右辺は $c$ だけになり、$c=-7$ がすぐ求まる。ただし代入で得た値は必要条件なので、最後に係数比較などで恒等式になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "係数比較（または代入）の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b,\\ c$ をすべて正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "展開したときの $x$ の係数の符号を誤る。",
+          "数値代入法で求めた値の十分性を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x>0$ のとき、式 $x+\\dfrac{25}{x}-1$ の最小値と、最小値をとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "9",
+        "display": "最小値 $9$（$x=5$）"
+      },
+      "explanation": "$x>0,\\ \\dfrac{25}{x}>0$ より、相加平均と相乗平均の関係から $x+\\dfrac{25}{x}\\geqq2\\sqrt{25}=10$。等号は $x=5$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*sqrt(1*25)+(-1)",
+        "expected": "9"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-amgm_min",
+      "explanation_detail": {
+        "approach": "$x$ と $\\dfrac{25}{x}$ はどちらも正で、積 $25$ が一定。積が一定の2つの正の数の和には、相加平均と相乗平均の関係が使える。",
+        "steps": [
+          "$x>0$ より $x>0,\\ \\dfrac{25}{x}>0$。",
+          "$x+\\dfrac{25}{x}\\geqq2\\sqrt{x\\cdot\\dfrac{25}{x}}=2\\sqrt{25}=10$。",
+          "等号は $x=\\dfrac{25}{x}$、すなわち $x^2=25$、$x>0$ より $x=5$ のとき。",
+          "最小値は $10-1=9$。"
+        ],
+        "alternatives": [
+          "$x=5$ の前後（$x=6$ など）を代入すると値が $9$ より大きくなることで、結果の妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立の $x$ と最小値を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "正の数であることを確認せずに使う。",
+          "等号が成り立つ $x$ を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x>0$ のとき、式 $5x+\\dfrac{125}{x}+4$ の最小値と、最小値をとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "54",
+        "display": "最小値 $54$（$x=5$）"
+      },
+      "explanation": "$x>0,\\ \\dfrac{125}{x}>0$ より、相加平均と相乗平均の関係から $5x+\\dfrac{125}{x}\\geqq2\\sqrt{625}=50$。等号は $x=5$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*sqrt(5*125)+(4)",
+        "expected": "54"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-amgm_min",
+      "explanation_detail": {
+        "approach": "$5x$ と $\\dfrac{125}{x}$ はどちらも正で、積 $625$ が一定。積が一定の2つの正の数の和には、相加平均と相乗平均の関係が使える。",
+        "steps": [
+          "$x>0$ より $5x>0,\\ \\dfrac{125}{x}>0$。",
+          "$5x+\\dfrac{125}{x}\\geqq2\\sqrt{5x\\cdot\\dfrac{125}{x}}=2\\sqrt{625}=50$。",
+          "等号は $5x=\\dfrac{125}{x}$、すなわち $x^2=25$、$x>0$ より $x=5$ のとき。",
+          "最小値は $50+4=54$。"
+        ],
+        "alternatives": [
+          "$x=5$ の前後（$x=6$ など）を代入すると値が $54$ より大きくなることで、結果の妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立の $x$ と最小値を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "正の数であることを確認せずに使う。",
+          "等号が成り立つ $x$ を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x>0$ のとき、式 $2x+\\dfrac{50}{x}-1$ の最小値と、最小値をとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "19",
+        "display": "最小値 $19$（$x=5$）"
+      },
+      "explanation": "$x>0,\\ \\dfrac{50}{x}>0$ より、相加平均と相乗平均の関係から $2x+\\dfrac{50}{x}\\geqq2\\sqrt{100}=20$。等号は $x=5$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*sqrt(2*50)+(-1)",
+        "expected": "19"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-amgm_min",
+      "explanation_detail": {
+        "approach": "$2x$ と $\\dfrac{50}{x}$ はどちらも正で、積 $100$ が一定。積が一定の2つの正の数の和には、相加平均と相乗平均の関係が使える。",
+        "steps": [
+          "$x>0$ より $2x>0,\\ \\dfrac{50}{x}>0$。",
+          "$2x+\\dfrac{50}{x}\\geqq2\\sqrt{2x\\cdot\\dfrac{50}{x}}=2\\sqrt{100}=20$。",
+          "等号は $2x=\\dfrac{50}{x}$、すなわち $x^2=25$、$x>0$ より $x=5$ のとき。",
+          "最小値は $20-1=19$。"
+        ],
+        "alternatives": [
+          "$x=5$ の前後（$x=6$ など）を代入すると値が $19$ より大きくなることで、結果の妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立の $x$ と最小値を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "正の数であることを確認せずに使う。",
+          "等号が成り立つ $x$ を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x>0$ のとき、式 $x+\\dfrac{25}{x}$ の最小値と、最小値をとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "10",
+        "display": "最小値 $10$（$x=5$）"
+      },
+      "explanation": "$x>0,\\ \\dfrac{25}{x}>0$ より、相加平均と相乗平均の関係から $x+\\dfrac{25}{x}\\geqq2\\sqrt{25}=10$。等号は $x=5$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*sqrt(1*25)+(0)",
+        "expected": "10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-amgm_min",
+      "explanation_detail": {
+        "approach": "$x$ と $\\dfrac{25}{x}$ はどちらも正で、積 $25$ が一定。積が一定の2つの正の数の和には、相加平均と相乗平均の関係が使える。",
+        "steps": [
+          "$x>0$ より $x>0,\\ \\dfrac{25}{x}>0$。",
+          "$x+\\dfrac{25}{x}\\geqq2\\sqrt{x\\cdot\\dfrac{25}{x}}=2\\sqrt{25}=10$。",
+          "等号は $x=\\dfrac{25}{x}$、すなわち $x^2=25$、$x>0$ より $x=5$ のとき。",
+          "最小値は $10=10$。"
+        ],
+        "alternatives": [
+          "$x=5$ の前後（$x=6$ など）を代入すると値が $10$ より大きくなることで、結果の妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立の $x$ と最小値を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "正の数であることを確認せずに使う。",
+          "等号が成り立つ $x$ を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x>0$ のとき、式 $x+\\dfrac{25}{x}+3$ の最小値と、最小値をとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "13",
+        "display": "最小値 $13$（$x=5$）"
+      },
+      "explanation": "$x>0,\\ \\dfrac{25}{x}>0$ より、相加平均と相乗平均の関係から $x+\\dfrac{25}{x}\\geqq2\\sqrt{25}=10$。等号は $x=5$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*sqrt(1*25)+(3)",
+        "expected": "13"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-amgm_min",
+      "explanation_detail": {
+        "approach": "$x$ と $\\dfrac{25}{x}$ はどちらも正で、積 $25$ が一定。積が一定の2つの正の数の和には、相加平均と相乗平均の関係が使える。",
+        "steps": [
+          "$x>0$ より $x>0,\\ \\dfrac{25}{x}>0$。",
+          "$x+\\dfrac{25}{x}\\geqq2\\sqrt{x\\cdot\\dfrac{25}{x}}=2\\sqrt{25}=10$。",
+          "等号は $x=\\dfrac{25}{x}$、すなわち $x^2=25$、$x>0$ より $x=5$ のとき。",
+          "最小値は $10+3=13$。"
+        ],
+        "alternatives": [
+          "$x=5$ の前後（$x=6$ など）を代入すると値が $13$ より大きくなることで、結果の妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立の $x$ と最小値を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "正の数であることを確認せずに使う。",
+          "等号が成り立つ $x$ を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\left(x+\\dfrac{3}{x}\\right)^{6}$ の展開式における$x^{4}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "18"
+      },
+      "explanation": "一般項は ${}_{6}\\mathrm{C}_{r}x^{6-r}\\left(\\dfrac{3}{x}\\right)^r={}_{6}\\mathrm{C}_{r}(3)^rx^{6-2r}$。$r=1$ のとき$x^{4}$ の項になり、値は $18$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "binomial(6,1)*(3)**1",
+        "expected": "18"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_const_term",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{x}=x^{-1}$ と考えると、一般項の $x$ の指数は $r$ の一次式になる。その指数が求めたい値になる $r$ を求める。",
+        "steps": [
+          "一般項：${}_{6}\\mathrm{C}_{r}x^{6-r}\\left(\\dfrac{3}{x}\\right)^r={}_{6}\\mathrm{C}_{r}(3)^r\\cdot x^{(6-r)-r}$。",
+          "指数 $(6-r)-r=4$ を解いて $r=1$。",
+          "${}_{6}\\mathrm{C}_{1}\\cdot(3)^{1}=6\\cdot(3)=18$。"
+        ],
+        "alternatives": [
+          "指数法則 $\\dfrac{x^m}{x^r}=x^{m-r}$ を使わず、分母と分子の $x$ の個数を数えて約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の $x$ の指数を $r$ で表している",
+            "points": 2
+          },
+          {
+            "point": "$r$ を決めて係数を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{1}{x}$ の指数を $+r$ と数える。",
+          "$c^r$ の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\left(x^2+\\dfrac{2}{x}\\right)^{4}$ の展開式における$x^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "24"
+      },
+      "explanation": "一般項は ${}_{4}\\mathrm{C}_{r}(x^2)^{4-r}\\left(\\dfrac{2}{x}\\right)^r={}_{4}\\mathrm{C}_{r}(2)^rx^{8-3r}$。$r=2$ のとき$x^{2}$ の項になり、値は $24$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "binomial(4,2)*(2)**2",
+        "expected": "24"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_const_term",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{x}=x^{-1}$ と考えると、一般項の $x$ の指数は $r$ の一次式になる。その指数が求めたい値になる $r$ を求める。",
+        "steps": [
+          "一般項：${}_{4}\\mathrm{C}_{r}(x^2)^{4-r}\\left(\\dfrac{2}{x}\\right)^r={}_{4}\\mathrm{C}_{r}(2)^r\\cdot x^{2(4-r)-r}$。",
+          "指数 $2(4-r)-r=2$ を解いて $r=2$。",
+          "${}_{4}\\mathrm{C}_{2}\\cdot(2)^{2}=6\\cdot(4)=24$。"
+        ],
+        "alternatives": [
+          "指数法則 $\\dfrac{x^m}{x^r}=x^{m-r}$ を使わず、分母と分子の $x$ の個数を数えて約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の $x$ の指数を $r$ で表している",
+            "points": 2
+          },
+          {
+            "point": "$r$ を決めて係数を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$(x^2)^{4-r}$ の指数を $4-r$ のままにする（$x^2$ の場合は $2(4-r)$）。",
+          "$c^r$ の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\left(x+\\dfrac{2}{x}\\right)^{8}$ の展開式における$x^{6}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "16"
+      },
+      "explanation": "一般項は ${}_{8}\\mathrm{C}_{r}x^{8-r}\\left(\\dfrac{2}{x}\\right)^r={}_{8}\\mathrm{C}_{r}(2)^rx^{8-2r}$。$r=1$ のとき$x^{6}$ の項になり、値は $16$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "binomial(8,1)*(2)**1",
+        "expected": "16"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_const_term",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{x}=x^{-1}$ と考えると、一般項の $x$ の指数は $r$ の一次式になる。その指数が求めたい値になる $r$ を求める。",
+        "steps": [
+          "一般項：${}_{8}\\mathrm{C}_{r}x^{8-r}\\left(\\dfrac{2}{x}\\right)^r={}_{8}\\mathrm{C}_{r}(2)^r\\cdot x^{(8-r)-r}$。",
+          "指数 $(8-r)-r=6$ を解いて $r=1$。",
+          "${}_{8}\\mathrm{C}_{1}\\cdot(2)^{1}=8\\cdot(2)=16$。"
+        ],
+        "alternatives": [
+          "指数法則 $\\dfrac{x^m}{x^r}=x^{m-r}$ を使わず、分母と分子の $x$ の個数を数えて約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の $x$ の指数を $r$ で表している",
+            "points": 2
+          },
+          {
+            "point": "$r$ を決めて係数を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{1}{x}$ の指数を $+r$ と数える。",
+          "$c^r$ の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\left(x^2-\\dfrac{3}{x}\\right)^{6}$ の展開式における$x^{9}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "-18"
+      },
+      "explanation": "一般項は ${}_{6}\\mathrm{C}_{r}(x^2)^{6-r}\\left(-\\dfrac{3}{x}\\right)^r={}_{6}\\mathrm{C}_{r}(-3)^rx^{12-3r}$。$r=1$ のとき$x^{9}$ の項になり、値は $-18$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "binomial(6,1)*(-3)**1",
+        "expected": "-18"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_const_term",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{x}=x^{-1}$ と考えると、一般項の $x$ の指数は $r$ の一次式になる。その指数が求めたい値になる $r$ を求める。",
+        "steps": [
+          "一般項：${}_{6}\\mathrm{C}_{r}(x^2)^{6-r}\\left(-\\dfrac{3}{x}\\right)^r={}_{6}\\mathrm{C}_{r}(-3)^r\\cdot x^{2(6-r)-r}$。",
+          "指数 $2(6-r)-r=9$ を解いて $r=1$。",
+          "${}_{6}\\mathrm{C}_{1}\\cdot(-3)^{1}=6\\cdot(-3)=-18$。"
+        ],
+        "alternatives": [
+          "指数法則 $\\dfrac{x^m}{x^r}=x^{m-r}$ を使わず、分母と分子の $x$ の個数を数えて約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の $x$ の指数を $r$ で表している",
+            "points": 2
+          },
+          {
+            "point": "$r$ を決めて係数を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$(x^2)^{6-r}$ の指数を $6-r$ のままにする（$x^2$ の場合は $2(6-r)$）。",
+          "$c^r$ の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\left(x^2-\\dfrac{1}{x}\\right)^{4}$ の展開式における$x^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "一般項は ${}_{4}\\mathrm{C}_{r}(x^2)^{4-r}\\left(-\\dfrac{1}{x}\\right)^r={}_{4}\\mathrm{C}_{r}(-1)^rx^{8-3r}$。$r=2$ のとき$x^{2}$ の項になり、値は $6$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "binomial(4,2)*(-1)**2",
+        "expected": "6"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_const_term",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{x}=x^{-1}$ と考えると、一般項の $x$ の指数は $r$ の一次式になる。その指数が求めたい値になる $r$ を求める。",
+        "steps": [
+          "一般項：${}_{4}\\mathrm{C}_{r}(x^2)^{4-r}\\left(-\\dfrac{1}{x}\\right)^r={}_{4}\\mathrm{C}_{r}(-1)^r\\cdot x^{2(4-r)-r}$。",
+          "指数 $2(4-r)-r=2$ を解いて $r=2$。",
+          "${}_{4}\\mathrm{C}_{2}\\cdot(-1)^{2}=6\\cdot(1)=6$。"
+        ],
+        "alternatives": [
+          "指数法則 $\\dfrac{x^m}{x^r}=x^{m-r}$ を使わず、分母と分子の $x$ の個数を数えて約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の $x$ の指数を $r$ で表している",
+            "points": 2
+          },
+          {
+            "point": "$r$ を決めて係数を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$(x^2)^{4-r}$ の指数を $4-r$ のままにする（$x^2$ の場合は $2(4-r)$）。",
+          "$c^r$ の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "分数式 $-\\dfrac{3}{x+1}-\\dfrac{3}{x+2}$ を計算し、1つの分数式で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{-6x-9}{(x+1)(x+2)}$",
+        "accepted": [
+          "(-6x-9)/(x+1)(x+2)"
+        ]
+      },
+      "explanation": "分母を $(x+1)(x+2)$ にそろえて分子を計算すると $-6x-9$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((-3)/(x+(1))-(3)/(x+(2))-(((-6)*x**1+(-9)*x**0))/((x+(1))*(x+(2))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-fraction_calc",
+      "explanation_detail": {
+        "approach": "整数の分数と同じく、分母の最小公倍数 $(x+1)(x+2)$ で通分してから分子を計算する。",
+        "steps": [
+          "通分：$\\dfrac{-3(x+2)-3(x+1)}{(x+1)(x+2)}$。",
+          "分子を展開・整理：$-6x-9$。",
+          "分子と分母に共通な因数がないことを確かめて答えとする。"
+        ],
+        "alternatives": [
+          "$x=0$ など分母が $0$ にならない値を代入し、もとの式と答えの値が一致するか確かめる（$x=0$ なら $-\\dfrac{9}{2}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく通分している",
+            "points": 1
+          },
+          {
+            "point": "分子を符号も含めて正しく整理している",
+            "points": 2
+          },
+          {
+            "point": "約分の確認をして答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で、引く分数の分子全体にかっこをつけずに符号を誤る。",
+          "分母どうし・分子どうしを足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "分数式 $\\dfrac{3}{x+5}-\\dfrac{2}{x-2}$ を計算し、1つの分数式で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{x-16}{(x+5)(x-2)}$",
+        "accepted": [
+          "(x-16)/(x+5)(x-2)"
+        ]
+      },
+      "explanation": "分母を $(x+5)(x-2)$ にそろえて分子を計算すると $x-16$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((3)/(x+(5))+(-2)/(x+(-2))-(((1)*x**1+(-16)*x**0))/((x+(5))*(x+(-2))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-fraction_calc",
+      "explanation_detail": {
+        "approach": "整数の分数と同じく、分母の最小公倍数 $(x+5)(x-2)$ で通分してから分子を計算する。",
+        "steps": [
+          "通分：$\\dfrac{3(x-2)-2(x+5)}{(x+5)(x-2)}$。",
+          "分子を展開・整理：$x-16$。",
+          "分子と分母に共通な因数がないことを確かめて答えとする。"
+        ],
+        "alternatives": [
+          "$x=0$ など分母が $0$ にならない値を代入し、もとの式と答えの値が一致するか確かめる（$x=0$ なら $\\dfrac{8}{5}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく通分している",
+            "points": 1
+          },
+          {
+            "point": "分子を符号も含めて正しく整理している",
+            "points": 2
+          },
+          {
+            "point": "約分の確認をして答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で、引く分数の分子全体にかっこをつけずに符号を誤る。",
+          "分母どうし・分子どうしを足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "分数式 $-\\dfrac{4}{x-2}+\\dfrac{1}{x-3}$ を計算し、1つの分数式で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{-3x+10}{(x-2)(x-3)}$",
+        "accepted": [
+          "(-3x+10)/(x-2)(x-3)"
+        ]
+      },
+      "explanation": "分母を $(x-2)(x-3)$ にそろえて分子を計算すると $-3x+10$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((-4)/(x+(-2))+(1)/(x+(-3))-(((-3)*x**1+(10)*x**0))/((x+(-2))*(x+(-3))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-fraction_calc",
+      "explanation_detail": {
+        "approach": "整数の分数と同じく、分母の最小公倍数 $(x-2)(x-3)$ で通分してから分子を計算する。",
+        "steps": [
+          "通分：$\\dfrac{-4(x-3)+1(x-2)}{(x-2)(x-3)}$。",
+          "分子を展開・整理：$-3x+10$。",
+          "分子と分母に共通な因数がないことを確かめて答えとする。"
+        ],
+        "alternatives": [
+          "$x=0$ など分母が $0$ にならない値を代入し、もとの式と答えの値が一致するか確かめる（$x=0$ なら $\\dfrac{5}{3}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく通分している",
+            "points": 1
+          },
+          {
+            "point": "分子を符号も含めて正しく整理している",
+            "points": 2
+          },
+          {
+            "point": "約分の確認をして答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で、引く分数の分子全体にかっこをつけずに符号を誤る。",
+          "分母どうし・分子どうしを足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "分数式 $-\\dfrac{3}{x+5}-\\dfrac{1}{x-1}$ を計算し、1つの分数式で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{-4x-2}{(x+5)(x-1)}$",
+        "accepted": [
+          "(-4x-2)/(x+5)(x-1)"
+        ]
+      },
+      "explanation": "分母を $(x+5)(x-1)$ にそろえて分子を計算すると $-4x-2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((-3)/(x+(5))+(-1)/(x+(-1))-(((-4)*x**1+(-2)*x**0))/((x+(5))*(x+(-1))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-fraction_calc",
+      "explanation_detail": {
+        "approach": "整数の分数と同じく、分母の最小公倍数 $(x+5)(x-1)$ で通分してから分子を計算する。",
+        "steps": [
+          "通分：$\\dfrac{-3(x-1)-1(x+5)}{(x+5)(x-1)}$。",
+          "分子を展開・整理：$-4x-2$。",
+          "分子と分母に共通な因数がないことを確かめて答えとする。"
+        ],
+        "alternatives": [
+          "$x=0$ など分母が $0$ にならない値を代入し、もとの式と答えの値が一致するか確かめる（$x=0$ なら $\\dfrac{2}{5}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく通分している",
+            "points": 1
+          },
+          {
+            "point": "分子を符号も含めて正しく整理している",
+            "points": 2
+          },
+          {
+            "point": "約分の確認をして答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で、引く分数の分子全体にかっこをつけずに符号を誤る。",
+          "分母どうし・分子どうしを足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "分数式 $-\\dfrac{4}{x-2}-\\dfrac{3}{x+4}$ を計算し、1つの分数式で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{-7x-10}{(x-2)(x+4)}$",
+        "accepted": [
+          "(-7x-10)/(x-2)(x+4)"
+        ]
+      },
+      "explanation": "分母を $(x-2)(x+4)$ にそろえて分子を計算すると $-7x-10$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((-4)/(x+(-2))+(-3)/(x+(4))-(((-7)*x**1+(-10)*x**0))/((x+(-2))*(x+(4))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-fraction_calc",
+      "explanation_detail": {
+        "approach": "整数の分数と同じく、分母の最小公倍数 $(x-2)(x+4)$ で通分してから分子を計算する。",
+        "steps": [
+          "通分：$\\dfrac{-4(x+4)-3(x-2)}{(x-2)(x+4)}$。",
+          "分子を展開・整理：$-7x-10$。",
+          "分子と分母に共通な因数がないことを確かめて答えとする。"
+        ],
+        "alternatives": [
+          "$x=0$ など分母が $0$ にならない値を代入し、もとの式と答えの値が一致するか確かめる（$x=0$ なら $\\dfrac{5}{4}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく通分している",
+            "points": 1
+          },
+          {
+            "point": "分子を符号も含めて正しく整理している",
+            "points": 2
+          },
+          {
+            "point": "約分の確認をして答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引き算で、引く分数の分子全体にかっこをつけずに符号を誤る。",
+          "分母どうし・分子どうしを足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の等式が $x$ についての恒等式であるとき、定数 $a,\\ b$ の値を求めなさい。$$\\dfrac{20}{(x-3)(x+2)}=\\dfrac{a}{x-3}+\\dfrac{b}{x+2}$$",
+      "answer": {
+        "value": "$a=4,\\ b=-4$",
+        "accepted": [
+          "a=4, b=-4"
+        ]
+      },
+      "explanation": "両辺に $(x-3)(x+2)$ を掛けた $20=a(x+2)+b(x-3)$ の係数を比較する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+b-(0), (2)*a+(-3)*b-(20)], [a, b])",
+        "expected": "{a: 4, b: -4}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-partial_fraction",
+      "explanation_detail": {
+        "approach": "分母を払って整式の恒等式にし、係数比較か数値代入で $a,\\ b$ を決める。",
+        "steps": [
+          "両辺に $(x-3)(x+2)$ を掛けて $20=(a+b)x+(2a-3b)$。",
+          "係数比較：$a+b=0$、$2a-3b=20$。",
+          "連立して $a=4,\\ b=-4$。"
+        ],
+        "alternatives": [
+          "数値代入：$x=3$ を代入すると $b$ の項が消えて $20=5a$ より $a=4$。同様に $x=-2$ で $b=-4$。（分母を払った後の整式の恒等式なので、$x=3$ を代入してよい。）"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母を払って整式の恒等式にしている",
+            "points": 1
+          },
+          {
+            "point": "係数比較の連立方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を払うとき、右辺の各項に掛ける因数を取り違える。",
+          "「分母が $0$ になる値は代入できない」と考えて数値代入をためらう（払った後の整式なら代入してよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の等式が $x$ についての恒等式であるとき、定数 $a,\\ b$ の値を求めなさい。$$\\dfrac{-2x+11}{(x-3)(x-4)}=\\dfrac{a}{x-3}+\\dfrac{b}{x-4}$$",
+      "answer": {
+        "value": "$a=-5,\\ b=3$",
+        "accepted": [
+          "a=-5, b=3"
+        ]
+      },
+      "explanation": "両辺に $(x-3)(x-4)$ を掛けた $-2x+11=a(x-4)+b(x-3)$ の係数を比較する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+b-(-2), (-4)*a+(-3)*b-(11)], [a, b])",
+        "expected": "{a: -5, b: 3}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-partial_fraction",
+      "explanation_detail": {
+        "approach": "分母を払って整式の恒等式にし、係数比較か数値代入で $a,\\ b$ を決める。",
+        "steps": [
+          "両辺に $(x-3)(x-4)$ を掛けて $-2x+11=(a+b)x+(-4a-3b)$。",
+          "係数比較：$a+b=-2$、$-4a-3b=11$。",
+          "連立して $a=-5,\\ b=3$。"
+        ],
+        "alternatives": [
+          "数値代入：$x=3$ を代入すると $b$ の項が消えて $5=-1a$ より $a=-5$。同様に $x=4$ で $b=3$。（分母を払った後の整式の恒等式なので、$x=3$ を代入してよい。）"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母を払って整式の恒等式にしている",
+            "points": 1
+          },
+          {
+            "point": "係数比較の連立方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を払うとき、右辺の各項に掛ける因数を取り違える。",
+          "「分母が $0$ になる値は代入できない」と考えて数値代入をためらう（払った後の整式なら代入してよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の等式が $x$ についての恒等式であるとき、定数 $a,\\ b$ の値を求めなさい。$$\\dfrac{-3x-11}{(x+5)(x+1)}=\\dfrac{a}{x+5}+\\dfrac{b}{x+1}$$",
+      "answer": {
+        "value": "$a=-1,\\ b=-2$",
+        "accepted": [
+          "a=-1, b=-2"
+        ]
+      },
+      "explanation": "両辺に $(x+5)(x+1)$ を掛けた $-3x-11=a(x+1)+b(x+5)$ の係数を比較する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+b-(-3), (1)*a+(5)*b-(-11)], [a, b])",
+        "expected": "{a: -1, b: -2}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-partial_fraction",
+      "explanation_detail": {
+        "approach": "分母を払って整式の恒等式にし、係数比較か数値代入で $a,\\ b$ を決める。",
+        "steps": [
+          "両辺に $(x+5)(x+1)$ を掛けて $-3x-11=(a+b)x+(1a+5b)$。",
+          "係数比較：$a+b=-3$、$1a+5b=-11$。",
+          "連立して $a=-1,\\ b=-2$。"
+        ],
+        "alternatives": [
+          "数値代入：$x=-5$ を代入すると $b$ の項が消えて $4=-4a$ より $a=-1$。同様に $x=-1$ で $b=-2$。（分母を払った後の整式の恒等式なので、$x=-5$ を代入してよい。）"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母を払って整式の恒等式にしている",
+            "points": 1
+          },
+          {
+            "point": "係数比較の連立方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を払うとき、右辺の各項に掛ける因数を取り違える。",
+          "「分母が $0$ になる値は代入できない」と考えて数値代入をためらう（払った後の整式なら代入してよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の等式が $x$ についての恒等式であるとき、定数 $a,\\ b$ の値を求めなさい。$$\\dfrac{2x-1}{(x-3)(x+2)}=\\dfrac{a}{x-3}+\\dfrac{b}{x+2}$$",
+      "answer": {
+        "value": "$a=1,\\ b=1$",
+        "accepted": [
+          "a=1, b=1"
+        ]
+      },
+      "explanation": "両辺に $(x-3)(x+2)$ を掛けた $2x-1=a(x+2)+b(x-3)$ の係数を比較する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+b-(2), (2)*a+(-3)*b-(-1)], [a, b])",
+        "expected": "{a: 1, b: 1}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-partial_fraction",
+      "explanation_detail": {
+        "approach": "分母を払って整式の恒等式にし、係数比較か数値代入で $a,\\ b$ を決める。",
+        "steps": [
+          "両辺に $(x-3)(x+2)$ を掛けて $2x-1=(a+b)x+(2a-3b)$。",
+          "係数比較：$a+b=2$、$2a-3b=-1$。",
+          "連立して $a=1,\\ b=1$。"
+        ],
+        "alternatives": [
+          "数値代入：$x=3$ を代入すると $b$ の項が消えて $5=5a$ より $a=1$。同様に $x=-2$ で $b=1$。（分母を払った後の整式の恒等式なので、$x=3$ を代入してよい。）"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母を払って整式の恒等式にしている",
+            "points": 1
+          },
+          {
+            "point": "係数比較の連立方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を払うとき、右辺の各項に掛ける因数を取り違える。",
+          "「分母が $0$ になる値は代入できない」と考えて数値代入をためらう（払った後の整式なら代入してよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の等式が $x$ についての恒等式であるとき、定数 $a,\\ b$ の値を求めなさい。$$\\dfrac{-10x}{(x-3)(x+3)}=\\dfrac{a}{x-3}+\\dfrac{b}{x+3}$$",
+      "answer": {
+        "value": "$a=-5,\\ b=-5$",
+        "accepted": [
+          "a=-5, b=-5"
+        ]
+      },
+      "explanation": "両辺に $(x-3)(x+3)$ を掛けた $-10x=a(x+3)+b(x-3)$ の係数を比較する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+b-(-10), (3)*a+(-3)*b-(0)], [a, b])",
+        "expected": "{a: -5, b: -5}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-partial_fraction",
+      "explanation_detail": {
+        "approach": "分母を払って整式の恒等式にし、係数比較か数値代入で $a,\\ b$ を決める。",
+        "steps": [
+          "両辺に $(x-3)(x+3)$ を掛けて $-10x=(a+b)x+(3a-3b)$。",
+          "係数比較：$a+b=-10$、$3a-3b=0$。",
+          "連立して $a=-5,\\ b=-5$。"
+        ],
+        "alternatives": [
+          "数値代入：$x=3$ を代入すると $b$ の項が消えて $-30=6a$ より $a=-5$。同様に $x=-3$ で $b=-5$。（分母を払った後の整式の恒等式なので、$x=3$ を代入してよい。）"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母を払って整式の恒等式にしている",
+            "points": 1
+          },
+          {
+            "point": "係数比較の連立方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を払うとき、右辺の各項に掛ける因数を取り違える。",
+          "「分母が $0$ になる値は代入できない」と考えて数値代入をためらう（払った後の整式なら代入してよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(x+3y-2z)^{4}$ の展開式における $xyz^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "144"
+      },
+      "explanation": "$x$ を $1$ 個、$3y$ を $1$ 個、$-2z$ を $2$ 個選ぶ選び方は $\\dfrac{4!}{1!\\,1!\\,2!}=12$ 通り。係数は $12\\cdot(3)^{1}\\cdot(-2)^{2}=144$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(4)/(factorial(1)*factorial(1)*factorial(2))*(3)**1*(-2)**2",
+        "expected": "144"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-multinomial",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "$n$ 個の因数のそれぞれから $x,\\ y,\\ z$ の項を1つずつ選ぶと考える。選び方の数は「同じものを含む順列」（数学A）の数になる。",
+        "steps": [
+          "$xyz^{2}$ の項は、$4$ 個の因数から $x$ を $1$ 個、$3y$ を $1$ 個、$-2z$ を $2$ 個選んで掛けたもの。",
+          "選び方は $\\dfrac{4!}{1!\\,1!\\,2!}=12$ 通り（同じものを含む順列）。",
+          "係数は $12\\times(3)^{1}\\times(-2)^{2}=144$。"
+        ],
+        "alternatives": [
+          "二項定理を2回使う方法：$\\{x+(3y-2z)\\}^{4}$ の一般項から ${}_{4}\\mathrm{C}_{3}x^{1}$、さらに $(3y-2z)^{3}$ の展開から ${}_{3}\\mathrm{C}_{2}$ を得て、${}_{4}\\mathrm{C}_{3}\\cdot{}_{3}\\mathrm{C}_{2}=12$ 通り。"
+        ],
+        "partial_credit": [
+          {
+            "point": "選び方の数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "係数の累乗・符号を正しく掛けている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y,\\ z$ の係数の累乗を掛け忘れる。",
+          "選び方の数を ${}_n\\mathrm{C}_p$ だけで済ませる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(x+2y+3z)^{7}$ の展開式における $x^{5}yz$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "252"
+      },
+      "explanation": "$x$ を $5$ 個、$2y$ を $1$ 個、$3z$ を $1$ 個選ぶ選び方は $\\dfrac{7!}{5!\\,1!\\,1!}=42$ 通り。係数は $42\\cdot(2)^{1}\\cdot(3)^{1}=252$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(7)/(factorial(5)*factorial(1)*factorial(1))*(2)**1*(3)**1",
+        "expected": "252"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-multinomial",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "$n$ 個の因数のそれぞれから $x,\\ y,\\ z$ の項を1つずつ選ぶと考える。選び方の数は「同じものを含む順列」（数学A）の数になる。",
+        "steps": [
+          "$x^{5}yz$ の項は、$7$ 個の因数から $x$ を $5$ 個、$2y$ を $1$ 個、$3z$ を $1$ 個選んで掛けたもの。",
+          "選び方は $\\dfrac{7!}{5!\\,1!\\,1!}=42$ 通り（同じものを含む順列）。",
+          "係数は $42\\times(2)^{1}\\times(3)^{1}=252$。"
+        ],
+        "alternatives": [
+          "二項定理を2回使う方法：$\\{x+(2y+3z)\\}^{7}$ の一般項から ${}_{7}\\mathrm{C}_{2}x^{5}$、さらに $(2y+3z)^{2}$ の展開から ${}_{2}\\mathrm{C}_{1}$ を得て、${}_{7}\\mathrm{C}_{2}\\cdot{}_{2}\\mathrm{C}_{1}=42$ 通り。"
+        ],
+        "partial_credit": [
+          {
+            "point": "選び方の数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "係数の累乗・符号を正しく掛けている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y,\\ z$ の係数の累乗を掛け忘れる。",
+          "選び方の数を ${}_n\\mathrm{C}_p$ だけで済ませる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(x-2y-2z)^{7}$ の展開式における $x^{2}y^{4}z$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "-3360"
+      },
+      "explanation": "$x$ を $2$ 個、$-2y$ を $4$ 個、$-2z$ を $1$ 個選ぶ選び方は $\\dfrac{7!}{2!\\,4!\\,1!}=105$ 通り。係数は $105\\cdot(-2)^{4}\\cdot(-2)^{1}=-3360$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(7)/(factorial(2)*factorial(4)*factorial(1))*(-2)**4*(-2)**1",
+        "expected": "-3360"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-multinomial",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "$n$ 個の因数のそれぞれから $x,\\ y,\\ z$ の項を1つずつ選ぶと考える。選び方の数は「同じものを含む順列」（数学A）の数になる。",
+        "steps": [
+          "$x^{2}y^{4}z$ の項は、$7$ 個の因数から $x$ を $2$ 個、$-2y$ を $4$ 個、$-2z$ を $1$ 個選んで掛けたもの。",
+          "選び方は $\\dfrac{7!}{2!\\,4!\\,1!}=105$ 通り（同じものを含む順列）。",
+          "係数は $105\\times(-2)^{4}\\times(-2)^{1}=-3360$。"
+        ],
+        "alternatives": [
+          "二項定理を2回使う方法：$\\{x+(-2y-2z)\\}^{7}$ の一般項から ${}_{7}\\mathrm{C}_{5}x^{2}$、さらに $(-2y-2z)^{5}$ の展開から ${}_{5}\\mathrm{C}_{1}$ を得て、${}_{7}\\mathrm{C}_{5}\\cdot{}_{5}\\mathrm{C}_{1}=105$ 通り。"
+        ],
+        "partial_credit": [
+          {
+            "point": "選び方の数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "係数の累乗・符号を正しく掛けている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y,\\ z$ の係数の累乗を掛け忘れる。",
+          "選び方の数を ${}_n\\mathrm{C}_p$ だけで済ませる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(x+2y-2z)^{5}$ の展開式における $x^{2}yz^{2}$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "240"
+      },
+      "explanation": "$x$ を $2$ 個、$2y$ を $1$ 個、$-2z$ を $2$ 個選ぶ選び方は $\\dfrac{5!}{2!\\,1!\\,2!}=30$ 通り。係数は $30\\cdot(2)^{1}\\cdot(-2)^{2}=240$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(5)/(factorial(2)*factorial(1)*factorial(2))*(2)**1*(-2)**2",
+        "expected": "240"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-multinomial",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "$n$ 個の因数のそれぞれから $x,\\ y,\\ z$ の項を1つずつ選ぶと考える。選び方の数は「同じものを含む順列」（数学A）の数になる。",
+        "steps": [
+          "$x^{2}yz^{2}$ の項は、$5$ 個の因数から $x$ を $2$ 個、$2y$ を $1$ 個、$-2z$ を $2$ 個選んで掛けたもの。",
+          "選び方は $\\dfrac{5!}{2!\\,1!\\,2!}=30$ 通り（同じものを含む順列）。",
+          "係数は $30\\times(2)^{1}\\times(-2)^{2}=240$。"
+        ],
+        "alternatives": [
+          "二項定理を2回使う方法：$\\{x+(2y-2z)\\}^{5}$ の一般項から ${}_{5}\\mathrm{C}_{3}x^{2}$、さらに $(2y-2z)^{3}$ の展開から ${}_{3}\\mathrm{C}_{2}$ を得て、${}_{5}\\mathrm{C}_{3}\\cdot{}_{3}\\mathrm{C}_{2}=30$ 通り。"
+        ],
+        "partial_credit": [
+          {
+            "point": "選び方の数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "係数の累乗・符号を正しく掛けている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y,\\ z$ の係数の累乗を掛け忘れる。",
+          "選び方の数を ${}_n\\mathrm{C}_p$ だけで済ませる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(x-2y+3z)^{5}$ の展開式における $x^{2}y^{2}z$ の項の係数を求めなさい。",
+      "answer": {
+        "value": "360"
+      },
+      "explanation": "$x$ を $2$ 個、$-2y$ を $2$ 個、$3z$ を $1$ 個選ぶ選び方は $\\dfrac{5!}{2!\\,2!\\,1!}=30$ 通り。係数は $30\\cdot(-2)^{2}\\cdot(3)^{1}=360$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(5)/(factorial(2)*factorial(2)*factorial(1))*(-2)**2*(3)**1",
+        "expected": "360"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-multinomial",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "$n$ 個の因数のそれぞれから $x,\\ y,\\ z$ の項を1つずつ選ぶと考える。選び方の数は「同じものを含む順列」（数学A）の数になる。",
+        "steps": [
+          "$x^{2}y^{2}z$ の項は、$5$ 個の因数から $x$ を $2$ 個、$-2y$ を $2$ 個、$3z$ を $1$ 個選んで掛けたもの。",
+          "選び方は $\\dfrac{5!}{2!\\,2!\\,1!}=30$ 通り（同じものを含む順列）。",
+          "係数は $30\\times(-2)^{2}\\times(3)^{1}=360$。"
+        ],
+        "alternatives": [
+          "二項定理を2回使う方法：$\\{x+(-2y+3z)\\}^{5}$ の一般項から ${}_{5}\\mathrm{C}_{3}x^{2}$、さらに $(-2y+3z)^{3}$ の展開から ${}_{3}\\mathrm{C}_{1}$ を得て、${}_{5}\\mathrm{C}_{3}\\cdot{}_{3}\\mathrm{C}_{1}=30$ 通り。"
+        ],
+        "partial_credit": [
+          {
+            "point": "選び方の数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "係数の累乗・符号を正しく掛けている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y,\\ z$ の係数の累乗を掛け忘れる。",
+          "選び方の数を ${}_n\\mathrm{C}_p$ だけで済ませる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$x,\\ y$ が実数のとき、不等式 $x^2+4y^2\\geqq 4xy$ を証明しなさい。また、等号が成り立つ条件を答えなさい。",
+      "answer": {
+        "value": "$(x^2+4y^2)-4xy=(x-2y)^2\\geqq0$。よって $x^2+4y^2\\geqq 4xy$。等号は$x=2y$ のとき成り立つ。"
+      },
+      "explanation": "差をとって平方完成すると $(x-2y)^2$ となり、実数の2乗は $0$ 以上であることから示せる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（左辺）$-$（右辺）をつくって証明の方針を示している",
+            "points": 2
+          },
+          {
+            "criterion": "平方の和の形に正しく変形している",
+            "points": 3
+          },
+          {
+            "criterion": "実数の2乗が $0$ 以上であることを根拠に結論している",
+            "points": 1
+          },
+          {
+            "criterion": "等号成立条件を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((x-2*y)**2+0*y**2)",
+        "expected": "x**2+4*y**2-4*x*y",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-prove_ineq",
+      "explanation_detail": {
+        "approach": "左辺と右辺の差を $x$ についての二次式とみて平方完成すると、「（実数）$^2$ の和」になる。",
+        "steps": [
+          "$(x^2+4y^2)-4xy=x^2-4y\\cdot x+4y^2$。",
+          "$x$ について平方完成：$(x-2y)^2-4y^2+4y^2=(x-2y)^2$。",
+          "$(x-2y)^2\\geqq0$ なので差は $0$ 以上。",
+          "等号は $x-2y=0$ のとき、すなわち$x=2y$ のとき。"
+        ],
+        "alternatives": [
+          "判別式の利用：左辺 $-$ 右辺を $x$ の二次式とみると、判別式 $D/4=4y^2-4y^2=0\\leqq0$ で $x^2$ の係数が正なので、常に $0$ 以上（数学Ⅰ 二次関数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差をとる方針",
+            "points": 2
+          },
+          {
+            "point": "平方の和への変形",
+            "points": 3
+          },
+          {
+            "point": "結論の根拠",
+            "points": 1
+          },
+          {
+            "point": "等号成立条件",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "示したい不等式から出発して変形し、正しい式に到達したことで証明とする（逆向きの推論）。",
+          "等号成立条件で、比の関係 $x=2y$ を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$x,\\ y$ が実数のとき、不等式 $x^2+4y^2\\geqq 2xy$ を証明しなさい。また、等号が成り立つ条件を答えなさい。",
+      "answer": {
+        "value": "$(x^2+4y^2)-2xy=(x-y)^2+3y^2\\geqq0$。よって $x^2+4y^2\\geqq 2xy$。等号は$x=y=0$ のとき成り立つ。"
+      },
+      "explanation": "差をとって平方完成すると $(x-y)^2+3y^2$ となり、実数の2乗は $0$ 以上であることから示せる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（左辺）$-$（右辺）をつくって証明の方針を示している",
+            "points": 2
+          },
+          {
+            "criterion": "平方の和の形に正しく変形している",
+            "points": 3
+          },
+          {
+            "criterion": "実数の2乗が $0$ 以上であることを根拠に結論している",
+            "points": 1
+          },
+          {
+            "criterion": "等号成立条件を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((x-1*y)**2+3*y**2)",
+        "expected": "x**2+4*y**2-2*x*y",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-prove_ineq",
+      "explanation_detail": {
+        "approach": "左辺と右辺の差を $x$ についての二次式とみて平方完成すると、「（実数）$^2$ の和」になる。",
+        "steps": [
+          "$(x^2+4y^2)-2xy=x^2-2y\\cdot x+4y^2$。",
+          "$x$ について平方完成：$(x-y)^2-y^2+4y^2=(x-y)^2+3y^2$。",
+          "$(x-y)^2\\geqq0$、$y^2\\geqq0$ なので和は $0$ 以上。",
+          "等号は $x-y=0$ かつ $y=0$、すなわち$x=y=0$ のとき。"
+        ],
+        "alternatives": [
+          "判別式の利用：左辺 $-$ 右辺を $x$ の二次式とみると、判別式 $D/4=y^2-4y^2=-3y^2\\leqq0$ で $x^2$ の係数が正なので、常に $0$ 以上（数学Ⅰ 二次関数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差をとる方針",
+            "points": 2
+          },
+          {
+            "point": "平方の和への変形",
+            "points": 3
+          },
+          {
+            "point": "結論の根拠",
+            "points": 1
+          },
+          {
+            "point": "等号成立条件",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "示したい不等式から出発して変形し、正しい式に到達したことで証明とする（逆向きの推論）。",
+          "等号成立条件で、$y=0$ の条件を見落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$a,\\ b$ が実数のとき、不等式 $a^2+25b^2\\geqq 10ab$ を証明しなさい。また、等号が成り立つ条件を答えなさい。",
+      "answer": {
+        "value": "$(a^2+25b^2)-10ab=(a-5b)^2\\geqq0$。よって $a^2+25b^2\\geqq 10ab$。等号は$a=5b$ のとき成り立つ。"
+      },
+      "explanation": "差をとって平方完成すると $(a-5b)^2$ となり、実数の2乗は $0$ 以上であることから示せる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（左辺）$-$（右辺）をつくって証明の方針を示している",
+            "points": 2
+          },
+          {
+            "criterion": "平方の和の形に正しく変形している",
+            "points": 3
+          },
+          {
+            "criterion": "実数の2乗が $0$ 以上であることを根拠に結論している",
+            "points": 1
+          },
+          {
+            "criterion": "等号成立条件を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((a-5*b)**2+0*b**2)",
+        "expected": "a**2+25*b**2-10*a*b",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-prove_ineq",
+      "explanation_detail": {
+        "approach": "左辺と右辺の差を $a$ についての二次式とみて平方完成すると、「（実数）$^2$ の和」になる。",
+        "steps": [
+          "$(a^2+25b^2)-10ab=a^2-10b\\cdot a+25b^2$。",
+          "$a$ について平方完成：$(a-5b)^2-25b^2+25b^2=(a-5b)^2$。",
+          "$(a-5b)^2\\geqq0$ なので差は $0$ 以上。",
+          "等号は $a-5b=0$ のとき、すなわち$a=5b$ のとき。"
+        ],
+        "alternatives": [
+          "判別式の利用：左辺 $-$ 右辺を $a$ の二次式とみると、判別式 $D/4=25b^2-25b^2=0\\leqq0$ で $a^2$ の係数が正なので、常に $0$ 以上（数学Ⅰ 二次関数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差をとる方針",
+            "points": 2
+          },
+          {
+            "point": "平方の和への変形",
+            "points": 3
+          },
+          {
+            "point": "結論の根拠",
+            "points": 1
+          },
+          {
+            "point": "等号成立条件",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "示したい不等式から出発して変形し、正しい式に到達したことで証明とする（逆向きの推論）。",
+          "等号成立条件で、比の関係 $a=5b$ を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>3$ のとき、$P=2x+\\dfrac{18}{x-3}$ の最小値と、そのときの $x$ の値を求めなさい。考え方も記述すること。",
+      "answer": {
+        "value": "$P=2(x-3)+\\dfrac{18}{x-3}+6\\geqq2\\sqrt{36}+6=18$。等号は $x=6$ のとき。最小値 $18$（$x=6$）"
+      },
+      "explanation": "$x-3>0$ に着目し、$P$ を「$x-3$ を含む2つの正の項の和＋定数」に変形してから相加平均と相乗平均の関係を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$x-3>0$ を確認し、積が一定になるよう式を変形している",
+            "points": 3
+          },
+          {
+            "criterion": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 2
+          },
+          {
+            "criterion": "等号成立の $x$ を求め、それが条件を満たすことを確かめている",
+            "points": 2
+          },
+          {
+            "criterion": "最小値を正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2*sqrt(2*18)+6",
+        "expected": "18",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-shifted_amgm",
+      "explanation_detail": {
+        "approach": "そのままでは $2x$ と $\\dfrac{18}{x-3}$ の積が一定にならない。$x-3$ をひとかたまりと見て、積が一定になる2項をつくる。",
+        "steps": [
+          "$t=x-3$ とおくと $t>0$ で、$P=2t+\\dfrac{18}{t}+6$。",
+          "$t>0$ より相加平均と相乗平均の関係から $2t+\\dfrac{18}{t}\\geqq2\\sqrt{36}=12$。",
+          "等号は $2t=\\dfrac{18}{t}$、すなわち $t^2=9$、$t>0$ より $t=3$。このとき $x=6$ で、$x>3$ を満たす。",
+          "最小値 $P=12+6=18$。"
+        ],
+        "alternatives": [
+          "微分法（数学Ⅱ 微分）を学んだ後なら、$P$ を $x$ で微分して増減を調べても同じ結果が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式の変形",
+            "points": 3
+          },
+          {
+            "point": "関係式の適用",
+            "points": 2
+          },
+          {
+            "point": "等号成立の確認",
+            "points": 2
+          },
+          {
+            "point": "最小値",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2x$ と $\\dfrac{18}{x-3}$ にそのまま関係式を当てはめ、$x$ を含む式を「最小値」と答える。",
+          "等号成立の $x$ が条件を満たすかを確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>2$ のとき、$P=4x+\\dfrac{1}{x-2}$ の最小値と、そのときの $x$ の値を求めなさい。考え方も記述すること。",
+      "answer": {
+        "value": "$P=4(x-2)+\\dfrac{1}{x-2}+8\\geqq2\\sqrt{4}+8=12$。等号は $x=\\frac{5}{2}$ のとき。最小値 $12$（$x=\\frac{5}{2}$）"
+      },
+      "explanation": "$x-2>0$ に着目し、$P$ を「$x-2$ を含む2つの正の項の和＋定数」に変形してから相加平均と相乗平均の関係を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$x-2>0$ を確認し、積が一定になるよう式を変形している",
+            "points": 3
+          },
+          {
+            "criterion": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 2
+          },
+          {
+            "criterion": "等号成立の $x$ を求め、それが条件を満たすことを確かめている",
+            "points": 2
+          },
+          {
+            "criterion": "最小値を正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2*sqrt(4*1)+8",
+        "expected": "12",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-shifted_amgm",
+      "explanation_detail": {
+        "approach": "そのままでは $4x$ と $\\dfrac{1}{x-2}$ の積が一定にならない。$x-2$ をひとかたまりと見て、積が一定になる2項をつくる。",
+        "steps": [
+          "$t=x-2$ とおくと $t>0$ で、$P=4t+\\dfrac{1}{t}+8$。",
+          "$t>0$ より相加平均と相乗平均の関係から $4t+\\dfrac{1}{t}\\geqq2\\sqrt{4}=4$。",
+          "等号は $4t=\\dfrac{1}{t}$、すなわち $t^2=\\frac{1}{4}$、$t>0$ より $t=\\frac{1}{2}$。このとき $x=\\frac{5}{2}$ で、$x>2$ を満たす。",
+          "最小値 $P=4+8=12$。"
+        ],
+        "alternatives": [
+          "微分法（数学Ⅱ 微分）を学んだ後なら、$P$ を $x$ で微分して増減を調べても同じ結果が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式の変形",
+            "points": 3
+          },
+          {
+            "point": "関係式の適用",
+            "points": 2
+          },
+          {
+            "point": "等号成立の確認",
+            "points": 2
+          },
+          {
+            "point": "最小値",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4x$ と $\\dfrac{1}{x-2}$ にそのまま関係式を当てはめ、$x$ を含む式を「最小値」と答える。",
+          "等号成立の $x$ が条件を満たすかを確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>3$ のとき、$P=3x+\\dfrac{12}{x-3}$ の最小値と、そのときの $x$ の値を求めなさい。考え方も記述すること。",
+      "answer": {
+        "value": "$P=3(x-3)+\\dfrac{12}{x-3}+9\\geqq2\\sqrt{36}+9=21$。等号は $x=5$ のとき。最小値 $21$（$x=5$）"
+      },
+      "explanation": "$x-3>0$ に着目し、$P$ を「$x-3$ を含む2つの正の項の和＋定数」に変形してから相加平均と相乗平均の関係を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$x-3>0$ を確認し、積が一定になるよう式を変形している",
+            "points": 3
+          },
+          {
+            "criterion": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 2
+          },
+          {
+            "criterion": "等号成立の $x$ を求め、それが条件を満たすことを確かめている",
+            "points": 2
+          },
+          {
+            "criterion": "最小値を正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2*sqrt(3*12)+9",
+        "expected": "21",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-shifted_amgm",
+      "explanation_detail": {
+        "approach": "そのままでは $3x$ と $\\dfrac{12}{x-3}$ の積が一定にならない。$x-3$ をひとかたまりと見て、積が一定になる2項をつくる。",
+        "steps": [
+          "$t=x-3$ とおくと $t>0$ で、$P=3t+\\dfrac{12}{t}+9$。",
+          "$t>0$ より相加平均と相乗平均の関係から $3t+\\dfrac{12}{t}\\geqq2\\sqrt{36}=12$。",
+          "等号は $3t=\\dfrac{12}{t}$、すなわち $t^2=4$、$t>0$ より $t=2$。このとき $x=5$ で、$x>3$ を満たす。",
+          "最小値 $P=12+9=21$。"
+        ],
+        "alternatives": [
+          "微分法（数学Ⅱ 微分）を学んだ後なら、$P$ を $x$ で微分して増減を調べても同じ結果が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式の変形",
+            "points": 3
+          },
+          {
+            "point": "関係式の適用",
+            "points": 2
+          },
+          {
+            "point": "等号成立の確認",
+            "points": 2
+          },
+          {
+            "point": "最小値",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$3x$ と $\\dfrac{12}{x-3}$ にそのまま関係式を当てはめ、$x$ を含む式を「最小値」と答える。",
+          "等号成立の $x$ が条件を満たすかを確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二項定理を利用して、和 $S={}_{6}\\mathrm{C}_{0}+{}_{6}\\mathrm{C}_{1}\\cdot(-2)+{}_{6}\\mathrm{C}_{2}\\cdot(-2)^2+\\cdots+{}_{6}\\mathrm{C}_{6}\\cdot(-2)^{6}$ の値を求めなさい。どの等式にどの値を代入したかを明記すること。",
+      "answer": {
+        "value": "二項定理 $(1+x)^{6}={}_{6}\\mathrm{C}_{0}+{}_{6}\\mathrm{C}_{1}x+\\cdots+{}_{6}\\mathrm{C}_{6}x^{6}$ に $x=-2$ を代入すると $S=(-1)^{6}=1$。"
+      },
+      "explanation": "$S$ は $(1+x)^{6}$ の展開式に $x=-2$ を代入したものになっている。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "二項定理による展開式を正しく書いている",
+            "points": 3
+          },
+          {
+            "criterion": "代入する値を正しく選び、その理由を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "$S$ の値を正しく計算している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "summation(binomial(6,k)*(-2)**k, [k, 0, 6])",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_sum",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "各項が ${}_{6}\\mathrm{C}_{k}\\cdot(\\text{ある数})^k$ の形をしている。これは $(1+x)^{6}$ の展開式の一般項 ${}_{6}\\mathrm{C}_{k}x^k$ に数を代入した形である。",
+        "steps": [
+          "二項定理より $(1+x)^{6}=\\sum_{k=0}^{6}{}_{6}\\mathrm{C}_{k}x^k$（すべての $x$ で成り立つ恒等式）。",
+          "$S$ の第 $k+1$ 項は ${}_{6}\\mathrm{C}_{k}\\cdot(-2)^k$ なので、$x=-2$ を代入すればよい。",
+          "$S=(1-2)^{6}=(-1)^{6}=1$。"
+        ],
+        "alternatives": [
+          "小さい場合で確かめる：$n=2$ なら ${}_{2}\\mathrm{C}_{0}+{}_{2}\\mathrm{C}_{1}x+{}_{2}\\mathrm{C}_{2}x^2=1+2x+x^2=(1+x)^2$ であり、$x=-2$ を代入した値と和を直接計算した値が一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開式",
+            "points": 3
+          },
+          {
+            "point": "代入値の選択と理由",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "符号が交互に変わる和で、$x$ に代入する値の符号を誤る。",
+          "$S$ の最後の項 ${}_{6}\\mathrm{C}_{6}$ の係数を数え落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二項定理を利用して、和 $S={}_{8}\\mathrm{C}_{0}-{}_{8}\\mathrm{C}_{1}\\cdot3+{}_{8}\\mathrm{C}_{2}\\cdot3^2-\\cdots+(-1)^{8}{}_{8}\\mathrm{C}_{8}\\cdot3^{8}$ の値を求めなさい。どの等式にどの値を代入したかを明記すること。",
+      "answer": {
+        "value": "二項定理 $(1+x)^{8}={}_{8}\\mathrm{C}_{0}+{}_{8}\\mathrm{C}_{1}x+\\cdots+{}_{8}\\mathrm{C}_{8}x^{8}$ に $x=-3$ を代入すると $S=(-2)^{8}=256$。"
+      },
+      "explanation": "$S$ は $(1+x)^{8}$ の展開式に $x=-3$ を代入したものになっている。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "二項定理による展開式を正しく書いている",
+            "points": 3
+          },
+          {
+            "criterion": "代入する値を正しく選び、その理由を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "$S$ の値を正しく計算している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "summation(binomial(8,k)*(-1)**k*(3)**k, [k, 0, 8])",
+        "expected": "256",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U01-binom_sum",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "各項が ${}_{8}\\mathrm{C}_{k}\\cdot(\\text{ある数})^k$ の形をしている。これは $(1+x)^{8}$ の展開式の一般項 ${}_{8}\\mathrm{C}_{k}x^k$ に数を代入した形である。",
+        "steps": [
+          "二項定理より $(1+x)^{8}=\\sum_{k=0}^{8}{}_{8}\\mathrm{C}_{k}x^k$（すべての $x$ で成り立つ恒等式）。",
+          "$S$ の第 $k+1$ 項は ${}_{8}\\mathrm{C}_{k}\\cdot(-3)^k$ なので、$x=-3$ を代入すればよい。",
+          "$S=(1-3)^{8}=(-2)^{8}=256$。"
+        ],
+        "alternatives": [
+          "小さい場合で確かめる：$n=2$ なら ${}_{2}\\mathrm{C}_{0}+{}_{2}\\mathrm{C}_{1}x+{}_{2}\\mathrm{C}_{2}x^2=1+2x+x^2=(1+x)^2$ であり、$x=-3$ を代入した値と和を直接計算した値が一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開式",
+            "points": 3
+          },
+          {
+            "point": "代入値の選択と理由",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "符号が交互に変わる和で、$x$ に代入する値の符号を誤る。",
+          "$S$ の最後の項 ${}_{8}\\mathrm{C}_{8}$ の係数を数え落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)=x^3+ax+b$ が $x^2-3x-3$ で割り切れるように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=-12,\\ b=-9$",
+        "accepted": [
+          "a=-12, b=-9"
+        ]
+      },
+      "explanation": "$P(x)$ を $x^2-3x-3$ で割ると商は $x+3$、余りは $(a-(-12))x+(b-(-9))$。余りが $0$ になる条件から求める。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve([a-(-12), b-(-9), expand(((1)*x**3+(0)*x**2+(-12)*x**1+(-9)*x**0)-(x**3+(0)*x**2+(-12)*x+(-9)))], [a, b])",
+        "expected": "{a: -12, b: -9}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U01-divisible_cond",
+      "explanation_detail": {
+        "approach": "「割り切れる」は「余りが $0$」と同じ。実際に割り算をして余りを $a,\\ b$ で表し、余りが恒等的に $0$ になる条件（$x$ の係数も定数項も $0$）を立てる。",
+        "steps": [
+          "$P(x)$ を $x^2-3x-3$ で割ると、商 $x+3$。",
+          "余りは $(a-(-12))x+(b-(-9))$。",
+          "余りが恒等的に $0$ である条件：$a-(-12)=0$ かつ $b-(-9)=0$。",
+          "$a=-12,\\ b=-9$。"
+        ],
+        "alternatives": [
+          "恒等式の利用：$P(x)$ は3次式で $x^3$ の係数が $1$ なので、$P(x)=(x^2-3x-3)(x+k)$ とおける。$x^2$ の係数を比べて $k=3$、展開して $x$ の係数・定数項を比べると $a=-12,\\ b=-9$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $a,\\ b$ で正しく表している（または恒等式を正しく立てている）",
+            "points": 4
+          },
+          {
+            "point": "余りの各係数を $0$ とおく条件を立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りが $0$ になる条件で、$x$ の係数か定数項の一方だけを $0$ とおく。",
+          "割り算の途中で $a,\\ b$ を含む項の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)=x^3-3x^2+ax+b$ が $x^2+2x+3$ で割り切れるように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=-7,\\ b=-15$",
+        "accepted": [
+          "a=-7, b=-15"
+        ]
+      },
+      "explanation": "$P(x)$ を $x^2+2x+3$ で割ると商は $x-5$、余りは $(a-(-7))x+(b-(-15))$。余りが $0$ になる条件から求める。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve([a-(-7), b-(-15), expand(((1)*x**3+(-3)*x**2+(-7)*x**1+(-15)*x**0)-(x**3+(-3)*x**2+(-7)*x+(-15)))], [a, b])",
+        "expected": "{a: -7, b: -15}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U01-divisible_cond",
+      "explanation_detail": {
+        "approach": "「割り切れる」は「余りが $0$」と同じ。実際に割り算をして余りを $a,\\ b$ で表し、余りが恒等的に $0$ になる条件（$x$ の係数も定数項も $0$）を立てる。",
+        "steps": [
+          "$P(x)$ を $x^2+2x+3$ で割ると、商 $x-5$。",
+          "余りは $(a-(-7))x+(b-(-15))$。",
+          "余りが恒等的に $0$ である条件：$a-(-7)=0$ かつ $b-(-15)=0$。",
+          "$a=-7,\\ b=-15$。"
+        ],
+        "alternatives": [
+          "恒等式の利用：$P(x)$ は3次式で $x^3$ の係数が $1$ なので、$P(x)=(x^2+2x+3)(x+k)$ とおける。$x^2$ の係数を比べて $k=-5$、展開して $x$ の係数・定数項を比べると $a=-7,\\ b=-15$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $a,\\ b$ で正しく表している（または恒等式を正しく立てている）",
+            "points": 4
+          },
+          {
+            "point": "余りの各係数を $0$ とおく条件を立てている",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$ を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りが $0$ になる条件で、$x$ の係数か定数項の一方だけを $0$ とおく。",
+          "割り算の途中で $a,\\ b$ を含む項の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$(2x+2)^{6}$ の展開式における $x^{2}$ の係数を求めなさい。\n［ある生徒の解答］\n一般項は ${}_{6}\\mathrm{C}_{r}\\cdot2x^{6-r}\\cdot(2)^r$。$x^{2}$ の項は $r=4$ のときなので、係数は ${}_{6}\\mathrm{C}_{4}\\cdot2\\cdot(2)^{4}=480$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$960$"
+      },
+      "explanation": "二項定理の $a,\\ b$ には「項全体」を、符号や係数も含めて代入する。$a=2x$、$b=2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "binomial(6,2)*(2)**2*(2)**4",
+        "expected": "960",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_binom",
+      "explanation_detail": {
+        "approach": "二項定理の $a,\\ b$ にかっこごと代入し、係数・符号もまとめて累乗する。",
+        "steps": [
+          "$a=2x$、$b=2$ として一般項 ${}_{6}\\mathrm{C}_{r}(2x)^{6-r}(2)^r$。",
+          "$x^{2}$ の項は $r=4$。",
+          "係数 $15\\cdot4\\cdot(16)=960$。"
+        ],
+        "alternatives": [
+          "$n$ が小さいうちは $(2x+2)^2$ などで一般項の式と実際の展開を比べると、代入の仕方の誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数・係数つきの項はかっこをつけて累乗する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "一般項は ${}_{6}\\mathrm{C}_{r}\\cdot2x^{6-r}\\cdot(2)^r$。$x^{2}$ の項は $r=4$ のときなので、係数は ${}_{6}\\mathrm{C}_{4}\\cdot2\\cdot(2)^{4}=480$",
+        "error_step": "一般項で $(2x)^{6-r}$ を $2x^{6-r}$ としている部分",
+        "error_type": "calculation",
+        "why_tempting": "$(2x)^{6-r}$ の指数が $x$ だけにかかると思い、係数 $2$ を累乗し忘れた。",
+        "correction": "一般項は ${}_{6}\\mathrm{C}_{r}(2x)^{6-r}(2)^r$。$r=4$ として係数は ${}_{6}\\mathrm{C}_{4}\\cdot2^{2}\\cdot(2)^{4}=960$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$(x-2)^{4}$ の展開式における $x^{1}$ の係数を求めなさい。\n［ある生徒の解答］\n一般項は ${}_{4}\\mathrm{C}_{r}x^{4-r}\\cdot2^r$。$x^{1}$ の項は $r=3$ のときなので、係数は ${}_{4}\\mathrm{C}_{3}\\cdot2^{3}=32$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-32$"
+      },
+      "explanation": "二項定理の $a,\\ b$ には「項全体」を、符号や係数も含めて代入する。$a=x$、$b=-2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "binomial(4,1)*(1)**1*(-2)**3",
+        "expected": "-32",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_binom",
+      "explanation_detail": {
+        "approach": "二項定理の $a,\\ b$ にかっこごと代入し、係数・符号もまとめて累乗する。",
+        "steps": [
+          "$a=x$、$b=-2$ として一般項 ${}_{4}\\mathrm{C}_{r}(x)^{4-r}(-2)^r$。",
+          "$x^{1}$ の項は $r=3$。",
+          "係数 $4\\cdot1\\cdot(-8)=-32$。"
+        ],
+        "alternatives": [
+          "$n$ が小さいうちは $(x-2)^2$ などで一般項の式と実際の展開を比べると、代入の仕方の誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数・係数つきの項はかっこをつけて累乗する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "一般項は ${}_{4}\\mathrm{C}_{r}x^{4-r}\\cdot2^r$。$x^{1}$ の項は $r=3$ のときなので、係数は ${}_{4}\\mathrm{C}_{3}\\cdot2^{3}=32$",
+        "error_step": "一般項で $b$ を $2$ としている部分",
+        "error_type": "sign",
+        "why_tempting": "$(x-2)^{4}$ の「$-$」を引き算の記号と見て、二項定理の $b$ を正の数 $2$ としてしまった。",
+        "correction": "一般項は ${}_{4}\\mathrm{C}_{r}(x)^{4-r}(-2)^r$。$r=3$ として係数は ${}_{4}\\mathrm{C}_{3}\\cdot1^{1}\\cdot(-2)^{3}=-32$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$(x-4)^{6}$ の展開式における $x^{1}$ の係数を求めなさい。\n［ある生徒の解答］\n一般項は ${}_{6}\\mathrm{C}_{r}x^{6-r}\\cdot4^r$。$x^{1}$ の項は $r=5$ のときなので、係数は ${}_{6}\\mathrm{C}_{5}\\cdot4^{5}=6144$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-6144$"
+      },
+      "explanation": "二項定理の $a,\\ b$ には「項全体」を、符号や係数も含めて代入する。$a=x$、$b=-4$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "binomial(6,1)*(1)**1*(-4)**5",
+        "expected": "-6144",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_binom",
+      "explanation_detail": {
+        "approach": "二項定理の $a,\\ b$ にかっこごと代入し、係数・符号もまとめて累乗する。",
+        "steps": [
+          "$a=x$、$b=-4$ として一般項 ${}_{6}\\mathrm{C}_{r}(x)^{6-r}(-4)^r$。",
+          "$x^{1}$ の項は $r=5$。",
+          "係数 $6\\cdot1\\cdot(-1024)=-6144$。"
+        ],
+        "alternatives": [
+          "$n$ が小さいうちは $(x-4)^2$ などで一般項の式と実際の展開を比べると、代入の仕方の誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数・係数つきの項はかっこをつけて累乗する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "一般項は ${}_{6}\\mathrm{C}_{r}x^{6-r}\\cdot4^r$。$x^{1}$ の項は $r=5$ のときなので、係数は ${}_{6}\\mathrm{C}_{5}\\cdot4^{5}=6144$",
+        "error_step": "一般項で $b$ を $4$ としている部分",
+        "error_type": "sign",
+        "why_tempting": "$(x-4)^{6}$ の「$-$」を引き算の記号と見て、二項定理の $b$ を正の数 $4$ としてしまった。",
+        "correction": "一般項は ${}_{6}\\mathrm{C}_{r}(x)^{6-r}(-4)^r$。$r=5$ として係数は ${}_{6}\\mathrm{C}_{5}\\cdot1^{1}\\cdot(-4)^{5}=-6144$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>0,\\ y>0$ のとき、$\\left(x+\\dfrac{2}{y}\\right)\\left(y+\\dfrac{8}{x}\\right)$ の最小値を求めなさい。\n［ある生徒の解答］\n相加平均と相乗平均の関係より $x+\\dfrac{2}{y}\\geqq2\\sqrt{\\dfrac{2x}{y}}$、$y+\\dfrac{8}{x}\\geqq2\\sqrt{\\dfrac{8y}{x}}$。辺々掛けて $\\left(x+\\dfrac{2}{y}\\right)\\left(y+\\dfrac{8}{x}\\right)\\geqq4\\sqrt{16}=16$。よって最小値は $16$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最小値 $18$"
+      },
+      "explanation": "1つ目の等号は $xy=2$、2つ目の等号は $xy=8$ のときで、同時には成り立たない。したがって $16$ には到達しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2+8+2*sqrt(2*8)",
+        "expected": "18",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-err_amgm_double",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係で得た下限を最小値と言うには、等号を成り立たせる値が実際に存在することを確かめる必要がある。",
+        "steps": [
+          "展開：$xy+8+2+\\dfrac{16}{xy}$。",
+          "$xy>0$ より $xy+\\dfrac{16}{xy}\\geqq2\\sqrt{16}=8$。",
+          "等号は $xy=4$ のとき（例えば $x=1,\\ y=4$）で、実際に成り立つ。",
+          "最小値 $8+10=18$。"
+        ],
+        "alternatives": [
+          "$x=1,\\ y=4$ を代入すると $\\left(1+\\dfrac{2}{4}\\right)(4+8)=18$ となり、値 $18$ が実際にとられることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "不等式を2回使って掛け合わせたときは、等号成立条件が両立するかを確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "相加平均と相乗平均の関係より $x+\\dfrac{2}{y}\\geqq2\\sqrt{\\dfrac{2x}{y}}$、$y+\\dfrac{8}{x}\\geqq2\\sqrt{\\dfrac{8y}{x}}$。辺々掛けて $\\left(x+\\dfrac{2}{y}\\right)\\left(y+\\dfrac{8}{x}\\right)\\geqq4\\sqrt{16}=16$。よって最小値は $16$",
+        "error_step": "「よって最小値は」と結論した部分（等号成立条件の確認もれ）",
+        "error_type": "condition",
+        "why_tempting": "不等式 $\\geqq 16$ 自体は正しいので、右辺がそのまま最小値になると思い込みやすい。2つの等号が同時に成り立つかを確かめていない。",
+        "correction": "展開して $xy+\\dfrac{16}{xy}+10\\geqq2\\sqrt{16}+10=18$。等号は $xy=4$ のとき成り立つので最小値 $18$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>0,\\ y>0$ のとき、$\\left(x+\\dfrac{8}{y}\\right)\\left(y+\\dfrac{2}{x}\\right)$ の最小値を求めなさい。\n［ある生徒の解答］\n相加平均と相乗平均の関係より $x+\\dfrac{8}{y}\\geqq2\\sqrt{\\dfrac{8x}{y}}$、$y+\\dfrac{2}{x}\\geqq2\\sqrt{\\dfrac{2y}{x}}$。辺々掛けて $\\left(x+\\dfrac{8}{y}\\right)\\left(y+\\dfrac{2}{x}\\right)\\geqq4\\sqrt{16}=16$。よって最小値は $16$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最小値 $18$"
+      },
+      "explanation": "1つ目の等号は $xy=8$、2つ目の等号は $xy=2$ のときで、同時には成り立たない。したがって $16$ には到達しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "8+2+2*sqrt(8*2)",
+        "expected": "18",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-err_amgm_double",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係で得た下限を最小値と言うには、等号を成り立たせる値が実際に存在することを確かめる必要がある。",
+        "steps": [
+          "展開：$xy+2+8+\\dfrac{16}{xy}$。",
+          "$xy>0$ より $xy+\\dfrac{16}{xy}\\geqq2\\sqrt{16}=8$。",
+          "等号は $xy=4$ のとき（例えば $x=1,\\ y=4$）で、実際に成り立つ。",
+          "最小値 $8+10=18$。"
+        ],
+        "alternatives": [
+          "$x=1,\\ y=4$ を代入すると $\\left(1+\\dfrac{8}{4}\\right)(4+2)=18$ となり、値 $18$ が実際にとられることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "不等式を2回使って掛け合わせたときは、等号成立条件が両立するかを確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "相加平均と相乗平均の関係より $x+\\dfrac{8}{y}\\geqq2\\sqrt{\\dfrac{8x}{y}}$、$y+\\dfrac{2}{x}\\geqq2\\sqrt{\\dfrac{2y}{x}}$。辺々掛けて $\\left(x+\\dfrac{8}{y}\\right)\\left(y+\\dfrac{2}{x}\\right)\\geqq4\\sqrt{16}=16$。よって最小値は $16$",
+        "error_step": "「よって最小値は」と結論した部分（等号成立条件の確認もれ）",
+        "error_type": "condition",
+        "why_tempting": "不等式 $\\geqq 16$ 自体は正しいので、右辺がそのまま最小値になると思い込みやすい。2つの等号が同時に成り立つかを確かめていない。",
+        "correction": "展開して $xy+\\dfrac{16}{xy}+10\\geqq2\\sqrt{16}+10=18$。等号は $xy=4$ のとき成り立つので最小値 $18$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>0,\\ y>0$ のとき、$\\left(x+\\dfrac{3}{y}\\right)\\left(y+\\dfrac{12}{x}\\right)$ の最小値を求めなさい。\n［ある生徒の解答］\n相加平均と相乗平均の関係より $x+\\dfrac{3}{y}\\geqq2\\sqrt{\\dfrac{3x}{y}}$、$y+\\dfrac{12}{x}\\geqq2\\sqrt{\\dfrac{12y}{x}}$。辺々掛けて $\\left(x+\\dfrac{3}{y}\\right)\\left(y+\\dfrac{12}{x}\\right)\\geqq4\\sqrt{36}=24$。よって最小値は $24$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最小値 $27$"
+      },
+      "explanation": "1つ目の等号は $xy=3$、2つ目の等号は $xy=12$ のときで、同時には成り立たない。したがって $24$ には到達しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "3+12+2*sqrt(3*12)",
+        "expected": "27",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U01-err_amgm_double",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係で得た下限を最小値と言うには、等号を成り立たせる値が実際に存在することを確かめる必要がある。",
+        "steps": [
+          "展開：$xy+12+3+\\dfrac{36}{xy}$。",
+          "$xy>0$ より $xy+\\dfrac{36}{xy}\\geqq2\\sqrt{36}=12$。",
+          "等号は $xy=6$ のとき（例えば $x=1,\\ y=6$）で、実際に成り立つ。",
+          "最小値 $12+15=27$。"
+        ],
+        "alternatives": [
+          "$x=1,\\ y=6$ を代入すると $\\left(1+\\dfrac{3}{6}\\right)(6+12)=27$ となり、値 $27$ が実際にとられることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "不等式を2回使って掛け合わせたときは、等号成立条件が両立するかを確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "相加平均と相乗平均の関係より $x+\\dfrac{3}{y}\\geqq2\\sqrt{\\dfrac{3x}{y}}$、$y+\\dfrac{12}{x}\\geqq2\\sqrt{\\dfrac{12y}{x}}$。辺々掛けて $\\left(x+\\dfrac{3}{y}\\right)\\left(y+\\dfrac{12}{x}\\right)\\geqq4\\sqrt{36}=24$。よって最小値は $24$",
+        "error_step": "「よって最小値は」と結論した部分（等号成立条件の確認もれ）",
+        "error_type": "condition",
+        "why_tempting": "不等式 $\\geqq 24$ 自体は正しいので、右辺がそのまま最小値になると思い込みやすい。2つの等号が同時に成り立つかを確かめていない。",
+        "correction": "展開して $xy+\\dfrac{36}{xy}+15\\geqq2\\sqrt{36}+15=27$。等号は $xy=6$ のとき成り立つので最小値 $27$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整式 $x^3-x-1$ を $x-3$ で割ったときの商と余りを求めなさい。\n［ある生徒の解答］\n係数を並べて組立除法を行う：$1,\\ -1,\\ -1$ を $x-3$ で割って、商 $x+2$、余り $5$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "商 $x^2+3x+8$、余り $23$"
+      },
+      "explanation": "係数の並びは $x^3,\\ x^2,\\ x$、定数の順の位置で次数を表すので、$x^2$ の係数 $0$ を省くと3次式が2次式として計算されてしまう。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((((1)*x**1+(-3)*x**0))*((1)*x**2+(3)*x**1+(8)*x**0)+(23))",
+        "expected": "((1)*x**3+(0)*x**2+(-1)*x**1+(-1)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_div_missing",
+      "explanation_detail": {
+        "approach": "抜けている次数がある整式は、係数 $0$ を補ってから割り算する。",
+        "steps": [
+          "$x^3+0x^2-x-1$ と考え、係数 $1,\\ 0,\\ -1,\\ -1$ を並べる。",
+          "$x-3$ で割ると商 $x^2+3x+8$。",
+          "余り $23$（$x=3$ を代入した値に一致）。"
+        ],
+        "alternatives": [
+          "検算：$(x-3)(x^2+3x+8)+(23)$ を展開すると $x^3-x-1$ にもどる。生徒の答えでは3次の項が出てこない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "抜けた次数の欄を空けずに筆算・組立除法をする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "係数を並べて組立除法を行う：$1,\\ -1,\\ -1$ を $x-3$ で割って、商 $x+2$、余り $5$",
+        "error_step": "係数を並べる段階（$x^2$ の係数 $0$ の書き落とし）",
+        "error_type": "notation",
+        "why_tempting": "式に $x^2$ の項が見えないため、係数の列に書くべき $0$ を省いてしまった。係数だけを扱う方法では各位置が次数を表すことを意識していない。",
+        "correction": "$x^2$ の係数 $0$ を入れて $1,\\ 0,\\ -1,\\ -1$ と並べ、商 $x^2+3x+8$、余り $23$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整式 $x^3+4x+7$ を $x+3$ で割ったときの商と余りを求めなさい。\n［ある生徒の解答］\n係数を並べて組立除法を行う：$1,\\ 4,\\ 7$ を $x+3$ で割って、商 $x+1$、余り $4$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "商 $x^2-3x+13$、余り $-32$"
+      },
+      "explanation": "係数の並びは $x^3,\\ x^2,\\ x$、定数の順の位置で次数を表すので、$x^2$ の係数 $0$ を省くと3次式が2次式として計算されてしまう。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((((1)*x**1+(3)*x**0))*((1)*x**2+(-3)*x**1+(13)*x**0)+(-32))",
+        "expected": "((1)*x**3+(0)*x**2+(4)*x**1+(7)*x**0)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_div_missing",
+      "explanation_detail": {
+        "approach": "抜けている次数がある整式は、係数 $0$ を補ってから割り算する。",
+        "steps": [
+          "$x^3+0x^2+4x+7$ と考え、係数 $1,\\ 0,\\ 4,\\ 7$ を並べる。",
+          "$x+3$ で割ると商 $x^2-3x+13$。",
+          "余り $-32$（$x=-3$ を代入した値に一致）。"
+        ],
+        "alternatives": [
+          "検算：$(x+3)(x^2-3x+13)+(-32)$ を展開すると $x^3+4x+7$ にもどる。生徒の答えでは3次の項が出てこない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "抜けた次数の欄を空けずに筆算・組立除法をする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "係数を並べて組立除法を行う：$1,\\ 4,\\ 7$ を $x+3$ で割って、商 $x+1$、余り $4$",
+        "error_step": "係数を並べる段階（$x^2$ の係数 $0$ の書き落とし）",
+        "error_type": "notation",
+        "why_tempting": "式に $x^2$ の項が見えないため、係数の列に書くべき $0$ を省いてしまった。係数だけを扱う方法では各位置が次数を表すことを意識していない。",
+        "correction": "$x^2$ の係数 $0$ を入れて $1,\\ 0,\\ 4,\\ 7$ と並べ、商 $x^2-3x+13$、余り $-32$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "分数式 $\\dfrac{x-2}{x+2}-\\dfrac{x-3}{x-1}$ を計算しなさい。\n［ある生徒の解答］\n$\\dfrac{(x-2)(x-1)-(x-3)(x+2)}{(x+2)(x-1)}=\\dfrac{x^2-3x+2-x^2-x-6}{(x+2)(x-1)}=\\dfrac{-4x-4}{(x+2)(x-1)}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{-2x+8}{(x+2)(x-1)}$"
+      },
+      "explanation": "引く式は展開した結果全体にかっこをつけてから符号を変える。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify((x+(-2))/(x+(2))-(x+(-3))/(x+(-1))-(((-2)*x**1+(8)*x**0))/((x+(2))*(x+(-1))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_fraction_minus",
+      "explanation_detail": {
+        "approach": "引き算では、引く式を展開した結果全体にかっこをつける。",
+        "steps": [
+          "通分：分子は $(x-2)(x-1)-(x-3)(x+2)$。",
+          "$(x-3)(x+2)=x^2-x-6$ をかっこごと引く。",
+          "分子 $=-2x+8$。分母と共通因数はないので答えは $\\dfrac{-2x+8}{(x+2)(x-1)}$。"
+        ],
+        "alternatives": [
+          "$x=0$ を代入すると、もとの式は $-4$、正しい答えは $-4$ で一致する。生徒の答えでは一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引く式のかっこを外すときに、一部の項の符号しか変えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{(x-2)(x-1)-(x-3)(x+2)}{(x+2)(x-1)}=\\dfrac{x^2-3x+2-x^2-x-6}{(x+2)(x-1)}=\\dfrac{-4x-4}{(x+2)(x-1)}$",
+        "error_step": "分子の展開で、引く式の第2項以降の符号を変えていない部分",
+        "error_type": "sign",
+        "why_tempting": "$-(x-3)(x+2)$ を展開するとき、$-$ を先頭の $x^2$ にしか付けず、残りの項の符号を変え忘れた。",
+        "correction": "分子 $=(x-2)(x-1)-\\{x^2-x-6\\}=-2x+8$ より $\\dfrac{-2x+8}{(x+2)(x-1)}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "分数式 $\\dfrac{x}{x-2}-\\dfrac{x+2}{x-1}$ を計算しなさい。\n［ある生徒の解答］\n$\\dfrac{(x)(x-1)-(x+2)(x-2)}{(x-2)(x-1)}=\\dfrac{x^2-x+0-x^2-4}{(x-2)(x-1)}=\\dfrac{-x-4}{(x-2)(x-1)}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{-x+4}{(x-2)(x-1)}$"
+      },
+      "explanation": "引く式は展開した結果全体にかっこをつけてから符号を変える。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify((x+(0))/(x+(-2))-(x+(2))/(x+(-1))-(((-1)*x**1+(4)*x**0))/((x+(-2))*(x+(-1))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U01-err_fraction_minus",
+      "explanation_detail": {
+        "approach": "引き算では、引く式を展開した結果全体にかっこをつける。",
+        "steps": [
+          "通分：分子は $(x)(x-1)-(x+2)(x-2)$。",
+          "$(x+2)(x-2)=x^2-4$ をかっこごと引く。",
+          "分子 $=-x+4$。分母と共通因数はないので答えは $\\dfrac{-x+4}{(x-2)(x-1)}$。"
+        ],
+        "alternatives": [
+          "$x=0$ を代入すると、もとの式は $2$、正しい答えは $2$ で一致する。生徒の答えでは一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引く式のかっこを外すときに、一部の項の符号しか変えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{(x)(x-1)-(x+2)(x-2)}{(x-2)(x-1)}=\\dfrac{x^2-x+0-x^2-4}{(x-2)(x-1)}=\\dfrac{-x-4}{(x-2)(x-1)}$",
+        "error_step": "分子の展開で、引く式の第2項以降の符号を変えていない部分",
+        "error_type": "sign",
+        "why_tempting": "$-(x+2)(x-2)$ を展開するとき、$-$ を先頭の $x^2$ にしか付けず、残りの項の符号を変え忘れた。",
+        "correction": "分子 $=(x)(x-1)-\\{x^2-4\\}=-x+4$ より $\\dfrac{-x+4}{(x-2)(x-1)}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "e10bf7b4ca5e041d401c0f20f69b0dfd5ead82bc1dde692f7d48a56b4fbf8cd3"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q021, Q023, Q041, Q043）",
+      "content_hash": "20778b18f0c798a5cf1430c8c1dbe803584312d8535ade9f7d40c74e22833af7"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 3 問（Q024, Q025, Q042）",
+      "content_hash": "fed958bfb6a8667bd69725e26c9319886236136b061cf222292807a3684d42c4"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:08:15+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "d0e8566291833d7d0a6156f873c26a913291352176b5f091e831e7cae340d9f6"
+  }
+}

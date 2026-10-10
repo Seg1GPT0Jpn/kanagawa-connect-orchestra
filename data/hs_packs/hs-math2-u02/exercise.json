@@ -1,0 +1,5574 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U02-EX",
+  "title": "複素数と方程式　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH2-U02-PACK",
+  "pair_set_id": "HS-MATH2-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH1-U03",
+        "point": "判別式",
+        "title": "二次関数"
+      },
+      {
+        "unit_id": "HS-MATH2-U01",
+        "point": "整式の除法",
+        "title": "式と証明"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHC-U02",
+        "point": "複素数平面",
+        "title": "平面上の曲線と複素数平面"
+      }
+    ],
+    "readiness_check": [
+      "二次方程式の解の公式と判別式（数学Ⅰ）を使える。",
+      "整式の除法 $A=BQ+R$（式と証明）を理解している。",
+      "平方根の計算と分母の有理化ができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の計算をして、結果を $a+bi$（$a,\\ b$ は実数）の形で答えなさい。$$(-1+4i)^2$$",
+      "answer": {
+        "value": "$-15-8i$",
+        "accepted": [
+          "-15-8i"
+        ]
+      },
+      "explanation": "乗法公式 $(a+b)^2$ と同様に展開し、$i^2=-1$ とする。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((-1)+(4)*I)**2)",
+        "expected": "(-15)+(-8)*I"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_arith",
+      "explanation_detail": {
+        "approach": "$i$ を文字と同じように扱って計算し、$i^2$ が現れたら $-1$ におきかえる。",
+        "steps": [
+          "$(a+bi)^2=a^2+2abi+b^2i^2$ に $a=-1,\\ b=4$ を当てはめると $1-8i+16i^2$。",
+          "整理して $-15-8i$。"
+        ],
+        "alternatives": [
+          "実部と虚部を別々に計算する公式 $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$ に当てはめても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開（または分母の実数化）を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "$i^2=-1$ を用いて正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2$ を $1$ として計算する。",
+          "虚部の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の計算をして、結果を $a+bi$（$a,\\ b$ は実数）の形で答えなさい。$$(2-4i)(-4-2i)$$",
+      "answer": {
+        "value": "$-16+12i$",
+        "accepted": [
+          "-16+12i"
+        ]
+      },
+      "explanation": "分配法則で展開し、$i^2=-1$ におきかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((2)+(-4)*I)*((-4)+(-2)*I))",
+        "expected": "(-16)+(12)*I"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_arith",
+      "explanation_detail": {
+        "approach": "$i$ を文字と同じように扱って計算し、$i^2$ が現れたら $-1$ におきかえる。",
+        "steps": [
+          "展開すると $(-8)+(-4)i+(16)i+(8)i^2$。",
+          "$i^2=-1$ を代入して整理すると $-16+12i$。"
+        ],
+        "alternatives": [
+          "実部と虚部を別々に計算する公式 $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$ に当てはめても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開（または分母の実数化）を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "$i^2=-1$ を用いて正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2$ を $1$ として計算する。",
+          "虚部の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の計算をして、結果を $a+bi$（$a,\\ b$ は実数）の形で答えなさい。$$\\dfrac{5-10i}{-1-2i}$$",
+      "answer": {
+        "value": "$3+4i$",
+        "accepted": [
+          "3+4i"
+        ]
+      },
+      "explanation": "分母の共役複素数を分母・分子に掛けて、分母を実数にする。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(((5)+(-10)*I)/((-1)+(-2)*I))",
+        "expected": "(3)+(4)*I"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_arith",
+      "explanation_detail": {
+        "approach": "$i$ を文字と同じように扱って計算し、$i^2$ が現れたら $-1$ におきかえる。除法は分母の共役複素数を掛けて分母を実数にする。",
+        "steps": [
+          "分母・分子に分母の共役複素数 $-1+2i$ を掛ける。",
+          "分母：$(-1-2i)(-1+2i)=1+4=5$。",
+          "分子：$(5-10i)(-1+2i)=15+20i$。",
+          "$5$ で割って $3+4i$。"
+        ],
+        "alternatives": [
+          "検算：答え $3+4i$ に分母 $-1-2i$ を掛けると分子 $5-10i$ にもどる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開（または分母の実数化）を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "$i^2=-1$ を用いて正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2$ を $1$ として計算する。",
+          "分母の実数化で、分子にだけ共役複素数を掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の計算をして、結果を $a+bi$（$a,\\ b$ は実数）の形で答えなさい。$$\\dfrac{11-3i}{3-2i}$$",
+      "answer": {
+        "value": "$3+i$",
+        "accepted": [
+          "3+i"
+        ]
+      },
+      "explanation": "分母の共役複素数を分母・分子に掛けて、分母を実数にする。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(((11)+(-3)*I)/((3)+(-2)*I))",
+        "expected": "(3)+(1)*I"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_arith",
+      "explanation_detail": {
+        "approach": "$i$ を文字と同じように扱って計算し、$i^2$ が現れたら $-1$ におきかえる。除法は分母の共役複素数を掛けて分母を実数にする。",
+        "steps": [
+          "分母・分子に分母の共役複素数 $3+2i$ を掛ける。",
+          "分母：$(3-2i)(3+2i)=9+4=13$。",
+          "分子：$(11-3i)(3+2i)=39+13i$。",
+          "$13$ で割って $3+i$。"
+        ],
+        "alternatives": [
+          "検算：答え $3+i$ に分母 $3-2i$ を掛けると分子 $11-3i$ にもどる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開（または分母の実数化）を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "$i^2=-1$ を用いて正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2$ を $1$ として計算する。",
+          "分母の実数化で、分子にだけ共役複素数を掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の計算をして、結果を $a+bi$（$a,\\ b$ は実数）の形で答えなさい。$$(-3-3i)(-3-i)$$",
+      "answer": {
+        "value": "$6+12i$",
+        "accepted": [
+          "6+12i"
+        ]
+      },
+      "explanation": "分配法則で展開し、$i^2=-1$ におきかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((-3)+(-3)*I)*((-3)+(-1)*I))",
+        "expected": "(6)+(12)*I"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_arith",
+      "explanation_detail": {
+        "approach": "$i$ を文字と同じように扱って計算し、$i^2$ が現れたら $-1$ におきかえる。",
+        "steps": [
+          "展開すると $(9)+(3)i+(9)i+(3)i^2$。",
+          "$i^2=-1$ を代入して整理すると $6+12i$。"
+        ],
+        "alternatives": [
+          "実部と虚部を別々に計算する公式 $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$ に当てはめても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開（または分母の実数化）を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "$i^2=-1$ を用いて正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2$ を $1$ として計算する。",
+          "虚部の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の計算をして、結果を $a+bi$（$a,\\ b$ は実数）の形で答えなさい。$$(3-2i)(-2+2i)$$",
+      "answer": {
+        "value": "$-2+10i$",
+        "accepted": [
+          "-2+10i"
+        ]
+      },
+      "explanation": "分配法則で展開し、$i^2=-1$ におきかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(((3)+(-2)*I)*((-2)+(2)*I))",
+        "expected": "(-2)+(10)*I"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_arith",
+      "explanation_detail": {
+        "approach": "$i$ を文字と同じように扱って計算し、$i^2$ が現れたら $-1$ におきかえる。",
+        "steps": [
+          "展開すると $(-6)+(6)i+(4)i+(-4)i^2$。",
+          "$i^2=-1$ を代入して整理すると $-2+10i$。"
+        ],
+        "alternatives": [
+          "実部と虚部を別々に計算する公式 $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$ に当てはめても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開（または分母の実数化）を正しく行っている",
+            "points": 1
+          },
+          {
+            "point": "$i^2=-1$ を用いて正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2$ を $1$ として計算する。",
+          "虚部の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x,\\ y$ を実数とする。等式 $(3x+y)+(x+2y)i=3+i$ が成り立つとき、$x,\\ y$ の値を求めなさい。",
+      "answer": {
+        "value": "$x=1,\\ y=0$",
+        "accepted": [
+          "x=1, y=0"
+        ]
+      },
+      "explanation": "$x,\\ y$ は実数なので $3x+y,\\ x+2y$ も実数。実部・虚部を比べて $3x+y=3$、$x+2y=1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve([3*x+(1)*y-(3), 1*x+(2)*y-(1)], [x, y])",
+        "expected": "{x: 1, y: 0}",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_equality",
+      "explanation_detail": {
+        "approach": "複素数の相等「実部どうし・虚部どうしが等しい」を使う。そのためには、かっこ内が実数であること（$x,\\ y$ が実数）が前提になる。",
+        "steps": [
+          "$x,\\ y$ が実数なので、$3x+y$ と $x+2y$ はともに実数。",
+          "実部：$3x+y=3$、虚部：$x+2y=1$。",
+          "連立して $x=1,\\ y=0$。"
+        ],
+        "alternatives": [
+          "求めた値を代入して $(3)+(1)i=3+i$ となることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "実部・虚部を比べた連立方程式を立てている",
+            "points": 1
+          },
+          {
+            "point": "$x,\\ y$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が実数であることを確認せずに実部・虚部を比べる。",
+          "右辺の虚部の符号を読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x,\\ y$ を実数とする。等式 $(3x+y)+(x+2y)i=-2-4i$ が成り立つとき、$x,\\ y$ の値を求めなさい。",
+      "answer": {
+        "value": "$x=0,\\ y=-2$",
+        "accepted": [
+          "x=0, y=-2"
+        ]
+      },
+      "explanation": "$x,\\ y$ は実数なので $3x+y,\\ x+2y$ も実数。実部・虚部を比べて $3x+y=-2$、$x+2y=-4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve([3*x+(1)*y-(-2), 1*x+(2)*y-(-4)], [x, y])",
+        "expected": "{x: 0, y: -2}",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_equality",
+      "explanation_detail": {
+        "approach": "複素数の相等「実部どうし・虚部どうしが等しい」を使う。そのためには、かっこ内が実数であること（$x,\\ y$ が実数）が前提になる。",
+        "steps": [
+          "$x,\\ y$ が実数なので、$3x+y$ と $x+2y$ はともに実数。",
+          "実部：$3x+y=-2$、虚部：$x+2y=-4$。",
+          "連立して $x=0,\\ y=-2$。"
+        ],
+        "alternatives": [
+          "求めた値を代入して $(-2)+(-4)i=-2-4i$ となることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "実部・虚部を比べた連立方程式を立てている",
+            "points": 1
+          },
+          {
+            "point": "$x,\\ y$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が実数であることを確認せずに実部・虚部を比べる。",
+          "右辺の虚部の符号を読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x,\\ y$ を実数とする。等式 $(x+2y)+(x-y)i=4+4i$ が成り立つとき、$x,\\ y$ の値を求めなさい。",
+      "answer": {
+        "value": "$x=4,\\ y=0$",
+        "accepted": [
+          "x=4, y=0"
+        ]
+      },
+      "explanation": "$x,\\ y$ は実数なので $x+2y,\\ x-y$ も実数。実部・虚部を比べて $x+2y=4$、$x-y=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve([1*x+(2)*y-(4), 1*x+(-1)*y-(4)], [x, y])",
+        "expected": "{x: 4, y: 0}",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_equality",
+      "explanation_detail": {
+        "approach": "複素数の相等「実部どうし・虚部どうしが等しい」を使う。そのためには、かっこ内が実数であること（$x,\\ y$ が実数）が前提になる。",
+        "steps": [
+          "$x,\\ y$ が実数なので、$x+2y$ と $x-y$ はともに実数。",
+          "実部：$x+2y=4$、虚部：$x-y=4$。",
+          "連立して $x=4,\\ y=0$。"
+        ],
+        "alternatives": [
+          "求めた値を代入して $(4)+(4)i=4+4i$ となることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "実部・虚部を比べた連立方程式を立てている",
+            "points": 1
+          },
+          {
+            "point": "$x,\\ y$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が実数であることを確認せずに実部・虚部を比べる。",
+          "右辺の虚部の符号を読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x,\\ y$ を実数とする。等式 $(x+y)+(x-y)i=-2$ が成り立つとき、$x,\\ y$ の値を求めなさい。",
+      "answer": {
+        "value": "$x=-1,\\ y=-1$",
+        "accepted": [
+          "x=-1, y=-1"
+        ]
+      },
+      "explanation": "$x,\\ y$ は実数なので $x+y,\\ x-y$ も実数。実部・虚部を比べて $x+y=-2$、$x-y=0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve([1*x+(1)*y-(-2), 1*x+(-1)*y-(0)], [x, y])",
+        "expected": "{x: -1, y: -1}",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_equality",
+      "explanation_detail": {
+        "approach": "複素数の相等「実部どうし・虚部どうしが等しい」を使う。そのためには、かっこ内が実数であること（$x,\\ y$ が実数）が前提になる。",
+        "steps": [
+          "$x,\\ y$ が実数なので、$x+y$ と $x-y$ はともに実数。",
+          "実部：$x+y=-2$、虚部：$x-y=0$。",
+          "連立して $x=-1,\\ y=-1$。"
+        ],
+        "alternatives": [
+          "求めた値を代入して $(-2)+(0)i=-2$ となることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "実部・虚部を比べた連立方程式を立てている",
+            "points": 1
+          },
+          {
+            "point": "$x,\\ y$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が実数であることを確認せずに実部・虚部を比べる。",
+          "右辺の虚部の符号を読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "二次方程式 $x^2+6x+13=0$ の解を複素数の範囲で考える。解の種類として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "異なる2つの虚数解"
+        },
+        {
+          "label": "イ",
+          "text": "実数解も虚数解ももたない"
+        },
+        {
+          "label": "ウ",
+          "text": "重解（実数解）"
+        },
+        {
+          "label": "エ",
+          "text": "異なる2つの実数解"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "判別式 $D=(6)^2-4\\cdot(1)\\cdot(13)=-16$。$D<0$ なので異なる2つの虚数解。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(6)**2-4*(1)*(13)",
+        "expected": "-16",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-root_kind",
+      "explanation_detail": {
+        "approach": "解の公式の根号の中 $D=b^2-4ac$ の符号で、解が実数か虚数か、異なるか重なるかが決まる。",
+        "steps": [
+          "$D=b^2-4ac=36-(52)=-16$。",
+          "$D<0$ → $\\sqrt{D}$ が虚数になり、異なる2つの虚数解。"
+        ],
+        "alternatives": [
+          "実際に解の公式で解を求めて確かめてもよい。$b$ が偶数なので $D/4=(b/2)^2-ac$ を使うと計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から解の種類を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "複素数の範囲では、二次方程式は必ず解（重解を含めて2つ）をもつ。",
+          "misconception": "「$D<0$ なら解なし」という数学Ⅰの言い方のまま考えている"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "重解をもつのは $D=0$ のとき。この方程式では $D\\neq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "異なる2つの実数解をもつのは $D>0$ のとき。この方程式では $D\\leqq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "二次方程式 $3x^2+18x+27=0$ の解を複素数の範囲で考える。解の種類として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "異なる2つの虚数解"
+        },
+        {
+          "label": "イ",
+          "text": "異なる2つの実数解"
+        },
+        {
+          "label": "ウ",
+          "text": "重解（実数解）"
+        },
+        {
+          "label": "エ",
+          "text": "実数解も虚数解ももたない"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "判別式 $D=(18)^2-4\\cdot(3)\\cdot(27)=0$。$D=0$ なので重解。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(18)**2-4*(3)*(27)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-root_kind",
+      "explanation_detail": {
+        "approach": "解の公式の根号の中 $D=b^2-4ac$ の符号で、解が実数か虚数か、異なるか重なるかが決まる。",
+        "steps": [
+          "$D=b^2-4ac=324-(324)=0$。",
+          "$D=0$ → 重解。"
+        ],
+        "alternatives": [
+          "実際に解の公式で解を求めて確かめてもよい。$b$ が偶数なので $D/4=(b/2)^2-ac$ を使うと計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から解の種類を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "虚数解をもつのは $D<0$ のとき。この方程式では $D\\geqq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "異なる2つの実数解をもつのは $D>0$ のとき。この方程式では $D\\leqq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "複素数の範囲では、二次方程式は必ず解（重解を含めて2つ）をもつ。",
+          "misconception": "「$D<0$ なら解なし」という数学Ⅰの言い方のまま考えている"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "二次方程式 $x^2+2x+4=0$ の解を複素数の範囲で考える。解の種類として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "実数解も虚数解ももたない"
+        },
+        {
+          "label": "イ",
+          "text": "異なる2つの虚数解"
+        },
+        {
+          "label": "ウ",
+          "text": "異なる2つの実数解"
+        },
+        {
+          "label": "エ",
+          "text": "重解（実数解）"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "判別式 $D=(2)^2-4\\cdot(1)\\cdot(4)=-12$。$D<0$ なので異なる2つの虚数解。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(2)**2-4*(1)*(4)",
+        "expected": "-12",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-root_kind",
+      "explanation_detail": {
+        "approach": "解の公式の根号の中 $D=b^2-4ac$ の符号で、解が実数か虚数か、異なるか重なるかが決まる。",
+        "steps": [
+          "$D=b^2-4ac=4-(16)=-12$。",
+          "$D<0$ → $\\sqrt{D}$ が虚数になり、異なる2つの虚数解。"
+        ],
+        "alternatives": [
+          "実際に解の公式で解を求めて確かめてもよい。$b$ が偶数なので $D/4=(b/2)^2-ac$ を使うと計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から解の種類を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "複素数の範囲では、二次方程式は必ず解（重解を含めて2つ）をもつ。",
+          "misconception": "「$D<0$ なら解なし」という数学Ⅰの言い方のまま考えている"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "異なる2つの実数解をもつのは $D>0$ のとき。この方程式では $D\\leqq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "重解をもつのは $D=0$ のとき。この方程式では $D\\neq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "二次方程式 $-x^2+4=0$ の解を複素数の範囲で考える。解の種類として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "異なる2つの虚数解"
+        },
+        {
+          "label": "イ",
+          "text": "重解（実数解）"
+        },
+        {
+          "label": "ウ",
+          "text": "実数解も虚数解ももたない"
+        },
+        {
+          "label": "エ",
+          "text": "異なる2つの実数解"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "判別式 $D=(0)^2-4\\cdot(-1)\\cdot(4)=16$。$D>0$ なので異なる2つの実数解。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(0)**2-4*(-1)*(4)",
+        "expected": "16",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-root_kind",
+      "explanation_detail": {
+        "approach": "解の公式の根号の中 $D=b^2-4ac$ の符号で、解が実数か虚数か、異なるか重なるかが決まる。",
+        "steps": [
+          "$D=b^2-4ac=0-(-16)=16$。",
+          "$D>0$ → 異なる2つの実数解。"
+        ],
+        "alternatives": [
+          "実際に解の公式で解を求めて確かめてもよい。$b$ が偶数なので $D/4=(b/2)^2-ac$ を使うと計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から解の種類を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "虚数解をもつのは $D<0$ のとき。この方程式では $D\\geqq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "重解をもつのは $D=0$ のとき。この方程式では $D\\neq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "複素数の範囲では、二次方程式は必ず解（重解を含めて2つ）をもつ。",
+          "misconception": "「$D<0$ なら解なし」という数学Ⅰの言い方のまま考えている"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "二次方程式 $x^2-4x+7=0$ の解を複素数の範囲で考える。解の種類として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "異なる2つの実数解"
+        },
+        {
+          "label": "イ",
+          "text": "実数解も虚数解ももたない"
+        },
+        {
+          "label": "ウ",
+          "text": "異なる2つの虚数解"
+        },
+        {
+          "label": "エ",
+          "text": "重解（実数解）"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "判別式 $D=(-4)^2-4\\cdot(1)\\cdot(7)=-12$。$D<0$ なので異なる2つの虚数解。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-4)**2-4*(1)*(7)",
+        "expected": "-12",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-root_kind",
+      "explanation_detail": {
+        "approach": "解の公式の根号の中 $D=b^2-4ac$ の符号で、解が実数か虚数か、異なるか重なるかが決まる。",
+        "steps": [
+          "$D=b^2-4ac=16-(28)=-12$。",
+          "$D<0$ → $\\sqrt{D}$ が虚数になり、異なる2つの虚数解。"
+        ],
+        "alternatives": [
+          "実際に解の公式で解を求めて確かめてもよい。$b$ が偶数なので $D/4=(b/2)^2-ac$ を使うと計算が楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判別式を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "符号から解の種類を正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "異なる2つの実数解をもつのは $D>0$ のとき。この方程式では $D\\leqq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "複素数の範囲では、二次方程式は必ず解（重解を含めて2つ）をもつ。",
+          "misconception": "「$D<0$ なら解なし」という数学Ⅰの言い方のまま考えている"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "重解をもつのは $D=0$ のとき。この方程式では $D\\neq0$。",
+          "misconception": "判別式の符号と解の種類の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次方程式 $x^2+5x+4=0$ の2つの解を $\\alpha,\\ \\beta$ とする。$\\alpha^2+\\beta^2$ の値を求めなさい。",
+      "answer": {
+        "value": "17",
+        "display": "$17$"
+      },
+      "explanation": "解と係数の関係より $\\alpha+\\beta=-5,\\ \\alpha\\beta=4$。$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta=17$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-5)**2-2*(4)",
+        "expected": "17"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-symmetric_value",
+      "explanation_detail": {
+        "approach": "解そのものを求めず、解と係数の関係で和 $\\alpha+\\beta$ と積 $\\alpha\\beta$ を求め、式をこの2つで表す。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=-5$、$\\alpha\\beta=\\dfrac{c}{a}=4$。",
+          "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta$ と変形する。",
+          "代入して $17$。"
+        ],
+        "alternatives": [
+          "解の公式で $\\alpha,\\ \\beta$ を具体的に求めて代入しても同じ値になる（虚数解の場合は計算が重く、誤りやすい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "式を和と積で表して正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha+\\beta$ を $\\dfrac{b}{a}$ と符号を誤る。",
+          "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2$ のように $-2\\alpha\\beta$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次方程式 $2x^2+3x-6=0$ の2つの解を $\\alpha,\\ \\beta$ とする。$\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}$ の値を求めなさい。",
+      "answer": {
+        "value": "1/2",
+        "display": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "解と係数の関係より $\\alpha+\\beta=-\\dfrac{3}{2},\\ \\alpha\\beta=-3$。$\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}=\\dfrac{\\alpha+\\beta}{\\alpha\\beta}=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(Rational(-3,2))/(-3)",
+        "expected": "Rational(1,2)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-symmetric_value",
+      "explanation_detail": {
+        "approach": "解そのものを求めず、解と係数の関係で和 $\\alpha+\\beta$ と積 $\\alpha\\beta$ を求め、式をこの2つで表す。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=-\\dfrac{3}{2}$、$\\alpha\\beta=\\dfrac{c}{a}=-3$。",
+          "$\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}=\\dfrac{\\alpha+\\beta}{\\alpha\\beta}$ と変形する。",
+          "代入して $\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "解の公式で $\\alpha,\\ \\beta$ を具体的に求めて代入しても同じ値になる（虚数解の場合は計算が重く、誤りやすい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "式を和と積で表して正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha+\\beta$ を $\\dfrac{b}{a}$ と符号を誤る。",
+          "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2$ のように $-2\\alpha\\beta$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次方程式 $2x^2+4x+1=0$ の2つの解を $\\alpha,\\ \\beta$ とする。$\\alpha^2\\beta+\\alpha\\beta^2$ の値を求めなさい。",
+      "answer": {
+        "value": "-1",
+        "display": "$-1$"
+      },
+      "explanation": "解と係数の関係より $\\alpha+\\beta=-2,\\ \\alpha\\beta=\\dfrac{1}{2}$。$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)=-1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(Rational(1,2))*(-2)",
+        "expected": "-1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-symmetric_value",
+      "explanation_detail": {
+        "approach": "解そのものを求めず、解と係数の関係で和 $\\alpha+\\beta$ と積 $\\alpha\\beta$ を求め、式をこの2つで表す。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=-2$、$\\alpha\\beta=\\dfrac{c}{a}=\\dfrac{1}{2}$。",
+          "$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)$ と変形する。",
+          "代入して $-1$。"
+        ],
+        "alternatives": [
+          "解の公式で $\\alpha,\\ \\beta$ を具体的に求めて代入しても同じ値になる（虚数解の場合は計算が重く、誤りやすい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "式を和と積で表して正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha+\\beta$ を $\\dfrac{b}{a}$ と符号を誤る。",
+          "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2$ のように $-2\\alpha\\beta$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次方程式 $x^2+3x+4=0$ の2つの解を $\\alpha,\\ \\beta$ とする。$\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}$ の値を求めなさい。",
+      "answer": {
+        "value": "-3/4",
+        "display": "$-\\dfrac{3}{4}$"
+      },
+      "explanation": "解と係数の関係より $\\alpha+\\beta=-3,\\ \\alpha\\beta=4$。$\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}=\\dfrac{\\alpha+\\beta}{\\alpha\\beta}=-\\dfrac{3}{4}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-3)/(4)",
+        "expected": "Rational(-3,4)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-symmetric_value",
+      "explanation_detail": {
+        "approach": "解そのものを求めず、解と係数の関係で和 $\\alpha+\\beta$ と積 $\\alpha\\beta$ を求め、式をこの2つで表す。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=-3$、$\\alpha\\beta=\\dfrac{c}{a}=4$。",
+          "$\\dfrac{1}{\\alpha}+\\dfrac{1}{\\beta}=\\dfrac{\\alpha+\\beta}{\\alpha\\beta}$ と変形する。",
+          "代入して $-\\dfrac{3}{4}$。"
+        ],
+        "alternatives": [
+          "解の公式で $\\alpha,\\ \\beta$ を具体的に求めて代入しても同じ値になる（虚数解の場合は計算が重く、誤りやすい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "式を和と積で表して正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha+\\beta$ を $\\dfrac{b}{a}$ と符号を誤る。",
+          "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2$ のように $-2\\alpha\\beta$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次方程式 $x^2-3x-1=0$ の2つの解を $\\alpha,\\ \\beta$ とする。$\\alpha^2\\beta+\\alpha\\beta^2$ の値を求めなさい。",
+      "answer": {
+        "value": "-3",
+        "display": "$-3$"
+      },
+      "explanation": "解と係数の関係より $\\alpha+\\beta=3,\\ \\alpha\\beta=-1$。$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)=-3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-1)*(3)",
+        "expected": "-3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-symmetric_value",
+      "explanation_detail": {
+        "approach": "解そのものを求めず、解と係数の関係で和 $\\alpha+\\beta$ と積 $\\alpha\\beta$ を求め、式をこの2つで表す。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=3$、$\\alpha\\beta=\\dfrac{c}{a}=-1$。",
+          "$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)$ と変形する。",
+          "代入して $-3$。"
+        ],
+        "alternatives": [
+          "解の公式で $\\alpha,\\ \\beta$ を具体的に求めて代入しても同じ値になる（虚数解の場合は計算が重く、誤りやすい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "式を和と積で表して正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha+\\beta$ を $\\dfrac{b}{a}$ と符号を誤る。",
+          "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2$ のように $-2\\alpha\\beta$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整式 $P(x)=-x^3+5x^2-3$ を $x+2$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "25",
+        "display": "$25$"
+      },
+      "explanation": "剰余の定理より、余りは $P\\left(-2\\right)=25$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((-1)*(-2)**3+(5)*(-2)**2+(0)*(-2)**1+(-3)*(-2)**0)",
+        "expected": "25"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_thm",
+      "explanation_detail": {
+        "approach": "1次式で割った余りは定数。$x+2=0$ となる $x=-2$ を $P(x)$ に代入すれば、実際に割り算をしなくても余りが求まる（剰余の定理）。",
+        "steps": [
+          "$x+2=0$ となる $x$ は $x=-2$。",
+          "$P(x)=(x+2)Q(x)+R$ に $x=-2$ を代入すると $R=P\\left(-2\\right)$。",
+          "$P\\left(-2\\right)=25$。"
+        ],
+        "alternatives": [
+          "実際に $x+2$ で割り算（筆算）をして余りを求め、一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "代入する値を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "代入の計算を正しく行っている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する（符号の誤り）。",
+          "$ax-b$ で割るときに $x=b$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整式 $P(x)=-x^3+2x^2-x+1$ を $3x-2$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "25/27",
+        "display": "$\\dfrac{25}{27}$"
+      },
+      "explanation": "剰余の定理より、余りは $P\\left(\\dfrac{2}{3}\\right)=\\dfrac{25}{27}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((-1)*(Rational(2,3))**3+(2)*(Rational(2,3))**2+(-1)*(Rational(2,3))**1+(1)*(Rational(2,3))**0)",
+        "expected": "Rational(25,27)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_thm",
+      "explanation_detail": {
+        "approach": "1次式で割った余りは定数。$3x-2=0$ となる $x=\\dfrac{2}{3}$ を $P(x)$ に代入すれば、実際に割り算をしなくても余りが求まる（剰余の定理）。",
+        "steps": [
+          "$3x-2=0$ となる $x$ は $x=\\dfrac{2}{3}$。",
+          "$P(x)=(3x-2)Q(x)+R$ に $x=\\dfrac{2}{3}$ を代入すると $R=P\\left(\\dfrac{2}{3}\\right)$。",
+          "$P\\left(\\dfrac{2}{3}\\right)=\\dfrac{25}{27}$。"
+        ],
+        "alternatives": [
+          "実際に $3x-2$ で割り算（筆算）をして余りを求め、一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "代入する値を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "代入の計算を正しく行っている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する（符号の誤り）。",
+          "$ax-b$ で割るときに $x=b$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整式 $P(x)=3x^3-4x^2-5x+4$ を $x+3$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "-98",
+        "display": "$-98$"
+      },
+      "explanation": "剰余の定理より、余りは $P\\left(-3\\right)=-98$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((3)*(-3)**3+(-4)*(-3)**2+(-5)*(-3)**1+(4)*(-3)**0)",
+        "expected": "-98"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_thm",
+      "explanation_detail": {
+        "approach": "1次式で割った余りは定数。$x+3=0$ となる $x=-3$ を $P(x)$ に代入すれば、実際に割り算をしなくても余りが求まる（剰余の定理）。",
+        "steps": [
+          "$x+3=0$ となる $x$ は $x=-3$。",
+          "$P(x)=(x+3)Q(x)+R$ に $x=-3$ を代入すると $R=P\\left(-3\\right)$。",
+          "$P\\left(-3\\right)=-98$。"
+        ],
+        "alternatives": [
+          "実際に $x+3$ で割り算（筆算）をして余りを求め、一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "代入する値を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "代入の計算を正しく行っている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する（符号の誤り）。",
+          "$ax-b$ で割るときに $x=b$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整式 $P(x)=2x^3+2x^2+5x+2$ を $x-2$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "36",
+        "display": "$36$"
+      },
+      "explanation": "剰余の定理より、余りは $P\\left(2\\right)=36$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((2)*(2)**3+(2)*(2)**2+(5)*(2)**1+(2)*(2)**0)",
+        "expected": "36"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_thm",
+      "explanation_detail": {
+        "approach": "1次式で割った余りは定数。$x-2=0$ となる $x=2$ を $P(x)$ に代入すれば、実際に割り算をしなくても余りが求まる（剰余の定理）。",
+        "steps": [
+          "$x-2=0$ となる $x$ は $x=2$。",
+          "$P(x)=(x-2)Q(x)+R$ に $x=2$ を代入すると $R=P\\left(2\\right)$。",
+          "$P\\left(2\\right)=36$。"
+        ],
+        "alternatives": [
+          "実際に $x-2$ で割り算（筆算）をして余りを求め、一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "代入する値を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "代入の計算を正しく行っている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する（符号の誤り）。",
+          "$ax-b$ で割るときに $x=b$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整式 $P(x)=x^3+3x^2+5x+2$ を $x+3$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "-13",
+        "display": "$-13$"
+      },
+      "explanation": "剰余の定理より、余りは $P\\left(-3\\right)=-13$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((1)*(-3)**3+(3)*(-3)**2+(5)*(-3)**1+(2)*(-3)**0)",
+        "expected": "-13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_thm",
+      "explanation_detail": {
+        "approach": "1次式で割った余りは定数。$x+3=0$ となる $x=-3$ を $P(x)$ に代入すれば、実際に割り算をしなくても余りが求まる（剰余の定理）。",
+        "steps": [
+          "$x+3=0$ となる $x$ は $x=-3$。",
+          "$P(x)=(x+3)Q(x)+R$ に $x=-3$ を代入すると $R=P\\left(-3\\right)$。",
+          "$P\\left(-3\\right)=-13$。"
+        ],
+        "alternatives": [
+          "実際に $x+3$ で割り算（筆算）をして余りを求め、一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "代入する値を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "代入の計算を正しく行っている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する（符号の誤り）。",
+          "$ax-b$ で割るときに $x=b$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3次方程式 $2x^3+2x^2+2x+2=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=-1,\\ \\pm i$",
+        "accepted": [
+          "x=-1, \\pm i"
+        ]
+      },
+      "explanation": "$x=-1$ を代入すると左辺が $0$ になるので、因数定理より $x+1$ を因数にもつ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(((2)*x**3+(2)*x**2+(2)*x**1+(2)*x**0), x)",
+        "expected": "[-1, 0+sqrt(1)*I, 0-sqrt(1)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-cubic_solve",
+      "explanation_detail": {
+        "approach": "3次式を因数分解するために、因数定理を使って1次の因数を見つける。整数解の候補は定数項の約数（最高次の係数が1でないときは、定数項の約数を最高次の係数の約数で割った数）。",
+        "steps": [
+          "$P(x)=2x^3+2x^2+2x+2$ とおく。定数項 $2$ の約数 $\\pm1,\\ \\pm2$ などを代入し、$P(-1)=0$ を見つける。",
+          "$P(x)$ を $x+1$ で割って $P(x)=2(x+1)(x^2+1)$。",
+          "$x^2+1=0$ を解の公式で解くと $x=\\pm i$。",
+          "解は $x=-1,\\ \\pm i$。"
+        ],
+        "alternatives": [
+          "組立除法で $x+1$ による割り算を行うと、商 $2(x^2+1)$ が速く求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数定理で1次の因数を見つけている",
+            "points": 1
+          },
+          {
+            "point": "正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "2次方程式を複素数の範囲で正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2次の因数の判別式が負のとき「解なし」として虚数解を書き落とす。",
+          "割り算の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3次方程式 $x^3+3x^2+9x+27=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=-3,\\ \\pm 3i$",
+        "accepted": [
+          "x=-3, \\pm 3i"
+        ]
+      },
+      "explanation": "$x=-3$ を代入すると左辺が $0$ になるので、因数定理より $x+3$ を因数にもつ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(((1)*x**3+(3)*x**2+(9)*x**1+(27)*x**0), x)",
+        "expected": "[-3, 0+sqrt(9)*I, 0-sqrt(9)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-cubic_solve",
+      "explanation_detail": {
+        "approach": "3次式を因数分解するために、因数定理を使って1次の因数を見つける。整数解の候補は定数項の約数。",
+        "steps": [
+          "$P(x)=x^3+3x^2+9x+27$ とおく。定数項 $27$ の約数 $\\pm1,\\ \\pm3,\\ \\pm9,\\ \\pm27$ などを代入し、$P(-3)=0$ を見つける。",
+          "$P(x)$ を $x+3$ で割って $P(x)=(x+3)(x^2+9)$。",
+          "$x^2+9=0$ を解の公式で解くと $x=\\pm 3i$。",
+          "解は $x=-3,\\ \\pm 3i$。"
+        ],
+        "alternatives": [
+          "組立除法で $x+3$ による割り算を行うと、商 $x^2+9$ が速く求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数定理で1次の因数を見つけている",
+            "points": 1
+          },
+          {
+            "point": "正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "2次方程式を複素数の範囲で正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2次の因数の判別式が負のとき「解なし」として虚数解を書き落とす。",
+          "割り算の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3次方程式 $x^3+x^2-2=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=1,\\ -1\\pm i$",
+        "accepted": [
+          "x=1, -1\\pm i"
+        ]
+      },
+      "explanation": "$x=1$ を代入すると左辺が $0$ になるので、因数定理より $x-1$ を因数にもつ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(((1)*x**3+(1)*x**2+(0)*x**1+(-2)*x**0), x)",
+        "expected": "[1, -1+sqrt(1)*I, -1-sqrt(1)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-cubic_solve",
+      "explanation_detail": {
+        "approach": "3次式を因数分解するために、因数定理を使って1次の因数を見つける。整数解の候補は定数項の約数。",
+        "steps": [
+          "$P(x)=x^3+x^2-2$ とおく。定数項 $-2$ の約数 $\\pm1,\\ \\pm2$ などを代入し、$P(1)=0$ を見つける。",
+          "$P(x)$ を $x-1$ で割って $P(x)=(x-1)(x^2+2x+2)$。",
+          "$x^2+2x+2=0$ を解の公式で解くと $x=-1\\pm i$。",
+          "解は $x=1,\\ -1\\pm i$。"
+        ],
+        "alternatives": [
+          "組立除法で $x-1$ による割り算を行うと、商 $x^2+2x+2$ が速く求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数定理で1次の因数を見つけている",
+            "points": 1
+          },
+          {
+            "point": "正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "2次方程式を複素数の範囲で正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2次の因数の判別式が負のとき「解なし」として虚数解を書き落とす。",
+          "割り算の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3次方程式 $x^3+5x^2+16x+30=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=-3,\\ -1\\pm 3i$",
+        "accepted": [
+          "x=-3, -1\\pm 3i"
+        ]
+      },
+      "explanation": "$x=-3$ を代入すると左辺が $0$ になるので、因数定理より $x+3$ を因数にもつ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(((1)*x**3+(5)*x**2+(16)*x**1+(30)*x**0), x)",
+        "expected": "[-3, -1+sqrt(9)*I, -1-sqrt(9)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-cubic_solve",
+      "explanation_detail": {
+        "approach": "3次式を因数分解するために、因数定理を使って1次の因数を見つける。整数解の候補は定数項の約数。",
+        "steps": [
+          "$P(x)=x^3+5x^2+16x+30$ とおく。定数項 $30$ の約数 $\\pm1,\\ \\pm2,\\ \\pm3,\\ \\pm5$ などを代入し、$P(-3)=0$ を見つける。",
+          "$P(x)$ を $x+3$ で割って $P(x)=(x+3)(x^2+2x+10)$。",
+          "$x^2+2x+10=0$ を解の公式で解くと $x=-1\\pm 3i$。",
+          "解は $x=-3,\\ -1\\pm 3i$。"
+        ],
+        "alternatives": [
+          "組立除法で $x+3$ による割り算を行うと、商 $x^2+2x+10$ が速く求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数定理で1次の因数を見つけている",
+            "points": 1
+          },
+          {
+            "point": "正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "2次方程式を複素数の範囲で正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2次の因数の判別式が負のとき「解なし」として虚数解を書き落とす。",
+          "割り算の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "3次方程式 $x^3+3x^2+3x+9=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=-3,\\ \\pm \\sqrt{3}i$",
+        "accepted": [
+          "x=-3, \\pm \\sqrt{3}i"
+        ]
+      },
+      "explanation": "$x=-3$ を代入すると左辺が $0$ になるので、因数定理より $x+3$ を因数にもつ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(((1)*x**3+(3)*x**2+(3)*x**1+(9)*x**0), x)",
+        "expected": "[-3, 0+sqrt(3)*I, 0-sqrt(3)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-cubic_solve",
+      "explanation_detail": {
+        "approach": "3次式を因数分解するために、因数定理を使って1次の因数を見つける。整数解の候補は定数項の約数。",
+        "steps": [
+          "$P(x)=x^3+3x^2+3x+9$ とおく。定数項 $9$ の約数 $\\pm1,\\ \\pm3,\\ \\pm9$ などを代入し、$P(-3)=0$ を見つける。",
+          "$P(x)$ を $x+3$ で割って $P(x)=(x+3)(x^2+3)$。",
+          "$x^2+3=0$ を解の公式で解くと $x=\\pm \\sqrt{3}i$。",
+          "解は $x=-3,\\ \\pm \\sqrt{3}i$。"
+        ],
+        "alternatives": [
+          "組立除法で $x+3$ による割り算を行うと、商 $x^2+3$ が速く求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数定理で1次の因数を見つけている",
+            "points": 1
+          },
+          {
+            "point": "正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "2次方程式を複素数の範囲で正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2次の因数の判別式が負のとき「解なし」として虚数解を書き落とす。",
+          "割り算の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)$ を $x+2$ で割ると余りが $11$、$x+3$ で割ると余りが $14$ である。$P(x)$ を $(x+2)(x+3)$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$-3x+5$",
+        "accepted": [
+          "-3x+5"
+        ]
+      },
+      "explanation": "2次式で割った余りは1次以下なので $ax+b$ とおける。$P(-2)=11$、$P(-3)=14$ から $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([-2*a+b-(11), -3*a+b-(14)], [a, b])",
+        "expected": "{a: -3, b: 5}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_two",
+      "explanation_detail": {
+        "approach": "割る式が2次式なので、余りは1次以下の式 $ax+b$ とおける。除法の関係式に、割る式が $0$ になる $x$ の値を代入する。",
+        "steps": [
+          "商を $Q(x)$、余りを $ax+b$ として $P(x)=(x+2)(x+3)Q(x)+ax+b$。",
+          "剰余の定理より $P(-2)=11$、$P(-3)=14$。",
+          "$x=-2$：$-2a+b=11$、$x=-3$：$-3a+b=14$。",
+          "連立して $a=-3,\\ b=5$。余り $-3x+5$。"
+        ],
+        "alternatives": [
+          "求めた余り $-3x+5$ に $x=-2,\\ -3$ を代入して、それぞれ $11,\\ 14$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $ax+b$ とおく理由（次数）を理解している",
+            "points": 1
+          },
+          {
+            "point": "剰余の定理から連立方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを定数 $R$ とおいてしまう（2次式で割った余りは1次以下）。",
+          "代入する値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)$ を $x+2$ で割ると余りが $2$、$x+3$ で割ると余りが $3$ である。$P(x)$ を $x^2+5x+6$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$-x$",
+        "accepted": [
+          "-x"
+        ]
+      },
+      "explanation": "2次式で割った余りは1次以下なので $ax+b$ とおける。$P(-2)=2$、$P(-3)=3$ から $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([-2*a+b-(2), -3*a+b-(3)], [a, b])",
+        "expected": "{a: -1, b: 0}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_two",
+      "explanation_detail": {
+        "approach": "割る式が2次式なので、余りは1次以下の式 $ax+b$ とおける。除法の関係式に、割る式が $0$ になる $x$ の値を代入する。",
+        "steps": [
+          "商を $Q(x)$、余りを $ax+b$ として $P(x)=(x+2)(x+3)Q(x)+ax+b$。（割る式は $(x+2)(x+3)$ と因数分解できる）",
+          "剰余の定理より $P(-2)=2$、$P(-3)=3$。",
+          "$x=-2$：$-2a+b=2$、$x=-3$：$-3a+b=3$。",
+          "連立して $a=-1,\\ b=0$。余り $-x$。"
+        ],
+        "alternatives": [
+          "求めた余り $-x$ に $x=-2,\\ -3$ を代入して、それぞれ $2,\\ 3$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $ax+b$ とおく理由（次数）を理解している",
+            "points": 1
+          },
+          {
+            "point": "剰余の定理から連立方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを定数 $R$ とおいてしまう（2次式で割った余りは1次以下）。",
+          "因数分解されていない割る式から $x$ の値を読み取れない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)$ を $x-2$ で割ると余りが $12$、$x+1$ で割ると余りが $0$ である。$P(x)$ を $x^2-x-2$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$4x+4$",
+        "accepted": [
+          "4x+4"
+        ]
+      },
+      "explanation": "2次式で割った余りは1次以下なので $ax+b$ とおける。$P(2)=12$、$P(-1)=0$ から $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([2*a+b-(12), -1*a+b-(0)], [a, b])",
+        "expected": "{a: 4, b: 4}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_two",
+      "explanation_detail": {
+        "approach": "割る式が2次式なので、余りは1次以下の式 $ax+b$ とおける。除法の関係式に、割る式が $0$ になる $x$ の値を代入する。",
+        "steps": [
+          "商を $Q(x)$、余りを $ax+b$ として $P(x)=(x-2)(x+1)Q(x)+ax+b$。（割る式は $(x-2)(x+1)$ と因数分解できる）",
+          "剰余の定理より $P(2)=12$、$P(-1)=0$。",
+          "$x=2$：$2a+b=12$、$x=-1$：$-a+b=0$。",
+          "連立して $a=4,\\ b=4$。余り $4x+4$。"
+        ],
+        "alternatives": [
+          "求めた余り $4x+4$ に $x=2,\\ -1$ を代入して、それぞれ $12,\\ 0$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $ax+b$ とおく理由（次数）を理解している",
+            "points": 1
+          },
+          {
+            "point": "剰余の定理から連立方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを定数 $R$ とおいてしまう（2次式で割った余りは1次以下）。",
+          "因数分解されていない割る式から $x$ の値を読み取れない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)$ を $x-1$ で割ると余りが $0$、$x+2$ で割ると余りが $6$ である。$P(x)$ を $x^2+x-2$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$-2x+2$",
+        "accepted": [
+          "-2x+2"
+        ]
+      },
+      "explanation": "2次式で割った余りは1次以下なので $ax+b$ とおける。$P(1)=0$、$P(-2)=6$ から $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([1*a+b-(0), -2*a+b-(6)], [a, b])",
+        "expected": "{a: -2, b: 2}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_two",
+      "explanation_detail": {
+        "approach": "割る式が2次式なので、余りは1次以下の式 $ax+b$ とおける。除法の関係式に、割る式が $0$ になる $x$ の値を代入する。",
+        "steps": [
+          "商を $Q(x)$、余りを $ax+b$ として $P(x)=(x-1)(x+2)Q(x)+ax+b$。（割る式は $(x-1)(x+2)$ と因数分解できる）",
+          "剰余の定理より $P(1)=0$、$P(-2)=6$。",
+          "$x=1$：$a+b=0$、$x=-2$：$-2a+b=6$。",
+          "連立して $a=-2,\\ b=2$。余り $-2x+2$。"
+        ],
+        "alternatives": [
+          "求めた余り $-2x+2$ に $x=1,\\ -2$ を代入して、それぞれ $0,\\ 6$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $ax+b$ とおく理由（次数）を理解している",
+            "points": 1
+          },
+          {
+            "point": "剰余の定理から連立方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを定数 $R$ とおいてしまう（2次式で割った余りは1次以下）。",
+          "因数分解されていない割る式から $x$ の値を読み取れない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $P(x)$ を $x+3$ で割ると余りが $-10$、$x+1$ で割ると余りが $-2$ である。$P(x)$ を $(x+3)(x+1)$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$4x+2$",
+        "accepted": [
+          "4x+2"
+        ]
+      },
+      "explanation": "2次式で割った余りは1次以下なので $ax+b$ とおける。$P(-3)=-10$、$P(-1)=-2$ から $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([-3*a+b-(-10), -1*a+b-(-2)], [a, b])",
+        "expected": "{a: 4, b: 2}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-remainder_two",
+      "explanation_detail": {
+        "approach": "割る式が2次式なので、余りは1次以下の式 $ax+b$ とおける。除法の関係式に、割る式が $0$ になる $x$ の値を代入する。",
+        "steps": [
+          "商を $Q(x)$、余りを $ax+b$ として $P(x)=(x+3)(x+1)Q(x)+ax+b$。",
+          "剰余の定理より $P(-3)=-10$、$P(-1)=-2$。",
+          "$x=-3$：$-3a+b=-10$、$x=-1$：$-a+b=-2$。",
+          "連立して $a=4,\\ b=2$。余り $4x+2$。"
+        ],
+        "alternatives": [
+          "求めた余り $4x+2$ に $x=-3,\\ -1$ を代入して、それぞれ $-10,\\ -2$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りを $ax+b$ とおく理由（次数）を理解している",
+            "points": 1
+          },
+          {
+            "point": "剰余の定理から連立方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを定数 $R$ とおいてしまう（2次式で割った余りは1次以下）。",
+          "代入する値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "4次方程式 $x^4-3x^2+2=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=\\pm 1,\\ \\pm \\sqrt{2}$",
+        "accepted": [
+          "x=\\pm 1,\\ \\pm \\sqrt{2}"
+        ]
+      },
+      "explanation": "$x^2=t$ とおくと $t^2-3t+2=0$、$(t-1)(t-2)=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**4+(-3)*x**2+(2), x)",
+        "expected": "[sqrt(1), -sqrt(1), sqrt(2), -sqrt(2)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-biquadratic",
+      "explanation_detail": {
+        "approach": "$x^4$ と $x^2$ の項しかない（複2次式）ので、$x^2=t$ とおくと $t$ の2次方程式になる。",
+        "steps": [
+          "$x^2=t$ とおくと $t^2-3t+2=0$。",
+          "$(t-1)(t-2)=0$ より $t=1,\\ 2$。",
+          "$x^2=1$ より $x=\\pm 1$、$x^2=2$ より $x=\\pm \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "左辺を $(x^2-1)(x^2-2)$ と因数分解し、各因数を $0$ とおいて解いてもよい（虚数解は $x^2+a=(x+\\sqrt{a}i)(x-\\sqrt{a}i)$ と考える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x^2=t$ とおいて $t$ の方程式を解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ の値（虚数解を含む4つ）をすべて正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2=t$ の解で $\\pm$ の一方を書き落とす。",
+          "$t$ の値をそのまま $x$ の解としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "4次方程式 $x^4+7x^2-18=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=\\pm \\sqrt{2},\\ \\pm 3i$",
+        "accepted": [
+          "x=\\pm \\sqrt{2},\\ \\pm 3i"
+        ]
+      },
+      "explanation": "$x^2=t$ とおくと $t^2+7t-18=0$、$(t-2)(t+9)=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**4+(7)*x**2+(-18), x)",
+        "expected": "[sqrt(2), -sqrt(2), sqrt(-9), -sqrt(-9)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-biquadratic",
+      "explanation_detail": {
+        "approach": "$x^4$ と $x^2$ の項しかない（複2次式）ので、$x^2=t$ とおくと $t$ の2次方程式になる。",
+        "steps": [
+          "$x^2=t$ とおくと $t^2+7t-18=0$。",
+          "$(t-2)(t+9)=0$ より $t=2,\\ -9$。",
+          "$x^2=2$ より $x=\\pm \\sqrt{2}$、$x^2=-9$ より $x=\\pm 3i$。"
+        ],
+        "alternatives": [
+          "左辺を $(x^2-2)(x^2+9)$ と因数分解し、各因数を $0$ とおいて解いてもよい（虚数解は $x^2+a=(x+\\sqrt{a}i)(x-\\sqrt{a}i)$ と考える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x^2=t$ とおいて $t$ の方程式を解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ の値（虚数解を含む4つ）をすべて正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2=-9$ を「解なし」として虚数解を書き落とす。",
+          "$t$ の値をそのまま $x$ の解としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "4次方程式 $x^4-18x^2+32=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=\\pm \\sqrt{2},\\ \\pm 4$",
+        "accepted": [
+          "x=\\pm \\sqrt{2},\\ \\pm 4"
+        ]
+      },
+      "explanation": "$x^2=t$ とおくと $t^2-18t+32=0$、$(t-2)(t-16)=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**4+(-18)*x**2+(32), x)",
+        "expected": "[sqrt(2), -sqrt(2), sqrt(16), -sqrt(16)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-biquadratic",
+      "explanation_detail": {
+        "approach": "$x^4$ と $x^2$ の項しかない（複2次式）ので、$x^2=t$ とおくと $t$ の2次方程式になる。",
+        "steps": [
+          "$x^2=t$ とおくと $t^2-18t+32=0$。",
+          "$(t-2)(t-16)=0$ より $t=2,\\ 16$。",
+          "$x^2=2$ より $x=\\pm \\sqrt{2}$、$x^2=16$ より $x=\\pm 4$。"
+        ],
+        "alternatives": [
+          "左辺を $(x^2-2)(x^2-16)$ と因数分解し、各因数を $0$ とおいて解いてもよい（虚数解は $x^2+a=(x+\\sqrt{a}i)(x-\\sqrt{a}i)$ と考える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x^2=t$ とおいて $t$ の方程式を解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ の値（虚数解を含む4つ）をすべて正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2=t$ の解で $\\pm$ の一方を書き落とす。",
+          "$t$ の値をそのまま $x$ の解としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "4次方程式 $x^4-81=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=\\pm 3,\\ \\pm 3i$",
+        "accepted": [
+          "x=\\pm 3,\\ \\pm 3i"
+        ]
+      },
+      "explanation": "$x^2=t$ とおくと $t^2-81=0$、$(t-9)(t+9)=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**4+(0)*x**2+(-81), x)",
+        "expected": "[sqrt(9), -sqrt(9), sqrt(-9), -sqrt(-9)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-biquadratic",
+      "explanation_detail": {
+        "approach": "$x^4$ と $x^2$ の項しかない（複2次式）ので、$x^2=t$ とおくと $t$ の2次方程式になる。",
+        "steps": [
+          "$x^2=t$ とおくと $t^2-81=0$。",
+          "$(t-9)(t+9)=0$ より $t=9,\\ -9$。",
+          "$x^2=9$ より $x=\\pm 3$、$x^2=-9$ より $x=\\pm 3i$。"
+        ],
+        "alternatives": [
+          "左辺を $(x^2-9)(x^2+9)$ と因数分解し、各因数を $0$ とおいて解いてもよい（虚数解は $x^2+a=(x+\\sqrt{a}i)(x-\\sqrt{a}i)$ と考える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x^2=t$ とおいて $t$ の方程式を解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ の値（虚数解を含む4つ）をすべて正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2=-9$ を「解なし」として虚数解を書き落とす。",
+          "$t$ の値をそのまま $x$ の解としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "4次方程式 $x^4-10x^2+9=0$ を、複素数の範囲で解きなさい。",
+      "answer": {
+        "value": "$x=\\pm 1,\\ \\pm 3$",
+        "accepted": [
+          "x=\\pm 1,\\ \\pm 3"
+        ]
+      },
+      "explanation": "$x^2=t$ とおくと $t^2-10t+9=0$、$(t-1)(t-9)=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**4+(-10)*x**2+(9), x)",
+        "expected": "[sqrt(1), -sqrt(1), sqrt(9), -sqrt(9)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-biquadratic",
+      "explanation_detail": {
+        "approach": "$x^4$ と $x^2$ の項しかない（複2次式）ので、$x^2=t$ とおくと $t$ の2次方程式になる。",
+        "steps": [
+          "$x^2=t$ とおくと $t^2-10t+9=0$。",
+          "$(t-1)(t-9)=0$ より $t=1,\\ 9$。",
+          "$x^2=1$ より $x=\\pm 1$、$x^2=9$ より $x=\\pm 3$。"
+        ],
+        "alternatives": [
+          "左辺を $(x^2-1)(x^2-9)$ と因数分解し、各因数を $0$ とおいて解いてもよい（虚数解は $x^2+a=(x+\\sqrt{a}i)(x-\\sqrt{a}i)$ と考える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x^2=t$ とおいて $t$ の方程式を解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ の値（虚数解を含む4つ）をすべて正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2=t$ の解で $\\pm$ の一方を書き落とす。",
+          "$t$ の値をそのまま $x$ の解としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a,\\ b$ を実数の定数とする。3次方程式 $x^3+ax^2+bx-36=0$ が $x=3i$ を解にもつとき、$a,\\ b$ の値と他の解を求めなさい。",
+      "answer": {
+        "value": "$a=-4,\\ b=9$、他の解は $x=-3i,\\ 4$"
+      },
+      "explanation": "係数が実数なので、共役な $-3i$ も解。この2つを解とする2次式 $x^2+9$ で左辺が割り切れることを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "係数が実数であることから共役複素数も解であると述べている（または代入して実部・虚部を比較している）",
+            "points": 3
+          },
+          {
+            "criterion": "$a,\\ b$ を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "他の解をすべて正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**2+(0)*x**1+(9)*x**0)*(x-(4)))",
+        "expected": "x**3+(-4)*x**2+(9)*x+(-36)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_root_coef",
+      "explanation_detail": {
+        "approach": "実数係数の方程式が虚数解をもてば、その共役複素数も解になる。2つの虚数解を解とする2次式を作ると、左辺はそれで割り切れる。",
+        "steps": [
+          "係数が実数なので $-3i$ も解。2解の和 $0$、積 $9$ より、$x^2+9$ は左辺の因数。",
+          "定数項を比べて、左辺 $=(x^2+9)(x-4)$（$9\\times(-4)=-36$）。",
+          "展開して $x^3-4x^2+9x-36$ より $a=-4,\\ b=9$。",
+          "他の解は $x=-3i,\\ 4$。"
+        ],
+        "alternatives": [
+          "$x=3i$ を直接代入し、$(3i)^2=-9$、$(3i)^3=-27i$ を用いて実部・虚部がともに $0$ という連立方程式から $a,\\ b$ を求める方法もある（$a,\\ b$ が実数なので実部・虚部を比べられる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "共役解の利用（または実部・虚部の比較）",
+            "points": 3
+          },
+          {
+            "point": "$a,\\ b$ の値",
+            "points": 3
+          },
+          {
+            "point": "他の解",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "係数が実数であることを確認せずに共役複素数を解とする。",
+          "3つ目の実数解を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a,\\ b$ を実数の定数とする。3次方程式 $x^3+ax^2+bx+72=0$ が $x=3+3i$ を解にもつとき、$a,\\ b$ の値と他の解を求めなさい。",
+      "answer": {
+        "value": "$a=-2,\\ b=-6$、他の解は $x=3-3i,\\ -4$"
+      },
+      "explanation": "係数が実数なので、共役な $3-3i$ も解。この2つを解とする2次式 $x^2-6x+18$ で左辺が割り切れることを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "係数が実数であることから共役複素数も解であると述べている（または代入して実部・虚部を比較している）",
+            "points": 3
+          },
+          {
+            "criterion": "$a,\\ b$ を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "他の解をすべて正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**2+(-6)*x**1+(18)*x**0)*(x-(-4)))",
+        "expected": "x**3+(-2)*x**2+(-6)*x+(72)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_root_coef",
+      "explanation_detail": {
+        "approach": "実数係数の方程式が虚数解をもてば、その共役複素数も解になる。2つの虚数解を解とする2次式を作ると、左辺はそれで割り切れる。",
+        "steps": [
+          "係数が実数なので $3-3i$ も解。2解の和 $6$、積 $18$ より、$x^2-6x+18$ は左辺の因数。",
+          "定数項を比べて、左辺 $=(x^2-6x+18)(x+4)$（$18\\times(4)=72$）。",
+          "展開して $x^3-2x^2-6x+72$ より $a=-2,\\ b=-6$。",
+          "他の解は $x=3-3i,\\ -4$。"
+        ],
+        "alternatives": [
+          "$x=3+3i$ を直接代入し、$(3+3i)^2=18i$、$(3+3i)^3=-54+54i$ を用いて実部・虚部がともに $0$ という連立方程式から $a,\\ b$ を求める方法もある（$a,\\ b$ が実数なので実部・虚部を比べられる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "共役解の利用（または実部・虚部の比較）",
+            "points": 3
+          },
+          {
+            "point": "$a,\\ b$ の値",
+            "points": 3
+          },
+          {
+            "point": "他の解",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "係数が実数であることを確認せずに共役複素数を解とする。",
+          "3つ目の実数解を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a,\\ b$ を実数の定数とする。3次方程式 $x^3+ax^2+bx+5=0$ が $x=-1+2i$ を解にもつとき、$a,\\ b$ の値と他の解を求めなさい。",
+      "answer": {
+        "value": "$a=3,\\ b=7$、他の解は $x=-1-2i,\\ -1$"
+      },
+      "explanation": "係数が実数なので、共役な $-1-2i$ も解。この2つを解とする2次式 $x^2+2x+5$ で左辺が割り切れることを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "係数が実数であることから共役複素数も解であると述べている（または代入して実部・虚部を比較している）",
+            "points": 3
+          },
+          {
+            "criterion": "$a,\\ b$ を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "他の解をすべて正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(((1)*x**2+(2)*x**1+(5)*x**0)*(x-(-1)))",
+        "expected": "x**3+(3)*x**2+(7)*x+(5)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-complex_root_coef",
+      "explanation_detail": {
+        "approach": "実数係数の方程式が虚数解をもてば、その共役複素数も解になる。2つの虚数解を解とする2次式を作ると、左辺はそれで割り切れる。",
+        "steps": [
+          "係数が実数なので $-1-2i$ も解。2解の和 $-2$、積 $5$ より、$x^2+2x+5$ は左辺の因数。",
+          "定数項を比べて、左辺 $=(x^2+2x+5)(x+1)$（$5\\times(1)=5$）。",
+          "展開して $x^3+3x^2+7x+5$ より $a=3,\\ b=7$。",
+          "他の解は $x=-1-2i,\\ -1$。"
+        ],
+        "alternatives": [
+          "$x=-1+2i$ を直接代入し、$(-1+2i)^2=-3-4i$、$(-1+2i)^3=11-2i$ を用いて実部・虚部がともに $0$ という連立方程式から $a,\\ b$ を求める方法もある（$a,\\ b$ が実数なので実部・虚部を比べられる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "共役解の利用（または実部・虚部の比較）",
+            "points": 3
+          },
+          {
+            "point": "$a,\\ b$ の値",
+            "points": 3
+          },
+          {
+            "point": "他の解",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "係数が実数であることを確認せずに共役複素数を解とする。",
+          "3つ目の実数解を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二次方程式 $x^2-4=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha^2,\\ \\beta^2$ を2つの解とする二次方程式を1つ作りなさい（係数は整数とする）。",
+      "answer": {
+        "value": "$x^2-8x+16=0$"
+      },
+      "explanation": "新しい2解の和は $8$、積は $16$。$x^2-(\\text{和})x+(\\text{積})=0$ を整数係数に直す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "解と係数の関係で $\\alpha+\\beta,\\ \\alpha\\beta$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "新しい2解の和と積を $\\alpha+\\beta,\\ \\alpha\\beta$ で表して計算している",
+            "points": 4
+          },
+          {
+            "criterion": "方程式を正しく作っている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((1)*(x-(solve(x**2+(0)*x+(-4),x)[0]**2))*(x-(solve(x**2+(0)*x+(-4),x)[1]**2)))",
+        "expected": "(1)*x**2+(-8)*x**1+(16)*x**0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-new_equation",
+      "explanation_detail": {
+        "approach": "2数 $u,\\ v$ を解とする二次方程式は $x^2-(u+v)x+uv=0$。新しい2解の和と積を、もとの方程式の $\\alpha+\\beta,\\ \\alpha\\beta$ で表す。",
+        "steps": [
+          "解と係数の関係より $\\alpha+\\beta=0,\\ \\alpha\\beta=-4$。",
+          "新しい2解の和：$8$、積：$16$。",
+          "$x^2-(8)x+(16)=0$、すなわち $x^2-8x+16=0$。"
+        ],
+        "alternatives": [
+          "もとの方程式の解を解の公式で具体的に求め、新しい2解を直接計算して $(x-u)(x-v)$ を展開しても確かめられる（虚数解でも同じ結果になる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積",
+            "points": 2
+          },
+          {
+            "point": "新しい2解の和と積",
+            "points": 4
+          },
+          {
+            "point": "方程式",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2+(\\text{和})x+(\\text{積})=0$ と和の符号を誤る。",
+          "$\\alpha^2+\\beta^2$ を $(\\alpha+\\beta)^2$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二次方程式 $x^2-3x-4=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\dfrac{1}{\\alpha},\\ \\dfrac{1}{\\beta}$ を2つの解とする二次方程式を1つ作りなさい（係数は整数とする）。",
+      "answer": {
+        "value": "$4x^2+3x-1=0$"
+      },
+      "explanation": "新しい2解の和は $-\\dfrac{3}{4}$、積は $-\\dfrac{1}{4}$。$x^2-(\\text{和})x+(\\text{積})=0$ を整数係数に直す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "解と係数の関係で $\\alpha+\\beta,\\ \\alpha\\beta$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "新しい2解の和と積を $\\alpha+\\beta,\\ \\alpha\\beta$ で表して計算している",
+            "points": 4
+          },
+          {
+            "criterion": "方程式を正しく作っている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((4)*(x-(1/solve(x**2+(-3)*x+(-4),x)[0]))*(x-(1/solve(x**2+(-3)*x+(-4),x)[1])))",
+        "expected": "(4)*x**2+(3)*x**1+(-1)*x**0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-new_equation",
+      "explanation_detail": {
+        "approach": "2数 $u,\\ v$ を解とする二次方程式は $x^2-(u+v)x+uv=0$。新しい2解の和と積を、もとの方程式の $\\alpha+\\beta,\\ \\alpha\\beta$ で表す。",
+        "steps": [
+          "解と係数の関係より $\\alpha+\\beta=3,\\ \\alpha\\beta=-4$。",
+          "新しい2解の和：$-\\dfrac{3}{4}$、積：$-\\dfrac{1}{4}$。",
+          "$x^2-(-\\dfrac{3}{4})x+(-\\dfrac{1}{4})=0$。両辺を $4$ 倍して $4x^2+3x-1=0$。"
+        ],
+        "alternatives": [
+          "もとの方程式の解を解の公式で具体的に求め、新しい2解を直接計算して $(x-u)(x-v)$ を展開しても確かめられる（虚数解でも同じ結果になる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積",
+            "points": 2
+          },
+          {
+            "point": "新しい2解の和と積",
+            "points": 4
+          },
+          {
+            "point": "方程式",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2+(\\text{和})x+(\\text{積})=0$ と和の符号を誤る。",
+          "新しい2解の積の計算で展開を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二次方程式 $x^2-x-2=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha+\\beta,\\ \\alpha\\beta$ を2つの解とする二次方程式を1つ作りなさい（係数は整数とする）。",
+      "answer": {
+        "value": "$x^2+x-2=0$"
+      },
+      "explanation": "新しい2解の和は $-1$、積は $-2$。$x^2-(\\text{和})x+(\\text{積})=0$ を整数係数に直す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "解と係数の関係で $\\alpha+\\beta,\\ \\alpha\\beta$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "新しい2解の和と積を $\\alpha+\\beta,\\ \\alpha\\beta$ で表して計算している",
+            "points": 4
+          },
+          {
+            "criterion": "方程式を正しく作っている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((1)*(x-(1))*(x-(-2)))",
+        "expected": "(1)*x**2+(1)*x**1+(-2)*x**0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-new_equation",
+      "explanation_detail": {
+        "approach": "2数 $u,\\ v$ を解とする二次方程式は $x^2-(u+v)x+uv=0$。新しい2解の和と積を、もとの方程式の $\\alpha+\\beta,\\ \\alpha\\beta$ で表す。",
+        "steps": [
+          "解と係数の関係より $\\alpha+\\beta=1,\\ \\alpha\\beta=-2$。",
+          "新しい2解の和：$-1$、積：$-2$。",
+          "$x^2-(-1)x+(-2)=0$、すなわち $x^2+x-2=0$。"
+        ],
+        "alternatives": [
+          "もとの方程式の解を解の公式で具体的に求め、新しい2解を直接計算して $(x-u)(x-v)$ を展開しても確かめられる（虚数解でも同じ結果になる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和と積",
+            "points": 2
+          },
+          {
+            "point": "新しい2解の和と積",
+            "points": 4
+          },
+          {
+            "point": "方程式",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2+(\\text{和})x+(\\text{積})=0$ と和の符号を誤る。",
+          "新しい2解の積の計算で展開を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$m$ を実数の定数とする。二次方程式 $x^2-2mx+m+6=0$ が異なる2つの正の解をもつような $m$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$m>3$"
+      },
+      "explanation": "2つの解を $\\alpha,\\ \\beta$ とし、判別式と解と係数の関係（和 $2m$、積 $m+6$）から条件を立てる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "必要な条件（判別式・和・積の符号）を過不足なく立てている",
+            "points": 4
+          },
+          {
+            "criterion": "各不等式を正しく解いている",
+            "points": 2
+          },
+          {
+            "criterion": "共通範囲を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(m**2-m-6, m)",
+        "expected": "[3, -2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U02-sign_of_roots",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "解の符号の条件は、判別式（実数解をもつか）と、解と係数の関係による和・積の符号の組み合わせで表せる。二次関数のグラフ（数学Ⅰ）と $x$ 軸の交点の位置で考えることもできる。",
+        "steps": [
+          "$D/4=m^2-(m+6)=(m-3)(m+2)>0$ より $m<-2,\\ 3<m$。",
+          "$\\alpha+\\beta=2m>0$ より $m>0$。",
+          "$\\alpha\\beta=m+6>0$ より $m>-6$。",
+          "共通範囲は $m>3$。"
+        ],
+        "alternatives": [
+          "二次関数 $f(x)=x^2-2mx+m+6$ のグラフ（数学Ⅰ）で考える：軸 $x=m>0$、頂点の $y$ 座標 $<0$、$f(0)>0$ の3条件。同じ範囲が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の設定",
+            "points": 4
+          },
+          {
+            "point": "各不等式の解",
+            "points": 2
+          },
+          {
+            "point": "共通範囲",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "判別式の条件だけで答える（解の符号の条件を忘れる）。",
+          "$D\\geqq0$ として重解の場合を含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$m$ を実数の定数とする。二次方程式 $x^2-2mx+m+2=0$ が異なる2つの負の解をもつような $m$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-2<m<-1$"
+      },
+      "explanation": "2つの解を $\\alpha,\\ \\beta$ とし、判別式と解と係数の関係（和 $2m$、積 $m+2$）から条件を立てる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "必要な条件（判別式・和・積の符号）を過不足なく立てている",
+            "points": 4
+          },
+          {
+            "criterion": "各不等式を正しく解いている",
+            "points": 2
+          },
+          {
+            "criterion": "共通範囲を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(m**2-m-2, m)",
+        "expected": "[2, -1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U02-sign_of_roots",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "解の符号の条件は、判別式（実数解をもつか）と、解と係数の関係による和・積の符号の組み合わせで表せる。二次関数のグラフ（数学Ⅰ）と $x$ 軸の交点の位置で考えることもできる。",
+        "steps": [
+          "$D/4=(m-2)(m+1)>0$ より $m<-1,\\ 2<m$。",
+          "$\\alpha+\\beta=2m<0$ より $m<0$。",
+          "$\\alpha\\beta=m+2>0$ より $m>-2$。",
+          "共通範囲は $-2<m<-1$。"
+        ],
+        "alternatives": [
+          "二次関数 $f(x)=x^2-2mx+m+2$ のグラフ（数学Ⅰ）で考える：軸 $x=m<0$、頂点の $y$ 座標 $<0$、$f(0)>0$ の3条件。同じ範囲が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の設定",
+            "points": 4
+          },
+          {
+            "point": "各不等式の解",
+            "points": 2
+          },
+          {
+            "point": "共通範囲",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "判別式の条件だけで答える（解の符号の条件を忘れる）。",
+          "$D\\geqq0$ として重解の場合を含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x^{8}$ を $x^2+x$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$-x$"
+      },
+      "explanation": "$x^2+x=x(x+1)$。余りを $ax+b$ とおき、$x=0,\\ -1$ を代入して $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "割る式を因数分解し、余りを $ax+b$ とおいている",
+            "points": 2
+          },
+          {
+            "criterion": "除法の関係式に適切な値を代入して連立方程式を立てている",
+            "points": 4
+          },
+          {
+            "criterion": "余りを正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "solve([(0)*a+b-(0), (-1)*a+b-(1)], [a, b])",
+        "expected": "{a: -1, b: 0}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-xn_remainder",
+      "explanation_detail": {
+        "approach": "$8$ 次式を実際に割るのは大変。商を $Q(x)$ とおいた除法の関係式に、割る式が $0$ になる $x$ を代入すると、$Q(x)$ を知らなくても余りが決まる。",
+        "steps": [
+          "$x^{8}=x(x+1)Q(x)+ax+b$ とおく（余りは1次以下）。",
+          "$x=0$ を代入：$b=0$。",
+          "$x=-1$ を代入：$-a+b=1$。",
+          "連立して $a=-1,\\ b=0$。余りは $-x$。"
+        ],
+        "alternatives": [
+          "検算：求めた余り $-x$ に $x=0,\\ -1$ を代入すると $(0)^{8}=0$、$(-1)^{8}=1$ と一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りの形",
+            "points": 2
+          },
+          {
+            "point": "連立方程式",
+            "points": 4
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りを定数とおいてしまう。",
+          "負の数の累乗 $(-1)^{8}$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x^{6}$ を $x^2-3x$ で割ったときの余りを求めなさい。",
+      "answer": {
+        "value": "$243x$"
+      },
+      "explanation": "$x^2-3x=x(x-3)$。余りを $ax+b$ とおき、$x=0,\\ 3$ を代入して $a,\\ b$ を決める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "割る式を因数分解し、余りを $ax+b$ とおいている",
+            "points": 2
+          },
+          {
+            "criterion": "除法の関係式に適切な値を代入して連立方程式を立てている",
+            "points": 4
+          },
+          {
+            "criterion": "余りを正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "solve([(0)*a+b-(0), (3)*a+b-(729)], [a, b])",
+        "expected": "{a: 243, b: 0}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U02-xn_remainder",
+      "explanation_detail": {
+        "approach": "$6$ 次式を実際に割るのは大変。商を $Q(x)$ とおいた除法の関係式に、割る式が $0$ になる $x$ を代入すると、$Q(x)$ を知らなくても余りが決まる。",
+        "steps": [
+          "$x^{6}=x(x-3)Q(x)+ax+b$ とおく（余りは1次以下）。",
+          "$x=0$ を代入：$b=0$。",
+          "$x=3$ を代入：$3a+b=729$。",
+          "連立して $a=243,\\ b=0$。余りは $243x$。"
+        ],
+        "alternatives": [
+          "検算：求めた余り $243x$ に $x=0,\\ 3$ を代入すると $(0)^{6}=0$、$(3)^{6}=729$ と一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りの形",
+            "points": 2
+          },
+          {
+            "point": "連立方程式",
+            "points": 4
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りを定数とおいてしまう。",
+          "連立方程式の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$(3+4i)^2$ を計算しなさい。\n［ある生徒の解答］\n$(3+4i)^2=9+24i+16i^2=9+24i+16=25+24i$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-7+24i$"
+      },
+      "explanation": "$i^2=-1$ なので、$16i^2=-16$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(((3)+(4)*I)**2)",
+        "expected": "(-7)+(24)*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-err_complex",
+      "explanation_detail": {
+        "approach": "$i^2$ が現れたら、すぐに $-1$ におきかえる。",
+        "steps": [
+          "$(3+4i)^2=9+2\\cdot(3)\\cdot(4)i+(4)^2i^2$。",
+          "$i^2=-1$ より $16i^2=-16$。",
+          "整理して $-7+24i$。"
+        ],
+        "alternatives": [
+          "$(a+bi)^2=(a^2-b^2)+2abi$ の形を覚えておき、実部が $a^2-b^2=-7$ になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2=1$ と扱う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(3+4i)^2=9+24i+16i^2=9+24i+16=25+24i$",
+        "error_step": "2つ目の等号（$16i^2$ を $16$ とした部分）",
+        "error_type": "calculation",
+        "why_tempting": "$i^2$ の $2$ 乗を見て「2乗すれば正になる」という実数の感覚で処理してしまった。",
+        "correction": "$(3+4i)^2=9+24i+16i^2=9+24i-16=-7+24i$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\sqrt{-20}\\times\\sqrt{-80}$ を計算しなさい。\n［ある生徒の解答］\n$\\sqrt{-20}\\times\\sqrt{-80}=\\sqrt{(-20)\\times(-80)}=\\sqrt{1600}=40$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-40$"
+      },
+      "explanation": "負の数の平方根は、まず $\\sqrt{-a}=\\sqrt{a}\\,i$ と $i$ を用いて表してから計算する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(-20)*sqrt(-80)",
+        "expected": "-40",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-err_complex",
+      "explanation_detail": {
+        "approach": "$\\sqrt{}$ の中が負のときは、最初に $i$ を使った形に書き直す。",
+        "steps": [
+          "$\\sqrt{-20}=2\\sqrt{5}i$、$\\sqrt{-80}=4\\sqrt{5}i$。",
+          "積は $2\\sqrt{5}\\cdot4\\sqrt{5}\\cdot i^2$。",
+          "$i^2=-1$ より $-40$。"
+        ],
+        "alternatives": [
+          "$\\sqrt{-20}$ と $\\sqrt{-80}$ はどちらも純虚数なので、積は「純虚数×純虚数＝負の実数」になるはず。正の答え $40$ は符号の点で不自然と気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a}\\sqrt{b}=\\sqrt{ab}$ を負の数に使う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\sqrt{-20}\\times\\sqrt{-80}=\\sqrt{(-20)\\times(-80)}=\\sqrt{1600}=40$",
+        "error_step": "1つ目の等号（根号どうしをまとめた部分）",
+        "error_type": "concept",
+        "why_tempting": "$\\sqrt{a}\\sqrt{b}=\\sqrt{ab}$ を、$a,\\ b$ が負の場合にもそのまま使ってしまった。この性質は $a\\geqq0,\\ b\\geqq0$ のときにしか成り立たない。",
+        "correction": "$\\sqrt{-20}\\times\\sqrt{-80}=2\\sqrt{5}i\\times4\\sqrt{5}i=8\\cdot5\\,i^2=-40$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$(-4+2i)^2$ を計算しなさい。\n［ある生徒の解答］\n$(-4+2i)^2=16-16i+4i^2=16-16i+4=20-16i$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$12-16i$"
+      },
+      "explanation": "$i^2=-1$ なので、$4i^2=-4$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(((-4)+(2)*I)**2)",
+        "expected": "(12)+(-16)*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-err_complex",
+      "explanation_detail": {
+        "approach": "$i^2$ が現れたら、すぐに $-1$ におきかえる。",
+        "steps": [
+          "$(-4+2i)^2=16+2\\cdot(-4)\\cdot(2)i+(2)^2i^2$。",
+          "$i^2=-1$ より $4i^2=-4$。",
+          "整理して $12-16i$。"
+        ],
+        "alternatives": [
+          "$(a+bi)^2=(a^2-b^2)+2abi$ の形を覚えておき、実部が $a^2-b^2=12$ になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$i^2=1$ と扱う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(-4+2i)^2=16-16i+4i^2=16-16i+4=20-16i$",
+        "error_step": "2つ目の等号（$4i^2$ を $4$ とした部分）",
+        "error_type": "calculation",
+        "why_tempting": "$i^2$ の $2$ 乗を見て「2乗すれば正になる」という実数の感覚で処理してしまった。",
+        "correction": "$(-4+2i)^2=16-16i+4i^2=16-16i-4=12-16i$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次方程式 $x^2-2x-5=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha^2\\beta+\\alpha\\beta^2$ の値を求めなさい。\n［ある生徒の解答］\n解と係数の関係より $\\alpha+\\beta=-2$、$\\alpha\\beta=-5$。$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)=10$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-10$"
+      },
+      "explanation": "$a(x-\\alpha)(x-\\beta)=ax^2-a(\\alpha+\\beta)x+a\\alpha\\beta$ と比べると、$\\alpha+\\beta=-\\dfrac{b}{a}$ である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(-5)*(2)",
+        "expected": "-10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-err_vieta_sign",
+      "explanation_detail": {
+        "approach": "解と係数の関係の和は $-\\dfrac{b}{a}$。展開した式と係数比較すれば符号を確かめられる。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=2$、$\\alpha\\beta=\\dfrac{c}{a}=-5$。",
+          "$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)$。",
+          "代入して $-10$。"
+        ],
+        "alternatives": [
+          "$a(x-\\alpha)(x-\\beta)$ を展開して $x$ の係数を $-2$ と比べると、$\\alpha+\\beta$ の符号を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "和の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "解と係数の関係より $\\alpha+\\beta=-2$、$\\alpha\\beta=-5$。$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)=10$",
+        "error_step": "$\\alpha+\\beta$ の値（符号）",
+        "error_type": "formula",
+        "why_tempting": "$\\alpha\\beta=\\dfrac{c}{a}$ と同じ感覚で、和も $\\dfrac{b}{a}$ と符号をつけずに覚えてしまっている。",
+        "correction": "$\\alpha+\\beta=-\\dfrac{b}{a}=2$ として $\\alpha^2\\beta+\\alpha\\beta^2=-10$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次方程式 $2x^2-4x-3=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha^2\\beta+\\alpha\\beta^2$ の値を求めなさい。\n［ある生徒の解答］\n解と係数の関係より $\\alpha+\\beta=-2$、$\\alpha\\beta=-\\dfrac{3}{2}$。$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)=3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-3$"
+      },
+      "explanation": "$a(x-\\alpha)(x-\\beta)=ax^2-a(\\alpha+\\beta)x+a\\alpha\\beta$ と比べると、$\\alpha+\\beta=-\\dfrac{b}{a}$ である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(Rational(-3,2))*(2)",
+        "expected": "-3",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-err_vieta_sign",
+      "explanation_detail": {
+        "approach": "解と係数の関係の和は $-\\dfrac{b}{a}$。展開した式と係数比較すれば符号を確かめられる。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=2$、$\\alpha\\beta=\\dfrac{c}{a}=-\\dfrac{3}{2}$。",
+          "$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)$。",
+          "代入して $-3$。"
+        ],
+        "alternatives": [
+          "$a(x-\\alpha)(x-\\beta)$ を展開して $x$ の係数を $-4$ と比べると、$\\alpha+\\beta$ の符号を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "和の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "解と係数の関係より $\\alpha+\\beta=-2$、$\\alpha\\beta=-\\dfrac{3}{2}$。$\\alpha^2\\beta+\\alpha\\beta^2=\\alpha\\beta(\\alpha+\\beta)=3$",
+        "error_step": "$\\alpha+\\beta$ の値（符号）",
+        "error_type": "formula",
+        "why_tempting": "$\\alpha\\beta=\\dfrac{c}{a}$ と同じ感覚で、和も $\\dfrac{b}{a}$ と符号をつけずに覚えてしまっている。",
+        "correction": "$\\alpha+\\beta=-\\dfrac{b}{a}=2$ として $\\alpha^2\\beta+\\alpha\\beta^2=-3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "二次方程式 $x^2-4x+5=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$(\\alpha+1)(\\beta+1)$ の値を求めなさい。\n［ある生徒の解答］\n解と係数の関係より $\\alpha+\\beta=-4$、$\\alpha\\beta=5$。$(\\alpha+1)(\\beta+1)=\\alpha\\beta+(\\alpha+\\beta)+1=2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$10$"
+      },
+      "explanation": "$a(x-\\alpha)(x-\\beta)=ax^2-a(\\alpha+\\beta)x+a\\alpha\\beta$ と比べると、$\\alpha+\\beta=-\\dfrac{b}{a}$ である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(5)+(4)+1",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-err_vieta_sign",
+      "explanation_detail": {
+        "approach": "解と係数の関係の和は $-\\dfrac{b}{a}$。展開した式と係数比較すれば符号を確かめられる。",
+        "steps": [
+          "$\\alpha+\\beta=-\\dfrac{b}{a}=4$、$\\alpha\\beta=\\dfrac{c}{a}=5$。",
+          "$(\\alpha+1)(\\beta+1)=\\alpha\\beta+(\\alpha+\\beta)+1$。",
+          "代入して $10$。"
+        ],
+        "alternatives": [
+          "$a(x-\\alpha)(x-\\beta)$ を展開して $x$ の係数を $-4$ と比べると、$\\alpha+\\beta$ の符号を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "和の符号を誤る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "解と係数の関係より $\\alpha+\\beta=-4$、$\\alpha\\beta=5$。$(\\alpha+1)(\\beta+1)=\\alpha\\beta+(\\alpha+\\beta)+1=2$",
+        "error_step": "$\\alpha+\\beta$ の値（符号）",
+        "error_type": "formula",
+        "why_tempting": "$\\alpha\\beta=\\dfrac{c}{a}$ と同じ感覚で、和も $\\dfrac{b}{a}$ と符号をつけずに覚えてしまっている。",
+        "correction": "$\\alpha+\\beta=-\\dfrac{b}{a}=4$ として $(\\alpha+1)(\\beta+1)=10$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整式 $P(x)=2x^3-5x^2-x+4$ を $x+4$ で割ったときの余りを求めなさい。\n［ある生徒の解答］\n剰余の定理より、余りは $P(4)=48$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-200$"
+      },
+      "explanation": "$x+4=0$ となる $x=-4$ を代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "((2)*(-4)**3+(-5)*(-4)**2+(-1)*(-4)**1+(4)*(-4)**0)",
+        "expected": "-200",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-err_remainder_sign",
+      "explanation_detail": {
+        "approach": "割る式を $x-\\alpha$ の形に直すか、「割る式 $=0$」を解いて代入する値を決める。",
+        "steps": [
+          "$x+4=x-(-4)$ なので $\\alpha=-4$。",
+          "$P(-4)=-200$。"
+        ],
+        "alternatives": [
+          "実際に $x+4$ で割り算をして余りが $-200$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "剰余の定理より、余りは $P(4)=48$",
+        "error_step": "代入する値（$x=4$ とした部分）",
+        "error_type": "sign",
+        "why_tempting": "割る式 $x+4$ に見える数 $4$ をそのまま代入してしまった。剰余の定理の「$x-\\alpha$ で割った余りは $P(\\alpha)$」の符号を意識していない。",
+        "correction": "$x+4=x-(-4)$ なので、余りは $P(-4)=-200$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整式 $P(x)=x^3+3x^2+5x-5$ を $x+3$ で割ったときの余りを求めなさい。\n［ある生徒の解答］\n剰余の定理より、余りは $P(3)=64$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-20$"
+      },
+      "explanation": "$x+3=0$ となる $x=-3$ を代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "((1)*(-3)**3+(3)*(-3)**2+(5)*(-3)**1+(-5)*(-3)**0)",
+        "expected": "-20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U02-err_remainder_sign",
+      "explanation_detail": {
+        "approach": "割る式を $x-\\alpha$ の形に直すか、「割る式 $=0$」を解いて代入する値を決める。",
+        "steps": [
+          "$x+3=x-(-3)$ なので $\\alpha=-3$。",
+          "$P(-3)=-20$。"
+        ],
+        "alternatives": [
+          "実際に $x+3$ で割り算をして余りが $-20$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x+a$ で割るときに $x=a$ を代入する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "剰余の定理より、余りは $P(3)=64$",
+        "error_step": "代入する値（$x=3$ とした部分）",
+        "error_type": "sign",
+        "why_tempting": "割る式 $x+3$ に見える数 $3$ をそのまま代入してしまった。剰余の定理の「$x-\\alpha$ で割った余りは $P(\\alpha)$」の符号を意識していない。",
+        "correction": "$x+3=x-(-3)$ なので、余りは $P(-3)=-20$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $x^3-5x^2+10x-6=0$ を、複素数の範囲で解きなさい。\n［ある生徒の解答］\n$P(1)=0$ より $(x-1)(x^2-4x+6)=0$。$x^2-4x+6=0$ は判別式が負なので解をもたない。よって解は $x=1$ のみ\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=1,\\ 2\\pm \\sqrt{2}i$"
+      },
+      "explanation": "複素数の範囲では、判別式が負の二次方程式は異なる2つの虚数解をもつ。3次方程式は重解を含めて3つの解をもつ。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(((1)*x**3+(-5)*x**2+(10)*x**1+(-6)*x**0), x)",
+        "expected": "[1, 2+sqrt(2)*I, 2-sqrt(2)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-err_missing_imag",
+      "explanation_detail": {
+        "approach": "「複素数の範囲で解く」と指示されたら、虚数解まで求める。",
+        "steps": [
+          "因数分解 $(x-1)(x^2-4x+6)=0$ までは正しい。",
+          "$x^2-4x+6=0$ を解の公式で解くと $x=2\\pm \\sqrt{2}i$。",
+          "解は $x=1,\\ 2\\pm \\sqrt{2}i$。"
+        ],
+        "alternatives": [
+          "3次方程式の解は重解を含めて3つあるはず、という個数の確認で書き落としに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "虚数解を書き落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$P(1)=0$ より $(x-1)(x^2-4x+6)=0$。$x^2-4x+6=0$ は判別式が負なので解をもたない。よって解は $x=1$ のみ",
+        "error_step": "「判別式が負なので解をもたない」とした部分",
+        "error_type": "concept",
+        "why_tempting": "数学Ⅰで「$D<0$ なら（実数の）解なし」と学んだことを、複素数の範囲で解く場面でもそのまま使ってしまった。",
+        "correction": "$x^2-4x+6=0$ を複素数の範囲で解くと $x=2\\pm \\sqrt{2}i$。解は $x=1,\\ 2\\pm \\sqrt{2}i$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $x^3-4x^2+7x-6=0$ を、複素数の範囲で解きなさい。\n［ある生徒の解答］\n$P(2)=0$ より $(x-2)(x^2-2x+3)=0$。$x^2-2x+3=0$ は判別式が負なので解をもたない。よって解は $x=2$ のみ\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=2,\\ 1\\pm \\sqrt{2}i$"
+      },
+      "explanation": "複素数の範囲では、判別式が負の二次方程式は異なる2つの虚数解をもつ。3次方程式は重解を含めて3つの解をもつ。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(((1)*x**3+(-4)*x**2+(7)*x**1+(-6)*x**0), x)",
+        "expected": "[2, 1+sqrt(2)*I, 1-sqrt(2)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U02-err_missing_imag",
+      "explanation_detail": {
+        "approach": "「複素数の範囲で解く」と指示されたら、虚数解まで求める。",
+        "steps": [
+          "因数分解 $(x-2)(x^2-2x+3)=0$ までは正しい。",
+          "$x^2-2x+3=0$ を解の公式で解くと $x=1\\pm \\sqrt{2}i$。",
+          "解は $x=2,\\ 1\\pm \\sqrt{2}i$。"
+        ],
+        "alternatives": [
+          "3次方程式の解は重解を含めて3つあるはず、という個数の確認で書き落としに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "虚数解を書き落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$P(2)=0$ より $(x-2)(x^2-2x+3)=0$。$x^2-2x+3=0$ は判別式が負なので解をもたない。よって解は $x=2$ のみ",
+        "error_step": "「判別式が負なので解をもたない」とした部分",
+        "error_type": "concept",
+        "why_tempting": "数学Ⅰで「$D<0$ なら（実数の）解なし」と学んだことを、複素数の範囲で解く場面でもそのまま使ってしまった。",
+        "correction": "$x^2-2x+3=0$ を複素数の範囲で解くと $x=1\\pm \\sqrt{2}i$。解は $x=2,\\ 1\\pm \\sqrt{2}i$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "6801eb181fcdba6f70c54bea4545ddca98e4f4a5abb82c65472d4dfa142bc4d8"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 10 問（Q016, Q017, Q018, Q019, Q020, Q049, Q050, Q054, Q055, Q056）",
+      "content_hash": "d1825b3fba94f6811aa3ab33944597a50aa4663323a8b56c97c1ebdc1586354f"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:08:15+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "4770895a094dd3bff0d77bdc7409cb4e6fc93ef5ec3af04e6e2c2b8d5222dfb1"
+  }
+}

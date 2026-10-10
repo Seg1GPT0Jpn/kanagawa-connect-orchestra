@@ -1,0 +1,403 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U02-LESSON",
+  "title": "複素数と方程式　授業プリント",
+  "subtitle": "いろいろな式｜複素数・解と係数の関係・剰余の定理・因数定理・高次方程式",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U02"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATH2-U02-PACK",
+  "pair_set_id": "HS-MATH2-U02-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH1-U03",
+        "point": "判別式",
+        "title": "二次関数"
+      },
+      {
+        "unit_id": "HS-MATH2-U01",
+        "point": "整式の除法",
+        "title": "式と証明"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHC-U02",
+        "point": "複素数平面",
+        "title": "平面上の曲線と複素数平面"
+      }
+    ],
+    "readiness_check": [
+      "二次方程式の解の公式と判別式（数学Ⅰ）を使える。",
+      "整式の除法 $A=BQ+R$（式と証明）を理解している。",
+      "平方根の計算と分母の有理化ができる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "虚数単位 $i$ を用いて複素数の四則計算を行い、負の数の平方根を正しく扱える。",
+      "二次方程式の解を複素数の範囲で求め、判別式で解の種類を判別できる。",
+      "解と係数の関係を導き、対称式の値の計算や2数を解とする方程式の作成に使える。",
+      "剰余の定理・因数定理を除法の関係式から導き、高次方程式を因数分解して解ける。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：数の範囲を広げる",
+        "minutes": 10,
+        "activity": "x^2=-1 が実数解をもたないことを確認し、2乗して -1 になる数 i を導入する"
+      },
+      {
+        "phase": "複素数の計算",
+        "minutes": 20,
+        "activity": "相等・四則計算・共役複素数を扱い、例題1で除法（分母の実数化）を行う"
+      },
+      {
+        "phase": "二次方程式と判別式",
+        "minutes": 15,
+        "activity": "解の公式を複素数の範囲に広げ、D の符号で解の種類を判別する"
+      },
+      {
+        "phase": "解と係数の関係",
+        "minutes": 20,
+        "activity": "解の公式から関係を導き、例題2で対称式の値を求める"
+      },
+      {
+        "phase": "剰余の定理・因数定理と高次方程式",
+        "minutes": 30,
+        "activity": "A=BQ+R から剰余の定理を導き、例題3で3次方程式を解く"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 5,
+        "activity": "確認問題3問、問題プリントAの課題指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "2乗して $-1$ になる数",
+        "body": "実数は2乗すると必ず $0$ 以上になるので、方程式 $x^2=-1$ は実数の範囲には解をもたない。そこで、2乗すると $-1$ になる新しい数を1つ考え、それを $i$ で表す。$i$ を実数と同じように文字式の計算規則にしたがって扱うと、すべての二次方程式が解をもつようになる。",
+        "bullets": [
+          "$i^2=-1$ を満たす数 $i$ を虚数単位という。",
+          "$a+bi$（$a,\\ b$ は実数）の形の数を複素数といい、実数（$b=0$）も複素数に含まれる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "数の範囲を自然数→整数→有理数→実数と広げてきた歴史と、方程式が解をもつようにするための拡張という見方を結びつける。",
+            "ask": "$x+3=1$ や $2x=1$ が解をもつために、数の範囲をどう広げてきたか。",
+            "expect": "負の数、分数を導入した。",
+            "timing": "導入の冒頭"
+          },
+          {
+            "point": "$i$ は「実数ではない数」であり、大小関係（$i>0$ など）は考えないことを最初に確認する。",
+            "caution": "$i>0$ と思い込む生徒がいる。"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "複素数とその相等・共役",
+        "body": "$a,\\ b$ を実数として $a+bi$ と表される数を複素数といい、$a$ を実部、$b$ を虚部という。$b\\neq0$ のものを虚数、$a=0,\\ b\\neq0$ のものを純虚数という。$a+bi$ に対し $a-bi$ を共役な複素数といい、$\\overline{a+bi}$ で表す。",
+        "formula": "$$a+bi=c+di\\iff a=c\\ \\text{かつ}\\ b=d\\qquad(a,\\ b,\\ c,\\ d\\ \\text{は実数})$$",
+        "conditions": [
+          "相等の条件は $a,\\ b,\\ c,\\ d$ が実数のときに限って使える",
+          "$a>0$ のとき $\\sqrt{-a}=\\sqrt{a}\\,i$ と定める",
+          "$(a+bi)(a-bi)=a^2+b^2$ は実数（分母の実数化に使う）"
+        ],
+        "teacher_points": [
+          {
+            "point": "$\\sqrt{-2}\\sqrt{-3}$ は $\\sqrt{2}i\\cdot\\sqrt{3}i=-\\sqrt{6}$ であり、$\\sqrt{(-2)(-3)}=\\sqrt{6}$ ではないことを必ず扱う。",
+            "caution": "$\\sqrt{a}\\sqrt{b}=\\sqrt{ab}$ は $a,\\ b\\geqq0$ のときの性質。"
+          },
+          {
+            "point": "相等の条件を使う前に「$x,\\ y$ は実数」という前提を確認させる。",
+            "ask": "$x,\\ y$ が実数でないと、なぜ実部と虚部を比べられないのか。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　複素数の除法",
+        "example": {
+          "problem": "$\\dfrac{3+i}{1-2i}$ を $a+bi$ の形で表せ。",
+          "steps": [
+            "分母の共役複素数 $1+2i$ を分母・分子に掛ける。",
+            "分子：$(3+i)(1+2i)=3+6i+i+2i^2=1+7i$。",
+            "分母：$(1-2i)(1+2i)=1-4i^2=5$。",
+            "$\\dfrac{1+7i}{5}=\\dfrac{1}{5}+\\dfrac{7}{5}i$。"
+          ],
+          "answer": "$\\dfrac{1}{5}+\\dfrac{7}{5}i$",
+          "thinking": "分母を実数にするために、分母と共役な複素数を分母・分子に掛ける（分母の有理化と同じ発想）。"
+        },
+        "teacher_points": [
+          {
+            "point": "$i^2=-1$ におきかえるタイミングを毎回声に出させる。",
+            "ask": "$2i^2$ はいくつか。",
+            "expect": "$-2$"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "分母の $(1-2i)(1+2i)$ を $1-4=-3$ とする",
+            "correct": "$-(2i)^2=-4i^2=+4$ なので $1+4=5$"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "二次方程式の解と判別式",
+        "formula": "$$ax^2+bx+c=0\\ \\Longrightarrow\\ x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$$",
+        "conditions": [
+          "$a,\\ b,\\ c$ は実数、$a\\neq0$",
+          "$D=b^2-4ac>0$：異なる2つの実数解、$D=0$：重解、$D<0$：異なる2つの虚数解",
+          "虚数解は互いに共役な複素数になる"
+        ],
+        "body": "複素数の範囲で考えると、$D<0$ のときも $\\sqrt{D}=\\sqrt{-D}\\,i$ として解の公式がそのまま使える。",
+        "teacher_points": [
+          {
+            "point": "数学Ⅰでは「$D<0$ なら解なし」と学んだが、ここでは「実数解はないが虚数解が2つある」と言い直させる。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "解と係数の関係",
+        "formula": "$$ax^2+bx+c=0\\ \\text{の2つの解を}\\ \\alpha,\\ \\beta\\ \\text{とすると}\\quad \\alpha+\\beta=-\\dfrac{b}{a},\\quad \\alpha\\beta=\\dfrac{c}{a}$$",
+        "conditions": [
+          "$a\\neq0$（係数は複素数でも成り立つが、ここでは実数で扱う）",
+          "重解のときは $\\alpha=\\beta$ として成り立つ",
+          "$\\alpha,\\ \\beta$ を解とする二次方程式の1つは $x^2-(\\alpha+\\beta)x+\\alpha\\beta=0$"
+        ],
+        "proof_steps": [
+          "解の公式より $\\alpha=\\dfrac{-b+\\sqrt{D}}{2a},\\ \\beta=\\dfrac{-b-\\sqrt{D}}{2a}$（$D=b^2-4ac$）とおける。",
+          "和：$\\alpha+\\beta=\\dfrac{-2b}{2a}=-\\dfrac{b}{a}$。",
+          "積：$\\alpha\\beta=\\dfrac{(-b)^2-(\\sqrt{D})^2}{4a^2}=\\dfrac{b^2-(b^2-4ac)}{4a^2}=\\dfrac{c}{a}$。",
+          "$D<0$ のときも $(\\sqrt{D})^2=D$ が成り立つので、同じ計算で関係が得られる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "和の符号にマイナスがつくことを、$a(x-\\alpha)(x-\\beta)$ を展開して $x$ の係数を比べる方法でも確認させる。",
+            "ask": "$a(x-\\alpha)(x-\\beta)$ を展開すると $x$ の係数は何か。",
+            "expect": "$-a(\\alpha+\\beta)$"
+          },
+          {
+            "point": "$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta$ など、対称式は基本対称式 $\\alpha+\\beta,\\ \\alpha\\beta$ で表せることを示す。"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　対称式の値",
+        "example": {
+          "problem": "$2x^2-4x+3=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha^3+\\beta^3$ の値を求めよ。",
+          "steps": [
+            "解と係数の関係より $\\alpha+\\beta=2,\\ \\alpha\\beta=\\dfrac{3}{2}$。",
+            "$\\alpha^3+\\beta^3=(\\alpha+\\beta)^3-3\\alpha\\beta(\\alpha+\\beta)$。",
+            "$=8-3\\cdot\\dfrac{3}{2}\\cdot2=8-9=-1$。"
+          ],
+          "answer": "$-1$",
+          "thinking": "解を具体的に求める（虚数になる）よりも、和と積だけで表す方が速く確実。"
+        },
+        "teacher_points": [
+          {
+            "point": "解が虚数でも、和と積は実数になることに注目させる。"
+          }
+        ]
+      },
+      {
+        "id": "th3",
+        "kind": "theorem",
+        "title": "剰余の定理・因数定理",
+        "formula": "$$P(x)\\ \\text{を}\\ x-\\alpha\\ \\text{で割った余りは}\\ P(\\alpha)\\qquad P(\\alpha)=0\\iff P(x)\\ \\text{は}\\ x-\\alpha\\ \\text{で割り切れる}$$",
+        "conditions": [
+          "$ax-b$ で割った余りは $P\\left(\\dfrac{b}{a}\\right)$",
+          "因数定理：$P(\\alpha)=0$ ならば $P(x)$ は $x-\\alpha$ を因数にもつ",
+          "整数係数で最高次の係数が1のとき、整数の解の候補は定数項の約数"
+        ],
+        "proof_steps": [
+          "$P(x)$ を1次式 $x-\\alpha$ で割った商を $Q(x)$、余りを $R$ とすると、余りの次数は $0$ 以下なので $R$ は定数で、$P(x)=(x-\\alpha)Q(x)+R$。",
+          "この等式は $x$ についての恒等式なので、$x=\\alpha$ を代入できて $P(\\alpha)=0\\cdot Q(\\alpha)+R=R$。",
+          "したがって余りは $P(\\alpha)$（剰余の定理）。",
+          "特に $P(\\alpha)=0$ と $R=0$（割り切れる）は同値である（因数定理）。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「$x+2$ で割る」ときは $x=-2$ を代入する。$x-\\alpha$ の形に直して $\\alpha$ を読む習慣をつけさせる。",
+            "caution": "$x=2$ を代入する誤りが典型（問題プリントD）。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　3次方程式",
+        "example": {
+          "problem": "方程式 $x^3-3x^2+4x-2=0$ を解け。",
+          "steps": [
+            "$P(x)=x^3-3x^2+4x-2$ とおくと $P(1)=1-3+4-2=0$。",
+            "因数定理より $P(x)$ は $x-1$ で割り切れ、$P(x)=(x-1)(x^2-2x+2)$。",
+            "$x^2-2x+2=0$ を解くと $x=1\\pm\\sqrt{1-2}=1\\pm i$。"
+          ],
+          "answer": "$x=1,\\ 1\\pm i$",
+          "thinking": "定数項 $-2$ の約数 $\\pm1,\\ \\pm2$ を代入して $P(\\alpha)=0$ となる $\\alpha$ を探す。"
+        },
+        "teacher_points": [
+          {
+            "point": "2次の因数が実数の範囲で因数分解できなくても、複素数の範囲では解をもつ。答えに虚数解を書き落とさないよう指導する。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$x^2-2x+2=0$ は判別式が負なので「解なし」とし、答えを $x=1$ のみとする",
+            "correct": "複素数の範囲で解くので $x=1\\pm i$ も解"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 複素数",
+              "lines": [
+                "$i^2=-1$、$a+bi$（$a,b$ 実数）",
+                "相等：実部どうし・虚部どうし",
+                "$\\dfrac{3+i}{1-2i}=\\dfrac{(3+i)(1+2i)}{5}$",
+                "$\\sqrt{-2}\\sqrt{-3}=-\\sqrt{6}$ に注意"
+              ]
+            },
+            {
+              "title": "② 解と係数の関係",
+              "lines": [
+                "$D<0$：異なる2つの虚数解",
+                "$\\alpha+\\beta=-\\dfrac{b}{a}$、$\\alpha\\beta=\\dfrac{c}{a}$",
+                "$\\alpha^3+\\beta^3=(\\alpha+\\beta)^3-3\\alpha\\beta(\\alpha+\\beta)$"
+              ]
+            },
+            {
+              "title": "③ 剰余・因数定理",
+              "lines": [
+                "$P(x)=(x-\\alpha)Q(x)+R$",
+                "余り $R=P(\\alpha)$",
+                "$P(1)=0$ → $(x-1)(x^2-2x+2)$",
+                "$x=1,\\ 1\\pm i$"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "板書の③は「代入 → 割り算 → 2次方程式」の流れが一目で分かるよう矢印でつなぐ。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "複素数の計算は「$i$ を文字として計算し、$i^2$ が出たら $-1$」と1つの規則にまとめて指導する。"
+          },
+          {
+            "point": "負の数の平方根は、計算の最初に $\\sqrt{-a}=\\sqrt{a}\\,i$ と書き直させる。",
+            "caution": "先に根号どうしを掛けると符号を誤る。"
+          },
+          {
+            "point": "解と係数の関係の符号（和は $-\\dfrac{b}{a}$）を、毎回 $a(x-\\alpha)(x-\\beta)$ と比較して確認させる。",
+            "timing": "例題2の後"
+          },
+          {
+            "point": "高次方程式の答えは、因数分解した各因数から出る解をすべて並べ、個数（重解を含めて次数と同じ）を確認させる。"
+          },
+          {
+            "point": "「実数を係数とする方程式が虚数解 $p+qi$ をもてば共役な $p-qi$ も解」という性質は、係数が実数であることが前提だと強調する。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\sqrt{-4}\\times\\sqrt{-9}=\\sqrt{36}=6$",
+            "correct": "$2i\\times3i=6i^2=-6$"
+          },
+          {
+            "wrong": "$x^2+3x+5=0$ の解の和を $3$ とする",
+            "correct": "和は $-\\dfrac{b}{a}=-3$"
+          },
+          {
+            "wrong": "$P(x)$ を $x+2$ で割った余りを $P(2)$ とする",
+            "correct": "$x+2=x-(-2)$ なので $P(-2)$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "$i^2=-1$。複素数の相等は実部・虚部（実数）どうしで比べる。除法は分母の共役複素数を掛ける。",
+          "$D<0$ の二次方程式は異なる2つの虚数解（互いに共役）をもつ。",
+          "解と係数の関係：$\\alpha+\\beta=-\\dfrac{b}{a},\\ \\alpha\\beta=\\dfrac{c}{a}$。対称式は和と積で表す。",
+          "剰余の定理：余りは $P(\\alpha)$。因数定理で1次の因数を見つけて高次方程式を解く。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$(1+2i)^2$ を計算せよ。",
+            "a": "$1+4i+4i^2=-3+4i$"
+          },
+          {
+            "q": "$x^2+2x+4=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha^2+\\beta^2$ の値を求めよ。",
+            "a": "$(\\alpha+\\beta)^2-2\\alpha\\beta=4-8=-4$"
+          },
+          {
+            "q": "$P(x)=x^3+2x-5$ を $x+1$ で割った余りを求めよ。",
+            "a": "$P(-1)=-1-2-5=-8$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "7f06655e670c11ed71dcc538ee71217c7fe2e8bff7d80416b1f8c9a5dca8e4e0"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:08:15+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "588c818a492e63cb7611a038273bea6ef148e171969ce59060f2e2a8123c02c0"
+  }
+}
