@@ -19,7 +19,7 @@
   {% endif %}
   {% for item in g['items'] %}
     {% if item.kind == 'stimulus' %}
-      {{ stimulus_block(item.stimulus, 'questions') }}
+      {{ stimulus_block(item.stimulus, 'questions', item.compact) }}
     {% else %}
       {% set q = item.question %}
       <article class="question{% if q._long %} long{% endif %}" id="{{ q.id }}">
@@ -35,7 +35,7 @@
           {% if q.figure %}{{ figure_block(q.figure) }}{% endif %}
           {% if q.table %}{{ table_block(q.table) }}{% endif %}
           {% if q.choices %}
-          <ul class="choices cols-{{ q.choices | choice_cols }}">
+          <ul class="choices cols-{{ q._cols }}">
             {% for c in q.choices %}<li><span class="label">{{ c.label }}</span><span>{{ c.text | rich_inline }}</span></li>{% endfor %}
           </ul>
           {% endif %}
@@ -53,7 +53,7 @@
   <div class="namebox"><div class="grow">受検番号　　　　　　氏名</div><div class="score">／{{ qs.total_points | num }} 点</div></div>
   <table class="sheet">
     {% for g in groups %}{% for item in g['items'] if item.kind == 'question' %}{% set q = item.question %}
-    <tr>
+    <tr{% if q.question_type in ['descriptive', 'essay', 'proof'] %} class="tall"{% endif %}>
       <th>{{ q._number }}</th>
       <td>{% if q.choices and q.question_type in ['multiple_choice', 'true_false'] %}<span class="bubbles">{% for c in q.choices %}<span>{{ c.label }}</span>{% endfor %}</span>{% endif %}</td>
     </tr>

@@ -17,9 +17,11 @@
 </figure>
 {%- endmacro %}
 
-{% macro stimulus_block(s, kind) -%}
+{% macro stimulus_block(s, kind, compact=False) -%}
 {% set is_listen = s.type == 'listening_script' %}
-{% if is_listen and kind == 'questions' %}
+{% if is_listen and kind == 'questions' and compact %}
+<div class="listening-mini">{{ s.title or 'リスニング' }}</div>
+{% elif is_listen and kind == 'questions' %}
 <div class="stimulus listening short">
   <div class="stim-title">{{ s.title or 'リスニング' }}</div>
   <div class="listening-note">※ 放送を聞いて答えなさい。放送文は解答解説冊子に掲載しています。</div>

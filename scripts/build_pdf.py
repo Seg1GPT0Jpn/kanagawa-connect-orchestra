@@ -106,11 +106,16 @@ def visual_len(s: str) -> float:
     return sum(1.0 if unicodedata.east_asian_width(ch) in "WF" else 0.55 for ch in s)
 
 
-def choice_cols(choices) -> int:
+# 選択肢の段組み（4段にできる最大長, 2段にできる最大長）。用紙幅に応じて変える。
+CHOICE_LIMITS = {"A4": (8, 19), "B5": (7, 16), "tablet": (5, 12)}
+
+
+def choice_cols(choices, paper: str = "A4") -> int:
+    four, two = CHOICE_LIMITS[paper]
     m = max((visual_len(c.get("text", "")) for c in choices), default=0)
-    if m <= 8 and len(choices) in (4, 8):
+    if m <= four and len(choices) in (4, 8):
         return 4
-    if m <= 19:
+    if m <= two:
         return 2
     return 1
 
@@ -153,7 +158,7 @@ def truncate_plain(text: str, n: int) -> str:
 # 組版用データの準備
 # --------------------------------------------------------------------------
 
-def prepare(data: dict) -> tuple[list, list]:
+def prepare(data: dict, paper: str = "A4") -> tuple[list, list]:
     stimuli = {s["id"]: s for s in data.get("stimuli", [])}
     sections = {s["id"]: s for s in data.get("sections", [])}
     groups: list[dict] = []
@@ -165,6 +170,7 @@ def prepare(data: dict) -> tuple[list, list]:
         q["_long"] = len(q.get("stem", "")) > 500 or (q.get("answer_space") or {}).get("lines", 0) > 10 or \
             (q.get("answer_space") or {}).get("char_grid", 0) > 200 or bool(q.get("stimulus") and len(q["stimulus"].get("content", "")) > 600)
         q["_long_exp"] = len(q.get("explanation", "")) > 700
+        q["_cols"] = choice_cols(q.get("choices") or [], paper)
         sec_id = q.get("section")
         if sec_id != cur_key:
             sec = sections.get(sec_id) if sec_id else None
@@ -173,11 +179,15 @@ def prepare(data: dict) -> tuple[list, list]:
             if sec:
                 for ref in sec.get("stimulus_refs", []):
                     if ref in stimuli and ref not in shown:
-                        groups[-1]["items"].append({"kind": "stimulus", "stimulus": stimuli[ref]})
+                        groups[-1]["items"].append({"kind": "stimulus", "stimulus": stimuli[ref], "compact": False})
                         shown.add(ref)
         ref = q.get("stimulus_ref")
         if ref and ref in stimuli and ref not in shown:
-            groups[-1]["items"].append({"kind": "stimulus", "stimulus": stimuli[ref]})
+            st = stimuli[ref]
+            # 同じ大問の2つ目以降のリスニング資料は、問題冊子では見出しだけにする
+            compact = st.get("type") == "listening_script" and any(
+                it["kind"] == "stimulus" and it["stimulus"].get("type") == "listening_script" for it in groups[-1]["items"])
+            groups[-1]["items"].append({"kind": "stimulus", "stimulus": st, "compact": compact})
             shown.add(ref)
         groups[-1]["items"].append({"kind": "question", "question": q})
     if groups:
@@ -198,7 +208,6 @@ def make_env():
     env.filters.update({
         "rich_inline": rich_inline,
         "rich_block": rich_block,
-        "choice_cols": choice_cols,
         "num": num,
         "answer_display": answer_display,
         "truncate_plain": truncate_plain,
@@ -215,7 +224,7 @@ def make_env():
 
 def render_html(env, data: dict, kind: str, paper: str) -> str:
     w, h, (mt, mr, mb, ml), fs = PAPERS[paper]
-    groups, units = prepare(data)
+    groups, units = prepare(data, paper)
     build = data.get("build", {})
     tpl = env.get_template("question_template.html" if kind == "questions" else "answer_template.html")
     page_css = f"@page {{ size: {w}mm {h}mm; }}\n:root {{ --fs: {fs}; }}"
@@ -234,7 +243,27 @@ def render_html(env, data: dict, kind: str, paper: str) -> str:
         show_points=build.get("show_points", True),
         show_difficulty=build.get("show_difficulty", data.get("track") not in ("mock_exam",)),
         answer_sheet=data.get("track") == "mock_exam",
+        subtotals=subtotals(data),
     )
+
+
+def subtotals(data: dict) -> list[dict]:
+    """教科（大問に subject がある場合）または大問ごとの配点合計。"""
+    secs = {s["id"]: s for s in data.get("sections", [])}
+    from_masters = MASTERS["subject"]
+    out: dict[str, dict] = {}
+    for q in data["questions"]:
+        sec = secs.get(q.get("section"))
+        if sec and sec.get("subject"):
+            key = from_masters.get(sec["subject"], sec["subject"])
+        elif sec:
+            key = sec["title"]
+        else:
+            continue
+        t = out.setdefault(key, {"title": key, "count": 0, "points": 0})
+        t["count"] += 1
+        t["points"] += q["scoring"]["points"]
+    return list(out.values())
 
 
 # --------------------------------------------------------------------------

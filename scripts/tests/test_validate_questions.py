@@ -72,6 +72,13 @@ class ValidatorTest(unittest.TestCase):
             self.assertIsNotNone(msg)
             self.assertIn("評価できません", msg)
 
+    def test_latex_lint(self):
+        self.assertTrue(vq.latex_problems("$20\\,^\\circ\\mathrm{C}$"))
+        self.assertTrue(vq.latex_problems("$\\frac{1}{2$"))
+        self.assertFalse(vq.latex_problems("$20\\,{}^\\circ$ と $\\dfrac{1}{2}x$"))
+        self.assertFalse(vq.latex_problems("$\\mathrm{A}\\rightarrow\\left(x\\right)$"))
+        self.assertTrue(vq.latex_problems("$\\left(x$"))
+
     def test_similarity_normalization(self):
         self.assertEqual(vq.normalize_text("Ｘ＋１、 です。"), vq.normalize_text("x+1です"))
 

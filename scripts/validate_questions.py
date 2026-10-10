@@ -552,6 +552,45 @@ def iter_strings(obj, path=()):
 _DISPLAY_MATH = re.compile(r"\$\$.*?\$\$", re.S)
 
 
+_MATH_SEG = re.compile(r"\$\$(.+?)\$\$|\$(.+?)\$", re.S)
+_LATEX_PITFALLS = [
+    (re.compile(r"\\[,;:! ]\s*[\^_]"), "空白命令（\\, など）の直後に ^ や _ は置けません。{} を挟んでください（例: 20\\,{}^\\circ）"),
+    (re.compile(r"(?<!\\)\^\^|(?<!\\)__"), "^ や _ が連続しています"),
+    (re.compile(r"\\(?:frac|dfrac|tfrac)\s*(?![\s{\\0-9a-zA-Z])"), "\\frac の引数がありません"),
+]
+
+
+def latex_problems(s: str) -> list[str]:
+    """$...$ 内の LaTeX について、KaTeX でエラーになりやすい書き方を検出する（簡易検査）。"""
+    out = []
+    for m in _MATH_SEG.finditer(s.replace("\\$", "")):
+        seg = m.group(1) or m.group(2) or ""
+        depth = 0
+        i = 0
+        while i < len(seg):
+            ch = seg[i]
+            if ch == "\\":
+                i += 2
+                continue
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth < 0:
+                    break
+            i += 1
+        if depth != 0:
+            out.append(f"数式の波かっこ {{ }} が対応していません: ${seg[:40]}$")
+        for pat, msg in _LATEX_PITFALLS:
+            if pat.search(seg):
+                out.append(f"{msg}: ${seg[:40]}$")
+        if len(re.findall(r"\\left(?![a-zA-Z])", seg)) != len(re.findall(r"\\right(?![a-zA-Z])", seg)):
+            out.append(f"\\left と \\right の数が一致しません: ${seg[:40]}$")
+        if seg.count("\\begin{") != seg.count("\\end{"):
+            out.append(f"\\begin と \\end の数が一致しません: ${seg[:40]}$")
+    return out
+
+
 def math_delimiters_balanced(s: str) -> bool:
     s = s.replace("\\$", "")
     s = _DISPLAY_MATH.sub("", s)
@@ -614,8 +653,13 @@ def check_file(fr: FileResult, rep: Reporter, validator, units: dict, run_calc: 
             rep.add(fr, "ERROR", "encoding", path, "置換文字 U+FFFD を含みます（文字化けの可能性）")
         if re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", s):
             rep.add(fr, "ERROR", "encoding", path, "制御文字を含みます")
-        if path and path[-1] in ("stem", "explanation", "text", "content", "display") and not math_delimiters_balanced(s):
-            rep.add(fr, "ERROR", "latex", path, "数式デリミタ $ の数が対応していません")
+        if path and (path[-1] in ("stem", "explanation", "text", "content", "display", "caption", "criterion")
+                     or (len(path) > 2 and path[-3] in ("rows", "header"))):
+            if not math_delimiters_balanced(s):
+                rep.add(fr, "ERROR", "latex", path, "数式デリミタ $ の数が対応していません")
+            else:
+                for msg in latex_problems(s):
+                    rep.add(fr, "ERROR", "latex", path, msg)
 
     # --- 整合性 ---
     stim_ids = [s.get("id") for s in data.get("stimuli", []) if isinstance(s, dict)]

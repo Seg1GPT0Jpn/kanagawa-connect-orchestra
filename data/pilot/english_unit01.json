@@ -657,36 +657,36 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "ordering",
-      "stem": "日本語に合うように、語句を並べかえなさい。\nあなたのクラスでだれがいちばん速く走りますか。",
+      "stem": "日本語に合うように、語句を並べかえなさい。ただし、文頭にくる語も小文字で示してある。\nあなたのクラスでだれがいちばん速く走りますか。",
       "choices": [
         {
           "label": "ア",
-          "text": "in"
+          "text": "who"
         },
         {
           "label": "イ",
-          "text": "runs"
-        },
-        {
-          "label": "ウ",
-          "text": "Who"
-        },
-        {
-          "label": "エ",
           "text": "your class"
         },
         {
-          "label": "オ",
+          "label": "ウ",
+          "text": "runs"
+        },
+        {
+          "label": "エ",
           "text": "the fastest"
+        },
+        {
+          "label": "オ",
+          "text": "in"
         }
       ],
       "answer": {
         "value": [
-          "ウ",
-          "イ",
-          "オ",
           "ア",
-          "エ"
+          "ウ",
+          "エ",
+          "オ",
+          "イ"
         ]
       },
       "explanation": "疑問詞 who が主語の文。Who runs the fastest in your class? 主語の who は3人称単数扱いなので runs。",
@@ -726,7 +726,7 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "ordering",
-      "stem": "日本語に合うように、語句を並べかえなさい。\nこの映画はあの映画ほどおもしろくない。",
+      "stem": "日本語に合うように、語句を並べかえなさい。ただし、文頭にくる語も小文字で示してある。\nこの映画はあの映画ほどおもしろくない。",
       "choices": [
         {
           "label": "ア",
@@ -734,23 +734,23 @@
         },
         {
           "label": "イ",
-          "text": "as interesting"
+          "text": "this movie"
         },
         {
           "label": "ウ",
-          "text": "as that one"
+          "text": "as interesting"
         },
         {
           "label": "エ",
-          "text": "This movie"
+          "text": "as that one"
         }
       ],
       "answer": {
         "value": [
-          "エ",
-          "ア",
           "イ",
-          "ウ"
+          "ア",
+          "ウ",
+          "エ"
         ]
       },
       "explanation": "「…ほど～ではない」は not as ～ as …。This movie is not as interesting as that one.",
@@ -1126,14 +1126,21 @@
       "author": "generate_batch.py（フェーズ1）",
       "changes": "初版作成（20問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "73fbe64c04480a7d930276218c33ae7fefc99bac0393ddbd9f1bfc546fed1394"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ1）",
+      "changes": "MVPレビュー指摘R1対応（語順整序の文頭語を小文字化）：修正 2 問（Q013, Q014）",
+      "content_hash": "4c3b0fa8a9325b89e91abce030fd38bb7e1b24edebeb6fbf543b5b8651b9befc"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-10T04:17:42+00:00",
+    "validated_at": "2026-10-10T04:20:03+00:00",
     "validator_version": "1.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "a805c0e7cae9f490f1a5686d57d0b746ab405ea1cde0c9486480c8f497a3d42a"
+    "content_hash": "152e3752cf2f96b4fa24b6399340ecb9f67a4a520f917b9ae50a5c48debc27b9"
   }
 }

@@ -50,7 +50,7 @@
       "id": "ENG-4",
       "title": "英語　問4　語順整序",
       "subject": "english",
-      "instructions": "解答欄には、選択肢の番号を正しい順に書きなさい。"
+      "instructions": "解答欄には、選択肢の番号を正しい順に書きなさい。文頭にくる語も小文字で示してあります。"
     },
     {
       "id": "ENG-5",
@@ -1335,19 +1335,19 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "ordering",
-      "stem": "対話が成り立つように、（　）内の語句を並べかえなさい。\nA: (　　). \nB: Wow, it's beautiful!",
+      "stem": "対話が成り立つように、（　）内の語句を並べかえなさい。ただし、文頭にくる語も小文字で示してある。\nA: (　　). \nB: Wow, it's beautiful!",
       "choices": [
         {
           "label": "1",
-          "text": "I took"
+          "text": "a picture"
         },
         {
           "label": "2",
-          "text": "This is"
+          "text": "I took"
         },
         {
           "label": "3",
-          "text": "a picture"
+          "text": "this is"
         },
         {
           "label": "4",
@@ -1356,9 +1356,9 @@
       ],
       "answer": {
         "value": [
-          "2",
           "3",
           "1",
+          "2",
           "4"
         ]
       },
@@ -8088,14 +8088,21 @@
       "author": "generate_batch.py（フェーズ1）",
       "changes": "初版作成（130問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "1a06727947d52ce153680139a4d91784878ab358dcfa93cfef8251c7f1361493"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ1）",
+      "changes": "MVPレビュー指摘R1対応（語順整序の文頭語を小文字化）：修正 1 問（Q014）",
+      "content_hash": "0df4eb415f89f2cad12a03c2aec944376409329be2ae1832d4faecfaa4c6fa1b"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-10T04:17:42+00:00",
+    "validated_at": "2026-10-10T04:20:03+00:00",
     "validator_version": "1.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "56207b7a591ccd9274c3f2d752d51787a67a266720eaa53664d2b196b6cf2290"
+    "content_hash": "700d918f638abd0d79eb62c4402849cb1282b7e6aea008e586fc505532ea3827"
   }
 }

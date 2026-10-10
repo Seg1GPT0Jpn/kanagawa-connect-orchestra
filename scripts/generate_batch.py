@@ -235,7 +235,7 @@ def set_hash(data: dict) -> str:
     return hashlib.sha256(json.dumps(body, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
-def merge_with_existing(new: dict, path: Path, phase: int, today: str) -> tuple[dict, str]:
+def merge_with_existing(new: dict, path: Path, phase: int, today: str, note: str | None = None) -> tuple[dict, str]:
     """既存ファイルと比較して revision_history を更新する。戻り値の第2要素は変更概要。"""
     h = set_hash(new)
     if not path.exists():
@@ -277,9 +277,12 @@ def merge_with_existing(new: dict, path: Path, phase: int, today: str) -> tuple[
     for q in new["questions"]:
         if q["id"] in changed and q["verification"].get("status") in REVIEW_STATES:
             q["verification"] = {"status": "draft", "notes": "内容修正のため再レビューが必要"}
+    changes = "；".join(parts)
+    if note:
+        changes = f"{note}：{changes}"
     new["revision_history"] = hist + [{
         "version": version, "date": today, "author": f"{GENERATOR}（フェーズ{phase}）",
-        "changes": "；".join(parts), "content_hash": h,
+        "changes": changes, "content_hash": h,
     }]
     return new, "updated"
 
@@ -326,7 +329,7 @@ def load_specs(phase: int) -> list[dict]:
     return specs
 
 
-def run_phase(phase: int, only: set[str] | None, pdf: bool, tablet: bool, today: str) -> dict:
+def run_phase(phase: int, only: set[str] | None, pdf: bool, tablet: bool, today: str, note: str | None = None) -> dict:
     specs = load_specs(phase)
     if only:
         specs = [s for s in specs if s["set_id"] in only]
@@ -336,7 +339,7 @@ def run_phase(phase: int, only: set[str] | None, pdf: bool, tablet: bool, today:
     for spec in specs:
         path = (ROOT / spec["out"]).resolve()
         data = expand_set(spec)
-        data, state = merge_with_existing(data, path, phase, today)
+        data, state = merge_with_existing(data, path, phase, today, note)
         summary[state] += 1
         write_json(path, data)
         written.append(path)
@@ -401,10 +404,11 @@ def main(argv=None) -> int:
     ap.add_argument("--no-pdf", action="store_true", help="PDF をビルドしない")
     ap.add_argument("--tablet", action="store_true", help="タブレット版 PDF も生成する")
     ap.add_argument("--date", default=dt.date.today().isoformat(), help="変更履歴に記録する日付（既定: 今日）")
+    ap.add_argument("--note", help="変更履歴に記録する変更理由（例: レビュー指摘番号）")
     args = ap.parse_args(argv)
     ok = True
     for ph in args.phase:
-        r = run_phase(ph, set(args.only) if args.only else None, not args.no_pdf, args.tablet, args.date)
+        r = run_phase(ph, set(args.only) if args.only else None, not args.no_pdf, args.tablet, args.date, args.note)
         ok = ok and r["ok"]
     return 0 if ok else 1
 

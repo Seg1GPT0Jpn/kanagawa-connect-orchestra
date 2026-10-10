@@ -8,6 +8,16 @@
 {% block body %}
 {{ header(qs, 'answers', units) }}
 
+{% if subtotals | length > 1 %}
+<section class="section">
+  <h2>配点</h2>
+  <table class="answer-key subtotal">
+    <thead><tr><th>区分</th><th>問題数</th><th>配点</th></tr></thead>
+    <tbody>{% for t in subtotals %}<tr><td>{{ t.title }}</td><td class="pts">{{ t.count }}</td><td class="pts">{{ t.points | num }}</td></tr>{% endfor %}</tbody>
+  </table>
+</section>
+{% endif %}
+
 <section class="section">
   <h2>解答一覧</h2>
   <table class="answer-key">
@@ -20,8 +30,8 @@
         <td class="pts">{{ q.scoring.points | num }}</td>
       </tr>
     {% endfor %}{% endfor %}
+    {% if qs.total_points %}<tr class="total"><td class="num">合計</td><td></td><td class="pts">{{ qs.total_points | num }}</td></tr>{% endif %}
     </tbody>
-    {% if qs.total_points %}<tfoot><tr><td class="num">合計</td><td></td><td class="pts">{{ qs.total_points | num }}</td></tr></tfoot>{% endif %}
   </table>
 </section>
 
@@ -44,7 +54,7 @@
           <div class="q-body">
             <div class="q-recap">{{ q.stem | truncate_plain(90) | rich_inline }}</div>
             {% if q.stimulus and q.stimulus.type == 'listening_script' %}{{ stimulus_block(q.stimulus, 'answers') }}{% endif %}
-            <div><span class="label exp">解説</span>{{ q.explanation | rich_block }}</div>
+            <div class="exp-body"><span class="label exp">解説</span>{{ q.explanation | rich_block }}</div>
             {% if q.scoring.rubric %}
             <div><span class="label rub">採点基準</span>{% if q.scoring.method == 'partial' %}部分点あり{% else %}観点別{% endif %}
               <ul class="rubric">{% for r in q.scoring.rubric %}<li>{{ r.criterion | rich_inline }}（{{ r.points | num }}点）</li>{% endfor %}</ul>
