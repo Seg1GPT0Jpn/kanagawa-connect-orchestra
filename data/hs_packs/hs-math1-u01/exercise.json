@@ -1,0 +1,5505 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U01-EX",
+  "title": "数と式　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH1-U01-PACK",
+  "pair_set_id": "HS-MATH1-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G3-U01",
+        "point": "乗法公式・因数分解",
+        "title": "式の展開と因数分解"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U02",
+        "point": "平方根の計算",
+        "title": "平方根"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH1-U03",
+        "point": "平方完成・因数分解",
+        "title": "二次関数"
+      },
+      {
+        "unit_id": "HS-MATH2-U01",
+        "point": "整式の除法・恒等式",
+        "title": "式と証明"
+      }
+    ],
+    "readiness_check": [
+      "中学で学んだ乗法公式 $(a+b)^2,\\ (a+b)(a-b)$ と因数分解を使える。",
+      "平方根の計算（$\\sqrt{12}=2\\sqrt{3}$ など）と、分母の有理化 $\\dfrac{1}{\\sqrt{2}}=\\dfrac{\\sqrt{2}}{2}$ ができる。",
+      "一次方程式を移項して解ける。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を展開しなさい。　$(2x+2y)(2x-2y)$",
+      "answer": {
+        "value": "$4x^2-4y^2$"
+      },
+      "explanation": "$(2x+2y)(2x-2y)=4x^2-4y^2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "expand((2*x+2*y)*(2*x-2*y))",
+        "expected": "(4)*x**2+(-4)*y**2",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-expand_prod",
+      "explanation_detail": {
+        "approach": "和と差の積 $(p+q)(p-q)=p^2-q^2$ が使える形である。",
+        "steps": [
+          "$(p+q)(p-q)=p^2-q^2$ を使う。",
+          "$p^2=(2x)^2=4x^2$、$q^2=(2y)^2=4y^2$。",
+          "まとめて $4x^2-4y^2$。"
+        ],
+        "alternatives": [
+          "$x=1$（2文字なら $x=1,\\ y=1$）を元の式と答えの両方に代入し、値が一致するかで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式の選択・各項の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "同類項を正しくまとめている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2pq$ の項（中央の項）を落とす。",
+          "負の数の2乗・3乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を展開しなさい。　$(4x+3y)(4x-3y)$",
+      "answer": {
+        "value": "$16x^2-9y^2$"
+      },
+      "explanation": "$(4x+3y)(4x-3y)=16x^2-9y^2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "expand((4*x+3*y)*(4*x-3*y))",
+        "expected": "(16)*x**2+(-9)*y**2",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-expand_prod",
+      "explanation_detail": {
+        "approach": "和と差の積 $(p+q)(p-q)=p^2-q^2$ が使える形である。",
+        "steps": [
+          "$(p+q)(p-q)=p^2-q^2$ を使う。",
+          "$p^2=(4x)^2=16x^2$、$q^2=(3y)^2=9y^2$。",
+          "まとめて $16x^2-9y^2$。"
+        ],
+        "alternatives": [
+          "$x=1$（2文字なら $x=1,\\ y=1$）を元の式と答えの両方に代入し、値が一致するかで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式の選択・各項の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "同類項を正しくまとめている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2pq$ の項（中央の項）を落とす。",
+          "負の数の2乗・3乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を展開しなさい。　$(2x+3)^3$",
+      "answer": {
+        "value": "$8x^3+36x^2+54x+27$"
+      },
+      "explanation": "$(2x+3)^3=8x^3+36x^2+54x+27$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((2*x+(3))**3)",
+        "expected": "(8)*x**3+(36)*x**2+(54)*x+(27)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-expand_prod",
+      "explanation_detail": {
+        "approach": "3次の展開公式 $(p+q)^3=p^3+3p^2q+3pq^2+q^3$ を使う。",
+        "steps": [
+          "$p=2x,\\ q=3$ とする。",
+          "$p^3=8x^3$、$3p^2q=36x^2$、$3pq^2=54x$、$q^3=27$。",
+          "まとめて $8x^3+36x^2+54x+27$。"
+        ],
+        "alternatives": [
+          "$x=1$（2文字なら $x=1,\\ y=1$）を元の式と答えの両方に代入し、値が一致するかで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式の選択・各項の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "同類項を正しくまとめている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2pq$ の項（中央の項）を落とす。",
+          "負の数の2乗・3乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を展開しなさい。　$(x-6)(4x+3)$",
+      "answer": {
+        "value": "$4x^2-21x-18$"
+      },
+      "explanation": "$(x-6)(4x+3)=4x^2-21x-18$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "expand((1*x+(-6))*(4*x+(3)))",
+        "expected": "(4)*x**2+(-21)*x+(-18)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-expand_prod",
+      "explanation_detail": {
+        "approach": "分配法則で4つの積を作り、同類項 $x$ の項をまとめる。",
+        "steps": [
+          "$x^2$ の項：$x\\times 4x=4x^2$。",
+          "$x$ の項：$x\\times (3)+(-6)\\times 4x=-21x$。",
+          "定数項：$(-6)\\times (3)=-18$。",
+          "まとめて $4x^2-21x-18$。"
+        ],
+        "alternatives": [
+          "$x=1$（2文字なら $x=1,\\ y=1$）を元の式と答えの両方に代入し、値が一致するかで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式の選択・各項の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "同類項を正しくまとめている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2pq$ の項（中央の項）を落とす。",
+          "負の数の2乗・3乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を展開しなさい。　$(x-5)(4x-3)$",
+      "answer": {
+        "value": "$4x^2-23x+15$"
+      },
+      "explanation": "$(x-5)(4x-3)=4x^2-23x+15$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "expand((1*x+(-5))*(4*x+(-3)))",
+        "expected": "(4)*x**2+(-23)*x+(15)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-expand_prod",
+      "explanation_detail": {
+        "approach": "分配法則で4つの積を作り、同類項 $x$ の項をまとめる。",
+        "steps": [
+          "$x^2$ の項：$x\\times 4x=4x^2$。",
+          "$x$ の項：$x\\times (-3)+(-5)\\times 4x=-23x$。",
+          "定数項：$(-5)\\times (-3)=15$。",
+          "まとめて $4x^2-23x+15$。"
+        ],
+        "alternatives": [
+          "$x=1$（2文字なら $x=1,\\ y=1$）を元の式と答えの両方に代入し、値が一致するかで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式の選択・各項の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "同類項を正しくまとめている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2pq$ の項（中央の項）を落とす。",
+          "負の数の2乗・3乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を因数分解しなさい。　$2x^2+7x+6$",
+      "answer": {
+        "value": "$(2x+3)(x+2)$",
+        "accepted": [
+          "(x+2)(2x+3)"
+        ]
+      },
+      "explanation": "$2x^2+7x+6=(2x+3)(x+2)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(1*(2*x+(3))*(1*x+(2)))",
+        "expected": "(2)*x**2+(7)*x+(6)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_quad",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が $1$ でないので、たすき掛けで係数の組合せを探す。",
+        "steps": [
+          "$x^2$ の係数 $2$ を $2\\times 1$、定数項 $6$ を $(3)\\times (2)$ と分ける。",
+          "たすき掛け：$2\\times (2)+(3)\\times 1=7$ が $x$ の係数に一致する。",
+          "よって $(2x+3)(x+2)$。"
+        ],
+        "alternatives": [
+          "答えを展開して $2x^2+7x+6$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数の組合せを正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "最後まで因数分解して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の符号の組合せ（$+$ と $-$）を誤る。",
+          "共通因数をくくり出し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を因数分解しなさい。　$2x^2+4x-30$",
+      "answer": {
+        "value": "$2(x-3)(x+5)$",
+        "accepted": [
+          "2(x+5)(x-3)"
+        ]
+      },
+      "explanation": "$2x^2+4x-30=2(x-3)(x+5)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(2*(1*x+(-3))*(1*x+(5)))",
+        "expected": "(2)*x**2+(4)*x+(-30)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_quad",
+      "explanation_detail": {
+        "approach": "すべての項に共通な因数があるので、最初にくくり出してから因数分解する。",
+        "steps": [
+          "まず共通因数 $2$ をくくり出す：$2(x^2+2x-15)$。",
+          "かっこの中は、積が $-15$、和が $2$ の2数 $-3,\\ 5$ で因数分解できる。",
+          "よって $2(x-3)(x+5)$。"
+        ],
+        "alternatives": [
+          "答えを展開して $2x^2+4x-30$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数の組合せを正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "最後まで因数分解して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の符号の組合せ（$+$ と $-$）を誤る。",
+          "共通因数をくくり出し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を因数分解しなさい。　$-2x^2-12x-10$",
+      "answer": {
+        "value": "$-2(x+1)(x+5)$",
+        "accepted": [
+          "-2(x+5)(x+1)"
+        ]
+      },
+      "explanation": "$-2x^2-12x-10=-2(x+1)(x+5)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(-2*(1*x+(1))*(1*x+(5)))",
+        "expected": "(-2)*x**2+(-12)*x+(-10)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_quad",
+      "explanation_detail": {
+        "approach": "すべての項に共通な因数があるので、最初にくくり出してから因数分解する。",
+        "steps": [
+          "まず共通因数 $-2$ をくくり出す：$-2(x^2+6x+5)$。",
+          "かっこの中は、積が $5$、和が $6$ の2数 $1,\\ 5$ で因数分解できる。",
+          "よって $-2(x+1)(x+5)$。"
+        ],
+        "alternatives": [
+          "答えを展開して $-2x^2-12x-10$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数の組合せを正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "最後まで因数分解して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の符号の組合せ（$+$ と $-$）を誤る。",
+          "共通因数をくくり出し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を因数分解しなさい。　$-2x^2+2$",
+      "answer": {
+        "value": "$-2(x-1)(x+1)$",
+        "accepted": [
+          "-2(x+1)(x-1)"
+        ]
+      },
+      "explanation": "$-2x^2+2=-2(x-1)(x+1)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(-2*(1*x+(-1))*(1*x+(1)))",
+        "expected": "(-2)*x**2+(0)*x+(2)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_quad",
+      "explanation_detail": {
+        "approach": "すべての項に共通な因数があるので、最初にくくり出してから因数分解する。",
+        "steps": [
+          "まず共通因数 $-2$ をくくり出す：$-2(x^2-1)$。",
+          "かっこの中は、積が $-1$、和が $0$ の2数 $-1,\\ 1$ で因数分解できる。",
+          "よって $-2(x-1)(x+1)$。"
+        ],
+        "alternatives": [
+          "答えを展開して $-2x^2+2$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数の組合せを正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "最後まで因数分解して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の符号の組合せ（$+$ と $-$）を誤る。",
+          "共通因数をくくり出し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を因数分解しなさい。　$x^2-x-30$",
+      "answer": {
+        "value": "$(x-6)(x+5)$",
+        "accepted": [
+          "(x+5)(x-6)"
+        ]
+      },
+      "explanation": "$x^2-x-30=(x-6)(x+5)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(1*(1*x+(-6))*(1*x+(5)))",
+        "expected": "(1)*x**2+(-1)*x+(-30)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_quad",
+      "explanation_detail": {
+        "approach": "$x^2$ の係数が $1$ なので、積が定数項・和が $x$ の係数になる2数を探す。",
+        "steps": [
+          "積が $-30$、和が $-1$ となる2数を探すと $-6,\\ 5$。",
+          "よって $(x-6)(x+5)$。"
+        ],
+        "alternatives": [
+          "答えを展開して $x^2-x-30$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数の組合せを正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "最後まで因数分解して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の符号の組合せ（$+$ と $-$）を誤る。",
+          "共通因数をくくり出し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の数の分母を有理化して、できるだけ簡単な形で答えなさい。　$\\dfrac{6}{\\sqrt{11}-\\sqrt{5}}$",
+      "answer": {
+        "value": "$\\sqrt{11}+\\sqrt{5}$"
+      },
+      "explanation": "$\\dfrac{6}{\\sqrt{11}-\\sqrt{5}}=\\sqrt{11}+\\sqrt{5}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "6/(sqrt(11)-sqrt(5))",
+        "expected": "Rational(6,6)*(sqrt(11)+sqrt(5))"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-rationalize",
+      "explanation_detail": {
+        "approach": "分母が $\\sqrt{5}$ を含む和・差の形なので、和と差の積 $(p+q)(p-q)=p^2-q^2$ で根号を消す。",
+        "steps": [
+          "分母・分子に $\\sqrt{11}+\\sqrt{5}$ をかける。",
+          "分母は $(\\sqrt{11})^2-(\\sqrt{5})^2=11-5=6$。",
+          "$\\dfrac{6(\\sqrt{11}+\\sqrt{5})}{6}=\\sqrt{11}+\\sqrt{5}$。"
+        ],
+        "alternatives": [
+          "電卓的な概算（$\\sqrt{2}\\fallingdotseq1.414,\\ \\sqrt{3}\\fallingdotseq1.732$ など）で、有理化の前後の値がほぼ等しいことを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数を分母・分子にかけている",
+            "points": 1
+          },
+          {
+            "point": "約分まで正しく行っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分子にかけ忘れる（分母だけにかける）。",
+          "分母の計算で $(\\sqrt{a})^2=a$ とせず $2a$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の数の分母を有理化して、できるだけ簡単な形で答えなさい。　$\\dfrac{8}{\\sqrt{6}}$",
+      "answer": {
+        "value": "$\\dfrac{4\\sqrt{6}}{3}$"
+      },
+      "explanation": "$\\dfrac{8}{\\sqrt{6}}=\\dfrac{4\\sqrt{6}}{3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "8/sqrt(6)",
+        "expected": "Rational(8,6)*sqrt(6)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-rationalize",
+      "explanation_detail": {
+        "approach": "分母の $\\sqrt{6}$ は、それ自身をかけると根号が消える。",
+        "steps": [
+          "分母・分子に $\\sqrt{6}$ をかける：$\\dfrac{8\\sqrt{6}}{6}$。",
+          "約分して $\\dfrac{4\\sqrt{6}}{3}$。"
+        ],
+        "alternatives": [
+          "電卓的な概算（$\\sqrt{2}\\fallingdotseq1.414,\\ \\sqrt{3}\\fallingdotseq1.732$ など）で、有理化の前後の値がほぼ等しいことを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数を分母・分子にかけている",
+            "points": 1
+          },
+          {
+            "point": "約分まで正しく行っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分子にかけ忘れる（分母だけにかける）。",
+          "分母の計算で $(\\sqrt{a})^2=a$ とせず $2a$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の数の分母を有理化して、できるだけ簡単な形で答えなさい。　$\\dfrac{4}{\\sqrt{3}}$",
+      "answer": {
+        "value": "$\\dfrac{4\\sqrt{3}}{3}$"
+      },
+      "explanation": "$\\dfrac{4}{\\sqrt{3}}=\\dfrac{4\\sqrt{3}}{3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4/sqrt(3)",
+        "expected": "Rational(4,3)*sqrt(3)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-rationalize",
+      "explanation_detail": {
+        "approach": "分母の $\\sqrt{3}$ は、それ自身をかけると根号が消える。",
+        "steps": [
+          "分母・分子に $\\sqrt{3}$ をかける：$\\dfrac{4\\sqrt{3}}{3}$。",
+          "これ以上約分できないので $\\dfrac{4\\sqrt{3}}{3}$。"
+        ],
+        "alternatives": [
+          "電卓的な概算（$\\sqrt{2}\\fallingdotseq1.414,\\ \\sqrt{3}\\fallingdotseq1.732$ など）で、有理化の前後の値がほぼ等しいことを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数を分母・分子にかけている",
+            "points": 1
+          },
+          {
+            "point": "約分まで正しく行っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分子にかけ忘れる（分母だけにかける）。",
+          "分母の計算で $(\\sqrt{a})^2=a$ とせず $2a$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の数の分母を有理化して、できるだけ簡単な形で答えなさい。　$\\dfrac{5}{\\sqrt{6}}$",
+      "answer": {
+        "value": "$\\dfrac{5\\sqrt{6}}{6}$"
+      },
+      "explanation": "$\\dfrac{5}{\\sqrt{6}}=\\dfrac{5\\sqrt{6}}{6}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "5/sqrt(6)",
+        "expected": "Rational(5,6)*sqrt(6)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-rationalize",
+      "explanation_detail": {
+        "approach": "分母の $\\sqrt{6}$ は、それ自身をかけると根号が消える。",
+        "steps": [
+          "分母・分子に $\\sqrt{6}$ をかける：$\\dfrac{5\\sqrt{6}}{6}$。",
+          "これ以上約分できないので $\\dfrac{5\\sqrt{6}}{6}$。"
+        ],
+        "alternatives": [
+          "電卓的な概算（$\\sqrt{2}\\fallingdotseq1.414,\\ \\sqrt{3}\\fallingdotseq1.732$ など）で、有理化の前後の値がほぼ等しいことを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数を分母・分子にかけている",
+            "points": 1
+          },
+          {
+            "point": "約分まで正しく行っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分子にかけ忘れる（分母だけにかける）。",
+          "分母の計算で $(\\sqrt{a})^2=a$ とせず $2a$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$|1-\\sqrt{6}|$ を絶対値記号を使わずに表したものとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$1-\\sqrt{6}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\sqrt{6}-1$"
+        },
+        {
+          "label": "ウ",
+          "text": "$-1-\\sqrt{6}$"
+        },
+        {
+          "label": "エ",
+          "text": "$1+\\sqrt{6}$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$2^2=4<6<9=3^2$ より $2<\\sqrt{6}<3$。中身 $1-\\sqrt{6}$ は負。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Abs(1-sqrt(6))",
+        "expected": "sqrt(6)-1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_remove",
+      "explanation_detail": {
+        "approach": "絶対値をはずすには、まず中身が正か負かを調べる。正ならそのまま、負なら全体に $-1$ をかける。",
+        "steps": [
+          "中身の符号を調べる。",
+          "$2^2=4<6<9=3^2$ より $2<\\sqrt{6}<3$。中身 $1-\\sqrt{6}$ は負。",
+          "答えは $\\sqrt{6}-1$。"
+        ],
+        "alternatives": [
+          "条件に合う具体的な値を1つ代入し、元の式と選択肢の値が等しいかを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の符号を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく絶対値をはずしている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "中身の符号を逆に判断している。$\\sqrt{6}$ の大きさを整数ではさんで確かめる必要がある。",
+          "misconception": "中身の符号の判定もれ"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "中身全体に $-1$ をかけると $\\sqrt{6}-1$ であり、$-1-\\sqrt{6}$ にはならない。",
+          "misconception": "符号の分配の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "絶対値をはずすときに、項ごとに符号を正にしてはいけない。中身全体の符号で判断する。",
+          "misconception": "各項を正にすれば絶対値がはずれるという誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$|5-\\sqrt{19}|$ を絶対値記号を使わずに表したものとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$-5-\\sqrt{19}$"
+        },
+        {
+          "label": "イ",
+          "text": "$5-\\sqrt{19}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$5+\\sqrt{19}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\sqrt{19}-5$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$4^2=16<19<25=5^2$ より $4<\\sqrt{19}<5$。中身 $5-\\sqrt{19}$ は正。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Abs(5-sqrt(19))",
+        "expected": "5-sqrt(19)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_remove",
+      "explanation_detail": {
+        "approach": "絶対値をはずすには、まず中身が正か負かを調べる。正ならそのまま、負なら全体に $-1$ をかける。",
+        "steps": [
+          "中身の符号を調べる。",
+          "$4^2=16<19<25=5^2$ より $4<\\sqrt{19}<5$。中身 $5-\\sqrt{19}$ は正。",
+          "答えは $5-\\sqrt{19}$。"
+        ],
+        "alternatives": [
+          "条件に合う具体的な値を1つ代入し、元の式と選択肢の値が等しいかを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の符号を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく絶対値をはずしている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "中身全体に $-1$ をかけると $\\sqrt{19}-5$ であり、$-5-\\sqrt{19}$ にはならない。",
+          "misconception": "符号の分配の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "絶対値をはずすときに、項ごとに符号を正にしてはいけない。中身全体の符号で判断する。",
+          "misconception": "各項を正にすれば絶対値がはずれるという誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "中身の符号を逆に判断している。$\\sqrt{19}$ の大きさを整数ではさんで確かめる必要がある。",
+          "misconception": "中身の符号の判定もれ"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$-6<x<5$ のとき、$|x-5|+|x+6|$ を絶対値記号を使わずに表したものとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$-2x-1$"
+        },
+        {
+          "label": "イ",
+          "text": "$11$"
+        },
+        {
+          "label": "ウ",
+          "text": "$2x+1$"
+        },
+        {
+          "label": "エ",
+          "text": "$-11$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$x-5<0$、$x+6>0$ なので、$-(x-5)+(x+6)=11$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Abs(Rational(-1,2)-5)+Abs(Rational(-1,2)+6)",
+        "expected": "11",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_remove",
+      "explanation_detail": {
+        "approach": "絶対値をはずすには、まず中身が正か負かを調べる。正ならそのまま、負なら全体に $-1$ をかける。",
+        "steps": [
+          "中身の符号を調べる。",
+          "$x-5<0$、$x+6>0$ なので、$-(x-5)+(x+6)=11$。",
+          "答えは $11$。"
+        ],
+        "alternatives": [
+          "条件に合う具体的な値を1つ代入し、元の式と選択肢の値が等しいかを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の符号を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく絶対値をはずしている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$|x+6|$ の中身は正なので符号を変えてはいけない。",
+          "misconception": "中身の符号の判断の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$|x-5|$ の中身が負であることを見落とし、そのまま $x-5$ としている。",
+          "misconception": "中身の符号の確認もれ"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "両方の中身の符号を逆に判断している。絶対値の値は負にならない。",
+          "misconception": "絶対値は 0 以上という性質の無視"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての一次不等式 $-3(x+3)\\geqq -5x-6$ を解きなさい。",
+      "answer": {
+        "value": "$x\\geqq \\dfrac{3}{2}$"
+      },
+      "explanation": "$2x\\geqq 3$ より $x\\geqq \\dfrac{3}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve((2)*x-(3), x)",
+        "expected": "[Rational(3,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-linear_ineq",
+      "explanation_detail": {
+        "approach": "移項して $ax\\ (\\text{不等号})\\ b$ の形にし、$x$ の係数 $a$ の正負に注意して両辺を割る。",
+        "steps": [
+          "かっこをはずす：$-3x-9\\geqq -5x-6$。",
+          "$x$ の項を左辺、定数項を右辺に移項する：$2x\\geqq 3$。",
+          "両辺を $2$ で割る。$x\\geqq \\dfrac{3}{2}$。"
+        ],
+        "alternatives": [
+          "境目 $x=\\dfrac{3}{2}$ を求めたあと、境目以外の値を1つ元の不等式に代入して成り立つかを調べ、解の向きを確かめることもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "移項して正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き（負の数で割るとき）を正しく扱っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数で割るときに不等号の向きを変え忘れる。",
+          "移項するときに符号を変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての一次不等式 $-3(x+1)>-5x-5$ を解きなさい。",
+      "answer": {
+        "value": "$x>-1$"
+      },
+      "explanation": "$2x>-2$ より $x>-1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve((2)*x-(-2), x)",
+        "expected": "[-1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-linear_ineq",
+      "explanation_detail": {
+        "approach": "移項して $ax\\ (\\text{不等号})\\ b$ の形にし、$x$ の係数 $a$ の正負に注意して両辺を割る。",
+        "steps": [
+          "かっこをはずす：$-3x-3>-5x-5$。",
+          "$x$ の項を左辺、定数項を右辺に移項する：$2x>-2$。",
+          "両辺を $2$ で割る。$x>-1$。"
+        ],
+        "alternatives": [
+          "境目 $x=-1$ を求めたあと、境目以外の値を1つ元の不等式に代入して成り立つかを調べ、解の向きを確かめることもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "移項して正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き（負の数で割るとき）を正しく扱っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数で割るときに不等号の向きを変え忘れる。",
+          "移項するときに符号を変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての一次不等式 $6x-7\\leqq -3x+6$ を解きなさい。",
+      "answer": {
+        "value": "$x\\leqq \\dfrac{13}{9}$"
+      },
+      "explanation": "$9x\\leqq 13$ より $x\\leqq \\dfrac{13}{9}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve((9)*x-(13), x)",
+        "expected": "[Rational(13,9)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-linear_ineq",
+      "explanation_detail": {
+        "approach": "移項して $ax\\ (\\text{不等号})\\ b$ の形にし、$x$ の係数 $a$ の正負に注意して両辺を割る。",
+        "steps": [
+          "$x$ の項を左辺、定数項を右辺に移項する：$9x\\leqq 13$。",
+          "両辺を $9$ で割る。$x\\leqq \\dfrac{13}{9}$。"
+        ],
+        "alternatives": [
+          "境目 $x=\\dfrac{13}{9}$ を求めたあと、境目以外の値を1つ元の不等式に代入して成り立つかを調べ、解の向きを確かめることもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "移項して正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向き（負の数で割るとき）を正しく扱っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数で割るときに不等号の向きを変え忘れる。",
+          "移項するときに符号を変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "公式を利用して、次の式を因数分解しなさい。　$8x^3+1$",
+      "answer": {
+        "value": "$(2x+1)(4x^2-2x+1)$",
+        "accepted": [
+          "(2x+1)(4x^2-2x+1)"
+        ]
+      },
+      "explanation": "$a=2x,\\ b=1$ として $a^3+b^3=(a+b)(a^2-ab+b^2)$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((2*x+(1)*1)*(4*x**2+(-2)*x*1+1*1**2))",
+        "expected": "(8)*x**3+(1)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_cubic",
+      "explanation_detail": {
+        "approach": "各項が「何かの3乗」になっているかを見る。$8x^3=(2x)^3$、$1=(1)^3$ と書けるので3乗の公式が使える。",
+        "steps": [
+          "$8x^3+1=(2x)^3+(1)^3$ と見る。",
+          "公式 $a^3+b^3=(a+b)(a^2-ab+b^2)$ に $a=2x,\\ b=1$ を代入する。",
+          "$a^2=4x^2$ などを計算して $(2x+1)(4x^2-2x+1)$。"
+        ],
+        "alternatives": [
+          "答えを展開すると、中央の項が打ち消し合って $8x^3+1$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3乗の形に正しく書き直している",
+            "points": 1
+          },
+          {
+            "point": "公式の符号を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "2つ目の因数を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2つ目の因数の中央の符号を1つ目と同じにしてしまう。",
+          "$1$ の2乗を計算し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "公式を利用して、次の式を因数分解しなさい。　$27x^3+64y^3$",
+      "answer": {
+        "value": "$(3x+4y)(9x^2-12xy+16y^2)$",
+        "accepted": [
+          "(3x+4y)(9x^2-12xy+16y^2)"
+        ]
+      },
+      "explanation": "$a=3x,\\ b=4y$ として $a^3+b^3=(a+b)(a^2-ab+b^2)$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((3*x+(4)*y)*(9*x**2+(-12)*x*y+16*y**2))",
+        "expected": "(27)*x**3+(64)*y**3",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_cubic",
+      "explanation_detail": {
+        "approach": "各項が「何かの3乗」になっているかを見る。$27x^3=(3x)^3$、$64y^3=(4y)^3$ と書けるので3乗の公式が使える。",
+        "steps": [
+          "$27x^3+64y^3=(3x)^3+(4y)^3$ と見る。",
+          "公式 $a^3+b^3=(a+b)(a^2-ab+b^2)$ に $a=3x,\\ b=4y$ を代入する。",
+          "$a^2=9x^2$ などを計算して $(3x+4y)(9x^2-12xy+16y^2)$。"
+        ],
+        "alternatives": [
+          "答えを展開すると、中央の項が打ち消し合って $27x^3+64y^3$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3乗の形に正しく書き直している",
+            "points": 1
+          },
+          {
+            "point": "公式の符号を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "2つ目の因数を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2つ目の因数の中央の符号を1つ目と同じにしてしまう。",
+          "$4y$ の2乗を計算し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "公式を利用して、次の式を因数分解しなさい。　$27x^3-y^3$",
+      "answer": {
+        "value": "$(3x-y)(9x^2+3xy+y^2)$",
+        "accepted": [
+          "(3x-y)(9x^2+3xy+y^2)"
+        ]
+      },
+      "explanation": "$a=3x,\\ b=y$ として $a^3-b^3=(a-b)(a^2+ab+b^2)$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((3*x+(-1)*y)*(9*x**2+(3)*x*y+1*y**2))",
+        "expected": "(27)*x**3+(-1)*y**3",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_cubic",
+      "explanation_detail": {
+        "approach": "各項が「何かの3乗」になっているかを見る。$27x^3=(3x)^3$、$1y^3=(y)^3$ と書けるので3乗の公式が使える。",
+        "steps": [
+          "$27x^3-y^3=(3x)^3-(y)^3$ と見る。",
+          "公式 $a^3-b^3=(a-b)(a^2+ab+b^2)$ に $a=3x,\\ b=y$ を代入する。",
+          "$a^2=9x^2$ などを計算して $(3x-y)(9x^2+3xy+y^2)$。"
+        ],
+        "alternatives": [
+          "答えを展開すると、中央の項が打ち消し合って $27x^3-y^3$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3乗の形に正しく書き直している",
+            "points": 1
+          },
+          {
+            "point": "公式の符号を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "2つ目の因数を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2つ目の因数の中央の符号を1つ目と同じにしてしまう。",
+          "$y$ の2乗を計算し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "公式を利用して、次の式を因数分解しなさい。　$27x^3-125$",
+      "answer": {
+        "value": "$(3x-5)(9x^2+15x+25)$",
+        "accepted": [
+          "(3x-5)(9x^2+15x+25)"
+        ]
+      },
+      "explanation": "$a=3x,\\ b=5$ として $a^3-b^3=(a-b)(a^2+ab+b^2)$ を使う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((3*x+(-5)*1)*(9*x**2+(15)*x*1+25*1**2))",
+        "expected": "(27)*x**3+(-125)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_cubic",
+      "explanation_detail": {
+        "approach": "各項が「何かの3乗」になっているかを見る。$27x^3=(3x)^3$、$125=(5)^3$ と書けるので3乗の公式が使える。",
+        "steps": [
+          "$27x^3-125=(3x)^3-(5)^3$ と見る。",
+          "公式 $a^3-b^3=(a-b)(a^2+ab+b^2)$ に $a=3x,\\ b=5$ を代入する。",
+          "$a^2=9x^2$ などを計算して $(3x-5)(9x^2+15x+25)$。"
+        ],
+        "alternatives": [
+          "答えを展開すると、中央の項が打ち消し合って $27x^3-125$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3乗の形に正しく書き直している",
+            "points": 1
+          },
+          {
+            "point": "公式の符号を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "2つ目の因数を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2つ目の因数の中央の符号を1つ目と同じにしてしまう。",
+          "$5$ の2乗を計算し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を、$x$ について整理してから因数分解しなさい。　$x^2+xy-6y^2-3x+11y-4$",
+      "answer": {
+        "value": "$(x+3y-4)(x-2y+1)$",
+        "accepted": [
+          "(x-2y+1)(x+3y-4)"
+        ]
+      },
+      "explanation": "$x$ について整理すると $x^2+(y-3)x+(-6y^2+11y-4)$。定数項は $(3y-4)(-2y+1)$ と因数分解できる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((x+(3)*y+(-4))*(x+(-2)*y+(1)))",
+        "expected": "(1)*x**2+(1)*x*y+(-6)*y**2+(-3)*x+(11)*y+(-4)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_two_var",
+      "explanation_detail": {
+        "approach": "2文字を含む2次式は、次数の低い文字に限らず、1つの文字（ここでは $x$）について整理し、残りを係数とみなして因数分解する。",
+        "steps": [
+          "$x$ について整理：$x^2+(y-3)x+(-6y^2+11y-4)$。",
+          "定数項（$y$ の式）を因数分解：$(-6y^2+11y-4)=(3y-4)(-2y+1)$。",
+          "和が $x$ の係数 $y-3$ になることを確かめ、$(x+3y-4)(x-2y+1)$。"
+        ],
+        "alternatives": [
+          "$y$ について整理しても同じ結果になる。また、答えを展開して元の式に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ について正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "$y$ の式の部分を正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "全体の因数分解が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "整理するときに $xy$ の項を $x$ の係数に入れ忘れる。",
+          "定数項の部分の因数分解の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を、$x$ について整理してから因数分解しなさい。　$x^2-xy-6y^2-x-7y-2$",
+      "answer": {
+        "value": "$(x-3y-2)(x+2y+1)$",
+        "accepted": [
+          "(x+2y+1)(x-3y-2)"
+        ]
+      },
+      "explanation": "$x$ について整理すると $x^2+(-y-1)x+(-6y^2-7y-2)$。定数項は $(-3y-2)(2y+1)$ と因数分解できる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((x+(-3)*y+(-2))*(x+(2)*y+(1)))",
+        "expected": "(1)*x**2+(-1)*x*y+(-6)*y**2+(-1)*x+(-7)*y+(-2)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_two_var",
+      "explanation_detail": {
+        "approach": "2文字を含む2次式は、次数の低い文字に限らず、1つの文字（ここでは $x$）について整理し、残りを係数とみなして因数分解する。",
+        "steps": [
+          "$x$ について整理：$x^2+(-y-1)x+(-6y^2-7y-2)$。",
+          "定数項（$y$ の式）を因数分解：$(-6y^2-7y-2)=(-3y-2)(2y+1)$。",
+          "和が $x$ の係数 $-y-1$ になることを確かめ、$(x-3y-2)(x+2y+1)$。"
+        ],
+        "alternatives": [
+          "$y$ について整理しても同じ結果になる。また、答えを展開して元の式に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ について正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "$y$ の式の部分を正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "全体の因数分解が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "整理するときに $xy$ の項を $x$ の係数に入れ忘れる。",
+          "定数項の部分の因数分解の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を、$x$ について整理してから因数分解しなさい。　$x^2+3xy+2y^2-3x-5y+2$",
+      "answer": {
+        "value": "$(x+y-2)(x+2y-1)$",
+        "accepted": [
+          "(x+2y-1)(x+y-2)"
+        ]
+      },
+      "explanation": "$x$ について整理すると $x^2+(3y-3)x+(2y^2-5y+2)$。定数項は $(y-2)(2y-1)$ と因数分解できる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((x+(1)*y+(-2))*(x+(2)*y+(-1)))",
+        "expected": "(1)*x**2+(3)*x*y+(2)*y**2+(-3)*x+(-5)*y+(2)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_two_var",
+      "explanation_detail": {
+        "approach": "2文字を含む2次式は、次数の低い文字に限らず、1つの文字（ここでは $x$）について整理し、残りを係数とみなして因数分解する。",
+        "steps": [
+          "$x$ について整理：$x^2+(3y-3)x+(2y^2-5y+2)$。",
+          "定数項（$y$ の式）を因数分解：$(2y^2-5y+2)=(y-2)(2y-1)$。",
+          "和が $x$ の係数 $3y-3$ になることを確かめ、$(x+y-2)(x+2y-1)$。"
+        ],
+        "alternatives": [
+          "$y$ について整理しても同じ結果になる。また、答えを展開して元の式に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ について正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "$y$ の式の部分を正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "全体の因数分解が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "整理するときに $xy$ の項を $x$ の係数に入れ忘れる。",
+          "定数項の部分の因数分解の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式を、$x$ について整理してから因数分解しなさい。　$x^2-4xy+3y^2+5x-9y+6$",
+      "answer": {
+        "value": "$(x-3y+3)(x-y+2)$",
+        "accepted": [
+          "(x-y+2)(x-3y+3)"
+        ]
+      },
+      "explanation": "$x$ について整理すると $x^2+(-4y+5)x+(3y^2-9y+6)$。定数項は $(-3y+3)(-y+2)$ と因数分解できる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((x+(-3)*y+(3))*(x+(-1)*y+(2)))",
+        "expected": "(1)*x**2+(-4)*x*y+(3)*y**2+(5)*x+(-9)*y+(6)*1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-factor_two_var",
+      "explanation_detail": {
+        "approach": "2文字を含む2次式は、次数の低い文字に限らず、1つの文字（ここでは $x$）について整理し、残りを係数とみなして因数分解する。",
+        "steps": [
+          "$x$ について整理：$x^2+(-4y+5)x+(3y^2-9y+6)$。",
+          "定数項（$y$ の式）を因数分解：$(3y^2-9y+6)=(-3y+3)(-y+2)$。",
+          "和が $x$ の係数 $-4y+5$ になることを確かめ、$(x-3y+3)(x-y+2)$。"
+        ],
+        "alternatives": [
+          "$y$ について整理しても同じ結果になる。また、答えを展開して元の式に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ について正しく整理している",
+            "points": 1
+          },
+          {
+            "point": "$y$ の式の部分を正しく因数分解している",
+            "points": 1
+          },
+          {
+            "point": "全体の因数分解が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "整理するときに $xy$ の項を $x$ の係数に入れ忘れる。",
+          "定数項の部分の因数分解の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x=\\dfrac{\\sqrt{3}+1}{\\sqrt{3}-1},\\ y=\\dfrac{\\sqrt{3}-1}{\\sqrt{3}+1}$ のとき、$x^3+y^3$ の値を求めなさい。",
+      "answer": {
+        "value": "52"
+      },
+      "explanation": "$x+y=4,\\ xy=1$。$x^3+y^3=(x+y)^3-3xy(x+y)=64-12=52$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((sqrt(3)+sqrt(1))/(sqrt(3)-sqrt(1)))**3+((sqrt(3)-sqrt(1))/(sqrt(3)+sqrt(1)))**3",
+        "expected": "52"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-symmetric",
+      "explanation_detail": {
+        "approach": "$x,\\ y$ を直接代入すると計算が重い。$x,\\ y$ を入れかえても変わらない式（対称式）は、基本対称式 $x+y,\\ xy$ で表せるので、先にこの2つを求める。",
+        "steps": [
+          "$x$ と $y$ は互いに逆数なので $xy=1$。",
+          "$x+y=\\dfrac{(\\sqrt{3}+1)^2+(\\sqrt{3}-1)^2}{3-1}=\\dfrac{8}{2}=4$。",
+          "$x^3+y^3=(x+y)^3-3xy(x+y)=64-12=52$。"
+        ],
+        "alternatives": [
+          "$x$ を有理化して $x=\\dfrac{(\\sqrt{3}+1)^2}{2}$ と表し、直接計算しても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x+y$ と $xy$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "対称式を基本対称式で表して値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+y$ を求めるときに通分で分母を $(\\sqrt{a}-\\sqrt{b})(\\sqrt{a}+\\sqrt{b})=a-b$ とせず誤る。",
+          "$x^3+y^3=(x+y)^3-3xy(x+y)$ の $-3xy(x+y)$ を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x=\\dfrac{\\sqrt{3}+\\sqrt{2}}{\\sqrt{3}-\\sqrt{2}},\\ y=\\dfrac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}}$ のとき、$x^3+y^3$ の値を求めなさい。",
+      "answer": {
+        "value": "970"
+      },
+      "explanation": "$x+y=10,\\ xy=1$。$x^3+y^3=(x+y)^3-3xy(x+y)=1000-30=970$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((sqrt(3)+sqrt(2))/(sqrt(3)-sqrt(2)))**3+((sqrt(3)-sqrt(2))/(sqrt(3)+sqrt(2)))**3",
+        "expected": "970"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-symmetric",
+      "explanation_detail": {
+        "approach": "$x,\\ y$ を直接代入すると計算が重い。$x,\\ y$ を入れかえても変わらない式（対称式）は、基本対称式 $x+y,\\ xy$ で表せるので、先にこの2つを求める。",
+        "steps": [
+          "$x$ と $y$ は互いに逆数なので $xy=1$。",
+          "$x+y=\\dfrac{(\\sqrt{3}+\\sqrt{2})^2+(\\sqrt{3}-\\sqrt{2})^2}{3-2}=\\dfrac{10}{1}=10$。",
+          "$x^3+y^3=(x+y)^3-3xy(x+y)=1000-30=970$。"
+        ],
+        "alternatives": [
+          "$x$ を有理化して $x=\\dfrac{(\\sqrt{3}+\\sqrt{2})^2}{1}$ と表し、直接計算しても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x+y$ と $xy$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "対称式を基本対称式で表して値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+y$ を求めるときに通分で分母を $(\\sqrt{a}-\\sqrt{b})(\\sqrt{a}+\\sqrt{b})=a-b$ とせず誤る。",
+          "$x^3+y^3=(x+y)^3-3xy(x+y)$ の $-3xy(x+y)$ を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x=\\dfrac{\\sqrt{5}+1}{\\sqrt{5}-1},\\ y=\\dfrac{\\sqrt{5}-1}{\\sqrt{5}+1}$ のとき、$x^2+y^2$ の値を求めなさい。",
+      "answer": {
+        "value": "7"
+      },
+      "explanation": "$x+y=3,\\ xy=1$。$x^2+y^2=(x+y)^2-2xy=9-2=7$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((sqrt(5)+sqrt(1))/(sqrt(5)-sqrt(1)))**2+((sqrt(5)-sqrt(1))/(sqrt(5)+sqrt(1)))**2",
+        "expected": "7"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-symmetric",
+      "explanation_detail": {
+        "approach": "$x,\\ y$ を直接代入すると計算が重い。$x,\\ y$ を入れかえても変わらない式（対称式）は、基本対称式 $x+y,\\ xy$ で表せるので、先にこの2つを求める。",
+        "steps": [
+          "$x$ と $y$ は互いに逆数なので $xy=1$。",
+          "$x+y=\\dfrac{(\\sqrt{5}+1)^2+(\\sqrt{5}-1)^2}{5-1}=\\dfrac{12}{4}=3$。",
+          "$x^2+y^2=(x+y)^2-2xy=9-2=7$。"
+        ],
+        "alternatives": [
+          "$x$ を有理化して $x=\\dfrac{(\\sqrt{5}+1)^2}{4}$ と表し、直接計算しても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x+y$ と $xy$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "対称式を基本対称式で表して値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+y$ を求めるときに通分で分母を $(\\sqrt{a}-\\sqrt{b})(\\sqrt{a}+\\sqrt{b})=a-b$ とせず誤る。",
+          "$x^3+y^3=(x+y)^3-3xy(x+y)$ の $-3xy(x+y)$ を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x=\\dfrac{\\sqrt{6}+\\sqrt{5}}{\\sqrt{6}-\\sqrt{5}},\\ y=\\dfrac{\\sqrt{6}-\\sqrt{5}}{\\sqrt{6}+\\sqrt{5}}$ のとき、$x^2+y^2$ の値を求めなさい。",
+      "answer": {
+        "value": "482"
+      },
+      "explanation": "$x+y=22,\\ xy=1$。$x^2+y^2=(x+y)^2-2xy=484-2=482$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((sqrt(6)+sqrt(5))/(sqrt(6)-sqrt(5)))**2+((sqrt(6)-sqrt(5))/(sqrt(6)+sqrt(5)))**2",
+        "expected": "482"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-symmetric",
+      "explanation_detail": {
+        "approach": "$x,\\ y$ を直接代入すると計算が重い。$x,\\ y$ を入れかえても変わらない式（対称式）は、基本対称式 $x+y,\\ xy$ で表せるので、先にこの2つを求める。",
+        "steps": [
+          "$x$ と $y$ は互いに逆数なので $xy=1$。",
+          "$x+y=\\dfrac{(\\sqrt{6}+\\sqrt{5})^2+(\\sqrt{6}-\\sqrt{5})^2}{6-5}=\\dfrac{22}{1}=22$。",
+          "$x^2+y^2=(x+y)^2-2xy=484-2=482$。"
+        ],
+        "alternatives": [
+          "$x$ を有理化して $x=\\dfrac{(\\sqrt{6}+\\sqrt{5})^2}{1}$ と表し、直接計算しても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x+y$ と $xy$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "対称式を基本対称式で表して値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x+y$ を求めるときに通分で分母を $(\\sqrt{a}-\\sqrt{b})(\\sqrt{a}+\\sqrt{b})=a-b$ とせず誤る。",
+          "$x^3+y^3=(x+y)^3-3xy(x+y)$ の $-3xy(x+y)$ を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての次の方程式または不等式を解きなさい。　$|2x-3|\\leqq 5$",
+      "answer": {
+        "value": "$-1\\leqq x\\leqq 4$"
+      },
+      "explanation": "$-5\\leqq 2x-3\\leqq 5$ より $-1\\leqq x\\leqq 4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((2*x-(3))**2-5**2, x)",
+        "expected": "[-1, 4]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_eq_ineq",
+      "explanation_detail": {
+        "approach": "$|X|=r\\iff X=\\pm r$、$|X|<r\\iff -r<X<r$、$|X|>r\\iff X<-r$ または $r<X$（$r>0$）を使う。$|x-p|$ は数直線上の距離と読むこともできる。",
+        "steps": [
+          "$X=2x-3$ とおくと $|X|\\leqq 5$。",
+          "$-5\\leqq 2x-3\\leqq 5$。",
+          "各辺を整理して $-1\\leqq x\\leqq 4$。"
+        ],
+        "alternatives": [
+          "$X=2x-3$ とおき、数直線上で原点からの距離が $5$ と比べてどうなる点かを考えて $X$ の範囲を求め、最後に $x$ の範囲に直してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値をはずした式（場合分けまたは公式）が正しい",
+            "points": 2
+          },
+          {
+            "point": "範囲・解を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$|X|>r$ を $-r>X>r$ のようにつなげて書く（そのような $X$ は存在しない）。",
+          "$x$ の係数で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての次の方程式または不等式を解きなさい。　$|x+3|\\geqq 6$",
+      "answer": {
+        "value": "$x\\leqq -9,\\ 3\\leqq x$"
+      },
+      "explanation": "$x+3\\leqq -6$ または $6\\leqq x+3$ より $x\\leqq -9,\\ 3\\leqq x$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((1*x-(-3))**2-6**2, x)",
+        "expected": "[-9, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_eq_ineq",
+      "explanation_detail": {
+        "approach": "$|X|=r\\iff X=\\pm r$、$|X|<r\\iff -r<X<r$、$|X|>r\\iff X<-r$ または $r<X$（$r>0$）を使う。$|x-p|$ は数直線上の距離と読むこともできる。",
+        "steps": [
+          "$X=x+3$ とおくと $|X|\\geqq 6$。",
+          "$x+3\\leqq -6$ または $6\\leqq x+3$。",
+          "各辺を整理して $x\\leqq -9,\\ 3\\leqq x$。"
+        ],
+        "alternatives": [
+          "$X=x+3$ とおき、数直線上で原点からの距離が $6$ と比べてどうなる点かを考えて $X$ の範囲を求め、最後に $x$ の範囲に直してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値をはずした式（場合分けまたは公式）が正しい",
+            "points": 2
+          },
+          {
+            "point": "範囲・解を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$|X|>r$ を $-r>X>r$ のようにつなげて書く（そのような $X$ は存在しない）。",
+          "$x$ の係数で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての次の方程式または不等式を解きなさい。　$|x+3|<5$",
+      "answer": {
+        "value": "$-8<x<2$"
+      },
+      "explanation": "$-5<x+3<5$ より $-8<x<2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((1*x-(-3))**2-5**2, x)",
+        "expected": "[-8, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_eq_ineq",
+      "explanation_detail": {
+        "approach": "$|X|=r\\iff X=\\pm r$、$|X|<r\\iff -r<X<r$、$|X|>r\\iff X<-r$ または $r<X$（$r>0$）を使う。$|x-p|$ は数直線上の距離と読むこともできる。",
+        "steps": [
+          "$X=x+3$ とおくと $|X|<5$。",
+          "$-5<x+3<5$。",
+          "各辺を整理して $-8<x<2$。"
+        ],
+        "alternatives": [
+          "$X=x+3$ とおき、数直線上で原点からの距離が $5$ と比べてどうなる点かを考えて $X$ の範囲を求め、最後に $x$ の範囲に直してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値をはずした式（場合分けまたは公式）が正しい",
+            "points": 2
+          },
+          {
+            "point": "範囲・解を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$|X|>r$ を $-r>X>r$ のようにつなげて書く（そのような $X$ は存在しない）。",
+          "$x$ の係数で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x$ についての次の方程式または不等式を解きなさい。　$|2x-3|<1$",
+      "answer": {
+        "value": "$1<x<2$"
+      },
+      "explanation": "$-1<2x-3<1$ より $1<x<2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((2*x-(3))**2-1**2, x)",
+        "expected": "[1, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_eq_ineq",
+      "explanation_detail": {
+        "approach": "$|X|=r\\iff X=\\pm r$、$|X|<r\\iff -r<X<r$、$|X|>r\\iff X<-r$ または $r<X$（$r>0$）を使う。$|x-p|$ は数直線上の距離と読むこともできる。",
+        "steps": [
+          "$X=2x-3$ とおくと $|X|<1$。",
+          "$-1<2x-3<1$。",
+          "各辺を整理して $1<x<2$。"
+        ],
+        "alternatives": [
+          "$X=2x-3$ とおき、数直線上で原点からの距離が $1$ と比べてどうなる点かを考えて $X$ の範囲を求め、最後に $x$ の範囲に直してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値をはずした式（場合分けまたは公式）が正しい",
+            "points": 2
+          },
+          {
+            "point": "範囲・解を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$|X|>r$ を $-r>X>r$ のようにつなげて書く（そのような $X$ は存在しない）。",
+          "$x$ の係数で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "連立不等式 $\\begin{cases}x-3>-3x-6\\\\ -3x-2\\geqq -13\\end{cases}$ を満たす最小の整数 $x$を求めなさい。",
+      "answer": {
+        "value": "0"
+      },
+      "explanation": "第1式から $x>-\\dfrac{3}{4}$、第2式から $x\\leqq \\dfrac{11}{3}$。共通部分は $-\\dfrac{3}{4}<x\\leqq \\dfrac{11}{3}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(Rational(-3,4))+1",
+        "expected": "0"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-ineq_system",
+      "explanation_detail": {
+        "approach": "それぞれの不等式を解き、数直線上で共通部分を求める。そのあと、範囲に含まれる整数を端点に注意して数える。",
+        "steps": [
+          "第1式：$4x>-3$ より $x>-\\dfrac{3}{4}$。",
+          "第2式：$-3x\\geqq -11$ より、負の数で割って $x\\leqq \\dfrac{11}{3}$。",
+          "共通部分 $-\\dfrac{3}{4}<x\\leqq \\dfrac{11}{3}$。",
+          "この範囲の整数を調べて、最小の整数 $x$は $0$。"
+        ],
+        "alternatives": [
+          "範囲の端に近い整数を実際に2つの不等式に代入して、満たすかどうかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの不等式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "共通部分を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点に注意して整数を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "第2式で $x$ の係数が負のとき、不等号の向きを変え忘れる。",
+          "端点が整数のとき、等号の有無（含むか含まないか）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "連立不等式 $\\begin{cases}x-2>-x+2\\\\ -3x-6\\geqq x-22\\end{cases}$ を満たす整数 $x$ の個数を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "第1式から $x>2$、第2式から $x\\leqq 4$。共通部分は $2<x\\leqq 4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(4)-floor(2)",
+        "expected": "2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-ineq_system",
+      "explanation_detail": {
+        "approach": "それぞれの不等式を解き、数直線上で共通部分を求める。そのあと、範囲に含まれる整数を端点に注意して数える。",
+        "steps": [
+          "第1式：$2x>4$ より $x>2$。",
+          "第2式：$-4x\\geqq -16$ より、負の数で割って $x\\leqq 4$。",
+          "共通部分 $2<x\\leqq 4$。",
+          "この範囲の整数を調べて、整数 $x$ の個数は $2$。"
+        ],
+        "alternatives": [
+          "範囲の端に近い整数を実際に2つの不等式に代入して、満たすかどうかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの不等式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "共通部分を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点に注意して整数を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "第2式で $x$ の係数が負のとき、不等号の向きを変え忘れる。",
+          "端点が整数のとき、等号の有無（含むか含まないか）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "連立不等式 $\\begin{cases}-x+2>-3x-3\\\\ -x\\geqq 2x+3\\end{cases}$ を満たす整数 $x$ の個数を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "第1式から $x>-\\dfrac{5}{2}$、第2式から $x\\leqq -1$。共通部分は $-\\dfrac{5}{2}<x\\leqq -1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(-1)-floor(Rational(-5,2))",
+        "expected": "2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-ineq_system",
+      "explanation_detail": {
+        "approach": "それぞれの不等式を解き、数直線上で共通部分を求める。そのあと、範囲に含まれる整数を端点に注意して数える。",
+        "steps": [
+          "第1式：$2x>-5$ より $x>-\\dfrac{5}{2}$。",
+          "第2式：$-3x\\geqq 3$ より、負の数で割って $x\\leqq -1$。",
+          "共通部分 $-\\dfrac{5}{2}<x\\leqq -1$。",
+          "この範囲の整数を調べて、整数 $x$ の個数は $2$。"
+        ],
+        "alternatives": [
+          "範囲の端に近い整数を実際に2つの不等式に代入して、満たすかどうかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの不等式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "共通部分を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点に注意して整数を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "第2式で $x$ の係数が負のとき、不等号の向きを変え忘れる。",
+          "端点が整数のとき、等号の有無（含むか含まないか）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "連立不等式 $\\begin{cases}1>-x-3\\\\ -2x-2\\geqq 2x-3\\end{cases}$ を満たす最小の整数 $x$を求めなさい。",
+      "answer": {
+        "value": "-3"
+      },
+      "explanation": "第1式から $x>-4$、第2式から $x\\leqq \\dfrac{1}{4}$。共通部分は $-4<x\\leqq \\dfrac{1}{4}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(-4)+1",
+        "expected": "-3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-ineq_system",
+      "explanation_detail": {
+        "approach": "それぞれの不等式を解き、数直線上で共通部分を求める。そのあと、範囲に含まれる整数を端点に注意して数える。",
+        "steps": [
+          "第1式：$x>-4$ より $x>-4$。",
+          "第2式：$-4x\\geqq -1$ より、負の数で割って $x\\leqq \\dfrac{1}{4}$。",
+          "共通部分 $-4<x\\leqq \\dfrac{1}{4}$。",
+          "この範囲の整数を調べて、最小の整数 $x$は $-3$。"
+        ],
+        "alternatives": [
+          "範囲の端に近い整数を実際に2つの不等式に代入して、満たすかどうかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの不等式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "共通部分を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点に注意して整数を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "第2式で $x$ の係数が負のとき、不等号の向きを変え忘れる。",
+          "端点が整数のとき、等号の有無（含むか含まないか）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\dfrac{6}{\\sqrt{7}-1}$ の整数部分を $a$、小数部分を $b$ とする。\n(1) $a,\\ b$ の値を求めなさい。\n(2) $b^2+4b$ の値を求めなさい。",
+      "answer": {
+        "value": "(1) $a=3,\\ b=\\sqrt{7}-2$　(2) $3$"
+      },
+      "explanation": "有理化すると $\\sqrt{7}+1$。$2<\\sqrt{7}<3$ より $a=3$、$b=\\sqrt{7}-2$。$b^2+4b=(b+2)^2-4=7-4=3$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "分母を正しく有理化している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{7}$ を整数ではさむ根拠を示している",
+            "points": 2
+          },
+          {
+            "criterion": "$a,\\ b$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) を工夫して（または正しく展開して）求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(sqrt(7)-2)**2+4*(sqrt(7)-2)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-int_frac_part",
+      "explanation_detail": {
+        "approach": "整数部分を求めるには、まず分母を有理化して値の大きさを見やすくし、$\\sqrt{7}$ を連続する2整数ではさむ。小数部分は「元の数 $-$ 整数部分」である。",
+        "steps": [
+          "分母・分子に $\\sqrt{7}+1$ をかける：$\\dfrac{6(\\sqrt{7}+1)}{7-1}=\\sqrt{7}+1$。",
+          "$4<7<9$ より $2<\\sqrt{7}<3$。よって $3<\\sqrt{7}+1<4$。",
+          "$a=3$、$b=(\\sqrt{7}+1)-3=\\sqrt{7}-2$。",
+          "$b+2=\\sqrt{7}$ なので、$b^2+4b=(b+2)^2-4=7-4=3$。"
+        ],
+        "alternatives": [
+          "$b=\\sqrt{7}-2$ をそのまま代入して展開しても、$(7-4\\sqrt{7}+4)+(4\\sqrt{7}-8)=3$ となる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化",
+            "points": 2
+          },
+          {
+            "point": "$\\sqrt{7}$ の評価",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$",
+            "points": 2
+          },
+          {
+            "point": "(2) の値",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "小数部分を $0.\\cdots$ のような近似値で答える（$b$ は正確な値 $\\sqrt{7}-2$ で表す）。",
+          "整数部分に有理化で出た定数 $1$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\dfrac{22}{\\sqrt{23}-1}$ の整数部分を $a$、小数部分を $b$ とする。\n(1) $a,\\ b$ の値を求めなさい。\n(2) $b^2+8b$ の値を求めなさい。",
+      "answer": {
+        "value": "(1) $a=5,\\ b=\\sqrt{23}-4$　(2) $7$"
+      },
+      "explanation": "有理化すると $\\sqrt{23}+1$。$4<\\sqrt{23}<5$ より $a=5$、$b=\\sqrt{23}-4$。$b^2+8b=(b+4)^2-16=23-16=7$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "分母を正しく有理化している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{23}$ を整数ではさむ根拠を示している",
+            "points": 2
+          },
+          {
+            "criterion": "$a,\\ b$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) を工夫して（または正しく展開して）求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(sqrt(23)-4)**2+8*(sqrt(23)-4)",
+        "expected": "7",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-int_frac_part",
+      "explanation_detail": {
+        "approach": "整数部分を求めるには、まず分母を有理化して値の大きさを見やすくし、$\\sqrt{23}$ を連続する2整数ではさむ。小数部分は「元の数 $-$ 整数部分」である。",
+        "steps": [
+          "分母・分子に $\\sqrt{23}+1$ をかける：$\\dfrac{22(\\sqrt{23}+1)}{23-1}=\\sqrt{23}+1$。",
+          "$16<23<25$ より $4<\\sqrt{23}<5$。よって $5<\\sqrt{23}+1<6$。",
+          "$a=5$、$b=(\\sqrt{23}+1)-5=\\sqrt{23}-4$。",
+          "$b+4=\\sqrt{23}$ なので、$b^2+8b=(b+4)^2-16=23-16=7$。"
+        ],
+        "alternatives": [
+          "$b=\\sqrt{23}-4$ をそのまま代入して展開しても、$(23-8\\sqrt{23}+16)+(8\\sqrt{23}-32)=7$ となる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化",
+            "points": 2
+          },
+          {
+            "point": "$\\sqrt{23}$ の評価",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$",
+            "points": 2
+          },
+          {
+            "point": "(2) の値",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "小数部分を $0.\\cdots$ のような近似値で答える（$b$ は正確な値 $\\sqrt{23}-4$ で表す）。",
+          "整数部分に有理化で出た定数 $1$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\dfrac{9}{\\sqrt{13}-2}$ の整数部分を $a$、小数部分を $b$ とする。\n(1) $a,\\ b$ の値を求めなさい。\n(2) $b^2+6b$ の値を求めなさい。",
+      "answer": {
+        "value": "(1) $a=5,\\ b=\\sqrt{13}-3$　(2) $4$"
+      },
+      "explanation": "有理化すると $\\sqrt{13}+2$。$3<\\sqrt{13}<4$ より $a=5$、$b=\\sqrt{13}-3$。$b^2+6b=(b+3)^2-9=13-9=4$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "分母を正しく有理化している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{13}$ を整数ではさむ根拠を示している",
+            "points": 2
+          },
+          {
+            "criterion": "$a,\\ b$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) を工夫して（または正しく展開して）求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(sqrt(13)-3)**2+6*(sqrt(13)-3)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-int_frac_part",
+      "explanation_detail": {
+        "approach": "整数部分を求めるには、まず分母を有理化して値の大きさを見やすくし、$\\sqrt{13}$ を連続する2整数ではさむ。小数部分は「元の数 $-$ 整数部分」である。",
+        "steps": [
+          "分母・分子に $\\sqrt{13}+2$ をかける：$\\dfrac{9(\\sqrt{13}+2)}{13-4}=\\sqrt{13}+2$。",
+          "$9<13<16$ より $3<\\sqrt{13}<4$。よって $5<\\sqrt{13}+2<6$。",
+          "$a=5$、$b=(\\sqrt{13}+2)-5=\\sqrt{13}-3$。",
+          "$b+3=\\sqrt{13}$ なので、$b^2+6b=(b+3)^2-9=13-9=4$。"
+        ],
+        "alternatives": [
+          "$b=\\sqrt{13}-3$ をそのまま代入して展開しても、$(13-6\\sqrt{13}+9)+(6\\sqrt{13}-18)=4$ となる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化",
+            "points": 2
+          },
+          {
+            "point": "$\\sqrt{13}$ の評価",
+            "points": 2
+          },
+          {
+            "point": "$a,\\ b$",
+            "points": 2
+          },
+          {
+            "point": "(2) の値",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "小数部分を $0.\\cdots$ のような近似値で答える（$b$ は正確な値 $\\sqrt{13}-3$ で表す）。",
+          "整数部分に有理化で出た定数 $2$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。$x$ についての不等式 $ax>3x+3$ を解きなさい。",
+      "answer": {
+        "value": "$a>3$ のとき $x>\\dfrac{3}{a-3}$、$a=3$ のとき解はない、$a<3$ のとき $x<\\dfrac{3}{a-3}$"
+      },
+      "explanation": "移項して $(a-3)x>3$。$x$ の係数 $a-3$ の符号で場合分けする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$(a-3)x>3$ と正しく整理している",
+            "points": 2
+          },
+          {
+            "criterion": "係数の正・0・負の3通りに場合分けしている",
+            "points": 2
+          },
+          {
+            "criterion": "$a\\neq3$ の2つの場合を不等号の向きに注意して解いている",
+            "points": 2
+          },
+          {
+            "criterion": "$a=3$ の場合を正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve((a-3)*x-(3), x)",
+        "expected": "[3/(a-3)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-param_ineq",
+      "explanation_detail": {
+        "approach": "$x$ の係数に文字が含まれるので、そのまま割ってはいけない。係数が正・0・負のどれかで、割り方（不等号の向き）や割れるかどうかが変わる。",
+        "steps": [
+          "移項して $(a-3)x>3$。",
+          "(i) $a-3>0$、すなわち $a>3$ のとき：両辺を正の数 $a-3$ で割り $x>\\dfrac{3}{a-3}$。",
+          "(ii) $a=3$ のとき：$0\\cdot x>3$ は成り立たないので、解はない。",
+          "(iii) $a<3$ のとき：負の数 $a-3$ で割るので向きが変わり $x<\\dfrac{3}{a-3}$。"
+        ],
+        "alternatives": [
+          "具体的な値（たとえば $a=4$ と $a=2$）を代入して、それぞれの不等式を解いた結果が答えと一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "移項・整理",
+            "points": 2
+          },
+          {
+            "point": "場合分けの基準",
+            "points": 2
+          },
+          {
+            "point": "$a\\neq3$ の解",
+            "points": 2
+          },
+          {
+            "point": "$a=3$ の判断",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$a-3$ の符号を確かめずに割ってしまう。",
+          "$a=3$ のとき「$x$ がない」と書いて終わり、解がすべての実数か解なしかを判断しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。$x$ についての不等式 $ax-3>3x+1$ を解きなさい。",
+      "answer": {
+        "value": "$a>3$ のとき $x>\\dfrac{4}{a-3}$、$a=3$ のとき解はない、$a<3$ のとき $x<\\dfrac{4}{a-3}$"
+      },
+      "explanation": "移項して $(a-3)x>4$。$x$ の係数 $a-3$ の符号で場合分けする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$(a-3)x>4$ と正しく整理している",
+            "points": 2
+          },
+          {
+            "criterion": "係数の正・0・負の3通りに場合分けしている",
+            "points": 2
+          },
+          {
+            "criterion": "$a\\neq3$ の2つの場合を不等号の向きに注意して解いている",
+            "points": 2
+          },
+          {
+            "criterion": "$a=3$ の場合を正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve((a-3)*x-(4), x)",
+        "expected": "[4/(a-3)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-param_ineq",
+      "explanation_detail": {
+        "approach": "$x$ の係数に文字が含まれるので、そのまま割ってはいけない。係数が正・0・負のどれかで、割り方（不等号の向き）や割れるかどうかが変わる。",
+        "steps": [
+          "移項して $(a-3)x>4$。",
+          "(i) $a-3>0$、すなわち $a>3$ のとき：両辺を正の数 $a-3$ で割り $x>\\dfrac{4}{a-3}$。",
+          "(ii) $a=3$ のとき：$0\\cdot x>4$ は成り立たないので、解はない。",
+          "(iii) $a<3$ のとき：負の数 $a-3$ で割るので向きが変わり $x<\\dfrac{4}{a-3}$。"
+        ],
+        "alternatives": [
+          "具体的な値（たとえば $a=4$ と $a=2$）を代入して、それぞれの不等式を解いた結果が答えと一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "移項・整理",
+            "points": 2
+          },
+          {
+            "point": "場合分けの基準",
+            "points": 2
+          },
+          {
+            "point": "$a\\neq3$ の解",
+            "points": 2
+          },
+          {
+            "point": "$a=3$ の判断",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$a-3$ の符号を確かめずに割ってしまう。",
+          "$a=3$ のとき「$x$ がない」と書いて終わり、解がすべての実数か解なしかを判断しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。$x$ についての不等式 $ax-3>4x-9$ を解きなさい。",
+      "answer": {
+        "value": "$a>4$ のとき $x>-\\dfrac{6}{a-4}$、$a=4$ のときすべての実数、$a<4$ のとき $x<-\\dfrac{6}{a-4}$"
+      },
+      "explanation": "移項して $(a-4)x>-6$。$x$ の係数 $a-4$ の符号で場合分けする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$(a-4)x>-6$ と正しく整理している",
+            "points": 2
+          },
+          {
+            "criterion": "係数の正・0・負の3通りに場合分けしている",
+            "points": 2
+          },
+          {
+            "criterion": "$a\\neq4$ の2つの場合を不等号の向きに注意して解いている",
+            "points": 2
+          },
+          {
+            "criterion": "$a=4$ の場合を正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve((a-4)*x-(-6), x)",
+        "expected": "[-6/(a-4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-param_ineq",
+      "explanation_detail": {
+        "approach": "$x$ の係数に文字が含まれるので、そのまま割ってはいけない。係数が正・0・負のどれかで、割り方（不等号の向き）や割れるかどうかが変わる。",
+        "steps": [
+          "移項して $(a-4)x>-6$。",
+          "(i) $a-4>0$、すなわち $a>4$ のとき：両辺を正の数 $a-4$ で割り $x>-\\dfrac{6}{a-4}$。",
+          "(ii) $a=4$ のとき：$0\\cdot x>-6$ はつねに成り立つので、すべての実数。",
+          "(iii) $a<4$ のとき：負の数 $a-4$ で割るので向きが変わり $x<-\\dfrac{6}{a-4}$。"
+        ],
+        "alternatives": [
+          "具体的な値（たとえば $a=5$ と $a=3$）を代入して、それぞれの不等式を解いた結果が答えと一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "移項・整理",
+            "points": 2
+          },
+          {
+            "point": "場合分けの基準",
+            "points": 2
+          },
+          {
+            "point": "$a\\neq4$ の解",
+            "points": 2
+          },
+          {
+            "point": "$a=4$ の判断",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$a-4$ の符号を確かめずに割ってしまう。",
+          "$a=4$ のとき「$x$ がない」と書いて終わり、解がすべての実数か解なしかを判断しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x$ についての方程式 $|x-2|+|x-4|=4$ を解きなさい。",
+      "answer": {
+        "value": "$x=1,\\ 5$"
+      },
+      "explanation": "$x<2$、$2\\leqq x<4$、$4\\leqq x$ の3つの場合に分けて絶対値をはずす。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "絶対値の中身の符号が変わる点 $x=2,\\ 4$ で3つに場合分けしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合で絶対値を正しくはずしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の解が、その場合の条件を満たすか確認している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を正しくまとめている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Abs(1-(2))+Abs(1-(4)), Abs(5-(2))+Abs(5-(4))]",
+        "expected": "[4, 4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_two",
+      "explanation_detail": {
+        "approach": "絶対値が2つあるので、それぞれの中身が $0$ になる $x=2,\\ 4$ を境に、数直線を3つの区間に分けて考える。",
+        "steps": [
+          "(i) $x<2$：$-(x-2)-(x-4)=4$ より $-2x=-2$、$x=1$（$x<2$ を満たす）。",
+          "(ii) $2\\leqq x<4$：$(x-2)-(x-4)=2$ なので $2=4$ は成り立たない（解なし）。",
+          "(iii) $4\\leqq x$：$2x=10$ より $x=5$（$x\\geqq 4$ を満たす）。",
+          "以上をまとめて $x=1,\\ 5$。"
+        ],
+        "alternatives": [
+          "$|x-2|+|x-4|$ は「数直線上の点 $x$ から2点 $2,\\ 4$ までの距離の和」である。2点の間ではつねに $2$、外側では両端から離れるほど大きくなるので、和が $4$ になる点は両外側に1つずつある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け",
+            "points": 2
+          },
+          {
+            "point": "絶対値のはずし方",
+            "points": 2
+          },
+          {
+            "point": "条件の確認",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "場合分けの境界の点を、どの場合にも含めない（または重複して含める）。",
+          "求めた解が場合の条件を満たすかを確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x$ についての不等式 $|x+5|+|x-5|<14$ を解きなさい。",
+      "answer": {
+        "value": "$-7<x<7$"
+      },
+      "explanation": "$x<-5$、$-5\\leqq x<5$、$5\\leqq x$ の3つの場合に分けて絶対値をはずす。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "絶対値の中身の符号が変わる点 $x=-5,\\ 5$ で3つに場合分けしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合で絶対値を正しくはずしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の解が、その場合の条件を満たすか確認している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を正しくまとめている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Abs(-7-(-5))+Abs(-7-(5)), Abs(7-(-5))+Abs(7-(5))]",
+        "expected": "[14, 14]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-abs_two",
+      "explanation_detail": {
+        "approach": "絶対値が2つあるので、それぞれの中身が $0$ になる $x=-5,\\ 5$ を境に、数直線を3つの区間に分けて考える。",
+        "steps": [
+          "(i) $x<-5$：$-(x+5)-(x-5)<14$ より $-2x<14$、$x>-7$。条件と合わせて $-7<x<-5$。",
+          "(ii) $-5\\leqq x<5$：$(x+5)-(x-5)=10$ なので $10<14$ はつねに成り立つ。この区間全体が解。",
+          "(iii) $5\\leqq x$：$2x<14$ より $x<7$。条件と合わせて $5\\leqq x<7$。",
+          "以上をまとめて $-7<x<7$。"
+        ],
+        "alternatives": [
+          "$|x+5|+|x-5|$ は「数直線上の点 $x$ から2点 $-5,\\ 5$ までの距離の和」である。2点の間ではつねに $10$、外側では両端から離れるほど大きくなるので、和が $14$ になる点は両外側に1つずつある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け",
+            "points": 2
+          },
+          {
+            "point": "絶対値のはずし方",
+            "points": 2
+          },
+          {
+            "point": "条件の確認",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "場合分けの境界の点を、どの場合にも含めない（または重複して含める）。",
+          "求めた解が場合の条件を満たすかを確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "実数全体を全体集合とし、$A=\\{x\\mid |x+2|<2\\}$、$B=\\{x\\mid 5x+5\\geqq x-3\\}$ とする。集合 $A\\cap B$ を、$x$ の範囲を表す不等式で答えなさい。",
+      "answer": {
+        "value": "$-2\\leqq x<0$"
+      },
+      "explanation": "$A$ は $-4<x<0$、$B$ は $x\\geqq -2$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[-2-2, -2+2, solve(4*x-(-8), x)[0]]",
+        "expected": "[-4, 0, -2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-cross_sets",
+      "related_units": [
+        "HS-MATH1-U02"
+      ],
+      "explanation_detail": {
+        "approach": "集合を条件で定めたときは、まず各条件を不等式として解き、数直線上で範囲を重ねて共通部分（補集合なら範囲の外側）を読み取る。",
+        "steps": [
+          "$|x+2|<2$ より $-2<x+2<2$、$A$：$-4<x<0$。",
+          "$B$ の不等式を整理：$4x\\geqq -8$ より $x\\geqq -2$。",
+          "数直線上で共通部分をとり、$-2\\leqq x<0$。"
+        ],
+        "alternatives": [
+          "端点の値（$x=-2$ など）を元の条件に代入して、集合に含まれるかどうかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$A$ の範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "$B$ の範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "共通部分（・補集合）を端点まで正しく答えている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{B}$ の端点の扱い（$\\geqq$ の補集合は $<$）を誤る。",
+          "絶対値の不等式を $x--2<2$ だけにしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "実数全体を全体集合とし、$A=\\{x\\mid |x-4|<4\\}$、$B=\\{x\\mid 4x-2\\geqq x+10\\}$ とする。集合 $A\\cap\\overline{B}$ を、$x$ の範囲を表す不等式で答えなさい。",
+      "answer": {
+        "value": "$0<x<4$"
+      },
+      "explanation": "$A$ は $0<x<8$、$B$ は $x\\geqq 4$。$\\overline{B}$ は $x<4$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[4-4, 4+4, solve(3*x-(12), x)[0]]",
+        "expected": "[0, 8, 4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U01-cross_sets",
+      "related_units": [
+        "HS-MATH1-U02"
+      ],
+      "explanation_detail": {
+        "approach": "集合を条件で定めたときは、まず各条件を不等式として解き、数直線上で範囲を重ねて共通部分（補集合なら範囲の外側）を読み取る。",
+        "steps": [
+          "$|x-4|<4$ より $-4<x-4<4$、$A$：$0<x<8$。",
+          "$B$ の不等式を整理：$3x\\geqq 12$ より $x\\geqq 4$。",
+          "$\\overline{B}$ は $B$ に含まれない実数全体なので $x<4$（端点 $4$ は $B$ に含まれるので $\\overline{B}$ には含まれない）。",
+          "数直線上で共通部分をとり、$0<x<4$。"
+        ],
+        "alternatives": [
+          "端点の値（$x=4$ など）を元の条件に代入して、集合に含まれるかどうかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$A$ の範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "$B$ の範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "共通部分（・補集合）を端点まで正しく答えている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{B}$ の端点の扱い（$\\geqq$ の補集合は $<$）を誤る。",
+          "絶対値の不等式を $x-4<4$ だけにしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "不等式 $x-9\\geqq 6x-2$ を解きなさい。\n［ある生徒の解答］\n$x-9\\geqq 6x-2$ より $-5x\\geqq 7$。両辺を $-5$ で割って $x\\geqq -\\dfrac{7}{5}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x\\leqq -\\dfrac{7}{5}$"
+      },
+      "explanation": "負の数で割ると不等号の向きが変わるので $x\\leqq -\\dfrac{7}{5}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((-5)*x-(7), x)",
+        "expected": "[Rational(-7,5)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-err_ineq_flip",
+      "explanation_detail": {
+        "approach": "$x$ の係数が負のまま割るときは、不等号の向きが変わる。移項の向きを工夫して係数を正にしてもよい。",
+        "steps": [
+          "移項して $-5x\\geqq 7$。",
+          "$-5<0$ なので、両辺を $-5$ で割ると向きが変わる。",
+          "$x\\leqq -\\dfrac{7}{5}$。"
+        ],
+        "alternatives": [
+          "$x$ の項を右辺に集めると $5x\\leqq -7$ となり、正の数で割るだけで $x\\leqq -\\dfrac{7}{5}$ が得られる。",
+          "境目以外の値を1つ代入して、元の不等式が成り立つ側を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数で割る・かけるときに向きを変え忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x-9\\geqq 6x-2$ より $-5x\\geqq 7$。両辺を $-5$ で割って $x\\geqq -\\dfrac{7}{5}$",
+        "error_step": "両辺を $-5$ で割った部分",
+        "error_type": "sign",
+        "why_tempting": "方程式を解くときと同じ感覚で両辺を割っている。$x$ の係数が負になったことに注意が向いていない。",
+        "correction": "$-5x\\geqq 7$ の両辺を負の数 $-5$ で割ると不等号の向きが変わり、$x\\leqq -\\dfrac{7}{5}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "不等式 $x+3\\geqq 5x+6$ を解きなさい。\n［ある生徒の解答］\n$x+3\\geqq 5x+6$ より $-4x\\geqq 3$。両辺を $-4$ で割って $x\\geqq -\\dfrac{3}{4}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x\\leqq -\\dfrac{3}{4}$"
+      },
+      "explanation": "負の数で割ると不等号の向きが変わるので $x\\leqq -\\dfrac{3}{4}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((-4)*x-(3), x)",
+        "expected": "[Rational(-3,4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-err_ineq_flip",
+      "explanation_detail": {
+        "approach": "$x$ の係数が負のまま割るときは、不等号の向きが変わる。移項の向きを工夫して係数を正にしてもよい。",
+        "steps": [
+          "移項して $-4x\\geqq 3$。",
+          "$-4<0$ なので、両辺を $-4$ で割ると向きが変わる。",
+          "$x\\leqq -\\dfrac{3}{4}$。"
+        ],
+        "alternatives": [
+          "$x$ の項を右辺に集めると $4x\\leqq -3$ となり、正の数で割るだけで $x\\leqq -\\dfrac{3}{4}$ が得られる。",
+          "境目以外の値を1つ代入して、元の不等式が成り立つ側を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数で割る・かけるときに向きを変え忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x+3\\geqq 5x+6$ より $-4x\\geqq 3$。両辺を $-4$ で割って $x\\geqq -\\dfrac{3}{4}$",
+        "error_step": "両辺を $-4$ で割った部分",
+        "error_type": "sign",
+        "why_tempting": "方程式を解くときと同じ感覚で両辺を割っている。$x$ の係数が負になったことに注意が向いていない。",
+        "correction": "$-4x\\geqq 3$ の両辺を負の数 $-4$ で割ると不等号の向きが変わり、$x\\leqq -\\dfrac{3}{4}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "不等式 $3x-3<5x-3$ を解きなさい。\n［ある生徒の解答］\n$3x-3<5x-3$ より $-2x<0$。両辺を $-2$ で割って $x<0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x>0$"
+      },
+      "explanation": "負の数で割ると不等号の向きが変わるので $x>0$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((-2)*x-(0), x)",
+        "expected": "[0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-err_ineq_flip",
+      "explanation_detail": {
+        "approach": "$x$ の係数が負のまま割るときは、不等号の向きが変わる。移項の向きを工夫して係数を正にしてもよい。",
+        "steps": [
+          "移項して $-2x<0$。",
+          "$-2<0$ なので、両辺を $-2$ で割ると向きが変わる。",
+          "$x>0$。"
+        ],
+        "alternatives": [
+          "$x$ の項を右辺に集めると $2x>0$ となり、正の数で割るだけで $x>0$ が得られる。",
+          "境目以外の値を1つ代入して、元の不等式が成り立つ側を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の数で割る・かけるときに向きを変え忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$3x-3<5x-3$ より $-2x<0$。両辺を $-2$ で割って $x<0$",
+        "error_step": "両辺を $-2$ で割った部分",
+        "error_type": "sign",
+        "why_tempting": "方程式を解くときと同じ感覚で両辺を割っている。$x$ の係数が負になったことに注意が向いていない。",
+        "correction": "$-2x<0$ の両辺を負の数 $-2$ で割ると不等号の向きが変わり、$x>0$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $|x+2|=2x+1$ を解きなさい。\n［ある生徒の解答］\n$x+2=2x+1$ より $x=1$、$-(x+2)=2x+1$ より $x=-1$。よって $x=1,\\ -1$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=1$"
+      },
+      "explanation": "$x=-1$ は $x<-2$ を満たさず、代入すると左辺 $1$、右辺 $-1$ で成り立たない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[Abs(1-(-2))-(2*1+(1)), Abs(-1-(-2))-(2*-1+(1))]",
+        "expected": "[0, 2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-err_abs_extraneous",
+      "explanation_detail": {
+        "approach": "右辺に $x$ を含む絶対値の方程式では、中身の符号で場合分けし、各場合の条件を満たす解だけを残す。",
+        "steps": [
+          "(i) $x\\geqq -2$ のとき：$x+2=2x+1$ より $x=1$。条件を満たす。",
+          "(ii) $x<-2$ のとき：$-(x+2)=2x+1$ より $x=-1$。条件を満たさないので不適。",
+          "よって $x=1$。"
+        ],
+        "alternatives": [
+          "左辺は $0$ 以上なので、右辺も $2x+1\\geqq0$ でなければならない。$x=-1$ のとき右辺は $-1$ で負になるので、この条件からも除かれる。",
+          "得られた値を元の方程式に代入して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "場合分けの条件を書かずに式だけ解く。",
+          "代入による確かめを省く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x+2=2x+1$ より $x=1$、$-(x+2)=2x+1$ より $x=-1$。よって $x=1,\\ -1$",
+        "error_step": "得られた2つの値をどちらも解とした部分",
+        "error_type": "condition",
+        "why_tempting": "絶対値をはずすときに「$\\pm$ をつければよい」と覚えていて、それぞれの式が成り立つための条件（中身の符号）を考えていない。",
+        "correction": "$x\\geqq -2$ のとき $x=1$、$x<-2$ のとき $x=-1$ で、条件を満たすのは $x=1$ のみ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $|x+1|=2x+8$ を解きなさい。\n［ある生徒の解答］\n$x+1=2x+8$ より $x=-7$、$-(x+1)=2x+8$ より $x=-3$。よって $x=-7,\\ -3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=-3$"
+      },
+      "explanation": "$x=-7$ は $x\\geqq -1$ を満たさず、代入すると左辺 $6$、右辺 $-6$ で成り立たない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[Abs(-3-(-1))-(2*-3+(8)), Abs(-7-(-1))-(2*-7+(8))]",
+        "expected": "[0, 12]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-err_abs_extraneous",
+      "explanation_detail": {
+        "approach": "右辺に $x$ を含む絶対値の方程式では、中身の符号で場合分けし、各場合の条件を満たす解だけを残す。",
+        "steps": [
+          "(i) $x\\geqq -1$ のとき：$x+1=2x+8$ より $x=-7$。条件を満たさないので不適。",
+          "(ii) $x<-1$ のとき：$-(x+1)=2x+8$ より $x=-3$。条件を満たす。",
+          "よって $x=-3$。"
+        ],
+        "alternatives": [
+          "左辺は $0$ 以上なので、右辺も $2x+8\\geqq0$ でなければならない。$x=-7$ のとき右辺は $-6$ で負になるので、この条件からも除かれる。",
+          "得られた値を元の方程式に代入して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "場合分けの条件を書かずに式だけ解く。",
+          "代入による確かめを省く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x+1=2x+8$ より $x=-7$、$-(x+1)=2x+8$ より $x=-3$。よって $x=-7,\\ -3$",
+        "error_step": "得られた2つの値をどちらも解とした部分",
+        "error_type": "condition",
+        "why_tempting": "絶対値をはずすときに「$\\pm$ をつければよい」と覚えていて、それぞれの式が成り立つための条件（中身の符号）を考えていない。",
+        "correction": "$x\\geqq -1$ のとき $x=-7$、$x<-1$ のとき $x=-3$ で、条件を満たすのは $x=-3$ のみ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $|x-3|=2x-9$ を解きなさい。\n［ある生徒の解答］\n$x-3=2x-9$ より $x=6$、$-(x-3)=2x-9$ より $x=4$。よって $x=6,\\ 4$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=6$"
+      },
+      "explanation": "$x=4$ は $x<3$ を満たさず、代入すると左辺 $1$、右辺 $-1$ で成り立たない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[Abs(6-(3))-(2*6+(-9)), Abs(4-(3))-(2*4+(-9))]",
+        "expected": "[0, 2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U01-err_abs_extraneous",
+      "explanation_detail": {
+        "approach": "右辺に $x$ を含む絶対値の方程式では、中身の符号で場合分けし、各場合の条件を満たす解だけを残す。",
+        "steps": [
+          "(i) $x\\geqq 3$ のとき：$x-3=2x-9$ より $x=6$。条件を満たす。",
+          "(ii) $x<3$ のとき：$-(x-3)=2x-9$ より $x=4$。条件を満たさないので不適。",
+          "よって $x=6$。"
+        ],
+        "alternatives": [
+          "左辺は $0$ 以上なので、右辺も $2x-9\\geqq0$ でなければならない。$x=4$ のとき右辺は $-1$ で負になるので、この条件からも除かれる。",
+          "得られた値を元の方程式に代入して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "場合分けの条件を書かずに式だけ解く。",
+          "代入による確かめを省く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x-3=2x-9$ より $x=6$、$-(x-3)=2x-9$ より $x=4$。よって $x=6,\\ 4$",
+        "error_step": "得られた2つの値をどちらも解とした部分",
+        "error_type": "condition",
+        "why_tempting": "絶対値をはずすときに「$\\pm$ をつければよい」と覚えていて、それぞれの式が成り立つための条件（中身の符号）を考えていない。",
+        "correction": "$x\\geqq 3$ のとき $x=6$、$x<3$ のとき $x=4$ で、条件を満たすのは $x=6$ のみ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\sqrt{(2-\\sqrt{5})^2}+\\sqrt{(5-\\sqrt{5})^2}$ を簡単にしなさい。\n［ある生徒の解答］\n$(2-\\sqrt{5})+(5-\\sqrt{5})=7-2\\sqrt{5}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3$"
+      },
+      "explanation": "$\\sqrt{A^2}=|A|$ であり、$A<0$ のときは $-A$ になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt((2-sqrt(5))**2)+sqrt((5-sqrt(5))**2)",
+        "expected": "3"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U01-err_sqrt_sq",
+      "explanation_detail": {
+        "approach": "$\\sqrt{A^2}$ は $A$ ではなく $|A|$。中身の正負を調べてから根号をはずす。",
+        "steps": [
+          "$2<\\sqrt{5}<3$ より、$2-\\sqrt{5}<0$、$5-\\sqrt{5}>0$。",
+          "$\\sqrt{(2-\\sqrt{5})^2}=|2-\\sqrt{5}|=\\sqrt{5}-2$。",
+          "$\\sqrt{(5-\\sqrt{5})^2}=5-\\sqrt{5}$。",
+          "和は $(\\sqrt{5}-2)+(5-\\sqrt{5})=3$。"
+        ],
+        "alternatives": [
+          "$\\sqrt{5}\\fallingdotseq2.24$ を使って元の式を概算すると約 $3$ になり、生徒の答え $7-2\\sqrt{5}\\fallingdotseq2.53$ とは一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{A^2}=A$ と機械的にはずす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(2-\\sqrt{5})+(5-\\sqrt{5})=7-2\\sqrt{5}$",
+        "error_step": "根号をはずした部分（中身の符号の確認もれ）",
+        "error_type": "concept",
+        "why_tempting": "$\\sqrt{a^2}=a$ と覚えていて、$a$ が負のときに成り立たないことを意識していない。",
+        "correction": "$2-\\sqrt{5}<0$ なので $\\sqrt{(2-\\sqrt{5})^2}=\\sqrt{5}-2$。$5-\\sqrt{5}>0$ なので $\\sqrt{(5-\\sqrt{5})^2}=5-\\sqrt{5}$。和は $3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$-3<x<2$ のとき、$\\sqrt{(x+3)^2}+\\sqrt{(x-2)^2}$ を簡単にしなさい。\n［ある生徒の解答］\n$(x+3)+(x-2)=2x+1$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$5$"
+      },
+      "explanation": "$\\sqrt{A^2}=|A|$ であり、$A<0$ のときは $-A$ になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt((Rational(-1,2)+3)**2)+sqrt((Rational(-1,2)-2)**2)",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U01-err_sqrt_sq",
+      "explanation_detail": {
+        "approach": "$\\sqrt{A^2}$ は $A$ ではなく $|A|$。中身の正負を調べてから根号をはずす。",
+        "steps": [
+          "$-3<x<2$ より $x+3>0$、$x-2<0$。",
+          "$\\sqrt{(x+3)^2}=|x+3|=x+3$。",
+          "$\\sqrt{(x-2)^2}=|x-2|=-(x-2)$。",
+          "和は $(x+3)-(x-2)=5$。"
+        ],
+        "alternatives": [
+          "範囲内の値 $x=0$ を代入すると元の式は $3+2=5$、生徒の答えは $1$ となり、一致しないことから誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{A^2}=A$ と機械的にはずす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x+3)+(x-2)=2x+1$",
+        "error_step": "根号をはずした部分（中身の符号の確認もれ）",
+        "error_type": "concept",
+        "why_tempting": "$\\sqrt{a^2}=a$ と覚えていて、$a$ が負のときに成り立たないことを意識していない。",
+        "correction": "$x-2<0$ なので $\\sqrt{(x-2)^2}=-(x-2)$。$(x+3)-(x-2)=5$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$x^4-1$ を因数分解しなさい。\n［ある生徒の解答］\n$x^4-1=(x^2-1)(x^2+1)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(x-1)(x+1)(x^2+1)$"
+      },
+      "explanation": "$(x)^2-1$ は和と差の積でさらに因数分解できる。$(x)^2+1$ は実数の範囲でこれ以上分解できない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((1*x-1)*(1*x+1)*(1*x**2+1))",
+        "expected": "1*x**4-1",
+        "compare": "expand"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-err_factor",
+      "explanation_detail": {
+        "approach": "因数分解の答えは、各因数がこれ以上分解できないところまで進める。",
+        "steps": [
+          "$(x^2)^2-1^2=(x^2-1)(x^2+1)$。",
+          "$x^2-1=(x-1)(x+1)$。",
+          "よって $(x-1)(x+1)(x^2+1)$。"
+        ],
+        "alternatives": [
+          "$x=1$ を代入すると元の式は $0$ になるので、$(x-1)$ を因数にもつはずだと気づける（因数定理の考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "途中で因数分解をやめる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x^4-1=(x^2-1)(x^2+1)$",
+        "error_step": "1つ目の因数 $x^2-1$ をそのままにした部分",
+        "error_type": "concept",
+        "why_tempting": "1回公式を使えたことで満足し、得られた因数がさらに分解できるかを確かめていない。",
+        "correction": "$x^2-1=(x-1)(x+1)$ とさらに分解して $(x-1)(x+1)(x^2+1)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$x^4-16$ を因数分解しなさい。\n［ある生徒の解答］\n$x^4-16=(x^2-4)(x^2+4)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(x-2)(x+2)(x^2+4)$"
+      },
+      "explanation": "$(x)^2-4$ は和と差の積でさらに因数分解できる。$(x)^2+4$ は実数の範囲でこれ以上分解できない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((1*x-2)*(1*x+2)*(1*x**2+4))",
+        "expected": "1*x**4-16",
+        "compare": "expand"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U01-err_factor",
+      "explanation_detail": {
+        "approach": "因数分解の答えは、各因数がこれ以上分解できないところまで進める。",
+        "steps": [
+          "$(x^2)^2-4^2=(x^2-4)(x^2+4)$。",
+          "$x^2-4=(x-2)(x+2)$。",
+          "よって $(x-2)(x+2)(x^2+4)$。"
+        ],
+        "alternatives": [
+          "$x=2$ を代入すると元の式は $0$ になるので、$(x-2)$ を因数にもつはずだと気づける（因数定理の考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "途中で因数分解をやめる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x^4-16=(x^2-4)(x^2+4)$",
+        "error_step": "1つ目の因数 $x^2-4$ をそのままにした部分",
+        "error_type": "concept",
+        "why_tempting": "1回公式を使えたことで満足し、得られた因数がさらに分解できるかを確かめていない。",
+        "correction": "$x^2-4=(x-2)(x+2)$ とさらに分解して $(x-2)(x+2)(x^2+4)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "1b5a243bc2db0f45045a36a180fc6d85ccfdee3606fde16d49964e7e690e7ba6"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 12 問（Q004, Q005, Q013, Q014, Q040, Q047, Q048, Q054, Q055, Q056 他）",
+      "content_hash": "e58fe5d541ea6ac8b44595e4ee3593cad7d8b8dfe4a75a9f36824c46614e4716"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q004, Q005, Q006, Q016）",
+      "content_hash": "e6a544ab925c535e9a141f3dad879208d3d66ed0ac10ca7ac488a983c1df9c36"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T08:56:07+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "00fedb0435bae94e132b58efb6b4019c6f9eccf5d04735ff4bf65d51dd64cff9"
+  }
+}

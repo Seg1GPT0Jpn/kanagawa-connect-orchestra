@@ -1,0 +1,5317 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHA-U03-EX",
+  "title": "数学と人間の活動　整数　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_a",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATHA-U03"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATHA-U03-PACK",
+  "pair_set_id": "HS-MATHA-U03-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U01",
+        "point": "素因数分解",
+        "title": "正の数・負の数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "漸化式と整数の性質",
+        "title": "数列"
+      }
+    ],
+    "readiness_check": [
+      "素因数分解（中学1年）ができる。",
+      "整数の割り算を「割られる数＝割る数×商＋余り」の形で書ける。",
+      "文字式による整数の表し方（偶数 $2k$、奇数 $2k+1$）を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHA-U03-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "自然数 $810$ の正の約数は全部で何個あるか。",
+      "answer": {
+        "value": "20"
+      },
+      "explanation": "$810=2\\cdot 3^{4}\\cdot 5$ より、約数の個数は $(1+1)\\times(1+1)\\times(4+1)=20$ 個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "len(divisors(810))",
+        "expected": "20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_count",
+      "explanation_detail": {
+        "approach": "素因数分解して、各素因数の指数を $0$ から何通り選べるかを数える（積の法則）。",
+        "steps": [
+          "$810=2\\cdot 3^{4}\\cdot 5$。",
+          "約数は $2^{x_1}\\cdot 3^{x_2}\\cdot 5^{x_3}$ の形（各指数は $0$ 以上）。",
+          "各指数の選び方を掛けて $2\\times5\\times2=20$。"
+        ],
+        "alternatives": [
+          "素因数が少ない場合は、表（縦に一方の素数の累乗、横に他方の素数の累乗）をかいて約数を書き出して数えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく素因数分解している",
+            "points": 1
+          },
+          {
+            "point": "約数の個数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数をそのまま掛けて $\\prod e$ とする（指数 $0$ の場合を数え忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "自然数 $441$ の正の約数は全部で何個あるか。",
+      "answer": {
+        "value": "9"
+      },
+      "explanation": "$441=3^{2}\\cdot 7^{2}$ より、約数の個数は $(2+1)\\times(2+1)=9$ 個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "len(divisors(441))",
+        "expected": "9"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_count",
+      "explanation_detail": {
+        "approach": "素因数分解して、各素因数の指数を $0$ から何通り選べるかを数える（積の法則）。",
+        "steps": [
+          "$441=3^{2}\\cdot 7^{2}$。",
+          "約数は $3^{x_1}\\cdot 7^{x_2}$ の形（各指数は $0$ 以上）。",
+          "各指数の選び方を掛けて $3\\times3=9$。"
+        ],
+        "alternatives": [
+          "素因数が少ない場合は、表（縦に一方の素数の累乗、横に他方の素数の累乗）をかいて約数を書き出して数えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく素因数分解している",
+            "points": 1
+          },
+          {
+            "point": "約数の個数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数をそのまま掛けて $\\prod e$ とする（指数 $0$ の場合を数え忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "自然数 $44$ の正の約数は全部で何個あるか。",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "$44=2^{2}\\cdot 11$ より、約数の個数は $(2+1)\\times(1+1)=6$ 個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "len(divisors(44))",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_count",
+      "explanation_detail": {
+        "approach": "素因数分解して、各素因数の指数を $0$ から何通り選べるかを数える（積の法則）。",
+        "steps": [
+          "$44=2^{2}\\cdot 11$。",
+          "約数は $2^{x_1}\\cdot 11^{x_2}$ の形（各指数は $0$ 以上）。",
+          "各指数の選び方を掛けて $3\\times2=6$。"
+        ],
+        "alternatives": [
+          "素因数が少ない場合は、表（縦に一方の素数の累乗、横に他方の素数の累乗）をかいて約数を書き出して数えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく素因数分解している",
+            "points": 1
+          },
+          {
+            "point": "約数の個数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数をそのまま掛けて $\\prod e$ とする（指数 $0$ の場合を数え忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "自然数 $750$ の正の約数は全部で何個あるか。",
+      "answer": {
+        "value": "16"
+      },
+      "explanation": "$750=2\\cdot 3\\cdot 5^{3}$ より、約数の個数は $(1+1)\\times(1+1)\\times(3+1)=16$ 個。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "len(divisors(750))",
+        "expected": "16"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_count",
+      "explanation_detail": {
+        "approach": "素因数分解して、各素因数の指数を $0$ から何通り選べるかを数える（積の法則）。",
+        "steps": [
+          "$750=2\\cdot 3\\cdot 5^{3}$。",
+          "約数は $2^{x_1}\\cdot 3^{x_2}\\cdot 5^{x_3}$ の形（各指数は $0$ 以上）。",
+          "各指数の選び方を掛けて $2\\times2\\times4=16$。"
+        ],
+        "alternatives": [
+          "素因数が少ない場合は、表（縦に一方の素数の累乗、横に他方の素数の累乗）をかいて約数を書き出して数えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく素因数分解している",
+            "points": 1
+          },
+          {
+            "point": "約数の個数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数をそのまま掛けて $\\prod e$ とする（指数 $0$ の場合を数え忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$55$ と $10$ の最大公約数を求めなさい。",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$55=5\\cdot 11$、$10=2\\cdot 5$。共通な素因数を少ない方の指数でかけて $5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "gcd(55,10)",
+        "expected": "5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-gcd_lcm",
+      "explanation_detail": {
+        "approach": "素因数分解して指数を比べる。最大公約数は共通な素因数の「少ない方の指数」、最小公倍数は「多い方の指数」。",
+        "steps": [
+          "$55=5\\cdot 11$、$10=2\\cdot 5$。",
+          "最大公約数は $5$。"
+        ],
+        "alternatives": [
+          "最大公約数 $g=5$ を求めれば、最小公倍数は $\\dfrac{ab}{g}=\\dfrac{55\\times10}{5}=110$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "最大公約数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数の指数の選び方（少ない方・多い方）を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$156$ と $108$ の最大公約数を求めなさい。",
+      "answer": {
+        "value": "12"
+      },
+      "explanation": "$156=2^{2}\\cdot 3\\cdot 13$、$108=2^{2}\\cdot 3^{3}$。共通な素因数を少ない方の指数でかけて $12$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "gcd(156,108)",
+        "expected": "12"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-gcd_lcm",
+      "explanation_detail": {
+        "approach": "素因数分解して指数を比べる。最大公約数は共通な素因数の「少ない方の指数」、最小公倍数は「多い方の指数」。",
+        "steps": [
+          "$156=2^{2}\\cdot 3\\cdot 13$、$108=2^{2}\\cdot 3^{3}$。",
+          "最大公約数は $12$。"
+        ],
+        "alternatives": [
+          "最大公約数 $g=12$ を求めれば、最小公倍数は $\\dfrac{ab}{g}=\\dfrac{156\\times108}{12}=1404$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "最大公約数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数の指数の選び方（少ない方・多い方）を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$12$ と $32$ の最小公倍数を求めなさい。",
+      "answer": {
+        "value": "96"
+      },
+      "explanation": "$12=2^{2}\\cdot 3$、$32=2^{5}$。すべての素因数を多い方の指数でかけて $96$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "lcm(12,32)",
+        "expected": "96"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-gcd_lcm",
+      "explanation_detail": {
+        "approach": "素因数分解して指数を比べる。最大公約数は共通な素因数の「少ない方の指数」、最小公倍数は「多い方の指数」。",
+        "steps": [
+          "$12=2^{2}\\cdot 3$、$32=2^{5}$。",
+          "最小公倍数は $96$。"
+        ],
+        "alternatives": [
+          "最大公約数 $g=4$ を求めれば、最小公倍数は $\\dfrac{ab}{g}=\\dfrac{12\\times32}{4}=96$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "最小公倍数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数の指数の選び方（少ない方・多い方）を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$234$ と $270$ の最大公約数を求めなさい。",
+      "answer": {
+        "value": "18"
+      },
+      "explanation": "$234=2\\cdot 3^{2}\\cdot 13$、$270=2\\cdot 3^{3}\\cdot 5$。共通な素因数を少ない方の指数でかけて $18$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "gcd(234,270)",
+        "expected": "18"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-gcd_lcm",
+      "explanation_detail": {
+        "approach": "素因数分解して指数を比べる。最大公約数は共通な素因数の「少ない方の指数」、最小公倍数は「多い方の指数」。",
+        "steps": [
+          "$234=2\\cdot 3^{2}\\cdot 13$、$270=2\\cdot 3^{3}\\cdot 5$。",
+          "最大公約数は $18$。"
+        ],
+        "alternatives": [
+          "最大公約数 $g=18$ を求めれば、最小公倍数は $\\dfrac{ab}{g}=\\dfrac{234\\times270}{18}=3510$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "最大公約数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数の指数の選び方（少ない方・多い方）を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$130_{(4)}$ を10進法で表すといくつになるか。",
+      "answer": {
+        "value": "28"
+      },
+      "explanation": "$130_{(4)}=1\\cdot 4^{2}+3\\cdot 4^{1}+0=28$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1*4**2+3*4**1+0*4**0",
+        "expected": "28"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-base_to_dec",
+      "explanation_detail": {
+        "approach": "4進法では、右から順に $1,\\ 4,\\ 4^2,\\ \\cdots$ の位になる。各位の数字と位の大きさの積を足す。",
+        "steps": [
+          "位の大きさは右から $1,\\ 4,\\ 16,\\ \\cdots$。",
+          "$1\\cdot 4^{2}+3\\cdot 4^{1}+0=28$。"
+        ],
+        "alternatives": [
+          "上の位から順に「4 倍して次の数字を足す」をくり返しても求められる（ホーナー法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "位の大きさを正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一番右の位を $4^1$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$441_{(5)}$ を10進法で表すといくつになるか。",
+      "answer": {
+        "value": "121"
+      },
+      "explanation": "$441_{(5)}=4\\cdot 5^{2}+4\\cdot 5^{1}+1=121$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "4*5**2+4*5**1+1*5**0",
+        "expected": "121"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-base_to_dec",
+      "explanation_detail": {
+        "approach": "5進法では、右から順に $1,\\ 5,\\ 5^2,\\ \\cdots$ の位になる。各位の数字と位の大きさの積を足す。",
+        "steps": [
+          "位の大きさは右から $1,\\ 5,\\ 25,\\ \\cdots$。",
+          "$4\\cdot 5^{2}+4\\cdot 5^{1}+1=121$。"
+        ],
+        "alternatives": [
+          "上の位から順に「5 倍して次の数字を足す」をくり返しても求められる（ホーナー法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "位の大きさを正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一番右の位を $5^1$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$2000_{(5)}$ を10進法で表すといくつになるか。",
+      "answer": {
+        "value": "250"
+      },
+      "explanation": "$2000_{(5)}=2\\cdot 5^{3}+0\\cdot 5^{2}+0\\cdot 5^{1}+0=250$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*5**3+0*5**2+0*5**1+0*5**0",
+        "expected": "250"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-base_to_dec",
+      "explanation_detail": {
+        "approach": "5進法では、右から順に $1,\\ 5,\\ 5^2,\\ \\cdots$ の位になる。各位の数字と位の大きさの積を足す。",
+        "steps": [
+          "位の大きさは右から $1,\\ 5,\\ 25,\\ 125,\\ \\cdots$。",
+          "$2\\cdot 5^{3}+0\\cdot 5^{2}+0\\cdot 5^{1}+0=250$。"
+        ],
+        "alternatives": [
+          "上の位から順に「5 倍して次の数字を足す」をくり返しても求められる（ホーナー法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "位の大きさを正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一番右の位を $5^1$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$101_{(6)}$ を10進法で表すといくつになるか。",
+      "answer": {
+        "value": "37"
+      },
+      "explanation": "$101_{(6)}=1\\cdot 6^{2}+0\\cdot 6^{1}+1=37$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1*6**2+0*6**1+1*6**0",
+        "expected": "37"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-base_to_dec",
+      "explanation_detail": {
+        "approach": "6進法では、右から順に $1,\\ 6,\\ 6^2,\\ \\cdots$ の位になる。各位の数字と位の大きさの積を足す。",
+        "steps": [
+          "位の大きさは右から $1,\\ 6,\\ 36,\\ \\cdots$。",
+          "$1\\cdot 6^{2}+0\\cdot 6^{1}+1=37$。"
+        ],
+        "alternatives": [
+          "上の位から順に「6 倍して次の数字を足す」をくり返しても求められる（ホーナー法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "位の大きさを正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一番右の位を $6^1$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "10進数の $267$ を 4 進法で表しなさい。",
+      "answer": {
+        "value": "$10023_{(4)}$",
+        "accepted": [
+          "10023"
+        ]
+      },
+      "explanation": "4 で割った余りを下の位から順に並べると $10023_{(4)}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1*4**4+0*4**3+0*4**2+2*4**1+3*4**0",
+        "expected": "267",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-dec_to_base",
+      "explanation_detail": {
+        "approach": "4 で割った余りが一の位、その商をまた 4 で割った余りが次の位、…と下の位から決まる。",
+        "steps": [
+          "$267\\div4=66$ 余り $3$",
+          "$66\\div4=16$ 余り $2$",
+          "$16\\div4=4$ 余り $0$",
+          "$4\\div4=1$ 余り $0$",
+          "$1\\div4=0$ 余り $1$",
+          "余りを下（最後）から上へ読む。"
+        ],
+        "alternatives": [
+          "検算：$1\\cdot 4^{4}+0\\cdot 4^{3}+0\\cdot 4^{2}+2\\cdot 4^{1}+3=267$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "割り算をくり返して余りを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "正しい順序で読んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを上から順に読み、数字の並びが逆になる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "10進数の $254$ を 3 進法で表しなさい。",
+      "answer": {
+        "value": "$100102_{(3)}$",
+        "accepted": [
+          "100102"
+        ]
+      },
+      "explanation": "3 で割った余りを下の位から順に並べると $100102_{(3)}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1*3**5+0*3**4+0*3**3+1*3**2+0*3**1+2*3**0",
+        "expected": "254",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-dec_to_base",
+      "explanation_detail": {
+        "approach": "3 で割った余りが一の位、その商をまた 3 で割った余りが次の位、…と下の位から決まる。",
+        "steps": [
+          "$254\\div3=84$ 余り $2$",
+          "$84\\div3=28$ 余り $0$",
+          "$28\\div3=9$ 余り $1$",
+          "$9\\div3=3$ 余り $0$",
+          "$3\\div3=1$ 余り $0$",
+          "$1\\div3=0$ 余り $1$",
+          "余りを下（最後）から上へ読む。"
+        ],
+        "alternatives": [
+          "検算：$1\\cdot 3^{5}+0\\cdot 3^{4}+0\\cdot 3^{3}+1\\cdot 3^{2}+0\\cdot 3^{1}+2=254$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "割り算をくり返して余りを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "正しい順序で読んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを上から順に読み、数字の並びが逆になる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "10進数の $331$ を 4 進法で表しなさい。",
+      "answer": {
+        "value": "$11023_{(4)}$",
+        "accepted": [
+          "11023"
+        ]
+      },
+      "explanation": "4 で割った余りを下の位から順に並べると $11023_{(4)}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1*4**4+1*4**3+0*4**2+2*4**1+3*4**0",
+        "expected": "331",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-dec_to_base",
+      "explanation_detail": {
+        "approach": "4 で割った余りが一の位、その商をまた 4 で割った余りが次の位、…と下の位から決まる。",
+        "steps": [
+          "$331\\div4=82$ 余り $3$",
+          "$82\\div4=20$ 余り $2$",
+          "$20\\div4=5$ 余り $0$",
+          "$5\\div4=1$ 余り $1$",
+          "$1\\div4=0$ 余り $1$",
+          "余りを下（最後）から上へ読む。"
+        ],
+        "alternatives": [
+          "検算：$1\\cdot 4^{4}+1\\cdot 4^{3}+0\\cdot 4^{2}+2\\cdot 4^{1}+3=331$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "割り算をくり返して余りを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "正しい順序で読んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを上から順に読み、数字の並びが逆になる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "10進数の $314$ を 3 進法で表しなさい。",
+      "answer": {
+        "value": "$102122_{(3)}$",
+        "accepted": [
+          "102122"
+        ]
+      },
+      "explanation": "3 で割った余りを下の位から順に並べると $102122_{(3)}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1*3**5+0*3**4+2*3**3+1*3**2+2*3**1+2*3**0",
+        "expected": "314",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-dec_to_base",
+      "explanation_detail": {
+        "approach": "3 で割った余りが一の位、その商をまた 3 で割った余りが次の位、…と下の位から決まる。",
+        "steps": [
+          "$314\\div3=104$ 余り $2$",
+          "$104\\div3=34$ 余り $2$",
+          "$34\\div3=11$ 余り $1$",
+          "$11\\div3=3$ 余り $2$",
+          "$3\\div3=1$ 余り $0$",
+          "$1\\div3=0$ 余り $1$",
+          "余りを下（最後）から上へ読む。"
+        ],
+        "alternatives": [
+          "検算：$1\\cdot 3^{5}+0\\cdot 3^{4}+2\\cdot 3^{3}+1\\cdot 3^{2}+2\\cdot 3^{1}+2=314$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "割り算をくり返して余りを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "正しい順序で読んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを上から順に読み、数字の並びが逆になる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整数 $a$ を $8$ で割ると $5$ 余り、整数 $b$ を $8$ で割ると $2$ 余る。$ab$ を $8$ で割った余りを求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "余りだけで計算してよい：$5\\times2=10$、これを $8$ で割った余りは $2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Mod(5*2,8)",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-remainder",
+      "explanation_detail": {
+        "approach": "$a=8k+5$、$b=8l+2$ とおいて計算すると、$8$ の倍数の部分は余りに影響しない。余りどうしで計算すればよい。",
+        "steps": [
+          "$a=8k+5$、$b=8l+2$（$k,\\ l$ は整数）とおく。",
+          "$ab$ を展開すると、$8$ の倍数＋（余りどうしの計算）の形になる。",
+          "$5\\times2=10$、$8$ で割った余りは $2$。"
+        ],
+        "alternatives": [
+          "具体的な数で確かめる：$a=5$、$b=2$（または $a=13$ など）として $ab$ を計算し、$8$ で割る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りどうしで計算してよい理由を理解している",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りどうしの計算結果が $8$ 以上になっても、もう一度 $8$ で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整数 $a$ を $9$ で割ると $7$ 余り、整数 $b$ を $9$ で割ると $4$ 余る。$a^3$ を $9$ で割った余りを求めなさい。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "余りだけで計算してよい：$7^3=343$、これを $9$ で割った余りは $1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Mod(7**3,9)",
+        "expected": "1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-remainder",
+      "explanation_detail": {
+        "approach": "$a=9k+7$、$b=9l+4$ とおいて計算すると、$9$ の倍数の部分は余りに影響しない。余りどうしで計算すればよい。",
+        "steps": [
+          "$a=9k+7$、$b=9l+4$（$k,\\ l$ は整数）とおく。",
+          "$a^3$ を展開すると、$9$ の倍数＋（余りどうしの計算）の形になる。",
+          "$7^3=343$、$9$ で割った余りは $1$。"
+        ],
+        "alternatives": [
+          "具体的な数で確かめる：$a=7$、$b=4$（または $a=16$ など）として $a^3$ を計算し、$9$ で割る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りどうしで計算してよい理由を理解している",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りどうしの計算結果が $9$ 以上になっても、もう一度 $9$ で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整数 $a$ を $9$ で割ると $4$ 余り、整数 $b$ を $9$ で割ると $7$ 余る。$a^3$ を $9$ で割った余りを求めなさい。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "余りだけで計算してよい：$4^3=64$、これを $9$ で割った余りは $1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Mod(4**3,9)",
+        "expected": "1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-remainder",
+      "explanation_detail": {
+        "approach": "$a=9k+4$、$b=9l+7$ とおいて計算すると、$9$ の倍数の部分は余りに影響しない。余りどうしで計算すればよい。",
+        "steps": [
+          "$a=9k+4$、$b=9l+7$（$k,\\ l$ は整数）とおく。",
+          "$a^3$ を展開すると、$9$ の倍数＋（余りどうしの計算）の形になる。",
+          "$4^3=64$、$9$ で割った余りは $1$。"
+        ],
+        "alternatives": [
+          "具体的な数で確かめる：$a=4$、$b=7$（または $a=13$ など）として $a^3$ を計算し、$9$ で割る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りどうしで計算してよい理由を理解している",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りどうしの計算結果が $9$ 以上になっても、もう一度 $9$ で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整数 $a$ を $5$ で割ると $2$ 余り、整数 $b$ を $5$ で割ると $4$ 余る。$a^3$ を $5$ で割った余りを求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "余りだけで計算してよい：$2^3=8$、これを $5$ で割った余りは $3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Mod(2**3,5)",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-remainder",
+      "explanation_detail": {
+        "approach": "$a=5k+2$、$b=5l+4$ とおいて計算すると、$5$ の倍数の部分は余りに影響しない。余りどうしで計算すればよい。",
+        "steps": [
+          "$a=5k+2$、$b=5l+4$（$k,\\ l$ は整数）とおく。",
+          "$a^3$ を展開すると、$5$ の倍数＋（余りどうしの計算）の形になる。",
+          "$2^3=8$、$5$ で割った余りは $3$。"
+        ],
+        "alternatives": [
+          "具体的な数で確かめる：$a=2$、$b=4$（または $a=7$ など）として $a^3$ を計算し、$5$ で割る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りどうしで計算してよい理由を理解している",
+            "points": 1
+          },
+          {
+            "point": "余りを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りどうしの計算結果が $5$ 以上になっても、もう一度 $5$ で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "互除法を用いて、$899$ と $434$ の最大公約数を求めなさい。途中の割り算の式も書きなさい。",
+      "answer": {
+        "value": "31"
+      },
+      "explanation": "互除法：$899=434\\times2+31$、$434=31\\times14+0$。余りが $0$ になったときの割る数 $31$ が最大公約数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd(899,434)",
+        "expected": "31"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-euclid",
+      "explanation_detail": {
+        "approach": "2数がともに大きく素因数分解しにくいときは、互除法 $\\gcd(a,b)=\\gcd(b,r)$ をくり返す。",
+        "steps": [
+          "$899=434\\times2+31$",
+          "$434=31\\times14+0$",
+          "最大公約数は $31$。"
+        ],
+        "alternatives": [
+          "求めた $31$ で両方を割ると $29$、$14$ となり、これらが互いに素であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "互除法の割り算を正しく続けている",
+            "points": 2
+          },
+          {
+            "point": "最大公約数を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最後の余り $0$ の1つ前の「余り」ではなく、割られる数を答えてしまう。",
+          "商と余りを取り違えて次の割り算に進む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "互除法を用いて、$208$ と $143$ の最大公約数を求めなさい。途中の割り算の式も書きなさい。",
+      "answer": {
+        "value": "13"
+      },
+      "explanation": "互除法：$208=143\\times1+65$、$143=65\\times2+13$、$65=13\\times5+0$。余りが $0$ になったときの割る数 $13$ が最大公約数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd(208,143)",
+        "expected": "13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-euclid",
+      "explanation_detail": {
+        "approach": "2数がともに大きく素因数分解しにくいときは、互除法 $\\gcd(a,b)=\\gcd(b,r)$ をくり返す。",
+        "steps": [
+          "$208=143\\times1+65$",
+          "$143=65\\times2+13$",
+          "$65=13\\times5+0$",
+          "最大公約数は $13$。"
+        ],
+        "alternatives": [
+          "求めた $13$ で両方を割ると $16$、$11$ となり、これらが互いに素であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "互除法の割り算を正しく続けている",
+            "points": 2
+          },
+          {
+            "point": "最大公約数を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最後の余り $0$ の1つ前の「余り」ではなく、割られる数を答えてしまう。",
+          "商と余りを取り違えて次の割り算に進む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "互除法を用いて、$364$ と $351$ の最大公約数を求めなさい。途中の割り算の式も書きなさい。",
+      "answer": {
+        "value": "13"
+      },
+      "explanation": "互除法：$364=351\\times1+13$、$351=13\\times27+0$。余りが $0$ になったときの割る数 $13$ が最大公約数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd(364,351)",
+        "expected": "13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-euclid",
+      "explanation_detail": {
+        "approach": "2数がともに大きく素因数分解しにくいときは、互除法 $\\gcd(a,b)=\\gcd(b,r)$ をくり返す。",
+        "steps": [
+          "$364=351\\times1+13$",
+          "$351=13\\times27+0$",
+          "最大公約数は $13$。"
+        ],
+        "alternatives": [
+          "求めた $13$ で両方を割ると $28$、$27$ となり、これらが互いに素であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "互除法の割り算を正しく続けている",
+            "points": 2
+          },
+          {
+            "point": "最大公約数を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最後の余り $0$ の1つ前の「余り」ではなく、割られる数を答えてしまう。",
+          "商と余りを取り違えて次の割り算に進む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "互除法を用いて、$961$ と $341$ の最大公約数を求めなさい。途中の割り算の式も書きなさい。",
+      "answer": {
+        "value": "31"
+      },
+      "explanation": "互除法：$961=341\\times2+279$、$341=279\\times1+62$、$279=62\\times4+31$、$62=31\\times2+0$。余りが $0$ になったときの割る数 $31$ が最大公約数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd(961,341)",
+        "expected": "31"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-euclid",
+      "explanation_detail": {
+        "approach": "2数がともに大きく素因数分解しにくいときは、互除法 $\\gcd(a,b)=\\gcd(b,r)$ をくり返す。",
+        "steps": [
+          "$961=341\\times2+279$",
+          "$341=279\\times1+62$",
+          "$279=62\\times4+31$",
+          "$62=31\\times2+0$",
+          "最大公約数は $31$。"
+        ],
+        "alternatives": [
+          "求めた $31$ で両方を割ると $31$、$11$ となり、これらが互いに素であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "互除法の割り算を正しく続けている",
+            "points": 2
+          },
+          {
+            "point": "最大公約数を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最後の余り $0$ の1つ前の「余り」ではなく、割られる数を答えてしまう。",
+          "商と余りを取り違えて次の割り算に進む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "互除法を用いて、$992$ と $589$ の最大公約数を求めなさい。途中の割り算の式も書きなさい。",
+      "answer": {
+        "value": "31"
+      },
+      "explanation": "互除法：$992=589\\times1+403$、$589=403\\times1+186$、$403=186\\times2+31$、$186=31\\times6+0$。余りが $0$ になったときの割る数 $31$ が最大公約数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd(992,589)",
+        "expected": "31"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-euclid",
+      "explanation_detail": {
+        "approach": "2数がともに大きく素因数分解しにくいときは、互除法 $\\gcd(a,b)=\\gcd(b,r)$ をくり返す。",
+        "steps": [
+          "$992=589\\times1+403$",
+          "$589=403\\times1+186$",
+          "$403=186\\times2+31$",
+          "$186=31\\times6+0$",
+          "最大公約数は $31$。"
+        ],
+        "alternatives": [
+          "求めた $31$ で両方を割ると $32$、$19$ となり、これらが互いに素であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "互除法の割り算を正しく続けている",
+            "points": 2
+          },
+          {
+            "point": "最大公約数を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最後の余り $0$ の1つ前の「余り」ではなく、割られる数を答えてしまう。",
+          "商と余りを取り違えて次の割り算に進む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $15x+11y=1$ を満たす整数 $x$、$y$ の組をすべて求めなさい。",
+      "answer": {
+        "value": "$x=11k+3,\\ y=-15k-4$（$k$ は整数）",
+        "accepted": [
+          "x=11k+3, y=-15k-4"
+        ]
+      },
+      "explanation": "1組の解 $(x,\\,y)=(3,\\,-4)$ を見つけ、差をとって $15(x-3)=-11(y+4)$。$15$ と $11$ は互いに素。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(15*(11*k+(3))+11*(-15*k+(-4)))",
+        "expected": "1",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-diophantine",
+      "explanation_detail": {
+        "approach": "まず1組の整数解（特殊解）を見つけ、もとの式との差をとる。係数が互いに素であることを使って一般解を決める。",
+        "steps": [
+          "$x=3$ のとき $y=-4$ となり、$(x,\\,y)=(3,\\,-4)$ は1つの解。",
+          "$15x+11y=1$ と $15\\cdot3+11\\cdot(-4)=1$ の差をとる：$15(x-3)+11(y-(-4))=0$。",
+          "$15$ と $11$ は互いに素なので、$x-3$ は $11$ の倍数：$x-3=11k$。",
+          "代入して $y=-15k-4$。"
+        ],
+        "alternatives": [
+          "互除法を逆にたどって特殊解を求める方法もある。特殊解の選び方によって答えの見た目は変わるが、$k$ をずらせば同じ解の集合になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特殊解を正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "互いに素であることを使って一般解を導いている",
+            "points": 2
+          },
+          {
+            "point": "一般解を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ に $a$ の倍数、$y$ に $b$ の倍数をつけてしまう（係数の入れかえ）。",
+          "「$k$ は整数」を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $12x+13y=1$ を満たす整数 $x$、$y$ の組をすべて求めなさい。",
+      "answer": {
+        "value": "$x=13k+12,\\ y=-12k-11$（$k$ は整数）",
+        "accepted": [
+          "x=13k+12, y=-12k-11"
+        ]
+      },
+      "explanation": "1組の解 $(x,\\,y)=(12,\\,-11)$ を見つけ、差をとって $12(x-12)=-13(y+11)$。$12$ と $13$ は互いに素。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(12*(13*k+(12))+13*(-12*k+(-11)))",
+        "expected": "1",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-diophantine",
+      "explanation_detail": {
+        "approach": "まず1組の整数解（特殊解）を見つけ、もとの式との差をとる。係数が互いに素であることを使って一般解を決める。",
+        "steps": [
+          "$x=12$ のとき $y=-11$ となり、$(x,\\,y)=(12,\\,-11)$ は1つの解。",
+          "$12x+13y=1$ と $12\\cdot12+13\\cdot(-11)=1$ の差をとる：$12(x-12)+13(y-(-11))=0$。",
+          "$12$ と $13$ は互いに素なので、$x-12$ は $13$ の倍数：$x-12=13k$。",
+          "代入して $y=-12k-11$。"
+        ],
+        "alternatives": [
+          "互除法を逆にたどって特殊解を求める方法もある。特殊解の選び方によって答えの見た目は変わるが、$k$ をずらせば同じ解の集合になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特殊解を正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "互いに素であることを使って一般解を導いている",
+            "points": 2
+          },
+          {
+            "point": "一般解を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ に $a$ の倍数、$y$ に $b$ の倍数をつけてしまう（係数の入れかえ）。",
+          "「$k$ は整数」を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $11x+5y=1$ を満たす整数 $x$、$y$ の組をすべて求めなさい。",
+      "answer": {
+        "value": "$x=5k+1,\\ y=-11k-2$（$k$ は整数）",
+        "accepted": [
+          "x=5k+1, y=-11k-2"
+        ]
+      },
+      "explanation": "1組の解 $(x,\\,y)=(1,\\,-2)$ を見つけ、差をとって $11(x-1)=-5(y+2)$。$11$ と $5$ は互いに素。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(11*(5*k+(1))+5*(-11*k+(-2)))",
+        "expected": "1",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-diophantine",
+      "explanation_detail": {
+        "approach": "まず1組の整数解（特殊解）を見つけ、もとの式との差をとる。係数が互いに素であることを使って一般解を決める。",
+        "steps": [
+          "$x=1$ のとき $y=-2$ となり、$(x,\\,y)=(1,\\,-2)$ は1つの解。",
+          "$11x+5y=1$ と $11\\cdot1+5\\cdot(-2)=1$ の差をとる：$11(x-1)+5(y-(-2))=0$。",
+          "$11$ と $5$ は互いに素なので、$x-1$ は $5$ の倍数：$x-1=5k$。",
+          "代入して $y=-11k-2$。"
+        ],
+        "alternatives": [
+          "互除法を逆にたどって特殊解を求める方法もある。特殊解の選び方によって答えの見た目は変わるが、$k$ をずらせば同じ解の集合になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特殊解を正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "互いに素であることを使って一般解を導いている",
+            "points": 2
+          },
+          {
+            "point": "一般解を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ に $a$ の倍数、$y$ に $b$ の倍数をつけてしまう（係数の入れかえ）。",
+          "「$k$ は整数」を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $16x+13y=1$ を満たす整数 $x$、$y$ の組をすべて求めなさい。",
+      "answer": {
+        "value": "$x=13k+9,\\ y=-16k-11$（$k$ は整数）",
+        "accepted": [
+          "x=13k+9, y=-16k-11"
+        ]
+      },
+      "explanation": "1組の解 $(x,\\,y)=(9,\\,-11)$ を見つけ、差をとって $16(x-9)=-13(y+11)$。$16$ と $13$ は互いに素。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(16*(13*k+(9))+13*(-16*k+(-11)))",
+        "expected": "1",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-diophantine",
+      "explanation_detail": {
+        "approach": "まず1組の整数解（特殊解）を見つけ、もとの式との差をとる。係数が互いに素であることを使って一般解を決める。",
+        "steps": [
+          "$x=9$ のとき $y=-11$ となり、$(x,\\,y)=(9,\\,-11)$ は1つの解。",
+          "$16x+13y=1$ と $16\\cdot9+13\\cdot(-11)=1$ の差をとる：$16(x-9)+13(y-(-11))=0$。",
+          "$16$ と $13$ は互いに素なので、$x-9$ は $13$ の倍数：$x-9=13k$。",
+          "代入して $y=-16k-11$。"
+        ],
+        "alternatives": [
+          "互除法を逆にたどって特殊解を求める方法もある。特殊解の選び方によって答えの見た目は変わるが、$k$ をずらせば同じ解の集合になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特殊解を正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "互いに素であることを使って一般解を導いている",
+            "points": 2
+          },
+          {
+            "point": "一般解を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ に $a$ の倍数、$y$ に $b$ の倍数をつけてしまう（係数の入れかえ）。",
+          "「$k$ は整数」を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $3x+4y=1$ を満たす整数 $x$、$y$ の組をすべて求めなさい。",
+      "answer": {
+        "value": "$x=4k+3,\\ y=-3k-2$（$k$ は整数）",
+        "accepted": [
+          "x=4k+3, y=-3k-2"
+        ]
+      },
+      "explanation": "1組の解 $(x,\\,y)=(3,\\,-2)$ を見つけ、差をとって $3(x-3)=-4(y+2)$。$3$ と $4$ は互いに素。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(3*(4*k+(3))+4*(-3*k+(-2)))",
+        "expected": "1",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-diophantine",
+      "explanation_detail": {
+        "approach": "まず1組の整数解（特殊解）を見つけ、もとの式との差をとる。係数が互いに素であることを使って一般解を決める。",
+        "steps": [
+          "$x=3$ のとき $y=-2$ となり、$(x,\\,y)=(3,\\,-2)$ は1つの解。",
+          "$3x+4y=1$ と $3\\cdot3+4\\cdot(-2)=1$ の差をとる：$3(x-3)+4(y-(-2))=0$。",
+          "$3$ と $4$ は互いに素なので、$x-3$ は $4$ の倍数：$x-3=4k$。",
+          "代入して $y=-3k-2$。"
+        ],
+        "alternatives": [
+          "互除法を逆にたどって特殊解を求める方法もある。特殊解の選び方によって答えの見た目は変わるが、$k$ をずらせば同じ解の集合になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特殊解を正しく見つけている",
+            "points": 1
+          },
+          {
+            "point": "互いに素であることを使って一般解を導いている",
+            "points": 2
+          },
+          {
+            "point": "一般解を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x$ に $a$ の倍数、$y$ に $b$ の倍数をつけてしまう（係数の入れかえ）。",
+          "「$k$ は整数」を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$196$ の正の約数の総和を求めなさい。",
+      "answer": {
+        "value": "399"
+      },
+      "explanation": "$196=2^{2}\\cdot 7^{2}$ より、総和は $(1+2+2^{2})(1+7+7^{2})=399$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sum(divisors(196))",
+        "expected": "399"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_sum",
+      "explanation_detail": {
+        "approach": "約数の総和は、各素因数について $1+p+\\cdots+p^a$ をつくって掛け合わせる。展開するとすべての約数が1回ずつ現れる。",
+        "steps": [
+          "$196=2^{2}\\cdot 7^{2}$。",
+          "総和 $=(1+2+2^{2})(1+7+7^{2})$。",
+          "各かっこを計算して $7\\times57=399$。"
+        ],
+        "alternatives": [
+          "約数を書き出して足しても確かめられる（全部で $9$ 個）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "総和の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "かっこの中の $1$（$p^0$）を書き忘れる。",
+          "各かっこを掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$100$ の正の約数の総和を求めなさい。",
+      "answer": {
+        "value": "217"
+      },
+      "explanation": "$100=2^{2}\\cdot 5^{2}$ より、総和は $(1+2+2^{2})(1+5+5^{2})=217$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sum(divisors(100))",
+        "expected": "217"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_sum",
+      "explanation_detail": {
+        "approach": "約数の総和は、各素因数について $1+p+\\cdots+p^a$ をつくって掛け合わせる。展開するとすべての約数が1回ずつ現れる。",
+        "steps": [
+          "$100=2^{2}\\cdot 5^{2}$。",
+          "総和 $=(1+2+2^{2})(1+5+5^{2})$。",
+          "各かっこを計算して $7\\times31=217$。"
+        ],
+        "alternatives": [
+          "約数を書き出して足しても確かめられる（全部で $9$ 個）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "総和の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "かっこの中の $1$（$p^0$）を書き忘れる。",
+          "各かっこを掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$21$ の正の約数の総和を求めなさい。",
+      "answer": {
+        "value": "32"
+      },
+      "explanation": "$21=3\\cdot 7$ より、総和は $(1+3)(1+7)=32$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sum(divisors(21))",
+        "expected": "32"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_sum",
+      "explanation_detail": {
+        "approach": "約数の総和は、各素因数について $1+p+\\cdots+p^a$ をつくって掛け合わせる。展開するとすべての約数が1回ずつ現れる。",
+        "steps": [
+          "$21=3\\cdot 7$。",
+          "総和 $=(1+3)(1+7)$。",
+          "各かっこを計算して $4\\times8=32$。"
+        ],
+        "alternatives": [
+          "約数を書き出して足しても確かめられる（全部で $4$ 個）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "素因数分解が正しい",
+            "points": 1
+          },
+          {
+            "point": "総和の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "かっこの中の $1$（$p^0$）を書き忘れる。",
+          "各かっこを掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$2$ 進法で表された小数 $0.111_{(2)}$ を10進法の分数で表しなさい。",
+      "answer": {
+        "value": "7/8",
+        "display": "$\\dfrac{7}{8}$"
+      },
+      "explanation": "$0.111_{(2)}=\\dfrac{1}{2}+\\dfrac{1}{4}+\\dfrac{1}{8}=\\dfrac{7}{8}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(7,8)",
+        "expected": "7/8"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-base_fraction",
+      "explanation_detail": {
+        "approach": "小数点以下の位は、左から $\\dfrac{1}{2},\\ \\dfrac{1}{2^2},\\ \\cdots$ の位になる。",
+        "steps": [
+          "小数第1位は $\\dfrac{1}{2}$ の位、第2位は $\\dfrac{1}{4}$ の位、第3位は $\\dfrac{1}{8}$ の位。",
+          "$0.111_{(2)}=\\dfrac{1}{2}+\\dfrac{1}{4}+\\dfrac{1}{8}$。",
+          "通分して $\\dfrac{7}{8}$。"
+        ],
+        "alternatives": [
+          "$0.111_{(2)}$ を $2^3=8$ 倍すると整数 $111_{(2)}=7$ になるので、$\\dfrac{7}{8}$ を約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "小数の位の大きさを正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "既約分数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "小数第1位を $\\dfrac{1}{10}$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$2$ 進法で表された小数 $0.01_{(2)}$ を10進法の分数で表しなさい。",
+      "answer": {
+        "value": "1/4",
+        "display": "$\\dfrac{1}{4}$"
+      },
+      "explanation": "$0.01_{(2)}=\\dfrac{0}{2}+\\dfrac{1}{4}=\\dfrac{1}{4}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1,4)",
+        "expected": "1/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-base_fraction",
+      "explanation_detail": {
+        "approach": "小数点以下の位は、左から $\\dfrac{1}{2},\\ \\dfrac{1}{2^2},\\ \\cdots$ の位になる。",
+        "steps": [
+          "小数第1位は $\\dfrac{1}{2}$ の位、第2位は $\\dfrac{1}{4}$ の位。",
+          "$0.01_{(2)}=\\dfrac{0}{2}+\\dfrac{1}{4}$。",
+          "通分して $\\dfrac{1}{4}$。"
+        ],
+        "alternatives": [
+          "$0.01_{(2)}$ を $2^2=4$ 倍すると整数 $01_{(2)}=1$ になるので、$\\dfrac{1}{4}$ を約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "小数の位の大きさを正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "既約分数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "小数第1位を $\\dfrac{1}{10}$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$3$ 進法で表された小数 $0.22_{(3)}$ を10進法の分数で表しなさい。",
+      "answer": {
+        "value": "8/9",
+        "display": "$\\dfrac{8}{9}$"
+      },
+      "explanation": "$0.22_{(3)}=\\dfrac{2}{3}+\\dfrac{2}{9}=\\dfrac{8}{9}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(8,9)",
+        "expected": "8/9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U03-base_fraction",
+      "explanation_detail": {
+        "approach": "小数点以下の位は、左から $\\dfrac{1}{3},\\ \\dfrac{1}{3^2},\\ \\cdots$ の位になる。",
+        "steps": [
+          "小数第1位は $\\dfrac{1}{3}$ の位、第2位は $\\dfrac{1}{9}$ の位。",
+          "$0.22_{(3)}=\\dfrac{2}{3}+\\dfrac{2}{9}$。",
+          "通分して $\\dfrac{8}{9}$。"
+        ],
+        "alternatives": [
+          "$0.22_{(3)}$ を $3^2=9$ 倍すると整数 $22_{(3)}=8$ になるので、$\\dfrac{8}{9}$ を約分してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "小数の位の大きさを正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "既約分数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "小数第1位を $\\dfrac{1}{10}$ の位と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "縦 $192$ cm、横 $144$ cm の長方形の紙を、余りが出ないようにできるだけ大きな同じ大きさの正方形に切り分ける。正方形は何枚できるか。",
+      "answer": {
+        "value": "12"
+      },
+      "explanation": "正方形の1辺は $192$ と $144$ の公約数で、最大のものは最大公約数 $48$。枚数は $\\dfrac{192}{48}\\times\\dfrac{144}{48}=12$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(192/gcd(192,144))*(144/gcd(192,144))",
+        "expected": "12"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-tile_problem",
+      "explanation_detail": {
+        "approach": "正方形の1辺は、縦の長さも横の長さも割り切る。最も大きい正方形は最大公約数。",
+        "steps": [
+          "1辺の長さは $192$ の約数かつ $144$ の約数。",
+          "最大公約数は $48$ cm。",
+          "縦に $4$ 枚、横に $3$ 枚で $12$ 枚。"
+        ],
+        "alternatives": [
+          "求めた長さが条件を満たすか（縦・横ともに割り切れる／割り切る）を割り算で確かめ、それより小さい（大きい）候補がないことも確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公倍数・公約数のどちらを使うかを正しく判断している",
+            "points": 2
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数を取り違える。",
+          "枚数を求めるとき、面積の比ではなく1方向の枚数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "縦 $14$ cm、横 $16$ cm の長方形の板を同じ向きにすき間なく並べて、できるだけ小さい正方形をつくる。必要な板の枚数を求めなさい。",
+      "answer": {
+        "value": "56"
+      },
+      "explanation": "正方形の1辺は $14$ と $16$ の公倍数で、最小のものは最小公倍数 $112$。枚数は $\\dfrac{112}{14}\\times\\dfrac{112}{16}=56$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(lcm(14,16)/14)*(lcm(14,16)/16)",
+        "expected": "56"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-tile_problem",
+      "explanation_detail": {
+        "approach": "正方形の1辺は、縦の長さの倍数でも横の長さの倍数でもある。最も小さい正方形は最小公倍数。",
+        "steps": [
+          "1辺の長さは $14$ の倍数かつ $16$ の倍数。",
+          "最小公倍数は $112$ cm。",
+          "縦に $8$ 枚、横に $7$ 枚で $56$ 枚。"
+        ],
+        "alternatives": [
+          "求めた長さが条件を満たすか（縦・横ともに割り切れる／割り切る）を割り算で確かめ、それより小さい（大きい）候補がないことも確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公倍数・公約数のどちらを使うかを正しく判断している",
+            "points": 2
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数を取り違える。",
+          "枚数を求めるとき、面積の比ではなく1方向の枚数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "縦 $12$ cm、横 $10$ cm の長方形のタイルを、すべて同じ向きにすき間なく並べて正方形をつくる。できる正方形のうち最も小さいものの1辺の長さを求めなさい。",
+      "answer": {
+        "value": "60"
+      },
+      "explanation": "正方形の1辺は $12$ と $10$ の公倍数で、最小のものは最小公倍数 $60$。枚数は $\\dfrac{60}{12}\\times\\dfrac{60}{10}=30$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "lcm(12,10)",
+        "expected": "60"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-tile_problem",
+      "explanation_detail": {
+        "approach": "正方形の1辺は、縦の長さの倍数でも横の長さの倍数でもある。最も小さい正方形は最小公倍数。",
+        "steps": [
+          "1辺の長さは $12$ の倍数かつ $10$ の倍数。",
+          "最小公倍数は $60$ cm。"
+        ],
+        "alternatives": [
+          "求めた長さが条件を満たすか（縦・横ともに割り切れる／割り切る）を割り算で確かめ、それより小さい（大きい）候補がないことも確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公倍数・公約数のどちらを使うかを正しく判断している",
+            "points": 2
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数を取り違える。",
+          "枚数を求めるとき、面積の比ではなく1方向の枚数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "縦 $10$ cm、横 $22$ cm の長方形の板を同じ向きにすき間なく並べて、できるだけ小さい正方形をつくる。必要な板の枚数を求めなさい。",
+      "answer": {
+        "value": "55"
+      },
+      "explanation": "正方形の1辺は $10$ と $22$ の公倍数で、最小のものは最小公倍数 $110$。枚数は $\\dfrac{110}{10}\\times\\dfrac{110}{22}=55$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(lcm(10,22)/10)*(lcm(10,22)/22)",
+        "expected": "55"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-tile_problem",
+      "explanation_detail": {
+        "approach": "正方形の1辺は、縦の長さの倍数でも横の長さの倍数でもある。最も小さい正方形は最小公倍数。",
+        "steps": [
+          "1辺の長さは $10$ の倍数かつ $22$ の倍数。",
+          "最小公倍数は $110$ cm。",
+          "縦に $11$ 枚、横に $5$ 枚で $55$ 枚。"
+        ],
+        "alternatives": [
+          "求めた長さが条件を満たすか（縦・横ともに割り切れる／割り切る）を割り算で確かめ、それより小さい（大きい）候補がないことも確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公倍数・公約数のどちらを使うかを正しく判断している",
+            "points": 2
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最大公約数と最小公倍数を取り違える。",
+          "枚数を求めるとき、面積の比ではなく1方向の枚数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "整数 $n$ について、$n^5-n$ は $5$ の倍数であることを証明しなさい。",
+      "answer": {
+        "value": "（証明）$n^5-n=n(n-1)(n+1)(n^2+1)$。$n=5k,\\ 5k+1,\\ 5k-1$ のとき、それぞれ $n,\\ n-1,\\ n+1$ が $5$ の倍数。$n=5k\\pm2$ のとき $n^2+1=25k^2\\pm20k+5=5(5k^2\\pm4k+1)$ で $5$ の倍数。いずれの場合も $5$ の倍数である。（証明終）"
+      },
+      "explanation": "$n^5-n=n(n-1)(n+1)(n^2+1)$ と因数分解し、$n$ を $5$ で割った余りで分ける。場合分けが、すべての整数をもれなく覆っていることを明記する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切な場合分け（または文字のおき方）をしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の計算が正しい",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Mod(0**5-0,5), Mod(1**5-1,5), Mod(2**5-2,5), Mod(3**5-3,5), Mod(4**5-4,5)]",
+        "expected": "[0, 0, 0, 0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-proof_mod",
+      "explanation_detail": {
+        "approach": "$n^5-n=n(n-1)(n+1)(n^2+1)$ と因数分解し、$n$ を $5$ で割った余りで分ける。",
+        "steps": [
+          "$n^5-n=n(n-1)(n+1)(n^2+1)$。",
+          "$n=5k,\\ 5k+1,\\ 5k-1$ のとき、それぞれ $n,\\ n-1,\\ n+1$ が $5$ の倍数。",
+          "$n=5k\\pm2$ のとき $n^2+1=25k^2\\pm20k+5=5(5k^2\\pm4k+1)$ で $5$ の倍数。",
+          "いずれの場合も $5$ の倍数である。"
+        ],
+        "alternatives": [
+          "余りだけに注目した計算（合同式の考え方）で各場合を確認すると、文字式の展開を短くできる。",
+          "小さい $n$ で具体的に計算して、主張が正しそうか確かめてから証明を書く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け・文字のおき方",
+            "points": 2
+          },
+          {
+            "point": "各場合の計算",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "いくつかの具体例で成り立つことを確かめただけで「証明」としてしまう。",
+          "場合分けにもれがある（例：$3$ で割った余りが $2$ の場合を忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "整数 $n$ について、$n(n+1)(2n+1)$ は $6$ の倍数であることを証明しなさい。",
+      "answer": {
+        "value": "（証明）$n(n+1)$ は連続2整数の積なので偶数。$n=3k$ なら $n$、$n=3k+2$ なら $n+1$、$n=3k+1$ なら $2n+1=6k+3$ が $3$ の倍数。$2$ と $3$ は互いに素なので $6$ の倍数。（証明終）"
+      },
+      "explanation": "$2$ の倍数であることと、$n$ を $3$ で割った余りで分けて $3$ の倍数であることを示す。場合分けが、すべての整数をもれなく覆っていることを明記する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切な場合分け（または文字のおき方）をしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の計算が正しい",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Mod(0*1*1,6), Mod(1*2*3,6), Mod(2*3*5,6), Mod(3*4*7,6), Mod(4*5*9,6), Mod(5*6*11,6)]",
+        "expected": "[0, 0, 0, 0, 0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-proof_mod",
+      "explanation_detail": {
+        "approach": "$2$ の倍数であることと、$n$ を $3$ で割った余りで分けて $3$ の倍数であることを示す。",
+        "steps": [
+          "$n(n+1)$ は連続2整数の積なので偶数。",
+          "$n=3k$ なら $n$、$n=3k+2$ なら $n+1$、$n=3k+1$ なら $2n+1=6k+3$ が $3$ の倍数。",
+          "$2$ と $3$ は互いに素なので $6$ の倍数。"
+        ],
+        "alternatives": [
+          "余りだけに注目した計算（合同式の考え方）で各場合を確認すると、文字式の展開を短くできる。",
+          "小さい $n$ で具体的に計算して、主張が正しそうか確かめてから証明を書く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け・文字のおき方",
+            "points": 2
+          },
+          {
+            "point": "各場合の計算",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "いくつかの具体例で成り立つことを確かめただけで「証明」としてしまう。",
+          "場合分けにもれがある（例：$3$ で割った余りが $2$ の場合を忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "奇数の2乗を $8$ で割った余りは $1$ であることを証明しなさい。",
+      "answer": {
+        "value": "（証明）奇数を $2k+1$（$k$ は整数）とおくと $(2k+1)^2=4k(k+1)+1$。$k(k+1)$ は連続する2つの整数の積なので偶数で、$k(k+1)=2m$ とおける。$(2k+1)^2=8m+1$ より、余りは $1$。（証明終）"
+      },
+      "explanation": "奇数を $2k+1$ とおき、$k(k+1)$ が連続2整数の積で偶数であることを使う。場合分けが、すべての整数をもれなく覆っていることを明記する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切な場合分け（または文字のおき方）をしている",
+            "points": 2
+          },
+          {
+            "criterion": "各場合の計算が正しい",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Mod(1**2,8), Mod(3**2,8), Mod(5**2,8), Mod(7**2,8)]",
+        "expected": "[1, 1, 1, 1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-proof_mod",
+      "explanation_detail": {
+        "approach": "奇数を $2k+1$ とおき、$k(k+1)$ が連続2整数の積で偶数であることを使う。",
+        "steps": [
+          "奇数を $2k+1$（$k$ は整数）とおくと $(2k+1)^2=4k(k+1)+1$。",
+          "$k(k+1)$ は連続する2つの整数の積なので偶数で、$k(k+1)=2m$ とおける。",
+          "$(2k+1)^2=8m+1$ より、余りは $1$。"
+        ],
+        "alternatives": [
+          "余りだけに注目した計算（合同式の考え方）で各場合を確認すると、文字式の展開を短くできる。",
+          "小さい $n$ で具体的に計算して、主張が正しそうか確かめてから証明を書く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け・文字のおき方",
+            "points": 2
+          },
+          {
+            "point": "各場合の計算",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "いくつかの具体例で成り立つことを確かめただけで「証明」としてしまう。",
+          "場合分けにもれがある（例：$3$ で割った余りが $2$ の場合を忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個 $80$ 円の品物 P と1個 $30$ 円の品物 Q を、どちらも少なくとも1個は買い、代金の合計をちょうど $600$ 円にしたい。P と Q の個数の組 $(x,\\,y)$ をすべて求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$(x,\\,y)=(3,\\,12)、(6,\\,4)$"
+      },
+      "explanation": "$80x+30y=600$ の両辺を $10$ で割って $8x+3y=60$。一般解を求め、$x\\geqq1$、$y\\geqq1$ を満たす $k$ を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "方程式を立てて簡単にしている",
+            "points": 2
+          },
+          {
+            "criterion": "一般解（または候補の絞り込み）を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "正の整数の条件から $k$ の範囲を決めている",
+            "points": 2
+          },
+          {
+            "criterion": "すべての組を答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[8*3+3*12, 8*6+3*4]",
+        "expected": "[60, 60]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-dioph_app",
+      "explanation_detail": {
+        "approach": "個数は正の整数なので、一次不定方程式の一般解を求めたあと、$x\\geqq1$、$y\\geqq1$ から整数 $k$ の範囲をしぼる。",
+        "steps": [
+          "$80x+30y=600$ より $8x+3y=60$。",
+          "1組の解 $(x,\\,y)=(3,\\,12)$。$8$ と $3$ は互いに素なので、一般解は $x=3k+3,\\ y=-8k+12$。",
+          "$x\\geqq1,\\ y\\geqq1$ より $0\\leqq k\\leqq1$。",
+          "$(x,\\,y)=(3,\\,12)、(6,\\,4)$。"
+        ],
+        "alternatives": [
+          "$y=\\dfrac{60-8x}{3}$ が正の整数になる $x$ を、$x=1,\\ 2,\\ \\cdots$ と順に調べてもよい（$3$ ごとに解が現れる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式",
+            "points": 2
+          },
+          {
+            "point": "一般解",
+            "points": 3
+          },
+          {
+            "point": "$k$ の範囲",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも1個」の条件を忘れて $x=0$ や $y=0$ の組を含める。",
+          "両辺を割らずに大きな係数のまま計算して誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個 $110$ 円の品物 P と1個 $30$ 円の品物 Q を、どちらも少なくとも1個は買い、代金の合計をちょうど $810$ 円にしたい。P と Q の個数の組 $(x,\\,y)$ をすべて求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$(x,\\,y)=(3,\\,16)、(6,\\,5)$"
+      },
+      "explanation": "$110x+30y=810$ の両辺を $10$ で割って $11x+3y=81$。一般解を求め、$x\\geqq1$、$y\\geqq1$ を満たす $k$ を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "方程式を立てて簡単にしている",
+            "points": 2
+          },
+          {
+            "criterion": "一般解（または候補の絞り込み）を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "正の整数の条件から $k$ の範囲を決めている",
+            "points": 2
+          },
+          {
+            "criterion": "すべての組を答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[11*3+3*16, 11*6+3*5]",
+        "expected": "[81, 81]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-dioph_app",
+      "explanation_detail": {
+        "approach": "個数は正の整数なので、一次不定方程式の一般解を求めたあと、$x\\geqq1$、$y\\geqq1$ から整数 $k$ の範囲をしぼる。",
+        "steps": [
+          "$110x+30y=810$ より $11x+3y=81$。",
+          "1組の解 $(x,\\,y)=(3,\\,16)$。$11$ と $3$ は互いに素なので、一般解は $x=3k+3,\\ y=-11k+16$。",
+          "$x\\geqq1,\\ y\\geqq1$ より $0\\leqq k\\leqq1$。",
+          "$(x,\\,y)=(3,\\,16)、(6,\\,5)$。"
+        ],
+        "alternatives": [
+          "$y=\\dfrac{81-11x}{3}$ が正の整数になる $x$ を、$x=1,\\ 2,\\ \\cdots$ と順に調べてもよい（$3$ ごとに解が現れる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式",
+            "points": 2
+          },
+          {
+            "point": "一般解",
+            "points": 3
+          },
+          {
+            "point": "$k$ の範囲",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも1個」の条件を忘れて $x=0$ や $y=0$ の組を含める。",
+          "両辺を割らずに大きな係数のまま計算して誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個 $210$ 円の品物 P と1個 $150$ 円の品物 Q を、どちらも少なくとも1個は買い、代金の合計をちょうど $2070$ 円にしたい。P と Q の個数の組 $(x,\\,y)$ をすべて求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$(x,\\,y)=(2,\\,11)、(7,\\,4)$"
+      },
+      "explanation": "$210x+150y=2070$ の両辺を $30$ で割って $7x+5y=69$。一般解を求め、$x\\geqq1$、$y\\geqq1$ を満たす $k$ を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "方程式を立てて簡単にしている",
+            "points": 2
+          },
+          {
+            "criterion": "一般解（または候補の絞り込み）を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "正の整数の条件から $k$ の範囲を決めている",
+            "points": 2
+          },
+          {
+            "criterion": "すべての組を答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[7*2+5*11, 7*7+5*4]",
+        "expected": "[69, 69]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-dioph_app",
+      "explanation_detail": {
+        "approach": "個数は正の整数なので、一次不定方程式の一般解を求めたあと、$x\\geqq1$、$y\\geqq1$ から整数 $k$ の範囲をしぼる。",
+        "steps": [
+          "$210x+150y=2070$ より $7x+5y=69$。",
+          "1組の解 $(x,\\,y)=(2,\\,11)$。$7$ と $5$ は互いに素なので、一般解は $x=5k+2,\\ y=-7k+11$。",
+          "$x\\geqq1,\\ y\\geqq1$ より $0\\leqq k\\leqq1$。",
+          "$(x,\\,y)=(2,\\,11)、(7,\\,4)$。"
+        ],
+        "alternatives": [
+          "$y=\\dfrac{69-7x}{5}$ が正の整数になる $x$ を、$x=1,\\ 2,\\ \\cdots$ と順に調べてもよい（$5$ ごとに解が現れる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式",
+            "points": 2
+          },
+          {
+            "point": "一般解",
+            "points": 3
+          },
+          {
+            "point": "$k$ の範囲",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも1個」の条件を忘れて $x=0$ や $y=0$ の組を含める。",
+          "両辺を割らずに大きな係数のまま計算して誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$540$ の正の約数のうち、$3$ の倍数であるものの個数と、それらの総和を求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "個数 $18$ 個、総和 $1638$",
+        "accepted": [
+          "18, 1638"
+        ]
+      },
+      "explanation": "$3$ の倍数である約数は $3m$（$m$ は $540\\div3=180$ の正の約数）の形。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[len(divisors(180)), 3*sum(divisors(180))]",
+        "expected": "[18, 1638]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_multiple",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "「$N$ の約数で $k$ の倍数」は、$km$（$m$ は $N/k$ の約数）と1対1に対応する。約数の個数・総和の公式（積の法則による数え上げ）を $N/k$ に使う。",
+        "steps": [
+          "$540=2^{2}\\cdot 3^{3}\\cdot 5$。$3$ の倍数である約数を $d=3m$ とおくと、$m$ は $180$ の正の約数。",
+          "$180=2^{2}\\cdot 3^{2}\\cdot 5$ の正の約数は $18$ 個。",
+          "総和は $3\\times(180\\ \\text{の約数の総和})=3\\times546=1638$。"
+        ],
+        "alternatives": [
+          "素因数の指数の選び方で直接数える：$2$ の指数は $0$ 以上 $2$ 以下、$3$ の指数は $1$ 以上 $3$ 以下、$5$ の指数は $0$ 以上 $1$ 以下 で、積の法則を使う。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$3m$ の形に対応させる（または指数の範囲を正しく設定する）",
+            "points": 3
+          },
+          {
+            "point": "個数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "総和を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$k$ の倍数の条件を指数の範囲に反映させず、すべての約数を数える。",
+          "総和で $k$ 倍し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$360$ の正の約数のうち、$3$ の倍数であるものの個数と、それらの総和を求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "個数 $16$ 個、総和 $1080$",
+        "accepted": [
+          "16, 1080"
+        ]
+      },
+      "explanation": "$3$ の倍数である約数は $3m$（$m$ は $360\\div3=120$ の正の約数）の形。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[len(divisors(120)), 3*sum(divisors(120))]",
+        "expected": "[16, 1080]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHA-U03-divisor_multiple",
+      "related_units": [
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "「$N$ の約数で $k$ の倍数」は、$km$（$m$ は $N/k$ の約数）と1対1に対応する。約数の個数・総和の公式（積の法則による数え上げ）を $N/k$ に使う。",
+        "steps": [
+          "$360=2^{3}\\cdot 3^{2}\\cdot 5$。$3$ の倍数である約数を $d=3m$ とおくと、$m$ は $120$ の正の約数。",
+          "$120=2^{3}\\cdot 3\\cdot 5$ の正の約数は $16$ 個。",
+          "総和は $3\\times(120\\ \\text{の約数の総和})=3\\times360=1080$。"
+        ],
+        "alternatives": [
+          "素因数の指数の選び方で直接数える：$2$ の指数は $0$ 以上 $3$ 以下、$3$ の指数は $1$ 以上 $2$ 以下、$5$ の指数は $0$ 以上 $1$ 以下 で、積の法則を使う。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$3m$ の形に対応させる（または指数の範囲を正しく設定する）",
+            "points": 3
+          },
+          {
+            "point": "個数を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "総和を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$k$ の倍数の条件を指数の範囲に反映させず、すべての約数を数える。",
+          "総和で $k$ 倍し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "最大公約数が $8$、最小公倍数が $224$ である2つの自然数 $a$、$b$（$a<b$）の組をすべて求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$(a,\\,b)=(8,\\,224)、(32,\\,56)$"
+      },
+      "explanation": "$a=8a'$、$b=8b'$（$a'$ と $b'$ は互いに素、$a'<b'$）とおくと、最小公倍数は $8a'b'=224$ より $a'b'=28$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$a=ga'$、$b=gb'$（互いに素）とおいている",
+            "points": 2
+          },
+          {
+            "criterion": "$a'b'$ の値を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "互いに素の条件で組を正しくしぼっている",
+            "points": 3
+          },
+          {
+            "criterion": "答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[gcd(8,224), lcm(8,224), gcd(32,56), lcm(32,56)]",
+        "expected": "[8, 224, 8, 224]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-gcd_lcm_pairs",
+      "explanation_detail": {
+        "approach": "最大公約数 $g$ でくくると、残りの $a'$、$b'$ は互いに素。最小公倍数は $ga'b'$ になるので、$a'b'$ の値が決まる。互いに素という条件を忘れない。",
+        "steps": [
+          "$a=8a'$、$b=8b'$（$a'<b'$、互いに素）とおく。",
+          "最小公倍数 $8a'b'=224$ より $a'b'=28$。",
+          "積が $28$ になる互いに素な組は $(a',\\,b')=(1,\\,28)、(4,\\,7)$。",
+          "$(a,\\,b)=(8,\\,224)、(32,\\,56)$。"
+        ],
+        "alternatives": [
+          "求めた各組について、実際に最大公約数と最小公倍数を計算して $8$、$224$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "おき方",
+            "points": 2
+          },
+          {
+            "point": "$a'b'$ の値",
+            "points": 2
+          },
+          {
+            "point": "互いに素での絞り込み",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積が $28$ になる組をすべて答え、互いに素でない組（最大公約数が $8$ より大きくなる組）を含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "最大公約数が $12$、最小公倍数が $168$ である2つの自然数 $a$、$b$（$a<b$）の組をすべて求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$(a,\\,b)=(12,\\,168)、(24,\\,84)$"
+      },
+      "explanation": "$a=12a'$、$b=12b'$（$a'$ と $b'$ は互いに素、$a'<b'$）とおくと、最小公倍数は $12a'b'=168$ より $a'b'=14$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$a=ga'$、$b=gb'$（互いに素）とおいている",
+            "points": 2
+          },
+          {
+            "criterion": "$a'b'$ の値を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "互いに素の条件で組を正しくしぼっている",
+            "points": 3
+          },
+          {
+            "criterion": "答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[gcd(12,168), lcm(12,168), gcd(24,84), lcm(24,84)]",
+        "expected": "[12, 168, 12, 168]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-gcd_lcm_pairs",
+      "explanation_detail": {
+        "approach": "最大公約数 $g$ でくくると、残りの $a'$、$b'$ は互いに素。最小公倍数は $ga'b'$ になるので、$a'b'$ の値が決まる。互いに素という条件を忘れない。",
+        "steps": [
+          "$a=12a'$、$b=12b'$（$a'<b'$、互いに素）とおく。",
+          "最小公倍数 $12a'b'=168$ より $a'b'=14$。",
+          "積が $14$ になる互いに素な組は $(a',\\,b')=(1,\\,14)、(2,\\,7)$。",
+          "$(a,\\,b)=(12,\\,168)、(24,\\,84)$。"
+        ],
+        "alternatives": [
+          "求めた各組について、実際に最大公約数と最小公倍数を計算して $12$、$168$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "おき方",
+            "points": 2
+          },
+          {
+            "point": "$a'b'$ の値",
+            "points": 2
+          },
+          {
+            "point": "互いに素での絞り込み",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積が $14$ になる組をすべて答え、互いに素でない組（最大公約数が $12$ より大きくなる組）を含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$33$ の正の約数の個数を求めなさい。\n［ある生徒の解答］\n$33=3\\cdot 11$ だから、約数の個数は指数を掛けて $1\\times1=1$ 個\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$4$ 個"
+      },
+      "explanation": "約数は各素因数の指数を $0$ から選ぶので、選び方は（指数＋1）通り。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "len(divisors(33))",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-err_divcount",
+      "explanation_detail": {
+        "approach": "約数 $1$ はどの素因数も含まない（指数がすべて $0$）。$1$ を数えられているかで公式の正しさを確かめられる。",
+        "steps": [
+          "$33=3\\cdot 11$。",
+          "各素因数の指数は $0$ から最大の指数まで選べる。",
+          "$(1+1)\\times(1+1)=4$。"
+        ],
+        "alternatives": [
+          "小さい数（例：$12=2^2\\cdot3$ の約数 $1,2,3,4,6,12$ の6個）で公式を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数 $0$ を数えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$33=3\\cdot 11$ だから、約数の個数は指数を掛けて $1\\times1=1$ 個",
+        "error_step": "個数の公式（指数をそのまま掛けた部分）",
+        "error_type": "formula",
+        "why_tempting": "素因数分解の指数がそのまま目に入るので、「指数を掛ける」と覚え違えやすい。指数 $0$（その素因数を含まない約数）の存在を意識していない。",
+        "correction": "指数 $0$ の場合も含めて、$(1+1)\\times(1+1)=4$ 個"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$144$ の正の約数の個数を求めなさい。\n［ある生徒の解答］\n$144=2^{4}\\cdot 3^{2}$ だから、約数の個数は指数を掛けて $4\\times2=8$ 個\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$15$ 個"
+      },
+      "explanation": "約数は各素因数の指数を $0$ から選ぶので、選び方は（指数＋1）通り。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "len(divisors(144))",
+        "expected": "15",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-err_divcount",
+      "explanation_detail": {
+        "approach": "約数 $1$ はどの素因数も含まない（指数がすべて $0$）。$1$ を数えられているかで公式の正しさを確かめられる。",
+        "steps": [
+          "$144=2^{4}\\cdot 3^{2}$。",
+          "各素因数の指数は $0$ から最大の指数まで選べる。",
+          "$(4+1)\\times(2+1)=15$。"
+        ],
+        "alternatives": [
+          "小さい数（例：$12=2^2\\cdot3$ の約数 $1,2,3,4,6,12$ の6個）で公式を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数 $0$ を数えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$144=2^{4}\\cdot 3^{2}$ だから、約数の個数は指数を掛けて $4\\times2=8$ 個",
+        "error_step": "個数の公式（指数をそのまま掛けた部分）",
+        "error_type": "formula",
+        "why_tempting": "素因数分解の指数がそのまま目に入るので、「指数を掛ける」と覚え違えやすい。指数 $0$（その素因数を含まない約数）の存在を意識していない。",
+        "correction": "指数 $0$ の場合も含めて、$(4+1)\\times(2+1)=15$ 個"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$616$ の正の約数の個数を求めなさい。\n［ある生徒の解答］\n$616=2^{3}\\cdot 7\\cdot 11$ だから、約数の個数は指数を掛けて $3\\times1\\times1=3$ 個\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$16$ 個"
+      },
+      "explanation": "約数は各素因数の指数を $0$ から選ぶので、選び方は（指数＋1）通り。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "len(divisors(616))",
+        "expected": "16",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-err_divcount",
+      "explanation_detail": {
+        "approach": "約数 $1$ はどの素因数も含まない（指数がすべて $0$）。$1$ を数えられているかで公式の正しさを確かめられる。",
+        "steps": [
+          "$616=2^{3}\\cdot 7\\cdot 11$。",
+          "各素因数の指数は $0$ から最大の指数まで選べる。",
+          "$(3+1)\\times(1+1)\\times(1+1)=16$。"
+        ],
+        "alternatives": [
+          "小さい数（例：$12=2^2\\cdot3$ の約数 $1,2,3,4,6,12$ の6個）で公式を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数 $0$ を数えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$616=2^{3}\\cdot 7\\cdot 11$ だから、約数の個数は指数を掛けて $3\\times1\\times1=3$ 個",
+        "error_step": "個数の公式（指数をそのまま掛けた部分）",
+        "error_type": "formula",
+        "why_tempting": "素因数分解の指数がそのまま目に入るので、「指数を掛ける」と覚え違えやすい。指数 $0$（その素因数を含まない約数）の存在を意識していない。",
+        "correction": "指数 $0$ の場合も含めて、$(3+1)\\times(1+1)\\times(1+1)=16$ 個"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $13x+9y=2$ の整数解をすべて求めなさい。\n［ある生徒の解答］\n$(x,\\,y)=(5,\\,-7)$ が1つの解なので、一般解は $x=13k+5,\\ y=-9k-7$（$k$ は整数）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=9k+5,\\ y=-13k-7$（$k$ は整数）"
+      },
+      "explanation": "$13(x-5)=-9(y-(-7))$ で、$13$ と $9$ は互いに素なので $x-5$ は $9$ の倍数。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(13*(9*k+(5))+9*(-13*k+(-7)))",
+        "expected": "2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-err_dioph",
+      "explanation_detail": {
+        "approach": "一般解は、もとの方程式に代入して $k$ が消えるかどうかで検算できる。",
+        "steps": [
+          "差をとって $13(x-5)=-9(y-(-7))$。",
+          "$13$ と $9$ は互いに素なので $x-5=9k$。",
+          "代入して $y=-13k-7$。"
+        ],
+        "alternatives": [
+          "生徒の解を代入すると $13(13k+5)+9(-9k+-7)=2+(88)k$ となり、$k\\neq0$ で $2$ にならない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一般解を代入して確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x,\\,y)=(5,\\,-7)$ が1つの解なので、一般解は $x=13k+5,\\ y=-9k-7$（$k$ は整数）",
+        "error_step": "一般解の係数（$x$ と $y$ に付ける倍数の入れかえ）",
+        "error_type": "formula",
+        "why_tempting": "「$x$ には $x$ の係数」と思いこみやすい。一般解を導く過程（差をとって互いに素を使う）を省いて形だけ覚えている。",
+        "correction": "$x=9k+5,\\ y=-13k-7$（$k$ は整数）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $10x+13y=5$ の整数解をすべて求めなさい。\n［ある生徒の解答］\n$(x,\\,y)=(7,\\,-5)$ が1つの解なので、一般解は $x=10k+7,\\ y=-13k-5$（$k$ は整数）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=13k+7,\\ y=-10k-5$（$k$ は整数）"
+      },
+      "explanation": "$10(x-7)=-13(y-(-5))$ で、$10$ と $13$ は互いに素なので $x-7$ は $13$ の倍数。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(10*(13*k+(7))+13*(-10*k+(-5)))",
+        "expected": "5",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-err_dioph",
+      "explanation_detail": {
+        "approach": "一般解は、もとの方程式に代入して $k$ が消えるかどうかで検算できる。",
+        "steps": [
+          "差をとって $10(x-7)=-13(y-(-5))$。",
+          "$10$ と $13$ は互いに素なので $x-7=13k$。",
+          "代入して $y=-10k-5$。"
+        ],
+        "alternatives": [
+          "生徒の解を代入すると $10(10k+7)+13(-13k+-5)=5+(-69)k$ となり、$k\\neq0$ で $5$ にならない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一般解を代入して確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x,\\,y)=(7,\\,-5)$ が1つの解なので、一般解は $x=10k+7,\\ y=-13k-5$（$k$ は整数）",
+        "error_step": "一般解の係数（$x$ と $y$ に付ける倍数の入れかえ）",
+        "error_type": "formula",
+        "why_tempting": "「$x$ には $x$ の係数」と思いこみやすい。一般解を導く過程（差をとって互いに素を使う）を省いて形だけ覚えている。",
+        "correction": "$x=13k+7,\\ y=-10k-5$（$k$ は整数）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $7x+9y=3$ の整数解をすべて求めなさい。\n［ある生徒の解答］\n$(x,\\,y)=(3,\\,-2)$ が1つの解なので、一般解は $x=7k+3,\\ y=-9k-2$（$k$ は整数）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=9k+3,\\ y=-7k-2$（$k$ は整数）"
+      },
+      "explanation": "$7(x-3)=-9(y-(-2))$ で、$7$ と $9$ は互いに素なので $x-3$ は $9$ の倍数。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(7*(9*k+(3))+9*(-7*k+(-2)))",
+        "expected": "3",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-err_dioph",
+      "explanation_detail": {
+        "approach": "一般解は、もとの方程式に代入して $k$ が消えるかどうかで検算できる。",
+        "steps": [
+          "差をとって $7(x-3)=-9(y-(-2))$。",
+          "$7$ と $9$ は互いに素なので $x-3=9k$。",
+          "代入して $y=-7k-2$。"
+        ],
+        "alternatives": [
+          "生徒の解を代入すると $7(7k+3)+9(-9k+-2)=3+(-32)k$ となり、$k\\neq0$ で $3$ にならない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一般解を代入して確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x,\\,y)=(3,\\,-2)$ が1つの解なので、一般解は $x=7k+3,\\ y=-9k-2$（$k$ は整数）",
+        "error_step": "一般解の係数（$x$ と $y$ に付ける倍数の入れかえ）",
+        "error_type": "formula",
+        "why_tempting": "「$x$ には $x$ の係数」と思いこみやすい。一般解を導く過程（差をとって互いに素を使う）を省いて形だけ覚えている。",
+        "correction": "$x=9k+3,\\ y=-7k-2$（$k$ は整数）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "10進数の $137$ を $6$ 進法で表しなさい。\n［ある生徒の解答］\n$137$ を $6$ で割っていき、余りを上から順に並べて $543_{(6)}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$345_{(6)}$"
+      },
+      "explanation": "最初の余りは $137$ を $6$ で割った余りで、一の位の数字である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "3*6**2+4*6**1+5*6**0",
+        "expected": "137",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-err_base",
+      "explanation_detail": {
+        "approach": "得られた数を10進法にもどして、もとの数になるか確かめる。",
+        "steps": [
+          "6 で割り続けて余りを求める。",
+          "最初の余りが一の位、最後の余りが最上位。",
+          "下から読んで $345_{(6)}$。"
+        ],
+        "alternatives": [
+          "生徒の答えを10進法にもどすと $207$ となり、$137$ にならない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを読む順序を逆にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$137$ を $6$ で割っていき、余りを上から順に並べて $543_{(6)}$",
+        "error_step": "余りを読む順序",
+        "error_type": "concept",
+        "why_tempting": "割り算を上から書いていくので、書いた順にそのまま読んでしまう。最初に出る余りが一の位であることを意識していない。",
+        "correction": "余りは下の位から順に出てくるので、下から読んで $345_{(6)}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "10進数の $54$ を $7$ 進法で表しなさい。\n［ある生徒の解答］\n$54$ を $7$ で割っていき、余りを上から順に並べて $501_{(7)}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$105_{(7)}$"
+      },
+      "explanation": "最初の余りは $54$ を $7$ で割った余りで、一の位の数字である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1*7**2+0*7**1+5*7**0",
+        "expected": "54",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U03-err_base",
+      "explanation_detail": {
+        "approach": "得られた数を10進法にもどして、もとの数になるか確かめる。",
+        "steps": [
+          "7 で割り続けて余りを求める。",
+          "最初の余りが一の位、最後の余りが最上位。",
+          "下から読んで $105_{(7)}$。"
+        ],
+        "alternatives": [
+          "生徒の答えを10進法にもどすと $246$ となり、$54$ にならない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "余りを読む順序を逆にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$54$ を $7$ で割っていき、余りを上から順に並べて $501_{(7)}$",
+        "error_step": "余りを読む順序",
+        "error_type": "concept",
+        "why_tempting": "割り算を上から書いていくので、書いた順にそのまま読んでしまう。最初に出る余りが一の位であることを意識していない。",
+        "correction": "余りは下の位から順に出てくるので、下から読んで $105_{(7)}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "最大公約数が $6$、最小公倍数が $168$ である2つの自然数 $a$、$b$（$a<b$）の組をすべて求めなさい。\n［ある生徒の解答］\n$a=6a'$、$b=6b'$ とおくと $a'b'=28$ なので、$(a,\\,b)=(6,\\,168)、(12,\\,84)、(24,\\,42)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(a,\\,b)=(6,\\,168)、(24,\\,42)$"
+      },
+      "explanation": "$a'$ と $b'$ が互いに素でないと、最大公約数が $6$ より大きくなる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[gcd(6,168), gcd(24,42)]",
+        "expected": "[6, 6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-err_coprime",
+      "explanation_detail": {
+        "approach": "答えの各組について、最大公約数・最小公倍数を実際に計算して確かめる。",
+        "steps": [
+          "$a=6a'$、$b=6b'$（$a'$、$b'$ は互いに素）。",
+          "$a'b'=28$。",
+          "互いに素な組だけを残す。",
+          "$(a,\\,b)=(6,\\,168)、(24,\\,42)$。"
+        ],
+        "alternatives": [
+          "例えば $(12,\\,84)$ の最大公約数は $12$ で、条件の $6$ と合わない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「互いに素」の条件を使わない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a=6a'$、$b=6b'$ とおくと $a'b'=28$ なので、$(a,\\,b)=(6,\\,168)、(12,\\,84)、(24,\\,42)$",
+        "error_step": "$a'$、$b'$ の組の選び方（互いに素の条件の確認もれ）",
+        "error_type": "condition",
+        "why_tempting": "$a'b'$ の値を求めたところで安心し、$a'$ と $b'$ が互いに素でなければならない理由（最大公約数が $g$ であること）を忘れている。",
+        "correction": "$(a,\\,b)=(6,\\,168)、(24,\\,42)$（$(12,\\,84)$ は最大公約数が $12$ となり不適）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "最大公約数が $5$、最小公倍数が $250$ である2つの自然数 $a$、$b$（$a<b$）の組をすべて求めなさい。\n［ある生徒の解答］\n$a=5a'$、$b=5b'$ とおくと $a'b'=50$ なので、$(a,\\,b)=(5,\\,250)、(10,\\,125)、(25,\\,50)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(a,\\,b)=(5,\\,250)、(10,\\,125)$"
+      },
+      "explanation": "$a'$ と $b'$ が互いに素でないと、最大公約数が $5$ より大きくなる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[gcd(5,250), gcd(10,125)]",
+        "expected": "[5, 5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U03-err_coprime",
+      "explanation_detail": {
+        "approach": "答えの各組について、最大公約数・最小公倍数を実際に計算して確かめる。",
+        "steps": [
+          "$a=5a'$、$b=5b'$（$a'$、$b'$ は互いに素）。",
+          "$a'b'=50$。",
+          "互いに素な組だけを残す。",
+          "$(a,\\,b)=(5,\\,250)、(10,\\,125)$。"
+        ],
+        "alternatives": [
+          "例えば $(25,\\,50)$ の最大公約数は $25$ で、条件の $5$ と合わない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「互いに素」の条件を使わない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a=5a'$、$b=5b'$ とおくと $a'b'=50$ なので、$(a,\\,b)=(5,\\,250)、(10,\\,125)、(25,\\,50)$",
+        "error_step": "$a'$、$b'$ の組の選び方（互いに素の条件の確認もれ）",
+        "error_type": "condition",
+        "why_tempting": "$a'b'$ の値を求めたところで安心し、$a'$ と $b'$ が互いに素でなければならない理由（最大公約数が $g$ であること）を忘れている。",
+        "correction": "$(a,\\,b)=(5,\\,250)、(10,\\,125)$（$(25,\\,50)$ は最大公約数が $25$ となり不適）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "51679c40bacef3d05557fca1076e49c9afa9f5bb782da41175c5dcc7e232c04f"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 11 問（Q001, Q002, Q003, Q004, Q031, Q032, Q033, Q038, Q051, Q052 他）",
+      "content_hash": "cbb46283d74cc13f0977d4ffd5a3b8462363b64554ffa1ae445ba690845dc0de"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:00:36+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "42dc78f8a31f40470639c22d7dbec52886781ce769ee6cfcac9b11139785b593"
+  }
+}

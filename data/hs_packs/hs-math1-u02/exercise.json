@@ -1,0 +1,5828 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U02-EX",
+  "title": "集合と命題　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH1-U02-PACK",
+  "pair_set_id": "HS-MATH1-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G2-U04",
+        "point": "仮定と結論・証明の書き方",
+        "title": "図形の調べ方　平行と合同"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "数学的帰納法",
+        "title": "数列"
+      },
+      {
+        "unit_id": "SS-MATH-U01",
+        "point": "背理法による証明",
+        "title": "数学　証明問題"
+      }
+    ],
+    "readiness_check": [
+      "中学で学んだ「仮定と結論」「証明の書き方」を知っている。",
+      "不等式の範囲を数直線上に表せる。",
+      "倍数・約数の意味を説明できる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$U=\\{1,\\ 2,\\ 3,\\ \\cdots,\\ 15\\}$ を全体集合とし、その部分集合を $A=\\{3,\\ 6,\\ 9,\\ 12,\\ 15\\}$、$B=\\{4,\\ 8,\\ 12\\}$ とする。集合 $A\\cap\\overline{B}$ を、要素を書き並べる方法で表しなさい。",
+      "answer": {
+        "value": "$\\{3,\\ 6,\\ 9,\\ 15\\}$"
+      },
+      "explanation": "$A$ の要素のうち、$B$ に属さないものを選ぶ。$A\\cap\\overline{B}=\\{3,\\ 6,\\ 9,\\ 15\\}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(15/3)-floor(15/12)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-set_ops",
+      "explanation_detail": {
+        "approach": "記号の意味（$\\cap$：かつ、$\\cup$：または、上線：補集合）を確認し、ベン図に要素を書きこんでから読み取る。",
+        "steps": [
+          "ベン図をかき、$A\\cap B=\\{12\\}$ を重なりの部分に書く。",
+          "$A$ の要素のうち、$B$ に属さないものを選ぶ。",
+          "$A\\cap\\overline{B}=\\{3,\\ 6,\\ 9,\\ 15\\}$。"
+        ],
+        "alternatives": [
+          "$A$ は $3$ の倍数、$B$ は $4$ の倍数の集合なので、要素の個数を倍数の個数から計算し（$4$ 個）、書き並べた個数と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "記号の意味を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "要素をもれなく正しく書き並べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cap$ と $\\cup$ を取り違える。",
+          "補集合を全体集合 $U$ ではなく $A\\cup B$ の中で考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$U=\\{1,\\ 2,\\ 3,\\ \\cdots,\\ 20\\}$ を全体集合とし、その部分集合を $A=\\{3,\\ 6,\\ 9,\\ 12,\\ 15,\\ 18\\}$、$B=\\{6,\\ 12,\\ 18\\}$ とする。集合 $A\\cap\\overline{B}$ を、要素を書き並べる方法で表しなさい。",
+      "answer": {
+        "value": "$\\{3,\\ 9,\\ 15\\}$"
+      },
+      "explanation": "$A$ の要素のうち、$B$ に属さないものを選ぶ。$A\\cap\\overline{B}=\\{3,\\ 9,\\ 15\\}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(20/3)-floor(20/6)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-set_ops",
+      "explanation_detail": {
+        "approach": "記号の意味（$\\cap$：かつ、$\\cup$：または、上線：補集合）を確認し、ベン図に要素を書きこんでから読み取る。",
+        "steps": [
+          "ベン図をかき、$A\\cap B=\\{6,\\ 12,\\ 18\\}$ を重なりの部分に書く。",
+          "$A$ の要素のうち、$B$ に属さないものを選ぶ。",
+          "$A\\cap\\overline{B}=\\{3,\\ 9,\\ 15\\}$。"
+        ],
+        "alternatives": [
+          "$A$ は $3$ の倍数、$B$ は $6$ の倍数の集合なので、要素の個数を倍数の個数から計算し（$3$ 個）、書き並べた個数と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "記号の意味を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "要素をもれなく正しく書き並べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cap$ と $\\cup$ を取り違える。",
+          "補集合を全体集合 $U$ ではなく $A\\cup B$ の中で考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$U=\\{1,\\ 2,\\ 3,\\ \\cdots,\\ 17\\}$ を全体集合とし、その部分集合を $A=\\{5,\\ 10,\\ 15\\}$、$B=\\{2,\\ 4,\\ 6,\\ 8,\\ 10,\\ 12,\\ 14,\\ 16\\}$ とする。集合 $A\\cup B$ を、要素を書き並べる方法で表しなさい。",
+      "answer": {
+        "value": "$\\{2,\\ 4,\\ 5,\\ 6,\\ 8,\\ 10,\\ 12,\\ 14,\\ 15,\\ 16\\}$"
+      },
+      "explanation": "$A$ と $B$ の少なくとも一方に属する要素を、重複しないように並べる。$A\\cup B=\\{2,\\ 4,\\ 5,\\ 6,\\ 8,\\ 10,\\ 12,\\ 14,\\ 15,\\ 16\\}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "floor(17/5)+floor(17/2)-floor(17/10)",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-set_ops",
+      "explanation_detail": {
+        "approach": "記号の意味（$\\cap$：かつ、$\\cup$：または、上線：補集合）を確認し、ベン図に要素を書きこんでから読み取る。",
+        "steps": [
+          "ベン図をかき、$A\\cap B=\\{10\\}$ を重なりの部分に書く。",
+          "$A$ と $B$ の少なくとも一方に属する要素を、重複しないように並べる。",
+          "$A\\cup B=\\{2,\\ 4,\\ 5,\\ 6,\\ 8,\\ 10,\\ 12,\\ 14,\\ 15,\\ 16\\}$。"
+        ],
+        "alternatives": [
+          "$A$ は $5$ の倍数、$B$ は $2$ の倍数の集合なので、要素の個数を倍数の個数から計算し（$10$ 個）、書き並べた個数と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "記号の意味を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "要素をもれなく正しく書き並べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cap$ と $\\cup$ を取り違える。",
+          "補集合を全体集合 $U$ ではなく $A\\cup B$ の中で考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$U=\\{1,\\ 2,\\ 3,\\ \\cdots,\\ 14\\}$ を全体集合とし、その部分集合を $A=\\{5,\\ 10\\}$、$B=\\{6,\\ 12\\}$ とする。集合 $\\overline{A\\cup B}$ を、要素を書き並べる方法で表しなさい。",
+      "answer": {
+        "value": "$\\{1,\\ 2,\\ 3,\\ 4,\\ 7,\\ 8,\\ 9,\\ 11,\\ 13,\\ 14\\}$"
+      },
+      "explanation": "$U$ の要素のうち、$A$ にも $B$ にも属さないものを選ぶ（ド・モルガンの法則より $\\overline{A}\\cap\\overline{B}$ と同じ）。$\\overline{A\\cup B}=\\{1,\\ 2,\\ 3,\\ 4,\\ 7,\\ 8,\\ 9,\\ 11,\\ 13,\\ 14\\}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "14-(floor(14/5)+floor(14/6)-floor(14/30))",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-set_ops",
+      "explanation_detail": {
+        "approach": "記号の意味（$\\cap$：かつ、$\\cup$：または、上線：補集合）を確認し、ベン図に要素を書きこんでから読み取る。",
+        "steps": [
+          "ベン図をかき、$A\\cap B=\\emptyset$ を重なりの部分に書く。",
+          "$U$ の要素のうち、$A$ にも $B$ にも属さないものを選ぶ（ド・モルガンの法則より $\\overline{A}\\cap\\overline{B}$ と同じ）。",
+          "$\\overline{A\\cup B}=\\{1,\\ 2,\\ 3,\\ 4,\\ 7,\\ 8,\\ 9,\\ 11,\\ 13,\\ 14\\}$。"
+        ],
+        "alternatives": [
+          "$A$ は $5$ の倍数、$B$ は $6$ の倍数の集合なので、要素の個数を倍数の個数から計算し（$10$ 個）、書き並べた個数と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "記号の意味を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "要素をもれなく正しく書き並べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cap$ と $\\cup$ を取り違える。",
+          "補集合を全体集合 $U$ ではなく $A\\cup B$ の中で考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$U=\\{1,\\ 2,\\ 3,\\ \\cdots,\\ 14\\}$ を全体集合とし、その部分集合を $A=\\{2,\\ 4,\\ 6,\\ 8,\\ 10,\\ 12,\\ 14\\}$、$B=\\{5,\\ 10\\}$ とする。集合 $A\\cap B$ を、要素を書き並べる方法で表しなさい。",
+      "answer": {
+        "value": "$\\{10\\}$"
+      },
+      "explanation": "$A$ と $B$ の両方に属する要素を選ぶ。$A\\cap B=\\{10\\}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "floor(14/10)",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-set_ops",
+      "explanation_detail": {
+        "approach": "記号の意味（$\\cap$：かつ、$\\cup$：または、上線：補集合）を確認し、ベン図に要素を書きこんでから読み取る。",
+        "steps": [
+          "ベン図をかき、$A\\cap B=\\{10\\}$ を重なりの部分に書く。",
+          "$A$ と $B$ の両方に属する要素を選ぶ。",
+          "$A\\cap B=\\{10\\}$。"
+        ],
+        "alternatives": [
+          "$A$ は $2$ の倍数、$B$ は $5$ の倍数の集合なので、要素の個数を倍数の個数から計算し（$1$ 個）、書き並べた個数と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "記号の意味を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "要素をもれなく正しく書き並べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cap$ と $\\cup$ を取り違える。",
+          "補集合を全体集合 $U$ ではなく $A\\cup B$ の中で考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1から100までの整数のうち、$4$ で割り切れるが $7$ では割り切れない数は何個あるか求めなさい。",
+      "answer": {
+        "value": "22"
+      },
+      "explanation": "$n(A\\cap\\overline{B})=n(A)-n(A\\cap B)=25-3=22$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(100/4)-floor(100/28)",
+        "expected": "22"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_count",
+      "explanation_detail": {
+        "approach": "$4$ の倍数の集合を $A$、$7$ の倍数の集合を $B$ とおき、求める集合を $A,\\ B$ と記号で表してから個数の公式を使う。両方で割り切れる数は $4$ と $7$ の最小公倍数 $28$ の倍数である。",
+        "steps": [
+          "$n(A)=25$、$n(B)=14$。",
+          "$A\\cap B$ は $28$ の倍数の集合で、$n(A\\cap B)=3$。",
+          "$n(A\\cap\\overline{B})=n(A)-n(A\\cap B)=25-3=22$。"
+        ],
+        "alternatives": [
+          "ベン図の4つの部分（$A$ だけ、$B$ だけ、両方、どちらでもない）の個数をすべて書きこみ、合計が 100 になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n(A),\\ n(B),\\ n(A\\cap B)$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "求める集合を正しく表して個数を計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "両方で割り切れる数を引き忘れる。",
+          "割り算の商の切り捨てを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1から200までの整数のうち、$2$ で割り切れるが $5$ では割り切れない数は何個あるか求めなさい。",
+      "answer": {
+        "value": "80"
+      },
+      "explanation": "$n(A\\cap\\overline{B})=n(A)-n(A\\cap B)=100-20=80$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(200/2)-floor(200/10)",
+        "expected": "80"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_count",
+      "explanation_detail": {
+        "approach": "$2$ の倍数の集合を $A$、$5$ の倍数の集合を $B$ とおき、求める集合を $A,\\ B$ と記号で表してから個数の公式を使う。両方で割り切れる数は $2$ と $5$ の最小公倍数 $10$ の倍数である。",
+        "steps": [
+          "$n(A)=100$、$n(B)=40$。",
+          "$A\\cap B$ は $10$ の倍数の集合で、$n(A\\cap B)=20$。",
+          "$n(A\\cap\\overline{B})=n(A)-n(A\\cap B)=100-20=80$。"
+        ],
+        "alternatives": [
+          "ベン図の4つの部分（$A$ だけ、$B$ だけ、両方、どちらでもない）の個数をすべて書きこみ、合計が 200 になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n(A),\\ n(B),\\ n(A\\cap B)$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "求める集合を正しく表して個数を計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "両方で割り切れる数を引き忘れる。",
+          "割り算の商の切り捨てを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1から120までの整数のうち、$5$ でも $7$ でも割り切れない数は何個あるか求めなさい。",
+      "answer": {
+        "value": "82"
+      },
+      "explanation": "$n(\\overline{A\\cup B})=120-(24+17-3)=82$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "120-(floor(120/5)+floor(120/7)-floor(120/35))",
+        "expected": "82"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_count",
+      "explanation_detail": {
+        "approach": "$5$ の倍数の集合を $A$、$7$ の倍数の集合を $B$ とおき、求める集合を $A,\\ B$ と記号で表してから個数の公式を使う。両方で割り切れる数は $5$ と $7$ の最小公倍数 $35$ の倍数である。",
+        "steps": [
+          "$n(A)=24$、$n(B)=17$。",
+          "$A\\cap B$ は $35$ の倍数の集合で、$n(A\\cap B)=3$。",
+          "$n(\\overline{A\\cup B})=120-(24+17-3)=82$。"
+        ],
+        "alternatives": [
+          "ベン図の4つの部分（$A$ だけ、$B$ だけ、両方、どちらでもない）の個数をすべて書きこみ、合計が 120 になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n(A),\\ n(B),\\ n(A\\cap B)$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "求める集合を正しく表して個数を計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "両方で割り切れる数を引き忘れる。",
+          "割り算の商の切り捨てを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1から60までの整数のうち、$5$ または $9$ で割り切れる数は何個あるか求めなさい。",
+      "answer": {
+        "value": "17"
+      },
+      "explanation": "$n(A\\cup B)=12+6-1=17$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(60/5)+floor(60/9)-floor(60/45)",
+        "expected": "17"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_count",
+      "explanation_detail": {
+        "approach": "$5$ の倍数の集合を $A$、$9$ の倍数の集合を $B$ とおき、求める集合を $A,\\ B$ と記号で表してから個数の公式を使う。両方で割り切れる数は $5$ と $9$ の最小公倍数 $45$ の倍数である。",
+        "steps": [
+          "$n(A)=12$、$n(B)=6$。",
+          "$A\\cap B$ は $45$ の倍数の集合で、$n(A\\cap B)=1$。",
+          "$n(A\\cup B)=12+6-1=17$。"
+        ],
+        "alternatives": [
+          "ベン図の4つの部分（$A$ だけ、$B$ だけ、両方、どちらでもない）の個数をすべて書きこみ、合計が 60 になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n(A),\\ n(B),\\ n(A\\cap B)$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "求める集合を正しく表して個数を計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "両方で割り切れる数を引き忘れる。",
+          "割り算の商の切り捨てを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$に関する2つの条件 $p$：$x>-1$、$q$：$x>-3$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "必要条件であるが十分条件ではない"
+        },
+        {
+          "label": "イ",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "ウ",
+          "text": "必要十分条件である"
+        },
+        {
+          "label": "エ",
+          "text": "必要条件でも十分条件でもない"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "「$p\\Rightarrow q$」は真、「$q\\Rightarrow p$」は偽（反例：$x=-1$）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-nec_suff",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」と「$q\\Rightarrow p$」の真偽を別々に調べる。$p\\Rightarrow q$ が真なら $p$ は十分条件、$q\\Rightarrow p$ が真なら $p$ は必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」：真。",
+          "「$q\\Rightarrow p$」：偽。反例 $x=-1$ は $q$ を満たすが $p$ を満たさない。",
+          "よって $p$ は $q$ であるための十分条件であるが必要条件ではない。"
+        ],
+        "alternatives": [
+          "条件を満たすものの集合 $P,\\ Q$ を数直線（またはベン図）にかき、$P\\subset Q$ か $Q\\subset P$ かを図で判定する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの向きの真偽を正しく判定している",
+            "points": 1
+          },
+          {
+            "point": "必要・十分を正しく対応させている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。「$q\\Rightarrow p$」は偽（反例：$x=-1$）なので、$p$ は必要条件ではない。",
+          "misconception": "必要と十分の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "「$q\\Rightarrow p$」は偽（反例：$x=-1$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$に関する2つの条件 $p$：$-7<x<-1$、$q$：$|x+4|<3$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "イ",
+          "text": "必要十分条件である"
+        },
+        {
+          "label": "ウ",
+          "text": "必要条件でも十分条件でもない"
+        },
+        {
+          "label": "エ",
+          "text": "必要条件であるが十分条件ではない"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "「$p\\Rightarrow q$」は真、「$q\\Rightarrow p$」は真。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-nec_suff",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」と「$q\\Rightarrow p$」の真偽を別々に調べる。$p\\Rightarrow q$ が真なら $p$ は十分条件、$q\\Rightarrow p$ が真なら $p$ は必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」：真。",
+          "「$q\\Rightarrow p$」：真。",
+          "よって $p$ は $q$ であるための必要十分条件である。"
+        ],
+        "alternatives": [
+          "条件を満たすものの集合 $P,\\ Q$ を数直線（またはベン図）にかき、$P\\subset Q$ か $Q\\subset P$ かを図で判定する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの向きの真偽を正しく判定している",
+            "points": 1
+          },
+          {
+            "point": "必要・十分を正しく対応させている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$q\\Rightarrow p$」は真なので、$p$ は必要条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。「$q\\Rightarrow p$」は真なので、$p$ は必要条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x,\\ y$に関する2つの条件 $p$：$x=0$、$q$：$xy=0$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "必要条件でも十分条件でもない"
+        },
+        {
+          "label": "イ",
+          "text": "必要条件であるが十分条件ではない"
+        },
+        {
+          "label": "ウ",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "エ",
+          "text": "必要十分条件である"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "「$p\\Rightarrow q$」は真、「$q\\Rightarrow p$」は偽（反例：$x=1,\\ y=0$）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-nec_suff",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」と「$q\\Rightarrow p$」の真偽を別々に調べる。$p\\Rightarrow q$ が真なら $p$ は十分条件、$q\\Rightarrow p$ が真なら $p$ は必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」：真。",
+          "「$q\\Rightarrow p$」：偽。反例 $x=1,\\ y=0$ は $q$ を満たすが $p$ を満たさない。",
+          "よって $p$ は $q$ であるための十分条件であるが必要条件ではない。"
+        ],
+        "alternatives": [
+          "条件を満たすものの集合 $P,\\ Q$ を数直線（またはベン図）にかき、$P\\subset Q$ か $Q\\subset P$ かを図で判定する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの向きの真偽を正しく判定している",
+            "points": 1
+          },
+          {
+            "point": "必要・十分を正しく対応させている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。「$q\\Rightarrow p$」は偽（反例：$x=1,\\ y=0$）なので、$p$ は必要条件ではない。",
+          "misconception": "必要と十分の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「$q\\Rightarrow p$」は偽（反例：$x=1,\\ y=0$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$に関する2つの条件 $p$：$x^2=16$、$q$：$x=4$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "必要条件でも十分条件でもない"
+        },
+        {
+          "label": "イ",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "ウ",
+          "text": "必要十分条件である"
+        },
+        {
+          "label": "エ",
+          "text": "必要条件であるが十分条件ではない"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "「$p\\Rightarrow q$」は偽（反例：$x=-4$）、「$q\\Rightarrow p$」は真。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-nec_suff",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」と「$q\\Rightarrow p$」の真偽を別々に調べる。$p\\Rightarrow q$ が真なら $p$ は十分条件、$q\\Rightarrow p$ が真なら $p$ は必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」：偽。反例 $x=-4$ は $p$ を満たすが $q$ を満たさない。",
+          "「$q\\Rightarrow p$」：真。",
+          "よって $p$ は $q$ であるための必要条件であるが十分条件ではない。"
+        ],
+        "alternatives": [
+          "条件を満たすものの集合 $P,\\ Q$ を数直線（またはベン図）にかき、$P\\subset Q$ か $Q\\subset P$ かを図で判定する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの向きの真偽を正しく判定している",
+            "points": 1
+          },
+          {
+            "point": "必要・十分を正しく対応させている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$q\\Rightarrow p$」は真なので、$p$ は必要条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "「$p\\Rightarrow q$」は偽（反例：$x=-4$）なので、$p$ は十分条件ではない。「$q\\Rightarrow p$」は真なので、$p$ は必要条件である。",
+          "misconception": "必要と十分の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "「$p\\Rightarrow q$」は偽（反例：$x=-4$）なので、$p$ は十分条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$に関する2つの条件 $p$：$|x|<5$、$q$：$x>4$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "イ",
+          "text": "必要条件であるが十分条件ではない"
+        },
+        {
+          "label": "ウ",
+          "text": "必要条件でも十分条件でもない"
+        },
+        {
+          "label": "エ",
+          "text": "必要十分条件である"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "「$p\\Rightarrow q$」は偽（反例：$x=-4$）、「$q\\Rightarrow p$」は偽（反例：$x=5$）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-nec_suff",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」と「$q\\Rightarrow p$」の真偽を別々に調べる。$p\\Rightarrow q$ が真なら $p$ は十分条件、$q\\Rightarrow p$ が真なら $p$ は必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」：偽。反例 $x=-4$ は $p$ を満たすが $q$ を満たさない。",
+          "「$q\\Rightarrow p$」：偽。反例 $x=5$ は $q$ を満たすが $p$ を満たさない。",
+          "よって $p$ は $q$ であるための必要条件でも十分条件でもない。"
+        ],
+        "alternatives": [
+          "条件を満たすものの集合 $P,\\ Q$ を数直線（またはベン図）にかき、$P\\subset Q$ か $Q\\subset P$ かを図で判定する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの向きの真偽を正しく判定している",
+            "points": 1
+          },
+          {
+            "point": "必要・十分を正しく対応させている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$p\\Rightarrow q$」は偽（反例：$x=-4$）なので、$p$ は十分条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "「$q\\Rightarrow p$」は偽（反例：$x=5$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「$p\\Rightarrow q$」は偽（反例：$x=-4$）なので、$p$ は十分条件ではない。「$q\\Rightarrow p$」は偽（反例：$x=5$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$についての命題「$x\\leqq -4$ ならば $x<-3$」の対偶として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "「$x\\geqq -3$ ならば $x>-4$」"
+        },
+        {
+          "label": "イ",
+          "text": "「$x<-3$ ならば $x\\leqq -4$」"
+        },
+        {
+          "label": "ウ",
+          "text": "「$x>-4$ ならば $x\\geqq -3$」"
+        },
+        {
+          "label": "エ",
+          "text": "「$x\\leqq -4$ ならば $x\\geqq -3$」"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "命題「$p\\Rightarrow q$」に対して、逆は「$q\\Rightarrow p$」、裏は「$\\overline{p}\\Rightarrow\\overline{q}$」、対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-converse_inverse",
+      "explanation_detail": {
+        "approach": "仮定 $p$ と結論 $q$ を確認し、定義（逆：入れかえ、裏：否定、対偶：入れかえて否定）に当てはめる。否定では「かつ」と「または」、$>$ と $\\leqq$ が入れかわる。",
+        "steps": [
+          "$p$：$x\\leqq -4$、$q$：$x<-3$。",
+          "$\\overline{p}$：$x>-4$、$\\overline{q}$：$x\\geqq -3$。",
+          "対偶は 「$x\\geqq -3$ ならば $x>-4$」。"
+        ],
+        "alternatives": [
+          "逆・裏・対偶の関係を四角形の図（もとの命題・逆・裏・対偶を頂点に置く）にかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮定・結論とその否定を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "定義に当てはめて正しく選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "これはもとの命題の逆である。対偶は仮定と結論を入れかえ、それぞれ否定したもの。",
+          "misconception": "逆・裏・対偶の定義の混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "これはもとの命題の裏である。対偶は仮定と結論を入れかえ、それぞれ否定したもの。",
+          "misconception": "逆・裏・対偶の定義の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "仮定はそのままで結論だけを否定したもので、逆・裏・対偶のどれでもない（もとの命題の否定とも異なる）。",
+          "misconception": "結論だけを否定すればよいという誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "整数 $n$についての命題「$n$ は $20$ の倍数 ならば $n$ は $5$ の倍数」の裏として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "「$n$ は $5$ の倍数 ならば $n$ は $20$ の倍数」"
+        },
+        {
+          "label": "イ",
+          "text": "「$n$ は $20$ の倍数でない ならば $n$ は $5$ の倍数でない」"
+        },
+        {
+          "label": "ウ",
+          "text": "「$n$ は $20$ の倍数 ならば $n$ は $5$ の倍数でない」"
+        },
+        {
+          "label": "エ",
+          "text": "「$n$ は $5$ の倍数でない ならば $n$ は $20$ の倍数でない」"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "命題「$p\\Rightarrow q$」に対して、逆は「$q\\Rightarrow p$」、裏は「$\\overline{p}\\Rightarrow\\overline{q}$」、対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-converse_inverse",
+      "explanation_detail": {
+        "approach": "仮定 $p$ と結論 $q$ を確認し、定義（逆：入れかえ、裏：否定、対偶：入れかえて否定）に当てはめる。否定では「かつ」と「または」、$>$ と $\\leqq$ が入れかわる。",
+        "steps": [
+          "$p$：$n$ は $20$ の倍数、$q$：$n$ は $5$ の倍数。",
+          "$\\overline{p}$：$n$ は $20$ の倍数でない、$\\overline{q}$：$n$ は $5$ の倍数でない。",
+          "裏は 「$n$ は $20$ の倍数でない ならば $n$ は $5$ の倍数でない」。"
+        ],
+        "alternatives": [
+          "逆・裏・対偶の関係を四角形の図（もとの命題・逆・裏・対偶を頂点に置く）にかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮定・結論とその否定を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "定義に当てはめて正しく選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "これはもとの命題の逆である。裏は仮定と結論をそれぞれ否定したもの。",
+          "misconception": "逆・裏・対偶の定義の混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "仮定はそのままで結論だけを否定したもので、逆・裏・対偶のどれでもない（もとの命題の否定とも異なる）。",
+          "misconception": "結論だけを否定すればよいという誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "これはもとの命題の対偶である。裏は仮定と結論をそれぞれ否定したもの。",
+          "misconception": "逆・裏・対偶の定義の混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$についての命題「$x=3$ ならば $x^2=9$」の対偶として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "「$x^2=9$ ならば $x=3$」"
+        },
+        {
+          "label": "イ",
+          "text": "「$x^2\\neq9$ ならば $x\\neq3$」"
+        },
+        {
+          "label": "ウ",
+          "text": "「$x\\neq3$ ならば $x^2\\neq9$」"
+        },
+        {
+          "label": "エ",
+          "text": "「$x=3$ ならば $x^2\\neq9$」"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "命題「$p\\Rightarrow q$」に対して、逆は「$q\\Rightarrow p$」、裏は「$\\overline{p}\\Rightarrow\\overline{q}$」、対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-converse_inverse",
+      "explanation_detail": {
+        "approach": "仮定 $p$ と結論 $q$ を確認し、定義（逆：入れかえ、裏：否定、対偶：入れかえて否定）に当てはめる。否定では「かつ」と「または」、$>$ と $\\leqq$ が入れかわる。",
+        "steps": [
+          "$p$：$x=3$、$q$：$x^2=9$。",
+          "$\\overline{p}$：$x\\neq3$、$\\overline{q}$：$x^2\\neq9$。",
+          "対偶は 「$x^2\\neq9$ ならば $x\\neq3$」。"
+        ],
+        "alternatives": [
+          "逆・裏・対偶の関係を四角形の図（もとの命題・逆・裏・対偶を頂点に置く）にかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮定・結論とその否定を正しくつくっている",
+            "points": 1
+          },
+          {
+            "point": "定義に当てはめて正しく選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "これはもとの命題の逆である。対偶は仮定と結論を入れかえ、それぞれ否定したもの。",
+          "misconception": "逆・裏・対偶の定義の混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "これはもとの命題の裏である。対偶は仮定と結論を入れかえ、それぞれ否定したもの。",
+          "misconception": "逆・裏・対偶の定義の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "仮定はそのままで結論だけを否定したもので、逆・裏・対偶のどれでもない（もとの命題の否定とも異なる）。",
+          "misconception": "結論だけを否定すればよいという誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "「すべての実数 $x$ について $x^2+3x+6>0$」の否定として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "すべての実数 $x$ について $x^2+3x+6\\leqq 0$"
+        },
+        {
+          "label": "イ",
+          "text": "すべての実数 $x$ について $x^2+3x+6<0$"
+        },
+        {
+          "label": "ウ",
+          "text": "ある実数 $x$ について $x^2+3x+6>0$"
+        },
+        {
+          "label": "エ",
+          "text": "ある実数 $x$ について $x^2+3x+6\\leqq 0$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "否定は ある実数 $x$ について $x^2+3x+6\\leqq 0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-negation",
+      "explanation_detail": {
+        "approach": "「すべて」と「ある」、「かつ」と「または」を入れかえ、個々の条件を否定する（$>$ の否定は $\\leqq$）。",
+        "steps": [
+          "否定の規則：「すべて」と「ある」、「かつ」と「または」をそれぞれ入れかえ、$>$ は $\\leqq$ に、$=$ は $\\neq$ に変える。",
+          "これに従うと ある実数 $x$ について $x^2+3x+6\\leqq 0$。"
+        ],
+        "alternatives": [
+          "数直線やベン図で、もとの条件を満たす部分と満たさない部分を塗り分け、選択肢がちょうど「満たさない部分」を表すかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "「すべて／ある」「かつ／または」を正しく入れかえている",
+            "points": 1
+          },
+          {
+            "point": "個々の条件を正しく否定している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「すべて」を否定すると「ある」になる。「すべての $x$ で成り立たない」はより強い主張である。",
+          "misconception": "全称の否定を全称のままにする誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "「すべて」が「ある」に変わっていないうえ、$>$ の否定は $\\leqq$（$<$ ではない）。",
+          "misconception": "不等号の否定の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "結論の不等号を否定していない。「ある $x$ について $>0$」はもとの命題が真でも偽でも成り立ちうる。",
+          "misconception": "結論の否定もれ"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "「$-1\\leqq x\\leqq 2$」の否定として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$x\\leqq -1$ または $2\\leqq x$"
+        },
+        {
+          "label": "イ",
+          "text": "$x<-1$ かつ $2<x$"
+        },
+        {
+          "label": "ウ",
+          "text": "$-1<x<2$"
+        },
+        {
+          "label": "エ",
+          "text": "$x<-1$ または $2<x$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "否定は $x<-1$ または $2<x$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-negation",
+      "explanation_detail": {
+        "approach": "「すべて」と「ある」、「かつ」と「または」を入れかえ、個々の条件を否定する（$>$ の否定は $\\leqq$）。",
+        "steps": [
+          "否定の規則：「すべて」と「ある」、「かつ」と「または」をそれぞれ入れかえ、$>$ は $\\leqq$ に、$=$ は $\\neq$ に変える。",
+          "これに従うと $x<-1$ または $2<x$。"
+        ],
+        "alternatives": [
+          "数直線やベン図で、もとの条件を満たす部分と満たさない部分を塗り分け、選択肢がちょうど「満たさない部分」を表すかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "「すべて／ある」「かつ／または」を正しく入れかえている",
+            "points": 1
+          },
+          {
+            "point": "個々の条件を正しく否定している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x=-1$ はもとの条件を満たすので、否定に含めてはいけない。",
+          "misconception": "境界の扱いの誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "「かつ」に直すと、両方を満たす $x$ は存在しない（空集合）。否定は「または」でつなぐ。",
+          "misconception": "かつ・またはの入れかえ忘れ"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "もとの範囲の内側を表しており、否定（範囲の外側）になっていない。",
+          "misconception": "否定の意味の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "「ある整数 $n$ について $n^2=5$」の否定として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "すべての整数 $n$ について $n^2\\neq 5$"
+        },
+        {
+          "label": "イ",
+          "text": "すべての整数 $n$ について $n^2=5$"
+        },
+        {
+          "label": "ウ",
+          "text": "ある整数 $n$ について $n^2\\neq 5$"
+        },
+        {
+          "label": "エ",
+          "text": "ある整数 $n$ について $n^2>5$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "否定は すべての整数 $n$ について $n^2\\neq 5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-negation",
+      "explanation_detail": {
+        "approach": "「すべて」と「ある」、「かつ」と「または」を入れかえ、個々の条件を否定する（$>$ の否定は $\\leqq$）。",
+        "steps": [
+          "否定の規則：「すべて」と「ある」、「かつ」と「または」をそれぞれ入れかえ、$>$ は $\\leqq$ に、$=$ は $\\neq$ に変える。",
+          "これに従うと すべての整数 $n$ について $n^2\\neq 5$。"
+        ],
+        "alternatives": [
+          "数直線やベン図で、もとの条件を満たす部分と満たさない部分を塗り分け、選択肢がちょうど「満たさない部分」を表すかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "「すべて／ある」「かつ／または」を正しく入れかえている",
+            "points": 1
+          },
+          {
+            "point": "個々の条件を正しく否定している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "「ある」を「すべて」に変えただけで、結論 $n^2=5$ を否定していない。",
+          "misconception": "結論の否定もれ"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "「ある」を否定すると「すべて」になる。「ある $n$ で等しくない」はもとの命題と同時に成り立ちうる。",
+          "misconception": "存在の否定を存在のままにする誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$=$ の否定は $\\neq$ であり、$>$ ではない。また「ある」も否定されていない。",
+          "misconception": "等号の否定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "命題「実数 $x$ について、$x^2+2x=0$ ならば $x=0$」は偽である。この命題の反例になっているものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$x=-1$"
+        },
+        {
+          "label": "イ",
+          "text": "$x=0$"
+        },
+        {
+          "label": "ウ",
+          "text": "$x=2$"
+        },
+        {
+          "label": "エ",
+          "text": "$x=-2$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "反例は「仮定を満たすが結論を満たさない」もの。$x=-2$ がこれに当たる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x-(0))*(x-(-2)), x)",
+        "expected": "[0, -2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-counterexample",
+      "explanation_detail": {
+        "approach": "反例の条件は2つ：(1) 仮定を満たす、(2) 結論を満たさない。各選択肢についてこの2点を確かめる。",
+        "steps": [
+          "各選択肢が仮定を満たすか調べる。",
+          "仮定を満たすもののうち、結論を満たさないものを探す。",
+          "$x=-2$ は仮定を満たし、結論を満たさない。"
+        ],
+        "alternatives": [
+          "仮定・結論を満たす範囲を数直線上にかき、「仮定の範囲にあって結論の範囲の外」にある値を探す。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反例の2つの条件を理解している",
+            "points": 2
+          },
+          {
+            "point": "正しい反例を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x=-1$ を代入すると左辺は $-1$ で $0$ にならず、仮定を満たさない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$x=0$ は結論を満たすので反例ではない。",
+          "misconception": "結論を満たす例を反例とする誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$x=2$ を代入すると左辺は $8$ で $0$ にならず、仮定を満たさない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "命題「実数 $x$ について、$x^2>9$ ならば $x>3$」は偽である。この命題の反例になっているものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$x=4$"
+        },
+        {
+          "label": "イ",
+          "text": "$x=3$"
+        },
+        {
+          "label": "ウ",
+          "text": "$x=0$"
+        },
+        {
+          "label": "エ",
+          "text": "$x=-4$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "反例は「仮定を満たすが結論を満たさない」もの。$x=-4$ がこれに当たる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-4)**2-9, -4-3]",
+        "expected": "[7, -7]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-counterexample",
+      "explanation_detail": {
+        "approach": "反例の条件は2つ：(1) 仮定を満たす、(2) 結論を満たさない。各選択肢についてこの2点を確かめる。",
+        "steps": [
+          "各選択肢が仮定を満たすか調べる。",
+          "仮定を満たすもののうち、結論を満たさないものを探す。",
+          "$x=-4$ は仮定を満たし、結論を満たさない。"
+        ],
+        "alternatives": [
+          "仮定・結論を満たす範囲を数直線上にかき、「仮定の範囲にあって結論の範囲の外」にある値を探す。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反例の2つの条件を理解している",
+            "points": 2
+          },
+          {
+            "point": "正しい反例を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x=4$ は仮定も結論も満たすので反例ではない。",
+          "misconception": "結論を満たす例を反例とする誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$x=3$ は仮定 $x^2>9$ を満たさないので反例ではない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$x=0$ は仮定を満たさないので反例ではない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "命題「実数 $x$ について、$x^2>16$ ならば $x>4$」は偽である。この命題の反例になっているものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$x=5$"
+        },
+        {
+          "label": "イ",
+          "text": "$x=4$"
+        },
+        {
+          "label": "ウ",
+          "text": "$x=-5$"
+        },
+        {
+          "label": "エ",
+          "text": "$x=0$"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "反例は「仮定を満たすが結論を満たさない」もの。$x=-5$ がこれに当たる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-5)**2-16, -5-4]",
+        "expected": "[9, -9]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-counterexample",
+      "explanation_detail": {
+        "approach": "反例の条件は2つ：(1) 仮定を満たす、(2) 結論を満たさない。各選択肢についてこの2点を確かめる。",
+        "steps": [
+          "各選択肢が仮定を満たすか調べる。",
+          "仮定を満たすもののうち、結論を満たさないものを探す。",
+          "$x=-5$ は仮定を満たし、結論を満たさない。"
+        ],
+        "alternatives": [
+          "仮定・結論を満たす範囲を数直線上にかき、「仮定の範囲にあって結論の範囲の外」にある値を探す。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反例の2つの条件を理解している",
+            "points": 2
+          },
+          {
+            "point": "正しい反例を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$x=5$ は仮定も結論も満たすので反例ではない。",
+          "misconception": "結論を満たす例を反例とする誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$x=4$ は仮定 $x^2>16$ を満たさないので反例ではない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$x=0$ は仮定を満たさないので反例ではない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "命題「整数 $n$ について、$n$ が $3$ の倍数ならば $n$ は $6$ の倍数」は偽である。この命題の反例になっているものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$n=15$"
+        },
+        {
+          "label": "イ",
+          "text": "$n=16$"
+        },
+        {
+          "label": "ウ",
+          "text": "$n=30$"
+        },
+        {
+          "label": "エ",
+          "text": "$n=12$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "反例は「仮定を満たすが結論を満たさない」もの。$n=15$ がこれに当たる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Mod(15,3), Mod(15,6)]",
+        "expected": "[0, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-counterexample",
+      "explanation_detail": {
+        "approach": "反例の条件は2つ：(1) 仮定を満たす、(2) 結論を満たさない。各選択肢についてこの2点を確かめる。",
+        "steps": [
+          "各選択肢が仮定を満たすか調べる。",
+          "仮定を満たすもののうち、結論を満たさないものを探す。",
+          "$n=15$ は仮定を満たし、結論を満たさない。"
+        ],
+        "alternatives": [
+          "仮定・結論を満たす範囲を数直線上にかき、「仮定の範囲にあって結論の範囲の外」にある値を探す。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反例の2つの条件を理解している",
+            "points": 2
+          },
+          {
+            "point": "正しい反例を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "$3$ の倍数ではないので仮定を満たさず、反例ではない。",
+          "misconception": "仮定を満たさない例を反例とする誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "仮定と結論をともに満たすので反例ではない。",
+          "misconception": "結論を満たす例を反例とする誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "仮定と結論をともに満たすので反例ではない。",
+          "misconception": "結論を満たす例を反例とする誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある学年の生徒 25 人に調査を行ったところ、運動部に所属している生徒は 14 人、習い事をしている生徒は 8 人、両方に当てはまる生徒は 3 人であった。どちらにも当てはまらない生徒は何人か。（数値は架空の設定である）",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "$n(A\\cup B)=14+8-3=19$。 $n(\\overline{A\\cup B})=25-19=6$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "25-(14+8-3)",
+        "expected": "6"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U02-venn_count",
+      "explanation_detail": {
+        "approach": "運動部に所属している生徒の集合を $A$、習い事をしている生徒の集合を $B$ とおき、ベン図の4つの部分に分けて考える。",
+        "steps": [
+          "$n(U)=25$、$n(A)=14$、$n(B)=8$ とする。",
+          "$n(A\\cup B)=14+8-3=19$。",
+          "$n(\\overline{A\\cup B})=25-19=6$。"
+        ],
+        "alternatives": [
+          "ベン図の重なりの部分を $x$ 人とおき、4つの部分の人数の合計が全体の人数になるという方程式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "集合を設定し、与えられた人数を正しく対応させている",
+            "points": 2
+          },
+          {
+            "point": "公式またはベン図から正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$n(A)+n(B)$ を $n(A\\cup B)$ としてしまう（重なりを2回数える）。",
+          "「どちらにも当てはまらない」人数を全体から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある学年の生徒 13 人に調査を行ったところ、運動部に所属している生徒は 6 人、習い事をしている生徒は 6 人、両方に当てはまる生徒は 2 人であった。どちらか一方だけに当てはまる生徒は何人か。（数値は架空の設定である）",
+      "answer": {
+        "value": "8"
+      },
+      "explanation": "$A$ だけ：$6-2=4$、$B$ だけ：$6-2=4$。 合計 $4+4=8$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(6-2)+(6-2)",
+        "expected": "8"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U02-venn_count",
+      "explanation_detail": {
+        "approach": "運動部に所属している生徒の集合を $A$、習い事をしている生徒の集合を $B$ とおき、ベン図の4つの部分に分けて考える。",
+        "steps": [
+          "$n(U)=13$、$n(A)=6$、$n(B)=6$ とする。",
+          "$A$ だけ：$6-2=4$、$B$ だけ：$6-2=4$。",
+          "合計 $4+4=8$。"
+        ],
+        "alternatives": [
+          "ベン図の重なりの部分を $x$ 人とおき、4つの部分の人数の合計が全体の人数になるという方程式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "集合を設定し、与えられた人数を正しく対応させている",
+            "points": 2
+          },
+          {
+            "point": "公式またはベン図から正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$n(A)+n(B)$ を $n(A\\cup B)$ としてしまう（重なりを2回数える）。",
+          "「どちらにも当てはまらない」人数を全体から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある学年の生徒 22 人に調査を行ったところ、電車で通学している生徒は 13 人、バスで通学している生徒は 11 人、両方に当てはまる生徒は 7 人であった。どちらにも当てはまらない生徒は何人か。（数値は架空の設定である）",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$n(A\\cup B)=13+11-7=17$。 $n(\\overline{A\\cup B})=22-17=5$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "22-(13+11-7)",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U02-venn_count",
+      "explanation_detail": {
+        "approach": "電車で通学している生徒の集合を $A$、バスで通学している生徒の集合を $B$ とおき、ベン図の4つの部分に分けて考える。",
+        "steps": [
+          "$n(U)=22$、$n(A)=13$、$n(B)=11$ とする。",
+          "$n(A\\cup B)=13+11-7=17$。",
+          "$n(\\overline{A\\cup B})=22-17=5$。"
+        ],
+        "alternatives": [
+          "ベン図の重なりの部分を $x$ 人とおき、4つの部分の人数の合計が全体の人数になるという方程式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "集合を設定し、与えられた人数を正しく対応させている",
+            "points": 2
+          },
+          {
+            "point": "公式またはベン図から正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$n(A)+n(B)$ を $n(A\\cup B)$ としてしまう（重なりを2回数える）。",
+          "「どちらにも当てはまらない」人数を全体から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある学年の生徒 25 人に調査を行ったところ、犬を飼っている生徒は 8 人、猫を飼っている生徒は 16 人、どちらにも当てはまらない生徒は 6 人であった。両方に当てはまる生徒は何人か。（数値は架空の設定である）",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$n(A\\cup B)=25-6=19$。 $n(A\\cap B)=n(A)+n(B)-n(A\\cup B)=8+16-19=5$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "8+16-(25-6)",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U02-venn_count",
+      "explanation_detail": {
+        "approach": "犬を飼っている生徒の集合を $A$、猫を飼っている生徒の集合を $B$ とおき、ベン図の4つの部分に分けて考える。",
+        "steps": [
+          "$n(U)=25$、$n(A)=8$、$n(B)=16$ とする。",
+          "$n(A\\cup B)=25-6=19$。",
+          "$n(A\\cap B)=n(A)+n(B)-n(A\\cup B)=8+16-19=5$。"
+        ],
+        "alternatives": [
+          "ベン図の重なりの部分を $x$ 人とおき、4つの部分の人数の合計が全体の人数になるという方程式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "集合を設定し、与えられた人数を正しく対応させている",
+            "points": 2
+          },
+          {
+            "point": "公式またはベン図から正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$n(A)+n(B)$ を $n(A\\cup B)$ としてしまう（重なりを2回数える）。",
+          "「どちらにも当てはまらない」人数を全体から引き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とする。実数 $x$ に関する条件 $p$：$|x+1|<4$、$q$：$a<x<a+9$ について、$p$ が $q$ であるための十分条件となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-6\\leqq a\\leqq -5$"
+      },
+      "explanation": "$P=\\{x\\mid -5<x<3\\}$、$Q=\\{x\\mid a<x<a+9\\}$。$P\\subset Q$ となる条件は $a\\leqq -5$ かつ $a+9\\geqq 3$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[-1-4, -1+4, -6, -5]",
+        "expected": "[-5, 3, -6, -5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-ns_param",
+      "explanation_detail": {
+        "approach": "$p$ が $q$ の十分条件であることは、集合で $P\\subset Q$ と言いかえられる。数直線に $P$ を固定してかき、$Q$ を動かして含まれる条件を端点で表す。",
+        "steps": [
+          "$|x+1|<4$ より $P$：$-5<x<3$。",
+          "十分条件であるための条件は $P\\subset Q$。",
+          "端点を比べて $a\\leqq -5$ かつ $a+9\\geqq 3$。",
+          "これを解いて $-6\\leqq a\\leqq -5$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-6$、$a=-5$）のときに図をかき、端点が一致しても含まれる（どちらも端点を含まない開区間なので）ことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$P$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "包含関係の向きを正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "端点の条件を立てて正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "十分条件と必要条件で包含関係の向きを逆にする。",
+          "端点で等号を含めてよいかの判断を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とする。実数 $x$ に関する条件 $p$：$|x|<4$、$q$：$a<x<a+12$ について、$p$ が $q$ であるための十分条件となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-8\\leqq a\\leqq -4$"
+      },
+      "explanation": "$P=\\{x\\mid -4<x<4\\}$、$Q=\\{x\\mid a<x<a+12\\}$。$P\\subset Q$ となる条件は $a\\leqq -4$ かつ $a+12\\geqq 4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[0-4, 0+4, -8, -4]",
+        "expected": "[-4, 4, -8, -4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-ns_param",
+      "explanation_detail": {
+        "approach": "$p$ が $q$ の十分条件であることは、集合で $P\\subset Q$ と言いかえられる。数直線に $P$ を固定してかき、$Q$ を動かして含まれる条件を端点で表す。",
+        "steps": [
+          "$|x|<4$ より $P$：$-4<x<4$。",
+          "十分条件であるための条件は $P\\subset Q$。",
+          "端点を比べて $a\\leqq -4$ かつ $a+12\\geqq 4$。",
+          "これを解いて $-8\\leqq a\\leqq -4$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-8$、$a=-4$）のときに図をかき、端点が一致しても含まれる（どちらも端点を含まない開区間なので）ことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$P$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "包含関係の向きを正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "端点の条件を立てて正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "十分条件と必要条件で包含関係の向きを逆にする。",
+          "端点で等号を含めてよいかの判断を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とする。実数 $x$ に関する条件 $p$：$|x-1|<2$、$q$：$a<x<a+6$ について、$p$ が $q$ であるための十分条件となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-3\\leqq a\\leqq -1$"
+      },
+      "explanation": "$P=\\{x\\mid -1<x<3\\}$、$Q=\\{x\\mid a<x<a+6\\}$。$P\\subset Q$ となる条件は $a\\leqq -1$ かつ $a+6\\geqq 3$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[1-2, 1+2, -3, -1]",
+        "expected": "[-1, 3, -3, -1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-ns_param",
+      "explanation_detail": {
+        "approach": "$p$ が $q$ の十分条件であることは、集合で $P\\subset Q$ と言いかえられる。数直線に $P$ を固定してかき、$Q$ を動かして含まれる条件を端点で表す。",
+        "steps": [
+          "$|x-1|<2$ より $P$：$-1<x<3$。",
+          "十分条件であるための条件は $P\\subset Q$。",
+          "端点を比べて $a\\leqq -1$ かつ $a+6\\geqq 3$。",
+          "これを解いて $-3\\leqq a\\leqq -1$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-3$、$a=-1$）のときに図をかき、端点が一致しても含まれる（どちらも端点を含まない開区間なので）ことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$P$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "包含関係の向きを正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "端点の条件を立てて正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "十分条件と必要条件で包含関係の向きを逆にする。",
+          "端点で等号を含めてよいかの判断を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とする。実数 $x$ に関する条件 $p$：$|x-4|<3$、$q$：$a<x<a+11$ について、$p$ が $q$ であるための十分条件となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-4\\leqq a\\leqq 1$"
+      },
+      "explanation": "$P=\\{x\\mid 1<x<7\\}$、$Q=\\{x\\mid a<x<a+11\\}$。$P\\subset Q$ となる条件は $a\\leqq 1$ かつ $a+11\\geqq 7$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[4-3, 4+3, -4, 1]",
+        "expected": "[1, 7, -4, 1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-ns_param",
+      "explanation_detail": {
+        "approach": "$p$ が $q$ の十分条件であることは、集合で $P\\subset Q$ と言いかえられる。数直線に $P$ を固定してかき、$Q$ を動かして含まれる条件を端点で表す。",
+        "steps": [
+          "$|x-4|<3$ より $P$：$1<x<7$。",
+          "十分条件であるための条件は $P\\subset Q$。",
+          "端点を比べて $a\\leqq 1$ かつ $a+11\\geqq 7$。",
+          "これを解いて $-4\\leqq a\\leqq 1$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-4$、$a=1$）のときに図をかき、端点が一致しても含まれる（どちらも端点を含まない開区間なので）ことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$P$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "包含関係の向きを正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "端点の条件を立てて正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "十分条件と必要条件で包含関係の向きを逆にする。",
+          "端点で等号を含めてよいかの判断を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とし、実数を要素とする集合 $A=\\{x\\mid a\\leqq x\\leqq a+7\\}$、$B=\\{x\\mid |x-4|\\leqq 4\\}$ を考える。$A\\cap B\\neq\\emptyset$ となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-7\\leqq a\\leqq 8$"
+      },
+      "explanation": "$B$ は $0\\leqq x\\leqq 8$。共通部分が空集合になる場合（$A$ が $B$ の完全に左か右にある場合）を除けばよい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[4-4, 4+4]",
+        "expected": "[0, 8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_inclusion",
+      "explanation_detail": {
+        "approach": "$B$ を数直線上の区間として求め、幅 $7$ の区間 $A$ を左右に動かしながら、端点どうしの位置関係を不等式で表す。",
+        "steps": [
+          "$|x-4|\\leqq 4$ より $B$：$0\\leqq x\\leqq 8$。",
+          "共通部分が空集合になる場合（$A$ が $B$ の完全に左か右にある場合）を除けばよい。",
+          "$a+7<0$ または $a>8$ の否定をとり、$-7\\leqq a\\leqq 8$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-7$、$a=8$）のときの図をかき、端点が重なる場合を含めるかどうかを確かめる（両方とも端点を含む閉区間）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$B$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点の位置関係を正しい不等式で表している",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点が一致する場合を含めるかどうか（等号の有無）を誤る。",
+          "$A\\cap B=\\emptyset$ を「かつ」でつないでしまう（左右どちらか一方でよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とし、実数を要素とする集合 $A=\\{x\\mid a\\leqq x\\leqq a+2\\}$、$B=\\{x\\mid |x-3|\\leqq 3\\}$ を考える。$A\\cap B=\\emptyset$ となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$a<-2,\\ 6<a$"
+      },
+      "explanation": "$B$ は $0\\leqq x\\leqq 6$。共通部分がないのは、$A$ が $B$ の完全に左にある（$a+2<0$）か、完全に右にある（$a>6$）とき。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[3-3, 3+3]",
+        "expected": "[0, 6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_inclusion",
+      "explanation_detail": {
+        "approach": "$B$ を数直線上の区間として求め、幅 $2$ の区間 $A$ を左右に動かしながら、端点どうしの位置関係を不等式で表す。",
+        "steps": [
+          "$|x-3|\\leqq 3$ より $B$：$0\\leqq x\\leqq 6$。",
+          "共通部分がないのは、$A$ が $B$ の完全に左にある（$a+2<0$）か、完全に右にある（$a>6$）とき。",
+          "よって $a<-2,\\ 6<a$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-2$、$a=6$）のときの図をかき、端点が重なる場合を含めるかどうかを確かめる（両方とも端点を含む閉区間）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$B$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点の位置関係を正しい不等式で表している",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点が一致する場合を含めるかどうか（等号の有無）を誤る。",
+          "$A\\cap B=\\emptyset$ を「かつ」でつないでしまう（左右どちらか一方でよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とし、実数を要素とする集合 $A=\\{x\\mid a\\leqq x\\leqq a+7\\}$、$B=\\{x\\mid |x+3|\\leqq 5\\}$ を考える。$A\\cap B\\neq\\emptyset$ となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-15\\leqq a\\leqq 2$"
+      },
+      "explanation": "$B$ は $-8\\leqq x\\leqq 2$。共通部分が空集合になる場合（$A$ が $B$ の完全に左か右にある場合）を除けばよい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[-3-5, -3+5]",
+        "expected": "[-8, 2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_inclusion",
+      "explanation_detail": {
+        "approach": "$B$ を数直線上の区間として求め、幅 $7$ の区間 $A$ を左右に動かしながら、端点どうしの位置関係を不等式で表す。",
+        "steps": [
+          "$|x+3|\\leqq 5$ より $B$：$-8\\leqq x\\leqq 2$。",
+          "共通部分が空集合になる場合（$A$ が $B$ の完全に左か右にある場合）を除けばよい。",
+          "$a+7<-8$ または $a>2$ の否定をとり、$-15\\leqq a\\leqq 2$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-15$、$a=2$）のときの図をかき、端点が重なる場合を含めるかどうかを確かめる（両方とも端点を含む閉区間）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$B$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点の位置関係を正しい不等式で表している",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点が一致する場合を含めるかどうか（等号の有無）を誤る。",
+          "$A\\cap B=\\emptyset$ を「かつ」でつないでしまう（左右どちらか一方でよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a$ を定数とし、実数を要素とする集合 $A=\\{x\\mid a\\leqq x\\leqq a+1\\}$、$B=\\{x\\mid |x|\\leqq 2\\}$ を考える。$A\\cap B\\neq\\emptyset$ となるような $a$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$-3\\leqq a\\leqq 2$"
+      },
+      "explanation": "$B$ は $-2\\leqq x\\leqq 2$。共通部分が空集合になる場合（$A$ が $B$ の完全に左か右にある場合）を除けばよい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[0-2, 0+2]",
+        "expected": "[-2, 2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-set_inclusion",
+      "explanation_detail": {
+        "approach": "$B$ を数直線上の区間として求め、幅 $1$ の区間 $A$ を左右に動かしながら、端点どうしの位置関係を不等式で表す。",
+        "steps": [
+          "$|x|\\leqq 2$ より $B$：$-2\\leqq x\\leqq 2$。",
+          "共通部分が空集合になる場合（$A$ が $B$ の完全に左か右にある場合）を除けばよい。",
+          "$a+1<-2$ または $a>2$ の否定をとり、$-3\\leqq a\\leqq 2$。"
+        ],
+        "alternatives": [
+          "境界の値（$a=-3$、$a=2$）のときの図をかき、端点が重なる場合を含めるかどうかを確かめる（両方とも端点を含む閉区間）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$B$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "端点の位置関係を正しい不等式で表している",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "端点が一致する場合を含めるかどうか（等号の有無）を誤る。",
+          "$A\\cap B=\\emptyset$ を「かつ」でつないでしまう（左右どちらか一方でよい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_select",
+      "stem": "実数 $x$についての命題「$x>-2$ ならば $x>1$」について、もとの命題・逆・裏・対偶のうち、真であるものをすべて選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "裏（もとの命題の仮定と結論をそれぞれ否定したもの）"
+        },
+        {
+          "label": "イ",
+          "text": "逆「$x>1$ ならば $x>-2$」"
+        },
+        {
+          "label": "ウ",
+          "text": "もとの命題「$x>-2$ ならば $x>1$」"
+        },
+        {
+          "label": "エ",
+          "text": "対偶（逆の仮定と結論をそれぞれ否定したもの）"
+        }
+      ],
+      "answer": {
+        "value": [
+          "ア",
+          "イ"
+        ]
+      },
+      "explanation": "もとの命題は偽、逆は真。対偶はもとの命題と、裏は逆と真偽が一致する。",
+      "scoring": {
+        "points": 4,
+        "method": "all_or_nothing",
+        "notes": "完全一致で正解"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-four_truth",
+      "explanation_detail": {
+        "approach": "4つすべてを調べる必要はない。もとの命題と逆の真偽を調べれば、対偶（もとの命題と一致）と裏（逆と一致）の真偽が決まる。",
+        "steps": [
+          "もとの命題：偽。",
+          "逆「$x>1$ ならば $x>-2$」：真。",
+          "対偶は偽、裏は真。"
+        ],
+        "alternatives": [
+          "条件を集合で表し、$P\\subset Q$（もとの命題）と $Q\\subset P$（逆）が成り立つかを数直線やベン図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの命題と逆の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "対偶・裏の真偽を関係から正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ウ",
+          "why_wrong": "もとの命題は偽である（仮定を満たし結論を満たさない反例が存在する）。",
+          "misconception": "真偽の判定の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "対偶はもとの命題と真偽が一致するので、偽である。",
+          "misconception": "逆・裏・対偶の真偽の関係の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_select",
+      "stem": "整数 $n$についての命題「$n$ が $8$ の倍数 ならば $n$ は $4$ の倍数」について、もとの命題・逆・裏・対偶のうち、真であるものをすべて選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "逆「$n$ は $4$ の倍数 ならば $n$ が $8$ の倍数」"
+        },
+        {
+          "label": "イ",
+          "text": "もとの命題「$n$ が $8$ の倍数 ならば $n$ は $4$ の倍数」"
+        },
+        {
+          "label": "ウ",
+          "text": "裏（もとの命題の仮定と結論をそれぞれ否定したもの）"
+        },
+        {
+          "label": "エ",
+          "text": "対偶（逆の仮定と結論をそれぞれ否定したもの）"
+        }
+      ],
+      "answer": {
+        "value": [
+          "イ",
+          "エ"
+        ]
+      },
+      "explanation": "もとの命題は真、逆は偽。対偶はもとの命題と、裏は逆と真偽が一致する。",
+      "scoring": {
+        "points": 4,
+        "method": "all_or_nothing",
+        "notes": "完全一致で正解"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-four_truth",
+      "explanation_detail": {
+        "approach": "4つすべてを調べる必要はない。もとの命題と逆の真偽を調べれば、対偶（もとの命題と一致）と裏（逆と一致）の真偽が決まる。",
+        "steps": [
+          "もとの命題：真。",
+          "逆「$n$ は $4$ の倍数 ならば $n$ が $8$ の倍数」：偽。",
+          "対偶は真、裏は偽。"
+        ],
+        "alternatives": [
+          "条件を集合で表し、$P\\subset Q$（もとの命題）と $Q\\subset P$（逆）が成り立つかを数直線やベン図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの命題と逆の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "対偶・裏の真偽を関係から正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "逆は偽である（仮定と結論を入れかえた命題には反例が存在する）。",
+          "misconception": "真偽の判定の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "裏は逆の対偶なので、逆と真偽が一致し、偽である。",
+          "misconception": "逆・裏・対偶の真偽の関係の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_select",
+      "stem": "整数 $n$についての命題「$n$ が $4$ の倍数 ならば $n$ は $12$ の倍数」について、もとの命題・逆・裏・対偶のうち、真であるものをすべて選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "対偶（逆の仮定と結論をそれぞれ否定したもの）"
+        },
+        {
+          "label": "イ",
+          "text": "裏（もとの命題の仮定と結論をそれぞれ否定したもの）"
+        },
+        {
+          "label": "ウ",
+          "text": "逆「$n$ は $12$ の倍数 ならば $n$ が $4$ の倍数」"
+        },
+        {
+          "label": "エ",
+          "text": "もとの命題「$n$ が $4$ の倍数 ならば $n$ は $12$ の倍数」"
+        }
+      ],
+      "answer": {
+        "value": [
+          "イ",
+          "ウ"
+        ]
+      },
+      "explanation": "もとの命題は偽、逆は真。対偶はもとの命題と、裏は逆と真偽が一致する。",
+      "scoring": {
+        "points": 4,
+        "method": "all_or_nothing",
+        "notes": "完全一致で正解"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-four_truth",
+      "explanation_detail": {
+        "approach": "4つすべてを調べる必要はない。もとの命題と逆の真偽を調べれば、対偶（もとの命題と一致）と裏（逆と一致）の真偽が決まる。",
+        "steps": [
+          "もとの命題：偽。",
+          "逆「$n$ は $12$ の倍数 ならば $n$ が $4$ の倍数」：真。",
+          "対偶は偽、裏は真。"
+        ],
+        "alternatives": [
+          "条件を集合で表し、$P\\subset Q$（もとの命題）と $Q\\subset P$（逆）が成り立つかを数直線やベン図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの命題と逆の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "対偶・裏の真偽を関係から正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "対偶はもとの命題と真偽が一致するので、偽である。",
+          "misconception": "逆・裏・対偶の真偽の関係の誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "もとの命題は偽である（仮定を満たし結論を満たさない反例が存在する）。",
+          "misconception": "真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_select",
+      "stem": "実数 $x$についての命題「$x^2<4$ ならば $x<2$」について、もとの命題・逆・裏・対偶のうち、真であるものをすべて選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "対偶（逆の仮定と結論をそれぞれ否定したもの）"
+        },
+        {
+          "label": "イ",
+          "text": "裏（もとの命題の仮定と結論をそれぞれ否定したもの）"
+        },
+        {
+          "label": "ウ",
+          "text": "逆「$x<2$ ならば $x^2<4$」"
+        },
+        {
+          "label": "エ",
+          "text": "もとの命題「$x^2<4$ ならば $x<2$」"
+        }
+      ],
+      "answer": {
+        "value": [
+          "ア",
+          "エ"
+        ]
+      },
+      "explanation": "もとの命題は真、逆は偽。対偶はもとの命題と、裏は逆と真偽が一致する。",
+      "scoring": {
+        "points": 4,
+        "method": "all_or_nothing",
+        "notes": "完全一致で正解"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-four_truth",
+      "explanation_detail": {
+        "approach": "4つすべてを調べる必要はない。もとの命題と逆の真偽を調べれば、対偶（もとの命題と一致）と裏（逆と一致）の真偽が決まる。",
+        "steps": [
+          "もとの命題：真。",
+          "逆「$x<2$ ならば $x^2<4$」：偽。",
+          "対偶は真、裏は偽。"
+        ],
+        "alternatives": [
+          "条件を集合で表し、$P\\subset Q$（もとの命題）と $Q\\subset P$（逆）が成り立つかを数直線やベン図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの命題と逆の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "対偶・裏の真偽を関係から正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "裏は逆の対偶なので、逆と真偽が一致し、偽である。",
+          "misconception": "逆・裏・対偶の真偽の関係の誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "逆は偽である（仮定と結論を入れかえた命題には反例が存在する）。",
+          "misconception": "真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "実数 $x,\\ y$ について、「$x+y>-2$ ならば、$x>-1$ または $y>-1$」であることを、対偶を利用して証明しなさい。",
+      "answer": {
+        "value": "対偶「$x\\leqq -1$ かつ $y\\leqq -1$ ならば、$x+y\\leqq -2$」を示す（解答の手順を参照）。"
+      },
+      "explanation": "直接示すのが難しいので、真偽が一致する対偶を証明する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "対偶を正しくつくっている（否定の仕方が正しい）",
+            "points": 2
+          },
+          {
+            "criterion": "対偶の仮定を式で表している",
+            "points": 2
+          },
+          {
+            "criterion": "対偶の結論を正しく導いている",
+            "points": 3
+          },
+          {
+            "criterion": "「対偶が真なのでもとの命題も真」と結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-proof_contra",
+      "explanation_detail": {
+        "approach": "もとの命題の仮定から直接結論を導くのは難しい。対偶にすると、仮定が「〜でない」「〜以下」のような扱いやすい形になる。",
+        "steps": [
+          "結論「$x>-1$ または $y>-1$」の否定は「$x\\leqq -1$ かつ $y\\leqq -1$」、仮定の否定は「$x+y\\leqq -2$」。",
+          "対偶「$x\\leqq -1$ かつ $y\\leqq -1$ ならば、$x+y\\leqq -2$」を証明する。",
+          "$x\\leqq -1$、$y\\leqq -1$ の辺々を加えて $x+y\\leqq -2$。",
+          "よって対偶は真であり、もとの命題も真である。"
+        ],
+        "alternatives": [
+          "背理法で「$x+y>-2$ かつ $x\\leqq -1$ かつ $y\\leqq -1$」と仮定し、辺々を加えて矛盾を導いてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対偶の作成",
+            "points": 2
+          },
+          {
+            "point": "仮定の式表現",
+            "points": 2
+          },
+          {
+            "point": "結論の導出",
+            "points": 3
+          },
+          {
+            "point": "結び",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "対偶ではなく逆を証明してしまう。",
+          "「または」の否定を「または」のままにする。",
+          "最後に「もとの命題も真」と結論を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "実数 $x,\\ y$ について、「$x+y>4$ ならば、$x>2$ または $y>2$」であることを、対偶を利用して証明しなさい。",
+      "answer": {
+        "value": "対偶「$x\\leqq 2$ かつ $y\\leqq 2$ ならば、$x+y\\leqq 4$」を示す（解答の手順を参照）。"
+      },
+      "explanation": "直接示すのが難しいので、真偽が一致する対偶を証明する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "対偶を正しくつくっている（否定の仕方が正しい）",
+            "points": 2
+          },
+          {
+            "criterion": "対偶の仮定を式で表している",
+            "points": 2
+          },
+          {
+            "criterion": "対偶の結論を正しく導いている",
+            "points": 3
+          },
+          {
+            "criterion": "「対偶が真なのでもとの命題も真」と結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-proof_contra",
+      "explanation_detail": {
+        "approach": "もとの命題の仮定から直接結論を導くのは難しい。対偶にすると、仮定が「〜でない」「〜以下」のような扱いやすい形になる。",
+        "steps": [
+          "結論「$x>2$ または $y>2$」の否定は「$x\\leqq 2$ かつ $y\\leqq 2$」、仮定の否定は「$x+y\\leqq 4$」。",
+          "対偶「$x\\leqq 2$ かつ $y\\leqq 2$ ならば、$x+y\\leqq 4$」を証明する。",
+          "$x\\leqq 2$、$y\\leqq 2$ の辺々を加えて $x+y\\leqq 4$。",
+          "よって対偶は真であり、もとの命題も真である。"
+        ],
+        "alternatives": [
+          "背理法で「$x+y>4$ かつ $x\\leqq 2$ かつ $y\\leqq 2$」と仮定し、辺々を加えて矛盾を導いてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対偶の作成",
+            "points": 2
+          },
+          {
+            "point": "仮定の式表現",
+            "points": 2
+          },
+          {
+            "point": "結論の導出",
+            "points": 3
+          },
+          {
+            "point": "結び",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "対偶ではなく逆を証明してしまう。",
+          "「または」の否定を「または」のままにする。",
+          "最後に「もとの命題も真」と結論を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "実数 $x,\\ y$ について、「$x+y>-6$ ならば、$x>-3$ または $y>-3$」であることを、対偶を利用して証明しなさい。",
+      "answer": {
+        "value": "対偶「$x\\leqq -3$ かつ $y\\leqq -3$ ならば、$x+y\\leqq -6$」を示す（解答の手順を参照）。"
+      },
+      "explanation": "直接示すのが難しいので、真偽が一致する対偶を証明する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "対偶を正しくつくっている（否定の仕方が正しい）",
+            "points": 2
+          },
+          {
+            "criterion": "対偶の仮定を式で表している",
+            "points": 2
+          },
+          {
+            "criterion": "対偶の結論を正しく導いている",
+            "points": 3
+          },
+          {
+            "criterion": "「対偶が真なのでもとの命題も真」と結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-proof_contra",
+      "explanation_detail": {
+        "approach": "もとの命題の仮定から直接結論を導くのは難しい。対偶にすると、仮定が「〜でない」「〜以下」のような扱いやすい形になる。",
+        "steps": [
+          "結論「$x>-3$ または $y>-3$」の否定は「$x\\leqq -3$ かつ $y\\leqq -3$」、仮定の否定は「$x+y\\leqq -6$」。",
+          "対偶「$x\\leqq -3$ かつ $y\\leqq -3$ ならば、$x+y\\leqq -6$」を証明する。",
+          "$x\\leqq -3$、$y\\leqq -3$ の辺々を加えて $x+y\\leqq -6$。",
+          "よって対偶は真であり、もとの命題も真である。"
+        ],
+        "alternatives": [
+          "背理法で「$x+y>-6$ かつ $x\\leqq -3$ かつ $y\\leqq -3$」と仮定し、辺々を加えて矛盾を導いてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対偶の作成",
+            "points": 2
+          },
+          {
+            "point": "仮定の式表現",
+            "points": 2
+          },
+          {
+            "point": "結論の導出",
+            "points": 3
+          },
+          {
+            "point": "結び",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "対偶ではなく逆を証明してしまう。",
+          "「または」の否定を「または」のままにする。",
+          "最後に「もとの命題も真」と結論を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\sqrt{3}$ が無理数であることを用いて、$5-2\\sqrt{3}$ が無理数であることを背理法によって証明しなさい。",
+      "answer": {
+        "value": "$5-2\\sqrt{3}$ が有理数 $r$ であると仮定すると、$\\sqrt{3}=\\dfrac{5-r}{2}$ は有理数となり矛盾する。よって $5-2\\sqrt{3}$ は無理数である。"
+      },
+      "explanation": "結論を否定して有理数と仮定し、$\\sqrt{3}$ について解くと、有理数の四則計算の結果が有理数になることから矛盾が生じる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "結論を否定して「有理数 $r$ である」と仮定している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{3}$ について正しく解いている",
+            "points": 2
+          },
+          {
+            "criterion": "右辺が有理数である理由（有理数の四則計算、$-2\\neq0$）を述べている",
+            "points": 2
+          },
+          {
+            "criterion": "矛盾を指摘して結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(5+(-2)*x-r, x)",
+        "expected": "[(r-(5))/(-2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-proof_irrational",
+      "explanation_detail": {
+        "approach": "「無理数である」は「有理数でない」ということなので、否定の「有理数である」を仮定して矛盾を導く（背理法）。",
+        "steps": [
+          "$5-2\\sqrt{3}$ が有理数であると仮定し、$r$ とおく：$5-2\\sqrt{3}=r$。",
+          "$\\sqrt{3}$ について解くと、$\\sqrt{3}=\\dfrac{5-r}{2}$。",
+          "$r$ と $5$ は有理数であり、有理数どうしの和・差・積・商（$0$ で割る場合を除く）は有理数なので、右辺は有理数である。",
+          "これは $\\sqrt{3}$ が無理数であることに矛盾する。よって $5-2\\sqrt{3}$ は無理数である。"
+        ],
+        "alternatives": [
+          "一般に「有理数 $a$、$0$ でない有理数 $b$ と無理数 $\\alpha$ について $a+b\\alpha$ は無理数」と示しておけば、同じ形の問題すべてに使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮定の設定",
+            "points": 2
+          },
+          {
+            "point": "式変形",
+            "points": 2
+          },
+          {
+            "point": "有理数である理由",
+            "points": 2
+          },
+          {
+            "point": "矛盾と結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「有理数と無理数の和は無理数だから」と、示すべきことを根拠に使ってしまう。",
+          "$-2$ で割るときに $0$ でないことを確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\sqrt{7}$ が無理数であることを用いて、$2-4\\sqrt{7}$ が無理数であることを背理法によって証明しなさい。",
+      "answer": {
+        "value": "$2-4\\sqrt{7}$ が有理数 $r$ であると仮定すると、$\\sqrt{7}=\\dfrac{2-r}{4}$ は有理数となり矛盾する。よって $2-4\\sqrt{7}$ は無理数である。"
+      },
+      "explanation": "結論を否定して有理数と仮定し、$\\sqrt{7}$ について解くと、有理数の四則計算の結果が有理数になることから矛盾が生じる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "結論を否定して「有理数 $r$ である」と仮定している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{7}$ について正しく解いている",
+            "points": 2
+          },
+          {
+            "criterion": "右辺が有理数である理由（有理数の四則計算、$-4\\neq0$）を述べている",
+            "points": 2
+          },
+          {
+            "criterion": "矛盾を指摘して結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(2+(-4)*x-r, x)",
+        "expected": "[(r-(2))/(-4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-proof_irrational",
+      "explanation_detail": {
+        "approach": "「無理数である」は「有理数でない」ということなので、否定の「有理数である」を仮定して矛盾を導く（背理法）。",
+        "steps": [
+          "$2-4\\sqrt{7}$ が有理数であると仮定し、$r$ とおく：$2-4\\sqrt{7}=r$。",
+          "$\\sqrt{7}$ について解くと、$\\sqrt{7}=\\dfrac{2-r}{4}$。",
+          "$r$ と $2$ は有理数であり、有理数どうしの和・差・積・商（$0$ で割る場合を除く）は有理数なので、右辺は有理数である。",
+          "これは $\\sqrt{7}$ が無理数であることに矛盾する。よって $2-4\\sqrt{7}$ は無理数である。"
+        ],
+        "alternatives": [
+          "一般に「有理数 $a$、$0$ でない有理数 $b$ と無理数 $\\alpha$ について $a+b\\alpha$ は無理数」と示しておけば、同じ形の問題すべてに使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮定の設定",
+            "points": 2
+          },
+          {
+            "point": "式変形",
+            "points": 2
+          },
+          {
+            "point": "有理数である理由",
+            "points": 2
+          },
+          {
+            "point": "矛盾と結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「有理数と無理数の和は無理数だから」と、示すべきことを根拠に使ってしまう。",
+          "$-4$ で割るときに $0$ でないことを確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\sqrt{5}$ が無理数であることを用いて、$5+\\sqrt{5}$ が無理数であることを背理法によって証明しなさい。",
+      "answer": {
+        "value": "$5+\\sqrt{5}$ が有理数 $r$ であると仮定すると、$\\sqrt{5}=r-5$ は有理数となり矛盾する。よって $5+\\sqrt{5}$ は無理数である。"
+      },
+      "explanation": "結論を否定して有理数と仮定し、$\\sqrt{5}$ について解くと、有理数の四則計算の結果が有理数になることから矛盾が生じる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "結論を否定して「有理数 $r$ である」と仮定している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{5}$ について正しく解いている",
+            "points": 2
+          },
+          {
+            "criterion": "右辺が有理数である理由（有理数の四則計算、$1\\neq0$）を述べている",
+            "points": 2
+          },
+          {
+            "criterion": "矛盾を指摘して結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve(5+(1)*x-r, x)",
+        "expected": "[(r-(5))/(1)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-proof_irrational",
+      "explanation_detail": {
+        "approach": "「無理数である」は「有理数でない」ということなので、否定の「有理数である」を仮定して矛盾を導く（背理法）。",
+        "steps": [
+          "$5+\\sqrt{5}$ が有理数であると仮定し、$r$ とおく：$5+\\sqrt{5}=r$。",
+          "$\\sqrt{5}$ について解くと、$\\sqrt{5}=r-5$。",
+          "$r$ と $5$ は有理数であり、有理数どうしの和・差・積・商（$0$ で割る場合を除く）は有理数なので、右辺は有理数である。",
+          "これは $\\sqrt{5}$ が無理数であることに矛盾する。よって $5+\\sqrt{5}$ は無理数である。"
+        ],
+        "alternatives": [
+          "一般に「有理数 $a$、$0$ でない有理数 $b$ と無理数 $\\alpha$ について $a+b\\alpha$ は無理数」と示しておけば、同じ形の問題すべてに使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮定の設定",
+            "points": 2
+          },
+          {
+            "point": "式変形",
+            "points": 2
+          },
+          {
+            "point": "有理数である理由",
+            "points": 2
+          },
+          {
+            "point": "矛盾と結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「有理数と無理数の和は無理数だから」と、示すべきことを根拠に使ってしまう。",
+          "$1$ で割るときに $0$ でないことを確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$ に関する条件 $p$：$x^2-x-2<0$、$q$：$|x+3|<3$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "必要条件であるが十分条件ではない"
+        },
+        {
+          "label": "イ",
+          "text": "必要条件でも十分条件でもない"
+        },
+        {
+          "label": "ウ",
+          "text": "必要十分条件である"
+        },
+        {
+          "label": "エ",
+          "text": "十分条件であるが必要条件ではない"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$P=\\{x\\mid -1<x<2\\}$、$Q=\\{x\\mid -6<x<0\\}$ の包含関係から判断する。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve((x-(-1))*(x-(2)), x)",
+        "expected": "[-1, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-cross_quad",
+      "related_units": [
+        "HS-MATH1-U03",
+        "HS-MATH1-U01"
+      ],
+      "explanation_detail": {
+        "approach": "二次不等式（二次関数の単元）と絶対値の不等式（数と式の単元）をそれぞれ解いて集合 $P,\\ Q$ を数直線上の範囲として求め、包含関係を調べる。",
+        "steps": [
+          "$x^2-x-2=(x+1)(x-2)<0$ より $P$：$-1<x<2$。",
+          "$-3<x+3<3$ より $Q$：$-6<x<0$。",
+          "$P\\subset Q$ は成り立たない（反例 $x=0$）。$Q\\subset P$ は成り立たない（反例 $x=-5$）。",
+          "よって必要条件でも十分条件でもない。"
+        ],
+        "alternatives": [
+          "2つの範囲を同じ数直線の上下にかき、端点の位置を比べる。端点がすべて一致すれば必要十分条件である。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$P$（二次不等式）を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "$Q$（絶対値の不等式）を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "包含関係から正しく判断している",
+            "points": 4
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$q\\Rightarrow p$」は偽（反例：$x=-5$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "「$p\\Rightarrow q$」は偽（反例：$x=0$）なので、$p$ は十分条件ではない。「$q\\Rightarrow p$」は偽（反例：$x=-5$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「$p\\Rightarrow q$」は偽（反例：$x=0$）なので、$p$ は十分条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x$ に関する条件 $p$：$x^2-8x+12<0$、$q$：$|x-6|<4$ について、$p$ は $q$ であるための何条件か。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "必要条件でも十分条件でもない"
+        },
+        {
+          "label": "イ",
+          "text": "必要条件であるが十分条件ではない"
+        },
+        {
+          "label": "ウ",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "エ",
+          "text": "必要十分条件である"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$P=\\{x\\mid 2<x<6\\}$、$Q=\\{x\\mid 2<x<10\\}$ の包含関係から判断する。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve((x-(2))*(x-(6)), x)",
+        "expected": "[2, 6]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-cross_quad",
+      "related_units": [
+        "HS-MATH1-U03",
+        "HS-MATH1-U01"
+      ],
+      "explanation_detail": {
+        "approach": "二次不等式（二次関数の単元）と絶対値の不等式（数と式の単元）をそれぞれ解いて集合 $P,\\ Q$ を数直線上の範囲として求め、包含関係を調べる。",
+        "steps": [
+          "$x^2-8x+12=(x-2)(x-6)<0$ より $P$：$2<x<6$。",
+          "$-4<x-6<4$ より $Q$：$2<x<10$。",
+          "$P\\subset Q$ は成り立つ。$Q\\subset P$ は成り立たない（反例 $x=6$）。",
+          "よって十分条件であるが必要条件ではない。"
+        ],
+        "alternatives": [
+          "2つの範囲を同じ数直線の上下にかき、端点の位置を比べる。端点がすべて一致すれば必要十分条件である。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$P$（二次不等式）を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "$Q$（絶対値の不等式）を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "包含関係から正しく判断している",
+            "points": 4
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "「$p\\Rightarrow q$」は真なので、$p$ は十分条件である。「$q\\Rightarrow p$」は偽（反例：$x=6$）なので、$p$ は必要条件ではない。",
+          "misconception": "必要と十分の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「$q\\Rightarrow p$」は偽（反例：$x=6$）なので、$p$ は必要条件ではない。",
+          "misconception": "一方の向きの真偽の判定の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "実数 $x,\\ y$に関する条件 $p$：$x+y>0$ かつ $xy>0$、$q$：$x>0$ かつ $y>0$ について、$p$ は $q$ であるための何条件か。理由（偽であるものには反例）も示して答えなさい。",
+      "answer": {
+        "value": "$p$ は $q$ であるための必要十分条件である。「$p\\Rightarrow q$」：$xy>0$ より $x,\\ y$ は同符号。両方負なら $x+y<0$ となり矛盾するので両方正。真。「$q\\Rightarrow p$」：$x>0,\\ y>0$ なら $x+y>0$、$xy>0$。真。"
+      },
+      "explanation": "「$p\\Rightarrow q$」：$xy>0$ より $x,\\ y$ は同符号。両方負なら $x+y<0$ となり矛盾するので両方正。真。「$q\\Rightarrow p$」：$x>0,\\ y>0$ なら $x+y>0$、$xy>0$。真。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「$p\\Rightarrow q$」の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "criterion": "「$q\\Rightarrow p$」の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "criterion": "真であるものには理由、偽であるものには正しい反例を示している",
+            "points": 2
+          },
+          {
+            "criterion": "必要・十分を正しく対応させて結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-ns_reason",
+      "explanation_detail": {
+        "approach": "2つの向きを別々に調べる。真なら理由を、偽なら「仮定を満たし結論を満たさない」反例を1つ挙げる。",
+        "steps": [
+          "「$p\\Rightarrow q$」：$xy>0$ より $x,\\ y$ は同符号。両方負なら $x+y<0$ となり矛盾するので両方正。真。",
+          "「$q\\Rightarrow p$」：$x>0,\\ y>0$ なら $x+y>0$、$xy>0$。真。",
+          "よって $p$ は $q$ であるための必要十分条件である。"
+        ],
+        "alternatives": [
+          "条件を満たす集合 $P,\\ Q$ をかき、包含関係から結論を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$p\\Rightarrow q$",
+            "points": 2
+          },
+          {
+            "point": "$q\\Rightarrow p$",
+            "points": 2
+          },
+          {
+            "point": "理由・反例",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "反例として、仮定を満たさない値を挙げる。",
+          "必要と十分を逆に答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "実数 $x$に関する条件 $p$：$x>3$、$q$：$x^2>9$ について、$p$ は $q$ であるための何条件か。理由（偽であるものには反例）も示して答えなさい。",
+      "answer": {
+        "value": "$p$ は $q$ であるための十分条件であるが必要条件ではない。「$p\\Rightarrow q$」：$x>3>0$ なら両辺は正なので2乗して $x^2>9$。真。「$q\\Rightarrow p$」：反例 $x=-4$（$x^2=16>9$ だが $x<3$）があり偽。"
+      },
+      "explanation": "「$p\\Rightarrow q$」：$x>3>0$ なら両辺は正なので2乗して $x^2>9$。真。「$q\\Rightarrow p$」：反例 $x=-4$（$x^2=16>9$ だが $x<3$）があり偽。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「$p\\Rightarrow q$」の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "criterion": "「$q\\Rightarrow p$」の真偽を正しく判定している",
+            "points": 2
+          },
+          {
+            "criterion": "真であるものには理由、偽であるものには正しい反例を示している",
+            "points": 2
+          },
+          {
+            "criterion": "必要・十分を正しく対応させて結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-ns_reason",
+      "explanation_detail": {
+        "approach": "2つの向きを別々に調べる。真なら理由を、偽なら「仮定を満たし結論を満たさない」反例を1つ挙げる。",
+        "steps": [
+          "「$p\\Rightarrow q$」：$x>3>0$ なら両辺は正なので2乗して $x^2>9$。真。",
+          "「$q\\Rightarrow p$」：反例 $x=-4$（$x^2=16>9$ だが $x<3$）があり偽。",
+          "よって $p$ は $q$ であるための十分条件であるが必要条件ではない。"
+        ],
+        "alternatives": [
+          "条件を満たす集合 $P,\\ Q$ をかき、包含関係から結論を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$p\\Rightarrow q$",
+            "points": 2
+          },
+          {
+            "point": "$q\\Rightarrow p$",
+            "points": 2
+          },
+          {
+            "point": "理由・反例",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "反例として、仮定を満たさない値を挙げる。",
+          "必要と十分を逆に答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "条件「$-2<x<3$」の否定を答えなさい。\n［ある生徒の解答］\n否定は「$-2\\geqq x\\geqq 3$」\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "「$x\\leqq -2$ または $3\\leqq x$」"
+      },
+      "explanation": "「$-2<x<3$」は「$x>-2$ かつ $x<3$」の意味なので、否定は「$x\\leqq -2$ または $x\\geqq 3$」。生徒の式を満たす $x$ は存在しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-err_negation",
+      "explanation_detail": {
+        "approach": "否定をつくるときは、量（すべて・ある）、つなぎ（かつ・または）、個々の条件の3か所をすべて変える。",
+        "steps": [
+          "否定の規則：「すべて」と「ある」、「かつ」と「または」をそれぞれ入れかえ、$>$ は $\\leqq$ に、$\\geqq$ は $<$ に変える。",
+          "「$-2<x<3$」は「$x>-2$ かつ $x<3$」の意味なので、否定は「$x\\leqq -2$ または $x\\geqq 3$」。生徒の式を満たす $x$ は存在しない。",
+          "否定は「$x\\leqq -2$ または $3\\leqq x$」。"
+        ],
+        "alternatives": [
+          "数直線やベン図で、もとの条件を満たす部分と満たさない部分を塗り分け、答えが「満たさない部分」全体を表しているか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "量やつなぎの言葉を否定し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "否定は「$-2\\geqq x\\geqq 3$」",
+        "error_step": "否定のつくり方",
+        "error_type": "logic",
+        "why_tempting": "不等号の向きをそれぞれ逆にすれば否定になると考え、つながった不等式のまま書いてしまった。",
+        "correction": "否定は「$x\\leqq -2$ または $3\\leqq x$」"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "条件「$-4<x<-2$」の否定を答えなさい。\n［ある生徒の解答］\n否定は「$-4\\geqq x\\geqq -2$」\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "「$x\\leqq -4$ または $-2\\leqq x$」"
+      },
+      "explanation": "「$-4<x<-2$」は「$x>-4$ かつ $x<-2$」の意味なので、否定は「$x\\leqq -4$ または $x\\geqq -2$」。生徒の式を満たす $x$ は存在しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-err_negation",
+      "explanation_detail": {
+        "approach": "否定をつくるときは、量（すべて・ある）、つなぎ（かつ・または）、個々の条件の3か所をすべて変える。",
+        "steps": [
+          "否定の規則：「すべて」と「ある」、「かつ」と「または」をそれぞれ入れかえ、$>$ は $\\leqq$ に、$\\geqq$ は $<$ に変える。",
+          "「$-4<x<-2$」は「$x>-4$ かつ $x<-2$」の意味なので、否定は「$x\\leqq -4$ または $x\\geqq -2$」。生徒の式を満たす $x$ は存在しない。",
+          "否定は「$x\\leqq -4$ または $-2\\leqq x$」。"
+        ],
+        "alternatives": [
+          "数直線やベン図で、もとの条件を満たす部分と満たさない部分を塗り分け、答えが「満たさない部分」全体を表しているか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "量やつなぎの言葉を否定し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "否定は「$-4\\geqq x\\geqq -2$」",
+        "error_step": "否定のつくり方",
+        "error_type": "logic",
+        "why_tempting": "不等号の向きをそれぞれ逆にすれば否定になると考え、つながった不等式のまま書いてしまった。",
+        "correction": "否定は「$x\\leqq -4$ または $-2\\leqq x$」"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "条件「$x\\geqq 6$ かつ $y\\geqq -1$」の否定を答えなさい。\n［ある生徒の解答］\n否定は「$x<6$ かつ $y<-1$」\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "「$x<6$ または $y<-1$」"
+      },
+      "explanation": "ド・モルガンの法則により「かつ」の否定は「または」になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-err_negation",
+      "explanation_detail": {
+        "approach": "否定をつくるときは、量（すべて・ある）、つなぎ（かつ・または）、個々の条件の3か所をすべて変える。",
+        "steps": [
+          "否定の規則：「すべて」と「ある」、「かつ」と「または」をそれぞれ入れかえ、$>$ は $\\leqq$ に、$\\geqq$ は $<$ に変える。",
+          "ド・モルガンの法則により「かつ」の否定は「または」になる。",
+          "否定は「$x<6$ または $y<-1$」。"
+        ],
+        "alternatives": [
+          "数直線やベン図で、もとの条件を満たす部分と満たさない部分を塗り分け、答えが「満たさない部分」全体を表しているか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "量やつなぎの言葉を否定し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "否定は「$x<6$ かつ $y<-1$」",
+        "error_step": "否定のつくり方",
+        "error_type": "logic",
+        "why_tempting": "個々の条件を否定することに注意が向き、「かつ」を「または」に変え忘れた。",
+        "correction": "否定は「$x<6$ または $y<-1$」"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整数 $n$についての命題「$n$ が $10$ の倍数 ならば $n$ は $5$ の倍数」の対偶をつくり、もとの命題の真偽を答えなさい。\n［ある生徒の解答］\n対偶は「$n$ が $10$ の倍数でない ならば $n$ は $5$ の倍数でない」である。$n=5$ が反例となるので対偶は偽。よって、もとの命題も偽である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "対偶「$n$ は $5$ の倍数でない ならば $n$ が $10$ の倍数でない」、もとの命題は真"
+      },
+      "explanation": "生徒がつくったのは裏であり、裏の真偽はもとの命題の真偽と一致するとは限らない。対偶「$n$ は $5$ の倍数でない ならば $n$ が $10$ の倍数でない」は真なので、もとの命題も真である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-err_inverse",
+      "explanation_detail": {
+        "approach": "対偶は「入れかえて、否定する」。裏（否定だけ）や逆（入れかえだけ）と区別する。",
+        "steps": [
+          "仮定 $p$：$n$ が $10$ の倍数、結論 $q$：$n$ は $5$ の倍数。",
+          "対偶は $\\overline{q}\\Rightarrow\\overline{p}$：「$n$ は $5$ の倍数でない ならば $n$ が $10$ の倍数でない」。",
+          "対偶は真（もとの命題を直接確かめても真）。",
+          "よってもとの命題は真。"
+        ],
+        "alternatives": [
+          "もとの命題を直接調べても真であることが確かめられる（条件を集合で表すと $P\\subset Q$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "裏と対偶を混同する。",
+          "裏や逆の真偽からもとの命題の真偽を判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "対偶は「$n$ が $10$ の倍数でない ならば $n$ は $5$ の倍数でない」である。$n=5$ が反例となるので対偶は偽。よって、もとの命題も偽である。",
+        "error_step": "対偶のつくり方（裏をつくっている）",
+        "error_type": "concept",
+        "why_tempting": "「否定する」ことだけを覚えていて、仮定と結論を入れかえることを忘れた。その結果、裏の真偽をもとの命題の真偽と誤って結びつけた。",
+        "correction": "対偶は「$n$ は $5$ の倍数でない ならば $n$ が $10$ の倍数でない」で真。よってもとの命題も真"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整数 $n$についての命題「$n$ が $15$ の倍数 ならば $n$ は $5$ の倍数」の対偶をつくり、もとの命題の真偽を答えなさい。\n［ある生徒の解答］\n対偶は「$n$ が $15$ の倍数でない ならば $n$ は $5$ の倍数でない」である。$n=5$ が反例となるので対偶は偽。よって、もとの命題も偽である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "対偶「$n$ は $5$ の倍数でない ならば $n$ が $15$ の倍数でない」、もとの命題は真"
+      },
+      "explanation": "生徒がつくったのは裏であり、裏の真偽はもとの命題の真偽と一致するとは限らない。対偶「$n$ は $5$ の倍数でない ならば $n$ が $15$ の倍数でない」は真なので、もとの命題も真である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-err_inverse",
+      "explanation_detail": {
+        "approach": "対偶は「入れかえて、否定する」。裏（否定だけ）や逆（入れかえだけ）と区別する。",
+        "steps": [
+          "仮定 $p$：$n$ が $15$ の倍数、結論 $q$：$n$ は $5$ の倍数。",
+          "対偶は $\\overline{q}\\Rightarrow\\overline{p}$：「$n$ は $5$ の倍数でない ならば $n$ が $15$ の倍数でない」。",
+          "対偶は真（もとの命題を直接確かめても真）。",
+          "よってもとの命題は真。"
+        ],
+        "alternatives": [
+          "もとの命題を直接調べても真であることが確かめられる（条件を集合で表すと $P\\subset Q$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "裏と対偶を混同する。",
+          "裏や逆の真偽からもとの命題の真偽を判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "対偶は「$n$ が $15$ の倍数でない ならば $n$ は $5$ の倍数でない」である。$n=5$ が反例となるので対偶は偽。よって、もとの命題も偽である。",
+        "error_step": "対偶のつくり方（裏をつくっている）",
+        "error_type": "concept",
+        "why_tempting": "「否定する」ことだけを覚えていて、仮定と結論を入れかえることを忘れた。その結果、裏の真偽をもとの命題の真偽と誤って結びつけた。",
+        "correction": "対偶は「$n$ は $5$ の倍数でない ならば $n$ が $15$ の倍数でない」で真。よってもとの命題も真"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "整数 $n$についての命題「$n$ が $6$ の倍数 ならば $n$ は $2$ の倍数」の対偶をつくり、もとの命題の真偽を答えなさい。\n［ある生徒の解答］\n対偶は「$n$ が $6$ の倍数でない ならば $n$ は $2$ の倍数でない」である。$n=2$ が反例となるので対偶は偽。よって、もとの命題も偽である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "対偶「$n$ は $2$ の倍数でない ならば $n$ が $6$ の倍数でない」、もとの命題は真"
+      },
+      "explanation": "生徒がつくったのは裏であり、裏の真偽はもとの命題の真偽と一致するとは限らない。対偶「$n$ は $2$ の倍数でない ならば $n$ が $6$ の倍数でない」は真なので、もとの命題も真である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U02-err_inverse",
+      "explanation_detail": {
+        "approach": "対偶は「入れかえて、否定する」。裏（否定だけ）や逆（入れかえだけ）と区別する。",
+        "steps": [
+          "仮定 $p$：$n$ が $6$ の倍数、結論 $q$：$n$ は $2$ の倍数。",
+          "対偶は $\\overline{q}\\Rightarrow\\overline{p}$：「$n$ は $2$ の倍数でない ならば $n$ が $6$ の倍数でない」。",
+          "対偶は真（もとの命題を直接確かめても真）。",
+          "よってもとの命題は真。"
+        ],
+        "alternatives": [
+          "もとの命題を直接調べても真であることが確かめられる（条件を集合で表すと $P\\subset Q$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "裏と対偶を混同する。",
+          "裏や逆の真偽からもとの命題の真偽を判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "対偶は「$n$ が $6$ の倍数でない ならば $n$ は $2$ の倍数でない」である。$n=2$ が反例となるので対偶は偽。よって、もとの命題も偽である。",
+        "error_step": "対偶のつくり方（裏をつくっている）",
+        "error_type": "concept",
+        "why_tempting": "「否定する」ことだけを覚えていて、仮定と結論を入れかえることを忘れた。その結果、裏の真偽をもとの命題の真偽と誤って結びつけた。",
+        "correction": "対偶は「$n$ は $2$ の倍数でない ならば $n$ が $6$ の倍数でない」で真。よってもとの命題も真"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "実数 $x,\\ y$に関する条件 $p$：$x>4$ かつ $y>-2$、$q$：$x+y>2$ について、$p$ は $q$ であるための何条件か答えなさい。\n［ある生徒の解答］\n「$p\\Rightarrow q$」が真であり、逆は偽である。よって $p$ は $q$ であるための必要条件であるが十分条件ではない。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$p$ は $q$ であるための十分条件であるが必要条件ではない"
+      },
+      "explanation": "「$p\\Rightarrow q$」が真のとき $p$ は十分条件、「$q\\Rightarrow p$」が真のとき $p$ は必要条件。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-err_nec_suff",
+      "explanation_detail": {
+        "approach": "集合で $P\\subset Q$ のとき、小さい方の $P$（$p$）が十分条件、大きい方の $Q$（$q$）が必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」は真。",
+          "「$q\\Rightarrow p$」は偽（反例 $x=3,\\ y=0$）。",
+          "よって $p$ は十分条件であるが必要条件ではない。"
+        ],
+        "alternatives": [
+          "「$p$ であれば十分 $q$ といえる」「$q$ であるためには $p$ が必要」と、言葉に当てはめて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "必要と十分を逆に答える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "「$p\\Rightarrow q$」が真であり、逆は偽である。よって $p$ は $q$ であるための必要条件であるが十分条件ではない。",
+        "error_step": "必要・十分の対応づけ",
+        "error_type": "concept",
+        "why_tempting": "矢印の真偽は正しく判定できているが、「矢印の出発点が十分条件、行き先が必要条件」という対応を逆に覚えている。",
+        "correction": "「$p\\Rightarrow q$」が真なので、$p$ は十分条件。$p$ は $q$ であるための十分条件であるが必要条件ではない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "実数 $x$に関する条件 $p$：$x=2$、$q$：$x^2=4$ について、$p$ は $q$ であるための何条件か答えなさい。\n［ある生徒の解答］\n「$p\\Rightarrow q$」が真であり、逆は偽である。よって $p$ は $q$ であるための必要条件であるが十分条件ではない。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$p$ は $q$ であるための十分条件であるが必要条件ではない"
+      },
+      "explanation": "「$p\\Rightarrow q$」が真のとき $p$ は十分条件、「$q\\Rightarrow p$」が真のとき $p$ は必要条件。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U02-err_nec_suff",
+      "explanation_detail": {
+        "approach": "集合で $P\\subset Q$ のとき、小さい方の $P$（$p$）が十分条件、大きい方の $Q$（$q$）が必要条件。",
+        "steps": [
+          "「$p\\Rightarrow q$」は真。",
+          "「$q\\Rightarrow p$」は偽（反例 $x=-2$）。",
+          "よって $p$ は十分条件であるが必要条件ではない。"
+        ],
+        "alternatives": [
+          "「$p$ であれば十分 $q$ といえる」「$q$ であるためには $p$ が必要」と、言葉に当てはめて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "必要と十分を逆に答える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "「$p\\Rightarrow q$」が真であり、逆は偽である。よって $p$ は $q$ であるための必要条件であるが十分条件ではない。",
+        "error_step": "必要・十分の対応づけ",
+        "error_type": "concept",
+        "why_tempting": "矢印の真偽は正しく判定できているが、「矢印の出発点が十分条件、行き先が必要条件」という対応を逆に覚えている。",
+        "correction": "「$p\\Rightarrow q$」が真なので、$p$ は十分条件。$p$ は $q$ であるための十分条件であるが必要条件ではない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$U=\\{1,\\ 2,\\ \\cdots,\\ 40\\}$ を全体集合とし、$2$ の倍数全体の集合を $A$、$5$ の倍数全体の集合を $B$ とする。$n(\\overline{A}\\cup\\overline{B})$ を求めなさい。\n［ある生徒の解答］\n$\\overline{A}\\cup\\overline{B}=\\overline{A\\cup B}$ なので、$40-(20+8-4)=16$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$36$"
+      },
+      "explanation": "$\\overline{A}\\cup\\overline{B}$ は$2$ で割り切れないか、または $5$ で割り切れない数の集合で、$A\\cap B$（$10$ の倍数）の補集合である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "40-floor(40/10)",
+        "expected": "36"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-err_demorgan",
+      "explanation_detail": {
+        "approach": "補集合の記号を分配するときは、$\\cap$ と $\\cup$ を入れかえる。ベン図で塗って確かめる。",
+        "steps": [
+          "ド・モルガンの法則より $\\overline{A\\cap B}=\\overline{A}\\cup\\overline{B}$。",
+          "$A\\cap B$ は $10$ の倍数の集合で、$n(A\\cap B)=4$。",
+          "$n(\\overline{A}\\cup\\overline{B})=40-4=36$。"
+        ],
+        "alternatives": [
+          "ベン図で $A\\cap B$ 以外の部分をすべて塗ると、$\\overline{A}$ と $\\overline{B}$ を合わせた部分（和集合）になることが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{A\\cap B}=\\overline{A}\\cap\\overline{B}$ とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\overline{A}\\cup\\overline{B}=\\overline{A\\cup B}$ なので、$40-(20+8-4)=16$",
+        "error_step": "ド・モルガンの法則の適用（$\\cap$ と $\\cup$ の入れかえ）",
+        "error_type": "logic",
+        "why_tempting": "補集合をとると「それぞれに線を引く」ことは覚えているが、そのとき $\\cap$ と $\\cup$ が入れかわることを忘れている。",
+        "correction": "$\\overline{A}\\cup\\overline{B}=\\overline{A\\cap B}$ であり、$40-4=36$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$U=\\{1,\\ 2,\\ \\cdots,\\ 50\\}$ を全体集合とし、$3$ の倍数全体の集合を $A$、$2$ の倍数全体の集合を $B$ とする。$n(\\overline{A\\cap B})$ を求めなさい。\n［ある生徒の解答］\n$\\overline{A\\cap B}=\\overline{A}\\cap\\overline{B}=\\overline{A\\cup B}$ なので、$n(\\overline{A\\cap B})=50-n(A\\cup B)=50-(16+25-8)=17$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$42$"
+      },
+      "explanation": "$\\overline{A\\cap B}$ は$3$ と $2$ の少なくとも一方で割り切れない数の集合で、$A\\cap B$（$6$ の倍数）の補集合である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "50-floor(50/6)",
+        "expected": "42"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U02-err_demorgan",
+      "explanation_detail": {
+        "approach": "補集合の記号を分配するときは、$\\cap$ と $\\cup$ を入れかえる。ベン図で塗って確かめる。",
+        "steps": [
+          "ド・モルガンの法則より $\\overline{A\\cap B}=\\overline{A}\\cup\\overline{B}$。",
+          "$A\\cap B$ は $6$ の倍数の集合で、$n(A\\cap B)=8$。",
+          "$n(\\overline{A\\cap B})=50-8=42$。"
+        ],
+        "alternatives": [
+          "ベン図で $A\\cap B$ 以外の部分をすべて塗ると、$\\overline{A}$ と $\\overline{B}$ を合わせた部分（和集合）になることが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{A\\cap B}=\\overline{A}\\cap\\overline{B}$ とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\overline{A\\cap B}=\\overline{A}\\cap\\overline{B}=\\overline{A\\cup B}$ なので、$n(\\overline{A\\cap B})=50-n(A\\cup B)=50-(16+25-8)=17$",
+        "error_step": "ド・モルガンの法則の適用（$\\cap$ と $\\cup$ の入れかえ）",
+        "error_type": "logic",
+        "why_tempting": "補集合をとると「それぞれに線を引く」ことは覚えているが、そのとき $\\cap$ と $\\cup$ が入れかわることを忘れている。",
+        "correction": "$\\overline{A\\cap B}=\\overline{A}\\cup\\overline{B}$ であり、$n(\\overline{A\\cap B})=50-n(A\\cap B)=50-8=42$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "70519b1b9b755770aec3876a6d3af09a9f845f1c585e422bb21c031d104db1a8"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 6 問（Q018, Q019, Q020, Q051, Q052, Q053）",
+      "content_hash": "e923a5ea37ba9787c1f052abdad00c5e19d377b5e4252096481487323922fca7"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 9 問（Q006, Q044, Q045, Q046, Q047, Q048, Q051, Q052, Q053）",
+      "content_hash": "b18d92953adc6455f12ef11985548dafca46bb259a052c03b5228e49e31895a4"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:04:03+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "812542111e1b170959ab23f43576abe1380ad6cfa191d2c16c3caddbf3df2b22"
+  }
+}

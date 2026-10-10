@@ -1,0 +1,5257 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHB-U01-EX",
+  "title": "数列　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_b",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHB-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATHB-U01-PACK",
+  "pair_set_id": "HS-MATHB-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U02",
+        "point": "文字式",
+        "title": "文字と式"
+      },
+      {
+        "unit_id": "HS-MATH1-U02",
+        "point": "命題と証明",
+        "title": "集合と命題"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U01",
+        "point": "数列の極限・無限級数",
+        "title": "極限"
+      }
+    ],
+    "readiness_check": [
+      "文字式の展開・因数分解ができる。",
+      "指数法則 $a^m\\cdot a^n=a^{m+n}$ を使える。",
+      "命題・仮定・結論の意味（数学Ⅰ「集合と命題」）を理解している。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHB-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項が $8$、公差が $-2$ である等差数列 $\\{a_n\\}$ について、第 $19$ 項 $a_{19}$ の値を求めなさい。",
+      "answer": {
+        "value": "-28"
+      },
+      "explanation": "$a_n=8+(n-1)\\cdot(-2)$ より $a_{19}=8+18\\times(-2)=-28$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "8+(19-1)*(-2)",
+        "expected": "-28"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_term",
+      "explanation_detail": {
+        "approach": "等差数列の一般項 $a_n=a+(n-1)d$ に代入する。第 $n$ 項までに公差を加える回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=8+(n-1)\\cdot(-2)=10 - 2 n$。",
+          "$n=19$ を代入して $a_{19}=-28$。"
+        ],
+        "alternatives": [
+          "一般項 $a_n=10 - 2 n$ を先に求め、$n=1$ で $8$ になることを確認してから代入するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$a+nd$ として $a_{19}=-30$ としてしまう（公差を加える回数の誤り）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項が $-9$、公差が $-6$ である等差数列 $\\{a_n\\}$ について、第 $32$ 項 $a_{32}$ の値を求めなさい。",
+      "answer": {
+        "value": "-195"
+      },
+      "explanation": "$a_n=-9+(n-1)\\cdot(-6)$ より $a_{32}=-9+31\\times(-6)=-195$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-9+(32-1)*(-6)",
+        "expected": "-195"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_term",
+      "explanation_detail": {
+        "approach": "等差数列の一般項 $a_n=a+(n-1)d$ に代入する。第 $n$ 項までに公差を加える回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=-9+(n-1)\\cdot(-6)=- 6 n - 3$。",
+          "$n=32$ を代入して $a_{32}=-195$。"
+        ],
+        "alternatives": [
+          "一般項 $a_n=- 6 n - 3$ を先に求め、$n=1$ で $-9$ になることを確認してから代入するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$a+nd$ として $a_{32}=-201$ としてしまう（公差を加える回数の誤り）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項が $9$、公差が $7$ である等差数列 $\\{a_n\\}$ について、第 $27$ 項 $a_{27}$ の値を求めなさい。",
+      "answer": {
+        "value": "191"
+      },
+      "explanation": "$a_n=9+(n-1)\\cdot(7)$ より $a_{27}=9+26\\times(7)=191$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "9+(27-1)*(7)",
+        "expected": "191"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_term",
+      "explanation_detail": {
+        "approach": "等差数列の一般項 $a_n=a+(n-1)d$ に代入する。第 $n$ 項までに公差を加える回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=9+(n-1)\\cdot(7)=7 n + 2$。",
+          "$n=27$ を代入して $a_{27}=191$。"
+        ],
+        "alternatives": [
+          "一般項 $a_n=7 n + 2$ を先に求め、$n=1$ で $9$ になることを確認してから代入するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$a+nd$ として $a_{27}=198$ としてしまう（公差を加える回数の誤り）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項が $15$、公差が $-2$ である等差数列 $\\{a_n\\}$ について、第 $33$ 項 $a_{33}$ の値を求めなさい。",
+      "answer": {
+        "value": "-49"
+      },
+      "explanation": "$a_n=15+(n-1)\\cdot(-2)$ より $a_{33}=15+32\\times(-2)=-49$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "15+(33-1)*(-2)",
+        "expected": "-49"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_term",
+      "explanation_detail": {
+        "approach": "等差数列の一般項 $a_n=a+(n-1)d$ に代入する。第 $n$ 項までに公差を加える回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=15+(n-1)\\cdot(-2)=17 - 2 n$。",
+          "$n=33$ を代入して $a_{33}=-49$。"
+        ],
+        "alternatives": [
+          "一般項 $a_n=17 - 2 n$ を先に求め、$n=1$ で $15$ になることを確認してから代入するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$a+nd$ として $a_{33}=-51$ としてしまう（公差を加える回数の誤り）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $2$、公比 $2$ の等比数列 $\\{a_n\\}$ の第 $7$ 項を求めなさい。",
+      "answer": {
+        "value": "128"
+      },
+      "explanation": "$a_n=2\\cdot 2^{n-1}$ より $a_{7}=2\\cdot(2)^{6}=128$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*(2)**(7-1)",
+        "expected": "128"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_term",
+      "explanation_detail": {
+        "approach": "等比数列の一般項は $a_n=ar^{n-1}$。第 $n$ 項までに公比を掛ける回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=2\\cdot 2^{n-1}$。",
+          "$a_{7}=2\\times(2)^{6}=128$。"
+        ],
+        "alternatives": [
+          "項を順に書き出して確かめる：$2$、$4$、$8$、$16$、$32$、$64$、$128$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n$ にしてしまう。",
+          "負の公比の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $5$、公比 $2$ の等比数列 $\\{a_n\\}$ の第 $4$ 項を求めなさい。",
+      "answer": {
+        "value": "40"
+      },
+      "explanation": "$a_n=5\\cdot 2^{n-1}$ より $a_{4}=5\\cdot(2)^{3}=40$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "5*(2)**(4-1)",
+        "expected": "40"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_term",
+      "explanation_detail": {
+        "approach": "等比数列の一般項は $a_n=ar^{n-1}$。第 $n$ 項までに公比を掛ける回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=5\\cdot 2^{n-1}$。",
+          "$a_{4}=5\\times(2)^{3}=40$。"
+        ],
+        "alternatives": [
+          "項を順に書き出して確かめる：$5$、$10$、$20$、$40$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n$ にしてしまう。",
+          "負の公比の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $1$、公比 $-3$ の等比数列 $\\{a_n\\}$ の第 $4$ 項を求めなさい。",
+      "answer": {
+        "value": "-27"
+      },
+      "explanation": "$a_n=(-3)^{n-1}$ より $a_{4}=1\\cdot(-3)^{3}=-27$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1*(-3)**(4-1)",
+        "expected": "-27"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_term",
+      "explanation_detail": {
+        "approach": "等比数列の一般項は $a_n=ar^{n-1}$。第 $n$ 項までに公比を掛ける回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=(-3)^{n-1}$。",
+          "$a_{4}=1\\times(-3)^{3}=-27$。"
+        ],
+        "alternatives": [
+          "項を順に書き出して確かめる：$1$、$-3$、$9$、$-27$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n$ にしてしまう。",
+          "負の公比の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $-1$、公比 $3$ の等比数列 $\\{a_n\\}$ の第 $5$ 項を求めなさい。",
+      "answer": {
+        "value": "-81"
+      },
+      "explanation": "$a_n=-3^{n-1}$ より $a_{5}=-1\\cdot(3)^{4}=-81$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-1*(3)**(5-1)",
+        "expected": "-81"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_term",
+      "explanation_detail": {
+        "approach": "等比数列の一般項は $a_n=ar^{n-1}$。第 $n$ 項までに公比を掛ける回数は $n-1$ 回。",
+        "steps": [
+          "$a_n=-3^{n-1}$。",
+          "$a_{5}=-1\\times(3)^{4}=-81$。"
+        ],
+        "alternatives": [
+          "項を順に書き出して確かめる：$-1$、$-3$、$-9$、$-27$、$-81$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "一般項の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n$ にしてしまう。",
+          "負の公比の累乗の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $-7$、公差 $-3$ の等差数列の、初項から第 $39$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "-2496"
+      },
+      "explanation": "末項は $a_{39}=-121$。$S=39\\times\\dfrac{-7+(-121)}{2}=-2496$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(-7+(k-1)*(-3), (k, 1, 39))",
+        "expected": "-2496"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_sum",
+      "explanation_detail": {
+        "approach": "等差数列の和は「(初項＋末項)×項数÷2」。末項を先に求めるか、$\\dfrac{n\\{2a+(n-1)d\\}}{2}$ を使う。",
+        "steps": [
+          "末項 $a_{39}=-7+38\\times(-3)=-121$。",
+          "$S_{39}=\\dfrac{39(-7+(-121))}{2}=-2496$。"
+        ],
+        "alternatives": [
+          "$S_n=\\dfrac{n\\{2a+(n-1)d\\}}{2}=\\dfrac{39\\{-14+38\\cdot(-3)\\}}{2}=-2496$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "末項または公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "末項を $a+nd$ と誤る。",
+          "最後に $2$ で割り忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $8$、公差 $-1$ の等差数列の、初項から第 $34$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "-289"
+      },
+      "explanation": "末項は $a_{34}=-25$。$S=34\\times\\dfrac{8+(-25)}{2}=-289$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(8+(k-1)*(-1), (k, 1, 34))",
+        "expected": "-289"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_sum",
+      "explanation_detail": {
+        "approach": "等差数列の和は「(初項＋末項)×項数÷2」。末項を先に求めるか、$\\dfrac{n\\{2a+(n-1)d\\}}{2}$ を使う。",
+        "steps": [
+          "末項 $a_{34}=8+33\\times(-1)=-25$。",
+          "$S_{34}=\\dfrac{34(8+(-25))}{2}=-289$。"
+        ],
+        "alternatives": [
+          "$S_n=\\dfrac{n\\{2a+(n-1)d\\}}{2}=\\dfrac{34\\{16+33\\cdot(-1)\\}}{2}=-289$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "末項または公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "末項を $a+nd$ と誤る。",
+          "最後に $2$ で割り忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $2$、公差 $-4$ の等差数列の、初項から第 $29$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "-1566"
+      },
+      "explanation": "末項は $a_{29}=-110$。$S=29\\times\\dfrac{2+(-110)}{2}=-1566$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(2+(k-1)*(-4), (k, 1, 29))",
+        "expected": "-1566"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_sum",
+      "explanation_detail": {
+        "approach": "等差数列の和は「(初項＋末項)×項数÷2」。末項を先に求めるか、$\\dfrac{n\\{2a+(n-1)d\\}}{2}$ を使う。",
+        "steps": [
+          "末項 $a_{29}=2+28\\times(-4)=-110$。",
+          "$S_{29}=\\dfrac{29(2+(-110))}{2}=-1566$。"
+        ],
+        "alternatives": [
+          "$S_n=\\dfrac{n\\{2a+(n-1)d\\}}{2}=\\dfrac{29\\{4+28\\cdot(-4)\\}}{2}=-1566$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "末項または公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "末項を $a+nd$ と誤る。",
+          "最後に $2$ で割り忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 $6$、公差 $-3$ の等差数列の、初項から第 $28$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "-966"
+      },
+      "explanation": "末項は $a_{28}=-75$。$S=28\\times\\dfrac{6+(-75)}{2}=-966$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(6+(k-1)*(-3), (k, 1, 28))",
+        "expected": "-966"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_sum",
+      "explanation_detail": {
+        "approach": "等差数列の和は「(初項＋末項)×項数÷2」。末項を先に求めるか、$\\dfrac{n\\{2a+(n-1)d\\}}{2}$ を使う。",
+        "steps": [
+          "末項 $a_{28}=6+27\\times(-3)=-75$。",
+          "$S_{28}=\\dfrac{28(6+(-75))}{2}=-966$。"
+        ],
+        "alternatives": [
+          "$S_n=\\dfrac{n\\{2a+(n-1)d\\}}{2}=\\dfrac{28\\{12+27\\cdot(-3)\\}}{2}=-966$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "末項または公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "末項を $a+nd$ と誤る。",
+          "最後に $2$ で割り忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{13}(3 k + 3)$ の値を求めなさい。",
+      "answer": {
+        "value": "312"
+      },
+      "explanation": "$\\Sigma$ の性質で項ごとに分け、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k^3=\\left\\{\\dfrac{1}{2}n(n+1)\\right\\}^2$ を使う。値は $312$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(3*k+(3), (k, 1, 13))",
+        "expected": "312"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_value",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の中を $k$ の多項式として展開し、項ごとに和の公式を使ってから $n$ に数値を代入する。",
+        "steps": [
+          "$(3 k + 3)$ を展開して $k$ の次数ごとに分ける：$3 k + 3$。",
+          "公式を使って $n=13$ を代入する。",
+          "和は $312$。"
+        ],
+        "alternatives": [
+          "$n$ が小さい場合は、数項書き出して足し、結果を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の和 $\\displaystyle\\sum_{k=1}^{n}c$ を $c$ としてしまう（正しくは $nc$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{12}k^3$ の値を求めなさい。",
+      "answer": {
+        "value": "6084"
+      },
+      "explanation": "$\\Sigma$ の性質で項ごとに分け、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k^3=\\left\\{\\dfrac{1}{2}n(n+1)\\right\\}^2$ を使う。値は $6084$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(k**3, (k, 1, 12))",
+        "expected": "6084"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_value",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の中を $k$ の多項式として展開し、項ごとに和の公式を使ってから $n$ に数値を代入する。",
+        "steps": [
+          "$k^3$ を展開して $k$ の次数ごとに分ける：$k^{3}$。",
+          "公式を使って $n=12$ を代入する。",
+          "和は $6084$。"
+        ],
+        "alternatives": [
+          "$n$ が小さい場合は、数項書き出して足し、結果を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の和 $\\displaystyle\\sum_{k=1}^{n}c$ を $c$ としてしまう（正しくは $nc$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{9}k^2$ の値を求めなさい。",
+      "answer": {
+        "value": "285"
+      },
+      "explanation": "$\\Sigma$ の性質で項ごとに分け、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k^3=\\left\\{\\dfrac{1}{2}n(n+1)\\right\\}^2$ を使う。値は $285$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(k**2, (k, 1, 9))",
+        "expected": "285"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_value",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の中を $k$ の多項式として展開し、項ごとに和の公式を使ってから $n$ に数値を代入する。",
+        "steps": [
+          "$k^2$ を展開して $k$ の次数ごとに分ける：$k^{2}$。",
+          "公式を使って $n=9$ を代入する。",
+          "和は $285$。"
+        ],
+        "alternatives": [
+          "$n$ が小さい場合は、数項書き出して足し、結果を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の和 $\\displaystyle\\sum_{k=1}^{n}c$ を $c$ としてしまう（正しくは $nc$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{20}k^2$ の値を求めなさい。",
+      "answer": {
+        "value": "2870"
+      },
+      "explanation": "$\\Sigma$ の性質で項ごとに分け、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k^3=\\left\\{\\dfrac{1}{2}n(n+1)\\right\\}^2$ を使う。値は $2870$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(k**2, (k, 1, 20))",
+        "expected": "2870"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_value",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の中を $k$ の多項式として展開し、項ごとに和の公式を使ってから $n$ に数値を代入する。",
+        "steps": [
+          "$k^2$ を展開して $k$ の次数ごとに分ける：$k^{2}$。",
+          "公式を使って $n=20$ を代入する。",
+          "和は $2870$。"
+        ],
+        "alternatives": [
+          "$n$ が小さい場合は、数項書き出して足し、結果を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項の和 $\\displaystyle\\sum_{k=1}^{n}c$ を $c$ としてしまう（正しくは $nc$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "等比数列 $4,\\ 8,\\ 16,\\ \\cdots$ の初項から第 $5$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "124"
+      },
+      "explanation": "初項 $4$、公比 $2$ なので $S_{5}=\\dfrac{4\\{(2)^{5}-1\\}}{2-1}=124$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(4*(2)**(k-1), (k, 1, 5))",
+        "expected": "124"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_sum",
+      "explanation_detail": {
+        "approach": "与えられた項から初項と公比を読み取り、等比数列の和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ に代入する。指数は項数 $n$。",
+        "steps": [
+          "初項 $4$、公比 $\\dfrac{8}{4}=2$。",
+          "$S_{5}=\\dfrac{4\\{(2)^{5}-1\\}}{2-1}$。",
+          "$=124$。"
+        ],
+        "alternatives": [
+          "項を書き出して足しても確かめられる：$(4)+(8)+(16)+(32)+(64)=124$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項・公比を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n-1$ にする。",
+          "公比が負のときの符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "等比数列 $3,\\ 6,\\ 12,\\ \\cdots$ の初項から第 $5$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "93"
+      },
+      "explanation": "初項 $3$、公比 $2$ なので $S_{5}=\\dfrac{3\\{(2)^{5}-1\\}}{2-1}=93$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(3*(2)**(k-1), (k, 1, 5))",
+        "expected": "93"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_sum",
+      "explanation_detail": {
+        "approach": "与えられた項から初項と公比を読み取り、等比数列の和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ に代入する。指数は項数 $n$。",
+        "steps": [
+          "初項 $3$、公比 $\\dfrac{6}{3}=2$。",
+          "$S_{5}=\\dfrac{3\\{(2)^{5}-1\\}}{2-1}$。",
+          "$=93$。"
+        ],
+        "alternatives": [
+          "項を書き出して足しても確かめられる：$(3)+(6)+(12)+(24)+(48)=93$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項・公比を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n-1$ にする。",
+          "公比が負のときの符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "等比数列 $1,\\ 5,\\ 25,\\ \\cdots$ の初項から第 $7$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "19531"
+      },
+      "explanation": "初項 $1$、公比 $5$ なので $S_{7}=\\dfrac{1\\{(5)^{7}-1\\}}{5-1}=19531$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(1*(5)**(k-1), (k, 1, 7))",
+        "expected": "19531"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_sum",
+      "explanation_detail": {
+        "approach": "与えられた項から初項と公比を読み取り、等比数列の和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ に代入する。指数は項数 $n$。",
+        "steps": [
+          "初項 $1$、公比 $\\dfrac{5}{1}=5$。",
+          "$S_{7}=\\dfrac{1\\{(5)^{7}-1\\}}{5-1}$。",
+          "$=19531$。"
+        ],
+        "alternatives": [
+          "項を書き出して足しても確かめられる：$(1)+(5)+(25)+(125)+(625)+(3125)+(15625)=19531$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項・公比を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n-1$ にする。",
+          "公比が負のときの符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "等比数列 $-1,\\ 3,\\ -9,\\ \\cdots$ の初項から第 $4$ 項までの和を求めなさい。",
+      "answer": {
+        "value": "20"
+      },
+      "explanation": "初項 $-1$、公比 $-3$ なので $S_{4}=\\dfrac{-1\\{(-3)^{4}-1\\}}{-3-1}=20$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(-1*(-3)**(k-1), (k, 1, 4))",
+        "expected": "20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-geo_sum",
+      "explanation_detail": {
+        "approach": "与えられた項から初項と公比を読み取り、等比数列の和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ に代入する。指数は項数 $n$。",
+        "steps": [
+          "初項 $-1$、公比 $\\dfrac{3}{-1}=-3$。",
+          "$S_{4}=\\dfrac{-1\\{(-3)^{4}-1\\}}{-3-1}$。",
+          "$=20$。"
+        ],
+        "alternatives": [
+          "項を書き出して足しても確かめられる：$(-1)+(3)+(-9)+(27)=20$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項・公比を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を $n-1$ にする。",
+          "公比が負のときの符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等差数列 $\\{a_n\\}$ において、$a_{16}=26$、$a_{17}=28$ である。一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=2 n - 6$",
+        "accepted": [
+          "a_n=2 n - 6"
+        ]
+      },
+      "explanation": "$a+15d=26$、$a+16d=28$ を解いて $a=-4,\\ d=2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+(16-1)*d-(26), a+(17-1)*d-(28)], [a, d])",
+        "expected": "{a: -4, d: 2}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_two_terms",
+      "explanation_detail": {
+        "approach": "初項 $a$ と公差 $d$ を未知数として、2つの項の条件から連立方程式をつくる。",
+        "steps": [
+          "$a_{16}=a+15d=26$、$a_{17}=a+16d=28$。",
+          "辺々引いて $1d=2$、$d=2$。",
+          "$a=-4$。",
+          "$a_n=-4+(n-1)\\cdot(2)=2 n - 6$。"
+        ],
+        "alternatives": [
+          "$a_{17}-a_{16}=(17-16)d$ を使えば、すぐに $d=2$ が分かる（項の番号の差が公差の個数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "連立方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "初項と公差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "一般項を整理して答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "番号の差 $q-p$ ではなく $q-p+1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等差数列 $\\{a_n\\}$ において、$a_{9}=58$、$a_{18}=112$ である。一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=6 n + 4$",
+        "accepted": [
+          "a_n=6 n + 4"
+        ]
+      },
+      "explanation": "$a+8d=58$、$a+17d=112$ を解いて $a=10,\\ d=6$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+(9-1)*d-(58), a+(18-1)*d-(112)], [a, d])",
+        "expected": "{a: 10, d: 6}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_two_terms",
+      "explanation_detail": {
+        "approach": "初項 $a$ と公差 $d$ を未知数として、2つの項の条件から連立方程式をつくる。",
+        "steps": [
+          "$a_{9}=a+8d=58$、$a_{18}=a+17d=112$。",
+          "辺々引いて $9d=54$、$d=6$。",
+          "$a=10$。",
+          "$a_n=10+(n-1)\\cdot(6)=6 n + 4$。"
+        ],
+        "alternatives": [
+          "$a_{18}-a_{9}=(18-9)d$ を使えば、すぐに $d=6$ が分かる（項の番号の差が公差の個数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "連立方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "初項と公差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "一般項を整理して答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "番号の差 $q-p$ ではなく $q-p+1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等差数列 $\\{a_n\\}$ において、$a_{7}=21$、$a_{9}=27$ である。一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=3 n$",
+        "accepted": [
+          "a_n=3 n"
+        ]
+      },
+      "explanation": "$a+6d=21$、$a+8d=27$ を解いて $a=3,\\ d=3$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+(7-1)*d-(21), a+(9-1)*d-(27)], [a, d])",
+        "expected": "{a: 3, d: 3}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_two_terms",
+      "explanation_detail": {
+        "approach": "初項 $a$ と公差 $d$ を未知数として、2つの項の条件から連立方程式をつくる。",
+        "steps": [
+          "$a_{7}=a+6d=21$、$a_{9}=a+8d=27$。",
+          "辺々引いて $2d=6$、$d=3$。",
+          "$a=3$。",
+          "$a_n=3+(n-1)\\cdot(3)=3 n$。"
+        ],
+        "alternatives": [
+          "$a_{9}-a_{7}=(9-7)d$ を使えば、すぐに $d=3$ が分かる（項の番号の差が公差の個数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "連立方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "初項と公差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "一般項を整理して答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "番号の差 $q-p$ ではなく $q-p+1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等差数列 $\\{a_n\\}$ において、$a_{6}=-1$、$a_{9}=2$ である。一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=n - 7$",
+        "accepted": [
+          "a_n=n - 7"
+        ]
+      },
+      "explanation": "$a+5d=-1$、$a+8d=2$ を解いて $a=-6,\\ d=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([a+(6-1)*d-(-1), a+(9-1)*d-(2)], [a, d])",
+        "expected": "{a: -6, d: 1}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-arith_two_terms",
+      "explanation_detail": {
+        "approach": "初項 $a$ と公差 $d$ を未知数として、2つの項の条件から連立方程式をつくる。",
+        "steps": [
+          "$a_{6}=a+5d=-1$、$a_{9}=a+8d=2$。",
+          "辺々引いて $3d=3$、$d=1$。",
+          "$a=-6$。",
+          "$a_n=-6+(n-1)\\cdot(1)=n - 7$。"
+        ],
+        "alternatives": [
+          "$a_{9}-a_{6}=(9-6)d$ を使えば、すぐに $d=1$ が分かる（項の番号の差が公差の個数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "連立方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "初項と公差を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "一般項を整理して答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "番号の差 $q-p$ ではなく $q-p+1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\displaystyle\\sum_{k=1}^{n}(k^{2} + 5 k - 3)$ を計算し、因数分解した形で答えなさい。",
+      "answer": {
+        "value": "$\\frac{n \\left(n^{2} + 9 n - 1\\right)}{3}$",
+        "accepted": [
+          "n*(n**2 + 9*n - 1)/3"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum c=nc$ を使い、共通因数 $n$ でくくる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(k**2 + 5*k - 3, (k, 1, n))",
+        "expected": "n*(n**2 + 9*n - 1)/3",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_formula",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の線形性で項ごとに分け、公式を使う。最後に共通因数 $n$（や $n+1$）でくくって整理する。",
+        "steps": [
+          "$\\displaystyle\\sum_{k=1}^{n}(k^{2} + 5 k - 3)=\\sum k^2 + 5 \\sum k - 3 n$（$\\sum$ はすべて $k=1$ から $n$ まで）。",
+          "公式を代入して、分母の最小公倍数で通分し $n$ でくくる。",
+          "$=\\frac{n \\left(n^{2} + 9 n - 1\\right)}{3}$。"
+        ],
+        "alternatives": [
+          "$n=1,\\ 2$ を代入して、もとの和（第1項、第1項＋第2項）と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "正しく整理・因数分解している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "定数 $c$ の和を $c$ とする（正しくは $cn$）。",
+          "通分の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\displaystyle\\sum_{k=1}^{n}(5 k + 3)$ を計算し、因数分解した形で答えなさい。",
+      "answer": {
+        "value": "$\\frac{n \\left(5 n + 11\\right)}{2}$",
+        "accepted": [
+          "n*(5*n + 11)/2"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum c=nc$ を使い、共通因数 $n$ でくくる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(5*k + 3, (k, 1, n))",
+        "expected": "n*(5*n + 11)/2",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_formula",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の線形性で項ごとに分け、公式を使う。最後に共通因数 $n$（や $n+1$）でくくって整理する。",
+        "steps": [
+          "$\\displaystyle\\sum_{k=1}^{n}(5 k + 3)=5 \\sum k + 3 n$（$\\sum$ はすべて $k=1$ から $n$ まで）。",
+          "公式を代入して、分母の最小公倍数で通分し $n$ でくくる。",
+          "$=\\frac{n \\left(5 n + 11\\right)}{2}$。"
+        ],
+        "alternatives": [
+          "$n=1,\\ 2$ を代入して、もとの和（第1項、第1項＋第2項）と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "正しく整理・因数分解している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "定数 $c$ の和を $c$ とする（正しくは $cn$）。",
+          "通分の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\displaystyle\\sum_{k=1}^{n}(4 k - 3)$ を計算し、因数分解した形で答えなさい。",
+      "answer": {
+        "value": "$n \\left(2 n - 1\\right)$",
+        "accepted": [
+          "n*(2*n - 1)"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum c=nc$ を使い、共通因数 $n$ でくくる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(4*k - 3, (k, 1, n))",
+        "expected": "n*(2*n - 1)",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_formula",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の線形性で項ごとに分け、公式を使う。最後に共通因数 $n$（や $n+1$）でくくって整理する。",
+        "steps": [
+          "$\\displaystyle\\sum_{k=1}^{n}(4 k - 3)=4 \\sum k - 3 n$（$\\sum$ はすべて $k=1$ から $n$ まで）。",
+          "公式を代入して、分母の最小公倍数で通分し $n$ でくくる。",
+          "$=n \\left(2 n - 1\\right)$。"
+        ],
+        "alternatives": [
+          "$n=1,\\ 2$ を代入して、もとの和（第1項、第1項＋第2項）と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "正しく整理・因数分解している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "定数 $c$ の和を $c$ とする（正しくは $cn$）。",
+          "通分の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\displaystyle\\sum_{k=1}^{n}(3 k^{2} + 4 k - 3)$ を計算し、因数分解した形で答えなさい。",
+      "answer": {
+        "value": "$\\frac{n \\left(2 n^{2} + 7 n - 1\\right)}{2}$",
+        "accepted": [
+          "n*(2*n**2 + 7*n - 1)/2"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum c=nc$ を使い、共通因数 $n$ でくくる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(3*k**2 + 4*k - 3, (k, 1, n))",
+        "expected": "n*(2*n**2 + 7*n - 1)/2",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_formula",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の線形性で項ごとに分け、公式を使う。最後に共通因数 $n$（や $n+1$）でくくって整理する。",
+        "steps": [
+          "$\\displaystyle\\sum_{k=1}^{n}(3 k^{2} + 4 k - 3)=3 \\sum k^2 + 4 \\sum k - 3 n$（$\\sum$ はすべて $k=1$ から $n$ まで）。",
+          "公式を代入して、分母の最小公倍数で通分し $n$ でくくる。",
+          "$=\\frac{n \\left(2 n^{2} + 7 n - 1\\right)}{2}$。"
+        ],
+        "alternatives": [
+          "$n=1,\\ 2$ を代入して、もとの和（第1項、第1項＋第2項）と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "正しく整理・因数分解している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "定数 $c$ の和を $c$ とする（正しくは $cn$）。",
+          "通分の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\displaystyle\\sum_{k=1}^{n}(3 k^{2} - 2)$ を計算し、因数分解した形で答えなさい。",
+      "answer": {
+        "value": "$\\frac{n \\left(2 n^{2} + 3 n - 3\\right)}{2}$",
+        "accepted": [
+          "n*(2*n**2 + 3*n - 3)/2"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum k^2=\\dfrac{1}{6}n(n+1)(2n+1)$、$\\displaystyle\\sum k=\\dfrac{1}{2}n(n+1)$、$\\displaystyle\\sum c=nc$ を使い、共通因数 $n$ でくくる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(3*k**2 - 2, (k, 1, n))",
+        "expected": "n*(2*n**2 + 3*n - 3)/2",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-sigma_formula",
+      "explanation_detail": {
+        "approach": "$\\Sigma$ の線形性で項ごとに分け、公式を使う。最後に共通因数 $n$（や $n+1$）でくくって整理する。",
+        "steps": [
+          "$\\displaystyle\\sum_{k=1}^{n}(3 k^{2} - 2)=3 \\sum k^2 - 2 n$（$\\sum$ はすべて $k=1$ から $n$ まで）。",
+          "公式を代入して、分母の最小公倍数で通分し $n$ でくくる。",
+          "$=\\frac{n \\left(2 n^{2} + 3 n - 3\\right)}{2}$。"
+        ],
+        "alternatives": [
+          "$n=1,\\ 2$ を代入して、もとの和（第1項、第1項＋第2項）と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "和の公式を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "正しく整理・因数分解している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "定数 $c$ の和を $c$ とする（正しくは $cn$）。",
+          "通分の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "数列 $7$，$7$，$8$，$10$，$13$，$17$，$\\cdots$ の一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=\\frac{n^{2}}{2} - \\frac{3 n}{2} + 8$",
+        "accepted": [
+          "a_n=n**2/2 - 3*n/2 + 8"
+        ]
+      },
+      "explanation": "階差数列は $0，1，2，3，4,\\ \\cdots$ で、一般項 $b_n=n - 1$ の等差数列。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(7+summation(0+(k-1)*1, (k, 1, n-1)))",
+        "expected": "n**2/2 - 3*n/2 + 8",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-diff_seq",
+      "explanation_detail": {
+        "approach": "隣り合う項の差（階差数列）をとると規則が見える。$n\\geqq2$ で $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k$ を使い、$n=1$ も確認する。",
+        "steps": [
+          "階差数列 $b_n=n - 1$。",
+          "$n\\geqq2$ のとき $a_n=7+\\displaystyle\\sum_{k=1}^{n-1}(k - 1)$。",
+          "計算して $a_n=\\frac{n^{2}}{2} - \\frac{3 n}{2} + 8$。",
+          "$n=1$ を代入すると $7$ となり $a_1$ と一致するので、$n=1$ でも成り立つ。"
+        ],
+        "alternatives": [
+          "一般項は $n$ の2次式になるので、$a_n=pn^2+qn+r$ とおいて $n=1,\\ 2,\\ 3$ の値から $p,\\ q,\\ r$ を決めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "階差数列の一般項を求めている",
+            "points": 1
+          },
+          {
+            "point": "$\\Sigma$ の上端を $n-1$ として計算している",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の確認をしている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Sigma$ の上端を $n$ にしてしまう。",
+          "$n=1$ のときの確認を書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "数列 $-2$，$-3$，$0$，$7$，$18$，$33$，$\\cdots$ の一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=2 n^{2} - 7 n + 3$",
+        "accepted": [
+          "a_n=2*n**2 - 7*n + 3"
+        ]
+      },
+      "explanation": "階差数列は $-1，3，7，11，15,\\ \\cdots$ で、一般項 $b_n=4 n - 5$ の等差数列。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(-2+summation(-1+(k-1)*4, (k, 1, n-1)))",
+        "expected": "2*n**2 - 7*n + 3",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-diff_seq",
+      "explanation_detail": {
+        "approach": "隣り合う項の差（階差数列）をとると規則が見える。$n\\geqq2$ で $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k$ を使い、$n=1$ も確認する。",
+        "steps": [
+          "階差数列 $b_n=4 n - 5$。",
+          "$n\\geqq2$ のとき $a_n=-2+\\displaystyle\\sum_{k=1}^{n-1}(4 k - 5)$。",
+          "計算して $a_n=2 n^{2} - 7 n + 3$。",
+          "$n=1$ を代入すると $-2$ となり $a_1$ と一致するので、$n=1$ でも成り立つ。"
+        ],
+        "alternatives": [
+          "一般項は $n$ の2次式になるので、$a_n=pn^2+qn+r$ とおいて $n=1,\\ 2,\\ 3$ の値から $p,\\ q,\\ r$ を決めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "階差数列の一般項を求めている",
+            "points": 1
+          },
+          {
+            "point": "$\\Sigma$ の上端を $n-1$ として計算している",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の確認をしている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Sigma$ の上端を $n$ にしてしまう。",
+          "$n=1$ のときの確認を書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "数列 $-4$，$1$，$8$，$17$，$28$，$41$，$\\cdots$ の一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=n^{2} + 2 n - 7$",
+        "accepted": [
+          "a_n=n**2 + 2*n - 7"
+        ]
+      },
+      "explanation": "階差数列は $5，7，9，11，13,\\ \\cdots$ で、一般項 $b_n=2 n + 3$ の等差数列。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(-4+summation(5+(k-1)*2, (k, 1, n-1)))",
+        "expected": "n**2 + 2*n - 7",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-diff_seq",
+      "explanation_detail": {
+        "approach": "隣り合う項の差（階差数列）をとると規則が見える。$n\\geqq2$ で $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k$ を使い、$n=1$ も確認する。",
+        "steps": [
+          "階差数列 $b_n=2 n + 3$。",
+          "$n\\geqq2$ のとき $a_n=-4+\\displaystyle\\sum_{k=1}^{n-1}(2 k + 3)$。",
+          "計算して $a_n=n^{2} + 2 n - 7$。",
+          "$n=1$ を代入すると $-4$ となり $a_1$ と一致するので、$n=1$ でも成り立つ。"
+        ],
+        "alternatives": [
+          "一般項は $n$ の2次式になるので、$a_n=pn^2+qn+r$ とおいて $n=1,\\ 2,\\ 3$ の値から $p,\\ q,\\ r$ を決めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "階差数列の一般項を求めている",
+            "points": 1
+          },
+          {
+            "point": "$\\Sigma$ の上端を $n-1$ として計算している",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の確認をしている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Sigma$ の上端を $n$ にしてしまう。",
+          "$n=1$ のときの確認を書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "数列 $3$，$6$，$10$，$15$，$21$，$28$，$\\cdots$ の一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=\\frac{n^{2}}{2} + \\frac{3 n}{2} + 1$",
+        "accepted": [
+          "a_n=n**2/2 + 3*n/2 + 1"
+        ]
+      },
+      "explanation": "階差数列は $3，4，5，6，7,\\ \\cdots$ で、一般項 $b_n=n + 2$ の等差数列。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(3+summation(3+(k-1)*1, (k, 1, n-1)))",
+        "expected": "n**2/2 + 3*n/2 + 1",
+        "compare": "expand"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-diff_seq",
+      "explanation_detail": {
+        "approach": "隣り合う項の差（階差数列）をとると規則が見える。$n\\geqq2$ で $a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k$ を使い、$n=1$ も確認する。",
+        "steps": [
+          "階差数列 $b_n=n + 2$。",
+          "$n\\geqq2$ のとき $a_n=3+\\displaystyle\\sum_{k=1}^{n-1}(k + 2)$。",
+          "計算して $a_n=\\frac{n^{2}}{2} + \\frac{3 n}{2} + 1$。",
+          "$n=1$ を代入すると $3$ となり $a_1$ と一致するので、$n=1$ でも成り立つ。"
+        ],
+        "alternatives": [
+          "一般項は $n$ の2次式になるので、$a_n=pn^2+qn+r$ とおいて $n=1,\\ 2,\\ 3$ の値から $p,\\ q,\\ r$ を決めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "階差数列の一般項を求めている",
+            "points": 1
+          },
+          {
+            "point": "$\\Sigma$ の上端を $n-1$ として計算している",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の確認をしている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Sigma$ の上端を $n$ にしてしまう。",
+          "$n=1$ のときの確認を書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a_1=6,\\ a_{n+1}=-2a_n+9$ で定められる数列 $\\{a_n\\}$ の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=3\\cdot (-2)^{n-1}+3$",
+        "accepted": [
+          "a_n=3*(-2)**(n-1)+(3)"
+        ]
+      },
+      "explanation": "$\\alpha=-2\\alpha+9$ より $\\alpha=3$。$a_{n+1}-3=-2(a_n-3)$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(3)*(-2)**(1-1)+(3), (3)*(-2)**(2-1)+(3), (3)*(-2)**(3-1)+(3), (3)*(-2)**(4-1)+(3)]",
+        "expected": "[6, -3, 15, -21]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-recur_linear",
+      "explanation_detail": {
+        "approach": "$a_{n+1}=pa_n+q$ 型は、$\\alpha=p\\alpha+q$ を満たす $\\alpha$ を使って $a_{n+1}-\\alpha=p(a_n-\\alpha)$ と変形し、等比数列に帰着させる。",
+        "steps": [
+          "$\\alpha=-2\\alpha+9$ を解いて $\\alpha=3$。",
+          "$a_{n+1}-(3)=-2\\{a_n-(3)\\}$。数列 $\\{a_n-(3)\\}$ は初項 $6-(3)=3$、公比 $-2$ の等比数列。",
+          "$a_n-(3)=3\\cdot (-2)^{n-1}$。",
+          "$a_n=3\\cdot (-2)^{n-1}+3$。"
+        ],
+        "alternatives": [
+          "求めた一般項に $n=1,\\ 2,\\ 3$ を代入し、漸化式から順に計算した値 $6$，$-3$，$15$ と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\alpha$ を求めて変形している",
+            "points": 1
+          },
+          {
+            "point": "等比数列の初項・公比を正しく捉えている",
+            "points": 2
+          },
+          {
+            "point": "一般項を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列 $\\{a_n-\\alpha\\}$ の初項を $a_1$ としてしまう。",
+          "$\\alpha$ を足すのを忘れて $a_n=(a_1-\\alpha)p^{n-1}$ で止める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a_1=6,\\ a_{n+1}=2a_n-4$ で定められる数列 $\\{a_n\\}$ の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=2\\cdot 2^{n-1}+4$",
+        "accepted": [
+          "a_n=2*(2)**(n-1)+(4)"
+        ]
+      },
+      "explanation": "$\\alpha=2\\alpha-4$ より $\\alpha=4$。$a_{n+1}-4=2(a_n-4)$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(2)*(2)**(1-1)+(4), (2)*(2)**(2-1)+(4), (2)*(2)**(3-1)+(4), (2)*(2)**(4-1)+(4)]",
+        "expected": "[6, 8, 12, 20]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-recur_linear",
+      "explanation_detail": {
+        "approach": "$a_{n+1}=pa_n+q$ 型は、$\\alpha=p\\alpha+q$ を満たす $\\alpha$ を使って $a_{n+1}-\\alpha=p(a_n-\\alpha)$ と変形し、等比数列に帰着させる。",
+        "steps": [
+          "$\\alpha=2\\alpha-4$ を解いて $\\alpha=4$。",
+          "$a_{n+1}-(4)=2\\{a_n-(4)\\}$。数列 $\\{a_n-(4)\\}$ は初項 $6-(4)=2$、公比 $2$ の等比数列。",
+          "$a_n-(4)=2\\cdot 2^{n-1}$。",
+          "$a_n=2\\cdot 2^{n-1}+4$。"
+        ],
+        "alternatives": [
+          "求めた一般項に $n=1,\\ 2,\\ 3$ を代入し、漸化式から順に計算した値 $6$，$8$，$12$ と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\alpha$ を求めて変形している",
+            "points": 1
+          },
+          {
+            "point": "等比数列の初項・公比を正しく捉えている",
+            "points": 2
+          },
+          {
+            "point": "一般項を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列 $\\{a_n-\\alpha\\}$ の初項を $a_1$ としてしまう。",
+          "$\\alpha$ を足すのを忘れて $a_n=(a_1-\\alpha)p^{n-1}$ で止める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a_1=6,\\ a_{n+1}=4a_n+15$ で定められる数列 $\\{a_n\\}$ の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=11\\cdot 4^{n-1}-5$",
+        "accepted": [
+          "a_n=11*(4)**(n-1)+(-5)"
+        ]
+      },
+      "explanation": "$\\alpha=4\\alpha+15$ より $\\alpha=-5$。$a_{n+1}+5=4(a_n+5)$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(11)*(4)**(1-1)+(-5), (11)*(4)**(2-1)+(-5), (11)*(4)**(3-1)+(-5), (11)*(4)**(4-1)+(-5)]",
+        "expected": "[6, 39, 171, 699]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-recur_linear",
+      "explanation_detail": {
+        "approach": "$a_{n+1}=pa_n+q$ 型は、$\\alpha=p\\alpha+q$ を満たす $\\alpha$ を使って $a_{n+1}-\\alpha=p(a_n-\\alpha)$ と変形し、等比数列に帰着させる。",
+        "steps": [
+          "$\\alpha=4\\alpha+15$ を解いて $\\alpha=-5$。",
+          "$a_{n+1}-(-5)=4\\{a_n-(-5)\\}$。数列 $\\{a_n-(-5)\\}$ は初項 $6-(-5)=11$、公比 $4$ の等比数列。",
+          "$a_n-(-5)=11\\cdot 4^{n-1}$。",
+          "$a_n=11\\cdot 4^{n-1}-5$。"
+        ],
+        "alternatives": [
+          "求めた一般項に $n=1,\\ 2,\\ 3$ を代入し、漸化式から順に計算した値 $6$，$39$，$171$ と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\alpha$ を求めて変形している",
+            "points": 1
+          },
+          {
+            "point": "等比数列の初項・公比を正しく捉えている",
+            "points": 2
+          },
+          {
+            "point": "一般項を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列 $\\{a_n-\\alpha\\}$ の初項を $a_1$ としてしまう。",
+          "$\\alpha$ を足すのを忘れて $a_n=(a_1-\\alpha)p^{n-1}$ で止める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a_1=5,\\ a_{n+1}=2a_n+2$ で定められる数列 $\\{a_n\\}$ の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=7\\cdot 2^{n-1}-2$",
+        "accepted": [
+          "a_n=7*(2)**(n-1)+(-2)"
+        ]
+      },
+      "explanation": "$\\alpha=2\\alpha+2$ より $\\alpha=-2$。$a_{n+1}+2=2(a_n+2)$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(7)*(2)**(1-1)+(-2), (7)*(2)**(2-1)+(-2), (7)*(2)**(3-1)+(-2), (7)*(2)**(4-1)+(-2)]",
+        "expected": "[5, 12, 26, 54]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHB-U01-recur_linear",
+      "explanation_detail": {
+        "approach": "$a_{n+1}=pa_n+q$ 型は、$\\alpha=p\\alpha+q$ を満たす $\\alpha$ を使って $a_{n+1}-\\alpha=p(a_n-\\alpha)$ と変形し、等比数列に帰着させる。",
+        "steps": [
+          "$\\alpha=2\\alpha+2$ を解いて $\\alpha=-2$。",
+          "$a_{n+1}-(-2)=2\\{a_n-(-2)\\}$。数列 $\\{a_n-(-2)\\}$ は初項 $5-(-2)=7$、公比 $2$ の等比数列。",
+          "$a_n-(-2)=7\\cdot 2^{n-1}$。",
+          "$a_n=7\\cdot 2^{n-1}-2$。"
+        ],
+        "alternatives": [
+          "求めた一般項に $n=1,\\ 2,\\ 3$ を代入し、漸化式から順に計算した値 $5$，$12$，$26$ と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\alpha$ を求めて変形している",
+            "points": 1
+          },
+          {
+            "point": "等比数列の初項・公比を正しく捉えている",
+            "points": 2
+          },
+          {
+            "point": "一般項を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列 $\\{a_n-\\alpha\\}$ の初項を $a_1$ としてしまう。",
+          "$\\alpha$ を足すのを忘れて $a_n=(a_1-\\alpha)p^{n-1}$ で止める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{36}\\dfrac{1}{(3k-2)(3k+1)}$ の値を求めなさい。",
+      "answer": {
+        "value": "36/109",
+        "display": "$\\dfrac{36}{109}$"
+      },
+      "explanation": "$\\dfrac{1}{(3k-2)(3k+1)}=\\dfrac{1}{3}\\left(\\dfrac{1}{3k-2}-\\dfrac{1}{3k+1}\\right)$ と部分分数に分けると、隣り合う項が打ち消し合う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(1/((3*k-2)*(3*k+1)), (k, 1, 36))",
+        "expected": "36/109"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U01-telescoping",
+      "explanation_detail": {
+        "approach": "分母が「差が一定の2つの1次式の積」なので、部分分数に分解すると和が打ち消し合い、最初と最後の項だけが残る。",
+        "steps": [
+          "$\\dfrac{1}{(3k-2)(3k+1)}=\\dfrac{1}{3}\\left(\\dfrac{1}{3k-2}-\\dfrac{1}{3k+1}\\right)$。",
+          "和を書き並べると、途中の項が打ち消し合う。",
+          "残った項を計算して $\\dfrac{36}{109}$。"
+        ],
+        "alternatives": [
+          "一般の $n$ で和を求めると $\\dfrac{n}{3n+1}$。これに $n=36$ を代入しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分分数に正しく分解している（係数を含む）",
+            "points": 2
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "部分分数分解で前に付く係数（$\\dfrac{1}{2}$ など）を忘れる。",
+          "残る項を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{32}\\dfrac{1}{(2k-1)(2k+1)}$ の値を求めなさい。",
+      "answer": {
+        "value": "32/65",
+        "display": "$\\dfrac{32}{65}$"
+      },
+      "explanation": "$\\dfrac{1}{(2k-1)(2k+1)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$ と部分分数に分けると、隣り合う項が打ち消し合う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(1/((2*k-1)*(2*k+1)), (k, 1, 32))",
+        "expected": "32/65"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U01-telescoping",
+      "explanation_detail": {
+        "approach": "分母が「差が一定の2つの1次式の積」なので、部分分数に分解すると和が打ち消し合い、最初と最後の項だけが残る。",
+        "steps": [
+          "$\\dfrac{1}{(2k-1)(2k+1)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$。",
+          "和を書き並べると、途中の項が打ち消し合う。",
+          "残った項を計算して $\\dfrac{32}{65}$。"
+        ],
+        "alternatives": [
+          "一般の $n$ で和を求めると $\\dfrac{n}{2n+1}$。これに $n=32$ を代入しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分分数に正しく分解している（係数を含む）",
+            "points": 2
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "部分分数分解で前に付く係数（$\\dfrac{1}{2}$ など）を忘れる。",
+          "残る項を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\displaystyle\\sum_{k=1}^{26}\\dfrac{1}{(2k-1)(2k+1)}$ の値を求めなさい。",
+      "answer": {
+        "value": "26/53",
+        "display": "$\\dfrac{26}{53}$"
+      },
+      "explanation": "$\\dfrac{1}{(2k-1)(2k+1)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$ と部分分数に分けると、隣り合う項が打ち消し合う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "summation(1/((2*k-1)*(2*k+1)), (k, 1, 26))",
+        "expected": "26/53"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHB-U01-telescoping",
+      "explanation_detail": {
+        "approach": "分母が「差が一定の2つの1次式の積」なので、部分分数に分解すると和が打ち消し合い、最初と最後の項だけが残る。",
+        "steps": [
+          "$\\dfrac{1}{(2k-1)(2k+1)}=\\dfrac{1}{2}\\left(\\dfrac{1}{2k-1}-\\dfrac{1}{2k+1}\\right)$。",
+          "和を書き並べると、途中の項が打ち消し合う。",
+          "残った項を計算して $\\dfrac{26}{53}$。"
+        ],
+        "alternatives": [
+          "一般の $n$ で和を求めると $\\dfrac{n}{2n+1}$。これに $n=26$ を代入しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分分数に正しく分解している（係数を含む）",
+            "points": 2
+          },
+          {
+            "point": "値を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "部分分数分解で前に付く係数（$\\dfrac{1}{2}$ など）を忘れる。",
+          "残る項を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "すべての自然数 $n$ について、$4^n-1$ は $3$ の倍数であることを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "（証明）[I] $n=1$ のとき、$4-1=3$ で $3$ の倍数。[II] $n=k$ のとき $4^k-1=3m$（$m$ は整数）と仮定すると、$4^{k+1}-1=4\\cdot4^k-1=4(3m+1)-1=3(4m+1)$。$4m+1$ は整数なので、$n=k+1$ のときも $3$ の倍数。[I]、[II] より、すべての自然数 $n$ で成り立つ。（証明終）"
+      },
+      "explanation": "数学的帰納法の2段階 [I]・[II] を示す。[II] では仮定を使って $n=k+1$ の場合を導く。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "[I] 出発点の場合を確かめている",
+            "points": 2
+          },
+          {
+            "criterion": "[II] 仮定を明示し、それを用いて $n=k+1$ の場合を正しく導いている",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[Mod(4**1-1,3), Mod(4**2-1,3), Mod(4**3-1,3), Mod(4**4-1,3)]",
+        "expected": "[0, 0, 0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U01-induction",
+      "explanation_detail": {
+        "approach": "[II] では「$n=k$ のときの式（仮定）」と「$n=k+1$ のときに示すべき式（目標）」を先に書き出し、左辺を「仮定の部分＋増えた部分」に分けて目標に向けて変形する。",
+        "steps": [
+          "[I] $n=1$ のとき、$4-1=3$ で $3$ の倍数。",
+          "[II] $n=k$ のとき $4^k-1=3m$（$m$ は整数）と仮定すると、$4^{k+1}-1=4\\cdot4^k-1=4(3m+1)-1=3(4m+1)$。",
+          "$4m+1$ は整数なので、$n=k+1$ のときも $3$ の倍数。",
+          "[I]、[II] より、すべての自然数 $n$ で成り立つ。"
+        ],
+        "alternatives": [
+          "示すべき式の両辺に $n=1,\\ 2,\\ 3$ を代入して成り立つことを確かめておくと、[II] の変形の見通しが立つ（証明の代わりにはならない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "[I]",
+            "points": 2
+          },
+          {
+            "point": "[II] の仮定と変形",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "[I] を書き忘れる。",
+          "[II] で示すべき式を仮定として使ってしまう（循環論法）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$n$ が $3$ 以上の自然数のとき、$2^n>2n$ が成り立つことを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "（証明）[I] $n=3$ のとき、左辺 $=8$、右辺 $=6$ で成り立つ。[II] $k\\geqq3$ として $n=k$ で $2^k>2k$ が成り立つと仮定すると、$2^{k+1}=2\\cdot2^k>4k$。$4k-2(k+1)=2k-2>0$（$k\\geqq3$）より $4k>2(k+1)$。よって $2^{k+1}>2(k+1)$ で、$n=k+1$ のときも成り立つ。[I]、[II] より、$n\\geqq3$ のすべての自然数 $n$ で成り立つ。（証明終）"
+      },
+      "explanation": "数学的帰納法の2段階 [I]・[II] を示す。[II] では仮定を使って $n=k+1$ の場合を導く。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "[I] 出発点の場合を確かめている",
+            "points": 2
+          },
+          {
+            "criterion": "[II] 仮定を明示し、それを用いて $n=k+1$ の場合を正しく導いている",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[2**3-2*3, 2**4-2*4, 2**5-2*5]",
+        "expected": "[2, 8, 22]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U01-induction",
+      "explanation_detail": {
+        "approach": "[II] では「$n=k$ のときの式（仮定）」と「$n=k+1$ のときに示すべき式（目標）」を先に書き出し、左辺を「仮定の部分＋増えた部分」に分けて目標に向けて変形する。",
+        "steps": [
+          "[I] $n=3$ のとき、左辺 $=8$、右辺 $=6$ で成り立つ。",
+          "[II] $k\\geqq3$ として $n=k$ で $2^k>2k$ が成り立つと仮定すると、$2^{k+1}=2\\cdot2^k>4k$。",
+          "$4k-2(k+1)=2k-2>0$（$k\\geqq3$）より $4k>2(k+1)$。よって $2^{k+1}>2(k+1)$ で、$n=k+1$ のときも成り立つ。",
+          "[I]、[II] より、$n\\geqq3$ のすべての自然数 $n$ で成り立つ。"
+        ],
+        "alternatives": [
+          "示すべき式の両辺に $n=1,\\ 2,\\ 3$ を代入して成り立つことを確かめておくと、[II] の変形の見通しが立つ（証明の代わりにはならない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "[I]",
+            "points": 2
+          },
+          {
+            "point": "[II] の仮定と変形",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "[I] を書き忘れる。",
+          "[II] で示すべき式を仮定として使ってしまう（循環論法）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "すべての自然数 $n$ について、$\\displaystyle\\sum_{k=1}^{n}k^3=\\left\\{\\dfrac{1}{2}n(n+1)\\right\\}^2$ が成り立つことを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "（証明）[I] $n=1$ のとき、両辺とも $1$。[II] $n=k$ で成り立つと仮定すると、$\\displaystyle\\sum_{i=1}^{k+1}i^3=\\dfrac{1}{4}k^2(k+1)^2+(k+1)^3=\\dfrac{1}{4}(k+1)^2(k^2+4k+4)$。$=\\left\\{\\dfrac{1}{2}(k+1)(k+2)\\right\\}^2$ で、$n=k+1$ のときも成り立つ。[I]、[II] より、すべての自然数 $n$ で成り立つ。（証明終）"
+      },
+      "explanation": "数学的帰納法の2段階 [I]・[II] を示す。[II] では仮定を使って $n=k+1$ の場合を導く。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "[I] 出発点の場合を確かめている",
+            "points": 2
+          },
+          {
+            "criterion": "[II] 仮定を明示し、それを用いて $n=k+1$ の場合を正しく導いている",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "expand(summation(k**3, (k, 1, n)) - (n*(n+1)/2)**2)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U01-induction",
+      "explanation_detail": {
+        "approach": "[II] では「$n=k$ のときの式（仮定）」と「$n=k+1$ のときに示すべき式（目標）」を先に書き出し、左辺を「仮定の部分＋増えた部分」に分けて目標に向けて変形する。",
+        "steps": [
+          "[I] $n=1$ のとき、両辺とも $1$。",
+          "[II] $n=k$ で成り立つと仮定すると、$\\displaystyle\\sum_{i=1}^{k+1}i^3=\\dfrac{1}{4}k^2(k+1)^2+(k+1)^3=\\dfrac{1}{4}(k+1)^2(k^2+4k+4)$。",
+          "$=\\left\\{\\dfrac{1}{2}(k+1)(k+2)\\right\\}^2$ で、$n=k+1$ のときも成り立つ。",
+          "[I]、[II] より、すべての自然数 $n$ で成り立つ。"
+        ],
+        "alternatives": [
+          "示すべき式の両辺に $n=1,\\ 2,\\ 3$ を代入して成り立つことを確かめておくと、[II] の変形の見通しが立つ（証明の代わりにはならない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "[I]",
+            "points": 2
+          },
+          {
+            "point": "[II] の仮定と変形",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "[I] を書き忘れる。",
+          "[II] で示すべき式を仮定として使ってしまう（循環論法）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "数列 $\\{a_n\\}$ の初項から第 $n$ 項までの和 $S_n$ が $S_n=- n^{2} - 5 n + 1$ で表されるとき、一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_1=-5$、$n\\geqq2$ のとき $a_n=- 2 n - 4$"
+      },
+      "explanation": "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=- 2 n - 4$。$a_1=S_1=-5$。$n=1$ を代入した値 $-6$ と一致しないので、分けて答える。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[expand(-n**2 - 5*n + 1 - (-5*n - (n - 1)**2 + 6)), -5]",
+        "expected": "[-2*n - 4, -5]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U01-sn_to_an",
+      "explanation_detail": {
+        "approach": "$a_n=S_n-S_{n-1}$ は $n\\geqq2$ でしか使えない（$S_0$ は定義されない）。$a_1=S_1$ を別に求めて、まとめられるかを確かめる。",
+        "steps": [
+          "$a_1=S_1=-5$。",
+          "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=(- n^{2} - 5 n + 1)-(- n^{2} - 3 n + 5)=- 2 n - 4$。",
+          "$n=1$ を代入すると $-6$で $a_1=-5$ と一致しない。",
+          "$a_1=-5$、$n\\geqq2$ のとき $a_n=- 2 n - 4$。"
+        ],
+        "alternatives": [
+          "$a_1,\\ a_2,\\ a_3$ を $S_1,\\ S_2-S_1,\\ S_3-S_2$ から実際に計算し（$-5,\\ -8,\\ -10$）、答えと照合する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n\\geqq2$ の条件を明記して $S_n-S_{n-1}$ を計算している",
+            "points": 3
+          },
+          {
+            "point": "$a_1=S_1$ を求めている",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の場合の確認と正しい結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$n=1$ の確認をせずに $a_n=- 2 n - 4$ とまとめる（定数項があるため誤り）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "数列 $\\{a_n\\}$ の初項から第 $n$ 項までの和 $S_n$ が $S_n=2 n^{2}$ で表されるとき、一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=4 n - 2$"
+      },
+      "explanation": "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=4 n - 2$。$a_1=S_1=2$。$n=1$ を代入した値と一致するので、まとめて表せる。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[expand(2*n**2 - (2*(n - 1)**2)), 2]",
+        "expected": "[4*n - 2, 2]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U01-sn_to_an",
+      "explanation_detail": {
+        "approach": "$a_n=S_n-S_{n-1}$ は $n\\geqq2$ でしか使えない（$S_0$ は定義されない）。$a_1=S_1$ を別に求めて、まとめられるかを確かめる。",
+        "steps": [
+          "$a_1=S_1=2$。",
+          "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=(2 n^{2})-(2 n^{2} - 4 n + 2)=4 n - 2$。",
+          "$n=1$ を代入すると $2$で $a_1$ と一致する。",
+          "$a_n=4 n - 2$。"
+        ],
+        "alternatives": [
+          "$a_1,\\ a_2,\\ a_3$ を $S_1,\\ S_2-S_1,\\ S_3-S_2$ から実際に計算し（$2,\\ 6,\\ 10$）、答えと照合する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n\\geqq2$ の条件を明記して $S_n-S_{n-1}$ を計算している",
+            "points": 3
+          },
+          {
+            "point": "$a_1=S_1$ を求めている",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の場合の確認と正しい結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$n=1$ の確認をせずに $a_n=4 n - 2$ とまとめる（この問題ではたまたま正しいが、根拠が書かれていないと減点される）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "数列 $\\{a_n\\}$ の初項から第 $n$ 項までの和 $S_n$ が $S_n=3 n^{2} + 3 n - 2$ で表されるとき、一般項 $a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_1=4$、$n\\geqq2$ のとき $a_n=6 n$"
+      },
+      "explanation": "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=6 n$。$a_1=S_1=4$。$n=1$ を代入した値 $6$ と一致しないので、分けて答える。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[expand(3*n**2 + 3*n - 2 - (3*n + 3*(n - 1)**2 - 5)), 4]",
+        "expected": "[6*n, 4]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHB-U01-sn_to_an",
+      "explanation_detail": {
+        "approach": "$a_n=S_n-S_{n-1}$ は $n\\geqq2$ でしか使えない（$S_0$ は定義されない）。$a_1=S_1$ を別に求めて、まとめられるかを確かめる。",
+        "steps": [
+          "$a_1=S_1=4$。",
+          "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=(3 n^{2} + 3 n - 2)-(3 n^{2} - 3 n - 2)=6 n$。",
+          "$n=1$ を代入すると $6$で $a_1=4$ と一致しない。",
+          "$a_1=4$、$n\\geqq2$ のとき $a_n=6 n$。"
+        ],
+        "alternatives": [
+          "$a_1,\\ a_2,\\ a_3$ を $S_1,\\ S_2-S_1,\\ S_3-S_2$ から実際に計算し（$4,\\ 12,\\ 18$）、答えと照合する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n\\geqq2$ の条件を明記して $S_n-S_{n-1}$ を計算している",
+            "points": 3
+          },
+          {
+            "point": "$a_1=S_1$ を求めている",
+            "points": 2
+          },
+          {
+            "point": "$n=1$ の場合の確認と正しい結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$n=1$ の確認をせずに $a_n=6 n$ とまとめる（定数項があるため誤り）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "一般項が $a_n=2^{n-1}$ である等比数列 $\\{a_n\\}$ において、初めて $10^{14}$ を超えるのは第何項か。ただし、$\\log_{10}2=0.3010$ とする。",
+      "answer": {
+        "value": "48"
+      },
+      "explanation": "$2^{n-1}>10^{14}$ の常用対数をとり、$n$ についての1次不等式を解く。最小の自然数 $n$ は $48$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "floor(14*log(10)/log(2))+2",
+        "expected": "48"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-log_seq",
+      "related_units": [
+        "HS-MATH2-U05"
+      ],
+      "explanation_detail": {
+        "approach": "指数に未知数 $n$ があるので、両辺の常用対数をとって $n$ の1次不等式に直す（指数・対数関数の単元）。底 $10>1$ なので不等号の向きは変わらない。",
+        "steps": [
+          "$2^{n-1}>10^{14}$ の両辺の常用対数をとる：$(n-1)\\log_{10}2>14$。",
+          "$n-1>\\dfrac{14}{0.3010}=46.51\\cdots$。",
+          "$n-1\\geqq47$ より $n\\geqq48$。",
+          "よって第 $48$ 項。"
+        ],
+        "alternatives": [
+          "$\\log_{10}a_n$ が $14$ を超える最初の $n$ を求める、と言いかえてもよい。$n=47$ と $n=48$ で $\\log_{10}a_n$ を計算し、$14$ をはさむことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数をとって不等式を立てている",
+            "points": 3
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          },
+          {
+            "point": "最小の自然数 $n$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$a_n=r^{n-1}$ の指数 $n-1$ を $n$ として計算する。",
+          "$n>\\cdots$ の小数を切り捨てた値を答えてしまう（超える最初の整数を答える）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "一般項が $a_n=3^n$ である等比数列 $\\{a_n\\}$ において、初めて $10^{15}$ を超えるのは第何項か。ただし、$\\log_{10}3=0.4771$ とする。",
+      "answer": {
+        "value": "32"
+      },
+      "explanation": "$3^n>10^{15}$ の常用対数をとり、$n$ についての1次不等式を解く。最小の自然数 $n$ は $32$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "floor(15*log(10)/log(3))+1",
+        "expected": "32"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-log_seq",
+      "related_units": [
+        "HS-MATH2-U05"
+      ],
+      "explanation_detail": {
+        "approach": "指数に未知数 $n$ があるので、両辺の常用対数をとって $n$ の1次不等式に直す（指数・対数関数の単元）。底 $10>1$ なので不等号の向きは変わらない。",
+        "steps": [
+          "$3^n>10^{15}$ の両辺の常用対数をとる：$n\\log_{10}3>15$。",
+          "$n>\\dfrac{15}{0.4771}=31.44\\cdots$。",
+          "$n\\geqq32$。",
+          "よって第 $32$ 項。"
+        ],
+        "alternatives": [
+          "$\\log_{10}a_n$ が $15$ を超える最初の $n$ を求める、と言いかえてもよい。$n=31$ と $n=32$ で $\\log_{10}a_n$ を計算し、$15$ をはさむことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数をとって不等式を立てている",
+            "points": 3
+          },
+          {
+            "point": "不等式を正しく解いている",
+            "points": 3
+          },
+          {
+            "point": "最小の自然数 $n$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$a_n=r^{n-1}$ の指数 $n-1$ を $n$ として計算する。",
+          "$n>\\cdots$ の小数を切り捨てた値を答えてしまう（超える最初の整数を答える）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$S_n=\\displaystyle\\sum_{k=1}^{n}(k)\\cdot 2^{k-1}$ を求めなさい。途中の考え方も書きなさい。",
+      "answer": {
+        "value": "$S_n=2^{n} \\left(n - 1\\right) + 1$"
+      },
+      "explanation": "$S_n-2S_n$ を計算すると、等比数列の和が現れる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$S_n$ と $2S_n$ を1つずらして並べ、差をとっている",
+            "points": 3
+          },
+          {
+            "criterion": "等比数列の和を正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "$S_n$ を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "summation((k)*2**(k-1), (k, 1, n))",
+        "expected": "2**n*(n - 1) + 1",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-weighted_sum",
+      "explanation_detail": {
+        "approach": "（等差数列）×（等比数列）の形の和は、等比数列の和の公式の導出と同じく、$S_n-rS_n$ をつくると等比数列の和に帰着する。",
+        "steps": [
+          "$S_n=1\\cdot1+2\\cdot2+\\cdots+(n)2^{n-1}$。",
+          "$2S_n=1\\cdot2+\\cdots+(n - 1)2^{n-1}+(n)2^{n}$。",
+          "辺々引くと $(1-2)S_n=1+1(2+2^2+\\cdots+2^{n-1})-(n)2^n$。",
+          "等比数列の和を計算して整理すると $S_n=2^{n} \\left(n - 1\\right) + 1$。"
+        ],
+        "alternatives": [
+          "求めた式に $n=1,\\ 2$ を代入し、$S_1=1$、$S_2=5$ と一致するか確かめる。",
+          "数学的帰納法で、求めた式が正しいことを証明することもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ずらして差をとる",
+            "points": 3
+          },
+          {
+            "point": "等比数列の和",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "差をとるとき、最後の項 $(an+b)r^n$ の符号を誤る。",
+          "等比数列の部分の項数を誤る（$r$ から $r^{n-1}$ までの $n-1$ 項）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$S_n=\\displaystyle\\sum_{k=1}^{n}(k + 2)\\cdot 2^{k-1}$ を求めなさい。途中の考え方も書きなさい。",
+      "answer": {
+        "value": "$S_n=2^{n} \\left(n + 1\\right) - 1$"
+      },
+      "explanation": "$S_n-2S_n$ を計算すると、等比数列の和が現れる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$S_n$ と $2S_n$ を1つずらして並べ、差をとっている",
+            "points": 3
+          },
+          {
+            "criterion": "等比数列の和を正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "$S_n$ を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "summation((k + 2)*2**(k-1), (k, 1, n))",
+        "expected": "2**n*(n + 1) - 1",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-weighted_sum",
+      "explanation_detail": {
+        "approach": "（等差数列）×（等比数列）の形の和は、等比数列の和の公式の導出と同じく、$S_n-rS_n$ をつくると等比数列の和に帰着する。",
+        "steps": [
+          "$S_n=3\\cdot1+4\\cdot2+\\cdots+(n + 2)2^{n-1}$。",
+          "$2S_n=3\\cdot2+\\cdots+(n + 1)2^{n-1}+(n + 2)2^{n}$。",
+          "辺々引くと $(1-2)S_n=3+1(2+2^2+\\cdots+2^{n-1})-(n + 2)2^n$。",
+          "等比数列の和を計算して整理すると $S_n=2^{n} \\left(n + 1\\right) - 1$。"
+        ],
+        "alternatives": [
+          "求めた式に $n=1,\\ 2$ を代入し、$S_1=3$、$S_2=11$ と一致するか確かめる。",
+          "数学的帰納法で、求めた式が正しいことを証明することもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ずらして差をとる",
+            "points": 3
+          },
+          {
+            "point": "等比数列の和",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "差をとるとき、最後の項 $(an+b)r^n$ の符号を誤る。",
+          "等比数列の部分の項数を誤る（$r$ から $r^{n-1}$ までの $n-1$ 項）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "初項 $3$、公比 $2$ の等比数列の、初項から第 $8$ 項までの和 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\dfrac{3(2^{7}-1)}{2-1}=381$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=765$"
+      },
+      "explanation": "和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ の指数は項数 $n$。生徒の式は第 $7$ 項までの和になっている。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "summation(3*2**(k-1), (k, 1, 8))",
+        "expected": "765",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_geo_sum",
+      "explanation_detail": {
+        "approach": "公式の導出 $S-rS$ で、最後に残るのは $ar^n$（第 $n+1$ 項にあたる）であることを思い出す。",
+        "steps": [
+          "項数は $8$。",
+          "$S=\\dfrac{3(2^{8}-1)}{2-1}$。",
+          "$=765$。"
+        ],
+        "alternatives": [
+          "項を書き出して足す：$3+6+12+24+48+96+192+384=765$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一般項と和の公式の指数を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\dfrac{3(2^{7}-1)}{2-1}=381$",
+        "error_step": "和の公式の指数（$r^{n-1}$ とした部分）",
+        "error_type": "formula",
+        "why_tempting": "一般項 $ar^{n-1}$ の指数 $n-1$ と、和の公式の指数 $n$ を混同している。",
+        "correction": "$S=\\dfrac{3(2^{8}-1)}{2-1}=765$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "初項 $3$、公比 $4$ の等比数列の、初項から第 $8$ 項までの和 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\dfrac{3(4^{7}-1)}{4-1}=16383$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=65535$"
+      },
+      "explanation": "和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ の指数は項数 $n$。生徒の式は第 $7$ 項までの和になっている。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "summation(3*4**(k-1), (k, 1, 8))",
+        "expected": "65535",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_geo_sum",
+      "explanation_detail": {
+        "approach": "公式の導出 $S-rS$ で、最後に残るのは $ar^n$（第 $n+1$ 項にあたる）であることを思い出す。",
+        "steps": [
+          "項数は $8$。",
+          "$S=\\dfrac{3(4^{8}-1)}{4-1}$。",
+          "$=65535$。"
+        ],
+        "alternatives": [
+          "項を書き出して足す：$3+12+48+192+768+3072+12288+49152=65535$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一般項と和の公式の指数を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\dfrac{3(4^{7}-1)}{4-1}=16383$",
+        "error_step": "和の公式の指数（$r^{n-1}$ とした部分）",
+        "error_type": "formula",
+        "why_tempting": "一般項 $ar^{n-1}$ の指数 $n-1$ と、和の公式の指数 $n$ を混同している。",
+        "correction": "$S=\\dfrac{3(4^{8}-1)}{4-1}=65535$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "初項 $3$、公比 $3$ の等比数列の、初項から第 $4$ 項までの和 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\dfrac{3(3^{3}-1)}{3-1}=39$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=120$"
+      },
+      "explanation": "和の公式 $S_n=\\dfrac{a(r^n-1)}{r-1}$ の指数は項数 $n$。生徒の式は第 $3$ 項までの和になっている。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "summation(3*3**(k-1), (k, 1, 4))",
+        "expected": "120",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_geo_sum",
+      "explanation_detail": {
+        "approach": "公式の導出 $S-rS$ で、最後に残るのは $ar^n$（第 $n+1$ 項にあたる）であることを思い出す。",
+        "steps": [
+          "項数は $4$。",
+          "$S=\\dfrac{3(3^{4}-1)}{3-1}$。",
+          "$=120$。"
+        ],
+        "alternatives": [
+          "項を書き出して足す：$3+9+27+81=120$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一般項と和の公式の指数を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\dfrac{3(3^{3}-1)}{3-1}=39$",
+        "error_step": "和の公式の指数（$r^{n-1}$ とした部分）",
+        "error_type": "formula",
+        "why_tempting": "一般項 $ar^{n-1}$ の指数 $n-1$ と、和の公式の指数 $n$ を混同している。",
+        "correction": "$S=\\dfrac{3(3^{4}-1)}{3-1}=120$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "初項から第 $n$ 項までの和が $S_n=3 n^{2} + 2 n - 3$ である数列 $\\{a_n\\}$ の一般項を求めなさい。\n［ある生徒の解答］\n$a_n=S_n-S_{n-1}=6 n - 1$（すべての自然数 $n$）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a_1=S_1=2$、$n\\geqq2$ のとき $a_n=6 n - 1$"
+      },
+      "explanation": "$n=1$ を代入すると $5$ となり $a_1=2$ と一致しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[2, expand(3*n**2 + 2*n - 3 - (2*n + 3*(n - 1)**2 - 5))]",
+        "expected": "[2, 6*n - 1]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-err_sn",
+      "explanation_detail": {
+        "approach": "$S_n$ に定数項があると、$n=1$ のときだけ値がずれる。必ず $a_1=S_1$ と照合する。",
+        "steps": [
+          "$a_1=S_1=2$。",
+          "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=6 n - 1$。",
+          "$n=1$ を代入すると $5\\neq2$ なので、分けて答える。"
+        ],
+        "alternatives": [
+          "$S_1=2$ を直接計算し、生徒の式に $n=1$ を代入した値 $5$ と比べれば誤りが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n\\geqq2$ の条件を書かない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a_n=S_n-S_{n-1}=6 n - 1$（すべての自然数 $n$）",
+        "error_step": "$n=1$ の場合の検討（$n\\geqq2$ の条件の無視）",
+        "error_type": "condition",
+        "why_tempting": "$a_n=S_n-S_{n-1}$ がどの $n$ でも使えると思いこんでいる。$S_0$ が定義されないことに気づいていない。",
+        "correction": "$a_1=S_1=2$、$n\\geqq2$ のとき $a_n=6 n - 1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "初項から第 $n$ 項までの和が $S_n=2 n^{2} + 5 n - 4$ である数列 $\\{a_n\\}$ の一般項を求めなさい。\n［ある生徒の解答］\n$a_n=S_n-S_{n-1}=4 n + 3$（すべての自然数 $n$）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a_1=S_1=3$、$n\\geqq2$ のとき $a_n=4 n + 3$"
+      },
+      "explanation": "$n=1$ を代入すると $7$ となり $a_1=3$ と一致しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[3, expand(2*n**2 + 5*n - 4 - (5*n + 2*(n - 1)**2 - 9))]",
+        "expected": "[3, 4*n + 3]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-err_sn",
+      "explanation_detail": {
+        "approach": "$S_n$ に定数項があると、$n=1$ のときだけ値がずれる。必ず $a_1=S_1$ と照合する。",
+        "steps": [
+          "$a_1=S_1=3$。",
+          "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=4 n + 3$。",
+          "$n=1$ を代入すると $7\\neq3$ なので、分けて答える。"
+        ],
+        "alternatives": [
+          "$S_1=3$ を直接計算し、生徒の式に $n=1$ を代入した値 $7$ と比べれば誤りが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n\\geqq2$ の条件を書かない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a_n=S_n-S_{n-1}=4 n + 3$（すべての自然数 $n$）",
+        "error_step": "$n=1$ の場合の検討（$n\\geqq2$ の条件の無視）",
+        "error_type": "condition",
+        "why_tempting": "$a_n=S_n-S_{n-1}$ がどの $n$ でも使えると思いこんでいる。$S_0$ が定義されないことに気づいていない。",
+        "correction": "$a_1=S_1=3$、$n\\geqq2$ のとき $a_n=4 n + 3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "初項から第 $n$ 項までの和が $S_n=2 n^{2} - n + 3$ である数列 $\\{a_n\\}$ の一般項を求めなさい。\n［ある生徒の解答］\n$a_n=S_n-S_{n-1}=4 n - 3$（すべての自然数 $n$）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a_1=S_1=4$、$n\\geqq2$ のとき $a_n=4 n - 3$"
+      },
+      "explanation": "$n=1$ を代入すると $1$ となり $a_1=4$ と一致しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[4, expand(2*n**2 - n + 3 - (-n + 2*(n - 1)**2 + 4))]",
+        "expected": "[4, 4*n - 3]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHB-U01-err_sn",
+      "explanation_detail": {
+        "approach": "$S_n$ に定数項があると、$n=1$ のときだけ値がずれる。必ず $a_1=S_1$ と照合する。",
+        "steps": [
+          "$a_1=S_1=4$。",
+          "$n\\geqq2$ のとき $a_n=S_n-S_{n-1}=4 n - 3$。",
+          "$n=1$ を代入すると $1\\neq4$ なので、分けて答える。"
+        ],
+        "alternatives": [
+          "$S_1=4$ を直接計算し、生徒の式に $n=1$ を代入した値 $1$ と比べれば誤りが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n\\geqq2$ の条件を書かない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a_n=S_n-S_{n-1}=4 n - 3$（すべての自然数 $n$）",
+        "error_step": "$n=1$ の場合の検討（$n\\geqq2$ の条件の無視）",
+        "error_type": "condition",
+        "why_tempting": "$a_n=S_n-S_{n-1}$ がどの $n$ でも使えると思いこんでいる。$S_0$ が定義されないことに気づいていない。",
+        "correction": "$a_1=S_1=4$、$n\\geqq2$ のとき $a_n=4 n - 3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "数列 $2$，$5$，$10$，$17$，$26$，$\\cdots$ の一般項を求めなさい。\n［ある生徒の解答］\n階差数列は $b_n=2 n + 1$。$a_n=2+\\displaystyle\\sum_{k=1}^{n}(2 k + 1)=n^{2} + 2 n + 2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a_n=n^{2} + 1$"
+      },
+      "explanation": "$a_1$ から $a_n$ までに差を加える回数は $n-1$ 回。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(2+summation(2*k + 1, (k, 1, n-1)))",
+        "expected": "n**2 + 1",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_diff",
+      "explanation_detail": {
+        "approach": "答えに $n=1,\\ 2$ を代入して、もとの数列と比べれば誤りに気づける。",
+        "steps": [
+          "$a_n=a_1+b_1+b_2+\\cdots+b_{n-1}$（$n\\geqq2$）。",
+          "$a_n=2+\\displaystyle\\sum_{k=1}^{n-1}(2 k + 1)=n^{2} + 1$。",
+          "$n=1$ で $2$ となり成り立つ。"
+        ],
+        "alternatives": [
+          "生徒の式に $n=1$ を代入すると $5$ となり、初項 $2$ と一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上端を $n$ にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "階差数列は $b_n=2 n + 1$。$a_n=2+\\displaystyle\\sum_{k=1}^{n}(2 k + 1)=n^{2} + 2 n + 2$",
+        "error_step": "$\\Sigma$ の上端（$n$ とした部分）",
+        "error_type": "formula",
+        "why_tempting": "「$n$ 項目まで」と考えて上端を機械的に $n$ にしている。$a_n$ までに加える差の個数が $n-1$ 個であることを意識していない。",
+        "correction": "$n\\geqq2$ のとき $a_n=2+\\displaystyle\\sum_{k=1}^{n-1}(2 k + 1)=n^{2} + 1$（$n=1$ でも成り立つ）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "数列 $3$，$4$，$8$，$15$，$25$，$\\cdots$ の一般項を求めなさい。\n［ある生徒の解答］\n階差数列は $b_n=3 n - 2$。$a_n=3+\\displaystyle\\sum_{k=1}^{n}(3 k - 2)=\\frac{3 n^{2}}{2} - \\frac{n}{2} + 3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$a_n=\\frac{3 n^{2}}{2} - \\frac{7 n}{2} + 5$"
+      },
+      "explanation": "$a_1$ から $a_n$ までに差を加える回数は $n-1$ 回。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(3+summation(3*k - 2, (k, 1, n-1)))",
+        "expected": "3*n**2/2 - 7*n/2 + 5",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_diff",
+      "explanation_detail": {
+        "approach": "答えに $n=1,\\ 2$ を代入して、もとの数列と比べれば誤りに気づける。",
+        "steps": [
+          "$a_n=a_1+b_1+b_2+\\cdots+b_{n-1}$（$n\\geqq2$）。",
+          "$a_n=3+\\displaystyle\\sum_{k=1}^{n-1}(3 k - 2)=\\frac{3 n^{2}}{2} - \\frac{7 n}{2} + 5$。",
+          "$n=1$ で $3$ となり成り立つ。"
+        ],
+        "alternatives": [
+          "生徒の式に $n=1$ を代入すると $4$ となり、初項 $3$ と一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上端を $n$ にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "階差数列は $b_n=3 n - 2$。$a_n=3+\\displaystyle\\sum_{k=1}^{n}(3 k - 2)=\\frac{3 n^{2}}{2} - \\frac{n}{2} + 3$",
+        "error_step": "$\\Sigma$ の上端（$n$ とした部分）",
+        "error_type": "formula",
+        "why_tempting": "「$n$ 項目まで」と考えて上端を機械的に $n$ にしている。$a_n$ までに加える差の個数が $n-1$ 個であることを意識していない。",
+        "correction": "$n\\geqq2$ のとき $a_n=3+\\displaystyle\\sum_{k=1}^{n-1}(3 k - 2)=\\frac{3 n^{2}}{2} - \\frac{7 n}{2} + 5$（$n=1$ でも成り立つ）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "等差数列 $1,\\ 7,\\ 13,\\ \\cdots,\\ 133$ の和を求めなさい。\n［ある生徒の解答］\n項数は $\\dfrac{133-1}{6}=22$。和は $\\dfrac{22(1+133)}{2}=1474$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1541$"
+      },
+      "explanation": "$a_n=1+(n-1)\\cdot6=133$ を解くと $n=23$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[(133-1)/6+1, summation(1+(k-1)*6, (k, 1, 23))]",
+        "expected": "[23, 1541]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_count",
+      "explanation_detail": {
+        "approach": "項数は一般項 $a_n=l$ を解いて求めると確実。",
+        "steps": [
+          "$a_n=1+(n-1)\\cdot6$ とおき、$a_n=133$ を解いて $n=23$。",
+          "和 $=\\dfrac{23(1+133)}{2}=1541$。"
+        ],
+        "alternatives": [
+          "小さな例（$1,\\ 7,\\ 13$ の3項）で「（末項－初項）÷公差」が $2$ になり、項数より $1$ 少ないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "項数を（末項－初項）÷公差 とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "項数は $\\dfrac{133-1}{6}=22$。和は $\\dfrac{22(1+133)}{2}=1474$",
+        "error_step": "項数の計算（$+1$ の忘れ）",
+        "error_type": "calculation",
+        "why_tempting": "（末項－初項）÷公差 は「公差を加えた回数」であり、項数はそれより $1$ 多い。植木算と同じ構造を見落としやすい。",
+        "correction": "項数は $\\dfrac{133-1}{6}+1=23$。和は $\\dfrac{23(1+133)}{2}=1541$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "等差数列 $15,\\ 22,\\ 29,\\ \\cdots,\\ 127$ の和を求めなさい。\n［ある生徒の解答］\n項数は $\\dfrac{127-15}{7}=16$。和は $\\dfrac{16(15+127)}{2}=1136$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1207$"
+      },
+      "explanation": "$a_n=15+(n-1)\\cdot7=127$ を解くと $n=17$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[(127-15)/7+1, summation(15+(k-1)*7, (k, 1, 17))]",
+        "expected": "[17, 1207]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHB-U01-err_count",
+      "explanation_detail": {
+        "approach": "項数は一般項 $a_n=l$ を解いて求めると確実。",
+        "steps": [
+          "$a_n=15+(n-1)\\cdot7$ とおき、$a_n=127$ を解いて $n=17$。",
+          "和 $=\\dfrac{17(15+127)}{2}=1207$。"
+        ],
+        "alternatives": [
+          "小さな例（$15,\\ 22,\\ 29$ の3項）で「（末項－初項）÷公差」が $2$ になり、項数より $1$ 少ないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "項数を（末項－初項）÷公差 とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "項数は $\\dfrac{127-15}{7}=16$。和は $\\dfrac{16(15+127)}{2}=1136$",
+        "error_step": "項数の計算（$+1$ の忘れ）",
+        "error_type": "calculation",
+        "why_tempting": "（末項－初項）÷公差 は「公差を加えた回数」であり、項数はそれより $1$ 多い。植木算と同じ構造を見落としやすい。",
+        "correction": "項数は $\\dfrac{127-15}{7}+1=17$。和は $\\dfrac{17(15+127)}{2}=1207$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b3ef362d00b125da01f454ea48cc1619dea04da07b98dda13e2eb872dac96363"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:05:51+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "fb83c2b0c3f5162c91b5153cea46fe359f397b8afa2941c9220620b37b3dca19"
+  }
+}

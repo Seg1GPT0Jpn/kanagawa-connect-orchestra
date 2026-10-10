@@ -1,0 +1,460 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHA-U02-LESSON",
+  "title": "図形の性質　授業プリント",
+  "subtitle": "図形の性質｜三角形の五心・チェバ・メネラウスの定理・円の性質・方べきの定理",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_a",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATHA-U02"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATHA-U02-PACK",
+  "pair_set_id": "HS-MATHA-U02-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G3-U05",
+        "point": "相似",
+        "title": "相似な図形"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U06",
+        "point": "円周角の定理",
+        "title": "円"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHC-U01",
+        "point": "位置ベクトルによる図形の証明",
+        "title": "ベクトル"
+      }
+    ],
+    "readiness_check": [
+      "平行線と線分の比、三角形の相似条件（中学3年）を使える。",
+      "円周角の定理とその逆（中学3年）を説明できる。",
+      "三角形の面積比を「底辺の比」「高さの比」で考えられる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "三角形の五心（重心・内心・外心・垂心・傍心）の定義と基本性質を説明し、長さや角の計算に使える。",
+      "角の二等分線と比の定理、チェバの定理、メネラウスの定理を証明の筋道とともに理解し、線分比を求められる。",
+      "円に内接する四角形・接弦定理・方べきの定理を、相似な三角形と結びつけて使いこなせる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：中学の図形からの接続",
+        "minutes": 8,
+        "activity": "三角形の内角の二等分線を3本かくと1点で交わることを作図で確かめ、「なぜ1点で交わるのか」を問う"
+      },
+      {
+        "phase": "三角形の五心",
+        "minutes": 17,
+        "activity": "五心の定義と性質を表にまとめ、重心が中線を 2:1 に内分すること・角の二等分線と比の定理を証明する"
+      },
+      {
+        "phase": "チェバ・メネラウスの定理",
+        "minutes": 30,
+        "activity": "面積比によるチェバの定理の証明、平行線によるメネラウスの定理の証明。例題1・例題2"
+      },
+      {
+        "phase": "円の性質",
+        "minutes": 15,
+        "activity": "円に内接する四角形の性質と接弦定理を、円周角の定理から導く"
+      },
+      {
+        "phase": "方べきの定理",
+        "minutes": 20,
+        "activity": "相似による証明（交わる2弦・接線と割線）。例題3で長さを求める"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 10,
+        "activity": "確認問題3問、問題プリントAの課題指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "三角形の「中心」はひとつではない",
+        "body": "三角形の3本の中線は1点で交わり、3本の内角の二等分線も1点で交わる。3本の直線がいつも1点で交わることは当たり前ではなく、それぞれに理由がある。この単元では、三角形の重要な点（五心）と、線分の比を一気に求めるチェバの定理・メネラウスの定理、そして円と直線がつくる図形の性質を、中学で学んだ相似と円周角の定理をもとに証明しながら学ぶ。",
+        "bullets": [
+          "重心・内心・外心・垂心・傍心をまとめて三角形の五心という。",
+          "線分の比の問題は「どの三角形に、どの直線を当てはめるか」を決めることが鍵になる。",
+          "円の問題では、等しい円周角を見つけて相似な三角形をつくるのが基本方針である。"
+        ],
+        "teacher_points": [
+          {
+            "point": "3本の線が1点で交わることを、作図ソフトや紙の作図で実際に確かめさせてから理由を問う。",
+            "ask": "2本の角の二等分線の交点を I とする。I は3辺からどんな距離にあるか。",
+            "expect": "2辺ずつから等距離なので、3辺すべてから等距離になる。",
+            "timing": "導入の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "三角形の五心",
+        "body": "三角形 $\\mathrm{ABC}$ について、次の5つの点を三角形の五心という。",
+        "conditions": [
+          "外心は、鋭角三角形では内部、直角三角形では斜辺の中点、鈍角三角形では外部にある。",
+          "正三角形では重心・内心・外心・垂心が一致する。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「何の交点か（定義）」と「何から等距離か（性質）」を区別して表に整理させる。",
+            "caution": "内心と外心の「等距離」の対象（辺か頂点か）を取り違えやすい。"
+          }
+        ],
+        "bullets": [
+          "重心 G：3本の中線の交点。各中線を頂点から $2:1$ に内分する。",
+          "内心 I：3つの内角の二等分線の交点。3辺から等距離にあり、内接円の中心である。",
+          "外心 O：3辺の垂直二等分線の交点。3頂点から等距離にあり、外接円の中心である。",
+          "垂心 H：各頂点から対辺またはその延長に下ろした3本の垂線の交点。",
+          "傍心：1つの内角の二等分線と、他の2つの頂点における外角の二等分線の交点。傍接円の中心で、1つの三角形に3個ある。"
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "角の二等分線と線分の比",
+        "formula": "$$\\triangle\\mathrm{ABC}\\ \\text{で}\\ \\angle\\mathrm{A}\\ \\text{の二等分線と辺 BC の交点を D とすると}\\quad \\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$$",
+        "conditions": [
+          "D は辺 BC を $\\mathrm{AB}:\\mathrm{AC}$ に内分する。",
+          "外角の二等分線と直線 BC の交点は、辺 BC を $\\mathrm{AB}:\\mathrm{AC}$ に外分する（$\\mathrm{AB}\\neq\\mathrm{AC}$ のとき）。"
+        ],
+        "proof_steps": [
+          "C を通り AD に平行な直線と、辺 BA の A を越える延長との交点を E とする。",
+          "$\\mathrm{AD}\\parallel\\mathrm{EC}$ より、$\\angle\\mathrm{ACE}=\\angle\\mathrm{CAD}$（錯角）、$\\angle\\mathrm{AEC}=\\angle\\mathrm{BAD}$（同位角）。",
+          "$\\angle\\mathrm{BAD}=\\angle\\mathrm{CAD}$ なので $\\angle\\mathrm{ACE}=\\angle\\mathrm{AEC}$。よって $\\triangle\\mathrm{ACE}$ は二等辺三角形で $\\mathrm{AE}=\\mathrm{AC}$。",
+          "$\\triangle\\mathrm{BEC}$ で $\\mathrm{AD}\\parallel\\mathrm{EC}$ より $\\mathrm{BD}:\\mathrm{DC}=\\mathrm{BA}:\\mathrm{AE}=\\mathrm{AB}:\\mathrm{AC}$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "補助線「平行線を引いて二等辺三角形をつくる」という発想を、なぜその線を引くのかとともに説明する。",
+            "ask": "比 $\\mathrm{AB}:\\mathrm{AC}$ を1本の直線上に並べるにはどうすればよいか。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "チェバの定理",
+        "formula": "$$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$$",
+        "conditions": [
+          "$\\triangle\\mathrm{ABC}$ の3頂点と、三角形の辺上にない点 O を結ぶ直線が、対辺 BC・CA・AB（またはその延長）とそれぞれ D・E・F で交わるとき成り立つ。",
+          "A → F → B → D → C → E → A と、頂点と分点を交互にたどって一周する順に比をかける。"
+        ],
+        "body": "O が三角形の内部にある場合を、面積比を使って証明する。",
+        "proof_steps": [
+          "$\\triangle\\mathrm{ABO}$ と $\\triangle\\mathrm{ACO}$ は辺 AO を共有する。B・C から直線 AO までの距離の比は $\\mathrm{BD}:\\mathrm{DC}$ に等しいので、$\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}=\\dfrac{\\triangle\\mathrm{ABO}}{\\triangle\\mathrm{ACO}}$。",
+          "同様に $\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=\\dfrac{\\triangle\\mathrm{BCO}}{\\triangle\\mathrm{BAO}}$、$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{\\triangle\\mathrm{CAO}}{\\triangle\\mathrm{CBO}}$。",
+          "3つの式をかけ合わせると、分子と分母の面積がすべて約分されて $1$ になる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "面積比で考えると「高さの比＝底辺上の線分の比」になることを、図に高さをかき入れて確認させる。",
+            "caution": "比をかける順序を崩すと等式が成り立たない。「頂点→分点→頂点」と一筆書きでたどる。"
+          }
+        ],
+        "figure": {
+          "alt": "三角形ABCと、1点Oで交わる3本の線分AD・BE・CF",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 160\" width=\"216\" height=\"160\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"200\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"100.57\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"127.56\" y2=\"75.82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"39.63\" y2=\"81\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"56.68\" y=\"9.51\">A</text><text x=\"2.48\" y=\"153.51\">B</text><text x=\"206.22\" y=\"152.06\">C</text><text x=\"98.99\" y=\"158.73\">D</text><text x=\"132.67\" y=\"73.66\">E</text><text x=\"25.36\" y=\"81.05\">F</text><text x=\"73.31\" y=\"101.39\">O</text></svg>"
+        }
+      },
+      {
+        "id": "th3",
+        "kind": "theorem",
+        "title": "メネラウスの定理",
+        "formula": "$$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$$",
+        "conditions": [
+          "三角形の頂点を通らない直線 $\\ell$ が、直線 BC・CA・AB とそれぞれ P・Q・R で交わるときに成り立つ。",
+          "線分の長さの比として使う（外分点 P についても $\\mathrm{BP}$、$\\mathrm{PC}$ は長さ）。"
+        ],
+        "proof_steps": [
+          "C を通り直線 $\\ell$ に平行な直線を引き、直線 AB との交点を D とする。",
+          "$\\mathrm{PR}\\parallel\\mathrm{CD}$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=\\dfrac{\\mathrm{BR}}{\\mathrm{RD}}$、$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=\\dfrac{\\mathrm{DR}}{\\mathrm{RA}}$。",
+          "よって $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{\\mathrm{BR}}{\\mathrm{RD}}\\cdot\\dfrac{\\mathrm{DR}}{\\mathrm{RA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "チェバとの違いは「1点で交わる3直線」か「1本の直線」か。図を見てどちらを使うかを判断させる。",
+            "ask": "この図には三角形と直線の組がいくつ見えるか。"
+          }
+        ],
+        "figure": {
+          "alt": "三角形ABCの辺AB上の点R・辺AC上の点Qを通る直線が、辺BCの延長と点Pで交わる図",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 248 140\" width=\"248\" height=\"140\" font-family=\"serif\" font-size=\"12\"><line x1=\"52\" y1=\"16\" x2=\"16\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"124\" x2=\"124\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"124\" y1=\"124\" x2=\"52\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"124\" y1=\"124\" x2=\"232\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"52\" x2=\"232\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"42.48\" y=\"10.48\">A</text><text x=\"2.21\" y=\"133.02\">B</text><text x=\"126.98\" y=\"136.5\">C</text><text x=\"238.6\" y=\"130.95\">P</text><text x=\"81.17\" y=\"63.37\">Q</text><text x=\"26.71\" y=\"50.11\">R</text></svg>"
+        }
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　チェバの定理",
+        "example": {
+          "problem": "$\\triangle\\mathrm{ABC}$ の内部の点 O について、直線 AO・BO・CO と辺 BC・CA・AB の交点をそれぞれ D・E・F とする。$\\mathrm{AF}:\\mathrm{FB}=2:3$、$\\mathrm{BD}:\\mathrm{DC}=4:1$ のとき、$\\mathrm{CE}:\\mathrm{EA}$ を求めよ。",
+          "steps": [
+            "チェバの定理より $\\dfrac{2}{3}\\cdot\\dfrac{4}{1}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$。",
+            "$\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=\\dfrac{3}{8}$。"
+          ],
+          "answer": "$\\mathrm{CE}:\\mathrm{EA}=3:8$",
+          "thinking": "3本の線分が1点 O で交わっているので、チェバの定理を使う。A から出発して F → B → D → C → E → A の順にたどる。"
+        },
+        "teacher_points": [
+          {
+            "point": "求めた比が図の見た目（E は A 寄りか C 寄りか）と合っているかを確かめさせる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\dfrac{2}{3}\\cdot\\dfrac{4}{1}=\\dfrac{8}{3}$ をそのまま $\\mathrm{CE}:\\mathrm{EA}=8:3$ とする",
+            "correct": "積が $1$ になるように残りの比を決めるので $\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=\\dfrac{3}{8}$"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　メネラウスの定理",
+        "example": {
+          "problem": "$\\triangle\\mathrm{ABC}$ の辺 AB を $1:2$ に内分する点を R、辺 AC の中点を Q とし、直線 RQ と直線 BC の交点を P とする。$\\mathrm{BP}:\\mathrm{PC}$ を求めよ。",
+          "steps": [
+            "直線 PQR と $\\triangle\\mathrm{ABC}$ にメネラウスの定理を用いる：$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。",
+            "$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=1$、$\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{1}{2}$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=2$。"
+          ],
+          "answer": "$\\mathrm{BP}:\\mathrm{PC}=2:1$（P は辺 BC の C を越える延長上にあり、C は線分 BP の中点）",
+          "thinking": "三角形 ABC と、それを横切る1本の直線 PQR の組なので、メネラウスの定理を使う。",
+          "figure": {
+            "alt": "三角形ABCの辺AB上の点R・辺AC上の点Qを通る直線が、辺BCの延長と点Pで交わる図",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 248 140\" width=\"248\" height=\"140\" font-family=\"serif\" font-size=\"12\"><line x1=\"52\" y1=\"16\" x2=\"16\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"124\" x2=\"124\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"124\" y1=\"124\" x2=\"52\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"124\" y1=\"124\" x2=\"232\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"52\" x2=\"232\" y2=\"124\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"42.48\" y=\"10.48\">A</text><text x=\"2.21\" y=\"133.02\">B</text><text x=\"126.98\" y=\"136.5\">C</text><text x=\"238.6\" y=\"130.95\">P</text><text x=\"81.17\" y=\"63.37\">Q</text><text x=\"26.71\" y=\"50.11\">R</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "外分点 P の位置を図で確認し、$\\mathrm{BP}>\\mathrm{PC}$ なので P が C の外側にあることを読み取らせる。"
+          }
+        ]
+      },
+      {
+        "id": "th4",
+        "kind": "theorem",
+        "title": "円に内接する四角形と接弦定理",
+        "formula": "$$\\text{円に内接する四角形 ABCD}\\ \\Longrightarrow\\ \\angle\\mathrm{A}+\\angle\\mathrm{C}=180^\\circ,\\quad \\angle\\mathrm{B}+\\angle\\mathrm{D}=180^\\circ$$",
+        "conditions": [
+          "円に内接する四角形の外角は、それと隣り合う内角の対角に等しい。",
+          "逆に、対角の和が $180^\\circ$ である四角形は円に内接する。",
+          "接弦定理：円の接線と、接点を通る弦のつくる角は、その角の内部にある弧に対する円周角に等しい。"
+        ],
+        "proof_steps": [
+          "円の中心を O とすると、弧 BCD に対する中心角と弧 BAD に対する中心角の和は $360^\\circ$。",
+          "円周角は中心角の半分なので、$\\angle\\mathrm{A}+\\angle\\mathrm{C}=\\dfrac{1}{2}\\times360^\\circ=180^\\circ$。",
+          "外角は $180^\\circ-\\angle\\mathrm{C}$ なので $\\angle\\mathrm{A}$ に等しい。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「対角」とは向かい合う角であり、隣り合う角ではないことを図で確認する。",
+            "caution": "$\\angle\\mathrm{A}+\\angle\\mathrm{B}=180^\\circ$ とする誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "th5",
+        "kind": "theorem",
+        "title": "方べきの定理",
+        "formula": "$$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD},\\qquad \\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PT}^2$$",
+        "conditions": [
+          "点 P を通る2直線が円とそれぞれ A, B と C, D で交わるとき（P は円の内部でも外部でもよい）、第1式が成り立つ。",
+          "P が円の外部にあり、P から引いた接線の接点を T とするとき、第2式が成り立つ。",
+          "PA、PB などは、いずれも点 P からの距離である（$\\mathrm{AB}$ ではない）。"
+        ],
+        "proof_steps": [
+          "（円の内部で交わる場合）$\\triangle\\mathrm{PAC}$ と $\\triangle\\mathrm{PDB}$ で、$\\angle\\mathrm{APC}=\\angle\\mathrm{DPB}$（対頂角）。",
+          "弧 BC に対する円周角より $\\angle\\mathrm{PAC}=\\angle\\mathrm{PDB}$。よって2組の角がそれぞれ等しく $\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$。",
+          "対応する辺の比より $\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$、すなわち $\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$。",
+          "（接線の場合）$\\triangle\\mathrm{PTA}$ と $\\triangle\\mathrm{PBT}$ で $\\angle\\mathrm{P}$ は共通、接弦定理より $\\angle\\mathrm{PTA}=\\angle\\mathrm{PBT}$。よって相似で $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「方べき」は相似の比を積の形に書き直したものだと理解させ、公式を忘れても相似から復元できるようにする。",
+            "ask": "どの2つの三角形が相似か。等しい角はどれか。"
+          }
+        ],
+        "figure": {
+          "alt": "円の2つの弦ABとCDが円の内部の点Pで交わる図",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 168 168\" width=\"168\" height=\"168\" font-family=\"serif\" font-size=\"12\"><circle cx=\"84\" cy=\"84\" r=\"68\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"20.1\" y1=\"60.74\" x2=\"149.68\" y2=\"101.6\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"66.4\" y1=\"18.32\" x2=\"95.81\" y2=\"150.97\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"20.1\" y1=\"60.74\" x2=\"66.4\" y2=\"18.32\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"149.68\" y1=\"101.6\" x2=\"95.81\" y2=\"150.97\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"5.7\" y=\"61.15\">A</text><text x=\"156.25\" y=\"108.64\">B</text><text x=\"59.73\" y=\"11.65\">C</text><text x=\"93.92\" y=\"165.76\">D</text><text x=\"68.56\" y=\"75.52\">P</text></svg>"
+        }
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　接線と割線",
+        "example": {
+          "problem": "円の外部の点 P から円に接線を引き、接点を T とする。また、P を通る直線が円と2点 A, B で交わり、$\\mathrm{PA}=4$、$\\mathrm{AB}=5$ である。PT の長さを求めよ。",
+          "steps": [
+            "$\\mathrm{PB}=\\mathrm{PA}+\\mathrm{AB}=9$。",
+            "方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=4\\times9=36$。",
+            "$\\mathrm{PT}>0$ より $\\mathrm{PT}=6$。"
+          ],
+          "answer": "$\\mathrm{PT}=6$",
+          "thinking": "接線と割線があるので $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}$。PB は P からの距離なので $\\mathrm{PA}+\\mathrm{AB}$。"
+        },
+        "teacher_points": [
+          {
+            "point": "$\\mathrm{PA}\\cdot\\mathrm{AB}$ と計算してしまう誤りを、方べきの意味（P からの距離の積）にもどって正させる。",
+            "caution": "$\\mathrm{PT}^2=4\\times5$ とする誤りが典型的。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=20$",
+            "correct": "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=4\\times9=36$"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 五心と角の二等分線",
+              "lines": [
+                "重心：中線を $2:1$",
+                "内心：3辺から等距離",
+                "外心：3頂点から等距離",
+                "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$",
+                "（平行線で二等辺三角形）"
+              ]
+            },
+            {
+              "title": "② チェバ・メネラウス",
+              "lines": [
+                "1点で交わる3線 → チェバ",
+                "1本の直線 → メネラウス",
+                "頂点→分点→頂点…と一周",
+                "例1 $\\mathrm{CE}:\\mathrm{EA}=3:8$",
+                "例2 $\\mathrm{BP}:\\mathrm{PC}=2:1$"
+              ]
+            },
+            {
+              "title": "③ 円の性質と方べき",
+              "lines": [
+                "内接四角形：対角の和 $180^\\circ$",
+                "接弦定理",
+                "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$",
+                "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PT}^2$",
+                "例3 $\\mathrm{PT}=6$"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "板書は3列に分け、②③では図を大きくかき、比や長さを図の中に書きこんでから式を立てる。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "チェバ・メネラウスでは、式を書く前に図の上で「出発点の頂点に指を置き、一周する」動作をさせる。",
+            "ask": "次にたどる点はどれか。"
+          },
+          {
+            "point": "比を求めたら、図の見た目と矛盾しないか（どちら寄りの点か）を必ず確認させる。",
+            "timing": "例題1・例題2の後"
+          },
+          {
+            "point": "外心の位置は三角形の形（鋭角・直角・鈍角）で変わることを、作図で見せる。",
+            "caution": "外心はいつも内部にあると思いこんでいる生徒が多い。"
+          },
+          {
+            "point": "方べきの定理は「P からの距離」の積であることを毎回言葉にさせる。",
+            "caution": "$\\mathrm{PA}\\cdot\\mathrm{AB}$ と弦の長さを使う誤り。"
+          },
+          {
+            "point": "重心の比 $2:1$ は「頂点側が 2」であることを、中線の長さの $\\dfrac{2}{3}$ という形でも確認させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "角の二等分線で $\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}$ とする",
+            "correct": "B 側の線分 BD には B 側の辺 AB が対応する：$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$"
+          },
+          {
+            "wrong": "円に内接する四角形で隣り合う角の和を $180^\\circ$ とする",
+            "correct": "和が $180^\\circ$ になるのは向かい合う角（対角）"
+          },
+          {
+            "wrong": "重心 G について $\\mathrm{AG}=\\dfrac{1}{3}\\mathrm{AM}$ とする",
+            "correct": "頂点側が 2 なので $\\mathrm{AG}=\\dfrac{2}{3}\\mathrm{AM}$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "五心は「何の交点か」と「何から等距離か」を区別して覚える。重心は中線を頂点から $2:1$ に内分する。",
+          "角の二等分線は対辺を隣の2辺の比に分ける。1点で交わる3線はチェバ、1本の直線はメネラウス。",
+          "円の問題は等しい円周角から相似を見つける。方べきの定理は P からの距離の積が一定。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。$\\mathrm{AM}=12$ のとき GM を求めよ。",
+            "a": "$\\mathrm{GM}=\\dfrac{1}{3}\\mathrm{AM}=4$"
+          },
+          {
+            "q": "$\\mathrm{AB}=8$、$\\mathrm{AC}=6$、$\\mathrm{BC}=7$ の $\\triangle\\mathrm{ABC}$ で、$\\angle\\mathrm{A}$ の二等分線と BC の交点を D とする。BD を求めよ。",
+            "a": "$\\mathrm{BD}:\\mathrm{DC}=4:3$ より $\\mathrm{BD}=4$"
+          },
+          {
+            "q": "円の外部の点 P から引いた直線が円と A, B で交わり $\\mathrm{PA}=2,\\ \\mathrm{PB}=8$。P から引いた接線の長さを求めよ。",
+            "a": "$\\mathrm{PT}^2=16$ より $\\mathrm{PT}=4$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "77f45f95474a07b9f3f47b7624504145a5a23ce786ae43518b286a0d913544b1"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:00:11+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "4ecad33f1091580f027253ccca3a6426674e36f603ed96372538d7e60ab1f77c"
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHB-U01-LESSON",
+  "title": "数列　授業プリント",
+  "subtitle": "数列｜等差数列・等比数列・Σ記号・階差数列・漸化式",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_b",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHB-U01"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATHB-U01-PACK",
+  "pair_set_id": "HS-MATHB-U01-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U02",
+        "point": "文字式",
+        "title": "文字と式"
+      },
+      {
+        "unit_id": "HS-MATH1-U02",
+        "point": "命題と証明",
+        "title": "集合と命題"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U01",
+        "point": "数列の極限・無限級数",
+        "title": "極限"
+      }
+    ],
+    "readiness_check": [
+      "文字式の展開・因数分解ができる。",
+      "指数法則 $a^m\\cdot a^n=a^{m+n}$ を使える。",
+      "命題・仮定・結論の意味（数学Ⅰ「集合と命題」）を理解している。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "等差数列・等比数列の一般項と和を求め、和の公式を導出できる。",
+      "$\\Sigma$ 記号の性質と $\\displaystyle\\sum k,\\ \\sum k^2$ などの公式を使って和を計算し、階差数列や和 $S_n$ から一般項を求められる。",
+      "漸化式 $a_{n+1}=pa_n+q$ を解き、数学的帰納法で自然数についての命題を証明できる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：並んだ数の規則",
+        "minutes": 8,
+        "activity": "身近な数の並びから「前の項との関係」と「番号との関係」の2つの見方を引き出す"
+      },
+      {
+        "phase": "等差数列・等比数列",
+        "minutes": 22,
+        "activity": "一般項と和の公式の導出（逆順に並べて足す／$S-rS$）。例題1"
+      },
+      {
+        "phase": "Σ 記号と和の公式",
+        "minutes": 20,
+        "activity": "$\\Sigma$ の意味と性質、$\\displaystyle\\sum k^2$ の公式の導出（恒等式の和）"
+      },
+      {
+        "phase": "階差数列と和からの一般項",
+        "minutes": 15,
+        "activity": "階差数列の公式、$a_n=S_n-S_{n-1}\\ (n\\geqq2)$ と $n=1$ の確認"
+      },
+      {
+        "phase": "漸化式",
+        "minutes": 20,
+        "activity": "$a_{n+1}=pa_n+q$ を $a_{n+1}-\\alpha=p(a_n-\\alpha)$ に変形して解く。例題2"
+      },
+      {
+        "phase": "数学的帰納法とまとめ",
+        "minutes": 15,
+        "activity": "帰納法の2段階の構造（例題3）、確認問題"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "数の並びを2つの見方でとらえる",
+        "body": "数列 $3,\\ 7,\\ 11,\\ 15,\\ \\cdots$ は「前の項に $4$ を足すと次の項になる」と見ることも、「第 $n$ 項は $4n-1$」と見ることもできる。前者は漸化式、後者は一般項による表し方である。この単元では、この2つの見方を行き来しながら、和の計算や証明の方法を身につける。",
+        "bullets": [
+          "一般項：番号 $n$ の式で項を直接表す。",
+          "漸化式：前の項（いくつか前の項）から次の項を決める規則。",
+          "和 $S_n=a_1+a_2+\\cdots+a_n$ は $\\displaystyle\\sum_{k=1}^{n}a_k$ と書く。"
+        ],
+        "teacher_points": [
+          {
+            "point": "最初に数の並びを見せ、「次の数は何か」「100番目の数は何か」と2つの問いを続けて投げかける。",
+            "ask": "100番目の数を、99番目までを計算せずに求めるにはどうすればよいか。",
+            "expect": "番号との関係（一般項）を見つければよい。",
+            "timing": "導入の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "等差数列・等比数列",
+        "body": "初項 $a$、公差 $d$ の等差数列は、各項に一定の数 $d$ を加えて次の項が得られる数列である。初項 $a$、公比 $r$ の等比数列は、各項に一定の数 $r$ を掛けて次の項が得られる数列である。",
+        "formula": "$$\\text{等差数列：}a_n=a+(n-1)d,\\qquad \\text{等比数列：}a_n=ar^{n-1}$$",
+        "conditions": [
+          "第 $n$ 項までに公差を加える回数は $n-1$ 回（公比を掛ける回数も $n-1$ 回）。",
+          "3つの数 $a,\\ b,\\ c$ がこの順に等差数列 $\\iff 2b=a+c$、等比数列 $\\iff b^2=ac$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「$n-1$」の理由を、植木算（木と間の数）と結びつけて確認する。",
+            "caution": "$a_n=a+nd$ と書く誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "等差数列・等比数列の和",
+        "formula": "$$S_n=\\dfrac{n(a+l)}{2}=\\dfrac{n\\{2a+(n-1)d\\}}{2},\\qquad S_n=\\dfrac{a(r^n-1)}{r-1}\\ (r\\neq1)$$",
+        "conditions": [
+          "$l$ は末項（第 $n$ 項）。",
+          "等比数列で $r=1$ のときは $S_n=na$。",
+          "$r<1$ のときは $S_n=\\dfrac{a(1-r^n)}{1-r}$ の形が計算しやすい。"
+        ],
+        "proof_steps": [
+          "（等差）$S_n=a_1+a_2+\\cdots+a_n$ と、逆順に並べた $S_n=a_n+a_{n-1}+\\cdots+a_1$ を辺々加える。",
+          "上下に並ぶ2項の和はどれも $a+l$ で、それが $n$ 組あるので $2S_n=n(a+l)$。",
+          "（等比）$S_n=a+ar+\\cdots+ar^{n-1}$、$rS_n=ar+ar^2+\\cdots+ar^n$。",
+          "上の式から下の式を引くと、間の項がすべて消えて $(1-r)S_n=a(1-r^n)$。$r\\neq1$ で割って公式を得る。"
+        ],
+        "teacher_points": [
+          {
+            "point": "等比数列の和の導出「$S-rS$」は、後の $\\displaystyle\\sum kr^{k-1}$ 型の和でも使うので、手順として身につけさせる。",
+            "ask": "$rS_n$ と $S_n$ を1つずらして並べると、何が見えるか。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　等比数列の和",
+        "example": {
+          "problem": "初項 $3$、公比 $2$ の等比数列の初項から第 $6$ 項までの和を求めよ。",
+          "steps": [
+            "$S_6=\\dfrac{3(2^6-1)}{2-1}$。",
+            "$=3\\times63=189$。"
+          ],
+          "answer": "$189$",
+          "thinking": "初項・公比・項数がそろっているので、和の公式に代入する。項数は $6$。"
+        },
+        "teacher_points": [
+          {
+            "point": "項を書き出して $3+6+12+24+48+96=189$ と確かめさせ、公式への信頼を育てる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$S_6=\\dfrac{3(2^5-1)}{2-1}=93$ とする",
+            "correct": "和の公式の指数は項数 $n$ そのもの：$2^6$"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "Σ 記号と和の公式",
+        "formula": "$$\\sum_{k=1}^{n}k=\\dfrac{1}{2}n(n+1),\\quad \\sum_{k=1}^{n}k^2=\\dfrac{1}{6}n(n+1)(2n+1),\\quad \\sum_{k=1}^{n}k^3=\\left\\{\\dfrac{1}{2}n(n+1)\\right\\}^2,\\quad \\sum_{k=1}^{n}c=nc$$",
+        "conditions": [
+          "$\\displaystyle\\sum_{k=1}^{n}(pa_k+qb_k)=p\\sum_{k=1}^{n}a_k+q\\sum_{k=1}^{n}b_k$（$p,\\ q$ は $k$ に無関係な定数）。",
+          "$\\displaystyle\\sum_{k=1}^{n}c$ は $c$ を $n$ 個足したものなので $nc$（$c$ ではない）。"
+        ],
+        "proof_steps": [
+          "恒等式 $(k+1)^3-k^3=3k^2+3k+1$ で $k=1,\\ 2,\\ \\cdots,\\ n$ とした $n$ 個の式を辺々加える。",
+          "左辺は隣どうしが打ち消し合って $(n+1)^3-1$。右辺は $\\displaystyle 3\\sum_{k=1}^{n}k^2+3\\cdot\\dfrac{1}{2}n(n+1)+n$。",
+          "$\\displaystyle 3\\sum_{k=1}^{n}k^2=(n+1)^3-1-\\dfrac{3}{2}n(n+1)-n=\\dfrac{1}{2}n(n+1)(2n+1)$。",
+          "両辺を $3$ で割って $\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{1}{6}n(n+1)(2n+1)$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「隣どうしが打ち消し合う和」は、部分分数分解による和（$\\dfrac{1}{k(k+1)}$ 型）と同じ発想であることを予告しておく。"
+          }
+        ]
+      },
+      {
+        "id": "th3",
+        "kind": "theorem",
+        "title": "階差数列と一般項、和と一般項",
+        "formula": "$$a_n=a_1+\\sum_{k=1}^{n-1}b_k\\ (n\\geqq2),\\qquad a_n=S_n-S_{n-1}\\ (n\\geqq2),\\quad a_1=S_1$$",
+        "conditions": [
+          "$b_n=a_{n+1}-a_n$ を $\\{a_n\\}$ の階差数列という。",
+          "どちらの式も $n\\geqq2$ でしか使えないので、最後に $n=1$ のときに成り立つかを確かめる。"
+        ],
+        "proof_steps": [
+          "$a_2-a_1=b_1,\\ a_3-a_2=b_2,\\ \\cdots,\\ a_n-a_{n-1}=b_{n-1}$ の $n-1$ 個の式を辺々加える。",
+          "左辺は打ち消し合って $a_n-a_1$ となり、$a_n=a_1+\\displaystyle\\sum_{k=1}^{n-1}b_k$。",
+          "$S_n=S_{n-1}+a_n$（$n\\geqq2$）より $a_n=S_n-S_{n-1}$。$n=1$ では $S_0$ が定義されないので $a_1=S_1$ を別に求める。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$\\Sigma$ の上端が $n-1$ になる理由を、式を $n-1$ 個並べた図で示す。",
+            "caution": "上端を $n$ にする誤りが典型的。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "漸化式 $a_{n+1}=pa_n+q$ の解き方",
+        "proof_steps": [
+          "$p\\neq1$ のとき、$\\alpha=p\\alpha+q$ を満たす $\\alpha=\\dfrac{q}{1-p}$ を求める。",
+          "$a_{n+1}=pa_n+q$ から $\\alpha=p\\alpha+q$ を引くと $a_{n+1}-\\alpha=p(a_n-\\alpha)$。",
+          "数列 $\\{a_n-\\alpha\\}$ は初項 $a_1-\\alpha$、公比 $p$ の等比数列なので $a_n-\\alpha=(a_1-\\alpha)p^{n-1}$。",
+          "よって $a_n=(a_1-\\alpha)p^{n-1}+\\alpha$。"
+        ],
+        "body": "定数 $\\alpha$ を引くことで、等比数列に帰着させるのが要点である。",
+        "teacher_points": [
+          {
+            "point": "$\\alpha$ は「数列が一定値 $\\alpha$ をとり続けるならその値」という意味をもつことを説明する。",
+            "ask": "$a_1=\\alpha$ のとき、数列はどうなるか。",
+            "expect": "ずっと $\\alpha$ のまま。"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　漸化式",
+        "example": {
+          "problem": "$a_1=2,\\ a_{n+1}=3a_n-4$ で定められる数列 $\\{a_n\\}$ の一般項を求めよ。",
+          "steps": [
+            "$\\alpha=3\\alpha-4$ より $\\alpha=2$。",
+            "$a_{n+1}-2=3(a_n-2)$。",
+            "$a_1-2=0$ なので、$a_n-2=0\\cdot3^{n-1}=0$。"
+          ],
+          "answer": "$a_n=2$（すべての項が $2$）",
+          "thinking": "$a_{n+1}-\\alpha=3(a_n-\\alpha)$ の形に変形する。初項が $\\alpha$ と等しいときは特別な結果になる。"
+        },
+        "teacher_points": [
+          {
+            "point": "$a_1=\\alpha$ の特別な場合を例に選び、変形の意味（ずれ $a_n-\\alpha$ が公比 $p$ 倍される）を実感させる。続けて $a_1=5$ の場合 $a_n=3^n+2$ も求めさせる。"
+          }
+        ]
+      },
+      {
+        "id": "th4",
+        "kind": "theorem",
+        "title": "数学的帰納法",
+        "formula": "$$\\text{[I] } P(1)\\ \\text{が成り立つ},\\quad \\text{[II] } P(k)\\Longrightarrow P(k+1)\\quad \\Longrightarrow\\quad \\text{すべての自然数 } n\\ \\text{で } P(n)$$",
+        "conditions": [
+          "[II] では「$P(k)$ が成り立つと仮定して $P(k+1)$ を導く」。$P(k)$ そのものを証明するわけではない。",
+          "[I] を省くと、正しくない命題でも [II] だけは示せてしまうことがある。"
+        ],
+        "proof_steps": [
+          "[I] より $P(1)$ が成り立つ。",
+          "[II] で $k=1$ とすると $P(2)$ が成り立つ。続けて $k=2$ とすると $P(3)$ が成り立つ。",
+          "これをくり返すと、どの自然数 $n$ についても有限回で $P(n)$ に到達する。"
+        ],
+        "teacher_points": [
+          {
+            "point": "ドミノ倒しのたとえで、[I]（最初のドミノを倒す）と [II]（倒れたら次も倒れる）の両方が必要なことを説明する。",
+            "caution": "[II] で結論 $P(k+1)$ を仮定に使ってしまう答案に注意。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　数学的帰納法",
+        "example": {
+          "problem": "すべての自然数 $n$ について $\\displaystyle\\sum_{k=1}^{n}k\\cdot2^{k-1}=(n-1)2^n+1$ が成り立つことを証明せよ。",
+          "steps": [
+            "[I] $n=1$ のとき、左辺 $=1$、右辺 $=0\\cdot2+1=1$ で成り立つ。",
+            "[II] $n=k$ のとき成り立つと仮定すると、$\\displaystyle\\sum_{i=1}^{k+1}i\\cdot2^{i-1}=(k-1)2^k+1+(k+1)2^k$。",
+            "$=2k\\cdot2^k+1=k\\cdot2^{k+1}+1=\\{(k+1)-1\\}2^{k+1}+1$ となり、$n=k+1$ のときも成り立つ。",
+            "[I]、[II] より、すべての自然数 $n$ で成り立つ。"
+          ],
+          "answer": "（証明終）",
+          "thinking": "$n=k+1$ の左辺を「$n=k$ の左辺＋第 $k+1$ 項」に分け、仮定を使う。目標の右辺 $(k+1-1)2^{k+1}+1$ を意識して変形する。"
+        },
+        "teacher_points": [
+          {
+            "point": "[II] の変形では、目標の式を先に書いておき、そこへ向かって式を整理するよう指導する。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 等差・等比",
+              "lines": [
+                "$a_n=a+(n-1)d$",
+                "$a_n=ar^{n-1}$",
+                "$S_n=\\dfrac{n(a+l)}{2}$",
+                "$S_n=\\dfrac{a(r^n-1)}{r-1}$",
+                "例1 $189$"
+              ]
+            },
+            {
+              "title": "② Σ・階差・和",
+              "lines": [
+                "$\\sum k=\\frac{1}{2}n(n+1)$",
+                "$\\sum k^2=\\frac{1}{6}n(n+1)(2n+1)$",
+                "$a_n=a_1+\\sum_{k=1}^{n-1}b_k$",
+                "$a_n=S_n-S_{n-1}\\ (n\\geqq2)$",
+                "$n=1$ を確認"
+              ]
+            },
+            {
+              "title": "③ 漸化式・帰納法",
+              "lines": [
+                "$a_{n+1}-\\alpha=p(a_n-\\alpha)$",
+                "$\\alpha=p\\alpha+q$",
+                "[I] $n=1$",
+                "[II] $P(k)\\Rightarrow P(k+1)$",
+                "例3"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "②の「$n\\geqq2$」と「$n=1$ を確認」は赤で囲み、毎回答案に書く習慣をつけさせる。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "一般項を求めたら、$n=1,\\ 2,\\ 3$ を代入して最初の数項と一致するか確かめさせる。",
+            "timing": "各例題の後"
+          },
+          {
+            "point": "$\\Sigma$ の計算では、定数項の和 $\\displaystyle\\sum_{k=1}^{n}c=nc$ を $c$ としてしまう誤りに注意させる。",
+            "ask": "$\\displaystyle\\sum_{k=1}^{n}3$ は何か。",
+            "expect": "$3n$"
+          },
+          {
+            "point": "階差数列・和からの一般項では、$n\\geqq2$ で求めた式が $n=1$ でも成り立つか、必ず確認させる。",
+            "caution": "$S_n$ に定数項があるときは $n=1$ で一致しない。"
+          },
+          {
+            "point": "漸化式の変形後、$\\{a_n-\\alpha\\}$ が等比数列であることを言葉で書かせる（何が等比数列かを明示）。"
+          },
+          {
+            "point": "帰納法の [II] では「仮定」「示すべき式」を最初に書き出させ、仮定をどこで使ったかを明示させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "等比数列の和で指数を $n-1$ にする",
+            "correct": "和の公式では $r^n$（項数が指数）。一般項の $r^{n-1}$ と区別する"
+          },
+          {
+            "wrong": "階差数列の公式で $\\displaystyle\\sum_{k=1}^{n}b_k$ とする",
+            "correct": "差の式は $n-1$ 個なので上端は $n-1$"
+          },
+          {
+            "wrong": "$S_n=n^2+n+1$ から $a_n=2n$ をすべての $n$ で成り立つとする",
+            "correct": "$a_1=S_1=3$ で、$a_n=2n$ は $n\\geqq2$ のみ"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "等差・等比の一般項と和の公式。和の導出は「逆順に足す」「$S-rS$」。",
+          "$\\Sigma$ の公式と性質。階差・和からの一般項は $n\\geqq2$ で求め、$n=1$ を確認。",
+          "$a_{n+1}=pa_n+q$ は $a_{n+1}-\\alpha=p(a_n-\\alpha)$。帰納法は [I] と [II] の両方が必要。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "初項 $5$、公差 $-3$ の等差数列の第 $10$ 項を求めよ。",
+            "a": "$5+9\\times(-3)=-22$"
+          },
+          {
+            "q": "$\\displaystyle\\sum_{k=1}^{n}(3k-1)$ を求めよ。",
+            "a": "$\\dfrac{3}{2}n(n+1)-n=\\dfrac{1}{2}n(3n+1)$"
+          },
+          {
+            "q": "$a_1=1,\\ a_{n+1}=2a_n+3$ の一般項を求めよ。",
+            "a": "$a_{n+1}+3=2(a_n+3)$ より $a_n=4\\cdot2^{n-1}-3=2^{n+1}-3$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "efcd678b0eaf33a960e056d43897ce48bb09ae56259f78299c2336e4ac31bfa8"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:05:51+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "1f6dca366ccadc7d1e2f2f7fbd288669ef0e13d37ba29b7081419c58aab0569a"
+  }
+}

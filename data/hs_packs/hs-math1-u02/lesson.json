@@ -1,0 +1,413 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U02-LESSON",
+  "title": "集合と命題　授業プリント",
+  "subtitle": "数と式｜集合・命題と条件・必要条件・十分条件・対偶・背理法",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U02"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATH1-U02-PACK",
+  "pair_set_id": "HS-MATH1-U02-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G2-U04",
+        "point": "仮定と結論・証明の書き方",
+        "title": "図形の調べ方　平行と合同"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "数学的帰納法",
+        "title": "数列"
+      },
+      {
+        "unit_id": "SS-MATH-U01",
+        "point": "背理法による証明",
+        "title": "数学　証明問題"
+      }
+    ],
+    "readiness_check": [
+      "中学で学んだ「仮定と結論」「証明の書き方」を知っている。",
+      "不等式の範囲を数直線上に表せる。",
+      "倍数・約数の意味を説明できる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "集合の共通部分・和集合・補集合を求め、ド・モルガンの法則と要素の個数の公式を使える。",
+      "命題の真偽を判定し、偽の命題には反例を挙げられる。条件を集合で表して必要条件・十分条件を判定できる。",
+      "命題の逆・裏・対偶をつくり、対偶を利用した証明と背理法による証明を書ける。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：「ならば」の正しさ",
+        "minutes": 10,
+        "activity": "日常の「〜ならば〜」の例で、正しい・正しくないを判定させ、反例の役割に気づかせる"
+      },
+      {
+        "phase": "集合",
+        "minutes": 20,
+        "activity": "集合の表し方、共通部分・和集合・補集合、ド・モルガンの法則、要素の個数（例題1）"
+      },
+      {
+        "phase": "命題と条件",
+        "minutes": 20,
+        "activity": "命題の真偽と反例、条件と集合の対応、条件の否定"
+      },
+      {
+        "phase": "必要条件・十分条件",
+        "minutes": 20,
+        "activity": "集合の包含関係で判定する（例題2）"
+      },
+      {
+        "phase": "逆・裏・対偶",
+        "minutes": 15,
+        "activity": "対偶の真偽が一致する理由と、対偶を利用した証明（例題3）"
+      },
+      {
+        "phase": "背理法",
+        "minutes": 10,
+        "activity": "$\\sqrt{2}$ が無理数であることの証明"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 5,
+        "activity": "確認問題3問、問題プリントA の課題指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "「ならば」はいつ正しいか",
+        "body": "「雨が降ったならば、地面がぬれる」は正しいと考えられるが、「地面がぬれているならば、雨が降った」は正しいとは限らない（打ち水をしたかもしれない）。このように、「ならば」でつながれた文の正しさは向きによって変わる。数学では、条件を満たすものの集まり（集合）を使うと、この正しさを図で判定できる。",
+        "bullets": [
+          "1つでも反例があれば「ならば」の文は偽である。",
+          "条件 $p$ を満たすものの集合を $P$ とすると、「$p\\Rightarrow q$」が真であることは $P\\subset Q$ と同じである。"
+        ],
+        "teacher_points": [
+          {
+            "point": "日常の例を2〜3個挙げ、逆向きにすると正しくなくなる例を生徒に考えさせる。",
+            "ask": "「〜ならば〜」の向きを逆にすると正しくなくなる例を挙げよ。",
+            "expect": "「正三角形ならば二等辺三角形」の逆。",
+            "timing": "導入の冒頭"
+          },
+          {
+            "point": "反例は「仮定を満たし、結論を満たさないもの」であることを最初にはっきり言葉で示す。",
+            "caution": "仮定を満たさない例を反例として挙げる誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "集合の演算",
+        "body": "集合 $A,\\ B$ について、$A$ と $B$ の両方に属する要素全体を共通部分 $A\\cap B$、少なくとも一方に属する要素全体を和集合 $A\\cup B$ という。全体集合 $U$ の要素のうち $A$ に属さないもの全体を $A$ の補集合 $\\overline{A}$ という。",
+        "formula": "$$A\\cap B=\\{x\\mid x\\in A\\ \\text{かつ}\\ x\\in B\\},\\quad A\\cup B=\\{x\\mid x\\in A\\ \\text{または}\\ x\\in B\\}$$",
+        "conditions": [
+          "$A$ のすべての要素が $B$ の要素であるとき、$A\\subset B$（$A$ は $B$ の部分集合）",
+          "要素をもたない集合を空集合といい、$\\emptyset$ で表す"
+        ],
+        "teacher_points": [
+          {
+            "point": "ベン図を必ずかき、$A\\cap B$、$A\\cup B$、$\\overline{A}$ を塗り分けて確認させる。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "ド・モルガンの法則と要素の個数",
+        "formula": "$$\\overline{A\\cup B}=\\overline{A}\\cap\\overline{B},\\qquad \\overline{A\\cap B}=\\overline{A}\\cup\\overline{B},\\qquad n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$$",
+        "conditions": [
+          "要素の個数の公式は、$A,\\ B$ が有限集合のときに使う",
+          "$A\\cap B=\\emptyset$ のときは $n(A\\cup B)=n(A)+n(B)$"
+        ],
+        "proof_steps": [
+          "$x\\in\\overline{A\\cup B}$ とは、「$x\\in A$ または $x\\in B$」ではないこと、すなわち「$x\\notin A$ かつ $x\\notin B$」である。",
+          "これは $x\\in\\overline{A}\\cap\\overline{B}$ と同じ意味なので、$\\overline{A\\cup B}=\\overline{A}\\cap\\overline{B}$。2つ目も同様に示せる。",
+          "$n(A)+n(B)$ では、$A\\cap B$ の要素を2回数えている。",
+          "そこで1回分の $n(A\\cap B)$ を引くと、$A\\cup B$ の要素をちょうど1回ずつ数えたことになる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "ド・モルガンの法則は「全体に線を引くと、$\\cup$ と $\\cap$ が入れかわる」と言語化させる。",
+            "ask": "$\\overline{A\\cap B}$ は $\\overline{A}\\cap\\overline{B}$ と等しいか。",
+            "expect": "等しくない。$\\overline{A}\\cup\\overline{B}$ と等しい。"
+          }
+        ]
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "命題・条件と必要条件・十分条件",
+        "body": "正しいか正しくないかが定まる文や式を命題という。2つの条件 $p,\\ q$ について、命題「$p\\Rightarrow q$」が真であるとき、$p$ は $q$ であるための十分条件、$q$ は $p$ であるための必要条件という。「$p\\Rightarrow q$」と「$q\\Rightarrow p$」がともに真のとき、$p$ は $q$ であるための必要十分条件である（$p\\iff q$）。",
+        "formula": "$$p\\Rightarrow q\\ \\text{が真}\\iff P\\subset Q\\quad(P,\\ Q\\ \\text{はそれぞれ}\\ p,\\ q\\ \\text{を満たすもの全体の集合})$$",
+        "conditions": [
+          "矢印の出発点にある方が十分条件、矢印の先にある方が必要条件",
+          "偽であることを示すには反例を1つ挙げればよい",
+          "条件の否定：「$p$ かつ $q$」の否定は「$\\overline{p}$ または $\\overline{q}$」"
+        ],
+        "teacher_points": [
+          {
+            "point": "「$p\\Rightarrow q$」の矢印をかき、「十分 → 必要」の向きを図で覚えさせる。",
+            "caution": "必要と十分を逆に答える誤りが最も多い。"
+          },
+          {
+            "point": "集合 $P$ が $Q$ に含まれる図を見せ、「小さい方が十分条件、大きい方が必要条件」と確認させる。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "対偶の真偽",
+        "formula": "$$p\\Rightarrow q\\ \\text{が真}\\iff \\overline{q}\\Rightarrow\\overline{p}\\ \\text{が真}$$",
+        "conditions": [
+          "逆「$q\\Rightarrow p$」、裏「$\\overline{p}\\Rightarrow\\overline{q}$」の真偽は、もとの命題と一致するとは限らない",
+          "逆と裏は互いに対偶なので、真偽が一致する"
+        ],
+        "proof_steps": [
+          "「$p\\Rightarrow q$」が真であることは $P\\subset Q$ と同値である。",
+          "$P\\subset Q$ のとき、$Q$ の外側にある要素は $P$ の外側にもある。すなわち $\\overline{Q}\\subset\\overline{P}$。",
+          "逆に $\\overline{Q}\\subset\\overline{P}$ なら、同じ理由で $P\\subset Q$。",
+          "$\\overline{Q}\\subset\\overline{P}$ は「$\\overline{q}\\Rightarrow\\overline{p}$」が真であることと同値。よって両者の真偽は一致する。"
+        ],
+        "teacher_points": [
+          {
+            "point": "ベン図で $P\\subset Q$ をかき、外側（補集合）どうしの包含関係が逆向きになることを示す。",
+            "timing": "対偶の導入時"
+          }
+        ]
+      },
+      {
+        "id": "pf1",
+        "kind": "proof",
+        "title": "背理法：$\\sqrt{2}$ は無理数である",
+        "proof_steps": [
+          "$\\sqrt{2}$ が有理数であると仮定すると、1以外に正の公約数をもたない自然数 $m,\\ n$ を用いて $\\sqrt{2}=\\dfrac{m}{n}$ と表せる。",
+          "両辺を2乗して分母を払うと $m^2=2n^2$。よって $m^2$ は偶数であり、$m$ も偶数である（$m$ が奇数なら $m^2$ も奇数になるから）。",
+          "$m=2k$（$k$ は自然数）とおくと $4k^2=2n^2$、すなわち $n^2=2k^2$。よって $n$ も偶数である。",
+          "$m,\\ n$ がともに偶数となり、1以外に正の公約数をもたないことに矛盾する。したがって $\\sqrt{2}$ は無理数である。"
+        ],
+        "body": "背理法は「結論を否定して仮定すると矛盾が生じる」ことを示す証明法である。結論が「〜でない」の形のとき（無理数である＝有理数でない）に特に有効である。",
+        "teacher_points": [
+          {
+            "point": "最初の仮定「既約分数で表せる」が、最後の矛盾の相手になっていることを矢印で板書して示す。",
+            "ask": "最後に出てきた矛盾は、どの仮定と食い違っているか。",
+            "expect": "$m,\\ n$ が1以外に公約数をもたないこと。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　倍数の個数",
+        "example": {
+          "problem": "1から100までの整数のうち、2または3で割り切れる数の個数を求めよ。",
+          "steps": [
+            "2の倍数の集合を $A$、3の倍数の集合を $B$ とする。$n(A)=50$、$n(B)=33$。",
+            "$A\\cap B$ は6の倍数の集合で、$100\\div6=16$ 余り $4$ より $n(A\\cap B)=16$。",
+            "$n(A\\cup B)=50+33-16=67$。"
+          ],
+          "answer": "$67$ 個",
+          "thinking": "「または」は和集合。2回数えた6の倍数を引く。"
+        },
+        "teacher_points": [
+          {
+            "point": "6の倍数を引く理由を、ベン図の重なりを指して説明させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$50+33=83$ 個とする",
+            "correct": "6の倍数を2回数えているので、$n(A\\cap B)=16$ を引く"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　必要条件・十分条件",
+        "example": {
+          "problem": "実数 $x$ について、$p$：$|x-1|<2$、$q$：$x<4$ とする。$p$ は $q$ であるための何条件か。",
+          "steps": [
+            "$P=\\{x\\mid -1<x<3\\}$、$Q=\\{x\\mid x<4\\}$。",
+            "$P\\subset Q$ なので「$p\\Rightarrow q$」は真。",
+            "$x=-5$ は $q$ を満たすが $p$ を満たさないので「$q\\Rightarrow p$」は偽。"
+          ],
+          "answer": "十分条件であるが必要条件ではない",
+          "thinking": "条件を集合（数直線上の範囲）に直し、どちらがどちらに含まれるかを見る。"
+        },
+        "teacher_points": [
+          {
+            "point": "数直線上に $P,\\ Q$ を上下にずらしてかき、包含関係を目で確かめさせる。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　対偶を利用した証明",
+        "example": {
+          "problem": "整数 $n$ について、$n^2$ が奇数ならば $n$ は奇数であることを証明せよ。",
+          "steps": [
+            "対偶「$n$ が偶数ならば $n^2$ は偶数」を示す。",
+            "$n$ が偶数のとき、整数 $k$ を用いて $n=2k$ と表せる。",
+            "$n^2=4k^2=2\\cdot2k^2$ で、$2k^2$ は整数なので $n^2$ は偶数。",
+            "対偶が真なので、もとの命題も真である。"
+          ],
+          "answer": "（証明は手順のとおり）",
+          "thinking": "「$n^2$ が奇数」から $n$ について直接言うのは難しい。$n$ についての条件から $n^2$ を調べる向き（対偶）なら計算できる。"
+        },
+        "teacher_points": [
+          {
+            "point": "答案の最初に「対偶を示す」と宣言し、最後に「対偶が真なのでもとの命題も真」と結ぶ形を徹底させる。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 集合",
+              "lines": [
+                "$A\\cap B$：かつ　$A\\cup B$：または",
+                "$\\overline{A\\cup B}=\\overline{A}\\cap\\overline{B}$",
+                "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$",
+                "例：$50+33-16=67$"
+              ]
+            },
+            {
+              "title": "② 必要・十分",
+              "lines": [
+                "$p\\Rightarrow q$ 真 $\\iff P\\subset Q$",
+                "$p$：十分条件　$q$：必要条件",
+                "偽 → 反例を1つ",
+                "例題2：$P\\subset Q$ → 十分"
+              ]
+            },
+            {
+              "title": "③ 対偶・背理法",
+              "lines": [
+                "逆 $q\\Rightarrow p$　裏 $\\overline{p}\\Rightarrow\\overline{q}$",
+                "対偶 $\\overline{q}\\Rightarrow\\overline{p}$（真偽一致）",
+                "背理法：結論を否定 → 矛盾",
+                "$\\sqrt{2}=\\dfrac{m}{n}$ → $m,\\ n$ ともに偶数"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "板書の②では、集合の包含図と矢印を並べてかき、十分・必要の位置関係を対応させる。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "反例を挙げる問題では、「仮定を満たすか」「結論を満たさないか」の2点を答案に明記させる。"
+          },
+          {
+            "point": "条件の否定では「かつ」と「または」、「すべて」と「ある」が入れかわることを、ド・モルガンの法則と結びつけて説明する。",
+            "ask": "「$x>0$ かつ $y>0$」の否定は何か。",
+            "expect": "「$x\\leqq0$ または $y\\leqq0$」"
+          },
+          {
+            "point": "$>$ の否定は $\\leqq$（$<$ ではない）ことを、数直線の境界の点で確認させる。",
+            "caution": "$x>2$ の否定を $x<2$ とする誤りが多い。"
+          },
+          {
+            "point": "背理法の答案では「〜と仮定する」「これは矛盾である」「したがって〜」の3つの言葉を必ず書かせる。",
+            "timing": "背理法の演習中"
+          },
+          {
+            "point": "逆が真であることを、もとの命題が真である根拠に使う誤り（逆と対偶の混同）を、問題プリントDで取り上げる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "「$x=1\\Rightarrow x^2=1$」が真なので、$x=1$ は $x^2=1$ であるための必要条件",
+            "correct": "矢印の出発点の $x=1$ は十分条件"
+          },
+          {
+            "wrong": "「すべての $x$ で $P$」の否定を「すべての $x$ で $P$ でない」とする",
+            "correct": "否定は「ある $x$ で $P$ でない」"
+          },
+          {
+            "wrong": "$\\overline{A\\cap B}=\\overline{A}\\cap\\overline{B}$",
+            "correct": "$\\overline{A\\cap B}=\\overline{A}\\cup\\overline{B}$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "$n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$。補集合はド・モルガンの法則で $\\cup$ と $\\cap$ が入れかわる。",
+          "「$p\\Rightarrow q$」が真 $\\iff P\\subset Q$。出発点が十分条件、矢印の先が必要条件。偽は反例1つで示す。",
+          "対偶はもとの命題と真偽が一致する。直接示しにくいときは対偶や背理法を使う。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "1から50までの整数のうち、3でも5でも割り切れない数の個数を求めよ。",
+            "a": "$n(A\\cup B)=16+10-3=23$ より $50-23=27$ 個"
+          },
+          {
+            "q": "実数 $x$ について、$x^2=9$ は $x=3$ であるための何条件か。",
+            "a": "必要条件であるが十分条件ではない（反例 $x=-3$）"
+          },
+          {
+            "q": "命題「$x>2$ ならば $x>1$」の対偶を答えよ。",
+            "a": "「$x\\leqq1$ ならば $x\\leqq2$」"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "bd88f7afdb60aabe8d046c36300683b26ebd1dc5bfa0d266cba95dabe95b5158"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:04:03+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "e1504a65d5facc15224caeb0e209cce51150f07fc26bfddff95a4219889e831e"
+  }
+}

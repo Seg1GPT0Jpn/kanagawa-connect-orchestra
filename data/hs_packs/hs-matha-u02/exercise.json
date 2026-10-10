@@ -1,0 +1,5342 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHA-U02-EX",
+  "title": "図形の性質　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_a",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATHA-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATHA-U02-PACK",
+  "pair_set_id": "HS-MATHA-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G3-U05",
+        "point": "相似",
+        "title": "相似な図形"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U06",
+        "point": "円周角の定理",
+        "title": "円"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHC-U01",
+        "point": "位置ベクトルによる図形の証明",
+        "title": "ベクトル"
+      }
+    ],
+    "readiness_check": [
+      "平行線と線分の比、三角形の相似条件（中学3年）を使える。",
+      "円周角の定理とその逆（中学3年）を説明できる。",
+      "三角形の面積比を「底辺の比」「高さの比」で考えられる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHA-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。中線 AM の長さが $9$ のとき、線分 GM の長さを求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$\\mathrm{AG}:\\mathrm{GM}=2:1$ より $\\mathrm{GM}=\\dfrac{1}{3}\\times9=3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,3)*9",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-centroid_ratio",
+      "explanation_detail": {
+        "approach": "重心は3本の中線の交点で、各中線を頂点の側から $2:1$ に内分する。",
+        "steps": [
+          "$\\mathrm{AG}:\\mathrm{GM}=2:1$。",
+          "GM は中線全体の $\\dfrac{1}{3}$ なので $3$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AG}=6$、$\\mathrm{GM}=3$ を両方求め、和が $9$ になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$2:1$ の比を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しい長さを求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "頂点側と中点側の比を逆にする（$\\mathrm{AG}:\\mathrm{GM}=1:2$ とする）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。中線 AM の長さが $6$ のとき、線分 AG の長さを求めなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$\\mathrm{AG}:\\mathrm{GM}=2:1$ より $\\mathrm{AG}=\\dfrac{2}{3}\\times6=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(2,3)*6",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-centroid_ratio",
+      "explanation_detail": {
+        "approach": "重心は3本の中線の交点で、各中線を頂点の側から $2:1$ に内分する。",
+        "steps": [
+          "$\\mathrm{AG}:\\mathrm{GM}=2:1$。",
+          "AG は中線全体の $\\dfrac{2}{3}$ なので $4$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AG}=4$、$\\mathrm{GM}=2$ を両方求め、和が $6$ になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$2:1$ の比を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しい長さを求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "頂点側と中点側の比を逆にする（$\\mathrm{AG}:\\mathrm{GM}=1:2$ とする）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。中線 AM の長さが $24$ のとき、線分 GM の長さを求めなさい。",
+      "answer": {
+        "value": "8"
+      },
+      "explanation": "$\\mathrm{AG}:\\mathrm{GM}=2:1$ より $\\mathrm{GM}=\\dfrac{1}{3}\\times24=8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,3)*24",
+        "expected": "8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-centroid_ratio",
+      "explanation_detail": {
+        "approach": "重心は3本の中線の交点で、各中線を頂点の側から $2:1$ に内分する。",
+        "steps": [
+          "$\\mathrm{AG}:\\mathrm{GM}=2:1$。",
+          "GM は中線全体の $\\dfrac{1}{3}$ なので $8$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AG}=16$、$\\mathrm{GM}=8$ を両方求め、和が $24$ になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$2:1$ の比を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しい長さを求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "頂点側と中点側の比を逆にする（$\\mathrm{AG}:\\mathrm{GM}=1:2$ とする）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。中線 AM の長さが $18$ のとき、線分 GM の長さを求めなさい。",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "$\\mathrm{AG}:\\mathrm{GM}=2:1$ より $\\mathrm{GM}=\\dfrac{1}{3}\\times18=6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,3)*18",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-centroid_ratio",
+      "explanation_detail": {
+        "approach": "重心は3本の中線の交点で、各中線を頂点の側から $2:1$ に内分する。",
+        "steps": [
+          "$\\mathrm{AG}:\\mathrm{GM}=2:1$。",
+          "GM は中線全体の $\\dfrac{1}{3}$ なので $6$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AG}=12$、$\\mathrm{GM}=6$ を両方求め、和が $18$ になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$2:1$ の比を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "正しい長さを求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "頂点側と中点側の比を逆にする（$\\mathrm{AG}:\\mathrm{GM}=1:2$ とする）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{AB}=6$、$\\mathrm{BC}=7$、$\\mathrm{CA}=8$ の $\\triangle\\mathrm{ABC}$ において、$\\angle\\mathrm{A}$ の二等分線が辺 BC と交わる点を D とする。線分 DC の長さを求めなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=6:8$ より $\\mathrm{DC}=7\\times\\dfrac{8}{14}=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(7*8,14)",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-bisector_ratio",
+      "explanation_detail": {
+        "approach": "内角の二等分線は、対辺を「隣り合う2辺の比」に内分する。B 側の線分には B 側の辺 AB が対応する。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=6:8$。",
+          "$\\mathrm{DC}=7\\times\\dfrac{8}{6+8}=4$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{BD}=3$、$\\mathrm{DC}=4$ の和が $\\mathrm{BC}=7$ になり、比が $3:4$ であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "比 $\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$ を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "長さを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}$ と対応を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{AB}=12$、$\\mathrm{BC}=10$、$\\mathrm{CA}=3$ の $\\triangle\\mathrm{ABC}$ において、$\\angle\\mathrm{A}$ の二等分線が辺 BC と交わる点を D とする。線分 BD の長さを求めなさい。",
+      "answer": {
+        "value": "8"
+      },
+      "explanation": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=12:3$ より $\\mathrm{BD}=10\\times\\dfrac{12}{15}=8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(10*12,15)",
+        "expected": "8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-bisector_ratio",
+      "explanation_detail": {
+        "approach": "内角の二等分線は、対辺を「隣り合う2辺の比」に内分する。B 側の線分には B 側の辺 AB が対応する。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=12:3$。",
+          "$\\mathrm{BD}=10\\times\\dfrac{12}{12+3}=8$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{BD}=8$、$\\mathrm{DC}=2$ の和が $\\mathrm{BC}=10$ になり、比が $4:1$ であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "比 $\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$ を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "長さを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}$ と対応を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{AB}=5$、$\\mathrm{BC}=12$、$\\mathrm{CA}=10$ の $\\triangle\\mathrm{ABC}$ において、$\\angle\\mathrm{A}$ の二等分線が辺 BC と交わる点を D とする。線分 DC の長さを求めなさい。",
+      "answer": {
+        "value": "8"
+      },
+      "explanation": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=5:10$ より $\\mathrm{DC}=12\\times\\dfrac{10}{15}=8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(12*10,15)",
+        "expected": "8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-bisector_ratio",
+      "explanation_detail": {
+        "approach": "内角の二等分線は、対辺を「隣り合う2辺の比」に内分する。B 側の線分には B 側の辺 AB が対応する。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=5:10$。",
+          "$\\mathrm{DC}=12\\times\\dfrac{10}{5+10}=8$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{BD}=4$、$\\mathrm{DC}=8$ の和が $\\mathrm{BC}=12$ になり、比が $1:2$ であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "比 $\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$ を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "長さを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}$ と対応を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{AB}=10$、$\\mathrm{BC}=6$、$\\mathrm{CA}=5$ の $\\triangle\\mathrm{ABC}$ において、$\\angle\\mathrm{A}$ の二等分線が辺 BC と交わる点を D とする。線分 BD の長さを求めなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=10:5$ より $\\mathrm{BD}=6\\times\\dfrac{10}{15}=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(6*10,15)",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-bisector_ratio",
+      "explanation_detail": {
+        "approach": "内角の二等分線は、対辺を「隣り合う2辺の比」に内分する。B 側の線分には B 側の辺 AB が対応する。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=10:5$。",
+          "$\\mathrm{BD}=6\\times\\dfrac{10}{10+5}=4$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{BD}=4$、$\\mathrm{DC}=2$ の和が $\\mathrm{BC}=6$ になり、比が $2:1$ であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "比 $\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}$ を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "長さを正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}$ と対応を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\triangle\\mathrm{ABC}$ の五心のうち、「各中線を頂点の側から $2:1$ に内分する」という性質をもつ点を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "重心"
+        },
+        {
+          "label": "イ",
+          "text": "内心"
+        },
+        {
+          "label": "ウ",
+          "text": "外心"
+        },
+        {
+          "label": "エ",
+          "text": "傍心"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "重心は3本の中線の交点である。重心は各中線を頂点の側から $2:1$ に内分する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-center_name",
+      "explanation_detail": {
+        "approach": "五心は「何の交点か（定義）」と「何から等距離か（性質）」をセットで覚える。",
+        "steps": [
+          "問われているのは「各中線を頂点の側から $2:1$ に内分する」。",
+          "これは重心の性質である。"
+        ],
+        "alternatives": [
+          "内心は内接円の中心（辺に接する円）、外心は外接円の中心（頂点を通る円）と、円と結びつけて区別するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい名称を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "内心は3つの内角の二等分線の交点である。内心は「3辺から等しい距離にある」点である。",
+          "misconception": "五心の定義の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "外心は3辺の垂直二等分線の交点である。外心は「3つの頂点から等しい距離にある」点である。",
+          "misconception": "五心の定義の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "傍心は1つの内角の二等分線と、他の2つの頂点における外角の二等分線の交点である。",
+          "misconception": "五心の定義の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\triangle\\mathrm{ABC}$ の五心のうち、「3辺から等しい距離にある」という性質をもつ点を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "内心"
+        },
+        {
+          "label": "イ",
+          "text": "傍心"
+        },
+        {
+          "label": "ウ",
+          "text": "重心"
+        },
+        {
+          "label": "エ",
+          "text": "外心"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "内心は3つの内角の二等分線の交点である。内心は3辺から等しい距離にある。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-center_name",
+      "explanation_detail": {
+        "approach": "五心は「何の交点か（定義）」と「何から等距離か（性質）」をセットで覚える。",
+        "steps": [
+          "問われているのは「3辺から等しい距離にある」。",
+          "これは内心の性質である。"
+        ],
+        "alternatives": [
+          "内心は内接円の中心（辺に接する円）、外心は外接円の中心（頂点を通る円）と、円と結びつけて区別するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい名称を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "傍心は1つの内角の二等分線と、他の2つの頂点における外角の二等分線の交点である。",
+          "misconception": "五心の定義の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "重心は3本の中線の交点である。重心は「各中線を頂点の側から $2:1$ に内分する」点である。",
+          "misconception": "五心の定義の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "外心は3辺の垂直二等分線の交点である。外心は「3つの頂点から等しい距離にある」点である。",
+          "misconception": "五心の定義の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$\\triangle\\mathrm{ABC}$ において、3つの内角の二等分線は1点で交わる。この交点の名称として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "重心"
+        },
+        {
+          "label": "イ",
+          "text": "内心"
+        },
+        {
+          "label": "ウ",
+          "text": "垂心"
+        },
+        {
+          "label": "エ",
+          "text": "外心"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "内心は3つの内角の二等分線の交点である。内心は3辺から等しい距離にある。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-center_name",
+      "explanation_detail": {
+        "approach": "五心は「何の交点か（定義）」と「何から等距離か（性質）」をセットで覚える。",
+        "steps": [
+          "問われているのは「3つの内角の二等分線」。",
+          "これは内心の定義である。"
+        ],
+        "alternatives": [
+          "内心は内接円の中心（辺に接する円）、外心は外接円の中心（頂点を通る円）と、円と結びつけて区別するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しい名称を選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "重心は3本の中線の交点である。重心は「各中線を頂点の側から $2:1$ に内分する」点である。",
+          "misconception": "五心の定義の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "垂心は各頂点から対辺またはその延長に下ろした3本の垂線の交点である。",
+          "misconception": "五心の定義の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "外心は3辺の垂直二等分線の交点である。外心は「3つの頂点から等しい距離にある」点である。",
+          "misconception": "五心の定義の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "四角形 ABCD は円に内接し、$\\angle\\mathrm{BAD}=76^\\circ$ である。$\\angle\\mathrm{BCD}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "104",
+        "display": "$104^\\circ$"
+      },
+      "explanation": "円に内接する四角形では対角の和は $180^\\circ$ので $104^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180-76",
+        "expected": "104"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-cyclic_quad_angle",
+      "explanation_detail": {
+        "approach": "円に内接する四角形では、向かい合う角（対角）の和が $180^\\circ$。外角は隣の内角の対角に等しい。",
+        "steps": [
+          "求める角と $76^\\circ$ の角の位置関係を確認する（向かい合う角）。",
+          "対角の和は $180^\\circ$より $104^\\circ$。"
+        ],
+        "alternatives": [
+          "対角の和 $180^\\circ$ は、2つの円周角に対する中心角の和が $360^\\circ$ であることから確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内接四角形の性質を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "隣り合う角の和を $180^\\circ$ と考える。",
+          "外角を $180^\\circ$ から引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "四角形 ABCD は円に内接し、$\\angle\\mathrm{BAD}=120^\\circ$ である。辺 BC の C を越える延長上に点 E をとるとき、$\\angle\\mathrm{DCE}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "120",
+        "display": "$120^\\circ$"
+      },
+      "explanation": "円に内接する四角形では外角はその内対角に等しいので $120^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "120",
+        "expected": "120"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-cyclic_quad_angle",
+      "explanation_detail": {
+        "approach": "円に内接する四角形では、向かい合う角（対角）の和が $180^\\circ$。外角は隣の内角の対角に等しい。",
+        "steps": [
+          "求める角と $120^\\circ$ の角の位置関係を確認する（外角と内対角）。",
+          "外角はその内対角に等しいより $120^\\circ$。"
+        ],
+        "alternatives": [
+          "対角の和 $180^\\circ$ は、2つの円周角に対する中心角の和が $360^\\circ$ であることから確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内接四角形の性質を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "隣り合う角の和を $180^\\circ$ と考える。",
+          "外角を $180^\\circ$ から引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "四角形 ABCD は円に内接し、$\\angle\\mathrm{BAD}=98^\\circ$ である。$\\angle\\mathrm{BCD}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "82",
+        "display": "$82^\\circ$"
+      },
+      "explanation": "円に内接する四角形では対角の和は $180^\\circ$ので $82^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180-98",
+        "expected": "82"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-cyclic_quad_angle",
+      "explanation_detail": {
+        "approach": "円に内接する四角形では、向かい合う角（対角）の和が $180^\\circ$。外角は隣の内角の対角に等しい。",
+        "steps": [
+          "求める角と $98^\\circ$ の角の位置関係を確認する（向かい合う角）。",
+          "対角の和は $180^\\circ$より $82^\\circ$。"
+        ],
+        "alternatives": [
+          "対角の和 $180^\\circ$ は、2つの円周角に対する中心角の和が $360^\\circ$ であることから確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内接四角形の性質を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "隣り合う角の和を $180^\\circ$ と考える。",
+          "外角を $180^\\circ$ から引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円に内接する四角形 ABCD において、$\\angle\\mathrm{ABC}=72^\\circ$ のとき、$\\angle\\mathrm{ADC}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "108",
+        "display": "$108^\\circ$"
+      },
+      "explanation": "円に内接する四角形では対角の和は $180^\\circ$ので $108^\\circ$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180-72",
+        "expected": "108"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-cyclic_quad_angle",
+      "explanation_detail": {
+        "approach": "円に内接する四角形では、向かい合う角（対角）の和が $180^\\circ$。外角は隣の内角の対角に等しい。",
+        "steps": [
+          "求める角と $72^\\circ$ の角の位置関係を確認する（向かい合う角）。",
+          "対角の和は $180^\\circ$より $108^\\circ$。"
+        ],
+        "alternatives": [
+          "対角の和 $180^\\circ$ は、2つの円周角に対する中心角の和が $360^\\circ$ であることから確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内接四角形の性質を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "隣り合う角の和を $180^\\circ$ と考える。",
+          "外角を $180^\\circ$ から引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円の外部の点 P を通る2本の直線が、円とそれぞれ2点 A, B および2点 C, D で交わる（$\\mathrm{PA}<\\mathrm{PB}$、$\\mathrm{PC}<\\mathrm{PD}$）。$\\mathrm{PA}=7$、$\\mathrm{PB}=10$、$\\mathrm{PC}=2$ のとき、PD の長さを求めなさい。",
+      "answer": {
+        "value": "35"
+      },
+      "explanation": "方べきの定理より $\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$、$7\\times10=2\\,\\mathrm{PD}$ より $\\mathrm{PD}=35$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(7*10,2)",
+        "expected": "35"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-power_chords",
+      "explanation_detail": {
+        "approach": "点 P を通る2直線が円と交わるとき、P から交点までの距離の積は一定（方べきの定理）。P が円の内部でも外部でも同じ式。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$。",
+          "$70=2\\,\\mathrm{PD}$。",
+          "$\\mathrm{PD}=35$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$ を示し、$\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$ から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "PD を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さ AB や CD を使ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円の弦 AB と弦 CD が円の内部の点 P で交わっている。$\\mathrm{PA}=2$、$\\mathrm{PB}=12$、$\\mathrm{PC}=8$ のとき、線分 PD の長さを求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "方べきの定理より $\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$、$2\\times12=8\\,\\mathrm{PD}$ より $\\mathrm{PD}=3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(2*12,8)",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-power_chords",
+      "explanation_detail": {
+        "approach": "点 P を通る2直線が円と交わるとき、P から交点までの距離の積は一定（方べきの定理）。P が円の内部でも外部でも同じ式。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$。",
+          "$24=8\\,\\mathrm{PD}$。",
+          "$\\mathrm{PD}=3$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$ を示し、$\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$ から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "PD を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さ AB や CD を使ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円の弦 AB と弦 CD が円の内部の点 P で交わっている。$\\mathrm{PA}=10$、$\\mathrm{PB}=12$、$\\mathrm{PC}=5$ のとき、線分 PD の長さを求めなさい。",
+      "answer": {
+        "value": "24"
+      },
+      "explanation": "方べきの定理より $\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$、$10\\times12=5\\,\\mathrm{PD}$ より $\\mathrm{PD}=24$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(10*12,5)",
+        "expected": "24"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-power_chords",
+      "explanation_detail": {
+        "approach": "点 P を通る2直線が円と交わるとき、P から交点までの距離の積は一定（方べきの定理）。P が円の内部でも外部でも同じ式。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$。",
+          "$120=5\\,\\mathrm{PD}$。",
+          "$\\mathrm{PD}=24$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$ を示し、$\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$ から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "PD を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さ AB や CD を使ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円の外部の点 P を通る2本の直線が、円とそれぞれ2点 A, B および2点 C, D で交わる（$\\mathrm{PA}<\\mathrm{PB}$、$\\mathrm{PC}<\\mathrm{PD}$）。$\\mathrm{PA}=5$、$\\mathrm{PB}=12$、$\\mathrm{PC}=4$ のとき、PD の長さを求めなさい。",
+      "answer": {
+        "value": "15"
+      },
+      "explanation": "方べきの定理より $\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$、$5\\times12=4\\,\\mathrm{PD}$ より $\\mathrm{PD}=15$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(5*12,4)",
+        "expected": "15"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-power_chords",
+      "explanation_detail": {
+        "approach": "点 P を通る2直線が円と交わるとき、P から交点までの距離の積は一定（方べきの定理）。P が円の内部でも外部でも同じ式。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$。",
+          "$60=4\\,\\mathrm{PD}$。",
+          "$\\mathrm{PD}=15$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$ を示し、$\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$ から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "PD を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さ AB や CD を使ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円の外部の点 P を通る2本の直線が、円とそれぞれ2点 A, B および2点 C, D で交わる（$\\mathrm{PA}<\\mathrm{PB}$、$\\mathrm{PC}<\\mathrm{PD}$）。$\\mathrm{PA}=8$、$\\mathrm{PB}=11$、$\\mathrm{PC}=4$ のとき、PD の長さを求めなさい。",
+      "answer": {
+        "value": "22"
+      },
+      "explanation": "方べきの定理より $\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$、$8\\times11=4\\,\\mathrm{PD}$ より $\\mathrm{PD}=22$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(8*11,4)",
+        "expected": "22"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-power_chords",
+      "explanation_detail": {
+        "approach": "点 P を通る2直線が円と交わるとき、P から交点までの距離の積は一定（方べきの定理）。P が円の内部でも外部でも同じ式。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$。",
+          "$88=4\\,\\mathrm{PD}$。",
+          "$\\mathrm{PD}=22$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$ を示し、$\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$ から求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "PD を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さ AB や CD を使ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内部の点 O について、直線 AO、BO、CO が辺 BC、CA、AB と交わる点をそれぞれ D、E、F とする。$\\mathrm{BD}:\\mathrm{DC}=2:1$、$\\mathrm{CE}:\\mathrm{EA}=4:1$ のとき、$\\mathrm{AF}:\\mathrm{FB}$ を最も簡単な整数の比で求めなさい。",
+      "figure": {
+        "alt": "三角形ABCと、1点Oで交わる3本の線分AD・BE・CF",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 160\" width=\"216\" height=\"160\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"200\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"100.57\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"127.56\" y2=\"75.82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"39.63\" y2=\"81\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"56.68\" y=\"9.51\">A</text><text x=\"2.48\" y=\"153.51\">B</text><text x=\"206.22\" y=\"152.06\">C</text><text x=\"98.99\" y=\"158.73\">D</text><text x=\"132.67\" y=\"73.66\">E</text><text x=\"25.36\" y=\"81.05\">F</text><text x=\"73.31\" y=\"101.39\">O</text></svg>"
+      },
+      "answer": {
+        "value": "$\\mathrm{AF}:\\mathrm{FB}=1:8$",
+        "accepted": [
+          "1:8"
+        ]
+      },
+      "explanation": "チェバの定理 $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ に代入すると $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{1}{8}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1*1,2*4)",
+        "expected": "Rational(1,8)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-ceva",
+      "explanation_detail": {
+        "approach": "3本の直線が1点 O で交わるので、チェバの定理を使う。A → F → B → D → C → E → A の順に比をかけると $1$ になる。",
+        "steps": [
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ を書く。",
+          "分かっている2つの比 $\\dfrac{2}{1}$、$\\dfrac{4}{1}$ を代入する。",
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{1\\cdot1}{2\\cdot4}=\\dfrac{1}{8}$ より $1:8$。"
+        ],
+        "alternatives": [
+          "面積比で確かめる：$\\triangle\\mathrm{OAB}$、$\\triangle\\mathrm{OBC}$、$\\triangle\\mathrm{OCA}$ の面積の比を文字でおき、各辺の比を面積比で表すと同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "チェバの定理を正しい順序で立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算し、最も簡単な整数の比にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "比をたどる順序を崩して、分子と分母を逆に代入する。",
+          "求めた分数の分子・分母を比の前後に逆に対応させる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内部の点 O について、直線 AO、BO、CO が辺 BC、CA、AB と交わる点をそれぞれ D、E、F とする。$\\mathrm{AF}:\\mathrm{FB}=1:2$、$\\mathrm{CE}:\\mathrm{EA}=5:1$ のとき、$\\mathrm{BD}:\\mathrm{DC}$ を最も簡単な整数の比で求めなさい。",
+      "figure": {
+        "alt": "三角形ABCと、1点Oで交わる3本の線分AD・BE・CF",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 160\" width=\"216\" height=\"160\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"200\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"100.57\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"127.56\" y2=\"75.82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"39.63\" y2=\"81\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"56.68\" y=\"9.51\">A</text><text x=\"2.48\" y=\"153.51\">B</text><text x=\"206.22\" y=\"152.06\">C</text><text x=\"98.99\" y=\"158.73\">D</text><text x=\"132.67\" y=\"73.66\">E</text><text x=\"25.36\" y=\"81.05\">F</text><text x=\"73.31\" y=\"101.39\">O</text></svg>"
+      },
+      "answer": {
+        "value": "$\\mathrm{BD}:\\mathrm{DC}=2:5$",
+        "accepted": [
+          "2:5"
+        ]
+      },
+      "explanation": "チェバの定理 $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ に代入すると $\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}=\\dfrac{2}{5}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(2*1,1*5)",
+        "expected": "Rational(2,5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-ceva",
+      "explanation_detail": {
+        "approach": "3本の直線が1点 O で交わるので、チェバの定理を使う。A → F → B → D → C → E → A の順に比をかけると $1$ になる。",
+        "steps": [
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ を書く。",
+          "分かっている2つの比 $\\dfrac{1}{2}$、$\\dfrac{5}{1}$ を代入する。",
+          "$\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}=\\dfrac{2\\cdot1}{1\\cdot5}=\\dfrac{2}{5}$ より $2:5$。"
+        ],
+        "alternatives": [
+          "面積比で確かめる：$\\triangle\\mathrm{OAB}$、$\\triangle\\mathrm{OBC}$、$\\triangle\\mathrm{OCA}$ の面積の比を文字でおき、各辺の比を面積比で表すと同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "チェバの定理を正しい順序で立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算し、最も簡単な整数の比にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "比をたどる順序を崩して、分子と分母を逆に代入する。",
+          "求めた分数の分子・分母を比の前後に逆に対応させる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内部の点 O について、直線 AO、BO、CO が辺 BC、CA、AB と交わる点をそれぞれ D、E、F とする。$\\mathrm{BD}:\\mathrm{DC}=5:3$、$\\mathrm{CE}:\\mathrm{EA}=1:3$ のとき、$\\mathrm{AF}:\\mathrm{FB}$ を最も簡単な整数の比で求めなさい。",
+      "figure": {
+        "alt": "三角形ABCと、1点Oで交わる3本の線分AD・BE・CF",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 160\" width=\"216\" height=\"160\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"200\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"100.57\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"127.56\" y2=\"75.82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"39.63\" y2=\"81\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"56.68\" y=\"9.51\">A</text><text x=\"2.48\" y=\"153.51\">B</text><text x=\"206.22\" y=\"152.06\">C</text><text x=\"98.99\" y=\"158.73\">D</text><text x=\"132.67\" y=\"73.66\">E</text><text x=\"25.36\" y=\"81.05\">F</text><text x=\"73.31\" y=\"101.39\">O</text></svg>"
+      },
+      "answer": {
+        "value": "$\\mathrm{AF}:\\mathrm{FB}=9:5$",
+        "accepted": [
+          "9:5"
+        ]
+      },
+      "explanation": "チェバの定理 $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ に代入すると $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{9}{5}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(3*3,5*1)",
+        "expected": "Rational(9,5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-ceva",
+      "explanation_detail": {
+        "approach": "3本の直線が1点 O で交わるので、チェバの定理を使う。A → F → B → D → C → E → A の順に比をかけると $1$ になる。",
+        "steps": [
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ を書く。",
+          "分かっている2つの比 $\\dfrac{5}{3}$、$\\dfrac{1}{3}$ を代入する。",
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{3\\cdot3}{5\\cdot1}=\\dfrac{9}{5}$ より $9:5$。"
+        ],
+        "alternatives": [
+          "面積比で確かめる：$\\triangle\\mathrm{OAB}$、$\\triangle\\mathrm{OBC}$、$\\triangle\\mathrm{OCA}$ の面積の比を文字でおき、各辺の比を面積比で表すと同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "チェバの定理を正しい順序で立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算し、最も簡単な整数の比にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "比をたどる順序を崩して、分子と分母を逆に代入する。",
+          "求めた分数の分子・分母を比の前後に逆に対応させる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内部の点 O について、直線 AO、BO、CO が辺 BC、CA、AB と交わる点をそれぞれ D、E、F とする。$\\mathrm{BD}:\\mathrm{DC}=1:5$、$\\mathrm{CE}:\\mathrm{EA}=1:3$ のとき、$\\mathrm{AF}:\\mathrm{FB}$ を最も簡単な整数の比で求めなさい。",
+      "figure": {
+        "alt": "三角形ABCと、1点Oで交わる3本の線分AD・BE・CF",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 160\" width=\"216\" height=\"160\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"200\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"100.57\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"127.56\" y2=\"75.82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"39.63\" y2=\"81\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"56.68\" y=\"9.51\">A</text><text x=\"2.48\" y=\"153.51\">B</text><text x=\"206.22\" y=\"152.06\">C</text><text x=\"98.99\" y=\"158.73\">D</text><text x=\"132.67\" y=\"73.66\">E</text><text x=\"25.36\" y=\"81.05\">F</text><text x=\"73.31\" y=\"101.39\">O</text></svg>"
+      },
+      "answer": {
+        "value": "$\\mathrm{AF}:\\mathrm{FB}=15:1$",
+        "accepted": [
+          "15:1"
+        ]
+      },
+      "explanation": "チェバの定理 $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ に代入すると $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{15}{1}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(5*3,1*1)",
+        "expected": "Rational(15,1)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-ceva",
+      "explanation_detail": {
+        "approach": "3本の直線が1点 O で交わるので、チェバの定理を使う。A → F → B → D → C → E → A の順に比をかけると $1$ になる。",
+        "steps": [
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ を書く。",
+          "分かっている2つの比 $\\dfrac{1}{5}$、$\\dfrac{1}{3}$ を代入する。",
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{5\\cdot3}{1\\cdot1}=\\dfrac{15}{1}$ より $15:1$。"
+        ],
+        "alternatives": [
+          "面積比で確かめる：$\\triangle\\mathrm{OAB}$、$\\triangle\\mathrm{OBC}$、$\\triangle\\mathrm{OCA}$ の面積の比を文字でおき、各辺の比を面積比で表すと同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "チェバの定理を正しい順序で立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算し、最も簡単な整数の比にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "比をたどる順序を崩して、分子と分母を逆に代入する。",
+          "求めた分数の分子・分母を比の前後に逆に対応させる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内部の点 O について、直線 AO、BO、CO が辺 BC、CA、AB と交わる点をそれぞれ D、E、F とする。$\\mathrm{BD}:\\mathrm{DC}=1:3$、$\\mathrm{CE}:\\mathrm{EA}=1:4$ のとき、$\\mathrm{AF}:\\mathrm{FB}$ を最も簡単な整数の比で求めなさい。",
+      "figure": {
+        "alt": "三角形ABCと、1点Oで交わる3本の線分AD・BE・CF",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 216 160\" width=\"216\" height=\"160\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"200\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"100.57\" y2=\"144\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"144\" x2=\"127.56\" y2=\"75.82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"200\" y1=\"144\" x2=\"39.63\" y2=\"81\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"56.68\" y=\"9.51\">A</text><text x=\"2.48\" y=\"153.51\">B</text><text x=\"206.22\" y=\"152.06\">C</text><text x=\"98.99\" y=\"158.73\">D</text><text x=\"132.67\" y=\"73.66\">E</text><text x=\"25.36\" y=\"81.05\">F</text><text x=\"73.31\" y=\"101.39\">O</text></svg>"
+      },
+      "answer": {
+        "value": "$\\mathrm{AF}:\\mathrm{FB}=12:1$",
+        "accepted": [
+          "12:1"
+        ]
+      },
+      "explanation": "チェバの定理 $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ に代入すると $\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{12}{1}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(3*4,1*1)",
+        "expected": "Rational(12,1)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-ceva",
+      "explanation_detail": {
+        "approach": "3本の直線が1点 O で交わるので、チェバの定理を使う。A → F → B → D → C → E → A の順に比をかけると $1$ になる。",
+        "steps": [
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}\\cdot\\dfrac{\\mathrm{BD}}{\\mathrm{DC}}\\cdot\\dfrac{\\mathrm{CE}}{\\mathrm{EA}}=1$ を書く。",
+          "分かっている2つの比 $\\dfrac{1}{3}$、$\\dfrac{1}{4}$ を代入する。",
+          "$\\dfrac{\\mathrm{AF}}{\\mathrm{FB}}=\\dfrac{3\\cdot4}{1\\cdot1}=\\dfrac{12}{1}$ より $12:1$。"
+        ],
+        "alternatives": [
+          "面積比で確かめる：$\\triangle\\mathrm{OAB}$、$\\triangle\\mathrm{OBC}$、$\\triangle\\mathrm{OCA}$ の面積の比を文字でおき、各辺の比を面積比で表すと同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "チェバの定理を正しい順序で立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算し、最も簡単な整数の比にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "比をたどる順序を崩して、分子と分母を逆に代入する。",
+          "求めた分数の分子・分母を比の前後に逆に対応させる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB を $5:1$ に内分する点を R、辺 AC を $4:1$ に内分する点を Q とする。直線 RQ と直線 BC の交点を P とするとき、$\\mathrm{BP}:\\mathrm{PC}$ を最も簡単な整数の比で求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BP}:\\mathrm{PC}=4:5$",
+        "accepted": [
+          "4:5"
+        ]
+      },
+      "explanation": "メネラウスの定理 $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{1}{4}\\cdot\\dfrac{5}{1}=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1*4,5*1)",
+        "expected": "Rational(4,5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus",
+      "explanation_detail": {
+        "approach": "三角形 ABC を1本の直線 PQR が横切っているので、メネラウスの定理を使う。P は辺 BC の延長上にある。",
+        "steps": [
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。",
+          "$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=\\dfrac{1}{4}$、$\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{5}{1}$ を代入する。",
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=\\dfrac{1\\cdot4}{5\\cdot1}$ より $4:5$（P は B の外側にある）。"
+        ],
+        "alternatives": [
+          "C を通り直線 RQ に平行な直線を引き、平行線と線分の比を2回使っても求められる（メネラウスの定理の証明と同じ考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "メネラウスの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "CQ:QA を AQ:QC のまま代入してしまう（与えられた比の向きの確認不足）。",
+          "外分点 P を内分点と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB を $1:4$ に内分する点を R、辺 AC を $4:1$ に内分する点を Q とする。直線 RQ と直線 BC の交点を P とするとき、$\\mathrm{BP}:\\mathrm{PC}$ を最も簡単な整数の比で求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BP}:\\mathrm{PC}=16:1$",
+        "accepted": [
+          "16:1"
+        ]
+      },
+      "explanation": "メネラウスの定理 $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{1}{4}\\cdot\\dfrac{1}{4}=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(4*4,1*1)",
+        "expected": "Rational(16,1)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus",
+      "explanation_detail": {
+        "approach": "三角形 ABC を1本の直線 PQR が横切っているので、メネラウスの定理を使う。P は辺 BC の延長上にある。",
+        "steps": [
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。",
+          "$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=\\dfrac{1}{4}$、$\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{1}{4}$ を代入する。",
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=\\dfrac{4\\cdot4}{1\\cdot1}$ より $16:1$（P は C の外側にある）。"
+        ],
+        "alternatives": [
+          "C を通り直線 RQ に平行な直線を引き、平行線と線分の比を2回使っても求められる（メネラウスの定理の証明と同じ考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "メネラウスの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "CQ:QA を AQ:QC のまま代入してしまう（与えられた比の向きの確認不足）。",
+          "外分点 P を内分点と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB を $2:5$ に内分する点を R、辺 AC を $4:5$ に内分する点を Q とする。直線 RQ と直線 BC の交点を P とするとき、$\\mathrm{BP}:\\mathrm{PC}$ を最も簡単な整数の比で求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BP}:\\mathrm{PC}=2:1$",
+        "accepted": [
+          "2:1"
+        ]
+      },
+      "explanation": "メネラウスの定理 $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{5}{4}\\cdot\\dfrac{2}{5}=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(5*4,2*5)",
+        "expected": "Rational(20,10)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus",
+      "explanation_detail": {
+        "approach": "三角形 ABC を1本の直線 PQR が横切っているので、メネラウスの定理を使う。P は辺 BC の延長上にある。",
+        "steps": [
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。",
+          "$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=\\dfrac{5}{4}$、$\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{2}{5}$ を代入する。",
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=\\dfrac{5\\cdot4}{2\\cdot5}$ より $2:1$（P は C の外側にある）。"
+        ],
+        "alternatives": [
+          "C を通り直線 RQ に平行な直線を引き、平行線と線分の比を2回使っても求められる（メネラウスの定理の証明と同じ考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "メネラウスの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "CQ:QA を AQ:QC のまま代入してしまう（与えられた比の向きの確認不足）。",
+          "外分点 P を内分点と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB を $5:1$ に内分する点を R、辺 AC を $4:5$ に内分する点を Q とする。直線 RQ と直線 BC の交点を P とするとき、$\\mathrm{BP}:\\mathrm{PC}$ を最も簡単な整数の比で求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BP}:\\mathrm{PC}=4:25$",
+        "accepted": [
+          "4:25"
+        ]
+      },
+      "explanation": "メネラウスの定理 $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{5}{4}\\cdot\\dfrac{5}{1}=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1*4,5*5)",
+        "expected": "Rational(4,25)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus",
+      "explanation_detail": {
+        "approach": "三角形 ABC を1本の直線 PQR が横切っているので、メネラウスの定理を使う。P は辺 BC の延長上にある。",
+        "steps": [
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。",
+          "$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=\\dfrac{5}{4}$、$\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{5}{1}$ を代入する。",
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=\\dfrac{1\\cdot4}{5\\cdot5}$ より $4:25$（P は B の外側にある）。"
+        ],
+        "alternatives": [
+          "C を通り直線 RQ に平行な直線を引き、平行線と線分の比を2回使っても求められる（メネラウスの定理の証明と同じ考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "メネラウスの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "CQ:QA を AQ:QC のまま代入してしまう（与えられた比の向きの確認不足）。",
+          "外分点 P を内分点と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB を $1:2$ に内分する点を R、辺 AC を $2:1$ に内分する点を Q とする。直線 RQ と直線 BC の交点を P とするとき、$\\mathrm{BP}:\\mathrm{PC}$ を最も簡単な整数の比で求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BP}:\\mathrm{PC}=4:1$",
+        "accepted": [
+          "4:1"
+        ]
+      },
+      "explanation": "メネラウスの定理 $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$ より $\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{1}{2}\\cdot\\dfrac{1}{2}=1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(2*2,1*1)",
+        "expected": "Rational(4,1)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus",
+      "explanation_detail": {
+        "approach": "三角形 ABC を1本の直線 PQR が横切っているので、メネラウスの定理を使う。P は辺 BC の延長上にある。",
+        "steps": [
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}\\cdot\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=1$。",
+          "$\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=\\dfrac{1}{2}$、$\\dfrac{\\mathrm{AR}}{\\mathrm{RB}}=\\dfrac{1}{2}$ を代入する。",
+          "$\\dfrac{\\mathrm{BP}}{\\mathrm{PC}}=\\dfrac{2\\cdot2}{1\\cdot1}$ より $4:1$（P は C の外側にある）。"
+        ],
+        "alternatives": [
+          "C を通り直線 RQ に平行な直線を引き、平行線と線分の比を2回使っても求められる（メネラウスの定理の証明と同じ考え方）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "メネラウスの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "比を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "CQ:QA を AQ:QC のまま代入してしまう（与えられた比の向きの確認不足）。",
+          "外分点 P を内分点と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "円の外部の点 P から円に引いた接線の接点を T とする。P を通る別の直線が円と2点 A, B で交わり、$\\mathrm{PA}=9$、$\\mathrm{AB}=8$（A は P と B の間）である。線分 PT の長さを求めなさい。",
+      "answer": {
+        "value": "$3 \\sqrt{17}$",
+        "accepted": [
+          "3*sqrt(17)"
+        ]
+      },
+      "explanation": "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=9\\times17=153$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(9*(9+8))",
+        "expected": "3*sqrt(17)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_secant",
+      "explanation_detail": {
+        "approach": "接線と割線がある方べきの定理 $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}$。PB は P からの距離なので $\\mathrm{PA}+\\mathrm{AB}$。",
+        "steps": [
+          "$\\mathrm{PB}=9+8=17$。",
+          "$\\mathrm{PT}^2=9\\times17=153$。",
+          "$\\mathrm{PT}>0$ より $\\mathrm{PT}=3 \\sqrt{17}$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$（接弦定理）から $\\mathrm{PT}:\\mathrm{PB}=\\mathrm{PA}:\\mathrm{PT}$ として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "PB を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "PT を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}$ とする。",
+          "根号を簡単にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "円の外部の点 P から円に引いた接線の接点を T とする。P を通る別の直線が円と2点 A, B で交わり、$\\mathrm{PA}=3$、$\\mathrm{AB}=9$（A は P と B の間）である。線分 PT の長さを求めなさい。",
+      "answer": {
+        "value": "$6$",
+        "accepted": [
+          "6"
+        ]
+      },
+      "explanation": "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=3\\times12=36$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(3*(3+9))",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_secant",
+      "explanation_detail": {
+        "approach": "接線と割線がある方べきの定理 $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}$。PB は P からの距離なので $\\mathrm{PA}+\\mathrm{AB}$。",
+        "steps": [
+          "$\\mathrm{PB}=3+9=12$。",
+          "$\\mathrm{PT}^2=3\\times12=36$。",
+          "$\\mathrm{PT}>0$ より $\\mathrm{PT}=6$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$（接弦定理）から $\\mathrm{PT}:\\mathrm{PB}=\\mathrm{PA}:\\mathrm{PT}$ として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "PB を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "PT を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}$ とする。",
+          "根号を簡単にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "円の外部の点 P から円に引いた接線の接点を T とする。P を通る別の直線が円と2点 A, B で交わり、$\\mathrm{PA}=4$、$\\mathrm{AB}=5$（A は P と B の間）である。線分 PT の長さを求めなさい。",
+      "answer": {
+        "value": "$6$",
+        "accepted": [
+          "6"
+        ]
+      },
+      "explanation": "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=4\\times9=36$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(4*(4+5))",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_secant",
+      "explanation_detail": {
+        "approach": "接線と割線がある方べきの定理 $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}$。PB は P からの距離なので $\\mathrm{PA}+\\mathrm{AB}$。",
+        "steps": [
+          "$\\mathrm{PB}=4+5=9$。",
+          "$\\mathrm{PT}^2=4\\times9=36$。",
+          "$\\mathrm{PT}>0$ より $\\mathrm{PT}=6$。"
+        ],
+        "alternatives": [
+          "$\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$（接弦定理）から $\\mathrm{PT}:\\mathrm{PB}=\\mathrm{PA}:\\mathrm{PT}$ として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "PB を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "PT を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}$ とする。",
+          "根号を簡単にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円の外部の点 P から円に接線を引き、接点を T とする。P を通る直線が円と2点 A, B で交わり（A は P と B の間）、$\\mathrm{PT}=6$、$\\mathrm{PA}=1$ である。弦 AB の長さを求めなさい。",
+      "answer": {
+        "value": "35"
+      },
+      "explanation": "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}$ より $\\mathrm{PB}=36\\div1=36$、$\\mathrm{AB}=36-1=35$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(6**2,1)-1",
+        "expected": "35"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_secant",
+      "explanation_detail": {
+        "approach": "方べきの定理で求まるのは P からの距離 PB。弦 AB は PB から PA を引いて求める。",
+        "steps": [
+          "$6^2=1\\cdot\\mathrm{PB}$。",
+          "$\\mathrm{PB}=36$。",
+          "$\\mathrm{AB}=\\mathrm{PB}-\\mathrm{PA}=35$。"
+        ],
+        "alternatives": [
+          "答えを代入して $\\mathrm{PA}\\cdot\\mathrm{PB}=1\\times36=36=6^2$ となることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方べきの定理の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "PB から AB を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "求めた PB をそのまま AB と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内心を I とすると、$\\angle\\mathrm{BIC}=161^\\circ$ であった。$\\angle\\mathrm{BAC}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "142",
+        "display": "$142^\\circ$"
+      },
+      "explanation": "$\\angle\\mathrm{BIC}=90^\\circ+\\dfrac{1}{2}\\angle\\mathrm{A}$ より $\\angle\\mathrm{A}=2(161^\\circ-90^\\circ)=142^\\circ$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "180-2*(180-161)",
+        "expected": "142"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-center_angle",
+      "explanation_detail": {
+        "approach": "内心は内角の二等分線の交点。$\\angle\\mathrm{B}$、$\\angle\\mathrm{C}$ の半分の和を $\\angle\\mathrm{BIC}$ から逆算する。",
+        "steps": [
+          "$\\angle\\mathrm{IBC}+\\angle\\mathrm{ICB}=180^\\circ-161^\\circ=19^\\circ$。",
+          "$\\angle\\mathrm{B}+\\angle\\mathrm{C}=2\\times19^\\circ=38^\\circ$。",
+          "$\\angle\\mathrm{A}=180^\\circ-38^\\circ=142^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\angle\\mathrm{BIC}=90^\\circ+\\dfrac{1}{2}\\angle\\mathrm{A}$、$\\angle\\mathrm{BOC}=2\\angle\\mathrm{A}$（A が鋭角のとき）を公式として覚えておき、検算に使う。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内心・外心の性質を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "内心と外心の性質を取り違える。",
+          "外心の場合、$\\angle\\mathrm{A}$ が鈍角だと O は BC に関して A と反対側にあり、$\\angle\\mathrm{BOC}=360^\\circ-2\\angle\\mathrm{A}$ となることを見落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の内心を I とする。$\\angle\\mathrm{BAC}=46^\\circ$ のとき、$\\angle\\mathrm{BIC}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "113",
+        "display": "$113^\\circ$"
+      },
+      "explanation": "$\\angle\\mathrm{IBC}+\\angle\\mathrm{ICB}=\\dfrac{1}{2}(180^\\circ-46^\\circ)=67^\\circ$ より $\\angle\\mathrm{BIC}=113^\\circ$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "180-(180-46)/2",
+        "expected": "113"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-center_angle",
+      "explanation_detail": {
+        "approach": "内心は内角の二等分線の交点。$\\triangle\\mathrm{IBC}$ の内角の和を考える。",
+        "steps": [
+          "$\\angle\\mathrm{B}+\\angle\\mathrm{C}=180^\\circ-46^\\circ=134^\\circ$。",
+          "BI、CI は角の二等分線なので $\\angle\\mathrm{IBC}+\\angle\\mathrm{ICB}=67^\\circ$。",
+          "$\\angle\\mathrm{BIC}=180^\\circ-67^\\circ=113^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\angle\\mathrm{BIC}=90^\\circ+\\dfrac{1}{2}\\angle\\mathrm{A}$、$\\angle\\mathrm{BOC}=2\\angle\\mathrm{A}$（A が鋭角のとき）を公式として覚えておき、検算に使う。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内心・外心の性質を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "内心と外心の性質を取り違える。",
+          "外心の場合、$\\angle\\mathrm{A}$ が鈍角だと O は BC に関して A と反対側にあり、$\\angle\\mathrm{BOC}=360^\\circ-2\\angle\\mathrm{A}$ となることを見落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "鋭角三角形 ABC の外心を O とする。$\\angle\\mathrm{BAC}=42^\\circ$ のとき、$\\angle\\mathrm{BOC}$ の大きさを求めなさい。",
+      "answer": {
+        "value": "84",
+        "display": "$84^\\circ$"
+      },
+      "explanation": "O は外接円の中心なので、$\\angle\\mathrm{BOC}$ は弧 BC に対する中心角で、円周角 $\\angle\\mathrm{BAC}$ の2倍。$84^\\circ$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*42",
+        "expected": "84"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-center_angle",
+      "explanation_detail": {
+        "approach": "外心は外接円の中心。中心角と円周角の関係（円周角の定理）が使える。",
+        "steps": [
+          "外心 O は外接円の中心である。",
+          "$\\angle\\mathrm{BOC}$ は弧 BC に対する中心角、$\\angle\\mathrm{BAC}$ は同じ弧に対する円周角。",
+          "$\\angle\\mathrm{BOC}=2\\times42^\\circ=84^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\angle\\mathrm{BIC}=90^\\circ+\\dfrac{1}{2}\\angle\\mathrm{A}$、$\\angle\\mathrm{BOC}=2\\angle\\mathrm{A}$（A が鋭角のとき）を公式として覚えておき、検算に使う。"
+        ],
+        "partial_credit": [
+          {
+            "point": "内心・外心の性質を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "角度を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "内心と外心の性質を取り違える。",
+          "外心の場合、$\\angle\\mathrm{A}$ が鈍角だと O は BC に関して A と反対側にあり、$\\angle\\mathrm{BOC}=360^\\circ-2\\angle\\mathrm{A}$ となることを見落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{BC}=11$、$\\mathrm{CA}=4$、$\\mathrm{AB}=9$ の $\\triangle\\mathrm{ABC}$ の内接円が、辺 BC、CA、AB に接する点をそれぞれ D、E、F とする。線分 AF の長さを求めなさい。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "円外の点から引いた2本の接線の長さは等しいので、$\\mathrm{AF}=\\mathrm{AE}=x$、$\\mathrm{BD}=\\mathrm{BF}=y$、$\\mathrm{CE}=\\mathrm{CD}=z$ とおける。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(4+9-11)/2",
+        "expected": "1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_length",
+      "explanation_detail": {
+        "approach": "円の外部の点から引いた2本の接線の長さは等しい。頂点ごとに接線の長さを文字でおき、3辺の長さの式を連立する。",
+        "steps": [
+          "$\\mathrm{AF}=\\mathrm{AE}=x$、$\\mathrm{BD}=\\mathrm{BF}=y$、$\\mathrm{CD}=\\mathrm{CE}=z$ とおく。",
+          "$x+y=9$、$y+z=11$、$z+x=4$。3式を加えて $x+y+z=12$。",
+          "$\\mathrm{AF}=1$。"
+        ],
+        "alternatives": [
+          "$x=\\dfrac{b+c-a}{2}$ のように「隣り合う2辺の和から対辺を引いて2で割る」と覚えておくと速い：$\\mathrm{AF}=1$、$\\mathrm{BD}=8$、$\\mathrm{CE}=3$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の長さが等しいことを使って式を立てている",
+            "points": 2
+          },
+          {
+            "point": "連立して正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AF}=\\dfrac{1}{2}\\mathrm{AB}$ のように、接点を辺の中点と思いこむ。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{BC}=13$、$\\mathrm{CA}=11$、$\\mathrm{AB}=6$ の $\\triangle\\mathrm{ABC}$ の内接円が、辺 BC、CA、AB に接する点をそれぞれ D、E、F とする。線分 AF の長さを求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "円外の点から引いた2本の接線の長さは等しいので、$\\mathrm{AF}=\\mathrm{AE}=x$、$\\mathrm{BD}=\\mathrm{BF}=y$、$\\mathrm{CE}=\\mathrm{CD}=z$ とおける。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(11+6-13)/2",
+        "expected": "2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_length",
+      "explanation_detail": {
+        "approach": "円の外部の点から引いた2本の接線の長さは等しい。頂点ごとに接線の長さを文字でおき、3辺の長さの式を連立する。",
+        "steps": [
+          "$\\mathrm{AF}=\\mathrm{AE}=x$、$\\mathrm{BD}=\\mathrm{BF}=y$、$\\mathrm{CD}=\\mathrm{CE}=z$ とおく。",
+          "$x+y=6$、$y+z=13$、$z+x=11$。3式を加えて $x+y+z=15$。",
+          "$\\mathrm{AF}=2$。"
+        ],
+        "alternatives": [
+          "$x=\\dfrac{b+c-a}{2}$ のように「隣り合う2辺の和から対辺を引いて2で割る」と覚えておくと速い：$\\mathrm{AF}=2$、$\\mathrm{BD}=4$、$\\mathrm{CE}=9$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の長さが等しいことを使って式を立てている",
+            "points": 2
+          },
+          {
+            "point": "連立して正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AF}=\\dfrac{1}{2}\\mathrm{AB}$ のように、接点を辺の中点と思いこむ。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{BC}=13$、$\\mathrm{CA}=12$、$\\mathrm{AB}=9$ の $\\triangle\\mathrm{ABC}$ の内接円が、辺 BC、CA、AB に接する点をそれぞれ D、E、F とする。線分 AF の長さを求めなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "円外の点から引いた2本の接線の長さは等しいので、$\\mathrm{AF}=\\mathrm{AE}=x$、$\\mathrm{BD}=\\mathrm{BF}=y$、$\\mathrm{CE}=\\mathrm{CD}=z$ とおける。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(12+9-13)/2",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-tangent_length",
+      "explanation_detail": {
+        "approach": "円の外部の点から引いた2本の接線の長さは等しい。頂点ごとに接線の長さを文字でおき、3辺の長さの式を連立する。",
+        "steps": [
+          "$\\mathrm{AF}=\\mathrm{AE}=x$、$\\mathrm{BD}=\\mathrm{BF}=y$、$\\mathrm{CD}=\\mathrm{CE}=z$ とおく。",
+          "$x+y=9$、$y+z=13$、$z+x=12$。3式を加えて $x+y+z=17$。",
+          "$\\mathrm{AF}=4$。"
+        ],
+        "alternatives": [
+          "$x=\\dfrac{b+c-a}{2}$ のように「隣り合う2辺の和から対辺を引いて2で割る」と覚えておくと速い：$\\mathrm{AF}=4$、$\\mathrm{BD}=5$、$\\mathrm{CE}=8$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の長さが等しいことを使って式を立てている",
+            "points": 2
+          },
+          {
+            "point": "連立して正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AF}=\\dfrac{1}{2}\\mathrm{AB}$ のように、接点を辺の中点と思いこむ。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB 上に $\\mathrm{AP}:\\mathrm{PB}=3:4$ となる点 P を、辺 AC 上に $\\mathrm{AQ}:\\mathrm{QC}=2:1$ となる点 Q をとり、線分 BQ と線分 CP の交点を O とする。さらに、直線 AO と辺 BC の交点を R とする。(1) $\\mathrm{BO}:\\mathrm{OQ}$、(2) $\\mathrm{BR}:\\mathrm{RC}$ をそれぞれ求め、用いた定理と三角形・直線を明記して説明しなさい。",
+      "answer": {
+        "value": "(1) $\\mathrm{BO}:\\mathrm{OQ}=4:1$　(2) $\\mathrm{BR}:\\mathrm{RC}=8:3$"
+      },
+      "explanation": "(1) $\\triangle\\mathrm{ABQ}$ と直線 PC にメネラウスの定理。(2) $\\triangle\\mathrm{ABC}$ と点 O にチェバの定理。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) メネラウスの定理を適用する三角形と直線を正しく選び、式を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "(1) の比を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) チェバの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) の比を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Rational(4,3)*Rational(3,1), Rational(4,3)*Rational(2,1)]",
+        "expected": "[4, 8/3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus_ceva",
+      "explanation_detail": {
+        "approach": "(1) は「BO:OQ」を含む三角形 ABQ と、それを横切る直線 P-O-C の組を見つける。(2) は3本の線分 AR、BQ、CP が1点 O で交わるのでチェバの定理。",
+        "steps": [
+          "(1) $\\triangle\\mathrm{ABQ}$ と直線 PC：$\\dfrac{\\mathrm{AP}}{\\mathrm{PB}}\\cdot\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}\\cdot\\dfrac{\\mathrm{QC}}{\\mathrm{CA}}=1$。",
+          "$\\dfrac{3}{4}\\cdot\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}\\cdot\\dfrac{1}{3}=1$ より $\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}=4$、$\\mathrm{BO}:\\mathrm{OQ}=4:1$。",
+          "(2) $\\triangle\\mathrm{ABC}$ と点 O：$\\dfrac{\\mathrm{AP}}{\\mathrm{PB}}\\cdot\\dfrac{\\mathrm{BR}}{\\mathrm{RC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=1$。",
+          "$\\dfrac{3}{4}\\cdot\\dfrac{\\mathrm{BR}}{\\mathrm{RC}}\\cdot\\dfrac{1}{2}=1$ より $\\mathrm{BR}:\\mathrm{RC}=8:3$。"
+        ],
+        "alternatives": [
+          "(1) は面積比でも求められる：$\\mathrm{BO}:\\mathrm{OQ}=\\triangle\\mathrm{BCP}:\\triangle\\mathrm{QCP}$ を、AB・AC 上の比から計算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1) の式",
+            "points": 2
+          },
+          {
+            "point": "(1) の答え",
+            "points": 2
+          },
+          {
+            "point": "(2) の式",
+            "points": 2
+          },
+          {
+            "point": "(2) の答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "(1) で $\\dfrac{\\mathrm{QC}}{\\mathrm{CA}}$ を $\\dfrac{\\mathrm{QC}}{\\mathrm{QA}}$ としてしまう（C は辺 QA の外側の点）。",
+          "どの三角形にどの直線を当てはめたのかを答案に書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB 上に $\\mathrm{AP}:\\mathrm{PB}=1:4$ となる点 P を、辺 AC 上に $\\mathrm{AQ}:\\mathrm{QC}=1:3$ となる点 Q をとり、線分 BQ と線分 CP の交点を O とする。さらに、直線 AO と辺 BC の交点を R とする。(1) $\\mathrm{BO}:\\mathrm{OQ}$、(2) $\\mathrm{BR}:\\mathrm{RC}$ をそれぞれ求め、用いた定理と三角形・直線を明記して説明しなさい。",
+      "answer": {
+        "value": "(1) $\\mathrm{BO}:\\mathrm{OQ}=16:3$　(2) $\\mathrm{BR}:\\mathrm{RC}=4:3$"
+      },
+      "explanation": "(1) $\\triangle\\mathrm{ABQ}$ と直線 PC にメネラウスの定理。(2) $\\triangle\\mathrm{ABC}$ と点 O にチェバの定理。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) メネラウスの定理を適用する三角形と直線を正しく選び、式を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "(1) の比を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) チェバの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) の比を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Rational(4,1)*Rational(4,3), Rational(4,1)*Rational(1,3)]",
+        "expected": "[16/3, 4/3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus_ceva",
+      "explanation_detail": {
+        "approach": "(1) は「BO:OQ」を含む三角形 ABQ と、それを横切る直線 P-O-C の組を見つける。(2) は3本の線分 AR、BQ、CP が1点 O で交わるのでチェバの定理。",
+        "steps": [
+          "(1) $\\triangle\\mathrm{ABQ}$ と直線 PC：$\\dfrac{\\mathrm{AP}}{\\mathrm{PB}}\\cdot\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}\\cdot\\dfrac{\\mathrm{QC}}{\\mathrm{CA}}=1$。",
+          "$\\dfrac{1}{4}\\cdot\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}\\cdot\\dfrac{3}{4}=1$ より $\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}=\\frac{16}{3}$、$\\mathrm{BO}:\\mathrm{OQ}=16:3$。",
+          "(2) $\\triangle\\mathrm{ABC}$ と点 O：$\\dfrac{\\mathrm{AP}}{\\mathrm{PB}}\\cdot\\dfrac{\\mathrm{BR}}{\\mathrm{RC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=1$。",
+          "$\\dfrac{1}{4}\\cdot\\dfrac{\\mathrm{BR}}{\\mathrm{RC}}\\cdot\\dfrac{3}{1}=1$ より $\\mathrm{BR}:\\mathrm{RC}=4:3$。"
+        ],
+        "alternatives": [
+          "(1) は面積比でも求められる：$\\mathrm{BO}:\\mathrm{OQ}=\\triangle\\mathrm{BCP}:\\triangle\\mathrm{QCP}$ を、AB・AC 上の比から計算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1) の式",
+            "points": 2
+          },
+          {
+            "point": "(1) の答え",
+            "points": 2
+          },
+          {
+            "point": "(2) の式",
+            "points": 2
+          },
+          {
+            "point": "(2) の答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "(1) で $\\dfrac{\\mathrm{QC}}{\\mathrm{CA}}$ を $\\dfrac{\\mathrm{QC}}{\\mathrm{QA}}$ としてしまう（C は辺 QA の外側の点）。",
+          "どの三角形にどの直線を当てはめたのかを答案に書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB 上に $\\mathrm{AP}:\\mathrm{PB}=2:1$ となる点 P を、辺 AC 上に $\\mathrm{AQ}:\\mathrm{QC}=1:3$ となる点 Q をとり、線分 BQ と線分 CP の交点を O とする。さらに、直線 AO と辺 BC の交点を R とする。(1) $\\mathrm{BO}:\\mathrm{OQ}$、(2) $\\mathrm{BR}:\\mathrm{RC}$ をそれぞれ求め、用いた定理と三角形・直線を明記して説明しなさい。",
+      "answer": {
+        "value": "(1) $\\mathrm{BO}:\\mathrm{OQ}=2:3$　(2) $\\mathrm{BR}:\\mathrm{RC}=1:6$"
+      },
+      "explanation": "(1) $\\triangle\\mathrm{ABQ}$ と直線 PC にメネラウスの定理。(2) $\\triangle\\mathrm{ABC}$ と点 O にチェバの定理。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) メネラウスの定理を適用する三角形と直線を正しく選び、式を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "(1) の比を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) チェバの定理を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) の比を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Rational(1,2)*Rational(4,3), Rational(1,2)*Rational(1,3)]",
+        "expected": "[2/3, 1/6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-menelaus_ceva",
+      "explanation_detail": {
+        "approach": "(1) は「BO:OQ」を含む三角形 ABQ と、それを横切る直線 P-O-C の組を見つける。(2) は3本の線分 AR、BQ、CP が1点 O で交わるのでチェバの定理。",
+        "steps": [
+          "(1) $\\triangle\\mathrm{ABQ}$ と直線 PC：$\\dfrac{\\mathrm{AP}}{\\mathrm{PB}}\\cdot\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}\\cdot\\dfrac{\\mathrm{QC}}{\\mathrm{CA}}=1$。",
+          "$\\dfrac{2}{1}\\cdot\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}\\cdot\\dfrac{3}{4}=1$ より $\\dfrac{\\mathrm{BO}}{\\mathrm{OQ}}=\\frac{2}{3}$、$\\mathrm{BO}:\\mathrm{OQ}=2:3$。",
+          "(2) $\\triangle\\mathrm{ABC}$ と点 O：$\\dfrac{\\mathrm{AP}}{\\mathrm{PB}}\\cdot\\dfrac{\\mathrm{BR}}{\\mathrm{RC}}\\cdot\\dfrac{\\mathrm{CQ}}{\\mathrm{QA}}=1$。",
+          "$\\dfrac{2}{1}\\cdot\\dfrac{\\mathrm{BR}}{\\mathrm{RC}}\\cdot\\dfrac{3}{1}=1$ より $\\mathrm{BR}:\\mathrm{RC}=1:6$。"
+        ],
+        "alternatives": [
+          "(1) は面積比でも求められる：$\\mathrm{BO}:\\mathrm{OQ}=\\triangle\\mathrm{BCP}:\\triangle\\mathrm{QCP}$ を、AB・AC 上の比から計算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1) の式",
+            "points": 2
+          },
+          {
+            "point": "(1) の答え",
+            "points": 2
+          },
+          {
+            "point": "(2) の式",
+            "points": 2
+          },
+          {
+            "point": "(2) の答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "(1) で $\\dfrac{\\mathrm{QC}}{\\mathrm{CA}}$ を $\\dfrac{\\mathrm{QC}}{\\mathrm{QA}}$ としてしまう（C は辺 QA の外側の点）。",
+          "どの三角形にどの直線を当てはめたのかを答案に書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "線分 AB と線分 CD が点 P で交わり、$\\mathrm{PA}=2$、$\\mathrm{PB}=4$、$\\mathrm{PC}=4$、$\\mathrm{PD}=1$ である。4点 A, B, C, D が同一円周上にあるかどうかを判定し、その理由を説明しなさい。",
+      "answer": {
+        "value": "4点 A, B, C, D は同一円周上にない"
+      },
+      "explanation": "$\\mathrm{PA}\\cdot\\mathrm{PB}=8$、$\\mathrm{PC}\\cdot\\mathrm{PD}=4$。等しくないので、方べきの定理（対偶）より同一円周上にない。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2つの積を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "方べきの定理の逆（または対偶）を根拠として述べている",
+            "points": 4
+          },
+          {
+            "criterion": "正しい結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2*4-4*1",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-concyclic_check",
+      "explanation_detail": {
+        "approach": "方べきの定理には逆が成り立つ。線分 AB、CD が P で交わるとき、$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$ ならば4点は同一円周上にある。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=2\\times4=8$。",
+          "$\\mathrm{PC}\\cdot\\mathrm{PD}=4\\times1=4$。",
+          "両者は等しくない。もし4点が同一円周上にあれば方べきの定理より積が等しくなるはずなので矛盾。よって同一円周上にない。"
+        ],
+        "alternatives": [
+          "相似の比を直接調べる：$\\mathrm{PA}:\\mathrm{PD}$ と $\\mathrm{PC}:\\mathrm{PB}$ が等しいかどうかで判定してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "積の計算",
+            "points": 2
+          },
+          {
+            "point": "定理の逆・対偶による根拠",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "方べきの定理を「円があること」を前提とせずに使ってよいか（逆が成り立つか）を説明しない。",
+          "積ではなく和 $\\mathrm{PA}+\\mathrm{PB}$ を比べる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "線分 AB と線分 CD が点 P で交わり、$\\mathrm{PA}=12$、$\\mathrm{PB}=4$、$\\mathrm{PC}=3$、$\\mathrm{PD}=16$ である。4点 A, B, C, D が同一円周上にあるかどうかを判定し、その理由を説明しなさい。",
+      "answer": {
+        "value": "4点 A, B, C, D は同一円周上にある"
+      },
+      "explanation": "$\\mathrm{PA}\\cdot\\mathrm{PB}=48$、$\\mathrm{PC}\\cdot\\mathrm{PD}=48$。等しいので、方べきの定理の逆より同一円周上にある。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2つの積を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "方べきの定理の逆（または対偶）を根拠として述べている",
+            "points": 4
+          },
+          {
+            "criterion": "正しい結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "12*4-3*16",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-concyclic_check",
+      "explanation_detail": {
+        "approach": "方べきの定理には逆が成り立つ。線分 AB、CD が P で交わるとき、$\\mathrm{PA}\\cdot\\mathrm{PB}=\\mathrm{PC}\\cdot\\mathrm{PD}$ ならば4点は同一円周上にある。",
+        "steps": [
+          "$\\mathrm{PA}\\cdot\\mathrm{PB}=12\\times4=48$。",
+          "$\\mathrm{PC}\\cdot\\mathrm{PD}=3\\times16=48$。",
+          "両者は等しいので、$\\mathrm{PA}:\\mathrm{PD}=\\mathrm{PC}:\\mathrm{PB}$ と対頂角から $\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$、$\\angle\\mathrm{PAC}=\\angle\\mathrm{PDB}$。円周角の定理の逆より同一円周上にある。"
+        ],
+        "alternatives": [
+          "相似の比を直接調べる：$\\mathrm{PA}:\\mathrm{PD}$ と $\\mathrm{PC}:\\mathrm{PB}$ が等しいかどうかで判定してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "積の計算",
+            "points": 2
+          },
+          {
+            "point": "定理の逆・対偶による根拠",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "方べきの定理を「円があること」を前提とせずに使ってよいか（逆が成り立つか）を説明しない。",
+          "積ではなく和 $\\mathrm{PA}+\\mathrm{PB}$ を比べる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\mathrm{BC}=20$、$\\mathrm{CA}=15$、$\\mathrm{AB}=7$ の $\\triangle\\mathrm{ABC}$ について、面積 $S$ と外接円の半径 $R$を求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$S=42$、$R=\\frac{25}{2}$",
+        "accepted": [
+          "S=42, R=25/2"
+        ]
+      },
+      "explanation": "余弦定理で $\\cos A$、そこから $\\sin A$ を求めて $S=\\dfrac{1}{2}bc\\sin A$。正弦定理で $R$ を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[Rational(1,2)*15*7*sqrt(1-(Rational(-126,210))**2), Rational(2100,168)]",
+        "expected": "[42, 25/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHA-U02-inradius",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "面積は「図形と計量」の余弦定理・面積公式で求める。内接円の半径は、内心と3頂点を結んで三角形を3つに分ける考え（内心が3辺から等距離）で面積と結びつく。外接円の半径は正弦定理。",
+        "steps": [
+          "余弦定理：$\\cos A=\\dfrac{15^2+7^2-20^2}{2\\cdot15\\cdot7}=- \\frac{3}{5}$。",
+          "$\\sin A=\\sqrt{1-\\cos^2A}=\\frac{4}{5}$（$0^\\circ<A<180^\\circ$ より $\\sin A>0$）。",
+          "$S=\\dfrac{1}{2}\\cdot15\\cdot7\\cdot\\frac{4}{5}=42$。",
+          "正弦定理 $\\dfrac{a}{\\sin A}=2R$ より $R=\\dfrac{20}{2\\cdot \\frac{4}{5}}=\\frac{25}{2}$。"
+        ],
+        "alternatives": [
+          "ヘロンの公式 $S=\\sqrt{s(s-a)(s-b)(s-c)}$（$s=\\dfrac{a+b+c}{2}$）を使うと面積を直接求められる。また $R=\\dfrac{abc}{4S}$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$、$\\sin A$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "半径を求める関係式（内心で3分割／正弦定理）を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "半径を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sin A$ を求めるときに根号の計算を誤る。",
+          "内接円の半径の式で $S=r(a+b+c)$ と $\\dfrac{1}{2}$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\mathrm{BC}=15$、$\\mathrm{CA}=14$、$\\mathrm{AB}=13$ の $\\triangle\\mathrm{ABC}$ について、面積 $S$ と内接円の半径 $r$を求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$S=84$、$r=4$",
+        "accepted": [
+          "S=84, r=4"
+        ]
+      },
+      "explanation": "余弦定理で $\\cos A$、そこから $\\sin A$ を求めて $S=\\dfrac{1}{2}bc\\sin A$。内心 I で3つの三角形に分けると $S=\\dfrac{1}{2}r(a+b+c)$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[Rational(1,2)*14*13*sqrt(1-(Rational(140,364))**2), Rational(2*84,42)]",
+        "expected": "[84, 4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHA-U02-inradius",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "面積は「図形と計量」の余弦定理・面積公式で求める。内接円の半径は、内心と3頂点を結んで三角形を3つに分ける考え（内心が3辺から等距離）で面積と結びつく。外接円の半径は正弦定理。",
+        "steps": [
+          "余弦定理：$\\cos A=\\dfrac{14^2+13^2-15^2}{2\\cdot14\\cdot13}=\\frac{5}{13}$。",
+          "$\\sin A=\\sqrt{1-\\cos^2A}=\\frac{12}{13}$（$0^\\circ<A<180^\\circ$ より $\\sin A>0$）。",
+          "$S=\\dfrac{1}{2}\\cdot14\\cdot13\\cdot\\frac{12}{13}=84$。",
+          "$S=\\dfrac{1}{2}r(a+b+c)$ より $r=\\dfrac{2S}{a+b+c}=\\dfrac{168}{42}=4$。"
+        ],
+        "alternatives": [
+          "ヘロンの公式 $S=\\sqrt{s(s-a)(s-b)(s-c)}$（$s=\\dfrac{a+b+c}{2}$）を使うと面積を直接求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$、$\\sin A$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "半径を求める関係式（内心で3分割／正弦定理）を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "半径を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sin A$ を求めるときに根号の計算を誤る。",
+          "内接円の半径の式で $S=r(a+b+c)$ と $\\dfrac{1}{2}$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\mathrm{BC}=10$、$\\mathrm{CA}=13$、$\\mathrm{AB}=13$ の $\\triangle\\mathrm{ABC}$ について、面積 $S$ と外接円の半径 $R$を求めなさい。考え方も書きなさい。",
+      "answer": {
+        "value": "$S=60$、$R=\\frac{169}{24}$",
+        "accepted": [
+          "S=60, R=169/24"
+        ]
+      },
+      "explanation": "余弦定理で $\\cos A$、そこから $\\sin A$ を求めて $S=\\dfrac{1}{2}bc\\sin A$。正弦定理で $R$ を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[Rational(1,2)*13*13*sqrt(1-(Rational(238,338))**2), Rational(1690,240)]",
+        "expected": "[60, 169/24]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHA-U02-inradius",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "面積は「図形と計量」の余弦定理・面積公式で求める。内接円の半径は、内心と3頂点を結んで三角形を3つに分ける考え（内心が3辺から等距離）で面積と結びつく。外接円の半径は正弦定理。",
+        "steps": [
+          "余弦定理：$\\cos A=\\dfrac{13^2+13^2-10^2}{2\\cdot13\\cdot13}=\\frac{119}{169}$。",
+          "$\\sin A=\\sqrt{1-\\cos^2A}=\\frac{120}{169}$（$0^\\circ<A<180^\\circ$ より $\\sin A>0$）。",
+          "$S=\\dfrac{1}{2}\\cdot13\\cdot13\\cdot\\frac{120}{169}=60$。",
+          "正弦定理 $\\dfrac{a}{\\sin A}=2R$ より $R=\\dfrac{10}{2\\cdot \\frac{120}{169}}=\\frac{169}{24}$。"
+        ],
+        "alternatives": [
+          "ヘロンの公式 $S=\\sqrt{s(s-a)(s-b)(s-c)}$（$s=\\dfrac{a+b+c}{2}$）を使うと面積を直接求められる。また $R=\\dfrac{abc}{4S}$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\cos A$、$\\sin A$ を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "半径を求める関係式（内心で3分割／正弦定理）を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "半径を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sin A$ を求めるときに根号の計算を誤る。",
+          "内接円の半径の式で $S=r(a+b+c)$ と $\\dfrac{1}{2}$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "半径 $6$ の円 O と半径 $2$ の円 O' があり、中心間の距離は $\\mathrm{OO'}=15$ である。2つの円の共通内接線の1本が円 O、O' に接する点をそれぞれ A、B とするとき、線分 AB の長さを求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{161}$",
+        "accepted": [
+          "sqrt(161)"
+        ]
+      },
+      "explanation": "O' から OA（またはその延長）に垂線を引き、直角三角形をつくる。直角をはさむ辺は AB と $6+2=8$、斜辺は $15$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sqrt(15**2-(6+2)**2)",
+        "expected": "sqrt(161)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-common_tangent",
+      "related_units": [
+        "JH-MATH-G3-U07"
+      ],
+      "explanation_detail": {
+        "approach": "接線は接点を通る半径に垂直なので、OA と O'B はともに AB に垂直で平行。O' を通り AB に平行な直線を引くと、三平方の定理が使える直角三角形ができる。",
+        "steps": [
+          "$\\mathrm{OA}\\perp\\mathrm{AB}$、$\\mathrm{O'B}\\perp\\mathrm{AB}$。O' から直線 OA に垂線 O'H を下ろすと、$\\mathrm{O'H}=\\mathrm{AB}$。",
+          "$\\mathrm{OH}=半径の和=8$（A と B が中心線の反対側にあるため）。",
+          "三平方の定理：$\\mathrm{AB}^2=15^2-8^2=161$。",
+          "$\\mathrm{AB}=\\sqrt{161}$。"
+        ],
+        "alternatives": [
+          "公式として、共通外接線の長さは $\\sqrt{d^2-(r_1-r_2)^2}$、共通内接線の長さは $\\sqrt{d^2-(r_1+r_2)^2}$ とまとめられる（共通内接線は $d>r_1+r_2$ のときに存在する）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線と半径が垂直であることを使って直角三角形をつくっている",
+            "points": 3
+          },
+          {
+            "point": "直角をはさむ辺が半径の和であることを示している",
+            "points": 2
+          },
+          {
+            "point": "正しい長さを求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "共通外接線で半径の和、共通内接線で半径の差を使ってしまう。",
+          "$\\mathrm{AB}=\\mathrm{OO'}$ と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "半径 $8$ の円 O と半径 $7$ の円 O' があり、中心間の距離は $\\mathrm{OO'}=19$ である。2つの円の共通内接線の1本が円 O、O' に接する点をそれぞれ A、B とするとき、線分 AB の長さを求めなさい。",
+      "answer": {
+        "value": "$2 \\sqrt{34}$",
+        "accepted": [
+          "2*sqrt(34)"
+        ]
+      },
+      "explanation": "O' から OA（またはその延長）に垂線を引き、直角三角形をつくる。直角をはさむ辺は AB と $8+7=15$、斜辺は $19$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sqrt(19**2-(8+7)**2)",
+        "expected": "2*sqrt(34)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-common_tangent",
+      "related_units": [
+        "JH-MATH-G3-U07"
+      ],
+      "explanation_detail": {
+        "approach": "接線は接点を通る半径に垂直なので、OA と O'B はともに AB に垂直で平行。O' を通り AB に平行な直線を引くと、三平方の定理が使える直角三角形ができる。",
+        "steps": [
+          "$\\mathrm{OA}\\perp\\mathrm{AB}$、$\\mathrm{O'B}\\perp\\mathrm{AB}$。O' から直線 OA に垂線 O'H を下ろすと、$\\mathrm{O'H}=\\mathrm{AB}$。",
+          "$\\mathrm{OH}=半径の和=15$（A と B が中心線の反対側にあるため）。",
+          "三平方の定理：$\\mathrm{AB}^2=19^2-15^2=136$。",
+          "$\\mathrm{AB}=2 \\sqrt{34}$。"
+        ],
+        "alternatives": [
+          "公式として、共通外接線の長さは $\\sqrt{d^2-(r_1-r_2)^2}$、共通内接線の長さは $\\sqrt{d^2-(r_1+r_2)^2}$ とまとめられる（共通内接線は $d>r_1+r_2$ のときに存在する）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線と半径が垂直であることを使って直角三角形をつくっている",
+            "points": 3
+          },
+          {
+            "point": "直角をはさむ辺が半径の和であることを示している",
+            "points": 2
+          },
+          {
+            "point": "正しい長さを求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "共通外接線で半径の和、共通内接線で半径の差を使ってしまう。",
+          "$\\mathrm{AB}=\\mathrm{OO'}$ と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\mathrm{AB}=12$、$\\mathrm{BC}=12$、$\\mathrm{CA}=4$ の $\\triangle\\mathrm{ABC}$ で、$\\angle\\mathrm{A}$ の二等分線と辺 BC の交点を D とする。BD の長さを求めなさい。\n［ある生徒の解答］\n$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}=4:12$ だから $\\mathrm{BD}=12\\times\\dfrac{4}{16}=3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BD}=9$"
+      },
+      "explanation": "B の側の線分 BD には、B の側の辺 AB が対応する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(12*12,16)",
+        "expected": "9",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-err_bisector",
+      "explanation_detail": {
+        "approach": "角の二等分線の定理は「隣り合う辺どうし」が対応する。図に比を書きこむと対応を誤りにくい。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=12:4$。",
+          "$\\mathrm{BD}=12\\times\\dfrac{12}{16}=9$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AB}>\\mathrm{AC}$ なら D は C に近いはず、という大小の見通し（AB が長いので BD も長い）で答えを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "比の対応を辺の名前のアルファベット順で決めてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}=4:12$ だから $\\mathrm{BD}=12\\times\\dfrac{4}{16}=3$",
+        "error_step": "比の対応（$\\mathrm{BD}:\\mathrm{DC}$ に対応させた辺の順序）",
+        "error_type": "concept",
+        "why_tempting": "「二等分線と比」は覚えていても、どの線分にどの辺が対応するかを図で確かめずに、辺の名前の並びで機械的に比を書いている。",
+        "correction": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=12:4$ より $\\mathrm{BD}=12\\times\\dfrac{12}{16}=9$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\mathrm{AB}=8$、$\\mathrm{BC}=6$、$\\mathrm{CA}=4$ の $\\triangle\\mathrm{ABC}$ で、$\\angle\\mathrm{A}$ の二等分線と辺 BC の交点を D とする。BD の長さを求めなさい。\n［ある生徒の解答］\n$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}=4:8$ だから $\\mathrm{BD}=6\\times\\dfrac{4}{12}=2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BD}=4$"
+      },
+      "explanation": "B の側の線分 BD には、B の側の辺 AB が対応する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(6*8,12)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-err_bisector",
+      "explanation_detail": {
+        "approach": "角の二等分線の定理は「隣り合う辺どうし」が対応する。図に比を書きこむと対応を誤りにくい。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=8:4$。",
+          "$\\mathrm{BD}=6\\times\\dfrac{8}{12}=4$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AB}>\\mathrm{AC}$ なら D は C に近いはず、という大小の見通し（AB が長いので BD も長い）で答えを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "比の対応を辺の名前のアルファベット順で決めてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}=4:8$ だから $\\mathrm{BD}=6\\times\\dfrac{4}{12}=2$",
+        "error_step": "比の対応（$\\mathrm{BD}:\\mathrm{DC}$ に対応させた辺の順序）",
+        "error_type": "concept",
+        "why_tempting": "「二等分線と比」は覚えていても、どの線分にどの辺が対応するかを図で確かめずに、辺の名前の並びで機械的に比を書いている。",
+        "correction": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=8:4$ より $\\mathrm{BD}=6\\times\\dfrac{8}{12}=4$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\mathrm{AB}=10$、$\\mathrm{BC}=8$、$\\mathrm{CA}=6$ の $\\triangle\\mathrm{ABC}$ で、$\\angle\\mathrm{A}$ の二等分線と辺 BC の交点を D とする。BD の長さを求めなさい。\n［ある生徒の解答］\n$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}=6:10$ だから $\\mathrm{BD}=8\\times\\dfrac{6}{16}=3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{BD}=5$"
+      },
+      "explanation": "B の側の線分 BD には、B の側の辺 AB が対応する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(8*10,16)",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U02-err_bisector",
+      "explanation_detail": {
+        "approach": "角の二等分線の定理は「隣り合う辺どうし」が対応する。図に比を書きこむと対応を誤りにくい。",
+        "steps": [
+          "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=10:6$。",
+          "$\\mathrm{BD}=8\\times\\dfrac{10}{16}=5$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{AB}>\\mathrm{AC}$ なら D は C に近いはず、という大小の見通し（AB が長いので BD も長い）で答えを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "比の対応を辺の名前のアルファベット順で決めてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AC}:\\mathrm{AB}=6:10$ だから $\\mathrm{BD}=8\\times\\dfrac{6}{16}=3$",
+        "error_step": "比の対応（$\\mathrm{BD}:\\mathrm{DC}$ に対応させた辺の順序）",
+        "error_type": "concept",
+        "why_tempting": "「二等分線と比」は覚えていても、どの線分にどの辺が対応するかを図で確かめずに、辺の名前の並びで機械的に比を書いている。",
+        "correction": "$\\mathrm{BD}:\\mathrm{DC}=\\mathrm{AB}:\\mathrm{AC}=10:6$ より $\\mathrm{BD}=8\\times\\dfrac{10}{16}=5$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "円の外部の点 P から引いた接線の接点を T とする。P を通る直線が円と点 A, B で交わり（A は P と B の間）、$\\mathrm{PA}=7$、$\\mathrm{AB}=3$ である。PT の長さを求めなさい。\n［ある生徒の解答］\n方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=7\\times3=21$、よって $\\mathrm{PT}=\\sqrt{21}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{PT}=\\sqrt{70}$"
+      },
+      "explanation": "方べきの定理の積は、すべて点 P から円との交点までの距離。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(7*(7+3))",
+        "expected": "sqrt(70)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-err_power",
+      "explanation_detail": {
+        "approach": "方べきの定理は相似 $\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$ から出る。相似比の辺はどれも P を端点とする線分である。",
+        "steps": [
+          "$\\mathrm{PB}=\\mathrm{PA}+\\mathrm{AB}=10$。",
+          "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=7\\times10=70$。",
+          "$\\mathrm{PT}=\\sqrt{70}$。"
+        ],
+        "alternatives": [
+          "相似 $\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$ から $\\mathrm{PT}:\\mathrm{PB}=\\mathrm{PA}:\\mathrm{PT}$ を立てて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さと P からの距離を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=7\\times3=21$、よって $\\mathrm{PT}=\\sqrt{21}$",
+        "error_step": "方べきの定理の式（PB の代わりに AB を使った部分）",
+        "error_type": "formula",
+        "why_tempting": "図に書かれている長さ AB をそのまま使いたくなる。方べきの定理が「点 P からの距離の積」であることを意識していない。",
+        "correction": "$\\mathrm{PB}=7+3=10$、$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=70$ より $\\mathrm{PT}=\\sqrt{70}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "円の外部の点 P から引いた接線の接点を T とする。P を通る直線が円と点 A, B で交わり（A は P と B の間）、$\\mathrm{PA}=3$、$\\mathrm{AB}=9$ である。PT の長さを求めなさい。\n［ある生徒の解答］\n方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=3\\times9=27$、よって $\\mathrm{PT}=3 \\sqrt{3}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{PT}=6$"
+      },
+      "explanation": "方べきの定理の積は、すべて点 P から円との交点までの距離。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(3*(3+9))",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-err_power",
+      "explanation_detail": {
+        "approach": "方べきの定理は相似 $\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$ から出る。相似比の辺はどれも P を端点とする線分である。",
+        "steps": [
+          "$\\mathrm{PB}=\\mathrm{PA}+\\mathrm{AB}=12$。",
+          "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=3\\times12=36$。",
+          "$\\mathrm{PT}=6$。"
+        ],
+        "alternatives": [
+          "相似 $\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$ から $\\mathrm{PT}:\\mathrm{PB}=\\mathrm{PA}:\\mathrm{PT}$ を立てて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さと P からの距離を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=3\\times9=27$、よって $\\mathrm{PT}=3 \\sqrt{3}$",
+        "error_step": "方べきの定理の式（PB の代わりに AB を使った部分）",
+        "error_type": "formula",
+        "why_tempting": "図に書かれている長さ AB をそのまま使いたくなる。方べきの定理が「点 P からの距離の積」であることを意識していない。",
+        "correction": "$\\mathrm{PB}=3+9=12$、$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=36$ より $\\mathrm{PT}=6$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "円の外部の点 P から引いた接線の接点を T とする。P を通る直線が円と点 A, B で交わり（A は P と B の間）、$\\mathrm{PA}=4$、$\\mathrm{AB}=4$ である。PT の長さを求めなさい。\n［ある生徒の解答］\n方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=4\\times4=16$、よって $\\mathrm{PT}=4$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{PT}=4 \\sqrt{2}$"
+      },
+      "explanation": "方べきの定理の積は、すべて点 P から円との交点までの距離。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(4*(4+4))",
+        "expected": "4*sqrt(2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-err_power",
+      "explanation_detail": {
+        "approach": "方べきの定理は相似 $\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$ から出る。相似比の辺はどれも P を端点とする線分である。",
+        "steps": [
+          "$\\mathrm{PB}=\\mathrm{PA}+\\mathrm{AB}=8$。",
+          "$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=4\\times8=32$。",
+          "$\\mathrm{PT}=4 \\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "相似 $\\triangle\\mathrm{PTA}\\sim\\triangle\\mathrm{PBT}$ から $\\mathrm{PT}:\\mathrm{PB}=\\mathrm{PA}:\\mathrm{PT}$ を立てて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "弦の長さと P からの距離を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "方べきの定理より $\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{AB}=4\\times4=16$、よって $\\mathrm{PT}=4$",
+        "error_step": "方べきの定理の式（PB の代わりに AB を使った部分）",
+        "error_type": "formula",
+        "why_tempting": "図に書かれている長さ AB をそのまま使いたくなる。方べきの定理が「点 P からの距離の積」であることを意識していない。",
+        "correction": "$\\mathrm{PB}=4+4=8$、$\\mathrm{PT}^2=\\mathrm{PA}\\cdot\\mathrm{PB}=32$ より $\\mathrm{PT}=4 \\sqrt{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。$\\mathrm{AM}=36$ のとき、AG の長さを求めなさい。\n［ある生徒の解答］\n重心は中線を $1:2$ に分けるので $\\mathrm{AG}=\\dfrac{1}{3}\\times36=12$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{AG}=24$"
+      },
+      "explanation": "$\\mathrm{AG}:\\mathrm{GM}=2:1$（頂点側が長い）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(2,3)*36",
+        "expected": "24",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-err_centroid",
+      "explanation_detail": {
+        "approach": "重心は三角形の「つり合いの点」で、頂点より辺の中点に近い位置にある。図で見通しを立ててから比を使う。",
+        "steps": [
+          "$\\mathrm{AG}:\\mathrm{GM}=2:1$。",
+          "$\\mathrm{AG}=\\dfrac{2}{3}\\times36=24$。"
+        ],
+        "alternatives": [
+          "座標で確かめる：A$(0,\\,3a)$、B$(-b,\\,0)$、C$(b,\\,0)$ とすると G$(0,\\,a)$、M$(0,\\,0)$ で、$\\mathrm{AG}=2a$、$\\mathrm{GM}=a$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AG}$ と $\\mathrm{GM}$ のどちらが長いかを図で確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "重心は中線を $1:2$ に分けるので $\\mathrm{AG}=\\dfrac{1}{3}\\times36=12$",
+        "error_step": "重心が中線を分ける比（頂点側と中点側の取り違え）",
+        "error_type": "concept",
+        "why_tempting": "「$2:1$」という数だけを覚えていて、どちら側が 2 なのかをあいまいにしている。",
+        "correction": "重心は中線を頂点の側から $2:1$ に内分するので $\\mathrm{AG}=\\dfrac{2}{3}\\times36=24$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\triangle\\mathrm{ABC}$ の重心を G、辺 BC の中点を M とする。$\\mathrm{AM}=21$ のとき、AG の長さを求めなさい。\n［ある生徒の解答］\n重心は中線を $1:2$ に分けるので $\\mathrm{AG}=\\dfrac{1}{3}\\times21=7$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\mathrm{AG}=14$"
+      },
+      "explanation": "$\\mathrm{AG}:\\mathrm{GM}=2:1$（頂点側が長い）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(2,3)*21",
+        "expected": "14",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U02-err_centroid",
+      "explanation_detail": {
+        "approach": "重心は三角形の「つり合いの点」で、頂点より辺の中点に近い位置にある。図で見通しを立ててから比を使う。",
+        "steps": [
+          "$\\mathrm{AG}:\\mathrm{GM}=2:1$。",
+          "$\\mathrm{AG}=\\dfrac{2}{3}\\times21=14$。"
+        ],
+        "alternatives": [
+          "座標で確かめる：A$(0,\\,3a)$、B$(-b,\\,0)$、C$(b,\\,0)$ とすると G$(0,\\,a)$、M$(0,\\,0)$ で、$\\mathrm{AG}=2a$、$\\mathrm{GM}=a$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mathrm{AG}$ と $\\mathrm{GM}$ のどちらが長いかを図で確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "重心は中線を $1:2$ に分けるので $\\mathrm{AG}=\\dfrac{1}{3}\\times21=7$",
+        "error_step": "重心が中線を分ける比（頂点側と中点側の取り違え）",
+        "error_type": "concept",
+        "why_tempting": "「$2:1$」という数だけを覚えていて、どちら側が 2 なのかをあいまいにしている。",
+        "correction": "重心は中線を頂点の側から $2:1$ に内分するので $\\mathrm{AG}=\\dfrac{2}{3}\\times21=14$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "円に内接する四角形 ABCD で、$\\angle\\mathrm{A}=60^\\circ$、$\\angle\\mathrm{D}=116^\\circ$ である。$\\angle\\mathrm{B}$ の大きさを求めなさい。\n［ある生徒の解答］\n内接四角形では $\\angle\\mathrm{A}+\\angle\\mathrm{B}=180^\\circ$ なので $\\angle\\mathrm{B}=180^\\circ-60^\\circ=120^\\circ$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\angle\\mathrm{B}=64^\\circ$"
+      },
+      "explanation": "円に内接する四角形で和が $180^\\circ$ になるのは向かい合う角（$\\angle\\mathrm{B}$ と $\\angle\\mathrm{D}$）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "180-116",
+        "expected": "64",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-err_cyclic",
+      "explanation_detail": {
+        "approach": "対角の和が $180^\\circ$ になる理由（2つの円周角に対する中心角の和が $360^\\circ$）にもどって確認する。",
+        "steps": [
+          "$\\angle\\mathrm{B}$ と向かい合う角は $\\angle\\mathrm{D}$。",
+          "$\\angle\\mathrm{B}=180^\\circ-116^\\circ=64^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\angle\\mathrm{C}=180^\\circ-60^\\circ=120^\\circ$ も求め、4つの角の和が $360^\\circ$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "隣り合う角と向かい合う角を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "内接四角形では $\\angle\\mathrm{A}+\\angle\\mathrm{B}=180^\\circ$ なので $\\angle\\mathrm{B}=180^\\circ-60^\\circ=120^\\circ$",
+        "error_step": "性質の適用（隣り合う角の和を $180^\\circ$ とした部分）",
+        "error_type": "concept",
+        "why_tempting": "「和が $180^\\circ$」という形だけを覚えていて、どの2角の和かを確かめていない。平行四辺形の性質（隣り合う角の和が $180^\\circ$）と混同しやすい。",
+        "correction": "$\\angle\\mathrm{B}$ の対角は $\\angle\\mathrm{D}$ なので $\\angle\\mathrm{B}=180^\\circ-116^\\circ=64^\\circ$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "円に内接する四角形 ABCD で、$\\angle\\mathrm{A}=110^\\circ$、$\\angle\\mathrm{D}=98^\\circ$ である。$\\angle\\mathrm{B}$ の大きさを求めなさい。\n［ある生徒の解答］\n内接四角形では $\\angle\\mathrm{A}+\\angle\\mathrm{B}=180^\\circ$ なので $\\angle\\mathrm{B}=180^\\circ-110^\\circ=70^\\circ$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\angle\\mathrm{B}=82^\\circ$"
+      },
+      "explanation": "円に内接する四角形で和が $180^\\circ$ になるのは向かい合う角（$\\angle\\mathrm{B}$ と $\\angle\\mathrm{D}$）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "180-98",
+        "expected": "82",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U02-err_cyclic",
+      "explanation_detail": {
+        "approach": "対角の和が $180^\\circ$ になる理由（2つの円周角に対する中心角の和が $360^\\circ$）にもどって確認する。",
+        "steps": [
+          "$\\angle\\mathrm{B}$ と向かい合う角は $\\angle\\mathrm{D}$。",
+          "$\\angle\\mathrm{B}=180^\\circ-98^\\circ=82^\\circ$。"
+        ],
+        "alternatives": [
+          "$\\angle\\mathrm{C}=180^\\circ-110^\\circ=70^\\circ$ も求め、4つの角の和が $360^\\circ$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "隣り合う角と向かい合う角を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "内接四角形では $\\angle\\mathrm{A}+\\angle\\mathrm{B}=180^\\circ$ なので $\\angle\\mathrm{B}=180^\\circ-110^\\circ=70^\\circ$",
+        "error_step": "性質の適用（隣り合う角の和を $180^\\circ$ とした部分）",
+        "error_type": "concept",
+        "why_tempting": "「和が $180^\\circ$」という形だけを覚えていて、どの2角の和かを確かめていない。平行四辺形の性質（隣り合う角の和が $180^\\circ$）と混同しやすい。",
+        "correction": "$\\angle\\mathrm{B}$ の対角は $\\angle\\mathrm{D}$ なので $\\angle\\mathrm{B}=180^\\circ-98^\\circ=82^\\circ$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "a49336a68424128c3a37fcb7aee7e04554e3ce44dfda8ccfd3475df8c19b8939"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q016, Q017, Q018, Q019）",
+      "content_hash": "91935dea645b9f94a9780abd9d4c983c6acb406b910bc7b9aada6f13a760b75c"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:00:11+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "4cf5b08bd063bbbdc1de1c95fdf25f00061859b0dd940a852dda9e3c5b4e006a"
+  }
+}
