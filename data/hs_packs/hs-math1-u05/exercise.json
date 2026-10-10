@@ -1,0 +1,5643 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH1-U05-EX",
+  "title": "データの分析　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U05"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH1-U05-PACK",
+  "pair_set_id": "HS-MATH1-U05-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G2-U07",
+        "point": "四分位数・箱ひげ図",
+        "title": "データの分布　四分位範囲と箱ひげ図"
+      },
+      {
+        "unit_id": "JH-MATH-G1-U07",
+        "point": "代表値",
+        "title": "データの活用"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHB-U02",
+        "point": "確率分布と統計的推測",
+        "title": "統計的な推測"
+      }
+    ],
+    "readiness_check": [
+      "平均値・中央値・最頻値（中学1年）を求められる。",
+      "四分位数と箱ひげ図（中学2年）をかける。",
+      "平方根の計算と、確率の基本的な求め方を知っている。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U05-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの分散を求めなさい。　33，31，25，33，22，24",
+      "answer": {
+        "value": "20",
+        "display": "$20$"
+      },
+      "explanation": "平均値 $28$、偏差の2乗の和 $120$ より、分散 $20$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "variance([33, 31, 25, 33, 22, 24])",
+        "expected": "20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-mean_var",
+      "explanation_detail": {
+        "approach": "定義どおり、平均値 → 偏差 → 偏差の2乗の平均（分散）→ その正の平方根（標準偏差）の順に求める。",
+        "steps": [
+          "平均値：$\\dfrac{168}{6}=28$。",
+          "偏差：$5$，$3$，$-3$，$5$，$-6$，$-4$（和は $0$）。",
+          "偏差の2乗：$25$，$9$，$9$，$25$，$36$，$16$、和は $120$。",
+          "分散 $=\\dfrac{120}{6}=20$。"
+        ],
+        "alternatives": [
+          "計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ を使うと、$\\overline{x^2}=804$ より $s^2=804-784=20$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "分散を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差を2乗せずに平均してしまう（必ず $0$ になる）。",
+          "個数 $n$ ではなく $n-1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの分散を求めなさい。　23，22，29，25，26",
+      "answer": {
+        "value": "6",
+        "display": "$6$"
+      },
+      "explanation": "平均値 $25$、偏差の2乗の和 $30$ より、分散 $6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "variance([23, 22, 29, 25, 26])",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-mean_var",
+      "explanation_detail": {
+        "approach": "定義どおり、平均値 → 偏差 → 偏差の2乗の平均（分散）→ その正の平方根（標準偏差）の順に求める。",
+        "steps": [
+          "平均値：$\\dfrac{125}{5}=25$。",
+          "偏差：$-2$，$-3$，$4$，$0$，$1$（和は $0$）。",
+          "偏差の2乗：$4$，$9$，$16$，$0$，$1$、和は $30$。",
+          "分散 $=\\dfrac{30}{5}=6$。"
+        ],
+        "alternatives": [
+          "計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ を使うと、$\\overline{x^2}=631$ より $s^2=631-625=6$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "分散を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差を2乗せずに平均してしまう（必ず $0$ になる）。",
+          "個数 $n$ ではなく $n-1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの分散を求めなさい。　5，6，8，1，5",
+      "answer": {
+        "value": "5.2",
+        "display": "$5.2$"
+      },
+      "explanation": "平均値 $5$、偏差の2乗の和 $26$ より、分散 $5.2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "variance([5, 6, 8, 1, 5])",
+        "expected": "5.2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-mean_var",
+      "explanation_detail": {
+        "approach": "定義どおり、平均値 → 偏差 → 偏差の2乗の平均（分散）→ その正の平方根（標準偏差）の順に求める。",
+        "steps": [
+          "平均値：$\\dfrac{25}{5}=5$。",
+          "偏差：$0$，$1$，$3$，$-4$，$0$（和は $0$）。",
+          "偏差の2乗：$0$，$1$，$9$，$16$，$0$、和は $26$。",
+          "分散 $=\\dfrac{26}{5}=5.2$。"
+        ],
+        "alternatives": [
+          "計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ を使うと、$\\overline{x^2}=30.2$ より $s^2=30.2-25=5.2$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "分散を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差を2乗せずに平均してしまう（必ず $0$ になる）。",
+          "個数 $n$ ではなく $n-1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの分散を求めなさい。　24，36，26，31，33",
+      "answer": {
+        "value": "19.6",
+        "display": "$19.6$"
+      },
+      "explanation": "平均値 $30$、偏差の2乗の和 $98$ より、分散 $19.6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "variance([24, 36, 26, 31, 33])",
+        "expected": "19.6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-mean_var",
+      "explanation_detail": {
+        "approach": "定義どおり、平均値 → 偏差 → 偏差の2乗の平均（分散）→ その正の平方根（標準偏差）の順に求める。",
+        "steps": [
+          "平均値：$\\dfrac{150}{5}=30$。",
+          "偏差：$-6$，$6$，$-4$，$1$，$3$（和は $0$）。",
+          "偏差の2乗：$36$，$36$，$16$，$1$，$9$、和は $98$。",
+          "分散 $=\\dfrac{98}{5}=19.6$。"
+        ],
+        "alternatives": [
+          "計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ を使うと、$\\overline{x^2}=919.6$ より $s^2=919.6-900=19.6$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "分散を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差を2乗せずに平均してしまう（必ず $0$ になる）。",
+          "個数 $n$ ではなく $n-1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの分散を求めなさい。　21，19，24，28，33",
+      "answer": {
+        "value": "25.2",
+        "display": "$25.2$"
+      },
+      "explanation": "平均値 $25$、偏差の2乗の和 $126$ より、分散 $25.2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "variance([21, 19, 24, 28, 33])",
+        "expected": "25.2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-mean_var",
+      "explanation_detail": {
+        "approach": "定義どおり、平均値 → 偏差 → 偏差の2乗の平均（分散）→ その正の平方根（標準偏差）の順に求める。",
+        "steps": [
+          "平均値：$\\dfrac{125}{5}=25$。",
+          "偏差：$-4$，$-6$，$-1$，$3$，$8$（和は $0$）。",
+          "偏差の2乗：$16$，$36$，$1$，$9$，$64$、和は $126$。",
+          "分散 $=\\dfrac{126}{5}=25.2$。"
+        ],
+        "alternatives": [
+          "計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ を使うと、$\\overline{x^2}=650.2$ より $s^2=650.2-625=25.2$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "分散を正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差を2乗せずに平均してしまう（必ず $0$ になる）。",
+          "個数 $n$ ではなく $n-1$ で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の 11 個のデータの第1四分位数を求めなさい。　28，46，38，24，17，15，27，37，49，20，33",
+      "answer": {
+        "value": "20",
+        "display": "$20$"
+      },
+      "explanation": "小さい順に並べると 15，17，20，24，27，28，33，37，38，46，49。$Q_1=20$、$Q_2=28$、$Q_3=38$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([28, 46, 38, 24, 17, 15, 27, 37, 49, 20, 33])[0]",
+        "expected": "20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-quartile",
+      "explanation_detail": {
+        "approach": "まずデータを小さい順に並べ、中央値で前半・後半に分ける（個数が奇数なら中央値はどちらにも入れない）。",
+        "steps": [
+          "小さい順に並べる：15，17，20，24，27，28，33，37，38，46，49。",
+          "中央値 $Q_2=28$。中央値を除いて前半 15，17，20，24，27、後半 33，37，38，46，49。",
+          "前半の中央値 $Q_1=20$、後半の中央値 $Q_3=38$。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかいて、箱の左端・右端の値として読み取り、計算結果と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "データを並べて前半・後半に正しく分けている",
+            "points": 1
+          },
+          {
+            "point": "第1四分位数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "データを並べ替えずに中央値をとる。",
+          "個数が奇数のとき、中央値を前半・後半に含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の 7 個のデータの四分位範囲を求めなさい。　10，37，51，46，29，44，45",
+      "answer": {
+        "value": "17",
+        "display": "$17$"
+      },
+      "explanation": "小さい順に並べると 10，29，37，44，45，46，51。$Q_1=29$、$Q_2=44$、$Q_3=46$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([10, 37, 51, 46, 29, 44, 45])[2]-quartiles([10, 37, 51, 46, 29, 44, 45])[0]",
+        "expected": "17"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-quartile",
+      "explanation_detail": {
+        "approach": "まずデータを小さい順に並べ、中央値で前半・後半に分ける（個数が奇数なら中央値はどちらにも入れない）。",
+        "steps": [
+          "小さい順に並べる：10，29，37，44，45，46，51。",
+          "中央値 $Q_2=44$。中央値を除いて前半 10，29，37、後半 45，46，51。",
+          "前半の中央値 $Q_1=29$、後半の中央値 $Q_3=46$。",
+          "四分位範囲 $=Q_3-Q_1=46-29=17$。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかいて、箱の左端・右端の値として読み取り、計算結果と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "データを並べて前半・後半に正しく分けている",
+            "points": 1
+          },
+          {
+            "point": "四分位範囲を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "データを並べ替えずに中央値をとる。",
+          "個数が奇数のとき、中央値を前半・後半に含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の 9 個のデータの四分位範囲を求めなさい。　35，17，44，32，11，36，29，15，30",
+      "answer": {
+        "value": "19.5",
+        "display": "$19.5$"
+      },
+      "explanation": "小さい順に並べると 11，15，17，29，30，32，35，36，44。$Q_1=16$、$Q_2=30$、$Q_3=35.5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([35, 17, 44, 32, 11, 36, 29, 15, 30])[2]-quartiles([35, 17, 44, 32, 11, 36, 29, 15, 30])[0]",
+        "expected": "19.5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-quartile",
+      "explanation_detail": {
+        "approach": "まずデータを小さい順に並べ、中央値で前半・後半に分ける（個数が奇数なら中央値はどちらにも入れない）。",
+        "steps": [
+          "小さい順に並べる：11，15，17，29，30，32，35，36，44。",
+          "中央値 $Q_2=30$。中央値を除いて前半 11，15，17，29、後半 32，35，36，44。",
+          "前半の中央値 $Q_1=16$、後半の中央値 $Q_3=35.5$。",
+          "四分位範囲 $=Q_3-Q_1=35.5-16=19.5$。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかいて、箱の左端・右端の値として読み取り、計算結果と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "データを並べて前半・後半に正しく分けている",
+            "points": 1
+          },
+          {
+            "point": "四分位範囲を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "データを並べ替えずに中央値をとる。",
+          "個数が奇数のとき、中央値を前半・後半に含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の 9 個のデータの四分位範囲を求めなさい。　22，39，32，59，51，17，30，43，28",
+      "answer": {
+        "value": "22",
+        "display": "$22$"
+      },
+      "explanation": "小さい順に並べると 17，22，28，30，32，39，43，51，59。$Q_1=25$、$Q_2=32$、$Q_3=47$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([22, 39, 32, 59, 51, 17, 30, 43, 28])[2]-quartiles([22, 39, 32, 59, 51, 17, 30, 43, 28])[0]",
+        "expected": "22"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-quartile",
+      "explanation_detail": {
+        "approach": "まずデータを小さい順に並べ、中央値で前半・後半に分ける（個数が奇数なら中央値はどちらにも入れない）。",
+        "steps": [
+          "小さい順に並べる：17，22，28，30，32，39，43，51，59。",
+          "中央値 $Q_2=32$。中央値を除いて前半 17，22，28，30、後半 39，43，51，59。",
+          "前半の中央値 $Q_1=25$、後半の中央値 $Q_3=47$。",
+          "四分位範囲 $=Q_3-Q_1=47-25=22$。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかいて、箱の左端・右端の値として読み取り、計算結果と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "データを並べて前半・後半に正しく分けている",
+            "points": 1
+          },
+          {
+            "point": "四分位範囲を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "データを並べ替えずに中央値をとる。",
+          "個数が奇数のとき、中央値を前半・後半に含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の 9 個のデータの第1四分位数を求めなさい。　10，38，16，28，44，20，58，24，21",
+      "answer": {
+        "value": "18",
+        "display": "$18$"
+      },
+      "explanation": "小さい順に並べると 10，16，20，21，24，28，38，44，58。$Q_1=18$、$Q_2=24$、$Q_3=41$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([10, 38, 16, 28, 44, 20, 58, 24, 21])[0]",
+        "expected": "18"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-quartile",
+      "explanation_detail": {
+        "approach": "まずデータを小さい順に並べ、中央値で前半・後半に分ける（個数が奇数なら中央値はどちらにも入れない）。",
+        "steps": [
+          "小さい順に並べる：10，16，20，21，24，28，38，44，58。",
+          "中央値 $Q_2=24$。中央値を除いて前半 10，16，20，21、後半 28，38，44，58。",
+          "前半の中央値 $Q_1=18$、後半の中央値 $Q_3=41$。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかいて、箱の左端・右端の値として読み取り、計算結果と一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "データを並べて前半・後半に正しく分けている",
+            "points": 1
+          },
+          {
+            "point": "第1四分位数を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "データを並べ替えずに中央値をとる。",
+          "個数が奇数のとき、中央値を前半・後半に含めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "変量 $x$ のデータの平均値が $5$、標準偏差が $2$ である。変量 $y$ を $y=4x+28$ で定めるとき、$y$ のデータの平均値を求めなさい。",
+      "answer": {
+        "value": "48"
+      },
+      "explanation": "$\\overline{y}=4\\times5+28=48$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4*5+(28)",
+        "expected": "48"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-transform",
+      "explanation_detail": {
+        "approach": "$y=ax+b$ のとき、平均値は $a\\overline{x}+b$、分散は $a^2$ 倍、標準偏差は $|a|$ 倍になる。$b$ は散らばりに影響しない。",
+        "steps": [
+          "$a=4,\\ b=28$。",
+          "$\\overline{y}=4\\times5+28=48$。"
+        ],
+        "alternatives": [
+          "具体的なデータ（たとえば $3,\\ 7$ の2つの値）で $y$ を計算し、平均値を直接求めて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変換の公式を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加えてしまう。",
+          "分散を $a$ 倍としてしまう（$a^2$ 倍が正しい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "変量 $x$ のデータの平均値が $28$、標準偏差が $8$ である。変量 $y$ を $y=4x+11$ で定めるとき、$y$ のデータの平均値を求めなさい。",
+      "answer": {
+        "value": "123"
+      },
+      "explanation": "$\\overline{y}=4\\times28+11=123$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4*28+(11)",
+        "expected": "123"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-transform",
+      "explanation_detail": {
+        "approach": "$y=ax+b$ のとき、平均値は $a\\overline{x}+b$、分散は $a^2$ 倍、標準偏差は $|a|$ 倍になる。$b$ は散らばりに影響しない。",
+        "steps": [
+          "$a=4,\\ b=11$。",
+          "$\\overline{y}=4\\times28+11=123$。"
+        ],
+        "alternatives": [
+          "具体的なデータ（たとえば $20,\\ 36$ の2つの値）で $y$ を計算し、平均値を直接求めて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変換の公式を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加えてしまう。",
+          "分散を $a$ 倍としてしまう（$a^2$ 倍が正しい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "変量 $x$ のデータの平均値が $21$、標準偏差が $6$ である。変量 $y$ を $y=-x-15$ で定めるとき、$y$ のデータの分散を求めなさい。",
+      "answer": {
+        "value": "36"
+      },
+      "explanation": "$s_y^2=(-1)^2\\times6^2=36$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(-1)**2*6**2",
+        "expected": "36"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-transform",
+      "explanation_detail": {
+        "approach": "$y=ax+b$ のとき、平均値は $a\\overline{x}+b$、分散は $a^2$ 倍、標準偏差は $|a|$ 倍になる。$b$ は散らばりに影響しない。",
+        "steps": [
+          "$a=-1,\\ b=-15$。",
+          "$s_y^2=(-1)^2\\times6^2=36$。"
+        ],
+        "alternatives": [
+          "具体的なデータ（たとえば $15,\\ 27$ の2つの値）で $y$ を計算し、分散を直接求めて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変換の公式を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加えてしまう。",
+          "標準偏差を $-1$ 倍として負の値にする（$|a|$ 倍が正しい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "変量 $x$ のデータの平均値が $47$、標準偏差が $3$ である。変量 $y$ を $y=-4x-4$ で定めるとき、$y$ のデータの平均値を求めなさい。",
+      "answer": {
+        "value": "-192"
+      },
+      "explanation": "$\\overline{y}=-4\\times47-4=-192$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-4*47+(-4)",
+        "expected": "-192"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-transform",
+      "explanation_detail": {
+        "approach": "$y=ax+b$ のとき、平均値は $a\\overline{x}+b$、分散は $a^2$ 倍、標準偏差は $|a|$ 倍になる。$b$ は散らばりに影響しない。",
+        "steps": [
+          "$a=-4,\\ b=-4$。",
+          "$\\overline{y}=-4\\times47-4=-192$。"
+        ],
+        "alternatives": [
+          "具体的なデータ（たとえば $44,\\ 50$ の2つの値）で $y$ を計算し、平均値を直接求めて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変換の公式を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加えてしまう。",
+          "標準偏差を $-4$ 倍として負の値にする（$|a|$ 倍が正しい）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "ある地域の各日の最高気温 $x$ とその日の飲料の販売数 $y$ について調べたところ、相関係数は $0.02$ であった（架空のデータ）。この結果の解釈として最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "直線的な相関はほとんどない"
+        },
+        {
+          "label": "イ",
+          "text": "強い正の相関がある"
+        },
+        {
+          "label": "ウ",
+          "text": "ある地域の各日の最高気温がその日の飲料の販売数を変化させる原因であると結論できる"
+        },
+        {
+          "label": "エ",
+          "text": "強い負の相関がある"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "$r=0.02$ なので直線的な相関はほとんどない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_meaning",
+      "explanation_detail": {
+        "approach": "相関係数の符号で正・負の相関を、絶対値の大きさ（$1$ に近いか $0$ に近いか）で相関の強さを判断する。因果関係は相関係数からは分からない。",
+        "steps": [
+          "符号は正。",
+          "絶対値は $0.02$ で、$0$ に近い。",
+          "よって直線的な相関はほとんどない。"
+        ],
+        "alternatives": [
+          "散布図を想像すると、$r$ が $1$ に近いときは右上がり、$-1$ に近いときは右下がりの直線の近くに点が集まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "符号と大きさを正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "相関と因果を区別している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "正の強い相関は $r$ が $1$ に近いとき。この値は $0$ に近い。",
+          "misconception": "相関係数の符号・大きさの読み誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "相関係数は2つの変量の直線的な関係の強さを表すだけで、因果関係は示さない。",
+          "misconception": "相関と因果の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "負の強い相関は $r$ が $-1$ に近いとき。この値は正である。",
+          "misconception": "相関係数の符号・大きさの読み誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "ある地域の各日の最高気温 $x$ とその日の飲料の販売数 $y$ について調べたところ、相関係数は $-0.91$ であった（架空のデータ）。この結果の解釈として最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "強い正の相関がある"
+        },
+        {
+          "label": "イ",
+          "text": "強い負の相関がある"
+        },
+        {
+          "label": "ウ",
+          "text": "ある地域の各日の最高気温がその日の飲料の販売数を変化させる原因であると結論できる"
+        },
+        {
+          "label": "エ",
+          "text": "直線的な相関はほとんどない"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$r=-0.91$ なので強い負の相関がある。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_meaning",
+      "explanation_detail": {
+        "approach": "相関係数の符号で正・負の相関を、絶対値の大きさ（$1$ に近いか $0$ に近いか）で相関の強さを判断する。因果関係は相関係数からは分からない。",
+        "steps": [
+          "符号は負。",
+          "絶対値は $0.91$ で、$1$ に近い。",
+          "よって強い負の相関がある。"
+        ],
+        "alternatives": [
+          "散布図を想像すると、$r$ が $1$ に近いときは右上がり、$-1$ に近いときは右下がりの直線の近くに点が集まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "符号と大きさを正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "相関と因果を区別している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "正の強い相関は $r$ が $1$ に近いとき。この値は負である。",
+          "misconception": "相関係数の符号・大きさの読み誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "相関係数は2つの変量の直線的な関係の強さを表すだけで、因果関係は示さない。",
+          "misconception": "相関と因果の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$|r|=0.91$ は $1$ に近く、強い相関がある。",
+          "misconception": "相関係数の大きさの読み誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "生徒の1日の勉強時間 $x$ と小テストの得点 $y$ について調べたところ、相関係数は $0.95$ であった（架空のデータ）。この結果の解釈として最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "直線的な相関はほとんどない"
+        },
+        {
+          "label": "イ",
+          "text": "生徒の1日の勉強時間が小テストの得点を変化させる原因であると結論できる"
+        },
+        {
+          "label": "ウ",
+          "text": "強い正の相関がある"
+        },
+        {
+          "label": "エ",
+          "text": "強い負の相関がある"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$r=0.95$ なので強い正の相関がある。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_meaning",
+      "explanation_detail": {
+        "approach": "相関係数の符号で正・負の相関を、絶対値の大きさ（$1$ に近いか $0$ に近いか）で相関の強さを判断する。因果関係は相関係数からは分からない。",
+        "steps": [
+          "符号は正。",
+          "絶対値は $0.95$ で、$1$ に近い。",
+          "よって強い正の相関がある。"
+        ],
+        "alternatives": [
+          "散布図を想像すると、$r$ が $1$ に近いときは右上がり、$-1$ に近いときは右下がりの直線の近くに点が集まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "符号と大きさを正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "相関と因果を区別している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$|r|=0.95$ は $1$ に近く、強い相関がある。",
+          "misconception": "相関係数の大きさの読み誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "相関係数は2つの変量の直線的な関係の強さを表すだけで、因果関係は示さない。",
+          "misconception": "相関と因果の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "負の強い相関は $r$ が $-1$ に近いとき。この値は正である。",
+          "misconception": "相関係数の符号・大きさの読み誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "2つの変量 $x,\\ y$ について、$x$ の標準偏差が $7$、$y$ の標準偏差が $5$、$x$ と $y$ の共分散が $28$ である。$x$ と $y$ の相関係数を求めなさい。",
+      "answer": {
+        "value": "0.8",
+        "display": "$0.8$"
+      },
+      "explanation": "$r=\\dfrac{28}{7\\times5}=0.8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "28/(7*5)",
+        "expected": "0.8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_from_cov",
+      "explanation_detail": {
+        "approach": "相関係数は共分散を2つの標準偏差の積で割った値 $r=\\dfrac{s_{xy}}{s_xs_y}$。",
+        "steps": [
+          "$s_xs_y=7\\times5=35$。",
+          "$r=\\dfrac{28}{35}=0.8$。"
+        ],
+        "alternatives": [
+          "求めた値が $-1\\leqq r\\leqq 1$ の範囲にあることを確かめる（範囲外なら計算ミス）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式を正しく用いている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散の積で割ってしまう。",
+          "共分散の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "2つの変量 $x,\\ y$ について、$x$ の標準偏差が $7$、$y$ の標準偏差が $9$、$x$ と $y$ の共分散が $37.8$ である。$x$ と $y$ の相関係数を求めなさい。",
+      "answer": {
+        "value": "0.6",
+        "display": "$0.6$"
+      },
+      "explanation": "$r=\\dfrac{37.8}{7\\times9}=0.6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(189,5)/(7*9)",
+        "expected": "0.6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_from_cov",
+      "explanation_detail": {
+        "approach": "相関係数は共分散を2つの標準偏差の積で割った値 $r=\\dfrac{s_{xy}}{s_xs_y}$。",
+        "steps": [
+          "$s_xs_y=7\\times9=63$。",
+          "$r=\\dfrac{37.8}{63}=0.6$。"
+        ],
+        "alternatives": [
+          "求めた値が $-1\\leqq r\\leqq 1$ の範囲にあることを確かめる（範囲外なら計算ミス）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式を正しく用いている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散の積で割ってしまう。",
+          "共分散の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "2つの変量 $x,\\ y$ について、$x$ の標準偏差が $4$、$y$ の標準偏差が $8$、$x$ と $y$ の共分散が $-19.2$ である。$x$ と $y$ の相関係数を求めなさい。",
+      "answer": {
+        "value": "-0.6",
+        "display": "$-0.6$"
+      },
+      "explanation": "$r=\\dfrac{-19.2}{4\\times8}=-0.6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(-96,5)/(4*8)",
+        "expected": "-0.6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_from_cov",
+      "explanation_detail": {
+        "approach": "相関係数は共分散を2つの標準偏差の積で割った値 $r=\\dfrac{s_{xy}}{s_xs_y}$。",
+        "steps": [
+          "$s_xs_y=4\\times8=32$。",
+          "$r=\\dfrac{-19.2}{32}=-0.6$。"
+        ],
+        "alternatives": [
+          "求めた値が $-1\\leqq r\\leqq 1$ の範囲にあることを確かめる（範囲外なら計算ミス）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式を正しく用いている",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分散の積で割ってしまう。",
+          "共分散の符号を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "8 個の値からなる変量 $x$ のデータについて、$x$ の平均値は $17$、$x^2$ の平均値は $370$ であった。$x$ のデータの標準偏差を求めなさい。",
+      "answer": {
+        "value": "9"
+      },
+      "explanation": "$s^2=\\overline{x^2}-(\\overline{x})^2=370-289=81$、$s=9$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(370-17**2)",
+        "expected": "9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_formula",
+      "explanation_detail": {
+        "approach": "個々の値が分からなくても、$\\overline{x}$ と $\\overline{x^2}$ が分かれば計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ で分散が求まる。",
+        "steps": [
+          "$(\\overline{x})^2=17^2=289$。",
+          "$s^2=370-289=81$。",
+          "$s=\\sqrt{81}=9$。"
+        ],
+        "alternatives": [
+          "公式の導出（偏差の2乗を展開して平均する）を思い出せば、引く量が「平均の2乗」であることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "計算公式を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "point": "標準偏差を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{x^2}-\\overline{x}$ と、平均を2乗し忘れる。",
+          "標準偏差を求めるときに平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "20 個の値からなる変量 $x$ のデータについて、$x$ の平均値は $4$、$x^2$ の平均値は $97$ であった。$x$ のデータの標準偏差を求めなさい。",
+      "answer": {
+        "value": "9"
+      },
+      "explanation": "$s^2=\\overline{x^2}-(\\overline{x})^2=97-16=81$、$s=9$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(97-4**2)",
+        "expected": "9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_formula",
+      "explanation_detail": {
+        "approach": "個々の値が分からなくても、$\\overline{x}$ と $\\overline{x^2}$ が分かれば計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ で分散が求まる。",
+        "steps": [
+          "$(\\overline{x})^2=4^2=16$。",
+          "$s^2=97-16=81$。",
+          "$s=\\sqrt{81}=9$。"
+        ],
+        "alternatives": [
+          "公式の導出（偏差の2乗を展開して平均する）を思い出せば、引く量が「平均の2乗」であることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "計算公式を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "point": "標準偏差を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{x^2}-\\overline{x}$ と、平均を2乗し忘れる。",
+          "標準偏差を求めるときに平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "10 個の値からなる変量 $x$ のデータについて、$x$ の平均値は $3$、$x^2$ の平均値は $25$ であった。$x$ のデータの標準偏差を求めなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$s^2=\\overline{x^2}-(\\overline{x})^2=25-9=16$、$s=4$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(25-3**2)",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_formula",
+      "explanation_detail": {
+        "approach": "個々の値が分からなくても、$\\overline{x}$ と $\\overline{x^2}$ が分かれば計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ で分散が求まる。",
+        "steps": [
+          "$(\\overline{x})^2=3^2=9$。",
+          "$s^2=25-9=16$。",
+          "$s=\\sqrt{16}=4$。"
+        ],
+        "alternatives": [
+          "公式の導出（偏差の2乗を展開して平均する）を思い出せば、引く量が「平均の2乗」であることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "計算公式を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "point": "標準偏差を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{x^2}-\\overline{x}$ と、平均を2乗し忘れる。",
+          "標準偏差を求めるときに平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "8 個の値からなる変量 $x$ のデータについて、$x$ の平均値は $31$、$x^2$ の平均値は $1061$ であった。$x$ のデータの標準偏差を求めなさい。",
+      "answer": {
+        "value": "10"
+      },
+      "explanation": "$s^2=\\overline{x^2}-(\\overline{x})^2=1061-961=100$、$s=10$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(1061-31**2)",
+        "expected": "10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_formula",
+      "explanation_detail": {
+        "approach": "個々の値が分からなくても、$\\overline{x}$ と $\\overline{x^2}$ が分かれば計算公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ で分散が求まる。",
+        "steps": [
+          "$(\\overline{x})^2=31^2=961$。",
+          "$s^2=1061-961=100$。",
+          "$s=\\sqrt{100}=10$。"
+        ],
+        "alternatives": [
+          "公式の導出（偏差の2乗を展開して平均する）を思い出せば、引く量が「平均の2乗」であることを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "計算公式を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "point": "標準偏差を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\overline{x^2}-\\overline{x}$ と、平均を2乗し忘れる。",
+          "標準偏差を求めるときに平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "5人の生徒の2つの小テストの得点 $(x,\\ y)$ は $(3,\\ 6)$，$(2,\\ 6)$，$(4,\\ 4)$，$(1,\\ 7)$，$(5,\\ 2)$ であった（架空のデータ。下の表にもまとめてある）。$x$ と $y$ の相関係数を、小数第3位を四捨五入して小数第2位まで求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$x$",
+            "3",
+            "2",
+            "4",
+            "1",
+            "5"
+          ],
+          [
+            "$y$",
+            "6",
+            "6",
+            "4",
+            "7",
+            "2"
+          ]
+        ],
+        "header": [
+          "生徒",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "answer": {
+        "value": "-0.95"
+      },
+      "explanation": "$\\overline{x}=3,\\ \\overline{y}=5$。偏差の積の和 $-12$、偏差の2乗の和はそれぞれ $10,\\ 16$。$r=\\dfrac{-12}{\\sqrt{10}\\sqrt{16}}\\fallingdotseq-0.95$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((-12)/sqrt(10*16)*100+Rational(1,2))/100",
+        "expected": "-0.95"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_calc",
+      "explanation_detail": {
+        "approach": "平均値 → 偏差 → 偏差の積の和と偏差の2乗の和 の順に表をつくる。$r=\\dfrac{s_{xy}}{s_xs_y}$ の $\\dfrac{1}{n}$ は分子・分母で約分できるので、和のまま計算してよい。",
+        "steps": [
+          "$\\overline{x}=3$、$\\overline{y}=5$。",
+          "$x$ の偏差：0，-1，1，-2，2、$y$ の偏差：1，1，-1，2，-3。",
+          "偏差の積の和 $-12$、$x$ の偏差の2乗の和 $10$、$y$ の偏差の2乗の和 $16$。",
+          "$r=\\dfrac{-12}{\\sqrt{160}}\\fallingdotseq-0.949$ より $-0.95$。"
+        ],
+        "alternatives": [
+          "共分散 $s_{xy}=-2.4$、標準偏差 $s_x=\\sqrt{2}$、$s_y=\\sqrt{3.2}$ を求めてから $r=\\dfrac{s_{xy}}{s_xs_y}$ に代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏差の積の和・2乗の和を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "相関係数を正しく四捨五入している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差の積の符号を誤る。",
+          "分母を $\\sqrt{10\\times16}$ ではなく $10\\times16$ としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "5人の生徒の2つの小テストの得点 $(x,\\ y)$ は $(7,\\ 1)$，$(10,\\ 1)$，$(6,\\ 8)$，$(8,\\ 5)$，$(9,\\ 10)$ であった（架空のデータ。下の表にもまとめてある）。$x$ と $y$ の相関係数を、小数第3位を四捨五入して小数第2位まで求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$x$",
+            "7",
+            "10",
+            "6",
+            "8",
+            "9"
+          ],
+          [
+            "$y$",
+            "1",
+            "1",
+            "8",
+            "5",
+            "10"
+          ]
+        ],
+        "header": [
+          "生徒",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "answer": {
+        "value": "-0.19"
+      },
+      "explanation": "$\\overline{x}=8,\\ \\overline{y}=5$。偏差の積の和 $-5$、偏差の2乗の和はそれぞれ $10,\\ 66$。$r=\\dfrac{-5}{\\sqrt{10}\\sqrt{66}}\\fallingdotseq-0.19$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((-5)/sqrt(10*66)*100+Rational(1,2))/100",
+        "expected": "-0.19"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_calc",
+      "explanation_detail": {
+        "approach": "平均値 → 偏差 → 偏差の積の和と偏差の2乗の和 の順に表をつくる。$r=\\dfrac{s_{xy}}{s_xs_y}$ の $\\dfrac{1}{n}$ は分子・分母で約分できるので、和のまま計算してよい。",
+        "steps": [
+          "$\\overline{x}=8$、$\\overline{y}=5$。",
+          "$x$ の偏差：-1，2，-2，0，1、$y$ の偏差：-4，-4，3，0，5。",
+          "偏差の積の和 $-5$、$x$ の偏差の2乗の和 $10$、$y$ の偏差の2乗の和 $66$。",
+          "$r=\\dfrac{-5}{\\sqrt{660}}\\fallingdotseq-0.195$ より $-0.19$。"
+        ],
+        "alternatives": [
+          "共分散 $s_{xy}=-1$、標準偏差 $s_x=\\sqrt{2}$、$s_y=\\sqrt{13.2}$ を求めてから $r=\\dfrac{s_{xy}}{s_xs_y}$ に代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏差の積の和・2乗の和を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "相関係数を正しく四捨五入している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差の積の符号を誤る。",
+          "分母を $\\sqrt{10\\times66}$ ではなく $10\\times66$ としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "5人の生徒の2つの小テストの得点 $(x,\\ y)$ は $(4,\\ 12)$，$(5,\\ 10)$，$(3,\\ 6)$，$(2,\\ 4)$，$(1,\\ 8)$ であった（架空のデータ。下の表にもまとめてある）。$x$ と $y$ の相関係数を、小数第3位を四捨五入して小数第2位まで求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$x$",
+            "4",
+            "5",
+            "3",
+            "2",
+            "1"
+          ],
+          [
+            "$y$",
+            "12",
+            "10",
+            "6",
+            "4",
+            "8"
+          ]
+        ],
+        "header": [
+          "生徒",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "answer": {
+        "value": "0.60"
+      },
+      "explanation": "$\\overline{x}=3,\\ \\overline{y}=8$。偏差の積の和 $12$、偏差の2乗の和はそれぞれ $10,\\ 40$。$r=\\dfrac{12}{\\sqrt{10}\\sqrt{40}}\\fallingdotseq0.60$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((12)/sqrt(10*40)*100+Rational(1,2))/100",
+        "expected": "0.60"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_calc",
+      "explanation_detail": {
+        "approach": "平均値 → 偏差 → 偏差の積の和と偏差の2乗の和 の順に表をつくる。$r=\\dfrac{s_{xy}}{s_xs_y}$ の $\\dfrac{1}{n}$ は分子・分母で約分できるので、和のまま計算してよい。",
+        "steps": [
+          "$\\overline{x}=3$、$\\overline{y}=8$。",
+          "$x$ の偏差：1，2，0，-1，-2、$y$ の偏差：4，2，-2，-4，0。",
+          "偏差の積の和 $12$、$x$ の偏差の2乗の和 $10$、$y$ の偏差の2乗の和 $40$。",
+          "$r=\\dfrac{12}{\\sqrt{400}}\\fallingdotseq0.600$ より $0.60$。"
+        ],
+        "alternatives": [
+          "共分散 $s_{xy}=2.4$、標準偏差 $s_x=\\sqrt{2}$、$s_y=\\sqrt{8}$ を求めてから $r=\\dfrac{s_{xy}}{s_xs_y}$ に代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏差の積の和・2乗の和を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "相関係数を正しく四捨五入している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差の積の符号を誤る。",
+          "分母を $\\sqrt{10\\times40}$ ではなく $10\\times40$ としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "5人の生徒の2つの小テストの得点 $(x,\\ y)$ は $(5,\\ 7)$，$(3,\\ 0)$，$(2,\\ 8)$，$(1,\\ 5)$，$(4,\\ 0)$ であった（架空のデータ。下の表にもまとめてある）。$x$ と $y$ の相関係数を、小数第3位を四捨五入して小数第2位まで求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "$x$",
+            "5",
+            "3",
+            "2",
+            "1",
+            "4"
+          ],
+          [
+            "$y$",
+            "7",
+            "0",
+            "8",
+            "5",
+            "0"
+          ]
+        ],
+        "header": [
+          "生徒",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "answer": {
+        "value": "-0.17"
+      },
+      "explanation": "$\\overline{x}=3,\\ \\overline{y}=4$。偏差の積の和 $-4$、偏差の2乗の和はそれぞれ $10,\\ 58$。$r=\\dfrac{-4}{\\sqrt{10}\\sqrt{58}}\\fallingdotseq-0.17$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((-4)/sqrt(10*58)*100+Rational(1,2))/100",
+        "expected": "-0.17"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_calc",
+      "explanation_detail": {
+        "approach": "平均値 → 偏差 → 偏差の積の和と偏差の2乗の和 の順に表をつくる。$r=\\dfrac{s_{xy}}{s_xs_y}$ の $\\dfrac{1}{n}$ は分子・分母で約分できるので、和のまま計算してよい。",
+        "steps": [
+          "$\\overline{x}=3$、$\\overline{y}=4$。",
+          "$x$ の偏差：2，0，-1，-2，1、$y$ の偏差：3，-4，4，1，-4。",
+          "偏差の積の和 $-4$、$x$ の偏差の2乗の和 $10$、$y$ の偏差の2乗の和 $58$。",
+          "$r=\\dfrac{-4}{\\sqrt{580}}\\fallingdotseq-0.166$ より $-0.17$。"
+        ],
+        "alternatives": [
+          "共分散 $s_{xy}=-0.8$、標準偏差 $s_x=\\sqrt{2}$、$s_y=\\sqrt{11.6}$ を求めてから $r=\\dfrac{s_{xy}}{s_xs_y}$ に代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均値と偏差を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏差の積の和・2乗の和を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "相関係数を正しく四捨五入している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "偏差の積の符号を誤る。",
+          "分母を $\\sqrt{10\\times58}$ ではなく $10\\times58$ としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の 10 個のデータについて、「第1四分位数から四分位範囲の1.5倍を引いた値より小さい値、または第3四分位数に四分位範囲の1.5倍を加えた値より大きい値」を外れ値とする。外れ値をすべて答えなさい（ない場合は「なし」と答えなさい）。　49，55，45，43，56，44，47，59，48，86",
+      "answer": {
+        "value": "86"
+      },
+      "explanation": "$Q_1=45,\\ Q_3=56$、四分位範囲 $11$。基準は $28.5$ より小さい値と $72.5$ より大きい値。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "quartiles([49, 55, 45, 43, 56, 44, 47, 59, 48, 86])",
+        "expected": "[45, Rational(97,2), 56]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-outlier",
+      "explanation_detail": {
+        "approach": "外れ値の基準は四分位数から決まるので、まず小さい順に並べて $Q_1,\\ Q_3$ と四分位範囲を求め、下側・上側の基準値を計算する。",
+        "steps": [
+          "小さい順：43，44，45，47，48，49，55，56，59，86。",
+          "$Q_1=45$、$Q_3=56$、四分位範囲 $11$。",
+          "下側の基準 $45-1.5\\times11=28.5$、上側の基準 $56+1.5\\times11=72.5$。",
+          "基準の外にある値：86。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかき、箱の長さの1.5倍を箱の両端から伸ばした範囲の外にある点を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "四分位数と四分位範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "基準値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "外れ値を正しく判定している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "四分位範囲の1.5倍を、四分位数ではなく中央値から引いてしまう。",
+          "データを並べ替えずに四分位数を求める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の 11 個のデータについて、「第1四分位数から四分位範囲の1.5倍を引いた値より小さい値、または第3四分位数に四分位範囲の1.5倍を加えた値より大きい値」を外れ値とする。外れ値をすべて答えなさい（ない場合は「なし」と答えなさい）。　52，59，45，42，53，48，100，60，41，38，39",
+      "answer": {
+        "value": "100"
+      },
+      "explanation": "$Q_1=41,\\ Q_3=59$、四分位範囲 $18$。基準は $14$ より小さい値と $86$ より大きい値。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "quartiles([52, 59, 45, 42, 53, 48, 100, 60, 41, 38, 39])",
+        "expected": "[41, 48, 59]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-outlier",
+      "explanation_detail": {
+        "approach": "外れ値の基準は四分位数から決まるので、まず小さい順に並べて $Q_1,\\ Q_3$ と四分位範囲を求め、下側・上側の基準値を計算する。",
+        "steps": [
+          "小さい順：38，39，41，42，45，48，52，53，59，60，100。",
+          "$Q_1=41$、$Q_3=59$、四分位範囲 $18$。",
+          "下側の基準 $41-1.5\\times18=14$、上側の基準 $59+1.5\\times18=86$。",
+          "基準の外にある値：100。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかき、箱の長さの1.5倍を箱の両端から伸ばした範囲の外にある点を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "四分位数と四分位範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "基準値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "外れ値を正しく判定している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "四分位範囲の1.5倍を、四分位数ではなく中央値から引いてしまう。",
+          "データを並べ替えずに四分位数を求める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の 9 個のデータについて、「第1四分位数から四分位範囲の1.5倍を引いた値より小さい値、または第3四分位数に四分位範囲の1.5倍を加えた値より大きい値」を外れ値とする。外れ値をすべて答えなさい（ない場合は「なし」と答えなさい）。　36，41，54，45，55，112，42，31，43",
+      "answer": {
+        "value": "112"
+      },
+      "explanation": "$Q_1=38.5,\\ Q_3=54.5$、四分位範囲 $16$。基準は $14.5$ より小さい値と $78.5$ より大きい値。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "quartiles([36, 41, 54, 45, 55, 112, 42, 31, 43])",
+        "expected": "[Rational(77,2), 43, Rational(109,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-outlier",
+      "explanation_detail": {
+        "approach": "外れ値の基準は四分位数から決まるので、まず小さい順に並べて $Q_1,\\ Q_3$ と四分位範囲を求め、下側・上側の基準値を計算する。",
+        "steps": [
+          "小さい順：31，36，41，42，43，45，54，55，112。",
+          "$Q_1=38.5$、$Q_3=54.5$、四分位範囲 $16$。",
+          "下側の基準 $38.5-1.5\\times16=14.5$、上側の基準 $54.5+1.5\\times16=78.5$。",
+          "基準の外にある値：112。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかき、箱の長さの1.5倍を箱の両端から伸ばした範囲の外にある点を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "四分位数と四分位範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "基準値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "外れ値を正しく判定している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "四分位範囲の1.5倍を、四分位数ではなく中央値から引いてしまう。",
+          "データを並べ替えずに四分位数を求める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の 11 個のデータについて、「第1四分位数から四分位範囲の1.5倍を引いた値より小さい値、または第3四分位数に四分位範囲の1.5倍を加えた値より大きい値」を外れ値とする。外れ値をすべて答えなさい（ない場合は「なし」と答えなさい）。　0，36，53，52，51，40，50，47，46，34，42",
+      "answer": {
+        "value": "0"
+      },
+      "explanation": "$Q_1=36,\\ Q_3=51$、四分位範囲 $15$。基準は $13.5$ より小さい値と $73.5$ より大きい値。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "quartiles([0, 36, 53, 52, 51, 40, 50, 47, 46, 34, 42])",
+        "expected": "[36, 46, 51]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-outlier",
+      "explanation_detail": {
+        "approach": "外れ値の基準は四分位数から決まるので、まず小さい順に並べて $Q_1,\\ Q_3$ と四分位範囲を求め、下側・上側の基準値を計算する。",
+        "steps": [
+          "小さい順：0，34，36，40，42，46，47，50，51，52，53。",
+          "$Q_1=36$、$Q_3=51$、四分位範囲 $15$。",
+          "下側の基準 $36-1.5\\times15=13.5$、上側の基準 $51+1.5\\times15=73.5$。",
+          "基準の外にある値：0。"
+        ],
+        "alternatives": [
+          "箱ひげ図をかき、箱の長さの1.5倍を箱の両端から伸ばした範囲の外にある点を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "四分位数と四分位範囲を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "基準値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "外れ値を正しく判定している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "四分位範囲の1.5倍を、四分位数ではなく中央値から引いてしまう。",
+          "データを並べ替えずに四分位数を求める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "新しい飲料 A と従来の飲料 B を 13 人に飲み比べてもらったところ、9 人が A の方がおいしいと答えた（架空の設定）。「A の方が好まれる」と判断してよいかを、基準となる確率を $5\\%$ として考える。仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとで、9 人以上が A を選ぶ確率は約 $0.133$ である。正しい判断を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」が正しいことが証明された"
+        },
+        {
+          "label": "イ",
+          "text": "「B の方が好まれる」と判断してよい"
+        },
+        {
+          "label": "ウ",
+          "text": "仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとでも起こりうることなので、「A の方が好まれる」とは判断できない"
+        },
+        {
+          "label": "エ",
+          "text": "仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとでは起こりにくいことが起こったので、「A の方が好まれる」と判断してよい"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "約 $0.133$ は $0.05$ 以上。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(13,t),(t,9,13))/2**13*1000+Rational(1,2))/1000",
+        "expected": "0.133",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hypothesis",
+      "explanation_detail": {
+        "approach": "仮説のもとで実際の結果以上に偏る確率を、基準 $0.05$ と比べる。小さければ仮説は誤りと判断し、そうでなければ「判断できない」と結論する。",
+        "steps": [
+          "仮説：A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）。",
+          "仮説のもとで実際の結果以上に偏る確率：約 $0.133$。",
+          "$0.133\\geqq 0.05$。",
+          "よって、仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとでも起こりうることなので、「A の方が好まれる」とは判断できない。"
+        ],
+        "alternatives": [
+          "確率の値は ${}_{13}\\mathrm{C}_{9}+\\cdots+{}_{13}\\mathrm{C}_{13}$ を $2^{13}$ で割って求められる（反復試行の確率）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "point": "結論を正しい形（判断できる／できない）で選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "仮説検定で仮説が正しいと証明されることはない。確率が基準以上のときは「誤りとは判断できない」だけである。",
+          "misconception": "判断できないことを証明と取り違える誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "観察された結果は主張と同じ向きに偏っており、反対の向きの判断の根拠にはならない。",
+          "misconception": "検定の向きの取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "確率約 $0.133$ は基準 $0.05$ 以上なので、めったに起こらないこととはいえない。",
+          "misconception": "基準との比較の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "あるコインを 14 回投げたところ、表が 12 回出た（架空の設定）。「このコインは表が出やすい」と判断してよいかを、基準となる確率を $5\\%$ として考える。仮説「このコインは公正である（表が出る確率は $\\dfrac{1}{2}$）」のもとで、表が 12 回以上出る確率は約 $0.006$ である。正しい判断を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "仮説「このコインは公正である（表が出る確率は $\\dfrac{1}{2}$）」のもとでは起こりにくいことが起こったので、「このコインは表が出やすい」と判断してよい"
+        },
+        {
+          "label": "イ",
+          "text": "仮説「このコインは公正である（表が出る確率は $\\dfrac{1}{2}$）」が正しいことが証明された"
+        },
+        {
+          "label": "ウ",
+          "text": "仮説「このコインは公正である（表が出る確率は $\\dfrac{1}{2}$）」のもとでも起こりうることなので、「このコインは表が出やすい」とは判断できない"
+        },
+        {
+          "label": "エ",
+          "text": "「このコインは裏が出やすい」と判断してよい"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "約 $0.006$ は $0.05$ より小さい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(14,t),(t,12,14))/2**14*1000+Rational(1,2))/1000",
+        "expected": "0.006",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hypothesis",
+      "explanation_detail": {
+        "approach": "仮説のもとで実際の結果以上に偏る確率を、基準 $0.05$ と比べる。小さければ仮説は誤りと判断し、そうでなければ「判断できない」と結論する。",
+        "steps": [
+          "仮説：このコインは公正である（表が出る確率は $\\dfrac{1}{2}$）。",
+          "仮説のもとで実際の結果以上に偏る確率：約 $0.006$。",
+          "$0.006<0.05$。",
+          "よって、仮説「このコインは公正である（表が出る確率は $\\dfrac{1}{2}$）」のもとでは起こりにくいことが起こったので、「このコインは表が出やすい」と判断してよい。"
+        ],
+        "alternatives": [
+          "確率の値は ${}_{14}\\mathrm{C}_{12}+\\cdots+{}_{14}\\mathrm{C}_{14}$ を $2^{14}$ で割って求められる（反復試行の確率）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "point": "結論を正しい形（判断できる／できない）で選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "仮説検定で仮説が正しいと証明されることはない。確率が基準以上のときは「誤りとは判断できない」だけである。",
+          "misconception": "判断できないことを証明と取り違える誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "確率約 $0.006$ は基準 $0.05$ より小さいので、仮説のもとでは起こりにくいことが起こったと考える。",
+          "misconception": "基準との比較の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "観察された結果は主張と同じ向きに偏っており、反対の向きの判断の根拠にはならない。",
+          "misconception": "検定の向きの取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "2つの選択肢から1つを選ぶ問題 16 問に、ある生徒が答えたところ 13 問正解した（架空の設定）。「この生徒には実力がある」と判断してよいかを、基準となる確率を $5\\%$ として考える。仮説「この生徒はでたらめに答えている（各問の正解の確率は $\\dfrac{1}{2}$）」のもとで、13 問以上正解する確率は約 $0.011$ である。正しい判断を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "「この生徒は正解しにくい答え方をしている」と判断してよい"
+        },
+        {
+          "label": "イ",
+          "text": "仮説「この生徒はでたらめに答えている（各問の正解の確率は $\\dfrac{1}{2}$）」のもとでも起こりうることなので、「この生徒には実力がある」とは判断できない"
+        },
+        {
+          "label": "ウ",
+          "text": "仮説「この生徒はでたらめに答えている（各問の正解の確率は $\\dfrac{1}{2}$）」が正しいことが証明された"
+        },
+        {
+          "label": "エ",
+          "text": "仮説「この生徒はでたらめに答えている（各問の正解の確率は $\\dfrac{1}{2}$）」のもとでは起こりにくいことが起こったので、「この生徒には実力がある」と判断してよい"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "約 $0.011$ は $0.05$ より小さい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(16,t),(t,13,16))/2**16*1000+Rational(1,2))/1000",
+        "expected": "0.011",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hypothesis",
+      "explanation_detail": {
+        "approach": "仮説のもとで実際の結果以上に偏る確率を、基準 $0.05$ と比べる。小さければ仮説は誤りと判断し、そうでなければ「判断できない」と結論する。",
+        "steps": [
+          "仮説：この生徒はでたらめに答えている（各問の正解の確率は $\\dfrac{1}{2}$）。",
+          "仮説のもとで実際の結果以上に偏る確率：約 $0.011$。",
+          "$0.011<0.05$。",
+          "よって、仮説「この生徒はでたらめに答えている（各問の正解の確率は $\\dfrac{1}{2}$）」のもとでは起こりにくいことが起こったので、「この生徒には実力がある」と判断してよい。"
+        ],
+        "alternatives": [
+          "確率の値は ${}_{16}\\mathrm{C}_{13}+\\cdots+{}_{16}\\mathrm{C}_{16}$ を $2^{16}$ で割って求められる（反復試行の確率）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "point": "結論を正しい形（判断できる／できない）で選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "観察された結果は主張と同じ向きに偏っており、反対の向きの判断の根拠にはならない。",
+          "misconception": "検定の向きの取り違え"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "確率約 $0.011$ は基準 $0.05$ より小さいので、仮説のもとでは起こりにくいことが起こったと考える。",
+          "misconception": "基準との比較の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "仮説検定で仮説が正しいと証明されることはない。確率が基準以上のときは「誤りとは判断できない」だけである。",
+          "misconception": "判断できないことを証明と取り違える誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "新しい飲料 A と従来の飲料 B を 22 人に飲み比べてもらったところ、14 人が A の方がおいしいと答えた（架空の設定）。「A の方が好まれる」と判断してよいかを、基準となる確率を $5\\%$ として考える。仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとで、14 人以上が A を選ぶ確率は約 $0.143$ である。正しい判断を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとでも起こりうることなので、「A の方が好まれる」とは判断できない"
+        },
+        {
+          "label": "イ",
+          "text": "仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」が正しいことが証明された"
+        },
+        {
+          "label": "ウ",
+          "text": "仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとでは起こりにくいことが起こったので、「A の方が好まれる」と判断してよい"
+        },
+        {
+          "label": "エ",
+          "text": "「B の方が好まれる」と判断してよい"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "約 $0.143$ は $0.05$ 以上。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(22,t),(t,14,22))/2**22*1000+Rational(1,2))/1000",
+        "expected": "0.143",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hypothesis",
+      "explanation_detail": {
+        "approach": "仮説のもとで実際の結果以上に偏る確率を、基準 $0.05$ と比べる。小さければ仮説は誤りと判断し、そうでなければ「判断できない」と結論する。",
+        "steps": [
+          "仮説：A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）。",
+          "仮説のもとで実際の結果以上に偏る確率：約 $0.143$。",
+          "$0.143\\geqq 0.05$。",
+          "よって、仮説「A と B の好みに差はない（A を選ぶ確率は $\\dfrac{1}{2}$）」のもとでも起こりうることなので、「A の方が好まれる」とは判断できない。"
+        ],
+        "alternatives": [
+          "確率の値は ${}_{22}\\mathrm{C}_{14}+\\cdots+{}_{22}\\mathrm{C}_{22}$ を $2^{22}$ で割って求められる（反復試行の確率）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "point": "結論を正しい形（判断できる／できない）で選んでいる",
+            "points": 2
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "仮説検定で仮説が正しいと証明されることはない。確率が基準以上のときは「誤りとは判断できない」だけである。",
+          "misconception": "判断できないことを証明と取り違える誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "確率約 $0.143$ は基準 $0.05$ 以上なので、めったに起こらないこととはいえない。",
+          "misconception": "基準との比較の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "観察された結果は主張と同じ向きに偏っており、反対の向きの判断の根拠にはならない。",
+          "misconception": "検定の向きの取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "A 組 10 人と B 組 5 人の小テストの得点について、A 組の平均値は $43$ 点、分散は $10$、B 組の平均値は $52$ 点、分散は $28$ である（架空のデータ）。2つの組を合わせた 15 人の得点の分散を求めなさい。",
+      "answer": {
+        "value": "34"
+      },
+      "explanation": "全体の平均値は $46$、全体の2乗の平均値は $2150$ なので、分散は $2150-46^2=34$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(10*(10+43**2)+5*(28+52**2))/15-((10*43+5*52)/15)**2",
+        "expected": "34"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-combined",
+      "explanation_detail": {
+        "approach": "合計を使って全体の平均値を求める。分散は平均同士を合わせられないので、各組の「2乗の平均値」$\\overline{x^2}=s^2+(\\overline{x})^2$ を求めて全体の2乗の平均値をつくる。",
+        "steps": [
+          "得点の合計：$10\\times43+5\\times52=690$、全体の平均値 $46$。",
+          "各組の2乗の平均値：A 組 $10+43^2=1859$、B 組 $28+52^2=2732$。",
+          "全体の2乗の平均値：$\\dfrac{10\\times1859+5\\times2732}{15}=2150$。",
+          "全体の分散：$2150-46^2=34$。"
+        ],
+        "alternatives": [
+          "全体の分散は「各組の分散の加重平均」と「各組の平均値の全体の平均値からのずれ」の和としても求められる：$\\dfrac{10\\times10+5\\times28}{15}+\\dfrac{10(43-46)^2+5(52-46)^2}{15}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の平均値を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "2乗の平均値を用いて正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの組の平均値（分散）をそのまま平均してしまう（人数の違いを無視）。",
+          "分散を合わせるときに平均値のずれを考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "A 組 5 人と B 組 5 人の小テストの得点について、A 組の平均値は $44$ 点、分散は $28$、B 組の平均値は $48$ 点、分散は $20$ である（架空のデータ）。2つの組を合わせた 10 人の得点の平均値を求めなさい。",
+      "answer": {
+        "value": "46"
+      },
+      "explanation": "全体の平均値は $46$、全体の2乗の平均値は $2144$ なので、分散は $2144-46^2=28$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(5*44+5*48)/10",
+        "expected": "46"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-combined",
+      "explanation_detail": {
+        "approach": "合計を使って全体の平均値を求める。分散は平均同士を合わせられないので、各組の「2乗の平均値」$\\overline{x^2}=s^2+(\\overline{x})^2$ を求めて全体の2乗の平均値をつくる。",
+        "steps": [
+          "得点の合計：$5\\times44+5\\times48=460$、全体の平均値 $46$。"
+        ],
+        "alternatives": [
+          "全体の分散は「各組の分散の加重平均」と「各組の平均値の全体の平均値からのずれ」の和としても求められる：$\\dfrac{5\\times28+5\\times20}{10}+\\dfrac{5(44-46)^2+5(48-46)^2}{10}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の平均値を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "2乗の平均値を用いて正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの組の平均値（分散）をそのまま平均してしまう（人数の違いを無視）。",
+          "分散を合わせるときに平均値のずれを考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "A 組 8 人と B 組 8 人の小テストの得点について、A 組の平均値は $46$ 点、分散は $5$、B 組の平均値は $44$ 点、分散は $29$ である（架空のデータ）。2つの組を合わせた 16 人の得点の分散を求めなさい。",
+      "answer": {
+        "value": "18"
+      },
+      "explanation": "全体の平均値は $45$、全体の2乗の平均値は $2043$ なので、分散は $2043-45^2=18$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(8*(5+46**2)+8*(29+44**2))/16-((8*46+8*44)/16)**2",
+        "expected": "18"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-combined",
+      "explanation_detail": {
+        "approach": "合計を使って全体の平均値を求める。分散は平均同士を合わせられないので、各組の「2乗の平均値」$\\overline{x^2}=s^2+(\\overline{x})^2$ を求めて全体の2乗の平均値をつくる。",
+        "steps": [
+          "得点の合計：$8\\times46+8\\times44=720$、全体の平均値 $45$。",
+          "各組の2乗の平均値：A 組 $5+46^2=2121$、B 組 $29+44^2=1965$。",
+          "全体の2乗の平均値：$\\dfrac{8\\times2121+8\\times1965}{16}=2043$。",
+          "全体の分散：$2043-45^2=18$。"
+        ],
+        "alternatives": [
+          "全体の分散は「各組の分散の加重平均」と「各組の平均値の全体の平均値からのずれ」の和としても求められる：$\\dfrac{8\\times5+8\\times29}{16}+\\dfrac{8(46-45)^2+8(44-45)^2}{16}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の平均値を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "2乗の平均値を用いて正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの組の平均値（分散）をそのまま平均してしまう（人数の違いを無視）。",
+          "分散を合わせるときに平均値のずれを考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "A 組 4 人と B 組 4 人の小テストの得点について、A 組の平均値は $46$ 点、分散は $11$、B 組の平均値は $66$ 点、分散は $19$ である（架空のデータ）。2つの組を合わせた 8 人の得点の分散を求めなさい。",
+      "answer": {
+        "value": "115"
+      },
+      "explanation": "全体の平均値は $56$、全体の2乗の平均値は $3251$ なので、分散は $3251-56^2=115$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(4*(11+46**2)+4*(19+66**2))/8-((4*46+4*66)/8)**2",
+        "expected": "115"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-combined",
+      "explanation_detail": {
+        "approach": "合計を使って全体の平均値を求める。分散は平均同士を合わせられないので、各組の「2乗の平均値」$\\overline{x^2}=s^2+(\\overline{x})^2$ を求めて全体の2乗の平均値をつくる。",
+        "steps": [
+          "得点の合計：$4\\times46+4\\times66=448$、全体の平均値 $56$。",
+          "各組の2乗の平均値：A 組 $11+46^2=2127$、B 組 $19+66^2=4375$。",
+          "全体の2乗の平均値：$\\dfrac{4\\times2127+4\\times4375}{8}=3251$。",
+          "全体の分散：$3251-56^2=115$。"
+        ],
+        "alternatives": [
+          "全体の分散は「各組の分散の加重平均」と「各組の平均値の全体の平均値からのずれ」の和としても求められる：$\\dfrac{4\\times11+4\\times19}{8}+\\dfrac{4(46-56)^2+4(66-56)^2}{8}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の平均値を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "2乗の平均値を用いて正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの組の平均値（分散）をそのまま平均してしまう（人数の違いを無視）。",
+          "分散を合わせるときに平均値のずれを考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "変量 $x$ のデータ $x_1,\\ x_2,\\ \\cdots,\\ x_n$ の平均値を $\\overline{x}$、標準偏差を $s_x$ とする。$y_k=-5x_k+4$（$k=1,\\ 2,\\ \\cdots,\\ n$）で定まる変量 $y$ の標準偏差 $s_y$ が $s_y=5s_x$ となることを証明しなさい。",
+      "answer": {
+        "value": "$s_y=5s_x$（証明は手順を参照）"
+      },
+      "explanation": "定義の式を展開し、平均値の定義 $\\overline{x}=\\dfrac{1}{n}\\sum x_k$ を使って整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "定義の式を正しく書き出している",
+            "points": 2
+          },
+          {
+            "criterion": "展開・整理の過程が正しい",
+            "points": 3
+          },
+          {
+            "criterion": "平均値の定義を用いて結論を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "結論（または理由）を明確に述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "variance([-5*1+(4), -5*4+(4), -5*7+(4)])-(-5)**2*variance([1, 4, 7])",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_proof",
+      "explanation_detail": {
+        "approach": "分散・平均値の定義を $\\sum$ を用いた式で書き、和の性質（定数は和の外に出せる、定数の $n$ 個の和は $n$ 倍）を使って変形する。",
+        "steps": [
+          "$\\overline{y}=\\dfrac{1}{n}\\sum(-5x_k+4)=-5\\overline{x}+4$。",
+          "偏差は $y_k-\\overline{y}=-5(x_k-\\overline{x})$（定数 $4$ は打ち消し合う）。",
+          "$s_y^2=\\dfrac{1}{n}\\sum\\{-5(x_k-\\overline{x})\\}^2=25\\cdot\\dfrac{1}{n}\\sum(x_k-\\overline{x})^2=25s_x^2$。",
+          "$s_y\\geqq0,\\ s_x\\geqq0$ なので、正の平方根をとって $s_y=\\sqrt{25}\\,s_x=5s_x$。"
+        ],
+        "alternatives": [
+          "$n=3$ などの具体的なデータで両辺を計算し、等しくなることを確かめてから一般の証明に進むとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定義の式",
+            "points": 2
+          },
+          {
+            "point": "展開と整理",
+            "points": 3
+          },
+          {
+            "point": "平均値の定義の利用",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sum(\\overline{x})^2$ を $(\\overline{x})^2$ としてしまう（$n$ 個の和なので $n(\\overline{x})^2$）。",
+          "標準偏差で絶対値（または正の平方根）の扱いを落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "変量 $x$ のデータ $x_1,\\ x_2,\\ \\cdots,\\ x_n$ の平均値を $\\overline{x}$、標準偏差を $s_x$ とする。$y_k=2x_k+6$（$k=1,\\ 2,\\ \\cdots,\\ n$）で定まる変量 $y$ の標準偏差 $s_y$ が $s_y=2s_x$ となることを証明しなさい。",
+      "answer": {
+        "value": "$s_y=2s_x$（証明は手順を参照）"
+      },
+      "explanation": "定義の式を展開し、平均値の定義 $\\overline{x}=\\dfrac{1}{n}\\sum x_k$ を使って整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "定義の式を正しく書き出している",
+            "points": 2
+          },
+          {
+            "criterion": "展開・整理の過程が正しい",
+            "points": 3
+          },
+          {
+            "criterion": "平均値の定義を用いて結論を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "結論（または理由）を明確に述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "variance([2*1+(6), 2*4+(6), 2*7+(6)])-(2)**2*variance([1, 4, 7])",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_proof",
+      "explanation_detail": {
+        "approach": "分散・平均値の定義を $\\sum$ を用いた式で書き、和の性質（定数は和の外に出せる、定数の $n$ 個の和は $n$ 倍）を使って変形する。",
+        "steps": [
+          "$\\overline{y}=\\dfrac{1}{n}\\sum(2x_k+6)=2\\overline{x}+6$。",
+          "偏差は $y_k-\\overline{y}=2(x_k-\\overline{x})$（定数 $6$ は打ち消し合う）。",
+          "$s_y^2=\\dfrac{1}{n}\\sum\\{2(x_k-\\overline{x})\\}^2=4\\cdot\\dfrac{1}{n}\\sum(x_k-\\overline{x})^2=4s_x^2$。",
+          "$s_y\\geqq0,\\ s_x\\geqq0$ なので、正の平方根をとって $s_y=\\sqrt{4}\\,s_x=2s_x$。"
+        ],
+        "alternatives": [
+          "$n=3$ などの具体的なデータで両辺を計算し、等しくなることを確かめてから一般の証明に進むとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定義の式",
+            "points": 2
+          },
+          {
+            "point": "展開と整理",
+            "points": 3
+          },
+          {
+            "point": "平均値の定義の利用",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sum(\\overline{x})^2$ を $(\\overline{x})^2$ としてしまう（$n$ 個の和なので $n(\\overline{x})^2$）。",
+          "標準偏差で絶対値（または正の平方根）の扱いを落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "変量 $x$ のデータ $x_1,\\ x_2,\\ \\cdots,\\ x_n$ の平均値を $\\overline{x}$、分散を $s^2$ とする。$s^2=\\overline{x^2}-(\\overline{x})^2$ が成り立つことを証明しなさい。ただし、$\\overline{x^2}$ は $x_1^2,\\ x_2^2,\\ \\cdots,\\ x_n^2$ の平均値である。",
+      "answer": {
+        "value": "$s^2=\\overline{x^2}-(\\overline{x})^2$（証明は手順を参照）"
+      },
+      "explanation": "定義の式を展開し、平均値の定義 $\\overline{x}=\\dfrac{1}{n}\\sum x_k$ を使って整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "定義の式を正しく書き出している",
+            "points": 2
+          },
+          {
+            "criterion": "展開・整理の過程が正しい",
+            "points": 3
+          },
+          {
+            "criterion": "平均値の定義を用いて結論を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "結論（または理由）を明確に述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(variance([p, q, r]) - (mean([p**2, q**2, r**2]) - mean([p, q, r])**2))",
+        "expected": "0",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-var_proof",
+      "explanation_detail": {
+        "approach": "分散・平均値の定義を $\\sum$ を用いた式で書き、和の性質（定数は和の外に出せる、定数の $n$ 個の和は $n$ 倍）を使って変形する。",
+        "steps": [
+          "$s^2=\\dfrac{1}{n}\\sum_{k=1}^{n}(x_k-\\overline{x})^2$ の各項を展開する：$(x_k-\\overline{x})^2=x_k^2-2\\overline{x}x_k+(\\overline{x})^2$。",
+          "和をとって $n$ で割ると $s^2=\\dfrac{1}{n}\\sum x_k^2-2\\overline{x}\\cdot\\dfrac{1}{n}\\sum x_k+(\\overline{x})^2$。",
+          "$\\dfrac{1}{n}\\sum x_k^2=\\overline{x^2}$、$\\dfrac{1}{n}\\sum x_k=\\overline{x}$ を代入して $s^2=\\overline{x^2}-2(\\overline{x})^2+(\\overline{x})^2=\\overline{x^2}-(\\overline{x})^2$。"
+        ],
+        "alternatives": [
+          "$n=3$ などの具体的なデータで両辺を計算し、等しくなることを確かめてから一般の証明に進むとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定義の式",
+            "points": 2
+          },
+          {
+            "point": "展開と整理",
+            "points": 3
+          },
+          {
+            "point": "平均値の定義の利用",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sum(\\overline{x})^2$ を $(\\overline{x})^2$ としてしまう（$n$ 個の和なので $n(\\overline{x})^2$）。",
+          "標準偏差で絶対値（または正の平方根）の扱いを落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある店で、新しいパン A と従来のパン B を 16 人に食べ比べてもらったところ、12 人が A を選んだ（架空の設定）。「A の方が好まれる」と判断してよいか、基準となる確率を $5\\%$ として、仮説検定の考え方を用いて説明しなさい。ただし、各回（各人・各組）の結果は互いに無関係とし、確率 $\\dfrac{1}{2}$ で起こることが 16 回中 12 回以上起こる確率は約 $0.038$ であることを用いてよい。",
+      "answer": {
+        "value": "仮説「A と B の好みに差はない」を立てる。仮説のもとで 12 回以上起こる確率は約 $0.038$ で、$0.05$ より小さい。よって「A の方が好まれる」と判断してよい。"
+      },
+      "explanation": "仮説のもとでの確率 $0.038$ を基準 $0.05$ と比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "主張に反する仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "仮説のもとでの確率を示している",
+            "points": 2
+          },
+          {
+            "criterion": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を「判断してよい／できない」の形で正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(16,t),(t,12,16))/2**16*1000+Rational(1,2))/1000",
+        "expected": "0.038",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hyp_writing",
+      "explanation_detail": {
+        "approach": "主張と反対の「差がない（確率 $\\dfrac{1}{2}$）」という仮説を立て、その仮説のもとで実際の結果以上に偏る確率を基準と比べる。",
+        "steps": [
+          "仮説：A と B の好みに差はない。",
+          "仮説のもとで 12 回以上となる確率は約 $0.038$。",
+          "$0.038<0.05$。",
+          "仮説のもとではめったに起こらないことが起こったと考え、仮説は誤りと判断する。よって「A の方が好まれる」と判断してよい。"
+        ],
+        "alternatives": [
+          "シミュレーション（コインを16回投げる実験を多数回くり返す）で、12回以上となる相対度数を調べても、同じ判断ができる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮説の設定",
+            "points": 2
+          },
+          {
+            "point": "確率の提示",
+            "points": 2
+          },
+          {
+            "point": "基準との比較",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率が基準以上のときに「仮説は正しい」「差がないことが証明された」と書く。",
+          "「ちょうど 12 回」の確率で判断してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある店で、新しいパン A と従来のパン B を 26 人に食べ比べてもらったところ、16 人が A を選んだ（架空の設定）。「A の方が好まれる」と判断してよいか、基準となる確率を $5\\%$ として、仮説検定の考え方を用いて説明しなさい。ただし、各回（各人・各組）の結果は互いに無関係とし、確率 $\\dfrac{1}{2}$ で起こることが 26 回中 16 回以上起こる確率は約 $0.163$ であることを用いてよい。",
+      "answer": {
+        "value": "仮説「A と B の好みに差はない」を立てる。仮説のもとで 16 回以上起こる確率は約 $0.163$ で、$0.05$ 以上である。よって「A の方が好まれる」とは判断できない。"
+      },
+      "explanation": "仮説のもとでの確率 $0.163$ を基準 $0.05$ と比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "主張に反する仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "仮説のもとでの確率を示している",
+            "points": 2
+          },
+          {
+            "criterion": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を「判断してよい／できない」の形で正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(26,t),(t,16,26))/2**26*1000+Rational(1,2))/1000",
+        "expected": "0.163",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hyp_writing",
+      "explanation_detail": {
+        "approach": "主張と反対の「差がない（確率 $\\dfrac{1}{2}$）」という仮説を立て、その仮説のもとで実際の結果以上に偏る確率を基準と比べる。",
+        "steps": [
+          "仮説：A と B の好みに差はない。",
+          "仮説のもとで 16 回以上となる確率は約 $0.163$。",
+          "$0.163\\geqq 0.05$。",
+          "仮説のもとでも起こりうることなので、仮説が誤りとは判断できない。よって「A の方が好まれる」とは判断できない。"
+        ],
+        "alternatives": [
+          "シミュレーション（コインを26回投げる実験を多数回くり返す）で、16回以上となる相対度数を調べても、同じ判断ができる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮説の設定",
+            "points": 2
+          },
+          {
+            "point": "確率の提示",
+            "points": 2
+          },
+          {
+            "point": "基準との比較",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率が基準以上のときに「仮説は正しい」「差がないことが証明された」と書く。",
+          "「ちょうど 16 回」の確率で判断してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある生徒が、形が少しゆがんだコインを 22 回投げたところ、表が 16 回出た（架空の設定）。「このコインは表が出やすい」と判断してよいか、基準となる確率を $5\\%$ として、仮説検定の考え方を用いて説明しなさい。ただし、各回（各人・各組）の結果は互いに無関係とし、確率 $\\dfrac{1}{2}$ で起こることが 22 回中 16 回以上起こる確率は約 $0.026$ であることを用いてよい。",
+      "answer": {
+        "value": "仮説「このコインは公正である」を立てる。仮説のもとで 16 回以上起こる確率は約 $0.026$ で、$0.05$ より小さい。よって「このコインは表が出やすい」と判断してよい。"
+      },
+      "explanation": "仮説のもとでの確率 $0.026$ を基準 $0.05$ と比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "主張に反する仮説を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "仮説のもとでの確率を示している",
+            "points": 2
+          },
+          {
+            "criterion": "確率と基準を正しく比較している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を「判断してよい／できない」の形で正しく述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(22,t),(t,16,22))/2**22*1000+Rational(1,2))/1000",
+        "expected": "0.026",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-hyp_writing",
+      "explanation_detail": {
+        "approach": "主張と反対の「差がない（確率 $\\dfrac{1}{2}$）」という仮説を立て、その仮説のもとで実際の結果以上に偏る確率を基準と比べる。",
+        "steps": [
+          "仮説：このコインは公正である。",
+          "仮説のもとで 16 回以上となる確率は約 $0.026$。",
+          "$0.026<0.05$。",
+          "仮説のもとではめったに起こらないことが起こったと考え、仮説は誤りと判断する。よって「このコインは表が出やすい」と判断してよい。"
+        ],
+        "alternatives": [
+          "シミュレーション（コインを22回投げる実験を多数回くり返す）で、16回以上となる相対度数を調べても、同じ判断ができる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仮説の設定",
+            "points": 2
+          },
+          {
+            "point": "確率の提示",
+            "points": 2
+          },
+          {
+            "point": "基準との比較",
+            "points": 2
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率が基準以上のときに「仮説は正しい」「差がないことが証明された」と書く。",
+          "「ちょうど 16 回」の確率で判断してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "あるコインを 5 回投げたところ、表が 5 回出た（架空の設定）。コインが公正である（表の出る確率が $\\dfrac{1}{2}$）と仮定したとき、表が 5 回以上出る確率を、反復試行の確率を用いて分数で求めなさい。また、基準となる確率を $5\\%$ として、「このコインは表が出やすい」と判断してよいか答えなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{32}$、判断してよい"
+      },
+      "explanation": "$\\dfrac{{}_{5}\\mathrm{C}_{5}}{2^{5}}=\\dfrac{1}{32}\\fallingdotseq0.031$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "summation(binomial(5,t),(t,5,5))/2**5",
+        "expected": "Rational(1,32)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-cross_unit",
+      "related_units": [
+        "HS-MATH1-U03",
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "仮説のもとでの確率は、反復試行の確率 ${}_n\\mathrm{C}_r\\left(\\dfrac{1}{2}\\right)^n$（場合の数と確率の単元）で計算できる。それを基準 $0.05$ と比べる。",
+        "steps": [
+          "表が $r$ 回出る確率は ${}_{5}\\mathrm{C}_r\\left(\\dfrac{1}{2}\\right)^{5}$。",
+          "5 回以上：$\\dfrac{{}_{5}\\mathrm{C}_{5}}{2^{5}}=\\dfrac{1}{32}$。",
+          "$\\fallingdotseq0.031$ は $0.05$ より小さい。",
+          "よって表が出やすいと判断してよい。"
+        ],
+        "alternatives": [
+          "表と裏の出方を樹形図で書き出し、全 $2^{5}$ 通りのうち条件に合う場合を数えても同じ確率が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反復試行の確率の式を正しく立てている",
+            "points": 3
+          },
+          {
+            "point": "確率を正しく計算している",
+            "points": 3
+          },
+          {
+            "point": "基準と比べて正しく判断している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「ちょうど 5 回」の確率だけで判断する。",
+          "確率が基準以上のとき「公正であると証明された」と書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "データ 15，17，8，11，14 に対して、$t$ の関数 $f(t)=(t-15)^2+(t-17)^2+(t-8)^2+(t-11)^2+(t-14)^2$ を考える。$f(t)$ を最小にする $t$ の値と、そのときの最小値を求めなさい。また、その $t$ の値がデータの何であるかを答えなさい。",
+      "answer": {
+        "value": "$t=13$ のとき最小値 $50$。$t$ はデータの平均値"
+      },
+      "explanation": "$f(t)=5t^2-130t+895$ を平方完成すると $f(t)=5(t-13)^2+50$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[mean([15, 17, 8, 11, 14]), 5*variance([15, 17, 8, 11, 14])]",
+        "expected": "[13, 50]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATH1-U05-cross_unit",
+      "related_units": [
+        "HS-MATH1-U03",
+        "HS-MATHA-U01"
+      ],
+      "explanation_detail": {
+        "approach": "$f(t)$ は $t$ の二次関数（二次関数の単元）なので、展開して平方完成すれば最小値が分かる。結果をデータの分析の言葉（平均値・分散）で解釈する。",
+        "steps": [
+          "展開：$f(t)=5t^2-130t+895$。",
+          "平方完成：$f(t)=5(t-13)^2+50$。",
+          "$t=13$ のとき最小値 $50$。",
+          "$t=13$ はデータの平均値であり、最小値 $50$ はデータの個数 $5$ と分散 $10$ の積に等しい。"
+        ],
+        "alternatives": [
+          "一般に $f(t)=\\sum(x_k-t)^2=n(t-\\overline{x})^2+ns^2$ と変形できるので、$t=\\overline{x}$ で最小値 $ns^2$ をとる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f(t)$ を正しく展開している",
+            "points": 2
+          },
+          {
+            "point": "平方完成して最小値を求めている",
+            "points": 4
+          },
+          {
+            "point": "平均値であることを指摘している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "展開で $x^2$ の係数（データの個数）を 1 としてしまう。",
+          "最小値を分散そのものと答える（個数倍になっている）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2つの変量 $x,\\ y$ の相関係数は $0.75$ である。変量 $u,\\ v$ を $u=x-12$、$v=-2y+15$ で定めるとき、$u$ と $v$ の相関係数を求め、その理由を説明しなさい。",
+      "answer": {
+        "value": "$-0.75$。共分散は $-2$ 倍、標準偏差の積は $2$ 倍になるので、相関係数は $-1$ 倍になる。"
+      },
+      "explanation": "$s_{uv}=-2s_{xy}$、$s_us_v=2s_xs_y$ より $r_{uv}=-r_{xy}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$u,\\ v$ の偏差を $x,\\ y$ の偏差で表している",
+            "points": 2
+          },
+          {
+            "criterion": "共分散が $-2$ 倍になることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "標準偏差がそれぞれ $|a|,\\ |c|$ 倍になることを用いている",
+            "points": 2
+          },
+          {
+            "criterion": "相関係数を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(3,4)*(1*-2)/Abs(1*-2)",
+        "expected": "Rational(-3,4)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_transform",
+      "explanation_detail": {
+        "approach": "偏差は $u_k-\\overline{u}=a(x_k-\\overline{x})$ のように、定数項が消えて係数倍になる。共分散と標準偏差がそれぞれ何倍になるかを調べる。",
+        "steps": [
+          "$u_k-\\overline{u}=(x_k-\\overline{x})$、$v_k-\\overline{v}=-2(y_k-\\overline{y})$。",
+          "共分散：$s_{uv}=(1)\\times(-2)\\,s_{xy}=-2s_{xy}$。",
+          "標準偏差：$s_u=s_x$、$s_v=2s_y$。",
+          "$r_{uv}=\\dfrac{-2s_{xy}}{2s_xs_y}=-r_{xy}=-0.75$。"
+        ],
+        "alternatives": [
+          "散布図で考えると、正の数をかける・数を足す変換は点の並び方の傾向を変えず、負の数をかけると左右（または上下）が反転して傾向の向きが逆になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "偏差の表現",
+            "points": 2
+          },
+          {
+            "point": "共分散",
+            "points": 2
+          },
+          {
+            "point": "標準偏差",
+            "points": 2
+          },
+          {
+            "point": "相関係数",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "相関係数も $-2$ 倍になると考える（標準偏差の積で割るので打ち消される）。",
+          "負の係数のときに符号が変わることを見落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2つの変量 $x,\\ y$ の相関係数は $-0.8$ である。変量 $u,\\ v$ を $u=-3x-3$、$v=-4y-14$ で定めるとき、$u$ と $v$ の相関係数を求め、その理由を説明しなさい。",
+      "answer": {
+        "value": "$-0.8$。共分散は $12$ 倍、標準偏差の積は $12$ 倍になるので、相関係数は $1$ 倍になる。"
+      },
+      "explanation": "$s_{uv}=12s_{xy}$、$s_us_v=12s_xs_y$ より $r_{uv}=r_{xy}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$u,\\ v$ の偏差を $x,\\ y$ の偏差で表している",
+            "points": 2
+          },
+          {
+            "criterion": "共分散が $12$ 倍になることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "標準偏差がそれぞれ $|a|,\\ |c|$ 倍になることを用いている",
+            "points": 2
+          },
+          {
+            "criterion": "相関係数を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(-4,5)*(-3*-4)/Abs(-3*-4)",
+        "expected": "Rational(-4,5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-corr_transform",
+      "explanation_detail": {
+        "approach": "偏差は $u_k-\\overline{u}=a(x_k-\\overline{x})$ のように、定数項が消えて係数倍になる。共分散と標準偏差がそれぞれ何倍になるかを調べる。",
+        "steps": [
+          "$u_k-\\overline{u}=-3(x_k-\\overline{x})$、$v_k-\\overline{v}=-4(y_k-\\overline{y})$。",
+          "共分散：$s_{uv}=(-3)\\times(-4)\\,s_{xy}=12s_{xy}$。",
+          "標準偏差：$s_u=3s_x$、$s_v=4s_y$。",
+          "$r_{uv}=\\dfrac{12s_{xy}}{12s_xs_y}=r_{xy}=-0.8$。"
+        ],
+        "alternatives": [
+          "散布図で考えると、正の数をかける・数を足す変換は点の並び方の傾向を変えず、負の数をかけると左右（または上下）が反転して傾向の向きが逆になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "偏差の表現",
+            "points": 2
+          },
+          {
+            "point": "共分散",
+            "points": 2
+          },
+          {
+            "point": "標準偏差",
+            "points": 2
+          },
+          {
+            "point": "相関係数",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "相関係数も $12$ 倍になると考える（標準偏差の積で割るので打ち消される）。",
+          "負の係数のときに符号が変わることを見落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "データ 12，8，6，14，10 の分散を求めなさい。\n［ある生徒の解答］\n$x^2$ の平均値は $108$、平均値は $10$ なので、分散は $108-10=98$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$8$"
+      },
+      "explanation": "分散は偏差の2乗の平均値であり、計算公式では $\\overline{x^2}$ から平均値の2乗を引く。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "variance([12, 8, 6, 14, 10])",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-err_variance",
+      "explanation_detail": {
+        "approach": "定義（偏差の2乗の平均）と計算公式（2乗の平均 − 平均の2乗）を正確に区別する。",
+        "steps": [
+          "平均値 $\\overline{x}=10$。",
+          "$\\overline{x^2}=108$。",
+          "$s^2=108-100=8$。"
+        ],
+        "alternatives": [
+          "定義と計算公式の両方で計算し、結果が一致するかで確かめる。",
+          "分散が $0$ になるのは、すべての値が等しいときだけである。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(\\overline{x})^2$ を $\\overline{x}$ とする。",
+          "偏差を2乗し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x^2$ の平均値は $108$、平均値は $10$ なので、分散は $108-10=98$",
+        "error_step": "分散の計算公式の適用（平均値を2乗していない）",
+        "error_type": "formula",
+        "why_tempting": "公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ の「平均値の2乗」を「平均値」と読み違えた。",
+        "correction": "$s^2=\\overline{x^2}-(\\overline{x})^2=108-10^2=8$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "データ 13，1，5，9，2 の分散を求めなさい。\n［ある生徒の解答］\n$x^2$ の平均値は $56$、平均値は $6$ なので、分散は $56-6=50$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$20$"
+      },
+      "explanation": "分散は偏差の2乗の平均値であり、計算公式では $\\overline{x^2}$ から平均値の2乗を引く。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "variance([13, 1, 5, 9, 2])",
+        "expected": "20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-err_variance",
+      "explanation_detail": {
+        "approach": "定義（偏差の2乗の平均）と計算公式（2乗の平均 − 平均の2乗）を正確に区別する。",
+        "steps": [
+          "平均値 $\\overline{x}=6$。",
+          "$\\overline{x^2}=56$。",
+          "$s^2=56-36=20$。"
+        ],
+        "alternatives": [
+          "定義と計算公式の両方で計算し、結果が一致するかで確かめる。",
+          "分散が $0$ になるのは、すべての値が等しいときだけである。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(\\overline{x})^2$ を $\\overline{x}$ とする。",
+          "偏差を2乗し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x^2$ の平均値は $56$、平均値は $6$ なので、分散は $56-6=50$",
+        "error_step": "分散の計算公式の適用（平均値を2乗していない）",
+        "error_type": "formula",
+        "why_tempting": "公式 $s^2=\\overline{x^2}-(\\overline{x})^2$ の「平均値の2乗」を「平均値」と読み違えた。",
+        "correction": "$s^2=\\overline{x^2}-(\\overline{x})^2=56-6^2=20$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "データ 21，25，28，22，24 の分散を求めなさい。\n［ある生徒の解答］\n平均値は $24$。偏差は $-3$，$1$，$4$，$-2$，$0$ で、その平均値は $0$ なので、分散は $0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$6$"
+      },
+      "explanation": "分散は偏差の2乗の平均値であり、計算公式では $\\overline{x^2}$ から平均値の2乗を引く。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "variance([21, 25, 28, 22, 24])",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-err_variance",
+      "explanation_detail": {
+        "approach": "定義（偏差の2乗の平均）と計算公式（2乗の平均 − 平均の2乗）を正確に区別する。",
+        "steps": [
+          "平均値 $\\overline{x}=24$。",
+          "$\\overline{x^2}=582$。",
+          "$s^2=582-576=6$。"
+        ],
+        "alternatives": [
+          "定義と計算公式の両方で計算し、結果が一致するかで確かめる。",
+          "分散が $0$ になるのは、すべての値が等しいときだけである。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(\\overline{x})^2$ を $\\overline{x}$ とする。",
+          "偏差を2乗し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "平均値は $24$。偏差は $-3$，$1$，$4$，$-2$，$0$ で、その平均値は $0$ なので、分散は $0$",
+        "error_step": "偏差を2乗せずに平均した部分",
+        "error_type": "concept",
+        "why_tempting": "「偏差の平均」と「偏差の2乗の平均」を混同した。偏差の和がつねに $0$ になることに気づいていない。",
+        "correction": "偏差の2乗の和は $30$ なので、分散は $\\dfrac{30}{5}=6$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "変量 $x$ の平均値が $53$、標準偏差が $s_x=7$ である。$y=-2x-19$ で定まる変量 $y$ の標準偏差 $s_y$ を求めなさい。\n［ある生徒の解答］\n$s_y=-2s_x=-14$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$14$"
+      },
+      "explanation": "$y$ の偏差は $-2(x_k-\\overline{x})$ となり $b$ は消える。分散は $4$ 倍、標準偏差は $|-2|=2$ 倍。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt((-2)**2*7**2)",
+        "expected": "14",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-err_transform",
+      "explanation_detail": {
+        "approach": "平行移動（$+b$）は散らばりを変えない。標準偏差は $|a|$ 倍で、負になることはない。",
+        "steps": [
+          "偏差：$y_k-\\overline{y}=-2(x_k-\\overline{x})$。",
+          "分散：$s_y^2=(-2)^2s_x^2=196$。",
+          "標準偏差：$s_y=\\sqrt{196}=14$。"
+        ],
+        "alternatives": [
+          "$x$ が $46,\\ 60$ の2つの値だけのデータ（標準偏差 $7$）で $y$ を計算すると、$y$ の値の差の半分が $14$ になることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加える。",
+          "標準偏差を負の値にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$s_y=-2s_x=-14$",
+        "error_step": "係数 $a$ の絶対値をとっていない部分",
+        "error_type": "formula",
+        "why_tempting": "分散が $a^2$ 倍であることから、平方根をとるときに $\\sqrt{a^2}=a$ としてしまった。",
+        "correction": "$s_y=|-2|s_x=2\\times7=14$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "変量 $x$ の平均値が $33$、標準偏差が $s_x=3$ である。$y=2x+10$ で定まる変量 $y$ の標準偏差 $s_y$ を求めなさい。\n［ある生徒の解答］\n$s_y=2s_x+10=16$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$6$"
+      },
+      "explanation": "$y$ の偏差は $2(x_k-\\overline{x})$ となり $b$ は消える。分散は $4$ 倍、標準偏差は $|2|=2$ 倍。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt((2)**2*3**2)",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-err_transform",
+      "explanation_detail": {
+        "approach": "平行移動（$+b$）は散らばりを変えない。標準偏差は $|a|$ 倍で、負になることはない。",
+        "steps": [
+          "偏差：$y_k-\\overline{y}=2(x_k-\\overline{x})$。",
+          "分散：$s_y^2=(2)^2s_x^2=36$。",
+          "標準偏差：$s_y=\\sqrt{36}=6$。"
+        ],
+        "alternatives": [
+          "$x$ が $30,\\ 36$ の2つの値だけのデータ（標準偏差 $3$）で $y$ を計算すると、$y$ の値の差の半分が $6$ になることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加える。",
+          "標準偏差を負の値にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$s_y=2s_x+10=16$",
+        "error_step": "標準偏差に $b$ を加え、係数をそのままかけた部分",
+        "error_type": "formula",
+        "why_tempting": "平均値の変換 $\\overline{y}=a\\overline{x}+b$ と同じ形で標準偏差も変換されると考えた。",
+        "correction": "$s_y=|2|s_x=2\\times3=6$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "変量 $x$ の平均値が $55$、標準偏差が $s_x=4$ である。$y=-5x+12$ で定まる変量 $y$ の標準偏差 $s_y$ を求めなさい。\n［ある生徒の解答］\n$s_y=-5s_x+12=-8$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$20$"
+      },
+      "explanation": "$y$ の偏差は $-5(x_k-\\overline{x})$ となり $b$ は消える。分散は $25$ 倍、標準偏差は $|-5|=5$ 倍。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt((-5)**2*4**2)",
+        "expected": "20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH1-U05-err_transform",
+      "explanation_detail": {
+        "approach": "平行移動（$+b$）は散らばりを変えない。標準偏差は $|a|$ 倍で、負になることはない。",
+        "steps": [
+          "偏差：$y_k-\\overline{y}=-5(x_k-\\overline{x})$。",
+          "分散：$s_y^2=(-5)^2s_x^2=400$。",
+          "標準偏差：$s_y=\\sqrt{400}=20$。"
+        ],
+        "alternatives": [
+          "$x$ が $51,\\ 59$ の2つの値だけのデータ（標準偏差 $4$）で $y$ を計算すると、$y$ の値の差の半分が $20$ になることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "標準偏差に $b$ を加える。",
+          "標準偏差を負の値にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$s_y=-5s_x+12=-8$",
+        "error_step": "標準偏差に $b$ を加え、係数をそのままかけた部分",
+        "error_type": "formula",
+        "why_tempting": "平均値の変換 $\\overline{y}=a\\overline{x}+b$ と同じ形で標準偏差も変換されると考えた。",
+        "correction": "$s_y=|-5|s_x=5\\times4=20$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "データ 19，11，24，48，43，45，36 の中央値 $Q_2$ と、第1四分位数 $Q_1$、第3四分位数 $Q_3$ を求めなさい。\n［ある生徒の解答］\n中央値は真ん中の値なので $48$。前半 19，11，24 の中央値 $Q_1=19$、後半 43，45，36 の中央値 $Q_3=43$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$Q_1=19,\\ Q_2=36,\\ Q_3=45$"
+      },
+      "explanation": "中央値・四分位数は、データを大きさの順に並べてから求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "quartiles([19, 11, 24, 48, 43, 45, 36])",
+        "expected": "[19, 36, 45]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-err_median",
+      "explanation_detail": {
+        "approach": "代表値・四分位数を求める前に、必ずデータを大きさの順に並べる。",
+        "steps": [
+          "小さい順に並べる：11，19，24，36，43，45，48。",
+          "中央値 $Q_2=36$。",
+          "前半 11，19，24、後半 43，45，48。",
+          "$Q_1=19$、$Q_3=45$。"
+        ],
+        "alternatives": [
+          "求めた中央値より小さい値と大きい値の個数が等しいかを数えて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "並べ替えずに中央値をとる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "中央値は真ん中の値なので $48$。前半 19，11，24 の中央値 $Q_1=19$、後半 43，45，36 の中央値 $Q_3=43$",
+        "error_step": "データを小さい順に並べていない部分",
+        "error_type": "calculation",
+        "why_tempting": "与えられた順番のまま「真ん中」をとった。中央値・四分位数は、大きさの順に並べたときの位置で決まることを忘れている。",
+        "correction": "小さい順に並べて 11，19，24，36，43，45，48。$Q_2=36$、$Q_1=19$、$Q_3=45$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "データ 39，51，44，48，10，57，38 の中央値 $Q_2$ と、第1四分位数 $Q_1$、第3四分位数 $Q_3$ を求めなさい。\n［ある生徒の解答］\n中央値は真ん中の値なので $48$。前半 39，51，44 の中央値 $Q_1=44$、後半 10，57，38 の中央値 $Q_3=38$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$Q_1=38,\\ Q_2=44,\\ Q_3=51$"
+      },
+      "explanation": "中央値・四分位数は、データを大きさの順に並べてから求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "quartiles([39, 51, 44, 48, 10, 57, 38])",
+        "expected": "[38, 44, 51]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH1-U05-err_median",
+      "explanation_detail": {
+        "approach": "代表値・四分位数を求める前に、必ずデータを大きさの順に並べる。",
+        "steps": [
+          "小さい順に並べる：10，38，39，44，48，51，57。",
+          "中央値 $Q_2=44$。",
+          "前半 10，38，39、後半 48，51，57。",
+          "$Q_1=38$、$Q_3=51$。"
+        ],
+        "alternatives": [
+          "求めた中央値より小さい値と大きい値の個数が等しいかを数えて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "並べ替えずに中央値をとる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "中央値は真ん中の値なので $48$。前半 39，51，44 の中央値 $Q_1=44$、後半 10，57，38 の中央値 $Q_3=38$",
+        "error_step": "データを小さい順に並べていない部分",
+        "error_type": "calculation",
+        "why_tempting": "与えられた順番のまま「真ん中」をとった。中央値・四分位数は、大きさの順に並べたときの位置で決まることを忘れている。",
+        "correction": "小さい順に並べて 10，38，39，44，48，51，57。$Q_2=44$、$Q_1=38$、$Q_3=51$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "ある市の各月のアイスクリームの売上 $x$ とその月の水難事故の件数 $y$ の相関係数は $0.82$ であった（架空のデータ）。このデータからいえることを答えなさい。\n［ある生徒の解答］\n相関係数が $0.82$ と $1$ に近いので、$x$ を減らせば $y$ も減らせる（$x$ が $y$ の原因である）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x$ と $y$ には強い正の相関がある。ただし、因果関係があるとはいえない（気温（季節）のような共通の要因が両方に影響している可能性がある）"
+      },
+      "explanation": "相関係数は直線的な関係の強さと向きを表す指標で、符号が向き、絶対値の大きさが強さを表す。因果関係や曲線的な関係は判断できない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-err_interpret",
+      "explanation_detail": {
+        "approach": "相関係数から言えることと言えないことを区別する。強さは絶対値で判断する。",
+        "steps": [
+          "相関係数の符号から相関の向きを読む。",
+          "絶対値の大きさから相関の強さを読む。",
+          "相関係数から言えないこと（因果関係・直線以外の関係）を区別する。"
+        ],
+        "alternatives": [
+          "散布図をかいて、点の並び方（直線的か、曲線的か、外れ値があるか）を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "相関と因果を混同する。",
+          "負の相関を弱い相関と考える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "相関係数が $0.82$ と $1$ に近いので、$x$ を減らせば $y$ も減らせる（$x$ が $y$ の原因である）",
+        "error_step": "相関から因果関係を結論した部分",
+        "error_type": "interpretation",
+        "why_tempting": "相関係数が大きいと、一方が他方を引き起こしていると考えがちである。",
+        "correction": "$x$ と $y$ には強い正の相関がある。ただし、因果関係があるとはいえない（気温（季節）のような共通の要因が両方に影響している可能性がある）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "各都市の消防署の数 $x$ とその都市の1年間の火災の件数 $y$ の相関係数は $0.91$ であった（架空のデータ）。このデータからいえることを答えなさい。\n［ある生徒の解答］\n相関係数が $0.91$ と $1$ に近いので、$x$ を減らせば $y$ も減らせる（$x$ が $y$ の原因である）\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x$ と $y$ には強い正の相関がある。ただし、因果関係があるとはいえない（都市の人口や面積のような共通の要因が両方に影響している可能性がある）"
+      },
+      "explanation": "相関係数は直線的な関係の強さと向きを表す指標で、符号が向き、絶対値の大きさが強さを表す。因果関係や曲線的な関係は判断できない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH1-U05-err_interpret",
+      "explanation_detail": {
+        "approach": "相関係数から言えることと言えないことを区別する。強さは絶対値で判断する。",
+        "steps": [
+          "相関係数の符号から相関の向きを読む。",
+          "絶対値の大きさから相関の強さを読む。",
+          "相関係数から言えないこと（因果関係・直線以外の関係）を区別する。"
+        ],
+        "alternatives": [
+          "散布図をかいて、点の並び方（直線的か、曲線的か、外れ値があるか）を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "相関と因果を混同する。",
+          "負の相関を弱い相関と考える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "相関係数が $0.91$ と $1$ に近いので、$x$ を減らせば $y$ も減らせる（$x$ が $y$ の原因である）",
+        "error_step": "相関から因果関係を結論した部分",
+        "error_type": "interpretation",
+        "why_tempting": "相関係数が大きいと、一方が他方を引き起こしていると考えがちである。",
+        "correction": "$x$ と $y$ には強い正の相関がある。ただし、因果関係があるとはいえない（都市の人口や面積のような共通の要因が両方に影響している可能性がある）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "2a2ddaafe8feb0c970d4756e347835ee4b158e56f86d10e901723cb767408e3b"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 11 問（Q013, Q029, Q030, Q031, Q032, Q042, Q046, Q047, Q049, Q050 他）",
+      "content_hash": "f79526633312267daf8a738d71f25eef058b9ed78f94ed22221e77c5e57271bf"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:11:01+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "b0ec4ec171634c068170aa26c30383e7a69817217d6ac49bf76df45f7dfd22ff"
+  }
+}
