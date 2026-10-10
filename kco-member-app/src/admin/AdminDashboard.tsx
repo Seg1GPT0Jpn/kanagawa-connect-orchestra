@@ -1,6 +1,7 @@
 import { useAuth } from '../auth/AuthProvider';
 import { ErrorNote, Loading } from '../components/Layout';
-import { useAdminStats, useStats } from '../lib/data';
+import { Link } from 'react-router-dom';
+import { useAdminStats, useJoinRequests, useStats } from '../lib/data';
 
 function formatUpdated(ts: { toDate(): Date } | undefined): string {
   if (!ts) return '未同期';
@@ -11,6 +12,8 @@ export function AdminDashboard() {
   const { isAdmin } = useAuth();
   const stats = useStats();
   const admin = useAdminStats(isAdmin);
+  const requests = useJoinRequests(isAdmin);
+  const pending = requests.data.filter(r => r.status === 'pending').length;
 
   if (stats.loading) return <Loading />;
 
@@ -20,6 +23,15 @@ export function AdminDashboard() {
   return (
     <div className="stack">
       <ErrorNote message={stats.error || admin.error} />
+
+      {isAdmin && pending > 0 && (
+        <Link className="card-link" to="/admin/join">
+          <div className="card card--important">
+            <p className="list__title">正式加入の申請が {pending}件 あります</p>
+            <p className="small">確認して「承認」すると、団員に切り替わります。</p>
+          </div>
+        </Link>
+      )}
 
       <div className="stat-tiles">
         {isAdmin && (

@@ -17,6 +17,7 @@ import type {
   Attendance,
   Campaign,
   Concert,
+  JoinRequest,
   Member,
   NotificationRequest,
   Proposal,
@@ -416,4 +417,28 @@ export function toCampaign(d: DocumentData): Campaign {
 
 export function useCampaign() {
   return useDocData(['publicCampaign', 'current'], (_id, d) => toCampaign(d), []);
+}
+
+// ---------- 正式加入の申請 ----------
+
+export function toJoinRequest(id: string, d: DocumentData): JoinRequest {
+  return {
+    id,
+    status: d.status === 'approved' || d.status === 'declined' ? d.status : 'pending',
+    message: s(d.message),
+    concert: s(d.concert),
+    createdAt: d.createdAt ?? null,
+    decidedAt: d.decidedAt ?? null,
+    appliedAt: typeof d.appliedAt === 'string' ? d.appliedAt : d.appliedAt ? String(d.appliedAt) : null,
+    applyError: s(d.applyError)
+  };
+}
+
+export function useMyJoinRequest(memberId: string | null) {
+  return useDocData(memberId ? ['joinRequests', memberId] : null, toJoinRequest, [memberId]);
+}
+
+/** 管理者のみ：すべての申請 */
+export function useJoinRequests(enabled: boolean) {
+  return useQueryData(() => (enabled ? query(collection(getServices().db, 'joinRequests'), orderBy('createdAt', 'desc')) : null), toJoinRequest, [enabled]);
 }

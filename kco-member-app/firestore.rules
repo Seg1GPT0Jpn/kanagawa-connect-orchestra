@@ -327,6 +327,37 @@ service cloud.firestore {
       allow create, delete: if false;
     }
 
+    // ---------- 正式加入の申請（参加希望者 → 管理者が承認） ----------
+    // ドキュメントID = 本人の団員ID（1人1件）。承認されると、スプレッドシートの同期が
+    // 応募者一覧の対応状況を「正式参加」に書き換え、団員に切り替わる（appliedAt を同期が書き込む）
+    match /joinRequests/{memberId} {
+      allow read: if (canRead() && memberId == myMemberId()) || isAdmin();
+
+      // 申請：参加希望者が自分の分だけ
+      allow create: if isActive()
+        && stage() == 'applicant'
+        && myMemberId() != null
+        && memberId == myMemberId()
+        && request.resource.data.keys().hasOnly(['status', 'message', 'concert', 'createdAt'])
+        && request.resource.data.status == 'pending'
+        && str(request.resource.data.message, 500)
+        && request.resource.data.concert in ['', 'ぜひ参加したい', '検討中', '参加しない']
+        && request.resource.data.createdAt == request.time;
+
+      // 取り消し（承認待ち・見送りのものだけ。見送りのあとは申し込み直せる）
+      allow delete: if isActive()
+        && memberId == myMemberId()
+        && resource.data.status in ['pending', 'declined'];
+
+      // 承認・見送り：管理者だけ（承認待ちのものに対して1回）
+      allow update: if isAdmin()
+        && resource.data.status == 'pending'
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'decidedAt', 'decidedBy'])
+        && request.resource.data.status in ['approved', 'declined']
+        && request.resource.data.decidedAt == request.time
+        && request.resource.data.decidedBy == request.auth.uid;
+    }
+
     // 参加希望者のプロフィール（同期だけが書き込む）。本人と運営だけが読める（団員一覧には出ない）
     match /applicants/{applicantId} {
       allow read: if canRead() && (applicantId == myMemberId() || isStaff());

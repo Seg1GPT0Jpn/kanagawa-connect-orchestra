@@ -239,3 +239,18 @@ export interface Campaign {
   memberCount: number;
   targetMembers: number;
 }
+
+// ---------- 正式加入の申請 ----------
+
+export interface JoinRequest {
+  /** = 団員ID（1人1件） */
+  id: string;
+  status: 'pending' | 'approved' | 'declined';
+  message: string;
+  concert: string;
+  createdAt: Timestamp | null;
+  decidedAt: Timestamp | null;
+  /** スプレッドシートに反映された日時（同期が書き込む） */
+  appliedAt: string | null;
+  applyError: string;
+}

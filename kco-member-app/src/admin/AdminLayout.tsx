@@ -21,6 +21,7 @@ export function AdminLayout() {
       <PageTitle en="Admin">運営</PageTitle>
       <nav className="admin-tabs" aria-label="運営メニュー">
         <NavLink to="/admin" end className={tab}>概要</NavLink>
+        {isAdmin && <NavLink to="/admin/join" className={tab}>加入申請</NavLink>}
         <NavLink to="/admin/rehearsals" className={tab}>練習・出欠</NavLink>
         <NavLink to="/admin/news" className={tab}>お知らせ</NavLink>
         {isAdmin && <NavLink to="/admin/concert" className={tab}>演奏会</NavLink>}
