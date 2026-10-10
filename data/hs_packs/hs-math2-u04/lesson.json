@@ -1,0 +1,444 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U04-LESSON",
+  "title": "三角関数　授業プリント",
+  "subtitle": "三角関数｜一般角と弧度法・三角関数のグラフ・加法定理・合成",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U04"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATH2-U04-PACK",
+  "pair_set_id": "HS-MATH2-U04-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH1-U04",
+        "point": "三角比",
+        "title": "図形と計量"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "三角関数の微分",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATHC-U02",
+        "point": "極形式",
+        "title": "平面上の曲線と複素数平面"
+      }
+    ],
+    "readiness_check": [
+      "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ の三角比を単位円で求められ、$\\sin^2\\theta+\\cos^2\\theta=1$ を使える。",
+      "2点間の距離の公式と余弦定理を使える。",
+      "二次関数の最大・最小を平方完成で求められる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "角を一般角・弧度法に拡張し、単位円を用いて三角関数を定義して、値・符号・周期を説明できる。",
+      "$y=a\\sin b(\\theta-p)+q$ などのグラフを、基本のグラフの拡大・縮小と平行移動としてかける。",
+      "加法定理を単位円と2点間の距離から証明し、2倍角・半角の公式と三角関数の合成を導いて、方程式・不等式・最大最小に活用できる。"
+    ],
+    "duration_minutes": 250,
+    "flow": [
+      {
+        "phase": "導入：回転を表す角",
+        "minutes": 15,
+        "activity": "観覧車のゴンドラの高さを例に、360°を超える回転・逆向きの回転を表す必要性を示す"
+      },
+      {
+        "phase": "一般角と弧度法",
+        "minutes": 35,
+        "activity": "動径と一般角、1ラジアンの定義、扇形の弧の長さと面積"
+      },
+      {
+        "phase": "三角関数の定義と性質",
+        "minutes": 40,
+        "activity": "単位円上の点の座標として定義、符号・相互関係・θ+2nπ、−θ、θ+π などの公式"
+      },
+      {
+        "phase": "三角関数のグラフ",
+        "minutes": 45,
+        "activity": "y=sinθ, cosθ, tanθ のグラフと周期、拡大・縮小と平行移動"
+      },
+      {
+        "phase": "方程式・不等式",
+        "minutes": 25,
+        "activity": "単位円で解を読み取る。解の範囲に注意"
+      },
+      {
+        "phase": "加法定理",
+        "minutes": 45,
+        "activity": "cos(α−β) を2点間の距離で証明し、sin・tan の加法定理を導く"
+      },
+      {
+        "phase": "2倍角・半角の公式と合成",
+        "minutes": 35,
+        "activity": "加法定理から導出、合成で最大・最小を求める"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 10,
+        "activity": "公式の系統図を板書し、確認問題と問題プリントの課題を指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "回転を表す角と三角関数",
+        "body": "観覧車のゴンドラは、1周して元の位置に戻った後も回り続ける。このような回転の量を表すには、$360^\\circ$ を超える角や、逆向きの回転を表す負の角が必要になる。角をこのように拡張し、単位円上の点の座標として三角比を定義し直したものが三角関数である。三角関数は、くり返し現れる現象（波・振動・季節の変化など）を表す基本の関数である。",
+        "bullets": [
+          "角の大きさを「弧の長さ」で測る弧度法を使うと、扇形の公式や数学Ⅲの微分の公式が簡潔になる。",
+          "数学Ⅰの三角比（$0^\\circ\\leqq\\theta\\leqq180^\\circ$）は、三角関数の特別な場合として含まれる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "観覧車の高さが時間とともに上下をくり返すグラフを示し、「同じ形がくり返す関数」が必要であることを実感させる。",
+            "ask": "ゴンドラが2周したとき、回転した角は何度か。",
+            "expect": "$720^\\circ$",
+            "timing": "導入の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "一般角と弧度法",
+        "body": "平面上で、点 O を中心に半直線 OP（動径）を、始線 OX の位置から回転させる。時計の針と逆向きを正の向き、同じ向きを負の向きとし、回転の量を表す角を一般角という。また、半径 $r$ の円で長さ $r$ の弧に対する中心角を $1$ ラジアン（弧度）とする角の測り方を弧度法という。",
+        "formula": "$$180^\\circ=\\pi\\ (\\text{ラジアン}),\\qquad \\ell=r\\theta,\\qquad S=\\dfrac{1}{2}r^2\\theta=\\dfrac{1}{2}r\\ell$$",
+        "conditions": [
+          "扇形の公式の $\\theta$ は弧度法で表した中心角（度数のまま代入しない）",
+          "動径の位置が同じ角は $\\theta+2n\\pi$（$n$ は整数）と表せる",
+          "弧度法では単位「ラジアン」を省略して書くことが多い"
+        ],
+        "teacher_points": [
+          {
+            "point": "1ラジアンは「半径と同じ長さの弧に対する中心角」であり、約 $57.3^\\circ$ であることを、ひもと円盤などで実際に確かめさせる。",
+            "ask": "半円の弧の長さは半径の何倍か。",
+            "expect": "$\\pi$ 倍。だから $180^\\circ=\\pi$ ラジアン。"
+          },
+          {
+            "point": "扇形の面積 $S=\\dfrac12r^2\\theta$ は、円の面積 $\\pi r^2$ に $\\dfrac{\\theta}{2\\pi}$ をかけたものとして導けることを示す。",
+            "caution": "度数法の $\\theta$ をそのまま代入する誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "三角関数の定義",
+        "body": "原点 O を中心とする半径 $r$ の円周上の点 P$(x,\\,y)$ について、動径 OP の表す一般角を $\\theta$ とするとき、次のように定める。",
+        "formula": "$$\\sin\\theta=\\dfrac{y}{r},\\qquad \\cos\\theta=\\dfrac{x}{r},\\qquad \\tan\\theta=\\dfrac{y}{x}\\ (x\\neq0)$$",
+        "conditions": [
+          "単位円（$r=1$）では P$(\\cos\\theta,\\,\\sin\\theta)$、$\\tan\\theta$ は直線 OP の傾き",
+          "$\\theta=\\dfrac{\\pi}{2}+n\\pi$（$n$ は整数）では $\\tan\\theta$ は定義されない",
+          "$-1\\leqq\\sin\\theta\\leqq1,\\ -1\\leqq\\cos\\theta\\leqq1$ で、$\\tan\\theta$ はすべての実数値をとる"
+        ],
+        "teacher_points": [
+          {
+            "point": "各象限での $\\sin,\\ \\cos,\\ \\tan$ の符号を、点 P の座標の符号と傾きから判断させ、表にまとめさせる。",
+            "ask": "第3象限の角では、$\\tan\\theta$ の符号はどうなるか。",
+            "expect": "$x<0,\\ y<0$ なので傾きは正。$\\tan\\theta>0$。"
+          }
+        ],
+        "figure": {
+          "alt": "単位円と点P(cosθ, sinθ)",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 196 196\" width=\"196\" height=\"196\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"98\" x2=\"188\" y2=\"98\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"98\" y1=\"182\" x2=\"98\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"184\" y=\"111\" font-style=\"italic\">x</text><text x=\"103\" y=\"12\" font-style=\"italic\">y</text><text x=\"87\" y=\"110\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"168\" height=\"168\"/></clipPath><path d=\"M38.36,91.44 L39.2,86.06 L40.04,82.49 L40.88,79.63 L41.72,77.2 L42.56,75.06 L43.4,73.12 L44.24,71.36 L45.08,69.73 L45.92,68.21 L46.76,66.78 L47.6,65.44 L48.44,64.18 L49.28,62.98 L50.12,61.84 L50.96,60.75 L51.8,59.72 L52.64,58.73 L53.48,57.78 L54.32,56.87 L55.16,55.99 L56,55.15 L56.84,54.34 L57.68,53.57 L58.52,52.82 L59.36,52.1 L60.2,51.4 L61.04,50.74 L61.88,50.09 L62.72,49.47 L63.56,48.87 L64.4,48.29 L65.24,47.73 L66.08,47.2 L66.92,46.68 L67.76,46.18 L68.6,45.7 L69.44,45.23 L70.28,44.79 L71.12,44.36 L71.96,43.95 L72.8,43.55 L73.64,43.17 L74.48,42.8 L75.32,42.45 L76.16,42.12 L77,41.8 L77.84,41.49 L78.68,41.2 L79.52,40.92 L80.36,40.65 L81.2,40.4 L82.04,40.16 L82.88,39.94 L83.72,39.72 L84.56,39.52 L85.4,39.34 L86.24,39.16 L87.08,39 L87.92,38.85 L88.76,38.72 L89.6,38.59 L90.44,38.48 L91.28,38.38 L92.12,38.29 L92.96,38.21 L93.8,38.15 L94.64,38.09 L95.48,38.05 L96.32,38.02 L97.16,38.01 L98,38 L98.84,38.01 L99.68,38.02 L100.52,38.05 L101.36,38.09 L102.2,38.15 L103.04,38.21 L103.88,38.29 L104.72,38.38 L105.56,38.48 L106.4,38.59 L107.24,38.72 L108.08,38.85 L108.92,39 L109.76,39.16 L110.6,39.34 L111.44,39.52 L112.28,39.72 L113.12,39.94 L113.96,40.16 L114.8,40.4 L115.64,40.65 L116.48,40.92 L117.32,41.2 L118.16,41.49 L119,41.8 L119.84,42.12 L120.68,42.45 L121.52,42.8 L122.36,43.17 L123.2,43.55 L124.04,43.95 L124.88,44.36 L125.72,44.79 L126.56,45.23 L127.4,45.7 L128.24,46.18 L129.08,46.68 L129.92,47.2 L130.76,47.73 L131.6,48.29 L132.44,48.87 L133.28,49.47 L134.12,50.09 L134.96,50.74 L135.8,51.4 L136.64,52.1 L137.48,52.82 L138.32,53.57 L139.16,54.34 L140,55.15 L140.84,55.99 L141.68,56.87 L142.52,57.78 L143.36,58.73 L144.2,59.72 L145.04,60.75 L145.88,61.84 L146.72,62.98 L147.56,64.18 L148.4,65.44 L149.24,66.78 L150.08,68.21 L150.92,69.73 L151.76,71.36 L152.6,73.12 L153.44,75.06 L154.28,77.2 L155.12,79.63 L155.96,82.49 L156.8,86.06 L157.64,91.44\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><clipPath id=\"k9\"><rect x=\"14\" y=\"14\" width=\"168\" height=\"168\"/></clipPath><path d=\"M38.36,104.56 L39.2,109.94 L40.04,113.51 L40.88,116.37 L41.72,118.8 L42.56,120.94 L43.4,122.88 L44.24,124.64 L45.08,126.27 L45.92,127.79 L46.76,129.22 L47.6,130.56 L48.44,131.82 L49.28,133.02 L50.12,134.16 L50.96,135.25 L51.8,136.28 L52.64,137.27 L53.48,138.22 L54.32,139.13 L55.16,140.01 L56,140.85 L56.84,141.66 L57.68,142.43 L58.52,143.18 L59.36,143.9 L60.2,144.6 L61.04,145.26 L61.88,145.91 L62.72,146.53 L63.56,147.13 L64.4,147.71 L65.24,148.27 L66.08,148.8 L66.92,149.32 L67.76,149.82 L68.6,150.3 L69.44,150.77 L70.28,151.21 L71.12,151.64 L71.96,152.05 L72.8,152.45 L73.64,152.83 L74.48,153.2 L75.32,153.55 L76.16,153.88 L77,154.2 L77.84,154.51 L78.68,154.8 L79.52,155.08 L80.36,155.35 L81.2,155.6 L82.04,155.84 L82.88,156.06 L83.72,156.28 L84.56,156.48 L85.4,156.66 L86.24,156.84 L87.08,157 L87.92,157.15 L88.76,157.28 L89.6,157.41 L90.44,157.52 L91.28,157.62 L92.12,157.71 L92.96,157.79 L93.8,157.85 L94.64,157.91 L95.48,157.95 L96.32,157.98 L97.16,157.99 L98,158 L98.84,157.99 L99.68,157.98 L100.52,157.95 L101.36,157.91 L102.2,157.85 L103.04,157.79 L103.88,157.71 L104.72,157.62 L105.56,157.52 L106.4,157.41 L107.24,157.28 L108.08,157.15 L108.92,157 L109.76,156.84 L110.6,156.66 L111.44,156.48 L112.28,156.28 L113.12,156.06 L113.96,155.84 L114.8,155.6 L115.64,155.35 L116.48,155.08 L117.32,154.8 L118.16,154.51 L119,154.2 L119.84,153.88 L120.68,153.55 L121.52,153.2 L122.36,152.83 L123.2,152.45 L124.04,152.05 L124.88,151.64 L125.72,151.21 L126.56,150.77 L127.4,150.3 L128.24,149.82 L129.08,149.32 L129.92,148.8 L130.76,148.27 L131.6,147.71 L132.44,147.13 L133.28,146.53 L134.12,145.91 L134.96,145.26 L135.8,144.6 L136.64,143.9 L137.48,143.18 L138.32,142.43 L139.16,141.66 L140,140.85 L140.84,140.01 L141.68,139.13 L142.52,138.22 L143.36,137.27 L144.2,136.28 L145.04,135.25 L145.88,134.16 L146.72,133.02 L147.56,131.82 L148.4,130.56 L149.24,129.22 L150.08,127.79 L150.92,126.27 L151.76,124.64 L152.6,122.88 L153.44,120.94 L154.28,118.8 L155.12,116.37 L155.96,113.51 L156.8,109.94 L157.64,104.56\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k9)\"/><line x1=\"98\" y1=\"98\" x2=\"46.04\" y2=\"128\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"46.04\" y1=\"98\" x2=\"46.04\" y2=\"128\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"46.04\" cy=\"128\" r=\"2.3\" fill=\"#000\"/><text x=\"50.04\" y=\"124\">P(cosθ, sinθ)</text></svg>"
+        },
+        "bullets": [
+          "$\\sin(\\theta+2n\\pi)=\\sin\\theta,\\ \\cos(\\theta+2n\\pi)=\\cos\\theta,\\ \\tan(\\theta+n\\pi)=\\tan\\theta$",
+          "$\\sin(-\\theta)=-\\sin\\theta,\\ \\cos(-\\theta)=\\cos\\theta,\\ \\tan(-\\theta)=-\\tan\\theta$",
+          "$\\sin\\left(\\theta+\\dfrac{\\pi}{2}\\right)=\\cos\\theta,\\ \\cos\\left(\\theta+\\dfrac{\\pi}{2}\\right)=-\\sin\\theta$"
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "加法定理",
+        "formula": "$$\\begin{aligned}\\sin(\\alpha\\pm\\beta)&=\\sin\\alpha\\cos\\beta\\pm\\cos\\alpha\\sin\\beta\\\\ \\cos(\\alpha\\pm\\beta)&=\\cos\\alpha\\cos\\beta\\mp\\sin\\alpha\\sin\\beta\\\\ \\tan(\\alpha\\pm\\beta)&=\\dfrac{\\tan\\alpha\\pm\\tan\\beta}{1\\mp\\tan\\alpha\\tan\\beta}\\end{aligned}$$",
+        "conditions": [
+          "複号同順",
+          "$\\tan$ の式は、$\\tan\\alpha,\\ \\tan\\beta,\\ \\tan(\\alpha\\pm\\beta)$ が定義される場合に成り立つ",
+          "$\\cos$ の式だけ、左辺の符号と右辺の符号が逆になる"
+        ],
+        "proof_steps": [
+          "単位円上に P$(\\cos\\alpha,\\,\\sin\\alpha)$、Q$(\\cos\\beta,\\,\\sin\\beta)$ をとる。",
+          "2点間の距離の公式より $\\mathrm{PQ}^2=(\\cos\\alpha-\\cos\\beta)^2+(\\sin\\alpha-\\sin\\beta)^2=2-2(\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta)$。",
+          "一方、$\\triangle\\mathrm{OPQ}$ で $\\angle\\mathrm{POQ}$ に対応する回転角は $\\alpha-\\beta$ なので、余弦定理（または O を中心に $-\\beta$ だけ回転して Q を $(1,\\,0)$ に移す考え）により $\\mathrm{PQ}^2=2-2\\cos(\\alpha-\\beta)$。",
+          "2式を比べて $\\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta$。",
+          "$\\beta$ を $-\\beta$ に置きかえると $\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta$。",
+          "$\\sin(\\alpha+\\beta)=\\cos\\left(\\dfrac{\\pi}{2}-(\\alpha+\\beta)\\right)=\\cos\\left(\\left(\\dfrac{\\pi}{2}-\\alpha\\right)-\\beta\\right)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta$。",
+          "$\\tan(\\alpha+\\beta)=\\dfrac{\\sin(\\alpha+\\beta)}{\\cos(\\alpha+\\beta)}$ の分母・分子を $\\cos\\alpha\\cos\\beta$ で割ると $\\tan$ の式が得られる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "証明の出発点は $\\cos(\\alpha-\\beta)$ ただ1つで、残りはすべて置きかえで導けることを系統図で示す。",
+            "ask": "$\\cos(\\alpha+\\beta)$ の式は、$\\cos(\\alpha-\\beta)$ の式から何をすれば得られるか。",
+            "expect": "$\\beta$ を $-\\beta$ に置きかえる。",
+            "timing": "加法定理の証明の直後"
+          },
+          {
+            "point": "$\\sin(\\alpha+\\beta)=\\sin\\alpha+\\sin\\beta$ が成り立たないことを、$\\alpha=\\beta=\\dfrac{\\pi}{2}$ などの反例で確認させる。",
+            "caution": "「かっこを分配する」感覚で誤る生徒が多い。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "2倍角・半角の公式",
+        "proof_steps": [
+          "加法定理で $\\beta=\\alpha$ とすると $\\sin2\\alpha=2\\sin\\alpha\\cos\\alpha$、$\\cos2\\alpha=\\cos^2\\alpha-\\sin^2\\alpha$。",
+          "$\\sin^2\\alpha+\\cos^2\\alpha=1$ を使うと $\\cos2\\alpha=2\\cos^2\\alpha-1=1-2\\sin^2\\alpha$。",
+          "$\\tan2\\alpha=\\dfrac{2\\tan\\alpha}{1-\\tan^2\\alpha}$。",
+          "$\\cos2\\alpha=1-2\\sin^2\\alpha$ で $\\alpha$ を $\\dfrac{\\alpha}{2}$ に置きかえて整理すると $\\sin^2\\dfrac{\\alpha}{2}=\\dfrac{1-\\cos\\alpha}{2}$。同様に $\\cos^2\\dfrac{\\alpha}{2}=\\dfrac{1+\\cos\\alpha}{2}$。"
+        ],
+        "body": "2倍角・半角の公式は、どれも加法定理と $\\sin^2\\alpha+\\cos^2\\alpha=1$ から数行で導ける。暗記に頼らず、導き方とセットで身につける。",
+        "teacher_points": [
+          {
+            "point": "$\\cos2\\alpha$ の3つの形を、「$\\sin$ だけで表したい」「$\\cos$ だけで表したい」という目的に応じて使い分けることを例で示す。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "三角関数の合成",
+        "formula": "$$a\\sin\\theta+b\\cos\\theta=\\sqrt{a^2+b^2}\\,\\sin(\\theta+\\alpha)\\qquad\\left(\\cos\\alpha=\\dfrac{a}{\\sqrt{a^2+b^2}},\\ \\sin\\alpha=\\dfrac{b}{\\sqrt{a^2+b^2}}\\right)$$",
+        "conditions": [
+          "$(a,\\,b)\\neq(0,\\,0)$",
+          "$\\alpha$ は点 $(a,\\,b)$ を表す動径の角（$\\sin\\theta$ の係数が $x$ 座標、$\\cos\\theta$ の係数が $y$ 座標）"
+        ],
+        "proof_steps": [
+          "$r=\\sqrt{a^2+b^2}$ とし、座標平面上に点 $(a,\\,b)$ をとると、$a=r\\cos\\alpha,\\ b=r\\sin\\alpha$ となる角 $\\alpha$ がある。",
+          "$a\\sin\\theta+b\\cos\\theta=r(\\sin\\theta\\cos\\alpha+\\cos\\theta\\sin\\alpha)$。",
+          "加法定理より $=r\\sin(\\theta+\\alpha)$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "点 $(a,\\,b)$ を図にかかせ、$r$ と $\\alpha$ を図から読み取る手順を定着させる。",
+            "caution": "$\\cos\\alpha=\\dfrac{b}{r}$ と取り違える誤りが多い。$\\sin\\theta$ の係数が $x$ 座標（$\\cos\\alpha$ 側）。"
+          }
+        ],
+        "figure": {
+          "alt": "点(a, b)と合成の角α（例: a=1, b=√3）",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 178 178\" width=\"178\" height=\"178\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"134\" x2=\"170\" y2=\"134\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"44\" y1=\"164\" x2=\"44\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"166\" y=\"147\" font-style=\"italic\">x</text><text x=\"49\" y=\"12\" font-style=\"italic\">y</text><text x=\"33\" y=\"146\">O</text><line x1=\"44\" y1=\"134\" x2=\"104\" y2=\"30.08\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"104\" y1=\"134\" x2=\"104\" y2=\"30.08\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"104\" cy=\"30.08\" r=\"2.3\" fill=\"#000\"/><text x=\"108\" y=\"26.08\">(1, √3)</text><text x=\"59\" y=\"125\">α</text></svg>"
+        }
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　加法定理で値を求める",
+        "example": {
+          "problem": "$\\cos\\dfrac{\\pi}{12}$ の値を求めよ。",
+          "steps": [
+            "$\\dfrac{\\pi}{12}=\\dfrac{\\pi}{3}-\\dfrac{\\pi}{4}$ と分ける。",
+            "$\\cos\\left(\\dfrac{\\pi}{3}-\\dfrac{\\pi}{4}\\right)=\\cos\\dfrac{\\pi}{3}\\cos\\dfrac{\\pi}{4}+\\sin\\dfrac{\\pi}{3}\\sin\\dfrac{\\pi}{4}=\\dfrac12\\cdot\\dfrac{\\sqrt2}{2}+\\dfrac{\\sqrt3}{2}\\cdot\\dfrac{\\sqrt2}{2}$。",
+            "$=\\dfrac{\\sqrt6+\\sqrt2}{4}$。"
+          ],
+          "answer": "$\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$",
+          "thinking": "値を知っている角（$\\dfrac{\\pi}{6},\\ \\dfrac{\\pi}{4},\\ \\dfrac{\\pi}{3}$ など）の和・差で表す。"
+        },
+        "teacher_points": [
+          {
+            "point": "答えが約 $0.966$ で、$\\cos0=1$ に近いことを確かめさせ、概算による検算を習慣づける。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta$",
+            "correct": "$\\cos$ の加法定理は符号が逆になる。差なら $+\\sin\\alpha\\sin\\beta$"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　合成と最大・最小",
+        "example": {
+          "problem": "$0\\leqq\\theta\\leqq\\pi$ のとき、$y=\\sqrt{3}\\sin\\theta+\\cos\\theta$ の最大値と最小値、およびそのときの $\\theta$ を求めよ。",
+          "steps": [
+            "点 $(\\sqrt3,\\,1)$ を考えると $r=2$、$\\alpha=\\dfrac{\\pi}{6}$。よって $y=2\\sin\\left(\\theta+\\dfrac{\\pi}{6}\\right)$。",
+            "$\\dfrac{\\pi}{6}\\leqq\\theta+\\dfrac{\\pi}{6}\\leqq\\dfrac{7}{6}\\pi$ なので、$-\\dfrac12\\leqq\\sin\\left(\\theta+\\dfrac{\\pi}{6}\\right)\\leqq1$。",
+            "最大値 $2$（$\\theta+\\dfrac{\\pi}{6}=\\dfrac{\\pi}{2}$ より $\\theta=\\dfrac{\\pi}{3}$）、最小値 $-1$（$\\theta+\\dfrac{\\pi}{6}=\\dfrac{7}{6}\\pi$ より $\\theta=\\pi$）。"
+          ],
+          "answer": "最大値 $2$（$\\theta=\\dfrac{\\pi}{3}$）、最小値 $-1$（$\\theta=\\pi$）",
+          "thinking": "$\\sin$ と $\\cos$ が混ざっていると最大・最小が分からない → 合成して $\\sin$ 1つにまとめ、角の範囲を単位円で読む。",
+          "figure": {
+            "alt": "y=2sin(θ+π/6) のグラフ（0≦θ≦π）",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 172 208\" width=\"172\" height=\"208\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"32\" y1=\"194\" x2=\"32\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"68\" y1=\"194\" x2=\"68\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"194\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"140\" y1=\"194\" x2=\"140\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"176\" x2=\"158\" y2=\"176\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"140\" x2=\"158\" y2=\"140\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"158\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"68\" x2=\"158\" y2=\"68\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"32\" x2=\"158\" y2=\"32\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"164\" y2=\"104\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"32\" y1=\"194\" x2=\"32\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"160\" y=\"117\" font-style=\"italic\">θ</text><text x=\"37\" y=\"12\" font-style=\"italic\">y</text><text x=\"21\" y=\"116\">O</text><text x=\"65\" y=\"116\" font-size=\"8\" fill=\"#555\">1</text><text x=\"101\" y=\"116\" font-size=\"8\" fill=\"#555\">2</text><text x=\"137\" y=\"116\" font-size=\"8\" fill=\"#555\">3</text><text x=\"19\" y=\"179\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"19\" y=\"143\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"19\" y=\"71\" font-size=\"8\" fill=\"#555\">1</text><text x=\"19\" y=\"35\" font-size=\"8\" fill=\"#555\">2</text><clipPath id=\"k23\"><rect x=\"14\" y=\"14\" width=\"144\" height=\"180\"/></clipPath><path d=\"M32,68 L32.72,66.76 L33.44,65.54 L34.16,64.33 L34.88,63.13 L35.6,61.95 L36.32,60.79 L37.04,59.65 L37.76,58.53 L38.48,57.42 L39.2,56.33 L39.92,55.26 L40.64,54.21 L41.36,53.18 L42.08,52.17 L42.8,51.18 L43.52,50.21 L44.24,49.27 L44.96,48.34 L45.68,47.44 L46.4,46.56 L47.12,45.7 L47.84,44.87 L48.56,44.06 L49.28,43.27 L50,42.51 L50.72,41.78 L51.44,41.06 L52.16,40.38 L52.88,39.72 L53.6,39.08 L54.32,38.47 L55.04,37.89 L55.76,37.33 L56.48,36.8 L57.2,36.3 L57.92,35.82 L58.64,35.37 L59.36,34.95 L60.08,34.55 L60.8,34.19 L61.52,33.85 L62.24,33.54 L62.96,33.26 L63.68,33 L64.4,32.78 L65.12,32.58 L65.84,32.41 L66.56,32.27 L67.28,32.16 L68,32.08 L68.72,32.03 L69.44,32 L70.16,32.01 L70.88,32.04 L71.6,32.1 L72.32,32.19 L73.04,32.31 L73.76,32.46 L74.48,32.63 L75.2,32.84 L75.92,33.07 L76.64,33.33 L77.36,33.62 L78.08,33.94 L78.8,34.29 L79.52,34.66 L80.24,35.06 L80.96,35.49 L81.68,35.95 L82.4,36.43 L83.12,36.95 L83.84,37.48 L84.56,38.05 L85.28,38.64 L86,39.26 L86.72,39.9 L87.44,40.57 L88.16,41.26 L88.88,41.98 L89.6,42.72 L90.32,43.49 L91.04,44.28 L91.76,45.1 L92.48,45.94 L93.2,46.8 L93.92,47.69 L94.64,48.6 L95.36,49.53 L96.08,50.48 L96.8,51.46 L97.52,52.45 L98.24,53.47 L98.96,54.5 L99.68,55.56 L100.4,56.63 L101.12,57.73 L101.84,58.84 L102.56,59.97 L103.28,61.12 L104,62.28 L104.72,63.47 L105.44,64.66 L106.16,65.88 L106.88,67.11 L107.6,68.35 L108.32,69.61 L109.04,70.88 L109.76,72.17 L110.48,73.46 L111.2,74.77 L111.92,76.09 L112.64,77.43 L113.36,78.77 L114.08,80.13 L114.8,81.49 L115.52,82.86 L116.24,84.24 L116.96,85.63 L117.68,87.03 L118.4,88.43 L119.12,89.84 L119.84,91.25 L120.56,92.67 L121.28,94.1 L122,95.52 L122.72,96.96 L123.44,98.39 L124.16,99.83 L124.88,101.27 L125.6,102.7 L126.32,104.14 L127.04,105.58 L127.76,107.02 L128.48,108.46 L129.2,109.9 L129.92,111.33 L130.64,112.76 L131.36,114.19 L132.08,115.61 L132.8,117.03 L133.52,118.45 L134.24,119.85 L134.96,121.25 L135.68,122.65 L136.4,124.04 L137.12,125.42 L137.84,126.79 L138.56,128.15 L139.28,129.5 L140,130.84 L140.72,132.17 L141.44,133.49 L142.16,134.8 L142.88,136.09 L143.6,137.38 L144.32,138.65 L145.04,139.9\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k23)\"/><circle cx=\"69.7\" cy=\"32\" r=\"2.3\" fill=\"#000\"/><text x=\"73.7\" y=\"28\">最大</text><circle cx=\"145.1\" cy=\"140\" r=\"2.3\" fill=\"#000\"/><text x=\"149.1\" y=\"136\">最小</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "置きかえた角 $\\theta+\\dfrac{\\pi}{6}$ の範囲を必ず書かせ、単位円上の弧として図示させる。",
+            "timing": "例題2の板書中"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\theta+\\dfrac{\\pi}{6}$ の範囲を考えず、最小値を $-2$ とする",
+            "correct": "範囲 $\\dfrac{\\pi}{6}\\leqq\\theta+\\dfrac{\\pi}{6}\\leqq\\dfrac{7}{6}\\pi$ では $\\sin$ は $-\\dfrac12$ までしか下がらない"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　2倍角の公式を使う方程式",
+        "example": {
+          "problem": "$0\\leqq\\theta<2\\pi$ のとき、方程式 $\\cos2\\theta+\\sin\\theta=0$ を解け。",
+          "steps": [
+            "$\\cos2\\theta=1-2\\sin^2\\theta$ を代入すると $2\\sin^2\\theta-\\sin\\theta-1=0$。",
+            "$(2\\sin\\theta+1)(\\sin\\theta-1)=0$ より $\\sin\\theta=-\\dfrac12,\\ 1$。",
+            "$\\sin\\theta=1$ のとき $\\theta=\\dfrac{\\pi}{2}$、$\\sin\\theta=-\\dfrac12$ のとき $\\theta=\\dfrac{7}{6}\\pi,\\ \\dfrac{11}{6}\\pi$。"
+          ],
+          "answer": "$\\theta=\\dfrac{\\pi}{2},\\ \\dfrac{7}{6}\\pi,\\ \\dfrac{11}{6}\\pi$",
+          "thinking": "$\\sin\\theta$ と $\\cos2\\theta$ が混在 → $\\cos2\\theta$ を $\\sin\\theta$ だけで表す形（$1-2\\sin^2\\theta$）を選ぶ。"
+        }
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 一般角・弧度法・定義",
+              "lines": [
+                "$180^\\circ=\\pi$",
+                "$\\ell=r\\theta,\\ S=\\dfrac12r^2\\theta$",
+                "単位円 P$(\\cos\\theta,\\sin\\theta)$",
+                "$\\tan\\theta$＝OP の傾き",
+                "周期：$\\sin,\\cos$ は $2\\pi$、$\\tan$ は $\\pi$"
+              ]
+            },
+            {
+              "title": "② 加法定理と系統図",
+              "lines": [
+                "$\\cos(\\alpha-\\beta)$（距離で証明）",
+                "↓ $\\beta\\to-\\beta$：$\\cos(\\alpha+\\beta)$",
+                "↓ 余角：$\\sin(\\alpha\\pm\\beta)$",
+                "↓ $\\beta=\\alpha$：2倍角",
+                "↓ $\\alpha\\to\\dfrac{\\alpha}{2}$：半角"
+              ]
+            },
+            {
+              "title": "③ 合成と活用",
+              "lines": [
+                "$a\\sin\\theta+b\\cos\\theta=r\\sin(\\theta+\\alpha)$",
+                "点 $(a,b)$ で $r,\\ \\alpha$ を読む",
+                "例 $\\sqrt3\\sin\\theta+\\cos\\theta=2\\sin(\\theta+\\frac{\\pi}{6})$",
+                "角の範囲を必ず書く",
+                "最大・最小、方程式へ"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "方程式・不等式では、まず $\\theta$ の範囲を確認し、単位円上の点や弧として解を読み取らせる。",
+            "ask": "$0\\leqq\\theta<2\\pi$ で $\\sin\\theta=\\dfrac12$ の解はいくつあるか。",
+            "expect": "2つ"
+          },
+          {
+            "point": "$\\sin2\\theta=k$ のように角が $2\\theta$ のときは、$2\\theta$ の範囲（$0\\leqq2\\theta<4\\pi$）で考えることを強調する。",
+            "caution": "解の個数が半分になる誤りが非常に多い。",
+            "timing": "方程式の演習の後"
+          },
+          {
+            "point": "グラフの平行移動は $y=\\sin2\\left(\\theta-\\dfrac{\\pi}{6}\\right)$ のように $\\theta$ の係数でくくってから読む。",
+            "caution": "$y=\\sin\\left(2\\theta-\\dfrac{\\pi}{3}\\right)$ を $\\dfrac{\\pi}{3}$ 移動と読む誤り。"
+          },
+          {
+            "point": "合成の結果は、$\\theta=0$ などを代入して元の式と値が一致するかで検算させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "扇形の面積を $S=\\dfrac12r^2\\theta$ に度数の $\\theta$ を代入して求める",
+            "correct": "$\\theta$ は弧度法で代入する"
+          },
+          {
+            "wrong": "$\\sin(\\alpha+\\beta)=\\sin\\alpha+\\sin\\beta$",
+            "correct": "加法定理 $\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta$ を使う"
+          },
+          {
+            "wrong": "$y=\\sin3\\theta$ の周期を $6\\pi$ とする",
+            "correct": "周期は $\\dfrac{2\\pi}{3}$（$\\theta$ の係数で割る）"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "弧度法では $180^\\circ=\\pi$。扇形は $\\ell=r\\theta,\\ S=\\dfrac12r^2\\theta$。",
+          "三角関数は単位円上の点の座標で定義する。$\\sin,\\ \\cos$ の周期は $2\\pi$、$\\tan$ の周期は $\\pi$。",
+          "加法定理は $\\cos(\\alpha-\\beta)$ を距離で証明し、置きかえで他の公式を導く。2倍角・半角・合成はすべて加法定理から得られる。",
+          "方程式・最大最小では、置きかえた角の範囲を必ず確認する。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\dfrac{5}{4}\\pi$ を度数法で表すと？",
+            "a": "$225^\\circ$"
+          },
+          {
+            "q": "$\\sin\\dfrac{4}{3}\\pi$ の値は？",
+            "a": "$-\\dfrac{\\sqrt3}{2}$"
+          },
+          {
+            "q": "$\\sin\\dfrac{5}{12}\\pi$ の値は？",
+            "a": "$\\dfrac{\\sqrt6+\\sqrt2}{4}$"
+          },
+          {
+            "q": "$\\sin\\theta-\\cos\\theta$ を $r\\sin(\\theta+\\alpha)$ の形に表すと？",
+            "a": "$\\sqrt2\\sin\\left(\\theta-\\dfrac{\\pi}{4}\\right)$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "7601733a0bb05bd5c1e06b5d505d7f4189f17c880712d31b0843aeadb6362e0e"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:17:23+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "cab877b5032a6cf5d62b88e0fa1d8f12c05fe00251d5107d23e10d84da3c5d8b"
+  }
+}

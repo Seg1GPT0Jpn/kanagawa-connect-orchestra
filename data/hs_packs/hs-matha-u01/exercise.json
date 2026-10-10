@@ -1,0 +1,5365 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHA-U01-EX",
+  "title": "場合の数と確率　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_a",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATHA-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATHA-U01-PACK",
+  "pair_set_id": "HS-MATHA-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G2-U06",
+        "point": "確率の基本",
+        "title": "確率"
+      },
+      {
+        "unit_id": "HS-MATH1-U02",
+        "point": "集合の要素の個数",
+        "title": "集合と命題"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATHB-U02",
+        "point": "確率変数・二項分布",
+        "title": "統計的な推測"
+      },
+      {
+        "unit_id": "HS-MATH2-U01",
+        "point": "二項定理",
+        "title": "式と証明"
+      }
+    ],
+    "readiness_check": [
+      "樹形図や表を使って、場合の数を数えられる（中学2年）。",
+      "「同様に確からしい」ことを前提に、確率を求められる（中学2年）。",
+      "集合の要素の個数の公式 $n(A\\cup B)=n(A)+n(B)-n(A\\cap B)$ を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHA-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "5 人の部員の中から、大会に出場する 2 人を選ぶ方法は何通りあるか。",
+      "answer": {
+        "value": "10"
+      },
+      "explanation": "${}_{5}\\mathrm{C}_{2}=\\dfrac{{}_{5}\\mathrm{P}_{2}}{2!}=\\dfrac{20}{2}=10$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "comb(5,2)",
+        "expected": "10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-perm_comb",
+      "explanation_detail": {
+        "approach": "出場する人を選ぶだけで、選んだ人の間に順序や役割の区別はない。組合せ ${}_n\\mathrm{C}_r$。",
+        "steps": [
+          "順序の区別・重複の有無を確認して、使う公式を決める。",
+          "${}_{5}\\mathrm{C}_{2}=\\dfrac{{}_{5}\\mathrm{P}_{2}}{2!}=\\dfrac{20}{2}=10$。"
+        ],
+        "alternatives": [
+          "小さい場合（人数や個数を減らした場合）で樹形図をかいて数え、公式の結果と一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数え方（公式）を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "順序を区別するかどうかを取り違え、P と C を混同する。",
+          "円順列で回転を同一視せず $n!$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "10 人の部員の中から、大会に出場する 2 人を選ぶ方法は何通りあるか。",
+      "answer": {
+        "value": "45"
+      },
+      "explanation": "${}_{10}\\mathrm{C}_{2}=\\dfrac{{}_{10}\\mathrm{P}_{2}}{2!}=\\dfrac{90}{2}=45$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "comb(10,2)",
+        "expected": "45"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-perm_comb",
+      "explanation_detail": {
+        "approach": "出場する人を選ぶだけで、選んだ人の間に順序や役割の区別はない。組合せ ${}_n\\mathrm{C}_r$。",
+        "steps": [
+          "順序の区別・重複の有無を確認して、使う公式を決める。",
+          "${}_{10}\\mathrm{C}_{2}=\\dfrac{{}_{10}\\mathrm{P}_{2}}{2!}=\\dfrac{90}{2}=45$。"
+        ],
+        "alternatives": [
+          "小さい場合（人数や個数を減らした場合）で樹形図をかいて数え、公式の結果と一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数え方（公式）を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "順序を区別するかどうかを取り違え、P と C を混同する。",
+          "円順列で回転を同一視せず $n!$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1 から 4 までの 4 種類の数字を、同じ数字をくり返し使ってもよいとして 5 個並べてできる 5 桁の数字の列は何通りあるか。",
+      "answer": {
+        "value": "1024"
+      },
+      "explanation": "$4^5=1024$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "4**5",
+        "expected": "1024"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-perm_comb",
+      "explanation_detail": {
+        "approach": "各桁に同じ数字を何度使ってもよいので、どの桁も選び方が同じ数ある（重複順列）。",
+        "steps": [
+          "順序の区別・重複の有無を確認して、使う公式を決める。",
+          "$4^5=1024$。"
+        ],
+        "alternatives": [
+          "小さい場合（人数や個数を減らした場合）で樹形図をかいて数え、公式の結果と一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数え方（公式）を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "順序を区別するかどうかを取り違え、P と C を混同する。",
+          "円順列で回転を同一視せず $n!$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "異なる 8 冊の本から 4 冊を選び、本棚に左から1列に並べる方法は何通りあるか。",
+      "answer": {
+        "value": "1680"
+      },
+      "explanation": "${}_{8}\\mathrm{P}_{4}=8\\times7\\times6\\times5=1680$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "perm(8,4)",
+        "expected": "1680"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-perm_comb",
+      "explanation_detail": {
+        "approach": "選んだ本を並べるので順序が区別される。異なる $n$ 個から $r$ 個を取る順列 ${}_n\\mathrm{P}_r$。",
+        "steps": [
+          "順序の区別・重複の有無を確認して、使う公式を決める。",
+          "${}_{8}\\mathrm{P}_{4}=8\\times7\\times6\\times5=1680$。"
+        ],
+        "alternatives": [
+          "小さい場合（人数や個数を減らした場合）で樹形図をかいて数え、公式の結果と一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数え方（公式）を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "順序を区別するかどうかを取り違え、P と C を混同する。",
+          "円順列で回転を同一視せず $n!$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1 から 3 までの 3 種類の数字を、同じ数字をくり返し使ってもよいとして 4 個並べてできる 4 桁の数字の列は何通りあるか。",
+      "answer": {
+        "value": "81"
+      },
+      "explanation": "$3^4=81$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "3**4",
+        "expected": "81"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-perm_comb",
+      "explanation_detail": {
+        "approach": "各桁に同じ数字を何度使ってもよいので、どの桁も選び方が同じ数ある（重複順列）。",
+        "steps": [
+          "順序の区別・重複の有無を確認して、使う公式を決める。",
+          "$3^4=81$。"
+        ],
+        "alternatives": [
+          "小さい場合（人数や個数を減らした場合）で樹形図をかいて数え、公式の結果と一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な数え方（公式）を選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "順序を区別するかどうかを取り違え、P と C を混同する。",
+          "円順列で回転を同一視せず $n!$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "大小2個のさいころを同時に投げるとき、出る目の積が奇数になる確率を求めなさい。",
+      "answer": {
+        "value": "1/4",
+        "display": "$\\dfrac{1}{4}$"
+      },
+      "explanation": "確率は $\\dfrac{9}{36}=\\dfrac{1}{4}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(9,36)",
+        "expected": "1/4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-prob_basic",
+      "explanation_detail": {
+        "approach": "大小2個のさいころの目の出方を $6\\times6$ の表に整理し、条件を満たすマスを数える。",
+        "steps": [
+          "目の出方は全部で $6\\times6=36$ 通りで、同様に確からしい。",
+          "条件を満たす（大，小）の組は $9$ 通り：$(1,\\ 1)$，$(1,\\ 3)$，$(1,\\ 5)$，$(3,\\ 1)$，$(3,\\ 3)$，$(3,\\ 5)$，$(5,\\ 1)$，$(5,\\ 3)$，$(5,\\ 5)$。",
+          "確率は $\\dfrac{9}{36}=\\dfrac{1}{4}$。"
+        ],
+        "alternatives": [
+          "余事象（条件を満たさない場合）の個数を数え、全体から引いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の場合の数と、条件を満たす場合の数を正しく数えている",
+            "points": 1
+          },
+          {
+            "point": "確率を約分して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2個のさいころを区別せず、全体を $21$ 通りとしてしまう（同様に確からしくない）。",
+          "重なり（両方を満たす場合）を2回数える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1 から 60 までの整数が1つずつ書かれた 60 枚のカードから1枚を引くとき、カードの数が $5$ の倍数または $4$ の倍数である確率を求めなさい。",
+      "answer": {
+        "value": "2/5",
+        "display": "$\\dfrac{2}{5}$"
+      },
+      "explanation": "確率は $\\dfrac{24}{60}=\\dfrac{2}{5}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(floor(60/5)+floor(60/4)-floor(60/20))/60",
+        "expected": "2/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-prob_basic",
+      "explanation_detail": {
+        "approach": "「または」なので和事象。両方の倍数（最小公倍数の倍数）を2回数えないよう、加法定理（要素の個数の公式）を使う。",
+        "steps": [
+          "$5$ の倍数は $12$ 枚、$4$ の倍数は $15$ 枚、両方（$20$ の倍数）は $3$ 枚。",
+          "$n(A\\cup B)=12+15-3=24$。",
+          "確率は $\\dfrac{24}{60}=\\dfrac{2}{5}$。"
+        ],
+        "alternatives": [
+          "余事象（条件を満たさない場合）の個数を数え、全体から引いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の場合の数と、条件を満たす場合の数を正しく数えている",
+            "points": 1
+          },
+          {
+            "point": "確率を約分して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2個のさいころを区別せず、全体を $21$ 通りとしてしまう（同様に確からしくない）。",
+          "重なり（両方を満たす場合）を2回数える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "大小2個のさいころを同時に投げるとき、出る目の和が $9$ 以上になる確率を求めなさい。",
+      "answer": {
+        "value": "5/18",
+        "display": "$\\dfrac{5}{18}$"
+      },
+      "explanation": "確率は $\\dfrac{10}{36}=\\dfrac{5}{18}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(10,36)",
+        "expected": "5/18"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-prob_basic",
+      "explanation_detail": {
+        "approach": "大小2個のさいころの目の出方を $6\\times6$ の表に整理し、条件を満たすマスを数える。",
+        "steps": [
+          "目の出方は全部で $6\\times6=36$ 通りで、同様に確からしい。",
+          "条件を満たす（大，小）の組は $10$ 通り：$(3,\\ 6)$，$(4,\\ 5)$，$(4,\\ 6)$，$(5,\\ 4)$，$(5,\\ 5)$，$(5,\\ 6)$，$(6,\\ 3)$，$(6,\\ 4)$，$(6,\\ 5)$，$(6,\\ 6)$。",
+          "確率は $\\dfrac{10}{36}=\\dfrac{5}{18}$。"
+        ],
+        "alternatives": [
+          "余事象（条件を満たさない場合）の個数を数え、全体から引いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の場合の数と、条件を満たす場合の数を正しく数えている",
+            "points": 1
+          },
+          {
+            "point": "確率を約分して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2個のさいころを区別せず、全体を $21$ 通りとしてしまう（同様に確からしくない）。",
+          "重なり（両方を満たす場合）を2回数える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "大小2個のさいころを同時に投げるとき、出る目の和が $10$ になる確率を求めなさい。",
+      "answer": {
+        "value": "1/12",
+        "display": "$\\dfrac{1}{12}$"
+      },
+      "explanation": "確率は $\\dfrac{3}{36}=\\dfrac{1}{12}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(3,36)",
+        "expected": "1/12"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-prob_basic",
+      "explanation_detail": {
+        "approach": "大小2個のさいころの目の出方を $6\\times6$ の表に整理し、条件を満たすマスを数える。",
+        "steps": [
+          "目の出方は全部で $6\\times6=36$ 通りで、同様に確からしい。",
+          "条件を満たす（大，小）の組は $3$ 通り：$(4,\\ 6)$，$(5,\\ 5)$，$(6,\\ 4)$。",
+          "確率は $\\dfrac{3}{36}=\\dfrac{1}{12}$。"
+        ],
+        "alternatives": [
+          "余事象（条件を満たさない場合）の個数を数え、全体から引いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の場合の数と、条件を満たす場合の数を正しく数えている",
+            "points": 1
+          },
+          {
+            "point": "確率を約分して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2個のさいころを区別せず、全体を $21$ 通りとしてしまう（同様に確からしくない）。",
+          "重なり（両方を満たす場合）を2回数える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "大小2個のさいころを同時に投げるとき、出る目の積が $3$ の倍数になる確率を求めなさい。",
+      "answer": {
+        "value": "5/9",
+        "display": "$\\dfrac{5}{9}$"
+      },
+      "explanation": "確率は $\\dfrac{20}{36}=\\dfrac{5}{9}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(20,36)",
+        "expected": "5/9"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-prob_basic",
+      "explanation_detail": {
+        "approach": "大小2個のさいころの目の出方を $6\\times6$ の表に整理し、条件を満たすマスを数える。",
+        "steps": [
+          "目の出方は全部で $6\\times6=36$ 通りで、同様に確からしい。",
+          "条件を満たす（大，小）の組は $20$ 通り：$(1,\\ 3)$，$(1,\\ 6)$，$(2,\\ 3)$，$(2,\\ 6)$，$(3,\\ 1)$，$(3,\\ 2)$，$(3,\\ 3)$，$(3,\\ 4)$，$(3,\\ 5)$，$(3,\\ 6)$，$(4,\\ 3)$，$(4,\\ 6)$など。",
+          "確率は $\\dfrac{20}{36}=\\dfrac{5}{9}$。"
+        ],
+        "alternatives": [
+          "余事象（条件を満たさない場合）の個数を数え、全体から引いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体の場合の数と、条件を満たす場合の数を正しく数えている",
+            "points": 1
+          },
+          {
+            "point": "確率を約分して正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2個のさいころを区別せず、全体を $21$ 通りとしてしまう（同様に確からしくない）。",
+          "重なり（両方を満たす場合）を2回数える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "6 枚の硬貨を同時に投げるとき、少なくとも1枚が表になる確率を求めなさい。",
+      "answer": {
+        "value": "63/64",
+        "display": "$\\dfrac{63}{64}$"
+      },
+      "explanation": "求める確率は $1-\\dfrac{1}{64}=\\dfrac{63}{64}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1-Rational(1,2)**6",
+        "expected": "63/64"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-complement",
+      "explanation_detail": {
+        "approach": "「少なくとも1個（1回）」の場合を直接数えると場合分けが多くなる。余事象「1個も（1回も）ない」の確率を求めて $1$ から引く。",
+        "steps": [
+          "余事象は「6 枚とも裏」で、その確率は $\\left(\\dfrac{1}{2}\\right)^6=\\dfrac{1}{64}$。",
+          "求める確率は $1-\\dfrac{1}{64}=\\dfrac{63}{64}$。"
+        ],
+        "alternatives": [
+          "「ちょうど1回」「ちょうど2回」……の確率をすべて求めて加えても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余事象を正しく設定している",
+            "points": 1
+          },
+          {
+            "point": "余事象の確率を求め、1から引いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍して求めてしまう。",
+          "余事象を「すべて赤球（表）」と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "赤球 5 個と白球 4 個が入った袋から、同時に 3 個の球を取り出すとき、少なくとも1個が赤球である確率を求めなさい。",
+      "answer": {
+        "value": "20/21",
+        "display": "$\\dfrac{20}{21}$"
+      },
+      "explanation": "求める確率は $1-\\dfrac{4}{84}=\\dfrac{20}{21}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1-comb(4,3)/comb(9,3)",
+        "expected": "20/21"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-complement",
+      "explanation_detail": {
+        "approach": "「少なくとも1個（1回）」の場合を直接数えると場合分けが多くなる。余事象「1個も（1回も）ない」の確率を求めて $1$ から引く。",
+        "steps": [
+          "取り出し方は全部で ${}_{9}\\mathrm{C}_{3}=84$ 通り。",
+          "余事象「3 個とも白球」は ${}_{4}\\mathrm{C}_{3}=4$ 通り。",
+          "求める確率は $1-\\dfrac{4}{84}=\\dfrac{20}{21}$。"
+        ],
+        "alternatives": [
+          "「ちょうど1回」「ちょうど2回」……の確率をすべて求めて加えても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余事象を正しく設定している",
+            "points": 1
+          },
+          {
+            "point": "余事象の確率を求め、1から引いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍して求めてしまう。",
+          "余事象を「すべて赤球（表）」と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1個のさいころを 3 回投げるとき、$2$ の目が少なくとも1回出る確率を求めなさい。",
+      "answer": {
+        "value": "91/216",
+        "display": "$\\dfrac{91}{216}$"
+      },
+      "explanation": "求める確率は $1-\\dfrac{125}{216}=\\dfrac{91}{216}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1-Rational(5,6)**3",
+        "expected": "91/216"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-complement",
+      "explanation_detail": {
+        "approach": "「少なくとも1個（1回）」の場合を直接数えると場合分けが多くなる。余事象「1個も（1回も）ない」の確率を求めて $1$ から引く。",
+        "steps": [
+          "余事象は「3 回とも $2$ 以外の目が出る」こと。その確率は $\\left(\\dfrac{5}{6}\\right)^3=\\dfrac{125}{216}$。",
+          "求める確率は $1-\\dfrac{125}{216}=\\dfrac{91}{216}$。"
+        ],
+        "alternatives": [
+          "「ちょうど1回」「ちょうど2回」……の確率をすべて求めて加えても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余事象を正しく設定している",
+            "points": 1
+          },
+          {
+            "point": "余事象の確率を求め、1から引いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍して求めてしまう。",
+          "余事象を「すべて赤球（表）」と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "赤球 5 個と白球 3 個が入った袋から、同時に 3 個の球を取り出すとき、少なくとも1個が赤球である確率を求めなさい。",
+      "answer": {
+        "value": "55/56",
+        "display": "$\\dfrac{55}{56}$"
+      },
+      "explanation": "求める確率は $1-\\dfrac{1}{56}=\\dfrac{55}{56}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1-comb(3,3)/comb(8,3)",
+        "expected": "55/56"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-complement",
+      "explanation_detail": {
+        "approach": "「少なくとも1個（1回）」の場合を直接数えると場合分けが多くなる。余事象「1個も（1回も）ない」の確率を求めて $1$ から引く。",
+        "steps": [
+          "取り出し方は全部で ${}_{8}\\mathrm{C}_{3}=56$ 通り。",
+          "余事象「3 個とも白球」は ${}_{3}\\mathrm{C}_{3}=1$ 通り。",
+          "求める確率は $1-\\dfrac{1}{56}=\\dfrac{55}{56}$。"
+        ],
+        "alternatives": [
+          "「ちょうど1回」「ちょうど2回」……の確率をすべて求めて加えても同じ値になる（計算量は多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余事象を正しく設定している",
+            "points": 1
+          },
+          {
+            "point": "余事象の確率を求め、1から引いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍して求めてしまう。",
+          "余事象を「すべて赤球（表）」と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "A さんと B さんが的に向かって1回ずつ矢を射る。A さんが命中する確率は $\\dfrac{1}{3}$、B さんが命中する確率は $\\dfrac{1}{2}$ で、2人の結果は互いに影響しない。一方だけが命中する確率を求めなさい。",
+      "answer": {
+        "value": "1/2",
+        "display": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\dfrac{1}{3}\\times\\dfrac{1}{2}+\\dfrac{2}{3}\\times\\dfrac{1}{2}=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,3)*(1-Rational(1,2))+(1-Rational(1,3))*Rational(1,2)",
+        "expected": "1/2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-indep",
+      "explanation_detail": {
+        "approach": "2人の試行は独立なので、それぞれの事象の確率の積が「ともに起こる」確率になる。複数の場合があるときは排反な場合に分けて加える。",
+        "steps": [
+          "2人の試行は独立である。",
+          "$\\dfrac{1}{3}\\times\\dfrac{1}{2}+\\dfrac{2}{3}\\times\\dfrac{1}{2}=\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "4通りの結果（命中・外れの組合せ）の確率をすべて表にし、合計が $1$ になることを確かめてから必要なものを加える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "独立性を用いて積で計算している",
+            "points": 1
+          },
+          {
+            "point": "場合を正しく選んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも一方」を $p+q$ としてしまう（重なりを2回数える）。",
+          "外れる確率 $1-p$ を使い忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "A さんと B さんが的に向かって1回ずつ矢を射る。A さんが命中する確率は $\\dfrac{1}{5}$、B さんが命中する確率は $\\dfrac{1}{5}$ で、2人の結果は互いに影響しない。2人とも命中する確率を求めなさい。",
+      "answer": {
+        "value": "1/25",
+        "display": "$\\dfrac{1}{25}$"
+      },
+      "explanation": "$\\dfrac{1}{5}\\times\\dfrac{1}{5}=\\dfrac{1}{25}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,5)*Rational(1,5)",
+        "expected": "1/25"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-indep",
+      "explanation_detail": {
+        "approach": "2人の試行は独立なので、それぞれの事象の確率の積が「ともに起こる」確率になる。複数の場合があるときは排反な場合に分けて加える。",
+        "steps": [
+          "2人の試行は独立である。",
+          "$\\dfrac{1}{5}\\times\\dfrac{1}{5}=\\dfrac{1}{25}$。"
+        ],
+        "alternatives": [
+          "4通りの結果（命中・外れの組合せ）の確率をすべて表にし、合計が $1$ になることを確かめてから必要なものを加える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "独立性を用いて積で計算している",
+            "points": 1
+          },
+          {
+            "point": "場合を正しく選んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも一方」を $p+q$ としてしまう（重なりを2回数える）。",
+          "外れる確率 $1-p$ を使い忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "A さんと B さんが的に向かって1回ずつ矢を射る。A さんが命中する確率は $\\dfrac{4}{5}$、B さんが命中する確率は $\\dfrac{3}{5}$ で、2人の結果は互いに影響しない。一方だけが命中する確率を求めなさい。",
+      "answer": {
+        "value": "11/25",
+        "display": "$\\dfrac{11}{25}$"
+      },
+      "explanation": "$\\dfrac{4}{5}\\times\\dfrac{2}{5}+\\dfrac{1}{5}\\times\\dfrac{3}{5}=\\dfrac{11}{25}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(4,5)*(1-Rational(3,5))+(1-Rational(4,5))*Rational(3,5)",
+        "expected": "11/25"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-indep",
+      "explanation_detail": {
+        "approach": "2人の試行は独立なので、それぞれの事象の確率の積が「ともに起こる」確率になる。複数の場合があるときは排反な場合に分けて加える。",
+        "steps": [
+          "2人の試行は独立である。",
+          "$\\dfrac{4}{5}\\times\\dfrac{2}{5}+\\dfrac{1}{5}\\times\\dfrac{3}{5}=\\dfrac{11}{25}$。"
+        ],
+        "alternatives": [
+          "4通りの結果（命中・外れの組合せ）の確率をすべて表にし、合計が $1$ になることを確かめてから必要なものを加える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "独立性を用いて積で計算している",
+            "points": 1
+          },
+          {
+            "point": "場合を正しく選んで答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも一方」を $p+q$ としてしまう（重なりを2回数える）。",
+          "外れる確率 $1-p$ を使い忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある集団 49 人について調べた結果（架空のデータ）は、1年生で図書館をよく利用する人が 24 人、1年生で図書館をあまり利用しない人が 9 人、2年生で図書館をよく利用する人が 5 人、2年生で図書館をあまり利用しない人が 11 人であった（表にもまとめてある）。この中から1人を選ぶとき、選んだ人が1年生であったとき、その人が図書館をよく利用する人である確率を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "1年生",
+            "24",
+            "9",
+            "33"
+          ],
+          [
+            "2年生",
+            "5",
+            "11",
+            "16"
+          ],
+          [
+            "計",
+            "29",
+            "20",
+            "49"
+          ]
+        ],
+        "header": [
+          "",
+          "図書館をよく利用する",
+          "図書館をあまり利用しない",
+          "計"
+        ]
+      },
+      "answer": {
+        "value": "8/11",
+        "display": "$\\dfrac{8}{11}$"
+      },
+      "explanation": "$\\dfrac{24}{24+9}=\\dfrac{8}{11}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(24,33)",
+        "expected": "8/11"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_basic",
+      "explanation_detail": {
+        "approach": "「〜であったとき」は条件付き確率。条件を満たす人だけを新しい全体とみなし、その中での割合を求める。",
+        "steps": [
+          "条件を満たす人の人数（分母）を表から読む。",
+          "その中で求める事象が起こる人数（分子）を読む。",
+          "$\\dfrac{24}{24+9}=\\dfrac{8}{11}$。"
+        ],
+        "alternatives": [
+          "式 $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$ を使い、全体 49 人を分母とした確率どうしの比として計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母（条件を満たす人数）を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を全体の 49 人にしてしまう（それは $P(A\\cap B)$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある集団 53 人について調べた結果（架空のデータ）は、男子で自転車で通学している人が 13 人、男子で自転車以外で通学している人が 6 人、女子で自転車で通学している人が 25 人、女子で自転車以外で通学している人が 9 人であった（表にもまとめてある）。この中から1人を選ぶとき、選んだ人が男子であったとき、その人が自転車で通学している人である確率を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "男子",
+            "13",
+            "6",
+            "19"
+          ],
+          [
+            "女子",
+            "25",
+            "9",
+            "34"
+          ],
+          [
+            "計",
+            "38",
+            "15",
+            "53"
+          ]
+        ],
+        "header": [
+          "",
+          "自転車で通学している",
+          "自転車以外で通学している",
+          "計"
+        ]
+      },
+      "answer": {
+        "value": "13/19",
+        "display": "$\\dfrac{13}{19}$"
+      },
+      "explanation": "$\\dfrac{13}{13+6}=\\dfrac{13}{19}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(13,19)",
+        "expected": "13/19"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_basic",
+      "explanation_detail": {
+        "approach": "「〜であったとき」は条件付き確率。条件を満たす人だけを新しい全体とみなし、その中での割合を求める。",
+        "steps": [
+          "条件を満たす人の人数（分母）を表から読む。",
+          "その中で求める事象が起こる人数（分子）を読む。",
+          "$\\dfrac{13}{13+6}=\\dfrac{13}{19}$。"
+        ],
+        "alternatives": [
+          "式 $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$ を使い、全体 53 人を分母とした確率どうしの比として計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母（条件を満たす人数）を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を全体の 53 人にしてしまう（それは $P(A\\cap B)$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある集団 50 人について調べた結果（架空のデータ）は、午前の来場者で展示 A を見た人が 19 人、午前の来場者で展示 A を見なかった人が 17 人、午後の来場者で展示 A を見た人が 11 人、午後の来場者で展示 A を見なかった人が 3 人であった（表にもまとめてある）。この中から1人を選ぶとき、選んだ人が展示 A を見た人であったとき、その人が午後の来場者である確率を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "午前の来場者",
+            "19",
+            "17",
+            "36"
+          ],
+          [
+            "午後の来場者",
+            "11",
+            "3",
+            "14"
+          ],
+          [
+            "計",
+            "30",
+            "20",
+            "50"
+          ]
+        ],
+        "header": [
+          "",
+          "展示 A を見た",
+          "展示 A を見なかった",
+          "計"
+        ]
+      },
+      "answer": {
+        "value": "11/30",
+        "display": "$\\dfrac{11}{30}$"
+      },
+      "explanation": "$\\dfrac{11}{19+11}=\\dfrac{11}{30}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(11,30)",
+        "expected": "11/30"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_basic",
+      "explanation_detail": {
+        "approach": "「〜であったとき」は条件付き確率。条件を満たす人だけを新しい全体とみなし、その中での割合を求める。",
+        "steps": [
+          "条件を満たす人の人数（分母）を表から読む。",
+          "その中で求める事象が起こる人数（分子）を読む。",
+          "$\\dfrac{11}{19+11}=\\dfrac{11}{30}$。"
+        ],
+        "alternatives": [
+          "式 $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$ を使い、全体 50 人を分母とした確率どうしの比として計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母（条件を満たす人数）を正しく選んでいる",
+            "points": 1
+          },
+          {
+            "point": "正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母を全体の 50 人にしてしまう（それは $P(A\\cap B)$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "A，B を含む 6 人が1列に並ぶとき、A と B が隣り合わない並び方は何通りあるか。",
+      "answer": {
+        "value": "480"
+      },
+      "explanation": "$6!-(6-1)!\\times2!=720-240=480$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(6)-factorial(5)*2",
+        "expected": "480"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-arrangement",
+      "explanation_detail": {
+        "approach": "隣り合うものはひとまとめにして考える。「隣り合わない」は全体から「隣り合う」を引く（余事象の考え）。",
+        "steps": [
+          "条件のある部分を先に処理する。",
+          "$6!-(6-1)!\\times2!=720-240=480$。"
+        ],
+        "alternatives": [
+          "人数（文字数）を小さくした場合で書き出して数え、同じ考え方の式が正しいかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の処理の仕方が正しい",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "ひとまとめにしたものの中の並び方をかけ忘れる。",
+          "同じものを含む順列で、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "A，B を含む 6 人が1列に並ぶとき、A と B が隣り合う並び方は何通りあるか。",
+      "answer": {
+        "value": "240"
+      },
+      "explanation": "$(6-1)!\\times2!=240$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(5)*2",
+        "expected": "240"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-arrangement",
+      "explanation_detail": {
+        "approach": "隣り合うものはひとまとめにして考える。「隣り合わない」は全体から「隣り合う」を引く（余事象の考え）。",
+        "steps": [
+          "条件のある部分を先に処理する。",
+          "$(6-1)!\\times2!=240$。"
+        ],
+        "alternatives": [
+          "人数（文字数）を小さくした場合で書き出して数え、同じ考え方の式が正しいかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の処理の仕方が正しい",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "ひとまとめにしたものの中の並び方をかけ忘れる。",
+          "同じものを含む順列で、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "7 個の文字 a，a，a，b，b，b，c をすべて1列に並べる方法は何通りあるか。",
+      "answer": {
+        "value": "140"
+      },
+      "explanation": "$\\dfrac{7!}{3!3!}=140$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(7)/(factorial(3)*factorial(3)*factorial(1))",
+        "expected": "140"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-arrangement",
+      "explanation_detail": {
+        "approach": "同じ文字を含むので、すべてを区別して並べた $n!$ 通りから、同じ文字どうしの入れかえで重複した分を割る。",
+        "steps": [
+          "条件のある部分を先に処理する。",
+          "$\\dfrac{7!}{3!3!}=140$。"
+        ],
+        "alternatives": [
+          "人数（文字数）を小さくした場合で書き出して数え、同じ考え方の式が正しいかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の処理の仕方が正しい",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "ひとまとめにしたものの中の並び方をかけ忘れる。",
+          "同じものを含む順列で、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "A，B を含む 4 人が1列に並ぶとき、A と B が隣り合わない並び方は何通りあるか。",
+      "answer": {
+        "value": "12"
+      },
+      "explanation": "$4!-(4-1)!\\times2!=24-12=12$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "factorial(4)-factorial(3)*2",
+        "expected": "12"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-arrangement",
+      "explanation_detail": {
+        "approach": "隣り合うものはひとまとめにして考える。「隣り合わない」は全体から「隣り合う」を引く（余事象の考え）。",
+        "steps": [
+          "条件のある部分を先に処理する。",
+          "$4!-(4-1)!\\times2!=24-12=12$。"
+        ],
+        "alternatives": [
+          "人数（文字数）を小さくした場合で書き出して数え、同じ考え方の式が正しいかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の処理の仕方が正しい",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "ひとまとめにしたものの中の並び方をかけ忘れる。",
+          "同じものを含む順列で、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "東へ 5 区画、北へ 4 区画の碁盤の目の道で、西南の角 P から東北の角 Q まで最短経路で進む。P から東へ 4 区画、北へ 3 区画の交差点 R を必ず通る経路は何通りあるか。",
+      "answer": {
+        "value": "70"
+      },
+      "explanation": "${}_{7}\\mathrm{C}_{4}\\times{}_{2}\\mathrm{C}_{1}=35\\times2=70$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(7,4)*comb(2,1)",
+        "expected": "70"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-comb_shapes",
+      "explanation_detail": {
+        "approach": "P→R と R→Q の2段階に分け、それぞれの最短経路の数をかける（積の法則）。",
+        "steps": [
+          "数える対象を、選び方・並べ方に言いかえる。",
+          "${}_{7}\\mathrm{C}_{4}\\times{}_{2}\\mathrm{C}_{1}=35\\times2=70$。"
+        ],
+        "alternatives": [
+          "小さい場合で図をかいて実際に数え、同じ考え方の式が成り立つかを確かめる。経路は交差点ごとに「そこまでの経路数」を書きこむ方法でも数えられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対象を選び方・並べ方に正しく言いかえている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "対角線の数で辺を引き忘れる。",
+          "経路の数を、区画数の積としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "東へ 4 区画、北へ 2 区画の碁盤の目の道で、西南の角 P から東北の角 Q まで最短経路で進む。P から東へ 2 区画、北へ 1 区画の交差点 R を必ず通る経路は何通りあるか。",
+      "answer": {
+        "value": "9"
+      },
+      "explanation": "${}_{3}\\mathrm{C}_{2}\\times{}_{3}\\mathrm{C}_{2}=3\\times3=9$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(3,2)*comb(3,2)",
+        "expected": "9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-comb_shapes",
+      "explanation_detail": {
+        "approach": "P→R と R→Q の2段階に分け、それぞれの最短経路の数をかける（積の法則）。",
+        "steps": [
+          "数える対象を、選び方・並べ方に言いかえる。",
+          "${}_{3}\\mathrm{C}_{2}\\times{}_{3}\\mathrm{C}_{2}=3\\times3=9$。"
+        ],
+        "alternatives": [
+          "小さい場合で図をかいて実際に数え、同じ考え方の式が成り立つかを確かめる。経路は交差点ごとに「そこまでの経路数」を書きこむ方法でも数えられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対象を選び方・並べ方に正しく言いかえている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "対角線の数で辺を引き忘れる。",
+          "経路の数を、区画数の積としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "正 11 角形の対角線は何本あるか。",
+      "answer": {
+        "value": "44"
+      },
+      "explanation": "${}_{11}\\mathrm{C}_{2}-11=55-11=44$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(11,2)-11",
+        "expected": "44"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-comb_shapes",
+      "explanation_detail": {
+        "approach": "2つの頂点を結ぶ線分の総数から、辺（となり合う頂点を結ぶ線分）の数を引く。",
+        "steps": [
+          "数える対象を、選び方・並べ方に言いかえる。",
+          "${}_{11}\\mathrm{C}_{2}-11=55-11=44$。"
+        ],
+        "alternatives": [
+          "小さい場合で図をかいて実際に数え、同じ考え方の式が成り立つかを確かめる。経路は交差点ごとに「そこまでの経路数」を書きこむ方法でも数えられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対象を選び方・並べ方に正しく言いかえている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "対角線の数で辺を引き忘れる。",
+          "経路の数を、区画数の積としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "正 5 角形の対角線は何本あるか。",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "${}_{5}\\mathrm{C}_{2}-5=10-5=5$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(5,2)-5",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-comb_shapes",
+      "explanation_detail": {
+        "approach": "2つの頂点を結ぶ線分の総数から、辺（となり合う頂点を結ぶ線分）の数を引く。",
+        "steps": [
+          "数える対象を、選び方・並べ方に言いかえる。",
+          "${}_{5}\\mathrm{C}_{2}-5=10-5=5$。"
+        ],
+        "alternatives": [
+          "小さい場合で図をかいて実際に数え、同じ考え方の式が成り立つかを確かめる。経路は交差点ごとに「そこまでの経路数」を書きこむ方法でも数えられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対象を選び方・並べ方に正しく言いかえている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "対角線の数で辺を引き忘れる。",
+          "経路の数を、区画数の積としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "「1個のさいころを投げて、5以上の目が出る」という試行を 5 回くり返す。この事象がちょうど 2 回起こる確率を求めなさい。",
+      "answer": {
+        "value": "80/243",
+        "display": "$\\dfrac{80}{243}$"
+      },
+      "explanation": "${}_{5}\\mathrm{C}_{2}\\left(\\dfrac{1}{3}\\right)^{2}\\left(\\dfrac{2}{3}\\right)^{3}=\\dfrac{80}{243}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(5,2)*Rational(1,3)**2*(1-Rational(1,3))**3",
+        "expected": "80/243"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-repeated",
+      "explanation_detail": {
+        "approach": "各回は独立で、1回に起こる確率は $\\dfrac{1}{3}$。反復試行の確率 ${}_n\\mathrm{C}_r\\,p^r(1-p)^{n-r}$ を使う。",
+        "steps": [
+          "1回の確率 $p=\\dfrac{1}{3}$、起こらない確率 $1-p=\\dfrac{2}{3}$。",
+          "${}_{5}\\mathrm{C}_{2}\\left(\\dfrac{1}{3}\\right)^{2}\\left(\\dfrac{2}{3}\\right)^{3}$。",
+          "$=\\dfrac{80}{243}$。"
+        ],
+        "alternatives": [
+          "$n=5$ 回の結果を「○（起こる）」「×（起こらない）」の列として考え、○の位置の選び方 ${}_{5}\\mathrm{C}_r$ 通りのそれぞれの確率が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反復試行の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算して約分している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "${}_n\\mathrm{C}_r$ をかけ忘れる。",
+          "起こらない確率 $1-p$ の指数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "「1個のさいころを投げて、1の目が出る」という試行を 6 回くり返す。この事象がちょうど 3 回起こる確率を求めなさい。",
+      "answer": {
+        "value": "625/11664",
+        "display": "$\\dfrac{625}{11664}$"
+      },
+      "explanation": "${}_{6}\\mathrm{C}_{3}\\left(\\dfrac{1}{6}\\right)^{3}\\left(\\dfrac{5}{6}\\right)^{3}=\\dfrac{625}{11664}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(6,3)*Rational(1,6)**3*(1-Rational(1,6))**3",
+        "expected": "625/11664"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-repeated",
+      "explanation_detail": {
+        "approach": "各回は独立で、1回に起こる確率は $\\dfrac{1}{6}$。反復試行の確率 ${}_n\\mathrm{C}_r\\,p^r(1-p)^{n-r}$ を使う。",
+        "steps": [
+          "1回の確率 $p=\\dfrac{1}{6}$、起こらない確率 $1-p=\\dfrac{5}{6}$。",
+          "${}_{6}\\mathrm{C}_{3}\\left(\\dfrac{1}{6}\\right)^{3}\\left(\\dfrac{5}{6}\\right)^{3}$。",
+          "$=\\dfrac{625}{11664}$。"
+        ],
+        "alternatives": [
+          "$n=6$ 回の結果を「○（起こる）」「×（起こらない）」の列として考え、○の位置の選び方 ${}_{6}\\mathrm{C}_r$ 通りのそれぞれの確率が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反復試行の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算して約分している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "${}_n\\mathrm{C}_r$ をかけ忘れる。",
+          "起こらない確率 $1-p$ の指数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "「あるバスケットボール選手がフリースローを1本投げて成功する（成功する確率を $\\dfrac{2}{3}$ とする）」という試行を 3 回くり返す。この事象がちょうど 2 回起こる確率を求めなさい。",
+      "answer": {
+        "value": "4/9",
+        "display": "$\\dfrac{4}{9}$"
+      },
+      "explanation": "${}_{3}\\mathrm{C}_{2}\\left(\\dfrac{2}{3}\\right)^{2}\\left(\\dfrac{1}{3}\\right)^{1}=\\dfrac{4}{9}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(3,2)*Rational(2,3)**2*(1-Rational(2,3))**1",
+        "expected": "4/9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-repeated",
+      "explanation_detail": {
+        "approach": "各回は独立で、1回に起こる確率は $\\dfrac{2}{3}$。反復試行の確率 ${}_n\\mathrm{C}_r\\,p^r(1-p)^{n-r}$ を使う。",
+        "steps": [
+          "1回の確率 $p=\\dfrac{2}{3}$、起こらない確率 $1-p=\\dfrac{1}{3}$。",
+          "${}_{3}\\mathrm{C}_{2}\\left(\\dfrac{2}{3}\\right)^{2}\\left(\\dfrac{1}{3}\\right)^{1}$。",
+          "$=\\dfrac{4}{9}$。"
+        ],
+        "alternatives": [
+          "$n=3$ 回の結果を「○（起こる）」「×（起こらない）」の列として考え、○の位置の選び方 ${}_{3}\\mathrm{C}_r$ 通りのそれぞれの確率が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反復試行の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算して約分している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "${}_n\\mathrm{C}_r$ をかけ忘れる。",
+          "起こらない確率 $1-p$ の指数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "「1個のさいころを投げて、2以下の目が出る」という試行を 5 回くり返す。この事象がちょうど 2 回起こる確率を求めなさい。",
+      "answer": {
+        "value": "80/243",
+        "display": "$\\dfrac{80}{243}$"
+      },
+      "explanation": "${}_{5}\\mathrm{C}_{2}\\left(\\dfrac{1}{3}\\right)^{2}\\left(\\dfrac{2}{3}\\right)^{3}=\\dfrac{80}{243}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "comb(5,2)*Rational(1,3)**2*(1-Rational(1,3))**3",
+        "expected": "80/243"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-repeated",
+      "explanation_detail": {
+        "approach": "各回は独立で、1回に起こる確率は $\\dfrac{1}{3}$。反復試行の確率 ${}_n\\mathrm{C}_r\\,p^r(1-p)^{n-r}$ を使う。",
+        "steps": [
+          "1回の確率 $p=\\dfrac{1}{3}$、起こらない確率 $1-p=\\dfrac{2}{3}$。",
+          "${}_{5}\\mathrm{C}_{2}\\left(\\dfrac{1}{3}\\right)^{2}\\left(\\dfrac{2}{3}\\right)^{3}$。",
+          "$=\\dfrac{80}{243}$。"
+        ],
+        "alternatives": [
+          "$n=5$ 回の結果を「○（起こる）」「×（起こらない）」の列として考え、○の位置の選び方 ${}_{5}\\mathrm{C}_r$ 通りのそれぞれの確率が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "反復試行の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "正しく計算して約分している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "${}_n\\mathrm{C}_r$ をかけ忘れる。",
+          "起こらない確率 $1-p$ の指数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "袋 A には赤球 2 個と白球 1 個、袋 B には赤球 6 個と白球 4 個が入っている。さいころを投げて1から4の目なら袋 A、それ以外なら袋 Bを選び、選んだ袋から球を1個取り出す。取り出した球が赤球であったとき、それが袋 A から取り出されたものである確率を求めなさい。",
+      "answer": {
+        "value": "20/29",
+        "display": "$\\dfrac{20}{29}$"
+      },
+      "explanation": "$\\dfrac{\\dfrac{4}{9}}{\\dfrac{4}{9}+\\dfrac{1}{5}}=\\dfrac{20}{29}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(Rational(2,3)*Rational(2,3))/(Rational(2,3)*Rational(2,3)+Rational(1,3)*Rational(6,10))",
+        "expected": "20/29"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_bayes",
+      "explanation_detail": {
+        "approach": "「赤球であった」ことが分かったうえでの確率なので条件付き確率。赤球が出るすべての場合（A から・B から）の確率を分母にする。",
+        "steps": [
+          "A を選んで赤球：$\\dfrac{2}{3}\\times\\dfrac{2}{3}=\\dfrac{4}{9}$。",
+          "B を選んで赤球：$\\dfrac{1}{3}\\times\\dfrac{6}{10}=\\dfrac{1}{5}$。",
+          "赤球が出る確率：$\\dfrac{29}{45}$。",
+          "求める確率：$\\dfrac{4}{9}\\div\\dfrac{29}{45}=\\dfrac{20}{29}$。"
+        ],
+        "alternatives": [
+          "樹形図の枝に確率を書きこみ、赤球に至る2本の枝の確率の比から答えを読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの場合の確率を乗法定理で正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "条件付き確率の式を正しく立てて計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "袋 A から赤球を取り出す確率 $\\dfrac{4}{9}$ をそのまま答える。",
+          "袋 A の中の赤球の割合 $\\dfrac{2}{3}$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "袋 A には赤球 6 個と白球 3 個、袋 B には赤球 2 個と白球 3 個が入っている。さいころを投げて1から4の目なら袋 A、それ以外なら袋 Bを選び、選んだ袋から球を1個取り出す。取り出した球が白球であったとき、それが袋 A から取り出されたものである確率を求めなさい。",
+      "answer": {
+        "value": "10/19",
+        "display": "$\\dfrac{10}{19}$"
+      },
+      "explanation": "$\\dfrac{\\dfrac{2}{9}}{\\dfrac{2}{9}+\\dfrac{1}{5}}=\\dfrac{10}{19}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(Rational(2,3)*Rational(3,9))/(Rational(2,3)*Rational(3,9)+Rational(1,3)*Rational(3,5))",
+        "expected": "10/19"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_bayes",
+      "explanation_detail": {
+        "approach": "「白球であった」ことが分かったうえでの確率なので条件付き確率。白球が出るすべての場合（A から・B から）の確率を分母にする。",
+        "steps": [
+          "A を選んで白球：$\\dfrac{2}{3}\\times\\dfrac{3}{9}=\\dfrac{2}{9}$。",
+          "B を選んで白球：$\\dfrac{1}{3}\\times\\dfrac{3}{5}=\\dfrac{1}{5}$。",
+          "白球が出る確率：$\\dfrac{19}{45}$。",
+          "求める確率：$\\dfrac{2}{9}\\div\\dfrac{19}{45}=\\dfrac{10}{19}$。"
+        ],
+        "alternatives": [
+          "樹形図の枝に確率を書きこみ、白球に至る2本の枝の確率の比から答えを読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの場合の確率を乗法定理で正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "条件付き確率の式を正しく立てて計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "袋 A から白球を取り出す確率 $\\dfrac{2}{9}$ をそのまま答える。",
+          "袋 A の中の白球の割合 $\\dfrac{3}{9}$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "袋 A には赤球 2 個と白球 4 個、袋 B には赤球 5 個と白球 2 個が入っている。硬貨を投げて表なら袋 A、裏なら袋 Bを選び、選んだ袋から球を1個取り出す。取り出した球が白球であったとき、それが袋 A から取り出されたものである確率を求めなさい。",
+      "answer": {
+        "value": "7/10",
+        "display": "$\\dfrac{7}{10}$"
+      },
+      "explanation": "$\\dfrac{\\dfrac{1}{3}}{\\dfrac{1}{3}+\\dfrac{1}{7}}=\\dfrac{7}{10}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(Rational(1,2)*Rational(4,6))/(Rational(1,2)*Rational(4,6)+Rational(1,2)*Rational(2,7))",
+        "expected": "7/10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_bayes",
+      "explanation_detail": {
+        "approach": "「白球であった」ことが分かったうえでの確率なので条件付き確率。白球が出るすべての場合（A から・B から）の確率を分母にする。",
+        "steps": [
+          "A を選んで白球：$\\dfrac{1}{2}\\times\\dfrac{4}{6}=\\dfrac{1}{3}$。",
+          "B を選んで白球：$\\dfrac{1}{2}\\times\\dfrac{2}{7}=\\dfrac{1}{7}$。",
+          "白球が出る確率：$\\dfrac{10}{21}$。",
+          "求める確率：$\\dfrac{1}{3}\\div\\dfrac{10}{21}=\\dfrac{7}{10}$。"
+        ],
+        "alternatives": [
+          "樹形図の枝に確率を書きこみ、白球に至る2本の枝の確率の比から答えを読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの場合の確率を乗法定理で正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "条件付き確率の式を正しく立てて計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "袋 A から白球を取り出す確率 $\\dfrac{1}{3}$ をそのまま答える。",
+          "袋 A の中の白球の割合 $\\dfrac{4}{6}$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "袋 A には赤球 5 個と白球 5 個、袋 B には赤球 5 個と白球 6 個が入っている。さいころを投げて1から4の目なら袋 A、それ以外なら袋 Bを選び、選んだ袋から球を1個取り出す。取り出した球が赤球であったとき、それが袋 A から取り出されたものである確率を求めなさい。",
+      "answer": {
+        "value": "11/16",
+        "display": "$\\dfrac{11}{16}$"
+      },
+      "explanation": "$\\dfrac{\\dfrac{1}{3}}{\\dfrac{1}{3}+\\dfrac{5}{33}}=\\dfrac{11}{16}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(Rational(2,3)*Rational(5,10))/(Rational(2,3)*Rational(5,10)+Rational(1,3)*Rational(5,11))",
+        "expected": "11/16"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-cond_bayes",
+      "explanation_detail": {
+        "approach": "「赤球であった」ことが分かったうえでの確率なので条件付き確率。赤球が出るすべての場合（A から・B から）の確率を分母にする。",
+        "steps": [
+          "A を選んで赤球：$\\dfrac{2}{3}\\times\\dfrac{5}{10}=\\dfrac{1}{3}$。",
+          "B を選んで赤球：$\\dfrac{1}{3}\\times\\dfrac{5}{11}=\\dfrac{5}{33}$。",
+          "赤球が出る確率：$\\dfrac{16}{33}$。",
+          "求める確率：$\\dfrac{1}{3}\\div\\dfrac{16}{33}=\\dfrac{11}{16}$。"
+        ],
+        "alternatives": [
+          "樹形図の枝に確率を書きこみ、赤球に至る2本の枝の確率の比から答えを読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの場合の確率を乗法定理で正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "条件付き確率の式を正しく立てて計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "袋 A から赤球を取り出す確率 $\\dfrac{1}{3}$ をそのまま答える。",
+          "袋 A の中の赤球の割合 $\\dfrac{5}{10}$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "10 本のくじの中に、1等（500 円）が 3 本、2等（100 円）が 4 本あり、残りははずれ（0 円）である。このくじを1本引くときの賞金の期待値を求めなさい。",
+      "answer": {
+        "value": "190",
+        "display": "$190$ 円"
+      },
+      "explanation": "$500\\times\\dfrac{3}{10}+100\\times\\dfrac{4}{10}=190$（円）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "500*Rational(3,10)+100*Rational(4,10)",
+        "expected": "190"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-expectation",
+      "explanation_detail": {
+        "approach": "とりうる値とその確率の表（確率分布）をつくり、「値 × 確率」の和を求める。確率の合計が $1$ になることも確かめる。",
+        "steps": [
+          "賞金のとりうる値と確率の表をつくる。",
+          "$500\\times\\dfrac{3}{10}+100\\times\\dfrac{4}{10}=190$（円）。"
+        ],
+        "alternatives": [
+          "確率の合計が $1$ になることを確かめてから期待値を計算すると、数え漏れに気づきやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "とりうる値と確率を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "期待値を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率をかけずに値を平均してしまう。",
+          "とりうる値の一部（0 円や 0 個など）を表から落とす（期待値には影響しないが、確率の合計の確認ができない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "赤球 6 個と白球 5 個が入った袋から同時に 2 個の球を取り出すとき、取り出される赤球の個数の期待値を求めなさい。",
+      "answer": {
+        "value": "12/11",
+        "display": "$\\dfrac{12}{11}$ 個"
+      },
+      "explanation": "期待値 $1\\times\\dfrac{6}{11}+2\\times\\dfrac{3}{11}=\\dfrac{12}{11}$（個）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1*comb(6,1)*comb(5,1)/comb(11,2)+2*comb(6,2)*comb(5,0)/comb(11,2)",
+        "expected": "12/11"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-expectation",
+      "explanation_detail": {
+        "approach": "とりうる値とその確率の表（確率分布）をつくり、「値 × 確率」の和を求める。確率の合計が $1$ になることも確かめる。",
+        "steps": [
+          "赤球の個数 $X$ のとりうる値は 0，1，2。",
+          "各値の確率：$P(X=0)=\\dfrac{2}{11}$，$P(X=1)=\\dfrac{6}{11}$，$P(X=2)=\\dfrac{3}{11}$。",
+          "期待値 $1\\times\\dfrac{6}{11}+2\\times\\dfrac{3}{11}=\\dfrac{12}{11}$（個）。"
+        ],
+        "alternatives": [
+          "確率の合計が $1$ になることを確かめてから期待値を計算すると、数え漏れに気づきやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "とりうる値と確率を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "期待値を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率をかけずに値を平均してしまう。",
+          "とりうる値の一部（0 円や 0 個など）を表から落とす（期待値には影響しないが、確率の合計の確認ができない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "3 個のさいころを同時に投げるとき、出る目の最大値の期待値を求めなさい。",
+      "answer": {
+        "value": "119/24",
+        "display": "$\\dfrac{119}{24}$"
+      },
+      "explanation": "期待値 $\\sum k\\,P(X=k)=\\dfrac{119}{24}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1*Rational(1,216)+2*Rational(7,216)+3*Rational(19,216)+4*Rational(37,216)+5*Rational(61,216)+6*Rational(91,216)",
+        "expected": "119/24"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-expectation",
+      "explanation_detail": {
+        "approach": "とりうる値とその確率の表（確率分布）をつくり、「値 × 確率」の和を求める。確率の合計が $1$ になることも確かめる。",
+        "steps": [
+          "最大値が $k$ 以下である確率は $\\left(\\dfrac{k}{6}\\right)^3$。",
+          "$P(X=k)=\\left(\\dfrac{k}{6}\\right)^3-\\left(\\dfrac{k-1}{6}\\right)^3$ より $P(X=1)=\\dfrac{1}{216}$，$P(X=2)=\\dfrac{7}{216}$，$P(X=3)=\\dfrac{19}{216}$，$P(X=4)=\\dfrac{37}{216}$，$P(X=5)=\\dfrac{61}{216}$，$P(X=6)=\\dfrac{91}{216}$。",
+          "期待値 $\\sum k\\,P(X=k)=\\dfrac{119}{24}$。"
+        ],
+        "alternatives": [
+          "確率の合計が $1$ になることを確かめてから期待値を計算すると、数え漏れに気づきやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "とりうる値と確率を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "期待値を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率をかけずに値を平均してしまう。",
+          "とりうる値の一部（0 円や 0 個など）を表から落とす（期待値には影響しないが、確率の合計の確認ができない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "赤球 6 個と白球 2 個が入った袋から同時に 2 個の球を取り出すとき、取り出される赤球の個数の期待値を求めなさい。",
+      "answer": {
+        "value": "3/2",
+        "display": "$\\dfrac{3}{2}$ 個"
+      },
+      "explanation": "期待値 $1\\times\\dfrac{3}{7}+2\\times\\dfrac{15}{28}=\\dfrac{3}{2}$（個）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1*comb(6,1)*comb(2,1)/comb(8,2)+2*comb(6,2)*comb(2,0)/comb(8,2)",
+        "expected": "3/2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-expectation",
+      "explanation_detail": {
+        "approach": "とりうる値とその確率の表（確率分布）をつくり、「値 × 確率」の和を求める。確率の合計が $1$ になることも確かめる。",
+        "steps": [
+          "赤球の個数 $X$ のとりうる値は 0，1，2。",
+          "各値の確率：$P(X=0)=\\dfrac{1}{28}$，$P(X=1)=\\dfrac{3}{7}$，$P(X=2)=\\dfrac{15}{28}$。",
+          "期待値 $1\\times\\dfrac{3}{7}+2\\times\\dfrac{15}{28}=\\dfrac{3}{2}$（個）。"
+        ],
+        "alternatives": [
+          "確率の合計が $1$ になることを確かめてから期待値を計算すると、数え漏れに気づきやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "とりうる値と確率を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "期待値を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "確率をかけずに値を平均してしまう。",
+          "とりうる値の一部（0 円や 0 個など）を表から落とす（期待値には影響しないが、確率の合計の確認ができない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "5 人を 2 人、2 人、1 人の 3 つの組に分ける方法は何通りあるか。ただし、組には名前や番号がなく区別しない。考え方も説明しなさい。",
+      "answer": {
+        "value": "$15$ 通り"
+      },
+      "explanation": "順に選ぶと ${}_{5}\\mathrm{C}_{2}\\times{}_{3}\\mathrm{C}_{2}\\times{}_{1}\\mathrm{C}_{1}=30$ 通り。同じ人数の組が 2 つ（2 人組）あり、組に区別がないので、その並べかえの数で割る。よって $30\\div2=15$ 通り。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "順に選ぶ方法の数を組合せで正しく表している",
+            "points": 2
+          },
+          {
+            "criterion": "組の区別の有無による重複を正しく判断している",
+            "points": 3
+          },
+          {
+            "criterion": "割る数（または割らない理由）を説明している",
+            "points": 2
+          },
+          {
+            "criterion": "答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(comb(5,2)*comb(3,2)*comb(1,1))/2",
+        "expected": "15",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-groups",
+      "explanation_detail": {
+        "approach": "まず組（部屋）に区別があるとして、順に人を選ぶ方法を積の法則で数える。次に、組に区別がない場合は、同じ人数の組を入れかえただけの重複を考える。",
+        "steps": [
+          "区別があるとして順に選ぶ：${}_{5}\\mathrm{C}_{2}\\times{}_{3}\\mathrm{C}_{2}\\times{}_{1}\\mathrm{C}_{1}=30$ 通り。",
+          "同じ人数の組が 2 つ（2 人組）あり、組に区別がないので、その並べかえの数で割る。",
+          "答え：$15$ 通り。"
+        ],
+        "alternatives": [
+          "人数を小さくした例（4人を2人ずつ2組に分けるなど）で実際に書き出し、割る必要がある理由を確かめる（4人なら3通り）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "順に選ぶ方法",
+            "points": 2
+          },
+          {
+            "point": "重複の判断",
+            "points": 3
+          },
+          {
+            "point": "割る数の説明",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "組に区別がないのに割り忘れる。",
+          "人数の異なる組まで区別がないとして割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "8 人を 4 人、4 人の 2 つの組に分ける方法は何通りあるか。ただし、組には名前や番号がなく区別しない。考え方も説明しなさい。",
+      "answer": {
+        "value": "$35$ 通り"
+      },
+      "explanation": "順に選ぶと ${}_{8}\\mathrm{C}_{4}\\times{}_{4}\\mathrm{C}_{4}=70$ 通り。同じ人数の組が 2 つ（4 人組）あり、組に区別がないので、その並べかえの数で割る。よって $70\\div2=35$ 通り。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "順に選ぶ方法の数を組合せで正しく表している",
+            "points": 2
+          },
+          {
+            "criterion": "組の区別の有無による重複を正しく判断している",
+            "points": 3
+          },
+          {
+            "criterion": "割る数（または割らない理由）を説明している",
+            "points": 2
+          },
+          {
+            "criterion": "答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(comb(8,4)*comb(4,4))/2",
+        "expected": "35",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-groups",
+      "explanation_detail": {
+        "approach": "まず組（部屋）に区別があるとして、順に人を選ぶ方法を積の法則で数える。次に、組に区別がない場合は、同じ人数の組を入れかえただけの重複を考える。",
+        "steps": [
+          "区別があるとして順に選ぶ：${}_{8}\\mathrm{C}_{4}\\times{}_{4}\\mathrm{C}_{4}=70$ 通り。",
+          "同じ人数の組が 2 つ（4 人組）あり、組に区別がないので、その並べかえの数で割る。",
+          "答え：$35$ 通り。"
+        ],
+        "alternatives": [
+          "人数を小さくした例（4人を2人ずつ2組に分けるなど）で実際に書き出し、割る必要がある理由を確かめる（4人なら3通り）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "順に選ぶ方法",
+            "points": 2
+          },
+          {
+            "point": "重複の判断",
+            "points": 3
+          },
+          {
+            "point": "割る数の説明",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "組に区別がないのに割り忘れる。",
+          "人数の異なる組まで区別がないとして割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "8 人を、部屋 A に 2 人、部屋 B に 2 人、部屋 C に 2 人、部屋 D に 2 人が入るように分ける方法は何通りあるか。考え方も説明しなさい。",
+      "answer": {
+        "value": "$2520$ 通り"
+      },
+      "explanation": "順に選ぶと ${}_{8}\\mathrm{C}_{2}\\times{}_{6}\\mathrm{C}_{2}\\times{}_{4}\\mathrm{C}_{2}\\times{}_{2}\\mathrm{C}_{2}=2520$ 通り。部屋に区別があるので、順に選んだ結果がそのまま異なる分け方になる。よって $2520$ 通り。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "順に選ぶ方法の数を組合せで正しく表している",
+            "points": 2
+          },
+          {
+            "criterion": "組の区別の有無による重複を正しく判断している",
+            "points": 3
+          },
+          {
+            "criterion": "割る数（または割らない理由）を説明している",
+            "points": 2
+          },
+          {
+            "criterion": "答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(comb(8,2)*comb(6,2)*comb(4,2)*comb(2,2))/1",
+        "expected": "2520",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-groups",
+      "explanation_detail": {
+        "approach": "まず組（部屋）に区別があるとして、順に人を選ぶ方法を積の法則で数える。次に、組に区別がない場合は、同じ人数の組を入れかえただけの重複を考える。",
+        "steps": [
+          "区別があるとして順に選ぶ：${}_{8}\\mathrm{C}_{2}\\times{}_{6}\\mathrm{C}_{2}\\times{}_{4}\\mathrm{C}_{2}\\times{}_{2}\\mathrm{C}_{2}=2520$ 通り。",
+          "部屋に区別があるので、順に選んだ結果がそのまま異なる分け方になる。",
+          "答え：$2520$ 通り。"
+        ],
+        "alternatives": [
+          "人数を小さくした例（4人を2人ずつ2組に分けるなど）で実際に書き出し、割る必要がある理由を確かめる（4人なら3通り）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "順に選ぶ方法",
+            "points": 2
+          },
+          {
+            "point": "重複の判断",
+            "points": 3
+          },
+          {
+            "point": "割る数の説明",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "組に区別がないのに割り忘れる。",
+          "人数の異なる組まで区別がないとして割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを 2 回投げるとき、出る目の最大値が $6$ である確率を求めなさい。考え方も説明しなさい。",
+      "answer": {
+        "value": "$\\dfrac{11}{36}$"
+      },
+      "explanation": "「すべて $6$ 以下」の確率から「すべて $5$ 以下」の確率を引く：$\\dfrac{6^2-5^2}{6^2}=\\dfrac{11}{36}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「すべて $6$ 以下」という事象を考えている",
+            "points": 2
+          },
+          {
+            "criterion": "「すべて $5$ 以下」との差として表す理由を説明している",
+            "points": 3
+          },
+          {
+            "criterion": "確率を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "答えを約分して正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(6,6)**2-Rational(5,6)**2",
+        "expected": "11/36",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-max_min",
+      "explanation_detail": {
+        "approach": "「最大値が 6 」を直接数えると場合分けが多い。「すべて 6 以下」という事象から、「すべて 5 以下」の場合を除くと考える。",
+        "steps": [
+          "事象 $A$：すべて $6$ 以下。$P(A)=1$。",
+          "事象 $B$：すべて $5$ 以下。$B\\subset A$ で、$P(B)=\\left(\\dfrac{5}{6}\\right)^2$。",
+          "最大値が $6$ であるのは、$A$ が起こり $B$ が起こらないとき。",
+          "確率は $P(A)-P(B)=\\dfrac{6^2-5^2}{6^2}=\\dfrac{11}{36}$。"
+        ],
+        "alternatives": [
+          "最大値が $6$ になる目の出方を、「6 が出る回数」で場合分けして数えても同じ結果になる（反復試行の考え）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "事象 $A$ の設定",
+            "points": 2
+          },
+          {
+            "point": "差をとる理由",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも1回 $6$ が出る」ことと混同する。",
+          "「最大値が 6 」の確率を $\\left(\\dfrac{1}{6}\\right)^2$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを 2 回投げるとき、出る目の最大値が $2$ である確率を求めなさい。考え方も説明しなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{12}$"
+      },
+      "explanation": "「すべて $2$ 以下」の確率から「すべて $1$ 以下」の確率を引く：$\\dfrac{2^2-1^2}{6^2}=\\dfrac{1}{12}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「すべて $2$ 以下」という事象を考えている",
+            "points": 2
+          },
+          {
+            "criterion": "「すべて $1$ 以下」との差として表す理由を説明している",
+            "points": 3
+          },
+          {
+            "criterion": "確率を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "答えを約分して正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(2,6)**2-Rational(1,6)**2",
+        "expected": "1/12",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-max_min",
+      "explanation_detail": {
+        "approach": "「最大値が 2 」を直接数えると場合分けが多い。「すべて 2 以下」という事象から、「すべて 1 以下」の場合を除くと考える。",
+        "steps": [
+          "事象 $A$：すべて $2$ 以下。$P(A)=\\left(\\dfrac{1}{3}\\right)^2$。",
+          "事象 $B$：すべて $1$ 以下。$B\\subset A$ で、$P(B)=\\left(\\dfrac{1}{6}\\right)^2$。",
+          "最大値が $2$ であるのは、$A$ が起こり $B$ が起こらないとき。",
+          "確率は $P(A)-P(B)=\\dfrac{2^2-1^2}{6^2}=\\dfrac{1}{12}$。"
+        ],
+        "alternatives": [
+          "最大値が $2$ になる目の出方を、「2 が出る回数」で場合分けして数えても同じ結果になる（反復試行の考え）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "事象 $A$ の設定",
+            "points": 2
+          },
+          {
+            "point": "差をとる理由",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも1回 $2$ が出る」ことと混同する。",
+          "「最大値が 2 」の確率を $\\left(\\dfrac{1}{6}\\right)^2$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを 2 回投げるとき、出る目の最大値が $3$ である確率を求めなさい。考え方も説明しなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{36}$"
+      },
+      "explanation": "「すべて $3$ 以下」の確率から「すべて $2$ 以下」の確率を引く：$\\dfrac{3^2-2^2}{6^2}=\\dfrac{5}{36}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「すべて $3$ 以下」という事象を考えている",
+            "points": 2
+          },
+          {
+            "criterion": "「すべて $2$ 以下」との差として表す理由を説明している",
+            "points": 3
+          },
+          {
+            "criterion": "確率を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "答えを約分して正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(3,6)**2-Rational(2,6)**2",
+        "expected": "5/36",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-max_min",
+      "explanation_detail": {
+        "approach": "「最大値が 3 」を直接数えると場合分けが多い。「すべて 3 以下」という事象から、「すべて 2 以下」の場合を除くと考える。",
+        "steps": [
+          "事象 $A$：すべて $3$ 以下。$P(A)=\\left(\\dfrac{1}{2}\\right)^2$。",
+          "事象 $B$：すべて $2$ 以下。$B\\subset A$ で、$P(B)=\\left(\\dfrac{1}{3}\\right)^2$。",
+          "最大値が $3$ であるのは、$A$ が起こり $B$ が起こらないとき。",
+          "確率は $P(A)-P(B)=\\dfrac{3^2-2^2}{6^2}=\\dfrac{5}{36}$。"
+        ],
+        "alternatives": [
+          "最大値が $3$ になる目の出方を、「3 が出る回数」で場合分けして数えても同じ結果になる（反復試行の考え）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "事象 $A$ の設定",
+            "points": 2
+          },
+          {
+            "point": "差をとる理由",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 2
+          },
+          {
+            "point": "答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「少なくとも1回 $3$ が出る」ことと混同する。",
+          "「最大値が 3 」の確率を $\\left(\\dfrac{1}{6}\\right)^2$ などとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "1回の試行で事象 $A$ が起こる確率を $p$ とする。この試行を独立に2回行うとき、$A$ がちょうど1回起こる確率を $f(p)$ とする。$p$ が $\\dfrac{1}{6}\\leqq p\\leqq \\dfrac{1}{5}$ の範囲を動くとき、$f(p)$ の最大値と最小値、およびそのときの $p$ の値を求めなさい。",
+      "answer": {
+        "value": "$p=\\dfrac{1}{5}$ のとき最大値 $\\dfrac{8}{25}$、$p=\\dfrac{1}{6}$ のとき最小値 $\\dfrac{5}{18}$"
+      },
+      "explanation": "$f(p)={}_{2}\\mathrm{C}_{1}p(1-p)=-2\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{2}$。軸 $p=\\dfrac{1}{2}$ と区間の位置関係から判断する。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[2*Rational(1,5)*(1-Rational(1,5)), Min(2*Rational(1,6)*(1-Rational(1,6)), 2*Rational(1,5)*(1-Rational(1,5)))]",
+        "expected": "[Rational(8,25), Rational(5,18)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-cross_quad",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "反復試行の確率で $f(p)$ を $p$ の式に表すと二次関数になる（二次関数の単元）。平方完成して、軸と定義域の位置関係から最大・最小を調べる。",
+        "steps": [
+          "$f(p)={}_{2}\\mathrm{C}_{1}p(1-p)=2p-2p^2$。",
+          "平方完成：$f(p)=-2\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{2}$（上に凸、軸 $p=\\dfrac{1}{2}$）。",
+          "区間 $\\dfrac{1}{6}\\leqq p\\leqq \\dfrac{1}{5}$ で、候補の値：$f(\\dfrac{1}{6})=\\dfrac{5}{18}$，$f(\\dfrac{1}{5})=\\dfrac{8}{25}$。",
+          "最大値は $p=\\dfrac{1}{5}$ で $\\dfrac{8}{25}$、最小値は軸から遠い端点でとる。"
+        ],
+        "alternatives": [
+          "$f(p)=2p(1-p)$ は $p$ と $1-p$ を入れかえても変わらない（$p=\\dfrac{1}{2}$ に関して対称）ことから、軸からの距離で比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f(p)$ を反復試行の確率として正しく表している",
+            "points": 2
+          },
+          {
+            "point": "平方完成して軸を求めている",
+            "points": 2
+          },
+          {
+            "point": "区間での最大・最小を正しく判断している",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "${}_2\\mathrm{C}_1=2$ をかけ忘れ、$f(p)=p(1-p)$ とする。",
+          "軸が区間外にあるのに頂点の値を最大値とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "1回の試行で事象 $A$ が起こる確率を $p$ とする。この試行を独立に2回行うとき、$A$ がちょうど1回起こる確率を $f(p)$ とする。$p$ が $\\dfrac{4}{5}\\leqq p\\leqq \\dfrac{5}{6}$ の範囲を動くとき、$f(p)$ の最大値と最小値、およびそのときの $p$ の値を求めなさい。",
+      "answer": {
+        "value": "$p=\\dfrac{4}{5}$ のとき最大値 $\\dfrac{8}{25}$、$p=\\dfrac{5}{6}$ のとき最小値 $\\dfrac{5}{18}$"
+      },
+      "explanation": "$f(p)={}_{2}\\mathrm{C}_{1}p(1-p)=-2\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{2}$。軸 $p=\\dfrac{1}{2}$ と区間の位置関係から判断する。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "[2*Rational(4,5)*(1-Rational(4,5)), Min(2*Rational(4,5)*(1-Rational(4,5)), 2*Rational(5,6)*(1-Rational(5,6)))]",
+        "expected": "[Rational(8,25), Rational(5,18)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATHA-U01-cross_quad",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "反復試行の確率で $f(p)$ を $p$ の式に表すと二次関数になる（二次関数の単元）。平方完成して、軸と定義域の位置関係から最大・最小を調べる。",
+        "steps": [
+          "$f(p)={}_{2}\\mathrm{C}_{1}p(1-p)=2p-2p^2$。",
+          "平方完成：$f(p)=-2\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{2}$（上に凸、軸 $p=\\dfrac{1}{2}$）。",
+          "区間 $\\dfrac{4}{5}\\leqq p\\leqq \\dfrac{5}{6}$ で、候補の値：$f(\\dfrac{4}{5})=\\dfrac{8}{25}$，$f(\\dfrac{5}{6})=\\dfrac{5}{18}$。",
+          "最大値は $p=\\dfrac{4}{5}$ で $\\dfrac{8}{25}$、最小値は軸から遠い端点でとる。"
+        ],
+        "alternatives": [
+          "$f(p)=2p(1-p)$ は $p$ と $1-p$ を入れかえても変わらない（$p=\\dfrac{1}{2}$ に関して対称）ことから、軸からの距離で比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f(p)$ を反復試行の確率として正しく表している",
+            "points": 2
+          },
+          {
+            "point": "平方完成して軸を求めている",
+            "points": 2
+          },
+          {
+            "point": "区間での最大・最小を正しく判断している",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "${}_2\\mathrm{C}_1=2$ をかけ忘れ、$f(p)=p(1-p)$ とする。",
+          "軸が区間外にあるのに頂点の値を最大値とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある感染症の検査は、感染している人に行うと $80\\%$ の確率で陽性となり、感染していない人に行っても $5\\%$ の確率で陽性となる（架空の設定）。感染している人の割合が全体の $0.1\\%$ である集団から1人を選んで検査したところ陽性であった。この人が実際に感染している確率を求め、その値について気づいたことを述べなさい。",
+      "answer": {
+        "value": "$\\dfrac{16}{1015}$（約 $1.6\\%$）。陽性であっても実際には感染していない確率が約 $98.4\\%$ あり、陽性の人のうち感染している人の割合は、検査が感染者を陽性とする確率 $80\\%$ より小さい。感染している人の割合が小さいほど、この差は大きくなる。"
+      },
+      "explanation": "陽性となる確率を「感染していて陽性」と「感染していないが陽性」の和で求め、条件付き確率を計算する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2つの場合（感染して陽性・感染していないが陽性）の確率を乗法定理で求めている",
+            "points": 3
+          },
+          {
+            "criterion": "条件付き確率の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "値を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "結果について妥当な考察を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(Rational(1,1000)*Rational(4,5))/(Rational(1,1000)*Rational(4,5)+(1-Rational(1,1000))*Rational(1,20))",
+        "expected": "Rational(16,1015)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-test_bayes",
+      "explanation_detail": {
+        "approach": "「陽性であった」ことが分かったうえでの確率なので条件付き確率。陽性となるすべての場合（感染している・いない）の確率を分母にする。",
+        "steps": [
+          "感染していて陽性：$\\dfrac{1}{1000}\\times\\dfrac{4}{5}=\\dfrac{1}{1250}$。",
+          "感染していないが陽性：$\\dfrac{999}{1000}\\times\\dfrac{1}{20}=\\dfrac{999}{20000}$。",
+          "陽性となる確率：$\\dfrac{203}{4000}$。",
+          "求める確率：$\\dfrac{1}{1250}\\div\\dfrac{203}{4000}=\\dfrac{16}{1015}\\fallingdotseq0.016$。"
+        ],
+        "alternatives": [
+          "集団を 10000 人などと具体的な人数で考え、各場合の人数を表にして割合を求めると、直感的に理解しやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの場合の確率",
+            "points": 3
+          },
+          {
+            "point": "条件付き確率の式",
+            "points": 2
+          },
+          {
+            "point": "計算",
+            "points": 2
+          },
+          {
+            "point": "考察",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "検査の精度 $80\\%$ をそのまま答えてしまう。",
+          "感染していないが陽性となる場合を分母に入れ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある感染症の検査は、感染している人に行うと $95\\%$ の確率で陽性となり、感染していない人に行っても $5\\%$ の確率で陽性となる（架空の設定）。感染している人の割合が全体の $1\\%$ である集団から1人を選んで検査したところ陽性であった。この人が実際に感染している確率を求め、その値について気づいたことを述べなさい。",
+      "answer": {
+        "value": "$\\dfrac{19}{118}$（約 $16.1\\%$）。陽性であっても実際には感染していない確率が約 $83.9\\%$ あり、陽性の人のうち感染している人の割合は、検査が感染者を陽性とする確率 $95\\%$ より小さい。感染している人の割合が小さいほど、この差は大きくなる。"
+      },
+      "explanation": "陽性となる確率を「感染していて陽性」と「感染していないが陽性」の和で求め、条件付き確率を計算する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2つの場合（感染して陽性・感染していないが陽性）の確率を乗法定理で求めている",
+            "points": 3
+          },
+          {
+            "criterion": "条件付き確率の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "criterion": "値を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "結果について妥当な考察を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(Rational(1,100)*Rational(19,20))/(Rational(1,100)*Rational(19,20)+(1-Rational(1,100))*Rational(1,20))",
+        "expected": "Rational(19,118)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHA-U01-test_bayes",
+      "explanation_detail": {
+        "approach": "「陽性であった」ことが分かったうえでの確率なので条件付き確率。陽性となるすべての場合（感染している・いない）の確率を分母にする。",
+        "steps": [
+          "感染していて陽性：$\\dfrac{1}{100}\\times\\dfrac{19}{20}=\\dfrac{19}{2000}$。",
+          "感染していないが陽性：$\\dfrac{99}{100}\\times\\dfrac{1}{20}=\\dfrac{99}{2000}$。",
+          "陽性となる確率：$\\dfrac{59}{1000}$。",
+          "求める確率：$\\dfrac{19}{2000}\\div\\dfrac{59}{1000}=\\dfrac{19}{118}\\fallingdotseq0.161$。"
+        ],
+        "alternatives": [
+          "集団を 10000 人などと具体的な人数で考え、各場合の人数を表にして割合を求めると、直感的に理解しやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2つの場合の確率",
+            "points": 3
+          },
+          {
+            "point": "条件付き確率の式",
+            "points": 2
+          },
+          {
+            "point": "計算",
+            "points": 2
+          },
+          {
+            "point": "考察",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "検査の精度 $95\\%$ をそのまま答えてしまう。",
+          "感染していないが陽性となる場合を分母に入れ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "6 人の中から 2 人の代表選手を選ぶ方法は何通りあるか。\n［ある生徒の解答］\n${}_{6}\\mathrm{P}_{2}=6\\times5=30$ 通り\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$15$ 通り"
+      },
+      "explanation": "順列では同じ 2 人の組を $2!=2$ 回ずつ重複して数えている。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "perm(6,2)/factorial(2)",
+        "expected": "15",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-err_pc",
+      "explanation_detail": {
+        "approach": "選んだものの間に順序や役割の区別があるか（P）、ないか（C）を判断する。",
+        "steps": [
+          "選ぶ 2 人の間に区別はない。",
+          "${}_{6}\\mathrm{C}_{2}=\\dfrac{{}_{6}\\mathrm{P}_{2}}{2!}=\\dfrac{30}{2}=15$。"
+        ],
+        "alternatives": [
+          "たとえば A，B，… の 2 人の組は、順列では $2!$ 通りの並びとして数えられていることを書き出して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "P と C を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "${}_{6}\\mathrm{P}_{2}=6\\times5=30$ 通り",
+        "error_step": "順列 P を使った部分",
+        "error_type": "concept",
+        "why_tempting": "「選ぶ」問題でも、1人目・2人目……と順に選ぶ様子を思い浮かべて、順序を区別してしまった。",
+        "correction": "選んだ 2 人に順序や役割の区別はないので組合せ：${}_{6}\\mathrm{C}_{2}=15$ 通り"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "10 人の中から 2 人の清掃当番を選ぶ方法は何通りあるか。\n［ある生徒の解答］\n${}_{10}\\mathrm{P}_{2}=10\\times9=90$ 通り\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$45$ 通り"
+      },
+      "explanation": "順列では同じ 2 人の組を $2!=2$ 回ずつ重複して数えている。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "perm(10,2)/factorial(2)",
+        "expected": "45",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-err_pc",
+      "explanation_detail": {
+        "approach": "選んだものの間に順序や役割の区別があるか（P）、ないか（C）を判断する。",
+        "steps": [
+          "選ぶ 2 人の間に区別はない。",
+          "${}_{10}\\mathrm{C}_{2}=\\dfrac{{}_{10}\\mathrm{P}_{2}}{2!}=\\dfrac{90}{2}=45$。"
+        ],
+        "alternatives": [
+          "たとえば A，B，… の 2 人の組は、順列では $2!$ 通りの並びとして数えられていることを書き出して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "P と C を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "${}_{10}\\mathrm{P}_{2}=10\\times9=90$ 通り",
+        "error_step": "順列 P を使った部分",
+        "error_type": "concept",
+        "why_tempting": "「選ぶ」問題でも、1人目・2人目……と順に選ぶ様子を思い浮かべて、順序を区別してしまった。",
+        "correction": "選んだ 2 人に順序や役割の区別はないので組合せ：${}_{10}\\mathrm{C}_{2}=45$ 通り"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "6 人の中から 4 人の清掃当番を選ぶ方法は何通りあるか。\n［ある生徒の解答］\n${}_{6}\\mathrm{P}_{4}=6\\times5\\times4\\times3=360$ 通り\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$15$ 通り"
+      },
+      "explanation": "順列では同じ 4 人の組を $4!=24$ 回ずつ重複して数えている。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "perm(6,4)/factorial(4)",
+        "expected": "15",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-err_pc",
+      "explanation_detail": {
+        "approach": "選んだものの間に順序や役割の区別があるか（P）、ないか（C）を判断する。",
+        "steps": [
+          "選ぶ 4 人の間に区別はない。",
+          "${}_{6}\\mathrm{C}_{4}=\\dfrac{{}_{6}\\mathrm{P}_{4}}{4!}=\\dfrac{360}{24}=15$。"
+        ],
+        "alternatives": [
+          "たとえば A，B，… の 4 人の組は、順列では $4!$ 通りの並びとして数えられていることを書き出して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "P と C を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "${}_{6}\\mathrm{P}_{4}=6\\times5\\times4\\times3=360$ 通り",
+        "error_step": "順列 P を使った部分",
+        "error_type": "concept",
+        "why_tempting": "「選ぶ」問題でも、1人目・2人目……と順に選ぶ様子を思い浮かべて、順序を区別してしまった。",
+        "correction": "選んだ 4 人に順序や役割の区別はないので組合せ：${}_{6}\\mathrm{C}_{4}=15$ 通り"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを 5 回投げるとき、$4$ の目が少なくとも1回出る確率を求めなさい。\n［ある生徒の解答］\n1回で $4$ の目が出る確率は $\\dfrac{1}{6}$ なので、5 回では $5\\times\\dfrac{1}{6}=\\dfrac{5}{6}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{4651}{7776}$"
+      },
+      "explanation": "回数倍すると、2回以上起こる場合を重複して数えることになる（回数を増やすと確率が $1$ を超えることもある）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1-Rational(5,6)**5",
+        "expected": "4651/7776",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-err_atleast",
+      "explanation_detail": {
+        "approach": "「少なくとも1回」は余事象「1回も起こらない」の確率を $1$ から引いて求める。",
+        "steps": [
+          "余事象「5 回とも $4$ 以外」の確率は $\\left(\\dfrac{5}{6}\\right)^5=\\dfrac{3125}{7776}$。",
+          "求める確率は $1-\\dfrac{3125}{7776}=\\dfrac{4651}{7776}$。"
+        ],
+        "alternatives": [
+          "回数を大きくすると、回数倍の考え方では確率が $1$ を超えてしまい矛盾することから誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1回で $4$ の目が出る確率は $\\dfrac{1}{6}$ なので、5 回では $5\\times\\dfrac{1}{6}=\\dfrac{5}{6}$",
+        "error_step": "確率を回数倍した部分",
+        "error_type": "concept",
+        "why_tempting": "「1回で $p$ なら $n$ 回で $n$ 倍」と比例のように考えた。2回以上起こる場合を重複して数えていることに気づいていない。",
+        "correction": "求める確率は $1-\\dfrac{3125}{7776}=\\dfrac{4651}{7776}$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを 3 回投げるとき、$2$ の目が少なくとも1回出る確率を求めなさい。\n［ある生徒の解答］\n1回で $2$ の目が出る確率は $\\dfrac{1}{6}$ なので、3 回では $3\\times\\dfrac{1}{6}=\\dfrac{1}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{91}{216}$"
+      },
+      "explanation": "回数倍すると、2回以上起こる場合を重複して数えることになる（回数を増やすと確率が $1$ を超えることもある）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1-Rational(5,6)**3",
+        "expected": "91/216",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-err_atleast",
+      "explanation_detail": {
+        "approach": "「少なくとも1回」は余事象「1回も起こらない」の確率を $1$ から引いて求める。",
+        "steps": [
+          "余事象「3 回とも $2$ 以外」の確率は $\\left(\\dfrac{5}{6}\\right)^3=\\dfrac{125}{216}$。",
+          "求める確率は $1-\\dfrac{125}{216}=\\dfrac{91}{216}$。"
+        ],
+        "alternatives": [
+          "回数を大きくすると、回数倍の考え方では確率が $1$ を超えてしまい矛盾することから誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1回で $2$ の目が出る確率は $\\dfrac{1}{6}$ なので、3 回では $3\\times\\dfrac{1}{6}=\\dfrac{1}{2}$",
+        "error_step": "確率を回数倍した部分",
+        "error_type": "concept",
+        "why_tempting": "「1回で $p$ なら $n$ 回で $n$ 倍」と比例のように考えた。2回以上起こる場合を重複して数えていることに気づいていない。",
+        "correction": "求める確率は $1-\\dfrac{125}{216}=\\dfrac{91}{216}$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "1個のさいころを 3 回投げるとき、$6$ の目が少なくとも1回出る確率を求めなさい。\n［ある生徒の解答］\n1回で $6$ の目が出る確率は $\\dfrac{1}{6}$ なので、3 回では $3\\times\\dfrac{1}{6}=\\dfrac{1}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{91}{216}$"
+      },
+      "explanation": "回数倍すると、2回以上起こる場合を重複して数えることになる（回数を増やすと確率が $1$ を超えることもある）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1-Rational(5,6)**3",
+        "expected": "91/216",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-err_atleast",
+      "explanation_detail": {
+        "approach": "「少なくとも1回」は余事象「1回も起こらない」の確率を $1$ から引いて求める。",
+        "steps": [
+          "余事象「3 回とも $6$ 以外」の確率は $\\left(\\dfrac{5}{6}\\right)^3=\\dfrac{125}{216}$。",
+          "求める確率は $1-\\dfrac{125}{216}=\\dfrac{91}{216}$。"
+        ],
+        "alternatives": [
+          "回数を大きくすると、回数倍の考え方では確率が $1$ を超えてしまい矛盾することから誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "確率を回数倍する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1回で $6$ の目が出る確率は $\\dfrac{1}{6}$ なので、3 回では $3\\times\\dfrac{1}{6}=\\dfrac{1}{2}$",
+        "error_step": "確率を回数倍した部分",
+        "error_type": "concept",
+        "why_tempting": "「1回で $p$ なら $n$ 回で $n$ 倍」と比例のように考えた。2回以上起こる場合を重複して数えていることに気づいていない。",
+        "correction": "求める確率は $1-\\dfrac{125}{216}=\\dfrac{91}{216}$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "ある集団 55 人のうち、1年生で図書館をよく利用する人が 20 人、1年生で図書館をあまり利用しない人が 16 人、2年生で図書館をよく利用する人が 14 人、2年生で図書館をあまり利用しない人が 5 人である（架空のデータ）。この中から1人を選ぶとき、選んだ人が1年生であったときに、その人が図書館をよく利用する人である確率を求めなさい。\n［ある生徒の解答］\n1年生で図書館をよく利用する人は 20 人なので、確率は $\\dfrac{20}{55}=\\dfrac{4}{11}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{9}$"
+      },
+      "explanation": "条件「1年生であった」により、全体は 1年生の 36 人にしぼられる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(20,55)/Rational(36,55)",
+        "expected": "5/9",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-err_cond",
+      "explanation_detail": {
+        "approach": "「〜であったとき」の確率は、条件を満たすものだけを全体とみなして求める。",
+        "steps": [
+          "条件を満たす人：1年生の $36$ 人。",
+          "その中で図書館をよく利用する人：$20$ 人。",
+          "$P_A(B)=\\dfrac{20}{36}=\\dfrac{5}{9}$。"
+        ],
+        "alternatives": [
+          "式 $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}=\\dfrac{20/55}{36/55}$ で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "条件付き確率の分母を全体にしてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1年生で図書館をよく利用する人は 20 人なので、確率は $\\dfrac{20}{55}=\\dfrac{4}{11}$",
+        "error_step": "分母を全体の人数にした部分",
+        "error_type": "concept",
+        "why_tempting": "「1年生かつ図書館をよく利用する」の確率 $P(A\\cap B)$ と、「1年生であったときの」条件付き確率 $P_A(B)$ を区別していない。",
+        "correction": "1年生は $20+16=36$ 人なので、$P_A(B)=\\dfrac{20}{36}=\\dfrac{5}{9}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "ある集団 48 人のうち、男子で自転車で通学している人が 5 人、男子で自転車以外で通学している人が 23 人、女子で自転車で通学している人が 16 人、女子で自転車以外で通学している人が 4 人である（架空のデータ）。この中から1人を選ぶとき、選んだ人が男子であったときに、その人が自転車で通学している人である確率を求めなさい。\n［ある生徒の解答］\n男子で自転車で通学している人は 5 人なので、確率は $\\dfrac{5}{48}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{28}$"
+      },
+      "explanation": "条件「男子であった」により、全体は 男子の 28 人にしぼられる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(5,48)/Rational(28,48)",
+        "expected": "5/28",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHA-U01-err_cond",
+      "explanation_detail": {
+        "approach": "「〜であったとき」の確率は、条件を満たすものだけを全体とみなして求める。",
+        "steps": [
+          "条件を満たす人：男子の $28$ 人。",
+          "その中で自転車で通学している人：$5$ 人。",
+          "$P_A(B)=\\dfrac{5}{28}$。"
+        ],
+        "alternatives": [
+          "式 $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}=\\dfrac{5/48}{28/48}$ で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "条件付き確率の分母を全体にしてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "男子で自転車で通学している人は 5 人なので、確率は $\\dfrac{5}{48}$",
+        "error_step": "分母を全体の人数にした部分",
+        "error_type": "concept",
+        "why_tempting": "「男子かつ自転車で通学している」の確率 $P(A\\cap B)$ と、「男子であったときの」条件付き確率 $P_A(B)$ を区別していない。",
+        "correction": "男子は $5+23=28$ 人なので、$P_A(B)=\\dfrac{5}{28}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "赤球 2 個と白球 5 個が入った袋から、1個ずつ2回続けて球を取り出す。ただし、取り出した球はもとに戻さない。2回とも赤球が出る確率を求めなさい。\n［ある生徒の解答］\n1回目に赤球が出る確率は $\\dfrac{2}{7}$、2回目も $\\dfrac{2}{7}$ なので、$\\left(\\dfrac{2}{7}\\right)^2=\\dfrac{4}{49}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{21}$"
+      },
+      "explanation": "もとに戻さないので、1回目に赤球が出たという条件のもとで2回目の確率を考える（乗法定理）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "comb(2,2)/comb(7,2)",
+        "expected": "1/21",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-err_replace",
+      "explanation_detail": {
+        "approach": "もとに戻さない取り出しは独立な試行ではない。条件付き確率を使って順にかける。",
+        "steps": [
+          "1回目に赤球：$\\dfrac{2}{7}$。",
+          "1回目が赤球のとき、2回目に赤球：$\\dfrac{1}{6}$。",
+          "乗法定理より $\\dfrac{2}{7}\\times\\dfrac{1}{6}=\\dfrac{1}{21}$。"
+        ],
+        "alternatives": [
+          "「同時に2個取り出す」と考えて $\\dfrac{{}_{2}\\mathrm{C}_{2}}{{}_{7}\\mathrm{C}_{2}}=\\dfrac{1}{21}$ としても同じ値 $\\dfrac{1}{21}$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "もとに戻さないのに独立な試行として計算する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1回目に赤球が出る確率は $\\dfrac{2}{7}$、2回目も $\\dfrac{2}{7}$ なので、$\\left(\\dfrac{2}{7}\\right)^2=\\dfrac{4}{49}$",
+        "error_step": "2回目の確率を1回目と同じにした部分",
+        "error_type": "concept",
+        "why_tempting": "球をもとに戻す場合（独立な試行）と同じように考え、1回目の結果で袋の中身が変わることを見落とした。",
+        "correction": "2回目は赤球 $1$ 個を含む $6$ 個から取り出すので、$\\dfrac{2}{7}\\times\\dfrac{1}{6}=\\dfrac{1}{21}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "赤球 6 個と白球 4 個が入った袋から、1個ずつ2回続けて球を取り出す。ただし、取り出した球はもとに戻さない。2回とも赤球が出る確率を求めなさい。\n［ある生徒の解答］\n1回目に赤球が出る確率は $\\dfrac{6}{10}$、2回目も $\\dfrac{6}{10}$ なので、$\\left(\\dfrac{6}{10}\\right)^2=\\dfrac{9}{25}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{3}$"
+      },
+      "explanation": "もとに戻さないので、1回目に赤球が出たという条件のもとで2回目の確率を考える（乗法定理）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "comb(6,2)/comb(10,2)",
+        "expected": "1/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHA-U01-err_replace",
+      "explanation_detail": {
+        "approach": "もとに戻さない取り出しは独立な試行ではない。条件付き確率を使って順にかける。",
+        "steps": [
+          "1回目に赤球：$\\dfrac{6}{10}$。",
+          "1回目が赤球のとき、2回目に赤球：$\\dfrac{5}{9}$。",
+          "乗法定理より $\\dfrac{6}{10}\\times\\dfrac{5}{9}=\\dfrac{1}{3}$。"
+        ],
+        "alternatives": [
+          "「同時に2個取り出す」と考えて $\\dfrac{{}_{6}\\mathrm{C}_{2}}{{}_{10}\\mathrm{C}_{2}}=\\dfrac{15}{45}$ としても同じ値 $\\dfrac{1}{3}$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "もとに戻さないのに独立な試行として計算する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1回目に赤球が出る確率は $\\dfrac{6}{10}$、2回目も $\\dfrac{6}{10}$ なので、$\\left(\\dfrac{6}{10}\\right)^2=\\dfrac{9}{25}$",
+        "error_step": "2回目の確率を1回目と同じにした部分",
+        "error_type": "concept",
+        "why_tempting": "球をもとに戻す場合（独立な試行）と同じように考え、1回目の結果で袋の中身が変わることを見落とした。",
+        "correction": "2回目は赤球 $5$ 個を含む $9$ 個から取り出すので、$\\dfrac{6}{10}\\times\\dfrac{5}{9}=\\dfrac{1}{3}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b1854d1a2b39954e62f6fcd8500d38c1749db43afcbf893b24a10af04d550d75"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 8 問（Q003, Q005, Q044, Q045, Q046, Q049, Q050, Q058）",
+      "content_hash": "639d92dcb24891079d150f78c68fb603910905efdb1b2d25275ec452e3337fb3"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 2 問（Q049, Q050）",
+      "content_hash": "40705a5f119f06507bfe7a952b15196c2cb99d4b9b5905523e68396639d06b6b"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T09:17:19+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "df88df3c7798c3afb939e773538ed254a2a922c6e7f39775295c8f3f5bbc0d93"
+  }
+}
