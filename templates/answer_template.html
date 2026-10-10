@@ -1,0 +1,62 @@
+{% extends "_layout.html" %}
+{% from "_macros.html" import header, stimulus_block, figure_block, table_block %}
+{#
+  解答・解説冊子テンプレート
+  1. 解答一覧（番号・正答・配点）
+  2. 問題ごとの解説・採点基準（リスニングの放送文・共有資料もここに掲載）
+#}
+{% block body %}
+{{ header(qs, 'answers', units) }}
+
+<section class="section">
+  <h2>解答一覧</h2>
+  <table class="answer-key">
+    <thead><tr><th>番号</th><th>正答</th><th>配点</th></tr></thead>
+    <tbody>
+    {% for g in groups %}{% for item in g['items'] if item.kind == 'question' %}{% set q = item.question %}
+      <tr>
+        <td class="num">{{ q._number }}</td>
+        <td><span class="ans">{{ q | answer_display | rich_inline }}</span></td>
+        <td class="pts">{{ q.scoring.points | num }}</td>
+      </tr>
+    {% endfor %}{% endfor %}
+    </tbody>
+    {% if qs.total_points %}<tfoot><tr><td class="num">合計</td><td></td><td class="pts">{{ qs.total_points | num }}</td></tr></tfoot>{% endif %}
+  </table>
+</section>
+
+<section class="section">
+  <h2>解説</h2>
+  {% for g in groups %}
+    {% if g.section %}<h3 class="head">{{ g.section.title }}</h3>{% endif %}
+    {% for item in g['items'] %}
+      {% if item.kind == 'stimulus' %}
+        {% if item.stimulus.type == 'listening_script' %}{{ stimulus_block(item.stimulus, 'answers') }}{% endif %}
+      {% else %}
+        {% set q = item.question %}
+        <div class="exp-item{% if q._long_exp %} long{% endif %}">
+          <div class="q-head">
+            <span class="q-num">{{ q._number }}</span>
+            <div class="q-stem"><span class="label">正答</span><span class="ans">{{ q | answer_display | rich_inline }}</span>
+              {% if q.answer.accepted %}<span class="tags">（別解: {{ q.answer.accepted | join('，') }}）</span>{% endif %}</div>
+            <span class="q-meta">{{ q.scoring.points | num }}点</span>
+          </div>
+          <div class="q-body">
+            <div class="q-recap">{{ q.stem | truncate_plain(90) | rich_inline }}</div>
+            {% if q.stimulus and q.stimulus.type == 'listening_script' %}{{ stimulus_block(q.stimulus, 'answers') }}{% endif %}
+            <div><span class="label exp">解説</span>{{ q.explanation | rich_block }}</div>
+            {% if q.scoring.rubric %}
+            <div><span class="label rub">採点基準</span>{% if q.scoring.method == 'partial' %}部分点あり{% else %}観点別{% endif %}
+              <ul class="rubric">{% for r in q.scoring.rubric %}<li>{{ r.criterion | rich_inline }}（{{ r.points | num }}点）</li>{% endfor %}</ul>
+            </div>
+            {% elif q.scoring.notes %}<div class="tags">採点上の注意：{{ q.scoring.notes }}</div>{% endif %}
+            <div class="tags">
+              {{ q.difficulty.level | difficulty_label }}（{{ q.difficulty.score }}）｜ {{ q.skills | map('skill_label') | join('・') }} ｜ {{ q.evaluation_aspect | aspect_label }} ｜ {{ q.unit_id }}{% if q.topic %}・{{ q.topic }}{% endif %} ｜ 検証: {{ q.verification.status | status_label }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</section>
+{% endblock %}

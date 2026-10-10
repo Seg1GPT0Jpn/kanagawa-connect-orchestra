@@ -1,0 +1,57 @@
+"""パイロット：英語 中学2年「比較」20問。"""
+from ._common import desc, mc, order, sa, table, unit_set
+
+PHASE = 1
+
+ITEMS = [
+    mc("（　）に入る最も適切な語を選びなさい。\nTom is (　　) than Ken.", ["taller", "tall", "tallest", "more tall"],
+       "than があるので比較級。tall の比較級は -er をつけて taller。", d=1, tp="比較級"),
+    mc("（　）に入る最も適切な語句を選びなさい。\nThis is the (　　) book of the three.",
+       ["most interesting", "more interesting", "interestinger", "interesting"],
+       "the と of the three（3つの中で）があるので最上級。つづりの長い interesting は most をつけて最上級にする。", d=1, tp="最上級"),
+    mc("（　）に入る最も適切な語を選びなさい。\nMt. Fuji is the highest mountain (　　) Japan.", ["in", "of", "at", "than"],
+       "最上級の範囲を表すとき、場所や集団には in、複数のものには of を使う。Japan は場所なので in。", d=1, tp="最上級"),
+    mc("（　）に入る最も適切な語を選びなさい。\nShe is the youngest (　　) the five.", ["of", "in", "than", "with"],
+       "the five（5人）は複数の人をまとめて表すので of を使う。", d=1, tp="最上級"),
+    sa("good の比較級を書きなさい。", "better", "good / well は不規則に変化する：good − better − best。", d=1, tp="不規則変化"),
+    sa("bad の最上級を書きなさい。", "worst", "bad は不規則に変化する：bad − worse − worst。", d=1, tp="不規則変化"),
+    mc("（　）に入る最も適切な語を選びなさい。\nMy bag is as (　　) as yours.", ["big", "bigger", "biggest", "more big"],
+       "as ～ as … の「～」には形容詞・副詞の原級（もとの形）が入る。", d=2, tp="as ～ as"),
+    mc("（　）に入る最も適切な語を選びなさい。\nWhich do you like (　　), tea or coffee?", ["better", "more", "best", "good"],
+       "2つのうち「どちらがより好きか」は like ～ better を使う。3つ以上なら like ～ the best。", d=2, tp="比較級"),
+    mc("（　）に入る最も適切な語句を選びなさい。\nSoccer is (　　) popular sport in my class.", ["the most", "more", "most", "the more"],
+       "in my class（クラスの中で）とあるので最上級。popular は most をつけ、最上級には the をつける。", d=2, tp="最上級"),
+    sa("2つの文がほぼ同じ意味になるように、（　）に入る1語を書きなさい。\nKen is taller than Mike.\nMike is (　　) than Ken.", "shorter",
+       "「ケンはマイクより背が高い」＝「マイクはケンより背が低い」。tall の反対の short を比較級にする。", d=2, tp="書きかえ"),
+    sa("2つの文がほぼ同じ意味になるように、（　）に入る1語を書きなさい。\nThis box is not as heavy as that one.\nThat box is (　　) than this one.", "heavier",
+       "not as ～ as … は「…ほど～ではない」。あの箱の方が重いので heavy の比較級 heavier。y を i にかえて -er をつける。", d=2, tp="書きかえ"),
+    order("日本語に合うように、語句を並べかえなさい。\n琵琶湖は日本で最も大きい湖です。", ["Lake Biwa", "is", "the largest", "lake", "in Japan"],
+          "最上級は「the＋最上級＋名詞＋in（範囲）」の語順。Lake Biwa is the largest lake in Japan.", d=2, tp="最上級"),
+    order("日本語に合うように、語句を並べかえなさい。\nあなたのクラスでだれがいちばん速く走りますか。", ["Who", "runs", "the fastest", "in", "your class"],
+          "疑問詞 who が主語の文。Who runs the fastest in your class? 主語の who は3人称単数扱いなので runs。", d=3, tp="最上級"),
+    order("日本語に合うように、語句を並べかえなさい。\nこの映画はあの映画ほどおもしろくない。", ["This movie", "is not", "as interesting", "as that one"],
+          "「…ほど～ではない」は not as ～ as …。This movie is not as interesting as that one.", d=3, tp="as ～ as"),
+    mc("（　）に入る最も適切な語を選びなさい。\nThis is one of the (　　) temples in Kyoto.", ["oldest", "old", "older", "most old"],
+       "one of the ＋最上級＋複数名詞で「最も～な…の1つ」。old の最上級は oldest。", d=3, tp="最上級"),
+    sa("2つの文がほぼ同じ意味になるように、（　）に入る1語を書きなさい。\nNo other student in my class is as tall as Taro.\nTaro is (　　) than any other student in my class.", "taller",
+       "「比較級＋than any other＋単数名詞」は最上級と同じ意味を表す。「クラスのほかのどの生徒も太郎ほど背が高くない」＝「太郎はクラスのほかのどの生徒よりも背が高い」。", d=4, tp="書きかえ"),
+    mc("次の表は、ある日の3つの都市の最高気温である。表の内容に合う英文を選びなさい。",
+       ["Naha was the hottest of the three cities.", "Sendai was hotter than Kobe.", "Kobe was as hot as Naha.", "Naha was colder than Sendai."],
+       "最高気温は那覇 29℃、神戸 25℃、仙台 19℃。3都市の中で那覇が最も暑い。", d=3, k=["reading", "grammar"], tp="資料の読み取り",
+       tbl=table([["Kobe", "25℃"], ["Sendai", "19℃"], ["Naha", "29℃"]], header=["City", "Highest temperature"])),
+    sa("次の英文には誤りが1か所ある。誤っている語を正しい形に直して書きなさい。\nHe can run more fast than me.", "faster",
+       "fast は1音節の語なので、more ではなく -er をつけて faster とする。He can run faster than me.", d=3, tp="比較級"),
+    mc("対話が成り立つように、（　）に入る最も適切な英文を選びなさい。\nA: Which is longer, the Shinano River or the Tone River?\nB: (　　)",
+       ["The Shinano River is.", "Yes, it is.", "The Tone River does.", "No, it isn't."],
+       "Which で始まる疑問文には Yes / No で答えない。「信濃川の方が長い」は The Shinano River is (longer). と be 動詞で答える。信濃川は日本で最も長い川である。", d=3, tp="比較級の疑問文"),
+    desc("あなたがいちばん好きな季節とその理由を、比較の表現を1つ以上使って、2文以上の英語で書きなさい。",
+         "I like summer the best of all the seasons. It is more exciting than winter because I can swim in the sea.",
+         "like ～ the best、more ～ than などの比較表現を使い、because などで理由を加えるとよい。主語と動詞のある完全な文で書くこと。",
+         [("比較の表現を正しく使っている", 2), ("好きな季節の理由を述べている", 2), ("2文以上で、文法・つづりの誤りがない", 1)],
+         d=4, k=["writing", "grammar"], lines=4, tp="英作文"),
+]
+
+SETS = [
+    unit_set("JH-ENG-G2-U04", ITEMS, track="pilot", out="data/pilot/english_unit01.json", set_id="PILOT-ENG-U01",
+             title="【パイロット】英語　比較", subtitle="中学2年｜基礎・標準・応用 20問"),
+]

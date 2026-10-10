@@ -1,0 +1,64 @@
+{% extends "_layout.html" %}
+{% from "_macros.html" import header, stimulus_block, figure_block, table_block, answer_space %}
+{#
+  問題冊子テンプレート
+  変数: qs（問題セット JSON）, groups（大問ごとのまとまり）, units（単元情報）, show_points, show_difficulty
+#}
+{% block body %}
+{{ header(qs, 'questions', units) }}
+
+{% if qs.instructions %}
+<ol class="instructions">{% for i in qs.instructions %}<li>{{ i | rich_inline }}</li>{% endfor %}</ol>
+{% endif %}
+
+{% for g in groups %}
+<section class="section{% if g.page_break %} page-break{% endif %}">
+  {% if g.section %}
+  <h2>{{ g.section.title }}</h2>
+  {% if g.section.instructions %}<p class="section-instructions">{{ g.section.instructions | rich_inline }}</p>{% endif %}
+  {% endif %}
+  {% for item in g['items'] %}
+    {% if item.kind == 'stimulus' %}
+      {{ stimulus_block(item.stimulus, 'questions') }}
+    {% else %}
+      {% set q = item.question %}
+      <article class="question{% if q._long %} long{% endif %}" id="{{ q.id }}">
+        <div class="q-head">
+          <span class="q-num">{{ q._number }}</span>
+          <div class="q-stem stem-text">{{ q.stem | rich_block }}</div>
+          {% if show_points or show_difficulty %}
+          <span class="q-meta">{% if show_difficulty %}{{ q.difficulty.level | difficulty_label }}{% endif %}{% if show_points and show_difficulty %}・{% endif %}{% if show_points %}{{ q.scoring.points | num }}点{% endif %}</span>
+          {% endif %}
+        </div>
+        <div class="q-body">
+          {% if q.stimulus %}{{ stimulus_block(q.stimulus, 'questions') }}{% endif %}
+          {% if q.figure %}{{ figure_block(q.figure) }}{% endif %}
+          {% if q.table %}{{ table_block(q.table) }}{% endif %}
+          {% if q.choices %}
+          <ul class="choices cols-{{ q.choices | choice_cols }}">
+            {% for c in q.choices %}<li><span class="label">{{ c.label }}</span><span>{{ c.text | rich_inline }}</span></li>{% endfor %}
+          </ul>
+          {% endif %}
+          {{ answer_space(q) }}
+        </div>
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>
+{% endfor %}
+
+{% if answer_sheet %}
+<section class="answer-sheet page-break">
+  <h2>解答用紙</h2>
+  <div class="namebox"><div class="grow">受検番号　　　　　　氏名</div><div class="score">／{{ qs.total_points | num }} 点</div></div>
+  <table class="sheet">
+    {% for g in groups %}{% for item in g['items'] if item.kind == 'question' %}{% set q = item.question %}
+    <tr>
+      <th>{{ q._number }}</th>
+      <td>{% if q.choices and q.question_type in ['multiple_choice', 'true_false'] %}<span class="bubbles">{% for c in q.choices %}<span>{{ c.label }}</span>{% endfor %}</span>{% endif %}</td>
+    </tr>
+    {% endfor %}{% endfor %}
+  </table>
+</section>
+{% endif %}
+{% endblock %}

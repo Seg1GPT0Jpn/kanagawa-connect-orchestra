@@ -1,0 +1,413 @@
+#!/usr/bin/env python3
+"""作問バンク（scripts/banks/）から問題マスター JSON を生成し、検査と PDF ビルドまで一括実行する。
+
+  python scripts/generate_batch.py --phase 1            # パイロット
+  python scripts/generate_batch.py --phase 2 3 4 5      # 複数フェーズ
+  python scripts/generate_batch.py --phase 2 --only JH-MATH-G1-U01-S1
+  python scripts/generate_batch.py --phase 1 --tablet   # タブレット版 PDF も作る
+  python scripts/generate_batch.py --phase 2 --no-pdf   # PDF を作らない（検査は必ず行う）
+
+各セットについて次を順に行う。
+  1. バンクの定義をスキーマ準拠の JSON に展開（ID 採番・選択肢の決定的シャッフル・既定値の補完）
+  2. 既存マスターとの差分を取り、内容が変わったときだけ revision_history に版を追加
+     （教科担当者のレビュー状態は、その問題の内容が変わっていなければ引き継ぐ）
+  3. validate_questions.py で data/ 全体を対象に検査（重複検知は既存データも含めて行う）
+  4. エラーが無ければ draft の問題を auto_checked に更新し、検査結果を validation に記録
+  5. build_pdf.py で問題冊子・解答解説冊子を output/ に生成
+  6. output/reports/phase{N}_report.json に結果を保存
+"""
+from __future__ import annotations
+
+import argparse
+import copy
+import datetime as dt
+import hashlib
+import importlib
+import json
+import random
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+sys.path.insert(0, str(HERE))
+
+import validate_questions as vq  # noqa: E402
+from banks import PHASE_MODULES  # noqa: E402
+from banks._common import COPYRIGHT_HOLDER, LICENSE, UNITS  # noqa: E402
+
+SCHEMA_VERSION = "1.0.0"
+GENERATOR = "generate_batch.py"
+LABELS = {
+    "kana": ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ"],
+    "num": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "alpha": ["A", "B", "C", "D", "E", "F", "G", "H"],
+}
+TYPE_MAP = {
+    "mc": "multiple_choice", "ms": "multiple_select", "tf": "true_false", "num": "numeric",
+    "sa": "short_answer", "fill": "fill_in_blank", "ord": "ordering", "desc": "descriptive",
+    "proof": "proof", "essay": "essay",
+}
+THINKING_SKILLS = {"thinking", "data_interpretation", "writing", "essay", "proof", "experiment"}
+REVIEW_STATES = {"self_reviewed", "expert_reviewed", "approved"}
+
+
+def level_of(score: int) -> str:
+    return "basic" if score <= 2 else ("standard" if score == 3 else "advanced")
+
+
+def _rng(*parts) -> random.Random:
+    seed = int(hashlib.sha256("|".join(map(str, parts)).encode()).hexdigest()[:16], 16)
+    return random.Random(seed)
+
+
+def expand_item(spec: dict, item: dict, n: int) -> dict:
+    t = item["t"]
+    qid = f"{spec['set_id']}-Q{n:03d}"
+    unit_id = item.get("u", spec["unit_ids"][0])
+    unit = UNITS.get(unit_id, {})
+    skills = item.get("k") or spec.get("default_skills") or unit.get("default_skills") or ["knowledge"]
+    score = int(item.get("d", 2))
+    if "asp" in item:
+        aspect = "knowledge_skill" if item["asp"] == "k" else "thinking_judgment_expression"
+    else:
+        aspect = "thinking_judgment_expression" if (THINKING_SKILLS & set(skills) or score >= 4) else "knowledge_skill"
+    labels = LABELS[item.get("labels", spec.get("labels", "kana"))]
+
+    q: dict = {
+        "id": qid,
+    }
+    if item.get("no"):
+        q["number"] = str(item["no"])
+    if item.get("sec"):
+        q["section"] = item["sec"]
+    q.update({
+        "grade": item.get("grade", unit.get("grade", spec["grade"])),
+        "subject": item.get("subj", unit.get("subject", spec["subject"])),
+        "unit_id": unit_id,
+    })
+    if item.get("tp"):
+        q["topic"] = item["tp"]
+    q.update({
+        "skills": list(dict.fromkeys(skills)),
+        "evaluation_aspect": aspect,
+        "question_type": TYPE_MAP[t],
+    })
+    if item.get("st"):
+        q["stimulus_ref"] = item["st"]
+    if item.get("stim"):
+        q["stimulus"] = item["stim"]
+    q["stem"] = item["s"]
+    if item.get("fig"):
+        q["figure"] = item["fig"]
+    if item.get("tbl"):
+        q["table"] = item["tbl"]
+
+    answer: dict
+    rng = _rng(spec["set_id"], n, item["s"])
+    if t in ("mc", "ms", "ord"):
+        texts = item["c"]
+        idx = list(range(len(texts)))
+        if not item.get("keep"):
+            rng.shuffle(idx)
+            if t == "ord":
+                # 並べ替えで偶然正しい順になったら1回ずらす
+                if idx == sorted(idx) and len(idx) > 1:
+                    idx = idx[1:] + idx[:1]
+        q["choices"] = [{"label": labels[pos], "text": texts[i]} for pos, i in enumerate(idx)]
+        label_of = {i: labels[pos] for pos, i in enumerate(idx)}
+        if t == "mc":
+            correct = item.get("ai", 0)
+            answer = {"value": label_of[correct]}
+        elif t == "ms":
+            answer = {"value": sorted((label_of[i] for i in range(item["n_correct"])), key=labels.index)}
+        else:
+            answer = {"value": [label_of[i] for i in range(len(texts))]}
+    elif t == "tf":
+        q["choices"] = [{"label": "○", "text": "正しい"}, {"label": "×", "text": "誤り"}]
+        answer = {"value": "○" if item["truth"] else "×"}
+    else:
+        answer = {"value": item["a"]}
+    if item.get("v"):
+        answer["accepted"] = list(item["v"])
+    if item.get("disp"):
+        answer["display"] = item["disp"]
+    if item.get("unit"):
+        answer["unit"] = item["unit"]
+    q["answer"] = answer
+    q["explanation"] = item["e"]
+
+    points = item.get("p", spec.get("default_points", 5))
+    if t in ("desc", "proof", "essay"):
+        rubric = [{"criterion": c, "points": p} for c, p in item["r"]]
+        method = "rubric" if abs(sum(r["points"] for r in rubric) - points) < 1e-9 else "partial"
+        if "p" not in item and method == "partial":
+            points = sum(r["points"] for r in rubric)
+            method = "rubric"
+        q["scoring"] = {"points": points, "method": method, "rubric": rubric}
+    elif t in ("ms", "ord"):
+        q["scoring"] = {"points": points, "method": "all_or_nothing", "notes": "完全一致で正解"}
+    else:
+        q["scoring"] = {"points": points, "method": "exact"}
+        if item.get("v"):
+            q["scoring"]["notes"] = "別解欄の表記も正解とする"
+    q["difficulty"] = {"level": level_of(score), "score": score}
+
+    sp = {}
+    if item.get("lines"):
+        sp["lines"] = item["lines"]
+    if item.get("grid"):
+        sp["char_grid"] = item["grid"]
+    if item.get("h"):
+        sp["height_mm"] = item["h"]
+    if sp:
+        q["answer_space"] = sp
+    if item.get("chk"):
+        c = item["chk"]
+        q["calc_check"] = {"expression": c[0], "expected": c[1]}
+        if len(c) > 2:
+            q["calc_check"]["compare"] = c[2]
+    if item.get("tags"):
+        q["tags"] = list(item["tags"])
+    q["verification"] = {"status": "draft"}
+    cp = {"status": item.get("cp", "original"), "holder": COPYRIGHT_HOLDER}
+    if item.get("src"):
+        cp["source"] = item["src"]
+    if cp["status"] == "public_domain":
+        cp["notes"] = "原文は著作権の保護期間が満了した古典。問題文・設問・解説はオリジナル。"
+    q["copyright"] = cp
+    return q
+
+
+def expand_set(spec: dict) -> dict:
+    data = {
+        "schema_version": SCHEMA_VERSION,
+        "set_id": spec["set_id"],
+        "title": spec["title"],
+    }
+    if spec.get("subtitle"):
+        data["subtitle"] = spec["subtitle"]
+    if spec.get("description"):
+        data["description"] = spec["description"]
+    data.update({
+        "track": spec["track"],
+        "stage": spec["stage"],
+        "subject": spec["subject"],
+    })
+    if spec.get("course"):
+        data["course"] = spec["course"]
+    data["grade"] = spec["grade"]
+    data["unit_ids"] = spec["unit_ids"]
+    for key in ("time_limit_minutes", "instructions", "exam_spec", "sections", "stimuli", "build"):
+        if spec.get(key):
+            data[key] = copy.deepcopy(spec[key])
+    data["questions"] = [expand_item(spec, it, i) for i, it in enumerate(spec["items"], 1)]
+    if spec.get("total_points") is True:
+        data["total_points"] = sum(q["scoring"]["points"] for q in data["questions"])
+    elif spec.get("total_points"):
+        data["total_points"] = spec["total_points"]
+    else:
+        data["total_points"] = sum(q["scoring"]["points"] for q in data["questions"])
+    if spec.get("track") == "mock_exam" or spec.get("total_points"):
+        pass
+    data["copyright"] = {
+        "status": spec.get("copyright_status", "original"),
+        "holder": COPYRIGHT_HOLDER,
+        "license": LICENSE,
+    }
+    if spec.get("copyright_notes"):
+        data["copyright"]["notes"] = spec["copyright_notes"]
+    return data
+
+
+# --------------------------------------------------------------------------
+# 版管理
+# --------------------------------------------------------------------------
+
+def _q_hash(q: dict) -> str:
+    body = {k: v for k, v in q.items() if k != "verification"}
+    return hashlib.sha256(json.dumps(body, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def set_hash(data: dict) -> str:
+    body = {k: v for k, v in data.items() if k not in ("revision_history", "validation")}
+    body["questions"] = [_q_hash(q) for q in data["questions"]]
+    return hashlib.sha256(json.dumps(body, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def merge_with_existing(new: dict, path: Path, phase: int, today: str) -> tuple[dict, str]:
+    """既存ファイルと比較して revision_history を更新する。戻り値の第2要素は変更概要。"""
+    h = set_hash(new)
+    if not path.exists():
+        new["revision_history"] = [{
+            "version": "1.0.0", "date": today, "author": f"{GENERATOR}（フェーズ{phase}）",
+            "changes": f"初版作成（{len(new['questions'])}問）。自動検査（スキーマ・重複・検算）実施予定。",
+            "content_hash": h,
+        }]
+        return new, "new"
+    old = json.loads(path.read_text(encoding="utf-8"))
+    hist = old.get("revision_history") or []
+    old_q = {q["id"]: q for q in old.get("questions", [])}
+    # 内容が同じ問題はレビュー状態を引き継ぐ
+    for q in new["questions"]:
+        oq = old_q.get(q["id"])
+        if oq and _q_hash(oq) == _q_hash(q):
+            q["verification"] = oq.get("verification", q["verification"])
+    if hist and hist[-1].get("content_hash") == h:
+        new["revision_history"] = hist
+        if old.get("validation"):
+            new["validation"] = old["validation"]
+        return new, "unchanged"
+    added = [i for i in (q["id"] for q in new["questions"]) if i not in old_q]
+    new_ids = {q["id"] for q in new["questions"]}
+    removed = [i for i in old_q if i not in new_ids]
+    changed = [q["id"] for q in new["questions"] if q["id"] in old_q and _q_hash(old_q[q["id"]]) != _q_hash(q)]
+    parts = []
+    if added:
+        parts.append(f"追加 {len(added)} 問")
+    if removed:
+        parts.append(f"削除 {len(removed)} 問")
+    if changed:
+        parts.append(f"修正 {len(changed)} 問（{', '.join(c.rsplit('-', 1)[-1] for c in changed[:10])}{' 他' if len(changed) > 10 else ''}）")
+    if not parts:
+        parts.append("セット情報（表題・構成・資料等）の更新")
+    last = hist[-1]["version"] if hist else "0.0.0"
+    major, minor, patch = (int(x) for x in last.split("."))
+    version = f"{major}.{minor + 1}.0" if (added or removed or changed) else f"{major}.{minor}.{patch + 1}"
+    for q in new["questions"]:
+        if q["id"] in changed and q["verification"].get("status") in REVIEW_STATES:
+            q["verification"] = {"status": "draft", "notes": "内容修正のため再レビューが必要"}
+    new["revision_history"] = hist + [{
+        "version": version, "date": today, "author": f"{GENERATOR}（フェーズ{phase}）",
+        "changes": "；".join(parts), "content_hash": h,
+    }]
+    return new, "updated"
+
+
+def write_json(path: Path, data: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def promote_checked(paths: list[Path], rep: vq.Reporter, today: str) -> None:
+    for fr in rep.files:
+        if fr.path not in paths or fr.errors:
+            continue
+        data = json.loads(fr.path.read_text(encoding="utf-8"))
+        changed = False
+        for q in data["questions"]:
+            v = q["verification"]
+            if v.get("status") == "draft":
+                methods = ["schema", "answer_consistency", "duplicate"] + (["calc_check"] if q.get("calc_check") else [])
+                q["verification"] = {
+                    "status": "auto_checked",
+                    "checked_by": f"validate_questions.py v{vq.VALIDATOR_VERSION}",
+                    "checked_at": today,
+                    "methods": methods,
+                    "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。",
+                }
+                changed = True
+        if changed:
+            write_json(fr.path, data)
+
+
+# --------------------------------------------------------------------------
+# 実行
+# --------------------------------------------------------------------------
+
+def load_specs(phase: int) -> list[dict]:
+    specs = []
+    for mod in PHASE_MODULES[phase]:
+        if not (HERE / "banks" / f"{mod}.py").exists():
+            print(f"   WARNING: 作問バンク banks/{mod}.py がありません（スキップ）")
+            continue
+        m = importlib.import_module(f"banks.{mod}")
+        specs.extend(m.SETS)
+    return specs
+
+
+def run_phase(phase: int, only: set[str] | None, pdf: bool, tablet: bool, today: str) -> dict:
+    specs = load_specs(phase)
+    if only:
+        specs = [s for s in specs if s["set_id"] in only]
+    print(f"== フェーズ {phase}: {len(specs)} セット ==")
+    written: list[Path] = []
+    summary = {"new": 0, "updated": 0, "unchanged": 0}
+    for spec in specs:
+        path = (ROOT / spec["out"]).resolve()
+        data = expand_set(spec)
+        data, state = merge_with_existing(data, path, phase, today)
+        summary[state] += 1
+        write_json(path, data)
+        written.append(path)
+    print(f"   生成: 新規 {summary['new']} / 更新 {summary['updated']} / 変更なし {summary['unchanged']}")
+
+    # 検査（重複検知は data/ 全体と比較）
+    rep = vq.validate_paths([str(p) for p in written], corpus=[str(ROOT / "data")])
+    errs = sum(f.errors for f in rep.files)
+    warns = sum(f.warnings for f in rep.files)
+    if errs:
+        for f in rep.files:
+            for i in f.issues:
+                if i.level == "ERROR":
+                    print("   " + i.format())
+        print(f"   検査: エラー {errs} 件 → PDF ビルドを中止しました")
+        return {"phase": phase, "sets": len(specs), "errors": errs, "warnings": warns, "pdf": [], "ok": False}
+    promote_checked(written, rep, today)
+    rep = vq.validate_paths([str(p) for p in written], corpus=[str(ROOT / "data")])
+    vq.stamp_files(rep)
+    warns = sum(f.warnings for f in rep.files)
+    warn_lines = [i.format() for f in rep.files for i in f.issues]
+    for line in warn_lines[:50]:
+        print("   " + line)
+    nq = sum(len(json.loads(p.read_text(encoding="utf-8"))["questions"]) for p in written)
+    print(f"   検査: {len(written)} ファイル / {nq} 問 / エラー 0 件 / 警告 {warns} 件")
+
+    pdf_results = []
+    build_errors = 0
+    if pdf:
+        import build_pdf
+        papers = ["A4"] + (["tablet"] if tablet else [])
+        for paper in papers:
+            res = build_pdf.build(written, ["questions", "answers"], paper, build_pdf.OUTPUT, False, False, True)
+            for r in res:
+                pdf_results.append({"source": r.source, "paper": paper, "outputs": r.outputs, "errors": r.errors, "warnings": r.warnings})
+                build_errors += len(r.errors)
+                for e in r.errors:
+                    print(f"   PDF ERROR {r.source}: {e}")
+        print(f"   PDF: {sum(len(r['outputs']) for r in pdf_results)} 件生成 / エラー {build_errors} 件")
+
+    report = {
+        "phase": phase,
+        "generated_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
+        "sets": len(specs),
+        "questions": nq,
+        "files": [vq.relpath(p) for p in written],
+        "validation": {"errors": 0, "warnings": warns, "issues": warn_lines},
+        "pdf": pdf_results,
+        "ok": build_errors == 0,
+    }
+    rdir = ROOT / "output" / "reports"
+    rdir.mkdir(parents=True, exist_ok=True)
+    name = f"phase{phase}_report.json" if not only else f"phase{phase}_partial_report.json"
+    (rdir / name).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return report
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description="作問バンクから問題マスターを生成し、検査・PDF ビルドを行う")
+    ap.add_argument("--phase", type=int, nargs="+", required=True, choices=sorted(PHASE_MODULES))
+    ap.add_argument("--only", nargs="*", help="指定した set_id だけを処理")
+    ap.add_argument("--no-pdf", action="store_true", help="PDF をビルドしない")
+    ap.add_argument("--tablet", action="store_true", help="タブレット版 PDF も生成する")
+    ap.add_argument("--date", default=dt.date.today().isoformat(), help="変更履歴に記録する日付（既定: 今日）")
+    args = ap.parse_args(argv)
+    ok = True
+    for ph in args.phase:
+        r = run_phase(ph, set(args.only) if args.only else None, not args.no_pdf, args.tablet, args.date)
+        ok = ok and r["ok"]
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,3416 @@
+{
+  "schema_version": "1.0.0",
+  "title": "教材カリキュラムマップ（中学校5教科・高等学校主要科目・入試対策）",
+  "description": "学習指導要領の内容構成に基づく単元マスター。問題データの unit_id はこのマップに定義された ID のみ使用できる。単元の学年配当は標準的な教科書の配列を参考にしたもので、採択教科書により前後する。",
+  "last_updated": "2026-10-10",
+  "basis": [
+    {
+      "id": "jh_cos_2017",
+      "title": "中学校学習指導要領（平成29年告示）",
+      "publisher": "文部科学省",
+      "effective_from": "2021-04-01"
+    },
+    {
+      "id": "hs_cos_2018",
+      "title": "高等学校学習指導要領（平成30年告示）",
+      "publisher": "文部科学省",
+      "effective_from": "2022-04-01"
+    }
+  ],
+  "id_rules": {
+    "unit_id": "{段階}-{教科/科目}-[G{学年}-]U{2桁連番}。段階は JH（中学）、HS（高校）、CT（共通テスト）、SS（二次試験）、EX（模試）。",
+    "question_id": "{set_id}-Q{3桁連番}。set_id は問題セット（JSONファイル）ごとに一意。",
+    "set_id": "{トラック}-{教科}-{単元またはセット名}。例: PILOT-MATH-U01, JH-SCI-G2-U03, KNG-MOCK-R8-01"
+  },
+  "masters": {
+    "grades": [
+      {
+        "code": "JH1",
+        "label": "中学1年",
+        "stage": "junior_high"
+      },
+      {
+        "code": "JH2",
+        "label": "中学2年",
+        "stage": "junior_high"
+      },
+      {
+        "code": "JH3",
+        "label": "中学3年",
+        "stage": "junior_high"
+      },
+      {
+        "code": "HS1",
+        "label": "高校1年",
+        "stage": "high_school"
+      },
+      {
+        "code": "HS2",
+        "label": "高校2年",
+        "stage": "high_school"
+      },
+      {
+        "code": "HS3",
+        "label": "高校3年・受験生",
+        "stage": "high_school"
+      }
+    ],
+    "subjects": [
+      {
+        "code": "japanese",
+        "label": "国語"
+      },
+      {
+        "code": "math",
+        "label": "数学"
+      },
+      {
+        "code": "english",
+        "label": "英語"
+      },
+      {
+        "code": "science",
+        "label": "理科"
+      },
+      {
+        "code": "social",
+        "label": "社会（地理歴史・公民）"
+      },
+      {
+        "code": "information",
+        "label": "情報"
+      },
+      {
+        "code": "integrated",
+        "label": "教科横断"
+      }
+    ],
+    "skills": [
+      {
+        "code": "knowledge",
+        "label": "知識の理解・定着"
+      },
+      {
+        "code": "vocabulary",
+        "label": "語彙・漢字"
+      },
+      {
+        "code": "grammar",
+        "label": "文法"
+      },
+      {
+        "code": "calculation",
+        "label": "計算・処理"
+      },
+      {
+        "code": "reading",
+        "label": "読解"
+      },
+      {
+        "code": "listening",
+        "label": "聞き取り"
+      },
+      {
+        "code": "writing",
+        "label": "表現・作文"
+      },
+      {
+        "code": "translation",
+        "label": "和訳・英訳・現代語訳"
+      },
+      {
+        "code": "classics",
+        "label": "古典"
+      },
+      {
+        "code": "data_interpretation",
+        "label": "資料・グラフの読み取り"
+      },
+      {
+        "code": "thinking",
+        "label": "思考・判断"
+      },
+      {
+        "code": "proof",
+        "label": "証明・論証"
+      },
+      {
+        "code": "essay",
+        "label": "論述"
+      },
+      {
+        "code": "experiment",
+        "label": "観察・実験の考察"
+      }
+    ],
+    "evaluation_aspects": [
+      {
+        "code": "knowledge_skill",
+        "label": "知識・技能"
+      },
+      {
+        "code": "thinking_judgment_expression",
+        "label": "思考・判断・表現"
+      }
+    ],
+    "difficulty_levels": [
+      {
+        "code": "basic",
+        "label": "基礎",
+        "score_range": [
+          1,
+          2
+        ]
+      },
+      {
+        "code": "standard",
+        "label": "標準",
+        "score_range": [
+          3,
+          3
+        ]
+      },
+      {
+        "code": "advanced",
+        "label": "応用",
+        "score_range": [
+          4,
+          5
+        ]
+      }
+    ],
+    "question_types": [
+      {
+        "code": "multiple_choice",
+        "label": "選択（単一）"
+      },
+      {
+        "code": "multiple_select",
+        "label": "選択（複数）"
+      },
+      {
+        "code": "true_false",
+        "label": "正誤"
+      },
+      {
+        "code": "short_answer",
+        "label": "記述（短答）"
+      },
+      {
+        "code": "numeric",
+        "label": "数値"
+      },
+      {
+        "code": "fill_in_blank",
+        "label": "空所補充"
+      },
+      {
+        "code": "ordering",
+        "label": "並べ替え・整序"
+      },
+      {
+        "code": "descriptive",
+        "label": "記述（説明）"
+      },
+      {
+        "code": "proof",
+        "label": "証明"
+      },
+      {
+        "code": "essay",
+        "label": "作文・論述"
+      }
+    ],
+    "verification_statuses": [
+      {
+        "code": "draft",
+        "label": "下書き（未検査）"
+      },
+      {
+        "code": "auto_checked",
+        "label": "自動検査済み（スキーマ・重複・検算）"
+      },
+      {
+        "code": "self_reviewed",
+        "label": "作成者セルフレビュー済み"
+      },
+      {
+        "code": "expert_reviewed",
+        "label": "教科専門家レビュー済み"
+      },
+      {
+        "code": "approved",
+        "label": "公開承認済み"
+      },
+      {
+        "code": "rejected",
+        "label": "差し戻し"
+      }
+    ],
+    "copyright_statuses": [
+      {
+        "code": "original",
+        "label": "オリジナル作成"
+      },
+      {
+        "code": "public_domain",
+        "label": "パブリックドメイン（著作権保護期間満了の古典等）"
+      },
+      {
+        "code": "licensed",
+        "label": "利用許諾済み"
+      },
+      {
+        "code": "quotation",
+        "label": "著作権法第32条に基づく引用"
+      },
+      {
+        "code": "needs_clearance",
+        "label": "権利処理が必要（公開不可）"
+      }
+    ],
+    "tracks": [
+      {
+        "code": "pilot",
+        "label": "パイロット（MVP検証）",
+        "data_dir": "data/pilot"
+      },
+      {
+        "code": "junior_high",
+        "label": "中学生版 単元別プリント",
+        "data_dir": "data/junior_high"
+      },
+      {
+        "code": "tokushoku",
+        "label": "特色検査対策プリント",
+        "data_dir": "data/junior_high/tokushoku"
+      },
+      {
+        "code": "mock_exam",
+        "label": "神奈川県公立高校入試 オリジナル模試",
+        "data_dir": "data/pilot"
+      },
+      {
+        "code": "high_school",
+        "label": "高校生向け 自習プリント",
+        "data_dir": "data/high_school"
+      },
+      {
+        "code": "common_test",
+        "label": "大学入学共通テスト対策",
+        "data_dir": "data/common_test"
+      },
+      {
+        "code": "second_stage",
+        "label": "難関大 個別試験（二次試験）対策",
+        "data_dir": "data/second_stage"
+      }
+    ]
+  },
+  "stages": [
+    {
+      "id": "junior_high",
+      "label": "中学校",
+      "basis": "jh_cos_2017",
+      "subjects": [
+        {
+          "subject": "japanese",
+          "label": "国語",
+          "units": [
+            {
+              "unit_id": "JH-JPN-G1-U01",
+              "grade": "JH1",
+              "domain": "知識及び技能",
+              "title": "漢字の読み書き・語句",
+              "topics": [
+                "第1学年配当漢字の読み書き",
+                "類義語・対義語",
+                "多義語"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第1学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "vocabulary"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G1-U02",
+              "grade": "JH1",
+              "domain": "知識及び技能",
+              "title": "文法①　言葉の単位と文節の関係",
+              "topics": [
+                "文章・段落・文・文節・単語",
+                "主語・述語の関係",
+                "修飾・被修飾の関係",
+                "並立・補助の関係"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第1学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G1-U03",
+              "grade": "JH1",
+              "domain": "知識及び技能",
+              "title": "文法②　品詞の分類",
+              "topics": [
+                "自立語と付属語",
+                "活用の有無",
+                "名詞・動詞・形容詞・形容動詞・副詞・連体詞・接続詞・感動詞"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第1学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G1-U04",
+              "grade": "JH1",
+              "domain": "読むこと",
+              "title": "説明的文章の読解",
+              "topics": [
+                "段落の役割",
+                "事実と意見",
+                "要旨の把握"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第1学年 C読むこと",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G1-U05",
+              "grade": "JH1",
+              "domain": "読むこと",
+              "title": "文学的文章の読解",
+              "topics": [
+                "場面の展開",
+                "登場人物の心情",
+                "描写の効果"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第1学年 C読むこと",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G1-U06",
+              "grade": "JH1",
+              "domain": "知識及び技能",
+              "title": "古典入門　歴史的仮名遣い",
+              "topics": [
+                "歴史的仮名遣い",
+                "竹取物語",
+                "古語の意味"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第1学年 〔知識及び技能〕(3)",
+              "default_skills": [
+                "classics"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G2-U01",
+              "grade": "JH2",
+              "domain": "知識及び技能",
+              "title": "漢字・語句　熟語の構成",
+              "topics": [
+                "第2学年配当漢字",
+                "熟語の構成",
+                "同音異義語"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第2学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "vocabulary"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G2-U02",
+              "grade": "JH2",
+              "domain": "知識及び技能",
+              "title": "文法③　用言の活用",
+              "topics": [
+                "動詞の活用の種類",
+                "活用形",
+                "形容詞・形容動詞の活用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第2学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G2-U03",
+              "grade": "JH2",
+              "domain": "知識及び技能",
+              "title": "敬語",
+              "topics": [
+                "尊敬語",
+                "謙譲語",
+                "丁寧語"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第2学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G2-U04",
+              "grade": "JH2",
+              "domain": "読むこと",
+              "title": "論理的文章の読解",
+              "topics": [
+                "主張と根拠",
+                "具体と抽象",
+                "論の展開"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第2学年 C読むこと",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G2-U05",
+              "grade": "JH2",
+              "domain": "知識及び技能",
+              "title": "古文　枕草子・徒然草",
+              "topics": [
+                "随筆",
+                "係り結び",
+                "古語の意味",
+                "作者の見方・考え方"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第2学年 〔知識及び技能〕(3)",
+              "default_skills": [
+                "classics"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G2-U06",
+              "grade": "JH2",
+              "domain": "知識及び技能",
+              "title": "漢文入門　訓読のきまり",
+              "topics": [
+                "返り点",
+                "書き下し文",
+                "故事成語"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第2学年 〔知識及び技能〕(3)",
+              "default_skills": [
+                "classics"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G3-U01",
+              "grade": "JH3",
+              "domain": "知識及び技能",
+              "title": "漢字・慣用句・四字熟語",
+              "topics": [
+                "第3学年までの漢字",
+                "慣用句",
+                "ことわざ",
+                "四字熟語"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第3学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "vocabulary"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G3-U02",
+              "grade": "JH3",
+              "domain": "知識及び技能",
+              "title": "文法④　付属語（助詞・助動詞）",
+              "topics": [
+                "助詞の種類",
+                "助動詞の意味",
+                "識別問題"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第3学年 〔知識及び技能〕(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G3-U03",
+              "grade": "JH3",
+              "domain": "読むこと",
+              "title": "詩歌　和歌・俳句・短歌",
+              "topics": [
+                "句切れ",
+                "季語",
+                "表現技法",
+                "万葉集・古今和歌集・新古今和歌集"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第3学年 C読むこと",
+              "default_skills": [
+                "classics",
+                "reading"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G3-U04",
+              "grade": "JH3",
+              "domain": "読むこと",
+              "title": "論説文の読解と批判的な読み",
+              "topics": [
+                "筆者の主張",
+                "論理の妥当性",
+                "複数の文章の比較"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第3学年 C読むこと",
+              "default_skills": [
+                "reading",
+                "thinking"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G3-U05",
+              "grade": "JH3",
+              "domain": "知識及び技能",
+              "title": "古文・漢文　おくのほそ道・論語",
+              "topics": [
+                "紀行文",
+                "論語",
+                "漢詩の形式"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第3学年 〔知識及び技能〕(3)",
+              "default_skills": [
+                "classics"
+              ],
+              "subject": "japanese"
+            },
+            {
+              "unit_id": "JH-JPN-G3-U06",
+              "grade": "JH3",
+              "domain": "書くこと",
+              "title": "作文　条件作文",
+              "topics": [
+                "条件に沿った構成",
+                "根拠を示した意見文",
+                "推敲"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 国語 第3学年 B書くこと",
+              "default_skills": [
+                "writing"
+              ],
+              "subject": "japanese"
+            }
+          ]
+        },
+        {
+          "subject": "math",
+          "label": "数学",
+          "units": [
+            {
+              "unit_id": "JH-MATH-G1-U01",
+              "grade": "JH1",
+              "domain": "数と式",
+              "title": "正の数・負の数",
+              "topics": [
+                "正負の数の意味と大小",
+                "四則計算",
+                "累乗",
+                "素因数分解"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 A(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G1-U02",
+              "grade": "JH1",
+              "domain": "数と式",
+              "title": "文字と式",
+              "topics": [
+                "文字式の表し方",
+                "式の値",
+                "一次式の計算",
+                "関係を表す式"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 A(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G1-U03",
+              "grade": "JH1",
+              "domain": "数と式",
+              "title": "一次方程式",
+              "topics": [
+                "等式の性質",
+                "一次方程式の解き方",
+                "比例式",
+                "方程式の利用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 A(3)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G1-U04",
+              "grade": "JH1",
+              "domain": "関数",
+              "title": "比例と反比例",
+              "topics": [
+                "関数の意味",
+                "比例",
+                "反比例",
+                "座標とグラフ"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 C(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G1-U05",
+              "grade": "JH1",
+              "domain": "図形",
+              "title": "平面図形",
+              "topics": [
+                "直線・角",
+                "作図",
+                "図形の移動",
+                "おうぎ形の弧の長さと面積"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 B(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G1-U06",
+              "grade": "JH1",
+              "domain": "図形",
+              "title": "空間図形",
+              "topics": [
+                "直線や平面の位置関係",
+                "回転体",
+                "立体の表面積と体積"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 B(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G1-U07",
+              "grade": "JH1",
+              "domain": "データの活用",
+              "title": "データの活用",
+              "topics": [
+                "度数分布表とヒストグラム",
+                "相対度数・累積相対度数",
+                "代表値",
+                "多数回の試行と確率"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第1学年 D(1)(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U01",
+              "grade": "JH2",
+              "domain": "数と式",
+              "title": "式の計算",
+              "topics": [
+                "単項式と多項式",
+                "多項式の加減",
+                "単項式の乗除",
+                "等式の変形",
+                "文字式による説明"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 A(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U02",
+              "grade": "JH2",
+              "domain": "数と式",
+              "title": "連立方程式",
+              "topics": [
+                "加減法",
+                "代入法",
+                "連立方程式の利用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 A(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U03",
+              "grade": "JH2",
+              "domain": "関数",
+              "title": "一次関数",
+              "topics": [
+                "一次関数の式とグラフ",
+                "変化の割合",
+                "直線の式",
+                "方程式とグラフ",
+                "一次関数の利用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 C(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U04",
+              "grade": "JH2",
+              "domain": "図形",
+              "title": "図形の調べ方　平行と合同",
+              "topics": [
+                "平行線と角",
+                "多角形の内角と外角",
+                "合同条件",
+                "証明の進め方"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 B(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U05",
+              "grade": "JH2",
+              "domain": "図形",
+              "title": "三角形と四角形",
+              "topics": [
+                "二等辺三角形",
+                "直角三角形の合同",
+                "平行四辺形の性質と条件",
+                "等積変形"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 B(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U06",
+              "grade": "JH2",
+              "domain": "データの活用",
+              "title": "確率",
+              "topics": [
+                "場合の数",
+                "確率の求め方",
+                "樹形図・表"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 D(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G2-U07",
+              "grade": "JH2",
+              "domain": "データの活用",
+              "title": "データの分布　四分位範囲と箱ひげ図",
+              "topics": [
+                "四分位数",
+                "四分位範囲",
+                "箱ひげ図"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第2学年 D(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U01",
+              "grade": "JH3",
+              "domain": "数と式",
+              "title": "式の展開と因数分解",
+              "topics": [
+                "乗法公式",
+                "因数分解",
+                "式の計算の利用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 A(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U02",
+              "grade": "JH3",
+              "domain": "数と式",
+              "title": "平方根",
+              "topics": [
+                "平方根の意味",
+                "根号を含む式の計算",
+                "有理数と無理数",
+                "有理化"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 A(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U03",
+              "grade": "JH3",
+              "domain": "数と式",
+              "title": "二次方程式",
+              "topics": [
+                "因数分解による解法",
+                "平方完成",
+                "解の公式",
+                "二次方程式の利用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 A(3)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U04",
+              "grade": "JH3",
+              "domain": "関数",
+              "title": "関数 y=ax^2",
+              "topics": [
+                "y=ax^2のグラフ",
+                "変域",
+                "変化の割合",
+                "放物線と直線"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 C(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U05",
+              "grade": "JH3",
+              "domain": "図形",
+              "title": "相似な図形",
+              "topics": [
+                "相似条件",
+                "平行線と線分の比",
+                "中点連結定理",
+                "相似比と面積比・体積比"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 B(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U06",
+              "grade": "JH3",
+              "domain": "図形",
+              "title": "円",
+              "topics": [
+                "円周角の定理",
+                "円周角の定理の逆",
+                "円と相似"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 B(2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U07",
+              "grade": "JH3",
+              "domain": "図形",
+              "title": "三平方の定理",
+              "topics": [
+                "三平方の定理",
+                "平面図形への利用",
+                "空間図形への利用"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 B(3)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            },
+            {
+              "unit_id": "JH-MATH-G3-U08",
+              "grade": "JH3",
+              "domain": "データの活用",
+              "title": "標本調査",
+              "topics": [
+                "全数調査と標本調査",
+                "無作為抽出",
+                "母集団の推定"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 数学 第3学年 D(1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math"
+            }
+          ]
+        },
+        {
+          "subject": "english",
+          "label": "英語",
+          "units": [
+            {
+              "unit_id": "JH-ENG-G1-U01",
+              "grade": "JH1",
+              "domain": "文法・語彙",
+              "title": "be動詞と一般動詞の現在形",
+              "topics": [
+                "be動詞",
+                "一般動詞",
+                "三人称単数現在",
+                "否定文・疑問文"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G1-U02",
+              "grade": "JH1",
+              "domain": "文法・語彙",
+              "title": "名詞の複数形と代名詞",
+              "topics": [
+                "可算名詞の複数形",
+                "人称代名詞の格",
+                "所有代名詞"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G1-U03",
+              "grade": "JH1",
+              "domain": "文法・語彙",
+              "title": "疑問詞を使った疑問文",
+              "topics": [
+                "what / who / where / when / why / how",
+                "how many / how much",
+                "whose / which"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G1-U04",
+              "grade": "JH1",
+              "domain": "文法・語彙",
+              "title": "現在進行形・助動詞can・命令文",
+              "topics": [
+                "現在進行形",
+                "can",
+                "命令文",
+                "Let's"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G1-U05",
+              "grade": "JH1",
+              "domain": "文法・語彙",
+              "title": "過去形",
+              "topics": [
+                "規則動詞の過去形",
+                "不規則動詞",
+                "be動詞の過去形",
+                "過去進行形"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G2-U01",
+              "grade": "JH2",
+              "domain": "文法・語彙",
+              "title": "未来表現",
+              "topics": [
+                "will",
+                "be going to",
+                "未来を表す語句"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G2-U02",
+              "grade": "JH2",
+              "domain": "文法・語彙",
+              "title": "不定詞と動名詞",
+              "topics": [
+                "不定詞の3用法",
+                "動名詞",
+                "目的語になる不定詞と動名詞"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G2-U03",
+              "grade": "JH2",
+              "domain": "文法・語彙",
+              "title": "接続詞とThere is構文",
+              "topics": [
+                "when / if / because / that",
+                "There is / are",
+                "must / have to / should"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G2-U04",
+              "grade": "JH2",
+              "domain": "文法・語彙",
+              "title": "比較",
+              "topics": [
+                "比較級",
+                "最上級",
+                "as ～ as",
+                "不規則変化"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G2-U05",
+              "grade": "JH2",
+              "domain": "文法・語彙",
+              "title": "受け身",
+              "topics": [
+                "受け身の形",
+                "過去分詞",
+                "by以外の前置詞を伴う受け身"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U01",
+              "grade": "JH3",
+              "domain": "文法・語彙",
+              "title": "現在完了形・現在完了進行形",
+              "topics": [
+                "継続",
+                "経験",
+                "完了",
+                "現在完了進行形"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U02",
+              "grade": "JH3",
+              "domain": "文法・語彙",
+              "title": "分詞の後置修飾",
+              "topics": [
+                "現在分詞による修飾",
+                "過去分詞による修飾",
+                "接触節"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U03",
+              "grade": "JH3",
+              "domain": "文法・語彙",
+              "title": "関係代名詞",
+              "topics": [
+                "主格の関係代名詞",
+                "目的格の関係代名詞",
+                "who / which / that"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U04",
+              "grade": "JH3",
+              "domain": "文法・語彙",
+              "title": "間接疑問文と文構造",
+              "topics": [
+                "間接疑問文",
+                "SVOO",
+                "SVOC",
+                "It is ～ for … to ―",
+                "原形不定詞"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U05",
+              "grade": "JH3",
+              "domain": "文法・語彙",
+              "title": "仮定法過去",
+              "topics": [
+                "If I were ～",
+                "I wish ～",
+                "仮定法と直説法の違い"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 2(1)",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U06",
+              "grade": "JH3",
+              "domain": "読むこと",
+              "title": "長文読解",
+              "topics": [
+                "対話文",
+                "説明文",
+                "スピーチ",
+                "グラフ・資料の読み取り"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 1(3) 読むこと",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "english"
+            },
+            {
+              "unit_id": "JH-ENG-G3-U07",
+              "grade": "JH3",
+              "domain": "書くこと",
+              "title": "条件英作文",
+              "topics": [
+                "条件に合う英文",
+                "意見と理由",
+                "語順整序"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 外国語 英語 1(5) 書くこと",
+              "default_skills": [
+                "writing"
+              ],
+              "subject": "english"
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "label": "理科",
+          "units": [
+            {
+              "unit_id": "JH-SCI-G1-U01",
+              "grade": "JH1",
+              "domain": "生命（第2分野）",
+              "title": "いろいろな生物とその共通点",
+              "topics": [
+                "観察器具",
+                "花のつくり",
+                "植物の分類",
+                "動物の分類"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第2分野 (1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G1-U02",
+              "grade": "JH1",
+              "domain": "粒子（第1分野）",
+              "title": "身のまわりの物質",
+              "topics": [
+                "物質の区別",
+                "気体の性質",
+                "水溶液と溶解度",
+                "状態変化"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G1-U03",
+              "grade": "JH1",
+              "domain": "エネルギー（第1分野）",
+              "title": "身近な物理現象　光・音・力",
+              "topics": [
+                "光の反射・屈折",
+                "凸レンズ",
+                "音の性質",
+                "力のはたらきとばね"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G1-U04",
+              "grade": "JH1",
+              "domain": "地球（第2分野）",
+              "title": "大地の成り立ちと変化",
+              "topics": [
+                "火山と火成岩",
+                "地震の伝わり方",
+                "地層と堆積岩",
+                "化石"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第2分野 (2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G2-U01",
+              "grade": "JH2",
+              "domain": "粒子（第1分野）",
+              "title": "化学変化と原子・分子",
+              "topics": [
+                "分解",
+                "原子・分子と化学式",
+                "化学反応式",
+                "酸化と還元",
+                "質量保存の法則",
+                "定比例の法則"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (4)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G2-U02",
+              "grade": "JH2",
+              "domain": "生命（第2分野）",
+              "title": "生物の体のつくりとはたらき",
+              "topics": [
+                "細胞",
+                "光合成と蒸散",
+                "消化と吸収",
+                "呼吸と血液循環",
+                "刺激と反応"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第2分野 (3)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G2-U03",
+              "grade": "JH2",
+              "domain": "エネルギー（第1分野）",
+              "title": "電流とその利用",
+              "topics": [
+                "回路と電流・電圧",
+                "オームの法則",
+                "電力と熱量",
+                "電流と磁界",
+                "電磁誘導",
+                "静電気と電流"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (3)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G2-U04",
+              "grade": "JH2",
+              "domain": "地球（第2分野）",
+              "title": "気象とその変化",
+              "topics": [
+                "気象観測",
+                "圧力・大気圧",
+                "湿度と露点",
+                "前線と天気の変化",
+                "日本の天気"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第2分野 (4)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G3-U01",
+              "grade": "JH3",
+              "domain": "粒子（第1分野）",
+              "title": "化学変化とイオン",
+              "topics": [
+                "電解質と電離",
+                "イオン",
+                "電池",
+                "酸・アルカリ",
+                "中和と塩"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (6)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G3-U02",
+              "grade": "JH3",
+              "domain": "生命（第2分野）",
+              "title": "生命の連続性",
+              "topics": [
+                "細胞分裂",
+                "無性生殖と有性生殖",
+                "遺伝の規則性",
+                "進化"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第2分野 (5)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G3-U03",
+              "grade": "JH3",
+              "domain": "エネルギー（第1分野）",
+              "title": "運動とエネルギー",
+              "topics": [
+                "力の合成・分解",
+                "水圧と浮力",
+                "運動の規則性",
+                "仕事",
+                "力学的エネルギーの保存"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (5)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G3-U04",
+              "grade": "JH3",
+              "domain": "地球（第2分野）",
+              "title": "地球と宇宙",
+              "topics": [
+                "天体の日周運動",
+                "年周運動",
+                "季節の変化",
+                "月と金星の見え方",
+                "太陽系"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第2分野 (6)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            },
+            {
+              "unit_id": "JH-SCI-G3-U05",
+              "grade": "JH3",
+              "domain": "生命・地球（第2分野）/ 第1分野(7)",
+              "title": "自然と人間・科学技術",
+              "topics": [
+                "食物連鎖",
+                "分解者",
+                "エネルギー資源",
+                "自然環境の保全"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 理科 第1分野 (7)・第2分野 (7)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science"
+            }
+          ]
+        },
+        {
+          "subject": "social",
+          "label": "社会",
+          "units": [
+            {
+              "unit_id": "JH-SOC-G1-U01",
+              "grade": "JH1",
+              "domain": "地理的分野",
+              "title": "世界の地域構成",
+              "topics": [
+                "六大陸と三大洋",
+                "緯度と経度",
+                "地図の図法",
+                "時差"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 地理的分野 A(1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G1-U02",
+              "grade": "JH1",
+              "domain": "地理的分野",
+              "title": "世界各地の人々の生活と環境",
+              "topics": [
+                "気候帯",
+                "雨温図",
+                "衣食住と宗教"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 地理的分野 B(1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G1-U03",
+              "grade": "JH1",
+              "domain": "地理的分野",
+              "title": "世界の諸地域",
+              "topics": [
+                "アジア",
+                "ヨーロッパ",
+                "アフリカ",
+                "北アメリカ",
+                "南アメリカ",
+                "オセアニア"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 地理的分野 B(2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G1-U04",
+              "grade": "JH1",
+              "domain": "歴史的分野",
+              "title": "古代までの日本",
+              "topics": [
+                "旧石器・縄文・弥生",
+                "古墳と大和政権",
+                "律令国家",
+                "平安時代"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 歴史的分野 B(1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G1-U05",
+              "grade": "JH1",
+              "domain": "歴史的分野",
+              "title": "中世の日本",
+              "topics": [
+                "鎌倉幕府",
+                "元寇",
+                "室町幕府",
+                "戦国時代"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 歴史的分野 B(2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G2-U01",
+              "grade": "JH2",
+              "domain": "地理的分野",
+              "title": "日本の地域構成と地域的特色",
+              "topics": [
+                "日本の位置と領域",
+                "地形",
+                "気候",
+                "人口",
+                "資源・産業"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 地理的分野 A(1)・C(2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G2-U02",
+              "grade": "JH2",
+              "domain": "地理的分野",
+              "title": "日本の諸地域",
+              "topics": [
+                "九州",
+                "中国・四国",
+                "近畿",
+                "中部",
+                "関東",
+                "東北",
+                "北海道"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 地理的分野 C(3)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G2-U03",
+              "grade": "JH2",
+              "domain": "歴史的分野",
+              "title": "近世の日本",
+              "topics": [
+                "ヨーロッパ人の来航",
+                "織豊政権",
+                "江戸幕府の成立",
+                "幕府政治の改革",
+                "江戸時代の文化"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 歴史的分野 B(3)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G2-U04",
+              "grade": "JH2",
+              "domain": "歴史的分野",
+              "title": "近代の日本と世界",
+              "topics": [
+                "欧米の近代化",
+                "開国と明治維新",
+                "立憲制国家",
+                "日清・日露戦争",
+                "第一次世界大戦"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 歴史的分野 C(1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U01",
+              "grade": "JH3",
+              "domain": "歴史的分野",
+              "title": "二度の世界大戦と日本",
+              "topics": [
+                "大正デモクラシー",
+                "世界恐慌",
+                "第二次世界大戦"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 歴史的分野 C(1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U02",
+              "grade": "JH3",
+              "domain": "歴史的分野",
+              "title": "現代の日本と世界",
+              "topics": [
+                "戦後改革",
+                "冷戦",
+                "高度経済成長",
+                "国際社会と日本"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 歴史的分野 C(2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U03",
+              "grade": "JH3",
+              "domain": "公民的分野",
+              "title": "私たちと現代社会",
+              "topics": [
+                "少子高齢化",
+                "情報化",
+                "グローバル化",
+                "対立と合意・効率と公正"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 公民的分野 A",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U04",
+              "grade": "JH3",
+              "domain": "公民的分野",
+              "title": "人間の尊重と日本国憲法",
+              "topics": [
+                "日本国憲法の基本原理",
+                "基本的人権",
+                "新しい人権"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 公民的分野 C(1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U05",
+              "grade": "JH3",
+              "domain": "公民的分野",
+              "title": "民主政治と政治参加",
+              "topics": [
+                "選挙",
+                "国会",
+                "内閣",
+                "裁判所",
+                "三権分立",
+                "地方自治"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 公民的分野 C(2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U06",
+              "grade": "JH3",
+              "domain": "公民的分野",
+              "title": "私たちと経済",
+              "topics": [
+                "市場経済と価格",
+                "企業",
+                "金融",
+                "財政と税",
+                "社会保障"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 公民的分野 B",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            },
+            {
+              "unit_id": "JH-SOC-G3-U07",
+              "grade": "JH3",
+              "domain": "公民的分野",
+              "title": "地球社会と私たち",
+              "topics": [
+                "国際連合",
+                "地域統合",
+                "地球環境問題",
+                "持続可能な社会"
+              ],
+              "standards_ref": "中学校学習指導要領（平成29年告示） 社会 公民的分野 D",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social"
+            }
+          ]
+        },
+        {
+          "subject": "integrated",
+          "label": "特色検査（教科横断）",
+          "units": [
+            {
+              "unit_id": "JH-TOKU-G3-U01",
+              "grade": "JH3",
+              "domain": "特色検査（自己表現検査）",
+              "title": "教科横断型　資料読解と論理的思考",
+              "topics": [
+                "複数資料の統合",
+                "数量的な推論",
+                "条件整理"
+              ],
+              "standards_ref": " 神奈川県公立高校 特色検査 対策",
+              "default_skills": [
+                "data_interpretation",
+                "thinking"
+              ],
+              "subject": "integrated"
+            },
+            {
+              "unit_id": "JH-TOKU-G3-U02",
+              "grade": "JH3",
+              "domain": "特色検査（自己表現検査）",
+              "title": "教科横断型　記述・表現",
+              "topics": [
+                "要約",
+                "意見の根拠づけ",
+                "字数制限のある記述"
+              ],
+              "standards_ref": " 神奈川県公立高校 特色検査 対策",
+              "default_skills": [
+                "writing",
+                "thinking"
+              ],
+              "subject": "integrated"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "high_school",
+      "label": "高等学校",
+      "basis": "hs_cos_2018",
+      "subjects": [
+        {
+          "subject": "math",
+          "course": "math_1",
+          "label": "数学Ⅰ",
+          "units": [
+            {
+              "unit_id": "HS-MATH1-U01",
+              "grade": "HS1",
+              "domain": "数と式",
+              "title": "数と式",
+              "topics": [
+                "多項式の展開と因数分解",
+                "実数",
+                "一次不等式",
+                "絶対値"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅰ (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_1"
+            },
+            {
+              "unit_id": "HS-MATH1-U02",
+              "grade": "HS1",
+              "domain": "数と式",
+              "title": "集合と命題",
+              "topics": [
+                "集合",
+                "命題と条件",
+                "必要条件・十分条件",
+                "対偶・背理法"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅰ (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_1"
+            },
+            {
+              "unit_id": "HS-MATH1-U03",
+              "grade": "HS1",
+              "domain": "二次関数",
+              "title": "二次関数",
+              "topics": [
+                "グラフと平行移動",
+                "最大・最小",
+                "二次方程式・二次不等式",
+                "判別式"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅰ (3)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_1"
+            },
+            {
+              "unit_id": "HS-MATH1-U04",
+              "grade": "HS1",
+              "domain": "図形と計量",
+              "title": "図形と計量",
+              "topics": [
+                "三角比",
+                "正弦定理",
+                "余弦定理",
+                "三角形の面積"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅰ (2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_1"
+            },
+            {
+              "unit_id": "HS-MATH1-U05",
+              "grade": "HS1",
+              "domain": "データの分析",
+              "title": "データの分析",
+              "topics": [
+                "分散と標準偏差",
+                "相関係数",
+                "仮説検定の考え方"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅰ (4)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_1"
+            }
+          ]
+        },
+        {
+          "subject": "math",
+          "course": "math_a",
+          "label": "数学A",
+          "units": [
+            {
+              "unit_id": "HS-MATHA-U01",
+              "grade": "HS1",
+              "domain": "場合の数と確率",
+              "title": "場合の数と確率",
+              "topics": [
+                "順列・組合せ",
+                "確率の基本性質",
+                "独立試行・反復試行",
+                "条件付き確率",
+                "期待値"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学A (2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_a"
+            },
+            {
+              "unit_id": "HS-MATHA-U02",
+              "grade": "HS1",
+              "domain": "図形の性質",
+              "title": "図形の性質",
+              "topics": [
+                "三角形の五心",
+                "チェバ・メネラウスの定理",
+                "円の性質",
+                "方べきの定理"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学A (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_a"
+            },
+            {
+              "unit_id": "HS-MATHA-U03",
+              "grade": "HS1",
+              "domain": "数学と人間の活動",
+              "title": "数学と人間の活動　整数",
+              "topics": [
+                "約数と倍数",
+                "ユークリッドの互除法",
+                "一次不定方程式",
+                "n進法"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学A (3)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_a"
+            }
+          ]
+        },
+        {
+          "subject": "math",
+          "course": "math_2",
+          "label": "数学Ⅱ",
+          "units": [
+            {
+              "unit_id": "HS-MATH2-U01",
+              "grade": "HS2",
+              "domain": "いろいろな式",
+              "title": "式と証明",
+              "topics": [
+                "二項定理",
+                "整式の除法",
+                "恒等式",
+                "等式・不等式の証明"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅱ (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_2"
+            },
+            {
+              "unit_id": "HS-MATH2-U02",
+              "grade": "HS2",
+              "domain": "いろいろな式",
+              "title": "複素数と方程式",
+              "topics": [
+                "複素数",
+                "解と係数の関係",
+                "剰余の定理・因数定理",
+                "高次方程式"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅱ (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_2"
+            },
+            {
+              "unit_id": "HS-MATH2-U03",
+              "grade": "HS2",
+              "domain": "図形と方程式",
+              "title": "図形と方程式",
+              "topics": [
+                "点と直線",
+                "円の方程式",
+                "軌跡と領域"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅱ (2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_2"
+            },
+            {
+              "unit_id": "HS-MATH2-U04",
+              "grade": "HS2",
+              "domain": "三角関数",
+              "title": "三角関数",
+              "topics": [
+                "一般角と弧度法",
+                "三角関数のグラフ",
+                "加法定理",
+                "合成"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅱ (4)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_2"
+            },
+            {
+              "unit_id": "HS-MATH2-U05",
+              "grade": "HS2",
+              "domain": "指数関数・対数関数",
+              "title": "指数関数・対数関数",
+              "topics": [
+                "指数の拡張",
+                "指数関数",
+                "対数の性質",
+                "常用対数"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅱ (3)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_2"
+            },
+            {
+              "unit_id": "HS-MATH2-U06",
+              "grade": "HS2",
+              "domain": "微分・積分の考え",
+              "title": "微分法・積分法",
+              "topics": [
+                "微分係数と導関数",
+                "接線",
+                "増減と極値",
+                "不定積分・定積分",
+                "面積"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学Ⅱ (5)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_2"
+            }
+          ]
+        },
+        {
+          "subject": "math",
+          "course": "math_b",
+          "label": "数学B",
+          "units": [
+            {
+              "unit_id": "HS-MATHB-U01",
+              "grade": "HS2",
+              "domain": "数列",
+              "title": "数列",
+              "topics": [
+                "等差数列・等比数列",
+                "Σ記号",
+                "階差数列",
+                "漸化式",
+                "数学的帰納法"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学B (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_b"
+            },
+            {
+              "unit_id": "HS-MATHB-U02",
+              "grade": "HS2",
+              "domain": "統計的な推測",
+              "title": "統計的な推測",
+              "topics": [
+                "確率変数と確率分布",
+                "二項分布",
+                "正規分布",
+                "母平均の推定・仮説検定"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学B (2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_b"
+            }
+          ]
+        },
+        {
+          "subject": "math",
+          "course": "math_c",
+          "label": "数学C",
+          "units": [
+            {
+              "unit_id": "HS-MATHC-U01",
+              "grade": "HS2",
+              "domain": "ベクトル",
+              "title": "ベクトル",
+              "topics": [
+                "ベクトルの演算",
+                "成分",
+                "内積",
+                "位置ベクトル",
+                "空間ベクトル"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学C (1)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_c"
+            },
+            {
+              "unit_id": "HS-MATHC-U02",
+              "grade": "HS2",
+              "domain": "平面上の曲線と複素数平面",
+              "title": "平面上の曲線と複素数平面",
+              "topics": [
+                "二次曲線",
+                "媒介変数表示",
+                "極形式",
+                "ド・モアブルの定理"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 数学C (2)",
+              "default_skills": [
+                "calculation"
+              ],
+              "subject": "math",
+              "course": "math_c"
+            }
+          ]
+        },
+        {
+          "subject": "english",
+          "course": "english_comm_1",
+          "label": "英語コミュニケーションⅠ・論理・表現Ⅰ",
+          "units": [
+            {
+              "unit_id": "HS-ENG-U01",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "文型と動詞",
+              "topics": [
+                "5文型",
+                "自動詞と他動詞",
+                "紛らわしい動詞"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U02",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "時制",
+              "topics": [
+                "現在・過去・未来",
+                "完了形",
+                "時・条件の副詞節"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U03",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "助動詞",
+              "topics": [
+                "推量の助動詞",
+                "助動詞＋have＋過去分詞",
+                "need / used to"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U04",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "不定詞・動名詞",
+              "topics": [
+                "意味上の主語",
+                "完了不定詞",
+                "不定詞と動名詞で意味が変わる動詞"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U05",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "分詞と分詞構文",
+              "topics": [
+                "分詞の形容詞的用法",
+                "分詞構文",
+                "付帯状況のwith"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U06",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "関係詞",
+              "topics": [
+                "関係代名詞what",
+                "関係副詞",
+                "非制限用法",
+                "複合関係詞"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U07",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "比較",
+              "topics": [
+                "倍数表現",
+                "比較級を用いた最上級表現",
+                "the 比較級, the 比較級"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U08",
+              "grade": "HS1",
+              "domain": "文法・語彙",
+              "title": "仮定法",
+              "topics": [
+                "仮定法過去",
+                "仮定法過去完了",
+                "混合仮定法",
+                "I wish / as if / without"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "grammar"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U09",
+              "grade": "HS1",
+              "domain": "読むこと",
+              "title": "長文読解",
+              "topics": [
+                "パラグラフの構成",
+                "ディスコースマーカー",
+                "要旨把握"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 英語コミュニケーションⅠ",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            },
+            {
+              "unit_id": "HS-ENG-U10",
+              "grade": "HS1",
+              "domain": "書くこと",
+              "title": "英作文　論理・表現",
+              "topics": [
+                "和文英訳",
+                "意見文",
+                "論理展開"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 論理・表現Ⅰ",
+              "default_skills": [
+                "writing"
+              ],
+              "subject": "english",
+              "course": "english_comm_1"
+            }
+          ]
+        },
+        {
+          "subject": "japanese",
+          "course": "japanese_basic",
+          "label": "現代の国語・言語文化",
+          "units": [
+            {
+              "unit_id": "HS-JPN-U01",
+              "grade": "HS1",
+              "domain": "現代の国語 読むこと",
+              "title": "評論の読解",
+              "topics": [
+                "対比構造",
+                "抽象と具体",
+                "論旨の把握"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 現代の国語",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U02",
+              "grade": "HS1",
+              "domain": "言語文化 読むこと",
+              "title": "小説の読解",
+              "topics": [
+                "心情把握",
+                "表現の特色",
+                "語り手と視点"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 言語文化",
+              "default_skills": [
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U03",
+              "grade": "HS1",
+              "domain": "言語文化 知識及び技能",
+              "title": "古文文法　用言",
+              "topics": [
+                "動詞の活用の種類",
+                "形容詞・形容動詞",
+                "音便"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 言語文化",
+              "default_skills": [
+                "classics",
+                "grammar"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U04",
+              "grade": "HS1",
+              "domain": "言語文化 知識及び技能",
+              "title": "古文文法　助動詞",
+              "topics": [
+                "助動詞の意味と接続",
+                "識別"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 言語文化",
+              "default_skills": [
+                "classics",
+                "grammar"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U05",
+              "grade": "HS1",
+              "domain": "言語文化 知識及び技能",
+              "title": "古文　敬語と読解",
+              "topics": [
+                "尊敬・謙譲・丁寧",
+                "敬意の方向",
+                "主語の判定"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 言語文化",
+              "default_skills": [
+                "classics",
+                "reading"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U06",
+              "grade": "HS1",
+              "domain": "言語文化 知識及び技能",
+              "title": "漢文　句法",
+              "topics": [
+                "再読文字",
+                "否定",
+                "疑問・反語",
+                "使役・受身",
+                "比較・限定"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 言語文化",
+              "default_skills": [
+                "classics"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U07",
+              "grade": "HS1",
+              "domain": "現代の国語 知識及び技能",
+              "title": "語彙・漢字",
+              "topics": [
+                "評論用語",
+                "同音異義語",
+                "慣用表現"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 現代の国語",
+              "default_skills": [
+                "vocabulary"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            },
+            {
+              "unit_id": "HS-JPN-U08",
+              "grade": "HS1",
+              "domain": "現代の国語 書くこと",
+              "title": "論理的な文章を書く",
+              "topics": [
+                "論証の型",
+                "反論の想定",
+                "要約"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 現代の国語",
+              "default_skills": [
+                "writing"
+              ],
+              "subject": "japanese",
+              "course": "japanese_basic"
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "physics_basic",
+          "label": "物理基礎",
+          "units": [
+            {
+              "unit_id": "HS-PHYB-U01",
+              "grade": "HS1",
+              "domain": "物体の運動とエネルギー",
+              "title": "運動の表し方と運動の法則",
+              "topics": [
+                "等加速度直線運動",
+                "自由落下",
+                "運動の法則",
+                "力のつり合い"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理基礎 (1)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "physics_basic"
+            },
+            {
+              "unit_id": "HS-PHYB-U02",
+              "grade": "HS1",
+              "domain": "物体の運動とエネルギー",
+              "title": "仕事とエネルギー",
+              "topics": [
+                "仕事と仕事率",
+                "運動エネルギー",
+                "力学的エネルギー保存",
+                "熱"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理基礎 (1)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "physics_basic"
+            },
+            {
+              "unit_id": "HS-PHYB-U03",
+              "grade": "HS1",
+              "domain": "様々な物理現象とエネルギーの利用",
+              "title": "波・電気",
+              "topics": [
+                "波の性質",
+                "音",
+                "電気回路",
+                "交流と電磁波"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 物理基礎 (2)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "physics_basic"
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "chemistry_basic",
+          "label": "化学基礎",
+          "units": [
+            {
+              "unit_id": "HS-CHEB-U01",
+              "grade": "HS1",
+              "domain": "物質の構成",
+              "title": "物質の構成と化学結合",
+              "topics": [
+                "原子の構造",
+                "周期表",
+                "イオン結合・共有結合・金属結合"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学基礎 (2)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry_basic"
+            },
+            {
+              "unit_id": "HS-CHEB-U02",
+              "grade": "HS1",
+              "domain": "物質の変化",
+              "title": "物質量と化学反応式",
+              "topics": [
+                "物質量",
+                "モル濃度",
+                "化学反応の量的関係"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学基礎 (3)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry_basic"
+            },
+            {
+              "unit_id": "HS-CHEB-U03",
+              "grade": "HS1",
+              "domain": "物質の変化",
+              "title": "酸と塩基・酸化還元",
+              "topics": [
+                "pH",
+                "中和滴定",
+                "酸化数",
+                "電池"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 化学基礎 (3)",
+              "default_skills": [
+                "calculation",
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "chemistry_basic"
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "biology_basic",
+          "label": "生物基礎",
+          "units": [
+            {
+              "unit_id": "HS-BIOB-U01",
+              "grade": "HS1",
+              "domain": "生物の特徴",
+              "title": "生物の特徴と遺伝子",
+              "topics": [
+                "細胞",
+                "代謝とATP",
+                "DNAの構造",
+                "遺伝情報の発現"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物基礎 (1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "biology_basic"
+            },
+            {
+              "unit_id": "HS-BIOB-U02",
+              "grade": "HS1",
+              "domain": "ヒトの体の調節",
+              "title": "ヒトの体の調節",
+              "topics": [
+                "自律神経",
+                "ホルモン",
+                "血糖濃度の調節",
+                "免疫"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物基礎 (2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "biology_basic"
+            },
+            {
+              "unit_id": "HS-BIOB-U03",
+              "grade": "HS1",
+              "domain": "生物の多様性と生態系",
+              "title": "生物の多様性と生態系",
+              "topics": [
+                "植生と遷移",
+                "バイオーム",
+                "生態系と物質循環",
+                "生態系の保全"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 生物基礎 (3)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "biology_basic"
+            }
+          ]
+        },
+        {
+          "subject": "science",
+          "course": "earth_basic",
+          "label": "地学基礎",
+          "units": [
+            {
+              "unit_id": "HS-EARB-U01",
+              "grade": "HS1",
+              "domain": "地球のすがた",
+              "title": "地球のすがたと活動",
+              "topics": [
+                "地球の形と内部構造",
+                "プレートテクトニクス",
+                "地震",
+                "火山"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 地学基礎 (1)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "earth_basic"
+            },
+            {
+              "unit_id": "HS-EARB-U02",
+              "grade": "HS1",
+              "domain": "変動する地球",
+              "title": "大気と海洋・宇宙",
+              "topics": [
+                "大気の構造",
+                "大気と海洋の循環",
+                "太陽系",
+                "宇宙の誕生"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 地学基礎 (2)",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "science",
+              "course": "earth_basic"
+            }
+          ]
+        },
+        {
+          "subject": "social",
+          "course": "history_general",
+          "label": "歴史総合",
+          "units": [
+            {
+              "unit_id": "HS-HIST-U01",
+              "grade": "HS1",
+              "domain": "近代化",
+              "title": "近代化と私たち",
+              "topics": [
+                "産業革命",
+                "国民国家",
+                "明治維新",
+                "帝国主義"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 歴史総合 B",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social",
+              "course": "history_general"
+            },
+            {
+              "unit_id": "HS-HIST-U02",
+              "grade": "HS1",
+              "domain": "大衆化",
+              "title": "国際秩序の変化や大衆化と私たち",
+              "topics": [
+                "第一次世界大戦",
+                "大衆社会",
+                "世界恐慌",
+                "第二次世界大戦"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 歴史総合 C",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social",
+              "course": "history_general"
+            },
+            {
+              "unit_id": "HS-HIST-U03",
+              "grade": "HS1",
+              "domain": "グローバル化",
+              "title": "グローバル化と私たち",
+              "topics": [
+                "冷戦",
+                "脱植民地化",
+                "経済成長",
+                "冷戦終結と地域紛争"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 歴史総合 D",
+              "default_skills": [
+                "knowledge"
+              ],
+              "subject": "social",
+              "course": "history_general"
+            }
+          ]
+        },
+        {
+          "subject": "social",
+          "course": "geography_general",
+          "label": "地理総合",
+          "units": [
+            {
+              "unit_id": "HS-GEOG-U01",
+              "grade": "HS1",
+              "domain": "地図と地理情報システム",
+              "title": "地図や地理情報システム",
+              "topics": [
+                "地図の図法",
+                "GIS",
+                "地形図の読図"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 地理総合 A",
+              "default_skills": [
+                "knowledge",
+                "data_interpretation"
+              ],
+              "subject": "social",
+              "course": "geography_general"
+            },
+            {
+              "unit_id": "HS-GEOG-U02",
+              "grade": "HS1",
+              "domain": "国際理解と国際協力",
+              "title": "国際理解と国際協力",
+              "topics": [
+                "生活文化の多様性",
+                "地球的課題"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 地理総合 B",
+              "default_skills": [
+                "knowledge",
+                "data_interpretation"
+              ],
+              "subject": "social",
+              "course": "geography_general"
+            },
+            {
+              "unit_id": "HS-GEOG-U03",
+              "grade": "HS1",
+              "domain": "防災",
+              "title": "持続可能な地域づくりと私たち",
+              "topics": [
+                "自然災害と防災",
+                "ハザードマップ"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 地理総合 C",
+              "default_skills": [
+                "knowledge",
+                "data_interpretation"
+              ],
+              "subject": "social",
+              "course": "geography_general"
+            }
+          ]
+        },
+        {
+          "subject": "social",
+          "course": "public",
+          "label": "公共",
+          "units": [
+            {
+              "unit_id": "HS-PUBL-U01",
+              "grade": "HS1",
+              "domain": "公共の扉",
+              "title": "公共の扉",
+              "topics": [
+                "青年期",
+                "思想と倫理",
+                "公共的な空間"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 公共 A",
+              "default_skills": [
+                "knowledge",
+                "thinking"
+              ],
+              "subject": "social",
+              "course": "public"
+            },
+            {
+              "unit_id": "HS-PUBL-U02",
+              "grade": "HS1",
+              "domain": "自立した主体として",
+              "title": "法・政治と私たち",
+              "topics": [
+                "法の支配",
+                "民主政治",
+                "司法参加",
+                "国際政治"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 公共 B",
+              "default_skills": [
+                "knowledge",
+                "thinking"
+              ],
+              "subject": "social",
+              "course": "public"
+            },
+            {
+              "unit_id": "HS-PUBL-U03",
+              "grade": "HS1",
+              "domain": "自立した主体として",
+              "title": "経済と私たち",
+              "topics": [
+                "市場の失敗",
+                "金融政策・財政政策",
+                "社会保障",
+                "国際経済"
+              ],
+              "standards_ref": "高等学校学習指導要領（平成30年告示） 公共 B",
+              "default_skills": [
+                "knowledge",
+                "thinking"
+              ],
+              "subject": "social",
+              "course": "public"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exam_tracks": [
+    {
+      "id": "kanagawa_public_hs",
+      "label": "神奈川県公立高等学校入学者選抜（学力検査）",
+      "notes": "5教科・各100点・各50分。近年の出題構成（マークシート方式中心、一部記述）を参考にした模試単元。正式な出題仕様は神奈川県教育委員会の公表資料を確認すること。",
+      "units": [
+        {
+          "unit_id": "EX-KNG-MOCK-JPN",
+          "grade": "JH3",
+          "subject": "japanese",
+          "domain": "入試対策",
+          "title": "神奈川県公立高校入試型 国語",
+          "topics": [
+            "漢字・語句",
+            "古典",
+            "小説",
+            "論説文",
+            "話し合い・資料"
+          ],
+          "standards_ref": "神奈川県公立高校入試",
+          "default_skills": [
+            "reading",
+            "vocabulary"
+          ]
+        },
+        {
+          "unit_id": "EX-KNG-MOCK-MATH",
+          "grade": "JH3",
+          "subject": "math",
+          "domain": "入試対策",
+          "title": "神奈川県公立高校入試型 数学",
+          "topics": [
+            "計算",
+            "小問集合",
+            "図形・資料",
+            "関数",
+            "確率",
+            "空間図形"
+          ],
+          "standards_ref": "神奈川県公立高校入試",
+          "default_skills": [
+            "calculation",
+            "thinking"
+          ]
+        },
+        {
+          "unit_id": "EX-KNG-MOCK-ENG",
+          "grade": "JH3",
+          "subject": "english",
+          "domain": "入試対策",
+          "title": "神奈川県公立高校入試型 英語",
+          "topics": [
+            "リスニング",
+            "語彙",
+            "文法",
+            "語順整序",
+            "条件英作文",
+            "長文読解",
+            "資料読解"
+          ],
+          "standards_ref": "神奈川県公立高校入試",
+          "default_skills": [
+            "reading",
+            "listening",
+            "grammar"
+          ]
+        },
+        {
+          "unit_id": "EX-KNG-MOCK-SCI",
+          "grade": "JH3",
+          "subject": "science",
+          "domain": "入試対策",
+          "title": "神奈川県公立高校入試型 理科",
+          "topics": [
+            "物理",
+            "化学",
+            "生物",
+            "地学",
+            "実験考察"
+          ],
+          "standards_ref": "神奈川県公立高校入試",
+          "default_skills": [
+            "knowledge",
+            "experiment"
+          ]
+        },
+        {
+          "unit_id": "EX-KNG-MOCK-SOC",
+          "grade": "JH3",
+          "subject": "social",
+          "domain": "入試対策",
+          "title": "神奈川県公立高校入試型 社会",
+          "topics": [
+            "地理",
+            "歴史",
+            "公民",
+            "資料読解"
+          ],
+          "standards_ref": "神奈川県公立高校入試",
+          "default_skills": [
+            "knowledge",
+            "data_interpretation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common_test",
+      "label": "大学入学共通テスト",
+      "notes": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+      "units": [
+        {
+          "unit_id": "CT-ENG-U01",
+          "grade": "HS3",
+          "subject": "english",
+          "domain": "試験対策",
+          "title": "英語リーディング　情報の検索と要旨把握",
+          "topics": [
+            "広告・掲示の読み取り",
+            "事実と意見の区別",
+            "論説文の要旨"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "reading"
+          ]
+        },
+        {
+          "unit_id": "CT-ENG-U02",
+          "grade": "HS3",
+          "subject": "english",
+          "domain": "試験対策",
+          "title": "英語リスニング　対話と講義の聞き取り",
+          "topics": [
+            "短い対話",
+            "講義と図表",
+            "複数の意見の比較"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "listening"
+          ]
+        },
+        {
+          "unit_id": "CT-JPN-U01",
+          "grade": "HS3",
+          "subject": "japanese",
+          "domain": "試験対策",
+          "title": "国語　現代文（論理的文章・実用的文章）",
+          "topics": [
+            "複数テクストの比較",
+            "資料と本文の対応"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "reading"
+          ]
+        },
+        {
+          "unit_id": "CT-JPN-U02",
+          "grade": "HS3",
+          "subject": "japanese",
+          "domain": "試験対策",
+          "title": "国語　古文・漢文",
+          "topics": [
+            "古文の内容把握",
+            "漢文の句法と内容"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "classics",
+            "reading"
+          ]
+        },
+        {
+          "unit_id": "CT-MATH1A-U01",
+          "grade": "HS3",
+          "subject": "math",
+          "domain": "試験対策",
+          "title": "数学Ⅰ・A　数と式・二次関数・図形と計量",
+          "topics": [
+            "日常の事象の数学化",
+            "二次関数の最大・最小",
+            "三角比の活用"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "calculation",
+            "thinking"
+          ]
+        },
+        {
+          "unit_id": "CT-MATH1A-U02",
+          "grade": "HS3",
+          "subject": "math",
+          "domain": "試験対策",
+          "title": "数学Ⅰ・A　データの分析・場合の数と確率・図形の性質",
+          "topics": [
+            "箱ひげ図と相関",
+            "条件付き確率",
+            "図形の性質"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "calculation",
+            "data_interpretation"
+          ]
+        },
+        {
+          "unit_id": "CT-MATH2BC-U01",
+          "grade": "HS3",
+          "subject": "math",
+          "domain": "試験対策",
+          "title": "数学Ⅱ・B・C　微積分・指数対数・三角関数",
+          "topics": [
+            "微分と極値",
+            "面積",
+            "対数の活用"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "calculation",
+            "thinking"
+          ]
+        },
+        {
+          "unit_id": "CT-MATH2BC-U02",
+          "grade": "HS3",
+          "subject": "math",
+          "domain": "試験対策",
+          "title": "数学Ⅱ・B・C　数列・統計的な推測・ベクトル",
+          "topics": [
+            "漸化式",
+            "推定",
+            "ベクトルの内積"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "calculation",
+            "thinking"
+          ]
+        },
+        {
+          "unit_id": "CT-SCI-U01",
+          "grade": "HS3",
+          "subject": "science",
+          "domain": "試験対策",
+          "title": "理科基礎　物理基礎・化学基礎",
+          "topics": [
+            "グラフの読み取り",
+            "量的関係",
+            "実験考察"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "data_interpretation",
+            "calculation"
+          ]
+        },
+        {
+          "unit_id": "CT-SCI-U02",
+          "grade": "HS3",
+          "subject": "science",
+          "domain": "試験対策",
+          "title": "理科基礎　生物基礎・地学基礎",
+          "topics": [
+            "実験データの解釈",
+            "仮説の検証"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "data_interpretation",
+            "thinking"
+          ]
+        },
+        {
+          "unit_id": "CT-SOC-U01",
+          "grade": "HS3",
+          "subject": "social",
+          "domain": "試験対策",
+          "title": "地理歴史　歴史総合を中心とした資料読解",
+          "topics": [
+            "史料の読解",
+            "年代整序",
+            "因果関係"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "data_interpretation",
+            "knowledge"
+          ]
+        },
+        {
+          "unit_id": "CT-SOC-U02",
+          "grade": "HS3",
+          "subject": "social",
+          "domain": "試験対策",
+          "title": "公民　公共・政治経済の資料読解",
+          "topics": [
+            "統計資料",
+            "制度比較",
+            "思考実験"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "data_interpretation",
+            "thinking"
+          ]
+        },
+        {
+          "unit_id": "CT-INFO-U01",
+          "grade": "HS3",
+          "subject": "information",
+          "domain": "試験対策",
+          "title": "情報Ⅰ　プログラミングとデータの活用",
+          "topics": [
+            "アルゴリズム",
+            "2進数",
+            "データの分析",
+            "情報セキュリティ"
+          ],
+          "standards_ref": "大学入学共通テスト（令和7年度以降の出題教科・科目）",
+          "default_skills": [
+            "thinking",
+            "calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second_stage",
+      "label": "難関大学 個別学力検査（二次試験）",
+      "notes": "記述・論述・証明形式の対策単元。",
+      "units": [
+        {
+          "unit_id": "SS-MATH-U01",
+          "grade": "HS3",
+          "subject": "math",
+          "domain": "試験対策",
+          "title": "数学　証明問題",
+          "topics": [
+            "整数の証明",
+            "数学的帰納法",
+            "不等式の証明",
+            "背理法"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "proof"
+          ]
+        },
+        {
+          "unit_id": "SS-MATH-U02",
+          "grade": "HS3",
+          "subject": "math",
+          "domain": "試験対策",
+          "title": "数学　記述式計算問題",
+          "topics": [
+            "微積分",
+            "確率",
+            "ベクトル"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "calculation",
+            "proof"
+          ]
+        },
+        {
+          "unit_id": "SS-ENG-U01",
+          "grade": "HS3",
+          "subject": "english",
+          "domain": "試験対策",
+          "title": "英語　和訳・説明問題",
+          "topics": [
+            "下線部和訳",
+            "内容説明"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "translation",
+            "reading"
+          ]
+        },
+        {
+          "unit_id": "SS-ENG-U02",
+          "grade": "HS3",
+          "subject": "english",
+          "domain": "試験対策",
+          "title": "英語　自由英作文・和文英訳",
+          "topics": [
+            "意見論述",
+            "和文英訳"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "writing",
+            "translation"
+          ]
+        },
+        {
+          "unit_id": "SS-JPN-U01",
+          "grade": "HS3",
+          "subject": "japanese",
+          "domain": "試験対策",
+          "title": "国語　現代文記述",
+          "topics": [
+            "傍線部説明",
+            "要約"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "essay",
+            "reading"
+          ]
+        },
+        {
+          "unit_id": "SS-JPN-U02",
+          "grade": "HS3",
+          "subject": "japanese",
+          "domain": "試験対策",
+          "title": "国語　古文・漢文記述",
+          "topics": [
+            "現代語訳",
+            "内容説明"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "classics",
+            "translation"
+          ]
+        },
+        {
+          "unit_id": "SS-SCI-U01",
+          "grade": "HS3",
+          "subject": "science",
+          "domain": "試験対策",
+          "title": "理科　論述・計算問題",
+          "topics": [
+            "物理の導出",
+            "化学の論述",
+            "生物の考察"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "essay",
+            "calculation"
+          ]
+        },
+        {
+          "unit_id": "SS-SOC-U01",
+          "grade": "HS3",
+          "subject": "social",
+          "domain": "試験対策",
+          "title": "地歴公民　論述問題",
+          "topics": [
+            "歴史の因果説明",
+            "地理の要因説明",
+            "政治経済の論述"
+          ],
+          "standards_ref": "国公立大学二次試験・私立大学個別試験",
+          "default_skills": [
+            "essay"
+          ]
+        }
+      ]
+    }
+  ]
+}

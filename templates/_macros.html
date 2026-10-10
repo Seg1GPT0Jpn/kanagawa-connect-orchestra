@@ -1,0 +1,76 @@
+{# 共通マクロ #}
+
+{% macro table_block(t) -%}
+<table class="data">
+  {% if t.caption %}<caption>{{ t.caption | rich_inline }}</caption>{% endif %}
+  {% if t.header %}<thead><tr>{% for h in t.header %}<th>{{ h | rich_inline }}</th>{% endfor %}</tr></thead>{% endif %}
+  <tbody>
+  {% for row in t.rows %}<tr>{% for c in row %}<td>{{ c | string | rich_inline }}</td>{% endfor %}</tr>{% endfor %}
+  </tbody>
+</table>
+{%- endmacro %}
+
+{% macro figure_block(f) -%}
+<figure class="figure-box" style="{% if f.height_mm %}min-height: {{ f.height_mm }}mm;{% endif %}">
+  {% if f.svg %}{{ f.svg | safe }}{% else %}<div class="alt">［図］{{ f.alt }}</div>{% endif %}
+  {% if f.caption %}<figcaption>{{ f.caption | rich_inline }}</figcaption>{% endif %}
+</figure>
+{%- endmacro %}
+
+{% macro stimulus_block(s, kind) -%}
+{% set is_listen = s.type == 'listening_script' %}
+{% if is_listen and kind == 'questions' %}
+<div class="stimulus listening short">
+  <div class="stim-title">{{ s.title or 'リスニング' }}</div>
+  <div class="listening-note">※ 放送を聞いて答えなさい。放送文は解答解説冊子に掲載しています。</div>
+</div>
+{% else %}
+<div class="stimulus {{ s.type }}{% if s.vertical %} vertical{% endif %}{% if (s.content | length) < 400 %} short{% endif %}{% if is_listen %} listening{% endif %}">
+  {% if s.title %}<div class="stim-title">{{ s.title | rich_inline }}{% if is_listen %}（放送文）{% endif %}</div>{% endif %}
+  <div class="content">{{ s.content | rich_block }}</div>
+  {% if s.table %}{{ table_block(s.table) }}{% endif %}
+  {% if s.figure %}{{ figure_block(s.figure) }}{% endif %}
+  {% if s.glossary %}<div class="glossary">{% for g in s.glossary %}（注）{{ g.term }}：{{ g.meaning }}{% if not loop.last %}　{% endif %}{% endfor %}</div>{% endif %}
+  {% if s.source %}<div class="source">{{ s.source }}</div>{% endif %}
+</div>
+{% endif %}
+{%- endmacro %}
+
+{% macro answer_space(q) -%}
+{% set sp = q.answer_space or {} %}
+{% if sp.char_grid %}
+  <div class="char-grid">{% for i in range(sp.char_grid) %}<span{% if (i + 1) % 100 == 0 %} class="mark100"{% endif %}></span>{% endfor %}</div>
+{% elif sp.lines %}
+  <div class="answer-lines">{% for i in range(sp.lines) %}<div></div>{% endfor %}</div>
+{% elif sp.height_mm %}
+  <div class="answer-box" style="min-height: {{ sp.height_mm }}mm"></div>
+{% elif q.question_type == 'ordering' %}
+  <div class="answer-box" style="min-height: 9mm"></div>
+{% elif q.question_type in ['multiple_choice', 'multiple_select', 'true_false'] %}
+{% elif q.question_type in ['descriptive', 'essay', 'proof'] %}
+  <div class="answer-lines">{% for i in range(4 if q.question_type == 'descriptive' else 8) %}<div></div>{% endfor %}</div>
+{% else %}
+  <div class="answer-box"></div>
+{% endif %}
+{%- endmacro %}
+
+{% macro header(qs, kind, units) -%}
+<header class="cover">
+  <div class="meta">
+    <span>{{ qs.grade | grade_label }}</span>
+    <span>{{ qs.subject | subject_label }}</span>
+    {% if units | length <= 2 %}{% for u in units %}<span>{{ u.unit_id }}　{{ u.title }}</span>{% endfor %}{% endif %}
+  </div>
+  <h1>{% if kind == 'answers' %}<span class="badge answer">解答・解説</span>{% else %}<span class="badge">{{ qs.track | track_label }}</span>{% endif %}{{ qs.title }}</h1>
+  {% if qs.subtitle %}<p class="subtitle">{{ qs.subtitle }}</p>{% endif %}
+  <div class="meta">
+    <span>全 {{ qs.questions | length }} 問</span>
+    {% if qs.total_points %}<span>{{ qs.total_points | num }} 点満点</span>{% endif %}
+    {% if qs.time_limit_minutes %}<span>制限時間 {{ qs.time_limit_minutes }} 分</span>{% endif %}
+    {% if qs.exam_spec %}<span>{{ qs.exam_spec.reference }}</span>{% endif %}
+  </div>
+  {% if kind == 'questions' %}
+  <div class="namebox"><div class="grow">組　　番　氏名</div><div class="score">／{{ (qs.total_points or (qs.questions | sum(attribute='scoring.points'))) | num }} 点</div></div>
+  {% endif %}
+</header>
+{%- endmacro %}

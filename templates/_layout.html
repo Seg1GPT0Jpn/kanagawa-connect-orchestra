@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ doc_title }}</title>
+<base href="{{ asset_base }}">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<style>
+{{ css | safe }}
+{{ page_css | safe }}
+</style>
+</head>
+<body class="paper-{{ paper }} kind-{{ kind }}">
+{% block body %}{% endblock %}
+<p class="colophon">
+  {{ qs.set_id }} ｜ 版 {{ qs.revision_history[-1].version }}（{{ qs.revision_history[-1].date }}）
+  {%- if qs.validation %} ｜ 自動検査 {{ qs.validation.result }}（{{ qs.validation.validated_at[:10] }}）{% endif %}
+  ｜ © {{ qs.copyright.holder }}{% if qs.copyright.license %}（{{ qs.copyright.license }}）{% endif %}
+</p>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/contrib/auto-render.min.js"></script>
+<script>
+  window.__renderDone = false;
+  window.__renderErrors = [];
+  document.addEventListener("DOMContentLoaded", function () {
+    try {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true }
+        ],
+        ignoredClasses: ["no-math"],
+        throwOnError: false,
+        strict: "ignore",
+        errorCallback: function (msg, err) { window.__renderErrors.push(String(msg) + " " + String(err)); }
+      });
+    } catch (e) {
+      window.__renderErrors.push(String(e));
+    }
+    (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () { window.__renderDone = true; });
+  });
+</script>
+</body>
+</html>
