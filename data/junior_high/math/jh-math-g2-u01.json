@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G2-U01-S1",
+  "title": "式の計算",
+  "subtitle": "数と式｜単項式と多項式・多項式の加減・単項式の乗除・等式の変形",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-MATH-G2-U01"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G2-U01-S1-Q001",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$(3x+2y)-(x-4y)$ を計算しなさい。",
+      "answer": {
+        "value": "$2x+6y$",
+        "accepted": [
+          "2x+6y"
+        ]
+      },
+      "explanation": "$3x+2y-x+4y=2x+6y$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "expand((3*x+2*y)-(x-4*y))",
+        "expected": "2*x+6*y"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q002",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$6a^2b\\div2ab\\times(-b)$ を計算しなさい。",
+      "answer": {
+        "value": "$-3ab$",
+        "accepted": [
+          "-3ab"
+        ]
+      },
+      "explanation": "$\\dfrac{6a^2b\\times(-b)}{2ab}=-3ab$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "6*a**2*b/(2*a*b)*(-b)",
+        "expected": "-3*a*b"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q003",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$2(3a-b)-3(a-2b)$ を計算しなさい。",
+      "answer": {
+        "value": "$3a+4b$",
+        "accepted": [
+          "3a+4b"
+        ]
+      },
+      "explanation": "$6a-2b-3a+6b=3a+4b$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(2*(3*a-b)-3*(a-2*b))",
+        "expected": "3*a+4*b"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q004",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x=2,\\ y=-3$ のとき、$4x^2y\\div2x$ の値を求めなさい。",
+      "answer": {
+        "value": "-12"
+      },
+      "explanation": "式を簡単にしてから代入する。$4x^2y\\div2x=2xy=2\\times2\\times(-3)=-12$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4*2**2*(-3)/(2*2)",
+        "expected": "-12"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q005",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $3x+2y=6$ を $y$ について解きなさい。",
+      "answer": {
+        "value": "$y=-\\dfrac{3}{2}x+3$",
+        "accepted": [
+          "y=(6-3x)/2",
+          "y=-3/2x+3"
+        ]
+      },
+      "explanation": "$2y=-3x+6$、両辺を 2 でわって $y=-\\dfrac{3}{2}x+3$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(3*x+2*y-6, y)",
+        "expected": "[-3*x/2+3]"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q006",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $V=\\dfrac{1}{3}\\pi r^2h$ を $h$ について解きなさい。",
+      "answer": {
+        "value": "$h=\\dfrac{3V}{\\pi r^2}$",
+        "accepted": [
+          "h=3V/(πr^2)"
+        ]
+      },
+      "explanation": "両辺を 3 倍して $3V=\\pi r^2h$。両辺を $\\pi r^2$ でわる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q007",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\dfrac{3x-y}{2}-\\dfrac{x-2y}{3}$ を計算しなさい。",
+      "answer": {
+        "value": "$\\dfrac{7x+y}{6}$",
+        "accepted": [
+          "(7x+y)/6"
+        ]
+      },
+      "explanation": "$\\dfrac{3(3x-y)-2(x-2y)}{6}=\\dfrac{9x-3y-2x+4y}{6}=\\dfrac{7x+y}{6}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(3*x-y)/2-(x-2*y)/3",
+        "expected": "(7*x+y)/6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U01-S1-Q008",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U01",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "連続する3つの整数の和は3の倍数になる。このことを、文字を使って説明しなさい。",
+      "answer": {
+        "value": "連続する3つの整数は、整数 $n$ を使って $n-1,\\ n,\\ n+1$ と表せる。その和は $(n-1)+n+(n+1)=3n$ で、$n$ は整数だから $3n$ は3の倍数である。よって、連続する3つの整数の和は3の倍数になる。"
+      },
+      "explanation": "真ん中の数を $n$ とおくと式が簡単になる。最小の数を $n$ として $n+(n+1)+(n+2)=3(n+1)$ としてもよい。「$3\\times$（整数）」の形を示すことが大切。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "3つの整数を1つの文字で正しく表している",
+            "points": 2
+          },
+          {
+            "criterion": "和を計算して $3\\times$（整数）の形に変形している",
+            "points": 2
+          },
+          {
+            "criterion": "3の倍数であると結論づけている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 5
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b046577f5bd96a7672d3d05eb943764367f72403eb69ac8f5f93777a2e886aa9"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "a6f338b83d17578c2a9107baafbecf14331570177797ba8b05885621d5114c4b"
+  }
+}

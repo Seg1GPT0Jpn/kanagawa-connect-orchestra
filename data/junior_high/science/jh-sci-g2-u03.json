@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-SCI-G2-U03-S1",
+  "title": "電流とその利用",
+  "subtitle": "エネルギー（第1分野）｜回路と電流・電圧・オームの法則・電力と熱量・電流と磁界",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "science",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-SCI-G2-U03"
+  ],
+  "instructions": [
+    "計算問題は、問題文で指定された単位で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-SCI-G2-U03-S1-Q001",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "並列回路で、一方の枝に 0.3 A、もう一方の枝に 0.5 A の電流が流れている。回路全体を流れる電流は何 A か。",
+      "answer": {
+        "value": "0.8",
+        "unit": "A"
+      },
+      "explanation": "並列回路では、枝分かれした電流の和が全体の電流になる。$0.3+0.5=0.8$（A）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "0.3+0.5",
+        "expected": "0.8"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q002",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "抵抗が $15\\,\\Omega$ の電熱線に $0.4\\,\\mathrm{A}$ の電流が流れているとき、電熱線に加わる電圧は何 V か。",
+      "answer": {
+        "value": "6",
+        "unit": "V"
+      },
+      "explanation": "$V=RI=15\\times0.4=6$（V）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "15*0.4",
+        "expected": "6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q003",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "消費電力 1000 W の電気ストーブを 2 時間使ったときの電力量は何 kWh か。",
+      "answer": {
+        "value": "2",
+        "unit": "kWh"
+      },
+      "explanation": "電力量（Wh）＝電力（W）×時間（h）＝$1000\\times2=2000$（Wh）＝$2$（kWh）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1000*2/1000",
+        "expected": "2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q004",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "異なる物質どうしをこすり合わせると静電気が生じるしくみとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "一方の物質の電子がもう一方の物質に移動するから"
+        },
+        {
+          "label": "イ",
+          "text": "＋の電気をもつ粒子が新しくつくられるから"
+        },
+        {
+          "label": "ウ",
+          "text": "空気中の電気が物質に集まるから"
+        },
+        {
+          "label": "エ",
+          "text": "物質の原子核が移動するから"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "こすり合わせると－の電気をもつ電子が一方からもう一方に移動し、電子を受け取った物質は－に、失った物質は＋に帯電する。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q005",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "磁界の向きの決め方として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "方位磁針の N 極が指す向き"
+        },
+        {
+          "label": "イ",
+          "text": "電流が流れる向き"
+        },
+        {
+          "label": "ウ",
+          "text": "磁力線の間かくが広い向き"
+        },
+        {
+          "label": "エ",
+          "text": "方位磁針の S 極が指す向き"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "磁界の中に置いた方位磁針の N 極が指す向きを磁界の向きとする。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q006",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "モーターが回転するしくみとして最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "コイルの中で磁石を動かすと電流が流れる"
+        },
+        {
+          "label": "イ",
+          "text": "電流を流すと導線が熱をもつ"
+        },
+        {
+          "label": "ウ",
+          "text": "磁界の中のコイルに電流を流すと、コイルが力を受ける"
+        },
+        {
+          "label": "エ",
+          "text": "静電気によってコイルが引きつけられる"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "モーターは、電流が磁界から受ける力を利用している。コイルの中で磁石を動かして電流を得るのは発電機（電磁誘導）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q007",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "発電機で電流をつくり出すときに利用している現象を何というか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "放電"
+        },
+        {
+          "label": "イ",
+          "text": "電磁誘導"
+        },
+        {
+          "label": "ウ",
+          "text": "反射"
+        },
+        {
+          "label": "エ",
+          "text": "静電気"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "コイルの中の磁界が変化すると電圧が生じ、電流が流れる現象を電磁誘導という。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U03-S1-Q008",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U03",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$6\\,\\Omega$ と $3\\,\\Omega$ の電熱線を並列につなぎ、$6\\,\\mathrm{V}$ の電源につないだ。回路全体で消費する電力は何 W か。",
+      "answer": {
+        "value": "18",
+        "unit": "W"
+      },
+      "explanation": "それぞれに 6 V が加わるので、電流は $6\\div6=1$（A）と $6\\div3=2$（A）、全体で 3 A。電力は $6\\times3=18$（W）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "6*(6/6+6/3)",
+        "expected": "18"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "2ad91b97f876719b182a6646d7d59e6c87d000efe46e8e5e380be656a54aee01"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "d0b479021ee063d6b0b8073326428b16c5a6339d417b09d66941e95bebbfca9e"
+  }
+}

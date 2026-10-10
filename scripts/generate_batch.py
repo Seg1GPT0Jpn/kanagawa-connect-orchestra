@@ -165,8 +165,10 @@ def expand_item(spec: dict, item: dict, n: int) -> dict:
     if item.get("chk"):
         c = item["chk"]
         q["calc_check"] = {"expression": c[0], "expected": c[1]}
-        if len(c) > 2:
+        if len(c) > 2 and c[2]:
             q["calc_check"]["compare"] = c[2]
+        if len(c) > 3:
+            q["calc_check"]["target"] = c[3]
     if item.get("tags"):
         q["tags"] = list(item["tags"])
     q["verification"] = {"status": "draft"}

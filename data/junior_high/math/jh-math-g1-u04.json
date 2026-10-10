@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G1-U04-S1",
+  "title": "比例と反比例",
+  "subtitle": "関数｜関数の意味・比例・反比例・座標とグラフ",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH1",
+  "unit_ids": [
+    "JH-MATH-G1-U04"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G1-U04-S1-Q001",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$y$ は $x$ に比例し、$x=3$ のとき $y=12$ である。$y$ を $x$ の式で表しなさい。",
+      "answer": {
+        "value": "$y=4x$",
+        "accepted": [
+          "y=4x"
+        ]
+      },
+      "explanation": "$y=ax$ に代入して $12=3a$、$a=4$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "solve(3*a-12, a)",
+        "expected": "[4]"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q002",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$y$ は $x$ に反比例し、$x=2$ のとき $y=6$ である。$y$ を $x$ の式で表しなさい。",
+      "answer": {
+        "value": "$y=\\dfrac{12}{x}$",
+        "accepted": [
+          "y=12/x"
+        ]
+      },
+      "explanation": "$y=\\dfrac{a}{x}$ より $a=xy=12$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*6",
+        "expected": "12"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q003",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$y=-3x$ について、$x=-4$ のときの $y$ の値を求めなさい。",
+      "answer": {
+        "value": "12"
+      },
+      "explanation": "$y=-3\\times(-4)=12$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-3*(-4)",
+        "expected": "12"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q004",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "反比例 $y=\\dfrac{a}{x}$ のグラフの形として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "双曲線"
+        },
+        {
+          "label": "イ",
+          "text": "原点を通る直線"
+        },
+        {
+          "label": "ウ",
+          "text": "放物線"
+        },
+        {
+          "label": "エ",
+          "text": "原点を通らない直線"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "反比例のグラフは、なめらかな2つの曲線からなる双曲線になる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q005",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 $(2,\\,-5)$ と $x$ 軸について対称な点の座標を求めなさい。",
+      "answer": {
+        "value": "$(2,\\,5)$",
+        "accepted": [
+          "(2,5)",
+          "(2, 5)"
+        ]
+      },
+      "explanation": "$x$ 軸について対称な点は、$y$ 座標の符号だけが変わる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q006",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反比例 $y=\\dfrac{a}{x}$ のグラフが点 $(3,\\,4)$ を通るとき、$x=6$ のときの $y$ の値を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "$a=3\\times4=12$。$y=\\dfrac{12}{6}=2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3*4/6",
+        "expected": "2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q007",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "歯数 24 の歯車 A が毎分 15 回転している。A とかみ合っている歯数 40 の歯車 B は、毎分何回転するか。",
+      "answer": {
+        "value": "9",
+        "unit": "回転"
+      },
+      "explanation": "かみ合う歯車では（歯数）×（回転数）が等しい。B の回転数を $y$ とすると $40y=24\\times15=360$、$y=9$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "24*15/40",
+        "expected": "9"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U04-S1-Q008",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$x>0$ の範囲で、反比例 $y=\\dfrac{18}{x}$ のグラフ上にあり、$x$ 座標と $y$ 座標がともに整数である点は何個あるか。",
+      "answer": {
+        "value": "6",
+        "unit": "個"
+      },
+      "explanation": "$xy=18$ を満たす正の整数の組を数える。$x=1,2,3,6,9,18$ の6個。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "len(divisors(18))",
+        "expected": "6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "fb7ec2a1e71c7032c92f3fe6382bc194cef72868385f2def297bbd6d5a2eed29"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "d1346594e63e19490eff9638fdb1c0d7dcc4da09209cd9fcfa3a5620e27090a4"
+  }
+}

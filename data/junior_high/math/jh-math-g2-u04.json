@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G2-U04-S1",
+  "title": "図形の調べ方　平行と合同",
+  "subtitle": "図形｜平行線と角・多角形の内角と外角・合同条件・証明の進め方",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-MATH-G2-U04"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G2-U04-S1-Q001",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "八角形の内角の和は何度か。",
+      "answer": {
+        "value": "1080",
+        "unit": "度"
+      },
+      "explanation": "$n$ 角形の内角の和は $180^\\circ\\times(n-2)$。$180\\times6=1080$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180*(8-2)",
+        "expected": "1080"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q002",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "正十二角形の1つの外角は何度か。",
+      "answer": {
+        "value": "30",
+        "unit": "度"
+      },
+      "explanation": "多角形の外角の和は $360^\\circ$。$360\\div12=30$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "360/12",
+        "expected": "30"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q003",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "1つの内角が $140^\\circ$ である正多角形は正何角形か。",
+      "answer": {
+        "value": "正九角形"
+      },
+      "explanation": "1つの外角は $180-140=40^\\circ$。$360\\div40=9$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "360/(180-140)",
+        "expected": "9"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q004",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $\\angle\\mathrm{A}=50^\\circ$、$\\angle\\mathrm{B}=65^\\circ$ のとき、頂点 C における外角の大きさは何度か。",
+      "answer": {
+        "value": "115",
+        "unit": "度"
+      },
+      "explanation": "三角形の外角は、それととなり合わない2つの内角の和に等しい。$50+65=115$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "50+65",
+        "expected": "115"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q005",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次のうち、三角形の合同条件でないものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "2組の辺とその間の角がそれぞれ等しい"
+        },
+        {
+          "label": "イ",
+          "text": "3組の角がそれぞれ等しい"
+        },
+        {
+          "label": "ウ",
+          "text": "1組の辺とその両端の角がそれぞれ等しい"
+        },
+        {
+          "label": "エ",
+          "text": "3組の辺がそれぞれ等しい"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "3組の角が等しいだけでは、形は同じでも大きさが異なる場合がある（相似）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q006",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "「$x$ が 6 の倍数ならば、$x$ は 3 の倍数である」の仮定として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$x$ が 18 の倍数"
+        },
+        {
+          "label": "イ",
+          "text": "$x$ が 2 の倍数"
+        },
+        {
+          "label": "ウ",
+          "text": "$x$ が 6 の倍数"
+        },
+        {
+          "label": "エ",
+          "text": "$x$ は 3 の倍数"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "「○○ならば□□」の○○の部分が仮定、□□の部分が結論。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q007",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "「$\\triangle\\mathrm{ABC}\\equiv\\triangle\\mathrm{DEF}$ ならば、$\\triangle\\mathrm{ABC}$ と $\\triangle\\mathrm{DEF}$ の面積は等しい」の逆と、その正誤について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "逆は「面積が等しければ合同である」で、正しくない"
+        },
+        {
+          "label": "イ",
+          "text": "逆は「面積が等しくなければ合同でない」で、正しくない"
+        },
+        {
+          "label": "ウ",
+          "text": "逆は「合同でなければ面積は等しくない」で、正しい"
+        },
+        {
+          "label": "エ",
+          "text": "逆は「面積が等しければ合同である」で、正しい"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "仮定と結論を入れかえたものが逆。面積が等しくても形が違う三角形はあるので、逆は正しくない（反例がある）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U04-S1-Q008",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "星形五角形の先端にある5つの角の和は何度か。",
+      "figure": {
+        "alt": "星形五角形",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 123.2 118.88\" width=\"123.2\" height=\"118.88\" font-family=\"serif\" font-size=\"12\"><line x1=\"61.6\" y1=\"16\" x2=\"89.76\" y2=\"102.88\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"89.76\" y1=\"102.88\" x2=\"16\" y2=\"49.12\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"49.12\" x2=\"107.2\" y2=\"49.12\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"107.2\" y1=\"49.12\" x2=\"33.44\" y2=\"102.88\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"33.44\" y1=\"102.88\" x2=\"61.6\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/></svg>"
+      },
+      "answer": {
+        "value": "180",
+        "unit": "度"
+      },
+      "explanation": "三角形の外角の性質を2回使うと、5つの角を1つの三角形の3つの内角に集められる。よって和は $180^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "de2f71f30401931a4c2b89b2feb716ec7c4316ac4240f7f523060f2dffaf21e5"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "ba093f803be4f15a23e0f5f139aca047e0d0928ec0a3a73c68ed6b521c01a3d8"
+  }
+}

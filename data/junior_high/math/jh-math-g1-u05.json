@@ -1,0 +1,454 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G1-U05-S1",
+  "title": "平面図形",
+  "subtitle": "図形｜直線・角・作図・図形の移動・おうぎ形の弧の長さと面積",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH1",
+  "unit_ids": [
+    "JH-MATH-G1-U05"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G1-U05-S1-Q001",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "線分 AB の垂直二等分線上にある点の性質として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "2点 A、B からの距離が等しい"
+        },
+        {
+          "label": "イ",
+          "text": "直線 AB からの距離が一定である"
+        },
+        {
+          "label": "ウ",
+          "text": "線分 AB 上にある"
+        },
+        {
+          "label": "エ",
+          "text": "点 A からの距離が線分 AB の長さに等しい"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "垂直二等分線上の点は、線分の両端から等しい距離にある。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q002",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "角の二等分線上にある点の性質として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "角の頂点を中心とする円周上にある"
+        },
+        {
+          "label": "イ",
+          "text": "角をつくる2辺と垂直に交わる"
+        },
+        {
+          "label": "ウ",
+          "text": "角をつくる2辺からの距離が等しい"
+        },
+        {
+          "label": "エ",
+          "text": "角の頂点からの距離が一定である"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "角の二等分線上の点は、角をつくる2辺（2直線）から等しい距離にある。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q003",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "半径 6 cm、中心角 $60^\\circ$ のおうぎ形の弧の長さを求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$2\\pi\\,\\mathrm{cm}$",
+        "accepted": [
+          "2π",
+          "2πcm"
+        ]
+      },
+      "explanation": "$2\\pi\\times6\\times\\dfrac{60}{360}=2\\pi$（cm）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*pi*6*Rational(60,360)",
+        "expected": "2*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q004",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "半径 6 cm、中心角 $60^\\circ$ のおうぎ形の面積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$6\\pi\\,\\mathrm{cm}^2$",
+        "accepted": [
+          "6π",
+          "6πcm²"
+        ]
+      },
+      "explanation": "$\\pi\\times6^2\\times\\dfrac{60}{360}=6\\pi$（cm²）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "pi*6**2*Rational(60,360)",
+        "expected": "6*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q005",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "半径 4 cm の円の面積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$16\\pi\\,\\mathrm{cm}^2$",
+        "accepted": [
+          "16π",
+          "16πcm²"
+        ]
+      },
+      "explanation": "$\\pi r^2=\\pi\\times4^2=16\\pi$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "pi*4**2",
+        "expected": "16*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q006",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "半径 9 cm、弧の長さが $6\\pi$ cm のおうぎ形の中心角は何度か。",
+      "answer": {
+        "value": "120",
+        "unit": "度"
+      },
+      "explanation": "中心角を $a^\\circ$ とすると $2\\pi\\times9\\times\\dfrac{a}{360}=6\\pi$。$a=120$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(2*pi*9*a/360-6*pi, a)",
+        "expected": "[120]"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q007",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "ある図形を、1点を中心として $180^\\circ$ 回転移動させることを特に何というか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "垂直移動"
+        },
+        {
+          "label": "イ",
+          "text": "点対称移動"
+        },
+        {
+          "label": "ウ",
+          "text": "平行移動"
+        },
+        {
+          "label": "エ",
+          "text": "対称移動"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$180^\\circ$ の回転移動を点対称移動という。対称移動は直線を折り目として折り返す移動。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U05-S1-Q008",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "半径 10 cm、弧の長さ $8\\pi$ cm のおうぎ形の面積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$40\\pi\\,\\mathrm{cm}^2$",
+        "accepted": [
+          "40π",
+          "40πcm²"
+        ]
+      },
+      "explanation": "おうぎ形の面積は $\\dfrac{1}{2}\\times(\\text{弧の長さ})\\times(\\text{半径})=\\dfrac{1}{2}\\times8\\pi\\times10=40\\pi$。中心角を求めてから計算してもよい（$144^\\circ$）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*8*pi*10",
+        "expected": "40*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "9ee32c5a23535cd2ff747a784b1956f67b109ebb05393cbcbf848e3d37aafc14"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "e5f96955339a3c0eabadad275484e1bb702f5ab62c8065a87b7a89e528969e7f"
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-TOKU-G3-U01-S1",
+  "title": "教科横断型　資料読解と論理的思考",
+  "subtitle": "特色検査（自己表現検査）｜複数資料の統合・数量的な推論・条件整理",
+  "track": "tokushoku",
+  "stage": "junior_high",
+  "subject": "integrated",
+  "grade": "JH3",
+  "unit_ids": [
+    "JH-TOKU-G3-U01"
+  ],
+  "instructions": [
+    "この検査は、教科の知識だけでなく、資料を読み取り、筋道を立てて考え、表現する力をみるものです。",
+    "記述問題では、考えの根拠を明らかにして書きなさい。"
+  ],
+  "stimuli": [
+    {
+      "id": "TK-DATA",
+      "type": "data",
+      "content": "ある中学校の全校生徒 300 人の通学方法と、通学方法別の平均通学時間（片道）を調べた。",
+      "title": "資料1・資料2",
+      "table": {
+        "rows": [
+          [
+            "徒歩",
+            "150 人",
+            "18 分"
+          ],
+          [
+            "自転車",
+            "90 人",
+            "12 分"
+          ],
+          [
+            "バス",
+            "60 人",
+            "25 分"
+          ]
+        ],
+        "header": [
+          "通学方法",
+          "資料1：人数",
+          "資料2：平均通学時間"
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q001",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "A、B、C、D の4人が横一列に並んでいる。次の条件をすべて満たすとき、左から2番目にいる人を選びなさい。\n・A は B のすぐ右にいる。\n・C は左はしではない。\n・D は A より左にいる。\n・C と D はとなり合っていない。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "A"
+        },
+        {
+          "label": "イ",
+          "text": "B"
+        },
+        {
+          "label": "ウ",
+          "text": "D"
+        },
+        {
+          "label": "エ",
+          "text": "C"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "条件を満たす並びは左から D、B、A、C のみ。B と A は「BA」の順で連続し、D は A より左、C は左はしではない。例えば B、A、D、C は D が A より左にない。D、B、A、C は C と D がとなり合っていないので条件を満たす。よって左から2番目は B。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q002",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "thinking",
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "同じ大きさの正方形のタイルを並べて図形をつくる。1番目は 3 枚、2番目は 5 枚、3番目は 7 枚のように、1つ前の図形に 2 枚ずつ加えていく。10番目の図形に使うタイルは何枚か。",
+      "answer": {
+        "value": "21",
+        "unit": "枚"
+      },
+      "explanation": "$n$ 番目の枚数は $2n+1$ と表せる。$2\\times10+1=21$（枚）。規則を式に表すと、何番目でもすぐに求められる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*10+1",
+        "expected": "21"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q003",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "thinking",
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある店では、仕入れ値 800 円の品物に 25% の利益を見込んで定価をつけた。その後、定価の 10% 引きで売った。このときの利益は何円か。",
+      "answer": {
+        "value": "100",
+        "unit": "円"
+      },
+      "explanation": "定価は $800\\times1.25=1000$（円）、売値は $1000\\times0.9=900$（円）。利益は $900-800=100$（円）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "800*Rational(125,100)*Rational(9,10)-800",
+        "expected": "100"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q004",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "thinking",
+        "data_interpretation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stimulus_ref": "TK-DATA",
+      "stem": "資料1・資料2から読み取れることとして最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "どの通学方法でも通学時間は同じである"
+        },
+        {
+          "label": "イ",
+          "text": "徒歩通学の生徒は全体の半数より少ない"
+        },
+        {
+          "label": "ウ",
+          "text": "バス通学の生徒の平均の通学時間は徒歩より短い"
+        },
+        {
+          "label": "エ",
+          "text": "自転車通学の生徒のほうが、平均の通学時間は短い"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "資料1より徒歩 150 人／300 人でちょうど半数（「半数より少ない」は誤り）。資料2より平均通学時間は自転車 12 分、徒歩 18 分、バス 25 分。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q005",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "thinking",
+        "data_interpretation",
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "資料1・資料2から、全校生徒 300 人の平均の通学時間を求めなさい。",
+      "answer": {
+        "value": "17.6",
+        "unit": "分"
+      },
+      "explanation": "$(18\\times150+12\\times90+25\\times60)\\div300=(2700+1080+1500)\\div300=5280\\div300=17.6$（分）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(18*150+12*90+25*60)/300",
+        "expected": "88/5"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q006",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "reading",
+        "thinking",
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "Admission to the City Museum costs 600 yen for adults and 300 yen for students. Groups of 10 or more people get a 20% discount on the total. A group of 2 adults and 10 students visits the museum. How much do they pay in total?（円で答えなさい）",
+      "answer": {
+        "value": "3360",
+        "unit": "円"
+      },
+      "explanation": "合計人数は 12 人で団体割引の対象。割引前は $600\\times2+300\\times10=4200$（円）。2割引きで $4200\\times0.8=3360$（円）。英文の条件を正確に読み取ることが必要。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(600*2+300*10)*Rational(8,10)",
+        "expected": "3360"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q007",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "thinking",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "ある日の気温と湿度を1時間ごとに測ったところ、気温が上がるにつれて湿度が下がった。この日の空気中の水蒸気量がほぼ一定だったとすると、このことを最もよく説明しているものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "湿度計が故障していたから"
+        },
+        {
+          "label": "イ",
+          "text": "気温と湿度はいつも同じように変化するから"
+        },
+        {
+          "label": "ウ",
+          "text": "気温が上がると空気中の水蒸気が減るから"
+        },
+        {
+          "label": "エ",
+          "text": "気温が上がると飽和水蒸気量が大きくなるので、水蒸気量が同じでも湿度は下がる"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "湿度＝水蒸気量÷飽和水蒸気量×100。分子が一定で、気温上昇により分母（飽和水蒸気量）が大きくなるので湿度は下がる。理科の知識を使った推論。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-TOKU-G3-U01-S1-Q008",
+      "grade": "JH3",
+      "subject": "integrated",
+      "unit_id": "JH-TOKU-G3-U01",
+      "skills": [
+        "writing",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "最初の問題で、条件を満たす並び方が「D、B、A、C」の1通りしかないことを、ほかの並び方が条件に合わない理由にふれながら説明しなさい。",
+      "answer": {
+        "value": "「A は B のすぐ右」より B と A は「BA」の順で連続する。この BA のかたまりの位置は左から（1・2）（2・3）（3・4）番目の3通り。（1・2）のとき D は A より左に置けない。（3・4）のとき D は1か2番目に、C は残りの位置になるが、C は左はしではないので C が2番目、D が1番目となり C と D がとなり合う。（2・3）のとき D は1番目、C は4番目となり、すべての条件を満たす。"
+      },
+      "explanation": "条件のうち、最も絞りこみやすいもの（BA が連続すること）から場合分けし、ほかの条件で一つずつ消していくと、もれなく確かめられる。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "BA が連続することから場合分けしている",
+            "points": 2
+          },
+          {
+            "criterion": "条件に合わない場合を理由とともに除いている",
+            "points": 2
+          },
+          {
+            "criterion": "1通りに決まることを結論づけている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "af0ebfcd03a9cfed586d50e7ac025ea083c09d4973a59e3d42cb41c59090f92f"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "PDF確認で、図のない問題に「図のように」とあった表現を修正：修正 1 問（Q002）",
+      "content_hash": "b7a0d59669437c68127c0f8c48eb05d4f02c0713c42af89dee987b599a712dc4"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:43:10+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "0b596f21da513b32c123ab7694b8a6afb88eb2d316515bfcf1e8d01455f5abcb"
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G2-U05-S1",
+  "title": "三角形と四角形",
+  "subtitle": "図形｜二等辺三角形・直角三角形の合同・平行四辺形の性質と条件・等積変形",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-MATH-G2-U05"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G2-U05-S1-Q001",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "頂角が $40^\\circ$ の二等辺三角形の底角は何度か。",
+      "answer": {
+        "value": "70",
+        "unit": "度"
+      },
+      "explanation": "底角は等しいので $(180-40)\\div2=70$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(180-40)/2",
+        "expected": "70"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q002",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\mathrm{AB}=\\mathrm{AC}$ の二等辺三角形 ABC で、$\\angle\\mathrm{B}=52^\\circ$ のとき、$\\angle\\mathrm{A}$ は何度か。",
+      "answer": {
+        "value": "76",
+        "unit": "度"
+      },
+      "explanation": "$\\angle\\mathrm{C}=52^\\circ$ なので $180-52\\times2=76$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180-2*52",
+        "expected": "76"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q003",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "平行四辺形の性質として正しくないものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "2組の対角はそれぞれ等しい"
+        },
+        {
+          "label": "イ",
+          "text": "2組の対辺はそれぞれ等しい"
+        },
+        {
+          "label": "ウ",
+          "text": "2本の対角線の長さは等しい"
+        },
+        {
+          "label": "エ",
+          "text": "対角線はそれぞれの中点で交わる"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "対角線の長さが等しいのは長方形の性質で、平行四辺形一般には成り立たない。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q004",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "平行四辺形 ABCD が長方形になるための条件として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{AC}=\\mathrm{BD}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{AC}\\perp\\mathrm{BD}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{AB}=\\mathrm{BC}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{AB}\\parallel\\mathrm{DC}$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "対角線の長さが等しい平行四辺形は長方形。$\\mathrm{AB}=\\mathrm{BC}$ や $\\mathrm{AC}\\perp\\mathrm{BD}$ はひし形になる条件。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q005",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "平行四辺形 ABCD がひし形になるための条件として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{AC}\\perp\\mathrm{BD}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\angle\\mathrm{A}=90^\\circ$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{AC}=\\mathrm{BD}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{AD}\\parallel\\mathrm{BC}$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "対角線が垂直に交わる、またはとなり合う辺が等しい平行四辺形はひし形になる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q006",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "直角三角形の合同条件として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "1つの鋭角がそれぞれ等しい"
+        },
+        {
+          "label": "イ",
+          "text": "斜辺以外の1辺がそれぞれ等しい"
+        },
+        {
+          "label": "ウ",
+          "text": "直角以外の2つの角がそれぞれ等しい"
+        },
+        {
+          "label": "エ",
+          "text": "斜辺と1つの鋭角がそれぞれ等しい"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "直角三角形の合同条件は「斜辺と1つの鋭角がそれぞれ等しい」「斜辺と他の1辺がそれぞれ等しい」の2つ。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q007",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "平行四辺形 ABCD で $\\angle\\mathrm{A}=110^\\circ$ のとき、$\\angle\\mathrm{B}$ は何度か。",
+      "answer": {
+        "value": "70",
+        "unit": "度"
+      },
+      "explanation": "平行四辺形のとなり合う角の和は $180^\\circ$。$180-110=70$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "180-110",
+        "expected": "70"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U05-S1-Q008",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U05",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "平行四辺形 ABCD の対角線の交点を O とし、O を通る直線が辺 AB、CD と交わる点をそれぞれ P、Q とする。このとき $\\mathrm{OP}=\\mathrm{OQ}$ であることを証明しなさい。",
+      "figure": {
+        "alt": "平行四辺形ABCDと対角線の交点O、Oを通る直線PQ",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 186 98\" width=\"186\" height=\"98\" font-family=\"serif\" font-size=\"12\"><line x1=\"38\" y1=\"16\" x2=\"16\" y2=\"82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"82\" x2=\"148\" y2=\"82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"148\" y1=\"82\" x2=\"170\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"170\" y1=\"16\" x2=\"38\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"38\" y1=\"16\" x2=\"148\" y2=\"82\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"82\" x2=\"170\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"27\" y1=\"49\" x2=\"159\" y2=\"49\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"24.57\" y=\"14.34\">A</text><text x=\"1.89\" y=\"90.33\">B</text><text x=\"153.43\" y=\"91.66\">C</text><text x=\"176.11\" y=\"15.67\">D</text><text x=\"89\" y=\"53\">O</text><text x=\"12\" y=\"53\">P</text><text x=\"166\" y=\"53\">Q</text></svg>"
+      },
+      "answer": {
+        "value": "$\\triangle\\mathrm{OAP}$ と $\\triangle\\mathrm{OCQ}$ において、平行四辺形の対角線はそれぞれの中点で交わるから $\\mathrm{OA}=\\mathrm{OC}$ …①。対頂角は等しいから $\\angle\\mathrm{AOP}=\\angle\\mathrm{COQ}$ …②。$\\mathrm{AB}\\parallel\\mathrm{DC}$ より錯角は等しいから $\\angle\\mathrm{OAP}=\\angle\\mathrm{OCQ}$ …③。①②③より、1組の辺とその両端の角がそれぞれ等しいので $\\triangle\\mathrm{OAP}\\equiv\\triangle\\mathrm{OCQ}$。合同な図形の対応する辺は等しいので $\\mathrm{OP}=\\mathrm{OQ}$。"
+      },
+      "explanation": "OP と OQ をふくむ三角形を見つけ、平行四辺形の性質（対角線の性質、対辺の平行）から等しい辺と角を示す。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "合同を示す2つの三角形を正しく設定している",
+            "points": 1
+          },
+          {
+            "criterion": "等しい辺・角を根拠とともに3つ示している",
+            "points": 2
+          },
+          {
+            "criterion": "合同条件を正しく述べている",
+            "points": 1
+          },
+          {
+            "criterion": "合同から OP＝OQ を結論づけている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "56419c5395664d9f0924c80439d54235eb22c8e1e58986205a039e5288cd23c1"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "3341f26f8a125fd022169e26849e1ce9bb91d95c91230208b05431d8d5bb283e"
+  }
+}

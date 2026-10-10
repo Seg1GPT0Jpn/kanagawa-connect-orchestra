@@ -46,6 +46,10 @@ class ValidatorTest(unittest.TestCase):
         for c in ("schema", "answer", "curriculum", "calc_check", "duplicate_id", "latex", "scoring"):
             self.assertIn(c, cats, c)
 
+    def test_answer_must_match_calc_check(self):
+        msgs = [i.message for i in issues_of(self.rep, "invalid_schema.json") if i.category == "calc_check"]
+        self.assertTrue(any("正答 3" in m for m in msgs), msgs)
+
     def test_error_lines_point_into_file(self):
         for i in issues_of(self.rep, "invalid_schema.json"):
             self.assertIsNotNone(i.line, i.format())

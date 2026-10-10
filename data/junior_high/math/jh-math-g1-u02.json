@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G1-U02-S1",
+  "title": "文字と式",
+  "subtitle": "数と式｜文字式の表し方・式の値・一次式の計算・関係を表す式",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH1",
+  "unit_ids": [
+    "JH-MATH-G1-U02"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G1-U02-S1-Q001",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a\\times3\\times b$ を、文字式の表し方にしたがって書きなさい。",
+      "answer": {
+        "value": "$3ab$",
+        "accepted": [
+          "3ab"
+        ]
+      },
+      "explanation": "数を文字の前に書き、文字はふつうアルファベット順に並べ、$\\times$ は省く。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q002",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x\\div4$ を、文字式の表し方にしたがって書きなさい。",
+      "answer": {
+        "value": "$\\dfrac{x}{4}$",
+        "accepted": [
+          "x/4",
+          "1/4x"
+        ]
+      },
+      "explanation": "わり算は分数の形で書く。$\\dfrac{1}{4}x$ でもよい。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q003",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$x=-2$ のとき、$3x^2-x$ の値を求めなさい。",
+      "answer": {
+        "value": "14"
+      },
+      "explanation": "$3\\times(-2)^2-(-2)=12+2=14$。負の数を代入するときはかっこをつける。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3*(-2)**2-(-2)",
+        "expected": "14"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q004",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$(4x-3)-(2x-5)$ を計算しなさい。",
+      "answer": {
+        "value": "$2x+2$",
+        "accepted": [
+          "2x+2"
+        ]
+      },
+      "explanation": "かっこをはずすと $4x-3-2x+5=2x+2$。ひく式の各項の符号が変わる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((4*x-3)-(2*x-5))",
+        "expected": "2*x+2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q005",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$-3(2a-1)+2(a+4)$ を計算しなさい。",
+      "answer": {
+        "value": "$-4a+11$",
+        "accepted": [
+          "-4a+11"
+        ]
+      },
+      "explanation": "$-6a+3+2a+8=-4a+11$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(-3*(2*a-1)+2*(a+4))",
+        "expected": "-4*a+11"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q006",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "1個 $a$ 円のりんご3個と、1本 $b$ 円のジュース2本を買ったときの代金を、文字式で表しなさい。",
+      "answer": {
+        "value": "$(3a+2b)$ 円",
+        "accepted": [
+          "3a+2b",
+          "3a+2b円"
+        ]
+      },
+      "explanation": "りんごの代金 $3a$ 円とジュースの代金 $2b$ 円の和。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q007",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\dfrac{2x-1}{3}-\\dfrac{x-2}{4}$ を計算しなさい。",
+      "answer": {
+        "value": "$\\dfrac{5x+2}{12}$",
+        "accepted": [
+          "(5x+2)/12"
+        ]
+      },
+      "explanation": "通分して $\\dfrac{4(2x-1)-3(x-2)}{12}=\\dfrac{8x-4-3x+6}{12}=\\dfrac{5x+2}{12}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2*x-1)/3-(x-2)/4",
+        "expected": "(5*x+2)/12"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U02-S1-Q008",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "「1冊 $x$ 円のノート3冊と、120円のペン1本の代金の合計は1000円以下である」という数量の関係を不等式で表しなさい。",
+      "answer": {
+        "value": "$3x+120\\leqq1000$",
+        "accepted": [
+          "3x+120≦1000",
+          "3x+120<=1000"
+        ]
+      },
+      "explanation": "代金の合計は $3x+120$（円）。「以下」は $\\leqq$ で表す。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "70d165567a040f9c4d783b1b6803f2647f0ea40174eccfb6cc48ca7e522eb300"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "6b20508646f1af0e420c2cfca1ec19667452e6fe77f621a9fa86857513e71402"
+  }
+}

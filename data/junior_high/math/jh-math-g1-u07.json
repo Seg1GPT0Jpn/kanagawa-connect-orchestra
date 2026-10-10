@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G1-U07-S1",
+  "title": "データの活用",
+  "subtitle": "データの活用｜度数分布表とヒストグラム・相対度数・累積相対度数・代表値・多数回の試行と確率",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH1",
+  "unit_ids": [
+    "JH-MATH-G1-U07"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G1-U07-S1-Q001",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "データの中で最も多く現れる値を何というか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "範囲"
+        },
+        {
+          "label": "イ",
+          "text": "平均値"
+        },
+        {
+          "label": "ウ",
+          "text": "中央値"
+        },
+        {
+          "label": "エ",
+          "text": "最頻値"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "最も多く現れる値を最頻値（モード）という。度数分布表では度数の最も大きい階級の階級値。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q002",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "度数の合計が 40 の度数分布表で、ある階級の度数が 8 であった。この階級の相対度数を求めなさい。",
+      "answer": {
+        "value": "0.2"
+      },
+      "explanation": "相対度数＝階級の度数÷度数の合計＝$8\\div40=0.2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "8/40",
+        "expected": "0.2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q003",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの中央値を求めなさい。\n4，7，7，8，10，12",
+      "answer": {
+        "value": "7.5"
+      },
+      "explanation": "データの個数が偶数なので、中央の2つの値 7 と 8 の平均をとる。$(7+8)\\div2=7.5$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "median([4,7,7,8,10,12])",
+        "expected": "7.5"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q004",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの平均値を求めなさい。\n3，5，8，8，11",
+      "answer": {
+        "value": "7"
+      },
+      "explanation": "$(3+5+8+8+11)\\div5=35\\div5=7$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "mean([3,5,8,8,11])",
+        "expected": "7"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q005",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation",
+        "data_interpretation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "表は、ある学級 20 人の通学時間をまとめたものである。20 分以上 30 分未満の階級までの累積相対度数を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "0 以上 10 未満",
+            2
+          ],
+          [
+            "10 〜 20",
+            6
+          ],
+          [
+            "20 〜 30",
+            8
+          ],
+          [
+            "30 〜 40",
+            4
+          ],
+          [
+            "合計",
+            20
+          ]
+        ],
+        "header": [
+          "通学時間（分）",
+          "度数（人）"
+        ]
+      },
+      "answer": {
+        "value": "0.8"
+      },
+      "explanation": "20 分以上 30 分未満までの累積度数は $2+6+8=16$（人）。累積相対度数は $16\\div20=0.8$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2+6+8)/20",
+        "expected": "0.8"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q006",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation",
+        "data_interpretation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "前の問題の度数分布表から、通学時間の平均値を求めなさい。ただし、各階級の値は階級値（階級の中央の値）で代表させる。",
+      "answer": {
+        "value": "22",
+        "unit": "分"
+      },
+      "explanation": "（階級値×度数）の合計は $5\\times2+15\\times6+25\\times8+35\\times4=440$。平均値は $440\\div20=22$（分）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(5*2+15*6+25*8+35*4)/20",
+        "expected": "22"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q007",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの範囲を求めなさい。\n3，5，6，9，12",
+      "answer": {
+        "value": "9"
+      },
+      "explanation": "範囲＝最大値－最小値＝$12-3=9$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "12-3",
+        "expected": "9"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U07-S1-Q008",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U07",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ペットボトルのキャップを投げる実験を 1000 回行ったところ、表向きになったのは 420 回であった。このキャップを 2500 回投げると、表向きになるのはおよそ何回と考えられるか。",
+      "answer": {
+        "value": "1050",
+        "unit": "回"
+      },
+      "explanation": "表向きになる相対度数は $420\\div1000=0.42$。多数回の実験では相対度数を確率とみなせるので、$2500\\times0.42=1050$（回）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2500*420/1000",
+        "expected": "1050"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "65f25c16569901fa4d2977b48c7a835a5b084db71e36ea2a2285a789ff79d300"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "d1699060b2321db1ec72487c29b1c2600c9d214b85d6b50b3f664ad6a09d7b07"
+  }
+}

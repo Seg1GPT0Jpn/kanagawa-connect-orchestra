@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G1-U06-S1",
+  "title": "空間図形",
+  "subtitle": "図形｜直線や平面の位置関係・回転体・立体の表面積と体積",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH1",
+  "unit_ids": [
+    "JH-MATH-G1-U06"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G1-U06-S1-Q001",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "正多面体は全部で何種類あるか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "5種類"
+        },
+        {
+          "label": "イ",
+          "text": "6種類"
+        },
+        {
+          "label": "ウ",
+          "text": "4種類"
+        },
+        {
+          "label": "エ",
+          "text": "無数にある"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "正四面体・正六面体・正八面体・正十二面体・正二十面体の5種類。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q002",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "底面が1辺 5 cm の正方形で、高さが 6 cm の正四角錐の体積を求めなさい。",
+      "answer": {
+        "value": "50",
+        "unit": "cm³"
+      },
+      "explanation": "$\\dfrac{1}{3}\\times5^2\\times6=50$（cm³）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,3)*25*6",
+        "expected": "50"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q003",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "半径 3 cm の球の体積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$36\\pi\\,\\mathrm{cm}^3$",
+        "accepted": [
+          "36π",
+          "36πcm³"
+        ]
+      },
+      "explanation": "$\\dfrac{4}{3}\\pi r^3=\\dfrac{4}{3}\\pi\\times27=36\\pi$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(4,3)*pi*27",
+        "expected": "36*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q004",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "半径 5 cm の球の表面積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$100\\pi\\,\\mathrm{cm}^2$",
+        "accepted": [
+          "100π",
+          "100πcm²"
+        ]
+      },
+      "explanation": "$4\\pi r^2=4\\pi\\times25=100\\pi$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "4*pi*25",
+        "expected": "100*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q005",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "立方体 ABCD-EFGH で、辺 AB とねじれの位置にある辺は何本あるか。ただし、辺 AE、BF、CG、DH は平行で、面 ABCD と面 EFGH が向かい合っている。",
+      "answer": {
+        "value": "4",
+        "unit": "本"
+      },
+      "explanation": "辺 AB と平行な辺は DC、EF、HG、交わる辺は AD、AE、BC、BF。残りの CG、DH、EH、FG の4本がねじれの位置にある。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "12-1-3-4",
+        "expected": "4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q006",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "底面の半径が 2 cm、高さが 5 cm の円柱の体積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$20\\pi\\,\\mathrm{cm}^3$",
+        "accepted": [
+          "20π",
+          "20πcm³"
+        ]
+      },
+      "explanation": "$\\pi\\times2^2\\times5=20\\pi$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "pi*4*5",
+        "expected": "20*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q007",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "底面の半径が 2 cm、高さが 5 cm の円柱の表面積を求めなさい。ただし、円周率は $\\pi$ とする。",
+      "answer": {
+        "value": "$28\\pi\\,\\mathrm{cm}^2$",
+        "accepted": [
+          "28π",
+          "28πcm²"
+        ]
+      },
+      "explanation": "底面積 $4\\pi$ が2つと、側面（縦 5 cm、横は底面の円周 $4\\pi$ cm の長方形）の $20\\pi$ を合わせて $28\\pi$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*pi*4+2*pi*2*5",
+        "expected": "28*pi"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G1-U06-S1-Q008",
+      "grade": "JH1",
+      "subject": "math",
+      "unit_id": "JH-MATH-G1-U06",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "母線の長さが 6 cm、底面の半径が 2 cm の円錐の展開図で、側面のおうぎ形の中心角は何度か。",
+      "answer": {
+        "value": "120",
+        "unit": "度"
+      },
+      "explanation": "おうぎ形の弧の長さは底面の円周 $4\\pi$ に等しい。半径 6 の円周は $12\\pi$ なので、中心角は $360\\times\\dfrac{4\\pi}{12\\pi}=120^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "360*2/6",
+        "expected": "120"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "489fca6c5999d535723ded7f08c6bfb922d846bdc3ee6cacf46c7977fc7e253c"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "c260906da3f6e3929ac3f08c4f93cb7e1cd648719897f9fc28ff550689b91646"
+  }
+}

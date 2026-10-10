@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G3-U07-S1",
+  "title": "三平方の定理",
+  "subtitle": "図形｜三平方の定理・平面図形への利用・空間図形への利用",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH3",
+  "unit_ids": [
+    "JH-MATH-G3-U07"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G3-U07-S1-Q001",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "直角をはさむ2辺の長さが 6 cm、8 cm の直角三角形の斜辺の長さは何 cm か。",
+      "answer": {
+        "value": "10",
+        "unit": "cm"
+      },
+      "explanation": "$\\sqrt{6^2+8^2}=\\sqrt{100}=10$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sqrt(6**2+8**2)",
+        "expected": "10"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q002",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "斜辺が 13 cm、他の1辺が 5 cm の直角三角形の残りの辺の長さは何 cm か。",
+      "answer": {
+        "value": "12",
+        "unit": "cm"
+      },
+      "explanation": "$\\sqrt{13^2-5^2}=\\sqrt{144}=12$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sqrt(13**2-5**2)",
+        "expected": "12"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q003",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "1辺が 4 cm の正方形の対角線の長さを求めなさい。",
+      "answer": {
+        "value": "$4\\sqrt{2}\\,\\mathrm{cm}$",
+        "accepted": [
+          "4√2",
+          "4√2cm"
+        ]
+      },
+      "explanation": "直角二等辺三角形の辺の比 $1:1:\\sqrt{2}$ より $4\\sqrt{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sqrt(4**2+4**2)",
+        "expected": "4*sqrt(2)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q004",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "1辺が 6 cm の正三角形の高さを求めなさい。",
+      "answer": {
+        "value": "$3\\sqrt{3}\\,\\mathrm{cm}$",
+        "accepted": [
+          "3√3",
+          "3√3cm"
+        ]
+      },
+      "explanation": "高さで2つに分けた直角三角形の辺の比 $1:2:\\sqrt{3}$ より $3\\sqrt{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(6**2-3**2)",
+        "expected": "3*sqrt(3)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q005",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "2点 $(1,\\,2)$、$(4,\\,6)$ の間の距離を求めなさい。",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$\\sqrt{(4-1)^2+(6-2)^2}=\\sqrt{25}=5$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(3**2+4**2)",
+        "expected": "5"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q006",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "縦 3 cm、横 4 cm、高さ 12 cm の直方体の対角線の長さは何 cm か。",
+      "answer": {
+        "value": "13",
+        "unit": "cm"
+      },
+      "explanation": "$\\sqrt{3^2+4^2+12^2}=\\sqrt{169}=13$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(9+16+144)",
+        "expected": "13"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q007",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "底面が1辺 6 cm の正方形で、側面の4つの辺（側辺）がすべて 5 cm の正四角錐の高さを求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{7}\\,\\mathrm{cm}$",
+        "accepted": [
+          "√7",
+          "√7cm"
+        ]
+      },
+      "explanation": "底面の対角線の半分は $3\\sqrt{2}$。高さは $\\sqrt{5^2-(3\\sqrt{2})^2}=\\sqrt{25-18}=\\sqrt{7}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(5**2-(3*sqrt(2))**2)",
+        "expected": "sqrt(7)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U07-S1-Q008",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U07",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "前の問題の正四角錐の体積を求めなさい。",
+      "answer": {
+        "value": "$12\\sqrt{7}\\,\\mathrm{cm}^3$",
+        "accepted": [
+          "12√7",
+          "12√7cm³"
+        ]
+      },
+      "explanation": "$\\dfrac{1}{3}\\times36\\times\\sqrt{7}=12\\sqrt{7}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Rational(1,3)*36*sqrt(7)",
+        "expected": "12*sqrt(7)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "f81485a1bc1c3447a46ae0fbab5b1c0e3131940113446a6edc66fe7708547ff2"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "1dc8dc2cb1b5ca4a4ae746467a71d2f589cea6689fab8ae82667f06161468072"
+  }
+}

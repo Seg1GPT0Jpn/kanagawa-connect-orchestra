@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G2-U07-S1",
+  "title": "データの分布　四分位範囲と箱ひげ図",
+  "subtitle": "データの活用｜四分位数・四分位範囲・箱ひげ図",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-MATH-G2-U07"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G2-U07-S1-Q001",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "箱ひげ図の「箱」の部分が表している範囲として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "最小値から中央値まで"
+        },
+        {
+          "label": "イ",
+          "text": "最小値から最大値まで"
+        },
+        {
+          "label": "ウ",
+          "text": "第1四分位数から第3四分位数まで"
+        },
+        {
+          "label": "エ",
+          "text": "平均値を中心とした範囲"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "箱は第1四分位数から第3四分位数まで（データの中央付近の約半数）を表し、箱の中の線が中央値（第2四分位数）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q002",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次のデータの中央値を求めなさい。\n2，4，5，6，7，8，9，11，12",
+      "answer": {
+        "value": "7"
+      },
+      "explanation": "9個のデータの5番目の値。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "median([2,4,5,6,7,8,9,11,12])",
+        "expected": "7"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q003",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "前の問題のデータの第1四分位数を求めなさい。",
+      "answer": {
+        "value": "4.5"
+      },
+      "explanation": "中央値より小さい 2，4，5，6 の中央値で $(4+5)\\div2=4.5$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([2,4,5,6,7,8,9,11,12])[0]",
+        "expected": "9/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q004",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "前の問題のデータの第3四分位数を求めなさい。",
+      "answer": {
+        "value": "10"
+      },
+      "explanation": "中央値より大きい 8，9，11，12 の中央値で $(9+11)\\div2=10$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "quartiles([2,4,5,6,7,8,9,11,12])[2]",
+        "expected": "10"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q005",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "前の問題のデータの四分位範囲を求めなさい。",
+      "answer": {
+        "value": "5.5"
+      },
+      "explanation": "四分位範囲＝第3四分位数－第1四分位数＝$10-4.5=5.5$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "10-Rational(9,2)",
+        "expected": "11/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q006",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "箱ひげ図だけからは読み取ることができないものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "範囲"
+        },
+        {
+          "label": "イ",
+          "text": "中央値"
+        },
+        {
+          "label": "ウ",
+          "text": "平均値"
+        },
+        {
+          "label": "エ",
+          "text": "四分位範囲"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "箱ひげ図には最小値・第1四分位数・中央値・第3四分位数・最大値が表されるが、平均値は表されない（平均値を＋印などでかき加えることはある）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q007",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "表は、A 組と B 組の小テストの結果をまとめたものである。表から読み取れることとして正しいものを選びなさい。",
+      "table": {
+        "rows": [
+          [
+            "A 組",
+            30,
+            45,
+            60,
+            70,
+            90
+          ],
+          [
+            "B 組",
+            35,
+            50,
+            55,
+            78,
+            85
+          ]
+        ],
+        "header": [
+          "",
+          "最小値",
+          "第1四分位数",
+          "中央値",
+          "第3四分位数",
+          "最大値"
+        ]
+      },
+      "choices": [
+        {
+          "label": "ア",
+          "text": "四分位範囲は B 組のほうが大きい"
+        },
+        {
+          "label": "イ",
+          "text": "中央値は B 組のほうが大きい"
+        },
+        {
+          "label": "ウ",
+          "text": "範囲は B 組のほうが大きい"
+        },
+        {
+          "label": "エ",
+          "text": "A 組では 60 点以上の生徒が半数より少ない"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "四分位範囲は A 組 $70-45=25$、B 組 $78-50=28$。範囲は A 組 60、B 組 50。中央値は A 組 60、B 組 55。A 組の中央値が 60 なので、60 点以上は半数以上いる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G2-U07-S1-Q008",
+      "grade": "JH2",
+      "subject": "math",
+      "unit_id": "JH-MATH-G2-U07",
+      "skills": [
+        "data_interpretation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "前の問題の A 組の人数は 31 人である。A 組で 60 点以上の生徒は、少なくとも何人いるか。",
+      "answer": {
+        "value": "16",
+        "unit": "人"
+      },
+      "explanation": "31 人のデータの中央値は小さい方から 16 番目の値。中央値が 60 点なので、16 番目から 31 番目の 16 人は 60 点以上である。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "31-16+1",
+        "expected": "16"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "1f7a1a464a58888e4ab9a3415e6766d25f8633663eacd3bf86412479c2d61a7b"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "61e1dc54d936fb0301c2f1458f51f806ae71bc377844ae64a0606c9a1bdaac55"
+  }
+}

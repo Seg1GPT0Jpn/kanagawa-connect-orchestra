@@ -696,6 +696,14 @@
         },
         "note": {
           "type": "string"
+        },
+        "target": {
+          "enum": [
+            "answer",
+            "intermediate"
+          ],
+          "default": "answer",
+          "description": "answer: 数値・短答の問題では expected が正答（answer.value）と一致することも検査する。intermediate: 途中計算の検算（正答とは照合しない）。"
         }
       }
     },

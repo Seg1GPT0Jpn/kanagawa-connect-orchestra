@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G3-U03-S1",
+  "title": "二次方程式",
+  "subtitle": "数と式｜因数分解による解法・平方完成・解の公式・二次方程式の利用",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH3",
+  "unit_ids": [
+    "JH-MATH-G3-U03"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G3-U03-S1-Q001",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $x^2=25$ を解きなさい。",
+      "answer": {
+        "value": "$x=\\pm5$",
+        "accepted": [
+          "x=±5",
+          "±5"
+        ]
+      },
+      "explanation": "平方根の考えを使う。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "solve(x**2-25, x)",
+        "expected": "[-5, 5]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q002",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $(x-3)^2=7$ を解きなさい。",
+      "answer": {
+        "value": "$x=3\\pm\\sqrt{7}$",
+        "accepted": [
+          "x=3±√7"
+        ]
+      },
+      "explanation": "$x-3=\\pm\\sqrt{7}$ より $x=3\\pm\\sqrt{7}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "solve((x-3)**2-7, x)",
+        "expected": "[3-sqrt(7), 3+sqrt(7)]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q003",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $x^2-5x+6=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=2,\\ 3$",
+        "accepted": [
+          "x=2,3"
+        ]
+      },
+      "explanation": "$(x-2)(x-3)=0$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "solve(x**2-5*x+6, x)",
+        "expected": "[2, 3]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q004",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $x^2+4x-21=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=-7,\\ 3$",
+        "accepted": [
+          "x=-7,3"
+        ]
+      },
+      "explanation": "$(x+7)(x-3)=0$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(x**2+4*x-21, x)",
+        "expected": "[-7, 3]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q005",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $2x^2-3x-1=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=\\dfrac{3\\pm\\sqrt{17}}{4}$",
+        "accepted": [
+          "x=(3±√17)/4"
+        ]
+      },
+      "explanation": "解の公式より $x=\\dfrac{3\\pm\\sqrt{9+8}}{4}=\\dfrac{3\\pm\\sqrt{17}}{4}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(2*x**2-3*x-1, x)",
+        "expected": "[(3-sqrt(17))/4, (3+sqrt(17))/4]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q006",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $x^2+ax-12=0$ の解の1つが 3 であるとき、$a$ の値ともう1つの解を求めなさい。",
+      "answer": {
+        "value": "$a=1$、もう1つの解 $x=-4$"
+      },
+      "explanation": "$x=3$ を代入して $9+3a-12=0$、$a=1$。$x^2+x-12=(x+4)(x-3)=0$ より、もう1つの解は $-4$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**2+x-12, x)",
+        "expected": "[-4, 3]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q007",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "連続する2つの正の整数がある。その積が 132 であるとき、2つの整数を求めなさい。",
+      "answer": {
+        "value": "11 と 12"
+      },
+      "explanation": "小さい方を $x$ とすると $x(x+1)=132$、$x^2+x-132=0$、$(x+12)(x-11)=0$。$x>0$ より $x=11$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x*(x+1)-132, x)",
+        "expected": "[-12, 11]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U03-S1-Q008",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U03",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "縦 10 m、横 15 m の長方形の土地に、図のように同じ幅の道を縦と横に1本ずつつくり、残りを花だんにしたところ、花だんの面積は 126 m² になった。道の幅は何 m か。",
+      "figure": {
+        "alt": "縦10m横15mの長方形の土地に、縦と横に同じ幅の道が十字に通っている",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190.4 132.8\" width=\"190.4\" height=\"132.8\" font-family=\"serif\" font-size=\"12\"><line x1=\"39.4\" y1=\"16\" x2=\"39.4\" y2=\"106\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"39.4\" y1=\"106\" x2=\"174.4\" y2=\"106\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"174.4\" y1=\"106\" x2=\"174.4\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"174.4\" y1=\"16\" x2=\"39.4\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"93.4\" y1=\"16\" x2=\"93.4\" y2=\"106\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"102.4\" y1=\"16\" x2=\"102.4\" y2=\"106\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"39.4\" y1=\"70\" x2=\"174.4\" y2=\"70\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"39.4\" y1=\"61\" x2=\"174.4\" y2=\"61\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"16\" y=\"59.2\" font-size=\"10.5\">10m</text><text x=\"102.4\" y=\"116.8\" font-size=\"10.5\">15m</text></svg>"
+      },
+      "answer": {
+        "value": "1",
+        "unit": "m"
+      },
+      "explanation": "道を土地の端に寄せて考えると、花だんは縦 $(10-x)$ m、横 $(15-x)$ m の長方形になる。$(10-x)(15-x)=126$、$x^2-25x+24=0$、$(x-1)(x-24)=0$。$0<x<10$ より $x=1$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve((10-x)*(15-x)-126, x)[0]",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "c0f70df9b3fa752dacd4a5352d5047fc38db08d868a085259b8a4838dbd1994f"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "検算と正答の照合を追加したことに伴う検算式の修正：修正 1 問（Q008）",
+      "content_hash": "a875e6f3d115f4f00744390f42c54a7804508bd9c133c596b191364cae379f82"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "c5a44c210f9eab2053a492786302b0b825d7db24523f1c53da6a15f0a64d37cf"
+  }
+}

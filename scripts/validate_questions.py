@@ -597,6 +597,8 @@ def math_delimiters_balanced(s: str) -> bool:
     return s.count("$") % 2 == 0
 
 
+_NUMERIC = re.compile(r"-?\d+(?:\.\d+)?(?:/\d+)?")
+
 REQUIRED_Q_FIELDS = {
     "id": "問題ID",
     "answer": "正答",
@@ -761,12 +763,18 @@ def check_file(fr: FileResult, rep: Reporter, validator, units: dict, run_calc: 
         if cp.get("status") == "needs_clearance":
             rep.add(fr, "WARNING", "copyright", base + ("copyright", "status"), "権利処理が未完了です（公開・配布不可）")
 
-        # 検算
+        # 検算（式＝期待値、さらに数値の正答なら正答＝期待値）
         cc = q.get("calc_check")
         if run_calc and isinstance(cc, dict) and "expression" in cc and "expected" in cc:
             msg = run_calc_check(cc)
             if msg:
                 rep.add(fr, "ERROR", "calc_check", base + ("calc_check",), msg)
+            elif (qtype in ("numeric", "short_answer", "fill_in_blank") and cc.get("target", "answer") == "answer"
+                  and (isinstance(val, (int, float)) or (isinstance(val, str) and _NUMERIC.fullmatch(val.strip())))):
+                msg = run_calc_check({"expression": str(val).strip(), "expected": cc["expected"], "compare": "value"})
+                if msg:
+                    rep.add(fr, "ERROR", "calc_check", base + ("answer", "value"),
+                            f"正答 {val} が検算の期待値 {cc['expected']} と一致しません")
 
     tp = data.get("total_points")
     if isinstance(tp, (int, float)) and points_ok and questions and abs(tp - total) > 1e-9:

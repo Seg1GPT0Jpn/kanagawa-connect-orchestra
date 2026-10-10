@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G3-U05-S1",
+  "title": "相似な図形",
+  "subtitle": "図形｜相似条件・平行線と線分の比・中点連結定理・相似比と面積比・体積比",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH3",
+  "unit_ids": [
+    "JH-MATH-G3-U05"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G3-U05-S1-Q001",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次のうち、三角形の相似条件を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "2組の辺がそれぞれ等しい"
+        },
+        {
+          "label": "イ",
+          "text": "1組の角が等しい"
+        },
+        {
+          "label": "ウ",
+          "text": "1組の辺とその両端の角がそれぞれ等しい"
+        },
+        {
+          "label": "エ",
+          "text": "2組の角がそれぞれ等しい"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "相似条件は「3組の辺の比がすべて等しい」「2組の辺の比とその間の角がそれぞれ等しい」「2組の角がそれぞれ等しい」。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q002",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "相似比が $2:3$ の2つの三角形がある。小さい方の三角形の周の長さが 12 cm のとき、大きい方の周の長さは何 cm か。",
+      "answer": {
+        "value": "18",
+        "unit": "cm"
+      },
+      "explanation": "周の長さの比も相似比に等しい。$12\\times\\dfrac{3}{2}=18$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "12*Rational(3,2)",
+        "expected": "18"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q003",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "相似比が $2:3$ の2つの三角形がある。小さい方の面積が 20 cm² のとき、大きい方の面積は何 cm² か。",
+      "answer": {
+        "value": "45",
+        "unit": "cm²"
+      },
+      "explanation": "面積比は相似比の2乗で $4:9$。$20\\times\\dfrac{9}{4}=45$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "20*Rational(9,4)",
+        "expected": "45"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q004",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "相似比が $2:3$ の2つの立体がある。小さい方の体積が 16 cm³ のとき、大きい方の体積は何 cm³ か。",
+      "answer": {
+        "value": "54",
+        "unit": "cm³"
+      },
+      "explanation": "体積比は相似比の3乗で $8:27$。$16\\times\\dfrac{27}{8}=54$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "16*Rational(27,8)",
+        "expected": "54"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q005",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ の辺 AB、AC の中点をそれぞれ M、N とする。$\\mathrm{BC}=14$ cm のとき、MN の長さは何 cm か。",
+      "answer": {
+        "value": "7",
+        "unit": "cm"
+      },
+      "explanation": "中点連結定理より $\\mathrm{MN}=\\dfrac{1}{2}\\mathrm{BC}=7$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "14/2",
+        "expected": "7"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q006",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\triangle\\mathrm{ABC}$ で、辺 AB 上の点 D、辺 AC 上の点 E について $\\mathrm{DE}\\parallel\\mathrm{BC}$、$\\mathrm{AD}:\\mathrm{DB}=3:2$、$\\mathrm{AE}=6$ cm である。EC の長さは何 cm か。",
+      "answer": {
+        "value": "4",
+        "unit": "cm"
+      },
+      "explanation": "平行線と線分の比より $\\mathrm{AE}:\\mathrm{EC}=\\mathrm{AD}:\\mathrm{DB}=3:2$。$\\mathrm{EC}=6\\times\\dfrac{2}{3}=4$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "6*Rational(2,3)",
+        "expected": "4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q007",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "長さ 1 m の棒を地面に垂直に立てたところ、影の長さが 1.2 m であった。同じ時刻に、木の影の長さが 9 m であった。木の高さは何 m か。",
+      "answer": {
+        "value": "7.5",
+        "unit": "m"
+      },
+      "explanation": "棒と影、木と影でできる直角三角形は相似。木の高さを $x$ m とすると $1:1.2=x:9$、$x=7.5$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "9/Rational(12,10)",
+        "expected": "15/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U05-S1-Q008",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\mathrm{AD}\\parallel\\mathrm{BC}$、$\\mathrm{AD}=6$ cm、$\\mathrm{BC}=10$ cm の台形 ABCD で、対角線の交点を O とする。$\\triangle\\mathrm{AOD}$ と $\\triangle\\mathrm{COB}$ の面積の比を求めなさい。",
+      "answer": {
+        "value": "$9:25$",
+        "accepted": [
+          "9:25"
+        ]
+      },
+      "explanation": "$\\mathrm{AD}\\parallel\\mathrm{BC}$ より $\\triangle\\mathrm{AOD}\\sim\\triangle\\mathrm{COB}$ で、相似比は $6:10=3:5$。面積比は $9:25$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Rational(6,10)**2",
+        "expected": "9/25"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "5910d23b1de0d7e425f0c9b26a08fe7a702a3993e79f07255922354d01b5f66e"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "cdba8d73adf8eb697e4e6979d4f179412e13bd8accd4ea92a51fe36ad7db9186"
+  }
+}

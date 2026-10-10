@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-MATH-G3-U06-S1",
+  "title": "円",
+  "subtitle": "図形｜円周角の定理・円周角の定理の逆・円と相似",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH3",
+  "unit_ids": [
+    "JH-MATH-G3-U06"
+  ],
+  "instructions": [
+    "答えが分数になるときは、それ以上約分できない形で答えなさい。根号を含む答えは、根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-MATH-G3-U06-S1-Q001",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円 O で、弧 AB に対する中心角が $100^\\circ$ のとき、同じ弧に対する円周角は何度か。",
+      "answer": {
+        "value": "50",
+        "unit": "度"
+      },
+      "explanation": "円周角は中心角の半分。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "100/2",
+        "expected": "50"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q002",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "線分 AB を直径とする円の周上に点 C（A、B と異なる）をとる。$\\angle\\mathrm{ACB}$ は何度か。",
+      "answer": {
+        "value": "90",
+        "unit": "度"
+      },
+      "explanation": "半円の弧に対する円周角は $90^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180/2",
+        "expected": "90"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q003",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "線分 AB を直径とする円の周上に点 C をとる。$\\angle\\mathrm{ABC}=34^\\circ$ のとき、$\\angle\\mathrm{BAC}$ は何度か。",
+      "answer": {
+        "value": "56",
+        "unit": "度"
+      },
+      "explanation": "$\\angle\\mathrm{ACB}=90^\\circ$ なので $180-90-34=56$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "180-90-34",
+        "expected": "56"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q004",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "4点 A、B、C、D について、2点 C、D が直線 AB について同じ側にあり、$\\angle\\mathrm{ACB}=\\angle\\mathrm{ADB}$ であるとき、いえることを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{AB}\\parallel\\mathrm{CD}$ である"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{AC}=\\mathrm{BD}$ である"
+        },
+        {
+          "label": "ウ",
+          "text": "4点 A、B、C、D は1つの円周上にある"
+        },
+        {
+          "label": "エ",
+          "text": "四角形 ABCD は平行四辺形である"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "円周角の定理の逆により、4点は1つの円周上にある。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q005",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "円周を6等分する点を順に A、B、C、D、E、F とするとき、$\\angle\\mathrm{ADB}$ は何度か。",
+      "answer": {
+        "value": "30",
+        "unit": "度"
+      },
+      "explanation": "弧 AB に対する中心角は $360\\div6=60^\\circ$。円周角はその半分の $30^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "360/6/2",
+        "expected": "30"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q006",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "円 O の外部の点 P から円 O に2本の接線をひき、接点を A、B とする。$\\angle\\mathrm{APB}=50^\\circ$ のとき、$\\angle\\mathrm{AOB}$ は何度か。",
+      "answer": {
+        "value": "130",
+        "unit": "度"
+      },
+      "explanation": "接線は接点を通る半径に垂直なので $\\angle\\mathrm{OAP}=\\angle\\mathrm{OBP}=90^\\circ$。四角形 OAPB の内角の和から $360-90-90-50=130$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "360-90-90-50",
+        "expected": "130"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q007",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "円 O の周上に3点 A、B、C があり、$\\angle\\mathrm{OAB}=25^\\circ$ である。点 C が弧 AB のうち長い方の上にあるとき、$\\angle\\mathrm{ACB}$ は何度か。",
+      "answer": {
+        "value": "65",
+        "unit": "度"
+      },
+      "explanation": "$\\mathrm{OA}=\\mathrm{OB}$ より $\\angle\\mathrm{OBA}=25^\\circ$、$\\angle\\mathrm{AOB}=130^\\circ$。$\\angle\\mathrm{ACB}=130\\div2=65^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(180-2*25)/2",
+        "expected": "65"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U06-S1-Q008",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U06",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "円の2つの弦 AB、CD が点 P で交わっている。このとき $\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$ であることを証明しなさい。",
+      "figure": {
+        "alt": "円の弦ABとCDが点Pで交わる",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 136 136\" width=\"136\" height=\"136\" font-family=\"serif\" font-size=\"12\"><circle cx=\"68\" cy=\"68\" r=\"52\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"18.6\" y1=\"52.4\" x2=\"109.6\" y2=\"99.2\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"47.2\" y1=\"115.58\" x2=\"99.2\" y2=\"26.4\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"18.6\" y1=\"52.4\" x2=\"47.2\" y2=\"115.58\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"99.2\" y1=\"26.4\" x2=\"109.6\" y2=\"99.2\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"4.52\" y=\"52\">A</text><text x=\"114.98\" y=\"108.95\">B</text><text x=\"37.96\" y=\"129.25\">C</text><text x=\"100.99\" y=\"21.05\">D</text><text x=\"74.43\" y=\"92.4\">P</text></svg>"
+      },
+      "answer": {
+        "value": "$\\triangle\\mathrm{PAC}$ と $\\triangle\\mathrm{PDB}$ において、弧 BC に対する円周角は等しいから $\\angle\\mathrm{PAC}=\\angle\\mathrm{PDB}$ …①。対頂角は等しいから $\\angle\\mathrm{APC}=\\angle\\mathrm{DPB}$ …②。①②より、2組の角がそれぞれ等しいので $\\triangle\\mathrm{PAC}\\sim\\triangle\\mathrm{PDB}$。"
+      },
+      "explanation": "同じ弧に対する円周角が等しいことと、対頂角が等しいことから、2組の角が等しいことを示す。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "円周角の定理を根拠に1組の角が等しいことを示している",
+            "points": 2
+          },
+          {
+            "criterion": "対頂角（または別の円周角）で2組目の角を示している",
+            "points": 2
+          },
+          {
+            "criterion": "相似条件と結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "0e5beecbfc9fd1cd1355e7fc01af3a70d722df347ca14e9e52420db805d7a467"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "a4875f3461beeec49a88edbcd775a2821d80b8a70a47105b5970763e171ed34d"
+  }
+}

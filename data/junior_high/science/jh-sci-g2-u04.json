@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "JH-SCI-G2-U04-S1",
+  "title": "気象とその変化",
+  "subtitle": "地球（第2分野）｜気象観測・圧力・大気圧・湿度と露点・前線と天気の変化",
+  "track": "junior_high",
+  "stage": "junior_high",
+  "subject": "science",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-SCI-G2-U04"
+  ],
+  "instructions": [
+    "計算問題は、問題文で指定された単位で答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "JH-SCI-G2-U04-S1-Q001",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "100 N の力が 0.5 m² の面積に垂直にはたらいているとき、圧力は何 Pa か。",
+      "answer": {
+        "value": "200",
+        "unit": "Pa"
+      },
+      "explanation": "圧力（Pa）＝力（N）÷面積（m²）＝$100\\div0.5=200$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "100/0.5",
+        "expected": "200"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q002",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "大気圧について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "雨の日には 0 になる"
+        },
+        {
+          "label": "イ",
+          "text": "高い山の上ほど大きくなる"
+        },
+        {
+          "label": "ウ",
+          "text": "あらゆる向きから物体の表面に垂直にはたらく"
+        },
+        {
+          "label": "エ",
+          "text": "上から下へだけはたらく"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "大気圧は空気の重さによる圧力で、あらゆる向きからはたらく。上空ほど上にある空気が少ないので小さくなる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q003",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "calculation",
+        "data_interpretation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "表を使って、気温 25 ℃ で 1 m³ あたり 11.5 g の水蒸気をふくむ空気の湿度を求めなさい。小数第1位を四捨五入して整数で答えること。",
+      "table": {
+        "rows": [
+          [
+            "15",
+            "12.8"
+          ],
+          [
+            "20",
+            "17.3"
+          ],
+          [
+            "25",
+            "23.1"
+          ]
+        ],
+        "header": [
+          "気温（℃）",
+          "飽和水蒸気量（g/m³）"
+        ]
+      },
+      "answer": {
+        "value": "50",
+        "unit": "%"
+      },
+      "explanation": "25 ℃ の飽和水蒸気量は 23.1 g/m³。湿度は $11.5\\div23.1\\times100=49.78\\cdots$ より 50 %。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(Rational(115,231)*100+Rational(1,2))",
+        "expected": "50"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q004",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "露点の説明として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "水が沸騰する温度"
+        },
+        {
+          "label": "イ",
+          "text": "空気中の水蒸気が冷やされて水滴になり始めるときの温度"
+        },
+        {
+          "label": "ウ",
+          "text": "雨が降り始めるときの気温"
+        },
+        {
+          "label": "エ",
+          "text": "空気の温度が 0 ℃ になる温度"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "空気を冷やしていくと、ある温度で飽和水蒸気量と実際の水蒸気量が等しくなり、水滴ができ始める。この温度が露点。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q005",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "温暖前線が通過した後の天気の変化として最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "気温が下がり、風向きが北寄りに変わる"
+        },
+        {
+          "label": "イ",
+          "text": "気圧が急に上がり、雪が降る"
+        },
+        {
+          "label": "ウ",
+          "text": "気温が上がり、風向きが南寄りに変わる"
+        },
+        {
+          "label": "エ",
+          "text": "激しい雨が短時間降る"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "温暖前線の前ではおだやかな雨が長く降り、通過後は暖気におおわれて気温が上がる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q006",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "高気圧の中心付近の空気の動きと天気として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "上昇気流が生じ、雲ができやすい"
+        },
+        {
+          "label": "イ",
+          "text": "下降気流が生じ、晴れることが多い"
+        },
+        {
+          "label": "ウ",
+          "text": "空気は動かず、霧が出る"
+        },
+        {
+          "label": "エ",
+          "text": "下降気流が生じ、雨が降りやすい"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "高気圧の中心では下降気流が生じて雲ができにくい。低気圧の中心では上昇気流が生じて雲ができやすい。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q007",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "日本の冬の天気の特徴として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "移動性高気圧と低気圧が交互に通過し、天気が周期的に変わる"
+        },
+        {
+          "label": "イ",
+          "text": "停滞前線ができ、長雨が続く"
+        },
+        {
+          "label": "ウ",
+          "text": "南高北低の気圧配置で南東の季節風がふき、蒸し暑い"
+        },
+        {
+          "label": "エ",
+          "text": "西高東低の気圧配置で北西の季節風がふき、日本海側で雪が多い"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "冬はシベリア高気圧が発達し西高東低の気圧配置になる。北西の季節風が日本海の水蒸気をふくんで、日本海側に雪を降らせる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SCI-G2-U04-S1-Q008",
+      "grade": "JH2",
+      "subject": "science",
+      "unit_id": "JH-SCI-G2-U04",
+      "skills": [
+        "knowledge",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "晴れた日の昼間、海岸付近で海から陸に向かって風（海風）がふく理由として最も適切なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "陸は海よりあたたまりやすく、陸上の気圧が低くなるから"
+        },
+        {
+          "label": "イ",
+          "text": "地球の自転によって風向きが変わるから"
+        },
+        {
+          "label": "ウ",
+          "text": "陸上の空気が冷えて下降するから"
+        },
+        {
+          "label": "エ",
+          "text": "海は陸よりあたたまりやすく、海上の気圧が低くなるから"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "昼は陸のほうが速くあたたまり、陸上で上昇気流が生じて気圧が低くなる。風は気圧の高い海から低い陸へふく。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 40,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ2）",
+      "changes": "初版作成（8問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "48ed841198aba0502b7ab73caa517b851fdd626e872c749459386c8c35b2cfde"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:42:09+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "1ce6215df54dcabbe4b782eed8e77f19bcdc1487b586f2b1d26a7efd31dd0fb2"
+  }
+}
