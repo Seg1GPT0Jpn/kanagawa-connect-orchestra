@@ -89,7 +89,7 @@ function appSyncRun() {
     return preview;
   }
 
-  if (!preview.writes) {
+  if (!preview.writes && !preview.joinToApply) {
     // Firebase 側は最新。応募者一覧の「Firebase連携状態」「アプリ利用」だけ最新にする
     appSyncCore_({ dryRun: false, allowMassDeactivation: false });
     alert_('団員アプリはすでに最新です（変更なし）。\n\n' + appSyncDescribe_(preview, true));
@@ -176,6 +176,109 @@ function appSyncOnFormSubmit_() {
   if (result.error && !result.busy) console.error('応募時の団員アプリ同期に失敗: ' + result.error);
 
   return result;
+}
+
+
+/*******************************************************
+ * 正式加入の申請（団員アプリ → 応募者一覧）
+ *
+ * 参加希望者がアプリで申し込み、管理者がアプリで「承認」したものを、
+ * 応募者一覧の対応状況「正式参加」に書き換える（1件につき1回だけ。appliedAt で記録）。
+ *  ・応募者一覧で「辞退」になっている人は書き換えず、理由をアプリに返す
+ *  ・承認待ちの申請は「正式加入の意思」を「希望」にする（空欄のときだけ）
+ * 戻り値：応募者一覧を書き換えたら true
+ *******************************************************/
+function appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result) {
+
+  let approved = [];
+  let pending = [];
+
+  try {
+    approved = client.query('joinRequests', 'status', 'approved').filter(d => !d.fields.appliedAt && !d.fields.applyError);
+    pending = client.query('joinRequests', 'status', 'pending');
+  } catch (e) {
+    // 申請のコレクションがまだ無い・読めない場合は、ほかの同期を続ける
+    console.error('正式加入の申請を読めませんでした: ' + e.message);
+    return false;
+  }
+
+  if (!approved.length && !pending.length) return false;
+
+  const byAppId = new Map();
+  app.records.slice().sort(compareByNo_).forEach(r => { if (r.appId && !byAppId.has(r.appId)) byAppId.set(r.appId, r); });
+
+  if (dryRun) {
+    result.joinToApply = approved.filter(d => byAppId.has(d.id)).length;
+    return false;
+  }
+
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const statusCol = app.map.status;
+  const intentCol = app.map.joinIntent;
+  const lastCol = app.map.lastContact;
+  const writes = [];
+  const contacts = [];
+  let changed = false;
+
+  approved.forEach(d => {
+    const r = byAppId.get(d.id);
+    let error = '';
+    if (!r) error = '応募者一覧に見つかりませんでした（アプリIDの行が削除された可能性があります）';
+    else if (r.status === '辞退') error = '応募者一覧で「辞退」になっているため、正式参加に変更しませんでした';
+
+    if (error) {
+      writes.push(appSyncWrite_('joinRequests/' + d.id, { applyError: error }, ['applyError']));
+      result.joinErrors = (result.joinErrors || 0) + 1;
+      return;
+    }
+
+    if (r.status !== APP_SYNC.joinedStatus && r.status !== APP_SYNC.pausedStatus) {
+      sheet.getRange(r.row, statusCol + 1).setValue(APP_SYNC.joinedStatus);
+      if (lastCol !== undefined) sheet.getRange(r.row, lastCol + 1).setValue(today);
+      changed = true;
+    }
+    if (intentCol !== undefined && r.joinIntent !== '希望') {
+      sheet.getRange(r.row, intentCol + 1).setValue('希望');
+      changed = true;
+    }
+    contacts.push({
+      date: today,
+      no: r.no,
+      name: toStr_(r.nickname) || toStr_(r.name),
+      method: 'その他',
+      content: '団員アプリで正式加入を申請 → 管理者が承認（対応状況を「正式参加」に変更）',
+      reply: toStr_(d.fields.message).slice(0, 500),
+      nextAction: '団員アプリの利用開始',
+      state: '完了'
+    });
+    writes.push(appSyncWrite_('joinRequests/' + d.id, { appliedAt: now.toISOString() }, ['appliedAt']));
+    result.joinApplied = (result.joinApplied || 0) + 1;
+  });
+
+  // 承認待ち：「正式加入の意思」を「希望」に（空欄のときだけ。運営の確認用）
+  if (intentCol !== undefined) {
+    pending.forEach(d => {
+      const r = byAppId.get(d.id);
+      if (r && !r.joinIntent) {
+        sheet.getRange(r.row, intentCol + 1).setValue('希望');
+        changed = true;
+      }
+    });
+  }
+
+  if (contacts.length && typeof globalThis.membershipAppendContacts_ === 'function') {
+    try {
+      globalThis.membershipAppendContacts_(ss, contacts);
+    } catch (e) {
+      console.error('連絡記録への追加に失敗: ' + e.message);
+    }
+  }
+
+  // 応募者一覧を書き換えたあとで、申請に「反映済み」を記録する（失敗しても次回は状態が正式参加なので二重に変更しない）
+  if (writes.length) client.commit(writes);
+
+  return changed;
 }
 
 
@@ -384,6 +487,11 @@ function appSyncCore_(options) {
       return result;
     }
 
+    const client = appSyncClient_(settings.projectId);
+
+    // 0. アプリで管理者が承認した正式加入を、応募者一覧に反映（対応状況 → 正式参加）
+    if (appSyncApplyJoinRequests_(ss, sheet, app, client, dryRun, result)) app = readApplicants_(sheet);
+
     // 1. 加入確定者を決める（アプリIDが無い人には新しく振る）
     const desired = appSyncDesiredMembers_(app, settings, result);
 
@@ -401,7 +509,6 @@ function appSyncCore_(options) {
     result.paused = desired.members.filter(m => m.status === 'paused').length;
 
     // 2. いまの Firestore の状態を読む
-    const client = appSyncClient_(settings.projectId);
     const existingAccess = client.list('memberAccess');
     const existingMembers = client.list('members');
     const existingStats = client.get('stats/summary');
@@ -1129,6 +1236,9 @@ function appSyncDescribe_(r, isPreview) {
   ];
 
   if (r.newIds) lines.push('新しく振るアプリID：' + r.newIds + '件（応募者一覧の「アプリID」列）');
+  if (r.joinApplied) lines.push('アプリで承認された正式加入：' + r.joinApplied + '人を「正式参加」に変更しました');
+  if (r.joinToApply) lines.push('アプリで承認された正式加入：' + r.joinToApply + '人（同期すると応募者一覧の対応状況を「正式参加」に変更）');
+  if (r.joinErrors) lines.push('⚠️ 反映できなかった正式加入の承認：' + r.joinErrors + '人（団員アプリの「運営」→「加入申請」に理由を表示）');
   if (r.stopped) lines.push('アプリ利用が「停止」のため登録しない人：' + r.stopped + '人');
   if (r.massDeactivation) lines.push('', '⚠️ 一度に多くの人が利用停止になります。応募者一覧の「対応状況」が正しいか確認してください。');
   if (r.problems.length) lines.push('', '確認が必要な行：', ...r.problems.slice(0, 15).map(p => '・' + p));

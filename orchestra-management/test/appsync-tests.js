@@ -655,6 +655,51 @@ section('S. 別のアカウント（代表）で連携する・応募した人�
   check('辞退が増えると申し込み数も減る', fsDocs(env, 'stats').summary.applicationCount, 7);
 }
 
+/* ============================================================ */
+section('T. アプリでの正式加入の申請 → 管理者が承認 → 応募者一覧に反映');
+{
+  const { env, ss, app, ctx } = makeEnv(PEOPLE, { applicants: true });
+  ctx.appSyncRun();
+  const id = no => col(app, 'アプリID')[no - 1];
+  const put = (path, obj) => env.firestore.docs.set(path, ctx.appSyncEncodeFields_(obj));
+  const req = path => fsDocs(env, 'joinRequests')[path];
+  // No.4（未対応）：承認済み、No.9（未対応）：承認待ち、No.8（辞退）：承認済み（反映しない）、存在しないID
+  put('joinRequests/' + id(4), { status: 'approved', message: 'よろしくお願いします', concert: 'ぜひ参加したい', createdAt: new Date() });
+  put('joinRequests/' + id(9), { status: 'pending', message: '', concert: '', createdAt: new Date() });
+  put('joinRequests/mghost000000000', { status: 'approved', message: '', concert: '', createdAt: new Date() });
+
+  // お試しでは変えない
+  env.alerts.length = 0;
+  const preview = ctx.appSyncPreview();
+  check('お試しでは応募者一覧を変えず、件数だけ表示', [col(app, '対応状況')[3], preview.joinToApply, /アプリで承認された正式加入：1人/.test(lastAlert(env))], ['未対応', 1, true]);
+
+  env.alerts.length = 0;
+  ctx.appSyncRun();
+  check('承認された人は応募者一覧の対応状況が「正式参加」に', col(app, '対応状況')[3], '正式参加');
+  check('同じ同期で団員に切り替わる（同じアプリID）', [fsDocs(env, 'memberAccess')['p4@example.com'].stage, fsDocs(env, 'memberAccess')['p4@example.com'].memberId], ['member', id(4)]);
+  check('申請に「反映済み」を記録', !!req(id(4)).appliedAt, true);
+  check('承認待ちの人は対応状況を変えない', col(app, '対応状況')[8], '未対応');
+  check('承認待ちの人は「正式加入の意思」を「希望」に', col(app, '正式加入の意思')[8], '希望');
+  check('応募者一覧に無いアプリIDは反映せず理由を返す', /見つかりませんでした/.test(req('mghost000000000').applyError), true);
+  check('結果メッセージに反映した人数', /1人を「正式参加」に変更しました/.test(allAlerts(env)), true);
+
+  // もう一度同期しても二重に処理しない
+  setStatus(app, 4, '保留');
+  ctx.appSyncRun();
+  check('反映済みの申請は二度と処理しない（運営があとで変えた状態を上書きしない）', col(app, '対応状況')[3], '保留');
+}
+{
+  // 辞退になっている人の承認は反映しない
+  const { env, app, ctx } = makeEnv(PEOPLE, { applicants: true });
+  ctx.appSyncRun();
+  const id9 = col(app, 'アプリID')[8];
+  setStatus(app, 9, '辞退');
+  env.firestore.docs.set('joinRequests/' + id9, ctx.appSyncEncodeFields_({ status: 'approved', message: '', concert: '', createdAt: new Date() }));
+  ctx.appSyncRun();
+  check('「辞退」の人は正式参加にしない', col(app, '対応状況')[8], '辞退');
+  check('理由をアプリに返す', /辞退/.test(fsDocs(env, 'joinRequests')[id9].applyError), true);
+}
+
 console.log('\n============================');
 console.log('団員アプリ同期テスト：成功 ' + passed + '件 ／ 失敗 ' + failed + '件');
 process.exit(failed ? 1 : 0);

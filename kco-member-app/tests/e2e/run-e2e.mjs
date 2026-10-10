@@ -106,6 +106,18 @@ async function readAsOwner(path) {
   return Object.fromEntries(Object.entries(json.fields || {}).map(([k, v]) => [k, conv(v)]));
 }
 
+// 画面は端末内のキャッシュで先に更新されるため、サーバーに保存されるまで待って確認する
+async function waitForDoc(path, predicate, timeout = 8000) {
+  const end = Date.now() + timeout;
+  let last;
+  while (Date.now() < end) {
+    last = await readAsOwner(path);
+    if (last && predicate(last)) return last;
+    await new Promise(r => setTimeout(r, 250));
+  }
+  return last;
+}
+
 const appears = (locator, timeout = 8000) => locator.waitFor({ timeout }).then(() => true).catch(() => false);
 
 async function emailLinkLogin(page, email) {
@@ -267,6 +279,7 @@ try {
     await page.getByText('会場変更のお知らせ').waitFor();
     check('重要なお知らせがホームに出る', true);
     await page.getByRole('link', { name: '演奏会の詳細' }).click();
+    await page.getByText(/交響曲第7番/).first().waitFor();
     const text = await page.locator('main').innerText();
     check('演奏会ページ：会場「未定」・曲目表示', text.includes('未定') && text.includes('交響曲第7番'));
     await page.screenshot({ path: `${SHOTS}/08-concert.png`, fullPage: true });
@@ -459,7 +472,14 @@ try {
     await emailLinkLogin(page, 'hopeful@example.com');
     await page.getByText('参加希望者として登録されています').waitFor();
     check('ホームに「参加希望者として登録されています」', true);
-    check('正式加入確認フォームへのボタン', (await page.getByRole('link', { name: '正式加入確認フォームへ' }).getAttribute('href')) === 'https://forms.example.com/join');
+    check('正式加入確認フォームへのリンクも残す', (await page.getByRole('link', { name: '正式加入確認フォーム' }).getAttribute('href')) === 'https://forms.example.com/join');
+    await page.getByRole('button', { name: '正式加入を申し込む' }).click();
+    await page.getByLabel('ぜひ参加したい').check();
+    await page.getByLabel('運営へのひとこと（任意・500文字まで）').fill('よろしくお願いします');
+    await page.getByRole('button', { name: '正式加入を申し込む' }).click();
+    await page.getByText('正式加入を申し込みました。').waitFor();
+    const jr = await waitForDoc('joinRequests/ap-1', d => d.status === 'pending');
+    check('アプリから正式加入を申し込める（承認待ち）', jr?.status === 'pending' && jr?.concert === 'ぜひ参加したい', JSON.stringify(jr));
     check('あいさつに自分の名前', await page.getByText('きぼうさん').first().isVisible());
     check('「みんなで」タブは出ない', !(await page.getByRole('link', { name: 'みんなで' }).isVisible()));
     check('楽譜・提案・団員一覧のタイルは出ない', !(await page.getByRole('link', { name: /楽譜/ }).isVisible()) && !(await page.getByRole('link', { name: /団員一覧/ }).isVisible()));
@@ -485,11 +505,23 @@ try {
     await ctx.close();
   }
 
-  console.log('■ 管理者：参加希望者の出欠');
+  console.log('■ 管理者：参加希望者の出欠・正式加入の承認');
   {
     const { ctx, page } = await newPhone();
     page.on('pageerror', e => pageErrors.push(e.message));
     await emailLinkLogin(page, 'admin@example.com');
+    await page.getByRole('link', { name: '運営' }).click();
+    check('概要に「正式加入の申請が 1件」', await appears(page.getByText('正式加入の申請が 1件 あります')));
+    await page.getByRole('link', { name: '加入申請' }).click();
+    await page.getByText('きぼうさん').waitFor();
+    check('申請に本人の名前・ひとことを表示', await page.getByText('よろしくお願いします').isVisible());
+    page.once('dialog', d => d.accept());
+    await page.getByRole('button', { name: '承認する' }).click();
+    await page.getByText('次の同期で反映').waitFor();
+    const approved = await waitForDoc('joinRequests/ap-1', d => d.status === 'approved');
+    check('管理者がアプリで承認できる（次の同期でスプレッドシートに反映）', approved?.status === 'approved', JSON.stringify(approved));
+    await page.screenshot({ path: `${SHOTS}/17-admin-join.png`, fullPage: true });
+    await page.goto(BASE + '/');
     await page.getByRole('link', { name: '運営' }).click();
     await page.getByRole('link', { name: '練習・出欠' }).click();
     await page.getByText('第1回 合奏練習').click();

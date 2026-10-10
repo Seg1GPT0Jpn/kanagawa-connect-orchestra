@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../auth/AuthProvider';
 import { AttendanceBadge, CategoryBadge } from '../components/Badges';
+import { JoinRequestCard } from '../components/JoinRequestCard';
 import { ErrorNote, Loading } from '../components/Layout';
-import { useAnnouncements, useAppConfig, useCampaign, useConcerts, useMyAttendance, useMyProfile, useRehearsals, useStats, useSurveys } from '../lib/data';
+import { useAnnouncements, useCampaign, useConcerts, useMyAttendance, useMyProfile, useRehearsals, useStats, useSurveys } from '../lib/data';
 import { isSurveyOpen } from '../lib/survey';
 import { formatDateJa, formatTimeRange, orTbd, splitByDate, todayJst } from '../lib/dates';
 import { isForMe } from '../lib/parts';
@@ -15,7 +16,6 @@ export function HomePage() {
   const concerts = useConcerts();
   const news = useAnnouncements(false, isApplicant);
   const surveys = useSurveys(false, !isApplicant);
-  const config = useAppConfig();
   const campaign = useCampaign();
   const openSurveys = surveys.data.filter(sv => isSurveyOpen(sv));
 
@@ -43,20 +43,7 @@ export function HomePage() {
 
       <ErrorNote message={stats.error || rehearsals.error || news.error} />
 
-      {isApplicant && (
-        <section className="card card--important" aria-labelledby="applicant-title">
-          <h2 className="card__title" id="applicant-title">参加希望者として登録されています</h2>
-          <p className="small">
-            練習予定・演奏会・お知らせを見たり、練習の出欠（見学・体験）を登録したりできます。
-            正式に加入すると、団員一覧・楽譜・アンケートなども使えるようになります。
-          </p>
-          {config.data?.joinFormUrl ? (
-            <a className="btn btn--gold" href={config.data.joinFormUrl} target="_blank" rel="noopener noreferrer" style={{ marginTop: '0.5rem' }}>正式加入確認フォームへ</a>
-          ) : (
-            <p className="small muted">正式加入の手続きは、運営からのご案内をお待ちください。</p>
-          )}
-        </section>
-      )}
+      {isApplicant && <JoinRequestCard />}
 
       {important.map(a => (
         <Link key={a.id} to={`/news#${a.id}`} className="card-link">

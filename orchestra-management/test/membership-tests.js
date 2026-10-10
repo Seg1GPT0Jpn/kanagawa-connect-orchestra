@@ -357,6 +357,20 @@ section('J. 既存機能への影響なし・個人情報');
   check('ログにメールアドレスを出さない', env.logs.some(l => /@example\.com/.test(l)), false);
 }
 
+/* ============================================================ */
+section('K. アプリでの正式加入の承認を連絡記録に残す');
+{
+  const e = makeEnv();
+  e.ctx.appSyncRun();
+  const id2 = byNo(e.app, 2, 'アプリID');
+  e.env.firestore.docs.set('joinRequests/' + id2, e.ctx.appSyncEncodeFields_({ status: 'approved', message: 'がんばります', concert: 'ぜひ参加したい', createdAt: new Date() }));
+  e.ctx.appSyncRun();
+  const row = e.contacts._rows().slice(1).find(x => x[1] === 2);
+  check('対応状況が「正式参加」に', byNo(e.app, 2, '対応状況'), '正式参加');
+  check('連絡記録に「アプリで申請 → 承認」を記録（本人のひとことも）', [!!row && /管理者が承認/.test(row[4]), row && row[5]], [true, 'がんばります']);
+  check('正式加入の意思も「希望」に', byNo(e.app, 2, '正式加入の意思'), '希望');
+}
+
 console.log('\n============================');
 console.log('正式加入確認テスト：成功 ' + passed + '件 ／ 失敗 ' + failed + '件');
 process.exit(failed ? 1 : 0);

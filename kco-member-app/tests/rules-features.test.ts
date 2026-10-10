@@ -450,3 +450,55 @@ describe('参加希望者（応募しただけの人）', () => {
     await assertFails(setDoc(doc(as('admin'), 'appConfig', 'public'), { joinFormUrl: 'https://evil.example.com', updatedAt: serverTimestamp() }, { merge: true }));
   });
 });
+
+// ---------------------------------------------------------------------
+describe('正式加入の申請', () => {
+  const request = (extra: Record<string, unknown> = {}) => ({ status: 'pending', message: 'よろしくお願いします', concert: 'ぜひ参加したい', createdAt: serverTimestamp(), ...extra });
+
+  it('参加希望者は自分の分だけ申し込める', async () => {
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+    await assertFails(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-2'), request())); // 他人の分
+    await assertFails(setDoc(doc(as('va'), 'joinRequests', 'm-va'), request())); // 団員は申し込めない
+    await assertFails(setDoc(doc(as('applicant'), 'joinRequests', 'x'), request())); // アプリ未登録
+    await assertFails(setDoc(doc(anon(), 'joinRequests', 'ap-1'), request()));
+  });
+
+  it('自分で承認済みにはできない・余計な項目は保存できない', async () => {
+    await assertFails(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request({ status: 'approved' })));
+    await assertFails(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request({ concert: 'たぶん' })));
+    await assertFails(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request({ role: 'admin' })));
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+    await assertFails(updateDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), { status: 'approved', decidedAt: serverTimestamp(), decidedBy: 'uid-h' }));
+  });
+
+  it('承認・見送りは管理者だけ（運営補助・団員は不可）', async () => {
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+    const decide = (key: 'admin' | 'staff' | 'va', uid: string) =>
+      updateDoc(doc(as(key), 'joinRequests', 'ap-1'), { status: 'approved', decidedAt: serverTimestamp(), decidedBy: uid });
+    await assertFails(decide('va', 'uid-va'));
+    await assertFails(decide('staff', 'uid-staff'));
+    await assertFails(decide('admin', 'uid-someone-else')); // 承認者の偽装
+    await assertSucceeds(decide('admin', 'uid-admin'));
+    // 一度決めたものは変えられない（同期が反映するまでの取り違え防止）
+    await assertFails(updateDoc(doc(as('admin'), 'joinRequests', 'ap-1'), { status: 'declined', decidedAt: serverTimestamp(), decidedBy: 'uid-admin' }));
+    // 承認されたものは本人が消せない
+    await assertFails(deleteDoc(doc(as('hopeful'), 'joinRequests', 'ap-1')));
+  });
+
+  it('読めるのは本人と管理者だけ', async () => {
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+    await assertSucceeds(getDoc(doc(as('hopeful'), 'joinRequests', 'ap-1')));
+    await assertSucceeds(getDocs(query(collection(as('admin'), 'joinRequests'), orderBy('createdAt', 'desc'))));
+    await assertFails(getDoc(doc(as('va'), 'joinRequests', 'ap-1')));
+    await assertFails(getDocs(collection(as('staff'), 'joinRequests')));
+  });
+
+  it('承認待ち・見送りは本人が取り消せる（見送りのあと申し込み直せる）', async () => {
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+    await assertSucceeds(deleteDoc(doc(as('hopeful'), 'joinRequests', 'ap-1')));
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+    await assertSucceeds(updateDoc(doc(as('admin'), 'joinRequests', 'ap-1'), { status: 'declined', decidedAt: serverTimestamp(), decidedBy: 'uid-admin' }));
+    await assertSucceeds(deleteDoc(doc(as('hopeful'), 'joinRequests', 'ap-1')));
+    await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
+  });
+});
