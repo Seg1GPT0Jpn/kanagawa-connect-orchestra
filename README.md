@@ -249,7 +249,9 @@ HTMLを直接編集しても構いませんが、その後にスクリプトを�
 | 公式サイト（`.github/workflows/deploy.yml`） | 公式サイト（HTML・JS・Firestore ルール） | `kanagawa-connect-orchestra` | `FIREBASE_SERVICE_ACCOUNT_SITE` |
 | 団員アプリ（`.github/workflows/member-app.yml`） | `kco-member-app/`（`orchestra-management/` はテストのみ） | `kanagawa-connect-official` | `FIREBASE_SERVICE_ACCOUNT_MEMBER_APP` |
 
-公式サイトのチェック：HTML が `_tools/build_site.py` と一致しているか、`js/*.bundle.js` がソースと一致しているか、ロジック・ルールのテスト。
+公式サイトのチェック：HTML が `_tools/build_site.py` と一致しているか、`js/*.bundle.js` がソースと一致しているか、**公開されるファイルにサイト以外のもの（`.git`・ソース・設定など）が含まれていないか**（`_tools/check_public_files.cjs`）、ロジック・ルールのテスト。
+
+> `firebase.json` の `"**/.*"` は隠しファイルだけを除外し、`.git` などの**隠しフォルダの中身は除外しません**。そのため `"**/.*/**"` も指定しています。
 
 ### 最初に1回だけ：公開用の鍵を GitHub に登録する
 
