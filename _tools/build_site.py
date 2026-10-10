@@ -240,7 +240,7 @@ def footer(root=""):
       <div class="site-footer__links">
         <a class="site-footer__join" href="{href("recruit.html", root)}">団員募集中｜詳しくはこちら</a>
         <a class="site-footer__sns" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">{ICON_IG}<span>Instagram</span>{NEW_TAB}</a>
-        <a class="site-footer__sns" href="{MEMBER_APP}" target="_blank" rel="noopener noreferrer">{ICON_MEMBER}<span>団員専用ページ（団員の方）</span>{NEW_TAB}</a>
+        <a class="site-footer__sns" href="{MEMBER_APP}" target="_blank" rel="noopener noreferrer">{ICON_MEMBER}<span>団員ページ（団員・参加希望者の方）</span>{NEW_TAB}</a>
       </div>
       <p class="site-footer__copy"><small>&copy; <span data-year>2026</span> {SITE}</small></p>
     </div>
