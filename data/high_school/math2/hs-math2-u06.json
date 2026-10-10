@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH2-U06-S1",
+  "title": "微分法・積分法",
+  "subtitle": "微分・積分の考え｜微分係数と導関数・接線・増減と極値・不定積分・定積分",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U06"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U06-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=x^3-3x^2+2$ の導関数を求めなさい。",
+      "answer": {
+        "value": "$f'(x)=3x^2-6x$",
+        "accepted": [
+          "3x^2-6x"
+        ]
+      },
+      "explanation": "$(x^n)'=nx^{n-1}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "diff(x**3-3*x**2+2, x)",
+        "expected": "3*x**2-6*x"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=x^2+1$ 上の点 $(1,\\,2)$ における接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=2x$",
+        "accepted": [
+          "y=2x"
+        ]
+      },
+      "explanation": "$y'=2x$ より接線の傾きは 2。$y-2=2(x-1)$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "diff(x**2+1, x)",
+        "expected": "2*x",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=x^3-3x^2+2$ の極値を求めなさい。",
+      "answer": {
+        "value": "$x=0$ で極大値 $2$、$x=2$ で極小値 $-2$"
+      },
+      "explanation": "$f'(x)=3x(x-2)$。増減表より $x=0$ で極大、$x=2$ で極小。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[0**3-3*0+2, 2**3-3*2**2+2]",
+        "expected": "[2, -2]",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "定積分 $\\displaystyle\\int_0^2(3x^2-2x)\\,dx$ を計算しなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$\\left[x^3-x^2\\right]_0^2=8-4=4$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate(3*x**2-2*x, (x, 0, 2))",
+        "expected": "4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "放物線 $y=x^2-2x$ と $x$ 軸で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "4/3",
+        "display": "$\\dfrac{4}{3}$"
+      },
+      "explanation": "$0\\leqq x\\leqq2$ で $y\\leqq0$。$S=-\\displaystyle\\int_0^2(x^2-2x)dx=\\dfrac{4}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "-integrate(x**2-2*x, (x, 0, 2))",
+        "expected": "4/3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "放物線 $y=x^2$ と直線 $y=x+2$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "9/2",
+        "display": "$\\dfrac{9}{2}$"
+      },
+      "explanation": "交点の $x$ 座標は $-1,\\ 2$。$S=\\displaystyle\\int_{-1}^2(x+2-x^2)dx=\\dfrac{(2-(-1))^3}{6}=\\dfrac{9}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "integrate(x+2-x**2, (x, -1, 2))",
+        "expected": "9/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "ddfbe5b2c9d2e49756b2417c344af3c01a716da3dd6cc316ec4aca7f6bfb34f2"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "fd9fd9f2102d469c25fa9912888a9669b8484f7e022206e4157bc8447f534636"
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATHB-U01-S1",
+  "title": "数列",
+  "subtitle": "数列｜等差数列・等比数列・Σ記号・階差数列・漸化式",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_b",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHB-U01"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHB-U01-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 3、公差 4 の等差数列の第 20 項を求めなさい。",
+      "answer": {
+        "value": "79"
+      },
+      "explanation": "$a_n=3+4(n-1)$。$a_{20}=3+76=79$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "3+4*19",
+        "expected": "79"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "初項 2、公比 3 の等比数列の初項から第 5 項までの和を求めなさい。",
+      "answer": {
+        "value": "242"
+      },
+      "explanation": "$S_5=\\dfrac{2(3^5-1)}{3-1}=242$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*(3**5-1)/(3-1)",
+        "expected": "242"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\displaystyle\\sum_{k=1}^{n}(2k+1)$ を求めなさい。",
+      "answer": {
+        "value": "$n^2+2n$",
+        "accepted": [
+          "n^2+2n",
+          "n(n+2)"
+        ]
+      },
+      "explanation": "$2\\cdot\\dfrac{n(n+1)}{2}+n=n^2+2n$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(2*k+1, (k, 1, n))",
+        "expected": "n**2+2*n",
+        "compare": "expand"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "数列 1，2，5，10，17，… の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=n^2-2n+2$",
+        "accepted": [
+          "a_n=(n-1)^2+1"
+        ]
+      },
+      "explanation": "階差数列は 1，3，5，7，…（$b_n=2n-1$）。$n\\geqq2$ のとき $a_n=1+\\displaystyle\\sum_{k=1}^{n-1}(2k-1)=1+(n-1)^2$。$n=1$ でも成り立つ。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand(1+(n-1)**2)",
+        "expected": "n**2-2*n+2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$a_1=1,\\ a_{n+1}=2a_n+1$ で定められる数列の一般項を求めなさい。",
+      "answer": {
+        "value": "$a_n=2^n-1$",
+        "accepted": [
+          "2^n-1"
+        ]
+      },
+      "explanation": "$a_{n+1}+1=2(a_n+1)$ と変形すると、$\\{a_n+1\\}$ は初項 2、公比 2 の等比数列。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[2**1-1, 2*(2**1-1)+1, 2*(2*(2**1-1)+1)+1]",
+        "expected": "[1, 3, 7]",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U01-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "すべての自然数 $n$ について $1+3+5+\\cdots+(2n-1)=n^2$ が成り立つことを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "[1] $n=1$ のとき、左辺 $=1$、右辺 $=1$ で成り立つ。[2] $n=k$ のとき成り立つと仮定すると $1+3+\\cdots+(2k-1)=k^2$。$n=k+1$ のとき、左辺 $=k^2+(2k+1)=(k+1)^2$ となり成り立つ。[1][2] より、すべての自然数 $n$ について成り立つ。"
+      },
+      "explanation": "数学的帰納法では、(1) $n=1$ の確認、(2) $n=k$ の仮定から $n=k+1$ を導く、の2段階を明記する。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$n=1$ のときを確認している",
+            "points": 1
+          },
+          {
+            "criterion": "$n=k$ の仮定を正しく使い $n=k+1$ を導いている",
+            "points": 3
+          },
+          {
+            "criterion": "結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "expand(k**2+2*k+1-(k+1)**2)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "dab1b86a49497c1dbcd9c89a2e8f58b86e14253b385731d179dfab99e503baaa"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "e6da272fa447c06a9cc4bfe37d1d4122eee1336963b16770b44fbc8a7e8b41c5"
+  }
+}

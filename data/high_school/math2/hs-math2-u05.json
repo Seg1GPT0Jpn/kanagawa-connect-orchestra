@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH2-U05-S1",
+  "title": "指数関数・対数関数",
+  "subtitle": "指数関数・対数関数｜指数の拡張・指数関数・対数の性質・常用対数",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U05"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U05-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$8^{\\frac{2}{3}}$ の値を求めなさい。",
+      "answer": {
+        "value": "4"
+      },
+      "explanation": "$8^{\\frac{2}{3}}=(2^3)^{\\frac{2}{3}}=2^2=4$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "8**Rational(2,3)",
+        "expected": "4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\log_2 32$ の値を求めなさい。",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$2^5=32$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "log(32, 2)",
+        "expected": "5"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\log_3 18-\\log_3 2$ の値を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "$\\log_3\\dfrac{18}{2}=\\log_3 9=2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "log(9, 3)",
+        "expected": "2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "方程式 $2^{x+1}=32$ を解きなさい。",
+      "answer": {
+        "value": "4",
+        "display": "$x=4$"
+      },
+      "explanation": "$2^{x+1}=2^5$ より $x+1=5$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(2**(x+1)-32, x)[0]",
+        "expected": "4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "不等式 $\\log_{\\frac{1}{2}}(x-1)>-2$ を解きなさい。",
+      "answer": {
+        "value": "$1<x<5$",
+        "accepted": [
+          "1<x<5"
+        ]
+      },
+      "explanation": "真数条件 $x>1$。底 $\\dfrac{1}{2}<1$ なので $x-1<\\left(\\dfrac{1}{2}\\right)^{-2}=4$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)**(-2)+1",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$\\log_{10}2=0.3010$ とする。$2^{50}$ は何桁の整数か。",
+      "answer": {
+        "value": "16",
+        "unit": "桁"
+      },
+      "explanation": "$\\log_{10}2^{50}=50\\times0.3010=15.05$。$10^{15}<2^{50}<10^{16}$ なので 16 桁。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "floor(50*0.3010)+1",
+        "expected": "16"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "def3946e9425cc904df0aa1c8f0ed7bcd6ba2d33af9b3fed35152bb364c9e053"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "be6ff56e9e074f34c224c887c213c0758238404689a4b8ad292d1d9ba6312f06"
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-PHYB-U03-S1",
+  "title": "波・電気",
+  "subtitle": "様々な物理現象とエネルギーの利用｜波の性質・音・電気回路・交流と電磁波",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-PHYB-U03"
+  ],
+  "instructions": [
+    "必要があれば、重力加速度の大きさは 9.8 m/s² とする。数値は問題文の指示に従って答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "HS-PHYB-U03-S1-Q001",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "振動数 500 Hz、波長 0.68 m の音波の速さは何 m/s か。",
+      "answer": {
+        "value": "340",
+        "unit": "m/s"
+      },
+      "explanation": "$v=f\\lambda=500\\times0.68=340$（m/s）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "500*0.68",
+        "expected": "340"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U03-S1-Q002",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "両端を固定した弦に定常波（定在波）ができているとき、弦の両端は何になっているか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "谷"
+        },
+        {
+          "label": "イ",
+          "text": "腹"
+        },
+        {
+          "label": "ウ",
+          "text": "山"
+        },
+        {
+          "label": "エ",
+          "text": "節"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "固定端では弦が振動できないので節になる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U03-S1-Q003",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "抵抗値 10 Ω と 15 Ω の抵抗を直列につなぎ、両端に 10 V の電圧を加えた。流れる電流は何 A か。",
+      "answer": {
+        "value": "0.4",
+        "unit": "A"
+      },
+      "explanation": "合成抵抗 25 Ω。$I=\\dfrac{10}{25}=0.40$（A）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "10/(10+15)",
+        "expected": "0.4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U03-S1-Q004",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "長さ 2.0 m、断面積 $1.0\\times10^{-6}$ m² の導線の抵抗率が $1.7\\times10^{-8}$ Ω·m のとき、抵抗は何 Ω か。",
+      "answer": {
+        "value": "0.034",
+        "unit": "Ω"
+      },
+      "explanation": "$R=\\rho\\dfrac{L}{S}=1.7\\times10^{-8}\\times\\dfrac{2.0}{1.0\\times10^{-6}}=3.4\\times10^{-2}$（Ω）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(17,10)*10**(-8)*2/10**(-6)",
+        "expected": "0.034"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U03-S1-Q005",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "家庭用の交流電源の電圧 100 V の「100 V」が表しているものとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "最小値"
+        },
+        {
+          "label": "イ",
+          "text": "実効値"
+        },
+        {
+          "label": "ウ",
+          "text": "最大値"
+        },
+        {
+          "label": "エ",
+          "text": "平均値（常に 0）"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "交流の電圧・電流は通常、実効値で表す。最大値は実効値の約 $\\sqrt{2}$ 倍（約 141 V）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U03-S1-Q006",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "電磁波を波長の長い順に並べたものとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "紫外線 → 可視光線 → 赤外線 → 電波 → X線"
+        },
+        {
+          "label": "イ",
+          "text": "可視光線 → 電波 → 赤外線 → X線 → 紫外線"
+        },
+        {
+          "label": "ウ",
+          "text": "X線 → 紫外線 → 可視光線 → 赤外線 → 電波"
+        },
+        {
+          "label": "エ",
+          "text": "電波 → 赤外線 → 可視光線 → 紫外線 → X線"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "電波が最も波長が長く、X線・γ線は波長が短い。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "c2609706b60ba7613df4750f3174e53118f8736d03e1138632fd705348296c3e"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "0ef1feb33af902e75c61bcf834645d471b610cbd0901b7f493583dec4e78cd32"
+  }
+}

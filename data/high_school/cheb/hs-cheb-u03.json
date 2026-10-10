@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-CHEB-U03-S1",
+  "title": "酸と塩基・酸化還元",
+  "subtitle": "物質の変化｜pH・中和滴定・酸化数・電池",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "chemistry_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-CHEB-U03"
+  ],
+  "instructions": [
+    "必要があれば、重力加速度の大きさは 9.8 m/s² とする。数値は問題文の指示に従って答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "HS-CHEB-U03-S1-Q001",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "水素イオン濃度が $1.0\\times10^{-3}$ mol/L の水溶液の pH を求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$\\mathrm{pH}=-\\log_{10}[\\mathrm{H^+}]=3$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-log(10**(-3), 10)",
+        "expected": "3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-S1-Q002",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.10 mol/L の塩酸 10 mL を中和するのに必要な 0.050 mol/L の水酸化ナトリウム水溶液は何 mL か。",
+      "answer": {
+        "value": "20",
+        "unit": "mL"
+      },
+      "explanation": "$0.10\\times10=0.050\\times V$ より $V=20$（mL）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.10*10/0.050",
+        "expected": "20"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-S1-Q003",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "knowledge",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "中和滴定で、弱酸の酢酸を強塩基の水酸化ナトリウム水溶液で滴定するときに適した指示薬を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "フェノールフタレイン"
+        },
+        {
+          "label": "イ",
+          "text": "BTB 溶液のみ"
+        },
+        {
+          "label": "ウ",
+          "text": "リトマス紙"
+        },
+        {
+          "label": "エ",
+          "text": "メチルオレンジ"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "中和点の水溶液は塩基性側にあるので、変色域が塩基性側のフェノールフタレインを用いる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-S1-Q004",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "過マンガン酸カリウム $\\mathrm{KMnO_4}$ 中の Mn の酸化数を求めなさい。",
+      "answer": {
+        "value": "7"
+      },
+      "explanation": "K は ＋1、O は −2。$1+x+(-2)\\times4=0$ より $x=+7$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(1+x-8, x)[0]",
+        "expected": "7"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-S1-Q005",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "ダニエル電池で負極となる金属と、そこで起こる反応の組み合わせとして正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "銅 ― 還元反応"
+        },
+        {
+          "label": "イ",
+          "text": "銅 ― 酸化反応"
+        },
+        {
+          "label": "ウ",
+          "text": "亜鉛 ― 還元反応"
+        },
+        {
+          "label": "エ",
+          "text": "亜鉛 ― 酸化反応"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "イオン化傾向の大きい亜鉛が電子を放出して（酸化されて）亜鉛イオンになる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-S1-Q006",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "knowledge",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "次の反応で、還元剤としてはたらいている物質を選びなさい。\n$\\mathrm{CuO}+\\mathrm{H_2}\\rightarrow\\mathrm{Cu}+\\mathrm{H_2O}$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{CuO}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{H_2}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{H_2O}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{Cu}$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$\\mathrm{H_2}$ は相手（CuO）を還元し、自身は酸化される（酸化数 0 → +1）ので還元剤。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "6c1a936571be3cd7e66b75fd7d30ea285639620ab03116aa052c02884686348d"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "4f05fef5348d390b189f67af371a4ba6fd529b1a39d8cc724d0150536a1ea47e"
+  }
+}

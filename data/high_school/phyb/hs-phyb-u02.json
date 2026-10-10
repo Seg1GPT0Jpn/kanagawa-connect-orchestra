@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-PHYB-U02-S1",
+  "title": "仕事とエネルギー",
+  "subtitle": "物体の運動とエネルギー｜仕事と仕事率・運動エネルギー・力学的エネルギー保存・熱",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-PHYB-U02"
+  ],
+  "instructions": [
+    "必要があれば、重力加速度の大きさは 9.8 m/s² とする。数値は問題文の指示に従って答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "HS-PHYB-U02-S1-Q001",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "物体に 20 N の力を加えて、力の向きに 3.0 m 動かしたときの仕事は何 J か。",
+      "answer": {
+        "value": "60",
+        "unit": "J"
+      },
+      "explanation": "$W=Fx=20\\times3.0=60$（J）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "20*3",
+        "expected": "60"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U02-S1-Q002",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量 2.0 kg の物体が速さ 3.0 m/s で運動しているときの運動エネルギーは何 J か。",
+      "answer": {
+        "value": "9",
+        "unit": "J"
+      },
+      "explanation": "$K=\\dfrac{1}{2}mv^2=\\dfrac{1}{2}\\times2.0\\times3.0^2=9.0$（J）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*2*3**2",
+        "expected": "9"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U02-S1-Q003",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量 1.0 kg の物体を、基準面から高さ 5.0 m の位置まで持ち上げた。重力による位置エネルギーは何 J か。",
+      "answer": {
+        "value": "49",
+        "unit": "J"
+      },
+      "explanation": "$U=mgh=1.0\\times9.8\\times5.0=49$（J）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1*9.8*5",
+        "expected": "49"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U02-S1-Q004",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "高さ 10 m の位置から小球を静かに落とした。地面に達する直前の速さは何 m/s か。空気抵抗は無視する。",
+      "answer": {
+        "value": "14",
+        "unit": "m/s"
+      },
+      "explanation": "力学的エネルギー保存より $mgh=\\dfrac{1}{2}mv^2$。$v=\\sqrt{2gh}=\\sqrt{2\\times9.8\\times10}=14$（m/s）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(2*Rational(98,10)*10)",
+        "expected": "14"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U02-S1-Q005",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量 100 g の水の温度を 20 ℃ から 30 ℃ に上げるのに必要な熱量は何 J か。水の比熱を 4.2 J/(g·K) とする。",
+      "answer": {
+        "value": "4200",
+        "unit": "J"
+      },
+      "explanation": "$Q=mc\\Delta T=100\\times4.2\\times10=4200$（J）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "100*4.2*10",
+        "expected": "4200"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U02-S1-Q006",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U02",
+      "skills": [
+        "knowledge",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "熱と仕事について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "熱と仕事は互いに変換できない"
+        },
+        {
+          "label": "イ",
+          "text": "熱は高温の物体から低温の物体へ自然に移動し、その逆は自然には起こらない"
+        },
+        {
+          "label": "ウ",
+          "text": "低温の物体から高温の物体へ熱が自然に移る"
+        },
+        {
+          "label": "エ",
+          "text": "熱はすべて仕事に変換できる"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "熱の移動には向きがある（不可逆変化）。熱機関でも熱をすべて仕事に変えることはできない。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "7db48f7b99f0ab75e60d5a96949cc6e990fc5e6de46b12ce5bc4f370fa07ba89"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "2935a161fdd70b80209d378288acce6dd8907afc45777b83284e7ebb4c8f80ef"
+  }
+}

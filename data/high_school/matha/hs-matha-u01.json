@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATHA-U01-S1",
+  "title": "場合の数と確率",
+  "subtitle": "場合の数と確率｜順列・組合せ・確率の基本性質・独立試行・反復試行・条件付き確率",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_a",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATHA-U01"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHA-U01-S1-Q001",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "異なる 5 個の文字から 3 個を選んで1列に並べる方法は何通りか。",
+      "answer": {
+        "value": "60",
+        "unit": "通り"
+      },
+      "explanation": "${}_5\\mathrm{P}_3=5\\cdot4\\cdot3=60$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "perm(5,3)",
+        "expected": "60"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-S1-Q002",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "男子 5 人、女子 4 人の中から 3 人の委員を選ぶとき、男子 2 人と女子 1 人を選ぶ方法は何通りか。",
+      "answer": {
+        "value": "40",
+        "unit": "通り"
+      },
+      "explanation": "${}_5\\mathrm{C}_2\\times{}_4\\mathrm{C}_1=10\\times4=40$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(5,2)*binomial(4,1)",
+        "expected": "40"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-S1-Q003",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "6 人が円形のテーブルに座る方法は何通りか。",
+      "answer": {
+        "value": "120",
+        "unit": "通り"
+      },
+      "explanation": "円順列は $(6-1)!=120$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "factorial(5)",
+        "expected": "120"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-S1-Q004",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1 個のさいころを 4 回投げるとき、1 の目がちょうど 2 回出る確率を求めなさい。",
+      "answer": {
+        "value": "25/216",
+        "display": "$\\dfrac{25}{216}$"
+      },
+      "explanation": "反復試行の確率 ${}_4\\mathrm{C}_2\\left(\\dfrac{1}{6}\\right)^2\\left(\\dfrac{5}{6}\\right)^2=6\\cdot\\dfrac{25}{1296}=\\dfrac{25}{216}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "binomial(4,2)*Rational(1,6)**2*Rational(5,6)**2",
+        "expected": "25/216"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-S1-Q005",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある病気の検査で、病気の人が陽性になる確率は 0.9、病気でない人が陽性になる確率は 0.1 である。この病気の人の割合が全体の 10% のとき、陽性と判定された人が実際に病気である確率を求めなさい。",
+      "answer": {
+        "value": "1/2",
+        "display": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "陽性になる確率は $0.1\\times0.9+0.9\\times0.1=0.18$。そのうち病気の人は $0.09$。条件付き確率は $\\dfrac{0.09}{0.18}=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(Rational(1,10)*Rational(9,10))/(Rational(1,10)*Rational(9,10)+Rational(9,10)*Rational(1,10))",
+        "expected": "1/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U01-S1-Q006",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1 個のさいころを 1 回投げて、出た目の数の 100 倍の金額（円）をもらえるゲームがある。もらえる金額の期待値を求めなさい。",
+      "answer": {
+        "value": "350",
+        "unit": "円"
+      },
+      "explanation": "$100\\times\\dfrac{1+2+3+4+5+6}{6}=350$（円）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "100*mean([1,2,3,4,5,6])",
+        "expected": "350"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "201997e6f8a4846cfd1688423b02f4d27254da6eb8d66b7940840f70c14639aa"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "c84c949e33b3a2f1a65dfa8a6688779f621d2e883767be1c3abcf64ca1b28176"
+  }
+}

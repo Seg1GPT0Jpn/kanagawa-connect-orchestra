@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATHC-U01-S1",
+  "title": "ベクトル",
+  "subtitle": "ベクトル｜ベクトルの演算・成分・内積・位置ベクトル",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_c",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHC-U01"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHC-U01-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\vec{a}=(2,\\,3),\\ \\vec{b}=(-1,\\,4)$ のとき、$2\\vec{a}-\\vec{b}$ を成分で表しなさい。",
+      "answer": {
+        "value": "$(5,\\,2)$",
+        "accepted": [
+          "(5,2)"
+        ]
+      },
+      "explanation": "$(4,\\,6)-(-1,\\,4)=(5,\\,2)$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[2*2-(-1), 2*3-4]",
+        "expected": "[5, 2]"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U01-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\vec{a}=(1,\\,2),\\ \\vec{b}=(3,\\,-1)$ の内積 $\\vec{a}\\cdot\\vec{b}$ を求めなさい。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "$1\\cdot3+2\\cdot(-1)=1$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1*3+2*(-1)",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U01-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$|\\vec{a}|=2,\\ |\\vec{b}|=3,\\ \\vec{a}\\cdot\\vec{b}=3$ のとき、$\\vec{a}$ と $\\vec{b}$ のなす角 $\\theta\\ (0^\\circ\\leqq\\theta\\leqq180^\\circ)$ は何度か。",
+      "answer": {
+        "value": "60",
+        "unit": "度"
+      },
+      "explanation": "$\\cos\\theta=\\dfrac{3}{2\\cdot3}=\\dfrac{1}{2}$ より $\\theta=60^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "acos(Rational(3,6))*180/pi",
+        "expected": "60"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U01-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\vec{a}=(2,\\,k)$ と $\\vec{b}=(3,\\,-6)$ が垂直になるような $k$ の値を求めなさい。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "内積が 0 になる条件 $6-6k=0$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(2*3+k*(-6), k)[0]",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U01-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{OAB}$ で $\\overrightarrow{\\mathrm{OA}}=\\vec{a},\\ \\overrightarrow{\\mathrm{OB}}=\\vec{b}$ とする。辺 AB を $2:1$ に内分する点 P の位置ベクトル $\\overrightarrow{\\mathrm{OP}}$ を $\\vec{a},\\ \\vec{b}$ で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{3}\\vec{a}+\\dfrac{2}{3}\\vec{b}$"
+      },
+      "explanation": "内分点の公式 $\\dfrac{n\\vec{a}+m\\vec{b}}{m+n}$（$m:n=2:1$）より $\\dfrac{\\vec{a}+2\\vec{b}}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U01-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "空間の2点 A$(1,\\,2,\\,3)$、B$(3,\\,0,\\,4)$ 間の距離を求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$\\sqrt{2^2+(-2)^2+1^2}=3$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(2**2+2**2+1**2)",
+        "expected": "3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b5b171c99a66ec2c61ab342e524b5a489f5e6949b9ce3512bade7d2e23682e32"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "be301a8f176496d3216b80d516a79a07658a5107efcdb0070f10ea346e0544f5"
+  }
+}

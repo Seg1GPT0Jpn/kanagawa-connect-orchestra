@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATHA-U03-S1",
+  "title": "数学と人間の活動　整数",
+  "subtitle": "数学と人間の活動｜約数と倍数・ユークリッドの互除法・一次不定方程式・n進法",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_a",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATHA-U03"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHA-U03-S1-Q001",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ユークリッドの互除法を用いて、391 と 299 の最大公約数を求めなさい。",
+      "answer": {
+        "value": "23"
+      },
+      "explanation": "$391=299\\cdot1+92$、$299=92\\cdot3+23$、$92=23\\cdot4$。最大公約数は 23。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "gcd(391, 299)",
+        "expected": "23"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-S1-Q002",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "504 の正の約数の個数を求めなさい。",
+      "answer": {
+        "value": "24",
+        "unit": "個"
+      },
+      "explanation": "$504=2^3\\cdot3^2\\cdot7$。約数の個数は $(3+1)(2+1)(1+1)=24$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "len(divisors(504))",
+        "expected": "24"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-S1-Q003",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $3x+5y=1$ の整数解をすべて求めなさい。",
+      "answer": {
+        "value": "$x=5k+2,\\ y=-3k-1$（$k$ は整数）"
+      },
+      "explanation": "$x=2,\\ y=-1$ が1つの解。$3(x-2)=-5(y+1)$ で 3 と 5 は互いに素なので $x-2=5k$、$y+1=-3k$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "3*2+5*(-1)",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-S1-Q004",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "2進法で表された数 $10110_{(2)}$ を10進法で表しなさい。",
+      "answer": {
+        "value": "22"
+      },
+      "explanation": "$1\\cdot2^4+0\\cdot2^3+1\\cdot2^2+1\\cdot2+0=22$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2**4+2**2+2",
+        "expected": "22"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-S1-Q005",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "10進法の 45 を 2進法で表しなさい。",
+      "answer": {
+        "value": "$101101_{(2)}$",
+        "accepted": [
+          "101101"
+        ]
+      },
+      "explanation": "$45=32+8+4+1$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "32+8+4+1",
+        "expected": "45",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHA-U03-S1-Q006",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATHA-U03",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$n$ が整数のとき、$n^3-n$ は 6 の倍数であることを証明しなさい。",
+      "answer": {
+        "value": "$n^3-n=(n-1)n(n+1)$ は連続する3つの整数の積である。連続する2つの整数の中には必ず偶数があるので2の倍数、連続する3つの整数の中には必ず3の倍数があるので3の倍数である。2と3は互いに素なので、$n^3-n$ は6の倍数である。"
+      },
+      "explanation": "因数分解して「連続する整数の積」と見ることがポイント。$n$ を 6 で割った余りで場合分けしてもよい。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$(n-1)n(n+1)$ と因数分解している",
+            "points": 2
+          },
+          {
+            "criterion": "2の倍数かつ3の倍数であることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "6の倍数と結論づけている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "factor(n**3-n)",
+        "expected": "n*(n-1)*(n+1)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "a2f18d52f08558309202fceb470f191560ba509b69ede8008d64f912654a3cb5"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "df6612d49bbac65566c4ff48c0a1b022aabebf48a715d2827de39f0c020bbea6"
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-PHYB-U01-S1",
+  "title": "運動の表し方と運動の法則",
+  "subtitle": "物体の運動とエネルギー｜等加速度直線運動・自由落下・運動の法則・力のつり合い",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-PHYB-U01"
+  ],
+  "instructions": [
+    "必要があれば、重力加速度の大きさは 9.8 m/s² とする。数値は問題文の指示に従って答えなさい。"
+  ],
+  "questions": [
+    {
+      "id": "HS-PHYB-U01-S1-Q001",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "静止していた物体が一定の加速度 2.0 m/s² で動き始めた。5.0 秒後の速さは何 m/s か。",
+      "answer": {
+        "value": "10",
+        "unit": "m/s"
+      },
+      "explanation": "$v=v_0+at=0+2.0\\times5.0=10$（m/s）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*5",
+        "expected": "10"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-S1-Q002",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "前の問題で、動き始めてから 5.0 秒間に進んだ距離は何 m か。",
+      "answer": {
+        "value": "25",
+        "unit": "m"
+      },
+      "explanation": "$x=v_0t+\\dfrac{1}{2}at^2=\\dfrac{1}{2}\\times2.0\\times5.0^2=25$（m）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*2*5**2",
+        "expected": "25"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-S1-Q003",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "小球を静かに落とした。2.0 秒後の速さは何 m/s か。空気抵抗は無視する。",
+      "answer": {
+        "value": "19.6",
+        "unit": "m/s"
+      },
+      "explanation": "自由落下 $v=gt=9.8\\times2.0=19.6$（m/s）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "9.8*2",
+        "expected": "19.6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-S1-Q004",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量 4.0 kg の物体に 12 N の力を加え続けたときに生じる加速度の大きさは何 m/s² か。摩擦はないものとする。",
+      "answer": {
+        "value": "3",
+        "unit": "m/s²"
+      },
+      "explanation": "運動方程式 $ma=F$ より $a=\\dfrac{12}{4.0}=3.0$（m/s²）。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "12/4",
+        "expected": "3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-S1-Q005",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "knowledge",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "水平な床に静止している物体にはたらく重力 $W$ と床からの垂直抗力 $N$ について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$N$ は $W$ より常に大きい"
+        },
+        {
+          "label": "イ",
+          "text": "$W$ と $N$ は作用・反作用の関係である"
+        },
+        {
+          "label": "ウ",
+          "text": "$W$ と $N$ は同じ物体にはたらかない"
+        },
+        {
+          "label": "エ",
+          "text": "$W$ と $N$ はつり合いの関係にあり、作用・反作用の関係ではない"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$W$ と $N$ はどちらも物体にはたらく力でつり合っている。重力の反作用は物体が地球を引く力、垂直抗力の反作用は物体が床を押す力。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-S1-Q006",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水平面上で、質量 2.0 kg の物体を水平に引いたところ、動き出す直前の力の大きさが 7.84 N であった。静止摩擦係数を求めなさい。",
+      "answer": {
+        "value": "0.4"
+      },
+      "explanation": "最大摩擦力 $F=\\mu N=\\mu mg$。$\\mu=\\dfrac{7.84}{2.0\\times9.8}=0.40$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "7.84/(2*9.8)",
+        "expected": "0.4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "36792fc1b58775baaa66f66108534f907f53a67b1e313499e90365170f861d68"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "80a92f24186ab5891a0fed390d8c8031af89e5221455f4214496a8d1271113d5"
+  }
+}

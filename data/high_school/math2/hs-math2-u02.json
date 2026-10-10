@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH2-U02-S1",
+  "title": "複素数と方程式",
+  "subtitle": "いろいろな式｜複素数・解と係数の関係・剰余の定理・因数定理・高次方程式",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U02"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U02-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$(2+3i)(1-i)$ を計算しなさい。",
+      "answer": {
+        "value": "$5+i$",
+        "accepted": [
+          "5+i"
+        ]
+      },
+      "explanation": "$2-2i+3i-3i^2=2+i+3=5+i$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "expand((2+3*I)*(1-I))",
+        "expected": "5+I"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\dfrac{1+i}{1-i}$ を計算しなさい。",
+      "answer": {
+        "value": "$i$",
+        "accepted": [
+          "i"
+        ]
+      },
+      "explanation": "分母・分子に $1+i$ をかけて $\\dfrac{(1+i)^2}{2}=\\dfrac{2i}{2}=i$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify((1+I)/(1-I))",
+        "expected": "I"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "二次方程式 $x^2+2x+5=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=-1\\pm2i$",
+        "accepted": [
+          "x=-1±2i"
+        ]
+      },
+      "explanation": "$x=-1\\pm\\sqrt{1-5}=-1\\pm2i$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "solve(x**2+2*x+5, x)",
+        "expected": "[-1-2*I, -1+2*I]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二次方程式 $x^2-3x+5=0$ の2つの解を $\\alpha,\\ \\beta$ とするとき、$\\alpha^2+\\beta^2$ の値を求めなさい。",
+      "answer": {
+        "value": "-1"
+      },
+      "explanation": "解と係数の関係より $\\alpha+\\beta=3,\\ \\alpha\\beta=5$。$\\alpha^2+\\beta^2=(\\alpha+\\beta)^2-2\\alpha\\beta=9-10=-1$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3**2-2*5",
+        "expected": "-1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "整式 $P(x)=x^3+ax^2-x+2$ が $x+2$ で割り切れるとき、定数 $a$ の値を求めなさい。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "因数定理より $P(-2)=0$。$-8+4a+2+2=4a-4=0$ より $a=1$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve((-2)**3+a*(-2)**2-(-2)+2, a)[0]",
+        "expected": "1"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U02-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $x^3-7x+6=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=1,\\ 2,\\ -3$",
+        "accepted": [
+          "x=1,2,-3"
+        ]
+      },
+      "explanation": "$x=1$ が解なので $(x-1)(x^2+x-6)=(x-1)(x-2)(x+3)=0$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(x**3-7*x+6, x)",
+        "expected": "[-3, 1, 2]",
+        "compare": "set"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "5acf46865662e991be6cf38d4d0ce33fb232f7161b126e5cde2e928dbdcb5057"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "ae21c837ec34de816691c8c134e1f70737efdb2c300cd4406f35b4304edc009f"
+  }
+}

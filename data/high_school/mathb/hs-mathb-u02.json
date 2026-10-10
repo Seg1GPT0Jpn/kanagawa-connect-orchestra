@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATHB-U02-S1",
+  "title": "統計的な推測",
+  "subtitle": "統計的な推測｜確率変数と確率分布・二項分布・正規分布・母平均の推定・仮説検定",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_b",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHB-U02"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHB-U02-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ のとる値が 1，2，3 で、それぞれの確率が $\\dfrac{1}{2},\\ \\dfrac{1}{3},\\ \\dfrac{1}{6}$ のとき、$X$ の期待値 $E(X)$ を求めなさい。",
+      "answer": {
+        "value": "5/3",
+        "display": "$\\dfrac{5}{3}$"
+      },
+      "explanation": "$E(X)=1\\cdot\\dfrac{1}{2}+2\\cdot\\dfrac{1}{3}+3\\cdot\\dfrac{1}{6}=\\dfrac{5}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)+2*Rational(1,3)+3*Rational(1,6)",
+        "expected": "5/3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "確率変数 $X$ の期待値が 5、分散が 4 のとき、$Y=3X+2$ の分散を求めなさい。",
+      "answer": {
+        "value": "36"
+      },
+      "explanation": "$V(aX+b)=a^2V(X)=9\\times4=36$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3**2*4",
+        "expected": "36"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1 個のさいころを 180 回投げるとき、1 の目が出る回数 $X$ の期待値を求めなさい。",
+      "answer": {
+        "value": "30"
+      },
+      "explanation": "$X$ は二項分布 $B\\left(180,\\ \\dfrac{1}{6}\\right)$ に従い、$E(X)=np=30$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "180*Rational(1,6)",
+        "expected": "30"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "前の問題の $X$ の標準偏差を求めなさい。",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$V(X)=np(1-p)=180\\cdot\\dfrac{1}{6}\\cdot\\dfrac{5}{6}=25$。標準偏差は 5。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(180*Rational(1,6)*Rational(5,6))",
+        "expected": "5"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "確率変数 $Z$ が標準正規分布 $N(0,1)$ に従うとき、$P(-1.96\\leqq Z\\leqq1.96)$ の値に最も近いものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0.50"
+        },
+        {
+          "label": "イ",
+          "text": "0.99"
+        },
+        {
+          "label": "ウ",
+          "text": "0.95"
+        },
+        {
+          "label": "エ",
+          "text": "0.68"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "正規分布表より $P(0\\leqq Z\\leqq1.96)\\fallingdotseq0.475$。2倍して約 0.95。母平均の信頼度 95% の信頼区間に使われる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHB-U02-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHB-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "ある工場の製品から無作為に 100 個を抽出して重さを調べたところ、標本平均が 50.0 g であった。母標準偏差を 2.0 g として、母平均を信頼度 95% で推定しなさい。小数第2位を四捨五入して答えること。",
+      "answer": {
+        "value": "$49.6\\leqq m\\leqq50.4$"
+      },
+      "explanation": "信頼区間は $\\bar{X}\\pm1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}=50.0\\pm1.96\\cdot\\dfrac{2.0}{10}=50.0\\pm0.392$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1.96*2/sqrt(100)",
+        "expected": "0.392",
+        "compare": "numeric",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "168eaaf0a2577490ec6dc2e91f853b38f8208181da6d91e010060ace93eea87b"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "2ce0e010ab7d6387487466dd2aee3525b7ab14763c2e5e8b0c9fde6d0e1c6568"
+  }
+}

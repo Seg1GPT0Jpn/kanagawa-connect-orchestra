@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH2-U01-S1",
+  "title": "式と証明",
+  "subtitle": "いろいろな式｜二項定理・整式の除法・恒等式・等式・不等式の証明",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U01"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U01-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$(2x+1)^5$ の展開式における $x^3$ の係数を求めなさい。",
+      "answer": {
+        "value": "80"
+      },
+      "explanation": "一般項は ${}_5\\mathrm{C}_r(2x)^r$。$r=3$ のとき ${}_5\\mathrm{C}_3\\cdot2^3=80$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "binomial(5,3)*2**3",
+        "expected": "80"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "整式 $x^3-2x^2+3x-4$ を $x-1$ で割ったときの商と余りを求めなさい。",
+      "answer": {
+        "value": "商 $x^2-x+2$、余り $-2$"
+      },
+      "explanation": "組立除法などで計算する。剰余の定理より余りは $f(1)=1-2+3-4=-2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((x-1)*(x**2-x+2)-2)",
+        "expected": "x**3-2*x**2+3*x-4",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "等式 $\\dfrac{3x+1}{(x+1)(x-1)}=\\dfrac{a}{x+1}+\\dfrac{b}{x-1}$ が $x$ についての恒等式となるように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=1,\\ b=2$",
+        "accepted": [
+          "a=1,b=2"
+        ]
+      },
+      "explanation": "分母を払うと $3x+1=a(x-1)+b(x+1)$。$x=1$ で $4=2b$、$x=-1$ で $-2=-2a$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "apart((3*x+1)/((x+1)*(x-1)))",
+        "expected": "1/(x+1)+2/(x-1)",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$a>0,\\ b>0$ のとき、相加平均と相乗平均の関係として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\dfrac{a+b}{2}\\leqq\\sqrt{ab}$"
+        },
+        {
+          "label": "イ",
+          "text": "$a+b\\geqq ab$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\dfrac{a+b}{2}\\geqq\\sqrt{ab}$（等号は $a=b$ のとき）"
+        },
+        {
+          "label": "エ",
+          "text": "$\\dfrac{a+b}{2}=\\sqrt{ab}$ が常に成り立つ"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$\\dfrac{a+b}{2}-\\sqrt{ab}=\\dfrac{(\\sqrt{a}-\\sqrt{b})^2}{2}\\geqq0$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$x>0$ のとき、$x+\\dfrac{9}{x}$ の最小値を求めなさい。",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "相加平均・相乗平均の関係より $x+\\dfrac{9}{x}\\geqq2\\sqrt{9}=6$。等号は $x=3$ のとき。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "3+9/3",
+        "expected": "6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U01-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$a,\\ b$ が実数のとき、不等式 $a^2+b^2\\geqq2ab$ を証明し、等号が成り立つ条件を答えなさい。",
+      "answer": {
+        "value": "$(a^2+b^2)-2ab=(a-b)^2\\geqq0$ よって $a^2+b^2\\geqq2ab$。等号は $a-b=0$、すなわち $a=b$ のとき成り立つ。"
+      },
+      "explanation": "（左辺）－（右辺）を変形して、実数の2乗が0以上であることを使う。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "差をとって平方の形に変形している",
+            "points": 3
+          },
+          {
+            "criterion": "等号成立条件を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 4
+      },
+      "calc_check": {
+        "expression": "expand((a-b)**2)",
+        "expected": "a**2-2*a*b+b**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "68e8c9701910608e66861929bd521d687bf3595824e75bb72f6ca856dd5cffc1"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "cf8b25f6d0db315ab261e44b7d2a6b03e40b0c145b37d2ef542cd2b6bfa0318b"
+  }
+}

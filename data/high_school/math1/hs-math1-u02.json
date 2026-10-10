@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH1-U02-S1",
+  "title": "集合と命題",
+  "subtitle": "数と式｜集合・命題と条件・必要条件・十分条件・対偶・背理法",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U02"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U02-S1-Q001",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "全体集合 $U=\\{1,2,3,\\cdots,10\\}$ の部分集合 $A=\\{2,4,6,8,10\\}$、$B=\\{3,6,9\\}$ について、$A\\cap B$ を求めなさい。",
+      "answer": {
+        "value": "$\\{6\\}$",
+        "accepted": [
+          "{6}"
+        ]
+      },
+      "explanation": "$A$ と $B$ の両方に属する要素は 6 だけ。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-S1-Q002",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "前の問題の $A,\\ B$ について、$\\overline{A\\cup B}$ の要素の個数を求めなさい。",
+      "answer": {
+        "value": "3",
+        "unit": "個"
+      },
+      "explanation": "$A\\cup B=\\{2,3,4,6,8,9,10\\}$（7個）。補集合は $\\{1,5,7\\}$ で3個。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "10-7",
+        "expected": "3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-S1-Q003",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "$x$ は実数とする。「$x^2=4$」は「$x=2$」であるための何条件か。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "必要十分条件である"
+        },
+        {
+          "label": "イ",
+          "text": "十分条件であるが必要条件ではない"
+        },
+        {
+          "label": "ウ",
+          "text": "必要条件であるが十分条件ではない"
+        },
+        {
+          "label": "エ",
+          "text": "必要条件でも十分条件でもない"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$x=2\\Rightarrow x^2=4$ は真、$x^2=4\\Rightarrow x=2$ は偽（反例 $x=-2$）。よって「$x^2=4$」は必要条件だが十分条件ではない。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-S1-Q004",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "命題「$n$ が 6 の倍数ならば、$n$ は 3 の倍数である」の対偶を選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$n$ が 3 の倍数でないならば、$n$ は 6 の倍数でない"
+        },
+        {
+          "label": "イ",
+          "text": "$n$ が 3 の倍数でないならば、$n$ は 6 の倍数である"
+        },
+        {
+          "label": "ウ",
+          "text": "$n$ が 6 の倍数でないならば、$n$ は 3 の倍数でない"
+        },
+        {
+          "label": "エ",
+          "text": "$n$ が 3 の倍数ならば、$n$ は 6 の倍数である"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "「$p\\Rightarrow q$」の対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。対偶はもとの命題と真偽が一致する。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-S1-Q005",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "命題「すべての実数 $x$ について $x^2>0$」の否定として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "ある実数 $x$ について $x^2\\leqq0$"
+        },
+        {
+          "label": "イ",
+          "text": "すべての実数 $x$ について $x^2<0$"
+        },
+        {
+          "label": "ウ",
+          "text": "すべての実数 $x$ について $x^2\\leqq0$"
+        },
+        {
+          "label": "エ",
+          "text": "ある実数 $x$ について $x^2>0$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "「すべての～について P」の否定は「ある～について P でない」。$x=0$ のとき $x^2=0$ なので、もとの命題は偽で否定は真。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U02-S1-Q006",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U02",
+      "skills": [
+        "proof",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\sqrt{2}$ が無理数であることを用いて、$1+\\sqrt{2}$ が無理数であることを背理法で証明しなさい。",
+      "answer": {
+        "value": "$1+\\sqrt{2}$ が有理数であると仮定し、$1+\\sqrt{2}=r$（$r$ は有理数）とおく。すると $\\sqrt{2}=r-1$ で、有理数から有理数をひいた数は有理数なので $\\sqrt{2}$ は有理数となる。これは $\\sqrt{2}$ が無理数であることに矛盾する。よって $1+\\sqrt{2}$ は無理数である。"
+      },
+      "explanation": "結論を否定して矛盾を導く。有理数どうしの和・差・積・商（0 でわる場合を除く）は有理数であることを使う。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "結論を否定した仮定を正しく置いている",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{2}$ が有理数になることを導いている",
+            "points": 2
+          },
+          {
+            "criterion": "矛盾を指摘して結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "672ea9fb027bb23844d8137034782e7781e5c84d8a72b245b87b519e87e2b1d1"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "1a2a64d2b7ab4b71f8e734ed9b280f11901ede262b7ef56f7a16f5320fde69d2"
+  }
+}

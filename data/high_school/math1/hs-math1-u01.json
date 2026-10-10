@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH1-U01-S1",
+  "title": "数と式",
+  "subtitle": "数と式｜多項式の展開と因数分解・実数・一次不等式・絶対値",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U01"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U01-S1-Q001",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$x^3-8$ を因数分解しなさい。",
+      "answer": {
+        "value": "$(x-2)(x^2+2x+4)$",
+        "accepted": [
+          "(x-2)(x^2+2x+4)"
+        ]
+      },
+      "explanation": "$a^3-b^3=(a-b)(a^2+ab+b^2)$ を用いる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((x-2)*(x**2+2*x+4))",
+        "expected": "x**3-8"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-S1-Q002",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$x^2+3xy+2y^2-x-3y-2$ を因数分解しなさい。",
+      "answer": {
+        "value": "$(x+2y+1)(x+y-2)$",
+        "accepted": [
+          "(x+2y+1)(x+y-2)",
+          "(x+y-2)(x+2y+1)"
+        ]
+      },
+      "explanation": "$x$ について整理すると $x^2+(3y-1)x+(2y^2-3y-2)=x^2+(3y-1)x+(2y+1)(y-2)$。和が $3y-1$、積が $(2y+1)(y-2)$ になる2式は $2y+1$ と $y-2$ なので $(x+2y+1)(x+y-2)$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "expand((x+2*y+1)*(x+y-2))",
+        "expected": "x**2+3*x*y+2*y**2-x-3*y-2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-S1-Q003",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\dfrac{1}{\\sqrt{5}-\\sqrt{3}}$ の分母を有理化しなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\sqrt{5}+\\sqrt{3}}{2}$",
+        "accepted": [
+          "(√5+√3)/2"
+        ]
+      },
+      "explanation": "分母・分子に $\\sqrt{5}+\\sqrt{3}$ をかけると、分母は $5-3=2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1/(sqrt(5)-sqrt(3))",
+        "expected": "(sqrt(5)+sqrt(3))/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-S1-Q004",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不等式 $3x-5>7x+3$ を解きなさい。",
+      "answer": {
+        "value": "$x<-2$",
+        "accepted": [
+          "x<-2"
+        ]
+      },
+      "explanation": "$-4x>8$。両辺を負の数でわるので不等号の向きが変わり $x<-2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "solve(3*x-5-(7*x+3), x)",
+        "expected": "[-2]"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-S1-Q005",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $|x-3|=5$ を解きなさい。",
+      "answer": {
+        "value": "$x=-2,\\ 8$",
+        "accepted": [
+          "x=-2,8"
+        ]
+      },
+      "explanation": "$x-3=\\pm5$ より $x=8,\\ -2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[3-5, 3+5]",
+        "expected": "[-2, 8]"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U01-S1-Q006",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$x=\\dfrac{1}{\\sqrt{3}-\\sqrt{2}},\\ y=\\dfrac{1}{\\sqrt{3}+\\sqrt{2}}$ のとき、$x^2+y^2$ の値を求めなさい。",
+      "answer": {
+        "value": "10"
+      },
+      "explanation": "$x=\\sqrt{3}+\\sqrt{2},\\ y=\\sqrt{3}-\\sqrt{2}$ より $x+y=2\\sqrt{3},\\ xy=1$。$x^2+y^2=(x+y)^2-2xy=12-2=10$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(1/(sqrt(3)-sqrt(2)))**2+(1/(sqrt(3)+sqrt(2)))**2",
+        "expected": "10"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "1706fe5f7d66da0eb40bda6c24c86e01daf4a3809d11d2d8c073495a965b7348"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "自動検査の検算（calc_check）で因数分解の正答の誤りを検出したため修正：修正 1 問（Q002）",
+      "content_hash": "f3692a277f294852f316e9d63a198d85c82e5b0c0c2f9917dabdbb1da37ad648"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "b26d9be86258e29b38d8e6d484035baf96a7966b4c3fc413912f525d36434b69"
+  }
+}

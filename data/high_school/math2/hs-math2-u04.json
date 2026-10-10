@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH2-U04-S1",
+  "title": "三角関数",
+  "subtitle": "三角関数｜一般角と弧度法・三角関数のグラフ・加法定理・合成",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U04"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U04-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$150^\\circ$ を弧度法で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{6}\\pi$",
+        "accepted": [
+          "5π/6"
+        ]
+      },
+      "explanation": "$180^\\circ=\\pi$ より $150^\\circ=\\dfrac{150}{180}\\pi$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "deg(150)",
+        "expected": "5*pi/6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U04-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\sin\\dfrac{7}{6}\\pi$ の値を求めなさい。",
+      "answer": {
+        "value": "-1/2",
+        "display": "$-\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\dfrac{7}{6}\\pi$ は第3象限の角で、$\\sin\\dfrac{7}{6}\\pi=-\\sin\\dfrac{\\pi}{6}=-\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sin(7*pi/6)",
+        "expected": "-1/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U04-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\sin75^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$",
+        "accepted": [
+          "(√6+√2)/4"
+        ]
+      },
+      "explanation": "加法定理 $\\sin(45^\\circ+30^\\circ)=\\sin45^\\circ\\cos30^\\circ+\\cos45^\\circ\\sin30^\\circ$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sin(deg(75))",
+        "expected": "(sqrt(6)+sqrt(2))/4"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U04-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\sin\\theta+\\sqrt{3}\\cos\\theta$ を $r\\sin(\\theta+\\alpha)$ の形に表しなさい。ただし $r>0,\\ -\\pi<\\alpha\\leqq\\pi$ とする。",
+      "answer": {
+        "value": "$2\\sin\\left(\\theta+\\dfrac{\\pi}{3}\\right)$"
+      },
+      "explanation": "$r=\\sqrt{1+3}=2$、$\\cos\\alpha=\\dfrac{1}{2},\\ \\sin\\alpha=\\dfrac{\\sqrt{3}}{2}$ より $\\alpha=\\dfrac{\\pi}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "trigsimp(2*sin(theta+pi/3)-(sin(theta)+sqrt(3)*cos(theta)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U04-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$0\\leqq\\theta<2\\pi$ のとき、方程式 $2\\sin^2\\theta-\\sin\\theta-1=0$ を解きなさい。",
+      "answer": {
+        "value": "$\\theta=\\dfrac{\\pi}{2},\\ \\dfrac{7}{6}\\pi,\\ \\dfrac{11}{6}\\pi$"
+      },
+      "explanation": "$(2\\sin\\theta+1)(\\sin\\theta-1)=0$ より $\\sin\\theta=1,\\ -\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve(2*x**2-x-1, x)",
+        "expected": "[-1/2, 1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U04-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "関数 $y=\\sin\\theta+\\sqrt{3}\\cos\\theta\\ (0\\leqq\\theta\\leqq\\pi)$ の最大値を求めなさい。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "$y=2\\sin\\left(\\theta+\\dfrac{\\pi}{3}\\right)$。$\\theta=\\dfrac{\\pi}{6}$ のとき最大値 2。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sin(pi/6)+sqrt(3)*cos(pi/6)",
+        "expected": "2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "fcfaccdf50bea6bf55ebce5bd09fb551276491bf3a15126d7104dd0b3ef9003b"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "17c9f2cb88bdaf71abbcdc6b0e9273ca544831e0ff235f5daa7f0f89975dd568"
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATHC-U02-S1",
+  "title": "平面上の曲線と複素数平面",
+  "subtitle": "平面上の曲線と複素数平面｜二次曲線・媒介変数表示・極形式・ド・モアブルの定理",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_c",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHC-U02"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHC-U02-S1-Q001",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y^2=8x$ の焦点の座標を求めなさい。",
+      "answer": {
+        "value": "$(2,\\,0)$",
+        "accepted": [
+          "(2,0)"
+        ]
+      },
+      "explanation": "$y^2=4px$ の焦点は $(p,\\,0)$。$4p=8$ より $p=2$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "8/4",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-S1-Q002",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "楕円 $\\dfrac{x^2}{25}+\\dfrac{y^2}{9}=1$ の焦点の座標を求めなさい。",
+      "answer": {
+        "value": "$(\\pm4,\\,0)$",
+        "accepted": [
+          "(±4,0)"
+        ]
+      },
+      "explanation": "$\\sqrt{25-9}=4$ より焦点は $(4,0),\\ (-4,0)$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(25-9)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-S1-Q003",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "双曲線 $\\dfrac{x^2}{9}-\\dfrac{y^2}{16}=1$ の漸近線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=\\pm\\dfrac{4}{3}x$",
+        "accepted": [
+          "y=±4/3x"
+        ]
+      },
+      "explanation": "$\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1$ の漸近線は $y=\\pm\\dfrac{b}{a}x$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-S1-Q004",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数 $1+\\sqrt{3}i$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。",
+      "answer": {
+        "value": "$2\\left(\\cos\\dfrac{\\pi}{3}+i\\sin\\dfrac{\\pi}{3}\\right)$"
+      },
+      "explanation": "絶対値は $\\sqrt{1+3}=2$。$\\cos\\theta=\\dfrac{1}{2},\\ \\sin\\theta=\\dfrac{\\sqrt{3}}{2}$ より $\\theta=\\dfrac{\\pi}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Abs(1+sqrt(3)*I)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-S1-Q005",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ド・モアブルの定理を用いて $(1+\\sqrt{3}i)^6$ を計算しなさい。",
+      "answer": {
+        "value": "$64$",
+        "accepted": [
+          "64"
+        ]
+      },
+      "explanation": "$\\{2(\\cos\\frac{\\pi}{3}+i\\sin\\frac{\\pi}{3})\\}^6=2^6(\\cos2\\pi+i\\sin2\\pi)=64$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((1+sqrt(3)*I)**6)",
+        "expected": "64"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-S1-Q006",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "媒介変数表示 $x=3\\cos\\theta,\\ y=3\\sin\\theta$ で表される曲線の方程式を、$\\theta$ を消去して求めなさい。",
+      "answer": {
+        "value": "$x^2+y^2=9$",
+        "accepted": [
+          "x^2+y^2=9"
+        ]
+      },
+      "explanation": "$\\cos^2\\theta+\\sin^2\\theta=1$ を用いる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "trigsimp((3*cos(theta))**2+(3*sin(theta))**2)",
+        "expected": "9",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "066274ddf94c2326afe4df30b98207b6e717f2ed09d004f1edae5cb97ff8da1f"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "729bdc4648db590b4726dfeddf478d76fcbe5976b96487b3235342ef3903618f"
+  }
+}

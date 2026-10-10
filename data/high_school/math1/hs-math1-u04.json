@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH1-U04-S1",
+  "title": "図形と計量",
+  "subtitle": "図形と計量｜三角比・正弦定理・余弦定理・三角形の面積",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U04"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U04-S1-Q001",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\sin\\theta=\\dfrac{3}{5}\\ (0^\\circ<\\theta<90^\\circ)$ のとき、$\\cos\\theta$ と $\\tan\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\cos\\theta=\\dfrac{4}{5},\\ \\tan\\theta=\\dfrac{3}{4}$"
+      },
+      "explanation": "$\\cos^2\\theta=1-\\sin^2\\theta=\\dfrac{16}{25}$、$\\cos\\theta>0$ より $\\dfrac{4}{5}$。$\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=\\dfrac{3}{4}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sqrt(1-Rational(9,25))",
+        "expected": "4/5",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-S1-Q002",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$\\sin150^\\circ$ の値を求めなさい。",
+      "answer": {
+        "value": "1/2",
+        "display": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\sin(180^\\circ-\\theta)=\\sin\\theta$ より $\\sin150^\\circ=\\sin30^\\circ=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "sin(deg(150))",
+        "expected": "1/2"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-S1-Q003",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $a=7,\\ b=5,\\ c=3$ のとき、$A$ を求めなさい。",
+      "answer": {
+        "value": "$A=120^\\circ$",
+        "accepted": [
+          "120°"
+        ]
+      },
+      "explanation": "余弦定理より $\\cos A=\\dfrac{5^2+3^2-7^2}{2\\cdot5\\cdot3}=-\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(5**2+3**2-7**2)/(2*5*3)",
+        "expected": "-1/2",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-S1-Q004",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $a=6,\\ A=45^\\circ,\\ B=60^\\circ$ のとき、$b$ を求めなさい。",
+      "answer": {
+        "value": "$3\\sqrt{6}$",
+        "accepted": [
+          "3√6"
+        ]
+      },
+      "explanation": "正弦定理より $b=\\dfrac{a\\sin B}{\\sin A}=\\dfrac{6\\cdot\\frac{\\sqrt{3}}{2}}{\\frac{\\sqrt{2}}{2}}=3\\sqrt{6}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "6*sin(deg(60))/sin(deg(45))",
+        "expected": "3*sqrt(6)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-S1-Q005",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $b=4,\\ c=5,\\ A=60^\\circ$ のとき、面積を求めなさい。",
+      "answer": {
+        "value": "$5\\sqrt{3}$",
+        "accepted": [
+          "5√3"
+        ]
+      },
+      "explanation": "$S=\\dfrac{1}{2}bc\\sin A=\\dfrac{1}{2}\\cdot4\\cdot5\\cdot\\dfrac{\\sqrt{3}}{2}=5\\sqrt{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*4*5*sin(deg(60))",
+        "expected": "5*sqrt(3)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U04-S1-Q006",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U04",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\triangle\\mathrm{ABC}$ で $a=7,\\ b=5,\\ c=3$ のとき、外接円の半径 $R$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{7\\sqrt{3}}{3}$",
+        "accepted": [
+          "7√3/3"
+        ]
+      },
+      "explanation": "$A=120^\\circ$（前問と同じ三角形）。正弦定理 $\\dfrac{a}{\\sin A}=2R$ より $R=\\dfrac{7}{2\\sin120^\\circ}=\\dfrac{7}{\\sqrt{3}}=\\dfrac{7\\sqrt{3}}{3}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "7/(2*sin(deg(120)))",
+        "expected": "7*sqrt(3)/3"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "81d58de8148e89c97fe625b19145761ae459b2da81d6d955c42c338661915761"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "cd513dd0f0612519fee8a5140a2e5dd07b34730f2793e344e106fa46b582011e"
+  }
+}

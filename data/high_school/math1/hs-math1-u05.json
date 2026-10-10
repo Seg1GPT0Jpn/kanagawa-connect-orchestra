@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0.0",
+  "set_id": "HS-MATH1-U05-S1",
+  "title": "データの分析",
+  "subtitle": "データの分析｜分散と標準偏差・相関係数・仮説検定の考え方",
+  "track": "high_school",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_1",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-MATH1-U05"
+  ],
+  "instructions": [
+    "答えは最も簡単な形で答えなさい。分数は既約分数、根号の中はできるだけ小さい自然数にすること。"
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH1-U05-S1-Q001",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "データ 2，4，6，8，10 の分散を求めなさい。",
+      "answer": {
+        "value": "8"
+      },
+      "explanation": "平均は 6。偏差の2乗の平均は $(16+4+0+4+16)\\div5=8$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "variance([2,4,6,8,10])",
+        "expected": "8"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-S1-Q002",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "前の問題のデータの標準偏差を求めなさい。",
+      "answer": {
+        "value": "$2\\sqrt{2}$",
+        "accepted": [
+          "2√2"
+        ]
+      },
+      "explanation": "標準偏差は分散の正の平方根。$\\sqrt{8}=2\\sqrt{2}$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "std([2,4,6,8,10])",
+        "expected": "2*sqrt(2)"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-S1-Q003",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "変量 $x$ の各値を 3 倍して 5 を加えた変量 $y=3x+5$ について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$y$ の分散は $x$ の分散の 3 倍"
+        },
+        {
+          "label": "イ",
+          "text": "$y$ の標準偏差は $x$ の標準偏差に 5 を加えたもの"
+        },
+        {
+          "label": "ウ",
+          "text": "$y$ の平均は $x$ の平均と等しい"
+        },
+        {
+          "label": "エ",
+          "text": "$y$ の平均は $x$ の平均の 3 倍に 5 を加えたもの、$y$ の標準偏差は $x$ の 3 倍"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$y=ax+b$ のとき、平均は $a\\bar{x}+b$、分散は $a^2$ 倍、標準偏差は $|a|$ 倍になる。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-S1-Q004",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "2つの変量 $x,\\ y$ の共分散が 12、$x$ の標準偏差が 4、$y$ の標準偏差が 5 のとき、相関係数を求めなさい。",
+      "answer": {
+        "value": "0.6"
+      },
+      "explanation": "相関係数 $r=\\dfrac{s_{xy}}{s_xs_y}=\\dfrac{12}{4\\times5}=0.6$。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "12/(4*5)",
+        "expected": "0.6"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-S1-Q005",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "相関係数について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0 以上の値しかとらない"
+        },
+        {
+          "label": "イ",
+          "text": "相関係数が 0 なら2つの変量は無関係である"
+        },
+        {
+          "label": "ウ",
+          "text": "相関係数が大きいほど、一方が他方の原因である"
+        },
+        {
+          "label": "エ",
+          "text": "$-1$ 以上 $1$ 以下の値をとり、$1$ に近いほど強い正の相関がある"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "相関係数が 0 でも曲線的な関係がある場合はある。また相関は因果関係を意味しない。",
+      "scoring": {
+        "points": 5,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH1-U05-S1-Q006",
+      "grade": "HS1",
+      "subject": "math",
+      "unit_id": "HS-MATH1-U05",
+      "skills": [
+        "thinking",
+        "data_interpretation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "あるコインを 20 回投げたところ、表が 15 回出た。このコインは表が出やすいと判断してよいか。「公正なコインを 20 回投げたとき表が 15 回以上出る確率は約 0.021」であることを用い、有意水準 5% で仮説検定の考え方にもとづいて説明しなさい。",
+      "answer": {
+        "value": "「コインは公正である（表の出る確率は 1/2）」と仮定する。この仮定のもとで表が 15 回以上出る確率は約 0.021 で、有意水準 0.05 より小さい。めったに起こらないことが起きたと考えられるので仮定を棄却し、このコインは表が出やすいと判断してよい。"
+      },
+      "explanation": "仮説検定では、主張と反対の仮説（帰無仮説）を立て、その仮説のもとで観測結果以上に極端なことが起こる確率が有意水準より小さいかどうかで判断する。",
+      "scoring": {
+        "points": 5,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "「公正である」という仮説を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "確率と有意水準を比較している",
+            "points": 2
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 5
+      },
+      "calc_check": {
+        "expression": "floor(summation(binomial(20, k), (k, 15, 20))/2**20*1000+Rational(1,2))/1000",
+        "expected": "21/1000",
+        "target": "intermediate"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v1.0.0",
+        "checked_at": "2026-10-10",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 30,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_batch.py（フェーズ3）",
+      "changes": "初版作成（6問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "908680e2263ce3169cc04d63aa892eb0413d44a8e6e6de51c3fa4f52e7080891"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-10T04:52:44+00:00",
+    "validator_version": "1.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "50ca87ec19adddb02caddebfa68a236f50273bebc0a86cfbf0b96d4b9bf0aa7d"
+  }
+}
