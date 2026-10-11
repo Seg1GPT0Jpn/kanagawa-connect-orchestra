@@ -2,7 +2,7 @@
 #
 #  ・プルリクエスト：チェックとテストだけ（公開しない・秘密情報は使わない）
 #  ・main に入ったとき：すべて通ったら Firebase（kanagawa-connect-orchestra）へ公開
-#    （サイト＝hosting と、Firestore のセキュリティルール。README の「デプロイ」と同じ内容）
+#    （サイト＝hosting。Firestore のセキュリティルールは firestore.rules が変わったときだけ）
 #
 # 公開には GitHub の Secrets に FIREBASE_SERVICE_ACCOUNT_SITE（サービスアカウントの JSON 鍵）が必要です。
 # 鍵はリポジトリに書かず、Secrets にだけ保存します（手順は README.md の「自動公開の設定」）。
@@ -40,6 +40,8 @@ jobs:
         with:
           # 認証情報を .git に残さない（公開するフォルダに .git が含まれても漏れないように）
           persist-credentials: false
+          # 直前のコミットと比べて firestore.rules が変わったかを調べるため
+          fetch-depth: 2
 
       - uses: actions/setup-python@v5
         with:
@@ -96,6 +98,27 @@ jobs:
         with:
           credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SITE }}
 
-      - name: Firebase に公開（サイト・Firestore ルール）
+      - name: Firebase に公開（サイト）
         if: github.event_name != 'pull_request'
-        run: _tools/firebase/node_modules/.bin/firebase deploy --only hosting,firestore:rules --project kanagawa-connect-orchestra --non-interactive
+        run: _tools/firebase/node_modules/.bin/firebase deploy --only hosting --project kanagawa-connect-orchestra --non-interactive
+
+      - name: firestore.rules が変わったか確認
+        id: rules
+        if: github.event_name != 'pull_request'
+        run: |
+          if git rev-parse -q --verify HEAD^ >/dev/null && git diff --quiet HEAD^ HEAD -- firestore.rules; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "firestore.rules は変わっていないので、ルールは公開し直しません。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ルールの公開には、サービスアカウントに「Service Usage ユーザー」などの権限が追加で必要です
+      # （Firebase コンソールで作った鍵だけでは 403 になることがあります。README の「自動公開の設定」参照）
+      - name: Firebase に公開（Firestore ルール）
+        if: github.event_name != 'pull_request' && steps.rules.outputs.changed == 'true'
+        run: |
+          _tools/firebase/node_modules/.bin/firebase deploy --only firestore:rules --project kanagawa-connect-orchestra --non-interactive || {
+            echo "::error::サイトは公開済みですが、Firestore ルールの公開に失敗しました（権限不足の可能性）。README.md の「自動公開の設定」を参照してください。"
+            exit 1
+          }
