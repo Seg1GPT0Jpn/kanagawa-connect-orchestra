@@ -30,6 +30,7 @@ export function AdminLayout() {
         <NavLink to="/admin/notify" className={tab}>通知</NavLink>
         <NavLink to="/admin/campaign" className={tab}>募集</NavLink>
         <NavLink to="/admin/members" className={tab}>団員</NavLink>
+        <NavLink to="/admin/docs" className={tab}>運営資料</NavLink>
       </nav>
       <Outlet />
     </div>

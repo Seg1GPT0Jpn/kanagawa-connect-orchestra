@@ -30,6 +30,7 @@ const AdminSurveyEdit = lazy(() => import('./admin/AdminSurveys').then(m => ({ d
 const AdminScores = lazy(() => import('./admin/AdminScores').then(m => ({ default: m.AdminScores })));
 const AdminNotify = lazy(() => import('./admin/AdminNotify').then(m => ({ default: m.AdminNotify })));
 const AdminJoinRequests = lazy(() => import('./admin/AdminJoinRequests').then(m => ({ default: m.AdminJoinRequests })));
+const AdminStaffDocs = lazy(() => import('./admin/AdminStaffDocs').then(m => ({ default: m.AdminStaffDocs })));
 const AdminCampaign = lazy(() => import('./admin/AdminCampaign').then(m => ({ default: m.AdminCampaign })));
 
 /** 団員だけの画面（参加希望者はホームへ。読めるかどうかの最終判定は Firestore ルール） */
@@ -92,6 +93,7 @@ export function App() {
           <Route path="notify" element={<Lazy><AdminNotify /></Lazy>} />
           <Route path="campaign" element={<Lazy><AdminCampaign /></Lazy>} />
           <Route path="join" element={<Lazy><AdminJoinRequests /></Lazy>} />
+          <Route path="docs" element={<Lazy><AdminStaffDocs /></Lazy>} />
         </Route>
         <Route path="login/*" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
