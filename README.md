@@ -246,7 +246,7 @@ HTMLを直接編集しても構いませんが、その後にスクリプトを�
 
 | ワークフロー | 対象 | 公開先 | 必要な Secret |
 |---|---|---|---|
-| 公式サイト（`.github/workflows/deploy.yml`） | 公式サイト（HTML・JS・Firestore ルール） | `kanagawa-connect-orchestra` | `FIREBASE_SERVICE_ACCOUNT_SITE` |
+| 公式サイト（`.github/workflows/deploy.yml`） | 公式サイト（HTML・JS。Firestore ルールは `firestore.rules` が変わったときだけ） | `kanagawa-connect-orchestra` | `FIREBASE_SERVICE_ACCOUNT_SITE` |
 | 団員アプリ（`.github/workflows/member-app.yml`） | `kco-member-app/`（`orchestra-management/` はテストのみ） | `kanagawa-connect-official` | `FIREBASE_SERVICE_ACCOUNT_MEMBER_APP` |
 
 公式サイトのチェック：HTML が `_tools/build_site.py` と一致しているか、`js/*.bundle.js` がソースと一致しているか、**公開されるファイルにサイト以外のもの（`.git`・ソース・設定など）が含まれていないか**（`_tools/check_public_files.cjs`）、ロジック・ルールのテスト。
@@ -274,4 +274,5 @@ HTMLを直接編集しても構いませんが、その後にスクリプトを�
 |---|---|
 | `Secrets に FIREBASE_SERVICE_ACCOUNT_… がありません` | 手順 5 の名前が正しいか確認 |
 | `Permission denied` ・ `403` | 手順 3 のロールが「Firebase 管理者」か確認。インデックスで止まる場合は「Cloud Datastore インデックス管理者」も追加 |
+| 公式サイトで `serviceusage.googleapis.com … 403`（Firestore ルールの公開で停止） | Firebase コンソールの「新しい秘密鍵を生成」で作った鍵（`firebase-adminsdk-…`）には、この権限がありません。サイト（HTML）は先に公開済みです。[IAM](https://console.cloud.google.com/iam-admin/iam?project=kanagawa-connect-orchestra) でその鍵のアカウントに「Service Usage ユーザー」を追加してから再実行 |
 | HTML／JS が一致しない | HTML を直接編集した可能性があります。`python _tools/build_site.py`、`cd _tools/firebase && npm run build` を実行してから入れてください |
