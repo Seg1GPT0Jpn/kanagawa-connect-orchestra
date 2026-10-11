@@ -24,7 +24,7 @@ MAIL = "kanagawaorchestra2026renraku@gmail.com"
 # 団員専用アプリ（別の Firebase プロジェクト。加入が確定した団員だけがログインできる）
 MEMBER_APP = "https://kanagawa-connect-official.web.app/"
 PDF = "docs/recruitment-guidelines.pdf"
-LASTMOD = "2026-10-10"
+LASTMOD = "2026-10-11"
 
 NAV = [
     ("index.html", "ホーム"),
@@ -86,7 +86,7 @@ def badge_open(text="募集中"):
 def program_list():
     """第1回演奏会のプログラム構成（演奏順）。サブメイン・アンコールは曲目候補を募集中。"""
     return f'''        <ol class="program-list">
-          <li><span class="program-list__part">オープニング</span><span class="program-list__detail">ブラームス：ハンガリー舞曲 {planned()}</span></li>
+          <li><span class="program-list__part">オープニング</span><span class="program-list__detail">ブラームス：ハンガリー舞曲第5番 {planned()}</span></li>
           <li><span class="program-list__part">サブメイン</span><span class="program-list__detail">曲目候補 {badge_open()}</span></li>
           <li class="program-list__main"><span class="program-list__part">メインプログラム</span><span class="program-list__detail">ドヴォルザーク：交響曲第7番 {planned()}</span></li>
           <li><span class="program-list__part">アンコール1</span><span class="program-list__detail">曲目候補 {badge_open()}</span></li>
@@ -100,7 +100,7 @@ def program_call_section(id_prefix="program-call", cls="section--tinted"):
       <div class="container container--narrow">
 {title("Program", f"{id_prefix}-title", "演奏会の曲目を、<br>一緒に決めませんか？")}
         <p>第1回演奏会では、ドヴォルザーク交響曲第7番をメインプログラムとして取り上げる予定です。</p>
-        <p>オープニングにはブラームスの「ハンガリー舞曲」を予定しています。</p>
+        <p>オープニングにはブラームスの「ハンガリー舞曲第5番」を予定しています。</p>
         <p>サブメイン曲、アンコール曲については、これから参加する皆さんの意見も聞きながら決めていきます。</p>
         <ul class="quote-list">
           <li>『この曲をオーケストラで演奏してみたい！』</li>
@@ -413,7 +413,7 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
           <p class="concert-feature__work" lang="en">Symphony No. 7</p>
           <p class="concert-feature__ja">ドヴォルザーク：交響曲第7番 ニ短調 作品70</p>
         </div>
-        <p>メインプログラムとして予定しています。オープニングはブラームスの「ハンガリー舞曲」を予定しています。サブメイン・アンコールの曲目は、参加する皆さんの意見も聞きながら決めていきます。</p>
+        <p>メインプログラムとして予定しています。オープニングはブラームスの「ハンガリー舞曲第5番」を予定しています。サブメイン・アンコールの曲目は、参加する皆さんの意見も聞きながら決めていきます。</p>
         <p class="small muted">開催日・会場は決定次第お知らせします。</p>
         <div class="section-more">
           {btn("concert.html", "第1回演奏会について", "outline-light")}
@@ -747,7 +747,7 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
 {title("Status", "status-title", "現在の決定状況")}
         <p class="text-center">演奏会の情報は、決まったものから順にお知らせします。</p>
         <dl class="info-list">
-{row("オープニング", "ブラームス：ハンガリー舞曲 " + planned())}
+{row("オープニング", "ブラームス：ハンガリー舞曲第5番 " + planned())}
 {row("メインプログラム", "ドヴォルザーク：交響曲第7番 " + planned())}
 {row("その他の曲目", "サブメイン・アンコール1・アンコール2 " + badge_open() + '<br><span class="small">曲目候補を募集しています。皆さんからいただいた候補を参考に、今後決定します。</span>')}
 {row("開催日", pending("決定次第お知らせします"))}
@@ -886,7 +886,7 @@ nf_body = f'''    <div class="page-header">
 '''
 
 # ================================================================ SUGGEST（曲目候補の提案）
-# オープニング（ハンガリー舞曲）は決まったため、サブメインとアンコールを募集する。
+# オープニング（ハンガリー舞曲第5番）は決まったため、サブメインとアンコールを募集する。
 # 過去の提案のカテゴリ（opening）は、管理画面・ルールでそのまま扱える
 SONG_CATS = [("submain", "サブメイン曲"), ("encore1", "アンコール曲1"), ("encore2", "アンコール曲2")]
 
@@ -933,7 +933,7 @@ suggest_body = page_header("Program suggestions", "曲目候補の提案", "演�
       <div class="container container--narrow">
 {title("Together", "suggest-intro-title", "演奏する人が、演奏会をつくる")}
         <p>第1回演奏会では、ドヴォルザーク交響曲第7番をメインプログラムとして取り上げる予定です。</p>
-        <p>オープニングにはブラームスの「ハンガリー舞曲」を予定しています。</p>
+        <p>オープニングにはブラームスの「ハンガリー舞曲第5番」を予定しています。</p>
         <p>サブメイン曲、アンコール曲については、これから参加する皆さんの意見も聞きながら決めていきます。</p>
         <ul class="quote-list">
           <li>『この曲をオーケストラで演奏してみたい！』</li>
