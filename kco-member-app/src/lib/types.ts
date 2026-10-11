@@ -103,6 +103,15 @@ export interface Announcement {
   forApplicants: boolean;
 }
 
+/** 運営資料（運営メンバーだけが読める） */
+export interface StaffDoc {
+  id: string;
+  title: string;
+  body: string;
+  pinned: boolean;
+  updatedAt: Timestamp | null;
+}
+
 export interface ProgramItem {
   label: string;
   composer: string;
