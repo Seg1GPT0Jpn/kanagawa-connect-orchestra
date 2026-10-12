@@ -1,6 +1,6 @@
 /// 記録の書き出し・読み込みの形（決定論的）
 ///
-///  ・バックアップ（JSON）：このアプリで読み込める形。練習記録と録音の分析結果
+///  ・バックアップ（JSON）：このアプリで読み込める形。練習記録・録音の分析結果・音程の記録
 ///  ・表（CSV）：Excel などで開ける形。練習記録を1行1回で
 library;
 
@@ -9,6 +9,7 @@ import 'dart:convert';
 import '../../core/clock.dart';
 import '../menu/domain/menu_rules.dart';
 import '../practice/domain/practice_record.dart';
+import '../audio_tools/domain/pitch_stats.dart';
 import '../recording/domain/recording_result.dart';
 
 const exportFormatName = 'kco-practice';
@@ -18,10 +19,17 @@ const exportFormatVersion = 1;
 const maxImportRecords = 20000;
 
 class ExportData {
-  const ExportData({required this.records, required this.recordingResults});
+  const ExportData({
+    required this.records,
+    required this.recordingResults,
+    this.tunerSessions = const [],
+  });
 
   final List<PracticeRecord> records;
   final List<RecordingResult> recordingResults;
+
+  /// チューナーの音程の記録
+  final List<TunerSession> tunerSessions;
 }
 
 /// バックアップ（JSON）。削除済みの記録は含めない
@@ -35,6 +43,7 @@ String buildBackupJson(ExportData data, {required DateTime exportedAt}) =>
           if (!r.deleted) r.toMap(),
       ],
       'recordingResults': [for (final r in data.recordingResults) r.toMap()],
+      'tunerSessions': [for (final s in data.tunerSessions) s.toMap()],
     });
 
 class ImportFormatException implements Exception {
@@ -65,10 +74,12 @@ ExportData parseBackupJson(String text) {
   }
   final rawRecords = decoded['records'];
   final rawResults = decoded['recordingResults'] ?? const [];
-  if (rawRecords is! List || rawResults is! List) {
+  final rawSessions = decoded['tunerSessions'] ?? const [];
+  if (rawRecords is! List || rawResults is! List || rawSessions is! List) {
     throw const ImportFormatException('バックアップの中身が壊れています');
   }
-  if (rawRecords.length + rawResults.length > maxImportRecords) {
+  if (rawRecords.length + rawResults.length + rawSessions.length >
+      maxImportRecords) {
     throw const ImportFormatException('記録が多すぎて読み込めません');
   }
   try {
@@ -77,6 +88,9 @@ ExportData parseBackupJson(String text) {
       recordingResults: [
         for (final m in rawResults)
           RecordingResult.fromMap(Map<String, Object?>.from(m as Map)),
+      ],
+      tunerSessions: [
+        for (final m in rawSessions) TunerSession.fromMap(m as Map),
       ],
     );
   } on ImportFormatException {

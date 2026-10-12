@@ -40,6 +40,11 @@ class PitchSettings {
     tonicPitchClass: (tonicPitchClass ?? this.tonicPitchClass) % 12,
   );
 
+  /// 音律の名前（平均律以外は主音つき）
+  String get temperamentLabel => temperament == Temperament.equal
+      ? temperament.label
+      : '${temperament.label}・主音 ${noteNames[tonicPitchClass]}';
+
   /// [midi]（実音）の、選んだ音律での平均律からのずれ（セント）
   double offsetFor(int midi) => temperament.offsetFor(midi, tonicPitchClass);
 
@@ -122,6 +127,14 @@ class ReferenceToneController extends ChangeNotifier {
   /// 鳴らす音を、選んでいる楽器の記譜音で選ぶ
   Future<void> selectWritten(int writtenMidi) =>
       selectConcert(_pitch.transposition.writtenToConcert(writtenMidi));
+
+  /// [midi]（実音）を選んで鳴らす（鳴っていれば高さだけ変える）。
+  /// ボタンの処理から直接呼ぶ（Web では、待たずに音を始める必要があるため）
+  Future<void> playConcert(int midi) {
+    _concertMidi = midi.clamp(46, 84);
+    notifyListeners();
+    return _playing ? _engine.startTone(frequency) : toggle();
+  }
 
   Future<void> toggle() async {
     if (_playing) {

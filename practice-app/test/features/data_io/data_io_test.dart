@@ -9,6 +9,9 @@ import 'package:kco_practice/features/practice/data/practice_repository.dart';
 import 'package:kco_practice/features/recording/data/recording_repository.dart';
 import 'package:kco_practice/features/recording/domain/recording_result.dart';
 
+import 'package:kco_practice/features/audio_tools/data/tuner_session_repository.dart';
+import 'package:kco_practice/features/audio_tools/domain/pitch_stats.dart';
+
 import '../../helpers.dart';
 
 RecordingResult result(String id) => RecordingResult(
@@ -112,6 +115,7 @@ void main() {
   group('取り込み', () {
     late PracticeRepository repo;
     late RecordingRepository recs;
+    late TunerSessionRepository sessions;
     late FakeFileGateway files;
     late DataIoService io;
 
@@ -119,10 +123,12 @@ void main() {
       final db = await openMemoryDb();
       repo = PracticeRepository(db, deviceId: 'devA');
       recs = RecordingRepository(db);
+      sessions = TunerSessionRepository(db);
       files = FakeFileGateway();
       io = DataIoService(
         practice: repo,
         recordings: recs,
+        tunerSessions: sessions,
         files: files,
         clock: FakeClock().call,
       );
@@ -156,6 +162,16 @@ void main() {
         actualSeconds: const {'long_tone': 900},
       );
       await recs.save(result('x1'));
+      await sessions.save(
+        TunerSession(
+          id: 't1',
+          startedAtMillis: 1,
+          durationSeconds: 10,
+          a4: 442,
+          temperamentLabel: '平均律',
+          stats: PitchStats(frameSeconds: 0.05, tolerance: 5)..add(70, 3),
+        ),
+      );
       expect(await io.exportBackup(null), isTrue);
       expect(await io.exportCsv(null, trumpetBasicRules), isTrue);
       expect(
@@ -167,11 +183,13 @@ void main() {
       final db2 = await openMemoryDb();
       final repo2 = PracticeRepository(db2, deviceId: 'devB');
       final recs2 = RecordingRepository(db2);
+      final sessions2 = TunerSessionRepository(db2);
       final files2 = FakeFileGateway()
         ..toPick = files.saved['practice-2026-10-12.json']!.$1;
       final io2 = DataIoService(
         practice: repo2,
         recordings: recs2,
+        tunerSessions: sessions2,
         files: files2,
       );
       final report = (await io2.importBackup(null))!;
@@ -183,10 +201,14 @@ void main() {
         'long_tone': 900,
       });
       expect((await recs2.all()).single.id, 'x1');
+      expect(report.tunerSessions, 1);
+      expect(report.summary, contains('音程の記録：追加 1 件'));
+      expect((await sessions2.all()).single.stats.notes[70]!.meanCents, 3);
 
       // もう一度読み込んでも増えない
       final again = (await io2.importBackup(null))!;
       expect([again.added, again.unchanged, again.results], [0, 1, 0]);
+      expect(again.tunerSessions, 0);
     });
 
     test('やめたら何もしない・UTF-8 でなければエラー', () async {

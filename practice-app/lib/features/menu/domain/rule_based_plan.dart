@@ -85,8 +85,7 @@ RuleBasedPlan planMenuByRules({
     final most = inMenu.first;
     // ほかの章より目立って多く吹いているときだけ入れ替える
     final average =
-        inMenu.fold(0, (a, m) => a + (secondsLast7[m.id] ?? 0)) /
-        inMenu.length;
+        inMenu.fold(0, (a, m) => a + (secondsLast7[m.id] ?? 0)) / inMenu.length;
     final mostSeconds = secondsLast7[most.id] ?? 0;
     if (mostSeconds == 0 || mostSeconds < average * 1.3) continue;
     final next = unused.first;

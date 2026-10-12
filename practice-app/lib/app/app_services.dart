@@ -17,6 +17,7 @@ import '../features/audio_tools/data/mic_input.dart';
 import '../features/audio_tools/data/mixer_controller.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
 import '../features/audio_tools/data/tuner_controller.dart';
+import '../features/audio_tools/data/tuner_session_repository.dart';
 import '../features/auth/auth_service.dart';
 import '../features/data_io/data_io_service.dart';
 import '../features/recording/data/recording_controller.dart';
@@ -46,6 +47,7 @@ class AppServices {
     required this.metronome,
     required this.referenceTone,
     required this.tuner,
+    required this.tunerSessions,
     required this.recording,
     required this.clickTrack,
     required this.dataIo,
@@ -70,6 +72,9 @@ class AppServices {
   /// 基準ピッチ（A4）・楽器の調と基準音
   final ReferenceToneController referenceTone;
   final TunerController tuner;
+
+  /// チューナーの練習記録（音程の統計）
+  final TunerSessionRepository tunerSessions;
 
   /// 録音と簡易音響分析
   final RecordingController recording;
@@ -147,6 +152,7 @@ class AppServices {
     clickTrack.onStarted = metronome.stop;
     final mic = micOverride ?? RecordMicInput();
     final recordings = RecordingRepository(db);
+    final tunerSessions = TunerSessionRepository(db);
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
@@ -155,7 +161,14 @@ class AppServices {
       mixer: mixer,
       metronome: metronome,
       referenceTone: referenceTone,
-      tuner: TunerController(mic, referenceTone),
+      tuner: await TunerController.load(
+        mic,
+        referenceTone,
+        meta: meta,
+        sessions: tunerSessions,
+        clock: clock,
+      ),
+      tunerSessions: tunerSessions,
       clickTrack: clickTrack,
       recording: RecordingController(
         mic: mic,
@@ -167,6 +180,7 @@ class AppServices {
       dataIo: DataIoService(
         practice: practice,
         recordings: recordings,
+        tunerSessions: tunerSessions,
         files: filesOverride ?? FilePickerGateway(),
         clock: clock,
       ),
