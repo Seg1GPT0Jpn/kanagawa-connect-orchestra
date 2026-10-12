@@ -171,6 +171,22 @@ class FakeAudioEngine implements AudioEngine {
 
   @override
   void stopTone() => toneHz = null;
+
+  Uint8List? playedWav;
+  void Function()? onPlaybackDone;
+
+  @override
+  Future<void> playWav(Uint8List wav, {void Function()? onDone}) async {
+    await ensureStarted();
+    playedWav = wav;
+    onPlaybackDone = onDone;
+  }
+
+  @override
+  void stopPlayback() {
+    playedWav = null;
+    onPlaybackDone = null;
+  }
 }
 
 /// 音を受け取らないマイク（テストから波形を流し込む）

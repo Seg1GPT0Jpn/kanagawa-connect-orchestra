@@ -25,6 +25,10 @@ abstract interface class AudioEngine {
   /// [hz] の正弦波を鳴らし続ける（鳴っていれば高さだけ変える）
   Future<void> startTone(double hz, {double volume = 0.5});
   void stopTone();
+
+  /// WAV（録音の再生など）を鳴らす。[onDone] は最後まで鳴ったとき
+  Future<void> playWav(Uint8List wav, {void Function()? onDone});
+  void stopPlayback();
 }
 
 class AudioEngineException implements Exception {
@@ -109,6 +113,45 @@ class SoLoudAudioEngine implements AudioEngine {
       _toneHandle = _soloud.play(sine, volume: volume, looping: true);
     } else {
       _soloud.setVolume(_toneHandle!, volume);
+    }
+  }
+
+  AudioSource? _clip;
+  SoundHandle? _clipHandle;
+  Timer? _clipTimer;
+
+  @override
+  Future<void> playWav(Uint8List wav, {void Function()? onDone}) async {
+    await ensureStarted();
+    stopPlayback();
+    final clip = _clip = await _soloud.loadMem('recording.wav', wav);
+    _clipHandle = _soloud.play(clip);
+    // 16bit モノラルの WAV なので、長さはデータの大きさから分かる
+    final sampleRate = ByteData.sublistView(wav).getUint32(24, Endian.little);
+    final micros = ((wav.length - 44) / 2 / sampleRate * 1000000).round();
+    _clipTimer = Timer(Duration(microseconds: micros), () {
+      _releaseClip();
+      onDone?.call();
+    });
+  }
+
+  @override
+  void stopPlayback() {
+    final h = _clipHandle;
+    if (h != null && _soloud.isInitialized) {
+      unawaited(_soloud.stop(h).catchError((Object _) {}));
+    }
+    _releaseClip();
+  }
+
+  void _releaseClip() {
+    _clipTimer?.cancel();
+    _clipTimer = null;
+    _clipHandle = null;
+    final c = _clip;
+    _clip = null;
+    if (c != null && _soloud.isInitialized) {
+      unawaited(_soloud.disposeSource(c).catchError((Object _) {}));
     }
   }
 
