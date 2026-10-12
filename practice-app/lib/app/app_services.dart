@@ -162,6 +162,7 @@ class AppServices {
     clickTrack.onStarted = metronome.stop;
     final mic = micOverride ?? RecordMicInput();
     final recordings = RecordingRepository(db);
+    final files = filesOverride ?? FilePickerGateway();
     final tunerSessions = TunerSessionRepository(db);
     return AppServices(
       practice: practice,
@@ -187,13 +188,14 @@ class AppServices {
         audio: audio,
         pitch: referenceTone,
         repository: recordings,
+        files: files,
         clock: clock,
       ),
       dataIo: DataIoService(
         practice: practice,
         recordings: recordings,
         tunerSessions: tunerSessions,
-        files: filesOverride ?? FilePickerGateway(),
+        files: files,
         clock: clock,
       ),
       sync: SyncController(

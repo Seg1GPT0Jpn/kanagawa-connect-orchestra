@@ -325,4 +325,7 @@ class FakeFileGateway implements FileGateway {
 
   @override
   Future<Uint8List?> pickJson() async => cancel ? null : toPick;
+
+  @override
+  Future<Uint8List?> pickAudio() async => cancel ? null : toPick;
 }

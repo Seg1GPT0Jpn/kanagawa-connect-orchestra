@@ -21,6 +21,9 @@ abstract interface class FileGateway {
 
   /// 選んだファイルの中身（やめたら null）
   Future<Uint8List?> pickJson();
+
+  /// 選んだ音声ファイル（WAV）の中身（やめたら null）
+  Future<Uint8List?> pickAudio();
 }
 
 class FilePickerGateway implements FileGateway {
@@ -38,10 +41,15 @@ class FilePickerGateway implements FileGateway {
       null;
 
   @override
-  Future<Uint8List?> pickJson() async {
+  Future<Uint8List?> pickJson() => _pick(const ['json']);
+
+  @override
+  Future<Uint8List?> pickAudio() => _pick(const ['wav']);
+
+  Future<Uint8List?> _pick(List<String> extensions) async {
     final files = await FilePicker.pickFiles(
       type: FileType.custom,
-      allowedExtensions: const ['json'],
+      allowedExtensions: extensions,
     );
     if (files.isEmpty) return null;
     return files.first.xFile.readAsBytes();
