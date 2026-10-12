@@ -6,18 +6,26 @@
 - **時間計算・ルール検査・集計はプログラム（Dart）が決定論的に行います。** AI は提案や文章づくりの補助だけで、AI の出力は必ずプログラムの検査を通してから使います。
 - **AI が使えない端末でも、** 練習記録・タイマー・テンプレート・メニュー監査はすべて動きます。
 
-## いまできていること（Stage 1）
+## できること
 
 | 機能 | 場所 |
 |---|---|
-| 練習タイマー（メニューの項目を順に計る・一時停止・途中で終える） | `lib/features/practice/domain/practice_session.dart`・`presentation/timer_page.dart` |
+| 練習タイマー（メニューの項目を順に計る・一時停止・途中で終える） | `lib/features/practice/` |
 | 練習記録（端末内に保存・メモ・削除）と集計（今日・直近7日・連続日数・項目別） | `lib/features/practice/` |
-| トランペット基礎メニューのルール（Arban は章ごと）と決定論的監査・修正案・おすすめ・自分のメニューの保存 | `lib/features/menu/` |
-| AI のメニュー案の読み取り・検査（JSON 以外・ルール違反は採用しない） | `lib/features/menu/domain/menu_proposal.dart` |
+| メニュー：時間のルールの決定論的監査・修正案・時間モード（通常・20分・10分）・今日の重点・Arban の章 | `lib/features/menu/` |
+| 今日の予定と調子からのすすめ（合奏・本番・疲れ・唇の痛み） | `lib/features/practice/domain/day_condition.dart` |
+| AI コーチ（端末・ブラウザに内蔵の AI。メニューの相談・ひとことアドバイス） | `lib/features/local_ai/` |
+| チューナー（YIN 法・B♭管などの移調表示・純正律などの音律） | `lib/features/audio_tools/` |
+| メトロノーム・クリックトラック（テンポ・拍子が変わる曲）・基準音 | `lib/features/audio_tools/` |
+| 録音と簡易音響分析（ロングトーンの音程・音量の安定、グラフ） | `lib/features/recording/` |
+| 記録の書き出し（CSV・バックアップ JSON）と読み込み | `lib/features/data_io/` |
 | ログイン（Google・メールアドレス）※ログインしなくても使える | `lib/features/auth/` |
 | クラウド同期（オフライン対応・競合の解決） | `lib/features/sync/` |
 | Firestore のセキュリティルールとテスト | `firestore.rules`・`rules-test/` |
-| ローカル AI の抽象化（`LocalAiService`）と「AI なし」の実装 | `lib/features/local_ai/` |
+| このアプリについて・プライバシーポリシー（`web/privacy.html`） | `lib/app/about_page.dart` |
+
+公開の手順（Web・Google Play・App Store、ストアの掲載情報の下書き、データの申告内容）は [docs/release.md](docs/release.md)、
+開発の進み具合は [docs/progress.md](docs/progress.md) を参照してください。
 
 ### 端末内の保存とクラウド同期のしくみ
 
@@ -71,8 +79,10 @@ lib/
 │   ├── practice/         練習記録・タイマー・集計
 │   ├── sync/             クラウド同期・競合の解決
 │   ├── menu/             メニュー作成・決定論的監査
-│   ├── local_ai/         ローカル AI（モデル管理・推論・使えないときの代わり）
-│   └── audio_tools/      チューナー・メトロノーム・録音（Stage 2〜3）
+│   ├── local_ai/         端末内 AI（AI コーチ・使えないときの代わり）
+│   ├── audio_tools/      チューナー・メトロノーム・クリックトラック・基準音・音律
+│   ├── recording/        録音と簡易音響分析
+│   └── data_io/          記録の書き出し・読み込み
 └── main.dart
 ```
 

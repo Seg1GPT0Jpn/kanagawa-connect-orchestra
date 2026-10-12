@@ -55,6 +55,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -97,3 +98,20 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+# アプリのアイコン（楽団のロゴ。`dart run flutter_launcher_icons` で各サイズを作り直す）
+flutter_launcher_icons:
+  image_path: assets/icon/icon.png
+  android: true
+  min_sdk_android: 26
+  adaptive_icon_background: "#F6F3EE"
+  # 外側が機種ごとの形で切り取られるが、ツールが前景に16%の余白を付けるのでロゴはそのまま使う
+  adaptive_icon_foreground: assets/icon/icon.png
+  ios: true
+  remove_alpha_ios: true
+  background_color_ios: "#F6F3EE"
+  web:
+    generate: true
+    image_path: assets/icon/icon.png
+    background_color: "#F6F3EE"
+    theme_color: "#1F4E79"

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../app/about_page.dart';
 import '../../app/app_services.dart';
 import '../sync/sync_controller.dart';
 import 'auth_service.dart';
@@ -12,7 +13,18 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final services = AppScope.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('アカウント')),
+      appBar: AppBar(
+        title: const Text('アカウント'),
+        actions: [
+          IconButton(
+            tooltip: 'このアプリについて',
+            icon: const Icon(Icons.info_outline),
+            onPressed: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute<void>(builder: (_) => const AboutPage())),
+          ),
+        ],
+      ),
       body: ListenableBuilder(
         listenable: services.sync,
         builder: (context, _) {
