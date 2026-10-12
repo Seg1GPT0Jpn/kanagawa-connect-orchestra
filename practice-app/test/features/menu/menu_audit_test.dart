@@ -5,7 +5,7 @@ import 'package:kco_practice/features/menu/domain/menu_rules.dart';
 
 import '../../menu_fixtures.dart';
 
-const rules = trumpetBasicRules;
+final rules = trumpetBasicRules;
 
 List<MenuViolationKind> kinds(MenuAuditResult r) =>
     r.violations.map((v) => v.kind).toList();
@@ -14,17 +14,20 @@ int arbanSum(Map<String, int> m) => arbanIds.fold(0, (s, id) => s + m[id]!);
 
 void main() {
   group('トランペット基礎メニューのルール', () {
-    test('仕様どおりの範囲（Arban は章ごと、合計20〜40分）', () {
+    test('仕様どおりの範囲（ウォームアップ3〜10分、Arban は章ごとで合計20〜40分、曲・エチュード0〜40分）', () {
       final ranges = {
         for (final i in rules.items.where((i) => i.group == null))
           i.id: [i.minMinutes, i.maxMinutes],
       };
       expect(ranges, {
-        'mouthpiece': [15, 30],
+        'mouthpiece': [3, 10],
         'long_tone': [10, 20],
         'lip_slur': [0, 15],
         'tonguing': [0, 10],
+        'repertoire': [0, 40],
       });
+      // 曲・エチュードは最後（練習の締め）
+      expect(rules.items.last.id, 'repertoire');
       final arban = rules.groupById('arban')!;
       expect([arban.minMinutes, arban.maxMinutes], [20, 40]);
       expect([rules.totalMinMinutes, rules.totalMaxMinutes], [45, 115]);
@@ -53,29 +56,31 @@ void main() {
     });
 
     test('名前：Arban の章は「Arban：章名」、以前の arban 項目も読める', () {
-      expect(rules.labelOf('mouthpiece'), 'マウスピース');
+      expect(rules.labelOf('mouthpiece'), 'ウォームアップ（呼吸・バズィング）');
+      expect(rules.labelOf('repertoire'), '曲・エチュード');
       expect(rules.labelOf('arban_slurs'), 'Arban：スラー');
       expect(rules.labelOf('arban'), 'Arban（アーバン）');
       expect(rules.labelOf('unknown'), 'unknown');
     });
 
-    test('初期値はルールを満たす（合計75分・Arban 30分）', () {
+    test('初期値はルールを満たす（合計80分・Arban 30分）', () {
       final r = auditMenu(rules.defaultMenu, rules);
       expect(r.isValid, isTrue);
-      expect(r.totalMinutes, 75);
+      expect(r.totalMinutes, 80);
       expect(arbanSum(rules.defaultMenu), 30);
     });
   });
 
   group('auditMenu', () {
-    test('すべて下限（合計45分・Arban 20分）は有効', () {
+    test('合計の下限ちょうど（45分）は有効', () {
       final r = auditMenu(
         menu(
-          mouthpiece: 15,
+          mouthpiece: 3,
           longTone: 10,
           lipSlur: 0,
           tonguing: 0,
           arban: {'arban_scales': 20},
+          repertoire: 12,
         ),
         rules,
       );
@@ -83,14 +88,15 @@ void main() {
       expect(r.totalMinutes, 45);
     });
 
-    test('すべて上限（合計115分・Arban 40分）は有効', () {
+    test('合計の上限ちょうど（115分）は有効', () {
       final r = auditMenu(
         menu(
-          mouthpiece: 30,
+          mouthpiece: 10,
           longTone: 20,
           lipSlur: 15,
           tonguing: 10,
           arban: {'arban_slurs': 20, 'arban_tonguing': 20},
+          repertoire: 20,
         ),
         rules,
       );
@@ -103,14 +109,14 @@ void main() {
     });
 
     test('下限を1分下回ると違反', () {
-      final r = auditMenu(menu(mouthpiece: 14), rules);
+      final r = auditMenu(menu(mouthpiece: 2), rules);
       expect(kinds(r), [MenuViolationKind.belowMinimum]);
       final v = r.violations.single;
       expect(
         [v.itemId, v.actualMinutes, v.minMinutes, v.maxMinutes],
-        ['mouthpiece', 14, 15, 30],
+        ['mouthpiece', 2, 3, 10],
       );
-      expect(v.message, 'マウスピース：14分は短すぎます（15〜30分）');
+      expect(v.message, 'ウォームアップ（呼吸・バズィング）：2分は短すぎます（3〜10分）');
     });
 
     test('上限を1分上回ると違反', () {
@@ -164,7 +170,7 @@ void main() {
         MenuViolationKind.unknownItem,
       ]);
       // ルールにない項目は合計に入れない
-      expect(r.totalMinutes, 60);
+      expect(r.totalMinutes, 65); // 80 - ロングトーン15（ルールにない arban は数えない）
     });
 
     test('合計の下限・上限（項目の範囲が広いルール）', () {
@@ -207,8 +213,8 @@ void main() {
 
     test('範囲外の項目を範囲内に収め、ほかは変えない', () {
       expect(
-        suggestCorrection(menu(mouthpiece: 5, longTone: 60), rules),
-        menu(mouthpiece: 15, longTone: 20),
+        suggestCorrection(menu(mouthpiece: 1, longTone: 60), rules),
+        menu(mouthpiece: 3, longTone: 20),
       );
     });
 
@@ -369,20 +375,107 @@ void main() {
         trumpetBasicPresets.map((p) => p.id).toSet(),
         hasLength(trumpetBasicPresets.length),
       );
+      // 曲・エチュードはどの案にも入れる（調査：曲・レパートリーに時間を取る）
+      for (final p in trumpetBasicPresets) {
+        expect(p.minutes['repertoire'], greaterThan(0), reason: p.id);
+      }
       final balanced = trumpetBasicPresets.firstWhere(
         (p) => p.id == 'balanced',
       );
       expect(balanced.menuFor(rules.items.map((i) => i.id)), rules.defaultMenu);
     });
 
-    test('「短め」は合計45分、「長め」は95分', () {
+    test('「短め」は合計45分、「長め」は105分', () {
       int total(String id) => trumpetBasicPresets
           .firstWhere((p) => p.id == id)
           .minutes
           .values
           .fold(0, (s, v) => s + v);
       expect(total('short'), 45);
-      expect(total('long'), 95);
+      expect(total('long'), 105);
+    });
+  });
+
+  group('時間モード', () {
+    test('通常・20分・10分の順で、どれも満たせるルールで初期値も満たす', () {
+      expect(trumpetModes.map((m) => m.id), [
+        'trumpet_basic',
+        'trumpet_20min',
+        'trumpet_10min',
+      ]);
+      expect(trumpetModes.map((m) => m.modeLabel), ['通常', '20分', '10分']);
+      final expectedTotals = {
+        'trumpet_basic': 80,
+        'trumpet_20min': 20,
+        'trumpet_10min': 10,
+      };
+      for (final m in trumpetModes) {
+        expect(m.isSatisfiable, isTrue, reason: m.id);
+        final r = auditMenu(m.defaultMenu, m);
+        expect(r.isValid, isTrue, reason: '${m.id}: ${r.violations}');
+        expect(r.totalMinutes, expectedTotals[m.id], reason: m.id);
+      }
+    });
+
+    test('合計の範囲：20分モードは15〜25分、10分モードは5〜15分。Arban は0分にできる', () {
+      expect(
+        [trumpet20Rules.totalMinMinutes, trumpet20Rules.totalMaxMinutes],
+        [15, 25],
+      );
+      expect(
+        [trumpet10Rules.totalMinMinutes, trumpet10Rules.totalMaxMinutes],
+        [5, 15],
+      );
+      expect(trumpet20Rules.groupById('arban')!.minMinutes, 0);
+      expect(trumpet10Rules.groupById('arban')!.minMinutes, 0);
+    });
+
+    test('どのモードも項目は同じ（記録をまたいで集計できる）', () {
+      final ids = trumpetBasicRules.items.map((i) => i.id).toList();
+      for (final m in trumpetModes) {
+        expect(m.items.map((i) => i.id), ids, reason: m.id);
+      }
+    });
+
+    test('通常モードのメニューは20分モードでは長すぎ、修正案は20分モードを満たす', () {
+      expect(
+        auditMenu(trumpetBasicRules.defaultMenu, trumpet20Rules).isValid,
+        isFalse,
+      );
+      final fixed = suggestCorrection(
+        trumpetBasicRules.defaultMenu,
+        trumpet20Rules,
+      );
+      expect(auditMenu(fixed, trumpet20Rules).isValid, isTrue);
+    });
+
+    test('どのモードでも、どんな入力の修正案もルールを満たす', () {
+      for (final m in trumpetModes) {
+        for (var seed = 0; seed < 30; seed++) {
+          final input = {
+            for (final (k, i) in m.items.indexed)
+              i.id: (seed * 5 + k * 11) % 30 - 2,
+          };
+          expect(
+            auditMenu(suggestCorrection(input, m), m).isValid,
+            isTrue,
+            reason: '${m.id} $input',
+          );
+        }
+      }
+    });
+
+    test('sections：練習の順に、Arban は1つのまとまり、曲・エチュードは最後', () {
+      final sections = trumpetBasicRules.sections;
+      expect(sections.map((s) => s.item?.id ?? s.group!.id), [
+        'mouthpiece',
+        'long_tone',
+        'lip_slur',
+        'tonguing',
+        'arban',
+        'repertoire',
+      ]);
+      expect(sections[4].members, hasLength(12));
     });
   });
 }

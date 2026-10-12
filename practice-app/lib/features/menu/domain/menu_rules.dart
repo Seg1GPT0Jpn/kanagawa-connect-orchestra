@@ -47,6 +47,18 @@ class MenuGroupRule {
   final String description;
 }
 
+/// 画面に並べる単位：単独の項目か、グループ（その中の項目）
+class MenuSection {
+  const MenuSection.item(MenuItemRule this.item)
+    : group = null,
+      members = const [];
+  const MenuSection.group(MenuGroupRule this.group, this.members) : item = null;
+
+  final MenuItemRule? item;
+  final MenuGroupRule? group;
+  final List<MenuItemRule> members;
+}
+
 /// メニュー全体のルール（項目ごとの範囲＋グループの合計＋全体の合計）
 class MenuRuleSet {
   const MenuRuleSet({
@@ -57,10 +69,16 @@ class MenuRuleSet {
     required this.totalMaxMinutes,
     this.groups = const [],
     this.legacyLabels = const {},
+    this.modeLabel = '',
+    this.modeDescription = '',
   });
 
   final String id;
   final String label;
+
+  /// 時間モードとしての短い名前（例：20分）と説明
+  final String modeLabel;
+  final String modeDescription;
 
   /// 練習する順番に並べる
   final List<MenuItemRule> items;
@@ -89,6 +107,21 @@ class MenuRuleSet {
     for (final i in items)
       if (i.group == groupId) i,
   ];
+
+  /// 練習する順番に、単独の項目とグループを並べる（グループは最初の項目の位置に出す）
+  List<MenuSection> get sections {
+    final result = <MenuSection>[];
+    final seen = <String>{};
+    for (final item in items) {
+      final g = item.group == null ? null : groupById(item.group!);
+      if (g == null) {
+        result.add(MenuSection.item(item));
+      } else if (seen.add(g.id)) {
+        result.add(MenuSection.group(g, itemsInGroup(g.id)));
+      }
+    }
+    return result;
+  }
 
   /// 画面・記録に出す名前（グループの項目は「Arban：スラー」のように）
   String labelOf(String itemId) {
@@ -134,171 +167,195 @@ class MenuRuleSet {
   };
 }
 
-/// トランペット基礎メニュー
-///
-/// 項目の範囲と合計（45〜115分）は指示書の仕様。Arban は 1893年 Goldman 編集版の分類で章ごとに分け、
-/// その日に鍛えたい章を選んで吹く（0分＝お休み）。Arban の合計は 20〜40分。
-const trumpetBasicRules = MenuRuleSet(
-  id: 'trumpet_basic',
-  label: 'トランペット基礎メニュー',
-  items: [
+/// メニューの項目（時間モードごとに範囲だけが変わる）
+class _ItemDef {
+  const _ItemDef(this.id, this.label, this.description, {this.group});
+
+  final String id;
+  final String label;
+  final String description;
+  final String? group;
+}
+
+/// 練習する順番。id は記録にも残るので変えない（mouthpiece は「ウォームアップ」の項目）
+const _defs = [
+  _ItemDef('mouthpiece', 'ウォームアップ（呼吸・バズィング）', '呼吸・唇やマウスピースのバズィングで、楽に振動を始める'),
+  _ItemDef('long_tone', 'ロングトーン', '音の立ち上がり・響き・終わり方、強弱と音程'),
+  _ItemDef('lip_slur', 'リップスラー', '低〜中音域から。音が変わっても音色・音量を崩さない'),
+  _ItemDef('tonguing', 'タンギング', '発音の明瞭さ。音の粒・音量・リズムをそろえる'),
+  // Arban の章（1893年 E. F. Goldman 編集版の分類。版によって番号・収録数は異なる）
+  _ItemDef(
+    'arban_first_studies',
+    '初歩練習',
+    'First Studies：音の長さ・音程・運指、リズムと発音の連携',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_syncopation',
+    'シンコペーション',
+    '拍の強弱、裏拍・拍をまたぐリズムを正確に',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_slurs',
+    'スラー',
+    'Slurring / Legato：息と唇の協調、滑らかな音のつながり',
+    group: 'arban',
+  ),
+  _ItemDef('arban_scales', '音階', '長音階・短音階：全調への対応、指の均一さ', group: 'arban'),
+  _ItemDef('arban_chromatic', '半音階', '半音の動きを均一なリズム・音色で', group: 'arban'),
+  _ItemDef(
+    'arban_ornaments',
+    '装飾音',
+    'ターン・前打音・トリル・モルデントを旋律に自然に組み込む',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_intervals',
+    '音程・跳躍',
+    'Intervals・分散和音：広い音程を正確に、和声の理解',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_tonguing',
+    'タンギング',
+    'シングル・ダブル・トリプル：速さより粒・アクセント・均一さ',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_phrasing',
+    'フレージング（旋律）',
+    'The Art of Phrasing：フレーズの山・呼吸位置・音の行き先',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_duets',
+    '二重奏',
+    '68 Duets：拍の共有、相手を聴く、音程・音色を合わせる',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_characteristic',
+    '性格的練習曲',
+    'Characteristic Studies：学んだ技術を1曲の中でまとめて使う',
+    group: 'arban',
+  ),
+  _ItemDef(
+    'arban_fantaisies',
+    '幻想曲・変奏曲',
+    'Fantaisies and Airs Variés：ソロ作品としての表現と技巧',
+    group: 'arban',
+  ),
+  _ItemDef('repertoire', '曲・エチュード', '合奏の楽譜・ソロ・エチュード。苦手な箇所を区切り、遅いテンポから'),
+];
+
+/// [ranges]：項目 id → (下限, 上限, 初期値)。Arban の章は [arbanChapter]（下限0）と [arbanDefaults] で決める
+List<MenuItemRule> _buildItems({
+  required Map<String, (int, int, int)> ranges,
+  required int arbanChapterMax,
+  required Map<String, int> arbanDefaults,
+}) => [
+  for (final d in _defs)
     MenuItemRule(
-      id: 'mouthpiece',
-      label: 'マウスピース',
-      minMinutes: 15,
-      maxMinutes: 30,
-      defaultMinutes: 20,
-      description: '呼吸・バズィングで、楽に振動を始める',
+      id: d.id,
+      label: d.label,
+      description: d.description,
+      group: d.group,
+      minMinutes: d.group == null ? ranges[d.id]!.$1 : 0,
+      maxMinutes: d.group == null ? ranges[d.id]!.$2 : arbanChapterMax,
+      defaultMinutes: d.group == null
+          ? ranges[d.id]!.$3
+          : (arbanDefaults[d.id] ?? 0),
     ),
-    MenuItemRule(
-      id: 'long_tone',
-      label: 'ロングトーン',
-      minMinutes: 10,
-      maxMinutes: 20,
-      defaultMinutes: 15,
-      description: '音の立ち上がり・響き・終わり方、強弱と音程',
-    ),
-    MenuItemRule(
-      id: 'lip_slur',
-      label: 'リップスラー',
-      minMinutes: 0,
-      maxMinutes: 15,
-      defaultMinutes: 5,
-      description: '低〜中音域から。音が変わっても音色・音量を崩さない',
-    ),
-    MenuItemRule(
-      id: 'tonguing',
-      label: 'タンギング',
-      minMinutes: 0,
-      maxMinutes: 10,
-      defaultMinutes: 5,
-      description: '発音の明瞭さ。音の粒・音量・リズムをそろえる',
-    ),
-    ..._arbanItems,
-  ],
-  groups: [
-    MenuGroupRule(
-      id: 'arban',
-      label: 'Arban',
-      minMinutes: 20,
-      maxMinutes: 40,
-      description: '毎日全部ではなく、その日に鍛えたい章を選ぶ',
-    ),
-  ],
-  totalMinMinutes: 45,
-  totalMaxMinutes: 115,
-  // 章ごとに分ける前は「arban」1項目だった
-  legacyLabels: {'arban': 'Arban（アーバン）'},
+];
+
+MenuGroupRule _arban(int min, int max) => MenuGroupRule(
+  id: 'arban',
+  label: 'Arban',
+  minMinutes: min,
+  maxMinutes: max,
+  description: '毎日全部ではなく、その日に鍛えたい章を選ぶ',
 );
 
-/// Arban の章（1893年 E. F. Goldman 編集版の分類。版によって番号・収録数は異なる）
-const _arbanItems = [
-  MenuItemRule(
-    id: 'arban_first_studies',
-    label: '初歩練習',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: 'First Studies：音の長さ・音程・運指、リズムと発音の連携',
+/// 章ごとに分ける前は「arban」1項目だった（古い記録の表示用）
+const _legacy = {'arban': 'Arban（アーバン）'};
+
+/// トランペット基礎メニュー（通常：合計45〜115分）
+///
+/// 合計45〜115分・ロングトーン・リップスラー・タンギング・Arban（合計20〜40分）は指示書の仕様。
+/// ウォームアップ（3〜10分）と曲・エチュード（0〜40分）は、プロ奏者の練習法の調査をもとに運営と決めた
+/// （docs/practice-research.md）。
+final trumpetBasicRules = MenuRuleSet(
+  id: 'trumpet_basic',
+  label: 'トランペット基礎メニュー',
+  modeLabel: '通常',
+  modeDescription: '合計45〜115分。基礎と曲をひととおり',
+  items: _buildItems(
+    ranges: {
+      'mouthpiece': (3, 10, 5),
+      'long_tone': (10, 20, 15),
+      'lip_slur': (0, 15, 5),
+      'tonguing': (0, 10, 5),
+      'repertoire': (0, 40, 20),
+    },
+    arbanChapterMax: 40,
+    arbanDefaults: {
+      'arban_slurs': 10,
+      'arban_scales': 10,
+      'arban_tonguing': 10,
+    },
   ),
-  MenuItemRule(
-    id: 'arban_syncopation',
-    label: 'シンコペーション',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: '拍の強弱、裏拍・拍をまたぐリズムを正確に',
+  groups: [_arban(20, 40)],
+  totalMinMinutes: 45,
+  totalMaxMinutes: 115,
+  legacyLabels: _legacy,
+);
+
+/// 20分モード（時間がない日・本番や合奏の前に整える）
+final trumpet20Rules = MenuRuleSet(
+  id: 'trumpet_20min',
+  label: 'トランペット基礎メニュー（20分）',
+  modeLabel: '20分',
+  modeDescription: '合計15〜25分。時間がない日・本番や合奏の前に整える',
+  items: _buildItems(
+    ranges: {
+      'mouthpiece': (2, 5, 3),
+      'long_tone': (3, 10, 5),
+      'lip_slur': (0, 5, 2),
+      'tonguing': (0, 5, 0),
+      'repertoire': (0, 15, 5),
+    },
+    arbanChapterMax: 15,
+    arbanDefaults: {'arban_slurs': 5},
   ),
-  MenuItemRule(
-    id: 'arban_slurs',
-    label: 'スラー',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 10,
-    description: 'Slurring / Legato：息と唇の協調、滑らかな音のつながり',
+  groups: [_arban(0, 15)],
+  totalMinMinutes: 15,
+  totalMaxMinutes: 25,
+  legacyLabels: _legacy,
+);
+
+/// 10分モード（とても短い日・疲れている日に、音を出して確かめるだけ）
+final trumpet10Rules = MenuRuleSet(
+  id: 'trumpet_10min',
+  label: 'トランペット基礎メニュー（10分）',
+  modeLabel: '10分',
+  modeDescription: '合計5〜15分。とても短い日・疲れている日に、音を出して確かめるだけ',
+  items: _buildItems(
+    ranges: {
+      'mouthpiece': (1, 3, 2),
+      'long_tone': (2, 5, 3),
+      'lip_slur': (0, 5, 2),
+      'tonguing': (0, 3, 0),
+      'repertoire': (0, 10, 3),
+    },
+    arbanChapterMax: 10,
+    arbanDefaults: const {},
   ),
-  MenuItemRule(
-    id: 'arban_scales',
-    label: '音階',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 10,
-    description: '長音階・短音階：全調への対応、指の均一さ',
-  ),
-  MenuItemRule(
-    id: 'arban_chromatic',
-    label: '半音階',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: '半音の動きを均一なリズム・音色で',
-  ),
-  MenuItemRule(
-    id: 'arban_ornaments',
-    label: '装飾音',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: 'ターン・前打音・トリル・モルデントを旋律に自然に組み込む',
-  ),
-  MenuItemRule(
-    id: 'arban_intervals',
-    label: '音程・跳躍',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: 'Intervals・分散和音：広い音程を正確に、和声の理解',
-  ),
-  MenuItemRule(
-    id: 'arban_tonguing',
-    label: 'タンギング',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 10,
-    description: 'シングル・ダブル・トリプル：速さより粒・アクセント・均一さ',
-  ),
-  MenuItemRule(
-    id: 'arban_phrasing',
-    label: 'フレージング（旋律）',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: 'The Art of Phrasing：フレーズの山・呼吸位置・音の行き先',
-  ),
-  MenuItemRule(
-    id: 'arban_duets',
-    label: '二重奏',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: '68 Duets：拍の共有、相手を聴く、音程・音色を合わせる',
-  ),
-  MenuItemRule(
-    id: 'arban_characteristic',
-    label: '性格的練習曲',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: 'Characteristic Studies：学んだ技術を1曲の中でまとめて使う',
-  ),
-  MenuItemRule(
-    id: 'arban_fantaisies',
-    label: '幻想曲・変奏曲',
-    group: 'arban',
-    minMinutes: 0,
-    maxMinutes: 40,
-    defaultMinutes: 0,
-    description: 'Fantaisies and Airs Variés：ソロ作品としての表現と技巧',
-  ),
-];
+  groups: [_arban(0, 10)],
+  totalMinMinutes: 5,
+  totalMaxMinutes: 15,
+  legacyLabels: _legacy,
+);
+
+/// 時間モード（選べる順）
+final trumpetModes = [trumpetBasicRules, trumpet20Rules, trumpet10Rules];

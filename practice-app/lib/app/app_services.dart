@@ -15,6 +15,7 @@ import '../features/local_ai/local_ai_service.dart';
 import '../features/menu/data/practice_menu_controller.dart';
 import '../features/menu/data/menu_settings_repository.dart';
 import '../features/menu/domain/menu_rules.dart';
+import '../features/practice/data/day_condition_repository.dart';
 import '../features/practice/data/practice_repository.dart';
 import '../features/sync/firestore_remote_record_store.dart';
 import '../features/sync/remote_record_store.dart';
@@ -27,6 +28,7 @@ class AppServices {
   AppServices({
     required this.practice,
     required this.menu,
+    required this.dayConditions,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
@@ -34,6 +36,9 @@ class AppServices {
 
   final PracticeRepository practice;
   final PracticeMenuController menu;
+
+  /// 今日の予定と調子（端末内だけ）
+  final DayConditionRepository dayConditions;
 
   /// クラウド同期（ログインもここから使う。sync.auth）
   final SyncController sync;
@@ -90,11 +95,8 @@ class AppServices {
     final menuSettings = MenuSettingsRepository(meta);
     return AppServices(
       practice: practice,
-      menu: PracticeMenuController(
-        trumpetBasicRules,
-        menuSettings,
-        await menuSettings.load(trumpetBasicRules),
-      ),
+      menu: await PracticeMenuController.load(menuSettings, trumpetModes),
+      dayConditions: DayConditionRepository(meta),
       sync: SyncController(
         repository: practice,
         auth: authOverride,

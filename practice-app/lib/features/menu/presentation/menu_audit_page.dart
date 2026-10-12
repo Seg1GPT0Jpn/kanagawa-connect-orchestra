@@ -12,6 +12,7 @@ class MenuAuditPage extends StatefulWidget {
     this.initialMinutes,
     this.onSave,
     this.presets = const [],
+    this.header,
   });
 
   final MenuRuleSet rules;
@@ -25,13 +26,18 @@ class MenuAuditPage extends StatefulWidget {
   /// 「今日の重点」のおすすめ（空なら出さない）
   final List<MenuPreset> presets;
 
+  /// いちばん上に出す部品（時間モードの切り替えなど）
+  final Widget? header;
+
   @override
   State<MenuAuditPage> createState() => _MenuAuditPageState();
 }
 
 class _MenuAuditPageState extends State<MenuAuditPage> {
-  /// 単独の項目のスライダーの上限（ルールの上限を超えて動かせるようにして、警告を確かめられるようにする）
-  static const _sliderMax = 60;
+  /// 単独の項目のスライダーの上限：項目の上限の2倍（10〜60分）
+  /// （ルールの上限を超えて動かせるようにして、警告を確かめられるようにする）
+  static int _sliderMax(MenuItemRule item) =>
+      (item.maxMinutes * 2).clamp(10, 60);
 
   late Map<String, int> _minutes = {
     ...(widget.initialMinutes ?? widget.rules.defaultMenu),
@@ -74,6 +80,10 @@ class _MenuAuditPageState extends State<MenuAuditPage> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
+          if (widget.header != null) ...[
+            widget.header!,
+            const Divider(height: 32),
+          ],
           if (widget.presets.isNotEmpty) ...[
             Text('今日の重点（おすすめ）', style: theme.textTheme.titleMedium),
             const SizedBox(height: 8),
@@ -103,32 +113,35 @@ class _MenuAuditPageState extends State<MenuAuditPage> {
             ),
             const Divider(height: 32),
           ],
-          for (final item in rules.items.where((i) => i.group == null))
-            _MenuItemTile(
-              label: item.label,
-              item: item,
-              minutes: _minutes[item.id] ?? 0,
-              sliderMax: _sliderMax,
-              onChanged: (v) => _set(item.id, v),
-            ),
-          for (final g in rules.groups) ...[
-            const Divider(height: 32),
-            _GroupHeader(
-              group: g,
-              sum: rules
-                  .itemsInGroup(g.id)
-                  .fold(0, (s, i) => s + (_minutes[i.id] ?? 0)),
-            ),
-            for (final item in rules.itemsInGroup(g.id))
+          for (final section in rules.sections)
+            if (section.item case final item?)
               _MenuItemTile(
                 label: item.label,
                 item: item,
                 minutes: _minutes[item.id] ?? 0,
-                sliderMax: g.maxMinutes,
-                compact: true,
+                sliderMax: _sliderMax(item),
                 onChanged: (v) => _set(item.id, v),
+              )
+            else ...[
+              const Divider(height: 32),
+              _GroupHeader(
+                group: section.group!,
+                sum: section.members.fold(
+                  0,
+                  (s, i) => s + (_minutes[i.id] ?? 0),
+                ),
               ),
-          ],
+              for (final item in section.members)
+                _MenuItemTile(
+                  label: item.label,
+                  item: item,
+                  minutes: _minutes[item.id] ?? 0,
+                  sliderMax: section.group!.maxMinutes,
+                  compact: true,
+                  onChanged: (v) => _set(item.id, v),
+                ),
+              const Divider(height: 32),
+            ],
           const Divider(height: 32),
           Text(
             '合計 ${audit.totalMinutes}分'

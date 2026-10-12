@@ -10,6 +10,14 @@ class MenuSettingsRepository {
 
   String _key(MenuRuleSet rules) => 'menu.${rules.id}';
 
+  /// 最後に選んだ時間モード（未選択なら null）
+  Future<String?> loadModeId() async {
+    final v = await _meta.get('menu.mode');
+    return v is String ? v : null;
+  }
+
+  Future<void> saveModeId(String id) => _meta.put('menu.mode', id);
+
   /// 保存したメニュー。未保存・壊れている・ルールを満たさない（ルール変更後など）ときは初期値
   Future<Map<String, int>> load(MenuRuleSet rules) async {
     final raw = await _meta.get(_key(rules));

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../features/auth/account_page.dart';
 import '../features/menu/domain/menu_presets.dart';
+import '../features/menu/domain/menu_rules.dart';
+import '../features/menu/presentation/mode_selector.dart';
 import '../features/menu/presentation/menu_audit_page.dart';
 import '../features/practice/presentation/practice_home_page.dart';
 import '../features/practice/presentation/records_page.dart';
@@ -27,16 +29,22 @@ class _HomeShellState extends State<HomeShell> {
         children: [
           const PracticeHomePage(),
           const RecordsPage(),
-          ValueListenableBuilder<Map<String, int>>(
-            valueListenable: services.menu,
-            builder: (context, minutes, _) => MenuAuditPage(
-              // 保存し直したら画面の初期値も入れ替える
-              key: ValueKey(minutes),
-              rules: services.menu.rules,
-              initialMinutes: minutes,
-              onSave: services.menu.save,
-              presets: trumpetBasicPresets,
-            ),
+          ListenableBuilder(
+            listenable: services.menu,
+            builder: (context, _) {
+              final menu = services.menu;
+              return MenuAuditPage(
+                // モード・保存したメニューが変わったら画面の初期値も入れ替える
+                key: ObjectKey((menu.rules, menu.savedMenu)),
+                rules: menu.rules,
+                initialMinutes: menu.savedMenu,
+                onSave: menu.save,
+                presets: menu.rules.id == trumpetBasicRules.id
+                    ? trumpetBasicPresets
+                    : const [],
+                header: ModeSelector(controller: menu),
+              );
+            },
           ),
           const AccountPage(),
         ],

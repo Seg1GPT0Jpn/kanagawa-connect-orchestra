@@ -35,24 +35,26 @@ void main() {
     await tester.pumpWidget(KcoPracticeApp(services: s));
     await tester.pumpAndSettle();
 
-    expect(find.text('75分'), findsOneWidget); // 合計
+    expect(find.text('80分'), findsOneWidget); // 合計
     expect(find.text('Arban'), findsOneWidget);
     expect(find.text('30分'), findsOneWidget); // Arban の合計（今日吹く章：スラー・音階・タンギング）
     expect(find.text('音階'), findsOneWidget);
     expect(find.text('二重奏'), findsNothing); // 0分の章は出さない
+    expect(find.text('曲・エチュード'), findsOneWidget);
+
     await tester.tap(find.text('練習をはじめる'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 7'), findsOneWidget);
+    expect(find.text('1 / 8'), findsOneWidget);
+    expect(find.text('5:00'), findsOneWidget);
     expect(find.text('Arban：スラー'), findsOneWidget);
-    expect(find.text('20:00'), findsOneWidget);
 
-    // 1項目めを18分で次へ、2項目めを途中（5分）で終える
-    clock.advance(const Duration(minutes: 18));
+    // ウォームアップを4分で次へ、ロングトーンを途中（10分）で終える
+    clock.advance(const Duration(minutes: 4));
     await tester.pump(const Duration(milliseconds: 300));
-    expect(find.text('2:00'), findsOneWidget);
+    expect(find.text('1:00'), findsOneWidget);
     await tester.tap(find.text('次へ'));
     await tester.pump();
-    clock.advance(const Duration(minutes: 5));
+    clock.advance(const Duration(minutes: 10));
     await tester.tap(find.text('途中で終える'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('終えて記録').last);
@@ -61,27 +63,81 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    expect(find.text('練習を記録しました（23分）'), findsOneWidget);
+    expect(find.text('練習を記録しました（14分）'), findsOneWidget);
     final records = (await tester.runAsync(() => s.practice.visible(null)))!;
     expect(records.single.actualSeconds, {
-      'mouthpiece': 1080,
-      'long_tone': 300,
+      'mouthpiece': 240,
+      'long_tone': 600,
       'lip_slur': 0,
       'tonguing': 0,
       'arban_slurs': 0,
       'arban_scales': 0,
       'arban_tonguing': 0,
+      'repertoire': 0,
     });
+    expect(records.single.ruleSetId, 'trumpet_basic');
     expect(records.single.ownerUid, isNull); // ログインしていない
 
     await tester.tap(find.text('記録'));
     await tester.pumpAndSettle();
-    expect(find.textContaining('2026-10-12　23分'), findsOneWidget);
-    expect(find.textContaining('23分・1日練習・1日連続'), findsOneWidget);
+    expect(find.textContaining('2026-10-12　14分'), findsOneWidget);
+    expect(find.textContaining('14分・1日練習・1日連続'), findsOneWidget);
 
     await tester.tap(find.text('練習').last);
     await tester.pumpAndSettle();
-    expect(find.text('23分'), findsWidgets); // 今日・直近7日
+    expect(find.text('14分'), findsWidgets); // 今日・直近7日
+  });
+
+  testWidgets('今日の予定と調子からおすすめを選ぶと、今日だけのメニューになり、戻せる', (tester) async {
+    final s = await services(tester);
+    await tester.pumpWidget(KcoPracticeApp(services: s));
+    await tester.pumpAndSettle();
+    expect(find.text('いつもどおりのメニューで練習しましょう。'), findsOneWidget);
+    expect(find.text('今日はこのおすすめにする'), findsNothing);
+
+    // 合奏がある → 通常モードの「短め（45分）」
+    await tester.tap(find.text('合奏・レッスン'));
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 20)),
+    );
+    await tester.pumpAndSettle();
+    expect(find.textContaining('個人練習は短め（45分）'), findsOneWidget);
+    await tester.tap(find.text('今日はこのおすすめにする'));
+    await tester.pumpAndSettle();
+    expect(find.text('45分'), findsOneWidget); // 合計
+    expect(find.text('今日だけのメニューです（保存はしていません）'), findsOneWidget);
+    expect(find.text('今日はこのおすすめにする'), findsNothing); // 適用済み
+    expect(s.menu.savedMenu['repertoire'], 20); // 保存したメニューは変わらない
+
+    // さらに疲れている → 10分モード
+    await tester.tap(find.text('疲れている'));
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 20)),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('今日はこのおすすめにする'));
+    await tester.pumpAndSettle();
+    expect(s.menu.rules.id, 'trumpet_10min');
+    expect(find.text('トランペット基礎メニュー（10分）'), findsOneWidget);
+    expect(find.text('10分'), findsOneWidget); // 合計
+
+    // 唇が痛い → 休む（おすすめのボタンは出ない）
+    await tester.tap(find.text('唇が痛い'));
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 20)),
+    );
+    await tester.pumpAndSettle();
+    expect(find.textContaining('今日は吹かずに休みましょう'), findsOneWidget);
+    expect(find.text('今日はこのおすすめにする'), findsNothing);
+
+    // 入れた調子は日ごとに残る
+    final saved = (await tester.runAsync(
+      () => s.dayConditions.load('2026-10-12'),
+    ))!;
+    expect(
+      [saved.rehearsal, saved.lipPain, saved.fatigue.name],
+      [true, true, 'tired'],
+    );
   });
 
   testWidgets('Firebase がない端末では、アカウントタブに端末内保存の案内が出る', (tester) async {

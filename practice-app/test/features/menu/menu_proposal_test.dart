@@ -6,7 +6,7 @@ import 'package:kco_practice/features/menu/domain/menu_rules.dart';
 import '../../menu_fixtures.dart';
 
 void main() {
-  const rules = trumpetBasicRules;
+  final rules = trumpetBasicRules;
 
   test('前後に文章があっても JSON を読み取り、ルールを満たせば採用できる', () {
     final json =
@@ -25,13 +25,13 @@ void main() {
   });
 
   test('ルール違反の案は採用せず、修正案を添える', () {
-    final json = menu(mouthpiece: 45).entries
+    final json = menu(mouthpiece: 11).entries
         .map((e) => '"${e.key}": ${e.value}')
         .join(', ');
     final r = reviewMenuProposal('{$json}', rules);
     expect(r.isAcceptable, isFalse);
     expect(r.audit!.violations.single.kind, MenuViolationKind.aboveMaximum);
-    expect(r.correction!['mouthpiece'], 30);
+    expect(r.correction!['mouthpiece'], 10);
     expect(auditMenu(r.correction!, rules).isValid, isTrue);
   });
 
