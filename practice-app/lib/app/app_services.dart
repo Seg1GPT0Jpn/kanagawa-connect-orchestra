@@ -11,6 +11,7 @@ import '../core/clock.dart';
 import '../core/local_database.dart';
 import '../core/meta_store.dart';
 import '../features/audio_tools/data/audio_engine.dart';
+import '../features/audio_tools/data/click_track_controller.dart';
 import '../features/audio_tools/data/metronome_controller.dart';
 import '../features/audio_tools/data/mic_input.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
@@ -43,6 +44,7 @@ class AppServices {
     required this.referenceTone,
     required this.tuner,
     required this.recording,
+    required this.clickTrack,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
@@ -64,6 +66,9 @@ class AppServices {
 
   /// 録音と簡易音響分析
   final RecordingController recording;
+
+  /// クリックトラック（テンポ・拍子が変わる曲用）
+  final ClickTrackController clickTrack;
 
   /// クラウド同期（ログインもここから使う。sync.auth）
   final SyncController sync;
@@ -123,15 +128,21 @@ class AppServices {
     final menuSettings = MenuSettingsRepository(meta);
     final audio = audioOverride ?? SoLoudAudioEngine();
     final referenceTone = await ReferenceToneController.load(audio, meta);
+    final metronome = await MetronomeController.load(audio, meta);
+    final clickTrack = await ClickTrackController.load(audio, meta);
+    // メトロノームとクリックトラックは、あとから鳴らした方だけを鳴らす
+    metronome.onStarted = clickTrack.stop;
+    clickTrack.onStarted = metronome.stop;
     final mic = micOverride ?? RecordMicInput();
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
       audio: audio,
-      metronome: await MetronomeController.load(audio, meta),
+      metronome: metronome,
       referenceTone: referenceTone,
       tuner: TunerController(mic, referenceTone),
+      clickTrack: clickTrack,
       recording: RecordingController(
         mic: mic,
         audio: audio,

@@ -23,6 +23,9 @@ class MetronomeController extends ChangeNotifier {
     );
   }
 
+  /// 鳴らし始めたとき（ほかのクリックを止めるため）
+  VoidCallback? onStarted;
+
   final AudioEngine _engine;
   final MetaStore _meta;
   MetronomeSettings _settings;
@@ -72,6 +75,7 @@ class MetronomeController extends ChangeNotifier {
       return;
     }
     _error = null;
+    onStarted?.call();
     _anchor = _engine.now + startLead;
     _scheduledUntil = Duration.zero;
     _timer = Timer.periodic(tickInterval, (_) => _pump());
