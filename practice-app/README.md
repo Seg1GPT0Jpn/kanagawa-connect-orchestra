@@ -136,15 +136,20 @@ Android・iOS はまだ Firebase にアプリを登録していないので、�
 Flutter の Web 版は、日本語のフォントをインターネットから読み込みます。完全にオフラインだと文字が正しく出ない場合があるので、
 フォントをアプリに同梱するかどうかを今後検討します。
 
-### ローカル AI（Stage 2）
+### 端末内 AI（AI コーチ）
 
-- エンジン：[`flutter_edge_ai`](https://pub.dev/packages/flutter_edge_ai)（旧 `flutter_gemma`）
-  - Android・iOS：LiteRT-LM（`.litertlm`）
-  - Web：MediaPipe（`.task`、WebGPU が必要）
-  - 予備：[`llamadart`](https://pub.dev/packages/llamadart)（GGUF）
-- モデル：Gemma 2 2B に加えて Gemma 3 1B・Gemma 3n E2B も比べて選ぶ。数百 MB〜数 GB あるので、アプリには入れず初回にダウンロードする
-- Google は MediaPipe LLM Inference API を保守のみとし、新機能は LiteRT-LM に集中させる方針です
-- 端末ごとの制約
-  - Android：LiteRT-LM は minSdk 30（Android 11）以上・arm64-v8a のみ
-  - iOS：15.0 以上（MediaPipe を使うなら 16.0）。大きなモデルにはメモリ上限を引き上げる entitlements が必要。シミュレーターは CPU のみ
-  - Web：WebGPU が使えないブラウザでは `isSupported = false` として AI なしで動かす
+費用のかからない、**端末・ブラウザに内蔵の AI** を使います（[flutter_local_ai](https://pub.dev/packages/flutter_local_ai)。モデルのファイルは配りません）。
+
+| 端末 | 使う AI | 条件 |
+|---|---|---|
+| Android | Gemini Nano（ML Kit GenAI / AICore） | Pixel 9 以降・Galaxy S25 以降など対応機種。初回に端末が AI を準備（ダウンロード） |
+| iPhone | Apple Foundation Models | iPhone 15 Pro 以降・iOS 26 以降で、Apple Intelligence をオン |
+| Web | Chrome・Edge の Prompt API | パソコン版のみ。**オリジントライアルのトークンが必要**（下記） |
+
+- 練習タブの「AI コーチ」で、今日の調子と直近7日の記録から「メニューの相談」「ひとことアドバイス」ができます。
+- AI のメニュー案は JSON で受け取り、アプリが時間のルールを確かめます。違反していればアプリが直した案を出します（`lib/features/local_ai/practice_coach.dart`）。
+- 対応していない端末では「使えません」と表示するだけで、ほかの機能はそのまま使えます。
+- AI は端末の中だけで動き、記録を外に送りません。
+
+**Web 版でAIを使う準備（公開 URL が決まってから）**：[Chrome のオリジントライアル](https://developer.chrome.com/origintrials/) で「Prompt API」に公開 URL（例：`https://kco-practice.web.app`）を登録し、発行されたトークンを `web/index.html` の `<head>` に
+`<meta http-equiv="origin-trial" content="発行されたトークン">` として追加します（無料）。

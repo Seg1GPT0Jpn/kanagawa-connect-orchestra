@@ -5,6 +5,7 @@ import 'package:kco_practice/features/audio_tools/data/audio_engine.dart';
 import 'package:kco_practice/features/audio_tools/data/mic_input.dart';
 import 'package:kco_practice/features/audio_tools/domain/metronome.dart';
 import 'package:kco_practice/features/auth/auth_service.dart';
+import 'package:kco_practice/features/local_ai/local_ai_service.dart';
 import 'package:kco_practice/features/practice/domain/practice_record.dart';
 import 'package:kco_practice/features/sync/conflict.dart';
 import 'package:kco_practice/features/sync/remote_record_store.dart';
@@ -199,5 +200,45 @@ class FakeMicInput implements MicInput {
     running = false;
     await _controller?.close();
     _controller = null;
+  }
+}
+
+/// 決まった答えを返す AI（指示文を記録する）
+class FakeLocalAiService implements LocalAiService {
+  FakeLocalAiService({this.state = LocalAiState.ready, List<String>? replies})
+    : replies = replies ?? [];
+
+  LocalAiState state;
+  final List<String> replies;
+  final List<String> prompts = [];
+  final List<String?> systemInstructions = [];
+  bool initialized = false;
+
+  @override
+  bool get isSupported => initialized;
+
+  @override
+  Future<LocalAiState> probe() async => state;
+
+  @override
+  Future<void> initializeModel({void Function(int percent)? onProgress}) async {
+    if (state == LocalAiState.unavailable) {
+      throw const LocalAiException('使えません');
+    }
+    onProgress?.call(100);
+    initialized = true;
+    state = LocalAiState.ready;
+  }
+
+  @override
+  Future<String> generatePrompt(
+    String promptText, {
+    String? systemInstruction,
+  }) async {
+    if (!initialized) throw const LocalAiException('AI の準備ができていません');
+    prompts.add(promptText);
+    systemInstructions.add(systemInstruction);
+    if (replies.isEmpty) throw const LocalAiException('答えがありません');
+    return replies.removeAt(0);
   }
 }

@@ -32,7 +32,13 @@ class MenuProposalReview {
 }
 
 /// AI の出力テキストから最初の JSON オブジェクト（`{"mouthpiece": 20, ...}`）を取り出して検査する
-MenuProposalReview reviewMenuProposal(String aiOutput, MenuRuleSet rules) {
+///
+/// [missingAsZero] が true なら、書かれていない項目は 0 分とみなす（AI は 0 分の章を省きがちなため）。
+MenuProposalReview reviewMenuProposal(
+  String aiOutput,
+  MenuRuleSet rules, {
+  bool missingAsZero = false,
+}) {
   final start = aiOutput.indexOf('{');
   final end = aiOutput.lastIndexOf('}');
   if (start < 0 || end < start) {
@@ -57,6 +63,12 @@ MenuProposalReview reviewMenuProposal(String aiOutput, MenuRuleSet rules) {
       minutes[key] = value.toInt();
     } else {
       return MenuProposalReview._(parseError: '「$key」の時間が整数の分ではありません');
+    }
+  }
+
+  if (missingAsZero) {
+    for (final item in rules.items) {
+      minutes.putIfAbsent(item.id, () => 0);
     }
   }
 

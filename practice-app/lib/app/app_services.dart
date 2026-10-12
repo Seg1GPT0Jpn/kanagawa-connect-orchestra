@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sembast/sembast.dart';
 
@@ -16,6 +17,7 @@ import '../features/audio_tools/data/reference_tone_controller.dart';
 import '../features/audio_tools/data/tuner_controller.dart';
 import '../features/auth/auth_service.dart';
 import '../features/auth/firebase_auth_service.dart';
+import '../features/local_ai/builtin_local_ai_service.dart';
 import '../features/local_ai/local_ai_service.dart';
 import '../features/menu/data/practice_menu_controller.dart';
 import '../features/menu/data/menu_settings_repository.dart';
@@ -103,6 +105,7 @@ class AppServices {
     RemoteRecordStore? remoteOverride,
     AudioEngine? audioOverride,
     MicInput? micOverride,
+    LocalAiService? localAiOverride,
     Clock clock = systemClock,
   }) async {
     final meta = MetaStore(db);
@@ -130,10 +133,16 @@ class AppServices {
             : SyncEngine(practice, remoteOverride),
         clock: clock,
       ),
-      localAi: const UnavailableLocalAiService(),
+      localAi: localAiOverride ?? _defaultLocalAi(),
       clock: clock,
     );
   }
+
+  /// 端末・ブラウザに内蔵の AI（Linux など内蔵 AI のない環境では「使えない」）
+  static LocalAiService _defaultLocalAi() =>
+      !kIsWeb && defaultTargetPlatform == TargetPlatform.linux
+      ? const UnavailableLocalAiService()
+      : BuiltInLocalAiService();
 
   static Future<bool> _initFirebase() async {
     final options = DefaultFirebaseOptions.currentPlatform;
