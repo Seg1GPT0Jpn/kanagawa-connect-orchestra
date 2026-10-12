@@ -13,6 +13,7 @@ import '../core/meta_store.dart';
 import '../features/audio_tools/data/audio_engine.dart';
 import '../features/audio_tools/data/click_track_controller.dart';
 import '../features/audio_tools/data/metronome_controller.dart';
+import '../features/audio_tools/data/metronome_presets.dart';
 import '../features/audio_tools/data/mic_input.dart';
 import '../features/audio_tools/data/mixer_controller.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
@@ -46,6 +47,7 @@ class AppServices {
     required this.audio,
     required this.mixer,
     required this.metronome,
+    required this.metronomePresets,
     required this.referenceTone,
     required this.temperaments,
     required this.tuner,
@@ -70,6 +72,9 @@ class AppServices {
   /// 系統ごとの音量と音のテスト
   final MixerController mixer;
   final MetronomeController metronome;
+
+  /// メトロノームのプリセット
+  final MetronomePresetLibrary metronomePresets;
 
   /// 基準ピッチ（A4）・楽器の調と基準音
   final ReferenceToneController referenceTone;
@@ -165,6 +170,7 @@ class AppServices {
       audio: audio,
       mixer: mixer,
       metronome: metronome,
+      metronomePresets: await MetronomePresetLibrary.load(meta),
       referenceTone: referenceTone,
       temperaments: await TemperamentLibrary.load(meta),
       tuner: await TunerController.load(
