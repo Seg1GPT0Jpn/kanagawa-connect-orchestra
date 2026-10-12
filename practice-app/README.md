@@ -11,13 +11,19 @@
 | 機能 | 場所 |
 |---|---|
 | 練習タイマー（メニューの項目を順に計る・一時停止・途中で終える） | `lib/features/practice/` |
-| 練習記録（端末内に保存・メモ・削除）と集計（今日・直近7日・連続日数・項目別） | `lib/features/practice/` |
+| 今日の目標・達成度・振り返り・次回の課題（前回の課題を引き継ぐ） | `lib/features/practice/` |
+| 練習記録（端末内に保存・メモ・削除と取り消し・ごみ箱）と集計・カレンダー・1日の目標と達成リング | `lib/features/practice/` |
 | メニュー：時間のルールの決定論的監査・修正案・時間モード（通常・20分・10分）・今日の重点・Arban の章 | `lib/features/menu/` |
-| 今日の予定と調子からのすすめ（合奏・本番・疲れ・唇の痛み） | `lib/features/practice/domain/day_condition.dart` |
-| AI コーチ（端末・ブラウザに内蔵の AI。メニューの相談・ひとことアドバイス） | `lib/features/local_ai/` |
-| チューナー（YIN 法・B♭管などの移調表示・純正律などの音律） | `lib/features/audio_tools/` |
-| メトロノーム・クリックトラック（テンポ・拍子が変わる曲）・基準音 | `lib/features/audio_tools/` |
-| 録音と簡易音響分析（ロングトーンの音程・音量の安定、グラフ） | `lib/features/recording/` |
+| 今日の予定と調子からのすすめ（理由・避けたいこと付き） | `lib/features/practice/domain/day_condition.dart` |
+| 練習コーチ：端末内蔵の AI（理由付きのメニュー案・ひとこと）と、AI なしのルールによる提案 | `lib/features/local_ai/`・`lib/features/menu/domain/rule_based_plan.dart` |
+| チューナー（YIN 法・ターゲット／横棒表示・合格の範囲・応答速度・0.1セント・直前の音と音程・出だし・合っていた割合） | `lib/features/audio_tools/` |
+| 音程の記録と統計（音名別・苦手な音・分布・期間・前回との比較） | `lib/features/audio_tools/domain/pitch_stats.dart` |
+| スペクトラム・音色メーター（倍音のバランス） | `lib/features/audio_tools/domain/spectrum.dart` |
+| 音律（平均律・純正律・ピタゴラス・自分で作る音律と共有）・楽器別の移調・音名の表記 | `lib/features/audio_tools/` |
+| メトロノーム（音色・パターン・消音・テンポの段階変化・カウントイン・ポリリズム・プリセット・タイマー）・クリックトラック | `lib/features/audio_tools/` |
+| 基準音（ホイール・鍵盤・和音・ドローン・音色）・練習音型・音程当て | `lib/features/audio_tools/` |
+| 音の設定（系統ごとの音量・テスト音・音が出ないときの確認） | `lib/features/audio_tools/presentation/sound_settings_sheet.dart` |
+| 録音と簡易音響分析（最大5分・信頼度・波形と範囲・五線譜・スペクトラム・WAV の書き出しと読み込み） | `lib/features/recording/` |
 | 記録の書き出し（CSV・バックアップ JSON）と読み込み | `lib/features/data_io/` |
 | ログイン（Google・メールアドレス）※ログインしなくても使える | `lib/features/auth/` |
 | クラウド同期（オフライン対応・競合の解決） | `lib/features/sync/` |
@@ -25,6 +31,7 @@
 | このアプリについて・プライバシーポリシー（`web/privacy.html`） | `lib/app/about_page.dart` |
 
 公開の手順（Web・Google Play・App Store、ストアの掲載情報の下書き、データの申告内容）は [docs/release.md](docs/release.md)、
+実機での確認表は [docs/device-test.md](docs/device-test.md)、
 開発の進み具合は [docs/progress.md](docs/progress.md) を参照してください。
 
 ### 端末内の保存とクラウド同期のしくみ
