@@ -15,4 +15,18 @@ class DayConditionRepository {
 
   Future<void> save(String day, DayCondition c) =>
       _meta.put('condition.$day', c.toMap());
+
+  final Map<String, String> _goals = {};
+
+  /// その日の目標（練習を始める前に書いておく）
+  Future<String> loadGoal(String day) async =>
+      _goals[day] ??= (await _meta.get('goal.$day') as String?) ?? '';
+
+  /// 読み込み済み・書いた目標（待たずに使う）
+  String cachedGoal(String day) => _goals[day] ?? '';
+
+  Future<void> saveGoal(String day, String goal) {
+    _goals[day] = goal;
+    return _meta.put('goal.$day', goal);
+  }
 }

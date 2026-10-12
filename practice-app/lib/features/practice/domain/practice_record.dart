@@ -14,7 +14,20 @@ class PracticeRecord {
     required this.updatedAtMillis,
     required this.updatedBy,
     required this.deleted,
+    this.goal = '',
+    this.achievement = 0,
+    this.nextFocus = '',
   });
+
+  /// 達成度の段階（0 は未記入）
+  static const achievementLabels = [
+    '未記入',
+    'できなかった',
+    '少しできた',
+    '半分くらい',
+    'ほぼできた',
+    'できた',
+  ];
 
   final String id;
 
@@ -44,6 +57,15 @@ class PracticeRecord {
   /// 削除済み（同期のため、消さずに印を付けておく）
   final bool deleted;
 
+  /// 今日の目標（例：ロングトーンの音程を安定させる）
+  final String goal;
+
+  /// 目標の達成度（1〜5。0 は未記入）
+  final int achievement;
+
+  /// 次回の課題（次の練習の目標に引き継ぐ）
+  final String nextFocus;
+
   int get totalActualSeconds => actualSeconds.values.fold(0, (s, v) => s + v);
 
   PracticeRecord copyWith({
@@ -53,6 +75,9 @@ class PracticeRecord {
     int? updatedAtMillis,
     String? updatedBy,
     bool? deleted,
+    String? goal,
+    int? achievement,
+    String? nextFocus,
   }) => PracticeRecord(
     id: id,
     ownerUid: ownerUid ?? this.ownerUid,
@@ -65,6 +90,9 @@ class PracticeRecord {
     updatedAtMillis: updatedAtMillis ?? this.updatedAtMillis,
     updatedBy: updatedBy ?? this.updatedBy,
     deleted: deleted ?? this.deleted,
+    goal: goal ?? this.goal,
+    achievement: achievement ?? this.achievement,
+    nextFocus: nextFocus ?? this.nextFocus,
   );
 
   Map<String, Object?> toMap() => {
@@ -79,6 +107,10 @@ class PracticeRecord {
     'updatedAt': updatedAtMillis,
     'updatedBy': updatedBy,
     'deleted': deleted,
+    // 目標・振り返りは、入れたときだけ送る（入れていない記録は前の版と同じ形のまま）
+    if (goal.isNotEmpty) 'goal': goal,
+    if (achievement != 0) 'achievement': achievement,
+    if (nextFocus.isNotEmpty) 'nextFocus': nextFocus,
   };
 
   factory PracticeRecord.fromMap(Map<String, Object?> m) => PracticeRecord(
@@ -93,6 +125,9 @@ class PracticeRecord {
     updatedAtMillis: (m['updatedAt']! as num).toInt(),
     updatedBy: m['updatedBy']! as String,
     deleted: (m['deleted'] as bool?) ?? false,
+    goal: (m['goal'] as String?) ?? '',
+    achievement: ((m['achievement'] as num?)?.toInt() ?? 0).clamp(0, 5),
+    nextFocus: (m['nextFocus'] as String?) ?? '',
   );
 
   static Map<String, int> _intMap(Object? v) => {

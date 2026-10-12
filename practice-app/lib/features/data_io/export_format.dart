@@ -1,6 +1,6 @@
 /// 記録の書き出し・読み込みの形（決定論的）
 ///
-///  ・バックアップ（JSON）：このアプリで読み込める形。練習記録と録音の分析結果
+///  ・バックアップ（JSON）：このアプリで読み込める形。練習記録・録音の分析結果・音程の記録
 ///  ・表（CSV）：Excel などで開ける形。練習記録を1行1回で
 library;
 
@@ -9,6 +9,7 @@ import 'dart:convert';
 import '../../core/clock.dart';
 import '../menu/domain/menu_rules.dart';
 import '../practice/domain/practice_record.dart';
+import '../audio_tools/domain/pitch_stats.dart';
 import '../recording/domain/recording_result.dart';
 
 const exportFormatName = 'kco-practice';
@@ -18,10 +19,17 @@ const exportFormatVersion = 1;
 const maxImportRecords = 20000;
 
 class ExportData {
-  const ExportData({required this.records, required this.recordingResults});
+  const ExportData({
+    required this.records,
+    required this.recordingResults,
+    this.tunerSessions = const [],
+  });
 
   final List<PracticeRecord> records;
   final List<RecordingResult> recordingResults;
+
+  /// チューナーの音程の記録
+  final List<TunerSession> tunerSessions;
 }
 
 /// バックアップ（JSON）。削除済みの記録は含めない
@@ -35,6 +43,7 @@ String buildBackupJson(ExportData data, {required DateTime exportedAt}) =>
           if (!r.deleted) r.toMap(),
       ],
       'recordingResults': [for (final r in data.recordingResults) r.toMap()],
+      'tunerSessions': [for (final s in data.tunerSessions) s.toMap()],
     });
 
 class ImportFormatException implements Exception {
@@ -65,10 +74,12 @@ ExportData parseBackupJson(String text) {
   }
   final rawRecords = decoded['records'];
   final rawResults = decoded['recordingResults'] ?? const [];
-  if (rawRecords is! List || rawResults is! List) {
+  final rawSessions = decoded['tunerSessions'] ?? const [];
+  if (rawRecords is! List || rawResults is! List || rawSessions is! List) {
     throw const ImportFormatException('バックアップの中身が壊れています');
   }
-  if (rawRecords.length + rawResults.length > maxImportRecords) {
+  if (rawRecords.length + rawResults.length + rawSessions.length >
+      maxImportRecords) {
     throw const ImportFormatException('記録が多すぎて読み込めません');
   }
   try {
@@ -77,6 +88,9 @@ ExportData parseBackupJson(String text) {
       recordingResults: [
         for (final m in rawResults)
           RecordingResult.fromMap(Map<String, Object?>.from(m as Map)),
+      ],
+      tunerSessions: [
+        for (final m in rawSessions) TunerSession.fromMap(m as Map),
       ],
     );
   } on ImportFormatException {
@@ -93,6 +107,9 @@ PracticeRecord _record(Object? m) {
     throw const ImportFormatException('バックアップの中の記録が壊れています');
   }
   if (r.note.length > 500) throw const ImportFormatException('メモが長すぎる記録があります');
+  if (r.goal.length > 200 || r.nextFocus.length > 200) {
+    throw const ImportFormatException('目標・次回の課題が長すぎる記録があります');
+  }
   return r;
 }
 
@@ -109,7 +126,10 @@ String buildRecordsCsv(List<PracticeRecord> records, MenuRuleSet rules) {
     '開始時刻',
     '合計（分）',
     for (final id in ids) '${rules.labelOf(id)}（分）',
+    '目標',
+    '達成度',
     'メモ',
+    '次回の課題',
   ];
   final rows = [
     for (final r in records.where((r) => !r.deleted))
@@ -118,7 +138,12 @@ String buildRecordsCsv(List<PracticeRecord> records, MenuRuleSet rules) {
         _time(r.startedAtMillis),
         _minutes(r.totalActualSeconds),
         for (final id in ids) _minutes(r.actualSeconds[id] ?? 0),
+        r.goal,
+        r.achievement == 0
+            ? ''
+            : PracticeRecord.achievementLabels[r.achievement],
         r.note,
+        r.nextFocus,
       ],
   ];
   return '﻿${[header, ...rows].map((row) => row.map(_csvField).join(',')).join('\r\n')}\r\n';

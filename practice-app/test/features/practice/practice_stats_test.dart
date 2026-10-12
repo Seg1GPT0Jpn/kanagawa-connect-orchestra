@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:kco_practice/features/practice/domain/practice_record.dart';
 import 'package:kco_practice/features/practice/domain/practice_stats.dart';
 
 import '../../helpers.dart';
@@ -57,4 +58,24 @@ void main() {
     expect(s.streakDays, 3);
     expect(s.daysPracticedLast7, 3);
   });
+
+  test('いちばん新しい記録の「次回の課題」を引き継ぐ（削除済み・空は飛ばす）', () {
+    PracticeRecord r(String id, int at, String next, {bool deleted = false}) =>
+        record(id, deleted: deleted).copyWith(nextFocus: next).withStart(at);
+    expect(latestNextFocus([]), isNull);
+    expect(
+      latestNextFocus([
+        r('a', 1, '高音を楽に'),
+        r('b', 3, ' 舌の位置 ', deleted: true),
+        r('c', 2, 'ロングトーンの音程'),
+        r('d', 4, ''),
+      ]),
+      'ロングトーンの音程',
+    );
+  });
+}
+
+extension on PracticeRecord {
+  PracticeRecord withStart(int millis) =>
+      PracticeRecord.fromMap({...toMap(), 'startedAt': millis});
 }

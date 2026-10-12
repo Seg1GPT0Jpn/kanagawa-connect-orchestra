@@ -9,6 +9,8 @@ import '../domain/day_condition.dart';
 import '../domain/practice_record.dart';
 import '../domain/practice_stats.dart';
 import '../../local_ai/ai_coach_card.dart';
+import 'goal_rings_card.dart';
+import 'reflection_page.dart';
 import 'timer_page.dart';
 import 'visible_records_builder.dart';
 
@@ -58,7 +60,11 @@ class PracticeHomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
+                  GoalRingsCard(stats: stats),
+                  const SizedBox(height: 8),
                   const TodayConditionCard(),
+                  const SizedBox(height: 8),
+                  TodayGoalCard(previousFocus: latestNextFocus(records)),
                   const SizedBox(height: 8),
                   AiCoachCard(stats: stats),
                   const SizedBox(height: 16),
@@ -152,19 +158,117 @@ class PracticeHomePage extends StatelessWidget {
   }
 
   Future<void> _start(BuildContext context, Map<String, int> minutes) async {
+    final services = AppScope.of(context);
     final messenger = ScaffoldMessenger.of(context);
-    final saved = await Navigator.of(context).push<PracticeRecord>(
-      MaterialPageRoute(builder: (_) => TimerPage(menu: minutes)),
+    final navigator = Navigator.of(context);
+    final goal = services.dayConditions.cachedGoal(
+      localDateString(services.clock()),
     );
-    if (saved != null) {
-      messenger.showSnackBar(
-        SnackBar(
-          content: Text(
-            '練習を記録しました（${formatPracticeTime(saved.totalActualSeconds)}）',
-          ),
+    final saved = await navigator.push<PracticeRecord>(
+      MaterialPageRoute(
+        builder: (_) => TimerPage(menu: minutes, goal: goal),
+      ),
+    );
+    if (saved == null) return;
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(
+          '練習を記録しました（${formatPracticeTime(saved.totalActualSeconds)}）',
         ),
-      );
+      ),
+    );
+    // 振り返り（目標の達成度・次回の課題）
+    await navigator.push<void>(
+      MaterialPageRoute(
+        fullscreenDialog: true,
+        builder: (_) => ReflectionPage(record: saved),
+      ),
+    );
+  }
+}
+
+/// 今日の目標（前回の「次回の課題」を引き継げる）
+class TodayGoalCard extends StatefulWidget {
+  const TodayGoalCard({super.key, required this.previousFocus});
+
+  final String? previousFocus;
+
+  @override
+  State<TodayGoalCard> createState() => _TodayGoalCardState();
+}
+
+class _TodayGoalCardState extends State<TodayGoalCard> {
+  late final AppServices _services = AppScope.of(context);
+  final _text = TextEditingController();
+  String? _day;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final day = localDateString(_services.clock());
+    if (day != _day) {
+      _day = day;
+      _services.dayConditions.loadGoal(day).then((g) {
+        if (mounted && _day == day) setState(() => _text.text = g);
+      });
     }
+  }
+
+  @override
+  void dispose() {
+    _text.dispose();
+    super.dispose();
+  }
+
+  void _save(String v) => _services.dayConditions.saveGoal(_day!, v.trim());
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final prev = widget.previousFocus;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('今日の目標', style: theme.textTheme.titleMedium),
+            if (prev != null) ...[
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      '前回の課題：$prev',
+                      style: theme.textTheme.bodySmall,
+                    ),
+                  ),
+                  if (_text.text.trim() != prev)
+                    TextButton(
+                      onPressed: () {
+                        setState(() => _text.text = prev);
+                        _save(prev);
+                      },
+                      child: const Text('目標にする'),
+                    ),
+                ],
+              ),
+            ],
+            const SizedBox(height: 4),
+            TextField(
+              controller: _text,
+              maxLength: 200,
+              decoration: const InputDecoration(
+                hintText: '例：ロングトーンの音程を安定させる',
+                isDense: true,
+                counterText: '',
+              ),
+              onChanged: _save,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -277,6 +381,18 @@ class _TodayConditionCardState extends State<TodayConditionCard> {
             ),
             const SizedBox(height: 12),
             Text(advice.message),
+            if (advice.reasons.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Text('おすすめの理由', style: theme.textTheme.labelLarge),
+              for (final r in advice.reasons) Text('・$r'),
+            ],
+            if (advice.avoid.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Text('今日は避けたいこと', style: theme.textTheme.labelLarge),
+              for (final a in advice.avoid) Text('・$a'),
+            ],
+            const SizedBox(height: 8),
+            Text(alwaysAdvice, style: theme.textTheme.bodySmall),
             if (advice.modeId != null && !applied) ...[
               const SizedBox(height: 8),
               FilledButton.tonal(

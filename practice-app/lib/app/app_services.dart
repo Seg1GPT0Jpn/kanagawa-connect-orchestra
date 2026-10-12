@@ -13,9 +13,13 @@ import '../core/meta_store.dart';
 import '../features/audio_tools/data/audio_engine.dart';
 import '../features/audio_tools/data/click_track_controller.dart';
 import '../features/audio_tools/data/metronome_controller.dart';
+import '../features/audio_tools/data/metronome_presets.dart';
 import '../features/audio_tools/data/mic_input.dart';
+import '../features/audio_tools/data/mixer_controller.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
+import '../features/audio_tools/data/temperament_library.dart';
 import '../features/audio_tools/data/tuner_controller.dart';
+import '../features/audio_tools/data/tuner_session_repository.dart';
 import '../features/auth/auth_service.dart';
 import '../features/data_io/data_io_service.dart';
 import '../features/recording/data/recording_controller.dart';
@@ -28,6 +32,7 @@ import '../features/menu/data/menu_settings_repository.dart';
 import '../features/menu/domain/menu_rules.dart';
 import '../features/practice/data/day_condition_repository.dart';
 import '../features/practice/data/practice_repository.dart';
+import '../features/practice/data/usage_tracker.dart';
 import '../features/sync/firestore_remote_record_store.dart';
 import '../features/sync/remote_record_store.dart';
 import '../features/sync/sync_controller.dart';
@@ -40,17 +45,38 @@ class AppServices {
     required this.practice,
     required this.menu,
     required this.dayConditions,
+    required this.usage,
+    required this.goals,
     required this.audio,
+    required this.mixer,
     required this.metronome,
+    required this.metronomePresets,
     required this.referenceTone,
+    required this.temperaments,
     required this.tuner,
+    required this.tunerSessions,
     required this.recording,
     required this.clickTrack,
     required this.dataIo,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
-  });
+  }) {
+    // 道具を使った時間を数える（目標・カレンダー用）
+    usage
+      ..watch(
+        UsageKind.metronome,
+        Listenable.merge([metronome, clickTrack]),
+        () => metronome.isRunning || clickTrack.isPlaying,
+      )
+      ..watch(UsageKind.tuner, tuner, () => tuner.isListening)
+      ..watch(UsageKind.tone, referenceTone, () => referenceTone.isPlaying)
+      ..watch(
+        UsageKind.recording,
+        recording,
+        () => recording.phase == RecordingPhase.recording,
+      );
+  }
 
   final PracticeRepository practice;
   final PracticeMenuController menu;
@@ -58,13 +84,29 @@ class AppServices {
   /// 今日の予定と調子（端末内だけ）
   final DayConditionRepository dayConditions;
 
+  /// 道具ごとに使った時間と、1日の目標
+  final UsageTracker usage;
+  final GoalsController goals;
+
   /// 音を鳴らす（メトロノーム・基準音）
   final AudioEngine audio;
+
+  /// 系統ごとの音量と音のテスト
+  final MixerController mixer;
   final MetronomeController metronome;
+
+  /// メトロノームのプリセット
+  final MetronomePresetLibrary metronomePresets;
 
   /// 基準ピッチ（A4）・楽器の調と基準音
   final ReferenceToneController referenceTone;
+
+  /// 自分で作った音律
+  final TemperamentLibrary temperaments;
   final TunerController tuner;
+
+  /// チューナーの練習記録（音程の統計）
+  final TunerSessionRepository tunerSessions;
 
   /// 録音と簡易音響分析
   final RecordingController recording;
@@ -132,7 +174,8 @@ class AppServices {
       clock: clock,
     );
     final menuSettings = MenuSettingsRepository(meta);
-    final audio = audioOverride ?? SoLoudAudioEngine();
+    final audio = audioOverride ?? AudioEngine.platform();
+    final mixer = await MixerController.load(audio, meta);
     final referenceTone = await ReferenceToneController.load(audio, meta);
     final metronome = await MetronomeController.load(audio, meta);
     final clickTrack = await ClickTrackController.load(audio, meta);
@@ -140,27 +183,44 @@ class AppServices {
     metronome.onStarted = clickTrack.stop;
     clickTrack.onStarted = metronome.stop;
     final mic = micOverride ?? RecordMicInput();
+    final usage = UsageTracker(meta, clock: clock);
     final recordings = RecordingRepository(db);
+    final files = filesOverride ?? FilePickerGateway();
+    final tunerSessions = TunerSessionRepository(db);
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
+      usage: usage,
+      goals: await GoalsController.load(meta),
       audio: audio,
+      mixer: mixer,
       metronome: metronome,
+      metronomePresets: await MetronomePresetLibrary.load(meta),
       referenceTone: referenceTone,
-      tuner: TunerController(mic, referenceTone),
+      temperaments: await TemperamentLibrary.load(meta),
+      tuner: await TunerController.load(
+        mic,
+        referenceTone,
+        meta: meta,
+        sessions: tunerSessions,
+        clock: clock,
+      ),
+      tunerSessions: tunerSessions,
       clickTrack: clickTrack,
       recording: RecordingController(
         mic: mic,
         audio: audio,
         pitch: referenceTone,
         repository: recordings,
+        files: files,
         clock: clock,
       ),
       dataIo: DataIoService(
         practice: practice,
         recordings: recordings,
-        files: filesOverride ?? FilePickerGateway(),
+        tunerSessions: tunerSessions,
+        files: files,
         clock: clock,
       ),
       sync: SyncController(
@@ -174,6 +234,21 @@ class AppServices {
       localAi: localAiOverride ?? _defaultLocalAi(),
       clock: clock,
     );
+  }
+
+  /// アプリが裏に回ったとき：音・マイクをすべて止める
+  ///
+  /// 裏では画面の処理が止められ、メトロノームの予約が途切れて音が乱れるため。
+  /// マイクも、使っていないときに入ったままにしない。
+  void pauseAll() {
+    metronome.stop();
+    clickTrack.stop();
+    referenceTone.stop();
+    unawaited(tuner.stop());
+    if (recording.phase == RecordingPhase.recording) {
+      unawaited(recording.stop());
+    }
+    recording.stopPlayback();
   }
 
   /// 端末・ブラウザに内蔵の AI（Linux など内蔵 AI のない環境では「使えない」）

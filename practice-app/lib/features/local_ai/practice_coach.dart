@@ -77,8 +77,9 @@ String buildMenuPrompt(CoachContext ctx) {
     ...lines,
     '全体の合計：${r.totalMinMinutes}〜${r.totalMaxMinutes}分。',
     '直近7日で少なかった項目を少し増やし、多すぎた項目は休ませてください。',
-    '答えは JSON だけにしてください。キーは上の英字の id、値は整数の分です。説明の文章は書かないでください。',
-    '例：{"${r.items.first.id}": ${r.items.first.defaultMinutes}, ...}',
+    '答えは JSON だけにしてください。"menu" には、キーが上の英字の id、値が整数の分のオブジェクトを、'
+        '"reason" には、なぜこのメニューにしたかを60文字以内の日本語で書きます。JSON の外に文章は書かないでください。',
+    '例：{"menu": {"${r.items.first.id}": ${r.items.first.defaultMinutes}, ...}, "reason": "…"}',
   ].join('\n');
 }
 

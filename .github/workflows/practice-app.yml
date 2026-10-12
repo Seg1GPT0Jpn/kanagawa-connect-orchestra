@@ -96,6 +96,19 @@ jobs:
       - name: Android 版（APK）のビルド
         run: flutter build apk --debug
 
+      # 公開用の鍵がないときは、リリース版を作れない（誤った署名で公開しないため）
+      - name: 鍵なしではリリース版のビルドが止まることの確認
+        run: |
+          if flutter build apk --release > release.log 2>&1; then
+            echo "::error::公開用の鍵がないのにリリース版が作れてしまいました"
+            exit 1
+          fi
+          if ! grep -q "KCO_ALLOW_DEBUG_SIGNED_RELEASE" release.log; then
+            cat release.log
+            echo "::error::リリース版のビルドが、鍵の確認以外の理由で失敗しました"
+            exit 1
+          fi
+
   rules:
     name: セキュリティルールのテスト（エミュレータ）
     runs-on: ubuntu-latest

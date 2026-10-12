@@ -1,14 +1,20 @@
-import 'dart:async';
-
 import 'package:flutter/foundation.dart';
-import 'package:flutter_soloud/flutter_soloud.dart';
 
 import '../domain/metronome.dart';
-import '../domain/wav.dart';
+import '../domain/sound.dart';
+import 'audio_engine_factory_native.dart'
+    if (dart.library.js_interop) 'audio_engine_factory_web.dart'
+    as platform;
 
 /// 音を鳴らす窓口（テストでは偽物に差し替える）
 abstract interface class AudioEngine {
-  /// 音を出せる状態にする（Web では、ボタンを押した中で呼ぶ必要がある）
+  /// 端末に合った鳴らし方（Web は Web Audio、スマホなどは SoLoud）
+  factory AudioEngine.platform() => platform.createAudioEngine();
+
+  /// 音を出せる状態にする。
+  ///
+  /// Web（特に iPhone の Safari）では、ボタンを押した処理の中で
+  /// **最初の await より前に** 呼ぶ必要がある（ブラウザが音を許可する条件）。
   Future<void> ensureStarted();
 
   bool get isStarted;
@@ -17,18 +23,40 @@ abstract interface class AudioEngine {
   Duration get now;
 
   /// [kind] のクリック音を、音の時計の [at] に鳴らすよう予約する
-  void scheduleClick(ClickKind kind, Duration at);
+  void scheduleClick(
+    ClickKind kind,
+    Duration at, {
+    ClickSound sound = ClickSound.beep,
+    double volume = 1,
+  });
 
   /// まだ鳴っていない予約をすべて取り消す
   void cancelScheduledClicks();
 
-  /// [hz] の正弦波を鳴らし続ける（鳴っていれば高さだけ変える）
-  Future<void> startTone(double hz, {double volume = 0.5});
-  void stopTone();
+  /// [hz] の音を [voice] 番で鳴らし続ける（鳴っていれば高さ・音色・音量だけ変える）。
+  /// 番号を変えると、和音のように複数の音を同時に鳴らせる
+  Future<void> startTone(
+    double hz, {
+    double volume = 0.5,
+    Timbre timbre = Timbre.sine,
+    int voice = 0,
+  });
 
-  /// WAV（録音の再生など）を鳴らす。[onDone] は最後まで鳴ったとき
-  Future<void> playWav(Uint8List wav, {void Function()? onDone});
+  /// [voice] 番の音を止める。null ならすべて
+  void stopTone({int? voice});
+
+  /// WAV（録音の再生など）を鳴らす。[speed] は再生の速さ（音の高さも変わる）。
+  /// [onDone] は最後まで鳴ったとき
+  Future<void> playWav(
+    Uint8List wav, {
+    double speed = 1,
+    void Function()? onDone,
+  });
   void stopPlayback();
+
+  /// 系統ごとの音量（0〜1）
+  double volumeOf(AudioChannel channel);
+  void setVolume(AudioChannel channel, double volume);
 }
 
 class AudioEngineException implements Exception {
@@ -40,127 +68,31 @@ class AudioEngineException implements Exception {
   String toString() => message;
 }
 
-/// SoLoud（flutter_soloud）で鳴らす
-class SoLoudAudioEngine implements AudioEngine {
-  final _soloud = SoLoud.instance;
-  final Map<ClickKind, AudioSource> _clicks = {};
-  final List<SoundHandle> _scheduled = [];
-  AudioSource? _sine;
-  SoundHandle? _toneHandle;
-  Future<void>? _starting;
+/// 音が出せなかったときの案内
+const audioTroubleMessage =
+    '音を出せませんでした。画面をもう一度タップするか、端末の音量・マナーモード'
+    '（iPhone の消音スイッチ）・接続中のイヤホンを確かめてください';
 
-  @override
-  bool get isStarted => _soloud.isInitialized && _clicks.isNotEmpty;
+/// 系統ごとの音量を覚えておく（エンジンの共通部分）
+mixin ChannelVolumes {
+  final Map<AudioChannel, double> _volumes = {
+    for (final c in AudioChannel.values) c: 1.0,
+  };
 
-  @override
-  Duration get now =>
-      _soloud.isInitialized ? _soloud.getEngineTime() : Duration.zero;
+  double volumeOf(AudioChannel channel) => _volumes[channel]!;
 
-  @override
-  Future<void> ensureStarted() => _starting ??= _start().catchError((Object e) {
-    _starting = null;
-    debugPrint('audio init failed: $e');
-    throw const AudioEngineException('音を出せませんでした。端末の音量や、ほかのアプリの使用状況を確かめてください');
-  });
+  void storeVolume(AudioChannel channel, double volume) =>
+      _volumes[channel] = volume.clamp(0.0, 1.0);
+}
 
-  Future<void> _start() async {
-    if (!_soloud.isInitialized) await _soloud.init(bufferSize: 1024);
-    // 強拍は高く大きく、細分は低く小さく
-    _clicks[ClickKind.accent] = await _soloud.loadMem(
-      'accent.wav',
-      clickWav(frequency: 1760),
-    );
-    _clicks[ClickKind.beat] = await _soloud.loadMem(
-      'beat.wav',
-      clickWav(frequency: 1320, volume: 0.75),
-    );
-    _clicks[ClickKind.subdivision] = await _soloud.loadMem(
-      'sub.wav',
-      clickWav(
-        frequency: 990,
-        volume: 0.45,
-        duration: const Duration(milliseconds: 25),
-      ),
-    );
-    _sine = await _soloud.loadWaveform(WaveForm.sin, false, 1, 0);
+/// 16bit モノラル WAV の標本化周波数とサンプル（-1〜1）
+({int sampleRate, Float32List samples}) decodePcm16Wav(Uint8List wav) {
+  final b = ByteData.sublistView(wav);
+  final sampleRate = b.getUint32(24, Endian.little);
+  final n = (wav.length - 44) ~/ 2;
+  final out = Float32List(n);
+  for (var i = 0; i < n; i++) {
+    out[i] = b.getInt16(44 + i * 2, Endian.little) / 32768;
   }
-
-  @override
-  void scheduleClick(ClickKind kind, Duration at) {
-    final source = _clicks[kind];
-    if (source == null) return;
-    _scheduled.add(_soloud.playScheduled(source, at));
-    // 終わった予約の記録は古いものから捨てる（取り消しは数秒先までで足りる）
-    if (_scheduled.length > 64) {
-      _scheduled.removeRange(0, _scheduled.length - 64);
-    }
-  }
-
-  @override
-  void cancelScheduledClicks() {
-    for (final h in _scheduled) {
-      unawaited(_soloud.stop(h).catchError((Object _) {}));
-    }
-    _scheduled.clear();
-  }
-
-  @override
-  Future<void> startTone(double hz, {double volume = 0.5}) async {
-    await ensureStarted();
-    final sine = _sine!;
-    _soloud.setWaveformFreq(sine, hz);
-    if (_toneHandle == null || !_soloud.getIsValidVoiceHandle(_toneHandle!)) {
-      _toneHandle = _soloud.play(sine, volume: volume, looping: true);
-    } else {
-      _soloud.setVolume(_toneHandle!, volume);
-    }
-  }
-
-  AudioSource? _clip;
-  SoundHandle? _clipHandle;
-  Timer? _clipTimer;
-
-  @override
-  Future<void> playWav(Uint8List wav, {void Function()? onDone}) async {
-    await ensureStarted();
-    stopPlayback();
-    final clip = _clip = await _soloud.loadMem('recording.wav', wav);
-    _clipHandle = _soloud.play(clip);
-    // 16bit モノラルの WAV なので、長さはデータの大きさから分かる
-    final sampleRate = ByteData.sublistView(wav).getUint32(24, Endian.little);
-    final micros = ((wav.length - 44) / 2 / sampleRate * 1000000).round();
-    _clipTimer = Timer(Duration(microseconds: micros), () {
-      _releaseClip();
-      onDone?.call();
-    });
-  }
-
-  @override
-  void stopPlayback() {
-    final h = _clipHandle;
-    if (h != null && _soloud.isInitialized) {
-      unawaited(_soloud.stop(h).catchError((Object _) {}));
-    }
-    _releaseClip();
-  }
-
-  void _releaseClip() {
-    _clipTimer?.cancel();
-    _clipTimer = null;
-    _clipHandle = null;
-    final c = _clip;
-    _clip = null;
-    if (c != null && _soloud.isInitialized) {
-      unawaited(_soloud.disposeSource(c).catchError((Object _) {}));
-    }
-  }
-
-  @override
-  void stopTone() {
-    final h = _toneHandle;
-    _toneHandle = null;
-    if (h != null && _soloud.isInitialized) {
-      unawaited(_soloud.stop(h).catchError((Object _) {}));
-    }
-  }
+  return (sampleRate: sampleRate, samples: out);
 }

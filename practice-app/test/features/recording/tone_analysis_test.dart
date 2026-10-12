@@ -113,4 +113,82 @@ void main() {
     expect(lines, hasLength(4));
     expect(lines[0], contains('よく安定'));
   });
+
+  group('信頼度の目安', () {
+    // 前後に静かな区間（周りの音だけ）を付けた録音
+    Float64List withSilence(Float64List tone, {double noise = 0.0005}) {
+      final rnd = math.Random(1);
+      final pad = (0.5 * sr).round();
+      final out = Float64List(tone.length + pad * 2);
+      for (var i = 0; i < out.length; i++) {
+        final t = i - pad;
+        out[i] =
+            (t >= 0 && t < tone.length ? tone[t] : 0) +
+            noise * (rnd.nextDouble() * 2 - 1);
+      }
+      return out;
+    }
+
+    test('静かな場所でのきれいなロングトーンは「高い」', () {
+      final a = analyzeTone(
+        withSilence(synth(3, (_) => bflat)),
+        sampleRate: sr,
+        a4: a4,
+      )!;
+      expect(a.reliability, Reliability.high);
+      expect(a.reliabilityNotes, isEmpty);
+      expect(a.gaps, isEmpty);
+      expect(a.levelDb, closeTo(-12, 3));
+    });
+
+    test('音が小さすぎる・割れている・短いと、理由つきで下がる', () {
+      final quiet = analyzeTone(
+        synth(3, (_) => bflat, amp: (_) => 0.05),
+        sampleRate: sr,
+        a4: a4,
+      )!;
+      expect(quiet.reliability, isNot(Reliability.high));
+      expect(quiet.reliabilityNotes.join(), contains('小さ'));
+
+      final loud = synth(3, (_) => bflat, amp: (_) => 2);
+      for (var i = 0; i < loud.length; i++) {
+        loud[i] = loud[i].clamp(-1.0, 1.0);
+      }
+      final clipped = analyzeTone(loud, sampleRate: sr, a4: a4)!;
+      expect(clipped.reliability, Reliability.low);
+      expect(clipped.reliabilityNotes.join(), contains('割れ'));
+
+      final short = analyzeTone(
+        synth(1, (_) => bflat),
+        sampleRate: sr,
+        a4: a4,
+      )!;
+      expect(short.reliabilityNotes.join(), contains('短め'));
+    });
+
+    test('途中で途切れた区間は「測れなかった区間」になり、多ければ信頼度が下がる', () {
+      final tone = synth(4, (_) => bflat);
+      // 1.0〜2.2秒を無音にする
+      for (var i = (1.0 * sr).round(); i < (2.2 * sr).round(); i++) {
+        tone[i] = 0;
+      }
+      final a = analyzeTone(tone, sampleRate: sr, a4: a4)!;
+      expect(a.gaps, hasLength(1));
+      expect(a.gaps.single.start, closeTo(1.0, 0.1));
+      expect(a.gaps.single.end, closeTo(2.2, 0.1));
+      expect(a.reliability, isNot(Reliability.high));
+      expect(a.reliabilityNotes.join(), contains('測れません'));
+    });
+
+    test('周りの音が大きいと下がる', () {
+      final a = analyzeTone(
+        withSilence(synth(3, (_) => bflat, amp: (_) => 0.05), noise: 0.03),
+        sampleRate: sr,
+        a4: a4,
+      );
+      expect(a, isNotNull);
+      expect(a!.reliability, isNot(Reliability.high));
+      expect(a.reliabilityNotes.join(), contains('周りの音'));
+    });
+  });
 }

@@ -20,7 +20,8 @@ service cloud.firestore {
       let d = request.resource.data;
       return d.keys().hasOnly(['id', 'ownerUid', 'practicedOn', 'startedAt', 'ruleSetId',
                                'plannedMinutes', 'actualSeconds', 'note', 'updatedAt',
-                               'updatedBy', 'deleted', 'serverUpdatedAt'])
+                               'updatedBy', 'deleted', 'serverUpdatedAt',
+                               'goal', 'achievement', 'nextFocus'])
         && d.keys().hasAll(['id', 'ownerUid', 'practicedOn', 'startedAt', 'ruleSetId',
                             'plannedMinutes', 'actualSeconds', 'note', 'updatedAt',
                             'updatedBy', 'deleted', 'serverUpdatedAt'])
@@ -36,6 +37,10 @@ service cloud.firestore {
         && d.updatedAt is int && d.updatedAt >= 0
         && d.updatedBy is string && d.updatedBy.size() > 0 && d.updatedBy.size() <= 64
         && d.deleted is bool
+        // 目標・達成度・次回の課題（入れたときだけある）
+        && (!('goal' in d) || (d.goal is string && d.goal.size() <= 200))
+        && (!('achievement' in d) || (d.achievement is int && d.achievement >= 0 && d.achievement <= 5))
+        && (!('nextFocus' in d) || (d.nextFocus is string && d.nextFocus.size() <= 200))
         && d.serverUpdatedAt == request.time;
     }
 

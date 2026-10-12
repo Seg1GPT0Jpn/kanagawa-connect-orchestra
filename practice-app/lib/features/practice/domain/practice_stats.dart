@@ -71,3 +71,15 @@ DateTime _parse(String ymd) {
 
 String _format(DateTime t) =>
     '${t.year.toString().padLeft(4, '0')}-${t.month.toString().padLeft(2, '0')}-${t.day.toString().padLeft(2, '0')}';
+
+/// いちばん新しい記録の「次回の課題」（次の練習の目標の候補）。なければ null
+String? latestNextFocus(Iterable<PracticeRecord> records) {
+  PracticeRecord? latest;
+  for (final r in records) {
+    if (r.deleted || r.nextFocus.trim().isEmpty) continue;
+    if (latest == null || r.startedAtMillis > latest.startedAtMillis) {
+      latest = r;
+    }
+  }
+  return latest?.nextFocus.trim();
+}

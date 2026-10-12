@@ -85,6 +85,8 @@ class DayAdvice {
     this.modeId,
     this.presetId,
     this.rest = false,
+    this.reasons = const [],
+    this.avoid = const [],
   });
 
   /// 画面に出す説明
@@ -98,20 +100,49 @@ class DayAdvice {
 
   /// 今日は吹かずに休む方がよい
   final bool rest;
+
+  /// なぜこうすすめるか（入力した予定・調子ごと）
+  final List<String> reasons;
+
+  /// 今日は避けたいこと
+  final List<String> avoid;
 }
 
-/// 上から順に当てはまったものを返す
+/// どの日にも出す、無理をしないための約束
+const alwaysAdvice = 'メニューは目安です。疲れや痛みを感じたら、時間が残っていても途中で終えて大丈夫です（記録はそこまでで残ります）。';
+
+/// 当てはまる予定・調子から、今日の練習の量をすすめる（いちばん負荷を下げるものを優先）
 DayAdvice adviseForDay(DayCondition c) {
+  final reasons = <String>[
+    if (c.lipPain) '唇が痛い → 痛みのあるときに吹くと、けがが長引くおそれがあります',
+    if (c.performance) '本番がある → 本番で吹く分の余力を残します',
+    if (c.fatigue == Fatigue.tired) '疲れている → 疲れたまま長く吹くと、悪い癖がつきやすくなります',
+    if (c.rehearsal) '合奏・レッスンがある → そこでも唇を使うので、個人練習は控えめにします',
+    if (c.heavyYesterday) '昨日たくさん吹いた → 唇の回復のため、柔らかい音を中心にします',
+  ];
+  final avoid = <String>[
+    if (c.performance) ...['新しい曲・新しい奏法を始めること', '高音や大音量の限界に挑む練習（本番の前に唇を疲れさせない）'],
+    if (c.fatigue == Fatigue.tired || c.heavyYesterday) '高音・大音量を長く続けること',
+    if (c.rehearsal && !c.performance) '合奏の前に曲を通して吹きすぎること',
+  ];
+
   if (c.lipPain) {
-    return const DayAdvice(
+    return DayAdvice(
       rest: true,
       message: '唇が痛いときは、今日は吹かずに休みましょう。痛みや腫れが続くときは、指導者や医療機関に相談してください。',
+      reasons: reasons,
+      avoid: const ['楽器を吹くこと（息の練習・譜読み・音源を聴くことは大丈夫）'],
     );
   }
   if (c.performance) {
-    return const DayAdvice(
-      modeId: 'trumpet_20min',
-      message: '本番の日は、練習は整える程度に（20分）。本番で吹く分の余力を残しましょう。',
+    final veryLight = c.fatigue == Fatigue.tired;
+    return DayAdvice(
+      modeId: veryLight ? 'trumpet_10min' : 'trumpet_20min',
+      message: veryLight
+          ? '本番の日で疲れてもいるので、音を出して確かめるだけ（10分）にしましょう。'
+          : '本番の日は、練習は整える程度に（20分）。本番で吹く分の余力を残しましょう。',
+      reasons: reasons,
+      avoid: avoid,
     );
   }
   if (c.fatigue == Fatigue.tired) {
@@ -120,20 +151,26 @@ DayAdvice adviseForDay(DayCondition c) {
       message: c.rehearsal
           ? '疲れていて合奏もある日は、音を出して確かめるだけ（10分）にしましょう。'
           : '疲れている日は短め（20分）に。無理に時間を埋めなくて大丈夫です。',
+      reasons: reasons,
+      avoid: avoid,
     );
   }
   if (c.rehearsal) {
-    return const DayAdvice(
+    return DayAdvice(
       modeId: 'trumpet_basic',
       presetId: 'short',
       message: '合奏・レッスンでも吹くので、個人練習は短め（45分）に。曲は難所だけ確認しましょう。',
+      reasons: reasons,
+      avoid: avoid,
     );
   }
   if (c.heavyYesterday) {
-    return const DayAdvice(
+    return DayAdvice(
       modeId: 'trumpet_basic',
       presetId: 'tone_flexibility',
       message: '昨日たくさん高音・大音量を吹いたので、今日は柔らかい音で音色・柔軟性を中心に。',
+      reasons: reasons,
+      avoid: avoid,
     );
   }
   return const DayAdvice(message: 'いつもどおりのメニューで練習しましょう。');

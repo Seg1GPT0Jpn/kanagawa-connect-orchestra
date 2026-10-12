@@ -17,7 +17,7 @@ void main() {
     WidgetTester tester, {
     bool cloudSync = true,
   }) async {
-    tester.view.physicalSize = const Size(430, 1400);
+    tester.view.physicalSize = const Size(430, 2600);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
     clock = FakeClock(DateTime(2026, 10, 12, 18));
@@ -49,6 +49,7 @@ void main() {
     expect(find.text('二重奏'), findsNothing); // 0分の章は出さない
     expect(find.text('曲・エチュード'), findsOneWidget);
 
+    await tester.ensureVisible(find.text('練習をはじめる'));
     await tester.tap(find.text('練習をはじめる'));
     await tester.pumpAndSettle();
     expect(find.text('1 / 8'), findsOneWidget);
@@ -71,6 +72,10 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('練習を記録しました（14分）'), findsOneWidget);
+    // 記録のあとは振り返りの画面（あとで書ける）
+    expect(find.text('練習の振り返り'), findsOneWidget);
+    await tester.tap(find.text('あとで'));
+    await tester.pumpAndSettle();
     final records = (await tester.runAsync(() => s.practice.visible(null)))!;
     expect(records.single.actualSeconds, {
       'mouthpiece': 240,

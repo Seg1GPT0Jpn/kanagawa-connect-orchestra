@@ -116,6 +116,23 @@ describe("練習記録（users/{uid}/practiceRecords）", () => {
     await assertSucceeds(setDoc(recRef(db, "alice", "r2"), rec("r2", "alice", { note: "あ".repeat(500) })));
   });
 
+  it("目標・達成度・次回の課題は、あってもなくてもよい（形は確かめる）", async () => {
+    const db = as("alice");
+    await assertSucceeds(setDoc(recRef(db, "alice", "g1"), rec("g1", "alice", {
+      goal: "ロングトーンの音程を安定させる", achievement: 4, nextFocus: "高音の B♭ を楽に",
+    })));
+    await assertSucceeds(setDoc(recRef(db, "alice", "g2"), rec("g2", "alice", { goal: "あ".repeat(200) })));
+    const bad = [
+      ["目標が長すぎる", rec("g3", "alice", { goal: "あ".repeat(201) })],
+      ["達成度が 6", rec("g3", "alice", { achievement: 6 })],
+      ["達成度が文字列", rec("g3", "alice", { achievement: "4" })],
+      ["次回の課題が数", rec("g3", "alice", { nextFocus: 1 })],
+    ];
+    for (const [why, data] of bad) {
+      await assertFails(setDoc(recRef(db, "alice", "g3"), data), why);
+    }
+  });
+
   it("新しい版での上書き・削除の印は OK、古い版での上書きはできない", async () => {
     await seed("alice", "r1", { updatedAt: 2000 });
     const db = as("alice");

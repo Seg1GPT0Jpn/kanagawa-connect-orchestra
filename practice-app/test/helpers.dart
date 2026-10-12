@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:kco_practice/features/audio_tools/data/audio_engine.dart';
 import 'package:kco_practice/features/audio_tools/data/mic_input.dart';
 import 'package:kco_practice/features/audio_tools/domain/metronome.dart';
+import 'package:kco_practice/features/audio_tools/domain/sound.dart';
 import 'package:kco_practice/features/auth/auth_service.dart';
 import 'package:kco_practice/features/data_io/data_io_service.dart';
 import 'package:kco_practice/features/local_ai/local_ai_service.dart';
@@ -154,7 +155,19 @@ class FakeAudioEngine implements AudioEngine {
   Duration get now => time;
 
   @override
-  void scheduleClick(ClickKind kind, Duration at) => scheduled.add((kind, at));
+  void scheduleClick(
+    ClickKind kind,
+    Duration at, {
+    ClickSound sound = ClickSound.beep,
+    double volume = 1,
+  }) {
+    scheduled.add((kind, at));
+    clickSounds.add(sound);
+    clickVolumes.add(volume);
+  }
+
+  final List<ClickSound> clickSounds = [];
+  final List<double> clickVolumes = [];
 
   @override
   void cancelScheduledClicks() {
@@ -164,24 +177,57 @@ class FakeAudioEngine implements AudioEngine {
   }
 
   @override
-  Future<void> startTone(double hz, {double volume = 0.5}) async {
+  Future<void> startTone(
+    double hz, {
+    double volume = 0.5,
+    Timbre timbre = Timbre.sine,
+    int voice = 0,
+  }) async {
     await ensureStarted();
-    toneHz = hz;
-    toneVolume = volume;
+    voices[voice] = (hz: hz, volume: volume, timbre: timbre);
+    if (voice == 0) {
+      toneHz = hz;
+      toneVolume = volume;
+    }
   }
 
+  /// 鳴っている音（番号ごと）
+  final Map<int, ({double hz, double volume, Timbre timbre})> voices = {};
+
   @override
-  void stopTone() => toneHz = null;
+  void stopTone({int? voice}) {
+    if (voice == null) {
+      voices.clear();
+    } else {
+      voices.remove(voice);
+    }
+    if (voice == null || voice == 0) toneHz = null;
+  }
 
   Uint8List? playedWav;
   void Function()? onPlaybackDone;
 
   @override
-  Future<void> playWav(Uint8List wav, {void Function()? onDone}) async {
+  Future<void> playWav(
+    Uint8List wav, {
+    double speed = 1,
+    void Function()? onDone,
+  }) async {
     await ensureStarted();
     playedWav = wav;
+    playbackSpeed = speed;
     onPlaybackDone = onDone;
   }
+
+  double playbackSpeed = 1;
+  final Map<AudioChannel, double> channelVolumes = {};
+
+  @override
+  double volumeOf(AudioChannel channel) => channelVolumes[channel] ?? 1;
+
+  @override
+  void setVolume(AudioChannel channel, double volume) =>
+      channelVolumes[channel] = volume;
 
   @override
   void stopPlayback() {
@@ -279,4 +325,7 @@ class FakeFileGateway implements FileGateway {
 
   @override
   Future<Uint8List?> pickJson() async => cancel ? null : toPick;
+
+  @override
+  Future<Uint8List?> pickAudio() async => cancel ? null : toPick;
 }

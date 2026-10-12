@@ -15,7 +15,11 @@ class MenuProposalReview {
     this.parseError,
     this.audit,
     this.correction,
+    this.reason,
   });
+
+  /// AI が書いた提案の理由（なければ null）
+  final String? reason;
 
   /// AI が提案したメニュー（読み取れなかったときは null）
   final Map<String, int>? minutes;
@@ -55,8 +59,23 @@ MenuProposalReview reviewMenuProposal(
     return const MenuProposalReview._(parseError: 'メニュー案は「項目: 分」の形で出してください');
   }
 
+  // {"menu": {...}, "reason": "..."} の形と、{"項目": 分, ...} だけの形の両方を読む
+  var body = decoded;
+  String? reason;
+  final r = decoded['reason'];
+  if (r is String && r.trim().isNotEmpty) {
+    final t = r.replaceAll(RegExp(r'\s+'), ' ').trim();
+    reason = t.length <= 120 ? t : '${t.substring(0, 120)}…';
+  }
+  final inner = decoded['menu'];
+  if (inner is Map<String, dynamic>) {
+    body = inner;
+  } else {
+    body = {...decoded}..remove('reason');
+  }
+
   final minutes = <String, int>{};
-  for (final MapEntry(:key, :value) in decoded.entries) {
+  for (final MapEntry(:key, :value) in body.entries) {
     if (value is int) {
       minutes[key] = value;
     } else if (value is double && value == value.truncateToDouble()) {
@@ -77,5 +96,6 @@ MenuProposalReview reviewMenuProposal(
     minutes: minutes,
     audit: audit,
     correction: audit.isValid ? null : suggestCorrection(minutes, rules),
+    reason: reason,
   );
 }

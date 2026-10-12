@@ -88,6 +88,15 @@ class ClickTrackController extends ChangeNotifier {
     await _persist();
   }
 
+  /// 出来上がったトラックを足して選ぶ（プリセットの連続再生など）
+  Future<void> addPrepared(ClickTrack t) async {
+    stop();
+    _tracks = [..._tracks, t];
+    _selected = _tracks.length - 1;
+    notifyListeners();
+    await _persist();
+  }
+
   Future<void> deleteTrack() async {
     stop();
     final next = [..._tracks]..removeAt(_selected);
