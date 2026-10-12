@@ -35,8 +35,20 @@ class TunerController extends ChangeNotifier {
   bool get isListening => _listening;
   String? get error => _error;
 
-  /// いま測れている音（無音・はっきりしないときは null）
+  /// いま測れている音（無音・はっきりしないときは null）。cents は平均律からのずれ
   PitchReading? get reading => _reading;
+
+  /// 選んだ音律での目標からのずれ（セント）。平均律なら reading.cents と同じ
+  double? get targetCents {
+    final r = _reading;
+    return r == null ? null : r.cents - _pitch.pitch.offsetFor(r.midi);
+  }
+
+  /// いまの音の、選んだ音律での平均律からのずれ（目標をどれだけずらすか）
+  double? get targetOffset {
+    final r = _reading;
+    return r == null ? null : _pitch.pitch.offsetFor(r.midi);
+  }
 
   /// 音の大きさ（0〜1、表示用）
   double get level => _level;

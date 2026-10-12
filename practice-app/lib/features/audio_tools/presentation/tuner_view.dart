@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/reference_tone_controller.dart';
 import '../data/tuner_controller.dart';
 import '../domain/pitch.dart';
+import '../domain/temperament.dart';
 import 'reference_tone_view.dart';
 
 /// チューナーの画面
@@ -19,13 +20,16 @@ class TunerView extends StatelessWidget {
       listenable: controller,
       builder: (context, _) {
         final r = controller.reading;
+        final cents = controller.targetCents;
+        final offset = controller.targetOffset;
+        final tuning = controller.pitch;
         final t = controller.pitch.transposition;
-        final inTune = r != null && r.cents.abs() <= 5;
+        final inTune = cents != null && cents.abs() <= 5;
         final color = r == null
             ? theme.disabledColor
             : inTune
             ? Colors.green.shade600
-            : r.cents.abs() <= 15
+            : cents!.abs() <= 15
             ? Colors.orange.shade700
             : theme.colorScheme.error;
         return ListView(
@@ -52,19 +56,29 @@ class TunerView extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 16),
-            CentsMeter(cents: r?.cents, color: color),
+            CentsMeter(cents: cents, color: color),
             const SizedBox(height: 4),
             Text(
-              r == null
+              cents == null
                   ? ''
-                  : '${r.cents >= 0 ? '+' : ''}${r.cents.toStringAsFixed(0)} セント（${inTune
+                  : '${cents >= 0 ? '+' : ''}${cents.toStringAsFixed(0)} セント（${inTune
                         ? 'ぴったり'
-                        : r.cents > 0
+                        : cents > 0
                         ? '高い'
                         : '低い'}）',
               textAlign: TextAlign.center,
               style: theme.textTheme.titleMedium?.copyWith(color: color),
             ),
+            if (tuning.temperament != Temperament.equal &&
+                r != null &&
+                offset != null)
+              Text(
+                '${tuning.temperament.label}・主音 ${noteNames[tuning.tonicPitchClass]}：'
+                '${intervalNames[(r.midi - tuning.tonicPitchClass) % 12]}は平均律より '
+                '${offset >= 0 ? '+' : ''}${offset.toStringAsFixed(0)} セントが目標',
+                textAlign: TextAlign.center,
+                style: theme.textTheme.bodySmall,
+              ),
             const SizedBox(height: 8),
             LinearProgressIndicator(value: controller.level, minHeight: 4),
             const SizedBox(height: 16),

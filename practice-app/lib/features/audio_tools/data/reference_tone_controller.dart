@@ -1,14 +1,19 @@
+import 'dart:math' as math;
+
 import 'package:flutter/foundation.dart';
 
 import '../../../core/meta_store.dart';
 import '../domain/pitch.dart';
+import '../domain/temperament.dart';
 import 'audio_engine.dart';
 
-/// 基準ピッチ（A4 の周波数）と楽器の調。基準音・チューナーで共通に使う
+/// 基準ピッチ（A4 の周波数）・楽器の調・音律。基準音・チューナーで共通に使う
 class PitchSettings {
   const PitchSettings({
     this.a4 = 442,
     this.transposition = Transposition.bFlat,
+    this.temperament = Temperament.equal,
+    this.tonicPitchClass = 10,
   });
 
   static const minA4 = 430.0;
@@ -17,15 +22,36 @@ class PitchSettings {
   final double a4;
   final Transposition transposition;
 
-  PitchSettings copyWith({double? a4, Transposition? transposition}) =>
-      PitchSettings(
-        a4: (a4 ?? this.a4).clamp(minA4, maxA4),
-        transposition: transposition ?? this.transposition,
-      );
+  /// 音律（チューナーの目標・基準音の高さ）
+  final Temperament temperament;
+
+  /// 主音（実音。0=C〜11=B）。初期値は B♭（吹奏楽・トランペットでよく使う調）
+  final int tonicPitchClass;
+
+  PitchSettings copyWith({
+    double? a4,
+    Transposition? transposition,
+    Temperament? temperament,
+    int? tonicPitchClass,
+  }) => PitchSettings(
+    a4: (a4 ?? this.a4).clamp(minA4, maxA4),
+    transposition: transposition ?? this.transposition,
+    temperament: temperament ?? this.temperament,
+    tonicPitchClass: (tonicPitchClass ?? this.tonicPitchClass) % 12,
+  );
+
+  /// [midi]（実音）の、選んだ音律での平均律からのずれ（セント）
+  double offsetFor(int midi) => temperament.offsetFor(midi, tonicPitchClass);
+
+  /// [midi]（実音）の、選んだ音律での周波数
+  double frequencyOf(int midi) =>
+      midiToFrequency(midi, a4: a4) * math.pow(2, offsetFor(midi) / 1200);
 
   Map<String, Object?> toMap() => {
     'a4': a4,
     'transposition': transposition.name,
+    'temperament': temperament.name,
+    'tonic': tonicPitchClass,
   };
 
   factory PitchSettings.fromMap(Map<Object?, Object?> m) => PitchSettings(
@@ -34,6 +60,11 @@ class PitchSettings {
       (t) => t.name == m['transposition'],
       orElse: () => Transposition.bFlat,
     ),
+    temperament: Temperament.values.firstWhere(
+      (t) => t.name == m['temperament'],
+      orElse: () => Temperament.equal,
+    ),
+    tonicPitchClass: m['tonic'] is int ? (m['tonic']! as int) % 12 : 10,
   );
 }
 
@@ -68,7 +99,9 @@ class ReferenceToneController extends ChangeNotifier {
 
   /// 選んでいる楽器の調での記譜音
   int get writtenMidi => _pitch.transposition.concertToWritten(_concertMidi);
-  double get frequency => midiToFrequency(_concertMidi, a4: _pitch.a4);
+
+  /// 選んだ音律での高さ
+  double get frequency => _pitch.frequencyOf(_concertMidi);
   bool get isPlaying => _playing;
   String? get error => _error;
 

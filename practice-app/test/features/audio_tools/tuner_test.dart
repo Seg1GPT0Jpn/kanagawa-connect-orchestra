@@ -7,6 +7,7 @@ import 'package:kco_practice/features/audio_tools/data/mic_input.dart';
 import 'package:kco_practice/features/audio_tools/data/reference_tone_controller.dart';
 import 'package:kco_practice/features/audio_tools/data/tuner_controller.dart';
 import 'package:kco_practice/features/audio_tools/domain/pitch.dart';
+import 'package:kco_practice/features/audio_tools/domain/temperament.dart';
 
 import '../../helpers.dart';
 
@@ -88,5 +89,44 @@ void main() {
     expect(tuner.isListening, isFalse);
     expect(tuner.reading, isNull);
     expect(mic.running, isFalse);
+  });
+
+  test('純正律（主音 B♭）：平均律の D は長3度として約14セント高く、純正の D ならぴったり', () async {
+    await pitch.updatePitch(
+      pitch.pitch.copyWith(
+        temperament: Temperament.justMajor,
+        tonicPitchClass: 10,
+      ),
+    );
+    await tuner.start();
+    tuner.addSamples(sine(midiToFrequency(74, a4: 442), 0.5)); // 平均律の D5
+    expect(tuner.reading!.cents.abs(), lessThan(1.5)); // 平均律からはずれていない
+    expect(tuner.targetOffset, closeTo(-13.7, 0.1));
+    expect(tuner.targetCents, closeTo(13.7, 1.5)); // 純正の目標より高い
+    final justD =
+        midiToFrequency(74, a4: 442) * math.pow(2, -13.69 / 1200).toDouble();
+    tuner.addSamples(sine(justD, 0.5));
+    expect(tuner.targetCents!.abs(), lessThan(1.5));
+  });
+
+  test('音律の設定は保存して読み戻せ、基準音もその高さで鳴る', () async {
+    await pitch.updatePitch(
+      pitch.pitch.copyWith(
+        temperament: Temperament.justMajor,
+        tonicPitchClass: 10,
+      ),
+    );
+    await pitch.selectConcert(74);
+    expect(
+      pitch.frequency,
+      closeTo(midiToFrequency(74, a4: 442) * math.pow(2, -13.69 / 1200), 0.01),
+    );
+    final m = PitchSettings.fromMap(pitch.pitch.toMap());
+    expect(m.temperament, Temperament.justMajor);
+    expect(m.tonicPitchClass, 10);
+    expect(
+      PitchSettings.fromMap({'temperament': 'nope', 'tonic': 'x'}).temperament,
+      Temperament.equal,
+    );
   });
 }

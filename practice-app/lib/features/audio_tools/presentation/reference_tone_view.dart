@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/reference_tone_controller.dart';
 import '../domain/pitch.dart';
+import '../domain/temperament.dart';
 
 /// 基準音の画面（実音と、楽器の記譜音を並べて表示）
 class ReferenceToneView extends StatelessWidget {
@@ -163,6 +164,43 @@ class PitchSettingsPanel extends StatelessWidget {
                     controller.updatePitch(p.copyWith(transposition: v.single)),
               ),
             ),
+            const SizedBox(height: 12),
+            Text('音律', style: theme.textTheme.titleSmall),
+            DropdownButton<Temperament>(
+              isExpanded: true,
+              value: p.temperament,
+              items: [
+                for (final t in Temperament.values)
+                  DropdownMenuItem(value: t, child: Text(t.label)),
+              ],
+              onChanged: (t) => t == null
+                  ? null
+                  : controller.updatePitch(p.copyWith(temperament: t)),
+            ),
+            Text(p.temperament.description, style: theme.textTheme.bodySmall),
+            if (p.temperament != Temperament.equal) ...[
+              const SizedBox(height: 8),
+              Text('主音（調）', style: theme.textTheme.titleSmall),
+              const SizedBox(height: 4),
+              Wrap(
+                spacing: 4,
+                runSpacing: 4,
+                children: [
+                  for (var pc = 0; pc < 12; pc++)
+                    ChoiceChip(
+                      label: Text(
+                        p.transposition == Transposition.concert
+                            ? noteNames[pc]
+                            : '${noteNames[pc]}（記譜${noteNames[p.transposition.concertToWritten(pc + 60) % 12]}）',
+                      ),
+                      selected: p.tonicPitchClass == pc,
+                      onSelected: (_) => controller.updatePitch(
+                        p.copyWith(tonicPitchClass: pc),
+                      ),
+                    ),
+                ],
+              ),
+            ],
           ],
         );
       },
