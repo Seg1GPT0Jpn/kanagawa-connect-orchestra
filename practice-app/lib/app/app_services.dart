@@ -14,6 +14,7 @@ import '../features/audio_tools/data/audio_engine.dart';
 import '../features/audio_tools/data/click_track_controller.dart';
 import '../features/audio_tools/data/metronome_controller.dart';
 import '../features/audio_tools/data/mic_input.dart';
+import '../features/audio_tools/data/mixer_controller.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
 import '../features/audio_tools/data/tuner_controller.dart';
 import '../features/auth/auth_service.dart';
@@ -41,6 +42,7 @@ class AppServices {
     required this.menu,
     required this.dayConditions,
     required this.audio,
+    required this.mixer,
     required this.metronome,
     required this.referenceTone,
     required this.tuner,
@@ -60,6 +62,9 @@ class AppServices {
 
   /// 音を鳴らす（メトロノーム・基準音）
   final AudioEngine audio;
+
+  /// 系統ごとの音量と音のテスト
+  final MixerController mixer;
   final MetronomeController metronome;
 
   /// 基準ピッチ（A4）・楽器の調と基準音
@@ -132,7 +137,8 @@ class AppServices {
       clock: clock,
     );
     final menuSettings = MenuSettingsRepository(meta);
-    final audio = audioOverride ?? SoLoudAudioEngine();
+    final audio = audioOverride ?? AudioEngine.platform();
+    final mixer = await MixerController.load(audio, meta);
     final referenceTone = await ReferenceToneController.load(audio, meta);
     final metronome = await MetronomeController.load(audio, meta);
     final clickTrack = await ClickTrackController.load(audio, meta);
@@ -146,6 +152,7 @@ class AppServices {
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
       audio: audio,
+      mixer: mixer,
       metronome: metronome,
       referenceTone: referenceTone,
       tuner: TunerController(mic, referenceTone),
@@ -174,6 +181,21 @@ class AppServices {
       localAi: localAiOverride ?? _defaultLocalAi(),
       clock: clock,
     );
+  }
+
+  /// アプリが裏に回ったとき：音・マイクをすべて止める
+  ///
+  /// 裏では画面の処理が止められ、メトロノームの予約が途切れて音が乱れるため。
+  /// マイクも、使っていないときに入ったままにしない。
+  void pauseAll() {
+    metronome.stop();
+    clickTrack.stop();
+    referenceTone.stop();
+    unawaited(tuner.stop());
+    if (recording.phase == RecordingPhase.recording) {
+      unawaited(recording.stop());
+    }
+    recording.stopPlayback();
   }
 
   /// 端末・ブラウザに内蔵の AI（Linux など内蔵 AI のない環境では「使えない」）

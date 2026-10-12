@@ -20,6 +20,22 @@ class HomeShell extends StatefulWidget {
 
 class _HomeShellState extends State<HomeShell> {
   int _tab = 0;
+  late final AppLifecycleListener _lifecycle;
+
+  @override
+  void initState() {
+    super.initState();
+    // 裏に回ったら音とマイクを止める（戻ったら、ボタンでもう一度始める）
+    _lifecycle = AppLifecycleListener(
+      onHide: () => AppScope.of(context).pauseAll(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _lifecycle.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
