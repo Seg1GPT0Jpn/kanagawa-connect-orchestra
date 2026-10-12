@@ -9,7 +9,7 @@ Web 版は GitHub Actions で自動公開できます。Android・iOS のスト�
 - [ ] 自動公開の鍵（GitHub Secrets の `FIREBASE_SERVICE_ACCOUNT_PRACTICE`）を登録した → Web 版が `https://kco-practice.web.app` に出る
 - [ ] プライバシーポリシーが `https://kco-practice.web.app/privacy.html` で見られる
 - [ ] Android・iOS のアプリを Firebase に登録した（スマホでもログイン・同期を使う場合。下の「3」）
-- [ ] 実機で、メトロノーム・基準音・チューナー・録音を試した（音量・マイク・Bluetooth イヤホン）
+- [ ] 実機での確認表（`docs/device-test.md`）をすべて試した（音・マイク・Bluetooth イヤホン・同期と復旧）
 - [ ] （任意）Web 版で AI コーチを使う場合、Chrome のオリジントライアルのトークンを入れた（README「端末内 AI」）
 
 ## 1. Web 版

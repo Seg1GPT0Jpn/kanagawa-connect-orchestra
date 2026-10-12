@@ -4,6 +4,7 @@
 library;
 
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:sembast/sembast.dart';
 
@@ -52,6 +53,21 @@ class PracticeRepository {
       if (_visible(s.value, uid)) PracticeRecord.fromMap(s.value),
   ];
 
+  /// 削除した記録（ごみ箱）。新しく削除した順
+  Stream<List<PracticeRecord>> watchDeleted(String? uid) => _store
+      .query(finder: Finder(sortOrders: [SortOrder('updatedAt', false)]))
+      .onSnapshots(_db)
+      .map(
+        (snaps) => [
+          for (final s in snaps)
+            if (s.value['deleted'] == true && _owned(s.value, uid))
+              PracticeRecord.fromMap(s.value),
+        ],
+      );
+
+  static bool _owned(Map<String, Object?> m, String? uid) =>
+      m['ownerUid'] == null || m['ownerUid'] == uid;
+
   static bool _visible(Map<String, Object?> m, String? uid) =>
       m['deleted'] != true && (m['ownerUid'] == null || m['ownerUid'] == uid);
 
@@ -96,6 +112,10 @@ class PracticeRepository {
   /// 削除（同期のため、記録は残して削除済みの印を付ける）
   Future<void> delete(String id) => _edit(id, (r) => r.copyWith(deleted: true));
 
+  /// 削除を取り消す（ほかの端末にも、次の同期で戻る）
+  Future<void> restore(String id) =>
+      _edit(id, (r) => r.copyWith(deleted: false));
+
   Future<void> _edit(
     String id,
     PracticeRecord Function(PracticeRecord) change,
@@ -103,8 +123,14 @@ class PracticeRepository {
     await _db.transaction((txn) async {
       final m = await _store.record(id).get(txn);
       if (m == null) return;
-      final edited = change(PracticeRecord.fromMap(m)).copyWith(
-        updatedAtMillis: clock().millisecondsSinceEpoch,
+      final before = PracticeRecord.fromMap(m);
+      // 端末の時計が遅れていても、編集が編集前の内容に負けないよう、
+      // 時刻は必ず前回より進める（同期の競合は時刻の新しい方が残るため）
+      final edited = change(before).copyWith(
+        updatedAtMillis: math.max(
+          clock().millisecondsSinceEpoch,
+          before.updatedAtMillis + 1,
+        ),
         updatedBy: deviceId,
       );
       await _putDirty(txn, edited);

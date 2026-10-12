@@ -33,6 +33,8 @@ class RecordingView extends StatelessWidget {
               'ロングトーンを録って、音程と音量の安定を確かめます（最大${RecordingController.maxDuration.inSeconds}秒）。',
               style: theme.textTheme.bodyMedium,
             ),
+            const SizedBox(height: 4),
+            const _HowToRecord(),
             const SizedBox(height: 12),
             if (recording) ...[
               Text(
@@ -123,12 +125,27 @@ class RecordingView extends StatelessWidget {
                         ),
                         subtitle: Text(
                           '音程のゆれ ±${r.pitchSpreadCents.toStringAsFixed(1)}・変化 ${_signed(r.driftCents)}セント・'
-                          '音量のゆれ ${r.volumeSpreadDb.toStringAsFixed(1)}dB',
+                          '音量のゆれ ${r.volumeSpreadDb.toStringAsFixed(1)}dB'
+                          '${r.reliability == null ? '' : '・信頼度 ${r.reliability!.label}'}',
                         ),
                         trailing: IconButton(
                           tooltip: '削除',
                           icon: const Icon(Icons.delete_outline),
-                          onPressed: () => c.repository.delete(r.id),
+                          onPressed: () async {
+                            final messenger = ScaffoldMessenger.of(context);
+                            await c.repository.delete(r.id);
+                            messenger
+                              ..removeCurrentSnackBar()
+                              ..showSnackBar(
+                                SnackBar(
+                                  content: const Text('分析結果を削除しました'),
+                                  action: SnackBarAction(
+                                    label: '元に戻す',
+                                    onPressed: () => c.repository.save(r),
+                                  ),
+                                ),
+                              );
+                          },
                         ),
                       ),
                   ],
@@ -176,10 +193,13 @@ class _ResultCard extends StatelessWidget {
               '鳴っていた時間 ${a.voicedSeconds.toStringAsFixed(1)} 秒・${a.medianFrequency.toStringAsFixed(1)} Hz',
               style: theme.textTheme.bodySmall,
             ),
+            const SizedBox(height: 8),
+            _ReliabilityBox(analysis: a),
             const SizedBox(height: 12),
             SizedBox(height: 120, child: PitchGraph(analysis: a)),
             Text(
-              '音程の変化（中央の線が平均。緑の帯は ±5 セント）',
+              '音程の変化（中央の線が平均。緑の帯は ±5 セント。'
+              '${a.gaps.isEmpty ? '' : '灰色は高さを測れなかった区間。'}）',
               style: theme.textTheme.bodySmall,
             ),
             const SizedBox(height: 12),
@@ -205,8 +225,86 @@ class _ResultCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             for (final l in lines) Text('・$l'),
+            const SizedBox(height: 8),
+            Text(
+              'この評価は、マイクで拾った音から計算した目安です。マイクの位置・部屋の響き・'
+              '周りの音・端末のマイクの特性で結果は変わります。指導者や奏者の耳による評価の'
+              '代わりにはなりません。同じ条件で録って、自分の変化を見るのに使ってください。',
+              style: theme.textTheme.bodySmall,
+            ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// 録り方の案内（たたんでおき、開くと読める）
+class _HowToRecord extends StatelessWidget {
+  const _HowToRecord();
+
+  @override
+  Widget build(BuildContext context) => const ExpansionTile(
+    tilePadding: EdgeInsets.zero,
+    title: Text('正しく測るための録り方'),
+    childrenPadding: EdgeInsets.only(bottom: 8),
+    expandedCrossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text('・マイク（端末の下側など）から 30〜50cm 離し、ベルを少し外して吹く'),
+      Text('・静かで、響きすぎない部屋で（エアコン・換気扇・ほかの楽器の音を避ける）'),
+      Text('・メゾフォルテくらいの楽な音量で、3秒以上まっすぐ伸ばす'),
+      Text('・Bluetooth イヤホンのマイクは使わない（音が加工・圧縮されるため）'),
+      Text('・比べるときは、毎回同じ場所・同じ距離・同じ端末で録る'),
+    ],
+  );
+}
+
+/// 信頼度の目安と理由
+class _ReliabilityBox extends StatelessWidget {
+  const _ReliabilityBox({required this.analysis});
+
+  final ToneAnalysis analysis;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final a = analysis;
+    final (icon, color) = switch (a.reliability) {
+      Reliability.high => (Icons.verified_outlined, Colors.green.shade700),
+      Reliability.medium => (Icons.info_outline, Colors.orange.shade800),
+      Reliability.low => (Icons.warning_amber, theme.colorScheme.error),
+    };
+    return Container(
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        border: Border.all(color: color.withValues(alpha: 0.5)),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(icon, color: color, size: 18),
+              const SizedBox(width: 6),
+              Text(
+                '分析の信頼度：${a.reliability.label}',
+                style: TextStyle(color: color, fontWeight: FontWeight.bold),
+              ),
+              const Spacer(),
+              Text(
+                '入力 ${a.levelDb.toStringAsFixed(0)} dB',
+                style: theme.textTheme.bodySmall,
+              ),
+            ],
+          ),
+          if (a.reliabilityNotes.isEmpty)
+            const Text('録音の条件に大きな問題は見つかりませんでした。')
+          else
+            for (final n in a.reliabilityNotes) Text('・$n'),
+          if (a.reliability == Reliability.low)
+            const Text('この結果はあてにしにくいため、録り直しをおすすめします。'),
+        ],
       ),
     );
   }
@@ -272,6 +370,7 @@ class PitchGraph extends StatelessWidget {
         line: theme.colorScheme.primary,
         grid: theme.colorScheme.outlineVariant,
         band: Colors.green.withValues(alpha: 0.18),
+        gap: theme.colorScheme.outline.withValues(alpha: 0.25),
       ),
       size: Size.infinite,
     );
@@ -284,12 +383,14 @@ class _PitchGraphPainter extends CustomPainter {
     required this.line,
     required this.grid,
     required this.band,
+    required this.gap,
   });
 
   final ToneAnalysis a;
   final Color line;
   final Color grid;
   final Color band;
+  final Color gap;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -304,6 +405,12 @@ class _PitchGraphPainter extends CustomPainter {
       Rect.fromLTRB(0, y(5), size.width, y(-5)),
       Paint()..color = band,
     );
+    for (final g in a.gaps) {
+      canvas.drawRect(
+        Rect.fromLTRB(x(g.start), 0, x(g.end), size.height),
+        Paint()..color = gap,
+      );
+    }
     final gridPaint = Paint()
       ..color = grid
       ..strokeWidth = 1;

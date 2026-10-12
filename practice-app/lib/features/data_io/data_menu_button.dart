@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../app/app_services.dart';
+import '../practice/presentation/deleted_records_page.dart';
 import 'export_format.dart';
 
 /// 記録タブの「︙」：CSV・バックアップの書き出しと、バックアップの読み込み
@@ -17,6 +18,8 @@ class DataMenuButton extends StatelessWidget {
         PopupMenuItem(value: 'csv', child: Text('表（CSV）で書き出す')),
         PopupMenuItem(value: 'backup', child: Text('バックアップ（JSON）を書き出す')),
         PopupMenuItem(value: 'import', child: Text('バックアップを読み込む')),
+        PopupMenuDivider(),
+        PopupMenuItem(value: 'trash', child: Text('削除した記録')),
       ],
     );
   }
@@ -26,6 +29,14 @@ class DataMenuButton extends StatelessWidget {
     AppServices services,
     String action,
   ) async {
+    if (action == 'trash') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute<void>(builder: (_) => const DeletedRecordsPage()),
+      );
+      return;
+    }
+    if (!context.mounted) return;
     final messenger = ScaffoldMessenger.of(context);
     final uid = services.sync.user?.uid;
     String? message;

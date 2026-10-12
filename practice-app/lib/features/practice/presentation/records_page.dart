@@ -124,6 +124,7 @@ class RecordsPage extends StatelessWidget {
               children: [
                 TextButton.icon(
                   onPressed: () async {
+                    final messenger = ScaffoldMessenger.of(context);
                     final ok = await showDialog<bool>(
                       context: context,
                       builder: (context) => AlertDialog(
@@ -143,6 +144,17 @@ class RecordsPage extends StatelessWidget {
                     if (ok == true) {
                       await services.practice.delete(r.id);
                       if (context.mounted) Navigator.pop(context);
+                      messenger
+                        ..removeCurrentSnackBar()
+                        ..showSnackBar(
+                          SnackBar(
+                            content: Text('${r.practicedOn} の記録を削除しました'),
+                            action: SnackBarAction(
+                              label: '元に戻す',
+                              onPressed: () => services.practice.restore(r.id),
+                            ),
+                          ),
+                        );
                     }
                   },
                   icon: const Icon(Icons.delete_outline),

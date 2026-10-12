@@ -61,6 +61,31 @@ void main() {
     expect(await repo.visible('u1'), isEmpty);
   });
 
+  test('削除した記録はごみ箱に出て、元に戻せる（戻すのも未送信の編集）', () async {
+    final id = await create(owner: 'u1');
+    await create(owner: 'u2');
+    await repo.delete(id);
+    expect((await repo.watchDeleted('u1').first).map((r) => r.id), [id]);
+    expect(await repo.watchDeleted('u2').first, isEmpty);
+
+    clock.advance(const Duration(minutes: 1));
+    await repo.restore(id);
+    expect((await repo.get(id))!.deleted, isFalse);
+    expect((await repo.visible('u1')).map((r) => r.id), [id]);
+    expect(await repo.watchDeleted('u1').first, isEmpty);
+    expect(await repo.isDirty(id), isTrue);
+  });
+
+  test('端末の時計が戻っていても、編集の時刻は前の版より必ず新しい', () async {
+    final id = await create();
+    final before = (await repo.get(id))!.updatedAtMillis;
+    clock.advance(const Duration(hours: -3)); // 時計が3時間遅れた
+    await repo.updateNote(id, 'メモ');
+    expect((await repo.get(id))!.updatedAtMillis, before + 1);
+    await repo.delete(id);
+    expect((await repo.get(id))!.updatedAtMillis, before + 2);
+  });
+
   test('ログイン前の記録をアカウントに引き継ぐ', () async {
     final guest = await create();
     await create(owner: 'u2');

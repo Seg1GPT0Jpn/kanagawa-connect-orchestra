@@ -15,6 +15,7 @@ class RecordingResult {
     required this.attackSeconds,
     required this.a4,
     this.memo = '',
+    this.reliability,
   });
 
   factory RecordingResult.fromAnalysis(
@@ -36,6 +37,7 @@ class RecordingResult {
     attackSeconds: a.attackSeconds,
     a4: a4,
     memo: memo,
+    reliability: a.reliability,
   );
 
   final String id;
@@ -55,6 +57,9 @@ class RecordingResult {
   final double a4;
   final String memo;
 
+  /// 分析の信頼度の目安（古い記録にはない）
+  final Reliability? reliability;
+
   Map<String, Object?> toMap() => {
     'id': id,
     'recordedAt': recordedAtMillis,
@@ -68,6 +73,7 @@ class RecordingResult {
     'attack': attackSeconds,
     'a4': a4,
     'memo': memo,
+    if (reliability != null) 'reliability': reliability!.name,
   };
 
   factory RecordingResult.fromMap(Map<String, Object?> m) {
@@ -85,6 +91,7 @@ class RecordingResult {
       attackSeconds: d('attack'),
       a4: d('a4'),
       memo: (m['memo'] as String?) ?? '',
+      reliability: Reliability.byName(m['reliability']),
     );
   }
 }
