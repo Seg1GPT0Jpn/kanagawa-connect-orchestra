@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー｜練習お助け（かながわコネクトオーケストラ）</title>
+  <meta name="description" content="楽器練習お助けアプリ「練習お助け」のプライバシーポリシー">
+  <style>
+    :root { --bg: #fbfaf7; --fg: #1d1b20; --muted: #5d5a63; --accent: #1f4e79; --line: #e3e0d8; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #16161a; --fg: #ecebf0; --muted: #b0aeb8; --accent: #9cc2ea; --line: #34333a; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.8 system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+    h1 { font-size: 1.5rem; line-height: 1.4; }
+    h2 { font-size: 1.15rem; margin-top: 2em; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+    a { color: var(--accent); }
+    table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>プライバシーポリシー<br><small>楽器練習お助けアプリ「練習お助け」</small></h1>
+  <p class="muted">運営：かながわコネクトオーケストラ　／　制定：2026年10月12日</p>
+
+  <p>かながわコネクトオーケストラ（以下「私たち」）は、楽器練習お助けアプリ「練習お助け」（以下「本アプリ」）で扱う情報を、次のとおり取り扱います。</p>
+
+  <h2>1. 基本の考え方</h2>
+  <ul>
+    <li>本アプリは、ログインしなくても使えます。ログインしない場合、練習の記録は<strong>お使いの端末の中だけ</strong>に保存され、私たちを含め外部には送られません。</li>
+    <li>マイクの音、録音、AI による処理は、<strong>すべて端末の中だけ</strong>で行います。</li>
+    <li>広告、行動の追跡（トラッキング）、利用状況の分析ツールは使っていません。</li>
+  </ul>
+
+  <h2>2. 扱う情報と使い道</h2>
+  <table>
+    <tr><th>情報</th><th>保存する場所</th><th>使い道</th></tr>
+    <tr><td>ログインに使うメールアドレス・表示名（Google またはメールアドレスでログインした場合）</td><td>Google Firebase Authentication</td><td>本人の確認と、ほかの端末との記録の同期</td></tr>
+    <tr><td>練習記録（日付・項目ごとの時間・メモ）</td><td>端末の中。ログインした場合は Google Cloud Firestore にも</td><td>記録・集計の表示、ほかの端末との同期</td></tr>
+    <tr><td>メニュー・メトロノームなどの設定、「今日の予定と調子」、録音の分析結果</td><td>端末の中だけ</td><td>アプリの表示とおすすめの計算</td></tr>
+    <tr><td>マイクの音・録音</td><td>保存しません（録音は聴き直すあいだだけ端末のメモリに置き、画面を閉じると消えます）</td><td>チューナー・録音の分析</td></tr>
+  </table>
+  <p>クラウドに保存した練習記録は、本人だけが読み書きできるように設定しています。私たちが個人の練習記録を閲覧・利用することはありません。</p>
+
+  <h2>3. 端末内の AI について</h2>
+  <p>「AI コーチ」は、端末やブラウザにはじめから入っている AI（Android の Gemini Nano、iPhone の Apple Foundation Models、Chrome・Edge の内蔵 AI）を使います。練習記録と「今日の予定と調子」を AI に渡しますが、処理は端末の中で行われ、本アプリから外部には送りません。AI の準備（モデルのダウンロード）は、端末・ブラウザの提供元（Google・Apple・Microsoft）の仕組みで行われます。</p>
+
+  <h2>4. 外部のサービス</h2>
+  <p>本アプリは、ログイン・同期・Web 版の公開のために Google の Firebase（Authentication・Cloud Firestore・Hosting）を使っています。これらのサービスでの情報の扱いは、<a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase のプライバシーとセキュリティ</a>をご覧ください。</p>
+
+  <h2>5. 第三者への提供</h2>
+  <p>法令に基づく場合を除き、本人の同意なく第三者に情報を提供しません。</p>
+
+  <h2>6. 情報の削除</h2>
+  <ul>
+    <li>端末の中の情報は、アプリを削除する（Web 版はブラウザのサイトデータを削除する）と消えます。</li>
+    <li>練習記録はアプリの中で削除できます（ログイン中はクラウドにも反映されます）。</li>
+    <li>アカウントとクラウドの記録をすべて削除したい場合は、下のお問い合わせ先からご連絡ください。本人確認のうえで削除します。</li>
+  </ul>
+
+  <h2>7. 未成年の方へ</h2>
+  <p>中学生・高校生の方も使えます。ログインしてクラウドに記録を保存する場合は、保護者の方と内容を確認してからお使いください。</p>
+
+  <h2>8. 変更</h2>
+  <p>このポリシーを変更するときは、このページでお知らせします。</p>
+
+  <h2>9. お問い合わせ</h2>
+  <p>かながわコネクトオーケストラ　<a href="https://kanagawa-connect-orchestra.web.app/contact.html">お問い合わせページ</a></p>
+</main>
+</body>
+</html>

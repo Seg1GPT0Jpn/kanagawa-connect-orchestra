@@ -3,12 +3,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:kco_practice/app/app.dart';
 import 'package:kco_practice/app/app_services.dart';
 
+import 'package:kco_practice/features/local_ai/local_ai_service.dart';
+
 import 'helpers.dart';
 
 void main() {
   late FakeClock clock;
   late FakeRemote cloud;
   late FakeAuth auth;
+  late FakeLocalAiService ai;
 
   Future<AppServices> services(
     WidgetTester tester, {
@@ -20,11 +23,15 @@ void main() {
     clock = FakeClock(DateTime(2026, 10, 12, 18));
     cloud = FakeRemote();
     auth = FakeAuth();
+    ai = FakeLocalAiService(state: LocalAiState.unavailable);
     return (await tester.runAsync(
       () async => AppServices.fromParts(
         db: await openMemoryDb(),
         authOverride: cloudSync ? auth : null,
         remoteOverride: cloudSync ? cloud : null,
+        audioOverride: FakeAudioEngine(),
+        micOverride: FakeMicInput(),
+        localAiOverride: ai,
         clock: clock.call,
       ),
     ))!;
@@ -138,6 +145,46 @@ void main() {
       [saved.rehearsal, saved.lipPain, saved.fatigue.name],
       [true, true, 'tired'],
     );
+  });
+
+  testWidgets('AI コーチ：使えない端末では案内だけ、使える端末ではメニューを相談して今日のメニューにできる', (
+    tester,
+  ) async {
+    final s = await services(tester);
+    await tester.pumpWidget(KcoPracticeApp(services: s));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('内蔵の AI を使えません'), findsOneWidget);
+    expect(find.text('メニューを相談'), findsNothing);
+  });
+
+  testWidgets('AI コーチ：準備してメニューを相談すると、アプリが確かめた案を今日だけ使える', (tester) async {
+    final s = await services(tester);
+    ai.state = LocalAiState.needsPreparation;
+    ai.replies.add(
+      '{"mouthpiece": 5, "long_tone": 20, "lip_slur": 15, "arban_slurs": 20, "repertoire": 10}',
+    );
+    await tester.pumpWidget(KcoPracticeApp(services: s));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('AI を準備する'));
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 20)),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('メニューを相談'));
+    await tester.runAsync(
+      () => Future<void>.delayed(const Duration(milliseconds: 20)),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('AI の案（合計70分）'), findsOneWidget);
+    expect(ai.prompts.single, contains('JSON だけ'));
+    await tester.tap(find.text('今日はこの案にする'));
+    await tester.pumpAndSettle();
+    expect(s.menu.isTemporary, isTrue);
+    expect(s.menu.value['lip_slur'], 15);
+    expect(s.menu.savedMenu['lip_slur'], 5); // 保存したメニューは変わらない
+    expect(find.text('70分'), findsOneWidget); // 練習タブの合計
   });
 
   testWidgets('Firebase がない端末では、アカウントタブに端末内保存の案内が出る', (tester) async {

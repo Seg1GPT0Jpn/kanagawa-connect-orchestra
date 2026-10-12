@@ -3,14 +3,25 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sembast/sembast.dart';
 
 import '../core/clock.dart';
 import '../core/local_database.dart';
 import '../core/meta_store.dart';
+import '../features/audio_tools/data/audio_engine.dart';
+import '../features/audio_tools/data/click_track_controller.dart';
+import '../features/audio_tools/data/metronome_controller.dart';
+import '../features/audio_tools/data/mic_input.dart';
+import '../features/audio_tools/data/reference_tone_controller.dart';
+import '../features/audio_tools/data/tuner_controller.dart';
 import '../features/auth/auth_service.dart';
+import '../features/data_io/data_io_service.dart';
+import '../features/recording/data/recording_controller.dart';
+import '../features/recording/data/recording_repository.dart';
 import '../features/auth/firebase_auth_service.dart';
+import '../features/local_ai/builtin_local_ai_service.dart';
 import '../features/local_ai/local_ai_service.dart';
 import '../features/menu/data/practice_menu_controller.dart';
 import '../features/menu/data/menu_settings_repository.dart';
@@ -29,6 +40,13 @@ class AppServices {
     required this.practice,
     required this.menu,
     required this.dayConditions,
+    required this.audio,
+    required this.metronome,
+    required this.referenceTone,
+    required this.tuner,
+    required this.recording,
+    required this.clickTrack,
+    required this.dataIo,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
@@ -39,6 +57,23 @@ class AppServices {
 
   /// 今日の予定と調子（端末内だけ）
   final DayConditionRepository dayConditions;
+
+  /// 音を鳴らす（メトロノーム・基準音）
+  final AudioEngine audio;
+  final MetronomeController metronome;
+
+  /// 基準ピッチ（A4）・楽器の調と基準音
+  final ReferenceToneController referenceTone;
+  final TunerController tuner;
+
+  /// 録音と簡易音響分析
+  final RecordingController recording;
+
+  /// クリックトラック（テンポ・拍子が変わる曲用）
+  final ClickTrackController clickTrack;
+
+  /// 記録の書き出し・読み込み
+  final DataIoService dataIo;
 
   /// クラウド同期（ログインもここから使う。sync.auth）
   final SyncController sync;
@@ -84,6 +119,10 @@ class AppServices {
     required Database db,
     AuthService? authOverride,
     RemoteRecordStore? remoteOverride,
+    AudioEngine? audioOverride,
+    MicInput? micOverride,
+    LocalAiService? localAiOverride,
+    FileGateway? filesOverride,
     Clock clock = systemClock,
   }) async {
     final meta = MetaStore(db);
@@ -93,10 +132,37 @@ class AppServices {
       clock: clock,
     );
     final menuSettings = MenuSettingsRepository(meta);
+    final audio = audioOverride ?? SoLoudAudioEngine();
+    final referenceTone = await ReferenceToneController.load(audio, meta);
+    final metronome = await MetronomeController.load(audio, meta);
+    final clickTrack = await ClickTrackController.load(audio, meta);
+    // メトロノームとクリックトラックは、あとから鳴らした方だけを鳴らす
+    metronome.onStarted = clickTrack.stop;
+    clickTrack.onStarted = metronome.stop;
+    final mic = micOverride ?? RecordMicInput();
+    final recordings = RecordingRepository(db);
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
+      audio: audio,
+      metronome: metronome,
+      referenceTone: referenceTone,
+      tuner: TunerController(mic, referenceTone),
+      clickTrack: clickTrack,
+      recording: RecordingController(
+        mic: mic,
+        audio: audio,
+        pitch: referenceTone,
+        repository: recordings,
+        clock: clock,
+      ),
+      dataIo: DataIoService(
+        practice: practice,
+        recordings: recordings,
+        files: filesOverride ?? FilePickerGateway(),
+        clock: clock,
+      ),
       sync: SyncController(
         repository: practice,
         auth: authOverride,
@@ -105,10 +171,16 @@ class AppServices {
             : SyncEngine(practice, remoteOverride),
         clock: clock,
       ),
-      localAi: const UnavailableLocalAiService(),
+      localAi: localAiOverride ?? _defaultLocalAi(),
       clock: clock,
     );
   }
+
+  /// 端末・ブラウザに内蔵の AI（Linux など内蔵 AI のない環境では「使えない」）
+  static LocalAiService _defaultLocalAi() =>
+      !kIsWeb && defaultTargetPlatform == TargetPlatform.linux
+      ? const UnavailableLocalAiService()
+      : BuiltInLocalAiService();
 
   static Future<bool> _initFirebase() async {
     final options = DefaultFirebaseOptions.currentPlatform;

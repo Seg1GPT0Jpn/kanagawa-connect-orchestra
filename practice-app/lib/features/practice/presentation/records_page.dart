@@ -4,6 +4,7 @@ import '../../../app/app_services.dart';
 import '../../../core/clock.dart';
 import '../domain/practice_record.dart';
 import '../domain/practice_stats.dart';
+import '../../data_io/data_menu_button.dart';
 import 'visible_records_builder.dart';
 
 /// 練習記録の一覧と集計
@@ -15,7 +16,10 @@ class RecordsPage extends StatelessWidget {
     final services = AppScope.of(context);
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('記録')),
+      appBar: AppBar(
+        title: const Text('記録'),
+        actions: const [DataMenuButton()],
+      ),
       body: VisibleRecordsBuilder(
         builder: (context, records) {
           if (records.isEmpty) {

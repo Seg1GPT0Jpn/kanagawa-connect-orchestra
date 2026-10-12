@@ -1,6 +1,12 @@
 import 'dart:async';
+import 'dart:typed_data';
 
+import 'package:kco_practice/features/audio_tools/data/audio_engine.dart';
+import 'package:kco_practice/features/audio_tools/data/mic_input.dart';
+import 'package:kco_practice/features/audio_tools/domain/metronome.dart';
 import 'package:kco_practice/features/auth/auth_service.dart';
+import 'package:kco_practice/features/data_io/data_io_service.dart';
+import 'package:kco_practice/features/local_ai/local_ai_service.dart';
 import 'package:kco_practice/features/practice/domain/practice_record.dart';
 import 'package:kco_practice/features/sync/conflict.dart';
 import 'package:kco_practice/features/sync/remote_record_store.dart';
@@ -121,4 +127,156 @@ class FakeAuth implements AuthService {
 
   @override
   Future<void> signOut() async => emit(null);
+}
+
+/// 音を鳴らさない AudioEngine（予約・正弦波を記録する。時計は手で進める）
+class FakeAudioEngine implements AudioEngine {
+  FakeAudioEngine({this.failToStart = false});
+
+  final bool failToStart;
+  bool started = false;
+  Duration time = Duration.zero;
+  final List<(ClickKind, Duration)> scheduled = [];
+  int cancelCount = 0;
+  double? toneHz;
+  double? toneVolume;
+
+  @override
+  Future<void> ensureStarted() async {
+    if (failToStart) throw const AudioEngineException('音を出せませんでした');
+    started = true;
+  }
+
+  @override
+  bool get isStarted => started;
+
+  @override
+  Duration get now => time;
+
+  @override
+  void scheduleClick(ClickKind kind, Duration at) => scheduled.add((kind, at));
+
+  @override
+  void cancelScheduledClicks() {
+    cancelCount++;
+    // まだ鳴っていない予約を消す
+    scheduled.removeWhere((c) => c.$2 > time);
+  }
+
+  @override
+  Future<void> startTone(double hz, {double volume = 0.5}) async {
+    await ensureStarted();
+    toneHz = hz;
+    toneVolume = volume;
+  }
+
+  @override
+  void stopTone() => toneHz = null;
+
+  Uint8List? playedWav;
+  void Function()? onPlaybackDone;
+
+  @override
+  Future<void> playWav(Uint8List wav, {void Function()? onDone}) async {
+    await ensureStarted();
+    playedWav = wav;
+    onPlaybackDone = onDone;
+  }
+
+  @override
+  void stopPlayback() {
+    playedWav = null;
+    onPlaybackDone = null;
+  }
+}
+
+/// 音を受け取らないマイク（テストから波形を流し込む）
+class FakeMicInput implements MicInput {
+  FakeMicInput({this.allowed = true});
+
+  bool allowed;
+  bool running = false;
+  int? sampleRate;
+  StreamController<Float64List>? _controller;
+
+  void push(Float64List samples) => _controller?.add(samples);
+
+  @override
+  Future<bool> requestPermission() async => allowed;
+
+  @override
+  Future<Stream<Float64List>> start({required int sampleRate}) async {
+    this.sampleRate = sampleRate;
+    running = true;
+    _controller = StreamController<Float64List>();
+    return _controller!.stream;
+  }
+
+  @override
+  Future<void> stop() async {
+    running = false;
+    await _controller?.close();
+    _controller = null;
+  }
+}
+
+/// 決まった答えを返す AI（指示文を記録する）
+class FakeLocalAiService implements LocalAiService {
+  FakeLocalAiService({this.state = LocalAiState.ready, List<String>? replies})
+    : replies = replies ?? [];
+
+  LocalAiState state;
+  final List<String> replies;
+  final List<String> prompts = [];
+  final List<String?> systemInstructions = [];
+  bool initialized = false;
+
+  @override
+  bool get isSupported => initialized;
+
+  @override
+  Future<LocalAiState> probe() async => state;
+
+  @override
+  Future<void> initializeModel({void Function(int percent)? onProgress}) async {
+    if (state == LocalAiState.unavailable) {
+      throw const LocalAiException('使えません');
+    }
+    onProgress?.call(100);
+    initialized = true;
+    state = LocalAiState.ready;
+  }
+
+  @override
+  Future<String> generatePrompt(
+    String promptText, {
+    String? systemInstruction,
+  }) async {
+    if (!initialized) throw const LocalAiException('AI の準備ができていません');
+    prompts.add(promptText);
+    systemInstructions.add(systemInstruction);
+    if (replies.isEmpty) throw const LocalAiException('答えがありません');
+    return replies.removeAt(0);
+  }
+}
+
+/// ファイルを実際には保存・選択しない（保存した内容を記録し、選ぶファイルを渡せる）
+class FakeFileGateway implements FileGateway {
+  final Map<String, (Uint8List, String)> saved = {};
+  Uint8List? toPick;
+  bool cancel = false;
+
+  @override
+  Future<bool> save(
+    String fileName,
+    Uint8List bytes, {
+    required String mimeType,
+  }) async {
+    if (cancel) return false;
+    saved[fileName] = (bytes, mimeType);
+    return true;
+  }
+
+  @override
+  Future<Uint8List?> pickJson() async => cancel ? null : toPick;
 }

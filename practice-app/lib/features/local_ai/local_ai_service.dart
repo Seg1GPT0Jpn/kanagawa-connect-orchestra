@@ -1,19 +1,39 @@
 /// ローカル AI（端末内 LLM）の抽象化
 ///
-/// モデルやエンジン（LiteRT-LM・MediaPipe など）を差し替えられるように、
+/// エンジン（端末・ブラウザに内蔵の AI など）を差し替えられるように、
 /// アプリの他の部分はこのインターフェースだけを使う。
 /// AI が使えない端末では [UnavailableLocalAiService] を使い、AI なしで動かす。
 library;
 
+/// AI がこの端末で使えるか
+enum LocalAiState {
+  /// すぐ使える
+  ready,
+
+  /// 使えるが、最初に OS・ブラウザが AI を準備（ダウンロード）する必要がある
+  needsPreparation,
+
+  /// 準備中（ダウンロード中など）
+  preparing,
+
+  /// この端末・ブラウザでは使えない
+  unavailable,
+}
+
 abstract interface class LocalAiService {
-  /// 今の端末・環境でローカル AI が使えるか
+  /// 今の端末・環境でローカル AI が使えるか（[initializeModel] が成功したあとで true）
   bool get isSupported;
 
-  /// モデルの読み込み・初期化。失敗したら [LocalAiException]
-  Future<void> initializeModel();
+  /// 使えるかどうかを調べる（時間がかかっても固まらない）
+  Future<LocalAiState> probe();
+
+  /// モデルの読み込み・初期化（必要なら OS・ブラウザの準備も）。失敗したら [LocalAiException]
+  ///
+  /// Web では、ボタンを押した中で呼ぶ必要がある（ブラウザがダウンロードを始めるため）。
+  Future<void> initializeModel({void Function(int percent)? onProgress});
 
   /// [promptText] に対するローカル推論の結果。出力は必ずプログラム側で検査してから使う
-  Future<String> generatePrompt(String promptText);
+  Future<String> generatePrompt(String promptText, {String? systemInstruction});
 }
 
 class LocalAiException implements Exception {
@@ -22,10 +42,10 @@ class LocalAiException implements Exception {
   final String message;
 
   @override
-  String toString() => 'LocalAiException: $message';
+  String toString() => message;
 }
 
-/// ローカル AI が使えないときの実装（初期化に失敗した端末・非対応ブラウザなど）
+/// ローカル AI が使えないときの実装（対応していない端末・ブラウザなど）
 class UnavailableLocalAiService implements LocalAiService {
   const UnavailableLocalAiService({this.reason = 'この端末ではローカル AI を使えません'});
 
@@ -35,9 +55,16 @@ class UnavailableLocalAiService implements LocalAiService {
   bool get isSupported => false;
 
   @override
-  Future<void> initializeModel() async => throw LocalAiException(reason);
+  Future<LocalAiState> probe() async => LocalAiState.unavailable;
 
   @override
-  Future<String> generatePrompt(String promptText) async =>
-      throw LocalAiException(reason);
+  Future<void> initializeModel({
+    void Function(int percent)? onProgress,
+  }) async => throw LocalAiException(reason);
+
+  @override
+  Future<String> generatePrompt(
+    String promptText, {
+    String? systemInstruction,
+  }) async => throw LocalAiException(reason);
 }
