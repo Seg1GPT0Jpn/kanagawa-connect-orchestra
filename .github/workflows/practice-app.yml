@@ -1,0 +1,57 @@
+# 練習お助けアプリ（practice-app・Flutter）のチェックとテスト
+#
+#  ・プルリクエスト／main に入ったとき：書式・静的解析・テスト・Web ビルドの確認だけ（公開はしない）
+#    ※ Firebase プロジェクトを用意したら、公開の手順をここに追加します
+name: 練習アプリ
+
+on:
+  pull_request:
+    paths:
+      - 'practice-app/**'
+      - '.github/workflows/practice-app.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'practice-app/**'
+      - '.github/workflows/practice-app.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: practice-app-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: 練習アプリのチェックとテスト
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: practice-app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.7
+          cache: true
+
+      - run: flutter pub get
+
+      - name: 書式（dart format）がそろっているか
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: 静的解析
+        run: flutter analyze
+
+      - name: テスト
+        run: flutter test
+
+      - name: Web 版がビルドできるか
+        run: flutter build web --no-web-resources-cdn

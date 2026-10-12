@@ -3,7 +3,7 @@
  *   node _tools/check_public_files.cjs
  *
  * firebase deploy が実際に使うのと同じ関数（firebase-tools の listFiles）で公開されるファイルを列挙し、
- * サイト以外のもの（.git・.github などの隠しフォルダ、_tools・団員アプリ・Apps Script のソース、
+ * サイト以外のもの（.git・.github などの隠しフォルダ、_tools・団員アプリ・練習アプリ・Apps Script のソース、
  * 設定・ルール・ログ・README）が含まれていたら失敗にする。
  */
 const path = require('path');
@@ -15,7 +15,7 @@ const files = listFiles(path.join(root, cfg.hosting.public), cfg.hosting.ignore)
 
 const bad = files.filter(f =>
   f.split('/').some(seg => seg.startsWith('.')) ||
-  /^(_tools|kco-member-app|orchestra-management|node_modules)\//.test(f) ||
+  /^(_tools|kco-member-app|practice-app|orchestra-management|node_modules)\//.test(f) ||
   /(^|\/)(firebase\.json|firestore\.rules|README\.md)$|\.(gs|log)$/.test(f));
 
 console.log('公開されるファイル：' + files.length + '件');
