@@ -10,7 +10,8 @@ enum Temperament {
   equal('平均律', '12の半音がすべて同じ幅（チューナーのふつうの基準）'),
   justMajor('純正律（長調）', '主音に対して、和音がうなりなく響く高さ。長3度は約14セント低い'),
   justMinor('純正律（短調）', '短調の和音がうなりなく響く高さ。短3度は約16セント高い'),
-  pythagorean('ピタゴラス音律', '純正な5度を積み重ねた高さ。旋律で音程を広めにとるときの目安');
+  pythagorean('ピタゴラス音律', '純正な5度を積み重ねた高さ。旋律で音程を広めにとるときの目安'),
+  custom('自分で作った音律', '音ごとのずれを自分で決めた音律');
 
   const Temperament(this.label, this.description);
 
@@ -19,7 +20,7 @@ enum Temperament {
 
   /// 主音からの半音数（0〜11）ごとの周波数比
   List<(int, int)> get _ratios => switch (this) {
-    Temperament.equal => const [],
+    Temperament.equal || Temperament.custom => const [],
     Temperament.justMajor => const [
       (1, 1),
       (16, 15),
@@ -66,7 +67,7 @@ enum Temperament {
 
   /// 主音から [semitones] 半音上の音の、平均律からのずれ（セント）
   double offsetCents(int semitones) {
-    if (this == Temperament.equal) return 0;
+    if (this == Temperament.equal || this == Temperament.custom) return 0;
     final i = semitones % 12;
     final (n, d) = _ratios[i];
     return 1200 * math.log(n / d) / math.ln2 - 100 * i;
@@ -91,4 +92,70 @@ const intervalNames = [
   '長6度',
   '短7度',
   '長7度',
+];
+
+/// 自分で作る音律：主音からの半音ごとに、平均律からのずれ（セント）を決める
+class CustomTemperament {
+  const CustomTemperament({
+    required this.id,
+    required this.name,
+    required this.offsets,
+  }) : assert(offsets.length == 12);
+
+  final String id;
+  final String name;
+
+  /// [0] が主音、[1] が短2度 …（平均律からのずれ・セント）
+  final List<double> offsets;
+
+  /// ずれの範囲（大きすぎる値は打ち間違いとして直す）
+  static const maxOffset = 50.0;
+
+  CustomTemperament copyWith({String? name, List<double>? offsets}) =>
+      CustomTemperament(
+        id: id,
+        name: name ?? this.name,
+        offsets: offsets ?? this.offsets,
+      );
+
+  Map<String, Object?> toMap() => {'id': id, 'name': name, 'offsets': offsets};
+
+  /// 壊れた値は読まない（null）
+  static CustomTemperament? fromMap(Object? raw) {
+    if (raw is! Map) return null;
+    final id = raw['id'], name = raw['name'], o = raw['offsets'];
+    if (id is! String || name is! String || o is! List || o.length != 12) {
+      return null;
+    }
+    if (o.any((v) => v is! num)) return null;
+    return CustomTemperament(
+      id: id,
+      name: name.length > 40 ? name.substring(0, 40) : name,
+      offsets: [
+        for (final v in o)
+          (v as num).toDouble().clamp(-maxOffset, maxOffset).toDouble(),
+      ],
+    );
+  }
+}
+
+/// 作るときのひな形（主音を C にすると本来の形になる、歴史的な音律も含む）
+final temperamentTemplates = <(String, List<double>)>[
+  ('平均律', List.filled(12, 0)),
+  for (final t in [
+    Temperament.justMajor,
+    Temperament.justMinor,
+    Temperament.pythagorean,
+  ])
+    (t.label, [for (var i = 0; i < 12; i++) t.offsetCents(i)]),
+  // 1/4 シントニックコンマ・ミーントーン（C を主音に。A を 0 にそろえた値）
+  (
+    'ミーントーン（1/4コンマ）',
+    [10.3, -13.7, 3.4, 20.5, -3.4, 13.7, -10.3, 6.8, -17.1, 0, 17.1, -6.8],
+  ),
+  // ヴェルクマイスター第3（C を主音に）
+  (
+    'ヴェルクマイスター第3',
+    [0, -9.8, -7.8, -5.9, -9.8, -2.0, -11.7, -3.9, -7.8, -11.7, -3.9, -7.8],
+  ),
 ];
