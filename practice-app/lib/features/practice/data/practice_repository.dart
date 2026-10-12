@@ -112,6 +112,43 @@ class PracticeRepository {
     _changes.add(null);
   }
 
+  /// バックアップから記録を取り込む。持ち主は [uid] にそろえる（ほかの人の記録として入らないように）
+  ///
+  /// 端末にない記録は追加し、ある記録は同期と同じ決まり（後から編集した方）で残す。
+  /// 取り込んで変わった記録は未送信にする（ログイン中なら次の同期で送る）。
+  Future<({int added, int updated, int unchanged})> importRecords(
+    List<PracticeRecord> records,
+    String? uid,
+  ) async {
+    var added = 0, updated = 0, unchanged = 0;
+    await _db.transaction((txn) async {
+      for (final incoming in records) {
+        final r = incoming.copyWith(ownerUid: uid);
+        final m = await _store.record(r.id).get(txn);
+        if (m == null) {
+          await _putDirty(txn, r);
+          added++;
+          continue;
+        }
+        final local = PracticeRecord.fromMap(m);
+        // 持ち主を除いて同じ内容なら何もしない
+        if (local.copyWith(ownerUid: uid) == r ||
+            identical(resolveConflict(local, r), local)) {
+          unchanged++;
+        } else {
+          await _putDirty(txn, r);
+          updated++;
+        }
+      }
+    });
+    if (added + updated > 0) _changes.add(null);
+    return (added: added, updated: updated, unchanged: unchanged);
+  }
+
+  /// 書き出し用：[uid] で見える記録（削除済みを除く、古い順）
+  Future<List<PracticeRecord>> exportable(String? uid) async =>
+      (await visible(uid)).reversed.toList();
+
   // ---- 同期用 ----
 
   /// ログイン前に作った記録を [uid] のアカウントに引き継ぐ（次の同期で送る）

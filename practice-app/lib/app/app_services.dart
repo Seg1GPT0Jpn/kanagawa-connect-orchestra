@@ -17,6 +17,7 @@ import '../features/audio_tools/data/mic_input.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
 import '../features/audio_tools/data/tuner_controller.dart';
 import '../features/auth/auth_service.dart';
+import '../features/data_io/data_io_service.dart';
 import '../features/recording/data/recording_controller.dart';
 import '../features/recording/data/recording_repository.dart';
 import '../features/auth/firebase_auth_service.dart';
@@ -45,6 +46,7 @@ class AppServices {
     required this.tuner,
     required this.recording,
     required this.clickTrack,
+    required this.dataIo,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
@@ -69,6 +71,9 @@ class AppServices {
 
   /// クリックトラック（テンポ・拍子が変わる曲用）
   final ClickTrackController clickTrack;
+
+  /// 記録の書き出し・読み込み
+  final DataIoService dataIo;
 
   /// クラウド同期（ログインもここから使う。sync.auth）
   final SyncController sync;
@@ -117,6 +122,7 @@ class AppServices {
     AudioEngine? audioOverride,
     MicInput? micOverride,
     LocalAiService? localAiOverride,
+    FileGateway? filesOverride,
     Clock clock = systemClock,
   }) async {
     final meta = MetaStore(db);
@@ -134,6 +140,7 @@ class AppServices {
     metronome.onStarted = clickTrack.stop;
     clickTrack.onStarted = metronome.stop;
     final mic = micOverride ?? RecordMicInput();
+    final recordings = RecordingRepository(db);
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
@@ -147,7 +154,13 @@ class AppServices {
         mic: mic,
         audio: audio,
         pitch: referenceTone,
-        repository: RecordingRepository(db),
+        repository: recordings,
+        clock: clock,
+      ),
+      dataIo: DataIoService(
+        practice: practice,
+        recordings: recordings,
+        files: filesOverride ?? FilePickerGateway(),
         clock: clock,
       ),
       sync: SyncController(

@@ -5,6 +5,7 @@ import 'package:kco_practice/features/audio_tools/data/audio_engine.dart';
 import 'package:kco_practice/features/audio_tools/data/mic_input.dart';
 import 'package:kco_practice/features/audio_tools/domain/metronome.dart';
 import 'package:kco_practice/features/auth/auth_service.dart';
+import 'package:kco_practice/features/data_io/data_io_service.dart';
 import 'package:kco_practice/features/local_ai/local_ai_service.dart';
 import 'package:kco_practice/features/practice/domain/practice_record.dart';
 import 'package:kco_practice/features/sync/conflict.dart';
@@ -257,4 +258,25 @@ class FakeLocalAiService implements LocalAiService {
     if (replies.isEmpty) throw const LocalAiException('答えがありません');
     return replies.removeAt(0);
   }
+}
+
+/// ファイルを実際には保存・選択しない（保存した内容を記録し、選ぶファイルを渡せる）
+class FakeFileGateway implements FileGateway {
+  final Map<String, (Uint8List, String)> saved = {};
+  Uint8List? toPick;
+  bool cancel = false;
+
+  @override
+  Future<bool> save(
+    String fileName,
+    Uint8List bytes, {
+    required String mimeType,
+  }) async {
+    if (cancel) return false;
+    saved[fileName] = (bytes, mimeType);
+    return true;
+  }
+
+  @override
+  Future<Uint8List?> pickJson() async => cancel ? null : toPick;
 }
