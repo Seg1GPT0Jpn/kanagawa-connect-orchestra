@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:kco_practice/features/audio_tools/data/audio_engine.dart';
+import 'package:kco_practice/features/audio_tools/domain/metronome.dart';
 import 'package:kco_practice/features/auth/auth_service.dart';
 import 'package:kco_practice/features/practice/domain/practice_record.dart';
 import 'package:kco_practice/features/sync/conflict.dart';
@@ -121,4 +123,49 @@ class FakeAuth implements AuthService {
 
   @override
   Future<void> signOut() async => emit(null);
+}
+
+/// 音を鳴らさない AudioEngine（予約・正弦波を記録する。時計は手で進める）
+class FakeAudioEngine implements AudioEngine {
+  FakeAudioEngine({this.failToStart = false});
+
+  final bool failToStart;
+  bool started = false;
+  Duration time = Duration.zero;
+  final List<(ClickKind, Duration)> scheduled = [];
+  int cancelCount = 0;
+  double? toneHz;
+  double? toneVolume;
+
+  @override
+  Future<void> ensureStarted() async {
+    if (failToStart) throw const AudioEngineException('音を出せませんでした');
+    started = true;
+  }
+
+  @override
+  bool get isStarted => started;
+
+  @override
+  Duration get now => time;
+
+  @override
+  void scheduleClick(ClickKind kind, Duration at) => scheduled.add((kind, at));
+
+  @override
+  void cancelScheduledClicks() {
+    cancelCount++;
+    // まだ鳴っていない予約を消す
+    scheduled.removeWhere((c) => c.$2 > time);
+  }
+
+  @override
+  Future<void> startTone(double hz, {double volume = 0.5}) async {
+    await ensureStarted();
+    toneHz = hz;
+    toneVolume = volume;
+  }
+
+  @override
+  void stopTone() => toneHz = null;
 }

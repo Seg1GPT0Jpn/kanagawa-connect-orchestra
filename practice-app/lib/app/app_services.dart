@@ -9,6 +9,9 @@ import 'package:sembast/sembast.dart';
 import '../core/clock.dart';
 import '../core/local_database.dart';
 import '../core/meta_store.dart';
+import '../features/audio_tools/data/audio_engine.dart';
+import '../features/audio_tools/data/metronome_controller.dart';
+import '../features/audio_tools/data/reference_tone_controller.dart';
 import '../features/auth/auth_service.dart';
 import '../features/auth/firebase_auth_service.dart';
 import '../features/local_ai/local_ai_service.dart';
@@ -29,6 +32,9 @@ class AppServices {
     required this.practice,
     required this.menu,
     required this.dayConditions,
+    required this.audio,
+    required this.metronome,
+    required this.referenceTone,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
@@ -39,6 +45,13 @@ class AppServices {
 
   /// 今日の予定と調子（端末内だけ）
   final DayConditionRepository dayConditions;
+
+  /// 音を鳴らす（メトロノーム・基準音）
+  final AudioEngine audio;
+  final MetronomeController metronome;
+
+  /// 基準ピッチ（A4）・楽器の調と基準音
+  final ReferenceToneController referenceTone;
 
   /// クラウド同期（ログインもここから使う。sync.auth）
   final SyncController sync;
@@ -84,6 +97,7 @@ class AppServices {
     required Database db,
     AuthService? authOverride,
     RemoteRecordStore? remoteOverride,
+    AudioEngine? audioOverride,
     Clock clock = systemClock,
   }) async {
     final meta = MetaStore(db);
@@ -93,10 +107,14 @@ class AppServices {
       clock: clock,
     );
     final menuSettings = MenuSettingsRepository(meta);
+    final audio = audioOverride ?? SoLoudAudioEngine();
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
+      audio: audio,
+      metronome: await MetronomeController.load(audio, meta),
+      referenceTone: await ReferenceToneController.load(audio, meta),
       sync: SyncController(
         repository: practice,
         auth: authOverride,

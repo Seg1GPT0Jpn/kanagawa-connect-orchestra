@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../features/audio_tools/presentation/tools_page.dart';
 import '../features/auth/account_page.dart';
 import '../features/menu/domain/menu_presets.dart';
 import '../features/menu/domain/menu_rules.dart';
@@ -46,6 +47,7 @@ class _HomeShellState extends State<HomeShell> {
               );
             },
           ),
+          const ToolsPage(),
           const AccountPage(),
         ],
       ),
@@ -60,6 +62,11 @@ class _HomeShellState extends State<HomeShell> {
           ),
           NavigationDestination(icon: Icon(Icons.history), label: '記録'),
           NavigationDestination(icon: Icon(Icons.tune), label: 'メニュー'),
+          NavigationDestination(
+            icon: Icon(Icons.music_note_outlined),
+            selectedIcon: Icon(Icons.music_note),
+            label: '道具',
+          ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
             selectedIcon: Icon(Icons.person),

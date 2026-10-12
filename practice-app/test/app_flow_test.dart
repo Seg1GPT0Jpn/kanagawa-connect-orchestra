@@ -25,6 +25,7 @@ void main() {
         db: await openMemoryDb(),
         authOverride: cloudSync ? auth : null,
         remoteOverride: cloudSync ? cloud : null,
+        audioOverride: FakeAudioEngine(),
         clock: clock.call,
       ),
     ))!;
