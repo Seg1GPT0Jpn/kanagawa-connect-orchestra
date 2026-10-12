@@ -5,9 +5,20 @@ import '../domain/menu_rules.dart';
 
 /// メニューの時間を決めて、その場でルールを検査する画面
 class MenuAuditPage extends StatefulWidget {
-  const MenuAuditPage({super.key, required this.rules});
+  const MenuAuditPage({
+    super.key,
+    required this.rules,
+    this.initialMinutes,
+    this.onSave,
+  });
 
   final MenuRuleSet rules;
+
+  /// 最初に表示するメニュー（null ならルールの初期値）
+  final Map<String, int>? initialMinutes;
+
+  /// ルールを満たすメニューを保存する（null なら保存ボタンを出さない）
+  final Future<void> Function(Map<String, int> minutes)? onSave;
 
   @override
   State<MenuAuditPage> createState() => _MenuAuditPageState();
@@ -17,7 +28,28 @@ class _MenuAuditPageState extends State<MenuAuditPage> {
   /// スライダーの上限（ルールの上限を超えて動かせるようにして、警告を確かめられるようにする）
   static const _sliderMax = 60;
 
-  late Map<String, int> _minutes = widget.rules.defaultMenu;
+  late Map<String, int> _minutes = {
+    ...(widget.initialMinutes ?? widget.rules.defaultMenu),
+  };
+  bool _saving = false;
+
+  bool get _changed {
+    final initial = widget.initialMinutes ?? widget.rules.defaultMenu;
+    return widget.rules.items.any((i) => initial[i.id] != _minutes[i.id]);
+  }
+
+  Future<void> _save() async {
+    setState(() => _saving = true);
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      await widget.onSave!(_minutes);
+      messenger.showSnackBar(const SnackBar(content: Text('メニューを保存しました')));
+    } catch (e) {
+      messenger.showSnackBar(SnackBar(content: Text('保存できませんでした：$e')));
+    } finally {
+      if (mounted) setState(() => _saving = false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,15 +76,23 @@ class _MenuAuditPageState extends State<MenuAuditPage> {
             style: theme.textTheme.titleLarge,
           ),
           const SizedBox(height: 12),
-          if (audit.isValid)
+          if (audit.isValid) ...[
             Card(
               color: theme.colorScheme.primaryContainer,
               child: const ListTile(
                 leading: Icon(Icons.check_circle_outline),
                 title: Text('ルールを満たしています'),
               ),
-            )
-          else ...[
+            ),
+            if (widget.onSave != null && _changed) ...[
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                onPressed: _saving ? null : _save,
+                icon: const Icon(Icons.save_outlined),
+                label: const Text('このメニューを保存'),
+              ),
+            ],
+          ] else ...[
             Card(
               color: theme.colorScheme.errorContainer,
               child: Column(

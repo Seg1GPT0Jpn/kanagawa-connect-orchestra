@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'app/app.dart';
+import 'app/app_services.dart';
 
-void main() {
-  runApp(const KcoPracticeApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final services = await AppServices.create();
+  runApp(KcoPracticeApp(services: services));
 }

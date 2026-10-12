@@ -6,14 +6,34 @@
 - **時間計算・ルール検査・集計はプログラム（Dart）が決定論的に行います。** AI は提案や文章づくりの補助だけで、AI の出力は必ずプログラムの検査を通してから使います。
 - **AI が使えない端末でも、** 練習記録・タイマー・テンプレート・メニュー監査はすべて動きます。
 
-## いまできていること（Stage 1 の土台）
+## いまできていること（Stage 1）
 
 | 機能 | 場所 |
 |---|---|
-| トランペット基礎メニューのルールと決定論的監査・修正案 | `lib/features/menu/domain/` |
+| 練習タイマー（メニューの項目を順に計る・一時停止・途中で終える） | `lib/features/practice/domain/practice_session.dart`・`presentation/timer_page.dart` |
+| 練習記録（端末内に保存・メモ・削除）と集計（今日・直近7日・連続日数・項目別） | `lib/features/practice/` |
+| トランペット基礎メニューのルールと決定論的監査・修正案・自分のメニューの保存 | `lib/features/menu/` |
 | AI のメニュー案の読み取り・検査（JSON 以外・ルール違反は採用しない） | `lib/features/menu/domain/menu_proposal.dart` |
+| ログイン（Google・メールアドレス）※ログインしなくても使える | `lib/features/auth/` |
+| クラウド同期（オフライン対応・競合の解決） | `lib/features/sync/` |
+| Firestore のセキュリティルールとテスト | `firestore.rules`・`rules-test/` |
 | ローカル AI の抽象化（`LocalAiService`）と「AI なし」の実装 | `lib/features/local_ai/` |
-| メニュー監査の画面 | `lib/features/menu/presentation/` |
+
+### 端末内の保存とクラウド同期のしくみ
+
+- 記録はまず**端末内**に保存します（Web はブラウザの IndexedDB、Android・iOS はアプリ内のファイル。[sembast](https://pub.dev/packages/sembast) を使用）。
+  ログインしていなくても、オフラインでも、練習・記録・集計はすべて使えます。
+- アプリはクラウド（Firebase）を**待たずに起動**します。Firebase には裏でつなぎ、15秒以内につながらなければ端末内だけで動きます
+  （オフラインだと Firebase の読み込みが終わらず、待っていると画面が出なくなるため）。
+- ログインすると、次のときに同期します：ログインしたとき・記録を作る／直す／消したとき（2秒待ってまとめて）・「今すぐ同期」
+  1. ログイン前に作った記録を、ログインしたアカウントに引き継ぐ
+  2. 前回以降にクラウドで変わった記録を取り込む
+  3. 端末でまだ送っていない記録を送る
+- **競合の解決**（同じ記録を2台で直したとき）：後から直した方を残します。同じ時刻なら端末 ID で決めます（どの端末で計算しても同じ結果）。
+  削除は「削除済み」の印を付けて同期するので、消した記録が別の端末から復活しません。
+  ※ 端末の時計が大きくずれていると、古い編集が残ることがあります。
+- クラウドでの保存場所：`users/{uid}/practiceRecords/{記録 ID}`。本人しか読み書きできません（`firestore.rules`）。
+- ログアウトすると、そのアカウントの記録はこの端末に表示されなくなります（もう一度ログインすれば表示されます）。
 
 ### トランペット基礎メニューのルール
 
@@ -33,10 +53,11 @@
 ```
 lib/
 ├── app/                  画面全体の設定（テーマ・最初の画面）
-├── core/                 共通の部品（必要になったら作る）
+├── core/                 共通の部品（端末内データベース・時計・ID）
 ├── features/
-│   ├── auth/             認証（Stage 1・Firebase プロジェクト作成後）
-│   ├── practice/         練習記録・タイマー（Stage 1）
+│   ├── auth/             ログイン
+│   ├── practice/         練習記録・タイマー・集計
+│   ├── sync/             クラウド同期・競合の解決
 │   ├── menu/             メニュー作成・決定論的監査
 │   ├── local_ai/         ローカル AI（モデル管理・推論・使えないときの代わり）
 │   └── audio_tools/      チューナー・メトロノーム・録音（Stage 2〜3）
@@ -62,18 +83,46 @@ dart format lib test      # 書式をそろえる
 flutter build web --no-web-resources-cdn
 ```
 
-プルリクエストでは GitHub Actions（`.github/workflows/practice-app.yml`）が書式・静的解析・テスト・Web ビルドを確認します。
+Firestore のセキュリティルールのテスト（Java が必要）：
 
-## これからの予定
+```bash
+cd practice-app/rules-test
+npm ci
+npm test
+```
 
-### Firebase プロジェクト（新しく作る）
+プルリクエストでは GitHub Actions（`.github/workflows/practice-app.yml`）が書式・静的解析・テスト・Web ビルド・ルールのテストを確認します。
+main に入ると、Web アプリと Firestore ルールを Firebase（kco-practice）に公開します（下の「自動公開の設定」が必要）。
 
-団員アプリ・公式サイトとは別の Firebase プロジェクトを使います。作成は運営の Google アカウントで行ってください。
+## 設定と今後の予定
 
-1. [Firebase コンソール](https://console.firebase.google.com/) でプロジェクトを作成（例：`kco-practice`）
-2. Authentication と Firestore を有効にする
-3. 手元で `dart pub global activate flutterfire_cli` → `cd practice-app && flutterfire configure` を実行し、Android・iOS・Web のアプリを登録する
-   （生成される `lib/firebase_options.dart` をコミットします。中身は公開されても問題ない識別子です）
+### 自動公開の設定（初回のみ）
+
+Firebase プロジェクト `kco-practice` は作成済みです（Authentication：Google・メールアドレス、Firestore：作成済み）。
+Web アプリ（`https://kco-practice.web.app`）と Firestore ルールを GitHub Actions から公開するには、鍵を1つ登録します。
+
+1. [Google Cloud コンソールのサービスアカウント](https://console.cloud.google.com/iam-admin/serviceaccounts?project=kco-practice)で「サービスアカウントを作成」
+   - 名前：`github-deploy` など
+   - ロール：「Firebase 管理者」（Firebase Admin）と「Service Usage ユーザー」（Service Usage Consumer）
+2. 作ったサービスアカウント →「鍵」→「鍵を追加」→「新しい鍵を作成」→ JSON をダウンロード
+3. GitHub のリポジトリ →「Settings」→「Secrets and variables」→「Actions」→「New repository secret」
+   - Name：`FIREBASE_SERVICE_ACCOUNT_PRACTICE`
+   - Secret：ダウンロードした JSON の中身をすべて貼り付け
+4. ダウンロードした JSON ファイルはパソコンから削除する（鍵は GitHub の Secrets にだけ置く）
+
+鍵を登録するまでは、main に入っても公開だけを飛ばします（警告が出ます）。
+**ルールを公開するまでは、クラウド同期は「同期できませんでした」になります**（Firestore が初期状態ではすべて拒否するため）。
+急ぐときは、Firebase コンソールの「Firestore Database」→「ルール」に `firestore.rules` の中身を貼り付けて「公開」しても構いません。
+
+### Android・iOS のクラウド同期
+
+Android・iOS はまだ Firebase にアプリを登録していないので、端末内だけで動きます。
+実機で確認するときに `flutterfire configure` でアプリを登録し、`lib/firebase_options.dart` を作り直します。
+
+### Web 版の日本語フォント
+
+Flutter の Web 版は、日本語のフォントをインターネットから読み込みます。完全にオフラインだと文字が正しく出ない場合があるので、
+フォントをアプリに同梱するかどうかを今後検討します。
 
 ### ローカル AI（Stage 2）
 
