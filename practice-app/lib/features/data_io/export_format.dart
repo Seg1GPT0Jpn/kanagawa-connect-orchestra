@@ -93,6 +93,9 @@ PracticeRecord _record(Object? m) {
     throw const ImportFormatException('バックアップの中の記録が壊れています');
   }
   if (r.note.length > 500) throw const ImportFormatException('メモが長すぎる記録があります');
+  if (r.goal.length > 200 || r.nextFocus.length > 200) {
+    throw const ImportFormatException('目標・次回の課題が長すぎる記録があります');
+  }
   return r;
 }
 
@@ -109,7 +112,10 @@ String buildRecordsCsv(List<PracticeRecord> records, MenuRuleSet rules) {
     '開始時刻',
     '合計（分）',
     for (final id in ids) '${rules.labelOf(id)}（分）',
+    '目標',
+    '達成度',
     'メモ',
+    '次回の課題',
   ];
   final rows = [
     for (final r in records.where((r) => !r.deleted))
@@ -118,7 +124,12 @@ String buildRecordsCsv(List<PracticeRecord> records, MenuRuleSet rules) {
         _time(r.startedAtMillis),
         _minutes(r.totalActualSeconds),
         for (final id in ids) _minutes(r.actualSeconds[id] ?? 0),
+        r.goal,
+        r.achievement == 0
+            ? ''
+            : PracticeRecord.achievementLabels[r.achievement],
         r.note,
+        r.nextFocus,
       ],
   ];
   return '﻿${[header, ...rows].map((row) => row.map(_csvField).join(',')).join('\r\n')}\r\n';

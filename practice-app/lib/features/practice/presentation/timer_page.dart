@@ -9,9 +9,12 @@ import '../domain/practice_session.dart';
 
 /// メニューの項目を順番に計るタイマー。終わったら記録して、保存した記録を返す
 class TimerPage extends StatefulWidget {
-  const TimerPage({super.key, required this.menu});
+  const TimerPage({super.key, required this.menu, this.goal = ''});
 
   final Map<String, int> menu;
+
+  /// 今日の目標（記録にも残す）
+  final String goal;
 
   @override
   State<TimerPage> createState() => _TimerPageState();
@@ -58,6 +61,7 @@ class _TimerPageState extends State<TimerPage> {
         ruleSetId: _services.menu.rules.id,
         plannedMinutes: widget.menu,
         actualSeconds: actual,
+        goal: widget.goal,
       );
     }
     navigator.pop(saved);
@@ -68,7 +72,7 @@ class _TimerPageState extends State<TimerPage> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('練習を終えますか？'),
-        content: const Text('ここまでの時間を記録します。'),
+        content: const Text('ここまでの時間を記録します。疲れや痛みがあるときは、途中で終えて大丈夫です。'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
@@ -116,6 +120,16 @@ class _TimerPageState extends State<TimerPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              if (widget.goal.isNotEmpty) ...[
+                Text(
+                  '今日の目標：${widget.goal}',
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: theme.colorScheme.primary,
+                  ),
+                ),
+                const SizedBox(height: 12),
+              ],
               Text(
                 seg.label,
                 style: theme.textTheme.headlineMedium,

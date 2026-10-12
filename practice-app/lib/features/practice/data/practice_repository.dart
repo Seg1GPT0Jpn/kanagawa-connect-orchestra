@@ -87,6 +87,7 @@ class PracticeRepository {
     required Map<String, int> plannedMinutes,
     required Map<String, int> actualSeconds,
     String note = '',
+    String goal = '',
   }) async {
     final record = PracticeRecord(
       id: generateId(),
@@ -97,6 +98,7 @@ class PracticeRepository {
       plannedMinutes: plannedMinutes,
       actualSeconds: actualSeconds,
       note: note,
+      goal: goal,
       updatedAtMillis: clock().millisecondsSinceEpoch,
       updatedBy: deviceId,
       deleted: false,
@@ -108,6 +110,23 @@ class PracticeRepository {
 
   Future<void> updateNote(String id, String note) =>
       _edit(id, (r) => r.copyWith(note: note));
+
+  /// 目標・達成度・振り返り（メモ）・次回の課題をまとめて直す
+  Future<void> updateReflection(
+    String id, {
+    String? goal,
+    int? achievement,
+    String? note,
+    String? nextFocus,
+  }) => _edit(
+    id,
+    (r) => r.copyWith(
+      goal: goal,
+      achievement: achievement?.clamp(0, 5),
+      note: note,
+      nextFocus: nextFocus,
+    ),
+  );
 
   /// 削除（同期のため、記録は残して削除済みの印を付ける）
   Future<void> delete(String id) => _edit(id, (r) => r.copyWith(deleted: true));

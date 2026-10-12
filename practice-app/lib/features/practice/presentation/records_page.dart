@@ -5,6 +5,7 @@ import '../../../core/clock.dart';
 import '../domain/practice_record.dart';
 import '../domain/practice_stats.dart';
 import '../../data_io/data_menu_button.dart';
+import 'reflection_page.dart';
 import 'visible_records_builder.dart';
 
 /// 練習記録の一覧と集計
@@ -74,7 +75,10 @@ class RecordsPage extends StatelessWidget {
                           in r.actualSeconds.entries)
                         if (value > 0)
                           '${rules.labelOf(key)} ${formatPracticeTime(value)}',
+                      if (r.goal.isNotEmpty)
+                        '🎯 ${r.goal}${r.achievement == 0 ? '' : '（${PracticeRecord.achievementLabels[r.achievement]}）'}',
                       if (r.note.isNotEmpty) '📝 ${r.note}',
+                      if (r.nextFocus.isNotEmpty) '➡ 次回：${r.nextFocus}',
                     ].join('・'),
                   ),
                   onTap: () => _showDetail(context, r),
@@ -110,7 +114,32 @@ class RecordsPage extends StatelessWidget {
               Text(
                 '${rules.labelOf(key)}：${formatSeconds(value)}（予定 ${r.plannedMinutes[key] ?? 0}分）',
               ),
-            const SizedBox(height: 12),
+            if (r.goal.isNotEmpty || r.nextFocus.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              if (r.goal.isNotEmpty)
+                Text(
+                  '目標：${r.goal}（${PracticeRecord.achievementLabels[r.achievement]}）',
+                ),
+              if (r.nextFocus.isNotEmpty) Text('次回の課題：${r.nextFocus}'),
+            ],
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      fullscreenDialog: true,
+                      builder: (_) => ReflectionPage(record: r),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.flag_outlined),
+                label: const Text('目標・振り返りを編集'),
+              ),
+            ),
+            const SizedBox(height: 4),
             TextField(
               controller: note,
               maxLines: 3,

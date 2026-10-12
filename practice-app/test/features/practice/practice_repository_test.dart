@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:kco_practice/features/practice/data/practice_repository.dart';
+import 'package:kco_practice/features/practice/domain/practice_record.dart';
 
 import '../../helpers.dart';
 
@@ -84,6 +85,36 @@ void main() {
     expect((await repo.get(id))!.updatedAtMillis, before + 1);
     await repo.delete(id);
     expect((await repo.get(id))!.updatedAtMillis, before + 2);
+  });
+
+  test('目標・達成度・次回の課題：保存・編集でき、入れていなければ前の形のまま', () async {
+    final plain = (await repo.get(await create()))!;
+    expect(plain.toMap().containsKey('goal'), isFalse);
+    expect(plain.toMap().containsKey('achievement'), isFalse);
+
+    final r = await repo.create(
+      ownerUid: null,
+      startedAt: clock.now,
+      ruleSetId: 'trumpet_basic',
+      plannedMinutes: const {'long_tone': 15},
+      actualSeconds: const {'long_tone': 900},
+      goal: '音程を安定させる',
+    );
+    expect(r.goal, '音程を安定させる');
+    clock.advance(const Duration(minutes: 1));
+    await repo.updateReflection(
+      r.id,
+      achievement: 9,
+      note: '後半は安定した',
+      nextFocus: '高音の B♭',
+    );
+    final edited = (await repo.get(r.id))!;
+    expect(edited.achievement, 5); // 1〜5 に収める
+    expect(edited.note, '後半は安定した');
+    expect(edited.nextFocus, '高音の B♭');
+    expect(edited.goal, '音程を安定させる');
+    expect(PracticeRecord.fromMap(edited.toMap()), edited);
+    expect(await repo.isDirty(r.id), isTrue);
   });
 
   test('ログイン前の記録をアカウントに引き継ぐ', () async {

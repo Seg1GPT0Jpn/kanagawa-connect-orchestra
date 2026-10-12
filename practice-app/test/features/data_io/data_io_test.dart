@@ -94,11 +94,11 @@ void main() {
         startsWith('練習した日,開始時刻,合計（分）,ウォームアップ（呼吸・バズィング）（分）,ロングトーン（分）'),
       );
       expect(lines[0], contains('Arban：音階（分）'));
-      expect(lines[0], endsWith('Arban（アーバン）（分）,メモ'));
+      expect(lines[0], endsWith('Arban（アーバン）（分）,目標,達成度,メモ,次回の課題'));
       expect(lines[1], contains(',25.5,')); // 合計 1530秒
       expect(lines[1], contains(',15.0,'));
-      expect(lines[1], endsWith(",'=SUM(A1)"));
-      expect(lines[2], endsWith(',"カンマ, と ""引用"""'));
+      expect(lines[1], endsWith(",,,'=SUM(A1),"));
+      expect(lines[2], endsWith(',"カンマ, と ""引用""",'));
     });
 
     test('ファイル名', () {

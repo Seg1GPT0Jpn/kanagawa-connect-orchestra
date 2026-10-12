@@ -119,4 +119,34 @@ void main() {
     });
     expect(await repo.load('2026-10-14'), const DayCondition());
   });
+
+  test('おすすめには理由と避けたいことが付く。本番で疲れている日は10分', () {
+    final perf = adviseForDay(
+      const DayCondition(performance: true, fatigue: Fatigue.tired),
+    );
+    expect(perf.modeId, 'trumpet_10min');
+    expect(perf.reasons.join(), allOf(contains('本番'), contains('疲れ')));
+    expect(perf.avoid.join(), contains('新しい曲'));
+
+    final pain = adviseForDay(
+      const DayCondition(lipPain: true, performance: true),
+    );
+    expect(pain.rest, isTrue);
+    expect(pain.message, contains('指導者'));
+    expect(pain.avoid.single, contains('吹くこと'));
+
+    final usual = adviseForDay(const DayCondition());
+    expect(usual.reasons, isEmpty);
+    expect(usual.avoid, isEmpty);
+    expect(alwaysAdvice, contains('途中で終えて大丈夫'));
+  });
+
+  test('今日の目標は日ごとに保存し、読み込み後は待たずに使える', () async {
+    final repo = DayConditionRepository(MetaStore(await openMemoryDb()));
+    expect(repo.cachedGoal('2026-10-12'), '');
+    await repo.saveGoal('2026-10-12', '音程を安定させる');
+    expect(repo.cachedGoal('2026-10-12'), '音程を安定させる');
+    expect(await repo.loadGoal('2026-10-12'), '音程を安定させる');
+    expect(await repo.loadGoal('2026-10-13'), '');
+  });
 }
