@@ -33,6 +33,7 @@ void main() {
       expect(p, contains('Arban の章（合計 20〜40分'));
       expect(p, contains('全体の合計：45〜115分'));
       expect(p, contains('JSON だけ'));
+      expect(p, contains('"reason"'));
       expect(p, contains('今日は合奏・レッスンがある'));
       expect(p, contains('疲れている'));
       expect(p, contains('ロングトーン 15分'));

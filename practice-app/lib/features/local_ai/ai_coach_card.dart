@@ -1,14 +1,16 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/app_services.dart';
 import '../../core/clock.dart';
 import '../menu/domain/menu_proposal.dart';
+import '../menu/domain/rule_based_plan.dart';
 import '../practice/domain/day_condition.dart';
 import '../practice/domain/practice_stats.dart';
 import 'local_ai_service.dart';
 import 'practice_coach.dart';
 
-/// 練習タブの「AI コーチ」。端末・ブラウザに内蔵の AI が使えるときだけ相談できる
+/// 練習タブの「練習コーチ」。内蔵の AI が使えれば相談でき、使えなくても記録からルールで提案する
 class AiCoachCard extends StatefulWidget {
   const AiCoachCard({super.key, required this.stats});
 
@@ -26,6 +28,7 @@ class _AiCoachCardState extends State<AiCoachCard> {
   String? _error;
   String? _advice;
   MenuProposalReview? _proposal;
+  RuleBasedPlan? _rulePlan;
 
   bool _probing = false;
 
@@ -86,6 +89,7 @@ class _AiCoachCardState extends State<AiCoachCard> {
     final ctx = await _context();
     _proposal = await PracticeCoach(_services.localAi).suggestMenu(ctx);
     _advice = null;
+    _rulePlan = null;
   });
 
   Future<void> _askAdvice() => _run(() async {
@@ -96,14 +100,33 @@ class _AiCoachCardState extends State<AiCoachCard> {
       _advice = await PracticeCoach(_services.localAi).advice(ctx);
     }
     _proposal = null;
+    _rulePlan = null;
   });
 
-  void _use(Map<String, int> minutes) {
+  /// AI を使わずに、記録の偏りからメニューを調整する（いつでも使える）
+  void _askRules() {
+    final menu = _services.menu;
+    setState(() {
+      _rulePlan = planMenuByRules(
+        rules: menu.rules,
+        currentMenu: menu.value,
+        secondsLast7: widget.stats.secondsByItemLast7,
+      );
+      _proposal = null;
+      _advice = null;
+      _error = null;
+    });
+  }
+
+  void _use(Map<String, int> minutes, String what) {
     final menu = _services.menu;
     menu.useForToday(menu.rules.id, minutes);
-    setState(() => _proposal = null);
+    setState(() {
+      _proposal = null;
+      _rulePlan = null;
+    });
     ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text('AI の案を今日のメニューにしました')));
+        .showSnackBar(SnackBar(content: Text('$whatを今日のメニューにしました')));
   }
 
   @override
@@ -121,13 +144,13 @@ class _AiCoachCardState extends State<AiCoachCard> {
               children: [
                 const Icon(Icons.auto_awesome_outlined, size: 20),
                 const SizedBox(width: 8),
-                Text('AI コーチ（端末内）', style: theme.textTheme.titleMedium),
+                Text('練習コーチ', style: theme.textTheme.titleMedium),
               ],
             ),
             const SizedBox(height: 8),
             switch (state) {
               LocalAiState.unavailable => Text(
-                'この端末・ブラウザでは、内蔵の AI を使えません。ほかの機能はそのまま使えます。',
+                'この端末・ブラウザでは、内蔵の AI を使えません。代わりに、記録の偏りからルールで提案できます。',
                 style: theme.textTheme.bodySmall,
               ),
               LocalAiState.needsPreparation || LocalAiState.preparing => Column(
@@ -180,11 +203,18 @@ class _AiCoachCardState extends State<AiCoachCard> {
               const SizedBox(height: 8),
               Text(_error!, style: TextStyle(color: theme.colorScheme.error)),
             ],
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: _busy ? null : _askRules,
+              icon: const Icon(Icons.rule, size: 18),
+              label: const Text('記録から提案（AI なし）'),
+            ),
             if (_advice != null) ...[const SizedBox(height: 8), Text(_advice!)],
             if (_proposal != null) ..._proposalView(_proposal!, theme),
+            if (_rulePlan != null) ..._rulePlanView(_rulePlan!, theme),
             const SizedBox(height: 8),
             Text(
-              'AI は端末の中だけで動き、記録は外に送りません。AI の案は、時間のルールをアプリが確かめてから使います。',
+              'AI は端末の中だけで動き、記録は外に送りません。どの案も、時間のルールをアプリが確かめてから使います。',
               style: theme.textTheme.bodySmall,
             ),
           ],
@@ -198,12 +228,39 @@ class _AiCoachCardState extends State<AiCoachCard> {
     if (_services.localAi.isSupported) await next();
   }
 
-  List<Widget> _proposalView(MenuProposalReview p, ThemeData theme) {
+  String _describe(Map<String, int> m) {
     final rules = _services.menu.rules;
-    String describe(Map<String, int> m) => [
+    return [
       for (final item in rules.items)
         if ((m[item.id] ?? 0) > 0) '${rules.labelOf(item.id)} ${m[item.id]}分',
     ].join('・');
+  }
+
+  List<Widget> _rulePlanView(RuleBasedPlan p, ThemeData theme) {
+    final total = p.minutes.values.fold(0, (s, v) => s + v);
+    final same = mapEquals(p.minutes, {
+      for (final item in _services.menu.rules.items)
+        item.id: _services.menu.value[item.id] ?? 0,
+    });
+    return [
+      const SizedBox(height: 8),
+      Text('記録からの提案（合計$total分）', style: theme.textTheme.titleSmall),
+      Text(_describe(p.minutes)),
+      const SizedBox(height: 4),
+      Text('理由', style: theme.textTheme.labelLarge),
+      for (final r in p.reasons) Text('・$r'),
+      if (!same) ...[
+        const SizedBox(height: 8),
+        FilledButton(
+          onPressed: () => _use(p.minutes, '提案'),
+          child: const Text('今日はこの案にする'),
+        ),
+      ],
+    ];
+  }
+
+  List<Widget> _proposalView(MenuProposalReview p, ThemeData theme) {
+    final describe = _describe;
     if (p.parseError != null) {
       return [
         const SizedBox(height: 8),
@@ -219,6 +276,10 @@ class _AiCoachCardState extends State<AiCoachCard> {
       const SizedBox(height: 8),
       Text('AI の案（合計$total分）', style: theme.textTheme.titleSmall),
       Text(describe(menu)),
+      if (p.reason != null) ...[
+        const SizedBox(height: 4),
+        Text('AI が考えた理由：${p.reason}'),
+      ],
       if (!p.isAcceptable) ...[
         const SizedBox(height: 4),
         Text(
@@ -229,7 +290,10 @@ class _AiCoachCardState extends State<AiCoachCard> {
         ),
       ],
       const SizedBox(height: 8),
-      FilledButton(onPressed: () => _use(menu), child: const Text('今日はこの案にする')),
+      FilledButton(
+        onPressed: () => _use(menu, 'AI の案'),
+        child: const Text('今日はこの案にする'),
+      ),
     ];
   }
 }
