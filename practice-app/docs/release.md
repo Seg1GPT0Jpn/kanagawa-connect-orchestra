@@ -36,6 +36,11 @@ storeFile=C:\\Users\\あなたの名前\\kco-practice-upload.jks
 ```
 鍵とパスワードをなくすと、アプリを更新できなくなります。安全な場所に控えを保管してください。
 
+`key.properties` がない・項目が足りない・鍵のファイルが見つからないときは、リリース版（`--release`）のビルドは**わざと失敗します**（デバッグ用の鍵で署名されたアプリを、誤って公開候補にしないため）。手元でリリース版の動きだけ確かめたいときは、次のようにするとデバッグ用の鍵で作れます（このアプリは公開に使えません）。
+```powershell
+$env:KCO_ALLOW_DEBUG_SIGNED_RELEASE = "1"; flutter run --release
+```
+
 ### 2-3. ビルドして登録
 ```powershell
 cd practice-app
