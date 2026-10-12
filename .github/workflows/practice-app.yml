@@ -65,6 +65,36 @@ jobs:
           path: practice-app/build/web
           retention-days: 3
 
+  android:
+    name: Android 版のビルド
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: practice-app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # Android のビルド（Gradle）に Java が必要
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.7
+          cache: true
+
+      - run: flutter pub get
+
+      # 署名なしのデバッグ版（Android の部品の組み合わせが壊れていないかを確かめる）
+      - name: Android 版（APK）のビルド
+        run: flutter build apk --debug
+
   rules:
     name: セキュリティルールのテスト（エミュレータ）
     runs-on: ubuntu-latest
