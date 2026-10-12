@@ -12,7 +12,7 @@ void main() {
       'long_tone': 15,
       'lip_slur': 0,
       'tonguing': 5,
-      'arban': 30,
+      'arban_tonguing': 30,
     },
     trumpetBasicRules,
     t0,
@@ -24,8 +24,9 @@ void main() {
       'mouthpiece',
       'long_tone',
       'tonguing',
-      'arban',
+      'arban_tonguing',
     ]);
+    expect(s.segments.last.label, 'Arban：タンギング');
     expect(s.segments.first.plannedSeconds, 1200);
     expect(s.isRunning, isTrue);
   });
@@ -64,7 +65,7 @@ void main() {
       'mouthpiece': 1200,
       'long_tone': 600,
       'tonguing': 300,
-      'arban': 1800,
+      'arban_tonguing': 1800,
     });
   });
 
@@ -83,7 +84,7 @@ void main() {
       'mouthpiece': 1200,
       'long_tone': 300,
       'tonguing': 0,
-      'arban': 0,
+      'arban_tonguing': 0,
     });
     // 終了後は何をしても変わらない
     s.next(at(2000));

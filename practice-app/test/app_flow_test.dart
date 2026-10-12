@@ -36,9 +36,14 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('75分'), findsOneWidget); // 合計
+    expect(find.text('Arban'), findsOneWidget);
+    expect(find.text('30分'), findsOneWidget); // Arban の合計（今日吹く章：スラー・音階・タンギング）
+    expect(find.text('音階'), findsOneWidget);
+    expect(find.text('二重奏'), findsNothing); // 0分の章は出さない
     await tester.tap(find.text('練習をはじめる'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 5'), findsOneWidget);
+    expect(find.text('1 / 7'), findsOneWidget);
+    expect(find.text('Arban：スラー'), findsOneWidget);
     expect(find.text('20:00'), findsOneWidget);
 
     // 1項目めを18分で次へ、2項目めを途中（5分）で終える
@@ -63,7 +68,9 @@ void main() {
       'long_tone': 300,
       'lip_slur': 0,
       'tonguing': 0,
-      'arban': 0,
+      'arban_slurs': 0,
+      'arban_scales': 0,
+      'arban_tonguing': 0,
     });
     expect(records.single.ownerUid, isNull); // ログインしていない
 

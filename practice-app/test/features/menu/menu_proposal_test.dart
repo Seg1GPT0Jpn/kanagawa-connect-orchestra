@@ -3,29 +3,48 @@ import 'package:kco_practice/features/menu/domain/menu_audit.dart';
 import 'package:kco_practice/features/menu/domain/menu_proposal.dart';
 import 'package:kco_practice/features/menu/domain/menu_rules.dart';
 
+import '../../menu_fixtures.dart';
+
 void main() {
   const rules = trumpetBasicRules;
 
   test('前後に文章があっても JSON を読み取り、ルールを満たせば採用できる', () {
-    final r = reviewMenuProposal(
-      '今日のおすすめです。\n{"mouthpiece": 20, "long_tone": 15, "lip_slur": 10, '
-      '"tonguing": 5, "arban": 30.0}\n無理せずに！',
-      rules,
-    );
+    final json =
+        menu(lipSlur: 10, arban: {'arban_scales': 20, 'arban_phrasing': 10})
+            .entries
+            .map(
+              (e) =>
+                  '"${e.key}": ${e.key == 'arban_scales' ? '20.0' : e.value}',
+            )
+            .join(', ');
+    final r = reviewMenuProposal('今日のおすすめです。\n{$json}\n無理せずに！', rules);
     expect(r.parseError, isNull);
-    expect(r.minutes!['arban'], 30);
+    expect(r.minutes!['arban_scales'], 20);
     expect(r.isAcceptable, isTrue);
     expect(r.correction, isNull);
   });
 
   test('ルール違反の案は採用せず、修正案を添える', () {
-    final r = reviewMenuProposal(
-      '{"mouthpiece": 45, "long_tone": 15, "lip_slur": 5, "tonguing": 5, "arban": 30}',
-      rules,
-    );
+    final json = menu(mouthpiece: 45).entries
+        .map((e) => '"${e.key}": ${e.value}')
+        .join(', ');
+    final r = reviewMenuProposal('{$json}', rules);
     expect(r.isAcceptable, isFalse);
     expect(r.audit!.violations.single.kind, MenuViolationKind.aboveMaximum);
     expect(r.correction!['mouthpiece'], 30);
+    expect(auditMenu(r.correction!, rules).isValid, isTrue);
+  });
+
+  test('以前の「arban」1項目の案は、章がないので採用しない', () {
+    final r = reviewMenuProposal(
+      '{"mouthpiece": 20, "long_tone": 15, "lip_slur": 5, "tonguing": 5, "arban": 30}',
+      rules,
+    );
+    expect(r.isAcceptable, isFalse);
+    expect(
+      r.audit!.violations.map((v) => v.kind),
+      contains(MenuViolationKind.unknownItem),
+    );
     expect(auditMenu(r.correction!, rules).isValid, isTrue);
   });
 

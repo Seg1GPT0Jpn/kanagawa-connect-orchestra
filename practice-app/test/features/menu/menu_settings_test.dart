@@ -5,6 +5,7 @@ import 'package:kco_practice/features/menu/data/menu_settings_repository.dart';
 import 'package:kco_practice/features/menu/domain/menu_rules.dart';
 
 import '../../helpers.dart';
+import '../../menu_fixtures.dart';
 
 void main() {
   const rules = trumpetBasicRules;
@@ -16,13 +17,13 @@ void main() {
     repo = MenuSettingsRepository(meta);
   });
 
-  final valid = {
-    'mouthpiece': 15,
-    'long_tone': 10,
-    'lip_slur': 0,
-    'tonguing': 0,
-    'arban': 20,
-  };
+  final valid = menu(
+    mouthpiece: 15,
+    longTone: 10,
+    lipSlur: 0,
+    tonguing: 0,
+    arban: {'arban_tonguing': 20},
+  );
 
   test('未保存なら初期値', () async {
     expect(await repo.load(rules), rules.defaultMenu);
@@ -35,18 +36,27 @@ void main() {
 
   test('ルールを満たさないメニューは保存できない', () async {
     await expectLater(
-      repo.save(rules, {...valid, 'arban': 41}),
+      repo.save(rules, {...valid, 'arban_tonguing': 41}),
       throwsArgumentError,
     );
     expect(await repo.load(rules), rules.defaultMenu);
   });
 
   test('保存済みの値が壊れている・ルールを満たさなくなったら初期値', () async {
-    await meta.put('menu.trumpet_basic', {...valid, 'arban': 99});
+    await meta.put('menu.trumpet_basic', {...valid, 'arban_tonguing': 99});
     expect(await repo.load(rules), rules.defaultMenu);
     await meta.put('menu.trumpet_basic', 'broken');
     expect(await repo.load(rules), rules.defaultMenu);
-    await meta.put('menu.trumpet_basic', {...valid, 'arban': '20'});
+    await meta.put('menu.trumpet_basic', {...valid, 'arban_tonguing': '20'});
+    expect(await repo.load(rules), rules.defaultMenu);
+    // 章ごとに分ける前に保存したメニュー（arban 1項目）も初期値に戻す
+    await meta.put('menu.trumpet_basic', {
+      'mouthpiece': 15,
+      'long_tone': 10,
+      'lip_slur': 0,
+      'tonguing': 0,
+      'arban': 20,
+    });
     expect(await repo.load(rules), rules.defaultMenu);
   });
 

@@ -54,15 +54,39 @@ class PracticeHomePage extends StatelessWidget {
                   const SizedBox(height: 16),
                   Text(rules.label, style: theme.textTheme.titleLarge),
                   const SizedBox(height: 8),
-                  for (final item in rules.items)
+                  for (final item in rules.items.where((i) => i.group == null))
                     ListTile(
                       dense: true,
                       title: Text(item.label),
                       trailing: Text(
-                        minutes[item.id] == 0 ? 'お休み' : '${minutes[item.id]}分',
+                        (minutes[item.id] ?? 0) == 0
+                            ? 'お休み'
+                            : '${minutes[item.id]}分',
                         style: theme.textTheme.titleMedium,
                       ),
                     ),
+                  // グループ（Arban）は合計と、今日吹く章だけ
+                  for (final g in rules.groups) ...[
+                    ListTile(
+                      dense: true,
+                      title: Text(g.label),
+                      trailing: Text(
+                        '${rules.itemsInGroup(g.id).fold(0, (s, i) => s + (minutes[i.id] ?? 0))}分',
+                        style: theme.textTheme.titleMedium,
+                      ),
+                    ),
+                    for (final item in rules.itemsInGroup(g.id))
+                      if ((minutes[item.id] ?? 0) > 0)
+                        ListTile(
+                          dense: true,
+                          contentPadding: const EdgeInsets.only(
+                            left: 32,
+                            right: 16,
+                          ),
+                          title: Text(item.label),
+                          trailing: Text('${minutes[item.id]}分'),
+                        ),
+                  ],
                   const Divider(),
                   ListTile(
                     title: const Text('合計'),

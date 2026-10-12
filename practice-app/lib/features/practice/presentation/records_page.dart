@@ -30,9 +30,7 @@ class RecordsPage extends StatelessWidget {
             records,
             localDateString(services.clock()),
           );
-          final labels = {
-            for (final i in services.menu.rules.items) i.id: i.label,
-          };
+          final rules = services.menu.rules;
           return ListView(
             padding: const EdgeInsets.symmetric(vertical: 8),
             children: [
@@ -54,7 +52,7 @@ class RecordsPage extends StatelessWidget {
                           in stats.secondsByItemLast7.entries)
                         if (value > 0)
                           Text(
-                            '${labels[key] ?? key}：${formatPracticeTime(value)}',
+                            '${rules.labelOf(key)}：${formatPracticeTime(value)}',
                             style: theme.textTheme.bodySmall,
                           ),
                     ],
@@ -71,11 +69,11 @@ class RecordsPage extends StatelessWidget {
                       for (final MapEntry(:key, :value)
                           in r.actualSeconds.entries)
                         if (value > 0)
-                          '${labels[key] ?? key} ${formatPracticeTime(value)}',
+                          '${rules.labelOf(key)} ${formatPracticeTime(value)}',
                       if (r.note.isNotEmpty) '📝 ${r.note}',
                     ].join('・'),
                   ),
-                  onTap: () => _showDetail(context, r, labels),
+                  onTap: () => _showDetail(context, r),
                 ),
             ],
           );
@@ -84,12 +82,9 @@ class RecordsPage extends StatelessWidget {
     );
   }
 
-  Future<void> _showDetail(
-    BuildContext context,
-    PracticeRecord r,
-    Map<String, String> labels,
-  ) {
+  Future<void> _showDetail(BuildContext context, PracticeRecord r) {
     final services = AppScope.of(context);
+    final rules = services.menu.rules;
     final note = TextEditingController(text: r.note);
     return showModalBottomSheet<void>(
       context: context,
@@ -109,7 +104,7 @@ class RecordsPage extends StatelessWidget {
             const SizedBox(height: 8),
             for (final MapEntry(:key, :value) in r.actualSeconds.entries)
               Text(
-                '${labels[key] ?? key}：${formatSeconds(value)}（予定 ${r.plannedMinutes[key] ?? 0}分）',
+                '${rules.labelOf(key)}：${formatSeconds(value)}（予定 ${r.plannedMinutes[key] ?? 0}分）',
               ),
             const SizedBox(height: 12),
             TextField(

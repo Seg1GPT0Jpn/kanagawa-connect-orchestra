@@ -11,9 +11,9 @@ String localDateString(DateTime t) {
       '${l.day.toString().padLeft(2, '0')}';
 }
 
-/// 練習時間を「23分」「45秒」で表す（1分未満は秒）
+/// 練習時間を「23分」「45秒」で表す（1分未満は秒、0は「0分」）
 String formatPracticeTime(int seconds) =>
-    seconds < 60 ? '$seconds秒' : '${seconds ~/ 60}分';
+    seconds > 0 && seconds < 60 ? '$seconds秒' : '${seconds ~/ 60}分';
 
 /// 秒を「m:ss」で表す（負の値は「+m:ss」＝予定超過）
 String formatSeconds(int seconds) {

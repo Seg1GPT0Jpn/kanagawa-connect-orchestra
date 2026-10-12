@@ -35,7 +35,7 @@ class PracticeSession {
         if ((minutes[item.id] ?? 0) > 0)
           TimerSegment(
             itemId: item.id,
-            label: item.label,
+            label: rules.labelOf(item.id),
             plannedSeconds: minutes[item.id]! * 60,
           ),
     ];

@@ -12,7 +12,7 @@
 |---|---|
 | 練習タイマー（メニューの項目を順に計る・一時停止・途中で終える） | `lib/features/practice/domain/practice_session.dart`・`presentation/timer_page.dart` |
 | 練習記録（端末内に保存・メモ・削除）と集計（今日・直近7日・連続日数・項目別） | `lib/features/practice/` |
-| トランペット基礎メニューのルールと決定論的監査・修正案・自分のメニューの保存 | `lib/features/menu/` |
+| トランペット基礎メニューのルール（Arban は章ごと）と決定論的監査・修正案・おすすめ・自分のメニューの保存 | `lib/features/menu/` |
 | AI のメニュー案の読み取り・検査（JSON 以外・ルール違反は採用しない） | `lib/features/menu/domain/menu_proposal.dart` |
 | ログイン（Google・メールアドレス）※ログインしなくても使える | `lib/features/auth/` |
 | クラウド同期（オフライン対応・競合の解決） | `lib/features/sync/` |
@@ -43,10 +43,16 @@
 | ロングトーン | 10〜20分 | 15分 |
 | リップスラー | 0〜15分（0分可） | 5分 |
 | タンギング | 0〜10分（0分可） | 5分 |
-| Arban（アーバン） | 20〜40分 | 30分 |
+| **Arban（12の章の合計）** | **20〜40分** | 30分（スラー・音階・タンギング各10分） |
 | **合計** | **45〜115分** | 75分 |
 
+Arban は 1893年版の分類で12の章（初歩練習・シンコペーション・スラー・音階・半音階・装飾音・音程跳躍・タンギング・
+フレージング・二重奏・性格的練習曲・幻想曲／変奏曲）に分け、各章 0〜40分（0分＝お休み）で、その日に鍛えたい章を選びます。
+メニュー画面の「今日の重点」から、調査をもとにしたおすすめ（バランス・短め・音色／柔軟性・指／音階・タンギング・表現／曲・長め）を選べます。
+調査の分析と、ルールの見直しの提案は [docs/practice-research.md](docs/practice-research.md) を参照してください。
+
 ルールを変えるときは `lib/features/menu/domain/menu_rules.dart` を直し、`test/features/menu/menu_audit_test.dart` の「仕様どおりの範囲」も合わせて直してください。
+おすすめは `lib/features/menu/domain/menu_presets.dart` で、ルールを満たさない案はテストで失敗します。
 
 ## フォルダ構成
 

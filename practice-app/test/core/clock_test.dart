@@ -3,8 +3,9 @@ import 'package:kco_practice/core/clock.dart';
 import 'package:kco_practice/core/ids.dart';
 
 void main() {
-  test('formatPracticeTime：1分未満は秒、それ以上は分（切り捨て）', () {
-    expect(formatPracticeTime(0), '0秒');
+  test('formatPracticeTime：1分未満は秒、それ以上は分（切り捨て）、0は0分', () {
+    expect(formatPracticeTime(0), '0分');
+    expect(formatPracticeTime(1), '1秒');
     expect(formatPracticeTime(59), '59秒');
     expect(formatPracticeTime(60), '1分');
     expect(formatPracticeTime(1399), '23分');

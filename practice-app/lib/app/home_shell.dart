@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../features/auth/account_page.dart';
+import '../features/menu/domain/menu_presets.dart';
 import '../features/menu/presentation/menu_audit_page.dart';
 import '../features/practice/presentation/practice_home_page.dart';
 import '../features/practice/presentation/records_page.dart';
@@ -34,6 +35,7 @@ class _HomeShellState extends State<HomeShell> {
               rules: services.menu.rules,
               initialMinutes: minutes,
               onSave: services.menu.save,
+              presets: trumpetBasicPresets,
             ),
           ),
           const AccountPage(),
