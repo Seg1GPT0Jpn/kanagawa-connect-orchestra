@@ -54,7 +54,8 @@ jobs:
         run: flutter analyze
 
       - name: テスト
-        run: flutter test
+        # 1件60秒で打ち切る（止まったテストを10分待たずに見つける）
+        run: flutter test --timeout 60s
 
       - name: Web 版のビルド（描画エンジンを同梱＝オフラインでも起動できる）
         run: flutter build web --no-web-resources-cdn

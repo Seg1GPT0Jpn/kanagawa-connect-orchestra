@@ -128,8 +128,13 @@ void main() {
     }
 
     testWidgets('鳴らすと、少し先までのクリックを正確な時刻に予約し続ける', (tester) async {
-      final c = await controller(tester);
-      await c.update(c.settings.copyWith(bpm: 120, beatsPerBar: 4));
+      await controller(tester);
+      // 保存（データベース）を通さず、最初からこの設定で作る（偽の時計の中で保存を待つと止まることがあるため）
+      final c = MetronomeController(
+        engine,
+        meta,
+        const MetronomeSettings(bpm: 120, beatsPerBar: 4),
+      );
       await c.start();
       expect(c.isRunning, isTrue);
       // 開始の余裕（100ms）のあとに1拍目
