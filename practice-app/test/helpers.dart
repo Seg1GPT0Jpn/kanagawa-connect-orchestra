@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:typed_data';
 
 import 'package:kco_practice/features/audio_tools/data/audio_engine.dart';
+import 'package:kco_practice/features/audio_tools/data/mic_input.dart';
 import 'package:kco_practice/features/audio_tools/domain/metronome.dart';
 import 'package:kco_practice/features/auth/auth_service.dart';
 import 'package:kco_practice/features/practice/domain/practice_record.dart';
@@ -168,4 +170,34 @@ class FakeAudioEngine implements AudioEngine {
 
   @override
   void stopTone() => toneHz = null;
+}
+
+/// 音を受け取らないマイク（テストから波形を流し込む）
+class FakeMicInput implements MicInput {
+  FakeMicInput({this.allowed = true});
+
+  bool allowed;
+  bool running = false;
+  int? sampleRate;
+  StreamController<Float64List>? _controller;
+
+  void push(Float64List samples) => _controller?.add(samples);
+
+  @override
+  Future<bool> requestPermission() async => allowed;
+
+  @override
+  Future<Stream<Float64List>> start({required int sampleRate}) async {
+    this.sampleRate = sampleRate;
+    running = true;
+    _controller = StreamController<Float64List>();
+    return _controller!.stream;
+  }
+
+  @override
+  Future<void> stop() async {
+    running = false;
+    await _controller?.close();
+    _controller = null;
+  }
 }

@@ -11,7 +11,9 @@ import '../core/local_database.dart';
 import '../core/meta_store.dart';
 import '../features/audio_tools/data/audio_engine.dart';
 import '../features/audio_tools/data/metronome_controller.dart';
+import '../features/audio_tools/data/mic_input.dart';
 import '../features/audio_tools/data/reference_tone_controller.dart';
+import '../features/audio_tools/data/tuner_controller.dart';
 import '../features/auth/auth_service.dart';
 import '../features/auth/firebase_auth_service.dart';
 import '../features/local_ai/local_ai_service.dart';
@@ -35,6 +37,7 @@ class AppServices {
     required this.audio,
     required this.metronome,
     required this.referenceTone,
+    required this.tuner,
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
@@ -52,6 +55,7 @@ class AppServices {
 
   /// 基準ピッチ（A4）・楽器の調と基準音
   final ReferenceToneController referenceTone;
+  final TunerController tuner;
 
   /// クラウド同期（ログインもここから使う。sync.auth）
   final SyncController sync;
@@ -98,6 +102,7 @@ class AppServices {
     AuthService? authOverride,
     RemoteRecordStore? remoteOverride,
     AudioEngine? audioOverride,
+    MicInput? micOverride,
     Clock clock = systemClock,
   }) async {
     final meta = MetaStore(db);
@@ -108,13 +113,15 @@ class AppServices {
     );
     final menuSettings = MenuSettingsRepository(meta);
     final audio = audioOverride ?? SoLoudAudioEngine();
+    final referenceTone = await ReferenceToneController.load(audio, meta);
     return AppServices(
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
       audio: audio,
       metronome: await MetronomeController.load(audio, meta),
-      referenceTone: await ReferenceToneController.load(audio, meta),
+      referenceTone: referenceTone,
+      tuner: TunerController(micOverride ?? RecordMicInput(), referenceTone),
       sync: SyncController(
         repository: practice,
         auth: authOverride,

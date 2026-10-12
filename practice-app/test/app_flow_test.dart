@@ -26,6 +26,7 @@ void main() {
         authOverride: cloudSync ? auth : null,
         remoteOverride: cloudSync ? cloud : null,
         audioOverride: FakeAudioEngine(),
+        micOverride: FakeMicInput(),
         clock: clock.call,
       ),
     ))!;

@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- チューナー・録音でマイクを使う -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- ログイン・同期 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="練習お助け"
         android:name="${applicationName}"
