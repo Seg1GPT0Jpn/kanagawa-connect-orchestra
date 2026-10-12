@@ -8,19 +8,23 @@
 # 鍵はリポジトリに書かず、Secrets にだけ保存します（手順は README.md の「自動公開の設定」）。
 name: 公式サイト
 
-# 団員アプリ・応募者管理のフォルダだけが変わったときは、公式サイトは公開し直さない（別のワークフロー）
+# 団員アプリ・練習アプリ・応募者管理のフォルダだけが変わったときは、公式サイトは公開し直さない（別のワークフロー）
 on:
   pull_request:
     paths-ignore:
       - 'kco-member-app/**'
       - 'orchestra-management/**'
       - '.github/workflows/member-app.yml'
+      - 'practice-app/**'
+      - '.github/workflows/practice-app.yml'
   push:
     branches: [main]
     paths-ignore:
       - 'kco-member-app/**'
       - 'orchestra-management/**'
       - '.github/workflows/member-app.yml'
+      - 'practice-app/**'
+      - '.github/workflows/practice-app.yml'
   workflow_dispatch:
 
 permissions:
