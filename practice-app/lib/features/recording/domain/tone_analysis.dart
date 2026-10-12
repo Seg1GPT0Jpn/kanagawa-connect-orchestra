@@ -9,6 +9,7 @@ import 'dart:typed_data';
 
 import '../../audio_tools/domain/pitch.dart';
 import '../../audio_tools/domain/pitch_detector.dart';
+import '../../audio_tools/domain/spectrum.dart';
 
 class ToneFrame {
   const ToneFrame({
@@ -72,7 +73,15 @@ class ToneAnalysis {
     this.reliabilityNotes = const [],
     this.gaps = const [],
     this.levelDb = 0,
+    this.spectrum,
+    this.harmonics,
   });
+
+  /// 鳴っていた区間の平均のスペクトラム
+  final Spectrum? spectrum;
+
+  /// 平均の倍音のバランス
+  final HarmonicProfile? harmonics;
 
   final List<ToneFrame> frames;
 
@@ -148,6 +157,7 @@ class ToneFrameAnalyzer {
   final int hopSize;
   final PitchDetector _detector;
   final List<ToneFrame> frames = [];
+  final SpectrumAverager _spectrum = SpectrumAverager();
   final List<double> _pending = [];
   int _consumed = 0;
 
@@ -166,6 +176,7 @@ class ToneFrameAnalyzer {
         if (s.abs() > peak) peak = s.abs();
       }
       final e = _detector.detect(frame);
+      if (e != null) _spectrum.add(Spectrum.of(frame, sampleRate: sampleRate));
       frames.add(
         ToneFrame(
           time: (_consumed + frameSize / 2) / sampleRate,
@@ -185,6 +196,7 @@ class ToneFrameAnalyzer {
     hopSeconds: hopSize / sampleRate,
     duration: samplesSeen / sampleRate,
     a4: a4,
+    spectrum: _spectrum.average,
   );
 }
 
@@ -202,6 +214,7 @@ ToneAnalysis? summarizeFrames(
   required double hopSeconds,
   required double duration,
   double a4 = 440,
+  Spectrum? spectrum,
 }) {
   final voiced = [
     for (final f in frames)
@@ -254,6 +267,8 @@ ToneAnalysis? summarizeFrames(
     reliabilityNotes: check.notes,
     gaps: gaps,
     levelDb: check.levelDb,
+    spectrum: spectrum,
+    harmonics: spectrum == null ? null : HarmonicProfile.of(spectrum, median),
     frames: frames,
     duration: duration,
     voicedSeconds: voiced.length * hopSeconds,

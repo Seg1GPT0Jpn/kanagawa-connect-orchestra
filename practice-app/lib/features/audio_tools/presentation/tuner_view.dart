@@ -5,6 +5,7 @@ import '../data/tuner_controller.dart';
 import '../domain/pitch.dart';
 import '../domain/temperament.dart';
 import 'reference_tone_view.dart';
+import 'spectrum_view.dart';
 
 /// チューナーの画面
 class TunerView extends StatelessWidget {
@@ -81,6 +82,8 @@ class TunerView extends StatelessWidget {
               ),
             const SizedBox(height: 8),
             LinearProgressIndicator(value: controller.level, minHeight: 4),
+            const SizedBox(height: 12),
+            ToneMeter(profile: controller.harmonics, height: 64),
             const SizedBox(height: 16),
             FilledButton.icon(
               style: FilledButton.styleFrom(

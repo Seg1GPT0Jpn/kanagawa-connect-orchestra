@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../audio_tools/data/reference_tone_controller.dart';
 import '../../audio_tools/domain/pitch.dart';
+import '../../audio_tools/presentation/spectrum_view.dart';
 import '../data/recording_controller.dart';
 import '../domain/recording_result.dart';
 import '../domain/tone_analysis.dart';
@@ -223,6 +224,20 @@ class _ResultCard extends StatelessWidget {
               value: '${a.attackSeconds.toStringAsFixed(2)} 秒',
               grade: a.attackGrade,
             ),
+            if (a.spectrum != null) ...[
+              const SizedBox(height: 12),
+              Text('スペクトラム（鳴っていた区間の平均）', style: theme.textTheme.titleSmall),
+              const SizedBox(height: 4),
+              SizedBox(
+                height: 160,
+                child: SpectrumGraph(
+                  spectrum: a.spectrum,
+                  fundamental: a.medianFrequency,
+                ),
+              ),
+              const SizedBox(height: 8),
+              ToneMeter(profile: a.harmonics, height: 64),
+            ],
             const SizedBox(height: 8),
             for (final l in lines) Text('・$l'),
             const SizedBox(height: 8),

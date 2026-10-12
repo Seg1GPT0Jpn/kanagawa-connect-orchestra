@@ -6,9 +6,10 @@ import 'click_track_view.dart';
 import 'metronome_view.dart';
 import 'reference_tone_view.dart';
 import 'sound_settings_sheet.dart';
+import 'spectrum_view.dart';
 import 'tuner_view.dart';
 
-/// 道具（チューナー・メトロノーム・クリックトラック・基準音・録音）
+/// 道具（チューナー・スペクトラム・メトロノーム・クリックトラック・基準音・録音）
 class ToolsPage extends StatelessWidget {
   const ToolsPage({super.key});
 
@@ -17,7 +18,7 @@ class ToolsPage extends StatelessWidget {
     final services = AppScope.of(context);
     final watch = Stopwatch()..start();
     return DefaultTabController(
-      length: 5,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('道具'),
@@ -34,6 +35,7 @@ class ToolsPage extends StatelessWidget {
             tabAlignment: TabAlignment.start,
             tabs: [
               Tab(text: 'チューナー'),
+              Tab(text: 'スペクトラム'),
               Tab(text: 'メトロノーム'),
               Tab(text: 'クリックトラック'),
               Tab(text: '基準音'),
@@ -47,6 +49,7 @@ class ToolsPage extends StatelessWidget {
               controller: services.tuner,
               pitch: services.referenceTone,
             ),
+            SpectrumView(controller: services.tuner),
             MetronomeView(
               controller: services.metronome,
               clock: () => watch.elapsed,

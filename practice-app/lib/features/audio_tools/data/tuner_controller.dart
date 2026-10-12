@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 
 import '../domain/pitch.dart';
 import '../domain/pitch_detector.dart';
+import '../domain/spectrum.dart';
 import 'mic_input.dart';
 import 'reference_tone_controller.dart';
 
@@ -31,6 +32,10 @@ class TunerController extends ChangeNotifier {
   PitchReading? _reading;
   double _level = 0;
   int _silentFrames = 0;
+  Spectrum? _spectrum;
+  Float64List? _peakHold;
+  HarmonicProfile? _harmonics;
+  bool _spectrumFrozen = false;
 
   bool get isListening => _listening;
   String? get error => _error;
@@ -52,6 +57,28 @@ class TunerController extends ChangeNotifier {
 
   /// 音の大きさ（0〜1、表示用）
   double get level => _level;
+
+  /// いまのスペクトラム（周波数ごとの強さ）
+  Spectrum? get spectrum => _spectrum;
+
+  /// これまでのいちばん大きな値（ゆっくり下がる。dB）
+  Float64List? get peakHold => _peakHold;
+
+  /// いまの音の倍音のバランス（音色メーター）。音が測れないときは null
+  HarmonicProfile? get harmonics => _harmonics;
+
+  /// スペクトラムの表示を止めて、じっくり見る
+  bool get spectrumFrozen => _spectrumFrozen;
+  void setSpectrumFrozen(bool v) {
+    _spectrumFrozen = v;
+    notifyListeners();
+  }
+
+  void resetPeakHold() {
+    _peakHold = null;
+    notifyListeners();
+  }
+
   PitchSettings get pitch => _pitch.pitch;
 
   Future<void> start() async {
@@ -81,6 +108,7 @@ class TunerController extends ChangeNotifier {
     if (_listening) await _mic.stop();
     _listening = false;
     _reading = null;
+    _harmonics = null;
     _level = 0;
     _buffer.clear();
     _smoother.clear();
@@ -109,11 +137,19 @@ class TunerController extends ChangeNotifier {
   }
 
   void _analyze(Float64List frame) {
+    final spectrum = _spectrumFrozen
+        ? null
+        : Spectrum.of(frame, sampleRate: analysisRate);
+    if (spectrum != null) {
+      _spectrum = spectrum;
+      _updatePeakHold(spectrum);
+    }
     final e = _detector.detect(frame);
     if (e == null) {
       // 短い途切れでは表示を消さない（音の切れ目でちらつかないように）
       if (++_silentFrames > 4) {
         _reading = null;
+        _harmonics = null;
         _smoother.clear();
       }
       _level = _level * 0.7;
@@ -123,6 +159,26 @@ class TunerController extends ChangeNotifier {
     _level = (e.rms * 4).clamp(0, 1);
     final hz = _smoother.add(e.frequency);
     _reading = PitchReading.fromFrequency(hz, a4: _pitch.pitch.a4);
+    if (spectrum != null) {
+      _harmonics = HarmonicProfile.of(spectrum, e.frequency);
+    }
+  }
+
+  /// 山の高さを覚えておき、1秒に約 20 dB ずつ下げる
+  void _updatePeakHold(Spectrum s) {
+    final hold = _peakHold;
+    if (hold == null || hold.length != s.amplitude.length) {
+      _peakHold = Float64List.fromList([
+        for (var i = 0; i < s.amplitude.length; i++) s.dbAt(i),
+      ]);
+      return;
+    }
+    // 1区間 ≒ 46ms
+    const fall = 20 * hopSize / analysisRate;
+    for (var i = 0; i < hold.length; i++) {
+      final db = s.dbAt(i);
+      hold[i] = db > hold[i] - fall ? db : hold[i] - fall;
+    }
   }
 
   @override

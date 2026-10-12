@@ -16,6 +16,8 @@ class RecordingResult {
     required this.a4,
     this.memo = '',
     this.reliability,
+    this.harmonicsDb,
+    this.brightness,
   });
 
   factory RecordingResult.fromAnalysis(
@@ -38,6 +40,8 @@ class RecordingResult {
     a4: a4,
     memo: memo,
     reliability: a.reliability,
+    harmonicsDb: a.harmonics?.levelsDb,
+    brightness: a.harmonics?.brightness,
   );
 
   final String id;
@@ -60,6 +64,12 @@ class RecordingResult {
   /// 分析の信頼度の目安（古い記録にはない）
   final Reliability? reliability;
 
+  /// 倍音のバランス（基音を 0 dB。古い記録にはない）
+  final List<double>? harmonicsDb;
+
+  /// 明るさの目安（古い記録にはない）
+  final double? brightness;
+
   Map<String, Object?> toMap() => {
     'id': id,
     'recordedAt': recordedAtMillis,
@@ -74,6 +84,8 @@ class RecordingResult {
     'a4': a4,
     'memo': memo,
     if (reliability != null) 'reliability': reliability!.name,
+    if (harmonicsDb != null) 'harmonics': harmonicsDb,
+    if (brightness != null) 'brightness': brightness,
   };
 
   factory RecordingResult.fromMap(Map<String, Object?> m) {
@@ -92,6 +104,10 @@ class RecordingResult {
       a4: d('a4'),
       memo: (m['memo'] as String?) ?? '',
       reliability: Reliability.byName(m['reliability']),
+      harmonicsDb: m['harmonics'] is List
+          ? [for (final v in m['harmonics']! as List) (v as num).toDouble()]
+          : null,
+      brightness: (m['brightness'] as num?)?.toDouble(),
     );
   }
 }
