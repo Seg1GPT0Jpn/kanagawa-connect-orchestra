@@ -9,6 +9,7 @@ import '../domain/day_condition.dart';
 import '../domain/practice_record.dart';
 import '../domain/practice_stats.dart';
 import '../../local_ai/ai_coach_card.dart';
+import 'goal_rings_card.dart';
 import 'reflection_page.dart';
 import 'timer_page.dart';
 import 'visible_records_builder.dart';
@@ -58,6 +59,8 @@ class PracticeHomePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 8),
+                  GoalRingsCard(stats: stats),
                   const SizedBox(height: 8),
                   const TodayConditionCard(),
                   const SizedBox(height: 8),

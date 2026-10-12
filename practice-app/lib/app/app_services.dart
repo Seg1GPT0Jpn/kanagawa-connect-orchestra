@@ -32,6 +32,7 @@ import '../features/menu/data/menu_settings_repository.dart';
 import '../features/menu/domain/menu_rules.dart';
 import '../features/practice/data/day_condition_repository.dart';
 import '../features/practice/data/practice_repository.dart';
+import '../features/practice/data/usage_tracker.dart';
 import '../features/sync/firestore_remote_record_store.dart';
 import '../features/sync/remote_record_store.dart';
 import '../features/sync/sync_controller.dart';
@@ -44,6 +45,8 @@ class AppServices {
     required this.practice,
     required this.menu,
     required this.dayConditions,
+    required this.usage,
+    required this.goals,
     required this.audio,
     required this.mixer,
     required this.metronome,
@@ -58,13 +61,32 @@ class AppServices {
     required this.sync,
     required this.localAi,
     this.clock = systemClock,
-  });
+  }) {
+    // 道具を使った時間を数える（目標・カレンダー用）
+    usage
+      ..watch(
+        UsageKind.metronome,
+        Listenable.merge([metronome, clickTrack]),
+        () => metronome.isRunning || clickTrack.isPlaying,
+      )
+      ..watch(UsageKind.tuner, tuner, () => tuner.isListening)
+      ..watch(UsageKind.tone, referenceTone, () => referenceTone.isPlaying)
+      ..watch(
+        UsageKind.recording,
+        recording,
+        () => recording.phase == RecordingPhase.recording,
+      );
+  }
 
   final PracticeRepository practice;
   final PracticeMenuController menu;
 
   /// 今日の予定と調子（端末内だけ）
   final DayConditionRepository dayConditions;
+
+  /// 道具ごとに使った時間と、1日の目標
+  final UsageTracker usage;
+  final GoalsController goals;
 
   /// 音を鳴らす（メトロノーム・基準音）
   final AudioEngine audio;
@@ -161,6 +183,7 @@ class AppServices {
     metronome.onStarted = clickTrack.stop;
     clickTrack.onStarted = metronome.stop;
     final mic = micOverride ?? RecordMicInput();
+    final usage = UsageTracker(meta, clock: clock);
     final recordings = RecordingRepository(db);
     final files = filesOverride ?? FilePickerGateway();
     final tunerSessions = TunerSessionRepository(db);
@@ -168,6 +191,8 @@ class AppServices {
       practice: practice,
       menu: await PracticeMenuController.load(menuSettings, trumpetModes),
       dayConditions: DayConditionRepository(meta),
+      usage: usage,
+      goals: await GoalsController.load(meta),
       audio: audio,
       mixer: mixer,
       metronome: metronome,

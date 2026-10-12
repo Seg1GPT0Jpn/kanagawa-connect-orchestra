@@ -5,6 +5,7 @@ import '../../../core/clock.dart';
 import '../domain/practice_record.dart';
 import '../domain/practice_stats.dart';
 import '../../data_io/data_menu_button.dart';
+import 'calendar_page.dart';
 import 'reflection_page.dart';
 import 'visible_records_builder.dart';
 
@@ -19,7 +20,17 @@ class RecordsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('記録'),
-        actions: const [DataMenuButton()],
+        actions: [
+          IconButton(
+            tooltip: 'カレンダー',
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute<void>(builder: (_) => const CalendarPage()),
+            ),
+            icon: const Icon(Icons.calendar_month_outlined),
+          ),
+          const DataMenuButton(),
+        ],
       ),
       body: VisibleRecordsBuilder(
         builder: (context, records) {

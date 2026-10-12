@@ -8,6 +8,7 @@ import '../domain/pitch.dart';
 import '../domain/sound.dart';
 import '../domain/temperament.dart';
 import 'exercise_view.dart';
+import 'interval_trainer_page.dart';
 import 'temperament_editor_page.dart';
 
 /// 基準音の画面：ホイール・鍵盤で音を選ぶ。1つの音・和音・ドローン。音色と音量
@@ -218,6 +219,17 @@ class _ReferenceToneViewState extends State<ReferenceToneView> {
             ),
             const Divider(height: 32),
             ExerciseView(tone: c),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (_) => IntervalTrainerPage(tone: c),
+                ),
+              ),
+              icon: const Icon(Icons.hearing_outlined),
+              label: const Text('音程当て（聴き分けの練習）'),
+            ),
             const Divider(height: 32),
             PitchSettingsPanel(controller: c),
           ],
