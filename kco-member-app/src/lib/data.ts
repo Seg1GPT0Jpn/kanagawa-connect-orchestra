@@ -23,6 +23,7 @@ import type {
   Proposal,
   Rehearsal,
   Score,
+  StaffDoc,
   Stats,
   Survey,
   SurveyQuestion,
@@ -139,6 +140,16 @@ export function toAnnouncement(id: string, d: DocumentData): Announcement {
   };
 }
 
+export function toStaffDoc(id: string, d: DocumentData): StaffDoc {
+  return {
+    id,
+    title: s(d.title),
+    body: s(d.body),
+    pinned: d.pinned === true,
+    updatedAt: d.updatedAt ?? null
+  };
+}
+
 export function toConcert(id: string, d: DocumentData): Concert {
   return {
     id,
@@ -230,6 +241,12 @@ export function useAnnouncements(includeDrafts = false, applicantOnly = false) {
     if (applicantOnly) return query(ref, where('published', '==', true), where('forApplicants', '==', true), orderBy('publishedAt', 'desc'));
     return query(ref, where('published', '==', true), orderBy('publishedAt', 'desc'));
   }, toAnnouncement, [includeDrafts, applicantOnly]);
+}
+
+/** 運営資料（運営メンバーだけ。読めるかどうかは Firestore ルールが判定） */
+export function useStaffDocs(enabled: boolean) {
+  return useQueryData(() => (enabled ? query(collection(getServices().db, 'staffDocs'), orderBy('updatedAt', 'desc')) : null),
+    toStaffDoc, [enabled]);
 }
 
 export function useConcerts(includeDrafts = false) {

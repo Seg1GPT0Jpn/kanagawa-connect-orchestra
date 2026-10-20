@@ -153,6 +153,16 @@ service cloud.firestore {
         && d.updatedAt == request.time;
     }
 
+    function validStaffDoc(d) {
+      return d.keys().hasOnly(['title', 'body', 'pinned', 'createdAt', 'updatedAt', 'updatedBy'])
+        && d.keys().hasAll(['title', 'body', 'pinned', 'updatedAt', 'updatedBy'])
+        && nonEmptyStr(d.title, 120)
+        && str(d.body, 10000)
+        && d.pinned is bool
+        && d.updatedAt == request.time
+        && d.updatedBy == request.auth.uid;
+    }
+
     function validConcert(d) {
       return d.keys().hasOnly(['title', 'date', 'venue', 'openTime', 'startTime', 'program',
                                'performers', 'notes', 'daySchedule', 'order', 'published', 'updatedAt'])
@@ -409,6 +419,16 @@ service cloud.firestore {
       allow update: if isStaff() && validAnnouncement(request.resource.data)
         && request.resource.data.get('createdAt', null) == resource.data.get('createdAt', null);
       allow delete: if isStaff();
+    }
+
+    // 運営資料（運営メンバー＝管理者・運営補助だけが読み書きできる。団員・参加希望者は読めない）
+    match /staffDocs/{docId} {
+      allow read: if isStaff();
+      allow create: if isStaff() && validStaffDoc(request.resource.data)
+        && request.resource.data.createdAt == request.time;
+      allow update: if isStaff() && validStaffDoc(request.resource.data)
+        && request.resource.data.get('createdAt', null) == resource.data.get('createdAt', null);
+      allow delete: if isAdmin();
     }
 
     // 演奏会情報

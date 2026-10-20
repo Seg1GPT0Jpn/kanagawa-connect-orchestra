@@ -502,3 +502,37 @@ describe('正式加入の申請', () => {
     await assertSucceeds(setDoc(doc(as('hopeful'), 'joinRequests', 'ap-1'), request()));
   });
 });
+
+describe('運営資料', () => {
+  const staffDoc = (uid: string, extra: Record<string, unknown> = {}) => ({
+    title: '🎻 運営メンバー募集', body: '📣 広報\n* SNS', pinned: false,
+    createdAt: serverTimestamp(), updatedAt: serverTimestamp(), updatedBy: uid, ...extra
+  });
+
+  it('管理者・運営補助は作成・閲覧・編集できる', async () => {
+    await assertSucceeds(setDoc(doc(as('admin'), 'staffDocs', 'd1'), staffDoc('uid-admin')));
+    await assertSucceeds(getDocs(query(collection(as('staff'), 'staffDocs'), orderBy('updatedAt', 'desc'))));
+    await assertSucceeds(updateDoc(doc(as('staff'), 'staffDocs', 'd1'), { body: '更新', updatedAt: serverTimestamp(), updatedBy: 'uid-staff' }));
+    await assertSucceeds(addDoc(collection(as('staff'), 'staffDocs'), staffDoc('uid-staff')));
+  });
+
+  it('団員・参加希望者・休止中・未ログインは読めない・書けない', async () => {
+    await assertSucceeds(setDoc(doc(as('admin'), 'staffDocs', 'd1'), staffDoc('uid-admin')));
+    for (const k of ['va', 'hopeful', 'paused', 'left'] as const) {
+      await assertFails(getDoc(doc(as(k), 'staffDocs', 'd1')));
+      await assertFails(getDocs(collection(as(k), 'staffDocs')));
+      await assertFails(setDoc(doc(as(k), 'staffDocs', 'x'), staffDoc(USERS[k].uid)));
+    }
+    await assertFails(getDoc(doc(anon(), 'staffDocs', 'd1')));
+  });
+
+  it('更新者の偽装・余計な項目・作成日時の変更はできない／削除は管理者だけ', async () => {
+    await assertFails(setDoc(doc(as('staff'), 'staffDocs', 'd2'), staffDoc('uid-admin')));
+    await assertFails(setDoc(doc(as('staff'), 'staffDocs', 'd2'), staffDoc('uid-staff', { visibility: 'all' })));
+    await assertFails(setDoc(doc(as('staff'), 'staffDocs', 'd2'), staffDoc('uid-staff', { title: '' })));
+    await assertSucceeds(setDoc(doc(as('admin'), 'staffDocs', 'd1'), staffDoc('uid-admin')));
+    await assertFails(updateDoc(doc(as('staff'), 'staffDocs', 'd1'), { createdAt: Timestamp.now(), updatedAt: serverTimestamp(), updatedBy: 'uid-staff' }));
+    await assertFails(deleteDoc(doc(as('staff'), 'staffDocs', 'd1')));
+    await assertSucceeds(deleteDoc(doc(as('admin'), 'staffDocs', 'd1')));
+  });
+});
