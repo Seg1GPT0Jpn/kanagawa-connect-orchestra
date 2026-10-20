@@ -1,0 +1,193 @@
+# 練習お助けアプリ（practice-app・Flutter）のチェック・テスト・自動公開
+#
+#  ・プルリクエスト：書式・静的解析・テスト・Web ビルド・セキュリティルールのテストだけ（公開しない・秘密情報は使わない）
+#  ・main に入ったとき：すべて通ったら Firebase（kco-practice）へ Web アプリと Firestore ルールを公開
+#
+# 公開には GitHub の Secrets に FIREBASE_SERVICE_ACCOUNT_PRACTICE（サービスアカウントの JSON 鍵）が必要です。
+# 鍵がまだないあいだは、公開だけを飛ばして警告を出します（手順は practice-app/README.md の「自動公開の設定」）。
+name: 練習アプリ
+
+on:
+  pull_request:
+    paths:
+      - 'practice-app/**'
+      - '.github/workflows/practice-app.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'practice-app/**'
+      - '.github/workflows/practice-app.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: practice-app-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: 練習アプリのチェックとテスト
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: practice-app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.7
+          cache: true
+
+      - run: flutter pub get
+
+      - name: 書式（dart format）がそろっているか
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: 静的解析
+        run: flutter analyze
+
+      - name: テスト
+        # 1件60秒で打ち切る（止まったテストを10分待たずに見つける）
+        run: flutter test --timeout 60s
+
+      - name: Web 版のビルド（描画エンジンを同梱＝オフラインでも起動できる）
+        run: flutter build web --no-web-resources-cdn
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: practice-web
+          path: practice-app/build/web
+          retention-days: 3
+
+  android:
+    name: Android 版のビルド
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: practice-app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # Android のビルド（Gradle）に Java が必要
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.7
+          cache: true
+
+      - run: flutter pub get
+
+      # 署名なしのデバッグ版（Android の部品の組み合わせが壊れていないかを確かめる）
+      - name: Android 版（APK）のビルド
+        run: flutter build apk --debug
+
+      # 公開用の鍵がないときは、リリース版を作れない（誤った署名で公開しないため）
+      - name: 鍵なしではリリース版のビルドが止まることの確認
+        run: |
+          if flutter build apk --release > release.log 2>&1; then
+            echo "::error::公開用の鍵がないのにリリース版が作れてしまいました"
+            exit 1
+          fi
+          if ! grep -q "KCO_ALLOW_DEBUG_SIGNED_RELEASE" release.log; then
+            cat release.log
+            echo "::error::リリース版のビルドが、鍵の確認以外の理由で失敗しました"
+            exit 1
+          fi
+
+  rules:
+    name: セキュリティルールのテスト（エミュレータ）
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: practice-app/rules-test
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: practice-app/rules-test/package-lock.json
+
+      # Firebase エミュレータに Java が必要
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - run: npm ci
+      - run: npm test
+
+  deploy:
+    name: Firebase に公開
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: [check, rules]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: practice-app
+    steps:
+      - name: 公開用の鍵があるか確認
+        id: key
+        env:
+          KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRACTICE }}
+        working-directory: .
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::warning::GitHub の Secrets に FIREBASE_SERVICE_ACCOUNT_PRACTICE がないので、公開を飛ばしました。practice-app/README.md の「自動公開の設定」を参照してください。"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.ok == 'true'
+        with:
+          persist-credentials: false
+
+      - uses: actions/download-artifact@v4
+        if: steps.key.outputs.ok == 'true'
+        with:
+          name: practice-web
+          path: practice-app/build/web
+
+      - uses: actions/setup-node@v4
+        if: steps.key.outputs.ok == 'true'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: practice-app/rules-test/package-lock.json
+
+      - name: Firebase CLI のインストール
+        if: steps.key.outputs.ok == 'true'
+        working-directory: practice-app/rules-test
+        run: npm ci
+
+      - name: Google Cloud にログイン（サービスアカウント）
+        if: steps.key.outputs.ok == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PRACTICE }}
+
+      - name: Firebase に公開（Web アプリ・Firestore ルール）
+        if: steps.key.outputs.ok == 'true'
+        run: rules-test/node_modules/.bin/firebase deploy --only hosting,firestore:rules --project kco-practice --non-interactive
