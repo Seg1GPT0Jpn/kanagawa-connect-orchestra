@@ -689,7 +689,7 @@ def err_density(r):
     wr = m / rr if mode == "linear" else m / rr ** 2
     wrong = f"密度＝質量÷大きさ なので、{m}÷{rr}＝{g(wr)} 倍" if mode == "linear" else f"体積は半径の 2 乗に比例するので、{m}÷{rr}²＝{g(wr)} 倍"
     step = "体積を半径に比例するとした部分" if mode == "linear" else "体積を半径の 2 乗に比例するとした部分"
-    name = r.choice(["惑星 X", "惑星 Y", "架空の惑星 Z"])
+    name = r.choice(["惑星X", "惑星Y", "架空の惑星Z"])
     return err_item(f"{name}は、半径が地球の {rr} 倍、質量が地球の {m} 倍である。{name}の平均密度は地球の何倍か。",
                     wrong, step, "formula",
                     "密度＝質量÷体積 は覚えているが、体積が半径の 3 乗に比例すること（球の体積 4πr³/3）を使っていない。",
