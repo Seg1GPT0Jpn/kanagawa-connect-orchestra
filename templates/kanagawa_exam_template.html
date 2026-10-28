@@ -26,7 +26,7 @@
     <p>{{ kg.series }}</p>
   </div>
   <h1 class="kg-subject">{{ kg.subject_title }}</h1>
-  <p class="kg-unit">{{ kg.unit_title }}</p>
+  {% if kg.unit_title %}<p class="kg-unit">{{ kg.unit_title }}</p>{% endif %}
   <div class="kg-notes">
     <div class="kg-notes-title">注　意　事　項</div>
     <ol>{% for n in kg.notes %}<li>{{ n | rich_inline }}</li>{% endfor %}</ol>
@@ -51,12 +51,12 @@
     {{ stimulus_block(item.stimulus, 'questions', item.compact) }}
   {% else %}{% set q = item.question %}
   <div class="kg-sub{% if q._long %} long{% endif %}">
-    <span class="kg-sublab">{{ q._sub }}</span>
+    {% if q._sub %}<span class="kg-sublab">{{ q._sub }}</span>{% endif %}
     <div class="kg-subbody">
       <div class="stem-text">{{ q.stem | rich_block }}</div>
       {% if q.figure %}{{ figure_block(q.figure) }}{% endif %}
       {% if q.table %}{{ table_block(q.table) }}{% endif %}
-      {% if q.choices %}<ul class="kg-choices cols-{{ q._cols }}">{% for c in q.choices %}<li><span class="n">{{ c.label }}．</span><span>{{ c.text | rich_inline }}</span></li>{% endfor %}</ul>{% endif %}
+      {% if q.choices %}<ul class="kg-choices cols-{{ q._cols }}">{% for c in q.choices %}<li><span class="n"><span class="tcy">{{ c.label }}</span>．</span><span>{{ c.text | rich_inline }}</span></li>{% endfor %}</ul>{% endif %}
       {% if q._mark %}<div class="kg-ans">答え　{{ mark_boxes(q._mark) }}</div>
       {% elif q._written %}<div class="kg-ans-note">※ 解答用紙の決められた欄に書きなさい。</div>{% endif %}
     </div>

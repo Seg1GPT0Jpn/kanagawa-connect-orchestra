@@ -116,6 +116,10 @@ def choice_cols(choices, paper: str = "A4") -> int:
     m = max((visual_len(c.get("text", "")) for c in choices), default=0)
     if m <= four and len(choices) in (4, 8):
         return 4
+    if m <= 6 and len(choices) == 5:
+        return 5   # 時刻などの短い5択は1行に並べる（入試の体裁）
+    if m <= 13 and len(choices) in (6, 9):
+        return 3   # 組み合わせの選択肢は 3×2・3×3 の表に並べる
     if m <= two:
         return 2
     return 1
@@ -264,16 +268,18 @@ def kanagawa_context(data: dict, groups: list, units: list) -> dict:
     tab, title = KG_SUBJECT.get(data.get("subject"), ("", MASTERS["subject"].get(data.get("subject"), "")))
     letters = iter(HIRAGANA * 3)
     has_mark = False
-    n_mon = 0
+    last_mon = ""
+    tate = is_tate(data)
     for g in groups:
         if g.get("section"):
-            n_mon += 1
+            last_mon = g["section"].get("title", last_mon)
         for it in g["items"]:
             if it["kind"] != "question":
                 continue
             q = it["question"]
             num = q.get("_number", "")
-            q["_sub"] = num[num.index("("):] if "(" in num else num
+            sub = num[num.index("("):] if "(" in num else ""   # 小問のない問（例：問5）は見出しだけ
+            q["_sub"] = sub.replace("(", "（").replace(")", "）") if tate else sub
             ma = q.get("mark_answer")
             if ma:
                 has_mark = True
@@ -281,7 +287,7 @@ def kanagawa_context(data: dict, groups: list, units: list) -> dict:
                 q["_mark"] = {"form": ma["form"], "parts": parts, "letters": [l for p in parts for l in p]}
             q["_written"] = not q.get("choices") and not ma
     notes = ["開始の合図があるまで、この問題冊子を開いてはいけません。",
-             f"問題は 問{n_mon} まであります。解答用紙はこの冊子の最後にあります。",
+             f"問題は {last_mon} まであります。解答用紙はこの冊子の最後にあります。",
              "解答は、解答用紙の決められた欄に書きなさい。",
              "番号を選んで答える問題は、解答用紙の番号を一つ塗りつぶしなさい。"]
     if has_mark:
@@ -296,6 +302,11 @@ def kanagawa_context(data: dict, groups: list, units: list) -> dict:
     notes.append("終了の合図があったら、すぐに解答をやめなさい。")
     unit = units[0] if units else {}
     grade = MASTERS["grade"].get(data.get("grade"), data.get("grade", ""))
+    if data.get("track") == "mock_exam":   # 模試は単元名ではなくセットの題名を表紙に出す
+        name = (data.get("exam_spec") or {}).get("name") or "オリジナル模試"
+        return {"tab": tab, "subject_title": title, "notes": notes, "has_mark": has_mark, "tate": tate,
+                "series": f"{name}　（{data.get('time_limit_minutes', 50)}分・{num(data.get('total_points', 100))}点）",
+                "unit_title": ""}
     return {"tab": tab, "subject_title": title, "notes": notes, "has_mark": has_mark, "tate": is_tate(data),
             "series": f"{grade}　単元演習",
             "unit_title": unit.get("title", data.get("title", ""))}
