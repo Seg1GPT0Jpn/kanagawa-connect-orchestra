@@ -156,6 +156,7 @@ def MARK(stem, x, e, expr, **kw):
     if c.denominator == 1:
         m = ("root", b) if c == 1 else ("coef_root", int(c), b)
     else:
+        assert c.numerator > 1  # 係数 1 のマーク欄（「1」をマークさせる形）は入試で使わない
         m = ("frac_root", c.numerator, b, c.denominator)
     return num(stem, T(x), e, mark=m, chk=(expr, py(x), None, "answer"), **kw)
 
@@ -1052,7 +1053,7 @@ def _err_case(r, kind):
         return prob, sol, fix, "分母の有理化", "calculation", "「分母の根号を分子に移す」と覚えてしまい、分母と分子に同じ数をかける意味を忘れる。", f"{k}/sqrt({b})", f"{k // b}*sqrt({b})"
     if kind == "mulrad":
         a, c = r.randint(2, 5), r.randint(2, 5)
-        b, d = r.sample([2, 3, 5, 7], 2)
+        b, d = r.choice([(2, 3), (2, 5), (3, 7), (2, 11), (3, 10)])
         prob = f"${a}\\sqrt{{{b}}}\\times{c}\\sqrt{{{d}}}$ を計算しなさい。"
         sol = f"${a}\\sqrt{{{b}}}\\times{c}\\sqrt{{{d}}}={a * c}\\sqrt{{{b + d}}}$"
         fix = f"$({a}\\times{c})\\sqrt{{{b}\\times{d}}}={a * c}\\sqrt{{{b * d}}}$"
@@ -1065,7 +1066,7 @@ def _err_case(r, kind):
         fix = f"$(\\sqrt{{{a}}})^2+2\\sqrt{{{a}}}\\sqrt{{{c}}}+(\\sqrt{{{c}}})^2={tex(x)}$"
         return prob, sol, fix, "乗法公式の展開", "formula", "$(a+b)^2=a^2+b^2$ と思いこみ、まん中の項を落とす。", f"(sqrt({a})+sqrt({c}))**2", py(x)
     p, q = r.sample([2, 3, 4, 5], 2)
-    b, d = r.sample([2, 3, 5, 7], 2)
+    b, d = r.choice([(2, 3), (2, 5), (3, 7), (2, 11), (3, 10), (5, 6)])
     prob = f"${p}\\sqrt{{{b}}}+{q}\\sqrt{{{d}}}$ を計算しなさい。"
     sol = f"${p}\\sqrt{{{b}}}+{q}\\sqrt{{{d}}}={p + q}\\sqrt{{{b + d}}}$"
     fix = f"根号の中が異なるので，${p}\\sqrt{{{b}}}+{q}\\sqrt{{{d}}}$ のままで，これ以上計算できない"
@@ -1094,7 +1095,7 @@ def d_err_explain(r):
 def d_err_line(r):
     b = r.choice([2, 3, 5, 6, 7])
     while True:
-        p, q, m = r.randint(2, 5), r.randint(1, 4), r.randint(1, 4)
+        p, q, m = r.randint(2, 5), r.randint(2, 4), r.randint(1, 4)
         if p - m + q > 0 and p != q:
             break
     P, Q, K = p * p * b, q * q * b, m * b

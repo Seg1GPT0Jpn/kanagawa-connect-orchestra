@@ -150,9 +150,10 @@ def _scale(lo, hi):
     return lab, minor
 
 
-def boxplot(groups, lo, hi, unit="", width=380, show_grid=True):
+def boxplot(groups, lo, hi, unit="", width=380, show_grid=True, lab=None):
     """groups=[(ラベル, (最小, Q1, 中央, Q3, 最大))]。横向きの箱ひげ図（目盛りつき）。"""
-    lab, minor = _scale(lo, hi)
+    lab0, minor = _scale(lo, hi)
+    lab = lab or lab0
     L, R = 54, 14
     W = width
     rh = 38
@@ -190,9 +191,9 @@ def boxplot(groups, lo, hi, unit="", width=380, show_grid=True):
     return "".join(o)
 
 
-def histogram(edges, counts, unit="", width=360):
+def histogram(edges, counts, unit="", width=360, L=34, R=12):
     n = len(counts)
-    L, R, T, B = 34, 12, 22, 34
+    T, B = 22, 34
     H = 180
     ymax = max(counts)
     ystep = 1 if ymax <= 8 else 2
@@ -806,6 +807,11 @@ def c_xy_judge(r):
               pit=["箱やひげの長さを，データの個数と考える。"])
 
 
+def _inner(svg):
+    """外側の <svg> タグを外して中身だけにする（図を1枚の SVG に合成するため）。"""
+    return re.sub(r"^<svg[^>]*>", "", svg)[:-len("</svg>")]
+
+
 SHAPES = {"右に長いすそ（山が左寄り）": [2, 6, 8, 5, 3, 2, 1, 1], "左に長いすそ（山が右寄り）": [1, 1, 2, 3, 5, 8, 6, 2],
           "山が中央に1つ": [1, 2, 4, 8, 8, 4, 2, 1], "ほぼ平ら": [4, 4, 4, 4, 4, 4, 4, 4]}
 
@@ -829,10 +835,10 @@ def c_hist_box(r):
     pos = order.index(target)
     cnt = data[target][0]
     n = sum(cnt)
-    hist = histogram(edges, cnt, unit=u)
-    box = boxplot([(KANA[i], data[k][2]) for i, k in enumerate(order)], 0, edges[-1], unit=u)
+    hist = _inner(histogram(edges, cnt, unit=u, width=380, L=54, R=14))
+    box = _inner(boxplot([(KANA[i], data[k][2]) for i, k in enumerate(order)], 0, edges[-1], unit=u, lab=w))
     TH = 180 + 8 + 38 * 4 + 40
-    fig = figure(f"{name}のヒストグラムと，箱ひげ図の候補 ア〜エ", f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 {TH}" width="380" height="{TH}"><g>{hist}</g><g transform="translate(0,188)">{box}</g></svg>')
+    fig = figure(f"{name}のヒストグラムと，箱ひげ図の候補 ア〜エ", f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 {TH}" width="380" height="{TH}" font-family="serif" font-size="12"><g font-size="11">{hist}</g><g transform="translate(0,188)">{box}</g></svg>')
     reason = {"右に長いすそ（山が左寄り）": "データが小さい方に集まっているので，箱が左に寄り，右のひげが長い。",
               "左に長いすそ（山が右寄り）": "データが大きい方に集まっているので，箱が右に寄り，左のひげが長い。",
               "山が中央に1つ": "データが中央に集まっているので，箱が短く中央にあり，左右のひげがほぼ同じ長さ。",
