@@ -53,10 +53,10 @@ def bestn(x):
     return 3 if is_exact(sig(x, 3), x) else 2
 
 
-def numq(stem, x, expr, e, unit, n=None, **kw):
-    """数値の答えの問題。x は厳密値、expr はそれを求める式（検算用）。"""
+def numq(stem, x, expr, e, unit, n=None, raw=False, **kw):
+    """数値の答えの問題。x は厳密値、expr はそれを求める式（検算用）。raw=True なら整数をそのまま答えにする。"""
     n = n or bestn(x)
-    s = sig(x, n)
+    s = str(x) if raw else sig(x, n)
     exact = is_exact(s, x)
     if not exact and "有効数字" not in stem:
         stem += f"有効数字{n}桁で答えなさい。"
@@ -227,11 +227,10 @@ def wave_basic(r):
                     alt=[f"周期 $T=\\dfrac{{1}}{{f}}$ を求め、$v=\\dfrac{{\\lambda}}{{T}}$ で計算しても同じ。"],
                     pc=[("$v=f\\lambda$ を用いている", 1), ("値が正しい", 1)], pit=["$\\dfrac{f}{\\lambda}$ を計算する。"])
     if kind == "lam":
-        vs, fs = r.choice(["340", "1500", "330", "20", "6.0"]), r.choice(["50", "100", "200", "500", "850", "1000"])
+        vs, fs = r.choice([("340", f_) for f_ in ["100", "170", "200", "425", "500", "680", "850", "1000"]] +
+                          [("1500", f_) for f_ in ["500", "1000", "3000"]] + [("20", f_) for f_ in ["2.0", "4.0", "5.0", "8.0"]] +
+                          [("6.0", f_) for f_ in ["1.5", "2.0", "3.0", "4.0"]])
         v, f = Q(vs), Q(fs)
-        if v / f < sp.Rational(1, 1000):
-            f = Q("2.0")
-            fs = "2.0"
         return numq(f"速さ {vs} m/s で伝わる波の振動数が {fs} Hz であるとき、波長は何 m か。", v / f, f"{P(v)}/{P(f)}", "$\\lambda=\\dfrac{v}{f}$。", "m", d=1,
                     ap="$v=f\\lambda$ を $\\lambda$ について解く。", steps=[f"$\\lambda=\\dfrac{{v}}{{f}}=\\dfrac{{{vs}}}{{{fs}}}$。", f"$\\lambda={t(v / f)}\\,\\mathrm{{m}}$。"],
                     alt=["求めた波長に振動数をかけて速さに戻ることを確かめる。"], pc=[("式を変形している", 1), ("値が正しい", 1)], pit=["$v\\times f$ を計算する。"])
@@ -279,7 +278,7 @@ def sound_basic(r):
         df = r.choice([1, 2, 3, 4, 5])
         f2 = f1 + r.choice([-1, 1]) * df
         return numq(f"振動数 {f1} Hz のおんさと {f2} Hz のおんさを同時に鳴らした。1秒間に聞こえるうなりの回数は何回か。", sp.Integer(df), f"Abs({f1}-{f2})",
-                    "うなりの回数 $f=|f_1-f_2|$。", "回", d=1, ap="振動数のわずかに違う2つの音が重なると、1秒間に振動数の差の回数だけ強弱がくり返される。",
+                    "うなりの回数 $f=|f_1-f_2|$。", "回", d=1, raw=True, ap="振動数のわずかに違う2つの音が重なると、1秒間に振動数の差の回数だけ強弱がくり返される。",
                     steps=[f"$|{f1}-{f2}|={df}$。", f"1秒間に {df} 回。"], alt=["1秒間に一方が他方より何回多く振動するかを数えると、その回数だけ山と山が重なり強め合う、と考えてもよい。"],
                     pc=[("振動数の差をとっている", 1), ("値が正しい", 1)], pit=["振動数の和や平均を答える。"])
     ts = r.choice(["2.0", "3.0", "5.0", "6.0", "10"])
@@ -479,9 +478,13 @@ STR_V = ["120", "180", "200", "240", "300", "360", "480"]
 
 @gen("standard_practice", 4, ["computation", "application"])
 def string_res(r):
-    Ls, vs = r.choice(STR_L), r.choice(STR_V)
-    L, v = Q(Ls), Q(vs)
-    n = r.choice([1, 1, 2, 3, 4])
+    while True:
+        Ls, vs = r.choice(STR_L), r.choice(STR_V)
+        L, v = Q(Ls), Q(vs)
+        n = r.choice([1, 1, 2, 3, 4])
+        fx = n * v / (2 * L)
+        if is_exact(sig(fx, 3), fx) or is_exact(sig(fx, 2), fx):
+            break
     kind = r.choice(["f", "f", "v", "lam"])
     lam = 2 * L / n
     f = v / lam
@@ -494,9 +497,9 @@ def string_res(r):
                     alt=[f"公式 $f_n=\\dfrac{{nv}}{{2L}}$ に直接代入しても同じ。"], pc=[("弦の長さと波長の関係を正しく立てている", 2), ("振動数が正しい", 2)],
                     pit=["$\\lambda=\\dfrac{L}{n}$ とする。"])
     if kind == "v":
-        return numq(f"長さ {Ls} m の弦の両端を固定し、{name}をさせたところ、振動数は {t(f)} Hz であった。弦を伝わる波の速さは何 m/s か。", v, f"{P(f)}*2*{P(L)}/{n}",
+        return numq(f"長さ {Ls} m の弦の両端を固定し、{name}をさせたところ、振動数は {dec(f)} Hz であった。弦を伝わる波の速さは何 m/s か。", v, f"{P(f)}*2*{P(L)}/{n}",
                     "$\\lambda=\\dfrac{2L}{n}$、$v=f\\lambda$。", "m/s", d=3,
-                    ap="波長を弦の長さから求め、$v=f\\lambda$ を使う。", steps=[f"$\\lambda=\\dfrac{{2\\times{Ls}}}{{{n}}}={t(lam)}\\,\\mathrm{{m}}$。", f"$v={t(f)}\\times{t(lam)}={t(v)}\\,\\mathrm{{m/s}}$。"],
+                    ap="波長を弦の長さから求め、$v=f\\lambda$ を使う。", steps=[f"$\\lambda=\\dfrac{{2\\times{Ls}}}{{{n}}}={t(lam)}\\,\\mathrm{{m}}$。", f"$v={dec(f)}\\times{t(lam)}={t(v)}\\,\\mathrm{{m/s}}$。"],
                     alt=["同じ弦の基本振動の振動数を先に求め、$v=2Lf_1$ を使ってもよい。"], pc=[("波長を求めている", 2), ("速さが正しい", 2)], pit=["振動数と弦の長さを直接かける。"])
     return numq(f"長さ {Ls} m の弦の両端を固定して{name}をさせたとき、弦にできる定常波の波長は何 m か。", lam, f"2*{P(L)}/{n}",
                 "両端が節で、腹 1 つ分が半波長。", "m", d=2, ap="図を描き、弦の長さが半波長の何個分かを数える。",
@@ -560,22 +563,22 @@ def circuit(r):
     common = dict(alt=["各抵抗の電流・電圧を求めたら、並列部分の電流の和が全体の電流に、各部分の電圧の和が全体の電圧になることを確かめる。"],
                   pit=["並列部分の合成で逆数に戻し忘れる。", "全体の電圧をそのまま並列部分の電圧とする。"])
     if ask == "I":
-        return numq(stem + "$R_1$ を流れる電流は何 A か。", I, f"{P(V)}/({P(R1)}+1/(1/{P(R2)}+1/{P(R3)}))", "合成抵抗を求め、オームの法則。", "A", d=3,
+        return numq(stem + "$R_1$ を流れる電流は何 A か。", I, f"{P(V)}/({P(R1)}+1/(1/{P(R2)}+1/{P(R3)}))", "合成抵抗を求め、オームの法則。", "A", d=3, n=2,
                     ap="$R_1$ は全体と直列なので、全体の電流がそのまま流れる。", steps=base_steps,
                     pc=[("並列部分の合成抵抗を求めている", 2), ("電流が正しい", 2)], **common)
     if ask == "Vp":
-        return numq(stem + "$R_2$ の両端の電圧は何 V か。", Vp, f"{P(V)}*{P(Rp)}/({P(R1)}+{P(Rp)})", "並列部分の電圧＝全体の電流×並列部分の合成抵抗。", "V", d=3,
+        return numq(stem + "$R_2$ の両端の電圧は何 V か。", Vp, f"{P(V)}*{P(Rp)}/({P(R1)}+{P(Rp)})", "並列部分の電圧＝全体の電流×並列部分の合成抵抗。", "V", d=3, n=2,
                     ap="並列部分の電圧は $R_2$ にも $R_3$ にも共通。全体の電流と並列部分の合成抵抗から求める。",
                     steps=base_steps + [f"並列部分の電圧 $={t(I)}\\times{t(Rp)}\\fallingdotseq{t(Vp)}\\,\\mathrm{{V}}$。"],
                     pc=[("全体の電流を求めている", 2), ("並列部分の電圧が正しい", 2)], **common)
     if ask == "I3":
         I3 = Vp / R3
-        return numq(stem + "$R_3$ を流れる電流は何 A か。", I3, f"{P(Vp)}/{P(R3)}", "並列部分の電圧を求め、$R_3$ で割る。", "A", d=3,
+        return numq(stem + "$R_3$ を流れる電流は何 A か。", I3, f"{P(Vp)}/{P(R3)}", "並列部分の電圧を求め、$R_3$ で割る。", "A", d=3, n=2,
                     ap="並列部分の電圧を先に求め、各抵抗にオームの法則を使う。",
                     steps=base_steps + [f"並列部分の電圧 $\\fallingdotseq{t(Vp)}\\,\\mathrm{{V}}$。", f"$I_3=\\dfrac{{{t(Vp)}}}{{{c}}}\\fallingdotseq{t(I3)}\\,\\mathrm{{A}}$。"],
                     pc=[("並列部分の電圧を求めている", 2), ("電流が正しい", 2)], **common)
     P1 = I ** 2 * R1
-    return numq(stem + "$R_1$ で消費される電力は何 W か。", P1, f"({P(V)}/({P(R1)}+{P(Rp)}))**2*{P(R1)}", "$P=I^2R$。", "W", d=3,
+    return numq(stem + "$R_1$ で消費される電力は何 W か。", P1, f"({P(V)}/({P(R1)}+{P(Rp)}))**2*{P(R1)}", "$P=I^2R$。", "W", d=3, n=2,
                 ap="$R_1$ を流れる電流（全体の電流）を求め、$P=I^2R_1$。", steps=base_steps + [f"$P=I^2R_1\\fallingdotseq{t(P1)}\\,\\mathrm{{W}}$。"],
                 pc=[("電流を求めている", 2), ("電力が正しい", 2)], **common)
 
@@ -589,9 +592,13 @@ def heater(r):
         Pw = sp.Integer(V) ** 2 / R
         m = r.choice([100, 200, 300, 500])
         if kind == "dT":
-            tt = r.choice([60, 120, 180, 300])
-            dT = Pw * tt / (m * Q("4.2"))
-            return numq(f"{Rs} Ω の電熱線に {V} V の電圧を加え、質量 {m} g の水を {tt} s 間温めた。電熱線で発生した熱がすべて水に与えられたとすると、水の温度は何 K 上昇するか。水の比熱を 4.2 J/(g·K) とする。",
+            while True:
+                tt = r.choice([60, 120, 180, 300])
+                m = r.choice([100, 200, 300, 500])
+                dT = Pw * tt / (m * Q("4.2"))
+                if 1 <= dT <= 50:
+                    break
+            return numq(f"{Rs} Ω の電熱線に {V if V >= 10 else str(V) + '.0'} V の電圧を加え、質量 {m} g の水を {tt} s 間温めた。電熱線で発生した熱がすべて水に与えられたとすると、水の温度は何 K 上昇するか。水の比熱を 4.2 J/(g·K) とする。",
                         dT, f"{V}**2/{P(R)}*{tt}/({m}*Rational(42,10))", "ジュール熱 $\\dfrac{V^2}{R}t$ ＝ 水が得た熱量 $mc\\Delta T$。", "K", d=3, n=2,
                         ap="電気エネルギー → 熱 → 水の温度上昇。前単元の $Q=mc\\Delta T$ と結びつける。",
                         steps=[f"消費電力 $P=\\dfrac{{{V}^2}}{{{Rs}}}={t(Pw)}\\,\\mathrm{{W}}$。", f"発熱量 $Q=Pt={t(Pw)}\\times{tt}={t(Pw * tt)}\\,\\mathrm{{J}}$。",
@@ -600,7 +607,7 @@ def heater(r):
                         pit=["電力と熱量を区別せず、時間をかけ忘れる。"])
         dT = r.choice([5, 10, 20, 30])
         tt = m * Q("4.2") * dT / Pw
-        return numq(f"{Rs} Ω の電熱線に {V} V の電圧を加えて、質量 {m} g の水を温める。発生した熱がすべて水に与えられるとすると、水の温度を {dT} K 上げるのに何 s かかるか。水の比熱を 4.2 J/(g·K) とする。",
+        return numq(f"{Rs} Ω の電熱線に {V if V >= 10 else str(V) + '.0'} V の電圧を加えて、質量 {m} g の水を温める。発生した熱がすべて水に与えられるとすると、水の温度を {dT} K 上げるのに何 s かかるか。水の比熱を 4.2 J/(g·K) とする。",
                     tt, f"{m}*Rational(42,10)*{dT}/({V}**2/{P(R)})", "$\\dfrac{V^2}{R}t=mc\\Delta T$。", "s", d=3, n=2,
                     ap="必要な熱量を求め、電熱線の消費電力（1秒あたりの発熱量）で割る。",
                     steps=[f"必要な熱量 $Q={m}\\times4.2\\times{dT}={t(m * Q('4.2') * dT)}\\,\\mathrm{{J}}$。", f"消費電力 $P=\\dfrac{{{V}^2}}{{{Rs}}}={t(Pw)}\\,\\mathrm{{W}}$。",
@@ -751,6 +758,11 @@ def derive_c(r):
                 chk=("expand((p/v)**2*r)", "p**2*r/v**2", "expand", "intermediate"))
 
 
+def c1(x):
+    """cm の測定値（小数第1位まで）。"""
+    return f"{float(x):.1f}"
+
+
 RESON = [(500, 17), (425, 20), (850, 10), (680, sp.Rational(25, 2))]
 
 
@@ -763,15 +775,15 @@ def resonance_c(r):
     lam_cm = 2 * (L2 - L1)
     V = f * lam_cm / 100
     tc = (V - Q("331.5")) / Q("0.6")
-    tbl = table([["1回目の共鳴", f"{dec(L1)} cm"], ["2回目の共鳴", f"{dec(L2)} cm"]], header=["共鳴の順", "管口から水面までの距離"], caption=f"おんさの振動数 {f} Hz")
-    return desc(f"水を入れたガラス管の管口に振動数 {f} Hz のおんさを近づけ、水面を下げていったところ、表の位置で共鳴が起こった。"
+    tbl = table([["1回目の共鳴", f"{c1(L1)} cm"], ["2回目の共鳴", f"{c1(L2)} cm"]], header=["共鳴の順", "管口から水面までの距離"], caption=f"おんさの振動数 {f} Hz")
+    return desc(f"水を入れたガラス管の管口に振動数 {f} Hz のおんさを近づけ、水面を下げていったところ、表の位置（管口から {c1(L1)} cm と {c1(L2)} cm）で共鳴が起こった。"
                 "（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
-                f"（1）$\\lambda=2(L_2-L_1)={dec(lam_cm)}\\,\\mathrm{{cm}}={dec(lam_cm / 100)}\\,\\mathrm{{m}}$　（2）$V={dec(V)}\\,\\mathrm{{m/s}}$、$t\\fallingdotseq{round(float(tc))}\\,\\mathrm{{℃}}$　（3）$\\dfrac{{\\lambda}}{{4}}-L_1={dec(dlt)}\\,\\mathrm{{cm}}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。",
+                f"（1）$\\lambda=2(L_2-L_1)={c1(lam_cm)}\\,\\mathrm{{cm}}={t(lam_cm / 100, 3)}\\,\\mathrm{{m}}$　（2）$V={dec(V)}\\,\\mathrm{{m/s}}$、$t\\fallingdotseq{round(float(tc))}\\,\\mathrm{{℃}}$　（3）$\\dfrac{{\\lambda}}{{4}}-L_1={c1(dlt)}\\,\\mathrm{{cm}}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。",
                 "隣り合う共鳴位置の差は半波長。1回目の共鳴では（補正を含めた長さ）＝$\\dfrac{\\lambda}{4}$。",
                 [("（1）差が半波長であることを用いて波長を求めている", 2), ("（2）音速と気温を正しく求めている", 2), ("（3）開口端補正を求めている", 2), ("（4）差をとると補正が消えることを説明している", 2)], d=4, p=8, lines=10, tbl=tbl,
                 ap="水面は節（閉口端）。1回目は $\\dfrac{\\lambda}{4}$、2回目は $\\dfrac{3\\lambda}{4}$ に、どちらも同じ開口端補正 $\\Delta$ が加わる。",
-                steps=[f"（1）$L_2-L_1={dec(L2 - L1)}\\,\\mathrm{{cm}}=\\dfrac{{\\lambda}}{{2}}$ より $\\lambda={dec(lam_cm)}\\,\\mathrm{{cm}}$。", f"（2）$V=f\\lambda={f}\\times{dec(lam_cm / 100)}={dec(V)}\\,\\mathrm{{m/s}}$、$t=\\dfrac{{{dec(V)}-331.5}}{{0.6}}\\fallingdotseq{round(float(tc))}$。",
-                       f"（3）$L_1+\\Delta=\\dfrac{{\\lambda}}{{4}}={dec(lam_cm / 4)}\\,\\mathrm{{cm}}$ より $\\Delta={dec(dlt)}\\,\\mathrm{{cm}}$。", "（4）$L_2-L_1=(\\tfrac34\\lambda-\\Delta)-(\\tfrac14\\lambda-\\Delta)=\\dfrac{\\lambda}{2}$。"],
+                steps=[f"（1）$L_2-L_1={c1(L2 - L1)}\\,\\mathrm{{cm}}=\\dfrac{{\\lambda}}{{2}}$ より $\\lambda={c1(lam_cm)}\\,\\mathrm{{cm}}$。", f"（2）$V=f\\lambda={f}\\times{t(lam_cm / 100, 3)}={dec(V)}\\,\\mathrm{{m/s}}$、$t=\\dfrac{{{dec(V)}-331.5}}{{0.6}}\\fallingdotseq{round(float(tc))}$。",
+                       f"（3）$L_1+\\Delta=\\dfrac{{\\lambda}}{{4}}={c1(lam_cm / 4)}\\,\\mathrm{{cm}}$ より $\\Delta={c1(dlt)}\\,\\mathrm{{cm}}$。", "（4）$L_2-L_1=(\\tfrac34\\lambda-\\Delta)-(\\tfrac14\\lambda-\\Delta)=\\dfrac{\\lambda}{2}$。"],
                 alt=[f"（3）は2回目の共鳴を使い $\\Delta=\\dfrac{{3\\lambda}}{{4}}-L_2$ としても同じ値になる（別の確かめ方）。"],
                 pc=[("（1）", 2), ("（2）", 2), ("（3）", 2), ("（4）", 2)], pit=["1回目の位置を4倍して波長とする。", "差 $L_2-L_1$ を1波長とする。"],
                 chk=(f"{f}*2*({P(L2)}-{P(L1)})/100", str(V), None, "intermediate"))
@@ -779,12 +791,15 @@ def resonance_c(r):
 
 @gen("thinking_writing", 2, ["cross_unit", "written_reasoning", "application"], rel=["HS-PHYB-U02"])
 def heater_c(r):
-    Rs, V = r.choice([("20", 100), ("25", 100), ("50", 100), ("10", 100)])
-    R = Q(Rs)
-    Pw = sp.Integer(V) ** 2 / R
-    m = r.choice([200, 300, 500])
-    tt = r.choice([120, 180, 240, 300])
-    dT_ideal = Pw * tt / (m * Q("4.2"))
+    while True:
+        Rs, V = r.choice([("20", 100), ("25", 100), ("50", 100), ("10", 100), ("100", 100)])
+        R = Q(Rs)
+        Pw = sp.Integer(V) ** 2 / R
+        m = r.choice([200, 300, 500, 1000])
+        tt = r.choice([60, 120, 180, 240, 300])
+        dT_ideal = Pw * tt / (m * Q("4.2"))
+        if 5 <= dT_ideal <= 50:
+            break
     eff = r.choice([sp.Rational(8, 10), sp.Rational(75, 100), sp.Rational(9, 10)])
     dT_real = dT_ideal * eff
     return desc(f"抵抗 {Rs} Ω の電熱線に {V} V の電圧を加え、断熱が不十分な容器に入れた質量 {m} g の水を {tt} s 間温めたところ、水温は ${sig(dT_real, 2)}\\,\\mathrm{{K}}$ 上昇した。水の比熱を 4.2 J/(g·K) とする。"

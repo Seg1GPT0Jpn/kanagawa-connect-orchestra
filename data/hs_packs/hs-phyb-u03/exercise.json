@@ -244,9 +244,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "numeric",
-      "stem": "速さ 20 m/s で伝わる波の振動数が 850 Hz であるとき、波長は何 m か。有効数字2桁で答えなさい。",
+      "stem": "速さ 20 m/s で伝わる波の振動数が 4.0 Hz であるとき、波長は何 m か。",
       "answer": {
-        "value": "0.024",
+        "value": "5.0",
         "unit": "m"
       },
       "explanation": "$\\lambda=\\dfrac{v}{f}$。",
@@ -259,9 +259,8 @@
         "score": 1
       },
       "calc_check": {
-        "expression": "(20)/(850)",
-        "expected": "2/85",
-        "target": "intermediate"
+        "expression": "(20)/(4)",
+        "expected": "5"
       },
       "exercise_level": "basic_check",
       "perspectives": [
@@ -271,8 +270,8 @@
       "explanation_detail": {
         "approach": "$v=f\\lambda$ を $\\lambda$ について解く。",
         "steps": [
-          "$\\lambda=\\dfrac{v}{f}=\\dfrac{20}{850}$。",
-          "$\\lambda=0.024\\,\\mathrm{m}$。"
+          "$\\lambda=\\dfrac{v}{f}=\\dfrac{20}{4.0}$。",
+          "$\\lambda=5.0\\,\\mathrm{m}$。"
         ],
         "alternatives": [
           "求めた波長に振動数をかけて速さに戻ることを確かめる。"
@@ -482,7 +481,7 @@
       "question_type": "numeric",
       "stem": "振動数 512 Hz のおんさと 517 Hz のおんさを同時に鳴らした。1秒間に聞こえるうなりの回数は何回か。",
       "answer": {
-        "value": "5.0",
+        "value": "5",
         "unit": "回"
       },
       "explanation": "うなりの回数 $f=|f_1-f_2|$。",
@@ -1709,23 +1708,23 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "numeric",
-      "stem": "長さ 0.80 m の弦の両端を固定し、腹が 3 つの振動をさせたところ、振動数は 3.4\\times10^{2} Hz であった。弦を伝わる波の速さは何 m/s か。",
+      "stem": "長さ 0.50 m の弦の両端を固定し、腹が 3 つの振動をさせた。弦を伝わる波の速さが 120 m/s のとき、振動数は何 Hz か。",
       "answer": {
-        "value": "180",
-        "unit": "m/s"
+        "value": "360",
+        "unit": "Hz"
       },
-      "explanation": "$\\lambda=\\dfrac{2L}{n}$、$v=f\\lambda$。",
+      "explanation": "$L=n\\cdot\\dfrac{\\lambda}{2}$、$f=\\dfrac{v}{\\lambda}$。",
       "scoring": {
         "points": 4,
         "method": "exact"
       },
       "difficulty": {
-        "level": "standard",
-        "score": 3
+        "level": "basic",
+        "score": 2
       },
       "calc_check": {
-        "expression": "(675/2)*2*(4/5)/3",
-        "expected": "180"
+        "expression": "(120)*3/(2*(1/2))",
+        "expected": "360"
       },
       "exercise_level": "standard_practice",
       "perspectives": [
@@ -1734,26 +1733,26 @@
       ],
       "variant_group": "HS-PHYB-U03-string_res",
       "explanation_detail": {
-        "approach": "波長を弦の長さから求め、$v=f\\lambda$ を使う。",
+        "approach": "両端が節。腹の数だけ半波長が弦に入る。図を描いて波長を求める。",
         "steps": [
-          "$\\lambda=\\dfrac{2\\times0.80}{3}=0.53\\,\\mathrm{m}$。",
-          "$v=3.4\\times10^{2}\\times0.53=180\\,\\mathrm{m/s}$。"
+          "$0.50=3\\times\\dfrac{\\lambda}{2}$ より $\\lambda=0.33\\,\\mathrm{m}$。",
+          "$f=\\dfrac{v}{\\lambda}=\\dfrac{120}{0.33}=360\\,\\mathrm{Hz}$。"
         ],
         "alternatives": [
-          "同じ弦の基本振動の振動数を先に求め、$v=2Lf_1$ を使ってもよい。"
+          "公式 $f_n=\\dfrac{nv}{2L}$ に直接代入しても同じ。"
         ],
         "partial_credit": [
           {
-            "point": "波長を求めている",
+            "point": "弦の長さと波長の関係を正しく立てている",
             "points": 2
           },
           {
-            "point": "速さが正しい",
+            "point": "振動数が正しい",
             "points": 2
           }
         ],
         "pitfalls": [
-          "振動数と弦の長さを直接かける。"
+          "$\\lambda=\\dfrac{L}{n}$ とする。"
         ]
       },
       "verification": {
@@ -2407,9 +2406,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "numeric",
-      "stem": "3.0 Ω の抵抗 $R_1$ に、6.0 Ω の抵抗 $R_2$ と 3.0 Ω の抵抗 $R_3$ を並列につないだものを直列に接続し、全体に 9.0 V の電圧を加えた。$R_1$ で消費される電力は何 W か。",
+      "stem": "3.0 Ω の抵抗 $R_1$ に、6.0 Ω の抵抗 $R_2$ と 3.0 Ω の抵抗 $R_3$ を並列につないだものを直列に接続し、全体に 9.0 V の電圧を加えた。$R_1$ で消費される電力は何 W か。有効数字2桁で答えなさい。",
       "answer": {
-        "value": "9.72",
+        "value": "9.7",
         "unit": "W"
       },
       "explanation": "$P=I^2R$。",
@@ -2423,7 +2422,8 @@
       },
       "calc_check": {
         "expression": "((9)/((3)+(2)))**2*(3)",
-        "expected": "243/25"
+        "expected": "243/25",
+        "target": "intermediate"
       },
       "exercise_level": "standard_practice",
       "perspectives": [
@@ -2723,9 +2723,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "numeric",
-      "stem": "2.0 Ω の電熱線に 6 V の電圧を加え、質量 200 g の水を 180 s 間温めた。電熱線で発生した熱がすべて水に与えられたとすると、水の温度は何 K 上昇するか。水の比熱を 4.2 J/(g·K) とする。有効数字2桁で答えなさい。",
+      "stem": "2.0 Ω の電熱線に 6.0 V の電圧を加え、質量 300 g の水を 180 s 間温めた。電熱線で発生した熱がすべて水に与えられたとすると、水の温度は何 K 上昇するか。水の比熱を 4.2 J/(g·K) とする。有効数字2桁で答えなさい。",
       "answer": {
-        "value": "3.9",
+        "value": "2.6",
         "unit": "K"
       },
       "explanation": "ジュール熱 $\\dfrac{V^2}{R}t$ ＝ 水が得た熱量 $mc\\Delta T$。",
@@ -2738,8 +2738,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "6**2/(2)*180/(200*Rational(42,10))",
-        "expected": "27/7",
+        "expression": "6**2/(2)*180/(300*Rational(42,10))",
+        "expected": "18/7",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -2756,7 +2756,7 @@
         "steps": [
           "消費電力 $P=\\dfrac{6^2}{2.0}=18\\,\\mathrm{W}$。",
           "発熱量 $Q=Pt=18\\times180=3.2\\times10^{3}\\,\\mathrm{J}$。",
-          "$\\Delta T=\\dfrac{Q}{mc}=\\dfrac{3.2\\times10^{3}}{200\\times4.2}\\fallingdotseq3.9\\,\\mathrm{K}$。"
+          "$\\Delta T=\\dfrac{Q}{mc}=\\dfrac{3.2\\times10^{3}}{300\\times4.2}\\fallingdotseq2.6\\,\\mathrm{K}$。"
         ],
         "alternatives": [
           "1秒あたりの温度上昇 $\\dfrac{P}{mc}$ を求めて時間をかけてもよい。"
@@ -2805,9 +2805,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "numeric",
-      "stem": "2.0 Ω の電熱線に 6 V の電圧を加え、質量 500 g の水を 60 s 間温めた。電熱線で発生した熱がすべて水に与えられたとすると、水の温度は何 K 上昇するか。水の比熱を 4.2 J/(g·K) とする。有効数字2桁で答えなさい。",
+      "stem": "2.0 Ω の電熱線に 6.0 V の電圧を加え、質量 200 g の水を 60 s 間温めた。電熱線で発生した熱がすべて水に与えられたとすると、水の温度は何 K 上昇するか。水の比熱を 4.2 J/(g·K) とする。有効数字2桁で答えなさい。",
       "answer": {
-        "value": "0.51",
+        "value": "1.3",
         "unit": "K"
       },
       "explanation": "ジュール熱 $\\dfrac{V^2}{R}t$ ＝ 水が得た熱量 $mc\\Delta T$。",
@@ -2820,8 +2820,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "6**2/(2)*60/(500*Rational(42,10))",
-        "expected": "18/35",
+        "expression": "6**2/(2)*60/(200*Rational(42,10))",
+        "expected": "9/7",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -2838,7 +2838,7 @@
         "steps": [
           "消費電力 $P=\\dfrac{6^2}{2.0}=18\\,\\mathrm{W}$。",
           "発熱量 $Q=Pt=18\\times60=1.1\\times10^{3}\\,\\mathrm{J}$。",
-          "$\\Delta T=\\dfrac{Q}{mc}=\\dfrac{1.1\\times10^{3}}{500\\times4.2}\\fallingdotseq0.51\\,\\mathrm{K}$。"
+          "$\\Delta T=\\dfrac{Q}{mc}=\\dfrac{1.1\\times10^{3}}{200\\times4.2}\\fallingdotseq1.3\\,\\mathrm{K}$。"
         ],
         "alternatives": [
           "1秒あたりの温度上昇 $\\dfrac{P}{mc}$ を求めて時間をかけてもよい。"
@@ -3566,7 +3566,7 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "descriptive",
-      "stem": "水を入れたガラス管の管口に振動数 850 Hz のおんさを近づけ、水面を下げていったところ、表の位置で共鳴が起こった。（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
+      "stem": "水を入れたガラス管の管口に振動数 850 Hz のおんさを近づけ、水面を下げていったところ、表の位置（管口から 9.1 cm と 29.1 cm）で共鳴が起こった。（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
       "table": {
         "rows": [
           [
@@ -3585,7 +3585,7 @@
         "caption": "おんさの振動数 850 Hz"
       },
       "answer": {
-        "value": "（1）$\\lambda=2(L_2-L_1)=40\\,\\mathrm{cm}=0.4\\,\\mathrm{m}$　（2）$V=340\\,\\mathrm{m/s}$、$t\\fallingdotseq14\\,\\mathrm{℃}$　（3）$\\dfrac{\\lambda}{4}-L_1=0.9\\,\\mathrm{cm}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。"
+        "value": "（1）$\\lambda=2(L_2-L_1)=40.0\\,\\mathrm{cm}=0.400\\,\\mathrm{m}$　（2）$V=340\\,\\mathrm{m/s}$、$t\\fallingdotseq14\\,\\mathrm{℃}$　（3）$\\dfrac{\\lambda}{4}-L_1=0.9\\,\\mathrm{cm}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。"
       },
       "explanation": "隣り合う共鳴位置の差は半波長。1回目の共鳴では（補正を含めた長さ）＝$\\dfrac{\\lambda}{4}$。",
       "scoring": {
@@ -3632,9 +3632,9 @@
       "explanation_detail": {
         "approach": "水面は節（閉口端）。1回目は $\\dfrac{\\lambda}{4}$、2回目は $\\dfrac{3\\lambda}{4}$ に、どちらも同じ開口端補正 $\\Delta$ が加わる。",
         "steps": [
-          "（1）$L_2-L_1=20\\,\\mathrm{cm}=\\dfrac{\\lambda}{2}$ より $\\lambda=40\\,\\mathrm{cm}$。",
-          "（2）$V=f\\lambda=850\\times0.4=340\\,\\mathrm{m/s}$、$t=\\dfrac{340-331.5}{0.6}\\fallingdotseq14$。",
-          "（3）$L_1+\\Delta=\\dfrac{\\lambda}{4}=10\\,\\mathrm{cm}$ より $\\Delta=0.9\\,\\mathrm{cm}$。",
+          "（1）$L_2-L_1=20.0\\,\\mathrm{cm}=\\dfrac{\\lambda}{2}$ より $\\lambda=40.0\\,\\mathrm{cm}$。",
+          "（2）$V=f\\lambda=850\\times0.400=340\\,\\mathrm{m/s}$、$t=\\dfrac{340-331.5}{0.6}\\fallingdotseq14$。",
+          "（3）$L_1+\\Delta=\\dfrac{\\lambda}{4}=10.0\\,\\mathrm{cm}$ より $\\Delta=0.9\\,\\mathrm{cm}$。",
           "（4）$L_2-L_1=(\\tfrac34\\lambda-\\Delta)-(\\tfrac14\\lambda-\\Delta)=\\dfrac{\\lambda}{2}$。"
         ],
         "alternatives": [
@@ -3693,16 +3693,16 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "descriptive",
-      "stem": "水を入れたガラス管の管口に振動数 500 Hz のおんさを近づけ、水面を下げていったところ、表の位置で共鳴が起こった。（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
+      "stem": "水を入れたガラス管の管口に振動数 500 Hz のおんさを近づけ、水面を下げていったところ、表の位置（管口から 16.0 cm と 50.0 cm）で共鳴が起こった。（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
       "table": {
         "rows": [
           [
             "1回目の共鳴",
-            "16 cm"
+            "16.0 cm"
           ],
           [
             "2回目の共鳴",
-            "50 cm"
+            "50.0 cm"
           ]
         ],
         "header": [
@@ -3712,7 +3712,7 @@
         "caption": "おんさの振動数 500 Hz"
       },
       "answer": {
-        "value": "（1）$\\lambda=2(L_2-L_1)=68\\,\\mathrm{cm}=0.68\\,\\mathrm{m}$　（2）$V=340\\,\\mathrm{m/s}$、$t\\fallingdotseq14\\,\\mathrm{℃}$　（3）$\\dfrac{\\lambda}{4}-L_1=1\\,\\mathrm{cm}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。"
+        "value": "（1）$\\lambda=2(L_2-L_1)=68.0\\,\\mathrm{cm}=0.680\\,\\mathrm{m}$　（2）$V=340\\,\\mathrm{m/s}$、$t\\fallingdotseq14\\,\\mathrm{℃}$　（3）$\\dfrac{\\lambda}{4}-L_1=1.0\\,\\mathrm{cm}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。"
       },
       "explanation": "隣り合う共鳴位置の差は半波長。1回目の共鳴では（補正を含めた長さ）＝$\\dfrac{\\lambda}{4}$。",
       "scoring": {
@@ -3759,9 +3759,9 @@
       "explanation_detail": {
         "approach": "水面は節（閉口端）。1回目は $\\dfrac{\\lambda}{4}$、2回目は $\\dfrac{3\\lambda}{4}$ に、どちらも同じ開口端補正 $\\Delta$ が加わる。",
         "steps": [
-          "（1）$L_2-L_1=34\\,\\mathrm{cm}=\\dfrac{\\lambda}{2}$ より $\\lambda=68\\,\\mathrm{cm}$。",
-          "（2）$V=f\\lambda=500\\times0.68=340\\,\\mathrm{m/s}$、$t=\\dfrac{340-331.5}{0.6}\\fallingdotseq14$。",
-          "（3）$L_1+\\Delta=\\dfrac{\\lambda}{4}=17\\,\\mathrm{cm}$ より $\\Delta=1\\,\\mathrm{cm}$。",
+          "（1）$L_2-L_1=34.0\\,\\mathrm{cm}=\\dfrac{\\lambda}{2}$ より $\\lambda=68.0\\,\\mathrm{cm}$。",
+          "（2）$V=f\\lambda=500\\times0.680=340\\,\\mathrm{m/s}$、$t=\\dfrac{340-331.5}{0.6}\\fallingdotseq14$。",
+          "（3）$L_1+\\Delta=\\dfrac{\\lambda}{4}=17.0\\,\\mathrm{cm}$ より $\\Delta=1.0\\,\\mathrm{cm}$。",
           "（4）$L_2-L_1=(\\tfrac34\\lambda-\\Delta)-(\\tfrac14\\lambda-\\Delta)=\\dfrac{\\lambda}{2}$。"
         ],
         "alternatives": [
@@ -3820,7 +3820,7 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "descriptive",
-      "stem": "水を入れたガラス管の管口に振動数 680 Hz のおんさを近づけ、水面を下げていったところ、表の位置で共鳴が起こった。（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
+      "stem": "水を入れたガラス管の管口に振動数 680 Hz のおんさを近づけ、水面を下げていったところ、表の位置（管口から 11.5 cm と 36.5 cm）で共鳴が起こった。（1）音の波長を求めなさい。（2）音の速さを求め、$V=331.5+0.6t$ を用いて気温 $t$〔℃〕を整数で推定しなさい。（3）開口端補正を求めなさい。（4）1回目の共鳴位置だけから $\\lambda=4L_1$ として波長を求める方法と比べ、2つの共鳴位置の差を使う方法の利点を説明しなさい。",
       "table": {
         "rows": [
           [
@@ -3839,7 +3839,7 @@
         "caption": "おんさの振動数 680 Hz"
       },
       "answer": {
-        "value": "（1）$\\lambda=2(L_2-L_1)=50\\,\\mathrm{cm}=0.5\\,\\mathrm{m}$　（2）$V=340\\,\\mathrm{m/s}$、$t\\fallingdotseq14\\,\\mathrm{℃}$　（3）$\\dfrac{\\lambda}{4}-L_1=1\\,\\mathrm{cm}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。"
+        "value": "（1）$\\lambda=2(L_2-L_1)=50.0\\,\\mathrm{cm}=0.500\\,\\mathrm{m}$　（2）$V=340\\,\\mathrm{m/s}$、$t\\fallingdotseq14\\,\\mathrm{℃}$　（3）$\\dfrac{\\lambda}{4}-L_1=1.0\\,\\mathrm{cm}$　（4）実際の腹は管口より少し外側にあり（開口端補正）、$4L_1$ では波長が小さく求まる。差 $L_2-L_1$ をとると補正が打ち消され、正確な半波長が得られる。"
       },
       "explanation": "隣り合う共鳴位置の差は半波長。1回目の共鳴では（補正を含めた長さ）＝$\\dfrac{\\lambda}{4}$。",
       "scoring": {
@@ -3886,9 +3886,9 @@
       "explanation_detail": {
         "approach": "水面は節（閉口端）。1回目は $\\dfrac{\\lambda}{4}$、2回目は $\\dfrac{3\\lambda}{4}$ に、どちらも同じ開口端補正 $\\Delta$ が加わる。",
         "steps": [
-          "（1）$L_2-L_1=25\\,\\mathrm{cm}=\\dfrac{\\lambda}{2}$ より $\\lambda=50\\,\\mathrm{cm}$。",
-          "（2）$V=f\\lambda=680\\times0.5=340\\,\\mathrm{m/s}$、$t=\\dfrac{340-331.5}{0.6}\\fallingdotseq14$。",
-          "（3）$L_1+\\Delta=\\dfrac{\\lambda}{4}=12.5\\,\\mathrm{cm}$ より $\\Delta=1\\,\\mathrm{cm}$。",
+          "（1）$L_2-L_1=25.0\\,\\mathrm{cm}=\\dfrac{\\lambda}{2}$ より $\\lambda=50.0\\,\\mathrm{cm}$。",
+          "（2）$V=f\\lambda=680\\times0.500=340\\,\\mathrm{m/s}$、$t=\\dfrac{340-331.5}{0.6}\\fallingdotseq14$。",
+          "（3）$L_1+\\Delta=\\dfrac{\\lambda}{4}=12.5\\,\\mathrm{cm}$ より $\\Delta=1.0\\,\\mathrm{cm}$。",
           "（4）$L_2-L_1=(\\tfrac34\\lambda-\\Delta)-(\\tfrac14\\lambda-\\Delta)=\\dfrac{\\lambda}{2}$。"
         ],
         "alternatives": [
@@ -3947,9 +3947,9 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "descriptive",
-      "stem": "抵抗 50 Ω の電熱線に 100 V の電圧を加え、断熱が不十分な容器に入れた質量 500 g の水を 120 s 間温めたところ、水温は $9.1\\,\\mathrm{K}$ 上昇した。水の比熱を 4.2 J/(g·K) とする。（1）電熱線で発生したジュール熱を求めなさい。（2）水が得た熱量を求め、発生したジュール熱の何 % が水の温度上昇に使われたかを求めなさい。（3）残りのエネルギーはどこへ行ったと考えられるか。エネルギー保存の観点から説明しなさい。",
+      "stem": "抵抗 25 Ω の電熱線に 100 V の電圧を加え、断熱が不十分な容器に入れた質量 300 g の水を 120 s 間温めたところ、水温は $30\\,\\mathrm{K}$ 上昇した。水の比熱を 4.2 J/(g·K) とする。（1）電熱線で発生したジュール熱を求めなさい。（2）水が得た熱量を求め、発生したジュール熱の何 % が水の温度上昇に使われたかを求めなさい。（3）残りのエネルギーはどこへ行ったと考えられるか。エネルギー保存の観点から説明しなさい。",
       "answer": {
-        "value": "（1）$Q=\\dfrac{V^2}{R}t=2.4\\times10^{4}\\,\\mathrm{J}$　（2）$mc\\Delta T\\fallingdotseq1.9\\times10^{4}\\,\\mathrm{J}$、約 80 %　（3）容器の温度上昇や、容器・水面から周囲の空気へ逃げた熱となった。エネルギーは失われたのではなく、水以外の物体の内部エネルギーに移った。"
+        "value": "（1）$Q=\\dfrac{V^2}{R}t=4.8\\times10^{4}\\,\\mathrm{J}$　（2）$mc\\Delta T\\fallingdotseq3.8\\times10^{4}\\,\\mathrm{J}$、約 80 %　（3）容器の温度上昇や、容器・水面から周囲の空気へ逃げた熱となった。エネルギーは失われたのではなく、水以外の物体の内部エネルギーに移った。"
       },
       "explanation": "電気エネルギー → ジュール熱 → 水・容器・周囲の内部エネルギー、とエネルギーの行き先を追う。",
       "scoring": {
@@ -3978,8 +3978,8 @@
         "lines": 10
       },
       "calc_check": {
-        "expression": "100**2/(50)*120",
-        "expected": "24000",
+        "expression": "100**2/(25)*120",
+        "expected": "48000",
         "target": "intermediate"
       },
       "exercise_level": "thinking_writing",
@@ -3995,8 +3995,8 @@
       "explanation_detail": {
         "approach": "電熱線の発熱はすべて水に行くとは限らない。前単元の熱量の保存と組み合わせて収支を考える。",
         "steps": [
-          "（1）$P=\\dfrac{100^2}{50}=200\\,\\mathrm{W}$、$Q=Pt=2.4\\times10^{4}\\,\\mathrm{J}$。",
-          "（2）$Q_{\\text{水}}=500\\times4.2\\times9.1$、割合 $\\dfrac{Q_{\\text{水}}}{Q}\\times100$。",
+          "（1）$P=\\dfrac{100^2}{25}=400\\,\\mathrm{W}$、$Q=Pt=4.8\\times10^{4}\\,\\mathrm{J}$。",
+          "（2）$Q_{\\text{水}}=300\\times4.2\\times30$、割合 $\\dfrac{Q_{\\text{水}}}{Q}\\times100$。",
           "（3）容器・空気への熱の移動を考える。"
         ],
         "alternatives": [
@@ -4050,9 +4050,9 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "descriptive",
-      "stem": "抵抗 20 Ω の電熱線に 100 V の電圧を加え、断熱が不十分な容器に入れた質量 500 g の水を 240 s 間温めたところ、水温は $43\\,\\mathrm{K}$ 上昇した。水の比熱を 4.2 J/(g·K) とする。（1）電熱線で発生したジュール熱を求めなさい。（2）水が得た熱量を求め、発生したジュール熱の何 % が水の温度上昇に使われたかを求めなさい。（3）残りのエネルギーはどこへ行ったと考えられるか。エネルギー保存の観点から説明しなさい。",
+      "stem": "抵抗 100 Ω の電熱線に 100 V の電圧を加え、断熱が不十分な容器に入れた質量 300 g の水を 180 s 間温めたところ、水温は $13\\,\\mathrm{K}$ 上昇した。水の比熱を 4.2 J/(g·K) とする。（1）電熱線で発生したジュール熱を求めなさい。（2）水が得た熱量を求め、発生したジュール熱の何 % が水の温度上昇に使われたかを求めなさい。（3）残りのエネルギーはどこへ行ったと考えられるか。エネルギー保存の観点から説明しなさい。",
       "answer": {
-        "value": "（1）$Q=\\dfrac{V^2}{R}t=1.2\\times10^{5}\\,\\mathrm{J}$　（2）$mc\\Delta T\\fallingdotseq9.0\\times10^{4}\\,\\mathrm{J}$、約 75 %　（3）容器の温度上昇や、容器・水面から周囲の空気へ逃げた熱となった。エネルギーは失われたのではなく、水以外の物体の内部エネルギーに移った。"
+        "value": "（1）$Q=\\dfrac{V^2}{R}t=1.8\\times10^{4}\\,\\mathrm{J}$　（2）$mc\\Delta T\\fallingdotseq1.6\\times10^{4}\\,\\mathrm{J}$、約 90 %　（3）容器の温度上昇や、容器・水面から周囲の空気へ逃げた熱となった。エネルギーは失われたのではなく、水以外の物体の内部エネルギーに移った。"
       },
       "explanation": "電気エネルギー → ジュール熱 → 水・容器・周囲の内部エネルギー、とエネルギーの行き先を追う。",
       "scoring": {
@@ -4081,8 +4081,8 @@
         "lines": 10
       },
       "calc_check": {
-        "expression": "100**2/(20)*240",
-        "expected": "120000",
+        "expression": "100**2/(100)*180",
+        "expected": "18000",
         "target": "intermediate"
       },
       "exercise_level": "thinking_writing",
@@ -4098,8 +4098,8 @@
       "explanation_detail": {
         "approach": "電熱線の発熱はすべて水に行くとは限らない。前単元の熱量の保存と組み合わせて収支を考える。",
         "steps": [
-          "（1）$P=\\dfrac{100^2}{20}=500\\,\\mathrm{W}$、$Q=Pt=1.2\\times10^{5}\\,\\mathrm{J}$。",
-          "（2）$Q_{\\text{水}}=500\\times4.2\\times43$、割合 $\\dfrac{Q_{\\text{水}}}{Q}\\times100$。",
+          "（1）$P=\\dfrac{100^2}{100}=100\\,\\mathrm{W}$、$Q=Pt=1.8\\times10^{4}\\,\\mathrm{J}$。",
+          "（2）$Q_{\\text{水}}=300\\times4.2\\times13$、割合 $\\dfrac{Q_{\\text{水}}}{Q}\\times100$。",
           "（3）容器・空気への熱の移動を考える。"
         ],
         "alternatives": [
@@ -5426,6 +5426,28 @@
       "author": "generate_highschool_unit.py",
       "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "c6e79ba8dcbcc08725e3aeb8ba1314f4a7234b08145262d1ee03f3e1704620c0"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 9 問（Q003, Q006, Q021, Q030, Q034, Q035, Q044, Q045, Q046）",
+      "content_hash": "abb064e9319d191d448ae85bec210c9382b781c146c96c4b44ce5d7d61e8525c"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 7 問（Q034, Q035, Q044, Q045, Q046, Q047, Q048）",
+      "content_hash": "8cd11cd3ed117ddd82f6a3e12f8f4c7d6df5a96089e24ce46eefefe136866a6d"
     }
-  ]
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:52:43+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "2aca76f270e36f97f47bfae67a847116b662866b03625a81590083f9b12b5b63"
+  }
 }
