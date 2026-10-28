@@ -1,0 +1,5663 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "SS-MATH-U01-EX",
+  "title": "数学　証明問題　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "SS-MATH-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "SS-MATH-U01-PACK",
+  "pair_set_id": "SS-MATH-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATHA-U03",
+        "point": "余りによる整数の分類・素因数分解の一意性・倍数の判定",
+        "title": "数学と人間の活動　整数"
+      },
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "数学的帰納法の仕組みと、和の記号 $\\Sigma$ を用いた和の公式",
+        "title": "数列"
+      },
+      {
+        "unit_id": "HS-MATH2-U01",
+        "point": "等式・不等式の証明（差をとる・平方完成・相加平均と相乗平均の関係）",
+        "title": "式と証明"
+      },
+      {
+        "unit_id": "HS-MATH1-U02",
+        "point": "命題の否定・対偶・背理法の論理",
+        "title": "集合と命題"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "SS-MATH-U02",
+        "point": "証明で身につけた「場合を尽くす」「条件を確かめる」答案の書き方を、記述式の計算問題の答案作成に生かす",
+        "title": "数学　記述式計算問題"
+      },
+      {
+        "unit_id": "HS-MATH3-U01",
+        "point": "不等式による評価（はさみうち）や帰納的に定められた数列の極限の議論へ発展する",
+        "title": "極限"
+      },
+      {
+        "unit_id": "HS-MATH2-U05",
+        "point": "背理法による $\\log_2 3$ などの無理数性の証明を、対数の大小比較・評価に生かす",
+        "title": "指数関数・対数関数"
+      }
+    ],
+    "readiness_check": [
+      "整数を $3k,\\ 3k+1,\\ 3k+2$ のように余りで分類して表せる（数学A 整数）。",
+      "数学的帰納法の2つの段階を説明できる（数学B 数列）。",
+      "$A-B\\geqq0$ を示して $A\\geqq B$ を導く不等式の証明ができる（数学Ⅱ 式と証明）。",
+      "命題の否定・対偶をつくれる（数学Ⅰ 集合と命題）。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "SS-MATH-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "整数 $n$ について、$n^3$ を $7$ で割った余りとして現れる値をすべて求めなさい。（立方数の余りは、整数の証明問題で法を選ぶときの基本資料になる。）",
+      "answer": {
+        "value": "$0,\\ 1,\\ 6$",
+        "accepted": [
+          "0, 1, 6"
+        ]
+      },
+      "explanation": "$n$ を $7$ で割った余り $r=0,\\ 1,\\ \\cdots,\\ 6$ で分類すると、$n^3\\equiv r^3\\pmod{7}$ なので、$r^3$ を $7$ で割った余りを調べればよい。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "{Mod(0**3, 7), Mod(1**3, 7), Mod(2**3, 7), Mod(3**3, 7), Mod(4**3, 7), Mod(5**3, 7), Mod(6**3, 7)}",
+        "expected": "[0, 1, 6]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_mod_power",
+      "explanation_detail": {
+        "approach": "$n=7k+r$ とおくと、$n^3$ を展開したとき $7$ の倍数でない部分は $r^3$ だけ。余り $r$ の $7$ 通りを調べれば、すべての整数を調べたことになる。",
+        "steps": [
+          "$r=0,\\ 1,\\ \\cdots,\\ 6$ について $r^3$ を $7$ で割った余りを計算する。",
+          "$r=0$：$0$、$r=1$：$1$、$r=2$：$1$、$r=3$：$6$、$r=4$：$1$、$r=5$：$6$、$r=6$：$6$。",
+          "現れる値は $0,\\ 1,\\ 6$（$2,\\ 3,\\ 4,\\ 5$ は現れない）。"
+        ],
+        "alternatives": [
+          "$r$ と $7-r$ は $(-r)^3$ の関係にあるので、立方では符号が逆の余りになる。半分の $r$ を調べるだけで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りで分類して $r^{3}$ を調べている",
+            "points": 1
+          },
+          {
+            "point": "現れる値をもれなく正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n=1,\\ 2,\\ 3$ など一部の値だけを調べ、現れる余りを見落とす。",
+          "$r^3$ の値そのもの（$7$ 以上の数）を余りと答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "整数 $n$ について、$n^2$ を $6$ で割った余りとして現れる値をすべて求めなさい。（平方数の余りは、整数の証明問題で法を選ぶときの基本資料になる。）",
+      "answer": {
+        "value": "$0,\\ 1,\\ 3,\\ 4$",
+        "accepted": [
+          "0, 1, 3, 4"
+        ]
+      },
+      "explanation": "$n$ を $6$ で割った余り $r=0,\\ 1,\\ \\cdots,\\ 5$ で分類すると、$n^2\\equiv r^2\\pmod{6}$ なので、$r^2$ を $6$ で割った余りを調べればよい。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "{Mod(0**2, 6), Mod(1**2, 6), Mod(2**2, 6), Mod(3**2, 6), Mod(4**2, 6), Mod(5**2, 6)}",
+        "expected": "[0, 1, 3, 4]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_mod_power",
+      "explanation_detail": {
+        "approach": "$n=6k+r$ とおくと、$n^2$ を展開したとき $6$ の倍数でない部分は $r^2$ だけ。余り $r$ の $6$ 通りを調べれば、すべての整数を調べたことになる。",
+        "steps": [
+          "$r=0,\\ 1,\\ \\cdots,\\ 5$ について $r^2$ を $6$ で割った余りを計算する。",
+          "$r=0$：$0$、$r=1$：$1$、$r=2$：$4$、$r=3$：$3$、$r=4$：$4$、$r=5$：$1$。",
+          "現れる値は $0,\\ 1,\\ 3,\\ 4$（$2,\\ 5$ は現れない）。"
+        ],
+        "alternatives": [
+          "$r$ と $6-r$ は $(-r)^2$ の関係にあるので、平方では同じ余りになる。半分の $r$ を調べるだけで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りで分類して $r^{2}$ を調べている",
+            "points": 1
+          },
+          {
+            "point": "現れる値をもれなく正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n=1,\\ 2,\\ 3$ など一部の値だけを調べ、現れる余りを見落とす。",
+          "$r^2$ の値そのもの（$6$ 以上の数）を余りと答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "整数 $n$ について、$n^3$ を $12$ で割った余りとして現れる値をすべて求めなさい。（立方数の余りは、整数の証明問題で法を選ぶときの基本資料になる。）",
+      "answer": {
+        "value": "$0,\\ 1,\\ 3,\\ 4,\\ 5,\\ 7,\\ 8,\\ 9,\\ 11$",
+        "accepted": [
+          "0, 1, 3, 4, 5, 7, 8, 9, 11"
+        ]
+      },
+      "explanation": "$n$ を $12$ で割った余り $r=0,\\ 1,\\ \\cdots,\\ 11$ で分類すると、$n^3\\equiv r^3\\pmod{12}$ なので、$r^3$ を $12$ で割った余りを調べればよい。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "{Mod(0**3, 12), Mod(1**3, 12), Mod(2**3, 12), Mod(3**3, 12), Mod(4**3, 12), Mod(5**3, 12), Mod(6**3, 12), Mod(7**3, 12), Mod(8**3, 12), Mod(9**3, 12), Mod(10**3, 12), Mod(11**3, 12)}",
+        "expected": "[0, 1, 3, 4, 5, 7, 8, 9, 11]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_mod_power",
+      "explanation_detail": {
+        "approach": "$n=12k+r$ とおくと、$n^3$ を展開したとき $12$ の倍数でない部分は $r^3$ だけ。余り $r$ の $12$ 通りを調べれば、すべての整数を調べたことになる。",
+        "steps": [
+          "$r=0,\\ 1,\\ \\cdots,\\ 11$ について $r^3$ を $12$ で割った余りを計算する。",
+          "$r=0$：$0$、$r=1$：$1$、$r=2$：$8$、$r=3$：$3$、$r=4$：$4$、$r=5$：$5$、$r=6$：$0$、$r=7$：$7$、$r=8$：$8$、$r=9$：$9$、$r=10$：$4$、$r=11$：$11$。",
+          "現れる値は $0,\\ 1,\\ 3,\\ 4,\\ 5,\\ 7,\\ 8,\\ 9,\\ 11$（$2,\\ 6,\\ 10$ は現れない）。"
+        ],
+        "alternatives": [
+          "$r$ と $12-r$ は $(-r)^3$ の関係にあるので、立方では符号が逆の余りになる。半分の $r$ を調べるだけで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りで分類して $r^{3}$ を調べている",
+            "points": 1
+          },
+          {
+            "point": "現れる値をもれなく正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n=1,\\ 2,\\ 3$ など一部の値だけを調べ、現れる余りを見落とす。",
+          "$r^3$ の値そのもの（$12$ 以上の数）を余りと答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "整数 $n$ について、$n^2$ を $13$ で割った余りとして現れる値をすべて求めなさい。（平方数の余りは、整数の証明問題で法を選ぶときの基本資料になる。）",
+      "answer": {
+        "value": "$0,\\ 1,\\ 3,\\ 4,\\ 9,\\ 10,\\ 12$",
+        "accepted": [
+          "0, 1, 3, 4, 9, 10, 12"
+        ]
+      },
+      "explanation": "$n$ を $13$ で割った余り $r=0,\\ 1,\\ \\cdots,\\ 12$ で分類すると、$n^2\\equiv r^2\\pmod{13}$ なので、$r^2$ を $13$ で割った余りを調べればよい。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "{Mod(0**2, 13), Mod(1**2, 13), Mod(2**2, 13), Mod(3**2, 13), Mod(4**2, 13), Mod(5**2, 13), Mod(6**2, 13), Mod(7**2, 13), Mod(8**2, 13), Mod(9**2, 13), Mod(10**2, 13), Mod(11**2, 13), Mod(12**2, 13)}",
+        "expected": "[0, 1, 3, 4, 9, 10, 12]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_mod_power",
+      "explanation_detail": {
+        "approach": "$n=13k+r$ とおくと、$n^2$ を展開したとき $13$ の倍数でない部分は $r^2$ だけ。余り $r$ の $13$ 通りを調べれば、すべての整数を調べたことになる。",
+        "steps": [
+          "$r=0,\\ 1,\\ \\cdots,\\ 12$ について $r^2$ を $13$ で割った余りを計算する。",
+          "$r=0$：$0$、$r=1$：$1$、$r=2$：$4$、$r=3$：$9$、$r=4$：$3$、$r=5$：$12$、$r=6$：$10$、$r=7$：$10$、$r=8$：$12$、$r=9$：$3$、$r=10$：$9$、$r=11$：$4$、$r=12$：$1$。",
+          "現れる値は $0,\\ 1,\\ 3,\\ 4,\\ 9,\\ 10,\\ 12$（$2,\\ 5,\\ 6,\\ 7,\\ 8,\\ 11$ は現れない）。"
+        ],
+        "alternatives": [
+          "$r$ と $13-r$ は $(-r)^2$ の関係にあるので、平方では同じ余りになる。半分の $r$ を調べるだけで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "余りで分類して $r^{2}$ を調べている",
+            "points": 1
+          },
+          {
+            "point": "現れる値をもれなく正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n=1,\\ 2,\\ 3$ など一部の値だけを調べ、現れる余りを見落とす。",
+          "$r^2$ の値そのもの（$13$ 以上の数）を余りと答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\sum_{i=1}^{n}i^3=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4}$ がすべての自然数 $n$ で成り立つことを数学的帰納法で証明する。「$n=k$ のとき成り立つ」と仮定した後、$n=k+1$ のときに示すべき等式の右辺を、$k$ の式で答えなさい。",
+      "answer": {
+        "value": "$\\frac{\\left(k + 1\\right)^{2} \\left(k + 2\\right)^{2}}{4}$",
+        "accepted": [
+          "(k + 1)**2*(k + 2)**2/4"
+        ]
+      },
+      "explanation": "示すべき等式は $\\displaystyle\\sum_{i=1}^{k+1}i^3=\\frac{\\left(k + 1\\right)^{2} \\left(k + 2\\right)^{2}}{4}$。右辺は公式の $n$ に $k+1$ を代入したもの。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(k+1)**2*((k+1)+1)**2/4",
+        "expected": "(k + 1)**2*(k + 2)**2/4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "SS-MATH-U01-a_induction_target",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k$ の等式を仮定し、$n=k+1$ の等式を目標として書き出す。目標を先に書いておくと、式変形の行き先がはっきりする。",
+        "steps": [
+          "示すべきことは「$n=k+1$ のときも公式が成り立つこと」。",
+          "公式の右辺 $\\frac{n^{2} \\left(n + 1\\right)^{2}}{4}$ の $n$ を $k+1$ に置きかえる。",
+          "右辺は $\\frac{\\left(k + 1\\right)^{2} \\left(k + 2\\right)^{2}}{4}$。"
+        ],
+        "alternatives": [
+          "$k=1$ などの具体的な値を代入して、求めた式の値が実際の和や項と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$k+1$ を正しい位置に代入している",
+            "points": 1
+          },
+          {
+            "point": "式を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n$ に $k+1$ を代入するとき、一部の $n$ だけを置きかえる。",
+          "左辺と右辺を取り違え、和の最後の項を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\sum_{i=1}^{n}i=\\frac{n \\left(n + 1\\right)}{2}$ がすべての自然数 $n$ で成り立つことを数学的帰納法で証明する。「$n=k$ のとき成り立つ」と仮定した後、$n=k$ のときの等式の両辺に加える、左辺の第 $k+1$ 項を $k$ の式で答えなさい。",
+      "answer": {
+        "value": "$k + 1$",
+        "accepted": [
+          "k + 1"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum_{i=1}^{k+1}=\\sum_{i=1}^{k}+(\\text{第}\\ k+1\\ \\text{項})$ で、第 $k+1$ 項は一般項の $i$ に $k+1$ を代入した $k + 1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(k+1)",
+        "expected": "k + 1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "SS-MATH-U01-a_induction_target",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k$ の等式を仮定し、$n=k+1$ の等式を目標として書き出す。目標を先に書いておくと、式変形の行き先がはっきりする。",
+        "steps": [
+          "$n=k+1$ の左辺は、$n=k$ の左辺に第 $k+1$ 項を加えたもの。",
+          "一般項 $i$ の $i$ に $k+1$ を代入する。",
+          "第 $k+1$ 項は $k + 1$。"
+        ],
+        "alternatives": [
+          "$k=1$ などの具体的な値を代入して、求めた式の値が実際の和や項と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$k+1$ を正しい位置に代入している",
+            "points": 1
+          },
+          {
+            "point": "式を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "第 $k+1$ 項として第 $k$ 項（$i=k$ を代入したもの）を答える。",
+          "一般項の一部にだけ $k+1$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\sum_{i=1}^{n}(3i-2)=\\frac{n \\left(3 n - 1\\right)}{2}$ がすべての自然数 $n$ で成り立つことを数学的帰納法で証明する。「$n=k$ のとき成り立つ」と仮定した後、$n=k$ のときの等式の両辺に加える、左辺の第 $k+1$ 項を $k$ の式で答えなさい。",
+      "answer": {
+        "value": "$3 k + 1$",
+        "accepted": [
+          "3*k + 1"
+        ]
+      },
+      "explanation": "$\\displaystyle\\sum_{i=1}^{k+1}=\\sum_{i=1}^{k}+(\\text{第}\\ k+1\\ \\text{項})$ で、第 $k+1$ 項は一般項の $i$ に $k+1$ を代入した $3 k + 1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3*(k+1)-2",
+        "expected": "3*k + 1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "SS-MATH-U01-a_induction_target",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k$ の等式を仮定し、$n=k+1$ の等式を目標として書き出す。目標を先に書いておくと、式変形の行き先がはっきりする。",
+        "steps": [
+          "$n=k+1$ の左辺は、$n=k$ の左辺に第 $k+1$ 項を加えたもの。",
+          "一般項 $(3i-2)$ の $i$ に $k+1$ を代入する。",
+          "第 $k+1$ 項は $3 k + 1$。"
+        ],
+        "alternatives": [
+          "$k=1$ などの具体的な値を代入して、求めた式の値が実際の和や項と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$k+1$ を正しい位置に代入している",
+            "points": 1
+          },
+          {
+            "point": "式を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "第 $k+1$ 項として第 $k$ 項（$i=k$ を代入したもの）を答える。",
+          "一般項の一部にだけ $k+1$ を代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\sum_{i=1}^{n}3^{i-1}=\\frac{3^{n} - 1}{2}$ がすべての自然数 $n$ で成り立つことを数学的帰納法で証明する。「$n=k$ のとき成り立つ」と仮定した後、$n=k+1$ のときに示すべき等式の右辺を、$k$ の式で答えなさい。",
+      "answer": {
+        "value": "$\\frac{3 \\cdot 3^{k} - 1}{2}$",
+        "accepted": [
+          "(3*3**k - 1)/2"
+        ]
+      },
+      "explanation": "示すべき等式は $\\displaystyle\\sum_{i=1}^{k+1}3^{i-1}=\\frac{3 \\cdot 3^{k} - 1}{2}$。右辺は公式の $n$ に $k+1$ を代入したもの。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(3**(k+1)-1)/2",
+        "expected": "(3*3**k - 1)/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "SS-MATH-U01-a_induction_target",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k$ の等式を仮定し、$n=k+1$ の等式を目標として書き出す。目標を先に書いておくと、式変形の行き先がはっきりする。",
+        "steps": [
+          "示すべきことは「$n=k+1$ のときも公式が成り立つこと」。",
+          "公式の右辺 $\\frac{3^{n} - 1}{2}$ の $n$ を $k+1$ に置きかえる。",
+          "右辺は $\\frac{3 \\cdot 3^{k} - 1}{2}$。"
+        ],
+        "alternatives": [
+          "$k=1$ などの具体的な値を代入して、求めた式の値が実際の和や項と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$k+1$ を正しい位置に代入している",
+            "points": 1
+          },
+          {
+            "point": "式を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$n$ に $k+1$ を代入するとき、一部の $n$ だけを置きかえる。",
+          "左辺と右辺を取り違え、和の最後の項を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$x>2$ のとき、関数 $f(x)=4x+\\dfrac{36}{x-2}$ の最小値と、そのときの $x$ の値を求めなさい。相加平均と相乗平均の関係を用い、等号が成り立つことも確かめること。",
+      "answer": {
+        "value": "$x=5$ のとき最小値 $32$",
+        "accepted": [
+          "最小値32(x=5)"
+        ]
+      },
+      "explanation": "$f(x)=4(x-2)+\\dfrac{36}{x-2}+8$ と変形する。$x-2>0$ より、相加平均と相乗平均の関係から $4(x-2)+\\dfrac{36}{x-2}\\geqq2\\sqrt{144}=24$。等号は $x-2=3$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[2*sqrt(4*36)+8, 2+sqrt(Rational(36,4))]",
+        "expected": "[32, 5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_amgm",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係は「積が一定になる2つの正の数の和」に使う。分母と同じ式をつくって、積が定数になる組を見つける。",
+        "steps": [
+          "$f(x)=4(x-2)+\\dfrac{36}{x-2}+8$ と変形する（$x-2>0$）。",
+          "積が一定：$4(x-2)\\cdot\\dfrac{36}{x-2}=144$。",
+          "よって $4(x-2)+\\dfrac{36}{x-2}\\geqq2\\sqrt{144}=24$。",
+          "等号は $4(x-2)=\\dfrac{36}{x-2}$、すなわち $x-2=3$（$x=5$）のとき成り立つ。",
+          "最小値は $24+8=32$。"
+        ],
+        "alternatives": [
+          "$f'(x)$ を求めて増減を調べても、$x=5$ で最小値 $32$ となることが確かめられる（数学Ⅲの方法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめ、最小値と $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ $x$ を確かめずに、不等式の右辺をそのまま最小値とする。",
+          "変形で出てくる定数 $+8$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$x>1$ のとき、関数 $f(x)=2x+\\dfrac{2}{x-1}$ の最小値と、そのときの $x$ の値を求めなさい。相加平均と相乗平均の関係を用い、等号が成り立つことも確かめること。",
+      "answer": {
+        "value": "$x=2$ のとき最小値 $6$",
+        "accepted": [
+          "最小値6(x=2)"
+        ]
+      },
+      "explanation": "$f(x)=2(x-1)+\\dfrac{2}{x-1}+2$ と変形する。$x-1>0$ より、相加平均と相乗平均の関係から $2(x-1)+\\dfrac{2}{x-1}\\geqq2\\sqrt{4}=4$。等号は $x-1=1$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[2*sqrt(2*2)+2, 1+sqrt(Rational(2,2))]",
+        "expected": "[6, 2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_amgm",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係は「積が一定になる2つの正の数の和」に使う。分母と同じ式をつくって、積が定数になる組を見つける。",
+        "steps": [
+          "$f(x)=2(x-1)+\\dfrac{2}{x-1}+2$ と変形する（$x-1>0$）。",
+          "積が一定：$2(x-1)\\cdot\\dfrac{2}{x-1}=4$。",
+          "よって $2(x-1)+\\dfrac{2}{x-1}\\geqq2\\sqrt{4}=4$。",
+          "等号は $2(x-1)=\\dfrac{2}{x-1}$、すなわち $x-1=1$（$x=2$）のとき成り立つ。",
+          "最小値は $4+2=6$。"
+        ],
+        "alternatives": [
+          "$f'(x)$ を求めて増減を調べても、$x=2$ で最小値 $6$ となることが確かめられる（数学Ⅲの方法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめ、最小値と $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ $x$ を確かめずに、不等式の右辺をそのまま最小値とする。",
+          "変形で出てくる定数 $+2$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$x>1$ のとき、関数 $f(x)=2x+\\dfrac{32}{x-1}$ の最小値と、そのときの $x$ の値を求めなさい。相加平均と相乗平均の関係を用い、等号が成り立つことも確かめること。",
+      "answer": {
+        "value": "$x=5$ のとき最小値 $18$",
+        "accepted": [
+          "最小値18(x=5)"
+        ]
+      },
+      "explanation": "$f(x)=2(x-1)+\\dfrac{32}{x-1}+2$ と変形する。$x-1>0$ より、相加平均と相乗平均の関係から $2(x-1)+\\dfrac{32}{x-1}\\geqq2\\sqrt{64}=16$。等号は $x-1=4$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[2*sqrt(2*32)+2, 1+sqrt(Rational(32,2))]",
+        "expected": "[18, 5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_amgm",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係は「積が一定になる2つの正の数の和」に使う。分母と同じ式をつくって、積が定数になる組を見つける。",
+        "steps": [
+          "$f(x)=2(x-1)+\\dfrac{32}{x-1}+2$ と変形する（$x-1>0$）。",
+          "積が一定：$2(x-1)\\cdot\\dfrac{32}{x-1}=64$。",
+          "よって $2(x-1)+\\dfrac{32}{x-1}\\geqq2\\sqrt{64}=16$。",
+          "等号は $2(x-1)=\\dfrac{32}{x-1}$、すなわち $x-1=4$（$x=5$）のとき成り立つ。",
+          "最小値は $16+2=18$。"
+        ],
+        "alternatives": [
+          "$f'(x)$ を求めて増減を調べても、$x=5$ で最小値 $18$ となることが確かめられる（数学Ⅲの方法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめ、最小値と $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ $x$ を確かめずに、不等式の右辺をそのまま最小値とする。",
+          "変形で出てくる定数 $+2$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$x>2$ のとき、関数 $f(x)=3x+\\dfrac{3}{x-2}$ の最小値と、そのときの $x$ の値を求めなさい。相加平均と相乗平均の関係を用い、等号が成り立つことも確かめること。",
+      "answer": {
+        "value": "$x=3$ のとき最小値 $12$",
+        "accepted": [
+          "最小値12(x=3)"
+        ]
+      },
+      "explanation": "$f(x)=3(x-2)+\\dfrac{3}{x-2}+6$ と変形する。$x-2>0$ より、相加平均と相乗平均の関係から $3(x-2)+\\dfrac{3}{x-2}\\geqq2\\sqrt{9}=6$。等号は $x-2=1$ のとき。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[2*sqrt(3*3)+6, 2+sqrt(Rational(3,3))]",
+        "expected": "[12, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_amgm",
+      "explanation_detail": {
+        "approach": "相加平均と相乗平均の関係は「積が一定になる2つの正の数の和」に使う。分母と同じ式をつくって、積が定数になる組を見つける。",
+        "steps": [
+          "$f(x)=3(x-2)+\\dfrac{3}{x-2}+6$ と変形する（$x-2>0$）。",
+          "積が一定：$3(x-2)\\cdot\\dfrac{3}{x-2}=9$。",
+          "よって $3(x-2)+\\dfrac{3}{x-2}\\geqq2\\sqrt{9}=6$。",
+          "等号は $3(x-2)=\\dfrac{3}{x-2}$、すなわち $x-2=1$（$x=3$）のとき成り立つ。",
+          "最小値は $6+6=12$。"
+        ],
+        "alternatives": [
+          "$f'(x)$ を求めて増減を調べても、$x=3$ で最小値 $12$ となることが確かめられる（数学Ⅲの方法）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "相加平均と相乗平均の関係を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめ、最小値と $x$ を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ $x$ を確かめずに、不等式の右辺をそのまま最小値とする。",
+          "変形で出てくる定数 $+6$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "整数 $n$ について、「$n^2$ が $3$ の倍数ならば、$n$ は $3$ の倍数である」という命題を、対偶を利用して証明したい。この命題の対偶として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$n^2$ が $3$ の倍数でないならば、$n$ は $3$ の倍数でない"
+        },
+        {
+          "label": "イ",
+          "text": "$n$ が $3$ の倍数でないならば、$n^2$ は $3$ の倍数である"
+        },
+        {
+          "label": "ウ",
+          "text": "$n$ が $3$ の倍数ならば、$n^2$ は $3$ の倍数である"
+        },
+        {
+          "label": "エ",
+          "text": "$n$ が $3$ の倍数でないならば、$n^2$ は $3$ の倍数でない"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "対偶は「$q$ でないならば $p$ でない」。仮定と結論を入れかえ、両方を否定する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_contrapositive",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」の対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。元の命題と真偽が一致するので、直接示しにくいときに使う。",
+        "steps": [
+          "仮定 $p$ と結論 $q$ を読み取る。",
+          "結論の否定 $\\overline{q}$ を仮定にし、仮定の否定 $\\overline{p}$ を結論にする。",
+          "「または」「少なくとも一方」を含むときは否定の形に注意する。"
+        ],
+        "alternatives": [
+          "元の命題と選んだ命題の真偽が、具体的な数で常に一致するかを確かめる（逆・裏は元の命題と真偽が一致するとは限らない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対偶の作り方（入れかえて両方を否定）を理解している",
+            "points": 1
+          },
+          {
+            "point": "否定を正しく作っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "逆（仮定と結論を入れかえただけ）を対偶と取り違える。",
+          "「または」の否定を「または」のままにする。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "仮定と結論をそれぞれ否定しただけの「裏」。入れかえをしていない。",
+          "misconception": "裏と対偶の混同"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "仮定だけを否定し、結論を否定し忘れている。",
+          "misconception": "否定の作り方の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "仮定と結論を入れかえただけの「逆」。逆は元の命題と真偽が一致するとは限らない。",
+          "misconception": "逆と対偶の混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "実数 $x,\\ y$ について、「$x+y>8$ ならば、$x>4$ または $y>4$ である」という命題を、対偶を利用して証明したい。この命題の対偶として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$x>4$ または $y>4$ ならば、$x+y>8$"
+        },
+        {
+          "label": "イ",
+          "text": "$x\\leqq 4$ かつ $y\\leqq 4$ ならば、$x+y\\leqq 8$"
+        },
+        {
+          "label": "ウ",
+          "text": "$x+y\\leqq 8$ ならば、$x\\leqq 4$ かつ $y\\leqq 4$"
+        },
+        {
+          "label": "エ",
+          "text": "$x\\leqq 4$ または $y\\leqq 4$ ならば、$x+y\\leqq 8$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "対偶は「$q$ でないならば $p$ でない」。仮定と結論を入れかえ、両方を否定する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_contrapositive",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」の対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。元の命題と真偽が一致するので、直接示しにくいときに使う。",
+        "steps": [
+          "仮定 $p$ と結論 $q$ を読み取る。",
+          "結論の否定 $\\overline{q}$ を仮定にし、仮定の否定 $\\overline{p}$ を結論にする。",
+          "「または」「少なくとも一方」を含むときは否定の形に注意する。"
+        ],
+        "alternatives": [
+          "元の命題と選んだ命題の真偽が、具体的な数で常に一致するかを確かめる（逆・裏は元の命題と真偽が一致するとは限らない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対偶の作り方（入れかえて両方を否定）を理解している",
+            "points": 1
+          },
+          {
+            "point": "否定を正しく作っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "逆（仮定と結論を入れかえただけ）を対偶と取り違える。",
+          "「または」の否定を「または」のままにする。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "仮定と結論を入れかえただけの「逆」。逆は元の命題と真偽が一致するとは限らない。",
+          "misconception": "逆と対偶の混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "仮定と結論をそれぞれ否定しただけの「裏」。入れかえをしていない。",
+          "misconception": "裏と対偶の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "「または」の否定を「または」のままにしている。ド・モルガンの法則により、「$p$ または $q$」の否定は「$\\overline{p}$ かつ $\\overline{q}$」。",
+          "misconception": "否定の作り方の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "整数 $m,\\ n$ について、「$mn$ が $2$ の倍数ならば、$m,\\ n$ の少なくとも一方は $2$ の倍数である」という命題を、対偶を利用して証明したい。この命題の対偶として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$m,\\ n$ の少なくとも一方が $2$ の倍数でないならば、$mn$ は $2$ の倍数でない"
+        },
+        {
+          "label": "イ",
+          "text": "$m,\\ n$ の少なくとも一方が $2$ の倍数ならば、$mn$ は $2$ の倍数である"
+        },
+        {
+          "label": "ウ",
+          "text": "$m,\\ n$ がともに $2$ の倍数でないならば、$mn$ は $2$ の倍数でない"
+        },
+        {
+          "label": "エ",
+          "text": "$mn$ が $2$ の倍数でないならば、$m,\\ n$ はともに $2$ の倍数でない"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "対偶は「$q$ でないならば $p$ でない」。仮定と結論を入れかえ、両方を否定する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-a_contrapositive",
+      "explanation_detail": {
+        "approach": "「$p\\Rightarrow q$」の対偶は「$\\overline{q}\\Rightarrow\\overline{p}$」。元の命題と真偽が一致するので、直接示しにくいときに使う。",
+        "steps": [
+          "仮定 $p$ と結論 $q$ を読み取る。",
+          "結論の否定 $\\overline{q}$ を仮定にし、仮定の否定 $\\overline{p}$ を結論にする。",
+          "「または」「少なくとも一方」を含むときは否定の形に注意する。"
+        ],
+        "alternatives": [
+          "元の命題と選んだ命題の真偽が、具体的な数で常に一致するかを確かめる（逆・裏は元の命題と真偽が一致するとは限らない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "対偶の作り方（入れかえて両方を否定）を理解している",
+            "points": 1
+          },
+          {
+            "point": "否定を正しく作っている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "逆（仮定と結論を入れかえただけ）を対偶と取り違える。",
+          "「または」の否定を「または」のままにする。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "「少なくとも一方は〜」の否定を「少なくとも一方は〜でない」としている。正しい否定は「ともに〜でない」。",
+          "misconception": "否定の作り方の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "仮定と結論を入れかえただけの「逆」。逆は元の命題と真偽が一致するとは限らない。",
+          "misconception": "逆と対偶の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "仮定と結論をそれぞれ否定しただけの「裏」。入れかえをしていない。",
+          "misconception": "裏と対偶の混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "証明に取りかかる前に、具体的な値で見当をつけておく。すべての整数 $n$ について $f(n)=n^5-n$ が $M$ で割り切れるような、最大の自然数 $M$ を求めなさい。（$f(1),\\ f(2),\\ \\cdots$ の値で見当をつけ、因数分解などで理由も確かめること。）",
+      "answer": {
+        "value": "30"
+      },
+      "explanation": "$f(1),\\ f(2),\\ \\cdots$ の最大公約数を調べると $30$。$f(n)$ を因数分解して連続する整数の積などを見つけると、常に $30$ の倍数であることが示せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "gcd([0, 30, 240, 1020, 3120, 7770])",
+        "expected": "30"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_always_div",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「常に $M$ で割り切れる」の $M$ は、まず小さい $n$ の値の最大公約数として見当をつける。そのうえで、因数分解（連続する整数の積）や余りによる分類で証明する。",
+        "steps": [
+          "値を計算する：$f(1)=0$、$f(2)=30$、$f(3)=240$、$f(4)=1020$、$f(5)=3120$、$f(6)=7770$。",
+          "これらの最大公約数は $30$ なので、$M$ は $30$ 以下。",
+          "$f(n)$ を因数分解すると、連続する整数の積や、余りで分類して $30$ の素因数それぞれで割り切れることが示せるので、$M=30$。"
+        ],
+        "alternatives": [
+          "$30$ を素因数分解し、各素因数 $p$ について $n$ を $p$ で割った余りで分類して $f(n)\\equiv0\\pmod p$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から最大公約数を求めている",
+            "points": 1
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ だけ、または $f(2)$ だけを見て $M$ を大きく見積もる。",
+          "「最大の」を見落とし、$2$ や $3$ など一部の約数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数の証明問題の第1問で、すべての整数 $n$ について $f(n)=n^5-n$ が $M$ で割り切れるような、最大の自然数 $M$ を求めなさい。（$f(1),\\ f(2),\\ \\cdots$ の値で見当をつけ、因数分解などで理由も確かめること。）",
+      "answer": {
+        "value": "30"
+      },
+      "explanation": "$f(1),\\ f(2),\\ \\cdots$ の最大公約数を調べると $30$。$f(n)$ を因数分解して連続する整数の積などを見つけると、常に $30$ の倍数であることが示せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "gcd([0, 30, 240, 1020, 3120, 7770])",
+        "expected": "30"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_always_div",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「常に $M$ で割り切れる」の $M$ は、まず小さい $n$ の値の最大公約数として見当をつける。そのうえで、因数分解（連続する整数の積）や余りによる分類で証明する。",
+        "steps": [
+          "値を計算する：$f(1)=0$、$f(2)=30$、$f(3)=240$、$f(4)=1020$、$f(5)=3120$、$f(6)=7770$。",
+          "これらの最大公約数は $30$ なので、$M$ は $30$ 以下。",
+          "$f(n)$ を因数分解すると、連続する整数の積や、余りで分類して $30$ の素因数それぞれで割り切れることが示せるので、$M=30$。"
+        ],
+        "alternatives": [
+          "$30$ を素因数分解し、各素因数 $p$ について $n$ を $p$ で割った余りで分類して $f(n)\\equiv0\\pmod p$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から最大公約数を求めている",
+            "points": 1
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ だけ、または $f(2)$ だけを見て $M$ を大きく見積もる。",
+          "「最大の」を見落とし、$2$ や $3$ など一部の約数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数の証明問題の第1問で、すべての整数 $n$ について $f(n)=n^3-n$ が $M$ で割り切れるような、最大の自然数 $M$ を求めなさい。（$f(1),\\ f(2),\\ \\cdots$ の値で見当をつけ、因数分解などで理由も確かめること。）",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "$f(1),\\ f(2),\\ \\cdots$ の最大公約数を調べると $6$。$f(n)$ を因数分解して連続する整数の積などを見つけると、常に $6$ の倍数であることが示せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "gcd([0, 6, 24, 60])",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_always_div",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「常に $M$ で割り切れる」の $M$ は、まず小さい $n$ の値の最大公約数として見当をつける。そのうえで、因数分解（連続する整数の積）や余りによる分類で証明する。",
+        "steps": [
+          "値を計算する：$f(1)=0$、$f(2)=6$、$f(3)=24$、$f(4)=60$。",
+          "これらの最大公約数は $6$ なので、$M$ は $6$ 以下。",
+          "$f(n)$ を因数分解すると、連続する整数の積や、余りで分類して $6$ の素因数それぞれで割り切れることが示せるので、$M=6$。"
+        ],
+        "alternatives": [
+          "$6$ を素因数分解し、各素因数 $p$ について $n$ を $p$ で割った余りで分類して $f(n)\\equiv0\\pmod p$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から最大公約数を求めている",
+            "points": 1
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ だけ、または $f(2)$ だけを見て $M$ を大きく見積もる。",
+          "「最大の」を見落とし、$2$ や $3$ など一部の約数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数の証明問題の第1問で、すべての整数 $n$ について $f(n)=n^7-n$ が $M$ で割り切れるような、最大の自然数 $M$ を求めなさい。（$f(1),\\ f(2),\\ \\cdots$ の値で見当をつけ、因数分解などで理由も確かめること。）",
+      "answer": {
+        "value": "42"
+      },
+      "explanation": "$f(1),\\ f(2),\\ \\cdots$ の最大公約数を調べると $42$。$f(n)$ を因数分解して連続する整数の積などを見つけると、常に $42$ の倍数であることが示せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "gcd([0, 126, 2184, 16380, 78120, 279930, 823536, 2097144])",
+        "expected": "42"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_always_div",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「常に $M$ で割り切れる」の $M$ は、まず小さい $n$ の値の最大公約数として見当をつける。そのうえで、因数分解（連続する整数の積）や余りによる分類で証明する。",
+        "steps": [
+          "値を計算する：$f(1)=0$、$f(2)=126$、$f(3)=2184$、$f(4)=16380$、$f(5)=78120$、$f(6)=279930$、$f(7)=823536$、$f(8)=2097144$。",
+          "これらの最大公約数は $42$ なので、$M$ は $42$ 以下。",
+          "$f(n)$ を因数分解すると、連続する整数の積や、余りで分類して $42$ の素因数それぞれで割り切れることが示せるので、$M=42$。"
+        ],
+        "alternatives": [
+          "$42$ を素因数分解し、各素因数 $p$ について $n$ を $p$ で割った余りで分類して $f(n)\\equiv0\\pmod p$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から最大公約数を求めている",
+            "points": 1
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ だけ、または $f(2)$ だけを見て $M$ を大きく見積もる。",
+          "「最大の」を見落とし、$2$ や $3$ など一部の約数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "証明に取りかかる前に、具体的な値で見当をつけておく。すべての整数 $n$ について $f(n)=n^3-7n$ が $M$ で割り切れるような、最大の自然数 $M$ を求めなさい。（$f(1),\\ f(2),\\ \\cdots$ の値で見当をつけ、因数分解などで理由も確かめること。）",
+      "answer": {
+        "value": "6"
+      },
+      "explanation": "$f(1),\\ f(2),\\ \\cdots$ の最大公約数を調べると $6$。$f(n)$ を因数分解して連続する整数の積などを見つけると、常に $6$ の倍数であることが示せる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "gcd([-6, -6, 6, 36])",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-a_always_div",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「常に $M$ で割り切れる」の $M$ は、まず小さい $n$ の値の最大公約数として見当をつける。そのうえで、因数分解（連続する整数の積）や余りによる分類で証明する。",
+        "steps": [
+          "値を計算する：$f(1)=-6$、$f(2)=-6$、$f(3)=6$、$f(4)=36$。",
+          "これらの最大公約数は $6$ なので、$M$ は $6$ 以下。",
+          "$f(n)$ を因数分解すると、連続する整数の積や、余りで分類して $6$ の素因数それぞれで割り切れることが示せるので、$M=6$。"
+        ],
+        "alternatives": [
+          "$6$ を素因数分解し、各素因数 $p$ について $n$ を $p$ で割った余りで分類して $f(n)\\equiv0\\pmod p$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から最大公約数を求めている",
+            "points": 1
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ だけ、または $f(2)$ だけを見て $M$ を大きく見積もる。",
+          "「最大の」を見落とし、$2$ や $3$ など一部の約数だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数 $n$ を $6$ で割ると $3$ 余る。このとき、$n^{47}$ を $6$ で割った余りを求めなさい。答案では、合同式または $n=6k+3$ とおいた式変形で理由を示すこと。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$n\\equiv3\\pmod{6}$ より、$n^{47}$ の $n$ を $3$ に置きかえて計算し、$6$ で割った余りを求める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Mod(3**47, 6)",
+        "expected": "3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-b_mod_value",
+      "explanation_detail": {
+        "approach": "合同式は足し算・かけ算・累乗で保たれる。$n$ を余り $3$ に置きかえてから計算すれば、大きな数を扱わずにすむ。",
+        "steps": [
+          "$n\\equiv3\\pmod{6}$。",
+          "$3$ の累乗を $6$ で割った余りは周期的にくり返すので、周期を見つけて指数を割る。",
+          "計算して $6$ で割った余りは $3$。"
+        ],
+        "alternatives": [
+          "$n=6k+3$ とおいて展開し、$6$ の倍数の部分をまとめて「$6\\times(\\text{整数})+3$」の形に直しても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "合同式（または $n=6k+3$）で置きかえている",
+            "points": 1
+          },
+          {
+            "point": "計算を正しく進めている",
+            "points": 1
+          },
+          {
+            "point": "余りを $0$ 以上 $5$ 以下の整数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りとして負の数や $6$ 以上の数をそのまま答える。",
+          "累乗の周期を数え間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数 $n$ を $7$ で割ると $3$ 余る。このとき、$n^{20}$ を $7$ で割った余りを求めなさい。答案では、合同式または $n=7k+3$ とおいた式変形で理由を示すこと。",
+      "answer": {
+        "value": "2"
+      },
+      "explanation": "$n\\equiv3\\pmod{7}$ より、$n^{20}$ の $n$ を $3$ に置きかえて計算し、$7$ で割った余りを求める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Mod(3**20, 7)",
+        "expected": "2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-b_mod_value",
+      "explanation_detail": {
+        "approach": "合同式は足し算・かけ算・累乗で保たれる。$n$ を余り $3$ に置きかえてから計算すれば、大きな数を扱わずにすむ。",
+        "steps": [
+          "$n\\equiv3\\pmod{7}$。",
+          "$3$ の累乗を $7$ で割った余りは周期的にくり返すので、周期を見つけて指数を割る。",
+          "計算して $7$ で割った余りは $2$。"
+        ],
+        "alternatives": [
+          "$n=7k+3$ とおいて展開し、$7$ の倍数の部分をまとめて「$7\\times(\\text{整数})+2$」の形に直しても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "合同式（または $n=7k+3$）で置きかえている",
+            "points": 1
+          },
+          {
+            "point": "計算を正しく進めている",
+            "points": 1
+          },
+          {
+            "point": "余りを $0$ 以上 $6$ 以下の整数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りとして負の数や $7$ 以上の数をそのまま答える。",
+          "累乗の周期を数え間違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数 $n$ を $3$ で割ると $1$ 余る。このとき、$n^3+3n$ を $3$ で割った余りを求めなさい。答案では、合同式または $n=3k+1$ とおいた式変形で理由を示すこと。",
+      "answer": {
+        "value": "1"
+      },
+      "explanation": "$n\\equiv1\\pmod{3}$ より、$n^3+3n$ の $n$ を $1$ に置きかえて計算し、$3$ で割った余りを求める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Mod(1**3+(3)*1, 3)",
+        "expected": "1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-b_mod_value",
+      "explanation_detail": {
+        "approach": "合同式は足し算・かけ算・累乗で保たれる。$n$ を余り $1$ に置きかえてから計算すれば、大きな数を扱わずにすむ。",
+        "steps": [
+          "$n\\equiv1\\pmod{3}$。",
+          "$n^3+3n\\equiv (1)^3+3(1)\\pmod{3}$。",
+          "計算して $3$ で割った余りは $1$。"
+        ],
+        "alternatives": [
+          "$n=3k+1$ とおいて展開し、$3$ の倍数の部分をまとめて「$3\\times(\\text{整数})+1$」の形に直しても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "合同式（または $n=3k+1$）で置きかえている",
+            "points": 1
+          },
+          {
+            "point": "計算を正しく進めている",
+            "points": 1
+          },
+          {
+            "point": "余りを $0$ 以上 $2$ 以下の整数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りとして負の数や $3$ 以上の数をそのまま答える。",
+          "$n$ を余りに置きかえたあと、係数の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "整数 $n$ を $11$ で割ると $10$ 余る。このとき、$n^2+4n$ を $11$ で割った余りを求めなさい。答案では、合同式または $n=11k+10$ とおいた式変形で理由を示すこと。",
+      "answer": {
+        "value": "8"
+      },
+      "explanation": "$n\\equiv10\\pmod{11}$ より、$n^2+4n$ の $n$ を $10$ に置きかえて計算し、$11$ で割った余りを求める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Mod(10**2+(4)*10+(0), 11)",
+        "expected": "8"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-b_mod_value",
+      "explanation_detail": {
+        "approach": "合同式は足し算・かけ算・累乗で保たれる。$n$ を余り $10$ に置きかえてから計算すれば、大きな数を扱わずにすむ。",
+        "steps": [
+          "$n\\equiv10\\pmod{11}$。",
+          "$n^2+4n\\equiv (10)^2+4(10)\\pmod{11}$。",
+          "計算して $11$ で割った余りは $8$。"
+        ],
+        "alternatives": [
+          "$n=11k+10$ とおいて展開し、$11$ の倍数の部分をまとめて「$11\\times(\\text{整数})+8$」の形に直しても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "合同式（または $n=11k+10$）で置きかえている",
+            "points": 1
+          },
+          {
+            "point": "計算を正しく進めている",
+            "points": 1
+          },
+          {
+            "point": "余りを $0$ 以上 $10$ 以下の整数で答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "余りとして負の数や $11$ 以上の数をそのまま答える。",
+          "$n$ を余りに置きかえたあと、係数の計算で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "自然数 $n$ に対して $f(n)=2^{n+1}+3^{2n-1}$ とする。すべての自然数 $n$ について $f(n)$ が $M$ の倍数となるような最大の自然数 $M$ を求めなさい。（$f(k+1)$ を $f(k)$ を用いて表すと、数学的帰納法で証明できる。）",
+      "answer": {
+        "value": "7"
+      },
+      "explanation": "小さい $n$ の値の最大公約数から $M=7$。$f(k+1)=2\\cdot2^{k+1}+9\\cdot3^{2k-1}=2f(k)+7\\cdot3^{2k-1}$ より、$f(k)$ が $7$ の倍数なら $f(k+1)$ も $7$ の倍数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd([7, 35, 259, 2219])",
+        "expected": "7"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-b_induction_div",
+      "explanation_detail": {
+        "approach": "まず $f(1),\\ f(2)$ などで見当をつけ、帰納法の (II) では $f(k+1)$ を「$f(k)$ の定数倍」と「$M$ の倍数」の和に分解する。",
+        "steps": [
+          "値を計算：$f(1)=7$、$f(2)=35$、$f(3)=259$。最大公約数は $7$。",
+          "(I) $n=1$ のとき $7$ の倍数。",
+          "(II) $f(k+1)=2\\cdot2^{k+1}+9\\cdot3^{2k-1}=2f(k)+7\\cdot3^{2k-1}$。仮定 $f(k)=7\\times(\\text{整数})$ より、$f(k+1)$ も $7$ の倍数。",
+          "$f(1)$ や $f(2)$ が $7$ なので、これより大きい $M$ はない。$M=7$。"
+        ],
+        "alternatives": [
+          "二項定理で $3^{2n-1}$ を $(2^2+2+1)$ を含む形に整理しても示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から $M$ の見当をつけている",
+            "points": 1
+          },
+          {
+            "point": "$f(k+1)$ を $f(k)$ で表す変形ができている",
+            "points": 2
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ の値だけを見て、$M$ を大きく見積もる（$f(2)$ との最大公約数を確かめていない）。",
+          "$f(k+1)$ の変形で、指数の $+1$ の扱いを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "自然数 $n$ に対して $f(n)=7^{n}-6n-1$ とする。すべての自然数 $n$ について $f(n)$ が $M$ の倍数となるような最大の自然数 $M$ を求めなさい。（$f(k+1)$ を $f(k)$ を用いて表すと、数学的帰納法で証明できる。）",
+      "answer": {
+        "value": "36"
+      },
+      "explanation": "小さい $n$ の値の最大公約数から $M=36$。$f(k+1)=7\\cdot7^{k}-6(k+1)-1=7f(k)+36k$ より、$f(k)$ が $36$ の倍数なら $f(k+1)$ も $36$ の倍数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd([0, 36, 324, 2376, 16776])",
+        "expected": "36"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-b_induction_div",
+      "explanation_detail": {
+        "approach": "まず $f(1),\\ f(2)$ などで見当をつけ、帰納法の (II) では $f(k+1)$ を「$f(k)$ の定数倍」と「$M$ の倍数」の和に分解する。",
+        "steps": [
+          "値を計算：$f(1)=0$、$f(2)=36$、$f(3)=324$。最大公約数は $36$。",
+          "(I) $n=1$ のとき $f(1)=0$、$n=2$ のとき $36$ の倍数。",
+          "(II) $f(k+1)=7\\cdot7^{k}-6(k+1)-1=7f(k)+36k$。仮定 $f(k)=36\\times(\\text{整数})$ より、$f(k+1)$ も $36$ の倍数。",
+          "$f(1)$ や $f(2)$ が $36$ なので、これより大きい $M$ はない。$M=36$。"
+        ],
+        "alternatives": [
+          "二項定理で $7^n=(1+6)^n$ と展開し、$n$ 次までの項を整理しても示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から $M$ の見当をつけている",
+            "points": 1
+          },
+          {
+            "point": "$f(k+1)$ を $f(k)$ で表す変形ができている",
+            "points": 2
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ の値だけを見て、$M$ を大きく見積もる（$f(2)$ との最大公約数を確かめていない）。",
+          "$f(k+1)$ の変形で、指数の $+1$ の扱いを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "自然数 $n$ に対して $f(n)=6^{n}-5n-1$ とする。すべての自然数 $n$ について $f(n)$ が $M$ の倍数となるような最大の自然数 $M$ を求めなさい。（$f(k+1)$ を $f(k)$ を用いて表すと、数学的帰納法で証明できる。）",
+      "answer": {
+        "value": "25"
+      },
+      "explanation": "小さい $n$ の値の最大公約数から $M=25$。$f(k+1)=6\\cdot6^{k}-5(k+1)-1=6f(k)+25k$ より、$f(k)$ が $25$ の倍数なら $f(k+1)$ も $25$ の倍数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd([0, 25, 200, 1275, 7750])",
+        "expected": "25"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-b_induction_div",
+      "explanation_detail": {
+        "approach": "まず $f(1),\\ f(2)$ などで見当をつけ、帰納法の (II) では $f(k+1)$ を「$f(k)$ の定数倍」と「$M$ の倍数」の和に分解する。",
+        "steps": [
+          "値を計算：$f(1)=0$、$f(2)=25$、$f(3)=200$。最大公約数は $25$。",
+          "(I) $n=1$ のとき $f(1)=0$、$n=2$ のとき $25$ の倍数。",
+          "(II) $f(k+1)=6\\cdot6^{k}-5(k+1)-1=6f(k)+25k$。仮定 $f(k)=25\\times(\\text{整数})$ より、$f(k+1)$ も $25$ の倍数。",
+          "$f(1)$ や $f(2)$ が $25$ なので、これより大きい $M$ はない。$M=25$。"
+        ],
+        "alternatives": [
+          "二項定理で $6^n=(1+5)^n$ と展開し、$n$ 次までの項を整理しても示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から $M$ の見当をつけている",
+            "points": 1
+          },
+          {
+            "point": "$f(k+1)$ を $f(k)$ で表す変形ができている",
+            "points": 2
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ の値だけを見て、$M$ を大きく見積もる（$f(2)$ との最大公約数を確かめていない）。",
+          "$f(k+1)$ の変形で、指数の $+1$ の扱いを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "自然数 $n$ に対して $f(n)=5^{n+1}+6^{2n-1}$ とする。すべての自然数 $n$ について $f(n)$ が $M$ の倍数となるような最大の自然数 $M$ を求めなさい。（$f(k+1)$ を $f(k)$ を用いて表すと、数学的帰納法で証明できる。）",
+      "answer": {
+        "value": "31"
+      },
+      "explanation": "小さい $n$ の値の最大公約数から $M=31$。$f(k+1)=5\\cdot5^{k+1}+36\\cdot6^{2k-1}=5f(k)+31\\cdot6^{2k-1}$ より、$f(k)$ が $31$ の倍数なら $f(k+1)$ も $31$ の倍数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "gcd([31, 341, 8401, 283061])",
+        "expected": "31"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-b_induction_div",
+      "explanation_detail": {
+        "approach": "まず $f(1),\\ f(2)$ などで見当をつけ、帰納法の (II) では $f(k+1)$ を「$f(k)$ の定数倍」と「$M$ の倍数」の和に分解する。",
+        "steps": [
+          "値を計算：$f(1)=31$、$f(2)=341$、$f(3)=8401$。最大公約数は $31$。",
+          "(I) $n=1$ のとき $31$ の倍数。",
+          "(II) $f(k+1)=5\\cdot5^{k+1}+36\\cdot6^{2k-1}=5f(k)+31\\cdot6^{2k-1}$。仮定 $f(k)=31\\times(\\text{整数})$ より、$f(k+1)$ も $31$ の倍数。",
+          "$f(1)$ や $f(2)$ が $31$ なので、これより大きい $M$ はない。$M=31$。"
+        ],
+        "alternatives": [
+          "二項定理で $6^{2n-1}$ を $(5^2+5+1)$ を含む形に整理しても示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "具体的な値から $M$ の見当をつけている",
+            "points": 1
+          },
+          {
+            "point": "$f(k+1)$ を $f(k)$ で表す変形ができている",
+            "points": 2
+          },
+          {
+            "point": "最大の $M$ を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f(1)$ の値だけを見て、$M$ を大きく見積もる（$f(2)$ との最大公約数を確かめていない）。",
+          "$f(k+1)$ の変形で、指数の $+1$ の扱いを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "正の実数 $x,\\ y$ に対して、$\\left(x+\\dfrac{24}{y}\\right)\\left(y+\\dfrac{6}{x}\\right)$ の最小値を求めなさい。等号が成り立つ $x,\\ y$ の条件も確かめること。",
+      "answer": {
+        "value": "54"
+      },
+      "explanation": "展開すると $xy+\\dfrac{144}{xy}+30$。$xy>0$ なので相加平均と相乗平均の関係から $xy+\\dfrac{144}{xy}\\geqq2\\sqrt{144}=24$、等号は $xy=12$ のとき。最小値 $54$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "24+6+2*sqrt(24*6)",
+        "expected": "54"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_amgm_product",
+      "explanation_detail": {
+        "approach": "2つのかっこにそれぞれ相加平均と相乗平均の関係を使うと、等号が同時に成り立たない。先に展開して、積が一定になる組 $xy$ と $\\dfrac{144}{xy}$ を見つける。",
+        "steps": [
+          "展開：$xy+6+24+\\dfrac{144}{xy}=xy+\\dfrac{144}{xy}+30$。",
+          "$xy>0$ より $xy+\\dfrac{144}{xy}\\geqq2\\sqrt{144}=24$。",
+          "等号は $xy=\\dfrac{144}{xy}$、すなわち $xy=12$ のとき（例えば $x=1,\\ y=12$）に成り立つ。",
+          "最小値は $24+30=54$。"
+        ],
+        "alternatives": [
+          "$t=xy\\ (t>0)$ とおくと $g(t)=t+\\dfrac{144}{t}+30$ の最小値の問題になり、$g'(t)=1-\\dfrac{144}{t^2}$ の符号から $t=12$ で最小と確かめられる。",
+          "コーシー・シュワルツの不等式の形 $\\left(x+\\dfrac{24}{y}\\right)\\left(\\dfrac{6}{x}+y\\right)\\geqq\\left(\\sqrt{6}+\\sqrt{24}\\right)^2=54$ でも同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開して積が一定の組を見つけている",
+            "points": 1
+          },
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて最小値を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つのかっこに別々に相加平均と相乗平均の関係を使い、$4\\sqrt{144}=48$ を最小値と答える（等号が同時に成り立たない）。",
+          "等号成立の条件を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "正の実数 $x,\\ y$ に対して、$\\left(x+\\dfrac{4}{y}\\right)\\left(y+\\dfrac{25}{x}\\right)$ の最小値を求めなさい。等号が成り立つ $x,\\ y$ の条件も確かめること。",
+      "answer": {
+        "value": "49"
+      },
+      "explanation": "展開すると $xy+\\dfrac{100}{xy}+29$。$xy>0$ なので相加平均と相乗平均の関係から $xy+\\dfrac{100}{xy}\\geqq2\\sqrt{100}=20$、等号は $xy=10$ のとき。最小値 $49$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "4+25+2*sqrt(4*25)",
+        "expected": "49"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_amgm_product",
+      "explanation_detail": {
+        "approach": "2つのかっこにそれぞれ相加平均と相乗平均の関係を使うと、等号が同時に成り立たない。先に展開して、積が一定になる組 $xy$ と $\\dfrac{100}{xy}$ を見つける。",
+        "steps": [
+          "展開：$xy+25+4+\\dfrac{100}{xy}=xy+\\dfrac{100}{xy}+29$。",
+          "$xy>0$ より $xy+\\dfrac{100}{xy}\\geqq2\\sqrt{100}=20$。",
+          "等号は $xy=\\dfrac{100}{xy}$、すなわち $xy=10$ のとき（例えば $x=1,\\ y=10$）に成り立つ。",
+          "最小値は $20+29=49$。"
+        ],
+        "alternatives": [
+          "$t=xy\\ (t>0)$ とおくと $g(t)=t+\\dfrac{100}{t}+29$ の最小値の問題になり、$g'(t)=1-\\dfrac{100}{t^2}$ の符号から $t=10$ で最小と確かめられる。",
+          "コーシー・シュワルツの不等式の形 $\\left(x+\\dfrac{4}{y}\\right)\\left(\\dfrac{25}{x}+y\\right)\\geqq\\left(\\sqrt{25}+\\sqrt{4}\\right)^2=49$ でも同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開して積が一定の組を見つけている",
+            "points": 1
+          },
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて最小値を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つのかっこに別々に相加平均と相乗平均の関係を使い、$4\\sqrt{100}=40$ を最小値と答える（等号が同時に成り立たない）。",
+          "等号成立の条件を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "正の実数 $x,\\ y$ に対して、$\\left(x+\\dfrac{3}{y}\\right)\\left(y+\\dfrac{12}{x}\\right)$ の最小値を求めなさい。等号が成り立つ $x,\\ y$ の条件も確かめること。",
+      "answer": {
+        "value": "27"
+      },
+      "explanation": "展開すると $xy+\\dfrac{36}{xy}+15$。$xy>0$ なので相加平均と相乗平均の関係から $xy+\\dfrac{36}{xy}\\geqq2\\sqrt{36}=12$、等号は $xy=6$ のとき。最小値 $27$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "3+12+2*sqrt(3*12)",
+        "expected": "27"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_amgm_product",
+      "explanation_detail": {
+        "approach": "2つのかっこにそれぞれ相加平均と相乗平均の関係を使うと、等号が同時に成り立たない。先に展開して、積が一定になる組 $xy$ と $\\dfrac{36}{xy}$ を見つける。",
+        "steps": [
+          "展開：$xy+12+3+\\dfrac{36}{xy}=xy+\\dfrac{36}{xy}+15$。",
+          "$xy>0$ より $xy+\\dfrac{36}{xy}\\geqq2\\sqrt{36}=12$。",
+          "等号は $xy=\\dfrac{36}{xy}$、すなわち $xy=6$ のとき（例えば $x=1,\\ y=6$）に成り立つ。",
+          "最小値は $12+15=27$。"
+        ],
+        "alternatives": [
+          "$t=xy\\ (t>0)$ とおくと $g(t)=t+\\dfrac{36}{t}+15$ の最小値の問題になり、$g'(t)=1-\\dfrac{36}{t^2}$ の符号から $t=6$ で最小と確かめられる。",
+          "コーシー・シュワルツの不等式の形 $\\left(x+\\dfrac{3}{y}\\right)\\left(\\dfrac{12}{x}+y\\right)\\geqq\\left(\\sqrt{12}+\\sqrt{3}\\right)^2=27$ でも同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開して積が一定の組を見つけている",
+            "points": 1
+          },
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて最小値を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つのかっこに別々に相加平均と相乗平均の関係を使い、$4\\sqrt{36}=24$ を最小値と答える（等号が同時に成り立たない）。",
+          "等号成立の条件を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "正の実数 $x,\\ y$ に対して、$\\left(x+\\dfrac{9}{y}\\right)\\left(y+\\dfrac{16}{x}\\right)$ の最小値を求めなさい。等号が成り立つ $x,\\ y$ の条件も確かめること。",
+      "answer": {
+        "value": "49"
+      },
+      "explanation": "展開すると $xy+\\dfrac{144}{xy}+25$。$xy>0$ なので相加平均と相乗平均の関係から $xy+\\dfrac{144}{xy}\\geqq2\\sqrt{144}=24$、等号は $xy=12$ のとき。最小値 $49$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "9+16+2*sqrt(9*16)",
+        "expected": "49"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_amgm_product",
+      "explanation_detail": {
+        "approach": "2つのかっこにそれぞれ相加平均と相乗平均の関係を使うと、等号が同時に成り立たない。先に展開して、積が一定になる組 $xy$ と $\\dfrac{144}{xy}$ を見つける。",
+        "steps": [
+          "展開：$xy+16+9+\\dfrac{144}{xy}=xy+\\dfrac{144}{xy}+25$。",
+          "$xy>0$ より $xy+\\dfrac{144}{xy}\\geqq2\\sqrt{144}=24$。",
+          "等号は $xy=\\dfrac{144}{xy}$、すなわち $xy=12$ のとき（例えば $x=1,\\ y=12$）に成り立つ。",
+          "最小値は $24+25=49$。"
+        ],
+        "alternatives": [
+          "$t=xy\\ (t>0)$ とおくと $g(t)=t+\\dfrac{144}{t}+25$ の最小値の問題になり、$g'(t)=1-\\dfrac{144}{t^2}$ の符号から $t=12$ で最小と確かめられる。",
+          "コーシー・シュワルツの不等式の形 $\\left(x+\\dfrac{9}{y}\\right)\\left(\\dfrac{16}{x}+y\\right)\\geqq\\left(\\sqrt{16}+\\sqrt{9}\\right)^2=49$ でも同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "展開して積が一定の組を見つけている",
+            "points": 1
+          },
+          {
+            "point": "相加平均と相乗平均の関係を正しく使っている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて最小値を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つのかっこに別々に相加平均と相乗平均の関係を使い、$4\\sqrt{144}=48$ を最小値と答える（等号が同時に成り立たない）。",
+          "等号成立の条件を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "実数 $x,\\ y$ が $x^2+y^2=3$ を満たすとき、$2x-3y$ の最小値を求めなさい。",
+      "answer": {
+        "value": "$- \\sqrt{39}$",
+        "accepted": [
+          "-sqrt(39)"
+        ]
+      },
+      "explanation": "$(13)(x^2+y^2)-(2x-3y)^2=(-3x-2y)^2\\geqq0$ より $(2x-3y)^2\\leqq39$。等号は $x:y=2:-3$ のとき成り立つので、最小値は $- \\sqrt{39}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "-sqrt(((2)**2+(-3)**2)*3)",
+        "expected": "-sqrt(39)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_cauchy",
+      "explanation_detail": {
+        "approach": "$(a^2+b^2)(x^2+y^2)\\geqq(ax+by)^2$（コーシー・シュワルツの不等式）を使うと、$ax+by$ のとりうる範囲が一度に求まる。等号成立の $x,\\ y$ が条件を満たすことも確かめる。",
+        "steps": [
+          "$(2^2+(-3)^2)(x^2+y^2)-(2x-3y)^2=(-3x-2y)^2\\geqq0$（展開して確かめる）。",
+          "$x^2+y^2=3$ より $(2x-3y)^2\\leqq13\\times3=39$。",
+          "$-\\sqrt{39}\\leqq 2x-3y\\leqq \\sqrt{39}$。",
+          "等号は $-3x-2y=0$ のとき。$x^2+y^2=3$ と合わせて実際に成り立つ点があるので、最小値は $- \\sqrt{39}$。"
+        ],
+        "alternatives": [
+          "$x=\\sqrt{3}\\cos\\theta,\\ y=\\sqrt{3}\\sin\\theta$ とおき、$2x-3y$ を三角関数の合成で $r\\sin(\\theta+\\alpha)$ の形にしても同じ結果になる。",
+          "$2x-3y=k$ とおき、直線と円 $x^2+y^2=3$ が共有点をもつ条件（中心と直線の距離 $\\leqq$ 半径）から $k$ の範囲を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式（または置き換え）を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値の範囲を求めている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ点の確認を省く。",
+          "$\\sqrt{39}$ を簡単にし忘れる、または 最大値と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "実数 $x,\\ y$ が $x^2+y^2=4$ を満たすとき、$-x+3y$ の最小値を求めなさい。",
+      "answer": {
+        "value": "$- 2 \\sqrt{10}$",
+        "accepted": [
+          "-2*sqrt(10)"
+        ]
+      },
+      "explanation": "$(10)(x^2+y^2)-(-x+3y)^2=(3x+y)^2\\geqq0$ より $(-x+3y)^2\\leqq40$。等号は $x:y=-1:3$ のとき成り立つので、最小値は $- 2 \\sqrt{10}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "-sqrt(((-1)**2+(3)**2)*4)",
+        "expected": "-2*sqrt(10)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_cauchy",
+      "explanation_detail": {
+        "approach": "$(a^2+b^2)(x^2+y^2)\\geqq(ax+by)^2$（コーシー・シュワルツの不等式）を使うと、$ax+by$ のとりうる範囲が一度に求まる。等号成立の $x,\\ y$ が条件を満たすことも確かめる。",
+        "steps": [
+          "$((-1)^2+3^2)(x^2+y^2)-(-x+3y)^2=(3x+y)^2\\geqq0$（展開して確かめる）。",
+          "$x^2+y^2=4$ より $(-x+3y)^2\\leqq10\\times4=40$。",
+          "$-2 \\sqrt{10}\\leqq -x+3y\\leqq 2 \\sqrt{10}$。",
+          "等号は $3x+y=0$ のとき。$x^2+y^2=4$ と合わせて実際に成り立つ点があるので、最小値は $- 2 \\sqrt{10}$。"
+        ],
+        "alternatives": [
+          "$x=2\\cos\\theta,\\ y=2\\sin\\theta$ とおき、$-x+3y$ を三角関数の合成で $r\\sin(\\theta+\\alpha)$ の形にしても同じ結果になる。",
+          "$-x+3y=k$ とおき、直線と円 $x^2+y^2=4$ が共有点をもつ条件（中心と直線の距離 $\\leqq$ 半径）から $k$ の範囲を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式（または置き換え）を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値の範囲を求めている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ点の確認を省く。",
+          "$\\sqrt{40}$ を簡単にし忘れる、または 最大値と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "実数 $x,\\ y$ が $x^2+y^2=9$ を満たすとき、$5x+12y$ の最小値を求めなさい。",
+      "answer": {
+        "value": "$-39$",
+        "accepted": [
+          "-39"
+        ]
+      },
+      "explanation": "$(169)(x^2+y^2)-(5x+12y)^2=(12x-5y)^2\\geqq0$ より $(5x+12y)^2\\leqq1521$。等号は $x:y=5:12$ のとき成り立つので、最小値は $-39$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "-sqrt(((5)**2+(12)**2)*9)",
+        "expected": "-39",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_cauchy",
+      "explanation_detail": {
+        "approach": "$(a^2+b^2)(x^2+y^2)\\geqq(ax+by)^2$（コーシー・シュワルツの不等式）を使うと、$ax+by$ のとりうる範囲が一度に求まる。等号成立の $x,\\ y$ が条件を満たすことも確かめる。",
+        "steps": [
+          "$(5^2+12^2)(x^2+y^2)-(5x+12y)^2=(12x-5y)^2\\geqq0$（展開して確かめる）。",
+          "$x^2+y^2=9$ より $(5x+12y)^2\\leqq169\\times9=1521$。",
+          "$-39\\leqq 5x+12y\\leqq 39$。",
+          "等号は $12x-5y=0$ のとき。$x^2+y^2=9$ と合わせて実際に成り立つ点があるので、最小値は $-39$。"
+        ],
+        "alternatives": [
+          "$x=3\\cos\\theta,\\ y=3\\sin\\theta$ とおき、$5x+12y$ を三角関数の合成で $r\\sin(\\theta+\\alpha)$ の形にしても同じ結果になる。",
+          "$5x+12y=k$ とおき、直線と円 $x^2+y^2=9$ が共有点をもつ条件（中心と直線の距離 $\\leqq$ 半径）から $k$ の範囲を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式（または置き換え）を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値の範囲を求めている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ点の確認を省く。",
+          "$\\sqrt{1521}$ を簡単にし忘れる、または 最大値と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "実数 $x,\\ y$ が $x^2+y^2=5$ を満たすとき、$4x-3y$ の最大値を求めなさい。",
+      "answer": {
+        "value": "$5 \\sqrt{5}$",
+        "accepted": [
+          "5*sqrt(5)"
+        ]
+      },
+      "explanation": "$(25)(x^2+y^2)-(4x-3y)^2=(-3x-4y)^2\\geqq0$ より $(4x-3y)^2\\leqq125$。等号は $x:y=4:-3$ のとき成り立つので、最大値は $5 \\sqrt{5}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(((4)**2+(-3)**2)*5)",
+        "expected": "5*sqrt(5)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "SS-MATH-U01-b_cauchy",
+      "explanation_detail": {
+        "approach": "$(a^2+b^2)(x^2+y^2)\\geqq(ax+by)^2$（コーシー・シュワルツの不等式）を使うと、$ax+by$ のとりうる範囲が一度に求まる。等号成立の $x,\\ y$ が条件を満たすことも確かめる。",
+        "steps": [
+          "$(4^2+(-3)^2)(x^2+y^2)-(4x-3y)^2=(-3x-4y)^2\\geqq0$（展開して確かめる）。",
+          "$x^2+y^2=5$ より $(4x-3y)^2\\leqq25\\times5=125$。",
+          "$-5 \\sqrt{5}\\leqq 4x-3y\\leqq 5 \\sqrt{5}$。",
+          "等号は $-3x-4y=0$ のとき。$x^2+y^2=5$ と合わせて実際に成り立つ点があるので、最大値は $5 \\sqrt{5}$。"
+        ],
+        "alternatives": [
+          "$x=\\sqrt{5}\\cos\\theta,\\ y=\\sqrt{5}\\sin\\theta$ とおき、$4x-3y$ を三角関数の合成で $r\\sin(\\theta+\\alpha)$ の形にしても同じ結果になる。",
+          "$4x-3y=k$ とおき、直線と円 $x^2+y^2=5$ が共有点をもつ条件（中心と直線の距離 $\\leqq$ 半径）から $k$ の範囲を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式（または置き換え）を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値の範囲を求めている",
+            "points": 1
+          },
+          {
+            "point": "等号成立を確かめて答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "等号が成り立つ点の確認を省く。",
+          "$\\sqrt{125}$ を簡単にし忘れる、または 最小値と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "有理数 $x,\\ y$ が $(-3x-y)+(-2x+3y)\\sqrt{5}=12-3\\sqrt{5}$ を満たすとき、$x,\\ y$ の値を求めなさい。ただし、$\\sqrt{5}$ が無理数であることは用いてよい。",
+      "answer": {
+        "value": "$x=-3,\\ y=-3$",
+        "accepted": [
+          "x=-3, y=-3"
+        ]
+      },
+      "explanation": "$\\sqrt{5}$ は無理数で、$x,\\ y$ は有理数なので、有理数部分と $\\sqrt{5}$ の係数をそれぞれ比べて $-3x-y=12,\\ -2x+3y=-3$。これを解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([-3*x+(-1)*y-(12), -2*x+(3)*y-(-3)], [x, y])",
+        "expected": "{x: -3, y: -3}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-b_rational_coeff",
+      "explanation_detail": {
+        "approach": "「$p,\\ q$ が有理数で $p+q\\sqrt{m}=0$ ならば $p=q=0$」は、$\\sqrt{m}$ の無理数性から背理法で示せる。この性質で係数を比較する。",
+        "steps": [
+          "移項して $\\{(-3x-y)-(12)\\}+\\{(-2x+3y)-(-3)\\}\\sqrt{5}=0$。",
+          "$x,\\ y$ は有理数なので、2つの中かっこは有理数。$\\sqrt{5}$ の係数が 0 でないと $\\sqrt{5}=(\\text{有理数})$ となり矛盾。",
+          "よって $-3x-y=12$ かつ $-2x+3y=-3$。",
+          "連立して $x=-3,\\ y=-3$。"
+        ],
+        "alternatives": [
+          "求めた値を元の式に代入して、両辺が一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x,\\ y$ が有理数であることを根拠に係数を比較している",
+            "points": 2
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が有理数という条件を書かずに係数比較をする（無理数なら係数比較はできない）。",
+          "連立方程式の加減法で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "有理数 $x,\\ y$ が $(-2x-3y)+(3x-2y)\\sqrt{5}=8-12\\sqrt{5}$ を満たすとき、$x,\\ y$ の値を求めなさい。ただし、$\\sqrt{5}$ が無理数であることは用いてよい。",
+      "answer": {
+        "value": "$x=-4,\\ y=0$",
+        "accepted": [
+          "x=-4, y=0"
+        ]
+      },
+      "explanation": "$\\sqrt{5}$ は無理数で、$x,\\ y$ は有理数なので、有理数部分と $\\sqrt{5}$ の係数をそれぞれ比べて $-2x-3y=8,\\ 3x-2y=-12$。これを解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([-2*x+(-3)*y-(8), 3*x+(-2)*y-(-12)], [x, y])",
+        "expected": "{x: -4, y: 0}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-b_rational_coeff",
+      "explanation_detail": {
+        "approach": "「$p,\\ q$ が有理数で $p+q\\sqrt{m}=0$ ならば $p=q=0$」は、$\\sqrt{m}$ の無理数性から背理法で示せる。この性質で係数を比較する。",
+        "steps": [
+          "移項して $\\{(-2x-3y)-(8)\\}+\\{(3x-2y)-(-12)\\}\\sqrt{5}=0$。",
+          "$x,\\ y$ は有理数なので、2つの中かっこは有理数。$\\sqrt{5}$ の係数が 0 でないと $\\sqrt{5}=(\\text{有理数})$ となり矛盾。",
+          "よって $-2x-3y=8$ かつ $3x-2y=-12$。",
+          "連立して $x=-4,\\ y=0$。"
+        ],
+        "alternatives": [
+          "求めた値を元の式に代入して、両辺が一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x,\\ y$ が有理数であることを根拠に係数を比較している",
+            "points": 2
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が有理数という条件を書かずに係数比較をする（無理数なら係数比較はできない）。",
+          "連立方程式の加減法で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "有理数 $x,\\ y$ が $(3x+2y)+(2x-2y)\\sqrt{2}=-20$ を満たすとき、$x,\\ y$ の値を求めなさい。ただし、$\\sqrt{2}$ が無理数であることは用いてよい。",
+      "answer": {
+        "value": "$x=-4,\\ y=-4$",
+        "accepted": [
+          "x=-4, y=-4"
+        ]
+      },
+      "explanation": "$\\sqrt{2}$ は無理数で、$x,\\ y$ は有理数なので、有理数部分と $\\sqrt{2}$ の係数をそれぞれ比べて $3x+2y=-20,\\ 2x-2y=0$。これを解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([3*x+(2)*y-(-20), 2*x+(-2)*y-(0)], [x, y])",
+        "expected": "{x: -4, y: -4}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-b_rational_coeff",
+      "explanation_detail": {
+        "approach": "「$p,\\ q$ が有理数で $p+q\\sqrt{m}=0$ ならば $p=q=0$」は、$\\sqrt{m}$ の無理数性から背理法で示せる。この性質で係数を比較する。",
+        "steps": [
+          "移項して $\\{(3x+2y)-(-20)\\}+\\{(2x-2y)-(0)\\}\\sqrt{2}=0$。",
+          "$x,\\ y$ は有理数なので、2つの中かっこは有理数。$\\sqrt{2}$ の係数が 0 でないと $\\sqrt{2}=(\\text{有理数})$ となり矛盾。",
+          "よって $3x+2y=-20$ かつ $2x-2y=0$。",
+          "連立して $x=-4,\\ y=-4$。"
+        ],
+        "alternatives": [
+          "求めた値を元の式に代入して、両辺が一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x,\\ y$ が有理数であることを根拠に係数を比較している",
+            "points": 2
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が有理数という条件を書かずに係数比較をする（無理数なら係数比較はできない）。",
+          "連立方程式の加減法で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "有理数 $x,\\ y$ が $(-x+2y)+(2x-y)\\sqrt{6}=8-7\\sqrt{6}$ を満たすとき、$x,\\ y$ の値を求めなさい。ただし、$\\sqrt{6}$ が無理数であることは用いてよい。",
+      "answer": {
+        "value": "$x=-2,\\ y=3$",
+        "accepted": [
+          "x=-2, y=3"
+        ]
+      },
+      "explanation": "$\\sqrt{6}$ は無理数で、$x,\\ y$ は有理数なので、有理数部分と $\\sqrt{6}$ の係数をそれぞれ比べて $-x+2y=8,\\ 2x-y=-7$。これを解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve([-1*x+(2)*y-(8), 2*x+(-1)*y-(-7)], [x, y])",
+        "expected": "{x: -2, y: 3}",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-b_rational_coeff",
+      "explanation_detail": {
+        "approach": "「$p,\\ q$ が有理数で $p+q\\sqrt{m}=0$ ならば $p=q=0$」は、$\\sqrt{m}$ の無理数性から背理法で示せる。この性質で係数を比較する。",
+        "steps": [
+          "移項して $\\{(-x+2y)-(8)\\}+\\{(2x-y)-(-7)\\}\\sqrt{6}=0$。",
+          "$x,\\ y$ は有理数なので、2つの中かっこは有理数。$\\sqrt{6}$ の係数が 0 でないと $\\sqrt{6}=(\\text{有理数})$ となり矛盾。",
+          "よって $-x+2y=8$ かつ $2x-y=-7$。",
+          "連立して $x=-2,\\ y=3$。"
+        ],
+        "alternatives": [
+          "求めた値を元の式に代入して、両辺が一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x,\\ y$ が有理数であることを根拠に係数を比較している",
+            "points": 2
+          },
+          {
+            "point": "連立方程式を正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x,\\ y$ が有理数という条件を書かずに係数比較をする（無理数なら係数比較はできない）。",
+          "連立方程式の加減法で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "方程式 $x^2+6y^2=98$ を満たす整数 $x,\\ y$ は存在しないことを証明しなさい。",
+      "answer": {
+        "value": "$x,\\ y$ を $3$ で割った余りで分類すると、$x^2$ を $3$ で割った余りは $0,\\ 1$ のいずれか、$6y^2$ の余りは $0$ で、左辺を $3$ で割った余りは $0,\\ 1$ のいずれか になる。一方、右辺 $98$ を $3$ で割った余りは $2$ で、これは現れない。よって整数解は存在しない。（証明終）"
+      },
+      "explanation": "法 $3$ で考えると、左辺の余りは $0,\\ 1$ に限られ、右辺の余り $2$ と一致しない。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$3$ で割った余りに注目する方針を示している",
+            "points": 2
+          },
+          {
+            "criterion": "$x^2$ などの余りを、余りによる分類で正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "左辺と右辺の余りが一致しないことから結論を導いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "{Mod(0**2+(6)*0**2, 3), Mod(0**2+(6)*1**2, 3), Mod(0**2+(6)*2**2, 3), Mod(1**2+(6)*0**2, 3), Mod(1**2+(6)*1**2, 3), Mod(1**2+(6)*2**2, 3), Mod(2**2+(6)*0**2, 3), Mod(2**2+(6)*1**2, 3), Mod(2**2+(6)*2**2, 3)}",
+        "expected": "[0, 1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-c_mod_eq",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「整数解が存在しない」ことは、ある数 $m$ で割った余りが両辺で一致しえないことで示せる（数学Aの整数の性質）。平方数の余りが限られる $m$（3, 4, 8 など）を実験で探す。",
+        "steps": [
+          "$m=3$ で割った余りを考える。$x$ を $3$ で割った余り $0,\\ \\cdots,\\ 2$ で分類して、$x^2$ の余りは $0,\\ 1$。",
+          "同様に $6y^2$ を $3$ で割った余りは $0$。",
+          "組み合わせると、左辺を $3$ で割った余りは $0,\\ 1$ のいずれか。",
+          "右辺 $98=3\\times32+2$ の余りは $2$ で、左辺の余りとして現れない。",
+          "両辺の余りが一致しないので、整数解は存在しない。"
+        ],
+        "alternatives": [
+          "$x$ と $y$ の余りの組をすべて表にまとめ、左辺の余りが右辺の余りと一致する欄が1つもないことを示す書き方もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "法の選択と方針",
+            "points": 2
+          },
+          {
+            "point": "平方数の余りの分類",
+            "points": 3
+          },
+          {
+            "point": "矛盾の導出と結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "具体的な $x,\\ y$ をいくつか代入しただけで「解なし」と結論する。",
+          "余りの組み合わせを一部しか調べない（$3$ 通り × $3$ 通りを尽くしていない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "方程式 $x^2+6y^2=62$ を満たす整数 $x,\\ y$ は存在しないことを証明しなさい。",
+      "answer": {
+        "value": "$x,\\ y$ を $3$ で割った余りで分類すると、$x^2$ を $3$ で割った余りは $0,\\ 1$ のいずれか、$6y^2$ の余りは $0$ で、左辺を $3$ で割った余りは $0,\\ 1$ のいずれか になる。一方、右辺 $62$ を $3$ で割った余りは $2$ で、これは現れない。よって整数解は存在しない。（証明終）"
+      },
+      "explanation": "法 $3$ で考えると、左辺の余りは $0,\\ 1$ に限られ、右辺の余り $2$ と一致しない。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$3$ で割った余りに注目する方針を示している",
+            "points": 2
+          },
+          {
+            "criterion": "$x^2$ などの余りを、余りによる分類で正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "左辺と右辺の余りが一致しないことから結論を導いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "{Mod(0**2+(6)*0**2, 3), Mod(0**2+(6)*1**2, 3), Mod(0**2+(6)*2**2, 3), Mod(1**2+(6)*0**2, 3), Mod(1**2+(6)*1**2, 3), Mod(1**2+(6)*2**2, 3), Mod(2**2+(6)*0**2, 3), Mod(2**2+(6)*1**2, 3), Mod(2**2+(6)*2**2, 3)}",
+        "expected": "[0, 1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-c_mod_eq",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「整数解が存在しない」ことは、ある数 $m$ で割った余りが両辺で一致しえないことで示せる（数学Aの整数の性質）。平方数の余りが限られる $m$（3, 4, 8 など）を実験で探す。",
+        "steps": [
+          "$m=3$ で割った余りを考える。$x$ を $3$ で割った余り $0,\\ \\cdots,\\ 2$ で分類して、$x^2$ の余りは $0,\\ 1$。",
+          "同様に $6y^2$ を $3$ で割った余りは $0$。",
+          "組み合わせると、左辺を $3$ で割った余りは $0,\\ 1$ のいずれか。",
+          "右辺 $62=3\\times20+2$ の余りは $2$ で、左辺の余りとして現れない。",
+          "両辺の余りが一致しないので、整数解は存在しない。"
+        ],
+        "alternatives": [
+          "$x$ と $y$ の余りの組をすべて表にまとめ、左辺の余りが右辺の余りと一致する欄が1つもないことを示す書き方もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "法の選択と方針",
+            "points": 2
+          },
+          {
+            "point": "平方数の余りの分類",
+            "points": 3
+          },
+          {
+            "point": "矛盾の導出と結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "具体的な $x,\\ y$ をいくつか代入しただけで「解なし」と結論する。",
+          "余りの組み合わせを一部しか調べない（$3$ 通り × $3$ 通りを尽くしていない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "方程式 $x^2+7y^2=75$ を満たす整数 $x,\\ y$ は存在しないことを証明しなさい。",
+      "answer": {
+        "value": "$x,\\ y$ を $7$ で割った余りで分類すると、$x^2$ を $7$ で割った余りは $0,\\ 1,\\ 2,\\ 4$ のいずれか、$7y^2$ の余りは $0$ で、左辺を $7$ で割った余りは $0,\\ 1,\\ 2,\\ 4$ のいずれか になる。一方、右辺 $75$ を $7$ で割った余りは $5$ で、これは現れない。よって整数解は存在しない。（証明終）"
+      },
+      "explanation": "法 $7$ で考えると、左辺の余りは $0,\\ 1,\\ 2,\\ 4$ に限られ、右辺の余り $5$ と一致しない。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$7$ で割った余りに注目する方針を示している",
+            "points": 2
+          },
+          {
+            "criterion": "$x^2$ などの余りを、余りによる分類で正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "左辺と右辺の余りが一致しないことから結論を導いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "{Mod(0**2+(7)*0**2, 7), Mod(0**2+(7)*1**2, 7), Mod(0**2+(7)*2**2, 7), Mod(0**2+(7)*3**2, 7), Mod(0**2+(7)*4**2, 7), Mod(0**2+(7)*5**2, 7), Mod(0**2+(7)*6**2, 7), Mod(1**2+(7)*0**2, 7), Mod(1**2+(7)*1**2, 7), Mod(1**2+(7)*2**2, 7), Mod(1**2+(7)*3**2, 7), Mod(1**2+(7)*4**2, 7), Mod(1**2+(7)*5**2, 7), Mod(1**2+(7)*6**2, 7), Mod(2**2+(7)*0**2, 7), Mod(2**2+(7)*1**2, 7), Mod(2**2+(7)*2**2, 7), Mod(2**2+(7)*3**2, 7), Mod(2**2+(7)*4**2, 7), Mod(2**2+(7)*5**2, 7), Mod(2**2+(7)*6**2, 7), Mod(3**2+(7)*0**2, 7), Mod(3**2+(7)*1**2, 7), Mod(3**2+(7)*2**2, 7), Mod(3**2+(7)*3**2, 7), Mod(3**2+(7)*4**2, 7), Mod(3**2+(7)*5**2, 7), Mod(3**2+(7)*6**2, 7), Mod(4**2+(7)*0**2, 7), Mod(4**2+(7)*1**2, 7), Mod(4**2+(7)*2**2, 7), Mod(4**2+(7)*3**2, 7), Mod(4**2+(7)*4**2, 7), Mod(4**2+(7)*5**2, 7), Mod(4**2+(7)*6**2, 7), Mod(5**2+(7)*0**2, 7), Mod(5**2+(7)*1**2, 7), Mod(5**2+(7)*2**2, 7), Mod(5**2+(7)*3**2, 7), Mod(5**2+(7)*4**2, 7), Mod(5**2+(7)*5**2, 7), Mod(5**2+(7)*6**2, 7), Mod(6**2+(7)*0**2, 7), Mod(6**2+(7)*1**2, 7), Mod(6**2+(7)*2**2, 7), Mod(6**2+(7)*3**2, 7), Mod(6**2+(7)*4**2, 7), Mod(6**2+(7)*5**2, 7), Mod(6**2+(7)*6**2, 7)}",
+        "expected": "[0, 1, 2, 4]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-c_mod_eq",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「整数解が存在しない」ことは、ある数 $m$ で割った余りが両辺で一致しえないことで示せる（数学Aの整数の性質）。平方数の余りが限られる $m$（3, 4, 8 など）を実験で探す。",
+        "steps": [
+          "$m=7$ で割った余りを考える。$x$ を $7$ で割った余り $0,\\ \\cdots,\\ 6$ で分類して、$x^2$ の余りは $0,\\ 1,\\ 2,\\ 4$。",
+          "同様に $7y^2$ を $7$ で割った余りは $0$。",
+          "組み合わせると、左辺を $7$ で割った余りは $0,\\ 1,\\ 2,\\ 4$ のいずれか。",
+          "右辺 $75=7\\times10+5$ の余りは $5$ で、左辺の余りとして現れない。",
+          "両辺の余りが一致しないので、整数解は存在しない。"
+        ],
+        "alternatives": [
+          "$x$ と $y$ の余りの組をすべて表にまとめ、左辺の余りが右辺の余りと一致する欄が1つもないことを示す書き方もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "法の選択と方針",
+            "points": 2
+          },
+          {
+            "point": "平方数の余りの分類",
+            "points": 3
+          },
+          {
+            "point": "矛盾の導出と結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "具体的な $x,\\ y$ をいくつか代入しただけで「解なし」と結論する。",
+          "余りの組み合わせを一部しか調べない（$7$ 通り × $7$ 通りを尽くしていない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "不等式 $3^n>n^3$ について、次の問いに答えなさい。\n(1) $n=1,\\ 2,\\ \\cdots$ と順に調べ、$n\\geqq n_0$ のすべての自然数 $n$ で成り立つような最小の自然数 $n_0$ を求めなさい（$n_0-1$ では成り立たないことも示すこと）。\n(2) $n\\geqq n_0$ のすべての自然数 $n$ について $3^n>n^3$ が成り立つことを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "(1) $n_0=4$（$n=3$ では左辺 $27$、右辺 $27$ で成り立たない）　(2) (I) $n=4$ のとき左辺 $81$、右辺 $64$ で成り立つ。(II) $k\\geqq4$ で成り立つと仮定すると、$3^{k+1}>3k^3$。$k\\geqq4$ のとき $\\left(\\dfrac{k+1}{k}\\right)^3\\leqq\\left(\\dfrac{5}{4}\\right)^3=\\dfrac{125}{64}<3$ なので $3k^3>(k+1)^3$。 よって $n=k+1$ でも成り立つ。(I)(II) より $n\\geqq4$ で成り立つ。（証明終）"
+      },
+      "explanation": "(II) の要点：$3^{k+1}>3k^3$。$k\\geqq4$ のとき $\\left(\\dfrac{k+1}{k}\\right)^3\\leqq\\left(\\dfrac{5}{4}\\right)^3=\\dfrac{125}{64}<3$ なので $3k^3>(k+1)^3$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) $n_0$ を正しく求め、$n_0-1$ で成り立たないことを示している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 出発点 $n=n_0$ の確認をしている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 仮定を用いて $n=k+1$ の場合を導いている",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "3**4-4**3",
+        "expected": "17",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-c_induction_ineq",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k+1$ の左辺を仮定で評価し、その評価値と $n=k+1$ の右辺の大小を「$k\\geqq n_0$ のとき」に確かめる。",
+        "steps": [
+          "(1) 値を比べる：$n=2$：$9$ と $8$、$n=3$：$27$ と $27$、$n=4$：$81$ と $64$。$n_0=4$。",
+          "(2)(I) $n=4$ で成り立つ。",
+          "(II) $k\\geqq4$ として $3^k>k^3$ を仮定する。",
+          "$3^{k+1}>3k^3$。$k\\geqq4$ のとき $\\left(\\dfrac{k+1}{k}\\right)^3\\leqq\\left(\\dfrac{5}{4}\\right)^3=\\dfrac{125}{64}<3$ なので $3k^3>(k+1)^3$。",
+          "(I)(II) より、$n\\geqq4$ のすべての自然数 $n$ で成り立つ。"
+        ],
+        "alternatives": [
+          "左辺と右辺の比（または差）が $n$ とともにどう変化するかを調べ、$n\\geqq n_0$ で比が増加し続けることから示す方法もある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n_0$ の決定",
+            "points": 2
+          },
+          {
+            "point": "出発点の確認",
+            "points": 1
+          },
+          {
+            "point": "帰納法の (II)",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "出発点を $n=1$ にしてしまい、(II) の不等式が小さい $k$ で成り立たないことに気づかない。",
+          "(II) で仮定を使わずに式変形する、または示すべき不等式を仮定して変形する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "不等式 $n!>3^n$ について、次の問いに答えなさい。\n(1) $n=1,\\ 2,\\ \\cdots$ と順に調べ、$n\\geqq n_0$ のすべての自然数 $n$ で成り立つような最小の自然数 $n_0$ を求めなさい（$n_0-1$ では成り立たないことも示すこと）。\n(2) $n\\geqq n_0$ のすべての自然数 $n$ について $n!>3^n$ が成り立つことを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "(1) $n_0=7$（$n=6$ では左辺 $720$、右辺 $729$ で成り立たない）　(2) (I) $n=7$ のとき左辺 $5040$、右辺 $2187$ で成り立つ。(II) $k\\geqq7$ で成り立つと仮定すると、$(k+1)!=(k+1)\\cdot k!>(k+1)\\cdot3^k$。$k\\geqq7$ より $k+1>3$ なので $(k+1)\\cdot3^k>3^{k+1}$。 よって $n=k+1$ でも成り立つ。(I)(II) より $n\\geqq7$ で成り立つ。（証明終）"
+      },
+      "explanation": "(II) の要点：$(k+1)!=(k+1)\\cdot k!>(k+1)\\cdot3^k$。$k\\geqq7$ より $k+1>3$ なので $(k+1)\\cdot3^k>3^{k+1}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) $n_0$ を正しく求め、$n_0-1$ で成り立たないことを示している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 出発点 $n=n_0$ の確認をしている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 仮定を用いて $n=k+1$ の場合を導いている",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "factorial(7)-3**7",
+        "expected": "2853",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-c_induction_ineq",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k+1$ の左辺を仮定で評価し、その評価値と $n=k+1$ の右辺の大小を「$k\\geqq n_0$ のとき」に確かめる。",
+        "steps": [
+          "(1) 値を比べる：$n=5$：$120$ と $243$、$n=6$：$720$ と $729$、$n=7$：$5040$ と $2187$。$n_0=7$。",
+          "(2)(I) $n=7$ で成り立つ。",
+          "(II) $k\\geqq7$ として $k!>3^k$ を仮定する。",
+          "$(k+1)!=(k+1)\\cdot k!>(k+1)\\cdot3^k$。$k\\geqq7$ より $k+1>3$ なので $(k+1)\\cdot3^k>3^{k+1}$。",
+          "(I)(II) より、$n\\geqq7$ のすべての自然数 $n$ で成り立つ。"
+        ],
+        "alternatives": [
+          "左辺と右辺の比（または差）が $n$ とともにどう変化するかを調べ、$n\\geqq n_0$ で比が増加し続けることから示す方法もある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n_0$ の決定",
+            "points": 2
+          },
+          {
+            "point": "出発点の確認",
+            "points": 1
+          },
+          {
+            "point": "帰納法の (II)",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "出発点を $n=1$ にしてしまい、(II) の不等式が小さい $k$ で成り立たないことに気づかない。",
+          "(II) で仮定を使わずに式変形する、または示すべき不等式を仮定して変形する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "不等式 $4^n>10n$ について、次の問いに答えなさい。\n(1) $n=1,\\ 2,\\ \\cdots$ と順に調べ、$n\\geqq n_0$ のすべての自然数 $n$ で成り立つような最小の自然数 $n_0$ を求めなさい（$n_0-1$ では成り立たないことも示すこと）。\n(2) $n\\geqq n_0$ のすべての自然数 $n$ について $4^n>10n$ が成り立つことを、数学的帰納法で証明しなさい。",
+      "answer": {
+        "value": "(1) $n_0=3$（$n=2$ では左辺 $16$、右辺 $20$ で成り立たない）　(2) (I) $n=3$ のとき左辺 $64$、右辺 $30$ で成り立つ。(II) $k\\geqq3$ で成り立つと仮定すると、$4^{k+1}=4\\cdot4^k>4\\cdot10k$。$40k-10(k+1)=10(3k-1)>0$ なので $4^{k+1}>10(k+1)$。 よって $n=k+1$ でも成り立つ。(I)(II) より $n\\geqq3$ で成り立つ。（証明終）"
+      },
+      "explanation": "(II) の要点：$4^{k+1}=4\\cdot4^k>4\\cdot10k$。$40k-10(k+1)=10(3k-1)>0$ なので $4^{k+1}>10(k+1)$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) $n_0$ を正しく求め、$n_0-1$ で成り立たないことを示している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 出発点 $n=n_0$ の確認をしている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 仮定を用いて $n=k+1$ の場合を導いている",
+            "points": 4
+          },
+          {
+            "criterion": "結論を正しく述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "4**3-10*3",
+        "expected": "34",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-c_induction_ineq",
+      "explanation_detail": {
+        "approach": "帰納法の (II) では、$n=k+1$ の左辺を仮定で評価し、その評価値と $n=k+1$ の右辺の大小を「$k\\geqq n_0$ のとき」に確かめる。",
+        "steps": [
+          "(1) 値を比べる：$n=1$：$4$ と $10$、$n=2$：$16$ と $20$、$n=3$：$64$ と $30$。$n_0=3$。",
+          "(2)(I) $n=3$ で成り立つ。",
+          "(II) $k\\geqq3$ として $4^k>10k$ を仮定する。",
+          "$4^{k+1}=4\\cdot4^k>4\\cdot10k$。$40k-10(k+1)=10(3k-1)>0$ なので $4^{k+1}>10(k+1)$。",
+          "(I)(II) より、$n\\geqq3$ のすべての自然数 $n$ で成り立つ。"
+        ],
+        "alternatives": [
+          "左辺と右辺の比（または差）が $n$ とともにどう変化するかを調べ、$n\\geqq n_0$ で比が増加し続けることから示す方法もある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$n_0$ の決定",
+            "points": 2
+          },
+          {
+            "point": "出発点の確認",
+            "points": 1
+          },
+          {
+            "point": "帰納法の (II)",
+            "points": 4
+          },
+          {
+            "point": "結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "出発点を $n=1$ にしてしまい、(II) の不等式が小さい $k$ で成り立たないことに気づかない。",
+          "(II) で仮定を使わずに式変形する、または示すべき不等式を仮定して変形する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "実数 $x,\\ y$ について、不等式 $x^2+2xy+2y^2\\geqq0$ を証明しなさい。また、等号が成り立つ条件を求めなさい。",
+      "answer": {
+        "value": "$x^2+2xy+2y^2=(x+y)^2+y^2\\geqq0$。等号は $x+y=0$ かつ $y=0$、すなわち $x=y=0$ のとき。（証明終）"
+      },
+      "explanation": "$x^2+2xy+2y^2=(x+y)^2+y^2\\geqq0$。等号は $x+y=0$ かつ $y=0$、すなわち $x=y=0$ のとき。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$x$ について平方完成している",
+            "points": 3
+          },
+          {
+            "criterion": "各項が 0 以上であることから不等式を導いている",
+            "points": 3
+          },
+          {
+            "criterion": "等号成立条件を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(x**2+(2)*x*y+2*y**2-((x+(1)*y)**2+1*y**2))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "SS-MATH-U01-c_ineq_sq",
+      "explanation_detail": {
+        "approach": "2変数の二次式は、一方の文字について平方完成すると「(実数)$^2$ の和」の形になり、0 以上であることが示せる。",
+        "steps": [
+          "左辺から右辺を引いた差（または左辺そのもの）を整理する。",
+          "平方完成・通分により「(実数)$^2$」を含む形にする。",
+          "各項が 0 以上であることから不等式が成り立つ。",
+          "等号成立条件は $x=y=0$。"
+        ],
+        "alternatives": [
+          "左辺を $x$ の二次式とみて、判別式 $D/4=(1y)^2-2y^2=-1y^2\\leqq0$ と $x^2$ の係数が正であることから示すこともできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ について平方完成している",
+            "points": 3
+          },
+          {
+            "point": "各項が 0 以上であることから不等式を導いている",
+            "points": 3
+          },
+          {
+            "point": "等号成立条件を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "等号成立条件を書き忘れる。",
+          "平方完成の計算で $y^2$ の係数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "実数 $x,\\ y$ について、不等式 $x^2-2xy+4y^2\\geqq0$ を証明しなさい。また、等号が成り立つ条件を求めなさい。",
+      "answer": {
+        "value": "$x^2-2xy+4y^2=(x-y)^2+3y^2\\geqq0$。等号は $x-y=0$ かつ $y=0$、すなわち $x=y=0$ のとき。（証明終）"
+      },
+      "explanation": "$x^2-2xy+4y^2=(x-y)^2+3y^2\\geqq0$。等号は $x-y=0$ かつ $y=0$、すなわち $x=y=0$ のとき。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$x$ について平方完成している",
+            "points": 3
+          },
+          {
+            "criterion": "各項が 0 以上であることから不等式を導いている",
+            "points": 3
+          },
+          {
+            "criterion": "等号成立条件を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand(x**2+(-2)*x*y+4*y**2-((x+(-1)*y)**2+3*y**2))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "SS-MATH-U01-c_ineq_sq",
+      "explanation_detail": {
+        "approach": "2変数の二次式は、一方の文字について平方完成すると「(実数)$^2$ の和」の形になり、0 以上であることが示せる。",
+        "steps": [
+          "左辺から右辺を引いた差（または左辺そのもの）を整理する。",
+          "平方完成・通分により「(実数)$^2$」を含む形にする。",
+          "各項が 0 以上であることから不等式が成り立つ。",
+          "等号成立条件は $x=y=0$。"
+        ],
+        "alternatives": [
+          "左辺を $x$ の二次式とみて、判別式 $D/4=(-1y)^2-4y^2=-3y^2\\leqq0$ と $x^2$ の係数が正であることから示すこともできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ について平方完成している",
+            "points": 3
+          },
+          {
+            "point": "各項が 0 以上であることから不等式を導いている",
+            "points": 3
+          },
+          {
+            "point": "等号成立条件を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "等号成立条件を書き忘れる。",
+          "平方完成の計算で $y^2$ の係数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\log_{2}6$ が無理数であることを、背理法を用いて証明しなさい。",
+      "answer": {
+        "value": "$\\log_{2}6$ が有理数であると仮定する。$\\log_{2}6>0$ なので、自然数 $m,\\ n$ を用いて $\\log_{2}6=\\dfrac{m}{n}$ と表せる。　$2^{\\frac{m}{n}}=6$ より $2^m=6^n$。　右辺 $6^n$ は素因数 $3$ をもつが、左辺 $2^m$ の素因数は $2$ だけであり、素因数分解の一意性に矛盾する。　よって $\\log_{2}6$ は無理数である。（証明終）"
+      },
+      "explanation": "右辺 $6^n$ は素因数 $3$ をもつが、左辺 $2^m$ の素因数は $2$ だけであり、素因数分解の一意性に矛盾する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "有理数と仮定し、$\\dfrac{m}{n}$（$m,\\ n$ は自然数）とおいている",
+            "points": 2
+          },
+          {
+            "criterion": "指数の等式 $2^m=6^n$ に直している",
+            "points": 2
+          },
+          {
+            "criterion": "素因数に注目して矛盾を導いている",
+            "points": 3
+          },
+          {
+            "criterion": "結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "factorint(6)",
+        "expected": "{2: 1, 3: 1}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-c_irrational",
+      "related_units": [
+        "HS-MATH2-U05",
+        "HS-MATH1-U02"
+      ],
+      "explanation_detail": {
+        "approach": "「無理数である」は否定の主張なので背理法。対数の等式を指数の等式に戻すと、整数の素因数の問題になる。",
+        "steps": [
+          "$\\log_{2}6$ が有理数であると仮定する。$\\log_{2}6>0$ なので、自然数 $m,\\ n$ を用いて $\\log_{2}6=\\dfrac{m}{n}$ と表せる。",
+          "$2^{\\frac{m}{n}}=6$ より $2^m=6^n$。",
+          "右辺 $6^n$ は素因数 $3$ をもつが、左辺 $2^m$ の素因数は $2$ だけであり、素因数分解の一意性に矛盾する。",
+          "よって $\\log_{2}6$ は無理数である。"
+        ],
+        "alternatives": [
+          "$2^m$ と $6^n$ を $3$ で割った余りに注目しても（一方は $3$ の倍数、他方は倍数でない）矛盾が導ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理数と仮定し、$\\dfrac{m}{n}$（$m,\\ n$ は自然数）とおいている",
+            "points": 2
+          },
+          {
+            "point": "指数の等式 $2^m=6^n$ に直している",
+            "points": 2
+          },
+          {
+            "point": "素因数に注目して矛盾を導いている",
+            "points": 3
+          },
+          {
+            "point": "結論を述べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「無理数でないと仮定する」と書いた後、有理数の表し方（分母・分子の条件）を明記しない。",
+          "矛盾が何と何の矛盾なのかを書かずに「矛盾」とだけ書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\sqrt{2}+\\sqrt{3}$ が無理数であることを証明しなさい。ただし、$\\sqrt{2}$ が無理数であることは用いてよい。",
+      "answer": {
+        "value": "$\\sqrt{2}+\\sqrt{3}=r$（$r$ は有理数）と仮定する。$r>0$。　$r-\\sqrt{2}=\\sqrt{3}$ の両辺を2乗して $r^2-2r\\sqrt{2}+2=3$。　$\\sqrt{2}=\\dfrac{r^2-1}{2r}$ となり、右辺は有理数なので $\\sqrt{2}$ が有理数となって矛盾する。　よって $\\sqrt{2}+\\sqrt{3}$ は無理数である。（証明終）"
+      },
+      "explanation": "$\\sqrt{2}=\\dfrac{r^2-1}{2r}$ となり、右辺は有理数なので $\\sqrt{2}$ が有理数となって矛盾する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "有理数 $r$ と仮定している",
+            "points": 2
+          },
+          {
+            "criterion": "一方の根号を移項して2乗している",
+            "points": 2
+          },
+          {
+            "criterion": "$\\sqrt{2}$ を有理数で表し矛盾を導いている",
+            "points": 3
+          },
+          {
+            "criterion": "結論を述べている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "expand((r-sqrt(2))**2)",
+        "expected": "r**2-2*r*sqrt(2)+2",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "SS-MATH-U01-c_irrational",
+      "related_units": [
+        "HS-MATH2-U05",
+        "HS-MATH1-U02"
+      ],
+      "explanation_detail": {
+        "approach": "2つの根号の和はそのまま2乗すると根号が残る。一方を移項してから2乗すると、根号が1つだけの式になる。",
+        "steps": [
+          "$\\sqrt{2}+\\sqrt{3}=r$（$r$ は有理数）と仮定する。$r>0$。",
+          "$r-\\sqrt{2}=\\sqrt{3}$ の両辺を2乗して $r^2-2r\\sqrt{2}+2=3$。",
+          "$\\sqrt{2}=\\dfrac{r^2-1}{2r}$ となり、右辺は有理数なので $\\sqrt{2}$ が有理数となって矛盾する。",
+          "よって $\\sqrt{2}+\\sqrt{3}$ は無理数である。"
+        ],
+        "alternatives": [
+          "$(\\sqrt{2}+\\sqrt{3})^2=5+2\\sqrt{6}$ が無理数であること（$\\sqrt{6}$ の無理数性）から示す方法もある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理数 $r$ と仮定している",
+            "points": 2
+          },
+          {
+            "point": "一方の根号を移項して2乗している",
+            "points": 2
+          },
+          {
+            "point": "$\\sqrt{2}$ を有理数で表し矛盾を導いている",
+            "points": 3
+          },
+          {
+            "point": "結論を述べている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「無理数でないと仮定する」と書いた後、有理数の表し方（分母・分子の条件）を明記しない。",
+          "矛盾が何と何の矛盾なのかを書かずに「矛盾」とだけ書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "「すべての自然数 $n$ について $3^n>10n$ が成り立つ」ことを数学的帰納法で示そうとした。\n［ある生徒の解答］\n$n=k$ のとき $3^k>10k$ が成り立つと仮定する。$3^{k+1}=3\\cdot3^k>30k=10k+20k\\geqq10k+10=10(k+1)$。よって $n=k+1$ のときも成り立つ。したがって、すべての自然数 $n$ について $3^n>10n$ が成り立つ。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "命題は誤り（$n=1$ が反例）。正しくは $n\\geqq4$ のすべての自然数 $n$ で $3^n>10n$ が成り立つ。"
+      },
+      "explanation": "$n=3$ では $27\\leqq30$、$n=4$ では $81>40$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[3**4-10*4, 3**3-10*3]",
+        "expected": "[41, -3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-d_induction_base",
+      "explanation_detail": {
+        "approach": "帰納法は (I) 出発点の確認と (II) の両方がそろって初めて証明になる。(II) だけでは、成り立たない命題も「証明」できてしまう。",
+        "steps": [
+          "$n=1$：$3>10$ は成り立たない（反例）。",
+          "$n=2$：$9$ と $20$、$n=3$：$27$ と $30$、$n=4$：$81$ と $40$。",
+          "(I) $n=4$ で成り立つ。(II) は生徒の変形のとおり $k\\geqq1$ で正しい。",
+          "よって $n\\geqq4$ で成り立つ。"
+        ],
+        "alternatives": [
+          "$y=3^x$ と $y=10x$ のグラフをかくと、小さい $x$ では直線が上にあり、ある所から指数関数が上になることが見てとれる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "出発点を確かめずに (II) だけで結論する。",
+          "出発点を $n=1$ に決めつけ、成り立つ最小の $n$ を調べない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=k$ のとき $3^k>10k$ が成り立つと仮定する。$3^{k+1}=3\\cdot3^k>30k=10k+20k\\geqq10k+10=10(k+1)$。よって $n=k+1$ のときも成り立つ。したがって、すべての自然数 $n$ について $3^n>10n$ が成り立つ。",
+        "error_step": "(I) 出発点（$n=1$ など）での確認をせずに結論した部分",
+        "error_type": "logic",
+        "why_tempting": "(II) の式変形が正しくできたので、それだけで証明が完成したと思いこんでいる。(II) は「成り立つなら次も成り立つ」ことしか示していない。",
+        "correction": "(I) の出発点の確認が抜けている。$n=1$ では $3>10$ が成り立たない。$n=4$ では $81>40$ で成り立つので、(II) と合わせて「$n\\geqq4$ のすべての自然数で成り立つ」が正しい結論。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "「すべての自然数 $n$ について $3^n>14n$ が成り立つ」ことを数学的帰納法で示そうとした。\n［ある生徒の解答］\n$n=k$ のとき $3^k>14k$ が成り立つと仮定する。$3^{k+1}=3\\cdot3^k>42k=14k+28k\\geqq14k+14=14(k+1)$。よって $n=k+1$ のときも成り立つ。したがって、すべての自然数 $n$ について $3^n>14n$ が成り立つ。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "命題は誤り（$n=1$ が反例）。正しくは $n\\geqq4$ のすべての自然数 $n$ で $3^n>14n$ が成り立つ。"
+      },
+      "explanation": "$n=3$ では $27\\leqq42$、$n=4$ では $81>56$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[3**4-14*4, 3**3-14*3]",
+        "expected": "[25, -15]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-d_induction_base",
+      "explanation_detail": {
+        "approach": "帰納法は (I) 出発点の確認と (II) の両方がそろって初めて証明になる。(II) だけでは、成り立たない命題も「証明」できてしまう。",
+        "steps": [
+          "$n=1$：$3>14$ は成り立たない（反例）。",
+          "$n=2$：$9$ と $28$、$n=3$：$27$ と $42$、$n=4$：$81$ と $56$。",
+          "(I) $n=4$ で成り立つ。(II) は生徒の変形のとおり $k\\geqq1$ で正しい。",
+          "よって $n\\geqq4$ で成り立つ。"
+        ],
+        "alternatives": [
+          "$y=3^x$ と $y=14x$ のグラフをかくと、小さい $x$ では直線が上にあり、ある所から指数関数が上になることが見てとれる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "出発点を確かめずに (II) だけで結論する。",
+          "出発点を $n=1$ に決めつけ、成り立つ最小の $n$ を調べない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=k$ のとき $3^k>14k$ が成り立つと仮定する。$3^{k+1}=3\\cdot3^k>42k=14k+28k\\geqq14k+14=14(k+1)$。よって $n=k+1$ のときも成り立つ。したがって、すべての自然数 $n$ について $3^n>14n$ が成り立つ。",
+        "error_step": "(I) 出発点（$n=1$ など）での確認をせずに結論した部分",
+        "error_type": "logic",
+        "why_tempting": "(II) の式変形が正しくできたので、それだけで証明が完成したと思いこんでいる。(II) は「成り立つなら次も成り立つ」ことしか示していない。",
+        "correction": "(I) の出発点の確認が抜けている。$n=1$ では $3>14$ が成り立たない。$n=4$ では $81>56$ で成り立つので、(II) と合わせて「$n\\geqq4$ のすべての自然数で成り立つ」が正しい結論。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "「すべての自然数 $n$ について $2^n>7n$ が成り立つ」ことを数学的帰納法で示そうとした。\n［ある生徒の解答］\n$n=k$ のとき $2^k>7k$ が成り立つと仮定する。$2^{k+1}=2\\cdot2^k>14k=7k+7k\\geqq7k+7=7(k+1)$。よって $n=k+1$ のときも成り立つ。したがって、すべての自然数 $n$ について $2^n>7n$ が成り立つ。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "命題は誤り（$n=1$ が反例）。正しくは $n\\geqq6$ のすべての自然数 $n$ で $2^n>7n$ が成り立つ。"
+      },
+      "explanation": "$n=5$ では $32\\leqq35$、$n=6$ では $64>42$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[2**6-7*6, 2**5-7*5]",
+        "expected": "[22, -3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-d_induction_base",
+      "explanation_detail": {
+        "approach": "帰納法は (I) 出発点の確認と (II) の両方がそろって初めて証明になる。(II) だけでは、成り立たない命題も「証明」できてしまう。",
+        "steps": [
+          "$n=1$：$2>7$ は成り立たない（反例）。",
+          "$n=4$：$16$ と $28$、$n=5$：$32$ と $35$、$n=6$：$64$ と $42$。",
+          "(I) $n=6$ で成り立つ。(II) は生徒の変形のとおり $k\\geqq1$ で正しい。",
+          "よって $n\\geqq6$ で成り立つ。"
+        ],
+        "alternatives": [
+          "$y=2^x$ と $y=7x$ のグラフをかくと、小さい $x$ では直線が上にあり、ある所から指数関数が上になることが見てとれる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "出発点を確かめずに (II) だけで結論する。",
+          "出発点を $n=1$ に決めつけ、成り立つ最小の $n$ を調べない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=k$ のとき $2^k>7k$ が成り立つと仮定する。$2^{k+1}=2\\cdot2^k>14k=7k+7k\\geqq7k+7=7(k+1)$。よって $n=k+1$ のときも成り立つ。したがって、すべての自然数 $n$ について $2^n>7n$ が成り立つ。",
+        "error_step": "(I) 出発点（$n=1$ など）での確認をせずに結論した部分",
+        "error_type": "logic",
+        "why_tempting": "(II) の式変形が正しくできたので、それだけで証明が完成したと思いこんでいる。(II) は「成り立つなら次も成り立つ」ことしか示していない。",
+        "correction": "(I) の出発点の確認が抜けている。$n=1$ では $2>7$ が成り立たない。$n=6$ では $64>42$ で成り立つので、(II) と合わせて「$n\\geqq6$ のすべての自然数で成り立つ」が正しい結論。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "実数 $a,\\ b,\\ c,\\ d$ が $a+b+c+d=3$ を満たすとき、$a,\\ b,\\ c,\\ d$ のうち少なくとも1つは $\\dfrac{3}{4}$ 以上であることを背理法で証明せよ。\n［ある生徒の解答］\n結論を否定して「$a,\\ b,\\ c,\\ d$ のうち少なくとも1つは $\\dfrac{3}{4}$ 未満である」と仮定する。すると $a+b+c+d<4\\times\\dfrac{3}{4}=3$ となり、$a+b+c+d=3$ に矛盾する。よって $a,\\ b,\\ c,\\ d$ の少なくとも1つは $\\dfrac{3}{4}$ 以上である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "否定は「すべて $\\dfrac{3}{4}$ 未満」。辺々を加えて $a+b+c+d<3$ となり矛盾するので、少なくとも1つは $\\dfrac{3}{4}$ 以上である。（証明終）"
+      },
+      "explanation": "「少なくとも1つは $P$」の否定は「すべて $P$ でない」。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "4*Rational(3,4)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-d_negation",
+      "explanation_detail": {
+        "approach": "背理法では、まず結論の否定を正しく作る。「少なくとも1つ」と「すべて」は否定で入れかわる。",
+        "steps": [
+          "示す命題：「$a,\\ b,\\ c,\\ d$ の少なくとも1つは $\\dfrac{3}{4}$ 以上」。",
+          "否定：「$a,\\ b,\\ c,\\ d$ はすべて $\\dfrac{3}{4}$ 未満」と仮定する。",
+          "$4$ つの不等式を辺々加えると $a+b+c+d<3$。",
+          "$a+b+c+d=3$ に矛盾。よって結論が成り立つ。"
+        ],
+        "alternatives": [
+          "具体例で確かめる：$a=0$ で他が大きい場合など、「少なくとも1つは $\\dfrac{3}{4}$ 未満」でも和が $3$ になりうるので、生徒の仮定からは矛盾が出ない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "否定で「少なくとも1つ」を残したままにする。",
+          "1つの文字の不等式から、和全体の不等式を導いてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "結論を否定して「$a,\\ b,\\ c,\\ d$ のうち少なくとも1つは $\\dfrac{3}{4}$ 未満である」と仮定する。すると $a+b+c+d<4\\times\\dfrac{3}{4}=3$ となり、$a+b+c+d=3$ に矛盾する。よって $a,\\ b,\\ c,\\ d$ の少なくとも1つは $\\dfrac{3}{4}$ 以上である。",
+        "error_step": "結論の否定を「少なくとも1つは $\\dfrac{3}{4}$ 未満」とした部分と、そこから和の不等式を導いた部分",
+        "error_type": "logic",
+        "why_tempting": "「以上」を「未満」に変えれば否定になると考え、「少なくとも1つ」を「すべて」に変えることを忘れている。また、1つが小さいだけでは和の評価はできない。",
+        "correction": "結論の否定は「$a,\\ b,\\ c,\\ d$ はすべて $\\dfrac{3}{4}$ 未満」。このとき辺々を加えて $a+b+c+d<4\\times\\dfrac{3}{4}=3$ となり、$a+b+c+d=3$ に矛盾する。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "実数 $a,\\ b,\\ c$ が $a+b+c=22$ を満たすとき、$a,\\ b,\\ c$ のうち少なくとも1つは $\\dfrac{22}{3}$ 以上であることを背理法で証明せよ。\n［ある生徒の解答］\n結論を否定して「$a,\\ b,\\ c$ のうち少なくとも1つは $\\dfrac{22}{3}$ 未満である」と仮定する。すると $a+b+c<3\\times\\dfrac{22}{3}=22$ となり、$a+b+c=22$ に矛盾する。よって $a,\\ b,\\ c$ の少なくとも1つは $\\dfrac{22}{3}$ 以上である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "否定は「すべて $\\dfrac{22}{3}$ 未満」。辺々を加えて $a+b+c<22$ となり矛盾するので、少なくとも1つは $\\dfrac{22}{3}$ 以上である。（証明終）"
+      },
+      "explanation": "「少なくとも1つは $P$」の否定は「すべて $P$ でない」。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "3*Rational(22,3)",
+        "expected": "22",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-d_negation",
+      "explanation_detail": {
+        "approach": "背理法では、まず結論の否定を正しく作る。「少なくとも1つ」と「すべて」は否定で入れかわる。",
+        "steps": [
+          "示す命題：「$a,\\ b,\\ c$ の少なくとも1つは $\\dfrac{22}{3}$ 以上」。",
+          "否定：「$a,\\ b,\\ c$ はすべて $\\dfrac{22}{3}$ 未満」と仮定する。",
+          "$3$ つの不等式を辺々加えると $a+b+c<22$。",
+          "$a+b+c=22$ に矛盾。よって結論が成り立つ。"
+        ],
+        "alternatives": [
+          "具体例で確かめる：$a=0$ で他が大きい場合など、「少なくとも1つは $\\dfrac{22}{3}$ 未満」でも和が $22$ になりうるので、生徒の仮定からは矛盾が出ない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "否定で「少なくとも1つ」を残したままにする。",
+          "1つの文字の不等式から、和全体の不等式を導いてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "結論を否定して「$a,\\ b,\\ c$ のうち少なくとも1つは $\\dfrac{22}{3}$ 未満である」と仮定する。すると $a+b+c<3\\times\\dfrac{22}{3}=22$ となり、$a+b+c=22$ に矛盾する。よって $a,\\ b,\\ c$ の少なくとも1つは $\\dfrac{22}{3}$ 以上である。",
+        "error_step": "結論の否定を「少なくとも1つは $\\dfrac{22}{3}$ 未満」とした部分と、そこから和の不等式を導いた部分",
+        "error_type": "logic",
+        "why_tempting": "「以上」を「未満」に変えれば否定になると考え、「少なくとも1つ」を「すべて」に変えることを忘れている。また、1つが小さいだけでは和の評価はできない。",
+        "correction": "結論の否定は「$a,\\ b,\\ c$ はすべて $\\dfrac{22}{3}$ 未満」。このとき辺々を加えて $a+b+c<3\\times\\dfrac{22}{3}=22$ となり、$a+b+c=22$ に矛盾する。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>0,\\ y>0$ のとき、$\\left(x+\\dfrac{4}{y}\\right)\\left(y+\\dfrac{16}{x}\\right)$ の最小値を求めよ。\n［ある生徒の解答］\n$x+\\dfrac{4}{y}\\geqq2\\sqrt{\\dfrac{4x}{y}}$、$y+\\dfrac{16}{x}\\geqq2\\sqrt{\\dfrac{16y}{x}}$。辺々かけて $\\left(x+\\dfrac{4}{y}\\right)\\left(y+\\dfrac{16}{x}\\right)\\geqq4\\sqrt{64}=32$。よって最小値は $32$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最小値 $36$（$xy=8$ のとき）"
+      },
+      "explanation": "2つの等号成立条件 $xy=4$ と $xy=16$ は両立しない。展開してから1回だけ使うと最小値 $36$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(1+Rational(4,8))*(8+16)",
+        "expected": "36",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-d_amgm_eq",
+      "explanation_detail": {
+        "approach": "最小値を求めるときは、不等式の等号が実際に成り立つことを必ず確かめる。複数回使うときは、等号条件が同時に成り立つかを確かめる。",
+        "steps": [
+          "1つ目の等号条件：$x=\\dfrac{4}{y}$、すなわち $xy=4$。2つ目：$xy=16$。$4\\neq16$ なので同時に成り立たない。",
+          "展開：$xy+\\dfrac{64}{xy}+20$。",
+          "$xy+\\dfrac{64}{xy}\\geqq16$（等号は $xy=8$）。",
+          "最小値 $36$。"
+        ],
+        "alternatives": [
+          "$x=1,\\ y=8$ を代入すると値は $36$ となり、$32$ より大きい。さらに小さくできないことは展開した式から確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "相加平均と相乗平均の関係を2回使い、等号条件の両立を確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x+\\dfrac{4}{y}\\geqq2\\sqrt{\\dfrac{4x}{y}}$、$y+\\dfrac{16}{x}\\geqq2\\sqrt{\\dfrac{16y}{x}}$。辺々かけて $\\left(x+\\dfrac{4}{y}\\right)\\left(y+\\dfrac{16}{x}\\right)\\geqq4\\sqrt{64}=32$。よって最小値は $32$。",
+        "error_step": "2つの不等式を辺々かけて得た値を最小値とした部分",
+        "error_type": "condition",
+        "why_tempting": "相加平均と相乗平均の関係で「$\\geqq$ 定数」が得られた時点で最小値だと考え、等号成立の確認を省いている。",
+        "correction": "1つ目の等号は $xy=4$、2つ目の等号は $xy=16$ のときで、同時には成り立たないので $32$ は最小値ではない。展開して $xy+\\dfrac{64}{xy}+20\\geqq16+20=36$（等号は $xy=8$）。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>0,\\ y>0$ のとき、$\\left(x+\\dfrac{12}{y}\\right)\\left(y+\\dfrac{3}{x}\\right)$ の最小値を求めよ。\n［ある生徒の解答］\n$x+\\dfrac{12}{y}\\geqq2\\sqrt{\\dfrac{12x}{y}}$、$y+\\dfrac{3}{x}\\geqq2\\sqrt{\\dfrac{3y}{x}}$。辺々かけて $\\left(x+\\dfrac{12}{y}\\right)\\left(y+\\dfrac{3}{x}\\right)\\geqq4\\sqrt{36}=24$。よって最小値は $24$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最小値 $27$（$xy=6$ のとき）"
+      },
+      "explanation": "2つの等号成立条件 $xy=12$ と $xy=3$ は両立しない。展開してから1回だけ使うと最小値 $27$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(1+Rational(12,6))*(6+3)",
+        "expected": "27",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-d_amgm_eq",
+      "explanation_detail": {
+        "approach": "最小値を求めるときは、不等式の等号が実際に成り立つことを必ず確かめる。複数回使うときは、等号条件が同時に成り立つかを確かめる。",
+        "steps": [
+          "1つ目の等号条件：$x=\\dfrac{12}{y}$、すなわち $xy=12$。2つ目：$xy=3$。$12\\neq3$ なので同時に成り立たない。",
+          "展開：$xy+\\dfrac{36}{xy}+15$。",
+          "$xy+\\dfrac{36}{xy}\\geqq12$（等号は $xy=6$）。",
+          "最小値 $27$。"
+        ],
+        "alternatives": [
+          "$x=1,\\ y=6$ を代入すると値は $27$ となり、$24$ より大きい。さらに小さくできないことは展開した式から確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "相加平均と相乗平均の関係を2回使い、等号条件の両立を確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x+\\dfrac{12}{y}\\geqq2\\sqrt{\\dfrac{12x}{y}}$、$y+\\dfrac{3}{x}\\geqq2\\sqrt{\\dfrac{3y}{x}}$。辺々かけて $\\left(x+\\dfrac{12}{y}\\right)\\left(y+\\dfrac{3}{x}\\right)\\geqq4\\sqrt{36}=24$。よって最小値は $24$。",
+        "error_step": "2つの不等式を辺々かけて得た値を最小値とした部分",
+        "error_type": "condition",
+        "why_tempting": "相加平均と相乗平均の関係で「$\\geqq$ 定数」が得られた時点で最小値だと考え、等号成立の確認を省いている。",
+        "correction": "1つ目の等号は $xy=12$、2つ目の等号は $xy=3$ のときで、同時には成り立たないので $24$ は最小値ではない。展開して $xy+\\dfrac{36}{xy}+15\\geqq12+15=27$（等号は $xy=6$）。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$x>0,\\ y>0$ のとき、$\\left(x+\\dfrac{8}{y}\\right)\\left(y+\\dfrac{18}{x}\\right)$ の最小値を求めよ。\n［ある生徒の解答］\n$x+\\dfrac{8}{y}\\geqq2\\sqrt{\\dfrac{8x}{y}}$、$y+\\dfrac{18}{x}\\geqq2\\sqrt{\\dfrac{18y}{x}}$。辺々かけて $\\left(x+\\dfrac{8}{y}\\right)\\left(y+\\dfrac{18}{x}\\right)\\geqq4\\sqrt{144}=48$。よって最小値は $48$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最小値 $50$（$xy=12$ のとき）"
+      },
+      "explanation": "2つの等号成立条件 $xy=8$ と $xy=18$ は両立しない。展開してから1回だけ使うと最小値 $50$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(1+Rational(8,12))*(12+18)",
+        "expected": "50",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "SS-MATH-U01-d_amgm_eq",
+      "explanation_detail": {
+        "approach": "最小値を求めるときは、不等式の等号が実際に成り立つことを必ず確かめる。複数回使うときは、等号条件が同時に成り立つかを確かめる。",
+        "steps": [
+          "1つ目の等号条件：$x=\\dfrac{8}{y}$、すなわち $xy=8$。2つ目：$xy=18$。$8\\neq18$ なので同時に成り立たない。",
+          "展開：$xy+\\dfrac{144}{xy}+26$。",
+          "$xy+\\dfrac{144}{xy}\\geqq24$（等号は $xy=12$）。",
+          "最小値 $50$。"
+        ],
+        "alternatives": [
+          "$x=1,\\ y=12$ を代入すると値は $50$ となり、$48$ より大きい。さらに小さくできないことは展開した式から確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "相加平均と相乗平均の関係を2回使い、等号条件の両立を確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x+\\dfrac{8}{y}\\geqq2\\sqrt{\\dfrac{8x}{y}}$、$y+\\dfrac{18}{x}\\geqq2\\sqrt{\\dfrac{18y}{x}}$。辺々かけて $\\left(x+\\dfrac{8}{y}\\right)\\left(y+\\dfrac{18}{x}\\right)\\geqq4\\sqrt{144}=48$。よって最小値は $48$。",
+        "error_step": "2つの不等式を辺々かけて得た値を最小値とした部分",
+        "error_type": "condition",
+        "why_tempting": "相加平均と相乗平均の関係で「$\\geqq$ 定数」が得られた時点で最小値だと考え、等号成立の確認を省いている。",
+        "correction": "1つ目の等号は $xy=8$、2つ目の等号は $xy=18$ のときで、同時には成り立たないので $48$ は最小値ではない。展開して $xy+\\dfrac{144}{xy}+26\\geqq24+26=50$（等号は $xy=12$）。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$n$ が奇数のとき、$n^2+47$ は 8 の倍数であることを証明せよ。\n［ある生徒の解答］\n$n=2k+1$（$k$ は整数）とおくと、$n^2+47=4k^2+4k+1+47=4k(k+1)+48$。$4k(k+1)$ は 4 の倍数、$48$ は 8 の倍数なので、$n^2+47$ は 8 の倍数である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$k(k+1)$ が偶数であることを示せば、$n^2+47=8\\times(\\text{整数})$ となり 8 の倍数。（証明終）"
+      },
+      "explanation": "連続する2整数の積 $k(k+1)$ は偶数なので $4k(k+1)$ は 8 の倍数。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((2*k+1)**2+(47)-(4*k*(k+1)+(48)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-d_odd_square",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「$m$ の倍数」を示すには、式全体を「$m\\times$(整数)」の形にする必要がある。4 の倍数だけでは 8 の倍数の根拠にならない。",
+        "steps": [
+          "$n=2k+1$ とおくと $n^2+47=4k(k+1)+48$。",
+          "$k(k+1)$ は連続する2整数の積なので、どちらか一方は偶数であり、$k(k+1)=2l$（$l$ は整数）とおける。",
+          "$n^2+47=8l+48=8\\left(l+6\\right)$。",
+          "よって 8 の倍数。"
+        ],
+        "alternatives": [
+          "$n$ を 8 で割った余り $1,\\ 3,\\ 5,\\ 7$ で分類すると、$n^2$ を 8 で割った余りはすべて 1 になることからも示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「4 の倍数 ＋ 8 の倍数 ＝ 8 の倍数」と誤って結論する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=2k+1$（$k$ は整数）とおくと、$n^2+47=4k^2+4k+1+47=4k(k+1)+48$。$4k(k+1)$ は 4 の倍数、$48$ は 8 の倍数なので、$n^2+47$ は 8 の倍数である。",
+        "error_step": "「$4k(k+1)$ は 4 の倍数」から「8 の倍数」を結論した部分",
+        "error_type": "logic",
+        "why_tempting": "式を「4×(整数)」の形にできたことで満足し、8 の倍数を示すにはもう1つの 2 が必要であることを見落としている。",
+        "correction": "4 の倍数と 8 の倍数の和は 8 の倍数とは限らない。$k(k+1)$ は連続する2整数の積なので偶数であり、$4k(k+1)$ は 8 の倍数。これと $48$（8 の倍数）の和なので 8 の倍数である。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "SS-MATH-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "SS-MATH-U01",
+      "skills": [
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$n$ が奇数のとき、$n^2+39$ は 8 の倍数であることを証明せよ。\n［ある生徒の解答］\n$n=2k-1$（$k$ は整数）とおくと、$n^2+39=4k^2-4k+1+39=4k(k-1)+40$。$4k(k-1)$ は 4 の倍数、$40$ は 8 の倍数なので、$n^2+39$ は 8 の倍数である。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$k(k-1)$ が偶数であることを示せば、$n^2+39=8\\times(\\text{整数})$ となり 8 の倍数。（証明終）"
+      },
+      "explanation": "連続する2整数の積 $k(k-1)$ は偶数なので $4k(k-1)$ は 8 の倍数。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な結論が正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand((2*k-1)**2+(39)-(4*k*(k-1)+(40)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "written_reasoning"
+      ],
+      "variant_group": "SS-MATH-U01-d_odd_square",
+      "related_units": [
+        "HS-MATHA-U03"
+      ],
+      "explanation_detail": {
+        "approach": "「$m$ の倍数」を示すには、式全体を「$m\\times$(整数)」の形にする必要がある。4 の倍数だけでは 8 の倍数の根拠にならない。",
+        "steps": [
+          "$n=2k-1$ とおくと $n^2+39=4k(k-1)+40$。",
+          "$k(k-1)$ は連続する2整数の積なので、どちらか一方は偶数であり、$k(k-1)=2l$（$l$ は整数）とおける。",
+          "$n^2+39=8l+40=8\\left(l+5\\right)$。",
+          "よって 8 の倍数。"
+        ],
+        "alternatives": [
+          "$n$ を 8 で割った余り $1,\\ 3,\\ 5,\\ 7$ で分類すると、$n^2$ を 8 で割った余りはすべて 1 になることからも示せる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい論証",
+            "points": 3
+          },
+          {
+            "point": "正しい結論",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「4 の倍数 ＋ 8 の倍数 ＝ 8 の倍数」と誤って結論する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=2k-1$（$k$ は整数）とおくと、$n^2+39=4k^2-4k+1+39=4k(k-1)+40$。$4k(k-1)$ は 4 の倍数、$40$ は 8 の倍数なので、$n^2+39$ は 8 の倍数である。",
+        "error_step": "「$4k(k-1)$ は 4 の倍数」から「8 の倍数」を結論した部分",
+        "error_type": "logic",
+        "why_tempting": "式を「4×(整数)」の形にできたことで満足し、8 の倍数を示すにはもう1つの 2 が必要であることを見落としている。",
+        "correction": "4 の倍数と 8 の倍数の和は 8 の倍数とは限らない。$k(k-1)$ は連続する2整数の積なので偶数であり、$4k(k-1)$ は 8 の倍数。これと $40$（8 の倍数）の和なので 8 の倍数である。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "3f681c7020484911c3799f45de6e2838bb07f2ff0c068dfbfea83593e61f3fc0"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 8 問（Q001, Q002, Q003, Q004, Q033, Q034, Q035, Q036）",
+      "content_hash": "acd8598898e8acc4c7b6482f9da70237b33263f44a29dbd2141861537e48926f"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 11 問（Q013, Q014, Q015, Q021, Q022, Q033, Q034, Q036, Q041, Q042 他）",
+      "content_hash": "da5ad81163832ddac4667df4762358a53435c2719f6431dd908ea0867d854ea1"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T11:57:59+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "f108aa985b125f9da5993df6af33fdccc86483ba96af02b9fc737f98cf4cc594"
+  }
+}

@@ -356,7 +356,8 @@ AMTS = ["0.10", "0.20", "0.25", "0.50", "1.5", "2.0", "0.40", "0.050", "3.0"]
 @gen("basic_check", 4, ["computation", "condition_check"])
 def mole_basic(r):
     nm, fm, M, gas, aw = r.choice(SUBS)
-    k = Q(r.choice(AMTS))
+    ks = r.choice(AMTS)
+    k = Q(ks)
     m = M * k
     ms = fv(m, 3)
     kind = r.choice(["m2n", "n2N"] + (["m2v", "v2m"] if gas else ["n2m"]))
@@ -369,7 +370,7 @@ def mole_basic(r):
                     alt=[f"逆算で確かめる：${fv(k)}\\,\\mathrm{{mol}}\\times{fv(M, 3)}\\,\\mathrm{{g/mol}}={ms}\\,\\mathrm{{g}}$。"],
                     pc=[("モル質量を正しく求めている", 1), ("物質量が正しい", 1)], pit=["分子量の計算で原子の数（添字）をかけ忘れる。"])
     if kind == "n2m":
-        return numq(f"{nm} $\\mathrm{{{fm}}}$ {fv(k)} mol の質量は何 g か。{tag}", m, f"{P(k)}*{P(M)}",
+        return numq(f"{nm} $\\mathrm{{{fm}}}$ {ks} mol の質量は何 g か。{tag}", m, f"{P(k)}*{P(M)}",
                     f"質量＝物質量×モル質量＝${fv(k)}\\times{fv(M, 3)}$ g。", "g", n=3 if not is_exact(sig(m, 2), m) else 2, d=1,
                     ap="質量＝物質量×モル質量。",
                     steps=[f"モル質量は {fv(M, 3)} g/mol。", f"${fv(k)}\\times{fv(M, 3)}={fv(m, 3)}\\,\\mathrm{{g}}$。"],
@@ -404,20 +405,21 @@ def energy_basic(r):
     kind = r.choice(["ke", "pe", "spring", "work"])
     if kind == "ke":
         mg = r.choice([200, 250, 400, 500, 800, 1500, 2000])
-        v = Q(r.choice(["2.0", "3.0", "4.0", "5.0", "6.0", "10"]))
+        vs = r.choice(["2.0", "3.0", "4.0", "5.0", "6.0", "10"])
+        v = Q(vs)
         m = sp.Rational(mg, 1000)
         K = m * v ** 2 / 2
-        return numq(f"質量 {mg} g の台車が速さ {fv(v)} m/s で運動している。この台車の運動エネルギーは何 J か。", K, f"Rational(1,2)*{P(m)}*{P(v)}**2",
+        return numq(f"質量 {mg} g の台車が速さ {vs} m/s で運動している。この台車の運動エネルギーは何 J か。", K, f"Rational(1,2)*{P(m)}*{P(v)}**2",
                     f"$K=\\dfrac12mv^2=\\dfrac12\\times{fv(m)}\\times{fv(v)}^2$。", "J", d=1,
                     ap="運動エネルギー $K=\\dfrac12mv^2$。質量は kg に直してから代入する。",
                     steps=[f"$m={mg}\\,\\mathrm{{g}}={fv(m)}\\,\\mathrm{{kg}}$。", f"$K=\\dfrac12\\times{fv(m)}\\times{fv(v)}^2={fv(K, 3)}\\,\\mathrm{{J}}$。"],
                     alt=["単位で確かめる：$\\mathrm{kg\\cdot(m/s)^2}=\\mathrm{N\\cdot m}=\\mathrm{J}$。g のまま代入すると 1000 倍の値になる。"],
                     pc=[("質量を kg に換算している", 1), ("値が正しい", 1)], pit=["質量を g のまま代入する。", "速さを2乗し忘れる。"])
     if kind == "pe":
-        m = Q(r.choice(["0.50", "1.0", "2.0", "0.20", "5.0", "3.0"]))
-        h = Q(r.choice(["2.0", "5.0", "10", "1.5", "0.50", "4.0"]))
+        mss, hs_ = r.choice(["0.50", "1.0", "2.0", "0.20", "5.0", "3.0"]), r.choice(["2.0", "5.0", "10", "1.5", "0.50", "4.0"])
+        m, h = Q(mss), Q(hs_)
         U = m * G * h
-        return numq(f"質量 {fv(m)} kg の物体を、床から高さ {fv(h)} m の棚の上に置いた。床を基準面とするとき、この物体のもつ重力による位置エネルギーは何 J か。{GS}",
+        return numq(f"質量 {mss} kg の物体を、床から高さ {hs_} m の棚の上に置いた。床を基準面とするとき、この物体のもつ重力による位置エネルギーは何 J か。{GS}",
                     U, f"{P(m)}*9.8*{P(h)}", "$U=mgh$。", "J", d=1,
                     ap="重力による位置エネルギー $U=mgh$（$h$ は基準面からの高さ）。",
                     steps=[f"$U={fv(m)}\\times9.8\\times{fv(h)}$。", f"$={sig(U)}\\,\\mathrm{{J}}$。"],
@@ -434,16 +436,16 @@ def energy_basic(r):
                     steps=[f"$x={xc}\\,\\mathrm{{cm}}={fv(x)}\\,\\mathrm{{m}}$。", f"$U=\\dfrac12\\times{k}\\times{fv(x)}^2={fv(U, 3)}\\,\\mathrm{{J}}$。"],
                     alt=[f"F−x グラフで考える：縮み {fv(x)} m のとき弾性力 ${fv(k * x)}\\,\\mathrm{{N}}$。三角形の面積 $\\dfrac12\\times{fv(x)}\\times{fv(k * x)}$ でも同じ。"],
                     pc=[("長さを m に換算している", 1), ("値が正しい", 1)], pit=["cm のまま代入する。", "$\\dfrac12$ を忘れる。"])
-    F = Q(r.choice(["2.0", "5.0", "10", "4.0", "8.0", "15"]))
-    x = Q(r.choice(["0.50", "1.5", "2.0", "3.0", "4.0", "0.80"]))
+    Fs, xs_ = r.choice(["2.0", "5.0", "10", "4.0", "8.0", "15"]), r.choice(["0.50", "1.5", "2.0", "3.0", "4.0", "0.80"])
+    F, x = Q(Fs), Q(xs_)
     th = r.choice([0, 60, 90])
     W = F * x * {0: 1, 60: sp.Rational(1, 2), 90: 0}[th]
     if th == 90:
-        stem = f"水平な床の上で、物体に鉛直上向きに大きさ {fv(F)} N の力を加えたまま（物体は床から離れない）、物体を水平に {fv(x)} m 移動させた。この力がした仕事は何 J か。"
+        stem = f"水平な床の上で、物体に鉛直上向きに大きさ {Fs} N の力を加えたまま（物体は床から離れない）、物体を水平に {xs_} m 移動させた。この力がした仕事は何 J か。"
     elif th == 0:
-        stem = f"水平な床の上の物体を、水平方向に大きさ {fv(F)} N の力で引いて、力の向きに {fv(x)} m 移動させた。この力がした仕事は何 J か。"
+        stem = f"水平な床の上の物体を、水平方向に大きさ {Fs} N の力で引いて、力の向きに {xs_} m 移動させた。この力がした仕事は何 J か。"
     else:
-        stem = f"水平な床の上の物体を、水平から 60° 上向きに大きさ {fv(F)} N の力で引いて、水平に {fv(x)} m 移動させた。この力がした仕事は何 J か。"
+        stem = f"水平な床の上の物体を、水平から 60° 上向きに大きさ {Fs} N の力で引いて、水平に {xs_} m 移動させた。この力がした仕事は何 J か。"
     return numq(stem, W, f"{P(F)}*{P(x)}*cos(deg({th}))", "$W=Fx\\cos\\theta$（$\\theta$ は力と移動の向きのなす角）。", "J", d=2,
                 ap="仕事は「移動の向きの力の成分」×「移動距離」。力と移動の向きのなす角に注意する。",
                 steps=[f"力と移動の向きのなす角は {th}°。", f"$W={fv(F)}\\times{fv(x)}\\times\\cos{th}^\\circ={fv(W)}\\,\\mathrm{{J}}$。"],
@@ -615,10 +617,10 @@ def gas_break(r):
     h = min(rr * u * j, nH2max) * 22400
     return numq(lead + f"同じ塩酸 {Vml} mL に{nm} {fv(M * u * j, 3)} g を加えたとき、発生する水素の体積は標準状態で何 mL か。", h,
                 f"Min({P(rr)}*{P(M * u * j)}/{M}, {P(nH2max)})*22400",
-                "金属と塩酸のどちらが不足するかを判断し、不足する方の量で水素の体積を決める。", "mL", n=3, d=3, tbl=tbl,
+                "金属と塩酸のどちらが不足するかを判断し、不足する方の量で水素の体積を決める。", "mL", n=3 if (h < 100 or is_exact(sig(h, 3), h)) else 4, d=3, tbl=tbl,
                 ap="加えた金属の量が折れ点より少ないか多いかを先に判断する。",
                 steps=[f"金属の物質量 $=\\dfrac{{{fv(M * u * j, 3)}}}{{{M}}}={sig(u * j, 2)}\\,\\mathrm{{mol}}$、これが全部反応すると水素は ${sig(rr * u * j, 2)}\\,\\mathrm{{mol}}$。",
-                       f"塩酸から発生できる水素の最大量は ${sig(nH2max, 2)}\\,\\mathrm{{mol}}$。",
+                       f"塩酸から発生できる水素の最大量は ${sig(nH2max, 3)}\\,\\mathrm{{mol}}$。",
                        f"小さい方が実際の量：${fv(h, 4)}\\,\\mathrm{{mL}}$。"],
                 alt=["表の比例部分から1 g あたりの体積を求めて比例計算し、最大値を超えないかを確かめる。"],
                 pc=[("過不足を判断している", 2), ("物質量の計算が正しい", 1), ("体積が正しい", 1)],
@@ -633,6 +635,7 @@ OXIDES = {"Mg": ("マグネシウム", "酸化マグネシウム", 24, Q("1.5"),
 
 @gen("standard_practice", 4, ["computation", "cross_unit", "application"], rel=["JH-SCI-G2-U01", "HS-CHEB-U02"])
 def oxide_ratio(r):
+    fv = lambda x, n=2: f"{float(x):.1f}" if sp.Rational(x) * 10 == int(sp.Rational(x) * 10) else globals()["fv"](x, n)  # noqa: E731
     kind = r.choice(["partial", "mix", "partial", "ratio"])
     if kind == "mix":
         x = Q("0.3") * r.randint(1, 6)
@@ -649,6 +652,7 @@ def oxide_ratio(r):
                     pit=["Mg と O の質量比 3：2 と Mg と MgO の質量比 3：5 を混同する。"])
     sym = r.choice(["Mg", "Cu"])
     nm, ox, M, ratio, unit_m, unit_o, masses, eq = OXIDES[sym]
+    RTs = str(ratio) if ratio == int(ratio) else globals()["fv"](ratio)
     if kind == "ratio":
         sel = masses[:4]
         rows = [[fv(m), fv(m + m / ratio)] for m in sel]
@@ -656,10 +660,10 @@ def oxide_ratio(r):
         m0 = r.choice([Q("4.5"), Q("6.0"), Q("7.2"), Q("9.0"), Q("12")]) if sym == "Mg" else r.choice([Q("4.8"), Q("6.0"), Q("8.0"), Q("10"), Q("12")])
         o = m0 / ratio
         return numq(f"{nm}の粉末を空気中で十分に加熱し、加熱後の質量を測定したところ、表のようになった。{nm} {fv(m0)} g を十分に加熱したとき、結びつく酸素は何 g か。",
-                    o, f"{P(m0)}/{P(ratio)}", f"表から {nm}：酸素＝{fv(ratio)}：1 の質量比で結びつく。", "g", d=2, tbl=tbl,
+                    o, f"{P(m0)}/{P(ratio)}", f"表から {nm}：酸素＝{RTs}：1 の質量比で結びつく。", "g", d=2, tbl=tbl,
                     ap="加熱後の質量−金属の質量＝結びついた酸素の質量。どの行でも比が一定であることを確かめて使う。",
-                    steps=[f"例えば {rows[0][0]} g → {rows[0][1]} g なので、酸素は {fv(sel[0] / ratio)} g。", f"{nm}：酸素＝{fv(ratio)}：1（一定）。",
-                           f"{fv(m0)} g なら酸素は $\\dfrac{{{fv(m0)}}}{{{fv(ratio)}}}={fv(o)}\\,\\mathrm{{g}}$。"],
+                    steps=[f"例えば {rows[0][0]} g → {rows[0][1]} g なので、酸素は {fv(sel[0] / ratio)} g。", f"{nm}：酸素＝{RTs}：1（一定）。",
+                           f"{fv(m0)} g なら酸素は $\\dfrac{{{fv(m0)}}}{{{RTs}}}={fv(o)}\\,\\mathrm{{g}}$。"],
                     alt=[f"原子量から確かめる：{nm} 1 mol（{M} g）と O 1 mol（16 g）が結びつくので、質量比は {M}：16。"],
                     pc=[("酸素の質量を差として求めている", 1), ("一定の質量比を使っている", 2), ("答えが正しい", 1)],
                     pit=["加熱後の質量（酸化物）と結びついた酸素を混同する。"], rel=["JH-SCI-G2-U01", "HS-CHEB-U02"])
@@ -671,9 +675,9 @@ def oxide_ratio(r):
     w = m + gain
     return numq(f"{nm} {fv(m)} g を空気中で加熱したが、加熱が不十分だったため、加熱後の質量は {fv(w)} g であった。未反応の{nm}は何 g か。原子量は O＝16、{sym}＝{M} とする。",
                 m - react, f"{P(m)}-({P(w)}-{P(m)})*{P(ratio)}",
-                f"増えた質量 {fv(gain)} g が結びついた酸素。{nm}：O＝{M}：16＝{fv(ratio)}：1 より、反応した{nm}は {fv(react)} g。", "g", d=3,
+                f"増えた質量 {fv(gain)} g が結びついた酸素。{nm}：O＝{M}：16＝{RTs}：1 より、反応した{nm}は {fv(react)} g。", "g", d=3,
                 ap="増えた質量は結びついた酸素の質量。そこから反応した金属の質量を質量比で求め、全体から引く。",
-                steps=[f"結びついた酸素 $={fv(w)}-{fv(m)}={fv(gain)}\\,\\mathrm{{g}}$。", f"{nm}：O＝{fv(ratio)}：1 より、反応した{nm} $={fv(gain)}\\times{fv(ratio)}={fv(react)}\\,\\mathrm{{g}}$。",
+                steps=[f"結びついた酸素 $={fv(w)}-{fv(m)}={fv(gain)}\\,\\mathrm{{g}}$。", f"{nm}：O＝{RTs}：1 より、反応した{nm} $={fv(gain)}\\times{RTs}={fv(react)}\\,\\mathrm{{g}}$。",
                        f"未反応 $={fv(m)}-{fv(react)}={fv(m - react)}\\,\\mathrm{{g}}$。"],
                 alt=[f"物質量で考える：O は $\\dfrac{{{fv(gain)}}}{{16}}\\,\\mathrm{{mol}}$、反応した{nm}も同じ物質量なので、その質量は ×{M}。"],
                 pc=[("増えた質量を酸素とみなしている", 1), ("反応した金属の質量を求めている", 2), ("答えが正しい", 1)],
@@ -710,18 +714,18 @@ def titration(r):
                   alt=["滴定曲線をかき、中和点付近で pH が急変する範囲に変色域が入る指示薬を選ぶ。"],
                   pc=[("中和点の液性を判断している", 2), ("指示薬を正しく選んでいる", 2)], why={w[0]: (w[1], w[2]) for w in wrongs},
                   pit=["中和点はいつも中性だと考える。"])
-    cb = Q(r.choice(["0.10", "0.20", "0.050", "0.12"]))
-    Va = Q(r.choice(["10.0", "20.0", "25.0"]))
+    cbs, Vas = r.choice(["0.10", "0.20", "0.050", "0.12"]), r.choice(["10.0", "20.0", "25.0"])
+    cb, Va = Q(cbs), Q(Vas)
     vb = Q(r.choice(["8.00", "12.50", "15.00", "16.40", "18.20", "9.60", "20.00"]))
     trials = [vb + Q("0.02"), vb, vb - Q("0.02")]
     ca = bv * cb * vb / (av * Va)
     tbl = table([[f"{i + 1} 回目", f"{t:.2f}"] for i, t in enumerate(trials)], header=["滴定", f"{bn}の滴下量 [mL]"], caption="3回の滴定結果")
-    return numq(f"濃度のわからない{an}（$\\mathrm{{{af}}}$）{fv(Va)} mL をホールピペットでとり、{fv(cb)} mol/L の{bn}（$\\mathrm{{{bf}}}$）で滴定したところ、中和に要した体積は表のようになった（1回目は {trials[0]:.2f} mL）。3回の平均値を用いて、{an}のモル濃度を有効数字2桁で求めなさい。",
+    return numq(f"濃度のわからない{an}（$\\mathrm{{{af}}}$）{Vas} mL をホールピペットでとり、{cbs} mol/L の{bn}（$\\mathrm{{{bf}}}$）で滴定したところ、中和に要した体積は表のようになった（1回目は {trials[0]:.2f} mL）。3回の平均値を用いて、{an}のモル濃度を有効数字2桁で求めなさい。",
                 ca, f"{bv}*{P(cb)}*({'+'.join(P(t) for t in trials)})/3/({av}*{P(Va)})",
                 f"中和の条件：$(\\text{{酸の価数}})\\times c\\times V=(\\text{{塩基の価数}})\\times c'\\times V'$。{an}は {av} 価、{bn}は {bv} 価。", "mol/L", d=3, tbl=tbl,
                 ap="中和点では、酸が出す $\\mathrm{H^+}$ の物質量＝塩基が出す $\\mathrm{OH^-}$ の物質量。価数を忘れずにかける。",
                 steps=[f"平均の滴下量 $=\\dfrac{{{'+'.join(f'{t:.2f}' for t in trials)}}}{{3}}={vb:.2f}\\,\\mathrm{{mL}}$。",
-                       f"${av}\\times c\\times\\dfrac{{{fv(Va)}}}{{1000}}={bv}\\times{fv(cb)}\\times\\dfrac{{{vb:.2f}}}{{1000}}$。",
+                       f"${av}\\times c\\times\\dfrac{{{Vas}}}{{1000}}={bv}\\times{cbs}\\times\\dfrac{{{vb:.2f}}}{{1000}}$。",
                        f"$c={sig(ca, 3)}\\fallingdotseq{sig(ca, 2)}\\,\\mathrm{{mol/L}}$。"],
                 alt=["体積は両辺とも mL のままでも、両辺で 1000 が約分されるので同じ結果になる（単位をそろえていることが条件）。"],
                 pc=[("平均値を求めている", 1), ("価数を含めた中和の式を立てている", 2), ("濃度が正しい", 1)],
@@ -732,14 +736,14 @@ def titration(r):
 def energy_table(r):
     kind = r.choice(["loss", "throw", "spring", "slope"])
     if kind == "loss":
-        m = Q(r.choice(["0.50", "1.0", "2.0", "0.20"]))
-        h = Q(r.choice(["0.50", "1.0", "1.5", "2.0", "2.5"]))
+        mss, hs_ = r.choice(["0.50", "1.0", "2.0", "0.20"]), r.choice(["0.50", "1.0", "1.5", "2.0", "2.5"])
+        m, h = Q(mss), Q(hs_)
         vmax2 = 2 * G * h
         v = r.choice([x for x in [Q("2.0"), Q("2.5"), Q("3.0"), Q("4.0"), Q("5.0"), Q("6.0")] if x ** 2 < vmax2 * Q("0.95") and x ** 2 > vmax2 * Q("0.4")] or [Q("2.0")])
         if v ** 2 >= vmax2:
             v = Q("1.0")
         loss = m * G * h - m * v ** 2 / 2
-        return numq(f"質量 {fv(m)} kg の物体を、あらい斜面上の高さ {fv(h)} m の点から静かにすべらせたところ、斜面の下端（高さ 0）での速さは {fv(v)} m/s であった。この間に摩擦によって失われた力学的エネルギーは何 J か。{GS}",
+        return numq(f"質量 {mss} kg の物体を、あらい斜面上の高さ {hs_} m の点から静かにすべらせたところ、斜面の下端（高さ 0）での速さは {float(v):.1f} m/s であった。この間に摩擦によって失われた力学的エネルギーは何 J か。{GS}",
                     loss, f"{P(m)}*9.8*{P(h)}-Rational(1,2)*{P(m)}*{P(v)}**2",
                     "失われた力学的エネルギー＝はじめの位置エネルギー−下端での運動エネルギー。", "J", d=3,
                     ap="摩擦がなければ $mgh=\\dfrac12mv^2$ が成り立つ。実際の運動エネルギーとの差が摩擦で失われた分。",
@@ -750,21 +754,22 @@ def energy_table(r):
                     pc=[("はじめの力学的エネルギーを求めている", 1), ("下端の運動エネルギーを求めている", 1), ("差として答えている", 2)],
                     pit=["運動エネルギーの $\\dfrac12$ を忘れる。"])
     if kind == "throw":
-        v0 = Q(r.choice(["4.9", "9.8", "7.0", "14", "2.8", "5.6", "8.4", "4.2"]))
+        v0s = r.choice(["4.9", "9.8", "7.0", "14", "2.8", "5.6", "8.4", "4.2"])
+        v0 = Q(v0s)
         h = v0 ** 2 / (2 * G)
-        return numq(f"地面から小球を鉛直上向きに速さ {fv(v0)} m/s で投げ上げた。空気抵抗を無視するとき、小球が達する最高点の地面からの高さは何 m か。力学的エネルギー保存の法則を用いて求めなさい。{GS}",
+        return numq(f"地面から小球を鉛直上向きに速さ {v0s} m/s で投げ上げた。空気抵抗を無視するとき、小球が達する最高点の地面からの高さは何 m か。力学的エネルギー保存の法則を用いて求めなさい。{GS}",
                     h, f"{P(v0)}**2/(2*9.8)", "最高点では速さ 0。$\\dfrac12mv_0^2=mgh$ より $h=\\dfrac{v_0^2}{2g}$。", "m", d=2,
                     ap="最高点で速さ 0 になることを使い、運動エネルギーがすべて位置エネルギーに変わったと考える。",
                     steps=["$\\dfrac12mv_0^2=mgh$（質量 $m$ は両辺で消える）。", f"$h=\\dfrac{{{fv(v0)}^2}}{{2\\times9.8}}={fv(h, 3)}\\,\\mathrm{{m}}$。"],
                     alt=["等加速度運動の式 $0^2-v_0^2=-2gh$ を使っても同じ結果になる。"],
                     pc=[("エネルギー保存の式を立てている", 2), ("高さが正しい", 2)], pit=["$v_0^2$ ではなく $v_0$ のまま計算する。"])
     if kind == "spring":
-        km = r.choice([(100, Q("0.25"), 20), (400, Q("1.0"), 20), (90, Q("0.10"), 30), (160, Q("0.40"), 20), (200, Q("0.50"), 20), (250, Q("0.10"), 50)])
-        k, m, w = km
+        k, mss, w = r.choice([(100, "0.25", 20), (400, "1.0", 20), (90, "0.10", 30), (160, "0.40", 20), (200, "0.50", 20), (250, "0.10", 50)])
+        m = Q(mss)
         xc = r.choice([2, 4, 5, 10])
         x = sp.Rational(xc, 100)
         v = w * x
-        return numq(f"なめらかな水平面上で、ばね定数 {k} N/m の軽いばねに質量 {fv(m)} kg の小物体を押し当て、ばねを自然の長さから {xc} cm 縮めて静かにはなした。小物体がばねから離れるときの速さは何 m/s か。",
+        return numq(f"なめらかな水平面上で、ばね定数 {k} N/m の軽いばねに質量 {mss} kg の小物体を押し当て、ばねを自然の長さから {xc} cm 縮めて静かにはなした。小物体がばねから離れるときの速さは何 m/s か。",
                     v, f"{P(x)}*sqrt({k}/{P(m)})", "$\\dfrac12kx^2=\\dfrac12mv^2$ より $v=x\\sqrt{\\dfrac{k}{m}}$。", "m/s", d=3,
                     ap="摩擦がないので、弾性エネルギーがすべて運動エネルギーに変わる。縮みは m に直す。",
                     steps=[f"$\\dfrac12\\times{k}\\times{fv(x)}^2=\\dfrac12\\times{fv(m)}\\times v^2$。", f"$v^2={fv(v ** 2)}$、$v={fv(v)}\\,\\mathrm{{m/s}}$。"],
@@ -773,17 +778,17 @@ def energy_table(r):
     hs = [Q("0.10"), Q("0.20"), Q("0.30"), Q("0.40")]
     loss = r.choice([0, 0, Q("0.2"), Q("0.1")])
     v2 = [2 * G * h * (1 - loss) for h in hs]
-    tbl = table([[fv(h), fv(x, 4)] for h, x in zip(hs, v2)], header=["高さ h [m]", "下端での速さの2乗 v² [m²/s²]"], caption="斜面上の高さ h から静かに放した台車の、下端での速さ")
+    tbl = table([[f"{float(h):.2f}", fv(x, 4)] for h, x in zip(hs, v2)], header=["高さ h [m]", "下端での速さの2乗 v² [m²/s²]"], caption="斜面上の高さ h から静かに放した台車の、下端での速さ")
     sl = 2 * G * (1 - loss)
     if loss == 0:
-        return numq("台車を斜面上のいろいろな高さ $h$ から静かに放し、斜面の下端での速さ $v$ を測定した。表（例えば $h={fv(hs[3])}\\,\\mathrm{{m}}$ のとき $v^2={fv(v2[3], 4)}$）をもとに横軸に $h$、縦軸に $v^2$ をとってグラフをかくと原点を通る直線になった。この傾きを用いて、重力加速度の大きさを求めなさい。ただし、摩擦は無視できるものとする。",
+        return numq(f"台車を斜面上のいろいろな高さ $h$ から静かに放し、斜面の下端での速さ $v$ を測定した。表（例えば $h=0.40\\,\\mathrm{{m}}$ のとき $v^2={fv(v2[3], 4)}$）をもとに横軸に $h$、縦軸に $v^2$ をとってグラフをかくと原点を通る直線になった。この傾きを用いて、重力加速度の大きさを求めなさい。ただし、摩擦は無視できるものとする。",
                     G, f"{P(v2[3])}/{P(hs[3])}/2", "$\\dfrac12mv^2=mgh$ より $v^2=2gh$。傾き $=2g$。", "m/s²", d=3, tbl=tbl,
                     ap="エネルギー保存の式を $v^2$ と $h$ の関係に書き直し、グラフの傾きが何に当たるかを考える。",
                     steps=["$v^2=2gh$ なので、$v^2$−$h$ グラフの傾きは $2g$。", f"表より傾き $=\\dfrac{{{fv(v2[3], 4)}}}{{{fv(hs[3])}}}={fv(sl, 3)}$。", f"$g=\\dfrac{{{fv(sl, 3)}}}{{2}}={fv(G)}\\,\\mathrm{{m/s^2}}$。"],
                     alt=["各行で $\\dfrac{v^2}{2h}$ を計算し、一定値になることを確かめてもよい。"],
                     pc=[("$v^2=2gh$ を導いている", 2), ("傾きを読み取っている", 1), ("値が正しい", 1)], pit=["傾きをそのまま $g$ と答える（2で割り忘れ）。"])
     frac_ = 1 - loss
-    return numq(f"台車を斜面上のいろいろな高さ $h$ から静かに放し、斜面の下端での速さ $v$ を測定したところ、表のようになった（$h={fv(hs[3])}\\,\\mathrm{{m}}$ のとき $v^2={fv(v2[3], 4)}$）。$v^2$ と $h$ は比例しているが、摩擦がない場合に予想される値より小さかった。はじめの位置エネルギーのうち、下端で運動エネルギーとして残っている割合は何 % か。{GS}",
+    return numq(f"台車を斜面上のいろいろな高さ $h$ から静かに放し、斜面の下端での速さ $v$ を測定したところ、表のようになった（$h=0.40\\,\\mathrm{{m}}$ のとき $v^2={fv(v2[3], 4)}$）。$v^2$ と $h$ は比例しているが、摩擦がない場合に予想される値より小さかった。はじめの位置エネルギーのうち、下端で運動エネルギーとして残っている割合は何 % か。{GS}",
                 frac_ * 100, f"{P(v2[3])}/(2*9.8*{P(hs[3])})*100", "摩擦がなければ $v^2=2gh$。実測の $v^2$ との比が残った割合。", "%", d=3, tbl=tbl,
                 ap="運動エネルギー÷位置エネルギー＝$\\dfrac{\\frac12mv^2}{mgh}=\\dfrac{v^2}{2gh}$。質量は不要。",
                 steps=[f"例えば $h={fv(hs[3])}$ のとき $2gh={fv(2 * G * hs[3], 4)}$。", f"$\\dfrac{{v^2}}{{2gh}}=\\dfrac{{{fv(v2[3], 4)}}}{{{fv(2 * G * hs[3], 4)}}}={fv(frac_)}$。",
@@ -847,9 +852,10 @@ def hypo_motion(r):
     a = Q(r.choice(["0.40", "0.60", "0.80", "1.0", "1.2", "1.6", "2.0", "2.4"]))
     ts = r.choice([[Q("0.50"), Q("1.0"), Q("1.5"), Q("2.0")], [Q("1.0"), Q("2.0"), Q("3.0"), Q("4.0")], [Q("0.20"), Q("0.40"), Q("0.60"), Q("0.80")]])
     xs = [a * t ** 2 / 2 for t in ts]
-    tbl = table([[fv(t), fv(x, 4)] for t, x in zip(ts, xs)], header=["時間 t [s]", "移動距離 x [m]"], caption="斜面上で静かに放した台車の運動")
+    td = (lambda t: f"{float(t):.2f}") if ts[0] < 1 else (lambda t: f"{float(t):.1f}")
+    tbl = table([[td(t), fv(x, 4)] for t, x in zip(ts, xs)], header=["時間 t [s]", "移動距離 x [m]"], caption="斜面上で静かに放した台車の運動")
     who = r.choice(["Aさん", "Bさん", "ある生徒"])
-    return desc(f"斜面上で台車を静かに放し、放してからの時間 $t$ と移動距離 $x$ を測定したところ、表のようになった（最後の測定は $t={fv(ts[-1])}\\,\\mathrm{{s}}$ で $x={fv(xs[-1], 4)}\\,\\mathrm{{m}}$）。{who}は「$x$ は $t$ に比例する」という仮説を立てた。"
+    return desc(f"斜面上で台車を静かに放し、放してからの時間 $t$ と移動距離 $x$ を測定したところ、表のようになった（最後の測定は $t={td(ts[-1])}\\,\\mathrm{{s}}$ で $x={fv(xs[-1], 4)}\\,\\mathrm{{m}}$）。{who}は「$x$ は $t$ に比例する」という仮説を立てた。"
                 "(1) この仮説が表のデータで支持されるかどうかを、根拠となる計算を示して判断しなさい。(2) データから $x$ と $t$ の関係を見いだし、台車の加速度の大きさを求めなさい。",
                 f"(1) $\\dfrac{{x}}{{t}}$ は {', '.join(fv(x / t, 3) for x, t in zip(xs, ts))} と一定でないので、仮説は支持されない。(2) $\\dfrac{{x}}{{t^2}}$ はどの行も {fv(a / 2, 3)} で一定なので $x$ は $t^2$ に比例する。$x=\\dfrac12at^2$ と比べて $a={fv(a)}\\,\\mathrm{{m/s^2}}$。",
                 "比例の検証は比が一定かどうかで行う。等加速度運動では $x=\\dfrac12at^2$ なので $\\dfrac{x}{t^2}=\\dfrac{a}{2}$ が一定になる。",
@@ -868,7 +874,8 @@ def hypo_motion(r):
 def electric_heat(r):
     while True:
         V = r.choice([6, 10, 12])
-        I = Q(r.choice(["1.0", "1.5", "2.0", "2.5"]))
+        Is = r.choice(["1.0", "1.5", "2.0", "2.5"])
+        I = Q(Is)
         t = r.choice([120, 180, 210, 300, 420])
         m = r.choice([100, 150, 200])
         dT = V * I * t / (Q("4.2") * m)
@@ -877,7 +884,7 @@ def electric_heat(r):
     eff = Q(r.choice(["0.80", "0.75", "0.90", "0.85"]))
     obs = sp.Rational(round(float(dT * eff) * 10), 10)
     ratio = obs / dT
-    return desc(f"電熱線に {V} V の電圧を加えて {fv(I)} A の電流を流し、水 {m} g を {t} 秒間加熱した。水の比熱を 4.2 J/(g·K) とする。"
+    return desc(f"電熱線に {V} V の電圧を加えて {Is} A の電流を流し、水 {m} g を {t} 秒間加熱した。水の比熱を 4.2 J/(g·K) とする。"
                 f"(1) 電熱線で発生した熱がすべて水の温度上昇に使われたとすると、水温は何 K 上がるか。(2) 実際の水温の上昇は {fv(obs)} K であった。発生した熱のうち水の温度上昇に使われた割合（%）を有効数字2桁で求め、(1) との差が生じた理由と、差を小さくする実験上の工夫を1つずつ述べなさい。",
                 f"(1) $Q=VIt={fv(V * I * t)}\\,\\mathrm{{J}}$、$\\Delta T=\\dfrac{{{fv(V * I * t)}}}{{{m}\\times4.2}}={fv(dT)}\\,\\mathrm{{K}}$。(2) $\\dfrac{{{fv(obs)}}}{{{fv(dT)}}}\\times100\\fallingdotseq{sig(ratio * 100, 2)}$ %。"
                 "理由：発生した熱の一部が容器や電熱線自身の温度上昇、周囲の空気への放熱に使われたから。工夫：断熱性の高い容器（発泡ポリスチレンのカップなど）にふたをして使う、水をかき混ぜて温度を均一にしてから測るなど。",
@@ -1035,20 +1042,19 @@ def err_titration(r):
     case = r.choice([("硫酸", "H_2SO_4", 2, "水酸化ナトリウム水溶液", "NaOH", 1), ("シュウ酸水溶液", "(COOH)_2", 2, "水酸化ナトリウム水溶液", "NaOH", 1),
                      ("塩酸", "HCl", 1, "水酸化バリウム水溶液", "Ba(OH)_2", 2), ("硫酸", "H_2SO_4", 2, "水酸化カリウム水溶液", "KOH", 1)])
     an, af, av, bn, bf, bv = case
-    ca = Q(r.choice(["0.10", "0.050", "0.20"]))
-    Va = Q(r.choice(["10.0", "20.0"]))
-    cb = Q(r.choice(["0.10", "0.20"]))
+    cas, Vas, cbs = r.choice(["0.10", "0.050", "0.20"]), r.choice(["10.0", "20.0"]), r.choice(["0.10", "0.20"])
+    ca, Va, cb = Q(cas), Q(Vas), Q(cbs)
     Vb = av * ca * Va / (bv * cb)
     wrongV = ca * Va / cb
-    return err_item(f"{fv(ca)} mol/L の{an}（$\\mathrm{{{af}}}$）{fv(Va)} mL を、{fv(cb)} mol/L の{bn}（$\\mathrm{{{bf}}}$）で中和するのに必要な体積は何 mL か。",
-                    f"$c\\times V=c'\\times V'$ より、${fv(ca)}\\times{fv(Va)}={fv(cb)}\\times V'$、$V'={fv(wrongV)}\\,\\mathrm{{mL}}$",
+    return err_item(f"{cas} mol/L の{an}（$\\mathrm{{{af}}}$）{Vas} mL を、{cbs} mol/L の{bn}（$\\mathrm{{{bf}}}$）で中和するのに必要な体積は何 mL か。",
+                    f"$c\\times V=c'\\times V'$ より、${cas}\\times{Vas}={cbs}\\times V'$、$V'={float(wrongV):.1f}\\,\\mathrm{{mL}}$",
                     "中和の式を立てた部分（価数）", "formula",
                     f"「濃度×体積が等しい」とだけ覚えていて、{an if av == 2 else bn}が2価であることを式に入れていない。",
-                    f"${av}\\times{fv(ca)}\\times{fv(Va)}={bv}\\times{fv(cb)}\\times V'$ より $V'={fv(Vb)}\\,\\mathrm{{mL}}$",
-                    f"{fv(Vb)} mL", "中和では $\\mathrm{H^+}$ と $\\mathrm{OH^-}$ の物質量が等しい。価数×濃度×体積で比べる。",
-                    [f"{an}は {av} 価、{bn}は {bv} 価。", f"${av}\\times{fv(ca)}\\times{fv(Va)}={bv}\\times{fv(cb)}\\times V'$。", f"$V'={fv(Vb)}\\,\\mathrm{{mL}}$。"],
+                    f"${av}\\times{cas}\\times{Vas}={bv}\\times{cbs}\\times V'$ より $V'={float(Vb):.1f}\\,\\mathrm{{mL}}$",
+                    f"{float(Vb):.1f} mL", "中和では $\\mathrm{H^+}$ と $\\mathrm{OH^-}$ の物質量が等しい。価数×濃度×体積で比べる。",
+                    [f"{an}は {av} 価、{bn}は {bv} 価。", f"${av}\\times{cas}\\times{Vas}={bv}\\times{cbs}\\times V'$。", f"$V'={float(Vb):.1f}\\,\\mathrm{{mL}}$。"],
                     "酸・塩基の化学式から価数を確認し、$acV=bc'V'$ の形で式を立てる。",
-                    [f"$\\mathrm{{H^+}}$ の物質量 ${av}\\times{fv(ca)}\\times\\dfrac{{{fv(Va)}}}{{1000}}$ mol と、$\\mathrm{{OH^-}}$ の物質量が等しくなるかを確かめる。"],
+                    [f"$\\mathrm{{H^+}}$ の物質量 ${av}\\times{cas}\\times\\dfrac{{{Vas}}}{{1000}}$ mol と、$\\mathrm{{OH^-}}$ の物質量が等しくなるかを確かめる。"],
                     ["価数をかけ忘れる。"], chk=(f"{av}*{P(ca)}*{P(Va)}/({bv}*{P(cb)})", str(Vb), None, "intermediate"), d=2)
 
 
