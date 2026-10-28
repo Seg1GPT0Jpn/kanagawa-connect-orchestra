@@ -1,0 +1,396 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHC-U01-LESSON",
+  "title": "ベクトル　授業プリント",
+  "subtitle": "ベクトル｜ベクトルの演算・成分・内積・位置ベクトル",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_c",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHC-U01"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATHC-U01-PACK",
+  "pair_set_id": "HS-MATHC-U01-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH1-U04",
+        "point": "三角比",
+        "title": "図形と計量"
+      },
+      {
+        "unit_id": "HS-MATHA-U02",
+        "point": "図形の性質",
+        "title": "図形の性質"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "CT-MATH2BC-U02",
+        "point": "ベクトルの応用",
+        "title": "数学Ⅱ・B・C　数列・統計的な推測・ベクトル"
+      }
+    ],
+    "readiness_check": [
+      "三平方の定理と余弦定理（数学Ⅰ）を使える。",
+      "$\\cos\\theta$ の値から $0^\\circ\\leqq\\theta\\leqq180^\\circ$ の角を求められる。",
+      "座標平面上の2点間の距離・内分点の座標（数学Ⅱ）を求められる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "ベクトルの和・差・実数倍を図と成分の両方で表し、大きさを計算できる。",
+      "内積の定義と成分表示を余弦定理から導き、なす角・垂直条件・図形の量の計算に使える。",
+      "位置ベクトルを使って内分点・外分点・交点を表し、図形の性質を式で示せる。空間ベクトルにも同じ考え方を広げられる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：向きと大きさをもつ量",
+        "minutes": 10,
+        "activity": "移動・力の例から有向線分とベクトルを導入し、和を平行四辺形でかく"
+      },
+      {
+        "phase": "成分と演算",
+        "minutes": 20,
+        "activity": "成分表示・和・実数倍・大きさを確認し、平行条件を式で表す"
+      },
+      {
+        "phase": "内積",
+        "minutes": 25,
+        "activity": "定義 → 余弦定理による成分表示の導出 → 例題1（なす角）"
+      },
+      {
+        "phase": "位置ベクトル",
+        "minutes": 25,
+        "activity": "内分点の公式を導き、例題2（2直線の交点）を全体で解く"
+      },
+      {
+        "phase": "空間ベクトル",
+        "minutes": 15,
+        "activity": "成分に z を加えるだけで同じ公式が使えることを例題3で確認"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 5,
+        "activity": "確認問題3問、問題プリントA の課題指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "向きと大きさをもつ量",
+        "body": "「東へ3 km、北へ1 km 進む」という移動や、物体を押す力は、大きさだけでなく向きも合わせて初めて決まる。このように向きと大きさをもつ量をベクトルという。ベクトルは矢印（有向線分）で表し、位置を問題にしない。つまり、平行移動して重なる矢印は同じベクトルとみなす。",
+        "bullets": [
+          "2つのベクトルの和 $\\vec{a}+\\vec{b}$ は、$\\vec{a}$ の終点に $\\vec{b}$ の始点をつないだ矢印（平行四辺形の対角線）で表される。",
+          "ベクトルを座標で表す（成分表示）と、図形の問題を計算で処理できるようになる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "同じ向き・同じ長さで位置の違う矢印を3本かき、「すべて同じベクトル」であることを確認させる。",
+            "ask": "この3本の矢印は同じベクトルか。",
+            "expect": "向きも長さも同じなので同じベクトル。",
+            "timing": "導入の冒頭"
+          },
+          {
+            "point": "和は「続けて移動したときの全体の移動」と説明すると、三角形の作図と平行四辺形の作図が同じであることが理解しやすい。"
+          }
+        ],
+        "figure": {
+          "alt": "ベクトルa=(3,1)、b=(1,2) と和 a+b=(4,3) を表す平行四辺形",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 184 158\" width=\"184\" height=\"158\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"144\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"40\" y1=\"144\" x2=\"40\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"66\" y1=\"144\" x2=\"66\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"92\" y1=\"144\" x2=\"92\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"118\" y1=\"144\" x2=\"118\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"144\" y1=\"144\" x2=\"144\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"170\" y1=\"144\" x2=\"170\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"144\" x2=\"170\" y2=\"144\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"170\" y2=\"118\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"92\" x2=\"170\" y2=\"92\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"66\" x2=\"170\" y2=\"66\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"40\" x2=\"170\" y2=\"40\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"170\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"176\" y2=\"118\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"40\" y1=\"144\" x2=\"40\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"172\" y=\"131\" font-style=\"italic\">x</text><text x=\"45\" y=\"12\" font-style=\"italic\">y</text><text x=\"29\" y=\"130\">O</text><text x=\"11\" y=\"130\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"63\" y=\"130\" font-size=\"8\" fill=\"#555\">1</text><text x=\"89\" y=\"130\" font-size=\"8\" fill=\"#555\">2</text><text x=\"115\" y=\"130\" font-size=\"8\" fill=\"#555\">3</text><text x=\"141\" y=\"130\" font-size=\"8\" fill=\"#555\">4</text><text x=\"167\" y=\"130\" font-size=\"8\" fill=\"#555\">5</text><text x=\"27\" y=\"147\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"27\" y=\"95\" font-size=\"8\" fill=\"#555\">1</text><text x=\"27\" y=\"69\" font-size=\"8\" fill=\"#555\">2</text><text x=\"27\" y=\"43\" font-size=\"8\" fill=\"#555\">3</text><text x=\"27\" y=\"17\" font-size=\"8\" fill=\"#555\">4</text><line x1=\"40\" y1=\"118\" x2=\"118\" y2=\"92\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"40\" y1=\"118\" x2=\"66\" y2=\"66\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"118\" y1=\"92\" x2=\"144\" y2=\"40\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"66\" y1=\"66\" x2=\"144\" y2=\"40\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"40\" y1=\"118\" x2=\"144\" y2=\"40\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"118\" cy=\"92\" r=\"2.3\" fill=\"#000\"/><text x=\"122\" y=\"88\">a</text><circle cx=\"66\" cy=\"66\" r=\"2.3\" fill=\"#000\"/><text x=\"70\" y=\"62\">b</text><circle cx=\"144\" cy=\"40\" r=\"2.3\" fill=\"#000\"/><text x=\"148\" y=\"36\">a+b</text></svg>"
+        }
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "ベクトルの成分と演算",
+        "body": "座標平面で、原点 O を始点として $\\vec{a}=\\overrightarrow{\\mathrm{OA}}$ となる点 A の座標が $(a_1,\\,a_2)$ のとき、$\\vec{a}=(a_1,\\,a_2)$ と書き、$a_1,\\ a_2$ を $\\vec{a}$ の成分という。",
+        "formula": "$$\\vec{a}=(a_1,\\,a_2),\\ \\vec{b}=(b_1,\\,b_2)\\ \\Longrightarrow\\ \\vec{a}\\pm\\vec{b}=(a_1\\pm b_1,\\,a_2\\pm b_2),\\quad k\\vec{a}=(ka_1,\\,ka_2),\\quad |\\vec{a}|=\\sqrt{a_1^2+a_2^2}$$",
+        "conditions": [
+          "2点 A$(x_1,\\,y_1)$、B$(x_2,\\,y_2)$ について $\\overrightarrow{\\mathrm{AB}}=(x_2-x_1,\\,y_2-y_1)$（終点 − 始点）。",
+          "$\\vec{a}\\neq\\vec{0},\\ \\vec{b}\\neq\\vec{0}$ のとき、$\\vec{a}\\parallel\\vec{b}\\iff\\vec{b}=k\\vec{a}$ となる実数 $k$ がある $\\iff a_1b_2-a_2b_1=0$。",
+          "空間では成分が3つになり、$\\vec{a}=(a_1,\\,a_2,\\,a_3)$、$|\\vec{a}|=\\sqrt{a_1^2+a_2^2+a_3^2}$ となる。演算の規則は平面と同じ。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$\\overrightarrow{\\mathrm{AB}}$ を「終点 − 始点」で求めることを、始点と終点を逆にした誤答と比べて確認させる。",
+            "caution": "「始点 − 終点」で計算して向きが逆になる誤りが多い。"
+          },
+          {
+            "point": "平行条件 $a_1b_2-a_2b_1=0$ は「成分の比が等しい」$a_1:a_2=b_1:b_2$ を、分母が $0$ になる場合も含めて書き直したものだと説明する。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "内積の定義と成分表示",
+        "formula": "$$\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta=a_1b_1+a_2b_2$$",
+        "conditions": [
+          "$\\vec{a}\\neq\\vec{0},\\ \\vec{b}\\neq\\vec{0}$、$\\theta$ は $\\vec{a}$ と $\\vec{b}$ のなす角（$0^\\circ\\leqq\\theta\\leqq180^\\circ$）。どちらかが $\\vec{0}$ のときは $\\vec{a}\\cdot\\vec{b}=0$ と定める。",
+          "$\\vec{a}\\perp\\vec{b}\\iff\\vec{a}\\cdot\\vec{b}=0$（$\\vec{a}\\neq\\vec{0},\\ \\vec{b}\\neq\\vec{0}$）",
+          "$|\\vec{a}|^2=\\vec{a}\\cdot\\vec{a}$。空間では $\\vec{a}\\cdot\\vec{b}=a_1b_1+a_2b_2+a_3b_3$。"
+        ],
+        "body": "内積はベクトルではなく実数（スカラー）である。なす角は、2つのベクトルの始点をそろえたときにできる角で測る。",
+        "proof_steps": [
+          "$\\overrightarrow{\\mathrm{OA}}=\\vec{a},\\ \\overrightarrow{\\mathrm{OB}}=\\vec{b}$ とすると、$\\overrightarrow{\\mathrm{AB}}=\\vec{b}-\\vec{a}$。",
+          "$\\triangle\\mathrm{OAB}$ に余弦定理を使うと $\\mathrm{AB}^2=\\mathrm{OA}^2+\\mathrm{OB}^2-2\\,\\mathrm{OA}\\cdot\\mathrm{OB}\\cos\\theta$。",
+          "これは $|\\vec{b}-\\vec{a}|^2=|\\vec{a}|^2+|\\vec{b}|^2-2\\vec{a}\\cdot\\vec{b}$ を意味する。",
+          "成分で書くと $(b_1-a_1)^2+(b_2-a_2)^2=a_1^2+a_2^2+b_1^2+b_2^2-2\\vec{a}\\cdot\\vec{b}$。",
+          "左辺を展開して整理すると $-2a_1b_1-2a_2b_2=-2\\vec{a}\\cdot\\vec{b}$、よって $\\vec{a}\\cdot\\vec{b}=a_1b_1+a_2b_2$。（O, A, B が一直線上にある場合も、同じ式が成り立つことが確かめられる。）"
+        ],
+        "teacher_points": [
+          {
+            "point": "余弦定理の式がそのまま内積の式に置きかわることを、2つの式を上下に並べて板書して見せる。",
+            "ask": "余弦定理の $2bc\\cos A$ にあたるのは、ベクトルでは何か。",
+            "expect": "$2\\vec{a}\\cdot\\vec{b}$"
+          },
+          {
+            "point": "$\\cos\\theta=\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$ の符号で、鋭角・直角・鈍角が判定できることを確認する。",
+            "caution": "内積が負なのに鋭角と答える誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "内分点・外分点の位置ベクトル",
+        "proof_steps": [
+          "点 P が線分 AB を $m:n$ に内分するとき、$\\overrightarrow{\\mathrm{AP}}=\\dfrac{m}{m+n}\\overrightarrow{\\mathrm{AB}}$。",
+          "位置ベクトルで書くと $\\vec{p}-\\vec{a}=\\dfrac{m}{m+n}(\\vec{b}-\\vec{a})$。",
+          "$\\vec{a}$ について整理すると $\\vec{p}=\\left(1-\\dfrac{m}{m+n}\\right)\\vec{a}+\\dfrac{m}{m+n}\\vec{b}=\\dfrac{n\\vec{a}+m\\vec{b}}{m+n}$。",
+          "外分（$m\\neq n$）は、内分の式の $n$ を $-n$ におきかえて $\\vec{p}=\\dfrac{-n\\vec{a}+m\\vec{b}}{m-n}$。",
+          "特に中点は $\\dfrac{\\vec{a}+\\vec{b}}{2}$、$\\triangle\\mathrm{ABC}$ の重心は $\\dfrac{\\vec{a}+\\vec{b}+\\vec{c}}{3}$。"
+        ],
+        "body": "基準の点 O を決めると、点 P はベクトル $\\vec{p}=\\overrightarrow{\\mathrm{OP}}$ と1対1に対応する。これを P の位置ベクトルという。",
+        "teacher_points": [
+          {
+            "point": "係数の「たすきがけ」（A の係数が $n$、B の係数が $m$）は、P が B に近いほど $\\vec{b}$ の係数が大きくなることで納得させる。",
+            "ask": "$m:n=3:1$ のとき、P は A と B のどちらに近いか。",
+            "expect": "B に近い"
+          },
+          {
+            "point": "係数の和が $1$ になっていることを、検算の習慣として身につけさせる。",
+            "timing": "導出の直後"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　成分からなす角を求める",
+        "example": {
+          "problem": "$\\vec{a}=(2,\\,1),\\ \\vec{b}=(1,\\,3)$ のなす角 $\\theta$ を求めよ。",
+          "steps": [
+            "$\\vec{a}\\cdot\\vec{b}=2\\cdot1+1\\cdot3=5$。",
+            "$|\\vec{a}|=\\sqrt{5},\\ |\\vec{b}|=\\sqrt{10}$。",
+            "$\\cos\\theta=\\dfrac{5}{\\sqrt{5}\\sqrt{10}}=\\dfrac{5}{5\\sqrt{2}}=\\dfrac{1}{\\sqrt{2}}$。",
+            "$0^\\circ\\leqq\\theta\\leqq180^\\circ$ より $\\theta=45^\\circ$。"
+          ],
+          "answer": "$\\theta=45^\\circ$",
+          "thinking": "内積を2通りに表した $|\\vec{a}||\\vec{b}|\\cos\\theta=a_1b_1+a_2b_2$ から $\\cos\\theta$ を求める。"
+        },
+        "teacher_points": [
+          {
+            "point": "答えの前に「$0^\\circ\\leqq\\theta\\leqq180^\\circ$ より」と範囲を書かせる。",
+            "caution": "範囲を書かないと、$\\cos\\theta$ から角が1つに決まる理由が答案に残らない。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\cos\\theta=\\dfrac{5}{\\sqrt{5}+\\sqrt{10}}$ とする",
+            "correct": "分母は大きさの積 $|\\vec{a}||\\vec{b}|$"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　2直線の交点の位置ベクトル",
+        "example": {
+          "problem": "$\\triangle\\mathrm{OAB}$ において、辺 OA を $2:1$ に内分する点を P、辺 OB の中点を Q とし、線分 AQ と BP の交点を X とする。$\\overrightarrow{\\mathrm{OA}}=\\vec{a},\\ \\overrightarrow{\\mathrm{OB}}=\\vec{b}$ として、$\\overrightarrow{\\mathrm{OX}}$ を $\\vec{a},\\ \\vec{b}$ で表せ。",
+          "steps": [
+            "X は AQ 上にあるので、$\\mathrm{AX}:\\mathrm{XQ}=s:(1-s)$ とおくと $\\overrightarrow{\\mathrm{OX}}=(1-s)\\vec{a}+\\dfrac{s}{2}\\vec{b}$。",
+            "X は BP 上にあるので、$\\mathrm{BX}:\\mathrm{XP}=u:(1-u)$ とおくと $\\overrightarrow{\\mathrm{OX}}=\\dfrac{2u}{3}\\vec{a}+(1-u)\\vec{b}$。",
+            "$\\vec{a},\\ \\vec{b}$ は $\\vec{0}$ でなく平行でもないので、係数を比較して $1-s=\\dfrac{2u}{3},\\ \\dfrac{s}{2}=1-u$。",
+            "これを解いて $s=\\dfrac{1}{2},\\ u=\\dfrac{3}{4}$。"
+          ],
+          "answer": "$\\overrightarrow{\\mathrm{OX}}=\\dfrac{1}{2}\\vec{a}+\\dfrac{1}{4}\\vec{b}$",
+          "thinking": "交点 X を「AQ 上の点」「BP 上の点」の2通りに表し、係数を比較する。",
+          "figure": {
+            "alt": "三角形OABと、OA上の点P、OBの中点Q、AQとBPの交点X",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 188 136\" width=\"188\" height=\"136\" font-family=\"serif\" font-size=\"12\"><line x1=\"16\" y1=\"120\" x2=\"172\" y2=\"120\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"120\" x2=\"68\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"172\" y1=\"120\" x2=\"68\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"172\" y1=\"120\" x2=\"42\" y2=\"68\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"68\" y1=\"16\" x2=\"120\" y2=\"120\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"1.87\" y=\"128.3\">O</text><text x=\"178.35\" y=\"127.72\">A</text><text x=\"61.19\" y=\"9.37\">B</text><text x=\"124.04\" y=\"131.51\">P</text><text x=\"28.07\" y=\"67.27\">Q</text><text x=\"113.74\" y=\"100.39\">X</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "係数比較ができる根拠「$\\vec{a},\\ \\vec{b}$ は $\\vec{0}$ でなく平行でない（1次独立）」を必ず答案に書かせる。",
+            "ask": "なぜ係数を比べてよいのか。",
+            "expect": "$\\vec{a}$ と $\\vec{b}$ が平行でないから。"
+          },
+          {
+            "point": "メネラウスの定理で $\\mathrm{AX}:\\mathrm{XQ}$ を求める方法と比べさせると、図形の性質（数学A）との結びつきが見える。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　空間ベクトルと三角形",
+        "example": {
+          "problem": "空間の3点 A$(1,\\,0,\\,2)$、B$(2,\\,1,\\,0)$、C$(0,\\,2,\\,1)$ について、$\\angle\\mathrm{BAC}$ と $\\triangle\\mathrm{ABC}$ の面積を求めよ。",
+          "steps": [
+            "$\\overrightarrow{\\mathrm{AB}}=(1,\\,1,\\,-2)$、$\\overrightarrow{\\mathrm{AC}}=(-1,\\,2,\\,-1)$。",
+            "$\\overrightarrow{\\mathrm{AB}}\\cdot\\overrightarrow{\\mathrm{AC}}=-1+2+2=3$、$|\\overrightarrow{\\mathrm{AB}}|=|\\overrightarrow{\\mathrm{AC}}|=\\sqrt{6}$。",
+            "$\\cos\\angle\\mathrm{BAC}=\\dfrac{3}{6}=\\dfrac{1}{2}$ より $\\angle\\mathrm{BAC}=60^\\circ$。",
+            "面積 $S=\\dfrac{1}{2}\\sqrt{6}\\cdot\\sqrt{6}\\sin60^\\circ=\\dfrac{3\\sqrt{3}}{2}$。"
+          ],
+          "answer": "$\\angle\\mathrm{BAC}=60^\\circ$、面積 $\\dfrac{3\\sqrt{3}}{2}$",
+          "thinking": "平面と同じく、終点 − 始点で辺のベクトルをつくり、内積からなす角を求める。"
+        },
+        "teacher_points": [
+          {
+            "point": "面積公式 $S=\\dfrac{1}{2}\\sqrt{|\\vec{a}|^2|\\vec{b}|^2-(\\vec{a}\\cdot\\vec{b})^2}$ で $\\sqrt{36-9}$ と計算しても同じ値になることを確かめさせる。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 成分と演算",
+              "lines": [
+                "$\\overrightarrow{\\mathrm{AB}}=$ 終点 − 始点",
+                "$|\\vec{a}|=\\sqrt{a_1^2+a_2^2}$",
+                "平行：$a_1b_2-a_2b_1=0$"
+              ]
+            },
+            {
+              "title": "② 内積",
+              "lines": [
+                "$\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta=a_1b_1+a_2b_2$",
+                "余弦定理から導く",
+                "垂直 $\\iff\\vec{a}\\cdot\\vec{b}=0$",
+                "例1：$\\cos\\theta=\\dfrac{1}{\\sqrt{2}}$、$\\theta=45^\\circ$"
+              ]
+            },
+            {
+              "title": "③ 位置ベクトル・空間",
+              "lines": [
+                "内分 $\\dfrac{n\\vec{a}+m\\vec{b}}{m+n}$",
+                "外分 $\\dfrac{-n\\vec{a}+m\\vec{b}}{m-n}$",
+                "交点：2通りに表して係数比較",
+                "空間：成分が3つになるだけ"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "板書は3列に分け、②の導出では余弦定理と内積の式を上下にそろえて書く。③には例題2の図を添える。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "$|\\vec{a}+\\vec{b}|$ を求めるときは、まず2乗して内積で展開することを徹底させる。",
+            "caution": "$|\\vec{a}+\\vec{b}|=|\\vec{a}|+|\\vec{b}|$ とする誤りが多い。"
+          },
+          {
+            "point": "なす角は始点をそろえて測ることを、三角形の頂点の角と比べて確認させる。",
+            "ask": "$\\triangle\\mathrm{ABC}$ で $\\overrightarrow{\\mathrm{AB}}$ と $\\overrightarrow{\\mathrm{BC}}$ のなす角は $\\angle\\mathrm{B}$ か。",
+            "expect": "$180^\\circ-\\angle\\mathrm{B}$"
+          },
+          {
+            "point": "平行条件と垂直条件を混同しないよう、「平行は成分のたすきがけの差が 0、垂直は内積が 0」と対で板書する。",
+            "timing": "成分と内積の両方を学んだ後"
+          },
+          {
+            "point": "交点の問題では、係数比較の前に「$\\vec{a},\\ \\vec{b}$ が1次独立」であることを書く習慣をつけさせる。"
+          },
+          {
+            "point": "空間ベクトルでは新しい公式を覚えるのではなく、平面の公式に $z$ 成分を加えるだけだと確認し、負担感を減らす。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\overrightarrow{\\mathrm{AB}}=\\vec{a}-\\vec{b}$ とする",
+            "correct": "終点 − 始点なので $\\vec{b}-\\vec{a}$"
+          },
+          {
+            "wrong": "内積が負でも $\\cos\\theta$ の絶対値から鋭角を答える",
+            "correct": "$\\cos\\theta<0$ なら $\\theta$ は鈍角"
+          },
+          {
+            "wrong": "外分点を $\\dfrac{n\\vec{a}+m\\vec{b}}{m+n}$ で計算する",
+            "correct": "外分は $n$ を $-n$ にして $\\dfrac{-n\\vec{a}+m\\vec{b}}{m-n}$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "成分で計算：和・差・実数倍は成分ごと、大きさは $\\sqrt{\\ }$ の中に成分の2乗の和。",
+          "内積 $\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta=a_1b_1+a_2b_2$。垂直 $\\iff$ 内積 $0$。$|\\vec{a}+\\vec{b}|$ は2乗して展開。",
+          "位置ベクトル：内分 $\\dfrac{n\\vec{a}+m\\vec{b}}{m+n}$。交点は2通りに表して係数比較。空間でも同じ考え方が使える。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\vec{a}=(3,\\,-1),\\ \\vec{b}=(2,\\,6)$ の内積を求め、2つのベクトルの位置関係を答えよ。",
+            "a": "$\\vec{a}\\cdot\\vec{b}=6-6=0$ より垂直"
+          },
+          {
+            "q": "$|\\vec{a}|=2,\\ |\\vec{b}|=1,\\ \\vec{a}\\cdot\\vec{b}=1$ のとき $|\\vec{a}-\\vec{b}|$ を求めよ。",
+            "a": "$|\\vec{a}-\\vec{b}|^2=4-2+1=3$ より $\\sqrt{3}$"
+          },
+          {
+            "q": "2点 A, B の位置ベクトルを $\\vec{a},\\ \\vec{b}$ とするとき、線分 AB を $1:3$ に内分する点の位置ベクトルを求めよ。",
+            "a": "$\\dfrac{3\\vec{a}+\\vec{b}}{4}$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "45403d3a240a960c3b3705584462f974d0b1378deb889ef9d3ab1d516f04fa40"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:22:25+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "80bc33e873e7280d756d408cb441d239800e639f92964c16c192f5205cdf6f1f"
+  }
+}

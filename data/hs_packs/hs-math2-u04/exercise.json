@@ -1443,7 +1443,7 @@
       "question_type": "short_answer",
       "stem": "加法定理を用いて、$\\sin255^\\circ$ の値を求めなさい。",
       "answer": {
-        "value": "$- \\sqrt{\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{2}}$"
+        "value": "$-\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$"
       },
       "explanation": "$255^\\circ=210^\\circ+45^\\circ$ と分けて加法定理を使う。",
       "scoring": {
@@ -1456,7 +1456,7 @@
       },
       "calc_check": {
         "expression": "sin(deg(255))",
-        "expected": "-sqrt(sqrt(3)/4 + 1/2)",
+        "expected": "(-sqrt(6) - sqrt(2))/4",
         "target": "intermediate"
       },
       "exercise_level": "basic_check",
@@ -1470,7 +1470,7 @@
           "$255^\\circ=210^\\circ+45^\\circ$。",
           "$\\sin255^\\circ=\\sin210^\\circ\\cos45^\\circ+\\cos210^\\circ\\sin45^\\circ$。",
           "$=- \\dfrac{1}{2}\\cdot\\dfrac{\\sqrt{2}}{2}+\\left(- \\dfrac{\\sqrt{3}}{2}\\right)\\cdot\\dfrac{\\sqrt{2}}{2}$。",
-          "$=- \\sqrt{\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{2}}$。"
+          "$=-\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓（関数電卓）で $\\sin255^\\circ\\fallingdotseq-0.9659$ を確かめ、答えの概数と比べる。"
@@ -1521,7 +1521,7 @@
       "question_type": "short_answer",
       "stem": "加法定理を用いて、$\\sin195^\\circ$ の値を求めなさい。",
       "answer": {
-        "value": "$- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "value": "$-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "explanation": "$195^\\circ=150^\\circ+45^\\circ$ と分けて加法定理を使う。",
       "scoring": {
@@ -1534,7 +1534,7 @@
       },
       "calc_check": {
         "expression": "sin(deg(195))",
-        "expected": "-sqrt(1/2 - sqrt(3)/4)",
+        "expected": "(-sqrt(6) + sqrt(2))/4",
         "target": "intermediate"
       },
       "exercise_level": "basic_check",
@@ -1548,7 +1548,7 @@
           "$195^\\circ=150^\\circ+45^\\circ$。",
           "$\\sin195^\\circ=\\sin150^\\circ\\cos45^\\circ+\\cos150^\\circ\\sin45^\\circ$。",
           "$=\\dfrac{1}{2}\\cdot\\dfrac{\\sqrt{2}}{2}+\\left(- \\dfrac{\\sqrt{3}}{2}\\right)\\cdot\\dfrac{\\sqrt{2}}{2}$。",
-          "$=- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$。"
+          "$=-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓（関数電卓）で $\\sin195^\\circ\\fallingdotseq-0.2588$ を確かめ、答えの概数と比べる。"
@@ -1599,7 +1599,7 @@
       "question_type": "short_answer",
       "stem": "加法定理を用いて、$\\cos285^\\circ$ の値を求めなさい。",
       "answer": {
-        "value": "$\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "value": "$\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "explanation": "$285^\\circ=240^\\circ+45^\\circ$ と分けて加法定理を使う。",
       "scoring": {
@@ -1612,7 +1612,7 @@
       },
       "calc_check": {
         "expression": "cos(deg(285))",
-        "expected": "sqrt(1/2 - sqrt(3)/4)",
+        "expected": "(-sqrt(2) + sqrt(6))/4",
         "target": "intermediate"
       },
       "exercise_level": "basic_check",
@@ -1626,7 +1626,7 @@
           "$285^\\circ=240^\\circ+45^\\circ$。",
           "$\\cos285^\\circ=\\cos240^\\circ\\cos45^\\circ-\\sin240^\\circ\\sin45^\\circ$。",
           "$=\\left(- \\dfrac{1}{2}\\right)\\cdot\\dfrac{\\sqrt{2}}{2}-\\left(- \\dfrac{\\sqrt{3}}{2}\\right)\\cdot\\dfrac{\\sqrt{2}}{2}$。",
-          "$=\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$。"
+          "$=\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓（関数電卓）で $\\cos285^\\circ\\fallingdotseq0.2588$ を確かめ、答えの概数と比べる。"
@@ -1677,7 +1677,7 @@
       "question_type": "short_answer",
       "stem": "加法定理を用いて、$\\cos75^\\circ$ の値を求めなさい。",
       "answer": {
-        "value": "$\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "value": "$\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "explanation": "$75^\\circ=45^\\circ+30^\\circ$ と分けて加法定理を使う。",
       "scoring": {
@@ -1690,7 +1690,7 @@
       },
       "calc_check": {
         "expression": "cos(deg(75))",
-        "expected": "sqrt(1/2 - sqrt(3)/4)",
+        "expected": "(-sqrt(2) + sqrt(6))/4",
         "target": "intermediate"
       },
       "exercise_level": "basic_check",
@@ -1704,7 +1704,7 @@
           "$75^\\circ=45^\\circ+30^\\circ$。",
           "$\\cos75^\\circ=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ$。",
           "$=\\left(\\dfrac{\\sqrt{2}}{2}\\right)\\cdot\\dfrac{\\sqrt{3}}{2}-\\left(\\dfrac{\\sqrt{2}}{2}\\right)\\cdot\\dfrac{1}{2}$。",
-          "$=\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$。"
+          "$=\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓（関数電卓）で $\\cos75^\\circ\\fallingdotseq0.2588$ を確かめ、答えの概数と比べる。"
@@ -3182,7 +3182,7 @@
       "explanation_detail": {
         "approach": "$\\theta$ の係数でくくって $y=a\\sin b(\\theta-p)+q$ の形にする。周期は $\\dfrac{2\\pi}{b}$、最大・最小は $\\pm|a|+q$。",
         "steps": [
-          "$y=3\\sin\\left(\\theta-\\dfrac{2}{3}\\pi\\right)+1$ を $y=3\\sin\\left(\\theta-\\dfrac{2}{3}\\pi\\right)+1$ と変形する。",
+          "$\\theta$ の係数が $1$ なので、$y=3\\sin\\left(\\theta-\\dfrac{2}{3}\\pi\\right)+1$ のかっこの中から移動量が直接読み取れる。",
           "周期は $\\dfrac{2\\pi}{1}=2\\pi$。",
           "$-1\\leqq\\sin(\\cdots)\\leqq1$ より最大値 $4$、最小値 $-2$。",
           "$y=3\\sin\\theta$ のグラフを$\\theta$ 軸方向に $\\dfrac{2}{3}\\pi$、$y$ 軸方向に $1$だけ平行移動したもの。"
@@ -3265,7 +3265,7 @@
       "explanation_detail": {
         "approach": "$\\theta$ の係数でくくって $y=a\\cos b(\\theta-p)+q$ の形にする。周期は $\\dfrac{2\\pi}{b}$、最大・最小は $\\pm|a|+q$。",
         "steps": [
-          "$y=3\\cos\\left(\\theta-\\dfrac{\\pi}{3}\\right)$ を $y=3\\cos\\left(\\theta-\\dfrac{\\pi}{3}\\right)$ と変形する。",
+          "$\\theta$ の係数が $1$ なので、$y=3\\cos\\left(\\theta-\\dfrac{\\pi}{3}\\right)$ のかっこの中から移動量が直接読み取れる。",
           "周期は $\\dfrac{2\\pi}{1}=2\\pi$。",
           "$-1\\leqq\\cos(\\cdots)\\leqq1$ より最大値 $3$、最小値 $-3$。",
           "$y=3\\cos\\theta$ のグラフを$\\theta$ 軸方向に $\\dfrac{\\pi}{3}$だけ平行移動したもの。"
@@ -3348,7 +3348,7 @@
       "explanation_detail": {
         "approach": "$\\theta$ の係数でくくって $y=a\\cos b(\\theta-p)+q$ の形にする。周期は $\\dfrac{2\\pi}{b}$、最大・最小は $\\pm|a|+q$。",
         "steps": [
-          "$y=-\\cos\\left(\\theta-\\dfrac{\\pi}{2}\\right)+1$ を $y=-\\cos\\left(\\theta-\\dfrac{\\pi}{2}\\right)+1$ と変形する。",
+          "$\\theta$ の係数が $1$ なので、$y=-\\cos\\left(\\theta-\\dfrac{\\pi}{2}\\right)+1$ のかっこの中から移動量が直接読み取れる。",
           "周期は $\\dfrac{2\\pi}{1}=2\\pi$。",
           "$-1\\leqq\\cos(\\cdots)\\leqq1$ より最大値 $2$、最小値 $0$。",
           "$y=-\\cos\\theta$ のグラフを$\\theta$ 軸方向に $\\dfrac{\\pi}{2}$、$y$ 軸方向に $1$だけ平行移動したもの。"
@@ -4649,9 +4649,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "descriptive",
-      "stem": "$\\sin345^\\circ$ の値を求めなさい。\n［ある生徒の解答］\n$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ+\\sin45^\\circ=- \\sqrt{\\dfrac{5}{4} - \\dfrac{\\sqrt{6}}{2}}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "stem": "$\\sin345^\\circ$ の値を求めなさい。\n［ある生徒の解答］\n$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ+\\sin45^\\circ=\\dfrac{- \\sqrt{3} + \\sqrt{2}}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
       "answer": {
-        "value": "$- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "value": "$-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "explanation": "加法定理 $\\sin(\\alpha+\\beta)$ を正しく使う。",
       "scoring": {
@@ -4681,7 +4681,7 @@
       },
       "calc_check": {
         "expression": "sin(deg(345))",
-        "expected": "-sqrt(1/2 - sqrt(3)/4)",
+        "expected": "(-sqrt(6) + sqrt(2))/4",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -4695,7 +4695,7 @@
         "steps": [
           "$345^\\circ=300^\\circ+45^\\circ$。",
           "$\\sin345^\\circ=\\sin300^\\circ\\cos45^\\circ+\\cos300^\\circ\\sin45^\\circ$。",
-          "$=- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$。"
+          "$=-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓で $\\sin345^\\circ\\fallingdotseq-0.2588$、生徒の答えは $\\fallingdotseq-0.1589$ となり、一致しないことで誤りに気づける。"
@@ -4719,11 +4719,11 @@
         ]
       },
       "error_analysis": {
-        "erroneous_solution": "$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ+\\sin45^\\circ=- \\sqrt{\\dfrac{5}{4} - \\dfrac{\\sqrt{6}}{2}}$",
+        "erroneous_solution": "$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ+\\sin45^\\circ=\\dfrac{- \\sqrt{3} + \\sqrt{2}}{2}$",
         "error_step": "$\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ+\\sin45^\\circ$ と分けた部分",
         "error_type": "formula",
         "why_tempting": "$a(x+y)=ax+ay$ のような分配法則の感覚で、関数の記号もかっこの中に分配できると考えている。",
-        "correction": "$\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ+\\cos300^\\circ\\sin45^\\circ=- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "correction": "$\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ+\\cos300^\\circ\\sin45^\\circ=-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "verification": {
         "status": "auto_checked",
@@ -4754,9 +4754,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "descriptive",
-      "stem": "$\\cos75^\\circ$ の値を求めなさい。\n［ある生徒の解答］\n$\\cos75^\\circ=\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ+\\cos30^\\circ=\\sqrt{\\dfrac{\\sqrt{6}}{2} + \\dfrac{5}{4}}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "stem": "$\\cos75^\\circ$ の値を求めなさい。\n［ある生徒の解答］\n$\\cos75^\\circ=\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ+\\cos30^\\circ=\\dfrac{\\sqrt{2} + \\sqrt{3}}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
       "answer": {
-        "value": "$\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "value": "$\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "explanation": "加法定理 $\\cos(\\alpha+\\beta)$ を正しく使う。",
       "scoring": {
@@ -4786,7 +4786,7 @@
       },
       "calc_check": {
         "expression": "cos(deg(75))",
-        "expected": "sqrt(1/2 - sqrt(3)/4)",
+        "expected": "(-sqrt(2) + sqrt(6))/4",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -4800,7 +4800,7 @@
         "steps": [
           "$75^\\circ=45^\\circ+30^\\circ$。",
           "$\\cos75^\\circ=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ$。",
-          "$=\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$。"
+          "$=\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓で $\\cos75^\\circ\\fallingdotseq0.2588$、生徒の答えは $\\fallingdotseq1.5731$ となり、一致しないことで誤りに気づける。"
@@ -4824,11 +4824,11 @@
         ]
       },
       "error_analysis": {
-        "erroneous_solution": "$\\cos75^\\circ=\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ+\\cos30^\\circ=\\sqrt{\\dfrac{\\sqrt{6}}{2} + \\dfrac{5}{4}}$",
+        "erroneous_solution": "$\\cos75^\\circ=\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ+\\cos30^\\circ=\\dfrac{\\sqrt{2} + \\sqrt{3}}{2}$",
         "error_step": "$\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ+\\cos30^\\circ$ と分けた部分",
         "error_type": "formula",
         "why_tempting": "$a(x+y)=ax+ay$ のような分配法則の感覚で、関数の記号もかっこの中に分配できると考えている。",
-        "correction": "$\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ=\\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "correction": "$\\cos(45^\\circ+30^\\circ)=\\cos45^\\circ\\cos30^\\circ-\\sin45^\\circ\\sin30^\\circ=\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "verification": {
         "status": "auto_checked",
@@ -4859,9 +4859,9 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "descriptive",
-      "stem": "$\\sin345^\\circ$ の値を求めなさい。\n［ある生徒の解答］\n$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ-\\cos300^\\circ\\sin45^\\circ=- \\sqrt{\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{2}}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "stem": "$\\sin345^\\circ$ の値を求めなさい。\n［ある生徒の解答］\n$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ-\\cos300^\\circ\\sin45^\\circ=-\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
       "answer": {
-        "value": "$- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "value": "$-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "explanation": "加法定理 $\\sin(\\alpha+\\beta)$ を正しく使う。",
       "scoring": {
@@ -4891,7 +4891,7 @@
       },
       "calc_check": {
         "expression": "sin(deg(345))",
-        "expected": "-sqrt(1/2 - sqrt(3)/4)",
+        "expected": "(-sqrt(6) + sqrt(2))/4",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -4905,7 +4905,7 @@
         "steps": [
           "$345^\\circ=300^\\circ+45^\\circ$。",
           "$\\sin345^\\circ=\\sin300^\\circ\\cos45^\\circ+\\cos300^\\circ\\sin45^\\circ$。",
-          "$=- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$。"
+          "$=-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$。"
         ],
         "alternatives": [
           "電卓で $\\sin345^\\circ\\fallingdotseq-0.2588$、生徒の答えは $\\fallingdotseq-0.9659$ となり、一致しないことで誤りに気づける。"
@@ -4929,11 +4929,11 @@
         ]
       },
       "error_analysis": {
-        "erroneous_solution": "$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ-\\cos300^\\circ\\sin45^\\circ=- \\sqrt{\\dfrac{\\sqrt{3}}{4} + \\dfrac{1}{2}}$",
+        "erroneous_solution": "$\\sin345^\\circ=\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ-\\cos300^\\circ\\sin45^\\circ=-\\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$",
         "error_step": "加法定理の右辺の符号",
         "error_type": "sign",
         "why_tempting": "$\\cos$ の加法定理の「符号が逆になる」性質を $\\sin$ にも当てはめてしまっている。",
-        "correction": "$\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ+\\cos300^\\circ\\sin45^\\circ=- \\sqrt{\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{4}}$"
+        "correction": "$\\sin(300^\\circ+45^\\circ)=\\sin300^\\circ\\cos45^\\circ+\\cos300^\\circ\\sin45^\\circ=-\\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$"
       },
       "verification": {
         "status": "auto_checked",
@@ -5491,14 +5491,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "0a5355febc0d3e232a890174c3c99e2647b909b925835777d79d923967739acc"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-10",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 10 問（Q017, Q018, Q019, Q020, Q038, Q039, Q040, Q053, Q054, Q055）",
+      "content_hash": "1a88b5cd1f955a9bdd1a2d58b0b64f0be8f13ea4678bf5654e4bbe8f7007a3a6"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-10T09:17:23+00:00",
+    "validated_at": "2026-10-28T10:22:25+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "f85902d697893aebe9162ad58c8971060fd7ba7265b53c94dfbe5c43ea8f1c0f"
+    "content_hash": "9bac83409883ea6328aaee156b3f86bbd89700ef161631edde79728f63af3afe"
   }
 }

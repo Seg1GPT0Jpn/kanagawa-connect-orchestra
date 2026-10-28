@@ -17,12 +17,32 @@ MFN = {"sin": math.sin, "cos": math.cos, "tan": math.tan}
 # 補助
 # ----------------------------------------------------------------------
 
+def _r26(v):
+    """v=p√6+q√2（p, q=±1/4）なら (p, q) を返す。"""
+    try:
+        fv = float(v)
+    except TypeError:
+        return None
+    for p in (F(1, 4), F(-1, 4)):
+        for q in (F(1, 4), F(-1, 4)):
+            if abs(fv - (float(p) * math.sqrt(6) + float(q) * math.sqrt(2))) < 1e-12:
+                return p, q
+    return None
+
+
 def tex(v):
-    return sp.latex(sp.nsimplify(v)).replace("\\frac", "\\dfrac")
+    e = v if isinstance(v, sp.Basic) else sp.nsimplify(v)
+    pq = _r26(e) if e.is_number else None
+    if pq:
+        p, q = pq
+        if p > 0:
+            return f"\\dfrac{{\\sqrt{{6}}{'+' if q > 0 else '-'}\\sqrt{{2}}}}{{4}}"
+        return f"-\\dfrac{{\\sqrt{{6}}{'-' if q > 0 else '+'}\\sqrt{{2}}}}{{4}}"
+    return sp.latex(e).replace("\\frac", "\\dfrac")
 
 
 def py(v):
-    return str(sp.nsimplify(v))
+    return str(v if isinstance(v, sp.Basic) else sp.nsimplify(v))
 
 
 def rad(q):
@@ -359,7 +379,7 @@ ADD_DEC = {15: (45, 30, -1), 75: (45, 30, 1), 105: (60, 45, 1), 165: (120, 45, 1
 
 
 def dv(fn, d):
-    return sp.nsimplify(FN[fn](sp.pi * d / 180))
+    return sp.radsimp(FN[fn](sp.pi * sp.Integer(d) / 180))
 
 
 @gen("basic_check", 4, ["computation"])
@@ -367,7 +387,7 @@ def addition_value(r):
     t = r.choice(list(ADD_DEC))
     fn = r.choice(["sin", "cos", "tan"])
     a, b, s = ADD_DEC[t]
-    v = sp.nsimplify(sp.radsimp(dv(fn, t)))
+    v = dv(fn, t)
     pm = "+" if s > 0 else "-"
     mp = "-" if s > 0 else "+"
     if fn == "sin":
@@ -531,7 +551,7 @@ def graph_props(r):
               f"周期 ${rad(per)}$、最大値 ${M}$、最小値 ${m}$。${base}$ のグラフを{mv}だけ平行移動したもの",
               f"${fact}$ と変形すると、移動量が読み取れる。", d=3,
               ap="$\\theta$ の係数でくくって $y=a\\" + fn + " b(\\theta-p)+q$ の形にする。周期は $\\dfrac{2\\pi}{b}$、最大・最小は $\\pm|a|+q$。",
-              steps=[f"${f}$ を ${fact}$ と変形する。", f"周期は $\\dfrac{{2\\pi}}{{{b}}}={rad(per)}$。", f"$-1\\leqq\\{fn}(\\cdots)\\leqq1$ より最大値 ${M}$、最小値 ${m}$。",
+              steps=[(f"${f}$ を ${fact}$ と変形する。" if b != 1 else f"$\\theta$ の係数が $1$ なので、${f}$ のかっこの中から移動量が直接読み取れる。"), f"周期は $\\dfrac{{2\\pi}}{{{b}}}={rad(per)}$。", f"$-1\\leqq\\{fn}(\\cdots)\\leqq1$ より最大値 ${M}$、最小値 ${m}$。",
                      f"${base}$ のグラフを{mv}だけ平行移動したもの。"],
               alt=[f"$\\theta={rad(sh)}$ を代入すると、かっこの中が $0$ になる。基本のグラフで $\\theta=0$ の点がここに移ったと考えて移動量を確かめる。"],
               pc=[("周期が正しい", 1), ("最大値・最小値が正しい", 1), ("平行移動の量（$\\theta$ の係数でくくった値）が正しい", 2)],
@@ -777,20 +797,20 @@ def err_addition(r):
     pm = "+" if s > 0 else "-"
     fn = r.choice(["sin", "cos"])
     kind = r.choice(["split", "sign"])
-    right = sp.nsimplify(sp.radsimp(dv(fn, t)))
+    right = dv(fn, t)
     if kind == "split":
-        wrong_v = sp.nsimplify(dv(fn, a) + s * dv(fn, b))
+        wrong_v = sp.radsimp(dv(fn, a) + s * dv(fn, b))
         wrong = f"$\\{fn}{t}^\\circ=\\{fn}({a}^\\circ{pm}{b}^\\circ)=\\{fn}{a}^\\circ{pm}\\{fn}{b}^\\circ={tex(wrong_v)}$"
         step, et = f"$\\{fn}({a}^\\circ{pm}{b}^\\circ)=\\{fn}{a}^\\circ{pm}\\{fn}{b}^\\circ$ と分けた部分", "formula"
         tempt = "$a(x+y)=ax+ay$ のような分配法則の感覚で、関数の記号もかっこの中に分配できると考えている。"
     else:
         if fn == "sin":
-            wrong_v = sp.nsimplify(dv("sin", a) * dv("cos", b) - s * dv("cos", a) * dv("sin", b))
+            wrong_v = sp.expand(dv("sin", a) * dv("cos", b) - s * dv("cos", a) * dv("sin", b))
             mid = f"\\sin{a}^\\circ\\cos{b}^\\circ{'-' if s > 0 else '+'}\\cos{a}^\\circ\\sin{b}^\\circ"
         else:
-            wrong_v = sp.nsimplify(dv("cos", a) * dv("cos", b) + s * dv("sin", a) * dv("sin", b))
+            wrong_v = sp.expand(dv("cos", a) * dv("cos", b) + s * dv("sin", a) * dv("sin", b))
             mid = f"\\cos{a}^\\circ\\cos{b}^\\circ{pm}\\sin{a}^\\circ\\sin{b}^\\circ"
-        wrong = f"$\\{fn}{t}^\\circ=\\{fn}({a}^\\circ{pm}{b}^\\circ)={mid}={tex(sp.radsimp(wrong_v))}$"
+        wrong = f"$\\{fn}{t}^\\circ=\\{fn}({a}^\\circ{pm}{b}^\\circ)={mid}={tex(wrong_v)}$"
         step, et = "加法定理の右辺の符号", "sign"
         tempt = ("$\\cos$ の加法定理は左辺と右辺で符号が逆になる（$\\cos(\\alpha+\\beta)$ は $-\\sin\\alpha\\sin\\beta$）が、$\\sin$ と同じ符号だと思い込んでいる。" if fn == "cos"
                  else "$\\cos$ の加法定理の「符号が逆になる」性質を $\\sin$ にも当てはめてしまっている。")
