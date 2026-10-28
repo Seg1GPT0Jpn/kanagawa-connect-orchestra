@@ -1,0 +1,5321 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATHC-U02-EX",
+  "title": "平面上の曲線と複素数平面　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_c",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATHC-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATHC-U02-PACK",
+  "pair_set_id": "HS-MATHC-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH2-U02",
+        "point": "複素数",
+        "title": "複素数と方程式"
+      },
+      {
+        "unit_id": "HS-MATH2-U04",
+        "point": "三角関数",
+        "title": "三角関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "媒介変数表示の微分",
+        "title": "微分法とその応用"
+      }
+    ],
+    "readiness_check": [
+      "2点間の距離の公式と円の方程式（数学Ⅱ）を使える。",
+      "複素数の四則計算と $i^2=-1$（数学Ⅱ）を使える。",
+      "三角関数の加法定理と、$\\dfrac{\\pi}{6},\\ \\dfrac{\\pi}{4},\\ \\dfrac{\\pi}{3}$ などの三角関数の値（数学Ⅱ）を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATHC-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y^2=16x$ について、焦点の座標と準線の方程式をそれぞれ答えなさい。",
+      "answer": {
+        "value": "焦点 $(4,\\,0)$、準線 $x=-4$",
+        "accepted": [
+          "(4,0), x=-4"
+        ]
+      },
+      "explanation": "$y^2=16x$ を $y^2=4px$ と比べると $4p=16$ より $p=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(16, 4)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-parabola_focus",
+      "explanation_detail": {
+        "approach": "標準形 $y^2=4px$ と係数を比べて $p$ を求める。焦点は $x$ 軸上にある。",
+        "steps": [
+          "$16=4p$ より $p=4$。",
+          "焦点は $(4,\\,0)$。",
+          "準線は $x=-4$。"
+        ],
+        "alternatives": [
+          "定義から確かめる：焦点 $(4,\\,0)$ と準線 $x=-4$ から等距離にある点 $(y$ 軸上の頂点は原点$)$ を考えると、原点は両方から距離 $4$ で等しい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "準線を方程式で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4p={4 * p}$ から $p={4 * p}$ としてしまう（$4$ で割り忘れ）。",
+          "焦点がどちらの軸上にあるかを取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $x^2=-12y$ について、焦点の座標と準線の方程式をそれぞれ答えなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,-3)$、準線 $y=3$",
+        "accepted": [
+          "(0,-3), y=3"
+        ]
+      },
+      "explanation": "$x^2=-12y$ を $x^2=4py$ と比べると $4p=-12$ より $p=-3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(-12, 4)",
+        "expected": "-3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-parabola_focus",
+      "explanation_detail": {
+        "approach": "標準形 $x^2=4py$ と係数を比べて $p$ を求める。焦点は $y$ 軸上にある。",
+        "steps": [
+          "$-12=4p$ より $p=-3$。",
+          "焦点は $(0,\\,-3)$。",
+          "準線は $y=3$。"
+        ],
+        "alternatives": [
+          "定義から確かめる：焦点 $(0,\\,-3)$ と準線 $y=3$ から等距離にある点 $(x$ 軸上の頂点は原点$)$ を考えると、原点は両方から距離 $3$ で等しい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "準線を方程式で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4p={4 * p}$ から $p={4 * p}$ としてしまう（$4$ で割り忘れ）。",
+          "焦点がどちらの軸上にあるかを取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y^2=12x$ について、焦点の座標と準線の方程式をそれぞれ答えなさい。",
+      "answer": {
+        "value": "焦点 $(3,\\,0)$、準線 $x=-3$",
+        "accepted": [
+          "(3,0), x=-3"
+        ]
+      },
+      "explanation": "$y^2=12x$ を $y^2=4px$ と比べると $4p=12$ より $p=3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(12, 4)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-parabola_focus",
+      "explanation_detail": {
+        "approach": "標準形 $y^2=4px$ と係数を比べて $p$ を求める。焦点は $x$ 軸上にある。",
+        "steps": [
+          "$12=4p$ より $p=3$。",
+          "焦点は $(3,\\,0)$。",
+          "準線は $x=-3$。"
+        ],
+        "alternatives": [
+          "定義から確かめる：焦点 $(3,\\,0)$ と準線 $x=-3$ から等距離にある点 $(y$ 軸上の頂点は原点$)$ を考えると、原点は両方から距離 $3$ で等しい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "準線を方程式で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4p={4 * p}$ から $p={4 * p}$ としてしまう（$4$ で割り忘れ）。",
+          "焦点がどちらの軸上にあるかを取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $x^2=4y$ について、焦点の座標と準線の方程式をそれぞれ答えなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,1)$、準線 $y=-1$",
+        "accepted": [
+          "(0,1), y=-1"
+        ]
+      },
+      "explanation": "$x^2=4y$ を $x^2=4py$ と比べると $4p=4$ より $p=1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(4, 4)",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-parabola_focus",
+      "explanation_detail": {
+        "approach": "標準形 $x^2=4py$ と係数を比べて $p$ を求める。焦点は $y$ 軸上にある。",
+        "steps": [
+          "$4=4p$ より $p=1$。",
+          "焦点は $(0,\\,1)$。",
+          "準線は $y=-1$。"
+        ],
+        "alternatives": [
+          "定義から確かめる：焦点 $(0,\\,1)$ と準線 $y=-1$ から等距離にある点 $(x$ 軸上の頂点は原点$)$ を考えると、原点は両方から距離 $1$ で等しい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "準線を方程式で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4p={4 * p}$ から $p={4 * p}$ としてしまう（$4$ で割り忘れ）。",
+          "焦点がどちらの軸上にあるかを取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $x^2=-16y$ について、焦点の座標と準線の方程式をそれぞれ答えなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,-4)$、準線 $y=4$",
+        "accepted": [
+          "(0,-4), y=4"
+        ]
+      },
+      "explanation": "$x^2=-16y$ を $x^2=4py$ と比べると $4p=-16$ より $p=-4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(-16, 4)",
+        "expected": "-4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-parabola_focus",
+      "explanation_detail": {
+        "approach": "標準形 $x^2=4py$ と係数を比べて $p$ を求める。焦点は $y$ 軸上にある。",
+        "steps": [
+          "$-16=4p$ より $p=-4$。",
+          "焦点は $(0,\\,-4)$。",
+          "準線は $y=4$。"
+        ],
+        "alternatives": [
+          "定義から確かめる：焦点 $(0,\\,-4)$ と準線 $y=4$ から等距離にある点 $(x$ 軸上の頂点は原点$)$ を考えると、原点は両方から距離 $4$ で等しい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "準線を方程式で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4p={4 * p}$ から $p={4 * p}$ としてしまう（$4$ で割り忘れ）。",
+          "焦点がどちらの軸上にあるかを取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "楕円 $\\dfrac{x^2}{16}+\\dfrac{y^2}{25}=1$ の焦点の座標と、長軸の長さを求めなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,3),\\ (0,\\,-3)$、長軸の長さ $10$"
+      },
+      "explanation": "分母の大きい方は $y^2$ の $25$ なので焦点は$y$ 軸上。$\\sqrt{25-16}=3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(25-16)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_focus",
+      "explanation_detail": {
+        "approach": "分母の大きい方の文字の軸上に焦点がある。焦点までの距離は $\\sqrt{(\\text{大きい分母})-(\\text{小さい分母})}$。",
+        "steps": [
+          "分母を比べると $25>16$ で、大きい方は $y^2$ の分母。焦点は$y$ 軸上。",
+          "$\\sqrt{25-16}=3$ より焦点 $(0,\\,3),\\ (0,\\,-3)$。",
+          "長軸の長さは $2\\sqrt{25}=10$。"
+        ],
+        "alternatives": [
+          "長軸の端の点（例：$(0,\\,5)$）から2焦点までの距離の和が長軸の長さ $10$ と一致することで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸と座標を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "長軸の長さを正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2+b^2}$ と双曲線の式を使ってしまう。",
+          "分母の大小を確かめず、いつも $x$ 軸上に焦点をとる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "楕円 $x^2+\\dfrac{y^2}{9}=1$ の焦点の座標と、長軸の長さを求めなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,2 \\sqrt{2}),\\ (0,\\,-2 \\sqrt{2})$、長軸の長さ $6$"
+      },
+      "explanation": "分母の大きい方は $y^2$ の $9$ なので焦点は$y$ 軸上。$\\sqrt{9-1}=2 \\sqrt{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(9-1)",
+        "expected": "2*sqrt(2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_focus",
+      "explanation_detail": {
+        "approach": "分母の大きい方の文字の軸上に焦点がある。焦点までの距離は $\\sqrt{(\\text{大きい分母})-(\\text{小さい分母})}$。",
+        "steps": [
+          "分母を比べると $9>1$ で、大きい方は $y^2$ の分母。焦点は$y$ 軸上。",
+          "$\\sqrt{9-1}=2 \\sqrt{2}$ より焦点 $(0,\\,2 \\sqrt{2}),\\ (0,\\,-2 \\sqrt{2})$。",
+          "長軸の長さは $2\\sqrt{9}=6$。"
+        ],
+        "alternatives": [
+          "長軸の端の点（例：$(0,\\,3)$）から2焦点までの距離の和が長軸の長さ $6$ と一致することで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸と座標を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "長軸の長さを正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2+b^2}$ と双曲線の式を使ってしまう。",
+          "分母の大小を確かめず、いつも $x$ 軸上に焦点をとる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "楕円 $\\dfrac{x^2}{225}+\\dfrac{y^2}{289}=1$ の焦点の座標と、長軸の長さを求めなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,8),\\ (0,\\,-8)$、長軸の長さ $34$"
+      },
+      "explanation": "分母の大きい方は $y^2$ の $289$ なので焦点は$y$ 軸上。$\\sqrt{289-225}=8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(289-225)",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_focus",
+      "explanation_detail": {
+        "approach": "分母の大きい方の文字の軸上に焦点がある。焦点までの距離は $\\sqrt{(\\text{大きい分母})-(\\text{小さい分母})}$。",
+        "steps": [
+          "分母を比べると $289>225$ で、大きい方は $y^2$ の分母。焦点は$y$ 軸上。",
+          "$\\sqrt{289-225}=8$ より焦点 $(0,\\,8),\\ (0,\\,-8)$。",
+          "長軸の長さは $2\\sqrt{289}=34$。"
+        ],
+        "alternatives": [
+          "長軸の端の点（例：$(0,\\,17)$）から2焦点までの距離の和が長軸の長さ $34$ と一致することで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸と座標を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "長軸の長さを正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2+b^2}$ と双曲線の式を使ってしまう。",
+          "分母の大小を確かめず、いつも $x$ 軸上に焦点をとる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "楕円 $\\dfrac{x^2}{16}+\\dfrac{y^2}{9}=1$ の焦点の座標と、長軸の長さを求めなさい。",
+      "answer": {
+        "value": "焦点 $(\\sqrt{7},\\,0),\\ (-\\sqrt{7},\\,0)$、長軸の長さ $8$"
+      },
+      "explanation": "分母の大きい方は $x^2$ の $16$ なので焦点は$x$ 軸上。$\\sqrt{16-9}=\\sqrt{7}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(16-9)",
+        "expected": "sqrt(7)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_focus",
+      "explanation_detail": {
+        "approach": "分母の大きい方の文字の軸上に焦点がある。焦点までの距離は $\\sqrt{(\\text{大きい分母})-(\\text{小さい分母})}$。",
+        "steps": [
+          "分母を比べると $16>9$ で、大きい方は $x^2$ の分母。焦点は$x$ 軸上。",
+          "$\\sqrt{16-9}=\\sqrt{7}$ より焦点 $(\\sqrt{7},\\,0),\\ (-\\sqrt{7},\\,0)$。",
+          "長軸の長さは $2\\sqrt{16}=8$。"
+        ],
+        "alternatives": [
+          "長軸の端の点（例：$(4,\\,0)$）から2焦点までの距離の和が長軸の長さ $8$ と一致することで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸と座標を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "長軸の長さを正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2+b^2}$ と双曲線の式を使ってしまう。",
+          "分母の大小を確かめず、いつも $x$ 軸上に焦点をとる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "楕円 $\\dfrac{x^2}{4}+\\dfrac{y^2}{16}=1$ の焦点の座標と、長軸の長さを求めなさい。",
+      "answer": {
+        "value": "焦点 $(0,\\,2 \\sqrt{3}),\\ (0,\\,-2 \\sqrt{3})$、長軸の長さ $8$"
+      },
+      "explanation": "分母の大きい方は $y^2$ の $16$ なので焦点は$y$ 軸上。$\\sqrt{16-4}=2 \\sqrt{3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "sqrt(16-4)",
+        "expected": "2*sqrt(3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_focus",
+      "explanation_detail": {
+        "approach": "分母の大きい方の文字の軸上に焦点がある。焦点までの距離は $\\sqrt{(\\text{大きい分母})-(\\text{小さい分母})}$。",
+        "steps": [
+          "分母を比べると $16>4$ で、大きい方は $y^2$ の分母。焦点は$y$ 軸上。",
+          "$\\sqrt{16-4}=2 \\sqrt{3}$ より焦点 $(0,\\,2 \\sqrt{3}),\\ (0,\\,-2 \\sqrt{3})$。",
+          "長軸の長さは $2\\sqrt{16}=8$。"
+        ],
+        "alternatives": [
+          "長軸の端の点（例：$(0,\\,4)$）から2焦点までの距離の和が長軸の長さ $8$ と一致することで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸と座標を正しく答えている",
+            "points": 1
+          },
+          {
+            "point": "長軸の長さを正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2+b^2}$ と双曲線の式を使ってしまう。",
+          "分母の大小を確かめず、いつも $x$ 軸上に焦点をとる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数 $z=3 \\sqrt{3}-3i$ の絶対値と偏角 $\\theta\\ (0\\leqq\\theta<2\\pi)$ を求め、$z$ を極形式で表しなさい。",
+      "answer": {
+        "value": "$|z|=6$、$\\theta=\\dfrac{11}{6}\\pi$、$z=6\\left(\\cos \\dfrac{11}{6}\\pi+i\\sin \\dfrac{11}{6}\\pi\\right)$"
+      },
+      "explanation": "$|z|=6$。$\\cos\\theta=\\dfrac{3 \\sqrt{3}}{6},\\ \\sin\\theta=\\dfrac{-3}{6}$ を満たす $\\theta$ は $\\dfrac{11}{6}\\pi$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[Abs(3*sqrt(3) - 3*I), simplify((6)*(cos(pi*Rational(11,6))+I*sin(pi*Rational(11,6)))-(3*sqrt(3) - 3*I))]",
+        "expected": "[6, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-polar_form",
+      "explanation_detail": {
+        "approach": "絶対値は原点からの距離。偏角は、点を複素数平面にかいて象限を確認してから $\\cos\\theta,\\ \\sin\\theta$ の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{(3 \\sqrt{3})^2+(-3)^2}=6$。",
+          "$z=6\\left(\\dfrac{3 \\sqrt{3}}{6}+\\dfrac{-3}{6}i\\right)$ と、絶対値でくくる。",
+          "$\\cos\\theta=\\frac{\\sqrt{3}}{2},\\ \\sin\\theta=- \\frac{1}{2}$ より $\\theta=\\dfrac{11}{6}\\pi$。"
+        ],
+        "alternatives": [
+          "複素数平面上に点をとり、実軸・虚軸と特別な直角三角形（$1:1:\\sqrt{2}$ や $1:2:\\sqrt{3}$）から偏角を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求め、極形式で表している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ の値だけで偏角を決め、象限を誤る。",
+          "偏角の範囲 $0\\leqq\\theta<2\\pi$ を守らず負の角で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数 $z=-3+3i$ の絶対値と偏角 $\\theta\\ (0\\leqq\\theta<2\\pi)$ を求め、$z$ を極形式で表しなさい。",
+      "answer": {
+        "value": "$|z|=3 \\sqrt{2}$、$\\theta=\\dfrac{3}{4}\\pi$、$z=3 \\sqrt{2}\\left(\\cos \\dfrac{3}{4}\\pi+i\\sin \\dfrac{3}{4}\\pi\\right)$"
+      },
+      "explanation": "$|z|=3 \\sqrt{2}$。$\\cos\\theta=\\dfrac{-3}{3 \\sqrt{2}},\\ \\sin\\theta=\\dfrac{3}{3 \\sqrt{2}}$ を満たす $\\theta$ は $\\dfrac{3}{4}\\pi$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[Abs(-3 + 3*I), simplify((3*sqrt(2))*(cos(pi*Rational(3,4))+I*sin(pi*Rational(3,4)))-(-3 + 3*I))]",
+        "expected": "[3*sqrt(2), 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-polar_form",
+      "explanation_detail": {
+        "approach": "絶対値は原点からの距離。偏角は、点を複素数平面にかいて象限を確認してから $\\cos\\theta,\\ \\sin\\theta$ の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{(-3)^2+(3)^2}=3 \\sqrt{2}$。",
+          "$z=3 \\sqrt{2}\\left(\\dfrac{-3}{3 \\sqrt{2}}+\\dfrac{3}{3 \\sqrt{2}}i\\right)$ と、絶対値でくくる。",
+          "$\\cos\\theta=- \\frac{\\sqrt{2}}{2},\\ \\sin\\theta=\\frac{\\sqrt{2}}{2}$ より $\\theta=\\dfrac{3}{4}\\pi$。"
+        ],
+        "alternatives": [
+          "複素数平面上に点をとり、実軸・虚軸と特別な直角三角形（$1:1:\\sqrt{2}$ や $1:2:\\sqrt{3}$）から偏角を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求め、極形式で表している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ の値だけで偏角を決め、象限を誤る。",
+          "偏角の範囲 $0\\leqq\\theta<2\\pi$ を守らず負の角で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数 $z=-1+i$ の絶対値と偏角 $\\theta\\ (0\\leqq\\theta<2\\pi)$ を求め、$z$ を極形式で表しなさい。",
+      "answer": {
+        "value": "$|z|=\\sqrt{2}$、$\\theta=\\dfrac{3}{4}\\pi$、$z=\\sqrt{2}\\left(\\cos \\dfrac{3}{4}\\pi+i\\sin \\dfrac{3}{4}\\pi\\right)$"
+      },
+      "explanation": "$|z|=\\sqrt{2}$。$\\cos\\theta=\\dfrac{-1}{\\sqrt{2}},\\ \\sin\\theta=\\dfrac{1}{\\sqrt{2}}$ を満たす $\\theta$ は $\\dfrac{3}{4}\\pi$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[Abs(-1 + I), simplify((sqrt(2))*(cos(pi*Rational(3,4))+I*sin(pi*Rational(3,4)))-(-1 + I))]",
+        "expected": "[sqrt(2), 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-polar_form",
+      "explanation_detail": {
+        "approach": "絶対値は原点からの距離。偏角は、点を複素数平面にかいて象限を確認してから $\\cos\\theta,\\ \\sin\\theta$ の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{(-1)^2+(1)^2}=\\sqrt{2}$。",
+          "$z=\\sqrt{2}\\left(\\dfrac{-1}{\\sqrt{2}}+\\dfrac{1}{\\sqrt{2}}i\\right)$ と、絶対値でくくる。",
+          "$\\cos\\theta=- \\frac{\\sqrt{2}}{2},\\ \\sin\\theta=\\frac{\\sqrt{2}}{2}$ より $\\theta=\\dfrac{3}{4}\\pi$。"
+        ],
+        "alternatives": [
+          "複素数平面上に点をとり、実軸・虚軸と特別な直角三角形（$1:1:\\sqrt{2}$ や $1:2:\\sqrt{3}$）から偏角を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求め、極形式で表している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ の値だけで偏角を決め、象限を誤る。",
+          "偏角の範囲 $0\\leqq\\theta<2\\pi$ を守らず負の角で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数 $z=3+3 \\sqrt{3}i$ の絶対値と偏角 $\\theta\\ (0\\leqq\\theta<2\\pi)$ を求め、$z$ を極形式で表しなさい。",
+      "answer": {
+        "value": "$|z|=6$、$\\theta=\\dfrac{\\pi}{3}$、$z=6\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$"
+      },
+      "explanation": "$|z|=6$。$\\cos\\theta=\\dfrac{3}{6},\\ \\sin\\theta=\\dfrac{3 \\sqrt{3}}{6}$ を満たす $\\theta$ は $\\dfrac{\\pi}{3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[Abs(3 + 3*sqrt(3)*I), simplify((6)*(cos(pi*Rational(1,3))+I*sin(pi*Rational(1,3)))-(3 + 3*sqrt(3)*I))]",
+        "expected": "[6, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-polar_form",
+      "explanation_detail": {
+        "approach": "絶対値は原点からの距離。偏角は、点を複素数平面にかいて象限を確認してから $\\cos\\theta,\\ \\sin\\theta$ の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{(3)^2+(3 \\sqrt{3})^2}=6$。",
+          "$z=6\\left(\\dfrac{3}{6}+\\dfrac{3 \\sqrt{3}}{6}i\\right)$ と、絶対値でくくる。",
+          "$\\cos\\theta=\\frac{1}{2},\\ \\sin\\theta=\\frac{\\sqrt{3}}{2}$ より $\\theta=\\dfrac{\\pi}{3}$。"
+        ],
+        "alternatives": [
+          "複素数平面上に点をとり、実軸・虚軸と特別な直角三角形（$1:1:\\sqrt{2}$ や $1:2:\\sqrt{3}$）から偏角を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求め、極形式で表している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ の値だけで偏角を決め、象限を誤る。",
+          "偏角の範囲 $0\\leqq\\theta<2\\pi$ を守らず負の角で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数 $z=2+2i$ の絶対値と偏角 $\\theta\\ (0\\leqq\\theta<2\\pi)$ を求め、$z$ を極形式で表しなさい。",
+      "answer": {
+        "value": "$|z|=2 \\sqrt{2}$、$\\theta=\\dfrac{\\pi}{4}$、$z=2 \\sqrt{2}\\left(\\cos \\dfrac{\\pi}{4}+i\\sin \\dfrac{\\pi}{4}\\right)$"
+      },
+      "explanation": "$|z|=2 \\sqrt{2}$。$\\cos\\theta=\\dfrac{2}{2 \\sqrt{2}},\\ \\sin\\theta=\\dfrac{2}{2 \\sqrt{2}}$ を満たす $\\theta$ は $\\dfrac{\\pi}{4}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[Abs(2 + 2*I), simplify((2*sqrt(2))*(cos(pi*Rational(1,4))+I*sin(pi*Rational(1,4)))-(2 + 2*I))]",
+        "expected": "[2*sqrt(2), 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-polar_form",
+      "explanation_detail": {
+        "approach": "絶対値は原点からの距離。偏角は、点を複素数平面にかいて象限を確認してから $\\cos\\theta,\\ \\sin\\theta$ の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{(2)^2+(2)^2}=2 \\sqrt{2}$。",
+          "$z=2 \\sqrt{2}\\left(\\dfrac{2}{2 \\sqrt{2}}+\\dfrac{2}{2 \\sqrt{2}}i\\right)$ と、絶対値でくくる。",
+          "$\\cos\\theta=\\frac{\\sqrt{2}}{2},\\ \\sin\\theta=\\frac{\\sqrt{2}}{2}$ より $\\theta=\\dfrac{\\pi}{4}$。"
+        ],
+        "alternatives": [
+          "複素数平面上に点をとり、実軸・虚軸と特別な直角三角形（$1:1:\\sqrt{2}$ や $1:2:\\sqrt{3}$）から偏角を読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求め、極形式で表している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ の値だけで偏角を決め、象限を誤る。",
+          "偏角の範囲 $0\\leqq\\theta<2\\pi$ を守らず負の角で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "媒介変数表示 $x=4+4\\cos\\theta,\\ y=3+4\\sin\\theta$ で表される曲線の方程式を、媒介変数を消去して $x,\\ y$ の式で表しなさい。",
+      "answer": {
+        "value": "$(x-4)^2+(y-3)^2=16$",
+        "accepted": [
+          "(x-4)^2+(y-3)^2=16"
+        ]
+      },
+      "explanation": "$\\cos\\theta=\\dfrac{x-(4)}{4},\\ \\sin\\theta=\\dfrac{y-(3)}{4}$ を $\\cos^2\\theta+\\sin^2\\theta=1$ に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(((4)+4*cos(theta)-(4))**2+((3)+4*sin(theta)-(3))**2-16)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-param_elim",
+      "explanation_detail": {
+        "approach": "三角関数で表されているときは $\\cos^2\\theta+\\sin^2\\theta=1$ を使って消去する。",
+        "steps": [
+          "$x-(4)=4\\cos\\theta$、$y-(3)=4\\sin\\theta$。",
+          "両辺を2乗して加えると、$\\cos^2\\theta+\\sin^2\\theta=1$ より $\\theta$ が消える。",
+          "$(x-4)^2+(y-3)^2=16$（中心 $(4,\\,3)$、半径 $4$ の円）。"
+        ],
+        "alternatives": [
+          "得られた方程式に、媒介変数表示の $x,\\ y$ を代入すると恒等的に成り立つことを確かめる（円の上の点であることの確認）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "消去の方針（関係式・代入）が正しい",
+            "points": 1
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos\\theta=\\dfrac{x}{a}$ の分母を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "媒介変数表示 $x=3\\cos\\theta,\\ y=\\sin\\theta$ で表される曲線の方程式を、媒介変数を消去して $x,\\ y$ の式で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{x^2}{9}+y^2=1$",
+        "accepted": [
+          "\\dfrac{x^2}{9}+y^2=1"
+        ]
+      },
+      "explanation": "$\\cos\\theta=\\dfrac{x}{3},\\ \\sin\\theta=\\dfrac{y}{1}$ を $\\cos^2\\theta+\\sin^2\\theta=1$ に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify((3*cos(theta))**2/9+(1*sin(theta))**2/1-1)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-param_elim",
+      "explanation_detail": {
+        "approach": "三角関数で表されているときは $\\cos^2\\theta+\\sin^2\\theta=1$ を使って消去する。",
+        "steps": [
+          "$\\cos\\theta=\\dfrac{x}{3}$、$\\sin\\theta=\\dfrac{y}{1}$。",
+          "$\\cos^2\\theta+\\sin^2\\theta=1$ に代入する。",
+          "$\\dfrac{x^2}{9}+y^2=1$（楕円）。"
+        ],
+        "alternatives": [
+          "得られた方程式に、媒介変数表示の $x,\\ y$ を代入すると恒等的に成り立つことを確かめる（楕円の上の点であることの確認）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "消去の方針（関係式・代入）が正しい",
+            "points": 1
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos\\theta=\\dfrac{x}{a}$ の分母を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "媒介変数表示 $x=-4+5\\cos\\theta,\\ y=-2+5\\sin\\theta$ で表される曲線の方程式を、媒介変数を消去して $x,\\ y$ の式で表しなさい。",
+      "answer": {
+        "value": "$(x+4)^2+(y+2)^2=25$",
+        "accepted": [
+          "(x+4)^2+(y+2)^2=25"
+        ]
+      },
+      "explanation": "$\\cos\\theta=\\dfrac{x-(-4)}{5},\\ \\sin\\theta=\\dfrac{y-(-2)}{5}$ を $\\cos^2\\theta+\\sin^2\\theta=1$ に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(((-4)+5*cos(theta)-(-4))**2+((-2)+5*sin(theta)-(-2))**2-25)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-param_elim",
+      "explanation_detail": {
+        "approach": "三角関数で表されているときは $\\cos^2\\theta+\\sin^2\\theta=1$ を使って消去する。",
+        "steps": [
+          "$x-(-4)=5\\cos\\theta$、$y-(-2)=5\\sin\\theta$。",
+          "両辺を2乗して加えると、$\\cos^2\\theta+\\sin^2\\theta=1$ より $\\theta$ が消える。",
+          "$(x+4)^2+(y+2)^2=25$（中心 $(-4,\\,-2)$、半径 $5$ の円）。"
+        ],
+        "alternatives": [
+          "得られた方程式に、媒介変数表示の $x,\\ y$ を代入すると恒等的に成り立つことを確かめる（円の上の点であることの確認）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "消去の方針（関係式・代入）が正しい",
+            "points": 1
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos\\theta=\\dfrac{x}{a}$ の分母を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "媒介変数表示 $x=t+4,\\ y=-t^2-4$ で表される曲線の方程式を、媒介変数を消去して $x,\\ y$ の式で表しなさい。",
+      "answer": {
+        "value": "$y=-(x-4)^2-4$",
+        "accepted": [
+          "y=-(x-4)^2-4"
+        ]
+      },
+      "explanation": "第1式より $t=x-(4)$。これを第2式に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((-1)*t**2+(-4)-((-1)*((t+(4))-(4))**2+(-4)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-param_elim",
+      "explanation_detail": {
+        "approach": "一次式で表されている方から媒介変数 $t$ を $x$ で表し、もう一方に代入する。",
+        "steps": [
+          "$t=x-4$。",
+          "第2式に代入して $t$ を消去する。",
+          "$y=-(x-4)^2-4$（放物線）。"
+        ],
+        "alternatives": [
+          "得られた方程式に、媒介変数表示の $x,\\ y$ を代入すると恒等的に成り立つことを確かめる（放物線の上の点であることの確認）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "消去の方針（関係式・代入）が正しい",
+            "points": 1
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$t=x-p$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "媒介変数表示 $x=t-3,\\ y=t^2-5$ で表される曲線の方程式を、媒介変数を消去して $x,\\ y$ の式で表しなさい。",
+      "answer": {
+        "value": "$y=(x+3)^2-5$",
+        "accepted": [
+          "y=(x+3)^2-5"
+        ]
+      },
+      "explanation": "第1式より $t=x-(-3)$。これを第2式に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand((1)*t**2+(-5)-((1)*((t+(-3))-(-3))**2+(-5)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-param_elim",
+      "explanation_detail": {
+        "approach": "一次式で表されている方から媒介変数 $t$ を $x$ で表し、もう一方に代入する。",
+        "steps": [
+          "$t=x+3$。",
+          "第2式に代入して $t$ を消去する。",
+          "$y=(x+3)^2-5$（放物線）。"
+        ],
+        "alternatives": [
+          "得られた方程式に、媒介変数表示の $x,\\ y$ を代入すると恒等的に成り立つことを確かめる（放物線の上の点であることの確認）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "消去の方針（関係式・代入）が正しい",
+            "points": 1
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$t=x-p$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ド・モアブルの定理を用いて、$\\left(-3+3 \\sqrt{3}i\\right)^{5}$ を $a+bi$（$a,\\ b$ は実数）の形で表しなさい。",
+      "answer": {
+        "value": "$-3888-3888 \\sqrt{3}i$",
+        "accepted": [
+          "-3888-3888 \\sqrt{3}i"
+        ]
+      },
+      "explanation": "$-3+3 \\sqrt{3}i=6\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$ より、$5$ 乗すると絶対値は $(6)^{5}=7776$、偏角は $\\dfrac{10}{3}\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-3 + 3*sqrt(3)*I)**5)",
+        "expected": "-3888 - 3888*sqrt(3)*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-demoivre_power",
+      "explanation_detail": {
+        "approach": "そのまま展開すると計算量が多い。極形式に直し、絶対値を $n$ 乗・偏角を $n$ 倍する。",
+        "steps": [
+          "$-3+3 \\sqrt{3}i=6\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$。",
+          "$\\left(-3+3 \\sqrt{3}i\\right)^{5}=7776\\left(\\cos \\dfrac{10}{3}\\pi+i\\sin \\dfrac{10}{3}\\pi\\right)$。",
+          "$\\dfrac{10}{3}\\pi$ は $\\dfrac{4}{3}\\pi$ と同じ向きなので、値を代入して $-3888-3888 \\sqrt{3}i$。"
+        ],
+        "alternatives": [
+          "偏角 $\\dfrac{2}{3}\\pi$ を $5$ 倍した角が単位円のどこにあるかを図で確かめると、符号の誤りを防げる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "極形式に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "ド・モアブルの定理を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "$a+bi$ の形で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値を $n$ 乗し忘れる。",
+          "偏角を $n$ 倍した後の三角関数の値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ド・モアブルの定理を用いて、$\\left(-1-i\\right)^{4}$ を $a+bi$（$a,\\ b$ は実数）の形で表しなさい。",
+      "answer": {
+        "value": "$-4$",
+        "accepted": [
+          "-4"
+        ]
+      },
+      "explanation": "$-1-i=\\sqrt{2}\\left(\\cos \\dfrac{5}{4}\\pi+i\\sin \\dfrac{5}{4}\\pi\\right)$ より、$4$ 乗すると絶対値は $(\\sqrt{2})^{4}=4$、偏角は $5\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-1 - I)**4)",
+        "expected": "-4",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-demoivre_power",
+      "explanation_detail": {
+        "approach": "そのまま展開すると計算量が多い。極形式に直し、絶対値を $n$ 乗・偏角を $n$ 倍する。",
+        "steps": [
+          "$-1-i=\\sqrt{2}\\left(\\cos \\dfrac{5}{4}\\pi+i\\sin \\dfrac{5}{4}\\pi\\right)$。",
+          "$\\left(-1-i\\right)^{4}=4\\left(\\cos 5\\pi+i\\sin 5\\pi\\right)$。",
+          "$5\\pi$ は $\\pi$ と同じ向きなので、値を代入して $-4$。"
+        ],
+        "alternatives": [
+          "二項定理で展開しても同じ結果になる（$i^2=-1$ に注意）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "極形式に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "ド・モアブルの定理を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "$a+bi$ の形で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値を $n$ 乗し忘れる。",
+          "偏角を $n$ 倍した後の三角関数の値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ド・モアブルの定理を用いて、$\\left(-2-2i\\right)^{5}$ を $a+bi$（$a,\\ b$ は実数）の形で表しなさい。",
+      "answer": {
+        "value": "$128+128i$",
+        "accepted": [
+          "128+128i"
+        ]
+      },
+      "explanation": "$-2-2i=2 \\sqrt{2}\\left(\\cos \\dfrac{5}{4}\\pi+i\\sin \\dfrac{5}{4}\\pi\\right)$ より、$5$ 乗すると絶対値は $(2 \\sqrt{2})^{5}=128 \\sqrt{2}$、偏角は $\\dfrac{25}{4}\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-2 - 2*I)**5)",
+        "expected": "128 + 128*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-demoivre_power",
+      "explanation_detail": {
+        "approach": "そのまま展開すると計算量が多い。極形式に直し、絶対値を $n$ 乗・偏角を $n$ 倍する。",
+        "steps": [
+          "$-2-2i=2 \\sqrt{2}\\left(\\cos \\dfrac{5}{4}\\pi+i\\sin \\dfrac{5}{4}\\pi\\right)$。",
+          "$\\left(-2-2i\\right)^{5}=128 \\sqrt{2}\\left(\\cos \\dfrac{25}{4}\\pi+i\\sin \\dfrac{25}{4}\\pi\\right)$。",
+          "$\\dfrac{25}{4}\\pi$ は $\\dfrac{\\pi}{4}$ と同じ向きなので、値を代入して $128+128i$。"
+        ],
+        "alternatives": [
+          "偏角 $\\dfrac{5}{4}\\pi$ を $5$ 倍した角が単位円のどこにあるかを図で確かめると、符号の誤りを防げる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "極形式に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "ド・モアブルの定理を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "$a+bi$ の形で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値を $n$ 乗し忘れる。",
+          "偏角を $n$ 倍した後の三角関数の値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ド・モアブルの定理を用いて、$\\left(-1+\\sqrt{3}i\\right)^{3}$ を $a+bi$（$a,\\ b$ は実数）の形で表しなさい。",
+      "answer": {
+        "value": "$8$",
+        "accepted": [
+          "8"
+        ]
+      },
+      "explanation": "$-1+\\sqrt{3}i=2\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$ より、$3$ 乗すると絶対値は $(2)^{3}=8$、偏角は $2\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((-1 + sqrt(3)*I)**3)",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-demoivre_power",
+      "explanation_detail": {
+        "approach": "そのまま展開すると計算量が多い。極形式に直し、絶対値を $n$ 乗・偏角を $n$ 倍する。",
+        "steps": [
+          "$-1+\\sqrt{3}i=2\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$。",
+          "$\\left(-1+\\sqrt{3}i\\right)^{3}=8\\left(\\cos 2\\pi+i\\sin 2\\pi\\right)$。",
+          "$2\\pi$ は $0$ と同じ向きなので、値を代入して $8$。"
+        ],
+        "alternatives": [
+          "二項定理で展開しても同じ結果になる（$i^2=-1$ に注意）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "極形式に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "ド・モアブルの定理を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "$a+bi$ の形で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値を $n$ 乗し忘れる。",
+          "偏角を $n$ 倍した後の三角関数の値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "ド・モアブルの定理を用いて、$\\left(\\sqrt{3}+i\\right)^{3}$ を $a+bi$（$a,\\ b$ は実数）の形で表しなさい。",
+      "answer": {
+        "value": "$8i$",
+        "accepted": [
+          "8i"
+        ]
+      },
+      "explanation": "$\\sqrt{3}+i=2\\left(\\cos \\dfrac{\\pi}{6}+i\\sin \\dfrac{\\pi}{6}\\right)$ より、$3$ 乗すると絶対値は $(2)^{3}=8$、偏角は $\\dfrac{\\pi}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((sqrt(3) + I)**3)",
+        "expected": "8*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-demoivre_power",
+      "explanation_detail": {
+        "approach": "そのまま展開すると計算量が多い。極形式に直し、絶対値を $n$ 乗・偏角を $n$ 倍する。",
+        "steps": [
+          "$\\sqrt{3}+i=2\\left(\\cos \\dfrac{\\pi}{6}+i\\sin \\dfrac{\\pi}{6}\\right)$。",
+          "$\\left(\\sqrt{3}+i\\right)^{3}=8\\left(\\cos \\dfrac{\\pi}{2}+i\\sin \\dfrac{\\pi}{2}\\right)$。",
+          "$\\dfrac{\\pi}{2}$ は $\\dfrac{\\pi}{2}$ と同じ向きなので、値を代入して $8i$。"
+        ],
+        "alternatives": [
+          "二項定理で展開しても同じ結果になる（$i^2=-1$ に注意）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "極形式に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "ド・モアブルの定理を正しく使っている",
+            "points": 2
+          },
+          {
+            "point": "$a+bi$ の形で正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値を $n$ 乗し忘れる。",
+          "偏角を $n$ 倍した後の三角関数の値の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$z_1=4\\left(\\cos \\dfrac{\\pi}{2}+i\\sin \\dfrac{\\pi}{2}\\right),\\ z_2=4\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$ のとき、$z_1z_2$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。",
+      "answer": {
+        "value": "$z_1z_2=16\\left(\\cos \\dfrac{7}{6}\\pi+i\\sin \\dfrac{7}{6}\\pi\\right)$"
+      },
+      "explanation": "絶対値は積、偏角は和。偏角は $\\dfrac{7}{6}\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((4*(cos(pi*Rational(1,2))+I*sin(pi*Rational(1,2))))*(4*(cos(pi*Rational(2,3))+I*sin(pi*Rational(2,3))))-(16)*(cos(pi*Rational(7,6))+I*sin(pi*Rational(7,6))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "極形式どうしの積・商は、絶対値と偏角を別々に計算できる（積：絶対値の積・偏角の和、商：絶対値の商・偏角の差）。",
+        "steps": [
+          "絶対値：$16$。",
+          "偏角：$\\dfrac{7}{6}\\pi$。",
+          "偏角はすでに $0\\leqq\\theta<2\\pi$ の範囲にある。",
+          "$z_1z_2=16\\left(\\cos \\dfrac{7}{6}\\pi+i\\sin \\dfrac{7}{6}\\pi\\right)$。"
+        ],
+        "alternatives": [
+          "$a+bi$ の形に直してから計算し、最後に極形式に戻しても同じ結果になるが、計算量が多い。極形式のまま計算する利点を確認するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "偏角の範囲を指定どおりに直している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "商で偏角を和にしてしまう。",
+          "偏角の範囲を $0\\leqq\\theta<2\\pi$ に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$z_1=3\\left(\\cos \\dfrac{5}{6}\\pi+i\\sin \\dfrac{5}{6}\\pi\\right),\\ z_2=\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$ のとき、$\\dfrac{z_1}{z_2}$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。",
+      "answer": {
+        "value": "$\\dfrac{z_1}{z_2}=3\\left(\\cos \\dfrac{\\pi}{2}+i\\sin \\dfrac{\\pi}{2}\\right)$"
+      },
+      "explanation": "絶対値は商、偏角は差。偏角は $\\dfrac{\\pi}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((3*(cos(pi*Rational(5,6))+I*sin(pi*Rational(5,6))))/(1*(cos(pi*Rational(1,3))+I*sin(pi*Rational(1,3))))-(3)*(cos(pi*Rational(1,2))+I*sin(pi*Rational(1,2))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "極形式どうしの積・商は、絶対値と偏角を別々に計算できる（積：絶対値の積・偏角の和、商：絶対値の商・偏角の差）。",
+        "steps": [
+          "絶対値：$3$。",
+          "偏角：$\\dfrac{\\pi}{2}$。",
+          "偏角はすでに $0\\leqq\\theta<2\\pi$ の範囲にある。",
+          "$\\dfrac{z_1}{z_2}=3\\left(\\cos \\dfrac{\\pi}{2}+i\\sin \\dfrac{\\pi}{2}\\right)$。"
+        ],
+        "alternatives": [
+          "$a+bi$ の形に直してから計算し、最後に極形式に戻しても同じ結果になるが、計算量が多い。極形式のまま計算する利点を確認するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "偏角の範囲を指定どおりに直している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "商で偏角を和にしてしまう。",
+          "偏角の範囲を $0\\leqq\\theta<2\\pi$ に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$z_1=2\\left(\\cos \\dfrac{\\pi}{2}+i\\sin \\dfrac{\\pi}{2}\\right),\\ z_2=\\left(\\cos \\dfrac{7}{6}\\pi+i\\sin \\dfrac{7}{6}\\pi\\right)$ のとき、$\\dfrac{z_1}{z_2}$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。",
+      "answer": {
+        "value": "$\\dfrac{z_1}{z_2}=2\\left(\\cos \\dfrac{4}{3}\\pi+i\\sin \\dfrac{4}{3}\\pi\\right)$"
+      },
+      "explanation": "絶対値は商、偏角は差。偏角は $-\\dfrac{2}{3}\\pi$、範囲に合わせて $\\dfrac{4}{3}\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((2*(cos(pi*Rational(1,2))+I*sin(pi*Rational(1,2))))/(1*(cos(pi*Rational(7,6))+I*sin(pi*Rational(7,6))))-(2)*(cos(pi*Rational(4,3))+I*sin(pi*Rational(4,3))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "極形式どうしの積・商は、絶対値と偏角を別々に計算できる（積：絶対値の積・偏角の和、商：絶対値の商・偏角の差）。",
+        "steps": [
+          "絶対値：$2$。",
+          "偏角：$-\\dfrac{2}{3}\\pi$。",
+          "$2\\pi$ の整数倍を加えて $0\\leqq\\theta<2\\pi$ に直すと $\\dfrac{4}{3}\\pi$。",
+          "$\\dfrac{z_1}{z_2}=2\\left(\\cos \\dfrac{4}{3}\\pi+i\\sin \\dfrac{4}{3}\\pi\\right)$。"
+        ],
+        "alternatives": [
+          "$a+bi$ の形に直してから計算し、最後に極形式に戻しても同じ結果になるが、計算量が多い。極形式のまま計算する利点を確認するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "偏角の範囲を指定どおりに直している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "商で偏角を和にしてしまう。",
+          "偏角の範囲を $0\\leqq\\theta<2\\pi$ に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$z_1=5\\left(\\cos \\dfrac{\\pi}{6}+i\\sin \\dfrac{\\pi}{6}\\right),\\ z_2=\\left(\\cos \\dfrac{3}{2}\\pi+i\\sin \\dfrac{3}{2}\\pi\\right)$ のとき、$z_1z_2$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。",
+      "answer": {
+        "value": "$z_1z_2=5\\left(\\cos \\dfrac{5}{3}\\pi+i\\sin \\dfrac{5}{3}\\pi\\right)$"
+      },
+      "explanation": "絶対値は積、偏角は和。偏角は $\\dfrac{5}{3}\\pi$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify((5*(cos(pi*Rational(1,6))+I*sin(pi*Rational(1,6))))*(1*(cos(pi*Rational(3,2))+I*sin(pi*Rational(3,2))))-(5)*(cos(pi*Rational(5,3))+I*sin(pi*Rational(5,3))))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "極形式どうしの積・商は、絶対値と偏角を別々に計算できる（積：絶対値の積・偏角の和、商：絶対値の商・偏角の差）。",
+        "steps": [
+          "絶対値：$5$。",
+          "偏角：$\\dfrac{5}{3}\\pi$。",
+          "偏角はすでに $0\\leqq\\theta<2\\pi$ の範囲にある。",
+          "$z_1z_2=5\\left(\\cos \\dfrac{5}{3}\\pi+i\\sin \\dfrac{5}{3}\\pi\\right)$。"
+        ],
+        "alternatives": [
+          "$a+bi$ の形に直してから計算し、最後に極形式に戻しても同じ結果になるが、計算量が多い。極形式のまま計算する利点を確認するとよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対値を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "偏角の範囲を指定どおりに直している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "商で偏角を和にしてしまう。",
+          "偏角の範囲を $0\\leqq\\theta<2\\pi$ に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数平面上で、点 $z=2-2i$ を点 $\\alpha=3+i$ のまわりに時計回りに $\\dfrac{\\pi}{2}$ だけ回転した点を表す複素数 $w$ を求めなさい。",
+      "answer": {
+        "value": "$w=2i$",
+        "accepted": [
+          "2i"
+        ]
+      },
+      "explanation": "$w=\\alpha+(z-\\alpha)\\left\\{\\cos\\left(-\\dfrac{\\pi}{2}\\right)+i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right\\}$ を計算する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((3 + I)+((2 - 2*I)-(3 + I))*(cos(pi*Rational(-1,2))+I*sin(pi*Rational(-1,2))))",
+        "expected": "2*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-rotation",
+      "explanation_detail": {
+        "approach": "原点のまわりの $\\theta$ 回転は $\\cos\\theta+i\\sin\\theta$ をかけること。中心が $\\alpha$ のときは、$\\alpha$ を原点に移してから回転し、元に戻す。",
+        "steps": [
+          "$z-\\alpha=-1-3i$（$\\alpha$ を原点に移す）。",
+          "$\\cos\\left(-\\dfrac{\\pi}{2}\\right)+i\\sin\\left(-\\dfrac{\\pi}{2}\\right)=-i$。",
+          "$(z-\\alpha)\\times(-i)=-3+i$。",
+          "$\\alpha$ を加えて元に戻すと $w=2i$。"
+        ],
+        "alternatives": [
+          "回転の前後で中心からの距離が変わらないこと（$|w-\\alpha|=|z-\\alpha|$）を計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "回転を複素数の積で表している",
+            "points": 1
+          },
+          {
+            "point": "回転を表す複素数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$w$ を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "時計回りの回転で偏角の符号を正にしてしまう。",
+          "中心 $\\alpha$ を引かずに $z$ をそのまま回転させる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数平面上で、点 $z=-3$ を原点のまわりに時計回りに $\\dfrac{\\pi}{6}$ だけ回転した点を表す複素数 $w$ を求めなさい。",
+      "answer": {
+        "value": "$w=- \\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i$",
+        "accepted": [
+          "- \\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i"
+        ]
+      },
+      "explanation": "$w=z\\left\\{\\cos\\left(-\\dfrac{\\pi}{6}\\right)+i\\sin\\left(-\\dfrac{\\pi}{6}\\right)\\right\\}$ を計算する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((0)+((-3)-(0))*(cos(pi*Rational(-1,6))+I*sin(pi*Rational(-1,6))))",
+        "expected": "-3*sqrt(3)/2 + 3*I/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-rotation",
+      "explanation_detail": {
+        "approach": "原点のまわりの $\\theta$ 回転は $\\cos\\theta+i\\sin\\theta$ をかけること。中心が $\\alpha$ のときは、$\\alpha$ を原点に移してから回転し、元に戻す。",
+        "steps": [
+          "$\\cos\\left(-\\dfrac{\\pi}{6}\\right)+i\\sin\\left(-\\dfrac{\\pi}{6}\\right)=\\frac{\\sqrt{3}}{2}-\\frac{1}{2}i$。",
+          "$z\\times(\\frac{\\sqrt{3}}{2}-\\frac{1}{2}i)=- \\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i$。",
+          "$w=- \\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i$。"
+        ],
+        "alternatives": [
+          "回転の前後で原点からの距離が変わらないこと（$|w|=|z|$）を計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "回転を複素数の積で表している",
+            "points": 1
+          },
+          {
+            "point": "回転を表す複素数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$w$ を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "時計回りの回転で偏角の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数平面上で、点 $z=i$ を原点のまわりに時計回りに $\\dfrac{\\pi}{6}$ だけ回転した点を表す複素数 $w$ を求めなさい。",
+      "answer": {
+        "value": "$w=\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i$",
+        "accepted": [
+          "\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i"
+        ]
+      },
+      "explanation": "$w=z\\left\\{\\cos\\left(-\\dfrac{\\pi}{6}\\right)+i\\sin\\left(-\\dfrac{\\pi}{6}\\right)\\right\\}$ を計算する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((0)+((I)-(0))*(cos(pi*Rational(-1,6))+I*sin(pi*Rational(-1,6))))",
+        "expected": "1/2 + sqrt(3)*I/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-rotation",
+      "explanation_detail": {
+        "approach": "原点のまわりの $\\theta$ 回転は $\\cos\\theta+i\\sin\\theta$ をかけること。中心が $\\alpha$ のときは、$\\alpha$ を原点に移してから回転し、元に戻す。",
+        "steps": [
+          "$\\cos\\left(-\\dfrac{\\pi}{6}\\right)+i\\sin\\left(-\\dfrac{\\pi}{6}\\right)=\\frac{\\sqrt{3}}{2}-\\frac{1}{2}i$。",
+          "$z\\times(\\frac{\\sqrt{3}}{2}-\\frac{1}{2}i)=\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i$。",
+          "$w=\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i$。"
+        ],
+        "alternatives": [
+          "回転の前後で原点からの距離が変わらないこと（$|w|=|z|$）を計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "回転を複素数の積で表している",
+            "points": 1
+          },
+          {
+            "point": "回転を表す複素数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$w$ を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "時計回りの回転で偏角の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "複素数平面上で、点 $z=3$ を原点のまわりに反時計回りに $\\dfrac{\\pi}{6}$ だけ回転した点を表す複素数 $w$ を求めなさい。",
+      "answer": {
+        "value": "$w=\\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i$",
+        "accepted": [
+          "\\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i"
+        ]
+      },
+      "explanation": "$w=z\\left\\{\\cos\\left(\\dfrac{\\pi}{6}\\right)+i\\sin\\left(\\dfrac{\\pi}{6}\\right)\\right\\}$ を計算する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((0)+((3)-(0))*(cos(pi*Rational(1,6))+I*sin(pi*Rational(1,6))))",
+        "expected": "3*sqrt(3)/2 + 3*I/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-rotation",
+      "explanation_detail": {
+        "approach": "原点のまわりの $\\theta$ 回転は $\\cos\\theta+i\\sin\\theta$ をかけること。中心が $\\alpha$ のときは、$\\alpha$ を原点に移してから回転し、元に戻す。",
+        "steps": [
+          "$\\cos\\left(\\dfrac{\\pi}{6}\\right)+i\\sin\\left(\\dfrac{\\pi}{6}\\right)=\\frac{\\sqrt{3}}{2}+\\frac{1}{2}i$。",
+          "$z\\times(\\frac{\\sqrt{3}}{2}+\\frac{1}{2}i)=\\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i$。",
+          "$w=\\frac{3 \\sqrt{3}}{2}+\\frac{3}{2}i$。"
+        ],
+        "alternatives": [
+          "回転の前後で原点からの距離が変わらないこと（$|w|=|z|$）を計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "回転を複素数の積で表している",
+            "points": 1
+          },
+          {
+            "point": "回転を表す複素数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$w$ を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "時計回りの回転で偏角の符号を正にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "双曲線 $\\dfrac{x^2}{16}-\\dfrac{y^2}{4}=1$ の焦点の座標と漸近線の方程式を求めなさい。",
+      "answer": {
+        "value": "焦点 $(2 \\sqrt{5},\\,0),\\ (-2 \\sqrt{5},\\,0)$、漸近線 $y=\\dfrac{1}{2}x,\\ y=-\\dfrac{1}{2}x$"
+      },
+      "explanation": "$\\sqrt{16+4}=2 \\sqrt{5}$。焦点は$x$ 軸上。漸近線は右辺を $0$ とおいた $\\dfrac{x^2}{16}-\\dfrac{y^2}{4}=0$ から得られる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[sqrt(16+4), Rational(2,4)]",
+        "expected": "[2*sqrt(5), Rational(1,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-hyperbola",
+      "explanation_detail": {
+        "approach": "双曲線の焦点までの距離は $\\sqrt{a^2+b^2}$（楕円とは符号が違う）。右辺の符号で焦点のある軸が決まる。漸近線は右辺を $0$ にした式を因数分解する。",
+        "steps": [
+          "$a^2=16,\\ b^2=4$、$\\sqrt{a^2+b^2}=2 \\sqrt{5}$。",
+          "右辺が $1$ なので焦点は $x$ 軸上。焦点 $(2 \\sqrt{5},\\,0),\\ (-2 \\sqrt{5},\\,0)$。",
+          "$\\dfrac{x^2}{16}-\\dfrac{y^2}{4}=0$ より $\\left(\\dfrac{x}{4}-\\dfrac{y}{2}\\right)\\left(\\dfrac{x}{4}+\\dfrac{y}{2}\\right)=0$。",
+          "漸近線 $y=\\dfrac{1}{2}x,\\ y=-\\dfrac{1}{2}x$。"
+        ],
+        "alternatives": [
+          "$x$ が十分大きいとき $y=\\pm\\dfrac{b}{a}x\\sqrt{1-\\dfrac{a^2}{x^2}}$ が $\\pm\\dfrac{b}{a}x$ に近づくことから、漸近線を確かめられる（右辺が $1$ の場合）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "焦点の座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "漸近線を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2-b^2}$ と楕円の式を使う。",
+          "右辺が $-1$ のとき焦点を $x$ 軸上にとる。",
+          "漸近線の傾きを $\\dfrac{a}{b}$ と逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "双曲線 $\\dfrac{x^2}{16}-\\dfrac{y^2}{25}=1$ の焦点の座標と漸近線の方程式を求めなさい。",
+      "answer": {
+        "value": "焦点 $(\\sqrt{41},\\,0),\\ (-\\sqrt{41},\\,0)$、漸近線 $y=\\dfrac{5}{4}x,\\ y=-\\dfrac{5}{4}x$"
+      },
+      "explanation": "$\\sqrt{16+25}=\\sqrt{41}$。焦点は$x$ 軸上。漸近線は右辺を $0$ とおいた $\\dfrac{x^2}{16}-\\dfrac{y^2}{25}=0$ から得られる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[sqrt(16+25), Rational(5,4)]",
+        "expected": "[sqrt(41), Rational(5,4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-hyperbola",
+      "explanation_detail": {
+        "approach": "双曲線の焦点までの距離は $\\sqrt{a^2+b^2}$（楕円とは符号が違う）。右辺の符号で焦点のある軸が決まる。漸近線は右辺を $0$ にした式を因数分解する。",
+        "steps": [
+          "$a^2=16,\\ b^2=25$、$\\sqrt{a^2+b^2}=\\sqrt{41}$。",
+          "右辺が $1$ なので焦点は $x$ 軸上。焦点 $(\\sqrt{41},\\,0),\\ (-\\sqrt{41},\\,0)$。",
+          "$\\dfrac{x^2}{16}-\\dfrac{y^2}{25}=0$ より $\\left(\\dfrac{x}{4}-\\dfrac{y}{5}\\right)\\left(\\dfrac{x}{4}+\\dfrac{y}{5}\\right)=0$。",
+          "漸近線 $y=\\dfrac{5}{4}x,\\ y=-\\dfrac{5}{4}x$。"
+        ],
+        "alternatives": [
+          "$x$ が十分大きいとき $y=\\pm\\dfrac{b}{a}x\\sqrt{1-\\dfrac{a^2}{x^2}}$ が $\\pm\\dfrac{b}{a}x$ に近づくことから、漸近線を確かめられる（右辺が $1$ の場合）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "焦点の座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "漸近線を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2-b^2}$ と楕円の式を使う。",
+          "右辺が $-1$ のとき焦点を $x$ 軸上にとる。",
+          "漸近線の傾きを $\\dfrac{a}{b}$ と逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "双曲線 $\\dfrac{x^2}{16}-\\dfrac{y^2}{9}=1$ の焦点の座標と漸近線の方程式を求めなさい。",
+      "answer": {
+        "value": "焦点 $(5,\\,0),\\ (-5,\\,0)$、漸近線 $y=\\dfrac{3}{4}x,\\ y=-\\dfrac{3}{4}x$"
+      },
+      "explanation": "$\\sqrt{16+9}=5$。焦点は$x$ 軸上。漸近線は右辺を $0$ とおいた $\\dfrac{x^2}{16}-\\dfrac{y^2}{9}=0$ から得られる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[sqrt(16+9), Rational(3,4)]",
+        "expected": "[5, Rational(3,4)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-hyperbola",
+      "explanation_detail": {
+        "approach": "双曲線の焦点までの距離は $\\sqrt{a^2+b^2}$（楕円とは符号が違う）。右辺の符号で焦点のある軸が決まる。漸近線は右辺を $0$ にした式を因数分解する。",
+        "steps": [
+          "$a^2=16,\\ b^2=9$、$\\sqrt{a^2+b^2}=5$。",
+          "右辺が $1$ なので焦点は $x$ 軸上。焦点 $(5,\\,0),\\ (-5,\\,0)$。",
+          "$\\dfrac{x^2}{16}-\\dfrac{y^2}{9}=0$ より $\\left(\\dfrac{x}{4}-\\dfrac{y}{3}\\right)\\left(\\dfrac{x}{4}+\\dfrac{y}{3}\\right)=0$。",
+          "漸近線 $y=\\dfrac{3}{4}x,\\ y=-\\dfrac{3}{4}x$。"
+        ],
+        "alternatives": [
+          "$x$ が十分大きいとき $y=\\pm\\dfrac{b}{a}x\\sqrt{1-\\dfrac{a^2}{x^2}}$ が $\\pm\\dfrac{b}{a}x$ に近づくことから、漸近線を確かめられる（右辺が $1$ の場合）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "焦点の座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "漸近線を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2-b^2}$ と楕円の式を使う。",
+          "右辺が $-1$ のとき焦点を $x$ 軸上にとる。",
+          "漸近線の傾きを $\\dfrac{a}{b}$ と逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "双曲線 $\\dfrac{x^2}{4}-y^2=1$ の焦点の座標と漸近線の方程式を求めなさい。",
+      "answer": {
+        "value": "焦点 $(\\sqrt{5},\\,0),\\ (-\\sqrt{5},\\,0)$、漸近線 $y=\\dfrac{1}{2}x,\\ y=-\\dfrac{1}{2}x$"
+      },
+      "explanation": "$\\sqrt{4+1}=\\sqrt{5}$。焦点は$x$ 軸上。漸近線は右辺を $0$ とおいた $\\dfrac{x^2}{4}-y^2=0$ から得られる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[sqrt(4+1), Rational(1,2)]",
+        "expected": "[sqrt(5), Rational(1,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-hyperbola",
+      "explanation_detail": {
+        "approach": "双曲線の焦点までの距離は $\\sqrt{a^2+b^2}$（楕円とは符号が違う）。右辺の符号で焦点のある軸が決まる。漸近線は右辺を $0$ にした式を因数分解する。",
+        "steps": [
+          "$a^2=4,\\ b^2=1$、$\\sqrt{a^2+b^2}=\\sqrt{5}$。",
+          "右辺が $1$ なので焦点は $x$ 軸上。焦点 $(\\sqrt{5},\\,0),\\ (-\\sqrt{5},\\,0)$。",
+          "$\\dfrac{x^2}{4}-y^2=0$ より $\\left(\\dfrac{x}{2}-\\dfrac{y}{1}\\right)\\left(\\dfrac{x}{2}+\\dfrac{y}{1}\\right)=0$。",
+          "漸近線 $y=\\dfrac{1}{2}x,\\ y=-\\dfrac{1}{2}x$。"
+        ],
+        "alternatives": [
+          "$x$ が十分大きいとき $y=\\pm\\dfrac{b}{a}x\\sqrt{1-\\dfrac{a^2}{x^2}}$ が $\\pm\\dfrac{b}{a}x$ に近づくことから、漸近線を確かめられる（右辺が $1$ の場合）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "焦点のある軸を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "焦点の座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "漸近線を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{a^2-b^2}$ と楕円の式を使う。",
+          "右辺が $-1$ のとき焦点を $x$ 軸上にとる。",
+          "漸近線の傾きを $\\dfrac{a}{b}$ と逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 F$(6,\\,0)$、F'$(-6,\\,0)$ からの距離の差が $8$ である点 P の軌跡の方程式を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{x^2}{16}-\\dfrac{y^2}{20}=1$",
+        "accepted": [
+          "\\dfrac{x^2}{16}-\\dfrac{y^2}{20}=1"
+        ]
+      },
+      "explanation": "双曲線の定義そのものである。$b^2=c^2-a^2=36-16=20$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "36-16",
+        "expected": "20",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-conic_from_def",
+      "explanation_detail": {
+        "approach": "条件は双曲線の定義そのもの。標準形の $a,\\ c$ を読み取り、$b^2$ を求める。",
+        "steps": [
+          "差が $2a=8$ なので $a=4$。焦点が $(\\pm6,\\,0)$ なので $c=6$。",
+          "$b^2=c^2-a^2=36-16=20$。",
+          "$\\dfrac{x^2}{16}-\\dfrac{y^2}{20}=1$。"
+        ],
+        "alternatives": [
+          "P$(x,\\,y)$ とおいて距離の条件を式で表し、根号を1つずつ移項して2乗する方法（授業の導出）でも同じ式が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "曲線の種類と定数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "楕円で $b^2=a^2+c^2$、双曲線で $b^2=a^2-c^2$ と符号を取り違える。",
+          "距離の和・差の $2a$ を $a$ と読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2点 F$(6,\\,0)$、F'$(-6,\\,0)$ からの距離の和が $20$ である点 P の軌跡の方程式を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{x^2}{100}+\\dfrac{y^2}{64}=1$",
+        "accepted": [
+          "\\dfrac{x^2}{100}+\\dfrac{y^2}{64}=1"
+        ]
+      },
+      "explanation": "楕円の定義そのものである。$b^2=a^2-c^2=100-36=64$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "100-36",
+        "expected": "64",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-conic_from_def",
+      "explanation_detail": {
+        "approach": "条件は楕円の定義そのもの。標準形の $a,\\ c$ を読み取り、$b^2$ を求める。",
+        "steps": [
+          "和が $2a=20$ なので $a=10$。焦点が $(\\pm6,\\,0)$ なので $c=6$。",
+          "$b^2=a^2-c^2=100-36=64$。",
+          "$\\dfrac{x^2}{100}+\\dfrac{y^2}{64}=1$。"
+        ],
+        "alternatives": [
+          "P$(x,\\,y)$ とおいて距離の条件を式で表し、根号を1つずつ移項して2乗する方法（授業の導出）でも同じ式が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "曲線の種類と定数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "楕円で $b^2=a^2+c^2$、双曲線で $b^2=a^2-c^2$ と符号を取り違える。",
+          "距離の和・差の $2a$ を $a$ と読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "点 F$(3,\\,0)$ と直線 $x=-3$ からの距離が等しい点 P の軌跡の方程式を求めなさい。",
+      "answer": {
+        "value": "$y^2=12x$",
+        "accepted": [
+          "y^2=12x"
+        ]
+      },
+      "explanation": "放物線の定義そのものである。両辺を2乗して等しいとおく。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "expand((x-(3))**2+y**2-(x+(3))**2)",
+        "expected": "-12*x+y**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-conic_from_def",
+      "explanation_detail": {
+        "approach": "条件は放物線の定義そのもの。定義から直接式を立てて2乗する。",
+        "steps": [
+          "P$(x,\\,y)$ とすると $\\mathrm{PF}=\\sqrt{(x-(3))^2+y^2}$、直線までの距離は $|x-(-3)|$。",
+          "両辺を2乗して等しいとおく。",
+          "展開して整理すると $y^2=12x$。"
+        ],
+        "alternatives": [
+          "頂点が原点、焦点の位置から開く向きが分かるので、標準形 $y^2=4px$（または $x^2=4py$）に $p$ を当てはめても得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "曲線の種類と定数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "正しい方程式を答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "楕円で $b^2=a^2+c^2$、双曲線で $b^2=a^2-c^2$ と符号を取り違える。",
+          "距離の和・差の $2a$ を $a$ と読み違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $z^{3}=-i$ を、$z$ を極形式で表す方法で解きなさい。考え方の過程も書くこと。",
+      "answer": {
+        "value": "$z=i,\\ - \\frac{\\sqrt{3}}{2}-\\frac{1}{2}i,\\ \\frac{\\sqrt{3}}{2}-\\frac{1}{2}i$"
+      },
+      "explanation": "$z=r(\\cos\\theta+i\\sin\\theta)$ とおくと $r^{3}=1$、$3\\theta=\\dfrac{3}{2}\\pi+2k\\pi$。$k=0,\\,1,\\,\\ldots,\\,2$ で3個の解が得られる。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(z**3-(-I), z)",
+        "expected": "[I, -sqrt(3)/2 - I/2, sqrt(3)/2 - I/2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATHC-U02-roots_eq",
+      "related_units": [
+        "HS-MATH2-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$z$ を極形式でおき、ド・モアブルの定理で左辺を表す。右辺も極形式にして、絶対値と偏角を比べる。偏角は $2\\pi$ の整数倍のずれを考える。",
+        "steps": [
+          "$z=r(\\cos\\theta+i\\sin\\theta)\\ (r>0)$ とおくと $z^{3}=r^{3}(\\cos3\\theta+i\\sin3\\theta)$。",
+          "右辺は $\\left(\\cos \\dfrac{3}{2}\\pi+i\\sin \\dfrac{3}{2}\\pi\\right)$。",
+          "絶対値を比べて $r^{3}=1$、$r>0$ より $r=1$。",
+          "偏角を比べて $3\\theta=\\dfrac{3}{2}\\pi+2k\\pi$（$k$ は整数）、$0\\leqq\\theta<2\\pi$ の範囲で $\\theta=\\dfrac{\\pi}{2},\\ \\dfrac{7}{6}\\pi,\\ \\dfrac{11}{6}\\pi$。",
+          "それぞれ $a+bi$ の形にして $z=i,\\ - \\frac{\\sqrt{3}}{2}-\\frac{1}{2}i,\\ \\frac{\\sqrt{3}}{2}-\\frac{1}{2}i$。"
+        ],
+        "alternatives": [
+          "解は原点を中心とする半径 $1$ の円周上に、正3角形の頂点として等間隔に並ぶ（$n=2$ なら原点に関して対称な2点）。",
+          "因数分解（数学Ⅱ「複素数と方程式」）で解いて照合することもできる。例えば $z^3=8$ なら $(z-2)(z^2+2z+4)=0$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$z$ を極形式でおきド・モアブルの定理を用いている",
+            "points": 2
+          },
+          {
+            "point": "絶対値を比較して $r$ を求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角に $2k\\pi$ を加えて比較している",
+            "points": 2
+          },
+          {
+            "point": "すべての解を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "偏角に $2k\\pi$ を加え忘れ、解を1つしか求めない。",
+          "$r^n$ の $n$ 乗根で $r>0$ を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $z^{3}=8$ を、$z$ を極形式で表す方法で解きなさい。考え方の過程も書くこと。",
+      "answer": {
+        "value": "$z=2,\\ -1+\\sqrt{3}i,\\ -1-\\sqrt{3}i$"
+      },
+      "explanation": "$z=r(\\cos\\theta+i\\sin\\theta)$ とおくと $r^{3}=8$、$3\\theta=0+2k\\pi$。$k=0,\\,1,\\,\\ldots,\\,2$ で3個の解が得られる。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(z**3-(8), z)",
+        "expected": "[2, -1 + sqrt(3)*I, -1 - sqrt(3)*I]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATHC-U02-roots_eq",
+      "related_units": [
+        "HS-MATH2-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$z$ を極形式でおき、ド・モアブルの定理で左辺を表す。右辺も極形式にして、絶対値と偏角を比べる。偏角は $2\\pi$ の整数倍のずれを考える。",
+        "steps": [
+          "$z=r(\\cos\\theta+i\\sin\\theta)\\ (r>0)$ とおくと $z^{3}=r^{3}(\\cos3\\theta+i\\sin3\\theta)$。",
+          "右辺は $8\\left(\\cos 0+i\\sin 0\\right)$。",
+          "絶対値を比べて $r^{3}=8$、$r>0$ より $r=2$。",
+          "偏角を比べて $3\\theta=0+2k\\pi$（$k$ は整数）、$0\\leqq\\theta<2\\pi$ の範囲で $\\theta=0,\\ \\dfrac{2}{3}\\pi,\\ \\dfrac{4}{3}\\pi$。",
+          "それぞれ $a+bi$ の形にして $z=2,\\ -1+\\sqrt{3}i,\\ -1-\\sqrt{3}i$。"
+        ],
+        "alternatives": [
+          "解は原点を中心とする半径 $2$ の円周上に、正3角形の頂点として等間隔に並ぶ（$n=2$ なら原点に関して対称な2点）。",
+          "因数分解（数学Ⅱ「複素数と方程式」）で解いて照合することもできる。例えば $z^3=8$ なら $(z-2)(z^2+2z+4)=0$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$z$ を極形式でおきド・モアブルの定理を用いている",
+            "points": 2
+          },
+          {
+            "point": "絶対値を比較して $r$ を求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角に $2k\\pi$ を加えて比較している",
+            "points": 2
+          },
+          {
+            "point": "すべての解を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "偏角に $2k\\pi$ を加え忘れ、解を1つしか求めない。",
+          "$r^n$ の $n$ 乗根で $r>0$ を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $z^{2}=-i$ を、$z$ を極形式で表す方法で解きなさい。考え方の過程も書くこと。",
+      "answer": {
+        "value": "$z=- \\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{2}}{2}i,\\ \\frac{\\sqrt{2}}{2}-\\frac{\\sqrt{2}}{2}i$"
+      },
+      "explanation": "$z=r(\\cos\\theta+i\\sin\\theta)$ とおくと $r^{2}=1$、$2\\theta=\\dfrac{3}{2}\\pi+2k\\pi$。$k=0,\\,1,\\,\\ldots,\\,1$ で2個の解が得られる。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(z**2-(-I), z)",
+        "expected": "[-sqrt(2)/2 + sqrt(2)*I/2, sqrt(2)/2 - sqrt(2)*I/2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATHC-U02-roots_eq",
+      "related_units": [
+        "HS-MATH2-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$z$ を極形式でおき、ド・モアブルの定理で左辺を表す。右辺も極形式にして、絶対値と偏角を比べる。偏角は $2\\pi$ の整数倍のずれを考える。",
+        "steps": [
+          "$z=r(\\cos\\theta+i\\sin\\theta)\\ (r>0)$ とおくと $z^{2}=r^{2}(\\cos2\\theta+i\\sin2\\theta)$。",
+          "右辺は $\\left(\\cos \\dfrac{3}{2}\\pi+i\\sin \\dfrac{3}{2}\\pi\\right)$。",
+          "絶対値を比べて $r^{2}=1$、$r>0$ より $r=1$。",
+          "偏角を比べて $2\\theta=\\dfrac{3}{2}\\pi+2k\\pi$（$k$ は整数）、$0\\leqq\\theta<2\\pi$ の範囲で $\\theta=\\dfrac{3}{4}\\pi,\\ \\dfrac{7}{4}\\pi$。",
+          "それぞれ $a+bi$ の形にして $z=- \\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{2}}{2}i,\\ \\frac{\\sqrt{2}}{2}-\\frac{\\sqrt{2}}{2}i$。"
+        ],
+        "alternatives": [
+          "解は原点に関して対称な2点になる。",
+          "因数分解（数学Ⅱ「複素数と方程式」）で解いて照合することもできる。例えば $z^3=8$ なら $(z-2)(z^2+2z+4)=0$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$z$ を極形式でおきド・モアブルの定理を用いている",
+            "points": 2
+          },
+          {
+            "point": "絶対値を比較して $r$ を求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角に $2k\\pi$ を加えて比較している",
+            "points": 2
+          },
+          {
+            "point": "すべての解を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "偏角に $2k\\pi$ を加え忘れ、解を1つしか求めない。",
+          "$r^n$ の $n$ 乗根で $r>0$ を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $z^{2}=i$ を、$z$ を極形式で表す方法で解きなさい。考え方の過程も書くこと。",
+      "answer": {
+        "value": "$z=\\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{2}}{2}i,\\ - \\frac{\\sqrt{2}}{2}-\\frac{\\sqrt{2}}{2}i$"
+      },
+      "explanation": "$z=r(\\cos\\theta+i\\sin\\theta)$ とおくと $r^{2}=1$、$2\\theta=\\dfrac{\\pi}{2}+2k\\pi$。$k=0,\\,1,\\,\\ldots,\\,1$ で2個の解が得られる。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "solve(z**2-(I), z)",
+        "expected": "[sqrt(2)/2 + sqrt(2)*I/2, -sqrt(2)/2 - sqrt(2)*I/2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATHC-U02-roots_eq",
+      "related_units": [
+        "HS-MATH2-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$z$ を極形式でおき、ド・モアブルの定理で左辺を表す。右辺も極形式にして、絶対値と偏角を比べる。偏角は $2\\pi$ の整数倍のずれを考える。",
+        "steps": [
+          "$z=r(\\cos\\theta+i\\sin\\theta)\\ (r>0)$ とおくと $z^{2}=r^{2}(\\cos2\\theta+i\\sin2\\theta)$。",
+          "右辺は $\\left(\\cos \\dfrac{\\pi}{2}+i\\sin \\dfrac{\\pi}{2}\\right)$。",
+          "絶対値を比べて $r^{2}=1$、$r>0$ より $r=1$。",
+          "偏角を比べて $2\\theta=\\dfrac{\\pi}{2}+2k\\pi$（$k$ は整数）、$0\\leqq\\theta<2\\pi$ の範囲で $\\theta=\\dfrac{\\pi}{4},\\ \\dfrac{5}{4}\\pi$。",
+          "それぞれ $a+bi$ の形にして $z=\\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{2}}{2}i,\\ - \\frac{\\sqrt{2}}{2}-\\frac{\\sqrt{2}}{2}i$。"
+        ],
+        "alternatives": [
+          "解は原点に関して対称な2点になる。",
+          "因数分解（数学Ⅱ「複素数と方程式」）で解いて照合することもできる。例えば $z^3=8$ なら $(z-2)(z^2+2z+4)=0$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$z$ を極形式でおきド・モアブルの定理を用いている",
+            "points": 2
+          },
+          {
+            "point": "絶対値を比較して $r$ を求めている",
+            "points": 1
+          },
+          {
+            "point": "偏角に $2k\\pi$ を加えて比較している",
+            "points": 2
+          },
+          {
+            "point": "すべての解を正しく求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "偏角に $2k\\pi$ を加え忘れ、解を1つしか求めない。",
+          "$r^n$ の $n$ 乗根で $r>0$ を確認しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "点 $(x,\\,y)$ が楕円 $\\dfrac{x^2}{4}+y^2=1$ 上を動くとき、$x+3y$ の最大値と最小値を求めなさい。",
+      "answer": {
+        "value": "最大値 $\\sqrt{13}$、最小値 $-\\sqrt{13}$"
+      },
+      "explanation": "$x=2\\cos\\theta,\\ y=1\\sin\\theta$ とおくと $x+3y=2\\cos\\theta+3\\sin\\theta$。三角関数の合成で振幅は $\\sqrt{4+9}=\\sqrt{13}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sqrt((2)**2+(3)**2)",
+        "expected": "sqrt(13)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_max",
+      "related_units": [
+        "HS-MATH2-U04"
+      ],
+      "explanation_detail": {
+        "approach": "楕円上の点は媒介変数 $\\theta$ で $x=a\\cos\\theta,\\ y=b\\sin\\theta$ と表せる。すると式は $\\sin\\theta,\\ \\cos\\theta$ の1次式になり、三角関数の合成（数学Ⅱ）で最大・最小が分かる。",
+        "steps": [
+          "$x=2\\cos\\theta,\\ y=\\sin\\theta\\ (0\\leqq\\theta<2\\pi)$ とおく。",
+          "$x+3y=2\\cos\\theta+3\\sin\\theta$。",
+          "合成すると $\\sqrt{13}\\sin(\\theta+\\alpha)$（$\\alpha$ は定数）。",
+          "$-1\\leqq\\sin(\\theta+\\alpha)\\leqq1$ より、最大値 $\\sqrt{13}$、最小値 $-\\sqrt{13}$。"
+        ],
+        "alternatives": [
+          "$x+3y=k$ とおき、直線と楕円が共有点をもつ条件（連立した2次方程式の判別式 $\\geqq0$）から $k$ の範囲を求めても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "楕円を媒介変数で表している",
+            "points": 2
+          },
+          {
+            "point": "式を $\\theta$ の三角関数で表している",
+            "points": 2
+          },
+          {
+            "point": "合成して最大値・最小値を正しく求めている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$x=\\cos\\theta,\\ y=\\sin\\theta$ と、円の媒介変数表示をそのまま使ってしまう。",
+          "合成の振幅を係数の和 $|2|+|3|$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "点 $(x,\\,y)$ が楕円 $\\dfrac{x^2}{9}+\\dfrac{y^2}{4}=1$ 上を動くとき、$-3x-y$ の最大値と最小値を求めなさい。",
+      "answer": {
+        "value": "最大値 $\\sqrt{85}$、最小値 $-\\sqrt{85}$"
+      },
+      "explanation": "$x=3\\cos\\theta,\\ y=2\\sin\\theta$ とおくと $-3x-y=-9\\cos\\theta-2\\sin\\theta$。三角関数の合成で振幅は $\\sqrt{81+4}=\\sqrt{85}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sqrt((-9)**2+(-2)**2)",
+        "expected": "sqrt(85)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_max",
+      "related_units": [
+        "HS-MATH2-U04"
+      ],
+      "explanation_detail": {
+        "approach": "楕円上の点は媒介変数 $\\theta$ で $x=a\\cos\\theta,\\ y=b\\sin\\theta$ と表せる。すると式は $\\sin\\theta,\\ \\cos\\theta$ の1次式になり、三角関数の合成（数学Ⅱ）で最大・最小が分かる。",
+        "steps": [
+          "$x=3\\cos\\theta,\\ y=2\\sin\\theta\\ (0\\leqq\\theta<2\\pi)$ とおく。",
+          "$-3x-y=-9\\cos\\theta-2\\sin\\theta$。",
+          "合成すると $\\sqrt{85}\\sin(\\theta+\\alpha)$（$\\alpha$ は定数）。",
+          "$-1\\leqq\\sin(\\theta+\\alpha)\\leqq1$ より、最大値 $\\sqrt{85}$、最小値 $-\\sqrt{85}$。"
+        ],
+        "alternatives": [
+          "$-3x-y=k$ とおき、直線と楕円が共有点をもつ条件（連立した2次方程式の判別式 $\\geqq0$）から $k$ の範囲を求めても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "楕円を媒介変数で表している",
+            "points": 2
+          },
+          {
+            "point": "式を $\\theta$ の三角関数で表している",
+            "points": 2
+          },
+          {
+            "point": "合成して最大値・最小値を正しく求めている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$x=\\cos\\theta,\\ y=\\sin\\theta$ と、円の媒介変数表示をそのまま使ってしまう。",
+          "合成の振幅を係数の和 $|-9|+|-2|$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "点 $(x,\\,y)$ が楕円 $\\dfrac{x^2}{9}+\\dfrac{y^2}{16}=1$ 上を動くとき、$-2x+y$ の最大値と最小値を求めなさい。",
+      "answer": {
+        "value": "最大値 $2 \\sqrt{13}$、最小値 $-2 \\sqrt{13}$"
+      },
+      "explanation": "$x=3\\cos\\theta,\\ y=4\\sin\\theta$ とおくと $-2x+y=-6\\cos\\theta+4\\sin\\theta$。三角関数の合成で振幅は $\\sqrt{36+16}=2 \\sqrt{13}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sqrt((-6)**2+(4)**2)",
+        "expected": "sqrt(52)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application"
+      ],
+      "variant_group": "HS-MATHC-U02-ellipse_max",
+      "related_units": [
+        "HS-MATH2-U04"
+      ],
+      "explanation_detail": {
+        "approach": "楕円上の点は媒介変数 $\\theta$ で $x=a\\cos\\theta,\\ y=b\\sin\\theta$ と表せる。すると式は $\\sin\\theta,\\ \\cos\\theta$ の1次式になり、三角関数の合成（数学Ⅱ）で最大・最小が分かる。",
+        "steps": [
+          "$x=3\\cos\\theta,\\ y=4\\sin\\theta\\ (0\\leqq\\theta<2\\pi)$ とおく。",
+          "$-2x+y=-6\\cos\\theta+4\\sin\\theta$。",
+          "合成すると $2 \\sqrt{13}\\sin(\\theta+\\alpha)$（$\\alpha$ は定数）。",
+          "$-1\\leqq\\sin(\\theta+\\alpha)\\leqq1$ より、最大値 $2 \\sqrt{13}$、最小値 $-2 \\sqrt{13}$。"
+        ],
+        "alternatives": [
+          "$-2x+y=k$ とおき、直線と楕円が共有点をもつ条件（連立した2次方程式の判別式 $\\geqq0$）から $k$ の範囲を求めても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "楕円を媒介変数で表している",
+            "points": 2
+          },
+          {
+            "point": "式を $\\theta$ の三角関数で表している",
+            "points": 2
+          },
+          {
+            "point": "合成して最大値・最小値を正しく求めている",
+            "points": 4
+          }
+        ],
+        "pitfalls": [
+          "$x=\\cos\\theta,\\ y=\\sin\\theta$ と、円の媒介変数表示をそのまま使ってしまう。",
+          "合成の振幅を係数の和 $|-6|+|4|$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "複素数平面上の3点 A$(-2+3i)$、B$(2+3i)$、C$(2+\\left(3 + 4 \\sqrt{3}\\right)i)$ を頂点とする $\\triangle\\mathrm{ABC}$ はどのような三角形か。$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$（$\\alpha,\\ \\beta,\\ \\gamma$ はそれぞれ A, B, C を表す複素数）を計算して、理由とともに答えなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}=1+\\sqrt{3}i=2\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$ より、$\\angle\\mathrm{A}=\\dfrac{\\pi}{3},\\ \\mathrm{AC}=2\\mathrm{AB}$ の三角形（$\\angle\\mathrm{B}=\\dfrac{\\pi}{2}$ の直角三角形）"
+      },
+      "explanation": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ の絶対値は $\\dfrac{\\mathrm{AC}}{\\mathrm{AB}}=2$、偏角は $\\angle\\mathrm{BAC}$（向きつき）で $\\dfrac{\\pi}{3}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "simplify(((2 + I*(3 + 4*sqrt(3)))-(-2 + 3*I))/((2 + 3*I)-(-2 + 3*I)))",
+        "expected": "1 + sqrt(3)*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHC-U02-triangle_shape",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ は「$\\overrightarrow{\\mathrm{AB}}$ を何倍・何度回転すると $\\overrightarrow{\\mathrm{AC}}$ になるか」を表す。絶対値で辺の比、偏角で角 A が分かる。",
+        "steps": [
+          "$\\beta-\\alpha=4$、$\\gamma-\\alpha=4+4 \\sqrt{3}i$。",
+          "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}=\\dfrac{4+4 \\sqrt{3}i}{4}=1+\\sqrt{3}i$（分母の共役複素数を分母・分子にかける）。",
+          "極形式で $2\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$。",
+          "$\\mathrm{AC}:\\mathrm{AB}=2:1$、$\\angle\\mathrm{BAC}=\\dfrac{\\pi}{3}$。",
+          "よって$\\angle\\mathrm{A}=\\dfrac{\\pi}{3},\\ \\mathrm{AC}=2\\mathrm{AB}$ の三角形（$\\angle\\mathrm{B}=\\dfrac{\\pi}{2}$ の直角三角形）。"
+        ],
+        "alternatives": [
+          "3辺の長さ $|\\beta-\\alpha|,\\ |\\gamma-\\alpha|,\\ |\\gamma-\\beta|$ を計算し、三平方の定理や辺の比から形を判定しても同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ を正しく計算している",
+            "points": 3
+          },
+          {
+            "point": "絶対値と偏角を、辺の比と角に正しく読みかえている",
+            "points": 3
+          },
+          {
+            "point": "三角形の形を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "偏角が負のとき、角の大きさを負の値で答える（角の大きさは絶対値）。",
+          "絶対値が $1$ でないのに二等辺三角形と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "複素数平面上の3点 A$(2+2i)$、B$(6+2i)$、C$(4+\\left(2 + 2 \\sqrt{3}\\right)i)$ を頂点とする $\\triangle\\mathrm{ABC}$ はどのような三角形か。$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$（$\\alpha,\\ \\beta,\\ \\gamma$ はそれぞれ A, B, C を表す複素数）を計算して、理由とともに答えなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}=\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i=\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$ より、正三角形"
+      },
+      "explanation": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ の絶対値は $\\dfrac{\\mathrm{AC}}{\\mathrm{AB}}=1$、偏角は $\\angle\\mathrm{BAC}$（向きつき）で $\\dfrac{\\pi}{3}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "simplify(((4 + I*(2 + 2*sqrt(3)))-(2 + 2*I))/((6 + 2*I)-(2 + 2*I)))",
+        "expected": "1/2 + sqrt(3)*I/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHC-U02-triangle_shape",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ は「$\\overrightarrow{\\mathrm{AB}}$ を何倍・何度回転すると $\\overrightarrow{\\mathrm{AC}}$ になるか」を表す。絶対値で辺の比、偏角で角 A が分かる。",
+        "steps": [
+          "$\\beta-\\alpha=4$、$\\gamma-\\alpha=2+2 \\sqrt{3}i$。",
+          "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}=\\dfrac{2+2 \\sqrt{3}i}{4}=\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i$（分母の共役複素数を分母・分子にかける）。",
+          "極形式で $\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$。",
+          "$\\mathrm{AC}:\\mathrm{AB}=1:1$、$\\angle\\mathrm{BAC}=\\dfrac{\\pi}{3}$。",
+          "よって正三角形。"
+        ],
+        "alternatives": [
+          "3辺の長さ $|\\beta-\\alpha|,\\ |\\gamma-\\alpha|,\\ |\\gamma-\\beta|$ を計算し、三平方の定理や辺の比から形を判定しても同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ を正しく計算している",
+            "points": 3
+          },
+          {
+            "point": "絶対値と偏角を、辺の比と角に正しく読みかえている",
+            "points": 3
+          },
+          {
+            "point": "三角形の形を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "偏角が負のとき、角の大きさを負の値で答える（角の大きさは絶対値）。",
+          "絶対値が $1$ でないのに二等辺三角形と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "複素数平面上の3点 A$(0)$、B$(-3)$、C$(6i)$ を頂点とする $\\triangle\\mathrm{ABC}$ はどのような三角形か。$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$（$\\alpha,\\ \\beta,\\ \\gamma$ はそれぞれ A, B, C を表す複素数）を計算して、理由とともに答えなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}=-2i=2\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right)+i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$ より、$\\angle\\mathrm{A}=\\dfrac{\\pi}{2}$ の直角三角形（$\\mathrm{AC}=2\\mathrm{AB}$）"
+      },
+      "explanation": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ の絶対値は $\\dfrac{\\mathrm{AC}}{\\mathrm{AB}}=2$、偏角は $\\angle\\mathrm{BAC}$（向きつき）で $-\\dfrac{\\pi}{2}$。",
+      "scoring": {
+        "points": 8,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "simplify(((6*I)-(0))/((-3)-(0)))",
+        "expected": "-2*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATHC-U02-triangle_shape",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ は「$\\overrightarrow{\\mathrm{AB}}$ を何倍・何度回転すると $\\overrightarrow{\\mathrm{AC}}$ になるか」を表す。絶対値で辺の比、偏角で角 A が分かる。",
+        "steps": [
+          "$\\beta-\\alpha=-3$、$\\gamma-\\alpha=6i$。",
+          "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}=\\dfrac{6i}{-3}=-2i$（分母の共役複素数を分母・分子にかける）。",
+          "極形式で $2\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right)+i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$。",
+          "$\\mathrm{AC}:\\mathrm{AB}=2:1$、$\\angle\\mathrm{BAC}=\\dfrac{\\pi}{2}$。",
+          "よって$\\angle\\mathrm{A}=\\dfrac{\\pi}{2}$ の直角三角形（$\\mathrm{AC}=2\\mathrm{AB}$）。"
+        ],
+        "alternatives": [
+          "3辺の長さ $|\\beta-\\alpha|,\\ |\\gamma-\\alpha|,\\ |\\gamma-\\beta|$ を計算し、三平方の定理や辺の比から形を判定しても同じ結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\dfrac{\\gamma-\\alpha}{\\beta-\\alpha}$ を正しく計算している",
+            "points": 3
+          },
+          {
+            "point": "絶対値と偏角を、辺の比と角に正しく読みかえている",
+            "points": 3
+          },
+          {
+            "point": "三角形の形を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "偏角が負のとき、角の大きさを負の値で答える（角の大きさは絶対値）。",
+          "絶対値が $1$ でないのに二等辺三角形と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "複素数 $z=- \\frac{\\sqrt{2}}{2}-\\frac{\\sqrt{6}}{2}i$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。\n［ある生徒の解答］\n$|z|=\\sqrt{2}$。$\\tan\\theta=\\sqrt{3}$ より $\\theta=\\dfrac{\\pi}{3}$。よって $z=\\sqrt{2}\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$z=\\sqrt{2}\\left(\\cos \\dfrac{4}{3}\\pi+i\\sin \\dfrac{4}{3}\\pi\\right)$"
+      },
+      "explanation": "$\\tan\\theta$ の値だけでは偏角は決まらない。$\\cos\\theta,\\ \\sin\\theta$ の符号（点の象限）まで確認する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify((sqrt(2))*(cos(pi*Rational(4,3))+I*sin(pi*Rational(4,3)))-(-sqrt(2)/2 - sqrt(6)*I/2))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-err_arg",
+      "explanation_detail": {
+        "approach": "偏角は図をかいて象限を確認し、$\\cos\\theta$ と $\\sin\\theta$ の両方の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{2}$。",
+          "$\\cos\\theta=- \\frac{1}{2}$、$\\sin\\theta=- \\frac{\\sqrt{3}}{2}$。",
+          "両方を満たす $\\theta=\\dfrac{4}{3}\\pi$。"
+        ],
+        "alternatives": [
+          "生徒の答え $\\sqrt{2}\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$ を $a+bi$ の形に戻すと $\\frac{\\sqrt{2}}{2}+\\frac{\\sqrt{6}}{2}i$ となり、元の $z$ と一致しないことで誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ だけで偏角を決める。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$|z|=\\sqrt{2}$。$\\tan\\theta=\\sqrt{3}$ より $\\theta=\\dfrac{\\pi}{3}$。よって $z=\\sqrt{2}\\left(\\cos \\dfrac{\\pi}{3}+i\\sin \\dfrac{\\pi}{3}\\right)$",
+        "error_step": "偏角を決める部分（$\\tan\\theta$ だけで判断）",
+        "error_type": "concept",
+        "why_tempting": "$\\tan\\theta$ の値が同じ角は $\\pi$ ずつずれて2つあるのに、知っている角を1つ当てはめて象限を確かめていない。",
+        "correction": "点 $z$ は第3象限にあるので、$\\cos\\theta=- \\frac{1}{2},\\ \\sin\\theta=- \\frac{\\sqrt{3}}{2}$ を満たす $\\theta=\\dfrac{4}{3}\\pi$。$z=\\sqrt{2}\\left(\\cos \\dfrac{4}{3}\\pi+i\\sin \\dfrac{4}{3}\\pi\\right)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "複素数 $z=- \\sqrt{2}+\\sqrt{6}i$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。\n［ある生徒の解答］\n$|z|=2 \\sqrt{2}$。$\\tan\\theta=- \\sqrt{3}$ より $\\theta=\\dfrac{5}{3}\\pi$。よって $z=2 \\sqrt{2}\\left(\\cos \\dfrac{5}{3}\\pi+i\\sin \\dfrac{5}{3}\\pi\\right)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$z=2 \\sqrt{2}\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$"
+      },
+      "explanation": "$\\tan\\theta$ の値だけでは偏角は決まらない。$\\cos\\theta,\\ \\sin\\theta$ の符号（点の象限）まで確認する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify((2*sqrt(2))*(cos(pi*Rational(2,3))+I*sin(pi*Rational(2,3)))-(-sqrt(2) + sqrt(6)*I))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-err_arg",
+      "explanation_detail": {
+        "approach": "偏角は図をかいて象限を確認し、$\\cos\\theta$ と $\\sin\\theta$ の両方の値で決める。",
+        "steps": [
+          "$|z|=2 \\sqrt{2}$。",
+          "$\\cos\\theta=- \\frac{1}{2}$、$\\sin\\theta=\\frac{\\sqrt{3}}{2}$。",
+          "両方を満たす $\\theta=\\dfrac{2}{3}\\pi$。"
+        ],
+        "alternatives": [
+          "生徒の答え $2 \\sqrt{2}\\left(\\cos \\dfrac{5}{3}\\pi+i\\sin \\dfrac{5}{3}\\pi\\right)$ を $a+bi$ の形に戻すと $\\sqrt{2}-\\sqrt{6}i$ となり、元の $z$ と一致しないことで誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ だけで偏角を決める。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$|z|=2 \\sqrt{2}$。$\\tan\\theta=- \\sqrt{3}$ より $\\theta=\\dfrac{5}{3}\\pi$。よって $z=2 \\sqrt{2}\\left(\\cos \\dfrac{5}{3}\\pi+i\\sin \\dfrac{5}{3}\\pi\\right)$",
+        "error_step": "偏角を決める部分（$\\tan\\theta$ だけで判断）",
+        "error_type": "concept",
+        "why_tempting": "$\\tan\\theta$ の値が同じ角は $\\pi$ ずつずれて2つあるのに、知っている角を1つ当てはめて象限を確かめていない。",
+        "correction": "点 $z$ は第2象限にあるので、$\\cos\\theta=- \\frac{1}{2},\\ \\sin\\theta=\\frac{\\sqrt{3}}{2}$ を満たす $\\theta=\\dfrac{2}{3}\\pi$。$z=2 \\sqrt{2}\\left(\\cos \\dfrac{2}{3}\\pi+i\\sin \\dfrac{2}{3}\\pi\\right)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "複素数 $z=-1-i$ を極形式で表しなさい。ただし偏角 $\\theta$ は $0\\leqq\\theta<2\\pi$ とする。\n［ある生徒の解答］\n$|z|=\\sqrt{2}$。$\\tan\\theta=1$ より $\\theta=\\dfrac{\\pi}{4}$。よって $z=\\sqrt{2}\\left(\\cos \\dfrac{\\pi}{4}+i\\sin \\dfrac{\\pi}{4}\\right)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$z=\\sqrt{2}\\left(\\cos \\dfrac{5}{4}\\pi+i\\sin \\dfrac{5}{4}\\pi\\right)$"
+      },
+      "explanation": "$\\tan\\theta$ の値だけでは偏角は決まらない。$\\cos\\theta,\\ \\sin\\theta$ の符号（点の象限）まで確認する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify((sqrt(2))*(cos(pi*Rational(5,4))+I*sin(pi*Rational(5,4)))-(-1 - I))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATHC-U02-err_arg",
+      "explanation_detail": {
+        "approach": "偏角は図をかいて象限を確認し、$\\cos\\theta$ と $\\sin\\theta$ の両方の値で決める。",
+        "steps": [
+          "$|z|=\\sqrt{2}$。",
+          "$\\cos\\theta=- \\frac{\\sqrt{2}}{2}$、$\\sin\\theta=- \\frac{\\sqrt{2}}{2}$。",
+          "両方を満たす $\\theta=\\dfrac{5}{4}\\pi$。"
+        ],
+        "alternatives": [
+          "生徒の答え $\\sqrt{2}\\left(\\cos \\dfrac{\\pi}{4}+i\\sin \\dfrac{\\pi}{4}\\right)$ を $a+bi$ の形に戻すと $1+i$ となり、元の $z$ と一致しないことで誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\tan\\theta$ だけで偏角を決める。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$|z|=\\sqrt{2}$。$\\tan\\theta=1$ より $\\theta=\\dfrac{\\pi}{4}$。よって $z=\\sqrt{2}\\left(\\cos \\dfrac{\\pi}{4}+i\\sin \\dfrac{\\pi}{4}\\right)$",
+        "error_step": "偏角を決める部分（$\\tan\\theta$ だけで判断）",
+        "error_type": "concept",
+        "why_tempting": "$\\tan\\theta$ の値が同じ角は $\\pi$ ずつずれて2つあるのに、知っている角を1つ当てはめて象限を確かめていない。",
+        "correction": "点 $z$ は第3象限にあるので、$\\cos\\theta=- \\frac{\\sqrt{2}}{2},\\ \\sin\\theta=- \\frac{\\sqrt{2}}{2}$ を満たす $\\theta=\\dfrac{5}{4}\\pi$。$z=\\sqrt{2}\\left(\\cos \\dfrac{5}{4}\\pi+i\\sin \\dfrac{5}{4}\\pi\\right)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "楕円 $\\dfrac{x^2}{25}+\\dfrac{y^2}{16}=1$ の焦点の座標を求めなさい。\n［ある生徒の解答］\n$c=\\sqrt{25+16}=\\sqrt{41}$ より、焦点は $(\\sqrt{41},\\,0),\\ (-\\sqrt{41},\\,0)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(3,\\,0),\\ (-3,\\,0)$"
+      },
+      "explanation": "楕円は $c^2=a^2-b^2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(25-16)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-err_conic_c",
+      "explanation_detail": {
+        "approach": "楕円では焦点が曲線の内側にあるので $c<a$、双曲線では焦点が頂点の外側にあるので $c>a$。図で大小を確かめると公式の符号を判断できる。",
+        "steps": [
+          "楕円の焦点の公式を確認する：楕円は $c^2=a^2-b^2$。",
+          "$c=3$。",
+          "焦点 $(\\pm3,\\,0)$。"
+        ],
+        "alternatives": [
+          "楕円では焦点は長軸の端 $(\\pm5,\\,0)$ より内側にあるはずで、生徒の値は外側にあるので誤りとわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "楕円と双曲線で $c^2$ の式を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$c=\\sqrt{25+16}=\\sqrt{41}$ より、焦点は $(\\sqrt{41},\\,0),\\ (-\\sqrt{41},\\,0)$",
+        "error_step": "$c$ を求める式",
+        "error_type": "formula",
+        "why_tempting": "楕円と双曲線の公式はよく似ており、双曲線の関係 $c^2=a^2+b^2$を取り違えて覚えている。",
+        "correction": "楕円では $c=\\sqrt{a^2-b^2}=\\sqrt{25-16}=3$。焦点は $(3,\\,0),\\ (-3,\\,0)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "楕円 $\\dfrac{x^2}{25}+\\dfrac{y^2}{9}=1$ の焦点の座標を求めなさい。\n［ある生徒の解答］\n$c=\\sqrt{25+9}=\\sqrt{34}$ より、焦点は $(\\sqrt{34},\\,0),\\ (-\\sqrt{34},\\,0)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(4,\\,0),\\ (-4,\\,0)$"
+      },
+      "explanation": "楕円は $c^2=a^2-b^2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(25-9)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-err_conic_c",
+      "explanation_detail": {
+        "approach": "楕円では焦点が曲線の内側にあるので $c<a$、双曲線では焦点が頂点の外側にあるので $c>a$。図で大小を確かめると公式の符号を判断できる。",
+        "steps": [
+          "楕円の焦点の公式を確認する：楕円は $c^2=a^2-b^2$。",
+          "$c=4$。",
+          "焦点 $(\\pm4,\\,0)$。"
+        ],
+        "alternatives": [
+          "楕円では焦点は長軸の端 $(\\pm5,\\,0)$ より内側にあるはずで、生徒の値は外側にあるので誤りとわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "楕円と双曲線で $c^2$ の式を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$c=\\sqrt{25+9}=\\sqrt{34}$ より、焦点は $(\\sqrt{34},\\,0),\\ (-\\sqrt{34},\\,0)$",
+        "error_step": "$c$ を求める式",
+        "error_type": "formula",
+        "why_tempting": "楕円と双曲線の公式はよく似ており、双曲線の関係 $c^2=a^2+b^2$を取り違えて覚えている。",
+        "correction": "楕円では $c=\\sqrt{a^2-b^2}=\\sqrt{25-9}=4$。焦点は $(4,\\,0),\\ (-4,\\,0)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "双曲線 $\\dfrac{x^2}{25}-\\dfrac{y^2}{4}=1$ の焦点の座標を求めなさい。\n［ある生徒の解答］\n$c=\\sqrt{25-4}=\\sqrt{21}$ より、焦点は $(\\sqrt{21},\\,0),\\ (-\\sqrt{21},\\,0)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$(\\sqrt{29},\\,0),\\ (-\\sqrt{29},\\,0)$"
+      },
+      "explanation": "双曲線は $c^2=a^2+b^2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(25+4)",
+        "expected": "sqrt(29)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-err_conic_c",
+      "explanation_detail": {
+        "approach": "楕円では焦点が曲線の内側にあるので $c<a$、双曲線では焦点が頂点の外側にあるので $c>a$。図で大小を確かめると公式の符号を判断できる。",
+        "steps": [
+          "双曲線の焦点の公式を確認する：双曲線は $c^2=a^2+b^2$。",
+          "$c=\\sqrt{29}$。",
+          "焦点 $(\\pm\\sqrt{29},\\,0)$。"
+        ],
+        "alternatives": [
+          "双曲線では焦点は頂点 $(\\pm5,\\,0)$ より外側にあるはずで、生徒の値は内側にあるので誤りとわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "楕円と双曲線で $c^2$ の式を取り違える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$c=\\sqrt{25-4}=\\sqrt{21}$ より、焦点は $(\\sqrt{21},\\,0),\\ (-\\sqrt{21},\\,0)$",
+        "error_step": "$c$ を求める式",
+        "error_type": "formula",
+        "why_tempting": "楕円と双曲線の公式はよく似ており、楕円の関係 $c^2=a^2-b^2$を取り違えて覚えている。",
+        "correction": "双曲線では $c=\\sqrt{a^2+b^2}=\\sqrt{25+4}=\\sqrt{29}$。焦点は $(\\sqrt{29},\\,0),\\ (-\\sqrt{29},\\,0)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\left(2-2i\\right)^{5}$ を計算しなさい。\n［ある生徒の解答］\n$2-2i=2 \\sqrt{2}\\left(\\cos \\dfrac{7}{4}\\pi+i\\sin \\dfrac{7}{4}\\pi\\right)$ より、$\\left(2-2i\\right)^{5}=2 \\sqrt{2}\\left(\\cos \\dfrac{35}{4}\\pi+i\\sin \\dfrac{35}{4}\\pi\\right)=-2+2i$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-128+128i$"
+      },
+      "explanation": "$\\{r(\\cos\\theta+i\\sin\\theta)\\}^n=r^n(\\cos n\\theta+i\\sin n\\theta)$。絶対値も $5$ 乗する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((2 - 2*I)**5)",
+        "expected": "-128 + 128*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-err_demoivre",
+      "explanation_detail": {
+        "approach": "積の性質「絶対値はかけ算」を $n$ 回くり返すと、絶対値は $r^n$ になる。",
+        "steps": [
+          "$2-2i=2 \\sqrt{2}\\left(\\cos \\dfrac{7}{4}\\pi+i\\sin \\dfrac{7}{4}\\pi\\right)$。",
+          "絶対値は $(2 \\sqrt{2})^{5}=128 \\sqrt{2}$、偏角は $\\dfrac{35}{4}\\pi$。",
+          "$-128+128i$。"
+        ],
+        "alternatives": [
+          "$|z^{5}|=|z|^{5}=128 \\sqrt{2}$ のはずだが、生徒の答えの絶対値は $2 \\sqrt{2}$ であり一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値の $n$ 乗を忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$2-2i=2 \\sqrt{2}\\left(\\cos \\dfrac{7}{4}\\pi+i\\sin \\dfrac{7}{4}\\pi\\right)$ より、$\\left(2-2i\\right)^{5}=2 \\sqrt{2}\\left(\\cos \\dfrac{35}{4}\\pi+i\\sin \\dfrac{35}{4}\\pi\\right)=-2+2i$",
+        "error_step": "累乗した後の絶対値",
+        "error_type": "formula",
+        "why_tempting": "ド・モアブルの定理 $(\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta$ を、絶対値が $1$ でない場合にもそのまま当てはめた。",
+        "correction": "$\\left(2-2i\\right)^{5}=(2 \\sqrt{2})^{5}\\left(\\cos \\dfrac{35}{4}\\pi+i\\sin \\dfrac{35}{4}\\pi\\right)=-128+128i$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\left(-3+3i\\right)^{6}$ を計算しなさい。\n［ある生徒の解答］\n$-3+3i=3 \\sqrt{2}\\left(\\cos \\dfrac{3}{4}\\pi+i\\sin \\dfrac{3}{4}\\pi\\right)$ より、$\\left(-3+3i\\right)^{6}=3 \\sqrt{2}\\left(\\cos \\dfrac{9}{2}\\pi+i\\sin \\dfrac{9}{2}\\pi\\right)=3 \\sqrt{2}i$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$5832i$"
+      },
+      "explanation": "$\\{r(\\cos\\theta+i\\sin\\theta)\\}^n=r^n(\\cos n\\theta+i\\sin n\\theta)$。絶対値も $6$ 乗する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((-3 + 3*I)**6)",
+        "expected": "5832*I",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATHC-U02-err_demoivre",
+      "explanation_detail": {
+        "approach": "積の性質「絶対値はかけ算」を $n$ 回くり返すと、絶対値は $r^n$ になる。",
+        "steps": [
+          "$-3+3i=3 \\sqrt{2}\\left(\\cos \\dfrac{3}{4}\\pi+i\\sin \\dfrac{3}{4}\\pi\\right)$。",
+          "絶対値は $(3 \\sqrt{2})^{6}=5832$、偏角は $\\dfrac{9}{2}\\pi$。",
+          "$5832i$。"
+        ],
+        "alternatives": [
+          "$|z^{6}|=|z|^{6}=5832$ のはずだが、生徒の答えの絶対値は $3 \\sqrt{2}$ であり一致しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "絶対値の $n$ 乗を忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$-3+3i=3 \\sqrt{2}\\left(\\cos \\dfrac{3}{4}\\pi+i\\sin \\dfrac{3}{4}\\pi\\right)$ より、$\\left(-3+3i\\right)^{6}=3 \\sqrt{2}\\left(\\cos \\dfrac{9}{2}\\pi+i\\sin \\dfrac{9}{2}\\pi\\right)=3 \\sqrt{2}i$",
+        "error_step": "累乗した後の絶対値",
+        "error_type": "formula",
+        "why_tempting": "ド・モアブルの定理 $(\\cos\\theta+i\\sin\\theta)^n=\\cos n\\theta+i\\sin n\\theta$ を、絶対値が $1$ でない場合にもそのまま当てはめた。",
+        "correction": "$\\left(-3+3i\\right)^{6}=(3 \\sqrt{2})^{6}\\left(\\cos \\dfrac{9}{2}\\pi+i\\sin \\dfrac{9}{2}\\pi\\right)=5832i$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "媒介変数表示 $x=\\cos\\theta,\\ y=2\\cos2\\theta$ で表される点 $(x,\\,y)$ が描く図形を求めなさい。\n［ある生徒の解答］\n$\\cos2\\theta=2\\cos^2\\theta-1$ に $\\cos\\theta=x$ を代入して $y=4x^2-2$。よって放物線 $y=4x^2-2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "放物線 $y=4x^2-2$ の $-1\\leqq x\\leqq1$ の部分"
+      },
+      "explanation": "$x=\\cos\\theta$ で $-1\\leqq\\cos\\theta\\leqq1$ なので $-1\\leqq x\\leqq1$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify((2)*cos(2*theta)-((4)*(1*cos(theta))**2-(2)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-err_param_range",
+      "explanation_detail": {
+        "approach": "消去した式は「必要条件」にすぎない。$x$ がどんな値をとれるかを確かめて、図形の範囲を決める。",
+        "steps": [
+          "媒介変数を消去して $x,\\ y$ の関係式を求める。",
+          "媒介変数のとりうる値から、$x$ のとりうる範囲を調べる。",
+          "$-1\\leqq x\\leqq1$ の部分に限られる。"
+        ],
+        "alternatives": [
+          "範囲外の $x$ の値（例えば範囲の外側の整数）を代入して、対応する媒介変数が存在しないことを確かめると、制限の必要性がはっきりする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "消去した式だけを答え、範囲を書かない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\cos2\\theta=2\\cos^2\\theta-1$ に $\\cos\\theta=x$ を代入して $y=4x^2-2$。よって放物線 $y=4x^2-2$",
+        "error_step": "最後の結論（$x$ の範囲の検討もれ）",
+        "error_type": "condition",
+        "why_tempting": "媒介変数を消去した式を求めた時点で解き終わったと考え、もとの媒介変数表示から生じる $x$ の範囲の制限を確認していない。",
+        "correction": "$-1\\leqq\\cos\\theta\\leqq1$ より $-1\\leqq x\\leqq1$。よって放物線 $y=4x^2-2$ のうち $-1\\leqq x\\leqq1$ の部分"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATHC-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATHC-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "媒介変数表示 $x=t^2+4,\\ y=-3t^2-2$ で表される点 $(x,\\,y)$ が描く図形を求めなさい。\n［ある生徒の解答］\n$t^2=x-4$ を代入して $y=-3x+10$。よって直線 $y=-3x+10$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "直線 $y=-3x+10$ の $x\\geqq4$ の部分"
+      },
+      "explanation": "$t^2\\geqq0$ なので $x=t^2+4\\geqq4$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand((-3)*t**2+(-2)-((-3)*(t**2+(4))+(10)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATHC-U02-err_param_range",
+      "explanation_detail": {
+        "approach": "消去した式は「必要条件」にすぎない。$x$ がどんな値をとれるかを確かめて、図形の範囲を決める。",
+        "steps": [
+          "媒介変数を消去して $x,\\ y$ の関係式を求める。",
+          "媒介変数のとりうる値から、$x$ のとりうる範囲を調べる。",
+          "$x\\geqq4$ の部分に限られる。"
+        ],
+        "alternatives": [
+          "範囲外の $x$ の値（例えば範囲の外側の整数）を代入して、対応する媒介変数が存在しないことを確かめると、制限の必要性がはっきりする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "消去した式だけを答え、範囲を書かない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$t^2=x-4$ を代入して $y=-3x+10$。よって直線 $y=-3x+10$",
+        "error_step": "最後の結論（$x$ の範囲の検討もれ）",
+        "error_type": "condition",
+        "why_tempting": "媒介変数を消去した式を求めた時点で解き終わったと考え、もとの媒介変数表示から生じる $x$ の範囲の制限を確認していない。",
+        "correction": "$t^2\\geqq0$ より $x\\geqq4$。よって直線 $y=-3x+10$ のうち $x\\geqq4$ の部分（半直線）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "f3573a29d52f326eb0bbdf7e6fa4c42a299a108c8032a35fbb691203178c9bda"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 11 問（Q007, Q031, Q032, Q033, Q038, Q039, Q040, Q048, Q049, Q050 他）",
+      "content_hash": "209e0b224f42eebce8108d7bd80fb30f04b5cd87fd51493c928644d3d2acb269"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:43:17+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "c5b0a4d360d777a9f29f82ddf907b4ab5a6c8b5450d120cd4bdbf13413890cdb"
+  }
+}

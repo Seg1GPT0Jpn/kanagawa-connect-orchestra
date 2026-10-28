@@ -1,0 +1,5438 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U05-EX",
+  "title": "指数関数・対数関数　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U05"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH2-U05-PACK",
+  "pair_set_id": "HS-MATH2-U05-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U01",
+        "point": "累乗",
+        "title": "正の数・負の数"
+      },
+      {
+        "unit_id": "HS-MATH1-U01",
+        "point": "指数法則",
+        "title": "数と式"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "指数・対数関数の微分",
+        "title": "微分法とその応用"
+      }
+    ],
+    "readiness_check": [
+      "$a^m\\times a^n=a^{m+n}$ など、自然数の指数についての指数法則を使える。",
+      "平方根の計算と有理化ができる。",
+      "二次関数の最大・最小、二次方程式の解法を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U05-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "指数法則を用いて、$4^{\\frac{1}{2}}$ の値を求めなさい。",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "底を $n$ 乗の形に直してから指数法則 $(a^p)^q=a^{pq}$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(4)**(Rational(1,2))",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_value",
+      "explanation_detail": {
+        "approach": "底を「何かの $2$ 乗」で表すと、指数の分母と打ち消し合って整数の指数になる。",
+        "steps": [
+          "$4=2^{2}$ と表す。",
+          "$4^{\\frac{1}{2}}=\\left(2^{2}\\right)^{\\frac{1}{2}}=2^{1}$。",
+          "$=2$。"
+        ],
+        "alternatives": [
+          "$a^{\\frac{m}{n}}=\\left(\\sqrt[n]{a}\\right)^m$ を使い、$\\sqrt[2]{4}=2$ を先に求めてから累乗してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底を累乗の形に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の指数で $-$ をつけてしまう（$a^{-n}=-a^n$ と誤る）。",
+          "指数の分数を約分せずに計算して迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "指数法則を用いて、$\\left(\\dfrac{1}{125}\\right)^{\\frac{2}{3}}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{25}$"
+      },
+      "explanation": "底を $n$ 乗の形に直してから指数法則 $(a^p)^q=a^{pq}$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(Rational(1,125))**(Rational(2,3))",
+        "expected": "Rational(1,25)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_value",
+      "explanation_detail": {
+        "approach": "底を「何かの $3$ 乗」で表すと、指数の分母と打ち消し合って整数の指数になる。",
+        "steps": [
+          "$\\left(\\dfrac{1}{125}\\right)=\\left(\\dfrac{1}{5}\\right)^{3}$ と表す。",
+          "$\\left(\\dfrac{1}{125}\\right)^{\\frac{2}{3}}=\\left(\\left(\\dfrac{1}{5}\\right)^{3}\\right)^{\\frac{2}{3}}=\\left(\\dfrac{1}{5}\\right)^{2}$。",
+          "$=\\dfrac{1}{25}$。"
+        ],
+        "alternatives": [
+          "$a^{\\frac{m}{n}}=\\left(\\sqrt[n]{a}\\right)^m$ を使い、$\\sqrt[3]{\\dfrac{1}{125}}=\\dfrac{1}{5}$ を先に求めてから累乗してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底を累乗の形に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の指数で $-$ をつけてしまう（$a^{-n}=-a^n$ と誤る）。",
+          "指数の分数を約分せずに計算して迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "指数法則を用いて、$\\left(\\dfrac{1}{4}\\right)^{\\frac{5}{2}}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{32}$"
+      },
+      "explanation": "底を $n$ 乗の形に直してから指数法則 $(a^p)^q=a^{pq}$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(Rational(1,4))**(Rational(5,2))",
+        "expected": "Rational(1,32)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_value",
+      "explanation_detail": {
+        "approach": "底を「何かの $2$ 乗」で表すと、指数の分母と打ち消し合って整数の指数になる。",
+        "steps": [
+          "$\\left(\\dfrac{1}{4}\\right)=\\left(\\dfrac{1}{2}\\right)^{2}$ と表す。",
+          "$\\left(\\dfrac{1}{4}\\right)^{\\frac{5}{2}}=\\left(\\left(\\dfrac{1}{2}\\right)^{2}\\right)^{\\frac{5}{2}}=\\left(\\dfrac{1}{2}\\right)^{5}$。",
+          "$=\\dfrac{1}{32}$。"
+        ],
+        "alternatives": [
+          "$a^{\\frac{m}{n}}=\\left(\\sqrt[n]{a}\\right)^m$ を使い、$\\sqrt[2]{\\dfrac{1}{4}}=\\dfrac{1}{2}$ を先に求めてから累乗してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底を累乗の形に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の指数で $-$ をつけてしまう（$a^{-n}=-a^n$ と誤る）。",
+          "指数の分数を約分せずに計算して迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "指数法則を用いて、$36^{-\\frac{1}{2}}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{6}$"
+      },
+      "explanation": "底を $n$ 乗の形に直してから指数法則 $(a^p)^q=a^{pq}$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(36)**(Rational(-1,2))",
+        "expected": "Rational(1,6)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_value",
+      "explanation_detail": {
+        "approach": "底を「何かの $2$ 乗」で表すと、指数の分母と打ち消し合って整数の指数になる。",
+        "steps": [
+          "$36=6^{2}$ と表す。",
+          "$36^{-\\frac{1}{2}}=\\left(6^{2}\\right)^{-\\frac{1}{2}}=6^{-1}$。",
+          "$=\\dfrac{1}{6}$。"
+        ],
+        "alternatives": [
+          "$a^{\\frac{m}{n}}=\\left(\\sqrt[n]{a}\\right)^m$ を使い、$\\sqrt[2]{36}=6$ を先に求めてから累乗してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底を累乗の形に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の指数で $-$ をつけてしまう（$a^{-n}=-a^n$ と誤る）。",
+          "指数の分数を約分せずに計算して迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "指数法則を用いて、$100^{-\\frac{5}{2}}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{100000}$"
+      },
+      "explanation": "底を $n$ 乗の形に直してから指数法則 $(a^p)^q=a^{pq}$ を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(100)**(Rational(-5,2))",
+        "expected": "Rational(1,100000)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_value",
+      "explanation_detail": {
+        "approach": "底を「何かの $2$ 乗」で表すと、指数の分母と打ち消し合って整数の指数になる。",
+        "steps": [
+          "$100=10^{2}$ と表す。",
+          "$100^{-\\frac{5}{2}}=\\left(10^{2}\\right)^{-\\frac{5}{2}}=10^{-5}$。",
+          "$=\\dfrac{1}{100000}$。"
+        ],
+        "alternatives": [
+          "$a^{\\frac{m}{n}}=\\left(\\sqrt[n]{a}\\right)^m$ を使い、$\\sqrt[2]{100}=10$ を先に求めてから累乗してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底を累乗の形に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の指数で $-$ をつけてしまう（$a^{-n}=-a^n$ と誤る）。",
+          "指数の分数を約分せずに計算して迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a^{\\frac{m}{n}}$ の形に直して計算しなさい。$$\\sqrt[6]{10^{5}}\\div\\sqrt[6]{10^{2}}\\times\\sqrt[6]{10^{3}}$$",
+      "answer": {
+        "value": "$10$"
+      },
+      "explanation": "各項を $10$ の累乗で表すと、指数は $\\frac{5}{6}-\\frac{1}{3}+\\frac{1}{2}=1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "10**((1)*Rational(5,6)+(-1)*Rational(2,6)+(1)*Rational(3,6))",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-root_law",
+      "explanation_detail": {
+        "approach": "累乗根を $\\sqrt[n]{a^m}=a^{\\frac{m}{n}}$ と分数の指数に直すと、かけ算・わり算が指数のたし算・ひき算になる。",
+        "steps": [
+          "$\\sqrt[6]{10^{5}}\\div\\sqrt[6]{10^{2}}\\times\\sqrt[6]{10^{3}}=10^{\\frac{5}{6}}\\div10^{\\frac{1}{3}}\\times10^{\\frac{1}{2}}$。",
+          "指数を計算して $\\frac{5}{6}-\\frac{1}{3}+\\frac{1}{2}=1$。",
+          "$10^{1}=10$。"
+        ],
+        "alternatives": [
+          "指数の分母を通分して1つの累乗根 $\\sqrt[N]{\\ \\ }$ にまとめて計算しても、同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分数の指数に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt[3]{a^2}$ を $a^{\\frac32}$ と、分母と分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a^{\\frac{m}{n}}$ の形に直して計算しなさい。$$\\sqrt{5^{5}}\\times\\sqrt[3]{5^{2}}\\times\\sqrt[6]{5^{5}}$$",
+      "answer": {
+        "value": "$625$"
+      },
+      "explanation": "各項を $5$ の累乗で表すと、指数は $\\frac{5}{2}+\\frac{2}{3}+\\frac{5}{6}=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "5**((1)*Rational(5,2)+(1)*Rational(2,3)+(1)*Rational(5,6))",
+        "expected": "625",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-root_law",
+      "explanation_detail": {
+        "approach": "累乗根を $\\sqrt[n]{a^m}=a^{\\frac{m}{n}}$ と分数の指数に直すと、かけ算・わり算が指数のたし算・ひき算になる。",
+        "steps": [
+          "$\\sqrt{5^{5}}\\times\\sqrt[3]{5^{2}}\\times\\sqrt[6]{5^{5}}=5^{\\frac{5}{2}}\\times5^{\\frac{2}{3}}\\times5^{\\frac{5}{6}}$。",
+          "指数を計算して $\\frac{5}{2}+\\frac{2}{3}+\\frac{5}{6}=4$。",
+          "$5^{4}=625$。"
+        ],
+        "alternatives": [
+          "指数の分母を通分して1つの累乗根 $\\sqrt[N]{\\ \\ }$ にまとめて計算しても、同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分数の指数に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt[3]{a^2}$ を $a^{\\frac32}$ と、分母と分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a^{\\frac{m}{n}}$ の形に直して計算しなさい。$$\\sqrt[6]{6^{5}}\\times\\sqrt[6]{6^{5}}\\times\\sqrt[3]{6}$$",
+      "answer": {
+        "value": "$36$"
+      },
+      "explanation": "各項を $6$ の累乗で表すと、指数は $\\frac{5}{6}+\\frac{5}{6}+\\frac{1}{3}=2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "6**((1)*Rational(5,6)+(1)*Rational(5,6)+(1)*Rational(1,3))",
+        "expected": "36",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-root_law",
+      "explanation_detail": {
+        "approach": "累乗根を $\\sqrt[n]{a^m}=a^{\\frac{m}{n}}$ と分数の指数に直すと、かけ算・わり算が指数のたし算・ひき算になる。",
+        "steps": [
+          "$\\sqrt[6]{6^{5}}\\times\\sqrt[6]{6^{5}}\\times\\sqrt[3]{6}=6^{\\frac{5}{6}}\\times6^{\\frac{5}{6}}\\times6^{\\frac{1}{3}}$。",
+          "指数を計算して $\\frac{5}{6}+\\frac{5}{6}+\\frac{1}{3}=2$。",
+          "$6^{2}=36$。"
+        ],
+        "alternatives": [
+          "指数の分母を通分して1つの累乗根 $\\sqrt[N]{\\ \\ }$ にまとめて計算しても、同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分数の指数に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt[3]{a^2}$ を $a^{\\frac32}$ と、分母と分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "$a^{\\frac{m}{n}}$ の形に直して計算しなさい。$$\\sqrt{10}\\div\\sqrt[3]{10}\\times\\sqrt[6]{10^{5}}$$",
+      "answer": {
+        "value": "$10$"
+      },
+      "explanation": "各項を $10$ の累乗で表すと、指数は $\\frac{1}{2}-\\frac{1}{3}+\\frac{5}{6}=1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "10**((1)*Rational(1,2)+(-1)*Rational(1,3)+(1)*Rational(5,6))",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-root_law",
+      "explanation_detail": {
+        "approach": "累乗根を $\\sqrt[n]{a^m}=a^{\\frac{m}{n}}$ と分数の指数に直すと、かけ算・わり算が指数のたし算・ひき算になる。",
+        "steps": [
+          "$\\sqrt{10}\\div\\sqrt[3]{10}\\times\\sqrt[6]{10^{5}}=10^{\\frac{1}{2}}\\div10^{\\frac{1}{3}}\\times10^{\\frac{5}{6}}$。",
+          "指数を計算して $\\frac{1}{2}-\\frac{1}{3}+\\frac{5}{6}=1$。",
+          "$10^{1}=10$。"
+        ],
+        "alternatives": [
+          "指数の分母を通分して1つの累乗根 $\\sqrt[N]{\\ \\ }$ にまとめて計算しても、同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分数の指数に正しく直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt[3]{a^2}$ を $a^{\\frac32}$ と、分母と分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の定義にもとづいて、$\\log_{\\frac{1}{2}}\\dfrac{1}{\\sqrt{2}}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\left(\\dfrac{1}{2}\\right)=2^{-1}$、$\\dfrac{1}{\\sqrt{2}}=2^{-\\frac{1}{2}}$ なので、$(2^{-1})^p=2^{-\\frac{1}{2}}$ より $p=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(2**(Rational(-1,2)), Rational(1,2))",
+        "expected": "Rational(1,2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-log_value",
+      "explanation_detail": {
+        "approach": "$\\log_{\\frac{1}{2}}\\dfrac{1}{\\sqrt{2}}=p$ とおき、$\\left(\\dfrac{1}{2}\\right)^p=\\dfrac{1}{\\sqrt{2}}$ を満たす $p$ を探す。底と真数を同じ数の累乗で表すとよい。",
+        "steps": [
+          "$\\log_{\\frac{1}{2}}\\dfrac{1}{\\sqrt{2}}=p$ とおくと $\\left(\\dfrac{1}{2}\\right)^p=\\dfrac{1}{\\sqrt{2}}$。",
+          "$2^{-1p}=2^{-\\frac{1}{2}}$ より $-1p=-\\frac{1}{2}$。",
+          "$p=\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "底の変換公式で $\\dfrac{\\log_{2}\\dfrac{1}{\\sqrt{2}}}{\\log_{2}\\dfrac{1}{2}}=\\dfrac{-\\frac{1}{2}}{-1}$ と計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底と真数を同じ数の累乗で表している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底と真数の役割を逆にして、逆数を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の定義にもとづいて、$\\log_{5}\\sqrt{5}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$5=5^{1}$、$\\sqrt{5}=5^{\\frac{1}{2}}$ なので、$(5^{1})^p=5^{\\frac{1}{2}}$ より $p=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(5**(Rational(1,2)), 5)",
+        "expected": "Rational(1,2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-log_value",
+      "explanation_detail": {
+        "approach": "$\\log_{5}\\sqrt{5}=p$ とおき、$5^p=\\sqrt{5}$ を満たす $p$ を探す。底と真数を同じ数の累乗で表すとよい。",
+        "steps": [
+          "$\\log_{5}\\sqrt{5}=p$ とおくと $5^p=\\sqrt{5}$。",
+          "$5^{1p}=5^{\\frac{1}{2}}$ より $1p=\\frac{1}{2}$。",
+          "$p=\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "底の変換公式で $\\dfrac{\\log_{5}\\sqrt{5}}{\\log_{5}5}=\\dfrac{\\frac{1}{2}}{1}$ と計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底と真数を同じ数の累乗で表している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底と真数の役割を逆にして、逆数を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の定義にもとづいて、$\\log_{2}\\sqrt{2}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$2=2^{1}$、$\\sqrt{2}=2^{\\frac{1}{2}}$ なので、$(2^{1})^p=2^{\\frac{1}{2}}$ より $p=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(2**(Rational(1,2)), 2)",
+        "expected": "Rational(1,2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-log_value",
+      "explanation_detail": {
+        "approach": "$\\log_{2}\\sqrt{2}=p$ とおき、$2^p=\\sqrt{2}$ を満たす $p$ を探す。底と真数を同じ数の累乗で表すとよい。",
+        "steps": [
+          "$\\log_{2}\\sqrt{2}=p$ とおくと $2^p=\\sqrt{2}$。",
+          "$2^{1p}=2^{\\frac{1}{2}}$ より $1p=\\frac{1}{2}$。",
+          "$p=\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "底の変換公式で $\\dfrac{\\log_{2}\\sqrt{2}}{\\log_{2}2}=\\dfrac{\\frac{1}{2}}{1}$ と計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底と真数を同じ数の累乗で表している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底と真数の役割を逆にして、逆数を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の定義にもとづいて、$\\log_{\\frac{1}{5}}625$ の値を求めなさい。",
+      "answer": {
+        "value": "$-4$"
+      },
+      "explanation": "$\\left(\\dfrac{1}{5}\\right)=5^{-1}$、$625=5^{4}$ なので、$(5^{-1})^p=5^{4}$ より $p=-4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(5**(4), Rational(1,5))",
+        "expected": "-4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-log_value",
+      "explanation_detail": {
+        "approach": "$\\log_{\\frac{1}{5}}625=p$ とおき、$\\left(\\dfrac{1}{5}\\right)^p=625$ を満たす $p$ を探す。底と真数を同じ数の累乗で表すとよい。",
+        "steps": [
+          "$\\log_{\\frac{1}{5}}625=p$ とおくと $\\left(\\dfrac{1}{5}\\right)^p=625$。",
+          "$5^{-1p}=5^{4}$ より $-1p=4$。",
+          "$p=-4$。"
+        ],
+        "alternatives": [
+          "底の変換公式で $\\dfrac{\\log_{5}625}{\\log_{5}\\dfrac{1}{5}}=\\dfrac{4}{-1}$ と計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底と真数を同じ数の累乗で表している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底と真数の役割を逆にして、逆数を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の性質を用いて、次の式を簡単にしなさい。$$\\log_{6}9+\\log_{6}4$$",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "対数の性質で1つの対数にまとめ、真数を底の累乗で表す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(9,6)+log(4,6)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-log_props",
+      "explanation_detail": {
+        "approach": "1つ1つの対数は簡単な値にならない。性質 $\\log_aM+\\log_aN=\\log_aMN$ などで1つにまとめると、真数が底の累乗になる。",
+        "steps": [
+          "$\\log_{6}9+\\log_{6}4$",
+          "$=\\log_{6}(9\\times4)=\\log_{6}36$。",
+          "$=2$。"
+        ],
+        "alternatives": [
+          "各真数を素因数分解し、$\\log_{6}$ の和・差に分けてから打ち消し合いを見てもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "性質を正しく使って1つの対数にまとめている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_aM+\\log_aN=\\log_a(M+N)$ と誤る。",
+          "係数 $2$ を真数の2乗に直さずに真数に掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の性質を用いて、次の式を簡単にしなさい。$$2\\log_{10}20-\\log_{10}4$$",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "対数の性質で1つの対数にまとめ、真数を底の累乗で表す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*log(20,10)-log(4,10)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-log_props",
+      "explanation_detail": {
+        "approach": "1つ1つの対数は簡単な値にならない。性質 $\\log_aM+\\log_aN=\\log_aMN$ などで1つにまとめると、真数が底の累乗になる。",
+        "steps": [
+          "$2\\log_{10}20-\\log_{10}4$",
+          "$2\\log_{10}20=\\log_{10}20^2=\\log_{10}400$。",
+          "$=\\log_{10}\\dfrac{400}{4}=\\log_{10}100=2$。"
+        ],
+        "alternatives": [
+          "各真数を素因数分解し、$\\log_{10}$ の和・差に分けてから打ち消し合いを見てもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "性質を正しく使って1つの対数にまとめている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_aM+\\log_aN=\\log_a(M+N)$ と誤る。",
+          "係数 $2$ を真数の2乗に直さずに真数に掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の性質を用いて、次の式を簡単にしなさい。$$\\log_{12}16+\\log_{12}9$$",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "対数の性質で1つの対数にまとめ、真数を底の累乗で表す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(16,12)+log(9,12)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-log_props",
+      "explanation_detail": {
+        "approach": "1つ1つの対数は簡単な値にならない。性質 $\\log_aM+\\log_aN=\\log_aMN$ などで1つにまとめると、真数が底の累乗になる。",
+        "steps": [
+          "$\\log_{12}16+\\log_{12}9$",
+          "$=\\log_{12}(16\\times9)=\\log_{12}144$。",
+          "$=2$。"
+        ],
+        "alternatives": [
+          "各真数を素因数分解し、$\\log_{12}$ の和・差に分けてから打ち消し合いを見てもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "性質を正しく使って1つの対数にまとめている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_aM+\\log_aN=\\log_a(M+N)$ と誤る。",
+          "係数 $2$ を真数の2乗に直さずに真数に掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "対数の性質を用いて、次の式を簡単にしなさい。$$\\log_{12}24+\\log_{12}6$$",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "対数の性質で1つの対数にまとめ、真数を底の累乗で表す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "log(24,12)+log(6,12)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-log_props",
+      "explanation_detail": {
+        "approach": "1つ1つの対数は簡単な値にならない。性質 $\\log_aM+\\log_aN=\\log_aMN$ などで1つにまとめると、真数が底の累乗になる。",
+        "steps": [
+          "$\\log_{12}24+\\log_{12}6$",
+          "$=\\log_{12}(24\\times6)=\\log_{12}144$。",
+          "$=2$。"
+        ],
+        "alternatives": [
+          "各真数を素因数分解し、$\\log_{12}$ の和・差に分けてから打ち消し合いを見てもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "性質を正しく使って1つの対数にまとめている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_aM+\\log_aN=\\log_a(M+N)$ と誤る。",
+          "係数 $2$ を真数の2乗に直さずに真数に掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の3つの数のうち、最も小さいものを選びなさい。$$\\sqrt{2},\\quad \\sqrt[4]{8},\\quad \\sqrt[3]{2}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\sqrt{2}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\sqrt[3]{2}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\sqrt[4]{8}$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "すべて正の数なので、$12$ 乗した値の大小で比べられる：$\\left(\\sqrt{2}\\right)^{12}=64$、$\\left(\\sqrt[4]{8}\\right)^{12}=512$、$\\left(\\sqrt[3]{2}\\right)^{12}=16$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[2**6, 8**3, 2**4]",
+        "expected": "[64, 512, 16]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_compare",
+      "explanation_detail": {
+        "approach": "根号の指数がそろっていないので、すべてを $12$ 乗（指数の分母の最小公倍数）して整数にしてから比べる。正の数 $A,\\ B$ では $A<B\\iff A^{n}<B^{n}$。",
+        "steps": [
+          "$\\sqrt[k]{b}=b^{\\frac1k}$ と表し、$12$ 乗する。",
+          "$\\left(\\sqrt{2}\\right)^{12}=2^{6}=64$。",
+          "$\\left(\\sqrt[4]{8}\\right)^{12}=8^{3}=512$。",
+          "$\\left(\\sqrt[3]{2}\\right)^{12}=2^{4}=16$。",
+          "小さい順に $\\sqrt[3]{2}<\\sqrt{2}<\\sqrt[4]{8}$。"
+        ],
+        "alternatives": [
+          "底を $2$ にそろえられるもの（$\\sqrt[3]{4}=2^{\\frac23}$ など）は指数の大小で比べてもよい（底 $2>1$ なので指数が大きいほど大きい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "同じ数で累乗して比べる方針を立てている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$12$ 乗して比べると $\\sqrt{2}$ は $64$ で、最小ではない。根号の中の数や根号の指数だけで判断している。",
+          "misconception": "累乗根の大小を中身や指数だけで判断する誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$12$ 乗して比べると $\\sqrt[4]{8}$ は $512$ で、最小ではない。根号の中の数や根号の指数だけで判断している。",
+          "misconception": "累乗根の大小を中身や指数だけで判断する誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の3つの数のうち、最も小さいものを選びなさい。$$\\sqrt[6]{9},\\quad \\sqrt[4]{3},\\quad \\sqrt{2}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\sqrt{2}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\sqrt[6]{9}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\sqrt[4]{3}$"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "すべて正の数なので、$12$ 乗した値の大小で比べられる：$\\left(\\sqrt[6]{9}\\right)^{12}=81$、$\\left(\\sqrt[4]{3}\\right)^{12}=27$、$\\left(\\sqrt{2}\\right)^{12}=64$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[9**2, 3**3, 2**6]",
+        "expected": "[81, 27, 64]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_compare",
+      "explanation_detail": {
+        "approach": "根号の指数がそろっていないので、すべてを $12$ 乗（指数の分母の最小公倍数）して整数にしてから比べる。正の数 $A,\\ B$ では $A<B\\iff A^{n}<B^{n}$。",
+        "steps": [
+          "$\\sqrt[k]{b}=b^{\\frac1k}$ と表し、$12$ 乗する。",
+          "$\\left(\\sqrt[6]{9}\\right)^{12}=9^{2}=81$。",
+          "$\\left(\\sqrt[4]{3}\\right)^{12}=3^{3}=27$。",
+          "$\\left(\\sqrt{2}\\right)^{12}=2^{6}=64$。",
+          "小さい順に $\\sqrt[4]{3}<\\sqrt{2}<\\sqrt[6]{9}$。"
+        ],
+        "alternatives": [
+          "底を $2$ にそろえられるもの（$\\sqrt[3]{4}=2^{\\frac23}$ など）は指数の大小で比べてもよい（底 $2>1$ なので指数が大きいほど大きい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "同じ数で累乗して比べる方針を立てている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$12$ 乗して比べると $\\sqrt{2}$ は $64$ で、最小ではない。根号の中の数や根号の指数だけで判断している。",
+          "misconception": "累乗根の大小を中身や指数だけで判断する誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$12$ 乗して比べると $\\sqrt[6]{9}$ は $81$ で、最小ではない。根号の中の数や根号の指数だけで判断している。",
+          "misconception": "累乗根の大小を中身や指数だけで判断する誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の3つの数のうち、最も大きいものを選びなさい。$$\\sqrt[5]{5},\\quad \\sqrt[3]{2},\\quad \\sqrt[3]{4}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\sqrt[5]{5}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\sqrt[3]{2}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\sqrt[3]{4}$"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "すべて正の数なので、$15$ 乗した値の大小で比べられる：$\\left(\\sqrt[5]{5}\\right)^{15}=125$、$\\left(\\sqrt[3]{2}\\right)^{15}=32$、$\\left(\\sqrt[3]{4}\\right)^{15}=1024$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[5**3, 2**5, 4**5]",
+        "expected": "[125, 32, 1024]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_compare",
+      "explanation_detail": {
+        "approach": "根号の指数がそろっていないので、すべてを $15$ 乗（指数の分母の最小公倍数）して整数にしてから比べる。正の数 $A,\\ B$ では $A<B\\iff A^{n}<B^{n}$。",
+        "steps": [
+          "$\\sqrt[k]{b}=b^{\\frac1k}$ と表し、$15$ 乗する。",
+          "$\\left(\\sqrt[5]{5}\\right)^{15}=5^{3}=125$。",
+          "$\\left(\\sqrt[3]{2}\\right)^{15}=2^{5}=32$。",
+          "$\\left(\\sqrt[3]{4}\\right)^{15}=4^{5}=1024$。",
+          "小さい順に $\\sqrt[3]{2}<\\sqrt[5]{5}<\\sqrt[3]{4}$。"
+        ],
+        "alternatives": [
+          "底を $2$ にそろえられるもの（$\\sqrt[3]{4}=2^{\\frac23}$ など）は指数の大小で比べてもよい（底 $2>1$ なので指数が大きいほど大きい）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "同じ数で累乗して比べる方針を立てている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$15$ 乗して比べると $\\sqrt[5]{5}$ は $125$ で、最大ではない。根号の中の数や根号の指数だけで判断している。",
+          "misconception": "累乗根の大小を中身や指数だけで判断する誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$15$ 乗して比べると $\\sqrt[3]{2}$ は $32$ で、最大ではない。根号の中の数や根号の指数だけで判断している。",
+          "misconception": "累乗根の大小を中身や指数だけで判断する誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $4^{x+1}=8^{x+2}$ を解きなさい。",
+      "answer": {
+        "value": "$x=-4$"
+      },
+      "explanation": "底を $2$ にそろえると $2^{2(x+1)}=2^{3(x+2)}$。指数を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "4**(-4+(1)) - 8**(-4+(2))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_equation",
+      "explanation_detail": {
+        "approach": "$4$ と $8$ はどちらも $2$ の累乗。底をそろえれば、指数関数は1対1なので指数どうしが等しいという式になる。",
+        "steps": [
+          "$4=2^{2},\\ 8=2^{3}$ より $2^{2(x+1)}=2^{3(x+2)}$。",
+          "$2(x+1)=3(x+2)$。",
+          "$x=-4$。"
+        ],
+        "alternatives": [
+          "両辺の $2$ を底とする対数をとっても、同じ一次方程式が得られる。",
+          "$x=-4$ を代入して両辺が等しくなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "指数の方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "解が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(c^i)^{x+s}$ を $c^{i+x+s}$ と、指数を掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $16^{x+1}=8^{x-3}$ を解きなさい。",
+      "answer": {
+        "value": "$x=-13$"
+      },
+      "explanation": "底を $2$ にそろえると $2^{4(x+1)}=2^{3(x-3)}$。指数を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "16**(-13+(1)) - 8**(-13+(-3))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_equation",
+      "explanation_detail": {
+        "approach": "$16$ と $8$ はどちらも $2$ の累乗。底をそろえれば、指数関数は1対1なので指数どうしが等しいという式になる。",
+        "steps": [
+          "$16=2^{4},\\ 8=2^{3}$ より $2^{4(x+1)}=2^{3(x-3)}$。",
+          "$4(x+1)=3(x-3)$。",
+          "$x=-13$。"
+        ],
+        "alternatives": [
+          "両辺の $2$ を底とする対数をとっても、同じ一次方程式が得られる。",
+          "$x=-13$ を代入して両辺が等しくなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "指数の方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "解が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(c^i)^{x+s}$ を $c^{i+x+s}$ と、指数を掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $2^{x-3}=16^{x+3}$ を解きなさい。",
+      "answer": {
+        "value": "$x=-5$"
+      },
+      "explanation": "底を $2$ にそろえると $2^{1(x-3)}=2^{4(x+3)}$。指数を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2**(-5+(-3)) - 16**(-5+(3))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_equation",
+      "explanation_detail": {
+        "approach": "$2$ と $16$ はどちらも $2$ の累乗。底をそろえれば、指数関数は1対1なので指数どうしが等しいという式になる。",
+        "steps": [
+          "$2=2^{1},\\ 16=2^{4}$ より $2^{1(x-3)}=2^{4(x+3)}$。",
+          "$1(x-3)=4(x+3)$。",
+          "$x=-5$。"
+        ],
+        "alternatives": [
+          "両辺の $2$ を底とする対数をとっても、同じ一次方程式が得られる。",
+          "$x=-5$ を代入して両辺が等しくなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "指数の方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "解が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(c^i)^{x+s}$ を $c^{i+x+s}$ と、指数を掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $3^{x-2}=27^{x+2}$ を解きなさい。",
+      "answer": {
+        "value": "$x=-4$"
+      },
+      "explanation": "底を $3$ にそろえると $3^{1(x-2)}=3^{3(x+2)}$。指数を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "3**(-4+(-2)) - 27**(-4+(2))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_equation",
+      "explanation_detail": {
+        "approach": "$3$ と $27$ はどちらも $3$ の累乗。底をそろえれば、指数関数は1対1なので指数どうしが等しいという式になる。",
+        "steps": [
+          "$3=3^{1},\\ 27=3^{3}$ より $3^{1(x-2)}=3^{3(x+2)}$。",
+          "$1(x-2)=3(x+2)$。",
+          "$x=-4$。"
+        ],
+        "alternatives": [
+          "両辺の $3$ を底とする対数をとっても、同じ一次方程式が得られる。",
+          "$x=-4$ を代入して両辺が等しくなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "指数の方程式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "解が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(c^i)^{x+s}$ を $c^{i+x+s}$ と、指数を掛けずに足してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $2\\cdot4^x-9\\cdot2^x+4=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=-1,\\ 2$"
+      },
+      "explanation": "$2^x=t\\ (t>0)$ とおくと $2t^2-9t+4=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[2*4**(-1)+(-9)*2**(-1)+(4), 2*4**(2)+(-9)*2**(2)+(4)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_quad_eq",
+      "explanation_detail": {
+        "approach": "$4^x=(2^x)^2$ に注目して $2^x=t$ とおくと、$t$ の二次方程式になる。$t$ は正の数しかとらないことに注意する。",
+        "steps": [
+          "$2^x=t$ とおくと $t>0$、方程式は $2t^2-9t+4=0$。",
+          "$t=\\dfrac{1}{2},\\ 4$。",
+          "$2^x=\\dfrac{1}{2},\\ 2^x=4$ より $x=-1,\\ 2$。"
+        ],
+        "alternatives": [
+          "得られた $x$ をもとの方程式に代入して $0$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$t$ に置きかえ、$t>0$ を示している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の二次方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$t>0$ を考えずに負の $t$ からも $x$ を求めようとする。",
+          "$4^x=2^{x^2}$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $3\\cdot9^x-28\\cdot3^x+9=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=-1,\\ 2$"
+      },
+      "explanation": "$3^x=t\\ (t>0)$ とおくと $3t^2-28t+9=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[3*9**(-1)+(-28)*3**(-1)+(9), 3*9**(2)+(-28)*3**(2)+(9)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_quad_eq",
+      "explanation_detail": {
+        "approach": "$9^x=(3^x)^2$ に注目して $3^x=t$ とおくと、$t$ の二次方程式になる。$t$ は正の数しかとらないことに注意する。",
+        "steps": [
+          "$3^x=t$ とおくと $t>0$、方程式は $3t^2-28t+9=0$。",
+          "$t=9,\\ \\dfrac{1}{3}$。",
+          "$3^x=9,\\ 3^x=\\dfrac{1}{3}$ より $x=-1,\\ 2$。"
+        ],
+        "alternatives": [
+          "得られた $x$ をもとの方程式に代入して $0$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$t$ に置きかえ、$t>0$ を示している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の二次方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$t>0$ を考えずに負の $t$ からも $x$ を求めようとする。",
+          "$9^x=3^{x^2}$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $3\\cdot9^x-10\\cdot3^x+3=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=-1,\\ 1$"
+      },
+      "explanation": "$3^x=t\\ (t>0)$ とおくと $3t^2-10t+3=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[3*9**(-1)+(-10)*3**(-1)+(3), 3*9**(1)+(-10)*3**(1)+(3)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_quad_eq",
+      "explanation_detail": {
+        "approach": "$9^x=(3^x)^2$ に注目して $3^x=t$ とおくと、$t$ の二次方程式になる。$t$ は正の数しかとらないことに注意する。",
+        "steps": [
+          "$3^x=t$ とおくと $t>0$、方程式は $3t^2-10t+3=0$。",
+          "$t=3,\\ \\dfrac{1}{3}$。",
+          "$3^x=3,\\ 3^x=\\dfrac{1}{3}$ より $x=-1,\\ 1$。"
+        ],
+        "alternatives": [
+          "得られた $x$ をもとの方程式に代入して $0$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$t$ に置きかえ、$t>0$ を示している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の二次方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$t>0$ を考えずに負の $t$ からも $x$ を求めようとする。",
+          "$9^x=3^{x^2}$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $4^x+2^x-20=0$ を解きなさい。",
+      "answer": {
+        "value": "$x=2$"
+      },
+      "explanation": "$2^x=t\\ (t>0)$ とおくと $t^2+t-20=0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[1*4**(2)+(1)*2**(2)+(-20)]",
+        "expected": "[0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_quad_eq",
+      "explanation_detail": {
+        "approach": "$4^x=(2^x)^2$ に注目して $2^x=t$ とおくと、$t$ の二次方程式になる。$t$ は正の数しかとらないことに注意する。",
+        "steps": [
+          "$2^x=t$ とおくと $t>0$、方程式は $t^2+t-20=0$。",
+          "$t=4,\\ -5$。 $t>0$ より $t=4$。",
+          "$2^x=4$ より $x=2$。"
+        ],
+        "alternatives": [
+          "得られた $x$ をもとの方程式に代入して $0$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$t$ に置きかえ、$t>0$ を示している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の二次方程式を正しく解いている",
+            "points": 2
+          },
+          {
+            "point": "$x$ を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$t>0$ を考えずに負の $t$ からも $x$ を求めようとする。",
+          "$4^x=2^{x^2}$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{2}(x+2)+\\log_{2}(x-1)=2$ を解きなさい。",
+      "answer": {
+        "value": "$x=2$"
+      },
+      "explanation": "真数条件 $x>1$ のもとで $(x+2)(x-1)=4$ を解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x+2)*(x-1)-4, x)",
+        "expected": "[-3, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_equation",
+      "explanation_detail": {
+        "approach": "対数の和を1つの対数にまとめ、右辺も同じ底の対数で表して真数を比べる。真数条件を最初に確認しておく。",
+        "steps": [
+          "真数条件：$x+2>0$ かつ $x-1>0$ より $x>1$。",
+          "$(x+2)(x-1)=2^{2}=4$。",
+          "これを解くと $x=2,\\ -3$。",
+          "$x>1$ より $x=2$。"
+        ],
+        "alternatives": [
+          "$x=2$ を代入すると左辺は $\\log_{2}4+\\log_{2}1=2$ となり、確かに成り立つ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "真数の方程式を正しく立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "条件に合う解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x=-3$ も答えてしまう（真数が負になる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{3}x+\\log_{3}(x+2)=1$ を解きなさい。",
+      "answer": {
+        "value": "$x=1$"
+      },
+      "explanation": "真数条件 $x>0$ のもとで $x(x+2)=3$ を解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x)*(x+2)-3, x)",
+        "expected": "[-3, 1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_equation",
+      "explanation_detail": {
+        "approach": "対数の和を1つの対数にまとめ、右辺も同じ底の対数で表して真数を比べる。真数条件を最初に確認しておく。",
+        "steps": [
+          "真数条件：$x>0$ かつ $x+2>0$ より $x>0$。",
+          "$x(x+2)=3^{1}=3$。",
+          "これを解くと $x=1,\\ -3$。",
+          "$x>0$ より $x=1$。"
+        ],
+        "alternatives": [
+          "$x=1$ を代入すると左辺は $\\log_{3}1+\\log_{3}3=1$ となり、確かに成り立つ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "真数の方程式を正しく立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "条件に合う解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x=-3$ も答えてしまう（真数が負になる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{2}(x+1)+\\log_{2}(x-2)=2$ を解きなさい。",
+      "answer": {
+        "value": "$x=3$"
+      },
+      "explanation": "真数条件 $x>2$ のもとで $(x+1)(x-2)=4$ を解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x+1)*(x-2)-4, x)",
+        "expected": "[-2, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_equation",
+      "explanation_detail": {
+        "approach": "対数の和を1つの対数にまとめ、右辺も同じ底の対数で表して真数を比べる。真数条件を最初に確認しておく。",
+        "steps": [
+          "真数条件：$x+1>0$ かつ $x-2>0$ より $x>2$。",
+          "$(x+1)(x-2)=2^{2}=4$。",
+          "これを解くと $x=3,\\ -2$。",
+          "$x>2$ より $x=3$。"
+        ],
+        "alternatives": [
+          "$x=3$ を代入すると左辺は $\\log_{2}4+\\log_{2}1=2$ となり、確かに成り立つ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "真数の方程式を正しく立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "条件に合う解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x=-2$ も答えてしまう（真数が負になる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{2}(x-1)+\\log_{2}(x+2)=2$ を解きなさい。",
+      "answer": {
+        "value": "$x=2$"
+      },
+      "explanation": "真数条件 $x>1$ のもとで $(x-1)(x+2)=4$ を解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x-1)*(x+2)-4, x)",
+        "expected": "[-3, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_equation",
+      "explanation_detail": {
+        "approach": "対数の和を1つの対数にまとめ、右辺も同じ底の対数で表して真数を比べる。真数条件を最初に確認しておく。",
+        "steps": [
+          "真数条件：$x-1>0$ かつ $x+2>0$ より $x>1$。",
+          "$(x-1)(x+2)=2^{2}=4$。",
+          "これを解くと $x=2,\\ -3$。",
+          "$x>1$ より $x=2$。"
+        ],
+        "alternatives": [
+          "$x=2$ を代入すると左辺は $\\log_{2}1+\\log_{2}4=2$ となり、確かに成り立つ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "真数の方程式を正しく立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "条件に合う解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x=-3$ も答えてしまう（真数が負になる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不等式 $\\log_{2}(x-2)\\geqq3$ を満たす $x$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$x\\geqq10$"
+      },
+      "explanation": "右辺を $\\log_{2}8$ と表す。底 $2$ は $1$ より大きいので、真数の大小は同じ向き。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[2, 2+(2)**(3)]",
+        "expected": "[2, 10]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_ineq",
+      "explanation_detail": {
+        "approach": "真数条件を確認し、右辺を同じ底の対数で表して真数どうしを比べる。底が $1$ より小さいときは不等号の向きが逆になる。",
+        "steps": [
+          "真数条件：$x>2$。",
+          "$3=\\log_{2}8$ より $\\log_{2}(x-2)\\geqq\\log_{2}8$。",
+          "底 $2$ は $1$ より大きいので $x-2\\geqq8$。",
+          "真数条件と合わせて $x\\geqq10$。"
+        ],
+        "alternatives": [
+          "$y=\\log_{2}x$ のグラフ（底が $1$ より大きいので増加）をかき、$y=3$ との上下関係から読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "底と $1$ の大小から不等号の向きを正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が $1$ より小さいのに不等号の向きを変えない。",
+          "真数条件 $x>2$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不等式 $\\log_{3}x\\leqq-2$ を満たす $x$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$0<x\\leqq\\dfrac{1}{9}$"
+      },
+      "explanation": "右辺を $\\log_{3}\\dfrac{1}{9}$ と表す。底 $3$ は $1$ より大きいので、真数の大小は同じ向き。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[0, 0+(3)**(-2)]",
+        "expected": "[0, Rational(1,9)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_ineq",
+      "explanation_detail": {
+        "approach": "真数条件を確認し、右辺を同じ底の対数で表して真数どうしを比べる。底が $1$ より小さいときは不等号の向きが逆になる。",
+        "steps": [
+          "真数条件：$x>0$。",
+          "$-2=\\log_{3}\\dfrac{1}{9}$ より $\\log_{3}x\\leqq\\log_{3}\\dfrac{1}{9}$。",
+          "底 $3$ は $1$ より大きいので $x\\leqq\\dfrac{1}{9}$。",
+          "真数条件と合わせて $0<x\\leqq\\dfrac{1}{9}$。"
+        ],
+        "alternatives": [
+          "$y=\\log_{3}x$ のグラフ（底が $1$ より大きいので増加）をかき、$y=-2$ との上下関係から読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "底と $1$ の大小から不等号の向きを正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が $1$ より小さいのに不等号の向きを変えない。",
+          "真数条件 $x>0$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不等式 $\\log_{3}(x+1)\\geqq3$ を満たす $x$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$x\\geqq26$"
+      },
+      "explanation": "右辺を $\\log_{3}27$ と表す。底 $3$ は $1$ より大きいので、真数の大小は同じ向き。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[-1, -1+(3)**(3)]",
+        "expected": "[-1, 26]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_ineq",
+      "explanation_detail": {
+        "approach": "真数条件を確認し、右辺を同じ底の対数で表して真数どうしを比べる。底が $1$ より小さいときは不等号の向きが逆になる。",
+        "steps": [
+          "真数条件：$x>-1$。",
+          "$3=\\log_{3}27$ より $\\log_{3}(x+1)\\geqq\\log_{3}27$。",
+          "底 $3$ は $1$ より大きいので $x+1\\geqq27$。",
+          "真数条件と合わせて $x\\geqq26$。"
+        ],
+        "alternatives": [
+          "$y=\\log_{3}x$ のグラフ（底が $1$ より大きいので増加）をかき、$y=3$ との上下関係から読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "底と $1$ の大小から不等号の向きを正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が $1$ より小さいのに不等号の向きを変えない。",
+          "真数条件 $x>-1$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不等式 $\\log_{\\frac{1}{3}}x\\geqq1$ を満たす $x$ の値の範囲を求めなさい。",
+      "answer": {
+        "value": "$0<x\\leqq\\dfrac{1}{3}$"
+      },
+      "explanation": "右辺を $\\log_{\\frac{1}{3}}\\dfrac{1}{3}$ と表す。底 $\\dfrac{1}{3}$ は $1$ より小さいので、真数の大小は逆向き。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[0, 0+(Rational(1,3))**(1)]",
+        "expected": "[0, Rational(1,3)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-log_ineq",
+      "explanation_detail": {
+        "approach": "真数条件を確認し、右辺を同じ底の対数で表して真数どうしを比べる。底が $1$ より小さいときは不等号の向きが逆になる。",
+        "steps": [
+          "真数条件：$x>0$。",
+          "$1=\\log_{\\frac{1}{3}}\\dfrac{1}{3}$ より $\\log_{\\frac{1}{3}}x\\geqq\\log_{\\frac{1}{3}}\\dfrac{1}{3}$。",
+          "底 $\\dfrac{1}{3}$ は $1$ より小さいので $x\\leqq\\dfrac{1}{3}$。",
+          "真数条件と合わせて $0<x\\leqq\\dfrac{1}{3}$。"
+        ],
+        "alternatives": [
+          "$y=\\log_{\\frac{1}{3}}x$ のグラフ（底が $1$ より小さいので減少）をかき、$y=1$ との上下関係から読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を示している",
+            "points": 1
+          },
+          {
+            "point": "底と $1$ の大小から不等号の向きを正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "範囲を正しく答えている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が $1$ より小さいのに不等号の向きを変えない。",
+          "真数条件 $x>0$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式の値を求めなさい。$$\\left(\\log_{2}3+\\log_{4}9\\right)\\left(\\log_{3}2+\\log_{9}8\\right)$$",
+      "answer": {
+        "value": "$5$"
+      },
+      "explanation": "底の変換公式で底を $2$ にそろえ、$\\log_{2}3=L$ とおくと、第1因数は $2L$、第2因数は $\\dfrac{\\dfrac{5}{2}}{L}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(log(3,2)+log(9,4))*(log(2,3)+log(8,9))",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U05-change_base",
+      "explanation_detail": {
+        "approach": "底がばらばらなので、底の変換公式で同じ底にそろえる。$\\log_{2}3=L$ とおくと見通しがよい。",
+        "steps": [
+          "$\\log_{2}3=1L$、$\\log_{4}9=\\dfrac{\\log_{2}9}{\\log_{2}4}=\\dfrac{2L}{2}$ より、第1因数 $=2L$。",
+          "$\\log_{3}2=\\dfrac{1}{L}$、$\\log_{9}8=\\dfrac{3}{2L}$ より、第2因数 $=\\dfrac{\\dfrac{5}{2}}{L}$。",
+          "積は $2\\times\\dfrac{5}{2}=5$。"
+        ],
+        "alternatives": [
+          "底をすべて $3$ や $10$ にそろえても同じ値になる（底の選び方によらない）。",
+          "$\\log_{2}3\\cdot\\log_{3}2=1$ を使って、展開した各項を計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底の変換公式で底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "各因数を正しく簡単にしている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{4}M$ を $2\\log_{2}M$ としてしまう（正しくは $\\dfrac12\\log_{2}M$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式の値を求めなさい。$$\\left(\\log_{3}25+\\log_{9}25\\right)\\left(\\log_{5}9+\\log_{25}9\\right)$$",
+      "answer": {
+        "value": "$9$"
+      },
+      "explanation": "底の変換公式で底を $3$ にそろえ、$\\log_{3}5=L$ とおくと、第1因数は $3L$、第2因数は $\\dfrac{3}{L}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(log(25,3)+log(25,9))*(log(9,5)+log(9,25))",
+        "expected": "9",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U05-change_base",
+      "explanation_detail": {
+        "approach": "底がばらばらなので、底の変換公式で同じ底にそろえる。$\\log_{3}5=L$ とおくと見通しがよい。",
+        "steps": [
+          "$\\log_{3}25=2L$、$\\log_{9}25=\\dfrac{\\log_{3}25}{\\log_{3}9}=\\dfrac{2L}{2}$ より、第1因数 $=3L$。",
+          "$\\log_{5}9=\\dfrac{2}{L}$、$\\log_{25}9=\\dfrac{2}{2L}$ より、第2因数 $=\\dfrac{3}{L}$。",
+          "積は $3\\times3=9$。"
+        ],
+        "alternatives": [
+          "底をすべて $5$ や $10$ にそろえても同じ値になる（底の選び方によらない）。",
+          "$\\log_{3}5\\cdot\\log_{5}3=1$ を使って、展開した各項を計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底の変換公式で底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "各因数を正しく簡単にしている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{9}M$ を $2\\log_{3}M$ としてしまう（正しくは $\\dfrac12\\log_{3}M$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式の値を求めなさい。$$\\left(\\log_{2}27+\\log_{4}9\\right)\\left(\\log_{3}4+\\log_{9}2\\right)$$",
+      "answer": {
+        "value": "$10$"
+      },
+      "explanation": "底の変換公式で底を $2$ にそろえ、$\\log_{2}3=L$ とおくと、第1因数は $4L$、第2因数は $\\dfrac{\\dfrac{5}{2}}{L}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(log(27,2)+log(9,4))*(log(4,3)+log(2,9))",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U05-change_base",
+      "explanation_detail": {
+        "approach": "底がばらばらなので、底の変換公式で同じ底にそろえる。$\\log_{2}3=L$ とおくと見通しがよい。",
+        "steps": [
+          "$\\log_{2}27=3L$、$\\log_{4}9=\\dfrac{\\log_{2}9}{\\log_{2}4}=\\dfrac{2L}{2}$ より、第1因数 $=4L$。",
+          "$\\log_{3}4=\\dfrac{2}{L}$、$\\log_{9}2=\\dfrac{1}{2L}$ より、第2因数 $=\\dfrac{\\dfrac{5}{2}}{L}$。",
+          "積は $4\\times\\dfrac{5}{2}=10$。"
+        ],
+        "alternatives": [
+          "底をすべて $3$ や $10$ にそろえても同じ値になる（底の選び方によらない）。",
+          "$\\log_{2}3\\cdot\\log_{3}2=1$ を使って、展開した各項を計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底の変換公式で底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "各因数を正しく簡単にしている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{4}M$ を $2\\log_{2}M$ としてしまう（正しくは $\\dfrac12\\log_{2}M$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の式の値を求めなさい。$$\\left(\\log_{2}125+\\log_{4}5\\right)\\left(\\log_{5}8+\\log_{25}2\\right)$$",
+      "answer": {
+        "value": "$\\dfrac{49}{4}$"
+      },
+      "explanation": "底の変換公式で底を $2$ にそろえ、$\\log_{2}5=L$ とおくと、第1因数は $\\dfrac{7}{2}L$、第2因数は $\\dfrac{\\dfrac{7}{2}}{L}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(log(125,2)+log(5,4))*(log(8,5)+log(2,25))",
+        "expected": "Rational(49,4)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U05-change_base",
+      "explanation_detail": {
+        "approach": "底がばらばらなので、底の変換公式で同じ底にそろえる。$\\log_{2}5=L$ とおくと見通しがよい。",
+        "steps": [
+          "$\\log_{2}125=3L$、$\\log_{4}5=\\dfrac{\\log_{2}5}{\\log_{2}4}=\\dfrac{1L}{2}$ より、第1因数 $=\\dfrac{7}{2}L$。",
+          "$\\log_{5}8=\\dfrac{3}{L}$、$\\log_{25}2=\\dfrac{1}{2L}$ より、第2因数 $=\\dfrac{\\dfrac{7}{2}}{L}$。",
+          "積は $\\dfrac{7}{2}\\times\\dfrac{7}{2}=\\dfrac{49}{4}$。"
+        ],
+        "alternatives": [
+          "底をすべて $5$ や $10$ にそろえても同じ値になる（底の選び方によらない）。",
+          "$\\log_{2}5\\cdot\\log_{5}2=1$ を使って、展開した各項を計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "底の変換公式で底をそろえている",
+            "points": 1
+          },
+          {
+            "point": "各因数を正しく簡単にしている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{4}M$ を $2\\log_{2}M$ としてしまう（正しくは $\\dfrac12\\log_{2}M$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ とする。$18^{15}$ は何桁の整数か。求め方も示しなさい。",
+      "answer": {
+        "value": "19桁"
+      },
+      "explanation": "$\\log_{10}18^{15}=15(\\log_{10}2+2\\log_{10}3)=18.828$ より $10^{18}<18^{15}<10^{19}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "常用対数をとり、与えられた値で正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "$10^{n-1}\\leqq N<10^n$ の形の不等式で評価している",
+            "points": 3
+          },
+          {
+            "criterion": "桁数を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "floor(15*((1)*Rational(3010,10000)+(2)*Rational(4771,10000)+(0)))+1",
+        "expected": "19",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "computation",
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATH2-U05-common_log",
+      "explanation_detail": {
+        "approach": "$N$ が $k$ 桁 $\\iff10^{k-1}\\leqq N<10^k\\iff k-1\\leqq\\log_{10}N<k$。常用対数の値を計算し、整数部分に注目する。",
+        "steps": [
+          "$\\log_{10}18^{15}=15\\log_{10}18=15(\\log_{10}2+2\\log_{10}3)$。",
+          "$=18.828$。",
+          "$18<\\log_{10}18^{15}<19$ より $10^{18}<18^{15}<10^{19}$。",
+          "よって 19 桁。"
+        ],
+        "alternatives": [
+          "$10^{18}$ が $19$ 桁の最小の数であることから、$10^{18}$ 以上 $10^{19}$ 未満の整数は $19$ 桁と確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数の計算",
+            "points": 3
+          },
+          {
+            "point": "不等式による評価",
+            "points": 3
+          },
+          {
+            "point": "桁数",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "整数部分 $18$ をそのまま桁数と答える。",
+          "掛け算の途中で小数点の位置を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ とする。$\\left(\\dfrac{5}{9}\\right)^{21}$ を小数で表すと、小数第何位に初めて $0$ でない数字が現れるか。求め方も示しなさい。",
+      "answer": {
+        "value": "小数第6位"
+      },
+      "explanation": "$\\log_{10}\\left(\\dfrac{5}{9}\\right)^{21}=-5.3592$ より $10^{-6}<\\left(\\dfrac{5}{9}\\right)^{21}<10^{-5}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "常用対数をとり、与えられた値で正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "$10^{-k}\\leqq x<10^{-k+1}$ の形の不等式で評価している",
+            "points": 3
+          },
+          {
+            "criterion": "位を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "-floor(21*((-1)*Rational(3010,10000)+(-2)*Rational(4771,10000)+(1)))",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "computation",
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATH2-U05-common_log",
+      "explanation_detail": {
+        "approach": "$0<x<1$ のとき、小数第 $k$ 位に初めて $0$ でない数字が現れる $\\iff10^{-k}\\leqq x<10^{-k+1}$。常用対数の値が負になることに注意する。",
+        "steps": [
+          "$\\log_{10}\\left(\\dfrac{5}{9}\\right)^{21}=21(-\\log_{10}2-2\\log_{10}3+1)$。",
+          "$=-5.3592$。",
+          "$-6<-5.3592<-5$ より $10^{-6}<\\left(\\dfrac{5}{9}\\right)^{21}<10^{-5}$。",
+          "よって小数第 6 位に初めて $0$ でない数字が現れる。"
+        ],
+        "alternatives": [
+          "$10^{-6}$ は小数第 $6$ 位に初めて $1$ が現れる数で、$10^{-5}$ 未満の数は小数第 $5$ 位までがすべて $0$ であることから確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数の計算",
+            "points": 3
+          },
+          {
+            "point": "不等式による評価",
+            "points": 3
+          },
+          {
+            "point": "位",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "負の数 $-5.3592$ の整数部分を $-5$ と考えて、1つずれた位を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ とする。$18^{52}$ は何桁の整数か。求め方も示しなさい。",
+      "answer": {
+        "value": "66桁"
+      },
+      "explanation": "$\\log_{10}18^{52}=52(\\log_{10}2+2\\log_{10}3)=65.2704$ より $10^{65}<18^{52}<10^{66}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "常用対数をとり、与えられた値で正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "$10^{n-1}\\leqq N<10^n$ の形の不等式で評価している",
+            "points": 3
+          },
+          {
+            "criterion": "桁数を正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "floor(52*((1)*Rational(3010,10000)+(2)*Rational(4771,10000)+(0)))+1",
+        "expected": "66",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "computation",
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-MATH2-U05-common_log",
+      "explanation_detail": {
+        "approach": "$N$ が $k$ 桁 $\\iff10^{k-1}\\leqq N<10^k\\iff k-1\\leqq\\log_{10}N<k$。常用対数の値を計算し、整数部分に注目する。",
+        "steps": [
+          "$\\log_{10}18^{52}=52\\log_{10}18=52(\\log_{10}2+2\\log_{10}3)$。",
+          "$=65.2704$。",
+          "$65<\\log_{10}18^{52}<66$ より $10^{65}<18^{52}<10^{66}$。",
+          "よって 66 桁。"
+        ],
+        "alternatives": [
+          "$10^{65}$ が $66$ 桁の最小の数であることから、$10^{65}$ 以上 $10^{66}$ 未満の整数は $66$ 桁と確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数の計算",
+            "points": 3
+          },
+          {
+            "point": "不等式による評価",
+            "points": 3
+          },
+          {
+            "point": "桁数",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "整数部分 $65$ をそのまま桁数と答える。",
+          "掛け算の途中で小数点の位置を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=4^x-2\\cdot2^x+1\\ \\left(0\\leqq x\\leqq2\\right)$ の最大値と最小値、およびそれらをとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $9$（$x=2$）、最小値 $0$（$x=0$）"
+      },
+      "explanation": "$2^x=t$ とおくと $1\\leqq t\\leqq4$ で $y=t^2-2t+1$。二次関数の定義域つき最大・最小の問題になる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切に置きかえ、$t$ の変域を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$t$ の二次関数の最大・最小を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "対応する $x$ の値を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(4)**2-(2)*(4)+(1), (1)**2-(2)*(1)+(1)]",
+        "expected": "[9, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_log_maxmin",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "$2^x=t$ とおくと $y$ は $t$ の二次関数になる。$2^x$ は増加関数なので、$x$ の変域から $t$ の変域が決まる。あとは数学Ⅰの「定義域つきの最大・最小」と同じ。",
+        "steps": [
+          "$2^x=t$ とおく。$2^x$ は増加関数なので $0\\leqq x\\leqq2$ のとき $1\\leqq t\\leqq4$。",
+          "$y=t^2-2t+1=\\left(t-1\\right)^2$（軸 $t=1$）。",
+          "変域内の端点と軸の位置を比べ、最大値 $9$、最小値 $0$。",
+          "対応する $x$ を求めて、最大値 $9$（$x=2$）、最小値 $0$（$x=0$）。"
+        ],
+        "alternatives": [
+          "$t$ の変域の端点と軸での $y$ の値をすべて計算して比較してもよい。",
+          "グラフ（放物線）をかいて、変域の部分の最高点・最低点を読む。"
+        ],
+        "partial_credit": [
+          {
+            "point": "置きかえと変域",
+            "points": 3
+          },
+          {
+            "point": "最大・最小",
+            "points": 3
+          },
+          {
+            "point": "$x$ の値",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$t$ の変域を考えず、頂点の値をそのまま最小値とする。",
+          "最大・最小をとる $t$ の値を、$x$ に戻さずに答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=4^x-8\\cdot2^x-3\\ \\left(-2\\leqq x\\leqq1\\right)$ の最大値と最小値、およびそれらをとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $-\\dfrac{79}{16}$（$x=-2$）、最小値 $-15$（$x=1$）"
+      },
+      "explanation": "$2^x=t$ とおくと $\\dfrac{1}{4}\\leqq t\\leqq2$ で $y=t^2-8t-3$。二次関数の定義域つき最大・最小の問題になる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切に置きかえ、$t$ の変域を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$t$ の二次関数の最大・最小を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "対応する $x$ の値を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(Rational(1,4))**2-(8)*(Rational(1,4))+(-3), (2)**2-(8)*(2)+(-3)]",
+        "expected": "[Rational(-79,16), -15]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_log_maxmin",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "$2^x=t$ とおくと $y$ は $t$ の二次関数になる。$2^x$ は増加関数なので、$x$ の変域から $t$ の変域が決まる。あとは数学Ⅰの「定義域つきの最大・最小」と同じ。",
+        "steps": [
+          "$2^x=t$ とおく。$2^x$ は増加関数なので $-2\\leqq x\\leqq1$ のとき $\\dfrac{1}{4}\\leqq t\\leqq2$。",
+          "$y=t^2-8t-3=\\left(t-4\\right)^2-19$（軸 $t=4$）。",
+          "変域内の端点と軸の位置を比べ、最大値 $-\\dfrac{79}{16}$、最小値 $-15$。",
+          "対応する $x$ を求めて、最大値 $-\\dfrac{79}{16}$（$x=-2$）、最小値 $-15$（$x=1$）。"
+        ],
+        "alternatives": [
+          "$t$ の変域の端点と軸での $y$ の値をすべて計算して比較してもよい。",
+          "グラフ（放物線）をかいて、変域の部分の最高点・最低点を読む。"
+        ],
+        "partial_credit": [
+          {
+            "point": "置きかえと変域",
+            "points": 3
+          },
+          {
+            "point": "最大・最小",
+            "points": 3
+          },
+          {
+            "point": "$x$ の値",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$t$ の変域を考えず、頂点の値をそのまま最小値とする。",
+          "最大・最小をとる $t$ の値を、$x$ に戻さずに答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=4^x-6\\cdot2^x+2\\ \\left(-2\\leqq x\\leqq1\\right)$ の最大値と最小値、およびそれらをとるときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $\\dfrac{9}{16}$（$x=-2$）、最小値 $-6$（$x=1$）"
+      },
+      "explanation": "$2^x=t$ とおくと $\\dfrac{1}{4}\\leqq t\\leqq2$ で $y=t^2-6t+2$。二次関数の定義域つき最大・最小の問題になる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切に置きかえ、$t$ の変域を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$t$ の二次関数の最大・最小を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "対応する $x$ の値を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(Rational(1,4))**2-(6)*(Rational(1,4))+(2), (2)**2-(6)*(2)+(2)]",
+        "expected": "[Rational(9,16), -6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-exp_log_maxmin",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "$2^x=t$ とおくと $y$ は $t$ の二次関数になる。$2^x$ は増加関数なので、$x$ の変域から $t$ の変域が決まる。あとは数学Ⅰの「定義域つきの最大・最小」と同じ。",
+        "steps": [
+          "$2^x=t$ とおく。$2^x$ は増加関数なので $-2\\leqq x\\leqq1$ のとき $\\dfrac{1}{4}\\leqq t\\leqq2$。",
+          "$y=t^2-6t+2=\\left(t-3\\right)^2-7$（軸 $t=3$）。",
+          "変域内の端点と軸の位置を比べ、最大値 $\\dfrac{9}{16}$、最小値 $-6$。",
+          "対応する $x$ を求めて、最大値 $\\dfrac{9}{16}$（$x=-2$）、最小値 $-6$（$x=1$）。"
+        ],
+        "alternatives": [
+          "$t$ の変域の端点と軸での $y$ の値をすべて計算して比較してもよい。",
+          "グラフ（放物線）をかいて、変域の部分の最高点・最低点を読む。"
+        ],
+        "partial_credit": [
+          {
+            "point": "置きかえと変域",
+            "points": 3
+          },
+          {
+            "point": "最大・最小",
+            "points": 3
+          },
+          {
+            "point": "$x$ の値",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$t$ の変域を考えず、頂点の値をそのまま最小値とする。",
+          "最大・最小をとる $t$ の値を、$x$ に戻さずに答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$\\log_23$ が無理数であることを証明しなさい。",
+      "answer": {
+        "value": "$\\log_23$ が有理数であると仮定する。$\\log_23>0$ なので、正の整数 $m,\\ n$ を用いて $\\log_23=\\dfrac{m}{n}$ と表せる。このとき $2^{\\frac{m}{n}}=3$、両辺を $n$ 乗して $2^m=3^n$。左辺は偶数、右辺は奇数なので矛盾。よって $\\log_23$ は無理数である。"
+      },
+      "explanation": "背理法を用いる。有理数 $\\dfrac{m}{n}$ とおいて指数の形に直し、偶奇を比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "方針（文字のおき方・使う法則）が正しい",
+            "points": 3
+          },
+          {
+            "criterion": "式変形・論理が正確である",
+            "points": 3
+          },
+          {
+            "criterion": "結論を明記している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "log(3,2)*log(2,3)-1",
+        "expected": "0",
+        "compare": "numeric",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-proof_item",
+      "explanation_detail": {
+        "approach": "背理法を用いる。有理数 $\\dfrac{m}{n}$ とおいて指数の形に直し、偶奇を比べる。",
+        "steps": [
+          "有理数と仮定し $\\log_23=\\dfrac{m}{n}$（$m,\\ n$ は正の整数）とおく。",
+          "$2^m=3^n$ を導く。",
+          "偶数＝奇数となり矛盾。"
+        ],
+        "alternatives": [
+          "$\\log_23\\fallingdotseq1.585$ は $1$ と $2$ の間にあり、整数でないことは $2<3<4$ からすぐ分かる（ただしこれだけでは無理数の証明にならない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "論理",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "示すべき性質そのものを途中で使ってしまう（循環論法）。",
+          "底や真数の条件（$a\\neq1$、$\\log_ca\\neq0$ など）にふれずに割り算をする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$a>1$ のとき、関数 $y=a^x$ が増加関数であること、すなわち $p<q$ ならば $a^p<a^q$ であることを証明しなさい。ただし、$a>1,\\ r>0$ ならば $a^r>1$ であることは用いてよい。",
+      "answer": {
+        "value": "$p<q$ とすると $q-p>0$ なので $a^{q-p}>1$。$a^p>0$ を両辺に掛けて $a^p\\cdot a^{q-p}>a^p$、すなわち $a^q>a^p$。"
+      },
+      "explanation": "差 $q-p>0$ を指数にもつ $a^{q-p}$ に注目し、指数法則 $a^pa^{q-p}=a^q$ を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "方針（文字のおき方・使う法則）が正しい",
+            "points": 3
+          },
+          {
+            "criterion": "式変形・論理が正確である",
+            "points": 3
+          },
+          {
+            "criterion": "結論を明記している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2**3-2**2*2**1",
+        "expected": "0",
+        "compare": "numeric",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-proof_item",
+      "explanation_detail": {
+        "approach": "差 $q-p>0$ を指数にもつ $a^{q-p}$ に注目し、指数法則 $a^pa^{q-p}=a^q$ を使う。",
+        "steps": [
+          "$q-p>0$ より $a^{q-p}>1$。",
+          "$a^p>0$ を掛ける。",
+          "$a^q>a^p$。"
+        ],
+        "alternatives": [
+          "$a^q-a^p=a^p(a^{q-p}-1)$ と因数分解し、$a^p>0,\\ a^{q-p}-1>0$ から正であることを示してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "論理",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "示すべき性質そのものを途中で使ってしまう（循環論法）。",
+          "底や真数の条件（$a\\neq1$、$\\log_ca\\neq0$ など）にふれずに割り算をする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "次の3つの数を小さい順に並べなさい。理由も示すこと。$$\\sqrt[4]{5},\\quad \\sqrt[4]{3},\\quad \\sqrt[3]{7}$$",
+      "answer": {
+        "value": "$\\sqrt[4]{3}<\\sqrt[4]{5}<\\sqrt[3]{7}$"
+      },
+      "explanation": "3つとも正の数なので、$12$ 乗した値で比べる：$125$、$27$、$2401$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "すべて正であることと、同じ数で累乗して比べる方針を示している",
+            "points": 3
+          },
+          {
+            "criterion": "累乗した値を正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "正しい順に並べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "[5**3, 3**3, 7**4]",
+        "expected": "[125, 27, 2401]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U05-compare_roots",
+      "explanation_detail": {
+        "approach": "根号の指数（$k$ 乗根の $k$）がそろっていない。$a>0,\\ b>0$ のとき $a<b\\iff a^n<b^n$ なので、指数の最小公倍数 $12$ 乗して整数にそろえる。",
+        "steps": [
+          "各数を $12$ 乗する（すべて正なので大小関係は変わらない）。",
+          "$\\left(\\sqrt[4]{5}\\right)^{12}=5^{3}=125$。",
+          "$\\left(\\sqrt[4]{3}\\right)^{12}=3^{3}=27$。",
+          "$\\left(\\sqrt[3]{7}\\right)^{12}=7^{4}=2401$。",
+          "よって $\\sqrt[4]{3}<\\sqrt[4]{5}<\\sqrt[3]{7}$。"
+        ],
+        "alternatives": [
+          "常用対数をとって $\\dfrac{1}{k}\\log_{10}b$ の大小を比べてもよい（$\\log_{10}$ は増加関数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "累乗の計算",
+            "points": 3
+          },
+          {
+            "point": "順序",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "根号の中の数が大きい方が大きいと決めつける。",
+          "$k$ 乗根の $k$ が大きいほど大きいと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "次の3つの数を小さい順に並べなさい。理由も示すこと。$$\\sqrt[5]{5},\\quad \\sqrt[3]{7},\\quad \\sqrt[3]{3}$$",
+      "answer": {
+        "value": "$\\sqrt[5]{5}<\\sqrt[3]{3}<\\sqrt[3]{7}$"
+      },
+      "explanation": "3つとも正の数なので、$15$ 乗した値で比べる：$125$、$16807$、$243$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "すべて正であることと、同じ数で累乗して比べる方針を示している",
+            "points": 3
+          },
+          {
+            "criterion": "累乗した値を正しく計算している",
+            "points": 3
+          },
+          {
+            "criterion": "正しい順に並べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "[5**3, 7**5, 3**5]",
+        "expected": "[125, 16807, 243]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U05-compare_roots",
+      "explanation_detail": {
+        "approach": "根号の指数（$k$ 乗根の $k$）がそろっていない。$a>0,\\ b>0$ のとき $a<b\\iff a^n<b^n$ なので、指数の最小公倍数 $15$ 乗して整数にそろえる。",
+        "steps": [
+          "各数を $15$ 乗する（すべて正なので大小関係は変わらない）。",
+          "$\\left(\\sqrt[5]{5}\\right)^{15}=5^{3}=125$。",
+          "$\\left(\\sqrt[3]{7}\\right)^{15}=7^{5}=16807$。",
+          "$\\left(\\sqrt[3]{3}\\right)^{15}=3^{5}=243$。",
+          "よって $\\sqrt[5]{5}<\\sqrt[3]{3}<\\sqrt[3]{7}$。"
+        ],
+        "alternatives": [
+          "常用対数をとって $\\dfrac{1}{k}\\log_{10}b$ の大小を比べてもよい（$\\log_{10}$ は増加関数）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "累乗の計算",
+            "points": 3
+          },
+          {
+            "point": "順序",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "根号の中の数が大きい方が大きいと決めつける。",
+          "$k$ 乗根の $k$ が大きいほど大きいと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\log_{6}18+\\log_{6}12$ を簡単にしなさい。\n［ある生徒の解答］\n$\\log_{6}18+\\log_{6}12=\\log_{6}(18+12)=\\log_{6}30$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3$"
+      },
+      "explanation": "対数の性質は $\\log_aM+\\log_aN=\\log_aMN$（真数は積）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "log(18,6)+log(12,6)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-err_log_rule",
+      "explanation_detail": {
+        "approach": "対数の性質は「$\\log$ の和 ⇔ 真数の積」。指数法則 $a^pa^q=a^{p+q}$ と対応させて確認する。",
+        "steps": [
+          "$\\log_{6}18+\\log_{6}12=\\log_{6}(18\\times12)$。",
+          "$=\\log_{6}216=3$。"
+        ],
+        "alternatives": [
+          "$\\log_{6}18,\\ \\log_{6}12$ の概数を電卓で求めて足すと $3$ に近くなり、生徒の答えとは一致しないことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式を指数法則と対応させて覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\log_{6}18+\\log_{6}12=\\log_{6}(18+12)=\\log_{6}30$",
+        "error_step": "$\\log_aM+\\log_aN=\\log_a(M+N)$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "「たし算はたし算のまま」という見た目の対応で公式を作ってしまっている。対数の和は真数の積に対応する。",
+        "correction": "$\\log_{6}18+\\log_{6}12=\\log_{6}216=3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\log_{12}36+\\log_{12}4$ を簡単にしなさい。\n［ある生徒の解答］\n$\\log_{12}36+\\log_{12}4=\\log_{12}(36+4)=\\log_{12}40$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "対数の性質は $\\log_aM+\\log_aN=\\log_aMN$（真数は積）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "log(36,12)+log(4,12)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-err_log_rule",
+      "explanation_detail": {
+        "approach": "対数の性質は「$\\log$ の和 ⇔ 真数の積」。指数法則 $a^pa^q=a^{p+q}$ と対応させて確認する。",
+        "steps": [
+          "$\\log_{12}36+\\log_{12}4=\\log_{12}(36\\times4)$。",
+          "$=\\log_{12}144=2$。"
+        ],
+        "alternatives": [
+          "$\\log_{12}36,\\ \\log_{12}4$ の概数を電卓で求めて足すと $2$ に近くなり、生徒の答えとは一致しないことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式を指数法則と対応させて覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\log_{12}36+\\log_{12}4=\\log_{12}(36+4)=\\log_{12}40$",
+        "error_step": "$\\log_aM+\\log_aN=\\log_a(M+N)$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "「たし算はたし算のまま」という見た目の対応で公式を作ってしまっている。対数の和は真数の積に対応する。",
+        "correction": "$\\log_{12}36+\\log_{12}4=\\log_{12}144=2$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\log_{10}4+\\log_{10}25$ を簡単にしなさい。\n［ある生徒の解答］\n$\\log_{10}4+\\log_{10}25=\\log_{10}(4+25)=\\log_{10}29$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "対数の性質は $\\log_aM+\\log_aN=\\log_aMN$（真数は積）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "log(4,10)+log(25,10)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U05-err_log_rule",
+      "explanation_detail": {
+        "approach": "対数の性質は「$\\log$ の和 ⇔ 真数の積」。指数法則 $a^pa^q=a^{p+q}$ と対応させて確認する。",
+        "steps": [
+          "$\\log_{10}4+\\log_{10}25=\\log_{10}(4\\times25)$。",
+          "$=\\log_{10}100=2$。"
+        ],
+        "alternatives": [
+          "$\\log_{10}4,\\ \\log_{10}25$ の概数を電卓で求めて足すと $2$ に近くなり、生徒の答えとは一致しないことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式を指数法則と対応させて覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\log_{10}4+\\log_{10}25=\\log_{10}(4+25)=\\log_{10}29$",
+        "error_step": "$\\log_aM+\\log_aN=\\log_a(M+N)$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "「たし算はたし算のまま」という見た目の対応で公式を作ってしまっている。対数の和は真数の積に対応する。",
+        "correction": "$\\log_{10}4+\\log_{10}25=\\log_{10}100=2$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $\\log_{3}x+\\log_{3}(x+8)=2$ を解きなさい。\n［ある生徒の解答］\n$x(x+8)=9$ を解いて $x=1,\\ -9$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=1$"
+      },
+      "explanation": "真数条件は $x>0$ かつ $x+8>0$、すなわち $x>0$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((x)*(x+8)-9, x)",
+        "expected": "[-9, 1]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-err_antilog",
+      "explanation_detail": {
+        "approach": "対数の方程式では、最初に真数条件を書き、最後に解がそれを満たすか確かめる。",
+        "steps": [
+          "真数条件：$x>0$。",
+          "$x(x+8)=9$ より $x=1,\\ -9$。",
+          "$x>0$ を満たすのは $x=1$。"
+        ],
+        "alternatives": [
+          "$x=-9$ を代入すると真数 $-9$ が負になり、$\\log$ が定義されないことから不適と分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "真数条件を最初に書く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x(x+8)=9$ を解いて $x=1,\\ -9$",
+        "error_step": "最後に解の吟味（真数条件の確認）をしていない部分",
+        "error_type": "condition",
+        "why_tempting": "対数をまとめた後は普通の二次方程式になるため、もとの式に対数があったこと（真数は正）を忘れてしまう。",
+        "correction": "真数条件 $x>0$ より $x=-9$ は不適。$x=1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $\\log_{3}(x-1)+\\log_{3}(x+1)=1$ を解きなさい。\n［ある生徒の解答］\n$(x-1)(x+1)=3$ を解いて $x=2,\\ -2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=2$"
+      },
+      "explanation": "真数条件は $x-1>0$ かつ $x+1>0$、すなわち $x>1$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((x-1)*(x+1)-3, x)",
+        "expected": "[-2, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-err_antilog",
+      "explanation_detail": {
+        "approach": "対数の方程式では、最初に真数条件を書き、最後に解がそれを満たすか確かめる。",
+        "steps": [
+          "真数条件：$x>1$。",
+          "$(x-1)(x+1)=3$ より $x=2,\\ -2$。",
+          "$x>1$ を満たすのは $x=2$。"
+        ],
+        "alternatives": [
+          "$x=-2$ を代入すると真数 $-3$ が負になり、$\\log$ が定義されないことから不適と分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "真数条件を最初に書く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x-1)(x+1)=3$ を解いて $x=2,\\ -2$",
+        "error_step": "最後に解の吟味（真数条件の確認）をしていない部分",
+        "error_type": "condition",
+        "why_tempting": "対数をまとめた後は普通の二次方程式になるため、もとの式に対数があったこと（真数は正）を忘れてしまう。",
+        "correction": "真数条件 $x>1$ より $x=-2$ は不適。$x=2$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "方程式 $\\log_{3}(x+2)+\\log_{3}(x-6)=2$ を解きなさい。\n［ある生徒の解答］\n$(x+2)(x-6)=9$ を解いて $x=7,\\ -3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=7$"
+      },
+      "explanation": "真数条件は $x+2>0$ かつ $x-6>0$、すなわち $x>6$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve((x+2)*(x-6)-9, x)",
+        "expected": "[-3, 7]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-err_antilog",
+      "explanation_detail": {
+        "approach": "対数の方程式では、最初に真数条件を書き、最後に解がそれを満たすか確かめる。",
+        "steps": [
+          "真数条件：$x>6$。",
+          "$(x+2)(x-6)=9$ より $x=7,\\ -3$。",
+          "$x>6$ を満たすのは $x=7$。"
+        ],
+        "alternatives": [
+          "$x=-3$ を代入すると真数 $-1$ が負になり、$\\log$ が定義されないことから不適と分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "真数条件を最初に書く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$(x+2)(x-6)=9$ を解いて $x=7,\\ -3$",
+        "error_step": "最後に解の吟味（真数条件の確認）をしていない部分",
+        "error_type": "condition",
+        "why_tempting": "対数をまとめた後は普通の二次方程式になるため、もとの式に対数があったこと（真数は正）を忘れてしまう。",
+        "correction": "真数条件 $x>6$ より $x=-3$ は不適。$x=7$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "不等式 $\\left(\\dfrac{1}{3}\\right)^{x+1}<\\dfrac{1}{9}$ を解きなさい。\n［ある生徒の解答］\n$\\dfrac{1}{9}=\\left(\\dfrac{1}{3}\\right)^{2}$ より $x+1<2$、よって $x<1$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x>1$"
+      },
+      "explanation": "$y=\\left(\\dfrac{1}{3}\\right)^x$ は減少関数なので、関数の値の大小と指数の大小は逆になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(Rational(1,3))**(2)",
+        "expected": "Rational(1,9)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-err_base_small",
+      "explanation_detail": {
+        "approach": "底と $1$ の大小を、指数を比べる前に必ず確認する。",
+        "steps": [
+          "$\\dfrac{1}{9}=\\left(\\dfrac{1}{3}\\right)^{2}$。",
+          "底 $\\dfrac{1}{3}$ は $0$ と $1$ の間なので、不等号の向きが変わる：$x+1>2$。",
+          "$x>1$。"
+        ],
+        "alternatives": [
+          "両辺の逆数をとると $\\left(3\\right)^{x+1}>9$ となり、底が $1$ より大きい形で解ける。",
+          "$x=2$ などを代入して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が $1$ より小さいときは不等号の向きが逆。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{1}{9}=\\left(\\dfrac{1}{3}\\right)^{2}$ より $x+1<2$、よって $x<1$",
+        "error_step": "指数を比べるときに不等号の向きをそのままにした部分",
+        "error_type": "sign",
+        "why_tempting": "底が $1$ より大きいときの解き方（不等号の向きはそのまま）を、底が $1$ より小さい場合にも当てはめている。",
+        "correction": "底 $\\dfrac{1}{3}<1$ なので $x+1>2$、よって $x>1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "不等式 $\\log_{\\frac{1}{3}}(x-1)<4$ を解きなさい。\n［ある生徒の解答］\n$4=\\log_{\\frac{1}{3}}\\dfrac{1}{81}$ より $x-1<\\dfrac{1}{81}$、よって $x<\\dfrac{82}{81}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x>\\dfrac{82}{81}$"
+      },
+      "explanation": "$y=\\log_{\\frac{1}{3}}x$ は減少関数。真数の大小は対数の大小と逆になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[1, 1+(Rational(1,3))**(4)]",
+        "expected": "[1, Rational(82,81)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U05-err_base_small",
+      "explanation_detail": {
+        "approach": "対数の不等式は「真数条件 → 底と $1$ の大小 → 真数の比較」の順に処理する。",
+        "steps": [
+          "真数条件：$x>1$。",
+          "$4=\\log_{\\frac{1}{3}}\\dfrac{1}{81}$、底 $\\dfrac{1}{3}<1$ より $x-1>\\dfrac{1}{81}$。",
+          "$x>\\dfrac{82}{81}$（これは真数条件を満たす）。"
+        ],
+        "alternatives": [
+          "$y=\\log_{\\frac{1}{3}}x$ のグラフ（右下がり）をかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "真数条件と、底による不等号の向きの両方を確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$4=\\log_{\\frac{1}{3}}\\dfrac{1}{81}$ より $x-1<\\dfrac{1}{81}$、よって $x<\\dfrac{82}{81}$",
+        "error_step": "真数を比べるときに不等号の向きをそのままにした部分（と、真数条件の確認もれ）",
+        "error_type": "condition",
+        "why_tempting": "底が $1$ より小さい対数関数は減少関数であることを意識せず、また真数条件 $x-1>0$ を考えていない。",
+        "correction": "底 $\\dfrac{1}{3}<1$ なので $x-1>\\dfrac{1}{81}$、よって $x>\\dfrac{82}{81}$（真数条件も満たす）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$4^{\\frac{3}{2}}$ の値を求めなさい。\n［ある生徒の解答］\n$4^{\\frac{3}{2}}=\\dfrac{4^{3}}{2}=32$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$8$"
+      },
+      "explanation": "$a^{\\frac{m}{n}}=\\sqrt[n]{a^m}=\\left(\\sqrt[n]{a}\\right)^m$。分母は累乗根を表す。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "4**(Rational(3,2))",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-err_exp_law",
+      "explanation_detail": {
+        "approach": "分数の指数は「分母が累乗根、分子が累乗」。",
+        "steps": [
+          "$\\sqrt[2]{4}=2$。",
+          "$4^{\\frac{3}{2}}=2^{3}$。",
+          "$=8$。"
+        ],
+        "alternatives": [
+          "答えを $2$ 乗して $4^{3}$ に戻るかを確かめる：$(8)^{2}=64$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$a^{\\frac{m}{n}}$ の定義を確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$4^{\\frac{3}{2}}=\\dfrac{4^{3}}{2}=32$",
+        "error_step": "$a^{\\frac{m}{n}}$ を $\\dfrac{a^m}{n}$ とした部分",
+        "error_type": "concept",
+        "why_tempting": "分数の指数の「分母」を、累乗根ではなく割り算だと思い込んでいる。",
+        "correction": "$4^{\\frac{3}{2}}=\\left(\\sqrt[2]{4}\\right)^{3}=2^{3}=8$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U05-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U05",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$25^{-\\frac{3}{2}}$ の値を求めなさい。\n［ある生徒の解答］\n$25^{-\\frac{3}{2}}=-25^{\\frac{3}{2}}=-125$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{125}$"
+      },
+      "explanation": "$a^{-p}=\\dfrac{1}{a^p}$。底が正なら、どんな指数でも値は正。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "25**(Rational(-3,2))",
+        "expected": "Rational(1,125)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U05-err_exp_law",
+      "explanation_detail": {
+        "approach": "負の指数は逆数。底 $a>0$ の累乗は常に正であることで検算する。",
+        "steps": [
+          "$25=5^{2}$。",
+          "$25^{-\\frac{3}{2}}=5^{-3}$。",
+          "$=\\dfrac{1}{125}$。"
+        ],
+        "alternatives": [
+          "$a^x>0$（$a>0$）なので、負の答えはありえないと気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負の指数を見たら逆数を考える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$25^{-\\frac{3}{2}}=-25^{\\frac{3}{2}}=-125$",
+        "error_step": "負の指数を「符号がマイナスになる」と解釈した部分",
+        "error_type": "concept",
+        "why_tempting": "指数の $-$ を、数そのものの符号と混同している。$a^{-p}$ は逆数を表す。",
+        "correction": "$25^{-\\frac{3}{2}}=\\dfrac{1}{25^{\\frac{3}{2}}}=\\dfrac{1}{125}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "387f0d9382dfdf0ad0919ae5221a0ee34b3e8cbe485525efff667aaf415ca58b"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q030, Q034, Q036, Q054）",
+      "content_hash": "ef209bb49347e05705515e35ef323bfdb8d43a877147c9cea944a5bd653ac4f3"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:43:17+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "1a337fcbc95c20a7732ca76701d2f149cd1e85a2cfcfafe1165aa18913fde1f5"
+  }
+}

@@ -1,0 +1,5517 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH2-U06-EX",
+  "title": "微分法・積分法　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_2",
+  "grade": "HS2",
+  "unit_ids": [
+    "HS-MATH2-U06"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH2-U06-PACK",
+  "pair_set_id": "HS-MATH2-U06-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH1-U03",
+        "point": "二次関数と最大・最小",
+        "title": "二次関数"
+      },
+      {
+        "unit_id": "HS-MATH2-U03",
+        "point": "直線の方程式",
+        "title": "図形と方程式"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "数学Ⅲの微分法",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATH3-U03",
+        "point": "数学Ⅲの積分法",
+        "title": "積分法とその応用"
+      },
+      {
+        "unit_id": "HS-PHYB-U01",
+        "point": "速度・加速度と微分",
+        "title": "運動の表し方と運動の法則"
+      }
+    ],
+    "readiness_check": [
+      "二次関数の平方完成と最大・最小（数学Ⅰ）ができる。",
+      "直線の方程式 $y-y_1=m(x-x_1)$（図形と方程式）を使える。",
+      "$(a+h)^3=a^3+3a^2h+3ah^2+h^3$ などの展開と、因数分解ができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH2-U06-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^3+4x^2+1$ の導関数 $f'(x)$ を求めなさい。また、微分係数 $f'(-3)$ の値を求めなさい。",
+      "answer": {
+        "value": "$f'(x)=6x^2+8x$、$f'(-3)=30$",
+        "accepted": [
+          "f'(x)=6x^2+8x, f'(-3)=30"
+        ]
+      },
+      "explanation": "$(x^n)'=nx^{n-1}$ を各項に用いて $f'(x)=6x^2+8x$。$x=-3$ を代入して $30$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[expand(diff((2)*x**3+(4)*x**2+(0)*x**1+(1)*x**0, x)), (6)*(-3)**2+(8)*(-3)**1+(0)*(-3)**0]",
+        "expected": "[(6)*x**2+(8)*x**1+(0)*x**0, 30]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-deriv_value",
+      "explanation_detail": {
+        "approach": "多項式は項ごとに $(x^n)'=nx^{n-1}$ を使って微分できる。積の形はまず展開する。微分係数は導関数に値を代入する。",
+        "steps": [
+          "$f'(x)=6x^2+8x$。",
+          "$f'(-3)=30$。"
+        ],
+        "alternatives": [
+          "定義 $f'(-3)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(-3+h)-f(-3)}{h}$ に従って計算しても同じ値になる（ただし計算量が多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "微分係数の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項を微分して残してしまう（定数の導関数は $0$）。",
+          "積の形のまま、各因数を微分して掛けてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-x^3-2x^2-5x+4$ の導関数 $f'(x)$ を求めなさい。また、微分係数 $f'(1)$ の値を求めなさい。",
+      "answer": {
+        "value": "$f'(x)=-3x^2-4x-5$、$f'(1)=-12$",
+        "accepted": [
+          "f'(x)=-3x^2-4x-5, f'(1)=-12"
+        ]
+      },
+      "explanation": "$(x^n)'=nx^{n-1}$ を各項に用いて $f'(x)=-3x^2-4x-5$。$x=1$ を代入して $-12$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[expand(diff((-1)*x**3+(-2)*x**2+(-5)*x**1+(4)*x**0, x)), (-3)*(1)**2+(-4)*(1)**1+(-5)*(1)**0]",
+        "expected": "[(-3)*x**2+(-4)*x**1+(-5)*x**0, -12]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-deriv_value",
+      "explanation_detail": {
+        "approach": "多項式は項ごとに $(x^n)'=nx^{n-1}$ を使って微分できる。積の形はまず展開する。微分係数は導関数に値を代入する。",
+        "steps": [
+          "$f'(x)=-3x^2-4x-5$。",
+          "$f'(1)=-12$。"
+        ],
+        "alternatives": [
+          "定義 $f'(1)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(1+h)-f(1)}{h}$ に従って計算しても同じ値になる（ただし計算量が多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "微分係数の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項を微分して残してしまう（定数の導関数は $0$）。",
+          "積の形のまま、各因数を微分して掛けてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-x^3-4x^2+5x-2$ の導関数 $f'(x)$ を求めなさい。また、微分係数 $f'(1)$ の値を求めなさい。",
+      "answer": {
+        "value": "$f'(x)=-3x^2-8x+5$、$f'(1)=-6$",
+        "accepted": [
+          "f'(x)=-3x^2-8x+5, f'(1)=-6"
+        ]
+      },
+      "explanation": "$(x^n)'=nx^{n-1}$ を各項に用いて $f'(x)=-3x^2-8x+5$。$x=1$ を代入して $-6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[expand(diff((-1)*x**3+(-4)*x**2+(5)*x**1+(-2)*x**0, x)), (-3)*(1)**2+(-8)*(1)**1+(5)*(1)**0]",
+        "expected": "[(-3)*x**2+(-8)*x**1+(5)*x**0, -6]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-deriv_value",
+      "explanation_detail": {
+        "approach": "多項式は項ごとに $(x^n)'=nx^{n-1}$ を使って微分できる。積の形はまず展開する。微分係数は導関数に値を代入する。",
+        "steps": [
+          "$f'(x)=-3x^2-8x+5$。",
+          "$f'(1)=-6$。"
+        ],
+        "alternatives": [
+          "定義 $f'(1)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(1+h)-f(1)}{h}$ に従って計算しても同じ値になる（ただし計算量が多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "微分係数の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項を微分して残してしまう（定数の導関数は $0$）。",
+          "積の形のまま、各因数を微分して掛けてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=x^3-3x^2-2x-3$ の導関数 $f'(x)$ を求めなさい。また、微分係数 $f'(2)$ の値を求めなさい。",
+      "answer": {
+        "value": "$f'(x)=3x^2-6x-2$、$f'(2)=-2$",
+        "accepted": [
+          "f'(x)=3x^2-6x-2, f'(2)=-2"
+        ]
+      },
+      "explanation": "$(x^n)'=nx^{n-1}$ を各項に用いて $f'(x)=3x^2-6x-2$。$x=2$ を代入して $-2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[expand(diff((1)*x**3+(-3)*x**2+(-2)*x**1+(-3)*x**0, x)), (3)*(2)**2+(-6)*(2)**1+(-2)*(2)**0]",
+        "expected": "[(3)*x**2+(-6)*x**1+(-2)*x**0, -2]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-deriv_value",
+      "explanation_detail": {
+        "approach": "多項式は項ごとに $(x^n)'=nx^{n-1}$ を使って微分できる。積の形はまず展開する。微分係数は導関数に値を代入する。",
+        "steps": [
+          "$f'(x)=3x^2-6x-2$。",
+          "$f'(2)=-2$。"
+        ],
+        "alternatives": [
+          "定義 $f'(2)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(2+h)-f(2)}{h}$ に従って計算しても同じ値になる（ただし計算量が多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "微分係数の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項を微分して残してしまう（定数の導関数は $0$）。",
+          "積の形のまま、各因数を微分して掛けてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=(-x+2)(x^2-1)$ の導関数 $f'(x)$ を求めなさい。また、微分係数 $f'(-2)$ の値を求めなさい。",
+      "answer": {
+        "value": "$f'(x)=-3x^2+4x+1$、$f'(-2)=-19$",
+        "accepted": [
+          "f'(x)=-3x^2+4x+1, f'(-2)=-19"
+        ]
+      },
+      "explanation": "$(x^n)'=nx^{n-1}$ を各項に用いて $f'(x)=-3x^2+4x+1$。$x=-2$ を代入して $-19$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "[expand(diff((-1)*x**3+(2)*x**2+(1)*x**1+(-2)*x**0, x)), (-3)*(-2)**2+(4)*(-2)**1+(1)*(-2)**0]",
+        "expected": "[(-3)*x**2+(4)*x**1+(1)*x**0, -19]",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-deriv_value",
+      "explanation_detail": {
+        "approach": "多項式は項ごとに $(x^n)'=nx^{n-1}$ を使って微分できる。積の形はまず展開する。微分係数は導関数に値を代入する。",
+        "steps": [
+          "展開して $f(x)=-x^3+2x^2+x-2$。",
+          "$f'(x)=-3x^2+4x+1$。",
+          "$f'(-2)=-19$。"
+        ],
+        "alternatives": [
+          "定義 $f'(-2)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(-2+h)-f(-2)}{h}$ に従って計算しても同じ値になる（ただし計算量が多い）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "微分係数の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "定数項を微分して残してしまう（定数の導関数は $0$）。",
+          "積の形のまま、各因数を微分して掛けてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-x^2-2x+3$ について、微分係数 $f'(3)$ を定義に従って求めなさい。",
+      "answer": {
+        "value": "$-8$"
+      },
+      "explanation": "$\\displaystyle f'(3)=\\lim_{h\\to0}\\dfrac{f(3+h)-f(3)}{h}=\\lim_{h\\to0}(-8-h)=-8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((-1)*(3+h)**2+(-2)*(3+h)+(3)-((-1)*(3)**2+(-2)*(3)+(3)))/h, h, 0)",
+        "expected": "-8",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-by_definition",
+      "explanation_detail": {
+        "approach": "定義 $f'(a)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$ に当てはめ、分子を展開して $h$ で約分してから $h\\to0$ とする。",
+        "steps": [
+          "$f(3+h)-f(3)=-8h-h^2$。",
+          "$\\dfrac{f(3+h)-f(3)}{h}=-8-h$（$h\\neq0$ で約分）。",
+          "$h\\to0$ として $f'(3)=-8$。"
+        ],
+        "alternatives": [
+          "導関数 $f'(x)=-2x-2$ に $x=3$ を代入して $-8$ となることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子を展開して $h$ で約分している",
+            "points": 1
+          },
+          {
+            "point": "極限値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母の $x$ の増加量を逆にしたり、符号を誤ったりする。",
+          "$h$ で約分する前に $h=0$ を代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^2-x-5$ について、微分係数 $f'(-2)$ を定義に従って求めなさい。",
+      "answer": {
+        "value": "$-9$"
+      },
+      "explanation": "$\\displaystyle f'(-2)=\\lim_{h\\to0}\\dfrac{f(-2+h)-f(-2)}{h}=\\lim_{h\\to0}(-9+2h)=-9$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((2)*(-2+h)**2+(-1)*(-2+h)+(-5)-((2)*(-2)**2+(-1)*(-2)+(-5)))/h, h, 0)",
+        "expected": "-9",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-by_definition",
+      "explanation_detail": {
+        "approach": "定義 $f'(a)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$ に当てはめ、分子を展開して $h$ で約分してから $h\\to0$ とする。",
+        "steps": [
+          "$f(-2+h)-f(-2)=-9h+2h^2$。",
+          "$\\dfrac{f(-2+h)-f(-2)}{h}=-9+2h$（$h\\neq0$ で約分）。",
+          "$h\\to0$ として $f'(-2)=-9$。"
+        ],
+        "alternatives": [
+          "導関数 $f'(x)=4x-1$ に $x=-2$ を代入して $-9$ となることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子を展開して $h$ で約分している",
+            "points": 1
+          },
+          {
+            "point": "極限値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母の $x$ の増加量を逆にしたり、符号を誤ったりする。",
+          "$h$ で約分する前に $h=0$ を代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-2x^2+3x-5$ において、$x$ の値が $1$ から $2$ まで変化するときの平均変化率を求めなさい。",
+      "answer": {
+        "value": "$-3$"
+      },
+      "explanation": "平均変化率 $\\dfrac{f(2)-f(1)}{2-(1)}=-3$。2点を結ぶ直線の傾きにあたる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(((-2)*(2)**2+(3)*(2)+(-5))-((-2)*(1)**2+(3)*(1)+(-5)))/(2-(1))",
+        "expected": "-3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-by_definition",
+      "explanation_detail": {
+        "approach": "平均変化率は $\\dfrac{f(b)-f(a)}{b-a}$。グラフ上の2点を結ぶ直線の傾きである。",
+        "steps": [
+          "$f(2)=-7$、$f(1)=-4$。",
+          "平均変化率は $\\dfrac{f(2)-f(1)}{2-(1)}=\\dfrac{-3}{1}=-3$。"
+        ],
+        "alternatives": [
+          "二次関数 $ax^2+bx+c$ の平均変化率は $a(p+q)+b$ と表せる。$-2\\times(1+2)+(3)=-3$ で確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "関数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "平均変化率が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母の $x$ の増加量を逆にしたり、符号を誤ったりする。",
+          "$h$ で約分する前に $h=0$ を代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^2+5x-5$ について、微分係数 $f'(-1)$ を定義に従って求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "$\\displaystyle f'(-1)=\\lim_{h\\to0}\\dfrac{f(-1+h)-f(-1)}{h}=\\lim_{h\\to0}(1+2h)=1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((2)*(-1+h)**2+(5)*(-1+h)+(-5)-((2)*(-1)**2+(5)*(-1)+(-5)))/h, h, 0)",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-by_definition",
+      "explanation_detail": {
+        "approach": "定義 $f'(a)=\\displaystyle\\lim_{h\\to0}\\dfrac{f(a+h)-f(a)}{h}$ に当てはめ、分子を展開して $h$ で約分してから $h\\to0$ とする。",
+        "steps": [
+          "$f(-1+h)-f(-1)=1h+2h^2$。",
+          "$\\dfrac{f(-1+h)-f(-1)}{h}=1+2h$（$h\\neq0$ で約分）。",
+          "$h\\to0$ として $f'(-1)=1$。"
+        ],
+        "alternatives": [
+          "導関数 $f'(x)=4x+5$ に $x=-1$ を代入して $1$ となることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子を展開して $h$ で約分している",
+            "points": 1
+          },
+          {
+            "point": "極限値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分母の $x$ の増加量を逆にしたり、符号を誤ったりする。",
+          "$h$ で約分する前に $h=0$ を代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int(-6x^2-2x-1)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-2x^3-x^2-x+C$（$C$ は積分定数）",
+        "accepted": [
+          "-2x^3-x^2-x+C"
+        ]
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ を項ごとに用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(diff((-2)*x**3+(-1)*x**2+(-1)*x**1+(0)*x**0, x))",
+        "expected": "(-6)*x**2+(-2)*x**1+(-1)*x**0",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-indefinite",
+      "explanation_detail": {
+        "approach": "不定積分は「微分すると被積分関数になる関数」。項ごとに $x^n\\to\\dfrac{x^{n+1}}{n+1}$ とする。積の形はまず展開する。",
+        "steps": [
+          "$-6x^2-2x-1$ の各項を積分する。",
+          "$-2x^3-x^2-x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分すると $-6x^2-2x-1$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各項を正しく積分している",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積分定数 $C$ を書き忘れる。",
+          "$x^2$ を $\\dfrac{x^3}{2}$ とするなど、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int(3x^2+2x+3)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$x^3+x^2+3x+C$（$C$ は積分定数）",
+        "accepted": [
+          "x^3+x^2+3x+C"
+        ]
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ を項ごとに用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(diff((1)*x**3+(1)*x**2+(3)*x**1+(0)*x**0, x))",
+        "expected": "(3)*x**2+(2)*x**1+(3)*x**0",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-indefinite",
+      "explanation_detail": {
+        "approach": "不定積分は「微分すると被積分関数になる関数」。項ごとに $x^n\\to\\dfrac{x^{n+1}}{n+1}$ とする。積の形はまず展開する。",
+        "steps": [
+          "$3x^2+2x+3$ の各項を積分する。",
+          "$x^3+x^2+3x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分すると $3x^2+2x+3$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各項を正しく積分している",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積分定数 $C$ を書き忘れる。",
+          "$x^2$ を $\\dfrac{x^3}{2}$ とするなど、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int(3x^2-2x-5)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$x^3-x^2-5x+C$（$C$ は積分定数）",
+        "accepted": [
+          "x^3-x^2-5x+C"
+        ]
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ を項ごとに用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(diff((1)*x**3+(-1)*x**2+(-5)*x**1+(0)*x**0, x))",
+        "expected": "(3)*x**2+(-2)*x**1+(-5)*x**0",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-indefinite",
+      "explanation_detail": {
+        "approach": "不定積分は「微分すると被積分関数になる関数」。項ごとに $x^n\\to\\dfrac{x^{n+1}}{n+1}$ とする。積の形はまず展開する。",
+        "steps": [
+          "$3x^2-2x-5$ の各項を積分する。",
+          "$x^3-x^2-5x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分すると $3x^2-2x-5$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各項を正しく積分している",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積分定数 $C$ を書き忘れる。",
+          "$x^2$ を $\\dfrac{x^3}{2}$ とするなど、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int(-9x^2-6x+4)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-3x^3-3x^2+4x+C$（$C$ は積分定数）",
+        "accepted": [
+          "-3x^3-3x^2+4x+C"
+        ]
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ を項ごとに用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(diff((-3)*x**3+(-3)*x**2+(4)*x**1+(0)*x**0, x))",
+        "expected": "(-9)*x**2+(-6)*x**1+(4)*x**0",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-indefinite",
+      "explanation_detail": {
+        "approach": "不定積分は「微分すると被積分関数になる関数」。項ごとに $x^n\\to\\dfrac{x^{n+1}}{n+1}$ とする。積の形はまず展開する。",
+        "steps": [
+          "$-9x^2-6x+4$ の各項を積分する。",
+          "$-3x^3-3x^2+4x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分すると $-9x^2-6x+4$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各項を正しく積分している",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積分定数 $C$ を書き忘れる。",
+          "$x^2$ を $\\dfrac{x^3}{2}$ とするなど、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int(3x^2+6x-5)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$x^3+3x^2-5x+C$（$C$ は積分定数）",
+        "accepted": [
+          "x^3+3x^2-5x+C"
+        ]
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ を項ごとに用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(diff((1)*x**3+(3)*x**2+(-5)*x**1+(0)*x**0, x))",
+        "expected": "(3)*x**2+(6)*x**1+(-5)*x**0",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-indefinite",
+      "explanation_detail": {
+        "approach": "不定積分は「微分すると被積分関数になる関数」。項ごとに $x^n\\to\\dfrac{x^{n+1}}{n+1}$ とする。積の形はまず展開する。",
+        "steps": [
+          "$3x^2+6x-5$ の各項を積分する。",
+          "$x^3+3x^2-5x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分すると $3x^2+6x-5$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各項を正しく積分している",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "積分定数 $C$ を書き忘れる。",
+          "$x^2$ を $\\dfrac{x^3}{2}$ とするなど、割る数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{-3}^{-2}(3x^2-4x+6)\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$35$"
+      },
+      "explanation": "原始関数 $F(x)=x^3-2x^2+6x$ を用いて $F(-2)-F(-3)=-28-(-63)=35$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((3)*x**2+(-4)*x**1+(6)*x**0, [x, -3, -2])",
+        "expected": "35"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-definite",
+      "explanation_detail": {
+        "approach": "原始関数 $F(x)$ を1つ求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。積分定数は打ち消し合うので不要。",
+        "steps": [
+          "$\\Bigl[x^3-2x^2+6x\\Bigr]_{-3}^{-2}$。",
+          "$=(-28)-(-63)=35$。"
+        ],
+        "alternatives": [
+          "項ごとに $\\displaystyle\\int_a^bx^n\\,dx=\\dfrac{b^{n+1}-a^{n+1}}{n+1}$ を計算して足し合わせてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$F(\\text{下端})-F(\\text{上端})$ と逆に引く。",
+          "負の数を代入するときに符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{-3}^{-2}(6x^2-6)\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$32$"
+      },
+      "explanation": "原始関数 $F(x)=2x^3-6x$ を用いて $F(-2)-F(-3)=-4-(-36)=32$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((6)*x**2+(0)*x**1+(-6)*x**0, [x, -3, -2])",
+        "expected": "32"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-definite",
+      "explanation_detail": {
+        "approach": "原始関数 $F(x)$ を1つ求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。積分定数は打ち消し合うので不要。",
+        "steps": [
+          "$\\Bigl[2x^3-6x\\Bigr]_{-3}^{-2}$。",
+          "$=(-4)-(-36)=32$。"
+        ],
+        "alternatives": [
+          "項ごとに $\\displaystyle\\int_a^bx^n\\,dx=\\dfrac{b^{n+1}-a^{n+1}}{n+1}$ を計算して足し合わせてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$F(\\text{下端})-F(\\text{上端})$ と逆に引く。",
+          "負の数を代入するときに符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{-2}^{-1}(6x^2+6x+3)\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$8$"
+      },
+      "explanation": "原始関数 $F(x)=2x^3+3x^2+3x$ を用いて $F(-1)-F(-2)=-2-(-10)=8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((6)*x**2+(6)*x**1+(3)*x**0, [x, -2, -1])",
+        "expected": "8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-definite",
+      "explanation_detail": {
+        "approach": "原始関数 $F(x)$ を1つ求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。積分定数は打ち消し合うので不要。",
+        "steps": [
+          "$\\Bigl[2x^3+3x^2+3x\\Bigr]_{-2}^{-1}$。",
+          "$=(-2)-(-10)=8$。"
+        ],
+        "alternatives": [
+          "項ごとに $\\displaystyle\\int_a^bx^n\\,dx=\\dfrac{b^{n+1}-a^{n+1}}{n+1}$ を計算して足し合わせてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$F(\\text{下端})-F(\\text{上端})$ と逆に引く。",
+          "負の数を代入するときに符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の定積分を計算しなさい。$$\\int_{-2}^{-1}(6x^2+6x+3)\\,dx+\\int_{-1}^{2}(6x^2+6x+3)\\,dx$$",
+      "answer": {
+        "value": "$44$"
+      },
+      "explanation": "原始関数 $F(x)=2x^3+3x^2+3x$ を用いて $F(2)-F(-2)=34-(-10)=44$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((6)*x**2+(6)*x**1+(3)*x**0, [x, -2, 2])",
+        "expected": "44"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-definite",
+      "explanation_detail": {
+        "approach": "原始関数 $F(x)$ を1つ求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。積分定数は打ち消し合うので不要。",
+        "steps": [
+          "被積分関数が同じなので、区間をつないで $\\displaystyle\\int_{-2}^{2}(6x^2+6x+3)\\,dx$ とまとめる。",
+          "$\\Bigl[2x^3+3x^2+3x\\Bigr]_{-2}^{2}$。",
+          "$=(34)-(-10)=44$。"
+        ],
+        "alternatives": [
+          "項ごとに $\\displaystyle\\int_a^bx^n\\,dx=\\dfrac{b^{n+1}-a^{n+1}}{n+1}$ を計算して足し合わせてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$F(\\text{下端})-F(\\text{上端})$ と逆に引く。",
+          "負の数を代入するときに符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "関数 $f(x)=2x^3+15x^2+36x-2$ の $x=4$ における様子として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$f'(4)\\neq0$ であり、$x=4$ で極値をとらない"
+        },
+        {
+          "label": "イ",
+          "text": "$x=4$ で極大値をとる"
+        },
+        {
+          "label": "ウ",
+          "text": "$f'(4)=0$ であるが、$x=4$ で極値をとらない"
+        },
+        {
+          "label": "エ",
+          "text": "$x=4$ で極小値をとる"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "$f'(4)=252\\neq0$ なので、$x=4$ の近くで単調に増加しており極値ではない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(6)*(4)**2+(30)*(4)**1+(36)*(4)**0",
+        "expected": "252",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-extremum_judge",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を求めて因数分解し、$x=4$ での値と、その前後での符号の変化を調べる。",
+        "steps": [
+          "$f'(x)=6x^2+30x+36=6(x+3)(x+2)$。",
+          "$f'(4)=252$。",
+          "$f'(4)=252\\neq0$ なので、$x=4$ の近くで単調に増加しており極値ではない。"
+        ],
+        "alternatives": [
+          "増減表をかいて、$x=4$ の前後の矢印の向きを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号の変化から正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "$f'(x)$ の符号が $x=4$ の前後で正から負に変わるときに限り極大。この関数ではそうなっていない。",
+          "misconception": "極大の判定条件の誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "実際には $f'(4)=252$ である。",
+          "misconception": "$f'(a)=0$ と極値の関係の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$f'(x)$ の符号が $x=4$ の前後で負から正に変わるときに限り極小。この関数ではそうなっていない。",
+          "misconception": "極小の判定条件の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "関数 $f(x)=x^3+9x^2+27x-1$ の $x=-3$ における様子として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$f'(-3)\\neq0$ であり、$x=-3$ で極値をとらない"
+        },
+        {
+          "label": "イ",
+          "text": "$f'(-3)=0$ であるが、$x=-3$ で極値をとらない"
+        },
+        {
+          "label": "ウ",
+          "text": "$x=-3$ で極大値をとる"
+        },
+        {
+          "label": "エ",
+          "text": "$x=-3$ で極小値をとる"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$f'(x)=3(x+3)^2\\geqq0$ で、$x=-3$ の前後で符号が変わらない（常に増加）ので極値ではない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(3)*(-3)**2+(18)*(-3)**1+(27)*(-3)**0",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-extremum_judge",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を求めて因数分解し、$x=-3$ での値と、その前後での符号の変化を調べる。",
+        "steps": [
+          "$f'(x)=3x^2+18x+27=3(x+3)^2$。",
+          "$f'(-3)=0$。",
+          "$f'(x)=3(x+3)^2\\geqq0$ で、$x=-3$ の前後で符号が変わらない（常に増加）ので極値ではない。"
+        ],
+        "alternatives": [
+          "増減表をかいて、$x=-3$ の前後の矢印の向きを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号の変化から正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$f'(-3)=0$ なので「$f'(-3)\\neq0$」は誤り。",
+          "misconception": "微分係数の計算の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$f'(x)$ の符号が $x=-3$ の前後で正から負に変わるときに限り極大。この関数ではそうなっていない。",
+          "misconception": "極大の判定条件の誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$f'(x)$ の符号が $x=-3$ の前後で負から正に変わるときに限り極小。この関数ではそうなっていない。",
+          "misconception": "極小の判定条件の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-2x^2+2x+3$ の接線のうち、傾きが $14$ であるものの方程式と接点の座標を求めなさい。",
+      "answer": {
+        "value": "$y=14x+21$（接点 $(-3,\\,-21)$）",
+        "accepted": [
+          "y=14x+21"
+        ]
+      },
+      "explanation": "接線の傾き $14$、接点 $(-3,\\,-21)$。$y-f(t)=f'(t)(x-t)$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(-4*t+(2)-(14), t)[0], (-2)*(-3)**2+(2)*(-3)+(3)-(14)*(-3)]",
+        "expected": "[-3, 21]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent",
+      "explanation_detail": {
+        "approach": "傾きが分かっているので、「導関数の値＝傾き」となる接点の $x$ 座標を先に求める。",
+        "steps": [
+          "$y'=-4x+2$。接点の $x$ 座標を $t$ とすると $-4t+2=14$ より $t=-3$。",
+          "接点は $(-3,\\,-21)$。",
+          "$y-(-21)=14(x-(-3))$ より $y=14x+21$。"
+        ],
+        "alternatives": [
+          "直線 $y=14x+k$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $D=0$）から $k$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の傾き・接点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾きに $x$ を含む導関数をそのまま使ってしまう。",
+          "$y-y_1=m(x-x_1)$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=x^3+2x^2-3x+3$ 上の点 $(-2,\\,9)$ における接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=x+11$",
+        "accepted": [
+          "y=x+11"
+        ]
+      },
+      "explanation": "接線の傾き $1$、接点 $(-2,\\,9)$。$y-f(t)=f'(t)(x-t)$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(3)*(-2)**2+(4)*(-2)**1+(-3)*(-2)**0, (1)*(-2)**3+(2)*(-2)**2+(-3)*(-2)**1+(3)*(-2)**0-(1)*(-2)]",
+        "expected": "[1, 11]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent",
+      "explanation_detail": {
+        "approach": "接線の傾きは導関数に接点の $x$ 座標を代入した値。点と傾きから直線の式をつくる。",
+        "steps": [
+          "$y'=3x^2+4x-3$。",
+          "接線の傾きは $x=-2$ を代入して $1$。",
+          "$y-(9)=1(x-(-2))$ より $y=x+11$。"
+        ],
+        "alternatives": [
+          "接線の式と曲線の式を連立すると、$x=-2$ を重解（2重以上の解）にもつことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の傾き・接点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾きに $x$ を含む導関数をそのまま使ってしまう。",
+          "$y-y_1=m(x-x_1)$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=x^2+2x$ の接線のうち、傾きが $2$ であるものの方程式と接点の座標を求めなさい。",
+      "answer": {
+        "value": "$y=2x$（接点 $(0,\\,0)$）",
+        "accepted": [
+          "y=2x"
+        ]
+      },
+      "explanation": "接線の傾き $2$、接点 $(0,\\,0)$。$y-f(t)=f'(t)(x-t)$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(2*t+(2)-(2), t)[0], (1)*(0)**2+(2)*(0)+(0)-(2)*(0)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent",
+      "explanation_detail": {
+        "approach": "傾きが分かっているので、「導関数の値＝傾き」となる接点の $x$ 座標を先に求める。",
+        "steps": [
+          "$y'=2x+2$。接点の $x$ 座標を $t$ とすると $2t+2=2$ より $t=0$。",
+          "接点は $(0,\\,0)$。",
+          "$y-(0)=2(x-(0))$ より $y=2x$。"
+        ],
+        "alternatives": [
+          "直線 $y=2x+k$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $D=0$）から $k$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の傾き・接点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾きに $x$ を含む導関数をそのまま使ってしまう。",
+          "$y-y_1=m(x-x_1)$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-2x^2-x-3$ の接線のうち、傾きが $-13$ であるものの方程式と接点の座標を求めなさい。",
+      "answer": {
+        "value": "$y=-13x+15$（接点 $(3,\\,-24)$）",
+        "accepted": [
+          "y=-13x+15"
+        ]
+      },
+      "explanation": "接線の傾き $-13$、接点 $(3,\\,-24)$。$y-f(t)=f'(t)(x-t)$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(-4*t+(-1)-(-13), t)[0], (-2)*(3)**2+(-1)*(3)+(-3)-(-13)*(3)]",
+        "expected": "[3, 15]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent",
+      "explanation_detail": {
+        "approach": "傾きが分かっているので、「導関数の値＝傾き」となる接点の $x$ 座標を先に求める。",
+        "steps": [
+          "$y'=-4x-1$。接点の $x$ 座標を $t$ とすると $-4t-1=-13$ より $t=3$。",
+          "接点は $(3,\\,-24)$。",
+          "$y-(-24)=-13(x-(3))$ より $y=-13x+15$。"
+        ],
+        "alternatives": [
+          "直線 $y=-13x+k$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $D=0$）から $k$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の傾き・接点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾きに $x$ を含む導関数をそのまま使ってしまう。",
+          "$y-y_1=m(x-x_1)$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-2x^2+x-2$ の接線のうち、傾きが $-11$ であるものの方程式と接点の座標を求めなさい。",
+      "answer": {
+        "value": "$y=-11x+16$（接点 $(3,\\,-17)$）",
+        "accepted": [
+          "y=-11x+16"
+        ]
+      },
+      "explanation": "接線の傾き $-11$、接点 $(3,\\,-17)$。$y-f(t)=f'(t)(x-t)$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(-4*t+(1)-(-11), t)[0], (-2)*(3)**2+(1)*(3)+(-2)-(-11)*(3)]",
+        "expected": "[3, 16]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent",
+      "explanation_detail": {
+        "approach": "傾きが分かっているので、「導関数の値＝傾き」となる接点の $x$ 座標を先に求める。",
+        "steps": [
+          "$y'=-4x+1$。接点の $x$ 座標を $t$ とすると $-4t+1=-11$ より $t=3$。",
+          "接点は $(3,\\,-17)$。",
+          "$y-(-17)=-11(x-(3))$ より $y=-11x+16$。"
+        ],
+        "alternatives": [
+          "直線 $y=-11x+k$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $D=0$）から $k$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の傾き・接点を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾きに $x$ を含む導関数をそのまま使ってしまう。",
+          "$y-y_1=m(x-x_1)$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^3+12x^2+18x-3$ の増減を調べ、極値を求めなさい。",
+      "answer": {
+        "value": "$x=-3$ で極大値 $-3$、$x=-1$ で極小値 $-11$"
+      },
+      "explanation": "$f'(x)=6x^2+24x+18=6(x+3)(x+1)$。$x=-3,\\ -1$ の前後で符号が変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(2)*(-3)**3+(12)*(-3)**2+(18)*(-3)**1+(-3)*(-3)**0, (2)*(-1)**3+(12)*(-1)**2+(18)*(-1)**1+(-3)*(-1)**0]",
+        "expected": "[-3, -11]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-extrema",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を因数分解して $f'(x)=0$ となる $x$ を求め、その前後の符号を増減表で調べる。",
+        "steps": [
+          "$f'(x)=6x^2+24x+18=6(x+3)(x+1)$。",
+          "$f'(x)=0$ とすると $x=-3,\\ -1$。",
+          "$x^3$ の係数が正なので、$f'(x)$ は $x<-3$ で正、$-3<x<-1$ で負、$x>-1$ で正。",
+          "$f(-3)=-3$、$f(-1)=-11$。",
+          "$x=-3$ で極大値 $-3$、$x=-1$ で極小値 $-11$。"
+        ],
+        "alternatives": [
+          "グラフの概形（$x^3$ の係数の符号で両端の向きが決まる）をかいて、極大・極小の位置を確かめる。",
+          "極大値と極小値の差は $\\displaystyle\\int_{-3}^{-1}f'(x)\\,dx$ の絶対値に等しいことからも検算できる（差 $8$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め因数分解している",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極大値・極小値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のときに、極大と極小を逆にする。",
+          "極値の $x$ の値だけを答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-2x^3+54x-5$ の増減を調べ、極値を求めなさい。",
+      "answer": {
+        "value": "$x=3$ で極大値 $103$、$x=-3$ で極小値 $-113$"
+      },
+      "explanation": "$f'(x)=-6x^2+54=-6(x+3)(x-3)$。$x=-3,\\ 3$ の前後で符号が変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-2)*(3)**3+(0)*(3)**2+(54)*(3)**1+(-5)*(3)**0, (-2)*(-3)**3+(0)*(-3)**2+(54)*(-3)**1+(-5)*(-3)**0]",
+        "expected": "[103, -113]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-extrema",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を因数分解して $f'(x)=0$ となる $x$ を求め、その前後の符号を増減表で調べる。",
+        "steps": [
+          "$f'(x)=-6x^2+54=-6(x+3)(x-3)$。",
+          "$f'(x)=0$ とすると $x=-3,\\ 3$。",
+          "$x^3$ の係数が負なので、$f'(x)$ は $x<-3$ で負、$-3<x<3$ で正、$x>3$ で負。",
+          "$f(-3)=-113$、$f(3)=103$。",
+          "$x=3$ で極大値 $103$、$x=-3$ で極小値 $-113$。"
+        ],
+        "alternatives": [
+          "グラフの概形（$x^3$ の係数の符号で両端の向きが決まる）をかいて、極大・極小の位置を確かめる。",
+          "極大値と極小値の差は $\\displaystyle\\int_{-3}^{3}f'(x)\\,dx$ の絶対値に等しいことからも検算できる（差 $216$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め因数分解している",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極大値・極小値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のときに、極大と極小を逆にする。",
+          "極値の $x$ の値だけを答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^3-6x^2-18x$ の増減を調べ、極値を求めなさい。",
+      "answer": {
+        "value": "$x=-1$ で極大値 $10$、$x=3$ で極小値 $-54$"
+      },
+      "explanation": "$f'(x)=6x^2-12x-18=6(x+1)(x-3)$。$x=-1,\\ 3$ の前後で符号が変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(2)*(-1)**3+(-6)*(-1)**2+(-18)*(-1)**1+(0)*(-1)**0, (2)*(3)**3+(-6)*(3)**2+(-18)*(3)**1+(0)*(3)**0]",
+        "expected": "[10, -54]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-extrema",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を因数分解して $f'(x)=0$ となる $x$ を求め、その前後の符号を増減表で調べる。",
+        "steps": [
+          "$f'(x)=6x^2-12x-18=6(x+1)(x-3)$。",
+          "$f'(x)=0$ とすると $x=-1,\\ 3$。",
+          "$x^3$ の係数が正なので、$f'(x)$ は $x<-1$ で正、$-1<x<3$ で負、$x>3$ で正。",
+          "$f(-1)=10$、$f(3)=-54$。",
+          "$x=-1$ で極大値 $10$、$x=3$ で極小値 $-54$。"
+        ],
+        "alternatives": [
+          "グラフの概形（$x^3$ の係数の符号で両端の向きが決まる）をかいて、極大・極小の位置を確かめる。",
+          "極大値と極小値の差は $\\displaystyle\\int_{-1}^{3}f'(x)\\,dx$ の絶対値に等しいことからも検算できる（差 $64$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め因数分解している",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極大値・極小値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のときに、極大と極小を逆にする。",
+          "極値の $x$ の値だけを答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-2x^3+3x^2+3$ の増減を調べ、極値を求めなさい。",
+      "answer": {
+        "value": "$x=1$ で極大値 $4$、$x=0$ で極小値 $3$"
+      },
+      "explanation": "$f'(x)=-6x^2+6x=-6x(x-1)$。$x=0,\\ 1$ の前後で符号が変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-2)*(1)**3+(3)*(1)**2+(0)*(1)**1+(3)*(1)**0, (-2)*(0)**3+(3)*(0)**2+(0)*(0)**1+(3)*(0)**0]",
+        "expected": "[4, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-extrema",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を因数分解して $f'(x)=0$ となる $x$ を求め、その前後の符号を増減表で調べる。",
+        "steps": [
+          "$f'(x)=-6x^2+6x=-6x(x-1)$。",
+          "$f'(x)=0$ とすると $x=0,\\ 1$。",
+          "$x^3$ の係数が負なので、$f'(x)$ は $x<0$ で負、$0<x<1$ で正、$x>1$ で負。",
+          "$f(0)=3$、$f(1)=4$。",
+          "$x=1$ で極大値 $4$、$x=0$ で極小値 $3$。"
+        ],
+        "alternatives": [
+          "グラフの概形（$x^3$ の係数の符号で両端の向きが決まる）をかいて、極大・極小の位置を確かめる。",
+          "極大値と極小値の差は $\\displaystyle\\int_{0}^{1}f'(x)\\,dx$ の絶対値に等しいことからも検算できる（差 $1$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め因数分解している",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極大値・極小値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のときに、極大と極小を逆にする。",
+          "極値の $x$ の値だけを答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^3+9x^2+3$ の増減を調べ、極値を求めなさい。",
+      "answer": {
+        "value": "$x=-3$ で極大値 $30$、$x=0$ で極小値 $3$"
+      },
+      "explanation": "$f'(x)=6x^2+18x=6(x+3)x$。$x=-3,\\ 0$ の前後で符号が変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(2)*(-3)**3+(9)*(-3)**2+(0)*(-3)**1+(3)*(-3)**0, (2)*(0)**3+(9)*(0)**2+(0)*(0)**1+(3)*(0)**0]",
+        "expected": "[30, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-extrema",
+      "explanation_detail": {
+        "approach": "$f'(x)$ を因数分解して $f'(x)=0$ となる $x$ を求め、その前後の符号を増減表で調べる。",
+        "steps": [
+          "$f'(x)=6x^2+18x=6(x+3)x$。",
+          "$f'(x)=0$ とすると $x=-3,\\ 0$。",
+          "$x^3$ の係数が正なので、$f'(x)$ は $x<-3$ で正、$-3<x<0$ で負、$x>0$ で正。",
+          "$f(-3)=30$、$f(0)=3$。",
+          "$x=-3$ で極大値 $30$、$x=0$ で極小値 $3$。"
+        ],
+        "alternatives": [
+          "グラフの概形（$x^3$ の係数の符号で両端の向きが決まる）をかいて、極大・極小の位置を確かめる。",
+          "極大値と極小値の差は $\\displaystyle\\int_{-3}^{0}f'(x)\\,dx$ の絶対値に等しいことからも検算できる（差 $27$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め因数分解している",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極大値・極小値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のときに、極大と極小を逆にする。",
+          "極値の $x$ の値だけを答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-x^3+6x^2-9x-4\\ (-1\\leqq x\\leqq4)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $12$（$x=-1$）、最小値 $-8$（$x=1,\\ x=4$）"
+      },
+      "explanation": "区間内の極値と、区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-1)*(-1)**3+(6)*(-1)**2+(-9)*(-1)**1+(-4)*(-1)**0, (-1)*(1)**3+(6)*(1)**2+(-9)*(1)**1+(-4)*(1)**0, (-1)*(3)**3+(6)*(3)**2+(-9)*(3)**1+(-4)*(3)**0, (-1)*(4)**3+(6)*(4)**2+(-9)*(4)**1+(-4)*(4)**0), Min((-1)*(-1)**3+(6)*(-1)**2+(-9)*(-1)**1+(-4)*(-1)**0, (-1)*(1)**3+(6)*(1)**2+(-9)*(1)**1+(-4)*(1)**0, (-1)*(3)**3+(6)*(3)**2+(-9)*(3)**1+(-4)*(3)**0, (-1)*(4)**3+(6)*(4)**2+(-9)*(4)**1+(-4)*(4)**0)]",
+        "expected": "[12, -8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-interval_maxmin",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「両端の値」の中にある。増減表を区間に限ってかき、候補の値を比べる。",
+        "steps": [
+          "$f'(x)=-3x^2+12x-9=-3(x-1)(x-3)$、$f'(x)=0$ とすると $x=1,\\ 3$。",
+          "区間 $-1\\leqq x\\leqq4$ で増減表をかく。",
+          "候補の値：$f(-1)=12$、$f(1)=-8$、$f(3)=-4$、$f(4)=-8$。",
+          "最大値 $12$、最小値 $-8$。"
+        ],
+        "alternatives": [
+          "候補の点の値をすべて計算して比べれば、増減表の細部に頼らずに確実に求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数から極値の候補を求めている",
+            "points": 1
+          },
+          {
+            "point": "区間の両端の値も調べている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値と $x$ の値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "区間の外にある極値を候補に入れてしまう。",
+          "両端の値を調べず、極大値を最大値と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-x^3-3x^2+9x-5\\ (-1\\leqq x\\leqq2)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $0$（$x=1$）、最小値 $-16$（$x=-1$）"
+      },
+      "explanation": "区間内の極値と、区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-1)*(-1)**3+(-3)*(-1)**2+(9)*(-1)**1+(-5)*(-1)**0, (-1)*(1)**3+(-3)*(1)**2+(9)*(1)**1+(-5)*(1)**0, (-1)*(2)**3+(-3)*(2)**2+(9)*(2)**1+(-5)*(2)**0), Min((-1)*(-1)**3+(-3)*(-1)**2+(9)*(-1)**1+(-5)*(-1)**0, (-1)*(1)**3+(-3)*(1)**2+(9)*(1)**1+(-5)*(1)**0, (-1)*(2)**3+(-3)*(2)**2+(9)*(2)**1+(-5)*(2)**0)]",
+        "expected": "[0, -16]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-interval_maxmin",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「両端の値」の中にある。増減表を区間に限ってかき、候補の値を比べる。",
+        "steps": [
+          "$f'(x)=-3x^2-6x+9=-3(x+3)(x-1)$、$f'(x)=0$ とすると $x=-3,\\ 1$。",
+          "区間 $-1\\leqq x\\leqq2$ で増減表をかく。",
+          "候補の値：$f(-1)=-16$、$f(1)=0$、$f(2)=-7$。",
+          "最大値 $0$、最小値 $-16$。"
+        ],
+        "alternatives": [
+          "候補の点の値をすべて計算して比べれば、増減表の細部に頼らずに確実に求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数から極値の候補を求めている",
+            "points": 1
+          },
+          {
+            "point": "区間の両端の値も調べている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値と $x$ の値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "区間の外にある極値を候補に入れてしまう。",
+          "両端の値を調べず、極大値を最大値と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=x^3+3x^2-9x+5\\ (-2\\leqq x\\leqq3)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $32$（$x=3$）、最小値 $0$（$x=1$）"
+      },
+      "explanation": "区間内の極値と、区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((1)*(-2)**3+(3)*(-2)**2+(-9)*(-2)**1+(5)*(-2)**0, (1)*(1)**3+(3)*(1)**2+(-9)*(1)**1+(5)*(1)**0, (1)*(3)**3+(3)*(3)**2+(-9)*(3)**1+(5)*(3)**0), Min((1)*(-2)**3+(3)*(-2)**2+(-9)*(-2)**1+(5)*(-2)**0, (1)*(1)**3+(3)*(1)**2+(-9)*(1)**1+(5)*(1)**0, (1)*(3)**3+(3)*(3)**2+(-9)*(3)**1+(5)*(3)**0)]",
+        "expected": "[32, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-interval_maxmin",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「両端の値」の中にある。増減表を区間に限ってかき、候補の値を比べる。",
+        "steps": [
+          "$f'(x)=3x^2+6x-9=3(x+3)(x-1)$、$f'(x)=0$ とすると $x=-3,\\ 1$。",
+          "区間 $-2\\leqq x\\leqq3$ で増減表をかく。",
+          "候補の値：$f(-2)=27$、$f(1)=0$、$f(3)=32$。",
+          "最大値 $32$、最小値 $0$。"
+        ],
+        "alternatives": [
+          "候補の点の値をすべて計算して比べれば、増減表の細部に頼らずに確実に求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数から極値の候補を求めている",
+            "points": 1
+          },
+          {
+            "point": "区間の両端の値も調べている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値と $x$ の値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "区間の外にある極値を候補に入れてしまう。",
+          "両端の値を調べず、極大値を最大値と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-x^3+3x+5\\ (-2\\leqq x\\leqq3)$ の最大値と最小値を求めなさい。また、そのときの $x$ の値も答えなさい。",
+      "answer": {
+        "value": "最大値 $7$（$x=-2,\\ x=1$）、最小値 $-13$（$x=3$）"
+      },
+      "explanation": "区間内の極値と、区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-1)*(-2)**3+(0)*(-2)**2+(3)*(-2)**1+(5)*(-2)**0, (-1)*(-1)**3+(0)*(-1)**2+(3)*(-1)**1+(5)*(-1)**0, (-1)*(1)**3+(0)*(1)**2+(3)*(1)**1+(5)*(1)**0, (-1)*(3)**3+(0)*(3)**2+(3)*(3)**1+(5)*(3)**0), Min((-1)*(-2)**3+(0)*(-2)**2+(3)*(-2)**1+(5)*(-2)**0, (-1)*(-1)**3+(0)*(-1)**2+(3)*(-1)**1+(5)*(-1)**0, (-1)*(1)**3+(0)*(1)**2+(3)*(1)**1+(5)*(1)**0, (-1)*(3)**3+(0)*(3)**2+(3)*(3)**1+(5)*(3)**0)]",
+        "expected": "[7, -13]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-interval_maxmin",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「両端の値」の中にある。増減表を区間に限ってかき、候補の値を比べる。",
+        "steps": [
+          "$f'(x)=-3x^2+3=-3(x+1)(x-1)$、$f'(x)=0$ とすると $x=-1,\\ 1$。",
+          "区間 $-2\\leqq x\\leqq3$ で増減表をかく。",
+          "候補の値：$f(-2)=7$、$f(-1)=3$、$f(1)=7$、$f(3)=-13$。",
+          "最大値 $7$、最小値 $-13$。"
+        ],
+        "alternatives": [
+          "候補の点の値をすべて計算して比べれば、増減表の細部に頼らずに確実に求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数から極値の候補を求めている",
+            "points": 1
+          },
+          {
+            "point": "区間の両端の値も調べている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値と $x$ の値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "区間の外にある極値を候補に入れてしまう。",
+          "両端の値を調べず、極大値を最大値と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2つの放物線 $y=x^2-24$、$y=-2x^2+3$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$108$"
+      },
+      "explanation": "交点の $x$ 座標は $-3,\\ 3$。差は $3x^2-27=3(x+3)(x-3)$ で、面積は $\\dfrac{3}{6}(3-(-3))^3=108$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((3)*x**2+(0)*x**1+(-27)*x**0, [x, -3, 3]))",
+        "expected": "108"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U06-area_two",
+      "explanation_detail": {
+        "approach": "交点の $x$ 座標を求め、その間で「上の関数－下の関数」を積分する。差が $a(x-\\alpha)(x-\\beta)$ の形なら $\\dfrac{|a|}{6}(\\beta-\\alpha)^3$ が使える。",
+        "steps": [
+          "2式の差：$(x^2-24)-(-2x^2+3)=3x^2-27=3(x+3)(x-3)$。",
+          "交点の $x$ 座標は $x=-3,\\ 3$。",
+          "$-3<x<3$ では第2式のグラフが上にある。",
+          "$S=\\displaystyle\\int_{-3}^{3}\\{-(3x^2-27)\\}\\,dx$",
+          "$=\\dfrac{3}{6}(3-(-3))^3=108$。"
+        ],
+        "alternatives": [
+          "$\\dfrac16$ 公式を使わずに、原始関数を求めて上端・下端を代入しても同じ値になる（検算に使える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して定積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "差の $x^2$ の係数を考えずに $\\dfrac16(\\beta-\\alpha)^3$ とする。",
+          "上下を逆にして負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=-2x^2+2x-2$ と直線 $y=8x+2$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{3}$"
+      },
+      "explanation": "交点の $x$ 座標は $-2,\\ -1$。差は $-2x^2-6x-4=-2(x+2)(x+1)$ で、面積は $\\dfrac{2}{6}(-1-(-2))^3=\\dfrac{1}{3}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((-2)*x**2+(-6)*x**1+(-4)*x**0, [x, -2, -1]))",
+        "expected": "Rational(1,3)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U06-area_two",
+      "explanation_detail": {
+        "approach": "交点の $x$ 座標を求め、その間で「上の関数－下の関数」を積分する。差が $a(x-\\alpha)(x-\\beta)$ の形なら $\\dfrac{|a|}{6}(\\beta-\\alpha)^3$ が使える。",
+        "steps": [
+          "2式の差：$(-2x^2+2x-2)-(8x+2)=-2x^2-6x-4=-2(x+2)(x+1)$。",
+          "交点の $x$ 座標は $x=-2,\\ -1$。",
+          "$-2<x<-1$ では第1式のグラフが上にある。",
+          "$S=\\displaystyle\\int_{-2}^{-1}(-2x^2-6x-4)\\,dx$",
+          "$=\\dfrac{2}{6}(-1-(-2))^3=\\dfrac{1}{3}$。"
+        ],
+        "alternatives": [
+          "$\\dfrac16$ 公式を使わずに、原始関数を求めて上端・下端を代入しても同じ値になる（検算に使える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して定積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "差の $x^2$ の係数を考えずに $\\dfrac16(\\beta-\\alpha)^3$ とする。",
+          "上下を逆にして負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "2つの放物線 $y=x^2-11x+11$、$y=-x^2-x+3$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$9$"
+      },
+      "explanation": "交点の $x$ 座標は $1,\\ 4$。差は $2x^2-10x+8=2(x-1)(x-4)$ で、面積は $\\dfrac{2}{6}(4-(1))^3=9$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((2)*x**2+(-10)*x**1+(8)*x**0, [x, 1, 4]))",
+        "expected": "9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U06-area_two",
+      "explanation_detail": {
+        "approach": "交点の $x$ 座標を求め、その間で「上の関数－下の関数」を積分する。差が $a(x-\\alpha)(x-\\beta)$ の形なら $\\dfrac{|a|}{6}(\\beta-\\alpha)^3$ が使える。",
+        "steps": [
+          "2式の差：$(x^2-11x+11)-(-x^2-x+3)=2x^2-10x+8=2(x-1)(x-4)$。",
+          "交点の $x$ 座標は $x=1,\\ 4$。",
+          "$1<x<4$ では第2式のグラフが上にある。",
+          "$S=\\displaystyle\\int_{1}^{4}\\{-(2x^2-10x+8)\\}\\,dx$",
+          "$=\\dfrac{2}{6}(4-(1))^3=9$。"
+        ],
+        "alternatives": [
+          "$\\dfrac16$ 公式を使わずに、原始関数を求めて上端・下端を代入しても同じ値になる（検算に使える）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して定積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "差の $x^2$ の係数を考えずに $\\dfrac16(\\beta-\\alpha)^3$ とする。",
+          "上下を逆にして負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=x^2-3x+2$ と $x$ 軸、および2直線 $x=1$、$x=3$ で囲まれた2つの部分の面積の和 $S$ を求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "$y=(x-1)(x-2)$ は区間の途中で符号が変わるので、区間を分けて面積を足す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((1)*x**2+(-3)*x**1+(2)*x**0, [x, 1, 2])) + Abs(integrate((1)*x**2+(-3)*x**1+(2)*x**0, [x, 2, 3]))",
+        "expected": "1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-area_axis",
+      "explanation_detail": {
+        "approach": "グラフが $x$ 軸より下にある部分では、定積分の値が負になる。$x$ 軸との交点で区間を分け、下にある部分は符号を変えてから足す。",
+        "steps": [
+          "$y=0$ となるのは $x=1,\\ 2$。区間 $1\\leqq x\\leqq3$ を $[1,\\,2]$、$[2,\\,3]$ に分ける。",
+          "$\\displaystyle\\int_{1}^{2}(x^2-3x+2)\\,dx=-\\dfrac{1}{6}$（下にある部分）。",
+          "$\\displaystyle\\int_{2}^{3}(x^2-3x+2)\\,dx=\\dfrac{5}{6}$（上にある部分）。",
+          "$S=\\dfrac{1}{6}+\\dfrac{5}{6}=1$。"
+        ],
+        "alternatives": [
+          "そのまま $\\displaystyle\\int_{1}^{3}$ を計算すると $\\dfrac{2}{3}$ となり、上下の部分が打ち消し合ってしまう。面積とは一致しないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ 軸との交点で区間を分けている",
+            "points": 1
+          },
+          {
+            "point": "各部分の定積分を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "符号を調整して面積の和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間を分けずに定積分を1回で計算してしまう。",
+          "$x$ 軸より下の部分の定積分（負の値）をそのまま足す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=x^2-2x-3$ と $x$ 軸、および2直線 $x=-1$、$x=4$ で囲まれた2つの部分の面積の和 $S$ を求めなさい。",
+      "answer": {
+        "value": "$13$"
+      },
+      "explanation": "$y=(x+1)(x-3)$ は区間の途中で符号が変わるので、区間を分けて面積を足す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((1)*x**2+(-2)*x**1+(-3)*x**0, [x, -1, 3])) + Abs(integrate((1)*x**2+(-2)*x**1+(-3)*x**0, [x, 3, 4]))",
+        "expected": "13"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-area_axis",
+      "explanation_detail": {
+        "approach": "グラフが $x$ 軸より下にある部分では、定積分の値が負になる。$x$ 軸との交点で区間を分け、下にある部分は符号を変えてから足す。",
+        "steps": [
+          "$y=0$ となるのは $x=-1,\\ 3$。区間 $-1\\leqq x\\leqq4$ を $[-1,\\,3]$、$[3,\\,4]$ に分ける。",
+          "$\\displaystyle\\int_{-1}^{3}(x^2-2x-3)\\,dx=-\\dfrac{32}{3}$（下にある部分）。",
+          "$\\displaystyle\\int_{3}^{4}(x^2-2x-3)\\,dx=\\dfrac{7}{3}$（上にある部分）。",
+          "$S=\\dfrac{32}{3}+\\dfrac{7}{3}=13$。"
+        ],
+        "alternatives": [
+          "そのまま $\\displaystyle\\int_{-1}^{4}$ を計算すると $-\\dfrac{25}{3}$ となり、上下の部分が打ち消し合ってしまう。面積とは一致しないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ 軸との交点で区間を分けている",
+            "points": 1
+          },
+          {
+            "point": "各部分の定積分を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "符号を調整して面積の和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間を分けずに定積分を1回で計算してしまう。",
+          "$x$ 軸より下の部分の定積分（負の値）をそのまま足す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=x^2+2x$ と $x$ 軸、および2直線 $x=-2$、$x=1$ で囲まれた2つの部分の面積の和 $S$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{8}{3}$"
+      },
+      "explanation": "$y=(x+2)x$ は区間の途中で符号が変わるので、区間を分けて面積を足す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((1)*x**2+(2)*x**1+(0)*x**0, [x, -2, 0])) + Abs(integrate((1)*x**2+(2)*x**1+(0)*x**0, [x, 0, 1]))",
+        "expected": "Rational(8,3)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-area_axis",
+      "explanation_detail": {
+        "approach": "グラフが $x$ 軸より下にある部分では、定積分の値が負になる。$x$ 軸との交点で区間を分け、下にある部分は符号を変えてから足す。",
+        "steps": [
+          "$y=0$ となるのは $x=-2,\\ 0$。区間 $-2\\leqq x\\leqq1$ を $[-2,\\,0]$、$[0,\\,1]$ に分ける。",
+          "$\\displaystyle\\int_{-2}^{0}(x^2+2x)\\,dx=-\\dfrac{4}{3}$（下にある部分）。",
+          "$\\displaystyle\\int_{0}^{1}(x^2+2x)\\,dx=\\dfrac{4}{3}$（上にある部分）。",
+          "$S=\\dfrac{4}{3}+\\dfrac{4}{3}=\\dfrac{8}{3}$。"
+        ],
+        "alternatives": [
+          "そのまま $\\displaystyle\\int_{-2}^{1}$ を計算すると $0$ となり、上下の部分が打ち消し合ってしまう。面積とは一致しないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x$ 軸との交点で区間を分けている",
+            "points": 1
+          },
+          {
+            "point": "各部分の定積分を正しく計算している",
+            "points": 2
+          },
+          {
+            "point": "符号を調整して面積の和を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間を分けずに定積分を1回で計算してしまう。",
+          "$x$ 軸より下の部分の定積分（負の値）をそのまま足す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。関数 $f(x)=x^3+ax^2+12x+2$ が極値をもつような $a$ の値の範囲を求めなさい。理由も示すこと。",
+      "answer": {
+        "value": "$a<-6,\\ 6<a$"
+      },
+      "explanation": "$f'(x)=3x^2+2ax+12$。極値をもつ $\\iff$ $f'(x)=0$ が異なる2つの実数解をもつ $\\iff$ $\\dfrac{D}{4}>0$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "極値をもつ条件を「$f'(x)=0$ が異なる2つの実数解をもつ」と言いかえている",
+            "points": 3
+          },
+          {
+            "criterion": "判別式を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "二次不等式を正しく解いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "solve(a**2-3*((0)*a+(12)), a)",
+        "expected": "[-6, 6]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-param_extreme",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "三次関数が極値をもつのは、$f'(x)$ の符号が変わる点があるとき、すなわち二次方程式 $f'(x)=0$ が異なる2つの実数解をもつとき。数学Ⅰの判別式と二次不等式に帰着する。",
+        "steps": [
+          "$f'(x)=3x^2+2ax+12$。",
+          "$f'(x)=0$ が異なる2つの実数解をもてば、その前後で $f'(x)$ の符号が変わり極値をもつ。重解または実数解なしなら $f'(x)\\geqq0$ で常に増加し、極値をもたない。",
+          "$\\dfrac{D}{4}=a^2-3\\cdot(12)=a^2-36=(a+6)(a-6)$。",
+          "極値をもつ条件 $\\dfrac{D}{4}>0$ より $a<-6,\\ 6<a$。"
+        ],
+        "alternatives": [
+          "境界の $a=-6$ を代入すると $f'(x)$ が $3(x+\\cdots)^2$ の形の完全平方式になり（重解）、極値をもたないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の言いかえ",
+            "points": 3
+          },
+          {
+            "point": "判別式の計算",
+            "points": 2
+          },
+          {
+            "point": "不等式の解",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$D\\geqq0$ としてしまい、重解（$D=0$）の場合を含めてしまう（重解では $f'(x)$ の符号が変わらない）。",
+          "$f'(x)$ の定数項の計算で $a$ を含む部分を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。関数 $f(x)=x^3+ax^2+2ax-1$ が極値をもたないような $a$ の値の範囲を求めなさい。理由も示すこと。",
+      "answer": {
+        "value": "$0\\leqq a\\leqq6$"
+      },
+      "explanation": "$f'(x)=3x^2+2ax+2a$。極値をもつ $\\iff$ $f'(x)=0$ が異なる2つの実数解をもつ $\\iff$ $\\dfrac{D}{4}>0$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "極値をもつ条件を「$f'(x)=0$ が異なる2つの実数解をもつ」と言いかえている",
+            "points": 3
+          },
+          {
+            "criterion": "判別式を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "二次不等式を正しく解いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "solve(a**2-3*((2)*a+(0)), a)",
+        "expected": "[0, 6]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-param_extreme",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "三次関数が極値をもつのは、$f'(x)$ の符号が変わる点があるとき、すなわち二次方程式 $f'(x)=0$ が異なる2つの実数解をもつとき。数学Ⅰの判別式と二次不等式に帰着する。",
+        "steps": [
+          "$f'(x)=3x^2+2ax+2a$。",
+          "$f'(x)=0$ が異なる2つの実数解をもてば、その前後で $f'(x)$ の符号が変わり極値をもつ。重解または実数解なしなら $f'(x)\\geqq0$ で常に増加し、極値をもたない。",
+          "$\\dfrac{D}{4}=a^2-3\\cdot(2a)=a^2-6a=a(a-6)$。",
+          "極値をもたない条件 $\\dfrac{D}{4}\\leqq0$ より $0\\leqq a\\leqq6$。"
+        ],
+        "alternatives": [
+          "境界の $a=0$ を代入すると $f'(x)$ が $3(x+\\cdots)^2$ の形の完全平方式になり（重解）、極値をもたないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の言いかえ",
+            "points": 3
+          },
+          {
+            "point": "判別式の計算",
+            "points": 2
+          },
+          {
+            "point": "不等式の解",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$D<0$ としてしまい、重解（$D=0$）の場合を落とす（重解でも極値をもたない）。",
+          "$f'(x)$ の定数項の計算で $a$ を含む部分を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$a$ を定数とする。関数 $f(x)=x^3+ax^2+(4a-9)x+3$ が極値をもつような $a$ の値の範囲を求めなさい。理由も示すこと。",
+      "answer": {
+        "value": "$a<3,\\ 9<a$"
+      },
+      "explanation": "$f'(x)=3x^2+2ax+(4a-9)$。極値をもつ $\\iff$ $f'(x)=0$ が異なる2つの実数解をもつ $\\iff$ $\\dfrac{D}{4}>0$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "極値をもつ条件を「$f'(x)=0$ が異なる2つの実数解をもつ」と言いかえている",
+            "points": 3
+          },
+          {
+            "criterion": "判別式を正しく計算している",
+            "points": 2
+          },
+          {
+            "criterion": "二次不等式を正しく解いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "solve(a**2-3*((4)*a+(-9)), a)",
+        "expected": "[3, 9]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-param_extreme",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "三次関数が極値をもつのは、$f'(x)$ の符号が変わる点があるとき、すなわち二次方程式 $f'(x)=0$ が異なる2つの実数解をもつとき。数学Ⅰの判別式と二次不等式に帰着する。",
+        "steps": [
+          "$f'(x)=3x^2+2ax+(4a-9)$。",
+          "$f'(x)=0$ が異なる2つの実数解をもてば、その前後で $f'(x)$ の符号が変わり極値をもつ。重解または実数解なしなら $f'(x)\\geqq0$ で常に増加し、極値をもたない。",
+          "$\\dfrac{D}{4}=a^2-3\\cdot(4a-9)=a^2-12a+27=(a-3)(a-9)$。",
+          "極値をもつ条件 $\\dfrac{D}{4}>0$ より $a<3,\\ 9<a$。"
+        ],
+        "alternatives": [
+          "境界の $a=3$ を代入すると $f'(x)$ が $3(x+\\cdots)^2$ の形の完全平方式になり（重解）、極値をもたないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件の言いかえ",
+            "points": 3
+          },
+          {
+            "point": "判別式の計算",
+            "points": 2
+          },
+          {
+            "point": "不等式の解",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$D\\geqq0$ としてしまい、重解（$D=0$）の場合を含めてしまう（重解では $f'(x)$ の符号が変わらない）。",
+          "$f'(x)$ の定数項の計算で $a$ を含む部分を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $(-3,\\,14)$ から放物線 $y=x^2-3x-3$ に引いた接線の方程式と、その接点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$y=-11x-19$（接点 $(-4,\\,25)$）、$y=-7x-7$（接点 $(-2,\\,7)$）"
+      },
+      "explanation": "接点を $(t,\\,t^2-3t-3)$ とおき、接線が点 $(-3,\\,14)$ を通る条件から $t$ を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接点の $x$ 座標を $t$ とおいて接線の方程式を表している",
+            "points": 3
+          },
+          {
+            "criterion": "点を通る条件から $t$ の方程式を立てて解いている",
+            "points": 3
+          },
+          {
+            "criterion": "接線と接点をすべて正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve((1)*t**2-2*(1)*(-3)*t+(14)-(-3)*(-3)-(-3), t)",
+        "expected": "[-4, -2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent_from_point",
+      "related_units": [
+        "HS-MATH2-U03"
+      ],
+      "explanation_detail": {
+        "approach": "点 $(-3,\\,14)$ は放物線上にない。接点が分からないので、接点の $x$ 座標を $t$ とおいて接線を表し、その接線が与えられた点を通る条件を使う。",
+        "steps": [
+          "$y'=2x-3$。接点を $(t,\\,t^2-3t-3)$ とすると、接線は $y=(2t-3)x-t^2-3$。",
+          "これが点 $(-3,\\,14)$ を通るので、代入して整理すると $t^2+6t+8=0$。",
+          "これを解いて $t=-4,\\ -2$。",
+          "よって $y=-11x-19$（接点 $(-4,\\,25)$）、$y=-7x-7$（接点 $(-2,\\,7)$）。"
+        ],
+        "alternatives": [
+          "点 $(-3,\\,14)$ を通る直線 $y=m(x-(-3))+(14)$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $=0$）から $m$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の式の設定",
+            "points": 3
+          },
+          {
+            "point": "通る条件と $t$ の決定",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "与えられた点を接点と誤解し、その点での微分係数を傾きにしてしまう。",
+          "接線が2本あることに気づかず1本だけ答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $(0,\\,-6)$ から放物線 $y=2x^2-x+2$ に引いた接線の方程式と、その接点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$y=-9x-6$（接点 $(-2,\\,12)$）、$y=7x-6$（接点 $(2,\\,8)$）"
+      },
+      "explanation": "接点を $(t,\\,2t^2-t+2)$ とおき、接線が点 $(0,\\,-6)$ を通る条件から $t$ を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接点の $x$ 座標を $t$ とおいて接線の方程式を表している",
+            "points": 3
+          },
+          {
+            "criterion": "点を通る条件から $t$ の方程式を立てて解いている",
+            "points": 3
+          },
+          {
+            "criterion": "接線と接点をすべて正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve((2)*t**2-2*(2)*(0)*t+(-6)-(-1)*(0)-(2), t)",
+        "expected": "[-2, 2]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent_from_point",
+      "related_units": [
+        "HS-MATH2-U03"
+      ],
+      "explanation_detail": {
+        "approach": "点 $(0,\\,-6)$ は放物線上にない。接点が分からないので、接点の $x$ 座標を $t$ とおいて接線を表し、その接線が与えられた点を通る条件を使う。",
+        "steps": [
+          "$y'=4x-1$。接点を $(t,\\,2t^2-t+2)$ とすると、接線は $y=(4t-1)x-2t^2+2$。",
+          "これが点 $(0,\\,-6)$ を通るので、代入して整理すると $2t^2-8=0$。",
+          "これを解いて $t=-2,\\ 2$。",
+          "よって $y=-9x-6$（接点 $(-2,\\,12)$）、$y=7x-6$（接点 $(2,\\,8)$）。"
+        ],
+        "alternatives": [
+          "点 $(0,\\,-6)$ を通る直線 $y=m(x-(0))+(-6)$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $=0$）から $m$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の式の設定",
+            "points": 3
+          },
+          {
+            "point": "通る条件と $t$ の決定",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "与えられた点を接点と誤解し、その点での微分係数を傾きにしてしまう。",
+          "接線が2本あることに気づかず1本だけ答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "点 $(2,\\,-7)$ から放物線 $y=-x^2-x-2$ に引いた接線の方程式と、その接点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$y=-3x-1$（接点 $(1,\\,-4)$）、$y=-7x+7$（接点 $(3,\\,-14)$）"
+      },
+      "explanation": "接点を $(t,\\,-t^2-t-2)$ とおき、接線が点 $(2,\\,-7)$ を通る条件から $t$ を求める。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接点の $x$ 座標を $t$ とおいて接線の方程式を表している",
+            "points": 3
+          },
+          {
+            "criterion": "点を通る条件から $t$ の方程式を立てて解いている",
+            "points": 3
+          },
+          {
+            "criterion": "接線と接点をすべて正しく答えている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve((-1)*t**2-2*(-1)*(2)*t+(-7)-(-1)*(2)-(-2), t)",
+        "expected": "[1, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH2-U06-tangent_from_point",
+      "related_units": [
+        "HS-MATH2-U03"
+      ],
+      "explanation_detail": {
+        "approach": "点 $(2,\\,-7)$ は放物線上にない。接点が分からないので、接点の $x$ 座標を $t$ とおいて接線を表し、その接線が与えられた点を通る条件を使う。",
+        "steps": [
+          "$y'=-2x-1$。接点を $(t,\\,-t^2-t-2)$ とすると、接線は $y=(-2t-1)x+t^2-2$。",
+          "これが点 $(2,\\,-7)$ を通るので、代入して整理すると $-t^2+4t-3=0$。",
+          "これを解いて $t=1,\\ 3$。",
+          "よって $y=-3x-1$（接点 $(1,\\,-4)$）、$y=-7x+7$（接点 $(3,\\,-14)$）。"
+        ],
+        "alternatives": [
+          "点 $(2,\\,-7)$ を通る直線 $y=m(x-(2))+(-7)$ と放物線を連立した二次方程式が重解をもつ条件（判別式 $=0$）から $m$ を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の式の設定",
+            "points": 3
+          },
+          {
+            "point": "通る条件と $t$ の決定",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "与えられた点を接点と誤解し、その点での微分係数を傾きにしてしまう。",
+          "接線が2本あることに気づかず1本だけ答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "縦 $16$ cm、横 $21$ cm の長方形の厚紙の四すみから、1辺の長さが $x$ cm の正方形を切り取り、残りを折り曲げてふたのない箱をつくる。箱の容積 $V$ の最大値と、そのときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "$x=3$ のとき最大値 $450$（cm$^3$）"
+      },
+      "explanation": "$V=x(16-2x)(21-2x)\\ \\left(0<x<8\\right)$ を微分して増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$V$ を $x$ の式で表し、$x$ の変域を示している",
+            "points": 2
+          },
+          {
+            "criterion": "導関数を求め増減を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "最大値とそのときの $x$ が正しい",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(3)*(16-2*(3))*(21-2*(3))",
+        "expected": "450",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-box_volume",
+      "explanation_detail": {
+        "approach": "容積を1つの変数 $x$ の三次関数で表し、変域（辺の長さが正）の中で増減表をかく。",
+        "steps": [
+          "底面は縦 $16-2x$、横 $21-2x$、高さ $x$ なので $V=x(16-2x)(21-2x)=4 x^{3} - 74 x^{2} + 336 x$。",
+          "辺の長さは正なので $0<x<8$。",
+          "$V'=12 x^{2} - 148 x + 336=4 \\left(x - 3\\right) \\left(3 x - 28\\right)$。変域内で $V'=0$ となるのは $x=3$。",
+          "$x=3$ の前後で $V'$ は正から負に変わるので、ここで極大かつ最大。",
+          "最大値 $V=450$。"
+        ],
+        "alternatives": [
+          "変域の端（$x\\to0$ や辺の長さが $0$ になるとき）では $V\\to0$ なので、変域内のただ1つの極大値が最大値になる、と説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式と変域",
+            "points": 2
+          },
+          {
+            "point": "増減の調べ方",
+            "points": 3
+          },
+          {
+            "point": "最大値と $x$",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "変域を考えず、変域外の $V'=0$ の解も候補にしてしまう。",
+          "底面の辺の長さを $16-x$ のように、切り取る分を片側だけ引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "縦 $10$ cm、横 $16$ cm の長方形の厚紙の四すみから、1辺の長さが $x$ cm の正方形を切り取り、残りを折り曲げてふたのない箱をつくる。箱の容積 $V$ の最大値と、そのときの $x$ の値を求めなさい。",
+      "answer": {
+        "value": "$x=2$ のとき最大値 $144$（cm$^3$）"
+      },
+      "explanation": "$V=x(10-2x)(16-2x)\\ \\left(0<x<5\\right)$ を微分して増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$V$ を $x$ の式で表し、$x$ の変域を示している",
+            "points": 2
+          },
+          {
+            "criterion": "導関数を求め増減を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "最大値とそのときの $x$ が正しい",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(2)*(10-2*(2))*(16-2*(2))",
+        "expected": "144",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-box_volume",
+      "explanation_detail": {
+        "approach": "容積を1つの変数 $x$ の三次関数で表し、変域（辺の長さが正）の中で増減表をかく。",
+        "steps": [
+          "底面は縦 $10-2x$、横 $16-2x$、高さ $x$ なので $V=x(10-2x)(16-2x)=4 x^{3} - 52 x^{2} + 160 x$。",
+          "辺の長さは正なので $0<x<5$。",
+          "$V'=12 x^{2} - 104 x + 160=4 \\left(x - 2\\right) \\left(3 x - 20\\right)$。変域内で $V'=0$ となるのは $x=2$。",
+          "$x=2$ の前後で $V'$ は正から負に変わるので、ここで極大かつ最大。",
+          "最大値 $V=144$。"
+        ],
+        "alternatives": [
+          "変域の端（$x\\to0$ や辺の長さが $0$ になるとき）では $V\\to0$ なので、変域内のただ1つの極大値が最大値になる、と説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式と変域",
+            "points": 2
+          },
+          {
+            "point": "増減の調べ方",
+            "points": 3
+          },
+          {
+            "point": "最大値と $x$",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "変域を考えず、変域外の $V'=0$ の解も候補にしてしまう。",
+          "底面の辺の長さを $10-x$ のように、切り取る分を片側だけ引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=x^2-4x+5$ と、その上の点 $(-1,\\,10)$ における接線、および直線 $x=2$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$9$"
+      },
+      "explanation": "放物線と接線の差は $a(x-t)^2$ の形になることを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接線の方程式を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "積分区間と被積分関数を正しく設定している",
+            "points": 3
+          },
+          {
+            "criterion": "面積を正しく計算している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "Abs(integrate(((1)*x**2+(-4)*x**1+(5)*x**0)-((-6)*x+(4)), [x, -1, 2]))",
+        "expected": "9"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-area_tangent",
+      "explanation_detail": {
+        "approach": "放物線と接線の差は、接点の $x$ 座標を $t$ として $a(x-t)^2$ の形になる。これを積分区間で積分する。",
+        "steps": [
+          "$y'=2x-4$ より接線は $y=-6x+4$。",
+          "放物線と接線の差は $x^2-4x+5-(-6x+4)=(x+1)^2$。",
+          "$S=\\displaystyle\\int_{-1}^{2}(x+1)^2\\,dx=\\Bigl[\\dfrac{(x+1)^3}{3}\\Bigr]_{-1}^{2}=9$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle\\int(x-t)^2\\,dx=\\dfrac{(x-t)^3}{3}+C$ を使うと展開せずに計算できる。展開して積分しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線",
+            "points": 2
+          },
+          {
+            "point": "立式",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "接線と放物線の上下関係を逆にして負の値を出す。",
+          "2本の接線の交点で区間を分けずに積分する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=3x^2+12x+10$ と、その上の点 $(1,\\,25)$ における接線、および直線 $x=-2$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$27$"
+      },
+      "explanation": "放物線と接線の差は $a(x-t)^2$ の形になることを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "接線の方程式を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "積分区間と被積分関数を正しく設定している",
+            "points": 3
+          },
+          {
+            "criterion": "面積を正しく計算している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "Abs(integrate(((3)*x**2+(12)*x**1+(10)*x**0)-((18)*x+(7)), [x, -2, 1]))",
+        "expected": "27"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH2-U06-area_tangent",
+      "explanation_detail": {
+        "approach": "放物線と接線の差は、接点の $x$ 座標を $t$ として $a(x-t)^2$ の形になる。これを積分区間で積分する。",
+        "steps": [
+          "$y'=6x+12$ より接線は $y=18x+7$。",
+          "放物線と接線の差は $3x^2+12x+10-(18x+7)=3(x-1)^2$。",
+          "$S=\\displaystyle\\int_{-2}^{1}3(x-1)^2\\,dx=\\Bigl[\\dfrac{3(x-1)^3}{3}\\Bigr]_{-2}^{1}=27$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle\\int(x-t)^2\\,dx=\\dfrac{(x-t)^3}{3}+C$ を使うと展開せずに計算できる。展開して積分しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線",
+            "points": 2
+          },
+          {
+            "point": "立式",
+            "points": 3
+          },
+          {
+            "point": "計算",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "接線と放物線の上下関係を逆にして負の値を出す。",
+          "2本の接線の交点で区間を分けずに積分する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=x^3+3x^2+x+4$ 上の点 $(-2,\\,6)$ における接線の方程式を求めなさい。\n［ある生徒の解答］\n$y'=3x^2+6x+1$、$x=-2$ のとき $y'=1$。よって接線は $y=x+6$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=x+8$"
+      },
+      "explanation": "接線は点 $(t,\\,f(t))$ を通り傾き $f'(t)$ の直線：$y-f(t)=f'(t)(x-t)$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[(3)*(-2)**2+(6)*(-2)**1+(1)*(-2)**0, (1)*(-2)**3+(3)*(-2)**2+(1)*(-2)**1+(4)*(-2)**0-(1)*(-2)]",
+        "expected": "[1, 8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-err_tangent",
+      "explanation_detail": {
+        "approach": "接線の公式 $y-f(t)=f'(t)(x-t)$ に、傾き（微分係数）と接点を正しく当てはめる。",
+        "steps": [
+          "$y'=3x^2+6x+1$、$f'(-2)=1$。",
+          "$y-(6)=1(x-(-2))$。",
+          "$y=x+8$。"
+        ],
+        "alternatives": [
+          "答えの直線に $x=-2$ を代入すると $y=6$ となり、接点を通ることを確かめられる（生徒の直線は通らない、または傾きが違う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "接点を通るかどうかの検算をしない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=3x^2+6x+1$、$x=-2$ のとき $y'=1$。よって接線は $y=x+6$",
+        "error_step": "直線の式 $y=mx+f(t)$ とした部分（$x$ 方向の平行移動を考えていない）",
+        "error_type": "formula",
+        "why_tempting": "「傾き $m$、点の $y$ 座標を切片」と思い込み、接点が $y$ 軸上にない場合にも $y=mx+f(t)$ としてしまう。",
+        "correction": "傾き $f'(-2)=1$、$y-(6)=1(x-(-2))$ より $y=x+8$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=-x^3+x+4$ 上の点 $(-2,\\,10)$ における接線の方程式を求めなさい。\n［ある生徒の解答］\n$x=-2$ のとき $y=10$ なので傾きは $10$。よって $y-(10)=10(x-(-2))$、$y=10x+30$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=-11x-12$"
+      },
+      "explanation": "接線は点 $(t,\\,f(t))$ を通り傾き $f'(t)$ の直線：$y-f(t)=f'(t)(x-t)$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[(-3)*(-2)**2+(0)*(-2)**1+(1)*(-2)**0, (-1)*(-2)**3+(0)*(-2)**2+(1)*(-2)**1+(4)*(-2)**0-(-11)*(-2)]",
+        "expected": "[-11, -12]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-err_tangent",
+      "explanation_detail": {
+        "approach": "接線の公式 $y-f(t)=f'(t)(x-t)$ に、傾き（微分係数）と接点を正しく当てはめる。",
+        "steps": [
+          "$y'=-3x^2+1$、$f'(-2)=-11$。",
+          "$y-(10)=-11(x-(-2))$。",
+          "$y=-11x-12$。"
+        ],
+        "alternatives": [
+          "答えの直線に $x=-2$ を代入すると $y=10$ となり、接点を通ることを確かめられる（生徒の直線は通らない、または傾きが違う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "接点を通るかどうかの検算をしない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x=-2$ のとき $y=10$ なので傾きは $10$。よって $y-(10)=10(x-(-2))$、$y=10x+30$",
+        "error_step": "接線の傾きに関数の値 $f(t)$ を使った部分",
+        "error_type": "concept",
+        "why_tempting": "接線の傾きは「微分係数」であるのに、接点の $y$ 座標（関数の値）と混同している。",
+        "correction": "傾き $f'(-2)=-11$、$y-(10)=-11(x-(-2))$ より $y=-11x-12$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=-x^3+x^2$ 上の点 $(2,\\,-4)$ における接線の方程式を求めなさい。\n［ある生徒の解答］\n$x=2$ のとき $y=-4$ なので傾きは $-4$。よって $y-(-4)=-4(x-(2))$、$y=-4x+4$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=-8x+12$"
+      },
+      "explanation": "接線は点 $(t,\\,f(t))$ を通り傾き $f'(t)$ の直線：$y-f(t)=f'(t)(x-t)$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[(-3)*(2)**2+(2)*(2)**1+(0)*(2)**0, (-1)*(2)**3+(1)*(2)**2+(0)*(2)**1+(0)*(2)**0-(-8)*(2)]",
+        "expected": "[-8, 12]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-err_tangent",
+      "explanation_detail": {
+        "approach": "接線の公式 $y-f(t)=f'(t)(x-t)$ に、傾き（微分係数）と接点を正しく当てはめる。",
+        "steps": [
+          "$y'=-3x^2+2x$、$f'(2)=-8$。",
+          "$y-(-4)=-8(x-(2))$。",
+          "$y=-8x+12$。"
+        ],
+        "alternatives": [
+          "答えの直線に $x=2$ を代入すると $y=-4$ となり、接点を通ることを確かめられる（生徒の直線は通らない、または傾きが違う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "接点を通るかどうかの検算をしない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$x=2$ のとき $y=-4$ なので傾きは $-4$。よって $y-(-4)=-4(x-(2))$、$y=-4x+4$",
+        "error_step": "接線の傾きに関数の値 $f(t)$ を使った部分",
+        "error_type": "concept",
+        "why_tempting": "接線の傾きは「微分係数」であるのに、接点の $y$ 座標（関数の値）と混同している。",
+        "correction": "傾き $f'(2)=-8$、$y-(-4)=-8(x-(2))$ より $y=-8x+12$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=x^3-3x^2+3x+4$ の極値を調べなさい。\n［ある生徒の解答］\n$f'(x)=3x^2-6x+3=3(x-1)^2$。$f'(x)=0$ より $x=1$。よって $x=1$ で極値 $5$ をとる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "$f'(x)$ の符号が $x=1$ の前後で変わらないので、$x=1$ は極値をとる点ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(diff((1)*x**3+(-3)*x**2+(3)*x**1+(4)*x**0, x))",
+        "expected": "3*(x-(1))**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-err_extreme",
+      "explanation_detail": {
+        "approach": "極値の判定は、$f'(x)=0$ の点の「前後の符号の変化」まで確かめる。",
+        "steps": [
+          "$f'(x)=3(x-1)^2$。",
+          "$x<1$ でも $x>1$ でも $f'(x)>0$。",
+          "$f(x)$ は常に増加し、極値はない。"
+        ],
+        "alternatives": [
+          "$f(x)=(x-1)^3+5$ と変形でき、$y=x^3$ を平行移動したグラフと分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "増減表をかかずに $f'(x)=0$ の解だけで判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=3x^2-6x+3=3(x-1)^2$。$f'(x)=0$ より $x=1$。よって $x=1$ で極値 $5$ をとる",
+        "error_step": "$f'(x)=0$ となる点を、そのまま極値をとる点とした部分",
+        "error_type": "condition",
+        "why_tempting": "「極値では $f'(x)=0$」を逆向きに使い、$f'(x)=0$ ならば極値と思い込んでいる。",
+        "correction": "$f'(x)=3(x-1)^2$ は $x=1$ の前後で符号が変わらない（常に $f'(x)\\geqq0$）。$f(x)$ は常に増加し、極値をもたない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=-x^3+3x-3$ の極値を求めなさい。\n［ある生徒の解答］\n$f'(x)=-3(x+1)(x-1)$ より、$x=-1$ で極大値 $-5$、$x=1$ で極小値 $-1$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x=1$ で極大値 $-1$、$x=-1$ で極小値 $-5$"
+      },
+      "explanation": "$f'(x)=-3(x+1)(x-1)$ は、$-1<x<1$ で正になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[(-1)*(1)**3+(0)*(1)**2+(3)*(1)**1+(-3)*(1)**0, (-1)*(-1)**3+(0)*(-1)**2+(3)*(-1)**1+(-3)*(-1)**0]",
+        "expected": "[-1, -5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-err_extreme",
+      "explanation_detail": {
+        "approach": "増減表で $f'(x)$ の符号を実際に調べてから、極大・極小を判定する。",
+        "steps": [
+          "$f'(x)=-3(x+1)(x-1)$。",
+          "$-1<x<1$ で $f'(x)>0$、その外側で $f'(x)<0$。",
+          "$x=-1$ で極小値 $-5$、$x=1$ で極大値 $-1$。"
+        ],
+        "alternatives": [
+          "極大値は極小値より大きいはず：$-1>-5$ であることからも、$x=1$ が極大と確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数の符号を確認しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=-3(x+1)(x-1)$ より、$x=-1$ で極大値 $-5$、$x=1$ で極小値 $-1$",
+        "error_step": "極大・極小の判定（$f'(x)$ の符号の調べ方）",
+        "error_type": "sign",
+        "why_tempting": "$x^3$ の係数が正のときの「左が極大、右が極小」というパターンを、係数が負の場合にもそのまま当てはめている。",
+        "correction": "$x<-1$ で $f'(x)<0$、$-1<x<1$ で $f'(x)>0$、$x>1$ で $f'(x)<0$。よって $x=-1$ で極小値 $-5$、$x=1$ で極大値 $-1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=-x^3-3$ の極値を調べなさい。\n［ある生徒の解答］\n$f'(x)=-3x^2$。$f'(x)=0$ より $x=0$。よって $x=0$ で極値 $-3$ をとる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "$f'(x)$ の符号が $x=0$ の前後で変わらないので、$x=0$ は極値をとる点ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(diff((-1)*x**3+(0)*x**2+(0)*x**1+(-3)*x**0, x))",
+        "expected": "-3*(x-(0))**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH2-U06-err_extreme",
+      "explanation_detail": {
+        "approach": "極値の判定は、$f'(x)=0$ の点の「前後の符号の変化」まで確かめる。",
+        "steps": [
+          "$f'(x)=-3x^2$。",
+          "$x<0$ でも $x>0$ でも $f'(x)<0$。",
+          "$f(x)$ は常に減少し、極値はない。"
+        ],
+        "alternatives": [
+          "$f(x)=-x^3-3$ と変形でき、$y=-x^3$ を平行移動したグラフと分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "増減表をかかずに $f'(x)=0$ の解だけで判断する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=-3x^2$。$f'(x)=0$ より $x=0$。よって $x=0$ で極値 $-3$ をとる",
+        "error_step": "$f'(x)=0$ となる点を、そのまま極値をとる点とした部分",
+        "error_type": "condition",
+        "why_tempting": "「極値では $f'(x)=0$」を逆向きに使い、$f'(x)=0$ ならば極値と思い込んでいる。",
+        "correction": "$f'(x)=-3x^2$ は $x=0$ の前後で符号が変わらない（常に $f'(x)\\leqq0$）。$f(x)$ は常に減少し、極値をもたない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=x^2-2x-3$ と $x$ 軸で囲まれた部分の面積を求めなさい。\n［ある生徒の解答］\n$\\displaystyle\\int_{-1}^{3}(x^2-2x-3)\\,dx=-\\dfrac{1}{6}(3-(-1))^3=-\\dfrac{32}{3}$。よって面積は $-\\dfrac{32}{3}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{32}{3}$"
+      },
+      "explanation": "面積は「上の関数－下の関数」の積分。$x$ 軸 $(y=0)$ が上にあるので $\\displaystyle\\int(0-f(x))\\,dx$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-integrate((1)*x**2+(-2)*x**1+(-3)*x**0, [x, -1, 3])",
+        "expected": "Rational(32,3)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-err_area_sign",
+      "explanation_detail": {
+        "approach": "面積は必ず正。定積分の値が負になったら、上下関係を見直す。",
+        "steps": [
+          "交点は $x=-1,\\ 3$、その間で $y\\leqq0$。",
+          "$S=\\displaystyle\\int_{-1}^{3}\\{0-(x^2-2x-3)\\}\\,dx$。",
+          "$=\\dfrac{1}{6}(3-(-1))^3=\\dfrac{32}{3}$。"
+        ],
+        "alternatives": [
+          "面積が負の値になることはないので、答えの符号で誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上下関係を確かめずに積分する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\displaystyle\\int_{-1}^{3}(x^2-2x-3)\\,dx=-\\dfrac{1}{6}(3-(-1))^3=-\\dfrac{32}{3}$。よって面積は $-\\dfrac{32}{3}$",
+        "error_step": "定積分の値をそのまま面積とした部分",
+        "error_type": "concept",
+        "why_tempting": "「面積＝定積分」と覚えていて、グラフが $x$ 軸より下にあると定積分が負になることを考えていない。",
+        "correction": "$-1\\leqq x\\leqq3$ で $y\\leqq0$ なので、面積は $-\\displaystyle\\int_{-1}^{3}(x^2-2x-3)\\,dx=\\dfrac{32}{3}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "放物線 $y=x^2-4x+3$ と $x$ 軸で囲まれた部分の面積を求めなさい。\n［ある生徒の解答］\n$\\displaystyle\\int_{1}^{3}(x^2-4x+3)\\,dx=-\\dfrac{1}{6}(3-(1))^3=-\\dfrac{4}{3}$。よって面積は $-\\dfrac{4}{3}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{4}{3}$"
+      },
+      "explanation": "面積は「上の関数－下の関数」の積分。$x$ 軸 $(y=0)$ が上にあるので $\\displaystyle\\int(0-f(x))\\,dx$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-integrate((1)*x**2+(-4)*x**1+(3)*x**0, [x, 1, 3])",
+        "expected": "Rational(4,3)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH2-U06-err_area_sign",
+      "explanation_detail": {
+        "approach": "面積は必ず正。定積分の値が負になったら、上下関係を見直す。",
+        "steps": [
+          "交点は $x=1,\\ 3$、その間で $y\\leqq0$。",
+          "$S=\\displaystyle\\int_{1}^{3}\\{0-(x^2-4x+3)\\}\\,dx$。",
+          "$=\\dfrac{1}{6}(3-(1))^3=\\dfrac{4}{3}$。"
+        ],
+        "alternatives": [
+          "面積が負の値になることはないので、答えの符号で誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上下関係を確かめずに積分する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\displaystyle\\int_{1}^{3}(x^2-4x+3)\\,dx=-\\dfrac{1}{6}(3-(1))^3=-\\dfrac{4}{3}$。よって面積は $-\\dfrac{4}{3}$",
+        "error_step": "定積分の値をそのまま面積とした部分",
+        "error_type": "concept",
+        "why_tempting": "「面積＝定積分」と覚えていて、グラフが $x$ 軸より下にあると定積分が負になることを考えていない。",
+        "correction": "$1\\leqq x\\leqq3$ で $y\\leqq0$ なので、面積は $-\\displaystyle\\int_{1}^{3}(x^2-4x+3)\\,dx=\\dfrac{4}{3}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "定積分 $\\displaystyle\\int_{1}^{4}(-6x^2+2x-2)\\,dx$ を計算しなさい。\n［ある生徒の解答］\n$\\Bigl[-2x^3+x^2-2x\\Bigr]_{1}^{4}=(-3)-(-120)=117$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-117$"
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$、$\\displaystyle\\int_a^bf(x)\\,dx=F(b)-F(a)$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "integrate((-6)*x**2+(2)*x**1+(-2)*x**0, [x, 1, 4])",
+        "expected": "-117"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-err_integral",
+      "explanation_detail": {
+        "approach": "原始関数は微分して確かめ、定積分は「上端の値－下端の値」の順で計算する。",
+        "steps": [
+          "原始関数は $F(x)=-2x^3+x^2-2x$。",
+          "$F(4)=-120$、$F(1)=-3$。",
+          "$F(4)-F(1)=-117$。"
+        ],
+        "alternatives": [
+          "原始関数 $F(x)=-2x^3+x^2-2x$ を微分すると $-6x^2+2x-2$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "原始関数を微分して検算しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Bigl[-2x^3+x^2-2x\\Bigr]_{1}^{4}=(-3)-(-120)=117$",
+        "error_step": "上端と下端の値を引く順序",
+        "error_type": "sign",
+        "why_tempting": "記号 $\\Bigl[F(x)\\Bigr]_a^b$ の下端 $a$ を先に書くので、$F(a)-F(b)$ と逆に引いてしまう。",
+        "correction": "$\\Bigl[-2x^3+x^2-2x\\Bigr]_{1}^{4}=(-120)-(-3)=-117$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH2-U06-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS2",
+      "subject": "math",
+      "unit_id": "HS-MATH2-U06",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "定積分 $\\displaystyle\\int_{1}^{4}(3x^2+4x+4)\\,dx$ を計算しなさい。\n［ある生徒の解答］\n$\\Bigl[x^3+2x^2+4x\\Bigr]_{1}^{4}=(7)-(112)=-105$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$105$"
+      },
+      "explanation": "$\\displaystyle\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$、$\\displaystyle\\int_a^bf(x)\\,dx=F(b)-F(a)$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "integrate((3)*x**2+(4)*x**1+(4)*x**0, [x, 1, 4])",
+        "expected": "105"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH2-U06-err_integral",
+      "explanation_detail": {
+        "approach": "原始関数は微分して確かめ、定積分は「上端の値－下端の値」の順で計算する。",
+        "steps": [
+          "原始関数は $F(x)=x^3+2x^2+4x$。",
+          "$F(4)=112$、$F(1)=7$。",
+          "$F(4)-F(1)=105$。"
+        ],
+        "alternatives": [
+          "原始関数 $F(x)=x^3+2x^2+4x$ を微分すると $3x^2+4x+4$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "原始関数を微分して検算しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Bigl[x^3+2x^2+4x\\Bigr]_{1}^{4}=(7)-(112)=-105$",
+        "error_step": "上端と下端の値を引く順序",
+        "error_type": "sign",
+        "why_tempting": "記号 $\\Bigl[F(x)\\Bigr]_a^b$ の下端 $a$ を先に書くので、$F(a)-F(b)$ と逆に引いてしまう。",
+        "correction": "$\\Bigl[x^3+2x^2+4x\\Bigr]_{1}^{4}=(112)-(7)=105$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "7ce59a2f626da9636acc74c9964c44e4a18ff2eb9f725ba45ecbe4cc1bc70b93"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 6 問（Q026, Q035, Q036, Q037, Q042, Q056）",
+      "content_hash": "a72fe11bc00738bf685f580812d95514b27a81aa022d64b86628e6570437f2b9"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:43:17+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "755642e4bcf6acca6dfd92cd7862a682face1ba6a86c49434321f06b34b70850"
+  }
+}

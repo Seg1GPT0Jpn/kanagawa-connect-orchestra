@@ -1,0 +1,5480 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-PHYB-U01-EX",
+  "title": "運動の表し方と運動の法則　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-PHYB-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-PHYB-U01-PACK",
+  "pair_set_id": "HS-PHYB-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-SCI-G3-U03",
+        "point": "運動とエネルギー",
+        "title": "運動とエネルギー"
+      },
+      {
+        "unit_id": "JH-MATH-G2-U03",
+        "point": "一次関数とグラフ",
+        "title": "一次関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-PHYB-U02",
+        "point": "仕事とエネルギー",
+        "title": "仕事とエネルギー"
+      },
+      {
+        "unit_id": "HS-PHY-U01",
+        "point": "運動量・円運動",
+        "title": "力学（運動量・円運動・単振動・万有引力）"
+      }
+    ],
+    "readiness_check": [
+      "中学校で学んだ「速さ＝距離÷時間」、力の表し方（矢印）、力のつり合いの条件を説明できる。",
+      "一次関数のグラフの傾きと、台形・三角形の面積を求められる。",
+      "三角比 $\\sin30^\\circ=\\dfrac{1}{2}$、$\\cos30^\\circ=\\dfrac{\\sqrt3}{2}$ などの値を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-PHYB-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "静止していた物体が正の向きに大きさ 1.5 m/s² の一定の加速度で運動を続けた。10 s 後の速さは何 m/s か。",
+      "answer": {
+        "value": "15",
+        "unit": "m/s"
+      },
+      "explanation": "$v=v_0+at$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(0)+(3/2)*(10)",
+        "expected": "15"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-kin_basic",
+      "explanation_detail": {
+        "approach": "加速度は「1秒あたりの速度の増加」。$t$ 秒で $at$ だけ速度が増える。",
+        "steps": [
+          "$v=v_0+at=0+1.5\\times10$。",
+          "$v=15.0\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフを描くと、傾き 1.5 の直線の $t=10$ での値として読み取れる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$v=v_0+at$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "初速度 $v_0$ を足し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "速さ 4.0 m/s で走っていた台車が、大きさ 1.5 m/s² の一定の加速度で減速した。止まるまでにかかる時間は何 s か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "2.7",
+        "unit": "s"
+      },
+      "explanation": "$0=v_0-at$ より $t=\\dfrac{v_0}{a}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(4)/(3/2)",
+        "expected": "8/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-kin_basic",
+      "explanation_detail": {
+        "approach": "止まる＝速度が 0。運動の向きを正とすると加速度は負。",
+        "steps": [
+          "運動の向きを正とすると $a=-1.5\\,\\mathrm{m/s^2}$。",
+          "$0=4.0-1.5t$ より $t=2.7\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "「1秒に 1.5 m/s ずつ遅くなる」ので、4.0 m/s を失うまでの秒数を割り算で求めると考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "加速度を負として式を立てている",
+            "points": 1
+          },
+          {
+            "point": "時間が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加速度を正のまま代入し、負の時間が出て混乱する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "静止していた物体が正の向きに大きさ 0.50 m/s² の一定の加速度で運動を続けた。運動を始めて（加速を始めて）から 4.0 s の間に進んだ距離は何 m か。",
+      "answer": {
+        "value": "4.0",
+        "unit": "m"
+      },
+      "explanation": "$x=v_0t+\\dfrac12at^2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(0)*(4)+Rational(1,2)*(1/2)*(4)**2",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-kin_basic",
+      "explanation_detail": {
+        "approach": "変位は $v$−$t$ グラフの面積。等加速度なら $x=v_0t+\\dfrac12at^2$。",
+        "steps": [
+          "$x=v_0t+\\dfrac12at^2=0\\times4.0+\\dfrac12\\times0.50\\times4.0^2$。",
+          "$x=4\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフの台形の面積 $\\dfrac12(v_0+v)t$（$v=2$）として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x=v_0t+\\dfrac12at^2$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac12$ をかけ忘れる。",
+          "$t$ を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "速さ 12 m/s で走っていた台車が、大きさ 4.0 m/s² の一定の加速度で減速した。止まるまでにかかる時間は何 s か。",
+      "answer": {
+        "value": "3.0",
+        "unit": "s"
+      },
+      "explanation": "$0=v_0-at$ より $t=\\dfrac{v_0}{a}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(12)/(4)",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-kin_basic",
+      "explanation_detail": {
+        "approach": "止まる＝速度が 0。運動の向きを正とすると加速度は負。",
+        "steps": [
+          "運動の向きを正とすると $a=-4.0\\,\\mathrm{m/s^2}$。",
+          "$0=12-4.0t$ より $t=3.0\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "「1秒に 4.0 m/s ずつ遅くなる」ので、12 m/s を失うまでの秒数を割り算で求めると考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "加速度を負として式を立てている",
+            "points": 1
+          },
+          {
+            "point": "時間が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加速度を正のまま代入し、負の時間が出て混乱する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "一直線上を運動する物体の速度 $v$ と時刻 $t$ の関係が図のようになった（$t=0$ で 2 m/s、$t=7\\,\\mathrm{s}$ で 4 m/s）。$t=0$ から $t=7\\,\\mathrm{s}$ までの変位は何 m か。",
+      "figure": {
+        "alt": "v−t グラフ。t=0 で v=2 m/s、t=7 s で v=4 m/s の直線",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 268 178\" width=\"268\" height=\"178\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"164\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"44\" y1=\"164\" x2=\"44\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"164\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"164\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"134\" y1=\"164\" x2=\"134\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"164\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"194\" y1=\"164\" x2=\"194\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"224\" y1=\"164\" x2=\"224\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"254\" y1=\"164\" x2=\"254\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"164\" x2=\"254\" y2=\"164\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"134\" x2=\"254\" y2=\"134\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"254\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"254\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"44\" x2=\"254\" y2=\"44\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"254\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"164\" x2=\"260\" y2=\"164\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"164\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"256\" y=\"177\" font-style=\"italic\">t[s]</text><text x=\"19\" y=\"12\" font-style=\"italic\">v[m/s]</text><text x=\"3\" y=\"176\">O</text><text x=\"41\" y=\"176\" font-size=\"8\" fill=\"#555\">1</text><text x=\"71\" y=\"176\" font-size=\"8\" fill=\"#555\">2</text><text x=\"101\" y=\"176\" font-size=\"8\" fill=\"#555\">3</text><text x=\"131\" y=\"176\" font-size=\"8\" fill=\"#555\">4</text><text x=\"161\" y=\"176\" font-size=\"8\" fill=\"#555\">5</text><text x=\"191\" y=\"176\" font-size=\"8\" fill=\"#555\">6</text><text x=\"221\" y=\"176\" font-size=\"8\" fill=\"#555\">7</text><text x=\"251\" y=\"176\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"137\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"107\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"47\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">5</text><line x1=\"14\" y1=\"104\" x2=\"224\" y2=\"44\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"14\" cy=\"104\" r=\"2.3\" fill=\"#000\"/><circle cx=\"224\" cy=\"44\" r=\"2.3\" fill=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "21",
+        "unit": "m"
+      },
+      "explanation": "変位は $v$−$t$ グラフと $t$ 軸で囲まれた部分の面積。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational((2+4)*7,2)",
+        "expected": "21"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-vt_graph",
+      "explanation_detail": {
+        "approach": "$v$−$t$ グラフの面積が変位。台形（または三角形）の面積を求める。",
+        "steps": [
+          "台形の面積 $\\dfrac12\\times(2+4)\\times7$。",
+          "変位 $=21\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "加速度 $a=\\dfrac{2}{7}$ を求め、$x=v_0t+\\dfrac12at^2$ に代入しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "面積が変位であることを用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを答えてしまう。",
+          "最後の速さ×時間で長方形として計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "一直線上を運動する物体の速度 $v$ と時刻 $t$ の関係が図のようになった（$t=0$ で 0 m/s、$t=4\\,\\mathrm{s}$ で 2 m/s）。この間の加速度は何 m/s² か。向きは正負の符号で表しなさい。",
+      "figure": {
+        "alt": "v−t グラフ。t=0 で v=0 m/s、t=4 s で v=2 m/s の直線",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 178 118\" width=\"178\" height=\"118\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"104\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"44\" y1=\"104\" x2=\"44\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"104\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"104\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"134\" y1=\"104\" x2=\"134\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"104\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"164\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"164\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"44\" x2=\"164\" y2=\"44\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"170\" y2=\"104\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"104\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"166\" y=\"117\" font-style=\"italic\">t[s]</text><text x=\"19\" y=\"12\" font-style=\"italic\">v[m/s]</text><text x=\"3\" y=\"116\">O</text><text x=\"41\" y=\"116\" font-size=\"8\" fill=\"#555\">1</text><text x=\"71\" y=\"116\" font-size=\"8\" fill=\"#555\">2</text><text x=\"101\" y=\"116\" font-size=\"8\" fill=\"#555\">3</text><text x=\"131\" y=\"116\" font-size=\"8\" fill=\"#555\">4</text><text x=\"161\" y=\"116\" font-size=\"8\" fill=\"#555\">5</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"47\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">3</text><line x1=\"14\" y1=\"104\" x2=\"134\" y2=\"44\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"14\" cy=\"104\" r=\"2.3\" fill=\"#000\"/><circle cx=\"134\" cy=\"44\" r=\"2.3\" fill=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "0.50",
+        "unit": "m/s²"
+      },
+      "explanation": "加速度は $v$−$t$ グラフの傾き。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(2-0)/4",
+        "expected": "1/2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-vt_graph",
+      "explanation_detail": {
+        "approach": "$v$−$t$ グラフの傾き＝（速度の変化）÷（時間）＝加速度。",
+        "steps": [
+          "$\\Delta v=2-0=2\\,\\mathrm{m/s}$、$\\Delta t=4\\,\\mathrm{s}$。",
+          "$a=\\dfrac{\\Delta v}{\\Delta t}=0.50\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "$v=v_0+at$ に $t=4$ の値を代入して $a$ について解いても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きとして加速度を求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "減速の場合に負の符号を落とす。",
+          "面積を求めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "一直線上を運動する物体の速度 $v$ と時刻 $t$ の関係が図のようになった（$t=0$ で 2 m/s、$t=7\\,\\mathrm{s}$ で 6 m/s）。この間の加速度は何 m/s² か。向きは正負の符号で表しなさい。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "v−t グラフ。t=0 で v=2 m/s、t=7 s で v=6 m/s の直線",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 268 238\" width=\"268\" height=\"238\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"224\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"44\" y1=\"224\" x2=\"44\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"224\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"224\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"134\" y1=\"224\" x2=\"134\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"224\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"194\" y1=\"224\" x2=\"194\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"224\" y1=\"224\" x2=\"224\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"254\" y1=\"224\" x2=\"254\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"224\" x2=\"254\" y2=\"224\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"194\" x2=\"254\" y2=\"194\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"164\" x2=\"254\" y2=\"164\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"134\" x2=\"254\" y2=\"134\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"254\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"254\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"44\" x2=\"254\" y2=\"44\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"254\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"224\" x2=\"260\" y2=\"224\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"224\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"256\" y=\"237\" font-style=\"italic\">t[s]</text><text x=\"19\" y=\"12\" font-style=\"italic\">v[m/s]</text><text x=\"3\" y=\"236\">O</text><text x=\"41\" y=\"236\" font-size=\"8\" fill=\"#555\">1</text><text x=\"71\" y=\"236\" font-size=\"8\" fill=\"#555\">2</text><text x=\"101\" y=\"236\" font-size=\"8\" fill=\"#555\">3</text><text x=\"131\" y=\"236\" font-size=\"8\" fill=\"#555\">4</text><text x=\"161\" y=\"236\" font-size=\"8\" fill=\"#555\">5</text><text x=\"191\" y=\"236\" font-size=\"8\" fill=\"#555\">6</text><text x=\"221\" y=\"236\" font-size=\"8\" fill=\"#555\">7</text><text x=\"251\" y=\"236\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"197\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"167\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"137\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"107\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">5</text><text x=\"1\" y=\"47\" font-size=\"8\" fill=\"#555\">6</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">7</text><line x1=\"14\" y1=\"164\" x2=\"224\" y2=\"44\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"14\" cy=\"164\" r=\"2.3\" fill=\"#000\"/><circle cx=\"224\" cy=\"44\" r=\"2.3\" fill=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "0.57",
+        "unit": "m/s²"
+      },
+      "explanation": "加速度は $v$−$t$ グラフの傾き。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(6-2)/7",
+        "expected": "4/7",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-vt_graph",
+      "explanation_detail": {
+        "approach": "$v$−$t$ グラフの傾き＝（速度の変化）÷（時間）＝加速度。",
+        "steps": [
+          "$\\Delta v=6-2=4\\,\\mathrm{m/s}$、$\\Delta t=7\\,\\mathrm{s}$。",
+          "$a=\\dfrac{\\Delta v}{\\Delta t}=0.57\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "$v=v_0+at$ に $t=7$ の値を代入して $a$ について解いても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きとして加速度を求めている",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "減速の場合に負の符号を落とす。",
+          "面積を求めてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "小球を静かにはなして自由落下させた。はなしてから 1.0 s 間に小球が落下した距離は何 m か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "4.9",
+        "unit": "m"
+      },
+      "explanation": "$y=\\dfrac12gt^2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*9.8*(1)**2",
+        "expected": "49/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-free_fall",
+      "explanation_detail": {
+        "approach": "下向きを正、はなした点を原点にとると $y=\\dfrac12gt^2$。",
+        "steps": [
+          "$y=\\dfrac12\\times9.8\\times1.0^2$。",
+          "$y=4.9\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフの三角形の面積 $\\dfrac12\\times t\\times gt$ として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y=\\dfrac12gt^2$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac12$ をかけ忘れて $gt^2$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "小球を静かにはなして自由落下させた。はなしてから 1.5 s 後の小球の速さは何 m/s か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "15",
+        "unit": "m/s"
+      },
+      "explanation": "自由落下は $v_0=0$、$a=g$ の等加速度運動。$v=gt$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "9.8*(3/2)",
+        "expected": "147/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-free_fall",
+      "explanation_detail": {
+        "approach": "鉛直下向きを正にとると $a=g$。",
+        "steps": [
+          "$v=gt=9.8\\times1.5$。",
+          "$v=15\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "速さは毎秒 9.8 m/s ずつ増える、と考えて比例計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$v=gt$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量によって答えが変わると考えて、与えられていない質量を探す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "小球を静かにはなして自由落下させた。はなしてから 4.0 s 間に小球が落下した距離は何 m か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "78",
+        "unit": "m"
+      },
+      "explanation": "$y=\\dfrac12gt^2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)*9.8*(4)**2",
+        "expected": "392/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-free_fall",
+      "explanation_detail": {
+        "approach": "下向きを正、はなした点を原点にとると $y=\\dfrac12gt^2$。",
+        "steps": [
+          "$y=\\dfrac12\\times9.8\\times4.0^2$。",
+          "$y=78\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフの三角形の面積 $\\dfrac12\\times t\\times gt$ として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y=\\dfrac12gt^2$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac12$ をかけ忘れて $gt^2$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "一直線の道路上を、自動車 A が東向きに 30 m/s、自動車 B が東向きに 20 m/s で走っている。B から見た A の速度は何 m/s か。東向きを正とし、向きは符号で表しなさい。",
+      "answer": {
+        "value": "10",
+        "unit": "m/s"
+      },
+      "explanation": "相対速度＝（相手の速度）−（観測者の速度）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(30)-(20)",
+        "expected": "10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-relative",
+      "explanation_detail": {
+        "approach": "観測者の速度を引く。向きを符号で表してから計算する。",
+        "steps": [
+          "$v_{\\mathrm{A}}=30\\,\\mathrm{m/s}$、$v_{\\mathrm{B}}=20\\,\\mathrm{m/s}$。",
+          "$v_{\\mathrm{BA}}=v_{\\mathrm{A}}-v_{\\mathrm{B}}=10\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "観測者 B が止まって見えるように、両方に B の速度と逆向きの速度を加えて考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "観測者の速度を引いている",
+            "points": 1
+          },
+          {
+            "point": "符号を含めて値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "引く順序を逆にする。",
+          "逆向きの速度を正のまま引く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "流れの速さが 2.0 m/s の川で、静水上を速さ 8.0 m/s で進むことのできる船が、川の下流に向かってまっすぐ進んでいる。岸から見た船の速さは何 m/s か。",
+      "answer": {
+        "value": "10",
+        "unit": "m/s"
+      },
+      "explanation": "岸から見た速度＝（水に対する船の速度）＋（水の速度）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "8+2",
+        "expected": "10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-relative",
+      "explanation_detail": {
+        "approach": "船は水に対して進み、水は岸に対して流れている。速度を向きを含めて足し合わせる。",
+        "steps": [
+          "下流向きを正とすると、水の速度 $+2$、水に対する船の速度 $+8$。",
+          "岸から見た速度 $+8+2=10$、速さ 10 m/s。"
+        ],
+        "alternatives": [
+          "上流に向かうときは流れに押し戻され、下流に向かうときは流れに運ばれる、と考えて差・和をとる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度の合成を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上流・下流で足し引きを逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "流れの速さが 3.0 m/s の川で、静水上を速さ 5.0 m/s で進むことのできる船が、川の上流に向かってまっすぐ進んでいる。岸から見た船の速さは何 m/s か。",
+      "answer": {
+        "value": "2.0",
+        "unit": "m/s"
+      },
+      "explanation": "岸から見た速度＝（水に対する船の速度）＋（水の速度）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "5-3",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-relative",
+      "explanation_detail": {
+        "approach": "船は水に対して進み、水は岸に対して流れている。速度を向きを含めて足し合わせる。",
+        "steps": [
+          "下流向きを正とすると、水の速度 $+3$、水に対する船の速度 $-5$。",
+          "岸から見た速度 $-5+3=-2$、速さ 2 m/s。"
+        ],
+        "alternatives": [
+          "上流に向かうときは流れに押し戻され、下流に向かうときは流れに運ばれる、と考えて差・和をとる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度の合成を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上流・下流で足し引きを逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上で、質量 8.0 kg の物体に水平方向に 30 N の力を加え続けた。生じる加速度の大きさは何 m/s² か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "3.8",
+        "unit": "m/s²"
+      },
+      "explanation": "$ma=F$ より $a=\\dfrac{F}{m}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(30)/(8)",
+        "expected": "15/4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-newton_basic",
+      "explanation_detail": {
+        "approach": "なめらかな面なので摩擦はない。水平方向の合力は加えた力だけ。",
+        "steps": [
+          "$a=\\dfrac{F}{m}=\\dfrac{30}{8.0}$。",
+          "$a=3.8\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "$1\\,\\mathrm{N}$ は $1\\,\\mathrm{kg}$ の物体に $1\\,\\mathrm{m/s^2}$ の加速度を生じさせる力、という定義から比で考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動方程式を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$m\\times F$ を計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量 5.0 kg の物体にはたらく重力の大きさは何 N か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "49",
+        "unit": "N"
+      },
+      "explanation": "$W=mg$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(5)*9.8",
+        "expected": "49"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-newton_basic",
+      "explanation_detail": {
+        "approach": "質量（kg）と重さ（N）は別の量。重さは重力の大きさで $mg$。",
+        "steps": [
+          "$W=mg=5.0\\times9.8$。",
+          "$W\\fallingdotseq49\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "自由落下の加速度が $g$ であることと $ma=F$ から、重力が $mg$ であると確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$W=mg$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量の数値をそのまま N で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ばね定数 200 N/m のばねを、自然の長さから 5 cm 伸ばすのに必要な力の大きさは何 N か。",
+      "answer": {
+        "value": "10",
+        "unit": "N"
+      },
+      "explanation": "フックの法則 $F=kx$。$x$ は m で代入。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(200)*(1/20)",
+        "expected": "10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-newton_basic",
+      "explanation_detail": {
+        "approach": "弾性力の大きさは伸び（縮み）に比例する。長さの単位を m にそろえる。",
+        "steps": [
+          "$x=0.05\\,\\mathrm{m}$。",
+          "$F=kx=200\\times0.05=10\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "ばね定数 200 N/m は「1 m 伸ばすのに 200 N」という意味なので、比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "長さを m に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "cm のまま代入して 100 倍の値にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$v$−$t$ グラフについて正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "グラフが $t$ 軸と交わると、物体は静止を続ける"
+        },
+        {
+          "label": "イ",
+          "text": "グラフの傾きは変位、面積は加速度を表す"
+        },
+        {
+          "label": "ウ",
+          "text": "グラフの傾きは加速度、グラフと $t$ 軸で囲まれた部分の面積は変位を表す"
+        },
+        {
+          "label": "エ",
+          "text": "グラフが右下がりなら、物体は負の向きに運動している"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "正しいのは「グラフの傾きは加速度、グラフと $t$ 軸で囲まれた部分の面積は変位を表す」。傾き＝$\\dfrac{\\Delta v}{\\Delta t}$ は加速度、面積＝$v\\times t$ は変位。逆である。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "力は「どの物体が、どの物体に」はたらくかを明確にし、運動の変化（加速度）と結びつけて判断する。",
+        "steps": [
+          "各選択肢で、どの物体にどの力がはたらいているか、合力と加速度の関係を確認する。",
+          "条件に合うのは「グラフの傾きは加速度、グラフと $t$ 軸で囲まれた部分の面積は変位を表す」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定すると、運動の法則と矛盾する具体的な場面を考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "$v=0$ になるのはその瞬間だけで、加速度があれば再び動き出す（向きが変わる）。",
+          "misconception": "瞬間の静止と静止を続けることの混同"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "傾き＝$\\dfrac{\\Delta v}{\\Delta t}$ は加速度、面積＝$v\\times t$ は変位。逆である。",
+          "misconception": "傾きと面積の意味の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "右下がりは加速度が負という意味。$v>0$ の範囲なら正の向きに減速しながら進んでいる。",
+          "misconception": "速度と加速度の符号の混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "なめらかな水平面上を等速直線運動している物体にはたらく水平方向の力について、正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "はじめに加えた力が物体の中に残っている"
+        },
+        {
+          "label": "イ",
+          "text": "運動の向きと逆向きに力がはたらいている"
+        },
+        {
+          "label": "ウ",
+          "text": "水平方向の合力は 0 である"
+        },
+        {
+          "label": "エ",
+          "text": "運動の向きに一定の力がはたらいている"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "正しいのは「水平方向の合力は 0 である」。力は物体の中にたまるものではなく、相互作用である。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "力は「どの物体が、どの物体に」はたらくかを明確にし、運動の変化（加速度）と結びつけて判断する。",
+        "steps": [
+          "各選択肢で、どの物体にどの力がはたらいているか、合力と加速度の関係を確認する。",
+          "条件に合うのは「水平方向の合力は 0 である」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定すると、運動の法則と矛盾する具体的な場面を考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "力は物体の中にたまるものではなく、相互作用である。",
+          "misconception": "力を物体がもつ量と考える誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "逆向きの力がはたらけば減速する。等速なので水平方向の合力は 0。",
+          "misconception": "合力と加速度の関係の誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "慣性の法則より、合力が 0 でも等速直線運動を続ける。運動の向きに力は必要ない。",
+          "misconception": "運動には力が必要という素朴概念"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "$v$−$t$ グラフについて正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "グラフの傾きは変位、面積は加速度を表す"
+        },
+        {
+          "label": "イ",
+          "text": "グラフの傾きは加速度、グラフと $t$ 軸で囲まれた部分の面積は変位を表す"
+        },
+        {
+          "label": "ウ",
+          "text": "グラフが右下がりなら、物体は負の向きに運動している"
+        },
+        {
+          "label": "エ",
+          "text": "グラフが $t$ 軸と交わると、物体は静止を続ける"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "正しいのは「グラフの傾きは加速度、グラフと $t$ 軸で囲まれた部分の面積は変位を表す」。右下がりは加速度が負という意味。$v>0$ の範囲なら正の向きに減速しながら進んでいる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "力は「どの物体が、どの物体に」はたらくかを明確にし、運動の変化（加速度）と結びつけて判断する。",
+        "steps": [
+          "各選択肢で、どの物体にどの力がはたらいているか、合力と加速度の関係を確認する。",
+          "条件に合うのは「グラフの傾きは加速度、グラフと $t$ 軸で囲まれた部分の面積は変位を表す」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定すると、運動の法則と矛盾する具体的な場面を考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "傾き＝$\\dfrac{\\Delta v}{\\Delta t}$ は加速度、面積＝$v\\times t$ は変位。逆である。",
+          "misconception": "傾きと面積の意味の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "右下がりは加速度が負という意味。$v>0$ の範囲なら正の向きに減速しながら進んでいる。",
+          "misconception": "速度と加速度の符号の混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$v=0$ になるのはその瞬間だけで、加速度があれば再び動き出す（向きが変わる）。",
+          "misconception": "瞬間の静止と静止を続けることの混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "水中に完全に沈めた物体にはたらく浮力について、正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "深く沈めるほど大きくなる"
+        },
+        {
+          "label": "イ",
+          "text": "物体の重さに等しい"
+        },
+        {
+          "label": "ウ",
+          "text": "物体の質量が大きいほど大きくなる"
+        },
+        {
+          "label": "エ",
+          "text": "物体が押しのけた水の重さに等しい"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "正しいのは「物体が押しのけた水の重さに等しい」。物体の重さと浮力が等しいのは、水に浮いて静止している場合だけ。沈めた物体では一般に等しくない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "力は「どの物体が、どの物体に」はたらくかを明確にし、運動の変化（加速度）と結びつけて判断する。",
+        "steps": [
+          "各選択肢で、どの物体にどの力がはたらいているか、合力と加速度の関係を確認する。",
+          "条件に合うのは「物体が押しのけた水の重さに等しい」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定すると、運動の法則と矛盾する具体的な場面を考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "完全に沈んだあとは押しのける体積が変わらないので、浮力は深さによらない。",
+          "misconception": "水圧と浮力の混同"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "物体の重さと浮力が等しいのは、水に浮いて静止している場合だけ。沈めた物体では一般に等しくない。",
+          "misconception": "浮くときのつり合いとの混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "浮力は押しのけた流体の重さ $\\rho Vg$ で決まり、物体の質量にはよらない。",
+          "misconception": "浮力の決まり方の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "時速 108 km で走っていた自動車の運転者が危険に気づき、0.60 s 後にブレーキをかけはじめた。ブレーキをかけてからは大きさ 6.0 m/s² の一定の加速度で減速して止まった。危険に気づいてから止まるまでに進んだ距離は何 m か。",
+      "answer": {
+        "value": "93",
+        "unit": "m"
+      },
+      "explanation": "空走距離（等速）＋制動距離（等加速度）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(108/Rational(36,10))*(3/5)+(108/Rational(36,10))**2/(2*(6))",
+        "expected": "93"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-accel_apps",
+      "explanation_detail": {
+        "approach": "運動を「反応するまでの等速運動」と「ブレーキ後の等加速度運動」の2区間に分ける。",
+        "steps": [
+          "$v_0=30\\,\\mathrm{m/s}$。空走距離 $30\\times0.60=18\\,\\mathrm{m}$。",
+          "制動距離 $\\dfrac{30^2}{2\\times6.0}=75\\,\\mathrm{m}$。",
+          "合計 $93\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフ（長方形＋三角形）を描き、その面積として求める。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2区間に分けている",
+            "points": 1
+          },
+          {
+            "point": "空走距離と制動距離をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "point": "合計が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "空走距離を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "時速 72 km で走っていた自動車の運転者が危険に気づき、0.60 s 後にブレーキをかけはじめた。ブレーキをかけてからは大きさ 5.0 m/s² の一定の加速度で減速して止まった。危険に気づいてから止まるまでに進んだ距離は何 m か。",
+      "answer": {
+        "value": "52",
+        "unit": "m"
+      },
+      "explanation": "空走距離（等速）＋制動距離（等加速度）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(72/Rational(36,10))*(3/5)+(72/Rational(36,10))**2/(2*(5))",
+        "expected": "52"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-accel_apps",
+      "explanation_detail": {
+        "approach": "運動を「反応するまでの等速運動」と「ブレーキ後の等加速度運動」の2区間に分ける。",
+        "steps": [
+          "$v_0=20\\,\\mathrm{m/s}$。空走距離 $20\\times0.60=12\\,\\mathrm{m}$。",
+          "制動距離 $\\dfrac{20^2}{2\\times5.0}=40\\,\\mathrm{m}$。",
+          "合計 $52\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフ（長方形＋三角形）を描き、その面積として求める。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2区間に分けている",
+            "points": 1
+          },
+          {
+            "point": "空走距離と制動距離をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "point": "合計が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "空走距離を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "時速 72 km で走っていた自動車の運転者が危険に気づき、0.50 s 後にブレーキをかけはじめた。ブレーキをかけてからは大きさ 8.0 m/s² の一定の加速度で減速して止まった。危険に気づいてから止まるまでに進んだ距離は何 m か。",
+      "answer": {
+        "value": "35",
+        "unit": "m"
+      },
+      "explanation": "空走距離（等速）＋制動距離（等加速度）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(72/Rational(36,10))*(1/2)+(72/Rational(36,10))**2/(2*(8))",
+        "expected": "35"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-accel_apps",
+      "explanation_detail": {
+        "approach": "運動を「反応するまでの等速運動」と「ブレーキ後の等加速度運動」の2区間に分ける。",
+        "steps": [
+          "$v_0=20\\,\\mathrm{m/s}$。空走距離 $20\\times0.50=10\\,\\mathrm{m}$。",
+          "制動距離 $\\dfrac{20^2}{2\\times8.0}=25\\,\\mathrm{m}$。",
+          "合計 $35\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフ（長方形＋三角形）を描き、その面積として求める。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2区間に分けている",
+            "points": 1
+          },
+          {
+            "point": "空走距離と制動距離をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "point": "合計が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "空走距離を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "静止していた電車が、加速度 3.0 m/s² で 6.0 s 間加速したのち、その速さのまま 5.0 s 間等速で走った。この間に電車が進んだ距離は何 m か。",
+      "answer": {
+        "value": "144",
+        "unit": "m"
+      },
+      "explanation": "加速区間（三角形）＋等速区間（長方形）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(18*6,2)+18*5",
+        "expected": "144"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-accel_apps",
+      "explanation_detail": {
+        "approach": "区間ごとに運動の種類が変わる。$v$−$t$ グラフを描くと見通しがよい。",
+        "steps": [
+          "加速後の速さ $v=3\\times6=18\\,\\mathrm{m/s}$。",
+          "加速区間 $\\dfrac12\\times3\\times6^2=54\\,\\mathrm{m}$、等速区間 $18\\times5=90\\,\\mathrm{m}$。",
+          "合計 $144\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$v$−$t$ グラフの台形の面積 $\\dfrac12\\{(t_1+t_2)+t_2\\}V$ として一度に求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "加速後の速さを求めている",
+            "points": 1
+          },
+          {
+            "point": "各区間の距離を求めている",
+            "points": 2
+          },
+          {
+            "point": "合計が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等速区間を $\\dfrac12$ 倍してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "高さ 34.3 m のビルの屋上から、小球を速さ 29.4 m/s で鉛直上向きに投げ上げた。小球が地面に達するのは投げてから何 s 後か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "7.0",
+        "unit": "s"
+      },
+      "explanation": "投げた点を原点、上向きを正として $y=v_0t-\\dfrac12gt^2=-h$ を解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "((147/5)+sqrt((147/5)**2+2*9.8*(343/10)))/9.8",
+        "expected": "7"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-vertical_throw",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "地面は投げた点より $h$ だけ下なので、変位 $y=-h$。二次方程式を解き、正の解をとる。",
+        "steps": [
+          "$29.4t-4.9t^2=-34.3$。",
+          "両辺を $-4.9$ で割って整理すると $t^2-6t-7=0$。",
+          "$(t-7)(t+1)=0$、$t>0$ より $t=7\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "最高点までの時間と最高点の高さを求め、そこから地面までの自由落下の時間を足しても求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変位を $-h$ として式を立てている",
+            "points": 2
+          },
+          {
+            "point": "二次方程式を正しく解き、正の解を選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "変位を $+h$ として解がなくなる（または誤った解を得る）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "高さ 29.4 m のビルの屋上から、小球を速さ 24.5 m/s で鉛直上向きに投げ上げた。小球が地面に達するのは投げてから何 s 後か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "6.0",
+        "unit": "s"
+      },
+      "explanation": "投げた点を原点、上向きを正として $y=v_0t-\\dfrac12gt^2=-h$ を解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "((49/2)+sqrt((49/2)**2+2*9.8*(147/5)))/9.8",
+        "expected": "6"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-vertical_throw",
+      "related_units": [
+        "HS-MATH1-U03"
+      ],
+      "explanation_detail": {
+        "approach": "地面は投げた点より $h$ だけ下なので、変位 $y=-h$。二次方程式を解き、正の解をとる。",
+        "steps": [
+          "$24.5t-4.9t^2=-29.4$。",
+          "両辺を $-4.9$ で割って整理すると $t^2-5t-6=0$。",
+          "$(t-6)(t+1)=0$、$t>0$ より $t=6\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "最高点までの時間と最高点の高さを求め、そこから地面までの自由落下の時間を足しても求まる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変位を $-h$ として式を立てている",
+            "points": 2
+          },
+          {
+            "point": "二次方程式を正しく解き、正の解を選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "変位を $+h$ として解がなくなる（または誤った解を得る）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "地面から小球を速さ 19.6 m/s で鉛直上向きに投げ上げた。小球が再び地面に戻るのは、投げてから何 s 後か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "4.0",
+        "unit": "s"
+      },
+      "explanation": "$0=v_0t-\\dfrac12gt^2$ の $t>0$ の解。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*(98/5)/9.8",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-vertical_throw",
+      "explanation_detail": {
+        "approach": "地面に戻る＝変位が 0。$y=v_0t-\\dfrac12gt^2=0$ を解く。",
+        "steps": [
+          "$0=19.6t-4.9t^2=t(19.6-4.9t)$。",
+          "$t>0$ より $t=4.0\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "上昇と下降は対称なので、最高点までの時間の2倍として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変位 0 の条件で式を立てている",
+            "points": 2
+          },
+          {
+            "point": "$t=0$ を除いて正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最高点までの時間を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "地面から小球を速さ 24.5 m/s で鉛直上向きに投げ上げた。小球が再び地面に戻るのは、投げてから何 s 後か。空気抵抗は無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "5.0",
+        "unit": "s"
+      },
+      "explanation": "$0=v_0t-\\dfrac12gt^2$ の $t>0$ の解。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*(49/2)/9.8",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-vertical_throw",
+      "explanation_detail": {
+        "approach": "地面に戻る＝変位が 0。$y=v_0t-\\dfrac12gt^2=0$ を解く。",
+        "steps": [
+          "$0=24.5t-4.9t^2=t(24.5-4.9t)$。",
+          "$t>0$ より $t=5.0\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "上昇と下降は対称なので、最高点までの時間の2倍として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変位 0 の条件で式を立てている",
+            "points": 2
+          },
+          {
+            "point": "$t=0$ を除いて正しく解いている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最高点までの時間を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "水平面と $60^\\circ$ の角をなすなめらかな斜面上で、質量 5.0 kg の物体が斜面に沿って滑り降りている。物体が斜面から受ける垂直抗力の大きさは何 N か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "25",
+        "unit": "N"
+      },
+      "explanation": "斜面に垂直な方向の力のつり合い：$N=mg\\cos\\theta$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(5)*9.8*cos(deg(60))",
+        "expected": "49/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-equilibrium",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "斜面に垂直な方向には運動しないので、その方向の力はつり合っている。",
+        "steps": [
+          "斜面に垂直な方向：$N=mg\\cos60^\\circ=5.0\\times9.8\\times\\dfrac{1}{2}$。",
+          "$N\\fallingdotseq25\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "水平面（$\\theta=0^\\circ$）なら $N=mg$ になることで $\\cos$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "垂直方向のつり合いを用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "垂直抗力を $mg$ のままとする。",
+          "滑っているので力はつり合わないと考える（斜面に垂直な方向はつり合う）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "水平面と $30^\\circ$ の角をなす粗い斜面上に質量 10 kg の物体を置き、物体は斜面上で静止していた。物体にはたらく静止摩擦力の大きさは何 N か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "49",
+        "unit": "N"
+      },
+      "explanation": "斜面に平行な方向の力のつり合い：（その力）$=mg\\sin\\theta$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(10)*9.8*sin(deg(30))",
+        "expected": "49"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-equilibrium",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "重力を斜面に平行な成分 $mg\\sin\\theta$ と垂直な成分 $mg\\cos\\theta$ に分解し、斜面方向のつり合いを考える。",
+        "steps": [
+          "重力の斜面に平行な成分は $mg\\sin30^\\circ=10\\times9.8\\times\\dfrac{1}{2}$。",
+          "これとつり合うので、求める力は $49\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "$\\theta\\to0^\\circ$（水平面）で 0、$\\theta\\to90^\\circ$（鉛直）で $mg$ になることから、$\\sin$ が正しいと確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "重力を正しく分解している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sin$ と $\\cos$ を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "水平面と $60^\\circ$ の角をなすなめらかな斜面上で、質量 4.0 kg の物体が斜面に沿って滑り降りている。物体が斜面から受ける垂直抗力の大きさは何 N か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "20",
+        "unit": "N"
+      },
+      "explanation": "斜面に垂直な方向の力のつり合い：$N=mg\\cos\\theta$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(4)*9.8*cos(deg(60))",
+        "expected": "98/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-equilibrium",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "斜面に垂直な方向には運動しないので、その方向の力はつり合っている。",
+        "steps": [
+          "斜面に垂直な方向：$N=mg\\cos60^\\circ=4.0\\times9.8\\times\\dfrac{1}{2}$。",
+          "$N\\fallingdotseq20\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "水平面（$\\theta=0^\\circ$）なら $N=mg$ になることで $\\cos$ を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "垂直方向のつり合いを用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "垂直抗力を $mg$ のままとする。",
+          "滑っているので力はつり合わないと考える（斜面に垂直な方向はつり合う）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "軽くなめらかな定滑車に軽い糸をかけ、両端に質量 6.0 kg の物体 P と質量 5.0 kg の物体 Q をつるして静かにはなした。物体の加速度の大きさは何 m/s² か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.89",
+        "unit": "m/s²"
+      },
+      "explanation": "P：$Ma=Mg-T$、Q：$ma=T-mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "9.8*(6-5)/(6+5)",
+        "expected": "49/55",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-two_body",
+      "explanation_detail": {
+        "approach": "重い P は下向き、軽い Q は上向きに同じ大きさの加速度で動く。それぞれの運動の向きを正にとる。",
+        "steps": [
+          "P：$6a=6\\times9.8-T$、Q：$5a=T-5\\times9.8$。",
+          "足して $11a=1\\times9.8$。",
+          "$a\\fallingdotseq0.89\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "全体を1本につながった物体とみなすと、動かす力は重さの差 $(M-m)g$、動かされる質量は $M+m$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2物体の運動方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "加速度が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "重さの差を質量の差で割って $a=g$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "軽くなめらかな定滑車に軽い糸をかけ、両端に質量 5.0 kg の物体 P と質量 2.0 kg の物体 Q をつるして静かにはなした。物体の加速度の大きさは何 m/s² か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "4.2",
+        "unit": "m/s²"
+      },
+      "explanation": "P：$Ma=Mg-T$、Q：$ma=T-mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "9.8*(5-2)/(5+2)",
+        "expected": "21/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-two_body",
+      "explanation_detail": {
+        "approach": "重い P は下向き、軽い Q は上向きに同じ大きさの加速度で動く。それぞれの運動の向きを正にとる。",
+        "steps": [
+          "P：$5a=5\\times9.8-T$、Q：$2a=T-2\\times9.8$。",
+          "足して $7a=3\\times9.8$。",
+          "$a\\fallingdotseq4.2\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "全体を1本につながった物体とみなすと、動かす力は重さの差 $(M-m)g$、動かされる質量は $M+m$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2物体の運動方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "加速度が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "重さの差を質量の差で割って $a=g$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "軽くなめらかな定滑車に軽い糸をかけ、両端に質量 4.0 kg の物体 P と質量 1.0 kg の物体 Q をつるして静かにはなした。物体の加速度の大きさは何 m/s² か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "5.9",
+        "unit": "m/s²"
+      },
+      "explanation": "P：$Ma=Mg-T$、Q：$ma=T-mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "9.8*(4-1)/(4+1)",
+        "expected": "147/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHYB-U01-two_body",
+      "explanation_detail": {
+        "approach": "重い P は下向き、軽い Q は上向きに同じ大きさの加速度で動く。それぞれの運動の向きを正にとる。",
+        "steps": [
+          "P：$4a=4\\times9.8-T$、Q：$1a=T-1\\times9.8$。",
+          "足して $5a=3\\times9.8$。",
+          "$a\\fallingdotseq5.9\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "全体を1本につながった物体とみなすと、動かす力は重さの差 $(M-m)g$、動かされる質量は $M+m$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2物体の運動方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "加速度が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "重さの差を質量の差で割って $a=g$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "粗い水平面上に置いた質量 10 kg の物体を、水平に 10 N の力で引いたが、物体は動かなかった。面と物体の間の静止摩擦係数を 0.50 とするとき、物体にはたらく静止摩擦力の大きさは何 N か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "10",
+        "unit": "N"
+      },
+      "explanation": "最大摩擦力 $\\mu N$ をこえていないので静止。静止摩擦力は引く力とつり合う。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "10",
+        "expected": "10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-friction",
+      "explanation_detail": {
+        "approach": "静止しているなら水平方向の力はつり合っている。$\\mu N$ は「動き出す直前」の値で、いつもその大きさとは限らない。",
+        "steps": [
+          "最大摩擦力 $\\mu mg=0.50\\times10\\times9.8\\fallingdotseq49\\,\\mathrm{N}$。10 N はこれより小さいので静止する。",
+          "水平方向のつり合いより、静止摩擦力 $=10\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "引く力を少しずつ大きくすると、静止摩擦力も同じだけ大きくなり、最大摩擦力に達したところで動き出す、という過程を考えて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大摩擦力と比べて静止を確認している",
+            "points": 2
+          },
+          {
+            "point": "つり合いから値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\mu mg$ を答えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水平面と $30^\\circ$ の角をなす粗い斜面上を、質量 2.0 kg の物体が滑り降りている。斜面と物体の間の動摩擦係数を 0.30 とするとき、物体の加速度の大きさは何 m/s² か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "2.4",
+        "unit": "m/s²"
+      },
+      "explanation": "斜面方向：$ma=mg\\sin\\theta-\\mu'mg\\cos\\theta$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "9.8*(sin(deg(30))-(3/10)*cos(deg(30)))",
+        "expected": "49/10 - 147*sqrt(3)/100",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-friction",
+      "explanation_detail": {
+        "approach": "垂直抗力は $mg\\cos\\theta$（$mg$ ではない）。動摩擦力は運動と逆向きで斜面に沿って上向き。",
+        "steps": [
+          "垂直方向のつり合い：$N=mg\\cos30^\\circ$。",
+          "斜面方向：$ma=mg\\sin30^\\circ-\\mu'mg\\cos30^\\circ$。",
+          "$a=9.8\\times\\left(\\dfrac12-0.30\\times\\dfrac{\\sqrt3}{2}\\right)\\fallingdotseq2.4\\,\\mathrm{m/s^2}$（質量によらない）。"
+        ],
+        "alternatives": [
+          "摩擦がない場合の加速度 $g\\sin30^\\circ=4.9\\,\\mathrm{m/s^2}$ より小さくなることで、答えの大きさを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "垂直抗力を $mg\\cos\\theta$ としている",
+            "points": 1
+          },
+          {
+            "point": "斜面方向の運動方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "垂直抗力を $mg$ として動摩擦力を $\\mu'mg$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "粗い水平面上で、質量 10 kg の物体を水平に 44 N の力で引き続けたところ、物体は加速しながら滑った。面と物体の間の動摩擦係数を 0.25 とするとき、物体の加速度の大きさは何 m/s² か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "2.0",
+        "unit": "m/s²"
+      },
+      "explanation": "$ma=F-\\mu'mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(44-(1/4)*(10)*9.8)/(10)",
+        "expected": "39/20",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-friction",
+      "explanation_detail": {
+        "approach": "運動方程式の右辺は合力。動摩擦力 $\\mu'mg$ を差し引く。",
+        "steps": [
+          "動摩擦力 $\\mu'mg=0.25\\times10\\times9.8=24.5\\,\\mathrm{N}$。",
+          "$10a=44-24.5$。",
+          "$a\\fallingdotseq2.0\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "合力を先に求めて質量で割る、という順で考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "動摩擦力を求めている",
+            "points": 1
+          },
+          {
+            "point": "合力で運動方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "摩擦を無視して $\\dfrac{F}{m}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "体積 400 cm³ の物体を水中に完全に沈めた。物体にはたらく浮力の大きさは何 N か。水の密度を $1.0\\times10^3\\,\\mathrm{kg/m^3}$、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "3.9",
+        "unit": "N"
+      },
+      "explanation": "アルキメデスの原理：浮力＝押しのけた水の重さ $\\rho Vg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1000*(1/2500)*9.8",
+        "expected": "98/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-buoyancy",
+      "related_units": [
+        "JH-SCI-G3-U03"
+      ],
+      "explanation_detail": {
+        "approach": "体積を m³ に直す（$1\\,\\mathrm{cm^3}=1\\times10^{-6}\\,\\mathrm{m^3}$）。",
+        "steps": [
+          "$V=400\\times10^{-6}\\,\\mathrm{m^3}$。",
+          "$F=\\rho Vg=1.0\\times10^3\\times400\\times10^{-6}\\times9.8\\fallingdotseq3.9\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "押しのけた水は 400 g（0.4 kg）なので、その重さ $0.4\\times9.8$ N と考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "体積の単位を換算している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "cm³ のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量 800 g、体積 400 cm³ の金属球をばねばかりにつるし、水中に完全に沈めて静止させた。ばねばかりが示す力の大きさは何 N か。水の密度を $1.0\\times10^3\\,\\mathrm{kg/m^3}$、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "3.9",
+        "unit": "N"
+      },
+      "explanation": "つり合い：$T+F_{\\text{浮}}=mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(4/5)*9.8-1000*(1/2500)*9.8",
+        "expected": "98/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-buoyancy",
+      "related_units": [
+        "JH-SCI-G3-U03"
+      ],
+      "explanation_detail": {
+        "approach": "金属球には重力・浮力・ばねばかりの張力の3力がはたらき、つり合っている。",
+        "steps": [
+          "重力 $mg=0.8\\times9.8=7.84\\,\\mathrm{N}$、浮力 $\\rho Vg=3.92\\,\\mathrm{N}$。",
+          "$T=mg-\\rho Vg\\fallingdotseq3.9\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "押しのけた水の質量を球の質量から引いた「見かけの質量」に $g$ をかけてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "3力のつり合いの式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "浮力を引き忘れて $mg$ を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "密度 $5.0\\times10^{2}\\,\\mathrm{kg/m^3}$ の木片が、密度 $1.0\\times10^3\\,\\mathrm{kg/m^3}$ の水に浮いて静止している。木片の全体積のうち、水面下にある部分の体積は何 % か。",
+      "answer": {
+        "value": "50",
+        "unit": "%"
+      },
+      "explanation": "浮力＝重力：$\\rho_{\\text{水}}V'g=\\rho Vg$ より $\\dfrac{V'}{V}=\\dfrac{\\rho}{\\rho_{\\text{水}}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(1/2)*100",
+        "expected": "50"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-buoyancy",
+      "related_units": [
+        "JH-SCI-G3-U03"
+      ],
+      "explanation_detail": {
+        "approach": "浮いて静止＝重力と浮力のつり合い。浮力は水面下の体積 $V'$ で決まる。",
+        "steps": [
+          "$\\rho_{\\text{水}}V'g=\\rho Vg$。",
+          "$\\dfrac{V'}{V}=\\dfrac{5.0\\times10^{2}}{1.0\\times10^3}=0.5$、すなわち 50 %。"
+        ],
+        "alternatives": [
+          "氷山（密度約 $0.92\\times10^3\\,\\mathrm{kg/m^3}$）の大部分が水面下にあることと比べ、密度が水に近いほど深く沈むことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "つり合いの式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "水面上の割合を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "proof",
+      "stem": "初速度 $v_0$、加速度 $a$（一定）で直線運動する物体について、$v$−$t$ グラフを用いて、時刻 $0$ から $t$ までの変位が $x=v_0t+\\dfrac12at^2$ となることを示しなさい。",
+      "answer": {
+        "value": "$v=v_0+at$ より、$v$−$t$ グラフは切片 $v_0$、傾き $a$ の直線。変位はグラフと $t$ 軸で囲まれた台形の面積で、高さ $v_0$ の長方形（面積 $v_0t$）と、底辺 $t$・高さ $at$ の三角形（面積 $\\dfrac12at^2$）の和。よって $x=v_0t+\\dfrac12at^2$。"
+      },
+      "explanation": "変位は $v$−$t$ グラフの面積。台形を長方形と三角形に分ける。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$v$−$t$ グラフが傾き $a$ の直線になることを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "変位がグラフの面積であることを用いている",
+            "points": 3
+          },
+          {
+            "criterion": "長方形と三角形の面積の和として結論を導いている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "calc_check": {
+        "expression": "expand(Rational(1,2)*(v+(v+a*t))*t)",
+        "expected": "v*t+a*t**2/2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-derive_item",
+      "explanation_detail": {
+        "approach": "等速運動の「速さ×時間＝長方形の面積」を出発点に、速度が変化する場合も面積が変位になることを使う。",
+        "steps": [
+          "$v=v_0+at$ のグラフを描く。",
+          "台形＝長方形 $v_0t$＋三角形 $\\dfrac12\\cdot t\\cdot at$。",
+          "$x=v_0t+\\dfrac12at^2$。"
+        ],
+        "alternatives": [
+          "台形の面積の公式 $\\dfrac12\\{v_0+(v_0+at)\\}t$ を展開しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "グラフ",
+            "points": 2
+          },
+          {
+            "point": "面積",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "三角形の高さを $a$ としてしまう（正しくは $at$）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "空気抵抗が無視できるとき、質量の異なる物体を同じ高さから同時に静かにはなすと同時に地面に達する。この理由を、運動方程式を用いて説明しなさい。また、実際の空気中で羽根が鉄球より遅く落ちる理由を述べなさい。",
+      "answer": {
+        "value": "質量 $m$ の物体にはたらく力は重力 $mg$ だけなので、運動方程式 $ma=mg$ より $a=g$ となり、加速度は質量によらない。初速度も同じ 0 なので、同じ時刻には同じ速さ・同じ落下距離となり、同時に地面に達する。空気中では空気抵抗がはたらき、羽根は重力に比べて空気抵抗の割合が大きいため、合力（下向き）が小さく加速度が小さくなるから。"
+      },
+      "explanation": "重力が質量に比例するので、運動方程式で質量が約分される。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "運動方程式 $ma=mg$ を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "加速度が質量によらず $g$ になることを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "空気抵抗の影響を、重力に対する割合（合力）で説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-derive_item",
+      "explanation_detail": {
+        "approach": "質量が大きいと重力も大きいが、動かしにくさ（慣性）も大きい。その2つがちょうど打ち消し合う。",
+        "steps": [
+          "$ma=mg$ → $a=g$。",
+          "初速度・加速度が同じ → 同じ運動。",
+          "空気中：抵抗力の重力に対する割合が羽根で大きい → 加速度が小さい。"
+        ],
+        "alternatives": [
+          "落下時間 $t=\\sqrt{\\dfrac{2h}{g}}$ に質量が含まれないことからも説明できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動方程式",
+            "points": 2
+          },
+          {
+            "point": "$a=g$",
+            "points": 3
+          },
+          {
+            "point": "空気抵抗",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "「重いものは重力が大きいので速く落ちる」と、質量による慣性の大きさを考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "一定の速さで走っているバスが急ブレーキをかけると、立っている乗客は前のめりに倒れそうになる。この現象を、慣性の法則を用いて説明しなさい。地面に対して静止している人から見た場合として述べること。",
+      "answer": {
+        "value": "バスがブレーキで減速しても、乗客の体（特に上半身）には前後方向の力がほとんどはたらかないため、慣性の法則により、それまでの速さのまま前向きに運動を続けようとする。足は床との摩擦でバスとともに減速するので、上半身だけが足より前に進み、前のめりになる。"
+      },
+      "explanation": "力がはたらかなければ速度は変わらない（慣性）。足と上半身の違いに注目する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "乗客に前後方向の力がほとんどはたらかないことを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "慣性の法則で、乗客がそれまでの速度を保とうとすることを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "足は摩擦で減速することにふれ、前のめりになる理由を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 7
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-derive_item",
+      "explanation_detail": {
+        "approach": "「前に押す力」がはたらくのではない。減速するのはバスで、乗客は速度を保とうとする。",
+        "steps": [
+          "上半身：力がはたらかない → 等速を続ける。",
+          "足：摩擦でバスと一緒に減速。",
+          "上半身が前に出る。"
+        ],
+        "alternatives": [
+          "発車するときに後ろに倒れそうになる現象も、同じく慣性で説明できることを示して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "力",
+            "points": 2
+          },
+          {
+            "point": "慣性",
+            "points": 3
+          },
+          {
+            "point": "足との違い",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "「前向きの力（慣性力）が乗客を押す」と、地面から見た説明に存在しない力を書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある区間を走るエレベーターの速度 $v$ と時刻 $t$ の関係が図のようになった（鉛直上向きを正）。0〜2 s で 0 から 12 m/s まで一様に増加し、2〜5 s は一定、5〜7 s で一様に減少して 0 になった。（1）各区間の加速度を求めなさい。（2）0〜7 s の間にエレベーターが上昇した距離を求めなさい。（3）$v$−$t$ グラフの面積が変位を表す理由を、一次関数のグラフの考え方と関連づけて説明しなさい。",
+      "figure": {
+        "alt": "v−t グラフ。0〜2 s で 0 から 12 m/s まで増加、2〜5 s で一定、5〜7 s で 0 まで減少",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 172 262\" width=\"172\" height=\"262\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"248\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"32\" y1=\"248\" x2=\"32\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"50\" y1=\"248\" x2=\"50\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"68\" y1=\"248\" x2=\"68\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"86\" y1=\"248\" x2=\"86\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"248\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"122\" y1=\"248\" x2=\"122\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"140\" y1=\"248\" x2=\"140\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"158\" y1=\"248\" x2=\"158\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"248\" x2=\"158\" y2=\"248\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"230\" x2=\"158\" y2=\"230\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"212\" x2=\"158\" y2=\"212\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"194\" x2=\"158\" y2=\"194\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"176\" x2=\"158\" y2=\"176\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"158\" x2=\"158\" y2=\"158\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"140\" x2=\"158\" y2=\"140\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"122\" x2=\"158\" y2=\"122\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"158\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"86\" x2=\"158\" y2=\"86\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"68\" x2=\"158\" y2=\"68\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"50\" x2=\"158\" y2=\"50\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"32\" x2=\"158\" y2=\"32\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"158\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"248\" x2=\"164\" y2=\"248\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"248\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"160\" y=\"261\" font-style=\"italic\">t[s]</text><text x=\"19\" y=\"12\" font-style=\"italic\">v[m/s]</text><text x=\"3\" y=\"260\">O</text><text x=\"29\" y=\"260\" font-size=\"8\" fill=\"#555\">1</text><text x=\"47\" y=\"260\" font-size=\"8\" fill=\"#555\">2</text><text x=\"65\" y=\"260\" font-size=\"8\" fill=\"#555\">3</text><text x=\"83\" y=\"260\" font-size=\"8\" fill=\"#555\">4</text><text x=\"101\" y=\"260\" font-size=\"8\" fill=\"#555\">5</text><text x=\"119\" y=\"260\" font-size=\"8\" fill=\"#555\">6</text><text x=\"137\" y=\"260\" font-size=\"8\" fill=\"#555\">7</text><text x=\"155\" y=\"260\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"215\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"179\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"143\" font-size=\"8\" fill=\"#555\">6</text><text x=\"1\" y=\"107\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"71\" font-size=\"8\" fill=\"#555\">10</text><text x=\"1\" y=\"35\" font-size=\"8\" fill=\"#555\">12</text><line x1=\"14\" y1=\"248\" x2=\"50\" y2=\"32\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"50\" y1=\"32\" x2=\"104\" y2=\"32\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"104\" y1=\"32\" x2=\"140\" y2=\"248\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"14\" cy=\"248\" r=\"2.3\" fill=\"#000\"/><circle cx=\"50\" cy=\"32\" r=\"2.3\" fill=\"#000\"/><circle cx=\"104\" cy=\"32\" r=\"2.3\" fill=\"#000\"/><circle cx=\"140\" cy=\"248\" r=\"2.3\" fill=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "（1）0〜2 s：$6.0\\,\\mathrm{m/s^2}$、2〜5 s：$0$、5〜7 s：$-6.0\\,\\mathrm{m/s^2}$　（2）$60\\,\\mathrm{m}$　（3）速度が一定の短い時間 $\\Delta t$ では変位は $v\\Delta t$（細長い長方形の面積）であり、時間を細かく区切って足し合わせるとグラフの下の面積になる。グラフの傾き（変化の割合）が加速度を表すのに対し、面積は速度×時間の積み重ねを表す。"
+      },
+      "explanation": "傾き＝加速度（一次関数の変化の割合）、面積＝変位。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）各区間の加速度を符号を含めて求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（2）台形の面積として距離を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）短い時間の $v\\Delta t$ の和が面積になることを説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "Rational(12*(2+2),2)+12*3",
+        "expected": "60",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-graph_c",
+      "related_units": [
+        "JH-MATH-G2-U03"
+      ],
+      "explanation_detail": {
+        "approach": "一次関数の「変化の割合」が傾き＝加速度。面積は速度と時間の積の合計。",
+        "steps": [
+          "（1）$\\dfrac{12-0}{2}=6.0$、$0$、$\\dfrac{0-12}{2}=-6.0$（単位 m/s²）。",
+          "（2）台形の面積 $\\dfrac12\\times(7+3)\\times12=60\\,\\mathrm{m}$。",
+          "（3）短い時間に分けて長方形の面積を足し合わせる。"
+        ],
+        "alternatives": [
+          "（2）は三角形 $\\dfrac12\\times2\\times12$＋長方形 $3\\times12$＋三角形 $\\dfrac12\\times2\\times12$ と分けて計算しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）加速度",
+            "points": 3
+          },
+          {
+            "point": "（2）距離",
+            "points": 2
+          },
+          {
+            "point": "（3）説明",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "減速区間の加速度の負の符号を落とす。",
+          "（2）で傾きを足し合わせてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある区間を走るエレベーターの速度 $v$ と時刻 $t$ の関係が図のようになった（鉛直上向きを正）。0〜3 s で 0 から 4 m/s まで一様に増加し、3〜9 s は一定、9〜11 s で一様に減少して 0 になった。（1）各区間の加速度を求めなさい。（2）0〜11 s の間にエレベーターが上昇した距離を求めなさい。（3）$v$−$t$ グラフの面積が変位を表す理由を、一次関数のグラフの考え方と関連づけて説明しなさい。",
+      "figure": {
+        "alt": "v−t グラフ。0〜3 s で 0 から 4 m/s まで増加、3〜9 s で一定、9〜11 s で 0 まで減少",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 268 128\" width=\"268\" height=\"128\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"114\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"34\" y1=\"114\" x2=\"34\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"54\" y1=\"114\" x2=\"54\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"114\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"94\" y1=\"114\" x2=\"94\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"114\" y1=\"114\" x2=\"114\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"134\" y1=\"114\" x2=\"134\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"154\" y1=\"114\" x2=\"154\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"174\" y1=\"114\" x2=\"174\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"194\" y1=\"114\" x2=\"194\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"214\" y1=\"114\" x2=\"214\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"234\" y1=\"114\" x2=\"234\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"254\" y1=\"114\" x2=\"254\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"114\" x2=\"254\" y2=\"114\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"94\" x2=\"254\" y2=\"94\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"254\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"54\" x2=\"254\" y2=\"54\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"34\" x2=\"254\" y2=\"34\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"254\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"114\" x2=\"260\" y2=\"114\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"114\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"256\" y=\"127\" font-style=\"italic\">t[s]</text><text x=\"19\" y=\"12\" font-style=\"italic\">v[m/s]</text><text x=\"3\" y=\"126\">O</text><text x=\"31\" y=\"126\" font-size=\"8\" fill=\"#555\">1</text><text x=\"51\" y=\"126\" font-size=\"8\" fill=\"#555\">2</text><text x=\"71\" y=\"126\" font-size=\"8\" fill=\"#555\">3</text><text x=\"91\" y=\"126\" font-size=\"8\" fill=\"#555\">4</text><text x=\"111\" y=\"126\" font-size=\"8\" fill=\"#555\">5</text><text x=\"131\" y=\"126\" font-size=\"8\" fill=\"#555\">6</text><text x=\"151\" y=\"126\" font-size=\"8\" fill=\"#555\">7</text><text x=\"171\" y=\"126\" font-size=\"8\" fill=\"#555\">8</text><text x=\"191\" y=\"126\" font-size=\"8\" fill=\"#555\">9</text><text x=\"211\" y=\"126\" font-size=\"8\" fill=\"#555\">10</text><text x=\"231\" y=\"126\" font-size=\"8\" fill=\"#555\">11</text><text x=\"251\" y=\"126\" font-size=\"8\" fill=\"#555\">12</text><text x=\"1\" y=\"97\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"57\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"37\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">5</text><line x1=\"14\" y1=\"114\" x2=\"74\" y2=\"34\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"74\" y1=\"34\" x2=\"194\" y2=\"34\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"194\" y1=\"34\" x2=\"234\" y2=\"114\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"14\" cy=\"114\" r=\"2.3\" fill=\"#000\"/><circle cx=\"74\" cy=\"34\" r=\"2.3\" fill=\"#000\"/><circle cx=\"194\" cy=\"34\" r=\"2.3\" fill=\"#000\"/><circle cx=\"234\" cy=\"114\" r=\"2.3\" fill=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "（1）0〜3 s：$1.3\\,\\mathrm{m/s^2}$、3〜9 s：$0$、9〜11 s：$-2.0\\,\\mathrm{m/s^2}$　（2）$34\\,\\mathrm{m}$　（3）速度が一定の短い時間 $\\Delta t$ では変位は $v\\Delta t$（細長い長方形の面積）であり、時間を細かく区切って足し合わせるとグラフの下の面積になる。グラフの傾き（変化の割合）が加速度を表すのに対し、面積は速度×時間の積み重ねを表す。"
+      },
+      "explanation": "傾き＝加速度（一次関数の変化の割合）、面積＝変位。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）各区間の加速度を符号を含めて求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（2）台形の面積として距離を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）短い時間の $v\\Delta t$ の和が面積になることを説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "Rational(4*(3+2),2)+4*6",
+        "expected": "34",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-graph_c",
+      "related_units": [
+        "JH-MATH-G2-U03"
+      ],
+      "explanation_detail": {
+        "approach": "一次関数の「変化の割合」が傾き＝加速度。面積は速度と時間の積の合計。",
+        "steps": [
+          "（1）$\\dfrac{4-0}{3}=1.3$、$0$、$\\dfrac{0-4}{2}=-2.0$（単位 m/s²）。",
+          "（2）台形の面積 $\\dfrac12\\times(11+6)\\times4=34\\,\\mathrm{m}$。",
+          "（3）短い時間に分けて長方形の面積を足し合わせる。"
+        ],
+        "alternatives": [
+          "（2）は三角形 $\\dfrac12\\times3\\times4$＋長方形 $6\\times4$＋三角形 $\\dfrac12\\times2\\times4$ と分けて計算しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）加速度",
+            "points": 3
+          },
+          {
+            "point": "（2）距離",
+            "points": 2
+          },
+          {
+            "point": "（3）説明",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "減速区間の加速度の負の符号を落とす。",
+          "（2）で傾きを足し合わせてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "粗い水平な机の上に質量 2.0 kg の物体 A を置き、軽い糸をつけて机の端の軽くなめらかな滑車に通し、他端に質量 4.0 kg の物体 B をつり下げて静かにはなしたところ、A は机の上を滑り始めた。A と机の間の動摩擦係数を 0.20、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）A、B それぞれの運動方程式を、加速度の大きさ $a$、糸の張力の大きさ $T$ を用いて書きなさい。（2）$a$ と $T$ を求めなさい。（3）（2）の $a$ を、A と B をひとまとまりとみなす方法で求め、結果が一致することを確かめなさい。",
+      "answer": {
+        "value": "（1）A：$2a=T-0.20\\times2\\times9.8$、B：$4a=4\\times9.8-T$　（2）$a\\fallingdotseq5.9\\,\\mathrm{m/s^2}$、$T\\fallingdotseq16\\,\\mathrm{N}$　（3）全体：$(2+4)a=4\\times9.8-0.20\\times2\\times9.8$ で同じ $a$ が得られる（張力は内力なので消える）。"
+      },
+      "explanation": "物体ごとに力を図示し運動方程式を立てる。全体で考えると内力が消える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）A の運動方程式で動摩擦力を正しく含めている",
+            "points": 2
+          },
+          {
+            "criterion": "（1）B の運動方程式を立てている",
+            "points": 1
+          },
+          {
+            "criterion": "（2）$a$ と $T$ を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）全体の運動方程式を立て、内力が消えることを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "9.8*(4-(1/5)*2)/(2+4)",
+        "expected": "147/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-pulley_c",
+      "explanation_detail": {
+        "approach": "A には張力（前向き）と動摩擦力（後ろ向き）、B には重力（下向き）と張力（上向き）。A の垂直抗力は $mg$。",
+        "steps": [
+          "A：$2a=T-\\mu'\\times2\\times9.8$。",
+          "B：$4a=4\\times9.8-T$。",
+          "足して $6a=(4-0.20\\times2)\\times9.8$、$a\\fallingdotseq5.9\\,\\mathrm{m/s^2}$。",
+          "$T=4(9.8-a)\\fallingdotseq16\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "張力 $T$ を A の式から求めた値と B の式から求めた値が一致するかで、計算を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）A",
+            "points": 2
+          },
+          {
+            "point": "（1）B",
+            "points": 1
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "張力を B の重さとする。",
+          "動摩擦力を $\\mu'(m+M)g$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "粗い水平な机の上に質量 3.0 kg の物体 A を置き、軽い糸をつけて机の端の軽くなめらかな滑車に通し、他端に質量 2.0 kg の物体 B をつり下げて静かにはなしたところ、A は机の上を滑り始めた。A と机の間の動摩擦係数を 0.10、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）A、B それぞれの運動方程式を、加速度の大きさ $a$、糸の張力の大きさ $T$ を用いて書きなさい。（2）$a$ と $T$ を求めなさい。（3）（2）の $a$ を、A と B をひとまとまりとみなす方法で求め、結果が一致することを確かめなさい。",
+      "answer": {
+        "value": "（1）A：$3a=T-0.10\\times3\\times9.8$、B：$2a=2\\times9.8-T$　（2）$a\\fallingdotseq3.3\\,\\mathrm{m/s^2}$、$T\\fallingdotseq13\\,\\mathrm{N}$　（3）全体：$(3+2)a=2\\times9.8-0.10\\times3\\times9.8$ で同じ $a$ が得られる（張力は内力なので消える）。"
+      },
+      "explanation": "物体ごとに力を図示し運動方程式を立てる。全体で考えると内力が消える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）A の運動方程式で動摩擦力を正しく含めている",
+            "points": 2
+          },
+          {
+            "criterion": "（1）B の運動方程式を立てている",
+            "points": 1
+          },
+          {
+            "criterion": "（2）$a$ と $T$ を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）全体の運動方程式を立て、内力が消えることを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "9.8*(2-(1/10)*3)/(3+2)",
+        "expected": "833/250",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-pulley_c",
+      "explanation_detail": {
+        "approach": "A には張力（前向き）と動摩擦力（後ろ向き）、B には重力（下向き）と張力（上向き）。A の垂直抗力は $mg$。",
+        "steps": [
+          "A：$3a=T-\\mu'\\times3\\times9.8$。",
+          "B：$2a=2\\times9.8-T$。",
+          "足して $5a=(2-0.10\\times3)\\times9.8$、$a\\fallingdotseq3.3\\,\\mathrm{m/s^2}$。",
+          "$T=2(9.8-a)\\fallingdotseq13\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "張力 $T$ を A の式から求めた値と B の式から求めた値が一致するかで、計算を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）A",
+            "points": 2
+          },
+          {
+            "point": "（1）B",
+            "points": 1
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "張力を B の重さとする。",
+          "動摩擦力を $\\mu'(m+M)g$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "粗い水平な机の上に質量 3.0 kg の物体 A を置き、軽い糸をつけて机の端の軽くなめらかな滑車に通し、他端に質量 3.0 kg の物体 B をつり下げて静かにはなしたところ、A は机の上を滑り始めた。A と机の間の動摩擦係数を 0.25、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）A、B それぞれの運動方程式を、加速度の大きさ $a$、糸の張力の大きさ $T$ を用いて書きなさい。（2）$a$ と $T$ を求めなさい。（3）（2）の $a$ を、A と B をひとまとまりとみなす方法で求め、結果が一致することを確かめなさい。",
+      "answer": {
+        "value": "（1）A：$3a=T-0.25\\times3\\times9.8$、B：$3a=3\\times9.8-T$　（2）$a\\fallingdotseq3.7\\,\\mathrm{m/s^2}$、$T\\fallingdotseq18\\,\\mathrm{N}$　（3）全体：$(3+3)a=3\\times9.8-0.25\\times3\\times9.8$ で同じ $a$ が得られる（張力は内力なので消える）。"
+      },
+      "explanation": "物体ごとに力を図示し運動方程式を立てる。全体で考えると内力が消える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）A の運動方程式で動摩擦力を正しく含めている",
+            "points": 2
+          },
+          {
+            "criterion": "（1）B の運動方程式を立てている",
+            "points": 1
+          },
+          {
+            "criterion": "（2）$a$ と $T$ を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）全体の運動方程式を立て、内力が消えることを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "9.8*(3-(1/4)*3)/(3+3)",
+        "expected": "147/40",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-pulley_c",
+      "explanation_detail": {
+        "approach": "A には張力（前向き）と動摩擦力（後ろ向き）、B には重力（下向き）と張力（上向き）。A の垂直抗力は $mg$。",
+        "steps": [
+          "A：$3a=T-\\mu'\\times3\\times9.8$。",
+          "B：$3a=3\\times9.8-T$。",
+          "足して $6a=(3-0.25\\times3)\\times9.8$、$a\\fallingdotseq3.7\\,\\mathrm{m/s^2}$。",
+          "$T=3(9.8-a)\\fallingdotseq18\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "張力 $T$ を A の式から求めた値と B の式から求めた値が一致するかで、計算を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）A",
+            "points": 2
+          },
+          {
+            "point": "（1）B",
+            "points": 1
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "張力を B の重さとする。",
+          "動摩擦力を $\\mu'(m+M)g$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水平面となす角 $\\theta$ が $\\sin\\theta=0.60$、$\\cos\\theta=0.80$ の粗い斜面上に、質量 2.0 kg の物体を静かに置いた。物体と斜面の間の静止摩擦係数は 0.90、動摩擦係数は 0.50 である。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）物体が滑り出すかどうかを、最大摩擦力と重力の斜面方向の成分を比べて判断し、理由とともに答えなさい。（2）滑り出すなら加速度の大きさを、静止を続けるなら静止摩擦力の大きさと向きを求めなさい。",
+      "answer": {
+        "value": "（1）$\\tan\\theta=0.75\\leqq\\mu=0.90$ なので静止を続ける。（2）静止摩擦力は $mg\\sin\\theta=2.0\\times9.8\\times0.60\\fallingdotseq12\\,\\mathrm{N}$（斜面に沿って上向き）"
+      },
+      "explanation": "滑り出す条件は $mg\\sin\\theta>\\mu mg\\cos\\theta$、すなわち $\\tan\\theta>\\mu$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）垂直抗力を $mg\\cos\\theta$ として最大摩擦力を表している",
+            "points": 2
+          },
+          {
+            "criterion": "（1）$mg\\sin\\theta$ と比べて正しく判断している",
+            "points": 3
+          },
+          {
+            "criterion": "（2）運動方程式またはつり合いから値を求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(2)*9.8*Rational(3,5)",
+        "expected": "294/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-incline_c",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "静止摩擦力は最大でも $\\mu N=\\mu mg\\cos\\theta$。重力の斜面方向成分 $mg\\sin\\theta$ がそれをこえるかどうかで判断する。",
+        "steps": [
+          "$N=mg\\cos\\theta$、最大摩擦力 $\\mu mg\\cos\\theta$。",
+          "$mg\\sin\\theta>\\mu mg\\cos\\theta\\iff\\tan\\theta>\\mu$。$\\tan\\theta=\\dfrac{0.60}{0.80}=0.75$。",
+          "静止の場合：斜面方向のつり合いより、静止摩擦力 $=mg\\sin\\theta$。"
+        ],
+        "alternatives": [
+          "判断の式 $\\tan\\theta>\\mu$ は質量によらないので、質量を使わずに判断できることを確かめる（三角比の $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）最大摩擦力",
+            "points": 2
+          },
+          {
+            "point": "（1）判断",
+            "points": 3
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "静止しているのに静止摩擦力を $\\mu mg\\cos\\theta$ とする。",
+          "滑り出したあとも静止摩擦係数を使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水平面となす角 $\\theta$ が $\\sin\\theta=0.60$、$\\cos\\theta=0.80$ の粗い斜面上に、質量 3.0 kg の物体を静かに置いた。物体と斜面の間の静止摩擦係数は 0.40、動摩擦係数は 0.30 である。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）物体が滑り出すかどうかを、最大摩擦力と重力の斜面方向の成分を比べて判断し、理由とともに答えなさい。（2）滑り出すなら加速度の大きさを、静止を続けるなら静止摩擦力の大きさと向きを求めなさい。",
+      "answer": {
+        "value": "（1）$\\tan\\theta=0.75>\\mu=0.40$ なので滑り出す。（2）$a=g(\\sin\\theta-\\mu'\\cos\\theta)\\fallingdotseq3.5\\,\\mathrm{m/s^2}$"
+      },
+      "explanation": "滑り出す条件は $mg\\sin\\theta>\\mu mg\\cos\\theta$、すなわち $\\tan\\theta>\\mu$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）垂直抗力を $mg\\cos\\theta$ として最大摩擦力を表している",
+            "points": 2
+          },
+          {
+            "criterion": "（1）$mg\\sin\\theta$ と比べて正しく判断している",
+            "points": 3
+          },
+          {
+            "criterion": "（2）運動方程式またはつり合いから値を求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "9.8*(Rational(3,5)-(3/10)*Rational(4,5))",
+        "expected": "441/125",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHYB-U01-incline_c",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "静止摩擦力は最大でも $\\mu N=\\mu mg\\cos\\theta$。重力の斜面方向成分 $mg\\sin\\theta$ がそれをこえるかどうかで判断する。",
+        "steps": [
+          "$N=mg\\cos\\theta$、最大摩擦力 $\\mu mg\\cos\\theta$。",
+          "$mg\\sin\\theta>\\mu mg\\cos\\theta\\iff\\tan\\theta>\\mu$。$\\tan\\theta=\\dfrac{0.60}{0.80}=0.75$。",
+          "滑る場合：$ma=mg\\sin\\theta-\\mu'mg\\cos\\theta$。"
+        ],
+        "alternatives": [
+          "判断の式 $\\tan\\theta>\\mu$ は質量によらないので、質量を使わずに判断できることを確かめる（三角比の $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）最大摩擦力",
+            "points": 2
+          },
+          {
+            "point": "（1）判断",
+            "points": 3
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "静止しているのに静止摩擦力を $\\mu mg\\cos\\theta$ とする。",
+          "滑り出したあとも静止摩擦係数を使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "地面から小球を速さ 19.6 m/s で鉛直上向きに投げ上げた。3 s 後の小球の速度を求めなさい。鉛直上向きを正とする。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\n$v=v_0+gt=19.6+9.8\\times3=49\\,\\mathrm{m/s}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-9.8\\,\\mathrm{m/s}$"
+      },
+      "explanation": "正の向きと加速度の向きが逆なら、加速度は負で代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(98/5)-9.8*(3)",
+        "expected": "-49/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-err_kin",
+      "explanation_detail": {
+        "approach": "正の向きを図に矢印で描き、各量（初速度・加速度）の符号を確認してから代入する。",
+        "steps": [
+          "上向き正 → $a=-9.8\\,\\mathrm{m/s^2}$。",
+          "$v=19.6-9.8\\times3=-9.8\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "最高点に達する時刻 $\\dfrac{v_0}{g}=2\\,\\mathrm{s}$ を過ぎているので、下向き（負）の速度になるはずだと確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "投げ上げで速さが増え続ける答えは不自然だと気づく。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$v=v_0+gt=19.6+9.8\\times3=49\\,\\mathrm{m/s}$",
+        "error_step": "$v=v_0+gt$ とした部分",
+        "error_type": "sign",
+        "why_tempting": "自由落下の式 $v=gt$ の形を覚えていて、上向きを正にとったときに重力加速度が負になることを反映していない。",
+        "correction": "上向きを正とすると加速度は $-g$。$v=v_0-gt=19.6-9.8\\times3=-9.8\\,\\mathrm{m/s}$（下向きに運動中）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "地面から小球を速さ 9.8 m/s で鉛直上向きに投げ上げた。3 s 後の小球の速度を求めなさい。鉛直上向きを正とする。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\n$v=v_0+gt=9.8+9.8\\times3=39.2\\,\\mathrm{m/s}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-19.6\\,\\mathrm{m/s}$"
+      },
+      "explanation": "正の向きと加速度の向きが逆なら、加速度は負で代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(49/5)-9.8*(3)",
+        "expected": "-98/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-err_kin",
+      "explanation_detail": {
+        "approach": "正の向きを図に矢印で描き、各量（初速度・加速度）の符号を確認してから代入する。",
+        "steps": [
+          "上向き正 → $a=-9.8\\,\\mathrm{m/s^2}$。",
+          "$v=9.8-9.8\\times3=-19.6\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "最高点に達する時刻 $\\dfrac{v_0}{g}=1\\,\\mathrm{s}$ を過ぎているので、下向き（負）の速度になるはずだと確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "投げ上げで速さが増え続ける答えは不自然だと気づく。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$v=v_0+gt=9.8+9.8\\times3=39.2\\,\\mathrm{m/s}$",
+        "error_step": "$v=v_0+gt$ とした部分",
+        "error_type": "sign",
+        "why_tempting": "自由落下の式 $v=gt$ の形を覚えていて、上向きを正にとったときに重力加速度が負になることを反映していない。",
+        "correction": "上向きを正とすると加速度は $-g$。$v=v_0-gt=9.8-9.8\\times3=-19.6\\,\\mathrm{m/s}$（下向きに運動中）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "時速 72 km で走っていた自動車が、一定の加速度で減速して 5.0 s で止まった。加速度の大きさを求めなさい。\n［ある生徒の解答］\n$a=\\dfrac{\\Delta v}{\\Delta t}=\\dfrac{72}{5.0}=14.4\\,\\mathrm{m/s^2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$4.0\\,\\mathrm{m/s^2}$"
+      },
+      "explanation": "加速度を m/s² で表すには、速さを m/s に直す（3.6 で割る）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(72*1000,3600)/(5)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHYB-U01-err_kin",
+      "explanation_detail": {
+        "approach": "単位の組み立て（km/h ÷ s は m/s² ではない）で確かめる。",
+        "steps": [
+          "$72\\,\\mathrm{km/h}=\\dfrac{72\\times1000}{3600}\\,\\mathrm{m/s}=20\\,\\mathrm{m/s}$。",
+          "$a=\\dfrac{20}{5.0}=4.0\\,\\mathrm{m/s^2}$（大きさ）。"
+        ],
+        "alternatives": [
+          "$1\\,\\mathrm{m/s}=3.6\\,\\mathrm{km/h}$ を覚えておくと換算が速い。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "計算の前に単位をそろえる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$a=\\dfrac{\\Delta v}{\\Delta t}=\\dfrac{72}{5.0}=14.4\\,\\mathrm{m/s^2}$",
+        "error_step": "速さを km/h のまま代入した部分",
+        "error_type": "unit",
+        "why_tempting": "問題文の数値をそのまま公式に入れ、速さと時間の単位（km/h と s）が合っているかを確認していない。",
+        "correction": "$v_0=72\\,\\mathrm{km/h}=20\\,\\mathrm{m/s}$。$a=\\dfrac{20}{5.0}=4.0\\,\\mathrm{m/s^2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "水平面と $30^\\circ$ の角をなすなめらかな斜面上に、質量 2.0 kg の物体を置いた。物体が斜面から受ける垂直抗力の大きさを求めなさい。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。\n［ある生徒の解答］\n垂直抗力は重力とつり合うので $N=mg=2.0\\times9.8=20\\,\\mathrm{N}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$17\\,\\mathrm{N}$"
+      },
+      "explanation": "垂直抗力は斜面に垂直。つり合うのは重力の「斜面に垂直な成分」$mg\\cos\\theta$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(2)*9.8*cos(deg(30))",
+        "expected": "49*sqrt(3)/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-err_force",
+      "explanation_detail": {
+        "approach": "力を分解する前に、どの方向で力がつり合っているかを確認する。",
+        "steps": [
+          "重力を斜面に平行・垂直に分解。",
+          "$N=mg\\cos30^\\circ\\fallingdotseq17\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "斜面の角を $90^\\circ$ に近づけると、壁に押しつける力がなくなり $N\\to0$ になるはず。$N=mg$ ではこれが説明できない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "垂直抗力はいつも $mg$ とは限らない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "垂直抗力は重力とつり合うので $N=mg=2.0\\times9.8=20\\,\\mathrm{N}$",
+        "error_step": "$N=mg$ とした部分",
+        "error_type": "concept",
+        "why_tempting": "水平面上での「垂直抗力＝重力」という経験を、斜面の場合にもそのまま当てはめている。",
+        "correction": "斜面に垂直な方向のつり合いより $N=mg\\cos30^\\circ=2.0\\times9.8\\times\\dfrac{\\sqrt{3}}{2}\\fallingdotseq17\\,\\mathrm{N}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "質量 4.0 kg の物体を天井から糸でつるし、静止させた。糸が物体を引く力と、物体にはたらく重力の関係について、ある生徒は次のように答えた。正しい関係と、糸が物体を引く力の大きさを答えなさい。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\n糸が物体を引く力と物体にはたらく重力は、作用・反作用の関係にある。したがって糸の張力は重力と等しい。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "力のつり合い、$39\\,\\mathrm{N}$"
+      },
+      "explanation": "1つの物体にはたらく2力は「つり合い」、2物体間で及ぼし合う力は「作用・反作用」。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(4)*9.8",
+        "expected": "196/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-err_force",
+      "explanation_detail": {
+        "approach": "力の矢印の作用点がどの物体にあるかを確認する。",
+        "steps": [
+          "張力も重力も物体にはたらく → つり合い。",
+          "静止しているので $T=mg\\fallingdotseq39\\,\\mathrm{N}$。",
+          "重力の反作用：物体が地球を引く力。"
+        ],
+        "alternatives": [
+          "糸を上向きに加速させると張力は重力より大きくなるが、作用反作用は常に等しい。この場合を考えれば2つは別の関係だとわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "作用反作用は「相手と自分」、つり合いは「自分にはたらく力どうし」。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "糸が物体を引く力と物体にはたらく重力は、作用・反作用の関係にある。したがって糸の張力は重力と等しい。",
+        "error_step": "「作用・反作用の関係」とした部分",
+        "error_type": "concept",
+        "why_tempting": "「大きさが等しく向きが逆」という共通点だけで、作用反作用とつり合いを区別していない。",
+        "correction": "2力はどちらも物体にはたらくので「力のつり合い」の関係。張力の大きさは $mg=4.0\\times9.8\\fallingdotseq39\\,\\mathrm{N}$。重力の反作用は物体が地球を引く力、張力の反作用は物体が糸を引く力"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "粗い水平面上に置いた質量 5.0 kg の物体を、水平に 4.0 N の力で引いたが、物体は動かなかった。静止摩擦係数を 0.60、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。物体にはたらく摩擦力の大きさを求めなさい。\n［ある生徒の解答］\n摩擦力 $=\\mu mg=0.60\\times5.0\\times9.8\\fallingdotseq29\\,\\mathrm{N}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$4.0\\,\\mathrm{N}$"
+      },
+      "explanation": "静止摩擦力の大きさは外力とのつり合いで決まり、$\\mu N$ は上限にすぎない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "4",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHYB-U01-err_force",
+      "explanation_detail": {
+        "approach": "物体の状態（静止・滑っている）を先に確かめ、静止ならつり合い、滑っていれば $\\mu'N$ を使う。",
+        "steps": [
+          "最大摩擦力 $\\mu mg\\fallingdotseq29\\,\\mathrm{N}>4.0\\,\\mathrm{N}$ → 静止。",
+          "つり合いより摩擦力 $=4.0\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "生徒の答えが正しいとすると、摩擦力 29 N が引く力 4.0 N より大きく、物体は引く向きと逆に動き出すことになり矛盾する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\mu N$ は「最大値」と書いて覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "摩擦力 $=\\mu mg=0.60\\times5.0\\times9.8\\fallingdotseq29\\,\\mathrm{N}$",
+        "error_step": "$\\mu mg$ を摩擦力とした部分",
+        "error_type": "condition",
+        "why_tempting": "「摩擦力＝摩擦係数×垂直抗力」と公式だけで覚え、それが最大摩擦力（動き出す直前）の値であるという条件を忘れている。",
+        "correction": "静止しているので水平方向の力はつり合い、静止摩擦力 $=4.0\\,\\mathrm{N}$（最大摩擦力 29 N 以下で条件を満たす）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "なめらかな水平面上の質量 2.0 kg の物体 A に軽い糸をつけ、なめらかな滑車を通して質量 3.0 kg の物体 B をつり下げ、静かにはなした。糸の張力の大きさを求めなさい。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\n糸は B を支えているので、張力は B の重さに等しい。$T=3\\times9.8=29.4\\,\\mathrm{N}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$12\\,\\mathrm{N}$"
+      },
+      "explanation": "加速している物体では力はつり合わない。運動方程式から張力を求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*9.8*3/(2+3)",
+        "expected": "294/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-err_newton",
+      "explanation_detail": {
+        "approach": "静止・等速ならつり合い、加速していれば運動方程式、と状態で使う法則を選ぶ。",
+        "steps": [
+          "A：$2a=T$、B：$3a=3\\times9.8-T$。",
+          "$a=\\dfrac{3\\times9.8}{5}$。",
+          "$T=2a\\fallingdotseq12\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "張力が B の重さに等しいと、B の合力が 0 で B は落ちないことになり、「動き出した」ことと矛盾する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加速中の物体に「つり合い」を使わない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "糸は B を支えているので、張力は B の重さに等しい。$T=3\\times9.8=29.4\\,\\mathrm{N}$",
+        "error_step": "張力を B の重さとした部分",
+        "error_type": "concept",
+        "why_tempting": "B が静止しているときの「張力＝重さ」を、B が加速している場合にも当てはめている。",
+        "correction": "B は下向きに加速するので $T<m_{\\mathrm{B}}g$。A：$2a=T$、B：$3a=3\\times9.8-T$ より $a=\\dfrac{3\\times9.8}{5}$、$T=2a\\fallingdotseq12\\,\\mathrm{N}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "粗い水平面上で、質量 4.0 kg の物体を水平に 20 N の力で引いて滑らせた。動摩擦係数を 0.25、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。物体の加速度の大きさを有効数字2桁で求めなさい。\n［ある生徒の解答］\n$ma=F$ より $a=\\dfrac{20}{4.0}=5.0\\,\\mathrm{m/s^2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$2.6\\,\\mathrm{m/s^2}$"
+      },
+      "explanation": "運動方程式の右辺は物体にはたらく力の合力。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(20-(1/4)*(4)*9.8)/(4)",
+        "expected": "51/20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-err_newton",
+      "explanation_detail": {
+        "approach": "物体にはたらく力をすべて図示してから、運動の向きの成分を足し引きする。",
+        "steps": [
+          "動摩擦力 $\\mu'mg=9.8\\,\\mathrm{N}$（運動と逆向き）。",
+          "$4.0a=20-9.8$。",
+          "$a\\fallingdotseq2.6\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "摩擦がある分だけ、なめらかな面の場合より加速度は小さくなるはず、という大小で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "力を図示せずに式を立てない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$ma=F$ より $a=\\dfrac{20}{4.0}=5.0\\,\\mathrm{m/s^2}$",
+        "error_step": "$ma=F$ の $F$ に引く力だけを入れた部分",
+        "error_type": "concept",
+        "why_tempting": "運動方程式の $F$ を「加えた力」と覚えていて、物体にはたらく他の力（動摩擦力）を含めた合力であることを忘れている。",
+        "correction": "合力は $F-\\mu'mg=20-9.8=10.2\\,\\mathrm{N}$。$a=\\dfrac{10.2}{4.0}\\fallingdotseq2.6\\,\\mathrm{m/s^2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "質量 2.0 kg の球 P と質量 10.0 kg の球 Q を、高さ 19.6 m から同時に静かにはなした。それぞれが地面に達するまでの時間を求めなさい。空気抵抗は無視し、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\n重力は質量に比例するので、加速度も質量に比例する。P の加速度を $g$ とすると Q の加速度は $5g$ となり、Q のほうが速く落ちる。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "どちらも $2\\,\\mathrm{s}$"
+      },
+      "explanation": "運動方程式では、重力 $mg$ の $m$ と左辺の $m$ が約分される。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(2*(98/5)/9.8)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-err_fall",
+      "explanation_detail": {
+        "approach": "力だけでなく、質量（動かしにくさ）も含めて運動方程式で考える。",
+        "steps": [
+          "P、Q とも $ma=mg$ → $a=g$。",
+          "$19.6=\\dfrac12\\times9.8\\times t^2$ より $t=2\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "2つの球を軽い糸でつないで1つの物体とみなすと、生徒の考えでは「速く落ちる球」と「遅く落ちる球」が引き合って矛盾が生じる、という思考実験でも確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "素朴な直観より運動方程式を優先する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "重力は質量に比例するので、加速度も質量に比例する。P の加速度を $g$ とすると Q の加速度は $5g$ となり、Q のほうが速く落ちる。",
+        "error_step": "「加速度も質量に比例する」とした部分",
+        "error_type": "concept",
+        "why_tempting": "「重い物ほど強く引かれる」ことに注目し、重い物ほど動かしにくい（慣性が大きい）ことを考えていない。",
+        "correction": "$ma=mg$ より $a=g$ で質量によらない。どちらも $t=\\sqrt{\\dfrac{2h}{g}}=\\sqrt{\\dfrac{2\\times19.6}{9.8}}=2\\,\\mathrm{s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHYB-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-PHYB-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "質量 1.0 kg の球 P と質量 3.0 kg の球 Q を、高さ 19.6 m から同時に静かにはなした。それぞれが地面に達するまでの時間を求めなさい。空気抵抗は無視し、重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\n重力は質量に比例するので、加速度も質量に比例する。P の加速度を $g$ とすると Q の加速度は $3g$ となり、Q のほうが速く落ちる。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "どちらも $2\\,\\mathrm{s}$"
+      },
+      "explanation": "運動方程式では、重力 $mg$ の $m$ と左辺の $m$ が約分される。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(2*(98/5)/9.8)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHYB-U01-err_fall",
+      "explanation_detail": {
+        "approach": "力だけでなく、質量（動かしにくさ）も含めて運動方程式で考える。",
+        "steps": [
+          "P、Q とも $ma=mg$ → $a=g$。",
+          "$19.6=\\dfrac12\\times9.8\\times t^2$ より $t=2\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "2つの球を軽い糸でつないで1つの物体とみなすと、生徒の考えでは「速く落ちる球」と「遅く落ちる球」が引き合って矛盾が生じる、という思考実験でも確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "素朴な直観より運動方程式を優先する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "重力は質量に比例するので、加速度も質量に比例する。P の加速度を $g$ とすると Q の加速度は $3g$ となり、Q のほうが速く落ちる。",
+        "error_step": "「加速度も質量に比例する」とした部分",
+        "error_type": "concept",
+        "why_tempting": "「重い物ほど強く引かれる」ことに注目し、重い物ほど動かしにくい（慣性が大きい）ことを考えていない。",
+        "correction": "$ma=mg$ より $a=g$ で質量によらない。どちらも $t=\\sqrt{\\dfrac{2h}{g}}=\\sqrt{\\dfrac{2\\times19.6}{9.8}}=2\\,\\mathrm{s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "bf64b21861327be8ed254a00f946423080ae383c211aff5c0f7d63f6a10842f9"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 1 問（Q036）",
+      "content_hash": "e6417ccd1c5fe4c7e53eb7b1dbc1d1f7ce81087c1e008c56a5e863231b72e3d6"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 3 問（Q021, Q022, Q023）",
+      "content_hash": "0fe7cf626db9cb6f6f7bdecc8780e0a3f0e927de59303d9bfa8ae54f0fb86ba8"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:42:41+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "a2c38b99ae88b4124b2e3ef891b07ab91a835b11e3a178c6df1b987259b48428"
+  }
+}
