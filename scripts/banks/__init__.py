@@ -9,6 +9,7 @@ generate_batch.py がこれを読み込み、スキーマ準拠の JSON を data
   3: 高校生向け 基礎科目 自習プリント
   4: 大学入学共通テスト 対策
   5: 難関大 個別試験（二次試験）対策
+  6: 神奈川県公立高校入試形式 5教科オリジナル模試（第2回：実際の問題冊子と同じ大問構成・解答形式。教科ごとに1セット）
 """
 PHASE_MODULES = {
     1: ["pilot_math", "pilot_english", "pilot_science", "pilot_social", "pilot_japanese", "pilot_mock"],
@@ -16,4 +17,5 @@ PHASE_MODULES = {
     3: ["hs_math", "hs_english", "hs_japanese", "hs_science", "hs_social"],
     4: ["common_test"],
     5: ["second_stage"],
+    6: ["mock_kng_eng", "mock_kng_math", "mock_kng_jpn", "mock_kng_sci", "mock_kng_soc"],
 }

@@ -1,6 +1,6 @@
 # 教材カタログ
 
-全 201 セット・2280 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
+全 359 セット・7020 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
 
 検証状態 `auto_checked` は自動検査（スキーマ・整合性・重複・検算）に合格した状態です。教科担当者のレビュー（`expert_reviewed`）を経てから配布してください。
 
@@ -210,10 +210,100 @@
 | SS-SCI-U01-S1 | 理科　論述・計算問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-sci-u01_questions.pdf) [解答](second_stage/ss-sci-u01_answers.pdf) |
 | SS-SOC-U01-S1 | 地歴公民　論述問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-soc-u01_questions.pdf) [解答](second_stage/ss-soc-u01_answers.pdf) |
 
-## 高校 単元パック（授業プリント＋問題プリント）（30 セット）
+## 高校 単元パック（授業プリント＋問題プリント）（154 セット）
 
 | セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |
 |---|---|---|---|---|---|---|---|---|
+| CT-ENG-U01-EX | 英語リーディング　情報の検索と要旨把握　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-eng-u01/exercise_questions.pdf) [解答](hs_packs/ct-eng-u01/exercise_answers.pdf) |
+| CT-ENG-U01-LESSON | 英語リーディング　情報の検索と要旨把握　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-ENG-U02-EX | 英語リスニング　対話と講義の聞き取り　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-eng-u02/exercise_questions.pdf) [解答](hs_packs/ct-eng-u02/exercise_answers.pdf) |
+| CT-ENG-U02-LESSON | 英語リスニング　対話と講義の聞き取り　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-INFO-U01-EX | 情報Ⅰ　プログラミングとデータの活用　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-info-u01/exercise_questions.pdf) [解答](hs_packs/ct-info-u01/exercise_answers.pdf) |
+| CT-INFO-U01-LESSON | 情報Ⅰ　プログラミングとデータの活用　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-JPN-U01-EX | 国語　現代文（論理的文章・実用的文章）　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-jpn-u01/exercise_questions.pdf) [解答](hs_packs/ct-jpn-u01/exercise_answers.pdf) |
+| CT-JPN-U01-LESSON | 国語　現代文（論理的文章・実用的文章）　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-JPN-U02-EX | 国語　古文・漢文　問題プリント | HS3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/ct-jpn-u02/exercise_questions.pdf) [解答](hs_packs/ct-jpn-u02/exercise_answers.pdf) |
+| CT-JPN-U02-LESSON | 国語　古文・漢文　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-MATH1A-U01-EX | 数学Ⅰ・A　数と式・二次関数・図形と計量　問題プリント | HS3 | 60 | 260 | 1.5.0 | pass | auto_checked 60 | [問題](hs_packs/ct-math1a-u01/exercise_questions.pdf) [解答](hs_packs/ct-math1a-u01/exercise_answers.pdf) |
+| CT-MATH1A-U01-LESSON | 数学Ⅰ・A　数と式・二次関数・図形と計量　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-MATH1A-U02-EX | 数学Ⅰ・A　データの分析・場合の数と確率・図形の性質　問題プリント | HS3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/ct-math1a-u02/exercise_questions.pdf) [解答](hs_packs/ct-math1a-u02/exercise_answers.pdf) |
+| CT-MATH1A-U02-LESSON | 数学Ⅰ・A　データの分析・場合の数と確率・図形の性質　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-MATH2BC-U01-EX | 数学Ⅱ・B・C　微積分・指数対数・三角関数　問題プリント | HS3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/ct-math2bc-u01/exercise_questions.pdf) [解答](hs_packs/ct-math2bc-u01/exercise_answers.pdf) |
+| CT-MATH2BC-U01-LESSON | 数学Ⅱ・B・C　微積分・指数対数・三角関数　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-MATH2BC-U02-EX | 数学Ⅱ・B・C　数列・統計的な推測・ベクトル　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-math2bc-u02/exercise_questions.pdf) [解答](hs_packs/ct-math2bc-u02/exercise_answers.pdf) |
+| CT-MATH2BC-U02-LESSON | 数学Ⅱ・B・C　数列・統計的な推測・ベクトル　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-SCI-U01-EX | 理科基礎　物理基礎・化学基礎　問題プリント | HS3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/ct-sci-u01/exercise_questions.pdf) [解答](hs_packs/ct-sci-u01/exercise_answers.pdf) |
+| CT-SCI-U01-LESSON | 理科基礎　物理基礎・化学基礎　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-SCI-U02-EX | 理科基礎　生物基礎・地学基礎　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-sci-u02/exercise_questions.pdf) [解答](hs_packs/ct-sci-u02/exercise_answers.pdf) |
+| CT-SCI-U02-LESSON | 理科基礎　生物基礎・地学基礎　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-SOC-U01-EX | 地理歴史　歴史総合を中心とした資料読解　問題プリント | HS3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/ct-soc-u01/exercise_questions.pdf) [解答](hs_packs/ct-soc-u01/exercise_answers.pdf) |
+| CT-SOC-U01-LESSON | 地理歴史　歴史総合を中心とした資料読解　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| CT-SOC-U02-EX | 公民　公共・政治経済の資料読解　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ct-soc-u02/exercise_questions.pdf) [解答](hs_packs/ct-soc-u02/exercise_answers.pdf) |
+| CT-SOC-U02-LESSON | 公民　公共・政治経済の資料読解　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| HS-BIOB-U01-EX | 生物の特徴と遺伝子　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-biob-u01/exercise_questions.pdf) [解答](hs_packs/hs-biob-u01/exercise_answers.pdf) |
+| HS-BIOB-U01-LESSON | 生物の特徴と遺伝子　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-BIOB-U02-EX | ヒトの体の調節　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-biob-u02/exercise_questions.pdf) [解答](hs_packs/hs-biob-u02/exercise_answers.pdf) |
+| HS-BIOB-U02-LESSON | ヒトの体の調節　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-BIOB-U03-EX | 生物の多様性と生態系　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-biob-u03/exercise_questions.pdf) [解答](hs_packs/hs-biob-u03/exercise_answers.pdf) |
+| HS-BIOB-U03-LESSON | 生物の多様性と生態系　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-CHEB-U01-EX | 物質の構成と化学結合　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-cheb-u01/exercise_questions.pdf) [解答](hs_packs/hs-cheb-u01/exercise_answers.pdf) |
+| HS-CHEB-U01-LESSON | 物質の構成と化学結合　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-CHEB-U02-EX | 物質量と化学反応式　問題プリント | HS1 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/hs-cheb-u02/exercise_questions.pdf) [解答](hs_packs/hs-cheb-u02/exercise_answers.pdf) |
+| HS-CHEB-U02-LESSON | 物質量と化学反応式　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-CHEB-U03-EX | 酸と塩基・酸化還元　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-cheb-u03/exercise_questions.pdf) [解答](hs_packs/hs-cheb-u03/exercise_answers.pdf) |
+| HS-CHEB-U03-LESSON | 酸と塩基・酸化還元　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-EARB-U01-EX | 地球のすがたと活動　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-earb-u01/exercise_questions.pdf) [解答](hs_packs/hs-earb-u01/exercise_answers.pdf) |
+| HS-EARB-U01-LESSON | 地球のすがたと活動　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-EARB-U02-EX | 大気と海洋・宇宙　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-earb-u02/exercise_questions.pdf) [解答](hs_packs/hs-earb-u02/exercise_answers.pdf) |
+| HS-EARB-U02-LESSON | 大気と海洋・宇宙　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U01-EX | 文型と動詞　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u01/exercise_questions.pdf) [解答](hs_packs/hs-eng-u01/exercise_answers.pdf) |
+| HS-ENG-U01-LESSON | 文型と動詞　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U02-EX | 時制　問題プリント | HS1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u02/exercise_questions.pdf) [解答](hs_packs/hs-eng-u02/exercise_answers.pdf) |
+| HS-ENG-U02-LESSON | 時制　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U03-EX | 助動詞　問題プリント | HS1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u03/exercise_questions.pdf) [解答](hs_packs/hs-eng-u03/exercise_answers.pdf) |
+| HS-ENG-U03-LESSON | 助動詞　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U04-EX | 不定詞・動名詞　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u04/exercise_questions.pdf) [解答](hs_packs/hs-eng-u04/exercise_answers.pdf) |
+| HS-ENG-U04-LESSON | 不定詞・動名詞　授業プリント | HS1 | 0 |  | 1.0.1 | pass |  |  |
+| HS-ENG-U05-EX | 分詞と分詞構文　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u05/exercise_questions.pdf) [解答](hs_packs/hs-eng-u05/exercise_answers.pdf) |
+| HS-ENG-U05-LESSON | 分詞と分詞構文　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U06-EX | 関係詞　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u06/exercise_questions.pdf) [解答](hs_packs/hs-eng-u06/exercise_answers.pdf) |
+| HS-ENG-U06-LESSON | 関係詞　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U07-EX | 比較　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u07/exercise_questions.pdf) [解答](hs_packs/hs-eng-u07/exercise_answers.pdf) |
+| HS-ENG-U07-LESSON | 比較　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U08-EX | 仮定法　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u08/exercise_questions.pdf) [解答](hs_packs/hs-eng-u08/exercise_answers.pdf) |
+| HS-ENG-U08-LESSON | 仮定法　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-ENG-U09-EX | 長文読解　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u09/exercise_questions.pdf) [解答](hs_packs/hs-eng-u09/exercise_answers.pdf) |
+| HS-ENG-U09-LESSON | 長文読解　授業プリント | HS1 | 0 |  | 1.0.1 | pass |  |  |
+| HS-ENG-U10-EX | 英作文　論理・表現　問題プリント | HS1 | 60 | 260 | 1.4.0 | pass | auto_checked 60 | [問題](hs_packs/hs-eng-u10/exercise_questions.pdf) [解答](hs_packs/hs-eng-u10/exercise_answers.pdf) |
+| HS-ENG-U10-LESSON | 英作文　論理・表現　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-GEOG-U01-EX | 地図や地理情報システム　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-geog-u01/exercise_questions.pdf) [解答](hs_packs/hs-geog-u01/exercise_answers.pdf) |
+| HS-GEOG-U01-LESSON | 地図や地理情報システム　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-GEOG-U02-EX | 国際理解と国際協力　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-geog-u02/exercise_questions.pdf) [解答](hs_packs/hs-geog-u02/exercise_answers.pdf) |
+| HS-GEOG-U02-LESSON | 国際理解と国際協力　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-GEOG-U03-EX | 持続可能な地域づくりと私たち　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-geog-u03/exercise_questions.pdf) [解答](hs_packs/hs-geog-u03/exercise_answers.pdf) |
+| HS-GEOG-U03-LESSON | 持続可能な地域づくりと私たち　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-HIST-U01-EX | 近代化と私たち　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-hist-u01/exercise_questions.pdf) [解答](hs_packs/hs-hist-u01/exercise_answers.pdf) |
+| HS-HIST-U01-LESSON | 近代化と私たち　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-HIST-U02-EX | 国際秩序の変化や大衆化と私たち　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-hist-u02/exercise_questions.pdf) [解答](hs_packs/hs-hist-u02/exercise_answers.pdf) |
+| HS-HIST-U02-LESSON | 国際秩序の変化や大衆化と私たち　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-HIST-U03-EX | グローバル化と私たち　問題プリント | HS1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/hs-hist-u03/exercise_questions.pdf) [解答](hs_packs/hs-hist-u03/exercise_answers.pdf) |
+| HS-HIST-U03-LESSON | グローバル化と私たち　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U01-EX | 評論の読解　問題プリント | HS1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u01/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u01/exercise_answers.pdf) |
+| HS-JPN-U01-LESSON | 評論の読解　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U02-EX | 小説の読解　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u02/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u02/exercise_answers.pdf) |
+| HS-JPN-U02-LESSON | 小説の読解　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U03-EX | 古文文法　用言　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u03/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u03/exercise_answers.pdf) |
+| HS-JPN-U03-LESSON | 古文文法　用言　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U04-EX | 古文文法　助動詞　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u04/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u04/exercise_answers.pdf) |
+| HS-JPN-U04-LESSON | 古文文法　助動詞　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U05-EX | 古文　敬語と読解　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u05/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u05/exercise_answers.pdf) |
+| HS-JPN-U05-LESSON | 古文　敬語と読解　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U06-EX | 漢文　句法　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u06/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u06/exercise_answers.pdf) |
+| HS-JPN-U06-LESSON | 漢文　句法　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U07-EX | 語彙・漢字　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u07/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u07/exercise_answers.pdf) |
+| HS-JPN-U07-LESSON | 語彙・漢字　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-JPN-U08-EX | 論理的な文章を書く　問題プリント | HS1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/hs-jpn-u08/exercise_questions.pdf) [解答](hs_packs/hs-jpn-u08/exercise_answers.pdf) |
+| HS-JPN-U08-LESSON | 論理的な文章を書く　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATH1-U01-EX | 数と式　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u01/exercise_questions.pdf) [解答](hs_packs/hs-math1-u01/exercise_answers.pdf) |
 | HS-MATH1-U01-LESSON | 数と式　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATH1-U02-EX | 集合と命題　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u02/exercise_questions.pdf) [解答](hs_packs/hs-math1-u02/exercise_answers.pdf) |
@@ -232,6 +322,10 @@
 | HS-MATH2-U03-LESSON | 図形と方程式　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATH2-U04-EX | 三角関数　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u04/exercise_questions.pdf) [解答](hs_packs/hs-math2-u04/exercise_answers.pdf) |
 | HS-MATH2-U04-LESSON | 三角関数　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH2-U05-EX | 指数関数・対数関数　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u05/exercise_questions.pdf) [解答](hs_packs/hs-math2-u05/exercise_answers.pdf) |
+| HS-MATH2-U05-LESSON | 指数関数・対数関数　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH2-U06-EX | 微分法・積分法　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u06/exercise_questions.pdf) [解答](hs_packs/hs-math2-u06/exercise_answers.pdf) |
+| HS-MATH2-U06-LESSON | 微分法・積分法　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATHA-U01-EX | 場合の数と確率　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-matha-u01/exercise_questions.pdf) [解答](hs_packs/hs-matha-u01/exercise_answers.pdf) |
 | HS-MATHA-U01-LESSON | 場合の数と確率　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATHA-U02-EX | 図形の性質　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-matha-u02/exercise_questions.pdf) [解答](hs_packs/hs-matha-u02/exercise_answers.pdf) |
@@ -244,4 +338,73 @@
 | HS-MATHB-U02-LESSON | 統計的な推測　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATHC-U01-EX | ベクトル　問題プリント | HS2 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/hs-mathc-u01/exercise_questions.pdf) [解答](hs_packs/hs-mathc-u01/exercise_answers.pdf) |
 | HS-MATHC-U01-LESSON | ベクトル　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHC-U02-EX | 平面上の曲線と複素数平面　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-mathc-u02/exercise_questions.pdf) [解答](hs_packs/hs-mathc-u02/exercise_answers.pdf) |
+| HS-MATHC-U02-LESSON | 平面上の曲線と複素数平面　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-PHYB-U01-EX | 運動の表し方と運動の法則　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-phyb-u01/exercise_questions.pdf) [解答](hs_packs/hs-phyb-u01/exercise_answers.pdf) |
+| HS-PHYB-U01-LESSON | 運動の表し方と運動の法則　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-PHYB-U02-EX | 仕事とエネルギー　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-phyb-u02/exercise_questions.pdf) [解答](hs_packs/hs-phyb-u02/exercise_answers.pdf) |
+| HS-PHYB-U02-LESSON | 仕事とエネルギー　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-PHYB-U03-EX | 波・電気　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-phyb-u03/exercise_questions.pdf) [解答](hs_packs/hs-phyb-u03/exercise_answers.pdf) |
+| HS-PHYB-U03-LESSON | 波・電気　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-PUBL-U01-EX | 公共の扉　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-publ-u01/exercise_questions.pdf) [解答](hs_packs/hs-publ-u01/exercise_answers.pdf) |
+| HS-PUBL-U01-LESSON | 公共の扉　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-PUBL-U02-EX | 法・政治と私たち　問題プリント | HS1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/hs-publ-u02/exercise_questions.pdf) [解答](hs_packs/hs-publ-u02/exercise_answers.pdf) |
+| HS-PUBL-U02-LESSON | 法・政治と私たち　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-PUBL-U03-EX | 経済と私たち　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-publ-u03/exercise_questions.pdf) [解答](hs_packs/hs-publ-u03/exercise_answers.pdf) |
+| HS-PUBL-U03-LESSON | 経済と私たち　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| SS-ENG-U01-EX | 英語　和訳・説明問題　問題プリント | HS3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/ss-eng-u01/exercise_questions.pdf) [解答](hs_packs/ss-eng-u01/exercise_answers.pdf) |
+| SS-ENG-U01-LESSON | 英語　和訳・説明問題　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| SS-ENG-U02-EX | 英語　自由英作文・和文英訳　問題プリント | HS3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/ss-eng-u02/exercise_questions.pdf) [解答](hs_packs/ss-eng-u02/exercise_answers.pdf) |
+| SS-ENG-U02-LESSON | 英語　自由英作文・和文英訳　授業プリント | HS3 | 0 |  | 1.0.1 | pass |  |  |
+| SS-JPN-U01-EX | 国語　現代文記述　問題プリント | HS3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/ss-jpn-u01/exercise_questions.pdf) [解答](hs_packs/ss-jpn-u01/exercise_answers.pdf) |
+| SS-JPN-U01-LESSON | 国語　現代文記述　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| SS-JPN-U02-EX | 国語　古文・漢文記述　問題プリント | HS3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](hs_packs/ss-jpn-u02/exercise_questions.pdf) [解答](hs_packs/ss-jpn-u02/exercise_answers.pdf) |
+| SS-JPN-U02-LESSON | 国語　古文・漢文記述　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| SS-MATH-U01-EX | 数学　証明問題　問題プリント | HS3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/ss-math-u01/exercise_questions.pdf) [解答](hs_packs/ss-math-u01/exercise_answers.pdf) |
+| SS-MATH-U01-LESSON | 数学　証明問題　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| SS-MATH-U02-EX | 数学　記述式計算問題　問題プリント | HS3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/ss-math-u02/exercise_questions.pdf) [解答](hs_packs/ss-math-u02/exercise_answers.pdf) |
+| SS-MATH-U02-LESSON | 数学　記述式計算問題　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| SS-SCI-U01-EX | 理科　論述・計算問題　問題プリント | HS3 | 60 | 260 | 1.4.0 | pass | auto_checked 60 | [問題](hs_packs/ss-sci-u01/exercise_questions.pdf) [解答](hs_packs/ss-sci-u01/exercise_answers.pdf) |
+| SS-SCI-U01-LESSON | 理科　論述・計算問題　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+| SS-SOC-U01-EX | 地歴公民　論述問題　問題プリント | HS3 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/ss-soc-u01/exercise_questions.pdf) [解答](hs_packs/ss-soc-u01/exercise_answers.pdf) |
+| SS-SOC-U01-LESSON | 地歴公民　論述問題　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
+
+## 中学 単元パック（授業プリント＋問題プリント）（34 セット）
+
+| セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |
+|---|---|---|---|---|---|---|---|---|
+| JH-ENG-G1-U01-EX | be動詞と一般動詞の現在形　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U01-LESSON | be動詞と一般動詞の現在形　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G1-U02-EX | 名詞の複数形と代名詞　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U02-LESSON | 名詞の複数形と代名詞　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G1-U03-EX | 疑問詞を使った疑問文　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U03-LESSON | 疑問詞を使った疑問文　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G1-U04-EX | 現在進行形・助動詞can・命令文　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U04-LESSON | 現在進行形・助動詞can・命令文　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G1-U05-EX | 過去形　問題プリント | JH1 | 60 | 260 | 1.3.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U05-LESSON | 過去形　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G2-U01-EX | 未来表現　問題プリント | JH2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U01-LESSON | 未来表現　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G2-U02-EX | 不定詞と動名詞　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U02-LESSON | 不定詞と動名詞　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G2-U03-EX | 接続詞とThere is構文　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U03-LESSON | 接続詞とThere is構文　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G2-U04-EX | 比較　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U04-LESSON | 比較　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G2-U05-EX | 受け身　問題プリント | JH2 | 60 | 264 | 1.3.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U05-LESSON | 受け身　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U01-EX | 現在完了形・現在完了進行形　問題プリント | JH3 | 60 | 260 | 1.3.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U01-LESSON | 現在完了形・現在完了進行形　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U02-EX | 分詞の後置修飾　問題プリント | JH3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U02-LESSON | 分詞の後置修飾　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U03-EX | 関係代名詞　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U03-LESSON | 関係代名詞　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U04-EX | 間接疑問文と文構造　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U04-LESSON | 間接疑問文と文構造　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U05-EX | 仮定法過去　問題プリント | JH3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U05-LESSON | 仮定法過去　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U06-EX | 長文読解　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U06-LESSON | 長文読解　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-ENG-G3-U07-EX | 条件英作文　問題プリント | JH3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U07-LESSON | 条件英作文　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
 
