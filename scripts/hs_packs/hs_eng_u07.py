@@ -335,7 +335,7 @@ def rewrite_superlative(r):
 
 
 ORDERS = [
-    ("この湖はあの湖の3倍の深さがある。", ["this lake", "is", "three times", "as", "deep", "as", "that one"], "倍数表現 X times as 原級 as"),
+    ("この湖はあの湖の3倍の深さがある。", ["this lake", "is", "three times", "as deep", "as", "that one"], "倍数表現 X times as 原級 as"),
     ("この部屋はあの部屋の半分の広さだ。", ["this room", "is", "half", "as large", "as", "that one"], "倍数表現 half as 原級 as"),
     ("この本はあの本の2倍のページ数がある。", ["this book", "has", "twice", "as many", "pages", "as", "that one"], "数の倍数 twice as many＋複数名詞 as"),
     ("早く出発すればするほど、早く着くだろう。", ["the earlier", "we leave", "the sooner", "we will", "arrive"], "the 比較級 ～, the 比較級 …"),
