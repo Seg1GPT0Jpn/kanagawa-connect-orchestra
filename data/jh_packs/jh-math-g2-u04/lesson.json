@@ -1,0 +1,416 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "JH-MATH-G2-U04-LESSON",
+  "title": "図形の調べ方　平行と合同　授業プリント",
+  "subtitle": "図形｜平行線と角・多角形の内角と外角・合同条件・証明の進め方",
+  "track": "jh_pack",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-MATH-G2-U04"
+  ],
+  "print_type": "lesson",
+  "pack_id": "JH-MATH-G2-U04-PACK",
+  "pair_set_id": "JH-MATH-G2-U04-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U05",
+        "point": "直線・角の表し方（∠、//、⊥）と、図形の移動（平行移動・回転移動・対称移動）で重なる図形の見方。",
+        "title": "平面図形"
+      },
+      {
+        "unit_id": "JH-MATH-G1-U03",
+        "point": "一次方程式を解けること。角の大きさを文字で表して方程式をつくるときに使う。",
+        "title": "一次方程式"
+      },
+      {
+        "unit_id": "JH-MATH-G2-U01",
+        "point": "文字式を使った説明のしかた。「仮定から結論を導く」証明の書き方の土台になる。",
+        "title": "式の計算"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "JH-MATH-G2-U05",
+        "point": "合同条件と証明の進め方を使い、二等辺三角形・平行四辺形の性質を証明する。",
+        "title": "三角形と四角形"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U05",
+        "point": "合同条件から相似条件へ発展し、相似な図形の証明を行う。",
+        "title": "相似な図形"
+      },
+      {
+        "unit_id": "HS-MATHA-U02",
+        "point": "高校の図形の性質で、三角形の五心や円の性質を論証する。",
+        "title": "図形の性質"
+      }
+    ],
+    "readiness_check": [
+      "対頂角が等しいこと、一直線の角が $180^\\circ$ であることを知っている。",
+      "三角形の内角の和が $180^\\circ$ であることを小学校で学んでいる（ここでは理由を説明できるようにする）。",
+      "合同な図形（ぴったり重なる図形）の意味と、対応する頂点・辺・角を答えられる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "平行線の同位角・錯角の性質と平行線になるための条件を理解し、角の大きさを根拠を示して求められる。",
+      "三角形の内角・外角の性質と多角形の内角の和・外角の和を、平行線の性質から導いて使える。",
+      "三角形の合同条件を理解し、仮定と結論を区別して、根拠を示しながら証明を書ける。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：なぜ $180^\\circ$ といえるのか",
+        "minutes": 10,
+        "activity": "小学校での「切って集める」確かめ方と、どんな三角形でも成り立つと言える理由の違いを考える"
+      },
+      {
+        "phase": "平行線と角",
+        "minutes": 20,
+        "activity": "同位角・錯角、平行線の性質と平行線になるための条件（例題1）"
+      },
+      {
+        "phase": "三角形と多角形の角",
+        "minutes": 20,
+        "activity": "内角の和・外角の性質の証明、多角形の内角の和 $180^\\circ\\times(n-2)$ と外角の和 $360^\\circ$（例題2）"
+      },
+      {
+        "phase": "合同条件",
+        "minutes": 20,
+        "activity": "3つの合同条件、合同条件にならない例（2辺と間でない角、3つの角）"
+      },
+      {
+        "phase": "証明の進め方",
+        "minutes": 20,
+        "activity": "仮定と結論、根拠になることがら、証明の書き方（例題3）"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 10,
+        "activity": "確認問題と問題プリントの指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "「いつでも成り立つ」と言うために",
+        "body": "小学校では、三角形の3つの角を切り取って並べると一直線になることから、内角の和が $180^\\circ$ になることを確かめた。しかし、それはいくつかの三角形で確かめただけである。この単元では、すでに正しいとわかっていることがら（平行線の性質など）を根拠にして、どんな三角形でも成り立つことを説明する方法――証明――を学ぶ。",
+        "bullets": [
+          "根拠となることがら：対頂角は等しい、平行線の同位角・錯角は等しい、など。",
+          "根拠を順につないで、仮定から結論を導くのが証明である。"
+        ],
+        "teacher_points": [
+          {
+            "point": "いろいろな形の三角形の角を切って並べる活動を短く行い、「何個確かめれば全部と言えるか」を問う。",
+            "ask": "1000個の三角形で確かめたら、すべての三角形で成り立つと言えるか。",
+            "expect": "言えない。まだ確かめていない三角形があるから。",
+            "timing": "導入"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "同位角・錯角と平行線",
+        "body": "2直線 ℓ、m に1つの直線が交わってできる角のうち、同じ位置にある角を同位角、ℓ と m の間で交わる直線の反対側にある角を錯角という。",
+        "conditions": [
+          "平行線の性質：2直線が平行ならば、同位角は等しく、錯角も等しい。",
+          "平行線になるための条件：同位角が等しければ（または錯角が等しければ）、2直線は平行である。",
+          "2直線が平行のとき、ℓ と m の間で交わる直線の同じ側にある2つの角（同側内角）の和は $180^\\circ$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "同位角・錯角は「位置関係の名前」であり、等しいとは限らないことを強調する。等しいのは2直線が平行なときだけ。",
+            "caution": "「錯角は等しい」とだけ覚えて、平行でない場合にも使う誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "三角形の内角と外角",
+        "formula": "$$\\angle\\mathrm{A}+\\angle\\mathrm{B}+\\angle\\mathrm{C}=180^\\circ\\qquad \\angle\\mathrm{ACD}=\\angle\\mathrm{A}+\\angle\\mathrm{B}$$",
+        "conditions": [
+          "三角形の3つの内角の和は $180^\\circ$。",
+          "三角形の1つの外角は、それととなり合わない2つの内角の和に等しい（$\\mathrm{D}$ は辺 BC を C の方に延長した直線上の点）。"
+        ],
+        "proof_steps": [
+          "$\\triangle\\mathrm{ABC}$ の辺 BC を延長した直線上に点 D をとり、C を通り辺 BA に平行な直線 CE をひく。",
+          "$\\mathrm{BA}\\parallel\\mathrm{CE}$ で、錯角は等しいから $\\angle\\mathrm{BAC}=\\angle\\mathrm{ACE}$。",
+          "同位角は等しいから $\\angle\\mathrm{ABC}=\\angle\\mathrm{ECD}$。",
+          "よって $\\angle\\mathrm{A}+\\angle\\mathrm{B}=\\angle\\mathrm{ACE}+\\angle\\mathrm{ECD}=\\angle\\mathrm{ACD}$（外角の性質）。",
+          "さらに $\\angle\\mathrm{ACB}+\\angle\\mathrm{ACD}=180^\\circ$（一直線）なので、$\\angle\\mathrm{A}+\\angle\\mathrm{B}+\\angle\\mathrm{C}=180^\\circ$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "証明の各行に「なぜそう言えるか（根拠）」を必ず添えさせる。根拠に使ってよいのは、すでに正しいと認められたことがらだけであることを確認する。",
+            "ask": "この証明で根拠にしたことがらは何か。",
+            "expect": "平行線の錯角・同位角は等しいこと、一直線の角は $180^\\circ$ であること。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "多角形の内角の和・外角の和を導く",
+        "proof_steps": [
+          "$n$ 角形の1つの頂点から対角線をひくと、$n-3$ 本の対角線で $(n-2)$ 個の三角形に分けられる。",
+          "それぞれの三角形の内角の和は $180^\\circ$ なので、$n$ 角形の内角の和は $180^\\circ\\times(n-2)$。",
+          "各頂点で、内角と外角の和は $180^\\circ$（一直線）。頂点は $n$ 個あるので、内角の和と外角の和を合わせると $180^\\circ\\times n$。",
+          "外角の和 $=180^\\circ\\times n-180^\\circ\\times(n-2)=360^\\circ$。$n$ に関係なく $360^\\circ$ である。",
+          "正 $n$ 角形では、1つの外角は $360^\\circ\\div n$、1つの内角は $180^\\circ-360^\\circ\\div n$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "五角形・六角形で三角形に分ける図をかかせ、三角形の数が「辺の数 − 2」になる理由を説明させる。",
+            "caution": "内部の1点から各頂点に線をひく方法では三角形が $n$ 個でき、中心のまわりの $360^\\circ$ を引く必要がある。どちらの方法でも同じ式になることを確かめさせるとよい。"
+          }
+        ]
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "三角形の合同条件",
+        "body": "2つの三角形は、次のどれかが成り立つとき合同である。",
+        "formula": "$$\\begin{aligned}&\\text{① 3組の辺がそれぞれ等しい}\\\\&\\text{② 2組の辺とその間の角がそれぞれ等しい}\\\\&\\text{③ 1組の辺とその両端の角がそれぞれ等しい}\\end{aligned}$$",
+        "conditions": [
+          "合同を記号 $\\equiv$ で表し、対応する頂点を同じ順に書く（$\\triangle\\mathrm{ABC}\\equiv\\triangle\\mathrm{DEF}$）。",
+          "2組の辺と「間でない角」が等しくても、合同とは限らない。",
+          "3つの角がそれぞれ等しくても、大きさの異なる三角形があるので合同とは限らない。"
+        ],
+        "teacher_points": [
+          {
+            "point": "②で「間の角」でない場合に2通りの三角形がかけることを、コンパスで作図して見せる。",
+            "ask": "AB $=5$ cm、BC $=4$ cm、$\\angle\\mathrm{A}=40^\\circ$ の三角形は1通りに決まるか。",
+            "expect": "決まらない。C の位置が2通りある。",
+            "timing": "合同条件の説明の後"
+          }
+        ]
+      },
+      {
+        "id": "pf1",
+        "kind": "proof",
+        "title": "証明の進め方（仮定と結論）",
+        "proof_steps": [
+          "「○○ならば□□」の○○の部分を仮定、□□の部分を結論という。",
+          "証明では、仮定から出発し、根拠となることがら（定義・定理・対頂角・平行線の性質・合同条件など）を使って結論を導く。",
+          "合同を使う証明の流れ：①どの三角形とどの三角形の合同を示すか決める → ②等しい辺や角を、根拠とともに3つ示す → ③合同条件を書いて合同を示す → ④合同な図形の対応する辺（角）は等しいことから結論を導く。",
+          "「○○ならば□□」の仮定と結論を入れかえたものを、もとのことがらの逆という。あることがらが正しくても、その逆が正しいとは限らない。"
+        ],
+        "teacher_points": [
+          {
+            "point": "例題3の証明で、どの行が「仮定」から、どの行が「すでに知っていること」から言えるかを色分けさせる。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　平行線と角",
+        "example": {
+          "problem": "右の図で、ℓ$\\parallel$m のとき、$\\angle x$ の大きさを求めなさい。",
+          "steps": [
+            "点 P を通り ℓ に平行な直線をひく。",
+            "ℓ との間の錯角から、上側の角は $40^\\circ$。",
+            "m との間の錯角から、下側の角は $35^\\circ$。",
+            "$\\angle x=40^\\circ+35^\\circ=75^\\circ$。"
+          ],
+          "answer": "$75^\\circ$",
+          "thinking": "折れ曲がった点を通る平行線をひくと、錯角が2つ見つかる。",
+          "figure": {
+            "alt": "平行な2直線 ℓ，m の間で折れ曲がった線",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 253.0 181.4\" width=\"253.0\" height=\"181.4\" font-family=\"serif\" font-size=\"12\"><line x1=\"34.0\" y1=\"35.4\" x2=\"209.2\" y2=\"35.4\" stroke=\"#000\" stroke-width=\"1.1\"/><line x1=\"34.0\" y1=\"147.4\" x2=\"209.2\" y2=\"147.4\" stroke=\"#000\" stroke-width=\"1.1\"/><line x1=\"97.6\" y1=\"35.4\" x2=\"164.4\" y2=\"91.4\" stroke=\"#000\" stroke-width=\"1.1\"/><line x1=\"164.4\" y1=\"91.4\" x2=\"84.4\" y2=\"147.4\" stroke=\"#000\" stroke-width=\"1.1\"/><path d=\"M106.1,42.5 A11,11 0 0 0 108.6,35.4\" fill=\"none\" stroke=\"#000\" stroke-width=\"0.8\"/><path d=\"M95.4,147.4 A11,11 0 0 0 93.4,141.1\" fill=\"none\" stroke=\"#000\" stroke-width=\"0.8\"/><path d=\"M155.9,84.3 A11,11 0 0 0 155.4,97.7\" fill=\"none\" stroke=\"#000\" stroke-width=\"0.8\"/><text x=\"97.6\" y=\"28.2\" text-anchor=\"middle\">A</text><text x=\"84.4\" y=\"164.0\" text-anchor=\"middle\">B</text><text x=\"175.6\" y=\"95.4\" text-anchor=\"middle\">P</text><text x=\"219.0\" y=\"38.0\" text-anchor=\"middle\" font-size=\"11\">ℓ</text><text x=\"219.0\" y=\"150.0\" text-anchor=\"middle\" font-size=\"11\">m</text><text x=\"127.9\" y=\"50.4\" text-anchor=\"middle\" font-size=\"11\">40°</text><text x=\"115.1\" y=\"141.7\" text-anchor=\"middle\" font-size=\"11\">35°</text><text x=\"140.6\" y=\"94.4\" text-anchor=\"middle\" font-size=\"11\">x</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "補助線をひく理由（錯角・同位角が使える形をつくる）を言葉で説明させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\angle x=180^\\circ-(40^\\circ+35^\\circ)$ とする",
+            "correct": "P を通る平行線で分けた2つの角の和が $\\angle x$"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　多角形の角",
+        "example": {
+          "problem": "正九角形の1つの内角の大きさを求めなさい。",
+          "steps": [
+            "外角の和は $360^\\circ$ なので、1つの外角は $360^\\circ\\div9=40^\\circ$。",
+            "1つの内角は $180^\\circ-40^\\circ=140^\\circ$。",
+            "（別解）内角の和 $180^\\circ\\times(9-2)=1260^\\circ$ を $9$ でわって $140^\\circ$。"
+          ],
+          "answer": "$140^\\circ$",
+          "thinking": "正多角形では、外角から求めると計算が簡単になる。"
+        }
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　合同を使った証明",
+        "example": {
+          "problem": "線分 AB と CD が点 O で交わり、AO $=$ BO、CO $=$ DO である。このとき、AC $=$ BD であることを証明しなさい。",
+          "steps": [
+            "$\\triangle\\mathrm{AOC}$ と $\\triangle\\mathrm{BOD}$ において、",
+            "仮定から AO $=$ BO ……①、CO $=$ DO ……②",
+            "対頂角は等しいから $\\angle\\mathrm{AOC}=\\angle\\mathrm{BOD}$ ……③",
+            "①、②、③から、2組の辺とその間の角がそれぞれ等しいので $\\triangle\\mathrm{AOC}\\equiv\\triangle\\mathrm{BOD}$",
+            "合同な図形の対応する辺は等しいので AC $=$ BD"
+          ],
+          "answer": "上の証明のとおり",
+          "thinking": "結論 AC $=$ BD をふくむ2つの三角形を探す。仮定の2組の辺の「間の角」が等しいことを言えれば合同条件がそろう。",
+          "figure": {
+            "alt": "線分 AB と CD が点 O で交わる図",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 222.0 159.6\" width=\"222.0\" height=\"159.6\" font-family=\"serif\" font-size=\"12\"><line x1=\"33.0\" y1=\"38.2\" x2=\"189.0\" y2=\"121.4\" stroke=\"#000\" stroke-width=\"1.1\"/><line x1=\"53.8\" y1=\"126.6\" x2=\"168.2\" y2=\"33.0\" stroke=\"#000\" stroke-width=\"1.1\"/><line x1=\"33.0\" y1=\"38.2\" x2=\"53.8\" y2=\"126.6\" stroke=\"#000\" stroke-width=\"1.1\"/><line x1=\"189.0\" y1=\"121.4\" x2=\"168.2\" y2=\"33.0\" stroke=\"#000\" stroke-width=\"1.1\"/><text x=\"23.3\" y=\"37.0\" text-anchor=\"middle\">A</text><text x=\"198.7\" y=\"130.6\" text-anchor=\"middle\">B</text><text x=\"45.3\" y=\"137.6\" text-anchor=\"middle\">C</text><text x=\"176.7\" y=\"30.0\" text-anchor=\"middle\">D</text><text x=\"122.7\" y=\"86.4\" text-anchor=\"middle\">O</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "証明の1行目「〜と〜において」を必ず書かせ、どの三角形の話かを明確にさせる。",
+            "caution": "合同条件を書かずに「よって合同」とする答案が多い。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 平行線と角",
+              "lines": [
+                "同位角・錯角（位置の名前）",
+                "ℓ$\\parallel$m ⇔ 同位角が等しい",
+                "ℓ$\\parallel$m ⇔ 錯角が等しい",
+                "くの字：平行線をひいて錯角"
+              ]
+            },
+            {
+              "title": "② 多角形の角",
+              "lines": [
+                "三角形の内角の和 $180^\\circ$",
+                "外角 ＝ となり合わない2内角の和",
+                "$n$ 角形の内角の和 $180^\\circ(n-2)$",
+                "外角の和はいつも $360^\\circ$"
+              ]
+            },
+            {
+              "title": "③ 合同と証明",
+              "lines": [
+                "3辺／2辺と間の角／1辺と両端の角",
+                "仮定 ⇒（根拠）⇒ 結論",
+                "合同 → 対応する辺・角が等しい",
+                "逆はいつも正しいとは限らない"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "③では、証明の型（〜において／仮定から／根拠／合同条件／結論）を枠で示して板書する。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "角を求める問題でも「なぜその角が等しいか（同位角・錯角・対頂角）」を一言添えさせると、証明の練習になる。"
+          },
+          {
+            "point": "多角形の内角の和の公式は、丸暗記ではなく「三角形に分ける図」とセットで思い出させる。",
+            "ask": "十角形の内角の和を、公式を使わずに説明できるか。",
+            "expect": "1つの頂点から対角線をひくと三角形が8個できるので $180^\\circ\\times8$。"
+          },
+          {
+            "point": "合同条件の「間の角」「両端の角」を、図に印をつけて確認させる。",
+            "caution": "辺と角の対応がずれていても合同と書いてしまう誤りが多い。"
+          },
+          {
+            "point": "仮定と結論の区別、逆の意味を、数や身近なことがらの例でも確かめさせる。",
+            "timing": "証明の進め方の最後"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$n$ 角形の内角の和は $180^\\circ\\times n$",
+            "correct": "三角形は $(n-2)$ 個なので $180^\\circ\\times(n-2)$"
+          },
+          {
+            "wrong": "錯角はいつでも等しい",
+            "correct": "等しいのは2直線が平行なときだけ"
+          },
+          {
+            "wrong": "2組の辺と1つの角が等しければ合同",
+            "correct": "その角が2組の辺の間の角でなければならない"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "平行線の同位角・錯角は等しい。逆に、同位角や錯角が等しければ2直線は平行。",
+          "三角形の内角の和は $180^\\circ$、外角はとなり合わない2内角の和。",
+          "$n$ 角形の内角の和 $180^\\circ\\times(n-2)$、外角の和 $360^\\circ$。",
+          "三角形の合同条件は3つ。証明は仮定から根拠をつないで結論を導く。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "十二角形の内角の和を求めなさい。",
+            "a": "$180^\\circ\\times10=1800^\\circ$"
+          },
+          {
+            "q": "1つの外角が $24^\\circ$ の正多角形は正何角形か。",
+            "a": "$360\\div24=15$ より正十五角形"
+          },
+          {
+            "q": "「$\\triangle\\mathrm{ABC}\\equiv\\triangle\\mathrm{DEF}$ ならば $\\angle\\mathrm{A}=\\angle\\mathrm{D}$」の仮定と結論を答えなさい。",
+            "a": "仮定：$\\triangle\\mathrm{ABC}\\equiv\\triangle\\mathrm{DEF}$、結論：$\\angle\\mathrm{A}=\\angle\\mathrm{D}$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "0ec2c5e3c1861466d66aa8b089582294185541ba8d835f941f58225683b48dfc"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T23:02:59+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "4a7a45404571cd696963656734a901bbad164af31298aeec9ba6c4b04ea6299f"
+  }
+}
