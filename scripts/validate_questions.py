@@ -571,7 +571,17 @@ overrightarrow overline underline vec angle triangle circ degree cases quad qqua
 Leftarrow iff implies Longrightarrow longrightarrow fallingdotseq equiv sim simeq approx parallel perp in notin subset subseteq supset cup cap emptyset
 forall exists neg land lor displaystyle hat bar dot ddot prime partial nabla mid not boxed underbrace overbrace binom choose operatorname
 Delta Gamma Theta Lambda Sigma Omega Phi Pi Psi psi chi rho tau eta zeta xi nu kappa iota upsilon
-langle rangle lfloor rfloor lceil rceil lbrace rbrace vert Vert backslash setminus""".split())
+langle rangle lfloor rfloor lceil rceil lbrace rbrace vert Vert backslash setminus
+leftrightarrow Leftrightarrow longleftrightarrow Longleftrightarrow mapsto uparrow downarrow updownarrow nearrow searrow
+rightleftharpoons rightleftarrows leftrightarrows xrightarrow xleftarrow overleftarrow overleftrightarrow
+textbf textit textsf texttt mathcal mathbb mathrm color colorbox fbox hspace vspace phantom quad enspace
+ominus oplus otimes odot bigcirc square blacksquare star ast bullet checkmark times cdotp therefore because
+lessgt gtrless ll gg propto varphi vartheta varpi varrho varsigma wp Re Im aleph hbar ell top bot
+widehat widetilde tilde breve check acute grave mathring stackrel overset underset frown smile
+sqcup sqcap uplus wedge vee bigcup bigcap bigvee bigwedge coprod ni nsubseteq subsetneq supseteq supsetneq
+nleq ngeq neq leqslant geqslant lesssim gtrsim cong ncong doteq triangleq
+arcsin arccos arctan sinh cosh tanh max min sup inf det gcd deg dim ker arg Pr mod bmod pmod
+lvert rvert lVert rVert big Big bigg Bigg bigl bigr Bigl Bigr""".split())
 
 
 def glued_commands(seg: str) -> list[str]:
