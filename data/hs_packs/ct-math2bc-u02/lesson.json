@@ -1,0 +1,407 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "CT-MATH2BC-U02-LESSON",
+  "title": "数学Ⅱ・B・C　数列・統計的な推測・ベクトル　授業プリント",
+  "subtitle": "試験対策｜漸化式・推定・ベクトルの内積",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-MATH2BC-U02"
+  ],
+  "print_type": "lesson",
+  "pack_id": "CT-MATH2BC-U02-PACK",
+  "pair_set_id": "CT-MATH2BC-U02-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "等差・等比数列、階差数列、漸化式 $a_{n+1}=pa_n+q$ の解き方",
+        "title": "数列"
+      },
+      {
+        "unit_id": "HS-MATHB-U02",
+        "point": "二項分布・正規分布と標準化、標本平均の分布、母平均・母比率の推定と仮説検定",
+        "title": "統計的な推測"
+      },
+      {
+        "unit_id": "HS-MATHC-U01",
+        "point": "ベクトルの内積の定義と計算規則、成分による内積、位置ベクトル",
+        "title": "ベクトル"
+      },
+      {
+        "unit_id": "HS-MATHA-U01",
+        "point": "確率の計算（確率の漸化式で、次の状態への推移確率を立てるため）",
+        "title": "場合の数と確率"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "SS-MATH-U02",
+        "point": "誘導つきで解いた確率・ベクトルの計算を、記述式の答案として論理的に書き切る",
+        "title": "数学　記述式計算問題"
+      },
+      {
+        "unit_id": "SS-MATH-U01",
+        "point": "漸化式で求めた一般項を数学的帰納法で証明する論述へ発展する",
+        "title": "数学　証明問題"
+      },
+      {
+        "unit_id": "HS-MATH3-U01",
+        "point": "漸化式で定まる数列の極限（$n\\to\\infty$ でどの値に近づくか）を調べる",
+        "title": "極限"
+      }
+    ],
+    "readiness_check": [
+      "等比数列の一般項 $a_n=ar^{n-1}$ と、階差数列による一般項の求め方を使える。",
+      "標準正規分布で $P(|Z|\\leqq1.96)=0.95$ であることを知っている。",
+      "ベクトルの内積 $\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta$ と成分による計算ができる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "共通テストの選択問題（数列・統計的な推測・ベクトル）で、誘導の式変形の意図を読み取り、漸化式・推定・内積の典型処理を短時間で実行できる。",
+      "漸化式 $a_{n+1}=pa_n+q$ の変形、信頼区間の式、$|\\vec{a}+t\\vec{b}|$ の最小値などの重要な結果を、導出の筋道とともに説明できる。",
+      "指数のずれ・$\\sqrt{n}$ の位置・係数の2乗など、得点を落としやすい箇所を自分で点検できる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：選択問題の選び方と読み方",
+        "minutes": 10,
+        "activity": "選択問題の構成と、誘導の「次に何を求めさせたいか」を予測する読み方を確認する"
+      },
+      {
+        "phase": "漸化式",
+        "minutes": 25,
+        "activity": "a_{n+1}=pa_n+q の変形の導出、確率の漸化式への応用（例題1）"
+      },
+      {
+        "phase": "統計的な推測",
+        "minutes": 30,
+        "activity": "標本平均の分布から信頼区間を導出し、母比率の推定を行う（例題2）。幅と標本の大きさの関係"
+      },
+      {
+        "phase": "ベクトルの内積",
+        "minutes": 25,
+        "activity": "|a+tb| の最小値と正射影。内積を求める3つの方法の使い分け（例題3）"
+      },
+      {
+        "phase": "まとめと見直しの観点",
+        "minutes": 10,
+        "activity": "典型的な失点と見直しの観点を確認し、問題プリントの課題を指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "選択問題は「型」と「誘導の意図」で解く",
+        "body": "共通テストの数学Ⅱ・B・C では、数学Ⅱの必答問題に加えて、数学B（数列、統計的な推測）と数学C（ベクトル、平面上の曲線と複素数平面）の内容から問題を選んで解答する。数列では漸化式の変形、統計的な推測では正規分布表を用いた推定・検定、ベクトルでは内積を使った長さ・角・垂直の処理が中心になる。どの分野も、誘導の式変形には「この形にすれば既に知っている型になる」という意図がある。",
+        "bullets": [
+          "誘導で「$b_n=a_n-\\alpha$ とおく」とあれば、$\\{b_n\\}$ は等比数列になる、と先に予測する。",
+          "統計の問題では、問題冊子に与えられる正規分布表と、$1.96$ などの値の使い方を確認しておく。",
+          "ベクトルでは、長さの条件は「2乗して内積で展開する」が基本方針である。"
+        ],
+        "teacher_points": [
+          {
+            "point": "どの選択問題を解くかは事前の演習で決めておき、本番で迷う時間をなくすよう指導する。",
+            "ask": "自分が選ぶ分野と、その分野で最初に確認すべき条件は何か。",
+            "expect": "例：統計なら正規分布表と信頼度、ベクトルなら与えられた長さと内積。",
+            "timing": "導入の冒頭"
+          },
+          {
+            "point": "誘導文中の「〜とおく」「〜と変形できる」に下線を引かせ、変形後に何の型になるかを言わせる。",
+            "caution": "誘導を無視して自己流で解くと、後の小問の誘導とつながらず時間を失う。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "漸化式 $a_{n+1}=pa_n+q$ の解法",
+        "formula": "$$a_{n+1}=pa_n+q\\ (p\\neq1)\\quad\\Longrightarrow\\quad a_n=(a_1-\\alpha)p^{n-1}+\\alpha\\qquad\\left(\\alpha=\\dfrac{q}{1-p}\\right)$$",
+        "conditions": [
+          "$\\alpha$ は $\\alpha=p\\alpha+q$（特性方程式）の解。",
+          "$p=1$ のときは等差数列。"
+        ],
+        "body": "漸化式の両辺から同じ数 $\\alpha$ を引いて「等比数列の型」に直すことが本質である。$a_{n+1}=pa_n+r^n$ の型も、$c\\,r^n$ の形の数を引いて同じ型に直せる。",
+        "proof_steps": [
+          "$\\alpha=p\\alpha+q$ を満たす $\\alpha$ をとり、漸化式から辺々引くと $a_{n+1}-\\alpha=p(a_n-\\alpha)$。",
+          "$b_n=a_n-\\alpha$ とおくと $b_{n+1}=pb_n$ なので、$\\{b_n\\}$ は初項 $b_1=a_1-\\alpha$、公比 $p$ の等比数列。",
+          "$b_n=(a_1-\\alpha)p^{n-1}$ より $a_n=(a_1-\\alpha)p^{n-1}+\\alpha$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "答えを出したら $n=1,\\ 2$ を代入して漸化式と一致するか必ず確かめさせる。",
+            "ask": "一般項に $n=1$ を代入すると何になるべきか。",
+            "expect": "$a_1$ の値。",
+            "caution": "指数を $p^n$ としてしまう誤りは $n=1$ の代入で発見できる。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "信頼度 95% の信頼区間の導出",
+        "proof_steps": [
+          "母平均 $m$、母標準偏差 $\\sigma$ の母集団から大きさ $n$ の無作為標本をとると、$n$ が大きいとき標本平均 $\\overline{X}$ は近似的に $N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$ に従う。",
+          "標準化 $Z=\\dfrac{\\overline{X}-m}{\\sigma/\\sqrt{n}}$ は近似的に $N(0,\\,1)$ に従い、$P(|Z|\\leqq1.96)=0.95$。",
+          "$|Z|\\leqq1.96$ を $m$ について解くと $\\overline{X}-1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}\\leqq m\\leqq\\overline{X}+1.96\\cdot\\dfrac{\\sigma}{\\sqrt{n}}$。",
+          "母比率 $p$ の推定では、標本比率 $R$ を用いて、標準偏差を $\\sqrt{\\dfrac{R(1-R)}{n}}$ で近似する：$R-1.96\\sqrt{\\dfrac{R(1-R)}{n}}\\leqq p\\leqq R+1.96\\sqrt{\\dfrac{R(1-R)}{n}}$。",
+          "区間の幅は $\\dfrac{1}{\\sqrt{n}}$ に比例するので、幅を $\\dfrac{1}{k}$ にするには標本の大きさを $k^2$ 倍にする必要がある。"
+        ],
+        "body": "「信頼度 95%」とは、同じ方法で標本をとって区間を作ることを何度もくり返すと、そのうちのおよそ 95% の区間が母平均を含む、という意味である。",
+        "teacher_points": [
+          {
+            "point": "$\\sigma$ と $\\dfrac{\\sigma}{\\sqrt{n}}$ の違い（個々のデータの散らばりと、標本平均の散らばり）を図で区別させる。",
+            "caution": "$1.96\\sigma$ や $1.96\\cdot\\dfrac{\\sigma}{n}$ とする誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "ベクトルの内積と長さ",
+        "body": "$\\vec{0}$ でない2つのベクトル $\\vec{a},\\ \\vec{b}$ のなす角を $\\theta\\ (0^\\circ\\leqq\\theta\\leqq180^\\circ)$ とするとき、内積を次で定める。成分が分かるときは成分で計算できる。",
+        "formula": "$$\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta=a_1b_1+a_2b_2,\\qquad |\\vec{a}+t\\vec{b}|^2=|\\vec{a}|^2+2t\\,\\vec{a}\\cdot\\vec{b}+t^2|\\vec{b}|^2$$",
+        "conditions": [
+          "$\\vec{a}\\perp\\vec{b}\\iff\\vec{a}\\cdot\\vec{b}=0$（$\\vec{a},\\ \\vec{b}\\neq\\vec{0}$）。",
+          "長さの条件は2乗して内積で展開する。係数も2乗されることに注意する。"
+        ],
+        "teacher_points": [
+          {
+            "point": "内積を求める3つの方法（定義・成分・長さの条件から逆算）を表にし、与えられた情報で使い分けさせる。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "$|\\vec{a}+t\\vec{b}|$ の最小値と正射影",
+        "formula": "$$|\\vec{a}+t\\vec{b}|\\ \\text{は}\\ t=-\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\ \\text{で最小},\\qquad \\text{最小値}=\\sqrt{|\\vec{a}|^2-\\dfrac{(\\vec{a}\\cdot\\vec{b})^2}{|\\vec{b}|^2}}$$",
+        "conditions": [
+          "$\\vec{b}\\neq\\vec{0}$、$t$ は実数全体を動く。",
+          "最小となるとき $(\\vec{a}+t\\vec{b})\\perp\\vec{b}$（垂線の足を考えることと同じ）。"
+        ],
+        "proof_steps": [
+          "$f(t)=|\\vec{a}+t\\vec{b}|^2=|\\vec{b}|^2t^2+2(\\vec{a}\\cdot\\vec{b})t+|\\vec{a}|^2$ は $t$ の二次関数で、$|\\vec{b}|^2>0$ より下に凸。",
+          "平方完成すると $f(t)=|\\vec{b}|^2\\left(t+\\dfrac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\right)^2+|\\vec{a}|^2-\\dfrac{(\\vec{a}\\cdot\\vec{b})^2}{|\\vec{b}|^2}$。",
+          "$|\\vec{a}+t\\vec{b}|\\geqq0$ なので、$f(t)$ が最小のとき $|\\vec{a}+t\\vec{b}|$ も最小。",
+          "そのとき $(\\vec{a}+t\\vec{b})\\cdot\\vec{b}=\\vec{a}\\cdot\\vec{b}+t|\\vec{b}|^2=0$ となり、垂直であることがわかる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "二次関数の最小値（数学Ⅰ）と図形の垂線の足が同じことを表している点を、図を使って説明する。",
+            "ask": "最小になるとき、ベクトル $\\vec{a}+t\\vec{b}$ と $\\vec{b}$ はどんな位置関係か。",
+            "expect": "垂直。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　漸化式の一般項",
+        "example": {
+          "problem": "$a_1=1,\\ a_{n+1}=3a_n+2$ で定められる数列 $\\{a_n\\}$ の一般項を求めよ。",
+          "steps": [
+            "$\\alpha=3\\alpha+2$ より $\\alpha=-1$。",
+            "$a_{n+1}+1=3(a_n+1)$ と変形できる。",
+            "$\\{a_n+1\\}$ は初項 $a_1+1=2$、公比 $3$ の等比数列なので $a_n+1=2\\cdot3^{n-1}$。"
+          ],
+          "answer": "$a_n=2\\cdot3^{n-1}-1$",
+          "thinking": "両辺から同じ数を引いて等比数列の型にする。引く数は特性方程式で求める。"
+        },
+        "teacher_points": [
+          {
+            "point": "$n=2$ を代入して $a_2=5$（漸化式から $3\\cdot1+2=5$）と一致することを確認させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$a_n+1=2\\cdot3^{n}$ として $a_n=2\\cdot3^n-1$",
+            "correct": "初項が第1項なので指数は $n-1$。$n=1$ を代入すると $a_1=5$ となり矛盾する"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　母比率の推定",
+        "example": {
+          "problem": "ある市（架空）で無作為に選んだ 400 人のうち、80 人がある政策に賛成した。賛成者の母比率 $p$ に対する信頼度 95% の信頼区間を求めよ。",
+          "steps": [
+            "標本比率 $R=\\dfrac{80}{400}=0.2$。",
+            "$\\sqrt{\\dfrac{R(1-R)}{n}}=\\sqrt{\\dfrac{0.2\\times0.8}{400}}=\\sqrt{0.0004}=0.02$。",
+            "$1.96\\times0.02=0.0392$ より $0.2-0.0392\\leqq p\\leqq0.2+0.0392$。"
+          ],
+          "answer": "$0.1608\\leqq p\\leqq0.2392$",
+          "thinking": "標本比率と標本の大きさから標準偏差を近似し、$\\pm1.96$ 倍の幅をとる。"
+        },
+        "teacher_points": [
+          {
+            "point": "標本の大きさを 4 倍の 1600 人にすると幅が半分になることを、その場で計算して確かめさせる。",
+            "ask": "1600 人で同じ比率なら、区間の幅はどうなるか。",
+            "expect": "$\\sqrt{4}=2$ で割られて半分になる。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　内積と長さの最小値",
+        "example": {
+          "problem": "$|\\vec{a}|=2,\\ |\\vec{b}|=3,\\ |\\vec{a}+\\vec{b}|=\\sqrt{19}$ のとき、$\\vec{a}\\cdot\\vec{b}$ となす角 $\\theta$ を求めよ。また、実数 $t$ に対して $|\\vec{a}+t\\vec{b}|$ の最小値を求めよ。",
+          "steps": [
+            "$|\\vec{a}+\\vec{b}|^2=|\\vec{a}|^2+2\\vec{a}\\cdot\\vec{b}+|\\vec{b}|^2$ より $19=4+2\\vec{a}\\cdot\\vec{b}+9$、$\\vec{a}\\cdot\\vec{b}=3$。",
+            "$\\cos\\theta=\\dfrac{3}{2\\cdot3}=\\dfrac{1}{2}$ より $\\theta=60^\\circ$。",
+            "$|\\vec{a}+t\\vec{b}|^2=9t^2+6t+4=9\\left(t+\\dfrac{1}{3}\\right)^2+3$。",
+            "$t=-\\dfrac{1}{3}$ のとき最小値 $\\sqrt{3}$。"
+          ],
+          "answer": "$\\vec{a}\\cdot\\vec{b}=3,\\ \\theta=60^\\circ$、最小値 $\\sqrt{3}$（$t=-\\dfrac{1}{3}$）",
+          "thinking": "長さの条件は2乗して内積で展開する。$|\\vec{a}+t\\vec{b}|^2$ は $t$ の二次関数。"
+        },
+        "teacher_points": [
+          {
+            "point": "最後に2乗をはずして（平方根をとって）答えることを確認する。",
+            "caution": "$|\\vec{a}+t\\vec{b}|^2$ の最小値 3 をそのまま答える誤り。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 漸化式",
+              "lines": [
+                "$a_{n+1}=pa_n+q$",
+                "$\\alpha=p\\alpha+q$",
+                "$a_{n+1}-\\alpha=p(a_n-\\alpha)$",
+                "$a_n=(a_1-\\alpha)p^{n-1}+\\alpha$",
+                "検算：$n=1,\\ 2$ を代入"
+              ]
+            },
+            {
+              "title": "② 推定",
+              "lines": [
+                "$\\overline{X}\\sim N\\left(m,\\ \\dfrac{\\sigma^2}{n}\\right)$（近似）",
+                "$\\overline{X}\\pm1.96\\dfrac{\\sigma}{\\sqrt{n}}$",
+                "$R\\pm1.96\\sqrt{\\dfrac{R(1-R)}{n}}$",
+                "幅 $\\propto\\dfrac{1}{\\sqrt{n}}$"
+              ]
+            },
+            {
+              "title": "③ 内積",
+              "lines": [
+                "$\\vec{a}\\cdot\\vec{b}=|\\vec{a}||\\vec{b}|\\cos\\theta$",
+                "長さは2乗して展開",
+                "$|\\vec{a}+t\\vec{b}|^2$ は $t$ の二次関数",
+                "最小 $\\iff(\\vec{a}+t\\vec{b})\\perp\\vec{b}$"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "各列の最後に「検算・確認の方法」を書き、問題演習で毎回参照させる。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "確率の漸化式では、「$n$ 回目の状態から $n+1$ 回目の状態への移り方」を樹形図や表に整理してから式を立てさせる。",
+            "timing": "例題1の後"
+          },
+          {
+            "point": "推定の答えは、区間の両端を計算した後、「標本の値が区間の中央にあるか」で検算させる。"
+          },
+          {
+            "point": "仮説検定の結論は「棄却される → 〜でないといえる」「棄却されない → 〜でないとはいえない（判断できない）」と、言い回しまで正確に書かせる。",
+            "caution": "棄却されないことを「仮説が正しいと証明された」と書く誤りが多い。"
+          },
+          {
+            "point": "ベクトルの長さの問題では、係数つきの展開 $|\\vec{a}+k\\vec{b}|^2=|\\vec{a}|^2+2k\\vec{a}\\cdot\\vec{b}+k^2|\\vec{b}|^2$ を毎回書かせ、$k^2$ の付け忘れを防ぐ。"
+          },
+          {
+            "point": "誤答訂正（問題プリントD）は、まず「どの行から誤っているか」だけを答えさせ、次に直させる2段階で扱う。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\overline{X}$ の標準偏差は母標準偏差 $\\sigma$ と同じ",
+            "correct": "標本平均の標準偏差は $\\dfrac{\\sigma}{\\sqrt{n}}$。$n$ が大きいほど小さい"
+          },
+          {
+            "wrong": "信頼度 95% の信頼区間には、データの 95% が含まれる",
+            "correct": "信頼区間は母平均（母比率）を推定する区間であり、個々のデータの分布の範囲ではない"
+          },
+          {
+            "wrong": "$|\\vec{a}-2\\vec{b}|^2=|\\vec{a}|^2-4\\vec{a}\\cdot\\vec{b}+2|\\vec{b}|^2$",
+            "correct": "係数も2乗され、$+4|\\vec{b}|^2$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "漸化式は「同じ数を引いて等比数列の型」にする。一般項は $n=1,\\ 2$ の代入で検算する。",
+          "信頼区間は $\\overline{X}\\pm1.96\\dfrac{\\sigma}{\\sqrt{n}}$、$R\\pm1.96\\sqrt{\\dfrac{R(1-R)}{n}}$。幅は $\\dfrac{1}{\\sqrt{n}}$ に比例する。",
+          "仮説検定の結論は「棄却される／されない」と、その意味を正確な言葉で述べる。",
+          "ベクトルの長さは2乗して内積で展開。$|\\vec{a}+t\\vec{b}|$ の最小は $t$ の二次関数の最小、図形的には垂線の足。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$a_1=4,\\ a_{n+1}=2a_n-3$ の一般項を求めよ。",
+            "a": "$a_{n+1}-3=2(a_n-3)$ より $a_n=2^{n-1}+3$"
+          },
+          {
+            "q": "母標準偏差 12 の母集団から大きさ 144 の標本をとり、標本平均が 50 であった。母平均の信頼度 95% の信頼区間を求めよ。",
+            "a": "$\\dfrac{12}{\\sqrt{144}}=1$ より $48.04\\leqq m\\leqq51.96$"
+          },
+          {
+            "q": "$|\\vec{a}|=1,\\ |\\vec{b}|=2,\\ \\vec{a}\\cdot\\vec{b}=-1$ のとき $|\\vec{a}+\\vec{b}|$ を求めよ。",
+            "a": "$1-2+4=3$ より $\\sqrt{3}$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "fd2233dee6852fb04a7a8692551c5024d84db98519d75eacb3cea760dc44e574"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T11:44:49+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "7c8349df293c2245d0ed9205b967e068161eccbacbc5850ae60b4ee4929d42a6"
+  }
+}
