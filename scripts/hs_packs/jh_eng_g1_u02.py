@@ -439,7 +439,10 @@ def possessive_rewrite(r):
         a, b = f"{dem} is {poss} {noun}.".replace("These is", "These are"), f"{dem} {noun} {bev} {pp}."
     rev = r.random() < 0.35
     src, ans = (b, a) if rev else (a, b)
-    tgt = f"所有格 {poss}" if rev else f"所有代名詞 {pp}"
+    if poss.endswith("'s"):
+        tgt = f"{poss}（～の）" if rev else f"{pp}（～のもの）"
+    else:
+        tgt = f"所有格 {poss}" if rev else f"所有代名詞 {pp}"
     return sa(f"次の英文を、{tgt} を使ってほぼ同じ意味の文に書きかえなさい。\n{src}", ans,
               f"「{who}の{noun}」＝「{who}のもの」。{poss} {noun} と {pp} が同じ意味になる。所有代名詞の後ろには名詞を置かない。", d=3,
               ap="所有格＋名詞（my bag）と所有代名詞（mine）は同じ内容を表す。名詞をどこに置くかを入れかえる。",

@@ -1899,29 +1899,29 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "次の疑問文に「いいえ」と答えるとき、最も適切なものを選びなさい。\nIs English spoken in many countries?",
+      "stem": "次の疑問文に「はい」と答えるとき、最も適切なものを選びなさい。\nIs English spoken in many countries?",
       "choices": [
         {
           "label": "ア",
-          "text": "No, it doesn't."
+          "text": "Yes, it is."
         },
         {
           "label": "イ",
-          "text": "No, it wasn't."
+          "text": "Yes, it does."
         },
         {
           "label": "ウ",
-          "text": "No, it isn't."
+          "text": "Yes, they are."
         },
         {
           "label": "エ",
-          "text": "No, they aren't."
+          "text": "Yes, it was."
         }
       ],
       "answer": {
-        "value": "ウ"
+        "value": "ア"
       },
-      "explanation": "受け身の疑問文には、主語を代名詞（it）にして be 動詞（is）で答える。答え：No, it isn't.",
+      "explanation": "受け身の疑問文には、主語を代名詞（it）にして be 動詞（is）で答える。答え：Yes, it is.",
       "scoring": {
         "points": 2,
         "method": "exact"
@@ -1941,10 +1941,10 @@
         "steps": [
           "疑問文は Is で始まる受け身の文。",
           "主語 English を代名詞にする → it。",
-          "答え：No, it isn't."
+          "答え：Yes, it is."
         ],
         "alternatives": [
-          "省略を補って答えの文を完全にする（It is not spoken in many countries.）と、形が正しいかを確かめられる。"
+          "省略を補って答えの文を完全にする（It is spoken in many countries.）と、形が正しいかを確かめられる。"
         ],
         "partial_credit": [
           {
@@ -1963,19 +1963,19 @@
       },
       "distractor_analysis": [
         {
-          "label": "ア",
+          "label": "イ",
           "why_wrong": "受け身の疑問文は be 動詞の文なので、does ではなく is を使って答える。",
           "misconception": "be 動詞と do / does / did の混同"
         },
         {
-          "label": "イ",
-          "why_wrong": "疑問文の be 動詞は Is なので、答えも is を使う。時制を変えない。",
-          "misconception": "疑問文と答えの時制"
+          "label": "ウ",
+          "why_wrong": "主語 English は単数なので、代名詞は it で受ける。",
+          "misconception": "答えの代名詞"
         },
         {
           "label": "エ",
-          "why_wrong": "主語 English は単数なので、代名詞は it で受ける。",
-          "misconception": "答えの代名詞"
+          "why_wrong": "疑問文の be 動詞は Is なので、答えも is を使う。時制を変えない。",
+          "misconception": "疑問文と答えの時制"
         }
       ],
       "verification": {
@@ -5938,14 +5938,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "修正 4 問（Q009, Q010, Q011, Q012）",
       "content_hash": "e0de66dfcd4f4a9894312eae6246998a7f4b4571d6f72e03f9f2c6d6c731116c"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 1 問（Q019）",
+      "content_hash": "b0180af54c7ea0c7a52fd3b83db0820e95b8d52799431cae2b98321b582f39fa"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-28T12:17:44+00:00",
+    "validated_at": "2026-10-28T12:18:31+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "190715ac23c5f784109d088fbff2997757d4f040a2e31dd17a11e4598d736f7b"
+    "content_hash": "158df333ea592f81150ef425df3e7cbaab9223bfa7d8deef72c6c586fd4dd1ff"
   }
 }

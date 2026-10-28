@@ -359,7 +359,7 @@ def q_answer(r):
     s, num, base, pp, act, tail, tense, jp = r.choice(SCENE)
     be = be_of(num, tense)
     pr = "it" if num == "sg" else "they"
-    yes = r.random() < 0.5
+    yes = r.random() < 0.5 or s == "English"  # 事実に反する答えにならないように
     do = {"pres": "does" if num == "sg" else "do", "past": "did"}[tense]
     neg = {"is": "isn't", "are": "aren't", "was": "wasn't", "were": "weren't"}
     ok = f"Yes, {pr} {be}." if yes else f"No, {pr} {neg[be]}."
