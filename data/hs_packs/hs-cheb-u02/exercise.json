@@ -1,0 +1,5562 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-CHEB-U02-EX",
+  "title": "物質量と化学反応式　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "chemistry_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-CHEB-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-CHEB-U02-PACK",
+  "pair_set_id": "HS-CHEB-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-CHEB-U01",
+        "point": "原子の構造と化学式",
+        "title": "物質の構成と化学結合"
+      },
+      {
+        "unit_id": "JH-SCI-G2-U01",
+        "point": "化学反応式・質量保存",
+        "title": "化学変化と原子・分子"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-CHEB-U03",
+        "point": "中和・酸化還元の量的関係",
+        "title": "酸と塩基・酸化還元"
+      },
+      {
+        "unit_id": "HS-CHE-U01",
+        "point": "気体の法則",
+        "title": "物質の状態（気体・溶液）"
+      },
+      {
+        "unit_id": "HS-CHE-U02",
+        "point": "反応エンタルピー",
+        "title": "化学反応とエネルギー・化学平衡"
+      }
+    ],
+    "readiness_check": [
+      "原子の構造・原子量の意味（前単元）と、化学式から構成原子の数を読み取れる。",
+      "中学校で学んだ化学反応式の書き方と質量保存の法則を説明できる。",
+      "比例式・小数の計算・指数（$10^{23}$ など）の扱いができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-CHEB-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "アルミニウム $\\mathrm{Al}$ 1.35 g の物質量は何 mol か。原子量は Al＝27 とする。",
+      "answer": {
+        "value": "0.050",
+        "unit": "mol"
+      },
+      "explanation": "モル質量 27 g/mol。$\\dfrac{1.35}{27}=0.050$（mol）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1.35/(27)",
+        "expected": "1/20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mol",
+      "explanation_detail": {
+        "approach": "物質量＝質量÷モル質量。モル質量は式量・分子量（原子量）に g/mol をつけたもの。",
+        "steps": [
+          "モル質量は 27 g/mol。",
+          "$n=\\dfrac{1.35\\,\\mathrm{g}}{27\\,\\mathrm{g/mol}}=0.050$ mol。"
+        ],
+        "alternatives": [
+          "比例で考える：1 mol が 27 g なので、1.35 g は $\\dfrac{1.35}{27}$ mol。"
+        ],
+        "partial_credit": [
+          {
+            "point": "モル質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "物質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量÷モル質量を逆に割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "硫酸 $\\mathrm{H_2SO_4}$ 4.9 g の物質量は何 mol か。原子量は H＝1.0、O＝16、S＝32 とする。",
+      "answer": {
+        "value": "0.050",
+        "unit": "mol"
+      },
+      "explanation": "モル質量 98 g/mol。$\\dfrac{4.9}{98}=0.050$（mol）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "4.9/(1.0*2+32+16*4)",
+        "expected": "1/20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mol",
+      "explanation_detail": {
+        "approach": "物質量＝質量÷モル質量。モル質量は式量・分子量（原子量）に g/mol をつけたもの。",
+        "steps": [
+          "モル質量は 98 g/mol。",
+          "$n=\\dfrac{4.9\\,\\mathrm{g}}{98\\,\\mathrm{g/mol}}=0.050$ mol。"
+        ],
+        "alternatives": [
+          "比例で考える：1 mol が 98 g なので、4.9 g は $\\dfrac{4.9}{98}$ mol。"
+        ],
+        "partial_credit": [
+          {
+            "point": "モル質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "物質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量÷モル質量を逆に割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "塩化水素 $\\mathrm{HCl}$の分子量を求めなさい。原子量は H＝1.0、Cl＝35.5 とする。",
+      "answer": {
+        "value": "36.5"
+      },
+      "explanation": "構成原子の原子量の和：36.5。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1.0+35.5",
+        "expected": "73/2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mol",
+      "explanation_detail": {
+        "approach": "化学式に含まれる各原子の原子量に、その原子の数をかけて足し合わせる。",
+        "steps": [
+          "化学式から各原子の数を読み取る。",
+          "原子量×個数の和を計算して 36.5。"
+        ],
+        "alternatives": [
+          "モル質量（g/mol）として答えるときは、同じ数値に単位 g/mol をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の数を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "添字やかっこの外の数字を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "窒素 $\\mathrm{N_2}$の分子量を求めなさい。原子量は N＝14 とする。",
+      "answer": {
+        "value": "28"
+      },
+      "explanation": "構成原子の原子量の和：28。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "14*2",
+        "expected": "28"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mol",
+      "explanation_detail": {
+        "approach": "化学式に含まれる各原子の原子量に、その原子の数をかけて足し合わせる。",
+        "steps": [
+          "化学式から各原子の数を読み取る。",
+          "原子量×個数の和を計算して 28。"
+        ],
+        "alternatives": [
+          "モル質量（g/mol）として答えるときは、同じ数値に単位 g/mol をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の数を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "添字やかっこの外の数字を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "塩化ナトリウム $\\mathrm{NaCl}$の式量を求めなさい。原子量は Na＝23、Cl＝35.5 とする。",
+      "answer": {
+        "value": "58.5"
+      },
+      "explanation": "構成原子の原子量の和：58.5。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "23+35.5",
+        "expected": "117/2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mol",
+      "explanation_detail": {
+        "approach": "化学式に含まれる各原子の原子量に、その原子の数をかけて足し合わせる。",
+        "steps": [
+          "化学式から各原子の数を読み取る。",
+          "原子量×個数の和を計算して 58.5。"
+        ],
+        "alternatives": [
+          "モル質量（g/mol）として答えるときは、同じ数値に単位 g/mol をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の数を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "添字やかっこの外の数字を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "二酸化炭素 $\\mathrm{CO_2}$ 0.20 mol に含まれる O 原子の数は何個か。アボガドロ定数を $6.0\\times10^{23}$ /mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$2.4\\times10^{23}$",
+        "unit": "個"
+      },
+      "explanation": "1個の分子に O が 2 個含まれるので、O の物質量は $0.20\\times2=0.40$ mol。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.20*2*6.0*10**23",
+        "expected": "240000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-particles",
+      "explanation_detail": {
+        "approach": "まず「何の粒子の物質量か」を考える。化学式1つあたりの原子の数をかけてから、アボガドロ定数をかける。",
+        "steps": [
+          "O の物質量：$0.20\\times2=0.40$ mol。",
+          "個数：$0.40\\times6.0\\times10^{23}=2.4\\times10^{23}$ 個。"
+        ],
+        "alternatives": [
+          "先に分子（組成式）の数 $1.2\\times10^{23}$ 個を求め、2 倍してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の物質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "個数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学式1つあたりの原子の数を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "窒素 $\\mathrm{N_2}$の分子 $1.2\\times10^{23}$ 個の物質量は何 mol か。アボガドロ定数を $6.0\\times10^{23}$ /mol とする。",
+      "answer": {
+        "value": "0.20",
+        "unit": "mol"
+      },
+      "explanation": "$n=\\dfrac{1.2\\times10^{23}}{6.0\\times10^{23}}=0.20$（mol）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1.2*10**23/(6.0*10**23)",
+        "expected": "1/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-particles",
+      "explanation_detail": {
+        "approach": "物質量＝粒子の数÷アボガドロ定数。",
+        "steps": [
+          "$n=\\dfrac{1.2\\times10^{23}}{6.0\\times10^{23}}$。",
+          "$=0.20$ mol。"
+        ],
+        "alternatives": [
+          "$6.0\\times10^{23}$ 個が 1 mol なので、何倍にあたるかを考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数の引き算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "酸素 $\\mathrm{O_2}$ 0.10 mol に含まれる分子の数は何個か。アボガドロ定数を $6.0\\times10^{23}$ /mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$6.0\\times10^{22}$",
+        "unit": "個"
+      },
+      "explanation": "$N=n\\times N_{\\mathrm{A}}=0.10\\times6.0\\times10^{23}=6.0\\times10^{22}$（個）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "0.10*6.0*10**23",
+        "expected": "60000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-particles",
+      "explanation_detail": {
+        "approach": "粒子の数＝物質量×アボガドロ定数。",
+        "steps": [
+          "$N=0.10\\,\\mathrm{mol}\\times6.0\\times10^{23}\\,/\\mathrm{mol}$。",
+          "$=6.0\\times10^{22}$ 個。"
+        ],
+        "alternatives": [
+          "指数の計算は「係数どうし」「10 の累乗どうし」に分けて計算すると誤りにくい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数が 10 以上になったときに指数を直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "硫酸 $\\mathrm{H_2SO_4}$ 0.50 mol に含まれる O 原子の数は何個か。アボガドロ定数を $6.0\\times10^{23}$ /mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.2\\times10^{24}$",
+        "unit": "個"
+      },
+      "explanation": "1個の分子に O が 4 個含まれるので、O の物質量は $0.50\\times4=2.0$ mol。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.50*4*6.0*10**23",
+        "expected": "1200000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-particles",
+      "explanation_detail": {
+        "approach": "まず「何の粒子の物質量か」を考える。化学式1つあたりの原子の数をかけてから、アボガドロ定数をかける。",
+        "steps": [
+          "O の物質量：$0.50\\times4=2.0$ mol。",
+          "個数：$2.0\\times6.0\\times10^{23}=1.2\\times10^{24}$ 個。"
+        ],
+        "alternatives": [
+          "先に分子（組成式）の数 $3.0\\times10^{23}$ 個を求め、4 倍してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の物質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "個数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学式1つあたりの原子の数を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で 2.24 L を占める水素の物質量は何 mol か。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "0.10",
+        "unit": "mol"
+      },
+      "explanation": "$n=\\dfrac{2.24}{22.4}=0.10$（mol）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2.24/22.4",
+        "expected": "1/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-gas_volume",
+      "explanation_detail": {
+        "approach": "物質量＝体積÷22.4 L/mol（標準状態の気体）。",
+        "steps": [
+          "$n=\\dfrac{2.24\\,\\mathrm{L}}{22.4\\,\\mathrm{L/mol}}$。",
+          "$=0.10$ mol。"
+        ],
+        "alternatives": [
+          "22.4 L が 1 mol なので、何倍・何分の1かを考えて暗算で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "気体の種類によってモル体積が変わると考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で 2.24 L を占めるエタンの物質量は何 mol か。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "0.10",
+        "unit": "mol"
+      },
+      "explanation": "$n=\\dfrac{2.24}{22.4}=0.10$（mol）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2.24/22.4",
+        "expected": "1/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-gas_volume",
+      "explanation_detail": {
+        "approach": "物質量＝体積÷22.4 L/mol（標準状態の気体）。",
+        "steps": [
+          "$n=\\dfrac{2.24\\,\\mathrm{L}}{22.4\\,\\mathrm{L/mol}}$。",
+          "$=0.10$ mol。"
+        ],
+        "alternatives": [
+          "22.4 L が 1 mol なので、何倍・何分の1かを考えて暗算で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "気体の種類によってモル体積が変わると考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で、プロパン $\\mathrm{C_3H_8}$ 1.5 mol の体積は何 L か。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "33.6",
+        "unit": "L"
+      },
+      "explanation": "$V=1.5\\times22.4=33.6$（L）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1.5*22.4",
+        "expected": "168/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-gas_volume",
+      "explanation_detail": {
+        "approach": "標準状態の気体では、体積＝物質量×22.4 L/mol。",
+        "steps": [
+          "$V=1.5\\,\\mathrm{mol}\\times22.4\\,\\mathrm{L/mol}$。",
+          "$=33.6$ L。"
+        ],
+        "alternatives": [
+          "気体の種類によらず、標準状態の気体 1 mol は 22.4 L なので比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "22.4 で割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で、エチレン $\\mathrm{C_2H_4}$ 2.0 mol の体積は何 L か。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "44.8",
+        "unit": "L"
+      },
+      "explanation": "$V=2.0\\times22.4=44.8$（L）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2.0*22.4",
+        "expected": "224/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-gas_volume",
+      "explanation_detail": {
+        "approach": "標準状態の気体では、体積＝物質量×22.4 L/mol。",
+        "steps": [
+          "$V=2.0\\,\\mathrm{mol}\\times22.4\\,\\mathrm{L/mol}$。",
+          "$=44.8$ L。"
+        ],
+        "alternatives": [
+          "気体の種類によらず、標準状態の気体 1 mol は 22.4 L なので比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "22.4 で割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.50 mol/L の水酸化ナトリウム水溶液を 1000 mL つくるのに必要な水酸化ナトリウム $\\mathrm{NaOH}$ の質量は何 g か。原子量は H＝1.0、O＝16、Na＝23 とする。",
+      "answer": {
+        "value": "20",
+        "unit": "g"
+      },
+      "explanation": "溶質の物質量 $0.50\\times1.0=0.50$ mol、質量 $0.50\\times40=20$ g。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.50*1000/1000*(23+16+1.0)",
+        "expected": "20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-molarity",
+      "explanation_detail": {
+        "approach": "必要な溶質の物質量＝モル濃度×溶液の体積（L）。それを質量に直す。",
+        "steps": [
+          "$n=0.50\\,\\mathrm{mol/L}\\times1.0\\,\\mathrm{L}=0.50$ mol。",
+          "$w=0.50\\times40=20$ g。"
+        ],
+        "alternatives": [
+          "単位で確かめる：mol/L × L × g/mol ＝ g。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "体積を mL のまま掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "水酸化カリウム $\\mathrm{KOH}$ 5.6 g を水に溶かして 250 mL の水溶液とした。この水溶液のモル濃度は何 mol/L か。原子量は H＝1.0、O＝16、K＝39 とする。",
+      "answer": {
+        "value": "0.40",
+        "unit": "mol/L"
+      },
+      "explanation": "溶質 $\\dfrac{5.6}{56}=0.10$ mol を 0.25 L で割る。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(5.6/(39+16+1.0))/(250/1000)",
+        "expected": "2/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-molarity",
+      "explanation_detail": {
+        "approach": "モル濃度＝溶質の物質量（mol）÷溶液の体積（L）。体積は L に直す。",
+        "steps": [
+          "溶質の物質量：$\\dfrac{5.6}{56}=0.10$ mol。",
+          "溶液の体積：250 mL＝0.25 L。",
+          "$c=\\dfrac{0.10}{0.25}=0.40$ mol/L。"
+        ],
+        "alternatives": [
+          "1 L あたりに換算する：1000 mL は 250 mL の 4 倍なので、溶質も同じ倍率でふやして考える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "モル濃度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "mL のまま割って 1000 分の1の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.10 mol/L の塩化ナトリウム水溶液を 500 mL つくるのに必要な塩化ナトリウム $\\mathrm{NaCl}$ の質量は何 g か。原子量は Na＝23、Cl＝35.5 とする。有効数字3桁で答えなさい。",
+      "answer": {
+        "value": "2.93",
+        "unit": "g"
+      },
+      "explanation": "溶質の物質量 $0.10\\times0.50=0.050$ mol、質量 $0.050\\times58.5=2.925$ g。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.10*500/1000*(23+35.5)",
+        "expected": "117/40",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-molarity",
+      "explanation_detail": {
+        "approach": "必要な溶質の物質量＝モル濃度×溶液の体積（L）。それを質量に直す。",
+        "steps": [
+          "$n=0.10\\,\\mathrm{mol/L}\\times0.50\\,\\mathrm{L}=0.050$ mol。",
+          "$w=0.050\\times58.5=2.925$ g。"
+        ],
+        "alternatives": [
+          "単位で確かめる：mol/L × L × g/mol ＝ g。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "体積を mL のまま掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1.0 mol/L の硫酸銅(Ⅱ)水溶液を 250 mL つくるのに必要な硫酸銅(Ⅱ) $\\mathrm{CuSO_4}$ の質量は何 g か。原子量は O＝16、S＝32、Cu＝64 とする。",
+      "answer": {
+        "value": "40",
+        "unit": "g"
+      },
+      "explanation": "溶質の物質量 $1.0\\times0.25=0.25$ mol、質量 $0.25\\times160=40$ g。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1.0*250/1000*(64+32+16*4)",
+        "expected": "40"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-molarity",
+      "explanation_detail": {
+        "approach": "必要な溶質の物質量＝モル濃度×溶液の体積（L）。それを質量に直す。",
+        "steps": [
+          "$n=1.0\\,\\mathrm{mol/L}\\times0.25\\,\\mathrm{L}=0.25$ mol。",
+          "$w=0.25\\times160=40$ g。"
+        ],
+        "alternatives": [
+          "単位で確かめる：mol/L × L × g/mol ＝ g。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "体積を mL のまま掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の化学反応式の係数（□）を、最も簡単な整数比になるように左から順に答えなさい（1 も省略せずに書く）。\n$$\\square\\,\\mathrm{Al}+\\square\\,\\mathrm{HCl}\\longrightarrow \\square\\,\\mathrm{AlCl_3}+\\square\\,\\mathrm{H_2}$$",
+      "answer": {
+        "value": "2、6、2、3"
+      },
+      "explanation": "完成した式：$2\\mathrm{Al}+6\\mathrm{HCl}\\longrightarrow 2\\mathrm{AlCl_3}+3\\mathrm{H_2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[2-2, 6-6, 6-6]",
+        "expected": "[0, 0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-balance",
+      "explanation_detail": {
+        "approach": "最も複雑な化学式の係数を 1 とおき、両辺で各原子の数が等しくなるように順に決める（目算法）。分数になったら全体を整数倍する。",
+        "steps": [
+          "登場する物質：アルミニウム、塩化水素、塩化アルミニウム、水素。",
+          "複雑な物質の係数を 1 とおき、その物質にしか含まれない原子から合わせていく。",
+          "O や H のように多くの物質に含まれる原子は最後に合わせる。",
+          "係数は 2、6、2、3。"
+        ],
+        "alternatives": [
+          "未定係数法：係数を $a,\\ b,\\ c,\\ \\dots$ とおき、原子ごとに等式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の数を両辺で比べている",
+            "points": 1
+          },
+          {
+            "point": "係数がすべて正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学式の添字を変えて数を合わせてしまう。",
+          "最も簡単な整数比になっていない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の化学反応式の係数（□）を、最も簡単な整数比になるように左から順に答えなさい（1 も省略せずに書く）。\n$$\\square\\,\\mathrm{Cu}+\\square\\,\\mathrm{O_2}\\longrightarrow \\square\\,\\mathrm{CuO}$$",
+      "answer": {
+        "value": "2、1、2"
+      },
+      "explanation": "完成した式：$2\\mathrm{Cu}+\\mathrm{O_2}\\longrightarrow 2\\mathrm{CuO}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[2-2, 2-2]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-balance",
+      "explanation_detail": {
+        "approach": "最も複雑な化学式の係数を 1 とおき、両辺で各原子の数が等しくなるように順に決める（目算法）。分数になったら全体を整数倍する。",
+        "steps": [
+          "登場する物質：銅、酸素、酸化銅(Ⅱ)。",
+          "複雑な物質の係数を 1 とおき、その物質にしか含まれない原子から合わせていく。",
+          "O や H のように多くの物質に含まれる原子は最後に合わせる。",
+          "係数は 2、1、2。"
+        ],
+        "alternatives": [
+          "未定係数法：係数を $a,\\ b,\\ c,\\ \\dots$ とおき、原子ごとに等式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の数を両辺で比べている",
+            "points": 1
+          },
+          {
+            "point": "係数がすべて正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学式の添字を変えて数を合わせてしまう。",
+          "最も簡単な整数比になっていない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "次の化学反応式の □ に係数を入れて、反応式を完成させなさい。係数が 1 のときも 1 と書き、左から順に答えなさい。\n$$\\square\\,\\mathrm{Na}+\\square\\,\\mathrm{H_2O}\\longrightarrow \\square\\,\\mathrm{NaOH}+\\square\\,\\mathrm{H_2}$$",
+      "answer": {
+        "value": "2、2、2、1"
+      },
+      "explanation": "完成した式：$2\\mathrm{Na}+2\\mathrm{H_2O}\\longrightarrow 2\\mathrm{NaOH}+\\mathrm{H_2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[4-4, 2-2, 2-2]",
+        "expected": "[0, 0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-balance",
+      "explanation_detail": {
+        "approach": "最も複雑な化学式の係数を 1 とおき、両辺で各原子の数が等しくなるように順に決める（目算法）。分数になったら全体を整数倍する。",
+        "steps": [
+          "登場する物質：ナトリウム、水、水酸化ナトリウム、水素。",
+          "複雑な物質の係数を 1 とおき、その物質にしか含まれない原子から合わせていく。",
+          "O や H のように多くの物質に含まれる原子は最後に合わせる。",
+          "係数は 2、2、2、1。"
+        ],
+        "alternatives": [
+          "未定係数法：係数を $a,\\ b,\\ c,\\ \\dots$ とおき、原子ごとに等式を立てて解く。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原子の数を両辺で比べている",
+            "points": 1
+          },
+          {
+            "point": "係数がすべて正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学式の添字を変えて数を合わせてしまう。",
+          "最も簡単な整数比になっていない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、酸素 $\\mathrm{O_2}$ 9.6 g がすべて反応するとき、生成する水の質量は何 g か。\n$$\\mathrm{C_6H_{12}O_6}+6\\mathrm{O_2}\\longrightarrow 6\\mathrm{CO_2}+6\\mathrm{H_2O}$$\n原子量は H＝1.0、O＝16 とする。",
+      "answer": {
+        "value": "5.4",
+        "unit": "g"
+      },
+      "explanation": "酸素 0.30 mol → 係数の比 6:6 より 水 $0.300$ mol → $5.4$ g。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "9.6/(16*2)*6/6*(1.0*2+16)",
+        "expected": "27/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mass",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量の順に換算する。係数の比は質量の比ではない。",
+        "steps": [
+          "酸素の物質量：$\\dfrac{9.6}{32}=0.30$ mol。",
+          "係数の比 $酸素:水=6:6$ より、水は $0.30\\times\\dfrac{6}{6}=0.300$ mol。",
+          "質量：$0.300\\times18=5.4$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式で解く：$6\\times32\\,\\mathrm{g}:6\\times18\\,\\mathrm{g}=9.6\\,\\mathrm{g}:x\\,\\mathrm{g}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "与えられた物質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比をそのまま質量の比として使う。",
+          "係数を無視して 1:1 で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、酸化アルミニウム $\\mathrm{Al_2O_3}$ 20.4 g が生成するとき、反応する酸素の質量は何 g か。\n$$4\\mathrm{Al}+3\\mathrm{O_2}\\longrightarrow 2\\mathrm{Al_2O_3}$$\n原子量は O＝16、Al＝27 とする。",
+      "answer": {
+        "value": "9.6",
+        "unit": "g"
+      },
+      "explanation": "酸化アルミニウム 0.20 mol → 係数の比 2:3 より 酸素 $0.300$ mol → $9.6$ g。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "20.4/(27*2+16*3)*3/2*(16*2)",
+        "expected": "48/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mass",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量の順に換算する。係数の比は質量の比ではない。",
+        "steps": [
+          "酸化アルミニウムの物質量：$\\dfrac{20.4}{102}=0.20$ mol。",
+          "係数の比 $酸化アルミニウム:酸素=2:3$ より、酸素は $0.20\\times\\dfrac{3}{2}=0.300$ mol。",
+          "質量：$0.300\\times32=9.6$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式で解く：$2\\times102\\,\\mathrm{g}:3\\times32\\,\\mathrm{g}=20.4\\,\\mathrm{g}:x\\,\\mathrm{g}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "与えられた物質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比をそのまま質量の比として使う。",
+          "係数を無視して 1:1 で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、塩化鉄(Ⅱ) $\\mathrm{FeCl_2}$ 38.1 g が生成するとき、生成する水素の質量は何 g か。\n$$\\mathrm{Fe}+2\\mathrm{HCl}\\longrightarrow \\mathrm{FeCl_2}+\\mathrm{H_2}$$\n原子量は H＝1.0、Cl＝35.5、Fe＝56 とする。",
+      "answer": {
+        "value": "0.60",
+        "unit": "g"
+      },
+      "explanation": "塩化鉄(Ⅱ) 0.30 mol → 係数の比 1:1 より 水素 $0.300$ mol → $0.60$ g。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "38.1/(56+35.5*2)*1/1*(1.0*2)",
+        "expected": "3/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mass",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量の順に換算する。係数の比は質量の比ではない。",
+        "steps": [
+          "塩化鉄(Ⅱ)の物質量：$\\dfrac{38.1}{127}=0.30$ mol。",
+          "係数の比 $塩化鉄(Ⅱ):水素=1:1$ より、水素は $0.30\\times\\dfrac{1}{1}=0.300$ mol。",
+          "質量：$0.300\\times2.0=0.60$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式で解く：$1\\times127\\,\\mathrm{g}:1\\times2.0\\,\\mathrm{g}=38.1\\,\\mathrm{g}:x\\,\\mathrm{g}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "与えられた物質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比をそのまま質量の比として使う。",
+          "係数を無視して 1:1 で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、鉄 $\\mathrm{Fe}$ 33.6 g がすべて反応するとき、生成する水素の質量は何 g か。\n$$\\mathrm{Fe}+2\\mathrm{HCl}\\longrightarrow \\mathrm{FeCl_2}+\\mathrm{H_2}$$\n原子量は H＝1.0、Fe＝56 とする。",
+      "answer": {
+        "value": "1.2",
+        "unit": "g"
+      },
+      "explanation": "鉄 0.60 mol → 係数の比 1:1 より 水素 $0.600$ mol → $1.2$ g。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "33.6/(56)*1/1*(1.0*2)",
+        "expected": "6/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mass",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量の順に換算する。係数の比は質量の比ではない。",
+        "steps": [
+          "鉄の物質量：$\\dfrac{33.6}{56}=0.60$ mol。",
+          "係数の比 $鉄:水素=1:1$ より、水素は $0.60\\times\\dfrac{1}{1}=0.600$ mol。",
+          "質量：$0.600\\times2.0=1.2$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式で解く：$1\\times56\\,\\mathrm{g}:1\\times2.0\\,\\mathrm{g}=33.6\\,\\mathrm{g}:x\\,\\mathrm{g}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "与えられた物質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比をそのまま質量の比として使う。",
+          "係数を無視して 1:1 で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、水 $\\mathrm{H_2O}$ 3.6 g が生成するとき、生成する二酸化炭素の質量は何 g か。\n$$\\mathrm{C_2H_4}+3\\mathrm{O_2}\\longrightarrow 2\\mathrm{CO_2}+2\\mathrm{H_2O}$$\n原子量は H＝1.0、C＝12、O＝16 とする。",
+      "answer": {
+        "value": "8.8",
+        "unit": "g"
+      },
+      "explanation": "水 0.20 mol → 係数の比 2:2 より 二酸化炭素 $0.200$ mol → $8.8$ g。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "3.6/(1.0*2+16)*2/2*(12+16*2)",
+        "expected": "44/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_mass",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量の順に換算する。係数の比は質量の比ではない。",
+        "steps": [
+          "水の物質量：$\\dfrac{3.6}{18}=0.20$ mol。",
+          "係数の比 $水:二酸化炭素=2:2$ より、二酸化炭素は $0.20\\times\\dfrac{2}{2}=0.200$ mol。",
+          "質量：$0.200\\times44=8.8$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式で解く：$2\\times18\\,\\mathrm{g}:2\\times44\\,\\mathrm{g}=3.6\\,\\mathrm{g}:x\\,\\mathrm{g}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "与えられた物質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比をそのまま質量の比として使う。",
+          "係数を無視して 1:1 で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、水 $\\mathrm{H_2O}$ 4.5 g が生成するとき、生成する二酸化炭素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 L か。\n$$2\\mathrm{C_2H_6}+7\\mathrm{O_2}\\longrightarrow 4\\mathrm{CO_2}+6\\mathrm{H_2O}$$\n原子量は H＝1.0、O＝16 とする。標準状態の気体のモル体積を 22.4 L/mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "3.7",
+        "unit": "L"
+      },
+      "explanation": "水 0.25 mol → 二酸化炭素 $0.167$ mol → $3.7$ L。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "4.5/(1.0*2+16)*4/6*22.4",
+        "expected": "56/15",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_gas",
+      "explanation_detail": {
+        "approach": "質量を物質量に直し、係数の比で気体の物質量を求めてから 22.4 L/mol をかける。",
+        "steps": [
+          "$n_{\\text{水}}=\\dfrac{4.5}{18}=0.25$ mol。",
+          "係数の比 6:4 より $n_{\\text{二酸化炭素}}=0.167$ mol。",
+          "$V=0.167\\times22.4=3.7$ L。"
+        ],
+        "alternatives": [
+          "比例式 $6\\times18\\,\\mathrm{g}:4\\times22.4\\,\\mathrm{L}=4.5\\,\\mathrm{g}:V$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を用いている",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わずに、与えられた物質と同じ物質量として計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、鉄 $\\mathrm{Fe}$ 11.2 g がすべて反応するとき、生成する水素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 L か。\n$$\\mathrm{Fe}+2\\mathrm{HCl}\\longrightarrow \\mathrm{FeCl_2}+\\mathrm{H_2}$$\n原子量は Fe＝56 とする。標準状態の気体のモル体積を 22.4 L/mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "4.5",
+        "unit": "L"
+      },
+      "explanation": "鉄 0.20 mol → 水素 $0.200$ mol → $4.5$ L。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "11.2/(56)*1/1*22.4",
+        "expected": "112/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_gas",
+      "explanation_detail": {
+        "approach": "質量を物質量に直し、係数の比で気体の物質量を求めてから 22.4 L/mol をかける。",
+        "steps": [
+          "$n_{\\text{鉄}}=\\dfrac{11.2}{56}=0.20$ mol。",
+          "係数の比 1:1 より $n_{\\text{水素}}=0.200$ mol。",
+          "$V=0.200\\times22.4=4.5$ L。"
+        ],
+        "alternatives": [
+          "比例式 $1\\times56\\,\\mathrm{g}:1\\times22.4\\,\\mathrm{L}=11.2\\,\\mathrm{g}:V$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を用いている",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わずに、与えられた物質と同じ物質量として計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、水 $\\mathrm{H_2O}$ 4.5 g が生成するとき、反応する酸素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 L か。\n$$\\mathrm{C_2H_4}+3\\mathrm{O_2}\\longrightarrow 2\\mathrm{CO_2}+2\\mathrm{H_2O}$$\n原子量は H＝1.0、O＝16 とする。標準状態の気体のモル体積を 22.4 L/mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "8.4",
+        "unit": "L"
+      },
+      "explanation": "水 0.25 mol → 酸素 $0.375$ mol → $8.4$ L。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "4.5/(1.0*2+16)*3/2*22.4",
+        "expected": "42/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_gas",
+      "explanation_detail": {
+        "approach": "質量を物質量に直し、係数の比で気体の物質量を求めてから 22.4 L/mol をかける。",
+        "steps": [
+          "$n_{\\text{水}}=\\dfrac{4.5}{18}=0.25$ mol。",
+          "係数の比 2:3 より $n_{\\text{酸素}}=0.375$ mol。",
+          "$V=0.375\\times22.4=8.4$ L。"
+        ],
+        "alternatives": [
+          "比例式 $2\\times18\\,\\mathrm{g}:3\\times22.4\\,\\mathrm{L}=4.5\\,\\mathrm{g}:V$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を用いている",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わずに、与えられた物質と同じ物質量として計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応で、水 $\\mathrm{H_2O}$ 7.2 g が生成するとき、反応する酸素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 L か。\n$$\\mathrm{C_3H_8}+5\\mathrm{O_2}\\longrightarrow 3\\mathrm{CO_2}+4\\mathrm{H_2O}$$\n原子量は H＝1.0、O＝16 とする。標準状態の気体のモル体積を 22.4 L/mol とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "11",
+        "unit": "L"
+      },
+      "explanation": "水 0.40 mol → 酸素 $0.500$ mol → $11$ L。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "7.2/(1.0*2+16)*5/4*22.4",
+        "expected": "56/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-mass_gas",
+      "explanation_detail": {
+        "approach": "質量を物質量に直し、係数の比で気体の物質量を求めてから 22.4 L/mol をかける。",
+        "steps": [
+          "$n_{\\text{水}}=\\dfrac{7.2}{18}=0.40$ mol。",
+          "係数の比 4:5 より $n_{\\text{酸素}}=0.500$ mol。",
+          "$V=0.500\\times22.4=11$ L。"
+        ],
+        "alternatives": [
+          "比例式 $4\\times18\\,\\mathrm{g}:5\\times22.4\\,\\mathrm{L}=7.2\\,\\mathrm{g}:V$ でも求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "係数の比を用いている",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わずに、与えられた物質と同じ物質量として計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.50 mol/L の塩化ナトリウム水溶液 100 mL と、2.0 mol/L の塩化ナトリウム水溶液 300 mL を混合した。混合後の水溶液のモル濃度は何 mol/L か。混合による体積の変化はないものとする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "1.6",
+        "unit": "mol/L"
+      },
+      "explanation": "溶質の合計 $0.050+0.60$ mol を 0.40 L で割る。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(0.50*100+2.0*300)/(100+300)",
+        "expected": "13/8",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-dilution",
+      "explanation_detail": {
+        "approach": "混合後の溶質の物質量は、それぞれの溶液に含まれる溶質の物質量の和。体積も和になる（体積変化なし）。",
+        "steps": [
+          "溶質：$0.50\\times0.10+2.0\\times0.30=0.65$ mol。",
+          "体積：400 mL＝0.40 L。",
+          "$c=1.6$ mol/L。"
+        ],
+        "alternatives": [
+          "加重平均として確かめる：混合後の濃度は2つの濃度の間にあり、体積の大きい方の濃度に近くなる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量の和を求めている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの濃度を単純平均する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1.0 mol/L のグルコース水溶液 250 mL と、2.0 mol/L のグルコース水溶液 250 mL を混合した。混合後の水溶液のモル濃度は何 mol/L か。混合による体積の変化はないものとする。",
+      "answer": {
+        "value": "1.5",
+        "unit": "mol/L"
+      },
+      "explanation": "溶質の合計 $0.25+0.50$ mol を 0.50 L で割る。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(1.0*250+2.0*250)/(250+250)",
+        "expected": "3/2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-dilution",
+      "explanation_detail": {
+        "approach": "混合後の溶質の物質量は、それぞれの溶液に含まれる溶質の物質量の和。体積も和になる（体積変化なし）。",
+        "steps": [
+          "溶質：$1.0\\times0.25+2.0\\times0.25=0.75$ mol。",
+          "体積：500 mL＝0.50 L。",
+          "$c=1.5$ mol/L。"
+        ],
+        "alternatives": [
+          "加重平均として確かめる：混合後の濃度は2つの濃度の間にあり、体積の大きい方の濃度に近くなる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量の和を求めている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの濃度を単純平均する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "3.0 mol/L の塩酸 10 mL を正確にはかりとり、水を加えて全体を 500 mL にした。うすめた後のモル濃度は何 mol/L か。",
+      "answer": {
+        "value": "0.060",
+        "unit": "mol/L"
+      },
+      "explanation": "$c_2=\\dfrac{c_1V_1}{V_2}=\\dfrac{3.0\\times10}{500}=0.060$ mol/L。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3.0*10/500",
+        "expected": "3/50"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-dilution",
+      "explanation_detail": {
+        "approach": "水でうすめても、溶けている溶質の物質量は変わらない。",
+        "steps": [
+          "溶質の物質量：$3.0\\times\\dfrac{10}{1000}=0.030$ mol。",
+          "うすめた後：$\\dfrac{0.030}{0.50}=0.060$ mol/L。"
+        ],
+        "alternatives": [
+          "体積が $\\dfrac{500}{10}$ 倍になったので、濃度は $\\dfrac{10}{500}$ 倍になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量が一定であることを用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "加えた水の体積だけで割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "質量パーセント濃度 10 %、密度 1.1 g/cm³ の塩化ナトリウム水溶液がある。この水溶液のモル濃度は何 mol/L か。原子量は Na＝23、Cl＝35.5 とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "1.9",
+        "unit": "mol/L"
+      },
+      "explanation": "溶液 1 L（1000 cm³）について計算する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "1000*1.1*10/100/(23+35.5)",
+        "expected": "220/117",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-percent_molarity",
+      "explanation_detail": {
+        "approach": "溶液 1 L（1000 cm³）を考え、質量 → 溶質の質量 → 溶質の物質量の順に求める。",
+        "steps": [
+          "溶液 1 L の質量：$1000\\times1.1=1100$ g。",
+          "溶質の質量：$1100\\times\\dfrac{10}{100}=110$ g。",
+          "溶質の物質量：$\\dfrac{110}{58.5}\\fallingdotseq1.9$ mol。よって $1.9$ mol/L。"
+        ],
+        "alternatives": [
+          "公式 $c=\\dfrac{1000\\times d\\times\\frac{a}{100}}{M}$ に代入してもよいが、1 L で考える手順を理解しておく。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶液 1 L の質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "溶質の質量・物質量を求めている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "密度を使わずに、溶液 1 L を 1000 g とみなす。",
+          "溶液の質量と溶質の質量を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "6.50 mol/L の水酸化カリウム水溶液の密度は 1.3 g/cm³ である。この水溶液の質量パーセント濃度は何 % か。原子量は H＝1.0、O＝16、K＝39 とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "28",
+        "unit": "%"
+      },
+      "explanation": "溶液 1 L について、溶質の質量÷溶液の質量×100。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "6.50*(39+16+1.0)/(1000*1.3)*100",
+        "expected": "28"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-percent_molarity",
+      "explanation_detail": {
+        "approach": "溶液 1 L を考え、溶質の質量と溶液の質量をそれぞれ求めて比をとる。",
+        "steps": [
+          "溶質：$6.50\\times56$ g。",
+          "溶液：$1000\\times1.3=1300$ g。",
+          "比をとって 100 倍する。"
+        ],
+        "alternatives": [
+          "逆向き（％ → mol/L）の計算をして、もとの濃度に戻るか検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "溶液の質量を求めている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶液の質量を 1000 g とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "1.10 mol/L のグルコース水溶液の密度は 1.1 g/cm³ である。この水溶液の質量パーセント濃度は何 % か。原子量は H＝1.0、C＝12、O＝16 とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "18",
+        "unit": "%"
+      },
+      "explanation": "溶液 1 L について、溶質の質量÷溶液の質量×100。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "1.10*(12*6+1.0*12+16*6)/(1000*1.1)*100",
+        "expected": "18"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-percent_molarity",
+      "explanation_detail": {
+        "approach": "溶液 1 L を考え、溶質の質量と溶液の質量をそれぞれ求めて比をとる。",
+        "steps": [
+          "溶質：$1.10\\times180$ g。",
+          "溶液：$1000\\times1.1=1100$ g。",
+          "比をとって 100 倍する。"
+        ],
+        "alternatives": [
+          "逆向き（％ → mol/L）の計算をして、もとの濃度に戻るか検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "溶液の質量を求めている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶液の質量を 1000 g とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "アルミニウム $\\mathrm{Al}$ 1.08 g に 0.50 mol/L の塩酸 10 mL を加えて反応させた。発生する水素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 mL か。\n$$2\\mathrm{Al}+6\\mathrm{HCl}\\longrightarrow 2\\mathrm{AlCl_3}+3\\mathrm{H_2}$$\n原子量は Al＝27 とする。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "56.0",
+        "unit": "mL"
+      },
+      "explanation": "アルミニウムがすべて反応するには HCl が $0.120$ mol 必要だが、$0.00500$ mol しかない → HCl が不足し、HCl がすべて反応する。水素は 塩化水素の量で決まる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Min(0.040*3/2, 0.0050*3/6)*22.4*1000",
+        "expected": "56"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-excess",
+      "explanation_detail": {
+        "approach": "両方の反応物の量が与えられているので、まず物質量に直して過不足を判定する。生成量は不足する（すべて反応する）方で決まる。",
+        "steps": [
+          "アルミニウム：$\\dfrac{1.08}{27}=0.040$ mol。HCl：$0.50\\times\\dfrac{10}{1000}=0.0050$ mol。",
+          "アルミニウムがすべて反応するには HCl が $0.120$ mol 必要だが、$0.00500$ mol しかない → HCl が不足し、HCl がすべて反応する。",
+          "水素：$0.00250$ mol → $0.00250\\times22.4\\times1000=56.0$ mL。"
+        ],
+        "alternatives": [
+          "反応前・変化量・反応後の表をつくると、余る物質の量も同時に分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "両方の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "過不足を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "過不足を判定せず、金属の量だけで計算する。",
+          "L と mL の換算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "鉄 $\\mathrm{Fe}$ 0.84 g に 2.0 mol/L の塩酸 20 mL を加えて反応させた。発生する水素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 mL か。\n$$\\mathrm{Fe}+2\\mathrm{HCl}\\longrightarrow \\mathrm{FeCl_2}+\\mathrm{H_2}$$\n原子量は Fe＝56 とする。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "336",
+        "unit": "mL"
+      },
+      "explanation": "鉄がすべて反応するのに必要な HCl は $0.0300$ mol で、塩酸中の HCl $0.0400$ mol で足りる → HCl が余る。水素は 鉄の量で決まる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Min(0.015*1/1, 0.040*1/2)*22.4*1000",
+        "expected": "336"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-excess",
+      "explanation_detail": {
+        "approach": "両方の反応物の量が与えられているので、まず物質量に直して過不足を判定する。生成量は不足する（すべて反応する）方で決まる。",
+        "steps": [
+          "鉄：$\\dfrac{0.84}{56}=0.015$ mol。HCl：$2.0\\times\\dfrac{20}{1000}=0.040$ mol。",
+          "鉄がすべて反応するのに必要な HCl は $0.0300$ mol で、塩酸中の HCl $0.0400$ mol で足りる → HCl が余る。",
+          "水素：$0.0150$ mol → $0.0150\\times22.4\\times1000=336$ mL。"
+        ],
+        "alternatives": [
+          "反応前・変化量・反応後の表をつくると、余る物質の量も同時に分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "両方の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "過不足を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "過不足を判定せず、金属の量だけで計算する。",
+          "L と mL の換算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "亜鉛 $\\mathrm{Zn}$ 1.95 g に 2.0 mol/L の塩酸 20 mL を加えて反応させた。発生する水素の体積は標準状態（0 ℃、$1.013\\times10^5$ Pa）で何 mL か。\n$$\\mathrm{Zn}+2\\mathrm{HCl}\\longrightarrow \\mathrm{ZnCl_2}+\\mathrm{H_2}$$\n原子量は Zn＝65 とする。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "448",
+        "unit": "mL"
+      },
+      "explanation": "亜鉛がすべて反応するには HCl が $0.0600$ mol 必要だが、$0.0400$ mol しかない → HCl が不足し、HCl がすべて反応する。水素は 塩化水素の量で決まる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "Min(0.030*1/1, 0.040*1/2)*22.4*1000",
+        "expected": "448"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-excess",
+      "explanation_detail": {
+        "approach": "両方の反応物の量が与えられているので、まず物質量に直して過不足を判定する。生成量は不足する（すべて反応する）方で決まる。",
+        "steps": [
+          "亜鉛：$\\dfrac{1.95}{65}=0.030$ mol。HCl：$2.0\\times\\dfrac{20}{1000}=0.040$ mol。",
+          "亜鉛がすべて反応するには HCl が $0.0600$ mol 必要だが、$0.0400$ mol しかない → HCl が不足し、HCl がすべて反応する。",
+          "水素：$0.0200$ mol → $0.0200\\times22.4\\times1000=448$ mL。"
+        ],
+        "alternatives": [
+          "反応前・変化量・反応後の表をつくると、余る物質の量も同時に分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "両方の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "過不足を正しく判定している",
+            "points": 2
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "過不足を判定せず、金属の量だけで計算する。",
+          "L と mL の換算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）での密度が $1.34$ g/L の気体がある。この気体の分子量を整数で求めなさい（有効数字の扱いは考えなくてよい）。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "30"
+      },
+      "explanation": "1 mol（22.4 L）の質量＝密度×22.4。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor(1.34*22.4+Rational(1,2))",
+        "expected": "30"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-molar_mass_gas",
+      "explanation_detail": {
+        "approach": "標準状態の気体 1 mol は 22.4 L。密度（1 L あたりの質量）に 22.4 をかけると 1 mol の質量になる。",
+        "steps": [
+          "$M=1.34\\times22.4\\fallingdotseq30$ g/mol。",
+          "その数値が分子量。"
+        ],
+        "alternatives": [
+          "分子量 30 の気体としては、たとえばエタンが考えられる。密度が空気（平均分子量約 29）より大きいか小さいかも判断の手がかりになる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "密度×22.4 の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "密度を 22.4 で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある気体 1.4 g の体積は、標準状態（0 ℃、$1.013\\times10^5$ Pa）で 1.12 L であった。この気体の分子量を求めなさい。標準状態の気体のモル体積を 22.4 L/mol とする。",
+      "answer": {
+        "value": "28"
+      },
+      "explanation": "物質量 $\\dfrac{1.12}{22.4}=0.050$ mol、モル質量 $\\dfrac{1.4}{0.050}=28$ g/mol。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "1.4/(1.12/22.4)",
+        "expected": "28"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-molar_mass_gas",
+      "explanation_detail": {
+        "approach": "体積から物質量を求め、質量÷物質量でモル質量を出す。モル質量の数値が分子量。",
+        "steps": [
+          "$n=\\dfrac{1.12}{22.4}=0.050$ mol。",
+          "$M=\\dfrac{1.4}{0.050}=28$ g/mol。",
+          "分子量は 28。"
+        ],
+        "alternatives": [
+          "22.4 L あたりの質量（標準状態での 1 mol の質量）を比例で求めても同じ：$1.4\\times\\dfrac{22.4}{1.12}$。",
+          "分子量 28 の気体としては、たとえば窒素（$\\mathrm{N_2}$）が考えられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 2
+          },
+          {
+            "point": "分子量が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "体積を 22.4 で割らずに質量を割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "グルコース $\\mathrm{C_6H_{12}O_6}$（分子量 180）を用いて、0.40 mol/L のグルコース水溶液を 250 mL 調製したい。必要な質量を求め、正しい調製の手順を、使う器具の名称を含めて説明しなさい。また、「はかりとった固体を水 250 mL に溶かす」方法ではいけない理由も述べなさい。",
+      "answer": {
+        "value": "必要な質量は $0.40\\times\\dfrac{250}{1000}\\times180=18.0$ g。この質量を正確にはかりとってビーカーで少量の水に溶かし、溶液を 250 mL のメスフラスコに移す。ビーカーを少量の水で洗って洗液もメスフラスコに入れ、標線まで水を加えてよく振り混ぜる。水 250 mL に溶かすと、溶液の体積は 250 mL ちょうどにはならない（溶質が溶けると体積が変わる）ため、モル濃度の定義（溶液 1 L あたりの物質量）に合わなくなる。"
+      },
+      "explanation": "モル濃度の分母は溶液の体積。体積を正確に合わせるにはメスフラスコを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "必要な質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "溶かしてからメスフラスコで標線まで合わせる手順を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "洗液も移すなど溶質を失わない操作にふれている",
+            "points": 1
+          },
+          {
+            "criterion": "水 250 mL に溶かしてはいけない理由を、溶液の体積で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "0.40*250/1000*180",
+        "expected": "18",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-preparation",
+      "explanation_detail": {
+        "approach": "必要な溶質の物質量＝モル濃度×溶液の体積。モル濃度の定義が「溶液」の体積であることから、器具と手順を考える。",
+        "steps": [
+          "溶質の物質量：$0.40\\times0.25=0.10$ mol。",
+          "質量：$0.10\\times180=18.0$ g。",
+          "少量の水に溶かす → メスフラスコに移す → 洗液も加える → 標線まで水を加える → 振り混ぜる。",
+          "水の体積で合わせると溶液の体積が定まらない。"
+        ],
+        "alternatives": [
+          "メスシリンダーで溶液の体積を合わせる方法は精度が低い。正確な濃度が必要なときはメスフラスコを使う、と比較して述べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量",
+            "points": 2
+          },
+          {
+            "point": "手順",
+            "points": 3
+          },
+          {
+            "point": "洗液",
+            "points": 1
+          },
+          {
+            "point": "理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "溶媒の水の体積をそろえれば良いと考える。",
+          "水和物の水和水を式量に含め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "炭酸ナトリウム $\\mathrm{Na_2CO_3}$（式量 106）を用いて、0.40 mol/L の炭酸ナトリウム水溶液を 250 mL 調製したい。必要な質量を求め、正しい調製の手順を、使う器具の名称を含めて説明しなさい。また、「はかりとった固体を水 250 mL に溶かす」方法ではいけない理由も述べなさい。",
+      "answer": {
+        "value": "必要な質量は $0.40\\times\\dfrac{250}{1000}\\times106=10.6$ g。この質量を正確にはかりとってビーカーで少量の水に溶かし、溶液を 250 mL のメスフラスコに移す。ビーカーを少量の水で洗って洗液もメスフラスコに入れ、標線まで水を加えてよく振り混ぜる。水 250 mL に溶かすと、溶液の体積は 250 mL ちょうどにはならない（溶質が溶けると体積が変わる）ため、モル濃度の定義（溶液 1 L あたりの物質量）に合わなくなる。"
+      },
+      "explanation": "モル濃度の分母は溶液の体積。体積を正確に合わせるにはメスフラスコを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "必要な質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "溶かしてからメスフラスコで標線まで合わせる手順を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "洗液も移すなど溶質を失わない操作にふれている",
+            "points": 1
+          },
+          {
+            "criterion": "水 250 mL に溶かしてはいけない理由を、溶液の体積で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "0.40*250/1000*106",
+        "expected": "53/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-preparation",
+      "explanation_detail": {
+        "approach": "必要な溶質の物質量＝モル濃度×溶液の体積。モル濃度の定義が「溶液」の体積であることから、器具と手順を考える。",
+        "steps": [
+          "溶質の物質量：$0.40\\times0.25=0.10$ mol。",
+          "質量：$0.10\\times106=10.6$ g。",
+          "少量の水に溶かす → メスフラスコに移す → 洗液も加える → 標線まで水を加える → 振り混ぜる。",
+          "水の体積で合わせると溶液の体積が定まらない。"
+        ],
+        "alternatives": [
+          "メスシリンダーで溶液の体積を合わせる方法は精度が低い。正確な濃度が必要なときはメスフラスコを使う、と比較して述べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量",
+            "points": 2
+          },
+          {
+            "point": "手順",
+            "points": 3
+          },
+          {
+            "point": "洗液",
+            "points": 1
+          },
+          {
+            "point": "理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "溶媒の水の体積をそろえれば良いと考える。",
+          "水和物の水和水を式量に含め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "グルコース $\\mathrm{C_6H_{12}O_6}$（分子量 180）を用いて、0.40 mol/L のグルコース水溶液を 500 mL 調製したい。必要な質量を求め、正しい調製の手順を、使う器具の名称を含めて説明しなさい。また、「はかりとった固体を水 500 mL に溶かす」方法ではいけない理由も述べなさい。",
+      "answer": {
+        "value": "必要な質量は $0.40\\times\\dfrac{500}{1000}\\times180=36.0$ g。この質量を正確にはかりとってビーカーで少量の水に溶かし、溶液を 500 mL のメスフラスコに移す。ビーカーを少量の水で洗って洗液もメスフラスコに入れ、標線まで水を加えてよく振り混ぜる。水 500 mL に溶かすと、溶液の体積は 500 mL ちょうどにはならない（溶質が溶けると体積が変わる）ため、モル濃度の定義（溶液 1 L あたりの物質量）に合わなくなる。"
+      },
+      "explanation": "モル濃度の分母は溶液の体積。体積を正確に合わせるにはメスフラスコを使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "必要な質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "溶かしてからメスフラスコで標線まで合わせる手順を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "洗液も移すなど溶質を失わない操作にふれている",
+            "points": 1
+          },
+          {
+            "criterion": "水 500 mL に溶かしてはいけない理由を、溶液の体積で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "0.40*500/1000*180",
+        "expected": "36",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-preparation",
+      "explanation_detail": {
+        "approach": "必要な溶質の物質量＝モル濃度×溶液の体積。モル濃度の定義が「溶液」の体積であることから、器具と手順を考える。",
+        "steps": [
+          "溶質の物質量：$0.40\\times0.50=0.20$ mol。",
+          "質量：$0.20\\times180=36.0$ g。",
+          "少量の水に溶かす → メスフラスコに移す → 洗液も加える → 標線まで水を加える → 振り混ぜる。",
+          "水の体積で合わせると溶液の体積が定まらない。"
+        ],
+        "alternatives": [
+          "メスシリンダーで溶液の体積を合わせる方法は精度が低い。正確な濃度が必要なときはメスフラスコを使う、と比較して述べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量",
+            "points": 2
+          },
+          {
+            "point": "手順",
+            "points": 3
+          },
+          {
+            "point": "洗液",
+            "points": 1
+          },
+          {
+            "point": "理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "溶媒の水の体積をそろえれば良いと考える。",
+          "水和物の水和水を式量に含め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "3価の陽イオンになる金属 M の単体 0.54 g に十分な量の塩酸を加えたところ、M はすべて溶けて水素が標準状態（0 ℃、$1.013\\times10^5$ Pa）で 672 mL 発生した。反応は $2\\mathrm{M}+6\\mathrm{HCl}\\longrightarrow2\\mathrm{MCl_3}+3\\mathrm{H_2}$ で表される。M の原子量を求め、M が何であるかを次の中から選び、考え方とともに答えなさい。（　）内は原子量、標準状態の気体のモル体積は 22.4 L/mol とする。\n候補：Mg（24）、Al（27）、Fe（56）、Zn（65）、Cu（64）",
+      "answer": {
+        "value": "水素 $0.0300$ mol より M は $0.0200$ mol。原子量は $\\dfrac{0.54}{0.0200}=27$ で、M は アルミニウム（Al）。"
+      },
+      "explanation": "水素の物質量から係数の比で M の物質量を求め、質量÷物質量でモル質量を出す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水素の物質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比から M の物質量を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "原子量を求め、金属を正しく特定している",
+            "points": 2
+          },
+          {
+            "criterion": "価数と反応式の関係にふれている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "0.54/(672/22400*2/3)",
+        "expected": "27",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U02-identify_metal",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "M は 3 価の陽イオンになるので、反応式の係数比は M : $\\mathrm{H_2}$ ＝ 2 : 3。水素の量から M の物質量を求め、原子量＝質量÷物質量を計算する（原子量と周期表の知識は前単元の内容）。",
+        "steps": [
+          "$n_{\\mathrm{H_2}}=\\dfrac{672}{22400}=0.0300$ mol。",
+          "係数の比より $n_{\\mathrm{M}}=0.0300\\times\\dfrac{2}{3}=0.0200$ mol。",
+          "原子量：$\\dfrac{0.54}{0.0200}=27$。",
+          "候補から M は アルミニウム。"
+        ],
+        "alternatives": [
+          "電子の授受で考える：M 1 mol は電子を 3 mol 放出し、$\\mathrm{H^+}$ 2 mol が電子 2 mol を受け取って $\\mathrm{H_2}$ 1 mol になる。これから M と $\\mathrm{H_2}$ の物質量の比を求めてもよい（酸化還元の単元につながる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水素の物質量",
+            "points": 2
+          },
+          {
+            "point": "M の物質量",
+            "points": 3
+          },
+          {
+            "point": "原子量と特定",
+            "points": 2
+          },
+          {
+            "point": "価数",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わず、M と水素を同じ物質量とする（3価の金属で誤る）。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "3価の陽イオンになる金属 M の単体 1.08 g に十分な量の塩酸を加えたところ、M はすべて溶けて水素が標準状態（0 ℃、$1.013\\times10^5$ Pa）で 1344 mL 発生した。反応は $2\\mathrm{M}+6\\mathrm{HCl}\\longrightarrow2\\mathrm{MCl_3}+3\\mathrm{H_2}$ で表される。M の原子量を求め、M が何であるかを次の中から選び、考え方とともに答えなさい。（　）内は原子量、標準状態の気体のモル体積は 22.4 L/mol とする。\n候補：Mg（24）、Al（27）、Fe（56）、Zn（65）、Cu（64）",
+      "answer": {
+        "value": "水素 $0.0600$ mol より M は $0.0400$ mol。原子量は $\\dfrac{1.08}{0.0400}=27$ で、M は アルミニウム（Al）。"
+      },
+      "explanation": "水素の物質量から係数の比で M の物質量を求め、質量÷物質量でモル質量を出す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水素の物質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比から M の物質量を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "原子量を求め、金属を正しく特定している",
+            "points": 2
+          },
+          {
+            "criterion": "価数と反応式の関係にふれている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "1.08/(1344/22400*2/3)",
+        "expected": "27",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U02-identify_metal",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "M は 3 価の陽イオンになるので、反応式の係数比は M : $\\mathrm{H_2}$ ＝ 2 : 3。水素の量から M の物質量を求め、原子量＝質量÷物質量を計算する（原子量と周期表の知識は前単元の内容）。",
+        "steps": [
+          "$n_{\\mathrm{H_2}}=\\dfrac{1344}{22400}=0.0600$ mol。",
+          "係数の比より $n_{\\mathrm{M}}=0.0600\\times\\dfrac{2}{3}=0.0400$ mol。",
+          "原子量：$\\dfrac{1.08}{0.0400}=27$。",
+          "候補から M は アルミニウム。"
+        ],
+        "alternatives": [
+          "電子の授受で考える：M 1 mol は電子を 3 mol 放出し、$\\mathrm{H^+}$ 2 mol が電子 2 mol を受け取って $\\mathrm{H_2}$ 1 mol になる。これから M と $\\mathrm{H_2}$ の物質量の比を求めてもよい（酸化還元の単元につながる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水素の物質量",
+            "points": 2
+          },
+          {
+            "point": "M の物質量",
+            "points": 3
+          },
+          {
+            "point": "原子量と特定",
+            "points": 2
+          },
+          {
+            "point": "価数",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わず、M と水素を同じ物質量とする（3価の金属で誤る）。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2価の陽イオンになる金属 M の単体 0.975 g に十分な量の塩酸を加えたところ、M はすべて溶けて水素が標準状態（0 ℃、$1.013\\times10^5$ Pa）で 336 mL 発生した。反応は $\\mathrm{M}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MCl_2}+\\mathrm{H_2}$ で表される。M の原子量を求め、M が何であるかを次の中から選び、考え方とともに答えなさい。（　）内は原子量、標準状態の気体のモル体積は 22.4 L/mol とする。\n候補：Mg（24）、Al（27）、Fe（56）、Zn（65）、Cu（64）",
+      "answer": {
+        "value": "水素 $0.0150$ mol より M は $0.0150$ mol。原子量は $\\dfrac{0.975}{0.0150}=65$ で、M は 亜鉛（Zn）。"
+      },
+      "explanation": "水素の物質量から係数の比で M の物質量を求め、質量÷物質量でモル質量を出す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水素の物質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比から M の物質量を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "原子量を求め、金属を正しく特定している",
+            "points": 2
+          },
+          {
+            "criterion": "価数と反応式の関係にふれている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "0.975/(336/22400*1/1)",
+        "expected": "65",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U02-identify_metal",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "M は 2 価の陽イオンになるので、反応式の係数比は M : $\\mathrm{H_2}$ ＝ 1 : 1。水素の量から M の物質量を求め、原子量＝質量÷物質量を計算する（原子量と周期表の知識は前単元の内容）。",
+        "steps": [
+          "$n_{\\mathrm{H_2}}=\\dfrac{336}{22400}=0.0150$ mol。",
+          "係数の比より $n_{\\mathrm{M}}=0.0150\\times1=0.0150$ mol。",
+          "原子量：$\\dfrac{0.975}{0.0150}=65$。",
+          "候補から M は 亜鉛。Cu は塩酸に溶けないことからも除外できる。"
+        ],
+        "alternatives": [
+          "電子の授受で考える：M 1 mol は電子を 2 mol 放出し、$\\mathrm{H^+}$ 2 mol が電子 2 mol を受け取って $\\mathrm{H_2}$ 1 mol になる。これから M と $\\mathrm{H_2}$ の物質量の比を求めてもよい（酸化還元の単元につながる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水素の物質量",
+            "points": 2
+          },
+          {
+            "point": "M の物質量",
+            "points": 3
+          },
+          {
+            "point": "原子量と特定",
+            "points": 2
+          },
+          {
+            "point": "価数",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わず、M と水素を同じ物質量とする（3価の金属で誤る）。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "2価の陽イオンになる金属 M の単体 0.325 g に十分な量の塩酸を加えたところ、M はすべて溶けて水素が標準状態（0 ℃、$1.013\\times10^5$ Pa）で 112 mL 発生した。反応は $\\mathrm{M}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MCl_2}+\\mathrm{H_2}$ で表される。M の原子量を求め、M が何であるかを次の中から選び、考え方とともに答えなさい。（　）内は原子量、標準状態の気体のモル体積は 22.4 L/mol とする。\n候補：Mg（24）、Al（27）、Fe（56）、Zn（65）、Cu（64）",
+      "answer": {
+        "value": "水素 $0.00500$ mol より M は $0.00500$ mol。原子量は $\\dfrac{0.325}{0.00500}=65$ で、M は 亜鉛（Zn）。"
+      },
+      "explanation": "水素の物質量から係数の比で M の物質量を求め、質量÷物質量でモル質量を出す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水素の物質量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比から M の物質量を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "原子量を求め、金属を正しく特定している",
+            "points": 2
+          },
+          {
+            "criterion": "価数と反応式の関係にふれている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "0.325/(112/22400*1/1)",
+        "expected": "65",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U02-identify_metal",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "M は 2 価の陽イオンになるので、反応式の係数比は M : $\\mathrm{H_2}$ ＝ 1 : 1。水素の量から M の物質量を求め、原子量＝質量÷物質量を計算する（原子量と周期表の知識は前単元の内容）。",
+        "steps": [
+          "$n_{\\mathrm{H_2}}=\\dfrac{112}{22400}=0.00500$ mol。",
+          "係数の比より $n_{\\mathrm{M}}=0.00500\\times1=0.00500$ mol。",
+          "原子量：$\\dfrac{0.325}{0.00500}=65$。",
+          "候補から M は 亜鉛。Cu は塩酸に溶けないことからも除外できる。"
+        ],
+        "alternatives": [
+          "電子の授受で考える：M 1 mol は電子を 2 mol 放出し、$\\mathrm{H^+}$ 2 mol が電子 2 mol を受け取って $\\mathrm{H_2}$ 1 mol になる。これから M と $\\mathrm{H_2}$ の物質量の比を求めてもよい（酸化還元の単元につながる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水素の物質量",
+            "points": 2
+          },
+          {
+            "point": "M の物質量",
+            "points": 3
+          },
+          {
+            "point": "原子量と特定",
+            "points": 2
+          },
+          {
+            "point": "価数",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を使わず、M と水素を同じ物質量とする（3価の金属で誤る）。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "濃度の分からない塩酸 25 mL ずつを6つのビーカーに入れ、マグネシウムを 0.090 g、0.18 g、…と 0.090 g ずつ増やして加えて、発生した水素の体積（標準状態に換算）を測定した。結果は表のとおりである。$\\mathrm{Mg}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MgCl_2}+\\mathrm{H_2}$、原子量 Mg＝24、標準状態の気体のモル体積は 22.4 L/mol とする。\n(1) 塩酸 25 mL とちょうど過不足なく反応するマグネシウムの質量を求めなさい。\n(2) この塩酸のモル濃度を求めなさい。\n(3) 表の後半で水素の体積が増えなくなる理由を説明しなさい。",
+      "table": {
+        "rows": [
+          [
+            "0.090",
+            "84.0"
+          ],
+          [
+            "0.18",
+            "168"
+          ],
+          [
+            "0.27",
+            "252"
+          ],
+          [
+            "0.36",
+            "336"
+          ],
+          [
+            "0.45",
+            "336"
+          ],
+          [
+            "0.54",
+            "336"
+          ]
+        ],
+        "header": [
+          "Mg の質量 [g]",
+          "発生した $\\mathrm{H_2}$ [mL]"
+        ],
+        "caption": "実験結果（測定値を理論値として扱う）"
+      },
+      "answer": {
+        "value": "(1) 0.36 g　(2) 1.2 mol/L　(3) 加えたマグネシウムが 0.36 g をこえると塩酸中の HCl がすべて反応してしまい、HCl が不足するため。余分なマグネシウムは反応せずに残り、水素は HCl の量で決まる最大値 336 mL のまま増えない。"
+      },
+      "explanation": "グラフ（表）の折れ曲がり点がちょうど過不足なく反応する点。そこでの量から HCl の物質量が分かる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 折れ曲がり点を読み取り、質量を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(2) HCl の物質量から濃度を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(3) HCl が不足することを説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "[1.2*25/1000/2*24, 1.2]",
+        "expected": "[9/25, 6/5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-data_table",
+      "explanation_detail": {
+        "approach": "Mg の質量に比例して水素が増える範囲は Mg が不足（すべて反応）、一定になった範囲は HCl が不足。比例の直線と水平線の交点が過不足なく反応する点。",
+        "steps": [
+          "最大の水素の体積は 336 mL＝$0.0150$ mol。",
+          "これと過不足なく反応する Mg も $0.0150$ mol＝0.36 g。",
+          "HCl はその2倍の $0.0300$ mol。濃度は $\\dfrac{0.0300}{0.025}=1.2$ mol/L。",
+          "後半は HCl が不足し、水素の量は一定。"
+        ],
+        "alternatives": [
+          "表の値をグラフにして、原点を通る直線部分と水平部分の交点を読み取ってもよい。",
+          "前半の比例部分から「Mg 1 g あたりの水素の体積」を求め、最大値をそれで割っても (1) が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 3
+          },
+          {
+            "point": "(2)",
+            "points": 3
+          },
+          {
+            "point": "(3)",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "表の最後の Mg の質量をすべて反応したものとして計算する。",
+          "HCl と $\\mathrm{H_2}$ の係数の比 2:1 を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "濃度の分からない塩酸 25 mL ずつを6つのビーカーに入れ、マグネシウムを 0.060 g、0.12 g、…と 0.060 g ずつ増やして加えて、発生した水素の体積（標準状態に換算）を測定した。結果は表のとおりである。$\\mathrm{Mg}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MgCl_2}+\\mathrm{H_2}$、原子量 Mg＝24、標準状態の気体のモル体積は 22.4 L/mol とする。\n(1) 塩酸 25 mL とちょうど過不足なく反応するマグネシウムの質量を求めなさい。\n(2) この塩酸のモル濃度を求めなさい。\n(3) 表の後半で水素の体積が増えなくなる理由を説明しなさい。",
+      "table": {
+        "rows": [
+          [
+            "0.060",
+            "56.0"
+          ],
+          [
+            "0.12",
+            "112"
+          ],
+          [
+            "0.18",
+            "168"
+          ],
+          [
+            "0.24",
+            "224"
+          ],
+          [
+            "0.30",
+            "224"
+          ],
+          [
+            "0.36",
+            "224"
+          ]
+        ],
+        "header": [
+          "Mg の質量 [g]",
+          "発生した $\\mathrm{H_2}$ [mL]"
+        ],
+        "caption": "実験結果（測定値を理論値として扱う）"
+      },
+      "answer": {
+        "value": "(1) 0.24 g　(2) 0.80 mol/L　(3) 加えたマグネシウムが 0.24 g をこえると塩酸中の HCl がすべて反応してしまい、HCl が不足するため。余分なマグネシウムは反応せずに残り、水素は HCl の量で決まる最大値 224 mL のまま増えない。"
+      },
+      "explanation": "グラフ（表）の折れ曲がり点がちょうど過不足なく反応する点。そこでの量から HCl の物質量が分かる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 折れ曲がり点を読み取り、質量を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(2) HCl の物質量から濃度を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(3) HCl が不足することを説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "[0.80*25/1000/2*24, 0.80]",
+        "expected": "[6/25, 4/5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-data_table",
+      "explanation_detail": {
+        "approach": "Mg の質量に比例して水素が増える範囲は Mg が不足（すべて反応）、一定になった範囲は HCl が不足。比例の直線と水平線の交点が過不足なく反応する点。",
+        "steps": [
+          "最大の水素の体積は 224 mL＝$0.0100$ mol。",
+          "これと過不足なく反応する Mg も $0.0100$ mol＝0.24 g。",
+          "HCl はその2倍の $0.0200$ mol。濃度は $\\dfrac{0.0200}{0.025}=0.80$ mol/L。",
+          "後半は HCl が不足し、水素の量は一定。"
+        ],
+        "alternatives": [
+          "表の値をグラフにして、原点を通る直線部分と水平部分の交点を読み取ってもよい。",
+          "前半の比例部分から「Mg 1 g あたりの水素の体積」を求め、最大値をそれで割っても (1) が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 3
+          },
+          {
+            "point": "(2)",
+            "points": 3
+          },
+          {
+            "point": "(3)",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "表の最後の Mg の質量をすべて反応したものとして計算する。",
+          "HCl と $\\mathrm{H_2}$ の係数の比 2:1 を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "濃度の分からない塩酸 100 mL ずつを6つのビーカーに入れ、マグネシウムを 0.12 g、0.24 g、…と 0.12 g ずつ増やして加えて、発生した水素の体積（標準状態に換算）を測定した。結果は表のとおりである。$\\mathrm{Mg}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MgCl_2}+\\mathrm{H_2}$、原子量 Mg＝24、標準状態の気体のモル体積は 22.4 L/mol とする。\n(1) 塩酸 100 mL とちょうど過不足なく反応するマグネシウムの質量を求めなさい。\n(2) この塩酸のモル濃度を求めなさい。\n(3) 表の後半で水素の体積が増えなくなる理由を説明しなさい。",
+      "table": {
+        "rows": [
+          [
+            "0.12",
+            "112"
+          ],
+          [
+            "0.24",
+            "224"
+          ],
+          [
+            "0.36",
+            "336"
+          ],
+          [
+            "0.48",
+            "448"
+          ],
+          [
+            "0.60",
+            "448"
+          ],
+          [
+            "0.72",
+            "448"
+          ]
+        ],
+        "header": [
+          "Mg の質量 [g]",
+          "発生した $\\mathrm{H_2}$ [mL]"
+        ],
+        "caption": "実験結果（測定値を理論値として扱う）"
+      },
+      "answer": {
+        "value": "(1) 0.48 g　(2) 0.40 mol/L　(3) 加えたマグネシウムが 0.48 g をこえると塩酸中の HCl がすべて反応してしまい、HCl が不足するため。余分なマグネシウムは反応せずに残り、水素は HCl の量で決まる最大値 448 mL のまま増えない。"
+      },
+      "explanation": "グラフ（表）の折れ曲がり点がちょうど過不足なく反応する点。そこでの量から HCl の物質量が分かる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 折れ曲がり点を読み取り、質量を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(2) HCl の物質量から濃度を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(3) HCl が不足することを説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "[0.40*100/1000/2*24, 0.40]",
+        "expected": "[12/25, 2/5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U02-data_table",
+      "explanation_detail": {
+        "approach": "Mg の質量に比例して水素が増える範囲は Mg が不足（すべて反応）、一定になった範囲は HCl が不足。比例の直線と水平線の交点が過不足なく反応する点。",
+        "steps": [
+          "最大の水素の体積は 448 mL＝$0.0200$ mol。",
+          "これと過不足なく反応する Mg も $0.0200$ mol＝0.48 g。",
+          "HCl はその2倍の $0.0400$ mol。濃度は $\\dfrac{0.0400}{0.10}=0.40$ mol/L。",
+          "後半は HCl が不足し、水素の量は一定。"
+        ],
+        "alternatives": [
+          "表の値をグラフにして、原点を通る直線部分と水平部分の交点を読み取ってもよい。",
+          "前半の比例部分から「Mg 1 g あたりの水素の体積」を求め、最大値をそれで割っても (1) が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 3
+          },
+          {
+            "point": "(2)",
+            "points": 3
+          },
+          {
+            "point": "(3)",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "表の最後の Mg の質量をすべて反応したものとして計算する。",
+          "HCl と $\\mathrm{H_2}$ の係数の比 2:1 を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で 4.48 L の水素 $\\mathrm{H_2}$ の質量を求めなさい。原子量は H＝1.0 とする。標準状態の気体のモル体積を 22.4 L/mol とする。\n［ある生徒の解答］\n物質量は $\\dfrac{4.48}{22.4}=0.20$ mol。水素の原子量 1.0 をかけて $0.20\\times1.0=0.20$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.40$ g"
+      },
+      "explanation": "気体の水素は二原子分子 $\\mathrm{H_2}$ として存在するので、モル質量は 2.0 g/mol。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "4.48/22.4*(1.0*2)",
+        "expected": "2/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-err_molar_volume",
+      "explanation_detail": {
+        "approach": "「何の粒子の物質量か」を明確にし、その粒子のモル質量をかける。",
+        "steps": [
+          "$n=\\dfrac{4.48}{22.4}=0.20$ mol（$\\mathrm{H_2}$ 分子の物質量）。",
+          "モル質量は分子量 2.0 に g/mol をつけたもの。",
+          "$w=0.20\\times2.0=0.40$ g。"
+        ],
+        "alternatives": [
+          "1 mol（22.4 L）の質量が分子量の値になることから、比例で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "単体の気体の分子式（$\\mathrm{O_2}$ など）を原子として扱う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "物質量は $\\dfrac{4.48}{22.4}=0.20$ mol。水素の原子量 1.0 をかけて $0.20\\times1.0=0.20$ g",
+        "error_step": "モル質量に原子量を用いた部分",
+        "error_type": "concept",
+        "why_tempting": "元素記号 H の原子量をそのまま使い、水素が二原子分子 $\\mathrm{H_2}$ であることを見落としている。",
+        "correction": "$\\mathrm{H_2}$ の分子量は 2.0。$0.20\\times2.0=0.40$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で 5.6 L の水素 $\\mathrm{H_2}$ の質量を求めなさい。原子量は H＝1.0 とする。標準状態の気体のモル体積を 22.4 L/mol とする。\n［ある生徒の解答］\n物質量は $\\dfrac{5.6}{22.4}=0.25$ mol。水素の原子量 1.0 をかけて $0.25\\times1.0=0.25$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.50$ g"
+      },
+      "explanation": "気体の水素は二原子分子 $\\mathrm{H_2}$ として存在するので、モル質量は 2.0 g/mol。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "5.6/22.4*(1.0*2)",
+        "expected": "1/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-err_molar_volume",
+      "explanation_detail": {
+        "approach": "「何の粒子の物質量か」を明確にし、その粒子のモル質量をかける。",
+        "steps": [
+          "$n=\\dfrac{5.6}{22.4}=0.25$ mol（$\\mathrm{H_2}$ 分子の物質量）。",
+          "モル質量は分子量 2.0 に g/mol をつけたもの。",
+          "$w=0.25\\times2.0=0.50$ g。"
+        ],
+        "alternatives": [
+          "1 mol（22.4 L）の質量が分子量の値になることから、比例で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "単体の気体の分子式（$\\mathrm{O_2}$ など）を原子として扱う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "物質量は $\\dfrac{5.6}{22.4}=0.25$ mol。水素の原子量 1.0 をかけて $0.25\\times1.0=0.25$ g",
+        "error_step": "モル質量に原子量を用いた部分",
+        "error_type": "concept",
+        "why_tempting": "元素記号 H の原子量をそのまま使い、水素が二原子分子 $\\mathrm{H_2}$ であることを見落としている。",
+        "correction": "$\\mathrm{H_2}$ の分子量は 2.0。$0.25\\times2.0=0.50$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "標準状態（0 ℃、$1.013\\times10^5$ Pa）で 33.6 L の水素 $\\mathrm{H_2}$ の質量を求めなさい。原子量は H＝1.0 とする。標準状態の気体のモル体積を 22.4 L/mol とする。\n［ある生徒の解答］\n物質量は $\\dfrac{33.6}{22.4}=1.5$ mol。水素の原子量 1.0 をかけて $1.5\\times1.0=1.5$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3.0$ g"
+      },
+      "explanation": "気体の水素は二原子分子 $\\mathrm{H_2}$ として存在するので、モル質量は 2.0 g/mol。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "33.6/22.4*(1.0*2)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U02-err_molar_volume",
+      "explanation_detail": {
+        "approach": "「何の粒子の物質量か」を明確にし、その粒子のモル質量をかける。",
+        "steps": [
+          "$n=\\dfrac{33.6}{22.4}=1.5$ mol（$\\mathrm{H_2}$ 分子の物質量）。",
+          "モル質量は分子量 2.0 に g/mol をつけたもの。",
+          "$w=1.5\\times2.0=3.0$ g。"
+        ],
+        "alternatives": [
+          "1 mol（22.4 L）の質量が分子量の値になることから、比例で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "単体の気体の分子式（$\\mathrm{O_2}$ など）を原子として扱う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "物質量は $\\dfrac{33.6}{22.4}=1.5$ mol。水素の原子量 1.0 をかけて $1.5\\times1.0=1.5$ g",
+        "error_step": "モル質量に原子量を用いた部分",
+        "error_type": "concept",
+        "why_tempting": "元素記号 H の原子量をそのまま使い、水素が二原子分子 $\\mathrm{H_2}$ であることを見落としている。",
+        "correction": "$\\mathrm{H_2}$ の分子量は 2.0。$1.5\\times2.0=3.0$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.50 mol/L の塩酸 20 mL に水 100 mL を加えてうすめた。うすめた後の塩酸のモル濃度を有効数字2桁で求めなさい。ただし、混合による体積の変化はないものとする。\n［ある生徒の解答］\n$\\dfrac{0.50\\times20}{100}=0.10$ mol/L\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.083$ mol/L"
+      },
+      "explanation": "うすめた後の溶液の体積は、もとの溶液と加えた水の体積の和。溶質の物質量は変わらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.50*20/(20+100)",
+        "expected": "1/12",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-err_concentration",
+      "explanation_detail": {
+        "approach": "希釈では「溶質の物質量が一定」「溶液全体の体積で割る」の2点を確認する。",
+        "steps": [
+          "溶質（HCl）：$0.50\\times\\dfrac{20}{1000}=0.010$ mol。",
+          "溶液：$120$ mL。",
+          "$c=\\dfrac{0.010}{0.12}\\fallingdotseq0.083$ mol/L。"
+        ],
+        "alternatives": [
+          "うすめた後の濃度は、もとの濃度より必ず小さく、体積の比 $\\dfrac{20}{120}$ 倍になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加えた水の体積だけで割る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{0.50\\times20}{100}=0.10$ mol/L",
+        "error_step": "割る体積（分母）",
+        "error_type": "concept",
+        "why_tempting": "「水 100 mL でうすめた」という文から、加えた水の体積だけを分母にしてしまった。",
+        "correction": "溶液の体積は $20+100=120$ mL なので $\\dfrac{0.50\\times20}{120}\\fallingdotseq0.083$ mol/L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.20 mol/L の塩酸 20 mL に水 80 mL を加えてうすめた。うすめた後の塩酸のモル濃度を有効数字2桁で求めなさい。ただし、混合による体積の変化はないものとする。\n［ある生徒の解答］\n$\\dfrac{0.20\\times20}{80}=0.050$ mol/L\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.040$ mol/L"
+      },
+      "explanation": "うすめた後の溶液の体積は、もとの溶液と加えた水の体積の和。溶質の物質量は変わらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.20*20/(20+80)",
+        "expected": "1/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-err_concentration",
+      "explanation_detail": {
+        "approach": "希釈では「溶質の物質量が一定」「溶液全体の体積で割る」の2点を確認する。",
+        "steps": [
+          "溶質（HCl）：$0.20\\times\\dfrac{20}{1000}=0.0040$ mol。",
+          "溶液：$100$ mL。",
+          "$c=\\dfrac{0.0040}{0.10}\\fallingdotseq0.040$ mol/L。"
+        ],
+        "alternatives": [
+          "うすめた後の濃度は、もとの濃度より必ず小さく、体積の比 $\\dfrac{20}{100}$ 倍になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加えた水の体積だけで割る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{0.20\\times20}{80}=0.050$ mol/L",
+        "error_step": "割る体積（分母）",
+        "error_type": "concept",
+        "why_tempting": "「水 80 mL でうすめた」という文から、加えた水の体積だけを分母にしてしまった。",
+        "correction": "溶液の体積は $20+80=100$ mL なので $\\dfrac{0.20\\times20}{100}\\fallingdotseq0.040$ mol/L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "グルコース $\\mathrm{C_6H_{12}O_6}$を用いて、0.50 mol/L の水溶液を 1000 mL つくる方法を答えなさい。原子量は H＝1.0、C＝12、O＝16 とする。\n［ある生徒の解答］\nグルコース 90 g（0.50 mol）をはかりとり、水 1000 mL に溶かす\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "90 g を少量の水に溶かしてメスフラスコに移し、標線まで水を加えて溶液全体を 1000 mL にする。"
+      },
+      "explanation": "モル濃度は溶液 1 L あたりの溶質の物質量。水 1000 mL に溶かすと溶液の体積はその値からずれる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.50*1.0*(12*6+1.0*12+16*6)",
+        "expected": "90",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U02-err_concentration",
+      "explanation_detail": {
+        "approach": "モル濃度の定義の分母が「溶液」の体積であることに立ち返る。",
+        "steps": [
+          "必要な溶質：$0.50\\times1.0=0.50$ mol＝90 g。",
+          "溶かしてからメスフラスコへ移す。",
+          "標線まで水を加え、溶液の体積を合わせる。"
+        ],
+        "alternatives": [
+          "定義式 $c=\\dfrac{n}{V_{\\text{溶液}}}$ に当てはめて、誤った方法では $V_{\\text{溶液}}$ が分からないことを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶媒の体積と溶液の体積を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "グルコース 90 g（0.50 mol）をはかりとり、水 1000 mL に溶かす",
+        "error_step": "水の体積で合わせている部分",
+        "error_type": "concept",
+        "why_tempting": "モル濃度の「1 L あたり」を、溶媒である水の量と取り違えている。日常の「水○○ mL に溶かす」という表現にも引きずられやすい。",
+        "correction": "90 g を少量の水に溶かし、メスフラスコで溶液全体を 1000 mL にする"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "次の反応で、水素 $\\mathrm{H_2}$ 0.20 g がすべて反応するとき、生成するアンモニアは何 g か。有効数字2桁で答えなさい。\n$$\\mathrm{N_2}+3\\mathrm{H_2}\\longrightarrow 2\\mathrm{NH_3}$$\n原子量は H＝1.0、N＝14 とする。\n［ある生徒の解答］\n係数の比 3:2 が質量の比なので、$0.20\\times\\dfrac{2}{3}=0.13$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.1$ g"
+      },
+      "explanation": "化学反応式の係数の比は物質量の比。質量に直すには、それぞれのモル質量をかける必要がある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.20/(1.0*2)*2/3*(14+1.0*3)",
+        "expected": "17/15",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U02-err_stoich",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量 の順を守る。",
+        "steps": [
+          "水素：$\\dfrac{0.20}{2.0}=0.10$ mol。",
+          "係数の比 3:2 より アンモニアは $0.0667$ mol。",
+          "質量：$0.0667\\times17\\fallingdotseq1.1$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式 $3\\times2.0:2\\times17=0.20:x$ を立てて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を質量の比とみなす。",
+          "係数を無視する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "係数の比 3:2 が質量の比なので、$0.20\\times\\dfrac{2}{3}=0.13$ g",
+        "error_step": "係数の比を質量の比として使った部分",
+        "error_type": "formula",
+        "why_tempting": "係数の比が「量の比」であることは覚えているが、それが物質量の比であって質量の比ではないことを区別していない。",
+        "correction": "$0.10\\times\\dfrac{2}{3}\\times17\\fallingdotseq1.1$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "次の反応で、酸素 $\\mathrm{O_2}$ 12.8 g がすべて反応するとき、生成する水は何 g か。有効数字2桁で答えなさい。\n$$2\\mathrm{H_2}+\\mathrm{O_2}\\longrightarrow 2\\mathrm{H_2O}$$\n原子量は H＝1.0、O＝16 とする。\n［ある生徒の解答］\n係数の比 1:2 が質量の比なので、$12.8\\times\\dfrac{2}{1}=26$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$14$ g"
+      },
+      "explanation": "化学反応式の係数の比は物質量の比。質量に直すには、それぞれのモル質量をかける必要がある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "12.8/(16*2)*2/1*(1.0*2+16)",
+        "expected": "72/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U02-err_stoich",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量 の順を守る。",
+        "steps": [
+          "酸素：$\\dfrac{12.8}{32}=0.40$ mol。",
+          "係数の比 1:2 より 水は $0.800$ mol。",
+          "質量：$0.800\\times18\\fallingdotseq14$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式 $1\\times32:2\\times18=12.8:x$ を立てて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を質量の比とみなす。",
+          "係数を無視する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "係数の比 1:2 が質量の比なので、$12.8\\times\\dfrac{2}{1}=26$ g",
+        "error_step": "係数の比を質量の比として使った部分",
+        "error_type": "formula",
+        "why_tempting": "係数の比が「量の比」であることは覚えているが、それが物質量の比であって質量の比ではないことを区別していない。",
+        "correction": "$0.40\\times\\dfrac{2}{1}\\times18\\fallingdotseq14$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "次の反応で、水 $\\mathrm{H_2O}$ 0.90 g が生成するとき、反応する塩化水素は何 g か。有効数字2桁で答えなさい。\n$$\\mathrm{CaCO_3}+2\\mathrm{HCl}\\longrightarrow \\mathrm{CaCl_2}+\\mathrm{H_2O}+\\mathrm{CO_2}$$\n原子量は H＝1.0、O＝16、Cl＝35.5 とする。\n［ある生徒の解答］\n水は $\\dfrac{0.90}{18}=0.050$ mol なので、塩化水素も 0.050 mol。$0.050\\times36.5=1.8$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3.7$ g"
+      },
+      "explanation": "化学反応式の係数の比は物質量の比。質量に直すには、それぞれのモル質量をかける必要がある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.90/(1.0*2+16)*2/1*(1.0+35.5)",
+        "expected": "73/20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U02-err_stoich",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量 の順を守る。",
+        "steps": [
+          "水：$\\dfrac{0.90}{18}=0.050$ mol。",
+          "係数の比 1:2 より 塩化水素は $0.100$ mol。",
+          "質量：$0.100\\times36.5\\fallingdotseq3.7$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式 $1\\times18:2\\times36.5=0.90:x$ を立てて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を質量の比とみなす。",
+          "係数を無視する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "水は $\\dfrac{0.90}{18}=0.050$ mol なので、塩化水素も 0.050 mol。$0.050\\times36.5=1.8$ g",
+        "error_step": "物質量の比を 1:1 とした部分",
+        "error_type": "calculation",
+        "why_tempting": "物質量に直すところまではできているが、係数を見ずに「同じ物質量だけ反応・生成する」と思い込んでいる。",
+        "correction": "$0.050\\times\\dfrac{2}{1}\\times36.5\\fallingdotseq3.7$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "次の反応で、ナトリウム $\\mathrm{Na}$ 1.15 g がすべて反応するとき、反応する水は何 g か。有効数字2桁で答えなさい。\n$$2\\mathrm{Na}+2\\mathrm{H_2O}\\longrightarrow 2\\mathrm{NaOH}+\\mathrm{H_2}$$\n原子量は H＝1.0、O＝16、Na＝23 とする。\n［ある生徒の解答］\n係数の比 2:2 が質量の比なので、$1.15\\times\\dfrac{2}{2}=1.2$ g\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.90$ g"
+      },
+      "explanation": "化学反応式の係数の比は物質量の比。質量に直すには、それぞれのモル質量をかける必要がある。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1.15/(23)*2/2*(1.0*2+16)",
+        "expected": "9/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U02-err_stoich",
+      "explanation_detail": {
+        "approach": "質量 → 物質量 → 係数の比 → 物質量 → 質量 の順を守る。",
+        "steps": [
+          "ナトリウム：$\\dfrac{1.15}{23}=0.050$ mol。",
+          "係数の比 2:2 より 水は $0.0500$ mol。",
+          "質量：$0.0500\\times18\\fallingdotseq0.90$ g。"
+        ],
+        "alternatives": [
+          "質量の比例式 $2\\times23:2\\times18=1.15:x$ を立てて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を質量の比とみなす。",
+          "係数を無視する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "係数の比 2:2 が質量の比なので、$1.15\\times\\dfrac{2}{2}=1.2$ g",
+        "error_step": "係数の比を質量の比として使った部分",
+        "error_type": "formula",
+        "why_tempting": "係数の比が「量の比」であることは覚えているが、それが物質量の比であって質量の比ではないことを区別していない。",
+        "correction": "$0.050\\times\\dfrac{2}{2}\\times18\\fallingdotseq0.90$ g"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "b3777cef2fb90d29fd619ee9923d75152127b8c8bb79a27962fc1e6b0f35c41c"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 5 問（Q006, Q009, Q039, Q040, Q045）",
+      "content_hash": "d9358a5850b84f70ada2c6ae89f54d38bdf2dd31a5f139bb8eb2be2596312f78"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 38 問（Q006, Q008, Q009, Q013, Q014, Q015, Q016, Q017, Q021, Q022 他）",
+      "content_hash": "e834f8674e82454ed7b8334ff4f0c8aefdcdaa3d8c0f00e3561eb885046a78af"
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 5 問（Q003, Q005, Q006, Q009, Q032）",
+      "content_hash": "c8c53c8390dc44c47677d8d5af1620afa5eada091dd67e6e542112a0b7f0128a"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:48:24+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "2b5a77da01252e310cbe539a38ad2b6b01ed4f37deef0ccec32cde2a0e2cf0f2"
+  }
+}
