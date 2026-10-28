@@ -729,7 +729,8 @@ PROOFS = [
          setup="右の図のように，△ABC の辺 AB，AC 上にそれぞれ点 D，E があり，DE//BC である。このとき，△ADE∽△ABC であることを次のように証明した。",
          body=["△ADE と △ABC において，", "DE//BC より，（a）は等しいから　${ADE}={ABC}$　……①", "∠A は共通　……②", "①，②から，（b）ので，△ADE∽△ABC"],
          a="同位角", b="2組の角がそれぞれ等しい"),
-    dict(pts={"A": (0, 2.4), "C": (1.8, 2.4), "O": inter((0, 2.4), (3.0, -1.0), (1.8, 2.4), (0.0, -1.0)), "B": (3.0, -1.0), "D": (0.0, -1.0)}, segs=[("A", "B"), ("C", "D"), ("A", "C"), ("D", "B")], off={"O": (0.4, 0)},
+    dict(pts={"A": (0, 2.4), "C": (1.8, 2.4), "O": inter((0, 2.4), (3.0, -1.0), (1.8, 2.4), (0.0, -1.0)), "B": (3.0, -1.0), "D": (0.0, -1.0)},
+         segs=[("A", "B"), ("C", "D"), ("A", "C"), ("D", "B")], off={"O": (0.4, 0)},
          setup="右の図のように，2つの線分 AB，CD が点 O で交わり，AC//DB である。このとき，△OAC∽△OBD であることを次のように証明した。",
          body=["△OAC と △OBD において，", "AC//DB より，（a）は等しいから　${OAC}={OBD}$　……①", "対頂角は等しいから　${AOC}={BOD}$　……②", "①，②から，（b）ので，△OAC∽△OBD"],
          a="錯角", b="2組の角がそれぞれ等しい"),
@@ -741,47 +742,74 @@ PROOFS = [
          setup="右の図のように，△ABC の辺 BC 上に，${BAD}={BCA}$ となる点 D をとる。このとき，△ABD∽△CBA であることを次のように証明した。",
          body=["△ABD と △CBA において，", "仮定から　${BAD}={BCA}$　……①", "（a）だから　${ABD}={CBA}$　……②", "①，②から，（b）ので，△ABD∽△CBA"],
          a="∠B は共通", b="2組の角がそれぞれ等しい"),
+    dict(pts={"A": (0, 3.0), "B": (0, 0), "C": (4.0, 0), "D": (1.44, 1.92)}, segs=[("A", "B"), ("B", "C"), ("C", "A"), ("B", "D")], off={"D": (0.3, 0.3)},
+         setup="右の図のように，${ABC}=90^\\circ$ の直角三角形 ABC で，頂点 B から辺 AC に垂線 BD をひく。このとき，△ABC∽△BDC であることを次のように証明した。",
+         body=["△ABC と △BDC において，", "仮定から　${ABC}={BDC}=90^\\circ$　……①", "（a）だから　${ACB}={BCD}$　……②", "①，②から，（b）ので，△ABC∽△BDC"],
+         a="∠C は共通", b="2組の角がそれぞれ等しい"),
+    dict(pts={"A": (2.0, 3.6), "B": (0, 0), "C": (5.0, 0), "D": (1.333, 2.4), "E": (2.857, 2.057)}, segs=[("A", "B"), ("B", "C"), ("C", "A"), ("D", "E")], off={"D": (-0.35, 0), "E": (0.35, 0.1)},
+         setup="右の図のように，△ABC の辺 AB 上に点 D，辺 AC 上に点 E があり，AB$={ab}$ cm，AC$={ac}$ cm，AD$={ad}$ cm，AE$={ae}$ cm である。このとき，△AED∽△ABC であることを次のように証明した。",
+         body=["△AED と △ABC において，", "AE：AB$={r1}$，AD：AC$={r2}$　……①", "（a）だから　${EAD}={BAC}$　……②", "①，②から，（b）ので，△AED∽△ABC"],
+         a="∠A は共通", b="2組の辺の比とその間の角がそれぞれ等しい"),
+    dict(pts={"A": (1.0, 2.6), "B": (0.0, 0.0), "C": (4.8, 0.0), "D": (5.8, 2.6), "E": (2.92, 2.6), "F": inter((0.0, 0.0), (2.92, 2.6), (1.0, 2.6), (4.8, 0.0))},
+         segs=[("A", "B"), ("B", "C"), ("C", "D"), ("D", "A"), ("B", "E"), ("A", "C")], off={"E": (0, 0.42), "F": (0.15, -0.45)},
+         setup="右の図のように，平行四辺形 ABCD の辺 AD 上に点 E をとり，線分 BE と対角線 AC の交点を F とする。このとき，△FAE∽△FCB であることを次のように証明した。",
+         body=["△FAE と △FCB において，", "AD//BC より，（a）は等しいから　${FAE}={FCB}$　……①", "対頂角は等しいから　${AFE}={CFB}$　……②", "①，②から，（b）ので，△FAE∽△FCB"],
+         a="錯角", b="2組の角がそれぞれ等しい"),
 ]
-REASONS = ["∠A は共通", "∠B は共通", "同位角", "錯角", "対頂角"]
+REASONS = ["∠A は共通", "∠B は共通", "∠C は共通", "同位角", "錯角", "対頂角"]
 SCONDS = ["3組の辺の比がすべて等しい", "2組の辺の比とその間の角がそれぞれ等しい", "2組の角がそれぞれ等しい"]
-
 
 
 @gen("standard_practice", 4, ["written_reasoning", "concept"])
 def b_proof_fill(r):
     P = dict(r.choice(PROOFS))
     p, q = r.choice([(2, 3), (3, 4), (3, 5), (2, 5), (4, 5), (1, 2), (1, 3), (2, 7), (3, 7), (4, 7)])
-    m1, m2 = r.randint(1, 3), r.randint(1, 3)
-    vals = dict(oa=p * m1, oc=q * m1, ob=p * m2 + 0, od=q * m2, p=p, q=q)
-    if vals["oa"] == vals["ob"]:
-        vals["ob"], vals["od"] = p * (m2 + 1), q * (m2 + 1)
+    m1, m2 = r.sample(range(1, 4), 2)
+    vals = dict(oa=p * m1, oc=q * m1, ob=p * m2, od=q * m2, ae=p * m1, ab=q * m1, ad=p * m2, ac=q * m2)
+    if P["a"] == "∠A は共通" and "{ab}" in P["setup"] and p * m2 >= q * m1:
+        raise AssertionError  # AD が AB より長くならないようにする
+    if "{ae}" in P["setup"] and p * m1 >= q * m2:
+        raise AssertionError
+    pairs = {"r1": (vals["oa"], vals["oc"]) if "{oa}" in P["setup"] else (vals["ae"], vals["ab"]),
+             "r2": (vals["ob"], vals["od"]) if "{oa}" in P["setup"] else (vals["ad"], vals["ac"])}
+    mp = r.choice([{}, {}, {"A": "P", "B": "Q", "C": "R", "D": "S", "E": "T", "F": "U"}])
 
-    def fmt(s):
-        s = s.replace("{oa}", str(vals["oa"])).replace("{ob}", str(vals["ob"])).replace("{oc}", str(vals["oc"])).replace("{od}", str(vals["od"]))
-        r1 = f"{vals['oa']}:{vals['oc']}" + ("" if vals["oa"] == p else f"={p}:{q}")
-        r2 = f"{vals['ob']}:{vals['od']}" + ("" if vals["ob"] == p else f"={p}:{q}")
-        s = s.replace("{r1}", r1).replace("{r2}", r2)
-        return re.sub(r"\{([A-Z]{1,3})\}", lambda m: A(m.group(1)), s)
+    def L(t):
+        return re.sub(r"(?<![a-z\\])[A-FO](?![a-z])", lambda m: mp.get(m.group(0), m.group(0)), t) if mp else t
+
+    def fmt(t):
+        for k_, v_ in vals.items():
+            t = t.replace("{" + k_ + "}", str(v_))
+        for k_, (x_, y_) in pairs.items():
+            t = t.replace("{" + k_ + "}", f"{x_}:{y_}" + ("" if x_ == p else f"={p}:{q}"))
+        t = re.sub(r"\{([A-Z]{1,3})\}", lambda m: A(m.group(1)), t)
+        return L(t)
     if P["pts"] is None:
-        fig = fig_de_bc(r.choice([0.35, 0.45, 0.55]))
+        pts = dict(STD)
+        tt = r.choice([0.35, 0.45, 0.55])
+        pts["D"], pts["E"] = lerp(pts["A"], pts["B"], tt), lerp(pts["A"], pts["C"], tt)
+        segs, off = [("A", "B"), ("B", "C"), ("C", "A"), ("D", "E")], {"D": (-0.35, 0.05), "E": (0.35, 0.05)}
     else:
-        fig = figure("証明の図", geo(P["pts"], segs=P["segs"], off=P["off"]))
-    wa = [x for x in REASONS if x != P["a"]]
+        pts, segs, off = P["pts"], P["segs"], P["off"]
+    pts2 = {L(k): v for k, v in pts.items()}
+    fig = figure("証明の図", geo(pts2, segs=[(L(a), L(b)) for a, b in segs], off={L(k): v for k, v in off.items()}))
+    pa, pb = L(P["a"]), P["b"]
+    wa = [L(x) for x in REASONS if x != P["a"]]
     wb = [x for x in SCONDS if x != P["b"]]
 
     def C(a, b):
         return f"（a）{a}　（b）{b}"
-    cands = [(C(r.choice(wa), P["b"]), f"（a）は{P['a']}である。図で，その角がなぜ等しいかを確かめる。", "根拠の取り違え"),
-             (C(P["a"], r.choice(wb)), f"①，②でそろったのは「{P['b']}」という条件である。", "相似条件の取り違え"),
-             (C(r.choice(wa), r.choice(wb)), f"（a）は{P['a']}，（b）は「{P['b']}」である。", "根拠と相似条件の取り違え"),
-             (C(P["a"], r.choice(wb)), f"①，②でそろったのは「{P['b']}」である。", "相似条件の取り違え"),
-             (C(r.choice(wa), P["b"]), f"（a）は{P['a']}である。", "根拠の取り違え")]
+    cands = [(C(r.choice(wa), pb), f"（a）は{pa}である。図で，その角がなぜ等しいかを確かめる。", "根拠の取り違え"),
+             (C(pa, r.choice(wb)), f"①，②でそろったのは「{pb}」という条件である。", "相似条件の取り違え"),
+             (C(r.choice(wa), r.choice(wb)), f"（a）は{pa}，（b）は「{pb}」である。", "根拠と相似条件の取り違え"),
+             (C(pa, r.choice(wb)), f"①，②でそろったのは「{pb}」である。", "相似条件の取り違え"),
+             (C(r.choice(wa), pb), f"（a）は{pa}である。", "根拠の取り違え")]
     body = "\n".join(fmt(x) for x in P["body"])
     setup = fmt(P["setup"])
     return MC(setup + f"\n〔証明〕\n{body}\n上の証明の（a），（b）にあてはまるものの組み合わせとして最も適するものを，" + SEL4,
-              C(P["a"], P["b"]), cands, f"（a）は{P['a']}，（b）は「{P['b']}」。", d=3, p=4, fig=fig,
+              C(pa, pb), cands, f"（a）は{pa}，（b）は「{pb}」。", d=3, p=4, fig=fig,
               ap="（a）は，その行で等しいといっている角が，なぜ等しいのか（共通・同位角・錯角・対頂角）を図で確かめる。（b）は①，②でそろったものが辺の比か角かで決める。",
-              steps=[f"（a）：{P['a']}。", f"①，②は「{P['b']}」の形になっている。", f"よって（a）{P['a']}，（b）{P['b']}。"],
+              steps=[f"（a）：{pa}。", f"①，②は「{pb}」の形になっている。", f"よって（a）{pa}，（b）{pb}。"],
               alt=["等しいとわかった角に同じ印，比が等しい辺に印をつけ，相似条件と照らし合わせる。"],
               pc=[("（a）の根拠を正しく選んでいる", 2), ("（b）の相似条件を正しく選んでいる", 2)],
               pit=["錯角と同位角を取り違える。", "辺の比が出てこないのに「辺の比」の条件を選ぶ。"])
