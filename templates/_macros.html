@@ -12,7 +12,7 @@
 
 {% macro figure_block(f) -%}
 <figure class="figure-box" style="{% if f.height_mm %}min-height: {{ f.height_mm }}mm;{% endif %}">
-  {% if f.svg %}{{ f.svg | safe }}{% else %}<div class="alt">［図］{{ f.alt }}</div>{% endif %}
+  {% if f.svg %}{{ f.svg | uniq_ids | safe }}{% else %}<div class="alt">［図］{{ f.alt }}</div>{% endif %}
   {% if f.caption %}<figcaption>{{ f.caption | rich_inline }}</figcaption>{% endif %}
 </figure>
 {%- endmacro %}

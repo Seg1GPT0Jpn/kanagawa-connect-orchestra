@@ -208,6 +208,21 @@ def prepare(data: dict, paper: str = "A4") -> tuple[list, list]:
     return groups, units
 
 
+_SVG_SEQ = [0]
+
+
+def uniq_svg_ids(svg: str) -> str:
+    """図ごとに SVG 内の id（clipPath など）を一意にする。同じ id の図が1冊に並ぶと、別の図の切り抜き範囲が使われてしまうため。"""
+    if not svg or "id=" not in svg:
+        return svg
+    _SVG_SEQ[0] += 1
+    pre = f"f{_SVG_SEQ[0]}-"
+    ids = set(re.findall(r'\bid="([^"]+)"', svg))
+    for i in sorted(ids, key=len, reverse=True):
+        svg = svg.replace(f'id="{i}"', f'id="{pre}{i}"').replace(f"url(#{i})", f"url(#{pre}{i})").replace(f'href="#{i}"', f'href="#{pre}{i}"')
+    return svg
+
+
 def make_env():
     from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -222,6 +237,7 @@ def make_env():
         "rich_block": rich_block,
         "num": num,
         "answer_display": answer_display,
+        "uniq_ids": uniq_svg_ids,
         "truncate_plain": truncate_plain,
         "grade_label": lambda c: MASTERS["grade"].get(c, c),
         "subject_label": lambda c: MASTERS["subject"].get(c, c),
