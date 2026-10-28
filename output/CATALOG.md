@@ -1,6 +1,6 @@
 # 教材カタログ
 
-全 359 セット・7020 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
+全 394 セット・8073 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
 
 検証状態 `auto_checked` は自動検査（スキーマ・整合性・重複・検算）に合格した状態です。教科担当者のレビュー（`expert_reviewed`）を経てから配布してください。
 
@@ -14,10 +14,15 @@
 | PILOT-SCI-U01 | 【パイロット】理科　電流とその利用 | JH2 | 20 | 100 | 1.0.0 | pass | auto_checked 20 | [問題](pilot/science_unit01_questions.pdf) [解答](pilot/science_unit01_answers.pdf) [問題(タブレット)](pilot/science_unit01_questions_tablet.pdf) [解答(タブレット)](pilot/science_unit01_answers_tablet.pdf) |
 | PILOT-SOC-U01 | 【パイロット】社会　近世の日本 | JH2 | 20 | 100 | 1.0.0 | pass | auto_checked 20 | [問題](pilot/social_unit01_questions.pdf) [解答](pilot/social_unit01_answers.pdf) [問題(タブレット)](pilot/social_unit01_questions_tablet.pdf) [解答(タブレット)](pilot/social_unit01_answers_tablet.pdf) |
 
-## 神奈川県公立高校入試 オリジナル模試（1 セット）
+## 神奈川県公立高校入試 オリジナル模試（6 セット）
 
 | セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |
 |---|---|---|---|---|---|---|---|---|
+| KNG-MOCK-R8-02-ENG | 神奈川県公立高校入試形式　オリジナル模試（第2回）　英語 | JH3 | 31 | 100 | 1.1.0 | pass | auto_checked 31 | [問題](mock_exam/kng_mock_r8_02_eng_questions.pdf) [解答](mock_exam/kng_mock_r8_02_eng_answers.pdf) |
+| KNG-MOCK-R8-02-JPN | 神奈川県公立高校入試形式　オリジナル模試（第2回）　国語 | JH3 | 30 | 100 | 1.2.0 | pass | auto_checked 30 | [問題](mock_exam/kng_mock_r8_02_jpn_questions.pdf) [解答](mock_exam/kng_mock_r8_02_jpn_answers.pdf) |
+| KNG-MOCK-R8-02-MATH | 神奈川県公立高校入試形式　オリジナル模試（第2回）　数学 | JH3 | 27 | 100 | 1.1.0 | pass | auto_checked 27 | [問題](mock_exam/kng_mock_r8_02_math_questions.pdf) [解答](mock_exam/kng_mock_r8_02_math_answers.pdf) |
+| KNG-MOCK-R8-02-SCI | 神奈川県公立高校入試形式　オリジナル模試（第2回）　理科 | JH3 | 32 | 100 | 1.1.0 | pass | auto_checked 32 | [問題](mock_exam/kng_mock_r8_02_sci_questions.pdf) [解答](mock_exam/kng_mock_r8_02_sci_answers.pdf) |
+| KNG-MOCK-R8-02-SOC | 神奈川県公立高校入試形式　オリジナル模試（第2回）　社会 | JH3 | 33 | 100 | 1.0.1 | pass | auto_checked 33 | [問題](mock_exam/kng_mock_r8_02_soc_questions.pdf) [解答](mock_exam/kng_mock_r8_02_soc_answers.pdf) |
 | KNG-MOCK-R8-01 | 神奈川県公立高校入試型　5教科オリジナル模試（第1回） | JH3 | 130 | 500 | 1.1.0 | pass | auto_checked 130 | [問題](pilot/kanagawa_mock_r8_01_questions.pdf) [解答](pilot/kanagawa_mock_r8_01_answers.pdf) [問題(タブレット)](pilot/kanagawa_mock_r8_01_questions_tablet.pdf) [解答(タブレット)](pilot/kanagawa_mock_r8_01_answers_tablet.pdf) |
 
 ## 中学生版 単元別プリント（86 セット）
@@ -369,42 +374,72 @@
 | SS-SOC-U01-EX | 地歴公民　論述問題　問題プリント | HS3 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/ss-soc-u01/exercise_questions.pdf) [解答](hs_packs/ss-soc-u01/exercise_answers.pdf) |
 | SS-SOC-U01-LESSON | 地歴公民　論述問題　授業プリント | HS3 | 0 |  | 1.0.0 | pass |  |  |
 
-## 中学 単元パック（授業プリント＋問題プリント）（34 セット）
+## 中学 単元パック（授業プリント＋問題プリント）（64 セット）
 
 | セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |
 |---|---|---|---|---|---|---|---|---|
-| JH-ENG-G1-U01-EX | be動詞と一般動詞の現在形　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U01-EX | be動詞と一般動詞の現在形　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g1-u01/exercise_questions.pdf) [解答](jh_packs/jh-eng-g1-u01/exercise_answers.pdf) |
 | JH-ENG-G1-U01-LESSON | be動詞と一般動詞の現在形　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G1-U02-EX | 名詞の複数形と代名詞　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U02-EX | 名詞の複数形と代名詞　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g1-u02/exercise_questions.pdf) [解答](jh_packs/jh-eng-g1-u02/exercise_answers.pdf) |
 | JH-ENG-G1-U02-LESSON | 名詞の複数形と代名詞　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G1-U03-EX | 疑問詞を使った疑問文　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U03-EX | 疑問詞を使った疑問文　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g1-u03/exercise_questions.pdf) [解答](jh_packs/jh-eng-g1-u03/exercise_answers.pdf) |
 | JH-ENG-G1-U03-LESSON | 疑問詞を使った疑問文　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G1-U04-EX | 現在進行形・助動詞can・命令文　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U04-EX | 現在進行形・助動詞can・命令文　問題プリント | JH1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g1-u04/exercise_questions.pdf) [解答](jh_packs/jh-eng-g1-u04/exercise_answers.pdf) |
 | JH-ENG-G1-U04-LESSON | 現在進行形・助動詞can・命令文　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G1-U05-EX | 過去形　問題プリント | JH1 | 60 | 260 | 1.3.0 | pass | auto_checked 60 |  |
+| JH-ENG-G1-U05-EX | 過去形　問題プリント | JH1 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g1-u05/exercise_questions.pdf) [解答](jh_packs/jh-eng-g1-u05/exercise_answers.pdf) |
 | JH-ENG-G1-U05-LESSON | 過去形　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G2-U01-EX | 未来表現　問題プリント | JH2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U01-EX | 未来表現　問題プリント | JH2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g2-u01/exercise_questions.pdf) [解答](jh_packs/jh-eng-g2-u01/exercise_answers.pdf) |
 | JH-ENG-G2-U01-LESSON | 未来表現　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G2-U02-EX | 不定詞と動名詞　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U02-EX | 不定詞と動名詞　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g2-u02/exercise_questions.pdf) [解答](jh_packs/jh-eng-g2-u02/exercise_answers.pdf) |
 | JH-ENG-G2-U02-LESSON | 不定詞と動名詞　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G2-U03-EX | 接続詞とThere is構文　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U03-EX | 接続詞とThere is構文　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g2-u03/exercise_questions.pdf) [解答](jh_packs/jh-eng-g2-u03/exercise_answers.pdf) |
 | JH-ENG-G2-U03-LESSON | 接続詞とThere is構文　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G2-U04-EX | 比較　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U04-EX | 比較　問題プリント | JH2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g2-u04/exercise_questions.pdf) [解答](jh_packs/jh-eng-g2-u04/exercise_answers.pdf) |
 | JH-ENG-G2-U04-LESSON | 比較　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G2-U05-EX | 受け身　問題プリント | JH2 | 60 | 264 | 1.3.0 | pass | auto_checked 60 |  |
+| JH-ENG-G2-U05-EX | 受け身　問題プリント | JH2 | 60 | 264 | 1.3.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g2-u05/exercise_questions.pdf) [解答](jh_packs/jh-eng-g2-u05/exercise_answers.pdf) |
 | JH-ENG-G2-U05-LESSON | 受け身　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U01-EX | 現在完了形・現在完了進行形　問題プリント | JH3 | 60 | 260 | 1.3.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U01-EX | 現在完了形・現在完了進行形　問題プリント | JH3 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u01/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u01/exercise_answers.pdf) |
 | JH-ENG-G3-U01-LESSON | 現在完了形・現在完了進行形　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U02-EX | 分詞の後置修飾　問題プリント | JH3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U02-EX | 分詞の後置修飾　問題プリント | JH3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u02/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u02/exercise_answers.pdf) |
 | JH-ENG-G3-U02-LESSON | 分詞の後置修飾　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U03-EX | 関係代名詞　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U03-EX | 関係代名詞　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u03/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u03/exercise_answers.pdf) |
 | JH-ENG-G3-U03-LESSON | 関係代名詞　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U04-EX | 間接疑問文と文構造　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U04-EX | 間接疑問文と文構造　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u04/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u04/exercise_answers.pdf) |
 | JH-ENG-G3-U04-LESSON | 間接疑問文と文構造　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U05-EX | 仮定法過去　問題プリント | JH3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U05-EX | 仮定法過去　問題プリント | JH3 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u05/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u05/exercise_answers.pdf) |
 | JH-ENG-G3-U05-LESSON | 仮定法過去　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U06-EX | 長文読解　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U06-EX | 長文読解　問題プリント | JH3 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u06/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u06/exercise_answers.pdf) |
 | JH-ENG-G3-U06-LESSON | 長文読解　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
-| JH-ENG-G3-U07-EX | 条件英作文　問題プリント | JH3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 |  |
+| JH-ENG-G3-U07-EX | 条件英作文　問題プリント | JH3 | 60 | 260 | 1.0.0 | pass | auto_checked 60 | [問題](jh_packs/jh-eng-g3-u07/exercise_questions.pdf) [解答](jh_packs/jh-eng-g3-u07/exercise_answers.pdf) |
 | JH-ENG-G3-U07-LESSON | 条件英作文　授業プリント | JH3 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G1-U01-EX | 漢字の読み書き・語句　問題プリント | JH1 | 60 | 240 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-JPN-G1-U01-LESSON | 漢字の読み書き・語句　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G1-U02-EX | 文法①　言葉の単位と文節の関係　問題プリント | JH1 | 60 | 240 | 1.0.0 | pass | auto_checked 60 |  |
+| JH-JPN-G1-U02-LESSON | 文法①　言葉の単位と文節の関係　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G1-U03-EX | 文法②　品詞の分類　問題プリント | JH1 | 60 | 240 | 1.0.0 | pass | auto_checked 60 |  |
+| JH-JPN-G1-U03-LESSON | 文法②　品詞の分類　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G1-U04-EX | 説明的文章の読解　問題プリント | JH1 | 60 | 246 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-JPN-G1-U04-LESSON | 説明的文章の読解　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G1-U05-EX | 文学的文章の読解　問題プリント | JH1 | 60 | 241 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-JPN-G1-U05-LESSON | 文学的文章の読解　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G2-U01-EX | 漢字・語句　熟語の構成　問題プリント | JH2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-JPN-G2-U01-LESSON | 漢字・語句　熟語の構成　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-JPN-G2-U02-EX | 文法③　用言の活用　問題プリント | JH2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-JPN-G2-U02-LESSON | 文法③　用言の活用　授業プリント | JH2 | 0 |  | 1.0.0 | pass |  |  |
+| JH-MATH-G1-U01-EX | 正の数・負の数　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-MATH-G1-U01-LESSON | 正の数・負の数　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-MATH-G1-U02-EX | 文字と式　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-MATH-G1-U02-LESSON | 文字と式　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-MATH-G1-U03-EX | 一次方程式　問題プリント | JH1 | 60 | 260 | 1.2.0 | 未検査 | auto_checked 58・draft 2 |  |
+| JH-MATH-G1-U03-LESSON | 一次方程式　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-MATH-G1-U04-EX | 比例と反比例　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-MATH-G1-U04-LESSON | 比例と反比例　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-MATH-G1-U05-EX | 平面図形　問題プリント | JH1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 |  |
+| JH-MATH-G1-U05-LESSON | 平面図形　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-MATH-G1-U06-EX | 空間図形　問題プリント | JH1 | 60 | 260 | 1.0.0 | pass | auto_checked 60 |  |
+| JH-MATH-G1-U06-LESSON | 空間図形　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-SCI-G1-U01-EX | いろいろな生物とその共通点　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-SCI-G1-U01-LESSON | いろいろな生物とその共通点　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
+| JH-SCI-G1-U02-EX | 身のまわりの物質　問題プリント | JH1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 |  |
+| JH-SCI-G1-U02-LESSON | 身のまわりの物質　授業プリント | JH1 | 0 |  | 1.0.0 | pass |  |  |
 
