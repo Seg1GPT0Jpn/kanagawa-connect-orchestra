@@ -277,8 +277,8 @@ def kanagawa_context(data: dict, groups: list, units: list) -> dict:
             if it["kind"] != "question":
                 continue
             q = it["question"]
-            num = q.get("_number", "")
-            sub = num[num.index("("):] if "(" in num else ""   # 小問のない問（例：問5）は見出しだけ
+            qno = q.get("_number", "")
+            sub = qno[qno.index("("):] if "(" in qno else ""   # 小問のない問（例：問5）は見出しだけ
             q["_sub"] = sub.replace("(", "（").replace(")", "）") if tate else sub
             ma = q.get("mark_answer")
             if ma:

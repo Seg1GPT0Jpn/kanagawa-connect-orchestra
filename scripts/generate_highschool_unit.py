@@ -44,7 +44,13 @@ def list_packs() -> dict[str, str]:
     for f in sorted(PACK_DIR.glob("*.py")):
         if f.name.startswith("_"):
             continue
-        m = importlib.import_module(f"hs_packs.{f.stem}")
+        try:
+            m = importlib.import_module(f"hs_packs.{f.stem}")
+        except Exception as e:  # noqa: BLE001  作成途中のモジュールがあっても他の単元は生成できるようにする
+            print(f"   WARNING: hs_packs/{f.name} を読み込めません（{type(e).__name__}: {e}）。この単元は飛ばします。", file=sys.stderr)
+            continue
+        if not hasattr(m, "UNIT_ID"):
+            continue
         out[m.UNIT_ID] = f.stem
     return out
 
