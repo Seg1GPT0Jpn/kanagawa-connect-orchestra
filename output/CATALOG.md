@@ -1,6 +1,6 @@
 # 教材カタログ
 
-全 175 セット・1500 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
+全 201 セット・2280 問（`scripts/generate_batch.py` が自動生成。手で編集しないこと）
 
 検証状態 `auto_checked` は自動検査（スキーマ・整合性・重複・検算）に合格した状態です。教科担当者のレビュー（`expert_reviewed`）を経てから配布してください。
 
@@ -210,12 +210,38 @@
 | SS-SCI-U01-S1 | 理科　論述・計算問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-sci-u01_questions.pdf) [解答](second_stage/ss-sci-u01_answers.pdf) |
 | SS-SOC-U01-S1 | 地歴公民　論述問題 | HS3 | 4 | 100 | 1.0.0 | pass | auto_checked 4 | [問題](second_stage/ss-soc-u01_questions.pdf) [解答](second_stage/ss-soc-u01_answers.pdf) |
 
-## 高校 単元パック（授業プリント＋問題プリント）（4 セット）
+## 高校 単元パック（授業プリント＋問題プリント）（30 セット）
 
 | セットID | 表題 | 学年 | 問題数 | 配点 | 版 | 自動検査 | 検証状態 | PDF |
 |---|---|---|---|---|---|---|---|---|
+| HS-MATH1-U01-EX | 数と式　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u01/exercise_questions.pdf) [解答](hs_packs/hs-math1-u01/exercise_answers.pdf) |
+| HS-MATH1-U01-LESSON | 数と式　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH1-U02-EX | 集合と命題　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u02/exercise_questions.pdf) [解答](hs_packs/hs-math1-u02/exercise_answers.pdf) |
+| HS-MATH1-U02-LESSON | 集合と命題　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATH1-U03-EX | 二次関数　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u03/exercise_questions.pdf) [解答](hs_packs/hs-math1-u03/exercise_answers.pdf) |
 | HS-MATH1-U03-LESSON | 二次関数　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
 | HS-MATH1-U04-EX | 図形と計量　問題プリント | HS1 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u04/exercise_questions.pdf) [解答](hs_packs/hs-math1-u04/exercise_answers.pdf) |
 | HS-MATH1-U04-LESSON | 図形と計量　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH1-U05-EX | データの分析　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math1-u05/exercise_questions.pdf) [解答](hs_packs/hs-math1-u05/exercise_answers.pdf) |
+| HS-MATH1-U05-LESSON | データの分析　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH2-U01-EX | 式と証明　問題プリント | HS2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u01/exercise_questions.pdf) [解答](hs_packs/hs-math2-u01/exercise_answers.pdf) |
+| HS-MATH2-U01-LESSON | 式と証明　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH2-U02-EX | 複素数と方程式　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u02/exercise_questions.pdf) [解答](hs_packs/hs-math2-u02/exercise_answers.pdf) |
+| HS-MATH2-U02-LESSON | 複素数と方程式　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH2-U03-EX | 図形と方程式　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u03/exercise_questions.pdf) [解答](hs_packs/hs-math2-u03/exercise_answers.pdf) |
+| HS-MATH2-U03-LESSON | 図形と方程式　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATH2-U04-EX | 三角関数　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-math2-u04/exercise_questions.pdf) [解答](hs_packs/hs-math2-u04/exercise_answers.pdf) |
+| HS-MATH2-U04-LESSON | 三角関数　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHA-U01-EX | 場合の数と確率　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-matha-u01/exercise_questions.pdf) [解答](hs_packs/hs-matha-u01/exercise_answers.pdf) |
+| HS-MATHA-U01-LESSON | 場合の数と確率　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHA-U02-EX | 図形の性質　問題プリント | HS1 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-matha-u02/exercise_questions.pdf) [解答](hs_packs/hs-matha-u02/exercise_answers.pdf) |
+| HS-MATHA-U02-LESSON | 図形の性質　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHA-U03-EX | 数学と人間の活動　整数　問題プリント | HS1 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-matha-u03/exercise_questions.pdf) [解答](hs_packs/hs-matha-u03/exercise_answers.pdf) |
+| HS-MATHA-U03-LESSON | 数学と人間の活動　整数　授業プリント | HS1 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHB-U01-EX | 数列　問題プリント | HS2 | 60 | 260 | 1.1.0 | pass | auto_checked 60 | [問題](hs_packs/hs-mathb-u01/exercise_questions.pdf) [解答](hs_packs/hs-mathb-u01/exercise_answers.pdf) |
+| HS-MATHB-U01-LESSON | 数列　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHB-U02-EX | 統計的な推測　問題プリント | HS2 | 60 | 260 | 1.2.0 | pass | auto_checked 60 | [問題](hs_packs/hs-mathb-u02/exercise_questions.pdf) [解答](hs_packs/hs-mathb-u02/exercise_answers.pdf) |
+| HS-MATHB-U02-LESSON | 統計的な推測　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
+| HS-MATHC-U01-EX | ベクトル　問題プリント | HS2 | 60 | 260 | 1.3.0 | pass | auto_checked 60 | [問題](hs_packs/hs-mathc-u01/exercise_questions.pdf) [解答](hs_packs/hs-mathc-u01/exercise_answers.pdf) |
+| HS-MATHC-U01-LESSON | ベクトル　授業プリント | HS2 | 0 |  | 1.0.0 | pass |  |  |
 
