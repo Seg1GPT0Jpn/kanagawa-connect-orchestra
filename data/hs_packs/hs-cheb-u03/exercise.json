@@ -1,0 +1,5817 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-CHEB-U03-EX",
+  "title": "酸と塩基・酸化還元　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "chemistry_basic",
+  "grade": "HS1",
+  "unit_ids": [
+    "HS-CHEB-U03"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-CHEB-U03-PACK",
+  "pair_set_id": "HS-CHEB-U03-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-CHEB-U02",
+        "point": "物質量・モル濃度",
+        "title": "物質量と化学反応式"
+      },
+      {
+        "unit_id": "JH-SCI-G3-U01",
+        "point": "酸・アルカリ",
+        "title": "化学変化とイオン"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-CHE-U02",
+        "point": "電離平衡",
+        "title": "化学反応とエネルギー・化学平衡"
+      }
+    ],
+    "readiness_check": [
+      "物質量・モル濃度の計算（$n=cV$）ができる（前単元）。",
+      "イオンの化学式・電子配置（前々単元）と、中学校で学んだ酸性・アルカリ性・中和を説明できる。",
+      "$10^{-3}$ などの指数と、常用対数 $\\log_{10}10^{n}=n$ の意味が分かる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-CHEB-U03-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$5.0\\times10^{-5}$ mol/L の水酸化バリウム水溶液の pH を求めなさい。ただし、水酸化バリウムは完全に電離するものとする。水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "10"
+      },
+      "explanation": "$[\\mathrm{OH^-}]=2\\times5.0\\times10^{-5}=1.0\\times10^{-4}$ mol/L、pH＝10。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "14+log(2*5*10**(-5), 10)",
+        "expected": "10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_basic",
+      "explanation_detail": {
+        "approach": "$\\mathrm{Ba(OH)_2}$ は2価の塩基。$[\\mathrm{OH^-}]$ は濃度の2倍になる。",
+        "steps": [
+          "$[\\mathrm{OH^-}]=1.0\\times10^{-4}$ mol/L。",
+          "$[\\mathrm{H^+}]=1.0\\times10^{-10}$ mol/L。",
+          "pH＝10。"
+        ],
+        "alternatives": [
+          "pOH＝4、pH＝14－4＝10。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を用いて $[\\mathrm{OH^-}]$ を求めている",
+            "points": 1
+          },
+          {
+            "point": "pH が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "価数 2 を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "pH が 2 の塩酸の水素イオン濃度 $[\\mathrm{H^+}]$ と、塩化水素のモル濃度を答えなさい。ただし、塩化水素は完全に電離するものとする。",
+      "answer": {
+        "value": "$[\\mathrm{H^+}]=1.0\\times10^{-2}$ mol/L、モル濃度 $1.0\\times10^{-2}$ mol/L"
+      },
+      "explanation": "pH＝$n$ ⇔ $[\\mathrm{H^+}]=1.0\\times10^{-n}$。1価の強酸なのでモル濃度も等しい。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-log(10**(-2), 10)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_basic",
+      "explanation_detail": {
+        "approach": "pH の定義を逆にたどる。1価の強酸では $[\\mathrm{H^+}]$ とモル濃度が等しい。",
+        "steps": [
+          "$[\\mathrm{H^+}]=1.0\\times10^{-2}$ mol/L。",
+          "1価の強酸で完全電離なので、モル濃度も同じ値。"
+        ],
+        "alternatives": [
+          "求めた濃度から pH を計算し直して、もとの値に戻るか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$[\\mathrm{H^+}]$ が正しい",
+            "points": 1
+          },
+          {
+            "point": "モル濃度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$1.0\\times10^{2}$ と指数の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$1.0\\times10^{-3}$ mol/L の硝酸の pH を求めなさい。ただし、硝酸は完全に電離するものとする。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "1価の強酸なので $[\\mathrm{H^+}]=1.0\\times10^{-3}$ mol/L、pH＝3。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-log(10**(-3), 10)",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_basic",
+      "explanation_detail": {
+        "approach": "1価の強酸は完全に電離するので、$[\\mathrm{H^+}]$ はモル濃度と等しい。$[\\mathrm{H^+}]=1.0\\times10^{-n}$ なら pH＝$n$。",
+        "steps": [
+          "$[\\mathrm{H^+}]=1\\times1.0\\times10^{-3}\\times1=1.0\\times10^{-3}$ mol/L。",
+          "$\\mathrm{pH}=-\\log_{10}(1.0\\times10^{-3})=3$。"
+        ],
+        "alternatives": [
+          "pH 1 の強酸を 10 倍ずつうすめると pH が 1 ずつ大きくなる、という関係から確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$[\\mathrm{H^+}]$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "pH が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数の符号のまま「pH＝−3」と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "$5.0\\times10^{-3}$ mol/L の水酸化カルシウム水溶液の pH を求めなさい。ただし、水酸化カルシウムは完全に電離するものとする。水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "12"
+      },
+      "explanation": "$[\\mathrm{OH^-}]=2\\times5.0\\times10^{-3}=1.0\\times10^{-2}$ mol/L、pH＝12。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "14+log(2*5*10**(-3), 10)",
+        "expected": "12"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_basic",
+      "explanation_detail": {
+        "approach": "$\\mathrm{Ca(OH)_2}$ は2価の塩基。$[\\mathrm{OH^-}]$ は濃度の2倍になる。",
+        "steps": [
+          "$[\\mathrm{OH^-}]=1.0\\times10^{-2}$ mol/L。",
+          "$[\\mathrm{H^+}]=1.0\\times10^{-12}$ mol/L。",
+          "pH＝12。"
+        ],
+        "alternatives": [
+          "pOH＝2、pH＝14－2＝12。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を用いて $[\\mathrm{OH^-}]$ を求めている",
+            "points": 1
+          },
+          {
+            "point": "pH が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "価数 2 を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "short_answer",
+      "stem": "pH が 4 の硝酸の水素イオン濃度 $[\\mathrm{H^+}]$ と、硝酸のモル濃度を答えなさい。ただし、硝酸は完全に電離するものとする。",
+      "answer": {
+        "value": "$[\\mathrm{H^+}]=1.0\\times10^{-4}$ mol/L、モル濃度 $1.0\\times10^{-4}$ mol/L"
+      },
+      "explanation": "pH＝$n$ ⇔ $[\\mathrm{H^+}]=1.0\\times10^{-n}$。1価の強酸なのでモル濃度も等しい。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-log(10**(-4), 10)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_basic",
+      "explanation_detail": {
+        "approach": "pH の定義を逆にたどる。1価の強酸では $[\\mathrm{H^+}]$ とモル濃度が等しい。",
+        "steps": [
+          "$[\\mathrm{H^+}]=1.0\\times10^{-4}$ mol/L。",
+          "1価の強酸で完全電離なので、モル濃度も同じ値。"
+        ],
+        "alternatives": [
+          "求めた濃度から pH を計算し直して、もとの値に戻るか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$[\\mathrm{H^+}]$ が正しい",
+            "points": 1
+          },
+          {
+            "point": "モル濃度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$1.0\\times10^{4}$ と指数の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の化学式で表される物質（イオン）中の N 原子の酸化数を求めなさい。\n$\\quad\\mathrm{NO}$（一酸化窒素）",
+      "answer": {
+        "value": "+2"
+      },
+      "explanation": "N の酸化数を $x$ とすると $x+(-2)\\times1=0$、$x=+2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(1*x+(1*(-2))-(0), x)[0]",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-oxidation_number",
+      "explanation_detail": {
+        "approach": "H は ＋1、O は −2（過酸化水素を除く）、アルカリ金属は ＋1 とし、酸化数の総和が 0（イオンなら電荷）になるように方程式を立てる。",
+        "steps": [
+          "N の酸化数を $x$ とおく。",
+          "化合物なので総和は 0：$x+(-2)\\times1=0$。",
+          "$x=+2$。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：$\\mathrm{NO}$ が生じる反応や半反応式で、何個の電子が出入りしたかと照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "酸化数が正しい（符号を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "多原子イオンの総和を 0 としてしまう。",
+          "対象の原子が2個あるときに個数を掛け忘れる。",
+          "正の酸化数に ＋ をつけない（＋も必ず書く）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の化学式で表される物質（イオン）中の C 原子の酸化数を求めなさい。\n$\\quad\\mathrm{C_2O_4^{2-}}$（シュウ酸イオン）",
+      "answer": {
+        "value": "+3"
+      },
+      "explanation": "C の酸化数を $x$ とすると $2x+(-2)\\times4=-2$、$x=+3$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(2*x+(4*(-2))-(-2), x)[0]",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-oxidation_number",
+      "explanation_detail": {
+        "approach": "H は ＋1、O は −2（過酸化水素を除く）、アルカリ金属は ＋1 とし、酸化数の総和が 0（イオンなら電荷）になるように方程式を立てる。",
+        "steps": [
+          "C の酸化数を $x$ とおく。",
+          "イオンなので総和はイオンの電荷 $-2$：$2x+(-2)\\times4=-2$。",
+          "$x=+3$。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：$\\mathrm{C_2O_4^{2-}}$ が生じる反応や半反応式で、何個の電子が出入りしたかと照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "酸化数が正しい（符号を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "多原子イオンの総和を 0 としてしまう。",
+          "対象の原子が2個あるときに個数を掛け忘れる。",
+          "正の酸化数に ＋ をつけない（＋も必ず書く）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の化学式で表される物質（イオン）中の Mn 原子の酸化数を求めなさい。\n$\\quad\\mathrm{MnO_2}$（酸化マンガン(Ⅳ)）",
+      "answer": {
+        "value": "+4"
+      },
+      "explanation": "Mn の酸化数を $x$ とすると $x+(-2)\\times2=0$、$x=+4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(1*x+(2*(-2))-(0), x)[0]",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-oxidation_number",
+      "explanation_detail": {
+        "approach": "H は ＋1、O は −2（過酸化水素を除く）、アルカリ金属は ＋1 とし、酸化数の総和が 0（イオンなら電荷）になるように方程式を立てる。",
+        "steps": [
+          "Mn の酸化数を $x$ とおく。",
+          "化合物なので総和は 0：$x+(-2)\\times2=0$。",
+          "$x=+4$。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：$\\mathrm{MnO_2}$ が生じる反応や半反応式で、何個の電子が出入りしたかと照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "酸化数が正しい（符号を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "多原子イオンの総和を 0 としてしまう。",
+          "対象の原子が2個あるときに個数を掛け忘れる。",
+          "正の酸化数に ＋ をつけない（＋も必ず書く）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の物質・イオンに含まれる Mn 原子の酸化数を求めなさい。\n$\\quad\\mathrm{MnO_2}$（酸化マンガン(Ⅳ)）",
+      "answer": {
+        "value": "+4"
+      },
+      "explanation": "Mn の酸化数を $x$ とすると $x+(-2)\\times2=0$、$x=+4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(1*x+(2*(-2))-(0), x)[0]",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-oxidation_number",
+      "explanation_detail": {
+        "approach": "H は ＋1、O は −2（過酸化水素を除く）、アルカリ金属は ＋1 とし、酸化数の総和が 0（イオンなら電荷）になるように方程式を立てる。",
+        "steps": [
+          "Mn の酸化数を $x$ とおく。",
+          "化合物なので総和は 0：$x+(-2)\\times2=0$。",
+          "$x=+4$。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：$\\mathrm{MnO_2}$ が生じる反応や半反応式で、何個の電子が出入りしたかと照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "酸化数が正しい（符号を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "多原子イオンの総和を 0 としてしまう。",
+          "対象の原子が2個あるときに個数を掛け忘れる。",
+          "正の酸化数に ＋ をつけない（＋も必ず書く）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の物質・イオンに含まれる Cr 原子の酸化数を求めなさい。\n$\\quad\\mathrm{Cr_2O_7^{2-}}$（二クロム酸イオン）",
+      "answer": {
+        "value": "+6"
+      },
+      "explanation": "Cr の酸化数を $x$ とすると $2x+(-2)\\times7=-2$、$x=+6$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "solve(2*x+(7*(-2))-(-2), x)[0]",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-oxidation_number",
+      "explanation_detail": {
+        "approach": "H は ＋1、O は −2（過酸化水素を除く）、アルカリ金属は ＋1 とし、酸化数の総和が 0（イオンなら電荷）になるように方程式を立てる。",
+        "steps": [
+          "Cr の酸化数を $x$ とおく。",
+          "イオンなので総和はイオンの電荷 $-2$：$2x+(-2)\\times7=-2$。",
+          "$x=+6$。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：$\\mathrm{Cr_2O_7^{2-}}$ が生じる反応や半反応式で、何個の電子が出入りしたかと照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方程式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "酸化数が正しい（符号を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "多原子イオンの総和を 0 としてしまう。",
+          "対象の原子が2個あるときに個数を掛け忘れる。",
+          "正の酸化数に ＋ をつけない（＋も必ず書く）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次のうち、2価の弱塩基に分類されるものを1つ選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{KOH}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{Cu(OH)_2}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{(COOH)_2}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{HNO_3}$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "水酸化銅(Ⅱ) $\\mathrm{Cu(OH)_2}$ は2価の弱塩基。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-acid_base_class",
+      "explanation_detail": {
+        "approach": "価数は1分子（1つ）あたりの $\\mathrm{H^+}$ を出す数（塩基は受け取る数・$\\mathrm{OH^-}$ の数）、強弱は電離度の大小で決まる。",
+        "steps": [
+          "各物質の価数を、出しうる $\\mathrm{H^+}$（または $\\mathrm{OH^-}$）の数から求める。",
+          "強酸 $\\mathrm{HCl,\\ HNO_3,\\ H_2SO_4}$、強塩基はアルカリ金属と Ca・Ba の水酸化物、と整理する。",
+          "条件に合うのは $\\mathrm{Cu(OH)_2}$。"
+        ],
+        "alternatives": [
+          "電離式をかいて、生じる $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の数を確かめる（例：$\\mathrm{(COOH)_2}$ は H を2個出す）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "強弱を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "酢酸 $\\mathrm{CH_3COOH}$ の H の数（4個）を価数と考える。",
+          "アンモニアは OH をもたないので塩基ではないと考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "水酸化カリウム $\\mathrm{KOH}$ は1価の強塩基である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "シュウ酸 $\\mathrm{(COOH)_2}$ は2価の弱酸である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "硝酸 $\\mathrm{HNO_3}$ は1価の強酸である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次のうち、1価の強酸に分類されるものを1つ選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{HNO_3}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{H_2SO_4}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{(COOH)_2}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{Ba(OH)_2}$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "硝酸 $\\mathrm{HNO_3}$ は1価の強酸。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-acid_base_class",
+      "explanation_detail": {
+        "approach": "価数は1分子（1つ）あたりの $\\mathrm{H^+}$ を出す数（塩基は受け取る数・$\\mathrm{OH^-}$ の数）、強弱は電離度の大小で決まる。",
+        "steps": [
+          "各物質の価数を、出しうる $\\mathrm{H^+}$（または $\\mathrm{OH^-}$）の数から求める。",
+          "強酸 $\\mathrm{HCl,\\ HNO_3,\\ H_2SO_4}$、強塩基はアルカリ金属と Ca・Ba の水酸化物、と整理する。",
+          "条件に合うのは $\\mathrm{HNO_3}$。"
+        ],
+        "alternatives": [
+          "電離式をかいて、生じる $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の数を確かめる（例：$\\mathrm{(COOH)_2}$ は H を2個出す）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "強弱を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "酢酸 $\\mathrm{CH_3COOH}$ の H の数（4個）を価数と考える。",
+          "アンモニアは OH をもたないので塩基ではないと考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "硫酸 $\\mathrm{H_2SO_4}$ は2価の強酸である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "シュウ酸 $\\mathrm{(COOH)_2}$ は2価の弱酸である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "水酸化バリウム $\\mathrm{Ba(OH)_2}$ は2価の強塩基である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次のうち、2価の強塩基に分類されるものを1つ選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{Ca(OH)_2}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{NH_3}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{H_2S}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{H_2SO_4}$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "水酸化カルシウム $\\mathrm{Ca(OH)_2}$ は2価の強塩基。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-acid_base_class",
+      "explanation_detail": {
+        "approach": "価数は1分子（1つ）あたりの $\\mathrm{H^+}$ を出す数（塩基は受け取る数・$\\mathrm{OH^-}$ の数）、強弱は電離度の大小で決まる。",
+        "steps": [
+          "各物質の価数を、出しうる $\\mathrm{H^+}$（または $\\mathrm{OH^-}$）の数から求める。",
+          "強酸 $\\mathrm{HCl,\\ HNO_3,\\ H_2SO_4}$、強塩基はアルカリ金属と Ca・Ba の水酸化物、と整理する。",
+          "条件に合うのは $\\mathrm{Ca(OH)_2}$。"
+        ],
+        "alternatives": [
+          "電離式をかいて、生じる $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の数を確かめる（例：$\\mathrm{(COOH)_2}$ は H を2個出す）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "強弱を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "酢酸 $\\mathrm{CH_3COOH}$ の H の数（4個）を価数と考える。",
+          "アンモニアは OH をもたないので塩基ではないと考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "アンモニア $\\mathrm{NH_3}$ は1価の弱塩基である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "硫化水素 $\\mathrm{H_2S}$ は2価の弱酸である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "硫酸 $\\mathrm{H_2SO_4}$ は2価の強酸である。",
+          "misconception": "酸・塩基の強弱と価数の判断の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の操作のうち、金属板の表面に別の金属が析出するものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "鉄板を硫酸マグネシウム水溶液に入れる"
+        },
+        {
+          "label": "イ",
+          "text": "鉄板を硫酸亜鉛水溶液に入れる"
+        },
+        {
+          "label": "ウ",
+          "text": "鉛板を硫酸マグネシウム水溶液に入れる"
+        },
+        {
+          "label": "エ",
+          "text": "銅板を硝酸銀水溶液に入れる"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "銅は銀よりイオン化傾向が大きいので、銅が陽イオンになり、銀が析出する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-ionization_tendency",
+      "explanation_detail": {
+        "approach": "入れる金属のイオン化傾向が、水溶液中の金属イオンのもとの金属より大きいときだけ反応が起こる。",
+        "steps": [
+          "イオン化傾向の順：Li > K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > (H₂) > Cu > Hg > Ag > Pt > Au。",
+          "各組み合わせで、金属板の金属と水溶液中のイオンの金属を比べる。",
+          "銅 > 銀 の組み合わせだけが反応する。"
+        ],
+        "alternatives": [
+          "電子の受け渡しで考える：イオン化傾向の大きい金属が電子を出し、小さい金属のイオンが電子を受け取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "イオン化傾向を比べている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "水溶液中のイオンの方が反応すると考え、向きを逆にする。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "鉄はマグネシウムよりイオン化傾向が小さいので、$\\mathrm{Mg^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "鉄は亜鉛よりイオン化傾向が小さいので、$\\mathrm{Zn^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "鉛はマグネシウムよりイオン化傾向が小さいので、$\\mathrm{Mg^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "銀板と鉄板を電解質の水溶液に浸して導線でつなぎ、電池をつくった。このときの説明として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "鉄が正極になり、鉄が還元される"
+        },
+        {
+          "label": "イ",
+          "text": "鉄が負極になり、鉄が酸化される"
+        },
+        {
+          "label": "ウ",
+          "text": "鉄が負極になり、鉄が還元される"
+        },
+        {
+          "label": "エ",
+          "text": "銀が負極になり、銀が酸化される"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "イオン化傾向は 鉄 > 銀。鉄が電子を出して陽イオンになる（酸化）ので負極。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-ionization_tendency",
+      "explanation_detail": {
+        "approach": "イオン化傾向の大きい金属が電子を放出して負極になる。電子を失う変化は酸化。",
+        "steps": [
+          "イオン化傾向：鉄 > 銀。",
+          "鉄が電子を出す → 負極、酸化反応。",
+          "電子は導線を通って正極へ流れる。"
+        ],
+        "alternatives": [
+          "ダニエル電池（Zn が負極、Cu が正極）と同じ考え方で判断する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "負極を正しく判断している",
+            "points": 1
+          },
+          {
+            "point": "酸化・還元を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「正」の字から、イオン化傾向の大きい方を正極と考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "鉄は電子を出す側なので負極。正極ではない。",
+          "misconception": "正極・負極の定義の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "負極では金属が電子を失って陽イオンになる（酸化）。",
+          "misconception": "酸化・還元の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "負極になるのはイオン化傾向の大きい鉄。",
+          "misconception": "イオン化傾向と極の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の操作のうち、金属板の表面に別の金属が析出するものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "銀板を硫酸鉄(Ⅱ)水溶液に入れる"
+        },
+        {
+          "label": "イ",
+          "text": "鉛板を硫酸銅(Ⅱ)水溶液に入れる"
+        },
+        {
+          "label": "ウ",
+          "text": "銀板を硫酸マグネシウム水溶液に入れる"
+        },
+        {
+          "label": "エ",
+          "text": "鉄板を硫酸マグネシウム水溶液に入れる"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "鉛は銅よりイオン化傾向が大きいので、鉛が陽イオンになり、銅が析出する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-ionization_tendency",
+      "explanation_detail": {
+        "approach": "入れる金属のイオン化傾向が、水溶液中の金属イオンのもとの金属より大きいときだけ反応が起こる。",
+        "steps": [
+          "イオン化傾向の順：Li > K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > (H₂) > Cu > Hg > Ag > Pt > Au。",
+          "各組み合わせで、金属板の金属と水溶液中のイオンの金属を比べる。",
+          "鉛 > 銅 の組み合わせだけが反応する。"
+        ],
+        "alternatives": [
+          "電子の受け渡しで考える：イオン化傾向の大きい金属が電子を出し、小さい金属のイオンが電子を受け取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "イオン化傾向を比べている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "水溶液中のイオンの方が反応すると考え、向きを逆にする。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "銀は鉄よりイオン化傾向が小さいので、$\\mathrm{Fe^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "銀はマグネシウムよりイオン化傾向が小さいので、$\\mathrm{Mg^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "鉄はマグネシウムよりイオン化傾向が小さいので、$\\mathrm{Mg^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の操作のうち、金属板の表面に別の金属が析出するものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "銀板を硫酸亜鉛水溶液に入れる"
+        },
+        {
+          "label": "イ",
+          "text": "鉄板を硫酸マグネシウム水溶液に入れる"
+        },
+        {
+          "label": "ウ",
+          "text": "銅板を硝酸銀水溶液に入れる"
+        },
+        {
+          "label": "エ",
+          "text": "銀板を硫酸マグネシウム水溶液に入れる"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "銅は銀よりイオン化傾向が大きいので、銅が陽イオンになり、銀が析出する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-ionization_tendency",
+      "explanation_detail": {
+        "approach": "入れる金属のイオン化傾向が、水溶液中の金属イオンのもとの金属より大きいときだけ反応が起こる。",
+        "steps": [
+          "イオン化傾向の順：Li > K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > (H₂) > Cu > Hg > Ag > Pt > Au。",
+          "各組み合わせで、金属板の金属と水溶液中のイオンの金属を比べる。",
+          "銅 > 銀 の組み合わせだけが反応する。"
+        ],
+        "alternatives": [
+          "電子の受け渡しで考える：イオン化傾向の大きい金属が電子を出し、小さい金属のイオンが電子を受け取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "イオン化傾向を比べている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "水溶液中のイオンの方が反応すると考え、向きを逆にする。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "銀は亜鉛よりイオン化傾向が小さいので、$\\mathrm{Zn^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "鉄はマグネシウムよりイオン化傾向が小さいので、$\\mathrm{Mg^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "銀はマグネシウムよりイオン化傾向が小さいので、$\\mathrm{Mg^{2+}}$ に電子を渡せず、反応は起こらない。",
+          "misconception": "イオン化傾向の大小の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の塩のうち、その水溶液が塩基性を示すものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "硝酸カリウム $\\mathrm{KNO_3}$"
+        },
+        {
+          "label": "イ",
+          "text": "硫酸水素ナトリウム $\\mathrm{NaHSO_4}$"
+        },
+        {
+          "label": "ウ",
+          "text": "炭酸水素ナトリウム $\\mathrm{NaHCO_3}$"
+        },
+        {
+          "label": "エ",
+          "text": "塩化カリウム $\\mathrm{KCl}$"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "炭酸水素ナトリウムは弱酸と強塩基からなる塩なので塩基性を示す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-salt_property",
+      "explanation_detail": {
+        "approach": "塩をつくっている酸と塩基を考え、強い方の性質が現れると整理する（強酸＋強塩基の正塩は中性）。",
+        "steps": [
+          "塩を陽イオンと陰イオンに分け、もとの塩基と酸を考える。",
+          "強い方の性質を示す。",
+          "炭酸水素ナトリウムは塩基性。"
+        ],
+        "alternatives": [
+          "加水分解で考える：弱酸の陰イオン（$\\mathrm{CH_3COO^-}$ など）は水から $\\mathrm{H^+}$ を受け取って $\\mathrm{OH^-}$ を生じ、弱塩基の陽イオン（$\\mathrm{NH_4^+}$）は $\\mathrm{H^+}$ を与える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの酸・塩基を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「H を含む酸性塩（$\\mathrm{NaHCO_3}$）は必ず酸性」と考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "硝酸カリウムは強酸と強塩基からなる正塩なので中性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "硫酸水素ナトリウムは強酸と弱塩基からなる塩（または酸性塩の硫酸水素ナトリウム）なので酸性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "塩化カリウムは強酸と強塩基からなる正塩なので中性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の塩のうち、その水溶液が塩基性を示すものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "塩化アンモニウム $\\mathrm{NH_4Cl}$"
+        },
+        {
+          "label": "イ",
+          "text": "塩化カリウム $\\mathrm{KCl}$"
+        },
+        {
+          "label": "ウ",
+          "text": "塩化ナトリウム $\\mathrm{NaCl}$"
+        },
+        {
+          "label": "エ",
+          "text": "酢酸ナトリウム $\\mathrm{CH_3COONa}$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "酢酸ナトリウムは弱酸と強塩基からなる塩なので塩基性を示す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-salt_property",
+      "explanation_detail": {
+        "approach": "塩をつくっている酸と塩基を考え、強い方の性質が現れると整理する（強酸＋強塩基の正塩は中性）。",
+        "steps": [
+          "塩を陽イオンと陰イオンに分け、もとの塩基と酸を考える。",
+          "強い方の性質を示す。",
+          "酢酸ナトリウムは塩基性。"
+        ],
+        "alternatives": [
+          "加水分解で考える：弱酸の陰イオン（$\\mathrm{CH_3COO^-}$ など）は水から $\\mathrm{H^+}$ を受け取って $\\mathrm{OH^-}$ を生じ、弱塩基の陽イオン（$\\mathrm{NH_4^+}$）は $\\mathrm{H^+}$ を与える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの酸・塩基を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「H を含む酸性塩（$\\mathrm{NaHCO_3}$）は必ず酸性」と考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "塩化アンモニウムは強酸と弱塩基からなる塩（または酸性塩の硫酸水素ナトリウム）なので酸性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "塩化カリウムは強酸と強塩基からなる正塩なので中性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "塩化ナトリウムは強酸と強塩基からなる正塩なので中性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の塩のうち、その水溶液が酸性を示すものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "塩化カリウム $\\mathrm{KCl}$"
+        },
+        {
+          "label": "イ",
+          "text": "硝酸カリウム $\\mathrm{KNO_3}$"
+        },
+        {
+          "label": "ウ",
+          "text": "炭酸ナトリウム $\\mathrm{Na_2CO_3}$"
+        },
+        {
+          "label": "エ",
+          "text": "硫酸アンモニウム $\\mathrm{(NH_4)_2SO_4}$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "硫酸アンモニウムは強酸と弱塩基からなる塩（または酸性塩の硫酸水素ナトリウム）なので酸性を示す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-salt_property",
+      "explanation_detail": {
+        "approach": "塩をつくっている酸と塩基を考え、強い方の性質が現れると整理する（強酸＋強塩基の正塩は中性）。",
+        "steps": [
+          "塩を陽イオンと陰イオンに分け、もとの塩基と酸を考える。",
+          "強い方の性質を示す。",
+          "硫酸アンモニウムは酸性。"
+        ],
+        "alternatives": [
+          "加水分解で考える：弱酸の陰イオン（$\\mathrm{CH_3COO^-}$ など）は水から $\\mathrm{H^+}$ を受け取って $\\mathrm{OH^-}$ を生じ、弱塩基の陽イオン（$\\mathrm{NH_4^+}$）は $\\mathrm{H^+}$ を与える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "もとの酸・塩基を正しく考えている",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「H を含む酸性塩（$\\mathrm{NaHCO_3}$）は必ず酸性」と考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "塩化カリウムは強酸と強塩基からなる正塩なので中性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "硝酸カリウムは強酸と強塩基からなる正塩なので中性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "炭酸ナトリウムは弱酸と強塩基からなる塩なので塩基性を示す。",
+          "misconception": "塩の水溶液の性質と、もとの酸・塩基の強弱の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度不明の硫酸 15.0 mL を、0.0500 mol/L のアンモニア水で滴定したところ、中和点までに 30.0 mL を要した。硫酸のモル濃度は何 mol/L か。",
+      "answer": {
+        "value": "0.0500",
+        "unit": "mol/L"
+      },
+      "explanation": "$2\\times c\\times15.0=1\\times0.0500\\times30.0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "1*0.050*30/(2*15)",
+        "expected": "1/20"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-neutralization",
+      "explanation_detail": {
+        "approach": "酸が出す $\\mathrm{H^+}$ の物質量＝塩基が出す $\\mathrm{OH^-}$ の物質量（価数×モル濃度×体積）で式を立てる。強弱は関係しない。",
+        "steps": [
+          "硫酸は2価、アンモニアは1価。",
+          "$2\\times c\\times15.0=1\\times0.0500\\times30.0$。",
+          "$c=0.0500$ mol/L。"
+        ],
+        "alternatives": [
+          "物質量を先に求める方法：酸（または塩基）の物質量を mmol 単位で出し、価数をかけて $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の量をそろえる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を含めて式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。",
+          "弱酸・弱塩基では中和に必要な量が少ないと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.0800 mol/L のシュウ酸水溶液 10.0 mL を、濃度不明の水酸化カリウム水溶液で滴定したところ、中和点までに 8.0 mL を要した。水酸化カリウムのモル濃度は何 mol/L か。",
+      "answer": {
+        "value": "0.200",
+        "unit": "mol/L"
+      },
+      "explanation": "$2\\times c_{\\text{酸}}\\times V_{\\text{酸}}=1\\times c_{\\text{塩基}}\\times V_{\\text{塩基}}$ に代入する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*0.080*10/(1*8.0)",
+        "expected": "1/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-neutralization",
+      "explanation_detail": {
+        "approach": "酸が出す $\\mathrm{H^+}$ の物質量＝塩基が出す $\\mathrm{OH^-}$ の物質量（価数×モル濃度×体積）で式を立てる。強弱は関係しない。",
+        "steps": [
+          "シュウ酸は2価、水酸化カリウムは1価。",
+          "$2\\times0.0800\\times10.0=1\\times c\\times8.0$。",
+          "$c=0.200$ mol/L。"
+        ],
+        "alternatives": [
+          "物質量を先に求める方法：酸（または塩基）の物質量を mmol 単位で出し、価数をかけて $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の量をそろえる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を含めて式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。",
+          "弱酸・弱塩基では中和に必要な量が少ないと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.0500 mol/L のシュウ酸水溶液 25.0 mL を、濃度不明の水酸化バリウム水溶液で滴定したところ、中和点までに 5.0 mL を要した。水酸化バリウムのモル濃度は何 mol/L か。",
+      "answer": {
+        "value": "0.250",
+        "unit": "mol/L"
+      },
+      "explanation": "$2\\times c_{\\text{酸}}\\times V_{\\text{酸}}=2\\times c_{\\text{塩基}}\\times V_{\\text{塩基}}$ に代入する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*0.050*25/(2*5.0)",
+        "expected": "1/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-neutralization",
+      "explanation_detail": {
+        "approach": "酸が出す $\\mathrm{H^+}$ の物質量＝塩基が出す $\\mathrm{OH^-}$ の物質量（価数×モル濃度×体積）で式を立てる。強弱は関係しない。",
+        "steps": [
+          "シュウ酸は2価、水酸化バリウムは2価。",
+          "$2\\times0.0500\\times25.0=2\\times c\\times5.0$。",
+          "$c=0.250$ mol/L。"
+        ],
+        "alternatives": [
+          "物質量を先に求める方法：酸（または塩基）の物質量を mmol 単位で出し、価数をかけて $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の量をそろえる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を含めて式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。",
+          "弱酸・弱塩基では中和に必要な量が少ないと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.0500 mol/L の硫酸 25.0 mL を過不足なく中和するには、0.250 mol/L のアンモニア水が何 mL 必要か。",
+      "answer": {
+        "value": "10.0",
+        "unit": "mL"
+      },
+      "explanation": "$2\\times0.0500\\times25.0=1\\times0.250\\times V$ より $V=10.0$ mL。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*0.050*25/(1*0.25)",
+        "expected": "10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-neutralization",
+      "explanation_detail": {
+        "approach": "酸が出す $\\mathrm{H^+}$ の物質量＝塩基が出す $\\mathrm{OH^-}$ の物質量（価数×モル濃度×体積）で式を立てる。強弱は関係しない。",
+        "steps": [
+          "硫酸は2価、アンモニアは1価。",
+          "$2\\times0.0500\\times25.0=1\\times0.250\\times V$。",
+          "$V=10.0$ mL。"
+        ],
+        "alternatives": [
+          "物質量を先に求める方法：酸（または塩基）の物質量を mmol 単位で出し、価数をかけて $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の量をそろえる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を含めて式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。",
+          "弱酸・弱塩基では中和に必要な量が少ないと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.0800 mol/L の硫酸 15.0 mL を過不足なく中和するには、0.200 mol/L の水酸化ナトリウム水溶液が何 mL 必要か。",
+      "answer": {
+        "value": "12.0",
+        "unit": "mL"
+      },
+      "explanation": "$2\\times0.0800\\times15.0=1\\times0.200\\times V$ より $V=12.0$ mL。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*0.080*15/(1*0.20)",
+        "expected": "12"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-neutralization",
+      "explanation_detail": {
+        "approach": "酸が出す $\\mathrm{H^+}$ の物質量＝塩基が出す $\\mathrm{OH^-}$ の物質量（価数×モル濃度×体積）で式を立てる。強弱は関係しない。",
+        "steps": [
+          "硫酸は2価、水酸化ナトリウムは1価。",
+          "$2\\times0.0800\\times15.0=1\\times0.200\\times V$。",
+          "$V=12.0$ mL。"
+        ],
+        "alternatives": [
+          "物質量を先に求める方法：酸（または塩基）の物質量を mmol 単位で出し、価数をかけて $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の量をそろえる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "価数を含めて式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。",
+          "弱酸・弱塩基では中和に必要な量が少ないと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.020 mol/L の酢酸水溶液の電離度を 0.050 とする。この水溶液の pH を求めなさい。",
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "$[\\mathrm{H^+}]=c\\alpha=0.020\\times0.050=1.0\\times10^{-3}$ mol/L より pH 3。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "-log(0.020*0.050, 10)",
+        "expected": "3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_dilute_weak",
+      "explanation_detail": {
+        "approach": "弱酸は一部しか電離しない。$[\\mathrm{H^+}]=$（価数）×（モル濃度）×（電離度）。",
+        "steps": [
+          "酢酸は1価の弱酸。",
+          "$[\\mathrm{H^+}]=0.020\\times0.050=1.0\\times10^{-3}$ mol/L。",
+          "pH＝3。"
+        ],
+        "alternatives": [
+          "同じ濃度の塩酸（完全電離）の pH と比べ、弱酸の方が pH が大きくなることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "電離度を用いて $[\\mathrm{H^+}]$ を求めている",
+            "points": 2
+          },
+          {
+            "point": "pH が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "電離度を無視して完全に電離したとして計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.020 mol/L のアンモニア水の電離度を 0.050 とする。この水溶液の pH を求めなさい。水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "11"
+      },
+      "explanation": "$[\\mathrm{OH^-}]=c\\alpha=1.0\\times10^{-3}$ mol/L、$[\\mathrm{H^+}]=1.0\\times10^{-11}$ mol/L より pH 11。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "14+log(0.020*0.050, 10)",
+        "expected": "11"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_dilute_weak",
+      "explanation_detail": {
+        "approach": "アンモニアは1価の弱塩基。$[\\mathrm{OH^-}]=c\\alpha$ を求めてから、水のイオン積を使う。",
+        "steps": [
+          "$[\\mathrm{OH^-}]=0.020\\times0.050=1.0\\times10^{-3}$ mol/L。",
+          "$[\\mathrm{H^+}]=\\dfrac{1.0\\times10^{-14}}{1.0\\times10^{-3}}=1.0\\times10^{-11}$ mol/L。",
+          "pH＝11。"
+        ],
+        "alternatives": [
+          "pOH＝3 を求めて、pH＝14－3 としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$[\\mathrm{OH^-}]$ を求めている",
+            "points": 2
+          },
+          {
+            "point": "pH が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "pH 2 の塩酸を水で $10^{3}$ 倍にうすめた。うすめた後の水溶液の pH を求めなさい。",
+      "answer": {
+        "value": "5"
+      },
+      "explanation": "$[\\mathrm{H^+}]$ が $\\dfrac{1}{10^{3}}$ 倍の $1.0\\times10^{-5}$ mol/L になるので pH 5。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-log(10**(-2)/10**3, 10)",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-ph_dilute_weak",
+      "explanation_detail": {
+        "approach": "うすめると $[\\mathrm{H^+}]$ が小さくなる。$10$ 倍うすめるごとに pH は 1 ずつ大きくなる（7 に近づくまで）。",
+        "steps": [
+          "もとの $[\\mathrm{H^+}]=1.0\\times10^{-2}$ mol/L。",
+          "$10^{3}$ 倍にうすめると $1.0\\times10^{-5}$ mol/L。",
+          "pH＝5。"
+        ],
+        "alternatives": [
+          "結果が 7 未満であることを確かめる（酸をうすめても中性・塩基性にはならない）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$[\\mathrm{H^+}]$ の変化を正しく考えている",
+            "points": 2
+          },
+          {
+            "point": "pH が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "pH を $10^{3}$ 倍してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度不明の過酸化水素水 25.0 mL をコニカルビーカーにとり、0.0200 mol/L の過マンガン酸カリウム水溶液（硫酸酸性）で滴定したところ、10.0 mL 加えたところで赤紫色が消えなくなった。過酸化水素のモル濃度は何 mol/L か。半反応式は次のとおりである。\n$$\\mathrm{MnO_4^-}+8\\mathrm{H^+}+5\\mathrm{e^-}\\longrightarrow\\mathrm{Mn^{2+}}+4\\mathrm{H_2O}$$\n$$\\mathrm{H_2O_2}\\longrightarrow\\mathrm{O_2}+2\\mathrm{H^+}+2\\mathrm{e^-}$$",
+      "answer": {
+        "value": "0.0200",
+        "unit": "mol/L"
+      },
+      "explanation": "$5\\times0.0200\\times10.0=2\\times c\\times25.0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "5*0.020*10.0/(2*25.0)",
+        "expected": "1/50"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-redox_titration",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の物質量＝還元剤が出す電子の物質量。半反応式から1 mol あたりの電子の数を読み取る。",
+        "steps": [
+          "酸化剤 1 mol は電子を 5 mol 受け取り、還元剤 1 mol は電子を 2 mol 出す。",
+          "$5\\times0.0200\\times\\dfrac{10.0}{1000}=2\\times c\\times\\dfrac{25.0}{1000}$。",
+          "$c=0.0200$ mol/L。"
+        ],
+        "alternatives": [
+          "イオン反応式（電子を消去した式）をつくり、物質量の比（例：$\\mathrm{MnO_4^-}:\\mathrm{H_2O_2}=2:5$）から比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "電子の数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "電子の物質量のつり合いの式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数（5 と 2 など）を逆に掛ける。",
+          "体積の単位をそろえない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度不明のシュウ酸水溶液 25.0 mL をコニカルビーカーにとり、0.0400 mol/L の過マンガン酸カリウム水溶液（硫酸酸性）で滴定したところ、8.0 mL 加えたところで赤紫色が消えなくなった。シュウ酸のモル濃度は何 mol/L か。半反応式は次のとおりである。\n$$\\mathrm{MnO_4^-}+8\\mathrm{H^+}+5\\mathrm{e^-}\\longrightarrow\\mathrm{Mn^{2+}}+4\\mathrm{H_2O}$$\n$$\\mathrm{(COOH)_2}\\longrightarrow2\\mathrm{CO_2}+2\\mathrm{H^+}+2\\mathrm{e^-}$$",
+      "answer": {
+        "value": "0.0320",
+        "unit": "mol/L"
+      },
+      "explanation": "$5\\times0.0400\\times8.0=2\\times c\\times25.0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "5*0.040*8.0/(2*25.0)",
+        "expected": "4/125"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-redox_titration",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の物質量＝還元剤が出す電子の物質量。半反応式から1 mol あたりの電子の数を読み取る。",
+        "steps": [
+          "酸化剤 1 mol は電子を 5 mol 受け取り、還元剤 1 mol は電子を 2 mol 出す。",
+          "$5\\times0.0400\\times\\dfrac{8.0}{1000}=2\\times c\\times\\dfrac{25.0}{1000}$。",
+          "$c=0.0320$ mol/L。"
+        ],
+        "alternatives": [
+          "イオン反応式（電子を消去した式）をつくり、物質量の比（例：$\\mathrm{MnO_4^-}:\\mathrm{H_2O_2}=2:5$）から比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "電子の数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "電子の物質量のつり合いの式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数（5 と 2 など）を逆に掛ける。",
+          "体積の単位をそろえない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.180 mol/L の硫酸鉄(Ⅱ)水溶液 25.0 mL と過不足なく反応する 0.0500 mol/L の二クロム酸カリウム水溶液（硫酸酸性）は何 mL か。半反応式は次のとおりである。\n$$\\mathrm{Cr_2O_7^{2-}}+14\\mathrm{H^+}+6\\mathrm{e^-}\\longrightarrow2\\mathrm{Cr^{3+}}+7\\mathrm{H_2O}$$\n$$\\mathrm{Fe^{2+}}\\longrightarrow\\mathrm{Fe^{3+}}+\\mathrm{e^-}$$",
+      "answer": {
+        "value": "15.0",
+        "unit": "mL"
+      },
+      "explanation": "$6\\times0.0500\\times V=1\\times0.180\\times25.0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "1*0.18*25/(6*0.050)",
+        "expected": "15"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-redox_titration",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の物質量＝還元剤が出す電子の物質量。半反応式から1 mol あたりの電子の数を読み取る。",
+        "steps": [
+          "酸化剤 1 mol は電子を 6 mol、還元剤 1 mol は電子を 1 mol 授受する。",
+          "$6\\times0.0500\\times V=1\\times0.180\\times25.0$。",
+          "$V=15.0$ mL。"
+        ],
+        "alternatives": [
+          "イオン反応式（電子を消去した式）をつくり、物質量の比（例：$\\mathrm{MnO_4^-}:\\mathrm{H_2O_2}=2:5$）から比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "電子の数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "電子の物質量のつり合いの式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数（5 と 2 など）を逆に掛ける。",
+          "体積の単位をそろえない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度不明の硫酸鉄(Ⅱ)水溶液 20.0 mL をコニカルビーカーにとり、0.0100 mol/L の過マンガン酸カリウム水溶液（硫酸酸性）で滴定したところ、8.0 mL 加えたところで赤紫色が消えなくなった。硫酸鉄(Ⅱ)のモル濃度は何 mol/L か。半反応式は次のとおりである。\n$$\\mathrm{MnO_4^-}+8\\mathrm{H^+}+5\\mathrm{e^-}\\longrightarrow\\mathrm{Mn^{2+}}+4\\mathrm{H_2O}$$\n$$\\mathrm{Fe^{2+}}\\longrightarrow\\mathrm{Fe^{3+}}+\\mathrm{e^-}$$",
+      "answer": {
+        "value": "0.0200",
+        "unit": "mol/L"
+      },
+      "explanation": "$5\\times0.0100\\times8.0=1\\times c\\times20.0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "5*0.010*8.0/(1*20.0)",
+        "expected": "1/50"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-redox_titration",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の物質量＝還元剤が出す電子の物質量。半反応式から1 mol あたりの電子の数を読み取る。",
+        "steps": [
+          "酸化剤 1 mol は電子を 5 mol 受け取り、還元剤 1 mol は電子を 1 mol 出す。",
+          "$5\\times0.0100\\times\\dfrac{8.0}{1000}=1\\times c\\times\\dfrac{20.0}{1000}$。",
+          "$c=0.0200$ mol/L。"
+        ],
+        "alternatives": [
+          "イオン反応式（電子を消去した式）をつくり、物質量の比（例：$\\mathrm{MnO_4^-}:\\mathrm{H_2O_2}=2:5$）から比例で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "電子の数を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "電子の物質量のつり合いの式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数（5 と 2 など）を逆に掛ける。",
+          "体積の単位をそろえない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の反応で、還元剤としてはたらいている物質を選びなさい。\n$$\\mathrm{Fe_2O_3}+3\\mathrm{CO}\\longrightarrow2\\mathrm{Fe}+3\\mathrm{CO_2}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{Fe_2O_3}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{CO}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{Fe}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{CO_2}$"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "酸化数の変化：Fe：$+3\\to0$（還元された＝酸化剤）、C：$+2\\to+4$（酸化された＝還元剤）。還元剤は $\\mathrm{CO}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-agent",
+      "explanation_detail": {
+        "approach": "反応の前後で酸化数が変化する原子を探す。酸化数が減少した原子を含む物質が酸化剤、増加した原子を含む物質が還元剤。",
+        "steps": [
+          "反応物の各原子の酸化数を求め、生成物と比べる。",
+          "Fe：$+3\\to0$：還元された → 酸化剤。",
+          "C：$+2\\to+4$：酸化された → 還元剤。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：電子を受け取る物質が酸化剤、電子を与える物質が還元剤。"
+        ],
+        "partial_credit": [
+          {
+            "point": "酸化数の変化を調べている",
+            "points": 2
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「酸化剤＝酸化される物質」と逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "この物質は酸化剤（Fe：$+3\\to0$ と酸化数が減少）。",
+          "misconception": "酸化剤と還元剤の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "生成物であり、反応を起こさせる側（酸化剤・還元剤）ではない。",
+          "misconception": "反応物と生成物の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "生成物であり、反応を起こさせる側（酸化剤・還元剤）ではない。",
+          "misconception": "反応物と生成物の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の反応で、還元剤としてはたらいている物質を選びなさい。\n$$\\mathrm{Mg}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MgCl_2}+\\mathrm{H_2}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{HCl}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{MgCl_2}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{H_2}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{Mg}$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "酸化数の変化：H：$+1\\to0$（還元された＝酸化剤）、Mg：$0\\to+2$（酸化された＝還元剤）。還元剤は $\\mathrm{Mg}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-agent",
+      "explanation_detail": {
+        "approach": "反応の前後で酸化数が変化する原子を探す。酸化数が減少した原子を含む物質が酸化剤、増加した原子を含む物質が還元剤。",
+        "steps": [
+          "反応物の各原子の酸化数を求め、生成物と比べる。",
+          "H：$+1\\to0$：還元された → 酸化剤。",
+          "Mg：$0\\to+2$：酸化された → 還元剤。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：電子を受け取る物質が酸化剤、電子を与える物質が還元剤。"
+        ],
+        "partial_credit": [
+          {
+            "point": "酸化数の変化を調べている",
+            "points": 2
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「酸化剤＝酸化される物質」と逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "この物質は酸化剤（H：$+1\\to0$ と酸化数が減少）。",
+          "misconception": "酸化剤と還元剤の取り違え"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "生成物であり、反応を起こさせる側（酸化剤・還元剤）ではない。",
+          "misconception": "反応物と生成物の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "生成物であり、反応を起こさせる側（酸化剤・還元剤）ではない。",
+          "misconception": "反応物と生成物の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の反応で、酸化剤としてはたらいている物質を選びなさい。\n$$\\mathrm{SO_2}+2\\mathrm{H_2S}\\longrightarrow3\\mathrm{S}+2\\mathrm{H_2O}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\mathrm{S}$"
+        },
+        {
+          "label": "イ",
+          "text": "$\\mathrm{H_2O}$"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\mathrm{H_2S}$"
+        },
+        {
+          "label": "エ",
+          "text": "$\\mathrm{SO_2}$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "酸化数の変化：S：$+4\\to0$（還元された＝酸化剤）、S：$-2\\to0$（酸化された＝還元剤）。酸化剤は $\\mathrm{SO_2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-agent",
+      "explanation_detail": {
+        "approach": "反応の前後で酸化数が変化する原子を探す。酸化数が減少した原子を含む物質が酸化剤、増加した原子を含む物質が還元剤。",
+        "steps": [
+          "反応物の各原子の酸化数を求め、生成物と比べる。",
+          "S：$+4\\to0$：還元された → 酸化剤。",
+          "S：$-2\\to0$：酸化された → 還元剤。"
+        ],
+        "alternatives": [
+          "電子の授受で確かめる：電子を受け取る物質が酸化剤、電子を与える物質が還元剤。"
+        ],
+        "partial_credit": [
+          {
+            "point": "酸化数の変化を調べている",
+            "points": 2
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「酸化剤＝酸化される物質」と逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "生成物であり、反応を起こさせる側（酸化剤・還元剤）ではない。",
+          "misconception": "反応物と生成物の取り違え"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "生成物であり、反応を起こさせる側（酸化剤・還元剤）ではない。",
+          "misconception": "反応物と生成物の取り違え"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "この物質は還元剤（S：$-2\\to0$ と酸化数が増加）。",
+          "misconception": "酸化剤と還元剤の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "亜鉛板を硫酸亜鉛水溶液に、銅板を硫酸銅(Ⅱ)水溶液に浸し、素焼き板で仕切った電池（ダニエル電池）を放電させたところ、導線を電子が 0.30 mol 流れた。正極の質量は何 g 増加するか。原子量は Zn＝65、Cu＝64 とする。",
+      "answer": {
+        "value": "9.6",
+        "unit": "g"
+      },
+      "explanation": "正極 $\\mathrm{Cu^{2+}}+2\\mathrm{e^-}\\longrightarrow\\mathrm{Cu}$ より、Cu が析出する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "0.30/2*64",
+        "expected": "48/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-battery",
+      "explanation_detail": {
+        "approach": "負極ではイオン化傾向の大きい金属が溶け出し（酸化）、正極では金属イオンが電子を受け取って析出する（還元）。電子の物質量と半反応式の係数の比で金属の物質量を求める。",
+        "steps": [
+          "正極（Cu）：$\\mathrm{Cu^{2+}}+2\\mathrm{e^-}\\longrightarrow\\mathrm{Cu}$。",
+          "析出する Cu：$0.30\\div2=0.150$ mol。",
+          "質量：$0.150\\times64=9.60$ g 増加。"
+        ],
+        "alternatives": [
+          "イオン化傾向から負極・正極を先に決め、半反応式を書いてから量的関係を考えると取り違えがない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "負極・正極の反応を正しく書いている",
+            "points": 2
+          },
+          {
+            "point": "電子との物質量の比を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負極と正極を逆にする。",
+          "金属1 mol あたりの電子の数（価数）を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "マグネシウム板を硫酸マグネシウム水溶液に、銅板を硫酸銅(Ⅱ)水溶液に浸し、素焼き板で仕切った電池を放電させたところ、導線を電子が 0.20 mol 流れた。負極の質量は何 g 減少するか。原子量は Mg＝24、Cu＝64 とする。",
+      "answer": {
+        "value": "2.4",
+        "unit": "g"
+      },
+      "explanation": "負極 $\\mathrm{Mg}\\longrightarrow\\mathrm{Mg^{2+}}+2\\mathrm{e^-}$ より、Mg は電子の $\\dfrac{1}{2}$ の物質量だけ溶け出す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "0.20/2*24",
+        "expected": "12/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-battery",
+      "explanation_detail": {
+        "approach": "負極ではイオン化傾向の大きい金属が溶け出し（酸化）、正極では金属イオンが電子を受け取って析出する（還元）。電子の物質量と半反応式の係数の比で金属の物質量を求める。",
+        "steps": [
+          "負極（Mg）：$\\mathrm{Mg}\\longrightarrow\\mathrm{Mg^{2+}}+2\\mathrm{e^-}$。",
+          "溶け出す Mg：$0.20\\div2=0.100$ mol。",
+          "質量：$0.100\\times24=2.40$ g 減少。"
+        ],
+        "alternatives": [
+          "イオン化傾向から負極・正極を先に決め、半反応式を書いてから量的関係を考えると取り違えがない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "負極・正極の反応を正しく書いている",
+            "points": 2
+          },
+          {
+            "point": "電子との物質量の比を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負極と正極を逆にする。",
+          "金属1 mol あたりの電子の数（価数）を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "亜鉛板を硫酸亜鉛水溶液に、銅板を硫酸銅(Ⅱ)水溶液に浸し、素焼き板で仕切った電池（ダニエル電池）を放電させたところ、導線を電子が 0.020 mol 流れた。正極の質量は何 g 増加するか。原子量は Zn＝65、Cu＝64 とする。",
+      "answer": {
+        "value": "0.64",
+        "unit": "g"
+      },
+      "explanation": "正極 $\\mathrm{Cu^{2+}}+2\\mathrm{e^-}\\longrightarrow\\mathrm{Cu}$ より、Cu が析出する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "0.020/2*64",
+        "expected": "16/25"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHEB-U03-battery",
+      "explanation_detail": {
+        "approach": "負極ではイオン化傾向の大きい金属が溶け出し（酸化）、正極では金属イオンが電子を受け取って析出する（還元）。電子の物質量と半反応式の係数の比で金属の物質量を求める。",
+        "steps": [
+          "正極（Cu）：$\\mathrm{Cu^{2+}}+2\\mathrm{e^-}\\longrightarrow\\mathrm{Cu}$。",
+          "析出する Cu：$0.020\\div2=0.0100$ mol。",
+          "質量：$0.0100\\times64=0.640$ g 増加。"
+        ],
+        "alternatives": [
+          "イオン化傾向から負極・正極を先に決め、半反応式を書いてから量的関係を考えると取り違えがない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "負極・正極の反応を正しく書いている",
+            "points": 2
+          },
+          {
+            "point": "電子との物質量の比を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "負極と正極を逆にする。",
+          "金属1 mol あたりの電子の数（価数）を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "塩酸をアンモニア水で中和滴定する。用いる指示薬とその理由の組み合わせとして最も適当なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "メチルオレンジ：中和点が塩基性側にあるから"
+        },
+        {
+          "label": "イ",
+          "text": "メチルオレンジ：中和点が酸性側にあるから"
+        },
+        {
+          "label": "ウ",
+          "text": "フェノールフタレイン：中和点が酸性側にあるから"
+        },
+        {
+          "label": "エ",
+          "text": "フェノールフタレイン：中和点が塩基性側にあるから"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "中和点で生じる塩は強酸と弱塩基からなる塩で、水溶液は酸性を示す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-indicator",
+      "explanation_detail": {
+        "approach": "中和点の水溶液は、生じる塩の性質によって中性とは限らない。中和点付近の pH の急変部分に変色域をもつ指示薬を選ぶ。",
+        "steps": [
+          "生じる塩は強酸と弱塩基からなる塩。",
+          "中和点は酸性側。",
+          "変色域が酸性側にある指示薬を選ぶ。"
+        ],
+        "alternatives": [
+          "滴定曲線をかいて、垂直に近い部分の pH 範囲と指示薬の変色域を重ねて判断する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中和点の液性を判断している",
+            "points": 2
+          },
+          {
+            "point": "指示薬を正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中和点は常に pH 7 だと考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "この滴定では中和点で生じる塩が強酸と弱塩基からなる塩なので、中和点は酸性側にある。メチルオレンジ（変色域 約3.1〜4.4）が適する。",
+          "misconception": "中和点の pH と指示薬の変色域の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "この滴定では中和点で生じる塩が強酸と弱塩基からなる塩なので、中和点は酸性側にある。メチルオレンジ（変色域 約3.1〜4.4）が適する。",
+          "misconception": "中和点の pH と指示薬の変色域の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "この滴定では中和点で生じる塩が強酸と弱塩基からなる塩なので、中和点は酸性側にある。メチルオレンジ（変色域 約3.1〜4.4）が適する。",
+          "misconception": "中和点の pH と指示薬の変色域の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "アンモニア水を加えて塩酸を中和滴定する実験を行う。用いる指示薬とその理由の組み合わせとして最も適当なものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "フェノールフタレイン：中和点が酸性側にあるから"
+        },
+        {
+          "label": "イ",
+          "text": "メチルオレンジ：中和点が酸性側にあるから"
+        },
+        {
+          "label": "ウ",
+          "text": "フェノールフタレイン：中和点が塩基性側にあるから"
+        },
+        {
+          "label": "エ",
+          "text": "メチルオレンジ：中和点が塩基性側にあるから"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "中和点で生じる塩は強酸と弱塩基からなる塩で、水溶液は酸性を示す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-indicator",
+      "explanation_detail": {
+        "approach": "中和点の水溶液は、生じる塩の性質によって中性とは限らない。中和点付近の pH の急変部分に変色域をもつ指示薬を選ぶ。",
+        "steps": [
+          "生じる塩は強酸と弱塩基からなる塩。",
+          "中和点は酸性側。",
+          "変色域が酸性側にある指示薬を選ぶ。"
+        ],
+        "alternatives": [
+          "滴定曲線をかいて、垂直に近い部分の pH 範囲と指示薬の変色域を重ねて判断する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中和点の液性を判断している",
+            "points": 2
+          },
+          {
+            "point": "指示薬を正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "中和点は常に pH 7 だと考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "この滴定では中和点で生じる塩が強酸と弱塩基からなる塩なので、中和点は酸性側にある。メチルオレンジ（変色域 約3.1〜4.4）が適する。",
+          "misconception": "中和点の pH と指示薬の変色域の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "この滴定では中和点で生じる塩が強酸と弱塩基からなる塩なので、中和点は酸性側にある。メチルオレンジ（変色域 約3.1〜4.4）が適する。",
+          "misconception": "中和点の pH と指示薬の変色域の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "この滴定では中和点で生じる塩が強酸と弱塩基からなる塩なので、中和点は酸性側にある。メチルオレンジ（変色域 約3.1〜4.4）が適する。",
+          "misconception": "中和点の pH と指示薬の変色域の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "「中和点」と「中性」は同じ意味ではない。このことを、酢酸水溶液と水酸化ナトリウム水溶液の中和を例にして説明しなさい。",
+      "answer": {
+        "value": "中和点は、酸の出す $\\mathrm{H^+}$ と塩基の出す $\\mathrm{OH^-}$ の物質量が等しくなり、過不足なく反応した点である。酢酸と水酸化ナトリウムの中和点では酢酸ナトリウムの水溶液になるが、酢酸イオンが水と反応して $\\mathrm{OH^-}$ を生じるため、水溶液は弱い塩基性を示す。したがって中和点でも pH は 7 にならず、中和点＝中性とは限らない。"
+      },
+      "explanation": "物質量・濃度・電離度といった概念のどれが関係しているかを区別して説明する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "中和点の意味（物質量の関係）を正しく述べている",
+            "points": 3
+          },
+          {
+            "criterion": "生じる塩が塩基性を示すことを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "中和点と中性が一致しない理由をまとめている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-titration_reason",
+      "explanation_detail": {
+        "approach": "中和点は「量」の概念、中性は「pH」の概念であることを区別する。",
+        "steps": [
+          "問われている2つの事柄を、それぞれ何で決まるかに分ける。",
+          "具体的な粒子（$\\mathrm{H^+}$・溶質）の物質量の変化で説明する。",
+          "結論を1文でまとめる。"
+        ],
+        "alternatives": [
+          "具体的な数値（例：0.10 mol/L、10 mL）を仮定して計算し、説明を裏づけてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中和点の意味（物質量の関係）を正しく述べている",
+            "points": 3
+          },
+          {
+            "point": "生じる塩が塩基性を示すことを述べている",
+            "points": 3
+          },
+          {
+            "point": "中和点と中性が一致しない理由をまとめている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「濃度」と「物質量」を区別せずに説明する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "図の滴定曲線について、中和点の pH が 7 より大きくなる理由と、この滴定でメチルオレンジが指示薬として適さない理由を説明しなさい。",
+      "figure": {
+        "alt": "滴定曲線。横軸は滴下量 V（mL）、縦軸は pH。帯は指示薬の変色域（PP：フェノールフタレイン 約8.0〜9.8、MO：メチルオレンジ 約3.1〜4.4）。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 248 182\" width=\"248\" height=\"182\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><polygon points=\"14,80 234,80 234,60.2 14,60.2\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><polygon points=\"14,133.9 234,133.9 234,119.6 14,119.6\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"14\" y1=\"168\" x2=\"240\" y2=\"168\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"168\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"236\" y=\"181\" font-style=\"italic\">V[mL]</text><text x=\"19\" y=\"12\" font-style=\"italic\">pH</text><text x=\"3\" y=\"180\">O</text><text x=\"33\" y=\"180\" font-size=\"8\" fill=\"#555\">2</text><text x=\"55\" y=\"180\" font-size=\"8\" fill=\"#555\">4</text><text x=\"77\" y=\"180\" font-size=\"8\" fill=\"#555\">6</text><text x=\"99\" y=\"180\" font-size=\"8\" fill=\"#555\">8</text><text x=\"121\" y=\"180\" font-size=\"8\" fill=\"#555\">10</text><text x=\"143\" y=\"180\" font-size=\"8\" fill=\"#555\">12</text><text x=\"165\" y=\"180\" font-size=\"8\" fill=\"#555\">14</text><text x=\"187\" y=\"180\" font-size=\"8\" fill=\"#555\">16</text><text x=\"209\" y=\"180\" font-size=\"8\" fill=\"#555\">18</text><text x=\"231\" y=\"180\" font-size=\"8\" fill=\"#555\">20</text><text x=\"1\" y=\"149\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"127\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"105\" font-size=\"8\" fill=\"#555\">6</text><text x=\"1\" y=\"83\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"61\" font-size=\"8\" fill=\"#555\">10</text><text x=\"1\" y=\"39\" font-size=\"8\" fill=\"#555\">12</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">14</text><clipPath id=\"k26\"><rect x=\"14\" y=\"14\" width=\"220\" height=\"154\"/></clipPath><path d=\"M14,136.32 L15.1,136.32 L16.2,134.23 L17.3,132.25 L18.4,130.82 L19.5,129.71 L20.6,128.78 L21.7,128 L22.8,127.31 L23.9,126.69 L25,126.14 L26.1,125.63 L27.2,125.16 L28.3,124.72 L29.4,124.31 L30.5,123.93 L31.6,123.56 L32.7,123.21 L33.8,122.88 L34.9,122.57 L36,122.26 L37.1,121.97 L38.2,121.69 L39.3,121.41 L40.4,121.15 L41.5,120.89 L42.6,120.64 L43.7,120.39 L44.8,120.15 L45.9,119.92 L47,119.69 L48.1,119.46 L49.2,119.24 L50.3,119.02 L51.4,118.81 L52.5,118.6 L53.6,118.39 L54.7,118.18 L55.8,117.98 L56.9,117.78 L58,117.58 L59.1,117.38 L60.2,117.18 L61.3,116.99 L62.4,116.79 L63.5,116.6 L64.6,116.41 L65.7,116.21 L66.8,116.02 L67.9,115.83 L69,115.64 L70.1,115.45 L71.2,115.26 L72.3,115.07 L73.4,114.87 L74.5,114.68 L75.6,114.49 L76.7,114.29 L77.8,114.1 L78.9,113.9 L80,113.7 L81.1,113.5 L82.2,113.3 L83.3,113.1 L84.4,112.89 L85.5,112.68 L86.6,112.47 L87.7,112.26 L88.8,112.04 L89.9,111.82 L91,111.59 L92.1,111.36 L93.2,111.13 L94.3,110.89 L95.4,110.64 L96.5,110.39 L97.6,110.13 L98.7,109.87 L99.8,109.59 L100.9,109.31 L102,109.02 L103.1,108.71 L104.2,108.4 L105.3,108.07 L106.4,107.72 L107.5,107.35 L108.6,106.97 L109.7,106.56 L110.8,106.12 L111.9,105.65 L113,105.14 L114.1,104.59 L115.2,103.97 L116.3,103.28 L117.4,102.5 L118.5,101.57 L119.6,100.46 L120.7,99.03 L121.8,97.05 L122.9,93.69 L124,71.98 L125.1,50.34 L126.2,47.05 L127.3,45.13 L128.4,43.78 L129.5,42.74 L130.6,41.89 L131.7,41.18 L132.8,40.56 L133.9,40.02 L135,39.54 L136.1,39.11 L137.2,38.72 L138.3,38.36 L139.4,38.03 L140.5,37.72 L141.6,37.43 L142.7,37.17 L143.8,36.92 L144.9,36.68 L146,36.46 L147.1,36.24 L148.2,36.04 L149.3,35.85 L150.4,35.67 L151.5,35.5 L152.6,35.33 L153.7,35.17 L154.8,35.02 L155.9,34.87 L157,34.73 L158.1,34.59 L159.2,34.46 L160.3,34.34 L161.4,34.22 L162.5,34.1 L163.6,33.98 L164.7,33.87 L165.8,33.76 L166.9,33.66 L168,33.56 L169.1,33.46 L170.2,33.37 L171.3,33.27 L172.4,33.18 L173.5,33.1 L174.6,33.01 L175.7,32.93 L176.8,32.85 L177.9,32.77 L179,32.69 L180.1,32.61 L181.2,32.54 L182.3,32.47 L183.4,32.4 L184.5,32.33 L185.6,32.26 L186.7,32.19 L187.8,32.13 L188.9,32.07 L190,32.01 L191.1,31.94 L192.2,31.89 L193.3,31.83 L194.4,31.77 L195.5,31.71 L196.6,31.66 L197.7,31.6 L198.8,31.55 L199.9,31.5 L201,31.45 L202.1,31.4 L203.2,31.35 L204.3,31.3 L205.4,31.25 L206.5,31.21 L207.6,31.16 L208.7,31.12 L209.8,31.07 L210.9,31.03 L212,30.98 L213.1,30.94 L214.2,30.9 L215.3,30.86 L216.4,30.82 L217.5,30.78 L218.6,30.74 L219.7,30.7 L220.8,30.66 L221.9,30.63 L223,30.59 L224.1,30.55 L225.2,30.52 L226.3,30.48 L227.4,30.45 L228.5,30.41 L229.6,30.38 L230.7,30.35 L231.8,30.31 L232.9,30.28 L234,30.25\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k26)\"/><circle cx=\"124\" cy=\"71.98\" r=\"2.3\" fill=\"#000\"/><text x=\"128\" y=\"67.98\">中和点</text><text x=\"152.6\" y=\"53.6\">PP</text><text x=\"152.6\" y=\"113\">MO</text></svg>",
+        "caption": "0.10 mol/L 酢酸水溶液 10 mL に 0.10 mol/L 水酸化ナトリウム水溶液を滴下したときの滴定曲線（概形）"
+      },
+      "answer": {
+        "value": "弱酸と強塩基の中和で生じる酢酸ナトリウムは、水溶液中で酢酸イオンが水から $\\mathrm{H^+}$ を受け取って $\\mathrm{OH^-}$ を生じるため塩基性を示し、中和点の pH は 7 より大きくなる。pH の急変部分は塩基性側にあるので、変色域が酸性側（約 3.1〜4.4）のメチルオレンジは中和点よりかなり前で変色してしまい、終点を正しく示さない。"
+      },
+      "explanation": "中和点で生じる塩の性質と、pH の急変部分の位置から考える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "生じる塩が塩基性を示すことを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "急変部分が塩基性側にあることを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "メチルオレンジは中和点の前に変色してしまうことを述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-titration_reason",
+      "explanation_detail": {
+        "approach": "図から中和点（滴下量 10 mL）の pH と、急変部分の pH の範囲を読み取る。生じる塩がどの酸・塩基からできているかで液性が決まる。",
+        "steps": [
+          "中和点で生じる塩を特定し、その水溶液の液性を考える。",
+          "図から pH の急変する範囲を読み取る。",
+          "指示薬の変色域が急変範囲に入っているかを確かめる。"
+        ],
+        "alternatives": [
+          "塩の加水分解（弱酸の陰イオンが $\\mathrm{OH^-}$ を、弱塩基の陽イオンが $\\mathrm{H^+}$ を生じる）を、イオン反応式を用いて説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "生じる塩が塩基性を示すことを述べている",
+            "points": 3
+          },
+          {
+            "point": "急変部分が塩基性側にあることを述べている",
+            "points": 2
+          },
+          {
+            "point": "メチルオレンジは中和点の前に変色してしまうことを述べている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "中和点は常に pH 7 だと考える。",
+          "指示薬の変色域を覚えていない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "中和滴定で、ホールピペットとビュレットは使用する溶液で内部を数回すすいで（共洗いして）から使うが、コニカルビーカーとメスフラスコは純水でぬれたまま使ってよい。この理由を説明しなさい。",
+      "answer": {
+        "value": "ホールピペットとビュレットは、はかりとる溶液の濃度を変えてはいけない器具である。内部に水が残っていると溶液がうすまり、同じ体積でも含まれる溶質の物質量が変わってしまうので共洗いする。コニカルビーカーは、はかりとった溶質の物質量だけが問題で、水でぬれていても物質量は変わらない。メスフラスコは最後に水を加えて体積を合わせるので、はじめから水が入っていても影響しない。"
+      },
+      "explanation": "物質量・濃度・電離度といった概念のどれが関係しているかを区別して説明する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "ホールピペット・ビュレットでは溶液がうすまって物質量が変わることを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "コニカルビーカーでは物質量が変わらないことを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "メスフラスコは後で水を加えるので影響しないことを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-titration_reason",
+      "explanation_detail": {
+        "approach": "それぞれの器具で、「溶液の濃度」と「溶質の物質量」のどちらが結果に影響するかを考える。",
+        "steps": [
+          "問われている2つの事柄を、それぞれ何で決まるかに分ける。",
+          "具体的な粒子（$\\mathrm{H^+}$・溶質）の物質量の変化で説明する。",
+          "結論を1文でまとめる。"
+        ],
+        "alternatives": [
+          "具体的な数値（例：0.10 mol/L、10 mL）を仮定して計算し、説明を裏づけてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ホールピペット・ビュレットでは溶液がうすまって物質量が変わることを述べている",
+            "points": 3
+          },
+          {
+            "point": "コニカルビーカーでは物質量が変わらないことを述べている",
+            "points": 3
+          },
+          {
+            "point": "メスフラスコは後で水を加えるので影響しないことを述べている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「濃度」と「物質量」を区別せずに説明する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "0.050 mol/L の塩酸 49 mL と 0.050 mol/L の水酸化ナトリウム水溶液 51 mL を混合した。混合後の水溶液の pH を、考え方とともに求めなさい。混合による体積の変化はなく、水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "pH 11"
+      },
+      "explanation": "中和で残った $\\mathrm{H^+}$ または $\\mathrm{OH^-}$ の物質量を、混合後の全体積で割る。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{H^+}$ と $\\mathrm{OH^-}$ の物質量をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "criterion": "余るイオンとその物質量を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "全体積で割って濃度を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "pH を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "14+log(Abs(0.050*49-0.050*51)/100, 10)",
+        "expected": "11",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U03-back_titration",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "混合で $\\mathrm{H^+}+\\mathrm{OH^-}\\longrightarrow\\mathrm{H_2O}$ が起こり、多い方が余る。余ったイオンの濃度は「余った物質量÷混合後の体積」（物質量とモル濃度は前単元の内容）。",
+        "steps": [
+          "$\\mathrm{H^+}$：$0.050\\times49.0=2.45$ mmol、$\\mathrm{OH^-}$：$0.050\\times51.0=2.55$ mmol。",
+          "$\\mathrm{OH^-}$ が $0.10$ mmol 余る。",
+          "混合後 100 mL なので濃度は $1.0\\times10^{-3}$ mol/L。",
+          "pH＝11。"
+        ],
+        "alternatives": [
+          "体積の差 2.0 mL 分だけ一方が余ると考え、その分を 100 mL にうすめた濃度を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "余り",
+            "points": 2
+          },
+          {
+            "point": "濃度",
+            "points": 2
+          },
+          {
+            "point": "pH",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "混合後の体積で割らず、もとの体積で割る。",
+          "塩基が余ったときに $[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "0.050 mol/L の塩酸 51 mL と 0.050 mol/L の水酸化ナトリウム水溶液 49 mL を混合した。混合後の水溶液の pH を、考え方とともに求めなさい。混合による体積の変化はなく、水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "pH 3"
+      },
+      "explanation": "中和で残った $\\mathrm{H^+}$ または $\\mathrm{OH^-}$ の物質量を、混合後の全体積で割る。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{H^+}$ と $\\mathrm{OH^-}$ の物質量をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "criterion": "余るイオンとその物質量を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "全体積で割って濃度を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "pH を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "-log(Abs(0.050*51-0.050*49)/100, 10)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U03-back_titration",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "混合で $\\mathrm{H^+}+\\mathrm{OH^-}\\longrightarrow\\mathrm{H_2O}$ が起こり、多い方が余る。余ったイオンの濃度は「余った物質量÷混合後の体積」（物質量とモル濃度は前単元の内容）。",
+        "steps": [
+          "$\\mathrm{H^+}$：$0.050\\times51.0=2.55$ mmol、$\\mathrm{OH^-}$：$0.050\\times49.0=2.45$ mmol。",
+          "$\\mathrm{H^+}$ が $0.10$ mmol 余る。",
+          "混合後 100 mL なので濃度は $1.0\\times10^{-3}$ mol/L。",
+          "pH＝3。"
+        ],
+        "alternatives": [
+          "体積の差 2.0 mL 分だけ一方が余ると考え、その分を 100 mL にうすめた濃度を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "余り",
+            "points": 2
+          },
+          {
+            "point": "濃度",
+            "points": 2
+          },
+          {
+            "point": "pH",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "混合後の体積で割らず、もとの体積で割る。",
+          "塩基が余ったときに $[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "0.050 mol/L の塩酸 40 mL と 0.050 mol/L の水酸化ナトリウム水溶液 60 mL を混合した。混合後の水溶液の pH を、考え方とともに求めなさい。混合による体積の変化はなく、水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "pH 12"
+      },
+      "explanation": "中和で残った $\\mathrm{H^+}$ または $\\mathrm{OH^-}$ の物質量を、混合後の全体積で割る。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{H^+}$ と $\\mathrm{OH^-}$ の物質量をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "criterion": "余るイオンとその物質量を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "全体積で割って濃度を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "pH を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "14+log(Abs(0.050*40-0.050*60)/100, 10)",
+        "expected": "12",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U03-back_titration",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "混合で $\\mathrm{H^+}+\\mathrm{OH^-}\\longrightarrow\\mathrm{H_2O}$ が起こり、多い方が余る。余ったイオンの濃度は「余った物質量÷混合後の体積」（物質量とモル濃度は前単元の内容）。",
+        "steps": [
+          "$\\mathrm{H^+}$：$0.050\\times40.0=2.0$ mmol、$\\mathrm{OH^-}$：$0.050\\times60.0=3.0$ mmol。",
+          "$\\mathrm{OH^-}$ が $1.0$ mmol 余る。",
+          "混合後 100 mL なので濃度は $1.0\\times10^{-2}$ mol/L。",
+          "pH＝12。"
+        ],
+        "alternatives": [
+          "体積の差 20 mL 分だけ一方が余ると考え、その分を 100 mL にうすめた濃度を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "余り",
+            "points": 2
+          },
+          {
+            "point": "濃度",
+            "points": 2
+          },
+          {
+            "point": "pH",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "混合後の体積で割らず、もとの体積で割る。",
+          "塩基が余ったときに $[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "0.20 mol/L の塩酸 49.75 mL と 0.20 mol/L の水酸化ナトリウム水溶液 50.25 mL を混合した。混合後の水溶液の pH を、考え方とともに求めなさい。混合による体積の変化はなく、水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。",
+      "answer": {
+        "value": "pH 11"
+      },
+      "explanation": "中和で残った $\\mathrm{H^+}$ または $\\mathrm{OH^-}$ の物質量を、混合後の全体積で割る。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\mathrm{H^+}$ と $\\mathrm{OH^-}$ の物質量をそれぞれ求めている",
+            "points": 2
+          },
+          {
+            "criterion": "余るイオンとその物質量を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "全体積で割って濃度を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "pH を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "14+log(Abs(0.20*49.75-0.20*50.25)/100, 10)",
+        "expected": "11",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHEB-U03-back_titration",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "混合で $\\mathrm{H^+}+\\mathrm{OH^-}\\longrightarrow\\mathrm{H_2O}$ が起こり、多い方が余る。余ったイオンの濃度は「余った物質量÷混合後の体積」（物質量とモル濃度は前単元の内容）。",
+        "steps": [
+          "$\\mathrm{H^+}$：$0.20\\times49.75=9.95$ mmol、$\\mathrm{OH^-}$：$0.20\\times50.25=10.05$ mmol。",
+          "$\\mathrm{OH^-}$ が $0.10$ mmol 余る。",
+          "混合後 100 mL なので濃度は $1.0\\times10^{-3}$ mol/L。",
+          "pH＝11。"
+        ],
+        "alternatives": [
+          "体積の差 0.50 mL 分だけ一方が余ると考え、その分を 100 mL にうすめた濃度を求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "余り",
+            "points": 2
+          },
+          {
+            "point": "濃度",
+            "points": 2
+          },
+          {
+            "point": "pH",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "混合後の体積で割らず、もとの体積で割る。",
+          "塩基が余ったときに $[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二クロム酸カリウム（硫酸酸性）と鉄(Ⅱ)イオンの反応について、次の2つの半反応式から電子 $\\mathrm{e^-}$ を消去してイオン反応式をつくり、酸化剤と還元剤が反応する物質量の比を答えなさい。考え方も書きなさい。\n$$\\mathrm{Cr_2O_7^{2-}}+14\\mathrm{H^+}+6\\mathrm{e^-}\\longrightarrow2\\mathrm{Cr^{3+}}+7\\mathrm{H_2O}$$\n$$\\mathrm{Fe^{2+}}\\longrightarrow\\mathrm{Fe^{3+}}+\\mathrm{e^-}$$",
+      "answer": {
+        "value": "$$\\mathrm{Cr_2O_7^{2-}}+6\\mathrm{Fe^{2+}}+14\\mathrm{H^+}\\longrightarrow2\\mathrm{Cr^{3+}}+6\\mathrm{Fe^{3+}}+7\\mathrm{H_2O}$$ 酸化剤：還元剤＝1:6（物質量の比）"
+      },
+      "explanation": "授受される電子の数を最小公倍数 6 にそろえて足し合わせる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "電子の数をそろえる倍数を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "criterion": "2式を足して電子を消去し、両辺の同じ物質を整理している",
+            "points": 3
+          },
+          {
+            "criterion": "物質量の比を正しく答えている",
+            "points": 2
+          },
+          {
+            "criterion": "電荷・原子の数のつり合いを確認している",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "(-2)+6*2+14*1-(2*3+6*3)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-CHEB-U03-half_reaction",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の数と還元剤が出す電子の数が等しくなるように、それぞれの半反応式を整数倍する。",
+        "steps": [
+          "酸化剤 1 mol は電子 6 mol を受け取り、還元剤 1 mol は電子 1 mol を出す。",
+          "最小公倍数 6 にそろえる：酸化剤の式を 1 倍、還元剤の式を 6 倍する。",
+          "2式を足して $\\mathrm{e^-}$ を消去し、両辺に共通する $\\mathrm{H^+}$ や $\\mathrm{H_2O}$ を整理する。",
+          "$\\mathrm{Cr_2O_7^{2-}}+6\\mathrm{Fe^{2+}}+14\\mathrm{H^+}\\longrightarrow2\\mathrm{Cr^{3+}}+6\\mathrm{Fe^{3+}}+7\\mathrm{H_2O}$。"
+        ],
+        "alternatives": [
+          "電子の物質量のつり合い $6\\times n_{\\text{酸化剤}}=1\\times n_{\\text{還元剤}}$ から、比 1:6 を直接求めることもできる（イオン反応式をつくらない解法）。",
+          "完成した式で、両辺の電荷の総和と各原子の数が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "倍数",
+            "points": 2
+          },
+          {
+            "point": "電子の消去と整理",
+            "points": 3
+          },
+          {
+            "point": "物質量の比",
+            "points": 2
+          },
+          {
+            "point": "確認",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数をそろえずに足し合わせる。",
+          "両辺の $\\mathrm{H^+}$ を相殺し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "過酸化水素（硫酸酸性）とヨウ化物イオンの反応について、次の2つの半反応式から電子 $\\mathrm{e^-}$ を消去してイオン反応式をつくり、酸化剤と還元剤が反応する物質量の比を答えなさい。考え方も書きなさい。\n$$\\mathrm{H_2O_2}+2\\mathrm{H^+}+2\\mathrm{e^-}\\longrightarrow2\\mathrm{H_2O}$$\n$$2\\mathrm{I^-}\\longrightarrow\\mathrm{I_2}+2\\mathrm{e^-}$$",
+      "answer": {
+        "value": "$$\\mathrm{H_2O_2}+2\\mathrm{I^-}+2\\mathrm{H^+}\\longrightarrow\\mathrm{I_2}+2\\mathrm{H_2O}$$ 酸化剤：還元剤＝1:2（物質量の比）"
+      },
+      "explanation": "授受される電子の数を最小公倍数 2 にそろえて足し合わせる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "電子の数をそろえる倍数を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "criterion": "2式を足して電子を消去し、両辺の同じ物質を整理している",
+            "points": 3
+          },
+          {
+            "criterion": "物質量の比を正しく答えている",
+            "points": 2
+          },
+          {
+            "criterion": "電荷・原子の数のつり合いを確認している",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2*(-1)+2*1",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-CHEB-U03-half_reaction",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の数と還元剤が出す電子の数が等しくなるように、それぞれの半反応式を整数倍する。",
+        "steps": [
+          "酸化剤 1 mol は電子 2 mol を受け取り、還元剤 1 mol は電子 2 mol を出す。",
+          "最小公倍数 2 にそろえる：酸化剤の式を 1 倍、還元剤の式を 1 倍する。",
+          "2式を足して $\\mathrm{e^-}$ を消去し、両辺に共通する $\\mathrm{H^+}$ や $\\mathrm{H_2O}$ を整理する。",
+          "$\\mathrm{H_2O_2}+2\\mathrm{I^-}+2\\mathrm{H^+}\\longrightarrow\\mathrm{I_2}+2\\mathrm{H_2O}$。"
+        ],
+        "alternatives": [
+          "電子の物質量のつり合い $2\\times n_{\\text{酸化剤}}=2\\times n_{\\text{還元剤}}$ から、比 1:2 を直接求めることもできる（イオン反応式をつくらない解法）。",
+          "完成した式で、両辺の電荷の総和と各原子の数が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "倍数",
+            "points": 2
+          },
+          {
+            "point": "電子の消去と整理",
+            "points": 3
+          },
+          {
+            "point": "物質量の比",
+            "points": 2
+          },
+          {
+            "point": "確認",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数をそろえずに足し合わせる。",
+          "両辺の $\\mathrm{H^+}$ を相殺し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "二酸化硫黄と硫化水素の反応について、次の2つの半反応式から電子 $\\mathrm{e^-}$ を消去してイオン反応式をつくり、酸化剤と還元剤が反応する物質量の比を答えなさい。考え方も書きなさい。\n$$\\mathrm{SO_2}+4\\mathrm{H^+}+4\\mathrm{e^-}\\longrightarrow\\mathrm{S}+2\\mathrm{H_2O}$$\n$$\\mathrm{H_2S}\\longrightarrow\\mathrm{S}+2\\mathrm{H^+}+2\\mathrm{e^-}$$",
+      "answer": {
+        "value": "$$\\mathrm{SO_2}+2\\mathrm{H_2S}\\longrightarrow3\\mathrm{S}+2\\mathrm{H_2O}$$ 酸化剤：還元剤＝1:2（物質量の比）"
+      },
+      "explanation": "授受される電子の数を最小公倍数 4 にそろえて足し合わせる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "電子の数をそろえる倍数を正しく選んでいる",
+            "points": 2
+          },
+          {
+            "criterion": "2式を足して電子を消去し、両辺の同じ物質を整理している",
+            "points": 3
+          },
+          {
+            "criterion": "物質量の比を正しく答えている",
+            "points": 2
+          },
+          {
+            "criterion": "電荷・原子の数のつり合いを確認している",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "0",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-CHEB-U03-half_reaction",
+      "explanation_detail": {
+        "approach": "酸化剤が受け取る電子の数と還元剤が出す電子の数が等しくなるように、それぞれの半反応式を整数倍する。",
+        "steps": [
+          "酸化剤 1 mol は電子 4 mol を受け取り、還元剤 1 mol は電子 2 mol を出す。",
+          "最小公倍数 4 にそろえる：酸化剤の式を 1 倍、還元剤の式を 2 倍する。",
+          "2式を足して $\\mathrm{e^-}$ を消去し、両辺に共通する $\\mathrm{H^+}$ や $\\mathrm{H_2O}$ を整理する。",
+          "$\\mathrm{SO_2}+2\\mathrm{H_2S}\\longrightarrow3\\mathrm{S}+2\\mathrm{H_2O}$。"
+        ],
+        "alternatives": [
+          "電子の物質量のつり合い $4\\times n_{\\text{酸化剤}}=2\\times n_{\\text{還元剤}}$ から、比 1:2 を直接求めることもできる（イオン反応式をつくらない解法）。",
+          "完成した式で、両辺の電荷の総和と各原子の数が等しいことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "倍数",
+            "points": 2
+          },
+          {
+            "point": "電子の消去と整理",
+            "points": 3
+          },
+          {
+            "point": "物質量の比",
+            "points": 2
+          },
+          {
+            "point": "確認",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電子の数をそろえずに足し合わせる。",
+          "両辺の $\\mathrm{H^+}$ を相殺し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$1.0\\times10^{-1}$ mol/L の水酸化ナトリウム水溶液の pH を求めなさい。水酸化ナトリウムは完全に電離し、水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。\n［ある生徒の解答］\n$[\\mathrm{OH^-}]=1.0\\times10^{-1}$ mol/L なので pH＝1\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "pH 13"
+      },
+      "explanation": "pH は $[\\mathrm{H^+}]$ で定義される。塩基性の水溶液では水のイオン積から $[\\mathrm{H^+}]$ を求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "14+log(10**(-1), 10)",
+        "expected": "13",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U03-err_ph",
+      "explanation_detail": {
+        "approach": "求めた pH が塩基性（7 より大きい）になっているかを確かめる。",
+        "steps": [
+          "$[\\mathrm{OH^-}]=1.0\\times10^{-1}$ mol/L。",
+          "$[\\mathrm{H^+}]=1.0\\times10^{-13}$ mol/L。",
+          "pH＝13。"
+        ],
+        "alternatives": [
+          "誤答の pH 1 は酸性を表すので、塩基の水溶液としておかしいと気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$[\\mathrm{OH^-}]=1.0\\times10^{-1}$ mol/L なので pH＝1",
+        "error_step": "$[\\mathrm{OH^-}]$ から直接 pH を求めた部分",
+        "error_type": "concept",
+        "why_tempting": "pH の計算に慣れて「濃度の指数を読めば pH」と機械的に処理し、pH が $[\\mathrm{H^+}]$ で定義されることを忘れている。",
+        "correction": "$[\\mathrm{H^+}]=\\dfrac{1.0\\times10^{-14}}{1.0\\times10^{-1}}=1.0\\times10^{-13}$ mol/L より pH＝13"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$1.0\\times10^{-4}$ mol/L の水酸化カリウム水溶液の pH を求めなさい。水酸化カリウムは完全に電離し、水のイオン積を $K_{\\mathrm{w}}=1.0\\times10^{-14}\\ (\\mathrm{mol/L})^2$ とする。\n［ある生徒の解答］\n$[\\mathrm{OH^-}]=1.0\\times10^{-4}$ mol/L なので pH＝4\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "pH 10"
+      },
+      "explanation": "pH は $[\\mathrm{H^+}]$ で定義される。塩基性の水溶液では水のイオン積から $[\\mathrm{H^+}]$ を求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "14+log(10**(-4), 10)",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U03-err_ph",
+      "explanation_detail": {
+        "approach": "求めた pH が塩基性（7 より大きい）になっているかを確かめる。",
+        "steps": [
+          "$[\\mathrm{OH^-}]=1.0\\times10^{-4}$ mol/L。",
+          "$[\\mathrm{H^+}]=1.0\\times10^{-10}$ mol/L。",
+          "pH＝10。"
+        ],
+        "alternatives": [
+          "誤答の pH 4 は酸性を表すので、塩基の水溶液としておかしいと気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$[\\mathrm{OH^-}]$ の指数をそのまま pH とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$[\\mathrm{OH^-}]=1.0\\times10^{-4}$ mol/L なので pH＝4",
+        "error_step": "$[\\mathrm{OH^-}]$ から直接 pH を求めた部分",
+        "error_type": "concept",
+        "why_tempting": "pH の計算に慣れて「濃度の指数を読めば pH」と機械的に処理し、pH が $[\\mathrm{H^+}]$ で定義されることを忘れている。",
+        "correction": "$[\\mathrm{H^+}]=\\dfrac{1.0\\times10^{-14}}{1.0\\times10^{-4}}=1.0\\times10^{-10}$ mol/L より pH＝10"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "pH 6 の塩酸を水で $10^{3}$ 倍にうすめたときの pH はおよそいくらか。\n［ある生徒の解答］\n10 倍うすめるごとに pH は 1 大きくなるので、pH＝6＋3＝9\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "pH はほぼ 7（7 よりわずかに小さい）"
+      },
+      "explanation": "酸をどれだけうすめても塩基性にはならない。$[\\mathrm{H^+}]$ が $10^{-7}$ mol/L 程度より小さくなると、水自身の電離による $\\mathrm{H^+}$ が無視できなくなる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHEB-U03-err_ph",
+      "explanation_detail": {
+        "approach": "規則を使う前に、結果が化学的にありうるか（酸性の水溶液が塩基性になっていないか）を確かめる。",
+        "steps": [
+          "塩酸由来の $[\\mathrm{H^+}]$ は $1.0\\times10^{-9}$ mol/L。",
+          "水の電離による $[\\mathrm{H^+}]\\fallingdotseq1.0\\times10^{-7}$ mol/L の方が大きい。",
+          "pH はほぼ 7。"
+        ],
+        "alternatives": [
+          "極端な場合を考える：純水にごくわずかの塩酸を加えても pH はほぼ 7 である。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "酸をうすめ続けると pH が 7 をこえると考える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "10 倍うすめるごとに pH は 1 大きくなるので、pH＝6＋3＝9",
+        "error_step": "うすめた後の pH を計算した部分",
+        "error_type": "condition",
+        "why_tempting": "「10 倍うすめると pH が 1 大きくなる」という規則を、適用できる範囲（水の電離が無視できる範囲）をこえて使っている。",
+        "correction": "$[\\mathrm{H^+}]$ は 1.0\\times10^{-9} mol/L 程度まで小さくなるが、水の電離による $1.0\\times10^{-7}$ mol/L の方が大きくなるので、pH はほぼ 7（わずかに 7 より小さい）"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.050 mol/L の酢酸水溶液 25.0 mL を過不足なく中和するのに必要な 0.050 mol/L の水酸化ナトリウム水溶液の体積を求めなさい。\n［ある生徒の解答］\n酢酸は弱酸で一部しか電離しないので、中和に必要な水酸化ナトリウム水溶液は 25.0 mL より少ない\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "25.0 mL"
+      },
+      "explanation": "中和の量的関係は価数と物質量で決まり、酸・塩基の強弱には関係しない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.050*25.0/0.050",
+        "expected": "25",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-err_valence",
+      "explanation_detail": {
+        "approach": "「H⁺ の物質量＝OH⁻ の物質量」で式を立て、強弱は使わない。",
+        "steps": [
+          "酢酸は1価の酸、NaOH は1価の塩基。",
+          "$1\\times0.050\\times25.0=1\\times0.050\\times V$。",
+          "$V=25.0$ mL。"
+        ],
+        "alternatives": [
+          "同じ濃度・同じ体積の塩酸を中和する場合と比べ、必要量が同じになることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電離度を中和の計算に使う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "酢酸は弱酸で一部しか電離しないので、中和に必要な水酸化ナトリウム水溶液は 25.0 mL より少ない",
+        "error_step": "弱酸の中和の量を判断した部分",
+        "error_type": "concept",
+        "why_tempting": "pH（電離している $\\mathrm{H^+}$ の量）と、中和できる量（出しうる $\\mathrm{H^+}$ の総量）を混同している。",
+        "correction": "中和が進むと酢酸の電離が進み、すべて反応する。$1\\times0.050\\times25.0=1\\times0.050\\times V$ より $V=25.0$ mL"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.100 mol/L のシュウ酸水溶液 10.0 mL を過不足なく中和するのに必要な 0.0500 mol/L の水酸化ナトリウム水溶液は何 mL か。\n［ある生徒の解答］\n$0.100\\times10.0=0.0500\\times V$ より $V=20.0$ mL\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "40.0 mL"
+      },
+      "explanation": "中和では $\\mathrm{H^+}$ の物質量と $\\mathrm{OH^-}$ の物質量が等しい。それぞれ価数×物質量で求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*0.10*10/(1*0.050)",
+        "expected": "40",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-err_valence",
+      "explanation_detail": {
+        "approach": "中和の式には必ず価数を書く。",
+        "steps": [
+          "シュウ酸は2価、水酸化ナトリウムは1価。",
+          "$2\\times0.100\\times10.0=1\\times0.0500\\times V$。",
+          "$V=40.0$ mL。"
+        ],
+        "alternatives": [
+          "電離式（例：$\\mathrm{(COOH)_2}$ や $\\mathrm{NaOH}$）をかいて、1 mol から生じる $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の数を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$0.100\\times10.0=0.0500\\times V$ より $V=20.0$ mL",
+        "error_step": "中和の式（価数）",
+        "error_type": "formula",
+        "why_tempting": "「濃度×体積」が等しいと覚えていて、シュウ酸が2価であることを式に入れていない。",
+        "correction": "$2\\times0.100\\times10.0=1\\times0.0500\\times V$ より $V=40.0$ mL"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.0500 mol/L のシュウ酸水溶液 10.0 mL を過不足なく中和するのに必要な 0.200 mol/L の水酸化カリウム水溶液は何 mL か。\n［ある生徒の解答］\n$0.0500\\times10.0=0.200\\times V$ より $V=2.50$ mL\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "5.00 mL"
+      },
+      "explanation": "中和では $\\mathrm{H^+}$ の物質量と $\\mathrm{OH^-}$ の物質量が等しい。それぞれ価数×物質量で求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*0.050*10/(1*0.20)",
+        "expected": "5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-err_valence",
+      "explanation_detail": {
+        "approach": "中和の式には必ず価数を書く。",
+        "steps": [
+          "シュウ酸は2価、水酸化カリウムは1価。",
+          "$2\\times0.0500\\times10.0=1\\times0.200\\times V$。",
+          "$V=5.00$ mL。"
+        ],
+        "alternatives": [
+          "電離式（例：$\\mathrm{(COOH)_2}$ や $\\mathrm{KOH}$）をかいて、1 mol から生じる $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の数を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$0.0500\\times10.0=0.200\\times V$ より $V=2.50$ mL",
+        "error_step": "中和の式（価数）",
+        "error_type": "formula",
+        "why_tempting": "「濃度×体積」が等しいと覚えていて、シュウ酸が2価であることを式に入れていない。",
+        "correction": "$2\\times0.0500\\times10.0=1\\times0.200\\times V$ より $V=5.00$ mL"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.0500 mol/L のシュウ酸水溶液 25.0 mL を過不足なく中和するのに必要な 0.0500 mol/L の水酸化ナトリウム水溶液は何 mL か。\n［ある生徒の解答］\n$0.0500\\times25.0=0.0500\\times V$ より $V=25.0$ mL\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "50.0 mL"
+      },
+      "explanation": "中和では $\\mathrm{H^+}$ の物質量と $\\mathrm{OH^-}$ の物質量が等しい。それぞれ価数×物質量で求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*0.050*25/(1*0.050)",
+        "expected": "50",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHEB-U03-err_valence",
+      "explanation_detail": {
+        "approach": "中和の式には必ず価数を書く。",
+        "steps": [
+          "シュウ酸は2価、水酸化ナトリウムは1価。",
+          "$2\\times0.0500\\times25.0=1\\times0.0500\\times V$。",
+          "$V=50.0$ mL。"
+        ],
+        "alternatives": [
+          "電離式（例：$\\mathrm{(COOH)_2}$ や $\\mathrm{NaOH}$）をかいて、1 mol から生じる $\\mathrm{H^+}$・$\\mathrm{OH^-}$ の数を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "価数を掛け忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$0.0500\\times25.0=0.0500\\times V$ より $V=25.0$ mL",
+        "error_step": "中和の式（価数）",
+        "error_type": "formula",
+        "why_tempting": "「濃度×体積」が等しいと覚えていて、シュウ酸が2価であることを式に入れていない。",
+        "correction": "$2\\times0.0500\\times25.0=1\\times0.0500\\times V$ より $V=50.0$ mL"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "マグネシウム板と亜鉛板を用いた電池で、負極・正極はどちらか。また、導線を流れる電子の向きを答えなさい。\n［ある生徒の解答］\nイオン化傾向の大きいマグネシウムが正極、亜鉛が負極。電子は正極（マグネシウム）から負極（亜鉛）へ流れる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "負極：マグネシウム、正極：亜鉛。電子はマグネシウムから亜鉛へ流れる。"
+      },
+      "explanation": "イオン化傾向の大きい金属が電子を放出して陽イオンになる（酸化）。電子を送り出す電極が負極である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U03-err_redox",
+      "explanation_detail": {
+        "approach": "「負極＝電子を出す＝酸化」とセットで判断する。",
+        "steps": [
+          "イオン化傾向：マグネシウム > 亜鉛。",
+          "マグネシウム：${\\mathrm{Mg}}\\longrightarrow\\mathrm{Mg^{2+}}+2\\mathrm{e^-}$（負極）。",
+          "電子はマグネシウムから亜鉛へ。電流はその逆向き。"
+        ],
+        "alternatives": [
+          "ダニエル電池（Zn が負極）と比べて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電流の向きと電子の向きを混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "イオン化傾向の大きいマグネシウムが正極、亜鉛が負極。電子は正極（マグネシウム）から負極（亜鉛）へ流れる",
+        "error_step": "正極・負極の判断",
+        "error_type": "concept",
+        "why_tempting": "「イオン化傾向が大きい＝反応が活発＝プラス（正）」という言葉のイメージで判断している。",
+        "correction": "マグネシウムが電子を出す負極、亜鉛が正極。電子は負極（マグネシウム）から導線を通って正極（亜鉛）へ流れる"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "$\\mathrm{MnO_4^{-}}$（過マンガン酸イオン）中の Mn の酸化数を求めなさい。\n［ある生徒の解答］\nMn の酸化数を $x$ とすると、総和は 0 なので $x+(-2)\\times4=0$、$x=+8$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "+7"
+      },
+      "explanation": "多原子イオンでは、酸化数の総和はイオンの電荷に等しい。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(1*x+(4*(-2))-(-1), x)[0]",
+        "expected": "7",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U03-err_redox",
+      "explanation_detail": {
+        "approach": "化学式の右上の電荷を確認してから方程式を立てる。",
+        "steps": [
+          "Mn の酸化数を $x$ とする。",
+          "総和＝電荷：$x+(-2)\\times4=-1$。",
+          "$x=+7$。"
+        ],
+        "alternatives": [
+          "既知の値と照合する（例：$\\mathrm{MnO_4^-}$ の Mn は $+7$、$\\mathrm{SO_4^{2-}}$ の S は $+6$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "イオンの電荷を無視する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "Mn の酸化数を $x$ とすると、総和は 0 なので $x+(-2)\\times4=0$、$x=+8$",
+        "error_step": "酸化数の総和を 0 とした部分",
+        "error_type": "condition",
+        "why_tempting": "化合物の「総和 0」の規則を、イオンにもそのまま当てはめている。",
+        "correction": "イオンなので総和は電荷 $-1$：$x+(-2)\\times4=-1$ より $x=+7$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHEB-U03-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS1",
+      "subject": "science",
+      "unit_id": "HS-CHEB-U03",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "過酸化水素 $\\mathrm{H_2O_2}$ 中の O と H の酸化数をそれぞれ求めなさい。\n［ある生徒の解答］\nO は $-2$ なので、H の酸化数を $x$ とすると $2x+(-2)\\times2=0$、$x=+2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "O は $-1$、H は $+1$"
+      },
+      "explanation": "過酸化水素は O−O 結合をもつ過酸化物で、O の酸化数は例外的に −1 になる。H は ＋1 のまま。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "solve(2*1+2*x, x)[0]",
+        "expected": "-1",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHEB-U03-err_redox",
+      "explanation_detail": {
+        "approach": "規則どうしが矛盾するときは、H＝＋1 を優先し、過酸化物の O を −1 とする。",
+        "steps": [
+          "H は ＋1 と決める。",
+          "O の酸化数を $y$ として $2\\times(+1)+2y=0$。",
+          "$y=-1$。"
+        ],
+        "alternatives": [
+          "$\\mathrm{H_2O_2}$ が酸化剤（O：$-1\\to-2$）にも還元剤（O：$-1\\to0$）にもなることと結びつけて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "H の酸化数が ＋2 になる不自然さに気づかない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "O は $-2$ なので、H の酸化数を $x$ とすると $2x+(-2)\\times2=0$、$x=+2$",
+        "error_step": "O の酸化数を −2 とした部分",
+        "error_type": "condition",
+        "why_tempting": "「O は −2」という規則を例外なく当てはめ、H が ＋2 という不自然な結果を見直していない。",
+        "correction": "H を ＋1 とすると $2\\times(+1)+2y=0$ より O は $-1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "393aaaf05e2890b869a45add38fcfe3bd89b903944b734b31d686680a681f59a"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 16 問（Q021, Q022, Q023, Q024, Q025, Q029, Q030, Q031, Q032, Q044 他）",
+      "content_hash": "9c3c4da6f2d9dd815eeed958a998c8be1786eced316f0f676db66365247f55d9"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T10:58:57+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "5ca6218af4a826965edf37f92e6ee1f387acbec921a5e28e104a06a1531b9148"
+  }
+}
