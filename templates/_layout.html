@@ -40,7 +40,10 @@
     } catch (e) {
       window.__renderErrors.push(String(e));
     }
-    (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () { window.__renderDone = true; });
+    (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () {
+      try { if (window.__beforeDone) window.__beforeDone(); } catch (e) { window.__renderErrors.push("paginate: " + e); }
+      window.__renderDone = true;
+    });
   });
 </script>
 </body>

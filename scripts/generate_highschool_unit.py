@@ -34,6 +34,7 @@ import validate_questions as vq  # noqa: E402
 from banks._common import UNITS  # noqa: E402
 
 PACK_DIR = HERE / "hs_packs"
+KANJI_NUM = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十"]
 MIN_COUNT = vq.MIN_PACK_QUESTIONS
 
 
@@ -90,21 +91,41 @@ def build_specs(unit_id: str, mod, count: int) -> tuple[dict, dict]:
                        subtitle=f"{unit['domain']}｜{'・'.join(unit['topics'][:4])}", lesson=lesson, items=[],
                        out=f"{root}/{unit_id.lower()}/lesson.json")
     items, sections, plan = [], [], {}
-    for lv, (letter, name, desc) in hl.LEVELS.items():
-        lv_items = items_by_level[lv]
-        plan[lv] = len(lv_items)
-        sections.append({"id": f"LV-{letter}", "title": f"{letter}　{name}", "instructions": desc})
-        for k, it in enumerate(lv_items, 1):
-            it["sec"] = f"LV-{letter}"
-            it["no"] = f"{letter}-{k:02d}"
-            items.append(it)
+    if jh:
+        # 神奈川県公立高校入試形式：段階ごとに最大5問ずつ「問n」にまとめ、小問を (ア)〜(オ) とする
+        kana = "アイウエオ"
+        qn = 0
+        for lv, (letter, name, desc) in hl.LEVELS.items():
+            lv_items = items_by_level[lv]
+            plan[lv] = len(lv_items)
+            for start in range(0, len(lv_items), 5):
+                qn += 1
+                chunk = lv_items[start:start + 5]
+                mon = f"問{KANJI_NUM[qn]}" if unit["subject"] == "japanese" else f"問{qn}"  # 国語は 問一・問二…
+                sections.append({"id": f"Q{qn}", "title": mon, "instructions": "次の各問いに答えなさい。" if len(chunk) > 1 else "次の問いに答えなさい。"})
+                for k, it in enumerate(chunk):
+                    it["sec"] = f"Q{qn}"
+                    it["no"] = f"{mon}({kana[k]})"
+                    items.append(it)
+    else:
+        for lv, (letter, name, desc) in hl.LEVELS.items():
+            lv_items = items_by_level[lv]
+            plan[lv] = len(lv_items)
+            sections.append({"id": f"LV-{letter}", "title": f"{letter}　{name}", "instructions": desc})
+            for k, it in enumerate(lv_items, 1):
+                it["sec"] = f"LV-{letter}"
+                it["no"] = f"{letter}-{k:02d}"
+                items.append(it)
     ex_spec = dict(common, set_id=ex_id, print_type="exercise", pair_set_id=lesson_id, title=f"{title}　問題プリント",
                    subtitle=f"A 基本確認 {plan['basic_check']}問・B 標準演習 {plan['standard_practice']}問・C 思考力・記述 {plan['thinking_writing']}問・D 典型誤答訂正 {plan['error_correction']}問",
                    sections=sections, exercise_plan=plan, items=items,
                    instructions=["A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
-                                 "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
-                                 "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"],
+                                 "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。"]
+                   + (["答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"] if unit["subject"] == "math" else []),
                    out=f"{root}/{unit_id.lower()}/exercise.json")
+    if jh:
+        ex_spec["exam_format"] = "kanagawa"
+        ex_spec["labels"] = "num"
     return lesson_spec, ex_spec
 
 

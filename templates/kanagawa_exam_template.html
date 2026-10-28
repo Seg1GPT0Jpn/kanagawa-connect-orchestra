@@ -1,0 +1,151 @@
+{% extends "_layout.html" %}
+{% from "_macros.html" import figure_block, table_block, stimulus_block %}
+{#
+  神奈川県公立高校入試形式の問題冊子（exam_format = "kanagawa"、kind = "questions"）
+  表紙（注意事項・受検番号欄）→ 問1〜（小問は (ア)(イ)…、選択肢は 1．2．…、数値は あいう 方式）→ 解答用紙（マークシート形式）
+  ※ 実際の入試問題と取り違えないよう、表紙は「神奈川県公立高校入試形式」の演習教材であることを明記する。
+#}
+{% macro mark_boxes(m) -%}
+{%- macro boxes(ls) -%}<span class="kg-mk">{% for l in ls %}<span class="kg-box">{{ l }}</span>{% endfor %}</span>{%- endmacro -%}
+<span class="kg-mark">
+{%- if m.form == 'int' -%}{{ boxes(m.parts[0]) }}
+{%- elif m.form == 'frac' -%}<span class="kg-frac"><span>{{ boxes(m.parts[0]) }}</span><span>{{ boxes(m.parts[1]) }}</span></span>
+{%- elif m.form == 'root' -%}<span class="kg-root">√</span>{{ boxes(m.parts[0]) }}
+{%- elif m.form == 'coef_root' -%}{{ boxes(m.parts[0]) }}<span class="kg-root">√</span>{{ boxes(m.parts[1]) }}
+{%- elif m.form == 'frac_root' -%}<span class="kg-frac"><span>{{ boxes(m.parts[0]) }}<span class="kg-root">√</span>{{ boxes(m.parts[1]) }}</span><span>{{ boxes(m.parts[2]) }}</span></span>
+{%- elif m.form == 'ratio' -%}{{ boxes(m.parts[0]) }}<span class="kg-colon">：</span>{{ boxes(m.parts[1]) }}
+{%- endif -%}
+</span>
+{%- endmacro %}
+
+{% block body %}
+<section class="kg-cover">
+  <div class="kg-tab">{{ kg.tab }}</div>
+  <div class="kg-head">
+    <p>神奈川県公立高校入試形式　演習問題</p>
+    <p>{{ kg.series }}</p>
+  </div>
+  <h1 class="kg-subject">{{ kg.subject_title }}</h1>
+  <p class="kg-unit">{{ kg.unit_title }}</p>
+  <div class="kg-notes">
+    <div class="kg-notes-title">注　意　事　項</div>
+    <ol>{% for n in kg.notes %}<li>{{ n | rich_inline }}</li>{% endfor %}</ol>
+  </div>
+  {% if kg.has_mark %}
+  <div class="kg-example">
+    <span class="kg-ex-label">例</span>
+    {{ mark_boxes({'form': 'frac', 'parts': [['あ'], ['い', 'う']]}) }} に $\dfrac{7}{12}$ と答えるときは、「あ」が 7、「い」が 1、「う」が 2 となります。
+    <table class="kg-ex-sheet">{% for l, d in [('あ', 7), ('い', 1), ('う', 2)] %}<tr><th>{{ l }}</th>{% for k in range(10) %}<td><span class="kg-bub{% if k == d %} on{% endif %}">{{ k }}</span></td>{% endfor %}</tr>{% endfor %}</table>
+  </div>
+  {% endif %}
+  <div class="kg-id"><span class="lab">受　検　番　号</span>{% for i in range(5) %}<span class="cell"></span>{% endfor %}<span class="ban">番</span></div>
+  <p class="kg-disclaimer">この冊子は神奈川県公立高校入試の出題形式にならったオリジナルの演習教材です。実際の入試問題ではありません。</p>
+</section>
+
+<div class="kg-body{% if kg.tate %} tate-src{% endif %}" id="kg-body">
+{% for g in groups %}
+<section class="kg-q{% if g.page_break or (not loop.first and g.section and g.section.page_break) %} page-break{% endif %}">
+  {% if g.section %}<div class="kg-qhead"><b>{{ g.section.title }}</b>{% if g.section.instructions %}　{{ g.section.instructions | rich_inline }}{% endif %}</div>{% endif %}
+  {% for item in g['items'] %}
+  {% if item.kind == 'stimulus' %}
+    {{ stimulus_block(item.stimulus, 'questions', item.compact) }}
+  {% else %}{% set q = item.question %}
+  <div class="kg-sub{% if q._long %} long{% endif %}">
+    <span class="kg-sublab">{{ q._sub }}</span>
+    <div class="kg-subbody">
+      <div class="stem-text">{{ q.stem | rich_block }}</div>
+      {% if q.figure %}{{ figure_block(q.figure) }}{% endif %}
+      {% if q.table %}{{ table_block(q.table) }}{% endif %}
+      {% if q.choices %}<ul class="kg-choices cols-{{ q._cols }}">{% for c in q.choices %}<li><span class="n">{{ c.label }}．</span><span>{{ c.text | rich_inline }}</span></li>{% endfor %}</ul>{% endif %}
+      {% if q._mark %}<div class="kg-ans">答え　{{ mark_boxes(q._mark) }}</div>
+      {% elif q._written %}<div class="kg-ans-note">※ 解答用紙の決められた欄に書きなさい。</div>{% endif %}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</section>
+{% endfor %}
+<p class="kg-end">（問題は，これで終わりです。）</p>
+</div>
+
+{% if kg.tate %}<div id="tate-pages"></div>
+<script>
+/* 縦書きの自動ページ分け：本文のブロックを固定サイズの縦書きページへ順に流し込み、入りきらない文は文字単位で次のページへ送る */
+window.__beforeDone = function () {
+  const src = document.getElementById('kg-body'), out = document.getElementById('tate-pages');
+  let page, inner, stackO = [], stackC = [];
+  const fits = () => inner.scrollWidth <= inner.clientWidth + 1;
+  const empty = () => !inner.textContent.trim() && !inner.querySelector('svg, img, table');
+  function newPage() {
+    page = document.createElement('div'); page.className = 'tpage';
+    inner = document.createElement('div'); inner.className = 'tinner'; page.appendChild(inner); out.appendChild(page);
+    let parent = inner;
+    stackC = stackO.map(o => { const c = o.cloneNode(false); c.removeAttribute('id'); c.classList.add('cont'); parent.appendChild(c); parent = c; return c; });
+  }
+  const cur = () => stackC.length ? stackC[stackC.length - 1] : inner;
+  function splitText(t) {
+    let s = t.data;
+    while (s.length) {
+      const parent = cur(), tn = document.createTextNode('');
+      parent.appendChild(tn);
+      let lo = 0, hi = s.length;
+      while (lo < hi) { const mid = (lo + hi + 1) >> 1; tn.data = s.slice(0, mid); if (fits()) lo = mid; else hi = mid - 1; }
+      tn.data = s.slice(0, lo); s = s.slice(lo);
+      if (s.length) { if (!lo) parent.removeChild(tn); newPage(); }
+    }
+  }
+  function put(node) {
+    const parent = cur();
+    parent.appendChild(node);
+    if (fits()) return;
+    parent.removeChild(node);
+    if (node.nodeType === 3) { splitText(node); return; }
+    if (node.nodeType !== 1) return;
+    const atomic = node.matches('li, table, svg, figure, .kg-mark, .katex, .nosplit, .kg-qhead');
+    if (!atomic && node.childNodes.length) {
+      const shell = node.cloneNode(false);
+      parent.appendChild(shell);
+      if (!fits()) { parent.removeChild(shell); newPage(); put(node); return; }
+      stackO.push(node); stackC.push(shell);
+      for (const ch of Array.from(node.childNodes)) put(ch);
+      stackO.pop(); stackC.pop();
+      return;
+    }
+    if (empty()) { parent.appendChild(node); return; }
+    newPage(); cur().appendChild(node);
+  }
+  newPage();
+  for (const ch of Array.from(src.childNodes)) put(ch);
+  src.remove();
+};
+</script>{% endif %}
+<section class="kg-sheet page-break">
+  <div class="kg-sheet-head">
+    <h2>解　答　用　紙　<span>{{ kg.subject_title }}</span></h2>
+    <div class="kg-id small"><span class="lab">受検番号</span>{% for i in range(5) %}<span class="cell"></span>{% endfor %}<span class="ban">番</span></div>
+    <div class="kg-score">得点<span></span></div>
+  </div>
+  <p class="kg-sheet-note">選択する問題は番号を、あいう の問題は数字を、それぞれ一つずつ塗りつぶしなさい。記述する問題は枠の中に書きなさい。</p>
+  <table class="kg-sheet-t">
+  {% for g in groups %}{% set qs_in = g['items'] | selectattr('kind', 'equalto', 'question') | list %}
+    {% for item in qs_in %}{% set q = item.question %}{% set mon = (g.section.title if g.section else '') if loop.first else '' %}
+      {% if q._mark %}
+        {% for l in q._mark.letters %}
+        <tr>{% if loop.first %}<th class="mon" rowspan="{{ q._mark.letters | length }}">{{ mon }}</th><th class="sub" rowspan="{{ q._mark.letters | length }}">{{ q._sub }}</th>{% endif %}
+          <td class="lt">{{ l }}</td><td>{% for k in range(10) %}<span class="kg-bub">{{ k }}</span>{% endfor %}</td></tr>
+        {% endfor %}
+      {% elif q.choices and q.question_type in ['multiple_choice', 'true_false'] %}
+        <tr><th class="mon">{{ mon }}</th><th class="sub">{{ q._sub }}</th><td class="lt"></td>
+          <td>{% for c in q.choices %}<span class="kg-bub">{{ c.label }}</span>{% endfor %}</td></tr>
+      {% else %}
+        <tr class="w"><th class="mon">{{ mon }}</th><th class="sub">{{ q._sub }}</th><td class="lt"></td>
+          <td>{% set sp = q.answer_space or {} %}
+            {% if sp.char_grid %}<div class="char-grid kg-grid">{% for i in range(sp.char_grid) %}<span></span>{% endfor %}</div>
+            {% else %}<div class="answer-lines">{% for i in range(sp.lines or (3 if q.question_type in ['descriptive', 'essay', 'proof'] else 1)) %}<div></div>{% endfor %}</div>{% endif %}
+          </td></tr>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  </table>
+</section>
+{% endblock %}

@@ -207,6 +207,9 @@ def expand_item(spec: dict, item: dict, n: int) -> dict:
         e = item["err"]
         q["error_analysis"] = {"erroneous_solution": e["sol"], "error_step": e["step"], "error_type": e["type"],
                                "why_tempting": e["tempt"], "correction": e["fix"]}
+    if item.get("mark"):
+        m = item["mark"]
+        q["mark_answer"] = {"form": m[0], "values": [int(v) for v in m[1:]]}
     if item.get("tags"):
         q["tags"] = list(item["tags"])
     q["verification"] = {"status": "draft"}
@@ -239,7 +242,7 @@ def expand_set(spec: dict) -> dict:
     data["grade"] = spec["grade"]
     data["unit_ids"] = spec["unit_ids"]
     for key in ("print_type", "pack_id", "pair_set_id", "unit_context", "lesson", "exercise_plan",
-                "time_limit_minutes", "instructions", "exam_spec", "sections", "stimuli", "build"):
+                "time_limit_minutes", "instructions", "exam_spec", "exam_format", "sections", "stimuli", "build"):
         if spec.get(key):
             data[key] = copy.deepcopy(spec[key])
     data["questions"] = [expand_item(spec, it, i) for i, it in enumerate(spec["items"], 1)]

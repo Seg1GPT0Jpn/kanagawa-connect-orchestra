@@ -142,6 +142,8 @@ def answer_display(q: dict) -> str:
     out = str(v)
     if a.get("unit"):
         out += f" {a['unit']}"
+    if q.get("_mark"):
+        out += f"（{mark_text(q)}）"
     return out
 
 
@@ -243,19 +245,91 @@ def edition_of(data: dict, kind: str) -> str:
 EDITION_TITLES = {"questions": "問題", "answers": "解答・解説", "student": "生徒用", "teacher": "教師用"}
 
 
+HIRAGANA = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわ"
+KG_SUBJECT = {"math": ("数", "数　　学"), "english": ("英", "外国語（英　語）"), "japanese": ("国", "国　　語"),
+              "science": ("理", "理　　科"), "social": ("社", "社　　会")}
+
+
+def is_tate(data: dict) -> bool:
+    """国語は実際の入試と同じく縦書き・横長の用紙で組む。"""
+    return data.get("exam_format") == "kanagawa" and data.get("subject") == "japanese"
+
+
+def is_kanagawa(data: dict, kind: str) -> bool:
+    return data.get("exam_format") == "kanagawa" and edition_of(data, kind) == "questions"
+
+
+def kanagawa_context(data: dict, groups: list, units: list) -> dict:
+    """神奈川入試形式の表紙・注意事項と、あいう の割り当て（冊子全体で通し）。"""
+    tab, title = KG_SUBJECT.get(data.get("subject"), ("", MASTERS["subject"].get(data.get("subject"), "")))
+    letters = iter(HIRAGANA * 3)
+    has_mark = False
+    n_mon = 0
+    for g in groups:
+        if g.get("section"):
+            n_mon += 1
+        for it in g["items"]:
+            if it["kind"] != "question":
+                continue
+            q = it["question"]
+            num = q.get("_number", "")
+            q["_sub"] = num[num.index("("):] if "(" in num else num
+            ma = q.get("mark_answer")
+            if ma:
+                has_mark = True
+                parts = [[next(letters) for _ in str(v)] for v in ma["values"]]
+                q["_mark"] = {"form": ma["form"], "parts": parts, "letters": [l for p in parts for l in p]}
+            q["_written"] = not q.get("choices") and not ma
+    notes = ["開始の合図があるまで、この問題冊子を開いてはいけません。",
+             f"問題は 問{n_mon} まであります。解答用紙はこの冊子の最後にあります。",
+             "解答は、解答用紙の決められた欄に書きなさい。",
+             "番号を選んで答える問題は、解答用紙の番号を一つ塗りつぶしなさい。"]
+    if has_mark:
+        notes += ["「あ」「い」「う」…にあてはまる数字を答える問題は、下の 例 のように、あてはまる数字をそれぞれ 0〜9 の中から一つずつ選びなさい。",
+                  "答えに根号が含まれるときは、根号の中を最も小さい自然数にしなさい。",
+                  "答えが分数になるときは、約分できる場合は約分しなさい。",
+                  "計算は、問題冊子のあいているところを使いなさい。"]
+    if data.get("subject") == "english":
+        notes.append("英語で書く答えは、活字体でも筆記体でもかまいません。")
+    if data.get("subject") == "japanese":
+        notes.append("字数制限のある問題は、句読点なども一字に数えなさい。")
+    notes.append("終了の合図があったら、すぐに解答をやめなさい。")
+    unit = units[0] if units else {}
+    grade = MASTERS["grade"].get(data.get("grade"), data.get("grade", ""))
+    return {"tab": tab, "subject_title": title, "notes": notes, "has_mark": has_mark, "tate": is_tate(data),
+            "series": f"{grade}　単元演習",
+            "unit_title": unit.get("title", data.get("title", ""))}
+
+
+def mark_text(q: dict) -> str:
+    """解答解説冊子用：あいう の答え（例 あ＝7　い＝1　う＝2）。"""
+    m = q.get("_mark")
+    if not m:
+        return ""
+    digits = "".join(str(v) for v in q["mark_answer"]["values"])
+    return "　".join(f"{l}＝{d}" for l, d in zip(m["letters"], digits))
+
+
 def render_html(env, data: dict, kind: str, paper: str) -> str:
     w, h, (mt, mr, mb, ml), fs = PAPERS[paper]
     groups, units = prepare(data, paper)
     build = data.get("build", {})
     pt = data.get("print_type", "worksheet")
     kind = edition_of(data, kind)
-    if pt == "lesson":
+    kg = None
+    if data.get("exam_format") == "kanagawa":
+        kg = kanagawa_context(data, groups, units)   # 解答解説でも あいう の対応を使う
+    if is_kanagawa(data, kind):
+        tpl = env.get_template("kanagawa_exam_template.html")
+    elif pt == "lesson":
         tpl = env.get_template("lesson_print_template.html")
     elif pt == "exercise":
         tpl = env.get_template("exercise_print_template.html")
     else:
         tpl = env.get_template("question_template.html" if kind == "questions" else "answer_template.html")
-    page_css = f"@page {{ size: {w}mm {h}mm; }}\n:root {{ --fs: {fs}; }}"
+    if is_kanagawa(data, kind) and is_tate(data):
+        w, h = h, w
+    page_css = f"@page {{ size: {w}mm {h}mm; }}\n:root {{ --fs: {fs}; --tpage-w: {w - ml - mr}mm; --tpage-h: {h - mt - mb - 1}mm; }}"
     if paper == "tablet":
         page_css += "\n.choices.cols-4 { grid-template-columns: 1fr 1fr; }"
     return tpl.render(
@@ -272,6 +346,7 @@ def render_html(env, data: dict, kind: str, paper: str) -> str:
         show_difficulty=build.get("show_difficulty", data.get("track") not in ("mock_exam",)),
         answer_sheet=data.get("track") == "mock_exam",
         subtotals=subtotals(data),
+        kg=kg,
     )
 
 
@@ -434,18 +509,23 @@ def build(files: list[Path], kinds: list[str], paper: str, out_dir: Path, keep_h
                     for level, msg in page.evaluate(LAYOUT_JS):
                         (res.errors if level == "ERROR" else res.warnings).append(f"{kind}: {msg}")
                     title_short = html.escape(data["title"][:40])
+                    pw, ph = (h, w) if is_kanagawa(data, kind) and is_tate(data) else (w, h)
                     page.pdf(
                         path=str(pdf_path),
-                        width=f"{w}mm", height=f"{h}mm",
+                        width=f"{pw}mm", height=f"{ph}mm",
                         margin={"top": f"{mt}mm", "right": f"{mr}mm", "bottom": f"{mb}mm", "left": f"{ml}mm"},
                         print_background=True,
                         display_header_footer=True,
-                        header_template=(
+                        header_template='<div></div>' if is_kanagawa(data, kind) else (
                             '<div style="width:100%;font-size:7px;color:#888;padding:0 '
                             f'{ml}mm;text-align:right;font-family:\'IPAGothic\',\'Noto Sans CJK JP\',sans-serif;">'
                             f'{title_short}（{EDITION_TITLES[edition_of(data, kind)]}）</div>'
                         ),
                         footer_template=(
+                            '<div style="width:100%;font-size:9px;color:#222;text-align:center;'
+                            'font-family:\'IPAMincho\',\'Noto Serif CJK JP\',serif;">'
+                            '－ <span class="pageNumber"></span> －</div>'
+                        ) if is_kanagawa(data, kind) else (
                             '<div style="width:100%;font-size:8px;color:#666;text-align:center;'
                             'font-family:\'IPAGothic\',\'Noto Sans CJK JP\',sans-serif;">'
                             '<span class="pageNumber"></span> / <span class="totalPages"></span></div>'

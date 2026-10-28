@@ -801,6 +801,12 @@ def check_file(fr: FileResult, rep: Reporter, validator, units: dict, run_calc: 
         if cp.get("status") == "needs_clearance":
             rep.add(fr, "WARNING", "copyright", base + ("copyright", "status"), "権利処理が未完了です（公開・配布不可）")
 
+        # あいう方式の数値マーク（神奈川入試形式）
+        ma = q.get("mark_answer")
+        if isinstance(ma, dict):
+            for msg in check_mark_answer(ma, q.get("calc_check") if run_calc else None):
+                rep.add(fr, "ERROR", "mark", base + ("mark_answer",), msg)
+
         # 検算（式＝期待値、さらに数値の正答なら正答＝期待値）
         cc = q.get("calc_check")
         if run_calc and isinstance(cc, dict) and "expression" in cc and "expected" in cc:
@@ -836,6 +842,46 @@ def check_file(fr: FileResult, rep: Reporter, validator, units: dict, run_calc: 
                 rep.add(fr, "ERROR", "revision", ("revision_history", k, "date"), f"日付 {d} が未来です")
         except ValueError:
             rep.add(fr, "ERROR", "revision", ("revision_history", k, "date"), f"日付 {d} が不正です")
+
+
+MARK_ARITY = {"int": 1, "frac": 2, "root": 1, "coef_root": 2, "frac_root": 3, "ratio": 2}
+
+
+def _squarefree(n: int) -> bool:
+    return n > 1 and all(n % (k * k) for k in range(2, int(n ** 0.5) + 1))
+
+
+def mark_value_expr(ma: dict) -> str | None:
+    """mark_answer が表す値の sympy 式（ratio は値を持たないので None）。"""
+    f, v = ma.get("form"), ma.get("values", [])
+    return {"int": lambda: f"{v[0]}", "frac": lambda: f"Rational({v[0]},{v[1]})", "root": lambda: f"sqrt({v[0]})",
+            "coef_root": lambda: f"{v[0]}*sqrt({v[1]})", "frac_root": lambda: f"{v[0]}*sqrt({v[1]})/{v[2]}",
+            "ratio": lambda: None}[f]()
+
+
+def check_mark_answer(ma: dict, cc: dict | None) -> list[str]:
+    """入試のマーク方式の約束（約分・根号の中は最小・比は最も簡単な整数）と、検算の期待値との一致を調べる。"""
+    from math import gcd
+    f, v = ma.get("form"), ma.get("values", [])
+    if f not in MARK_ARITY or len(v) != MARK_ARITY[f]:
+        return [f"mark_answer の形 {f} に対して値の個数 {len(v)} が合いません"]
+    out = []
+    if f == "frac" and (v[1] < 2 or gcd(v[0], v[1]) != 1):
+        out.append(f"分数 {v[0]}/{v[1]} は約分済みの分数（分母2以上）にしてください")
+    if f in ("root", "coef_root", "frac_root") and not _squarefree(v[-2] if f == "frac_root" else v[-1]):
+        out.append("根号の中は1より大きく、できるだけ小さい自然数にしてください")
+    if f == "coef_root" and v[0] < 2:
+        out.append("係数が1のときは root を使ってください")
+    if f == "frac_root" and (v[2] < 2 or gcd(v[0], v[2]) != 1):
+        out.append("係数と分母は約分してください（分母2以上）")
+    if f == "ratio" and (min(v) < 1 or gcd(v[0], v[1]) != 1):
+        out.append(f"比 {v[0]}:{v[1]} は最も簡単な整数の比にしてください")
+    expr = mark_value_expr(ma)
+    if not out and expr and isinstance(cc, dict) and "expected" in cc and cc.get("target", "answer") == "answer":
+        msg = run_calc_check({"expression": expr, "expected": cc["expected"], "compare": "value"})
+        if msg:
+            out.append(f"マークの値 {expr} が検算の期待値 {cc['expected']} と一致しません")
+    return out
 
 
 def check_pack(fr: FileResult, rep: Reporter, data: dict, units: dict) -> None:
