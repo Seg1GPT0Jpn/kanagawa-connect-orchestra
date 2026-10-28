@@ -363,6 +363,11 @@ TX = [
 ]
 
 
+def where(key):
+    """出典名に続ける語（和歌は「の和歌」、文章は「の一節」）。"""
+    return TEXTS[key][1] + ("の和歌" if key in ("AKI", "HANA", "SAKURA") else "の一節")
+
+
 def tstim(key):
     text, src, _ = TEXTS[key]
     return stim(f"KOBUN-AUX-{key}", text, "classical_text", "次の古文を読んで、あとの問いに答えなさい。", source=src, cp=PD)
@@ -643,7 +648,7 @@ def b_ru(r):
 def b_text(r):
     key, phrase, part, right, wr, judge = r.choice(TX)
     src = TEXTS[key][1]
-    return mc(f"{src}の一節の「{phrase}」の「{part}」の文法的説明として正しいものを選びなさい。", choices(right, wr),
+    return mc(f"{where(key)}の「{phrase}」の「{part}」の文法的説明として正しいものを選びなさい。", choices(right, wr),
               f"{judge}。", d=3, k=CG, stim=tstim(key), cp=PD, src=src,
               ap="直前の語の活用形（接続）と、下に続く語（活用形）を本文で確かめ、文脈から意味を決める。",
               steps=[f"本文で「{phrase}」の前後を確かめる。", f"接続・活用形・意味を判断する：{judge}。", f"結論：{right}。"],
@@ -763,7 +768,7 @@ def c_tl(r):
     auxes = [(p, part, right) for k, p, part, right, _, _ in TX if k == key]
     pts = "・".join(f"「{p}」の「{part}」（{right}）" for p, part, right in auxes)
     rub = [("助動詞の意味を正しく反映して訳している", 4), ("文全体を自然な現代語に訳している", 2), ("訳に反映させた助動詞を一つ以上挙げて説明している", 2)]
-    return desc(f"{src}の一節を、助動詞の意味が分かるように口語訳しなさい。また、訳に反映させた助動詞を一つ挙げ、その意味を説明しなさい。",
+    return desc(f"{where(key)}を、助動詞の意味が分かるように口語訳しなさい。また、訳に反映させた助動詞を一つ挙げ、その意味を説明しなさい。",
                 f"口語訳：{tl}　助動詞：{pts}。", f"本文中の助動詞：{pts}。", rub, d=5, p=8, k=CG, lines=6, stim=tstim(key), cp=PD, src=src,
                 ap="まず本文中の助動詞をすべて探して意味を決め、それから口語訳を組み立てる。",
                 steps=[f"本文中の助動詞を探す：{pts}。", "それぞれの意味を口語の言い方（ない・た・だろう・ようだ など）に置きかえる。", f"文全体をつなげて訳す：{tl}"],
@@ -847,7 +852,7 @@ def d_text(r):
     key, phrase, part, right, wr, judge = r.choice(TX)
     w = r.choice(wr)
     src = TEXTS[key][1]
-    return err_item(f"{src}の一節の「{phrase}」の「{part}」を文法的に説明しなさい。", f"{w}。", "接続・活用形・意味の判断", "interpretation",
+    return err_item(f"{where(key)}の「{phrase}」の「{part}」を文法的に説明しなさい。", f"{w}。", "接続・活用形・意味の判断", "interpretation",
                     "直前の語の形や、和歌・地の文といった文脈を確かめずに、よく知っている用法を当てはめやすい。",
                     f"{right}。{judge}。", f"「{w}」ではない。{judge}。",
                     [f"本文で「{phrase}」の前後を確かめる。", "直前の語の活用形（接続）と、下に続く語（活用形）を確かめる。", f"文脈から意味を決めて、{right}とする。"],
