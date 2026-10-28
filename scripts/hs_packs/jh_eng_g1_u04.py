@@ -79,7 +79,7 @@ ING = [
     ("run", "running", "double"), ("swim", "swimming", "double"), ("sit", "sitting", "double"), ("get", "getting", "double"),
     ("cut", "cutting", "double"), ("put", "putting", "double"), ("begin", "beginning", "double"), ("stop", "stopping", "double"),
     ("shop", "shopping", "double"), ("plan", "planning", "double"),
-    ("lie", "lying", "ie"), ("die", "dying", "ie"), ("tie", "tying", "ie"),
+    ("lie", "lying", "ie"), ("tie", "tying", "ie"),
 ]
 ING_BY = {k: [x for x in ING if x[2] == k] for k in ING_RULE}
 

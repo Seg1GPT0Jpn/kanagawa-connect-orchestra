@@ -583,7 +583,7 @@ LESSON = lesson(
                            ask="I live in this town for five years. はなぜ誤りか。", expect="過去から現在まで続く状態は現在完了で表す。")],
                 misconceptions=[("「5年になる」を現在形 is five years で書く。", "It has been five years since ～ のように現在完了で表す")]),
         example("ex2", "例題2　自由英作文（構成の分析）",
-                f"テーマ：{EXT[0]}について、あなたの考えを80〜100語の英語で書きなさい。",
+                f"テーマ：{EXT[0]}について、あなたの考えを70〜90語の英語で書きなさい。",
                 ["主張（第1文）：I believe we still need to learn foreign languages even though AI can translate for us.",
                  "理由1：翻訳ツールは、異文化の人と直接話す経験を完全には置きかえられない。言語を学ぶと、その話し手の考え方や価値観も学べる。",
                  "理由2（In addition）：機器なしで話せると、より早く信頼関係を築ける。",
