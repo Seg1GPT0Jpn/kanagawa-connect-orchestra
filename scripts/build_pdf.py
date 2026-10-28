@@ -171,6 +171,7 @@ def prepare(data: dict, paper: str = "A4") -> tuple[list, list]:
     groups: list[dict] = []
     shown: set[str] = set()
     cur_key = object()
+    prev_stim = None
     for i, q in enumerate(data["questions"]):
         q = dict(q)
         q["_number"] = q.get("number") or f"{i + 1}"
@@ -178,6 +179,10 @@ def prepare(data: dict, paper: str = "A4") -> tuple[list, list]:
             (q.get("answer_space") or {}).get("char_grid", 0) > 200 or bool(q.get("stimulus") and len(q["stimulus"].get("content", "")) > 600)
         q["_long_exp"] = len(q.get("explanation", "")) > 700
         q["_cols"] = choice_cols(q.get("choices") or [], paper)
+        # 問題に直接付いた資料（本文・放送文）は、直前の問題と同じなら繰り返さない
+        st = q.get("stimulus")
+        q["_stim_show"] = bool(st) and st != prev_stim
+        prev_stim = st
         sec_id = q.get("section")
         if sec_id != cur_key:
             sec = sections.get(sec_id) if sec_id else None

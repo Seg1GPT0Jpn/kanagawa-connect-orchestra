@@ -50,6 +50,7 @@
   {% if item.kind == 'stimulus' %}
     {{ stimulus_block(item.stimulus, 'questions', item.compact) }}
   {% else %}{% set q = item.question %}
+  {% if q._stim_show %}{{ stimulus_block(q.stimulus, 'questions') }}{% endif %}
   <div class="kg-sub{% if q._long %} long{% endif %}">
     {% if q._sub %}<span class="kg-sublab">{{ q._sub }}</span>{% endif %}
     <div class="kg-subbody">

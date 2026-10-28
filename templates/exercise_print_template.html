@@ -36,6 +36,7 @@
   {% if g.section %}<h2>{{ g.section.title }}</h2>{% if g.section.instructions and not answers %}<p class="section-instructions">{{ g.section.instructions | rich_inline }}</p>{% endif %}{% endif %}
   {% for item in g['items'] %}
   {% if item.kind == 'question' %}{% set q = item.question %}{% set ed = q.explanation_detail or {} %}
+  {% if q._stim_show and (not answers or q.stimulus.type == 'listening_script') %}{{ stimulus_block(q.stimulus, kind) }}{% endif %}
   <article class="{{ 'exp-item' if answers else 'question' }}{% if q._long or (answers and q._long_exp) %} long{% endif %}" id="{{ q.id }}">
     <div class="q-head">
       <span class="q-num lv">{{ q._number }}</span>
