@@ -617,32 +617,34 @@ def b_boxplot(r):
 
 
 CORR_SETS = [
-    ("1日の学習時間（分）", "小テストの得点"),
-    ("気温（℃）", "冷たい飲み物の売上（本）"),
-    ("1か月の運動日数", "50m走のタイム（秒）"),
-    ("通学時間（分）", "1日の睡眠時間（分）"),
-    ("身長（cm）", "1か月の読書冊数"),
+    ("1日の学習時間（分）", "小テストの得点（点）", 20, 120, 30, 100),
+    ("1か月の運動日数（日）", "反復横とびの回数（回）", 0, 25, 35, 65),
+    ("通学時間（分）", "1日の睡眠時間（分）", 10, 90, 360, 480),
+    ("1日のスマートフォン利用時間（分）", "1か月の読書冊数（冊）", 30, 240, 0, 10),
+    ("握力（kg）", "ハンドボール投げの記録（m）", 20, 50, 10, 35),
 ]
 
 
 @gen("standard_practice", 4, ["concept", "application"])
 def b_correlation(r):
-    xl, yl = r.choice(CORR_SETS)
+    xl, yl, xlo, xhi, ylo, yhi = r.choice(CORR_SETS)
     kind = r.choice(["pos", "neg", "none"])
     for _ in range(500):
-        xs = [r.randint(10, 60) for _ in range(8)]
+        ts = [r.random() for _ in range(8)]
+        xs = [round(xlo + t * (xhi - xlo)) for t in ts]
         if kind == "pos":
-            ys = [x + r.randint(-6, 6) + 20 for x in xs]
+            us = [min(1, max(0, t + r.uniform(-0.12, 0.12))) for t in ts]
         elif kind == "neg":
-            ys = [90 - x + r.randint(-6, 6) for x in xs]
+            us = [min(1, max(0, 1 - t + r.uniform(-0.12, 0.12))) for t in ts]
         else:
-            ys = [r.randint(30, 70) for _ in xs]
+            us = [r.random() for _ in ts]
+        ys = [round(ylo + u * (yhi - ylo)) for u in us]
         mx, my = sum(xs) / 8, sum(ys) / 8
         sxy = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
         sxx = sum((x - mx) ** 2 for x in xs)
         syy = sum((y - my) ** 2 for y in ys)
         rr = sxy / (sxx * syy) ** 0.5 if sxx and syy else 0
-        if (kind == "pos" and rr > 0.8) or (kind == "neg" and rr < -0.8) or (kind == "none" and abs(rr) < 0.15):
+        if (kind == "pos" and 0.8 < rr < 0.98) or (kind == "neg" and -0.98 < rr < -0.8) or (kind == "none" and abs(rr) < 0.15):
             break
     rows = [[f"生徒{chr(65 + i)}", x, y] for i, (x, y) in enumerate(zip(xs, ys))]
     lab = {"pos": "強い正の相関がある", "neg": "強い負の相関がある", "none": "ほとんど相関がない"}

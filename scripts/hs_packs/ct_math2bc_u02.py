@@ -85,6 +85,13 @@ def vexpr(k, name="b"):
     return f"\\vec{{a}}{'+' if k > 0 else '-'}{abs(k)}\\vec{{{name}}}"
 
 
+def lin2(c1, c2, v1="s", v2="t"):
+    """c1*s+c2*t の LaTeX。"""
+    a = "" if c1 == 1 else str(c1)
+    b = "" if c2 == 1 else str(c2)
+    return f"{a}{v1}+{b}{v2}"
+
+
 def sq(v):
     return sp.latex(sp.sqrt(sp.nsimplify(v)))
 
@@ -433,22 +440,23 @@ def prop_cases():
 
 
 PROP_CASES = prop_cases()
-PROP_CTX = ["ある市（架空）で無作為に選んだ {n} 人に調査したところ、{k} 人がある公共施設を利用したことがあると答えた",
-            "ある工場（架空）の製品から無作為に {n} 個を取り出して検査したところ、{k} 個が規格の上限に近い値であった",
-            "ある高校（架空）の卒業生から無作為に {n} 人を選んだところ、{k} 人が理系の学部に進学していた",
-            "ある湖（架空）で無作為に {n} 匹の魚を捕獲したところ、{k} 匹が特定の種類であった"]
+PROP_CTX = [("ある市（架空）で無作為に選んだ {n} 人に調査したところ、{k} 人がある公共施設を利用したことがあると答えた", "この施設を利用したことがある市民"),
+            ("ある工場（架空）で作られた電球から無作為に {n} 個を選んで調べたところ、{k} 個が基準の時間より長く点灯した", "基準の時間より長く点灯する電球"),
+            ("ある高校（架空）の卒業生から無作為に {n} 人を選んだところ、{k} 人が理系の学部に進学していた", "理系の学部に進学した卒業生"),
+            ("ある湖（架空）で無作為に {n} 匹の魚を捕獲したところ、{k} 匹が特定の種類であった", "湖にいる魚のうちその種類の魚")]
 
 
 @gen("standard_practice", 4, ["computation", "condition_check"])
 def b_ci_prop(r):
     R, n, sd = r.choice(PROP_CASES)
     k = int(R * n)
-    ctx = r.choice(PROP_CTX).format(n=n, k=k)
+    ctx, label = r.choice(PROP_CTX)
+    ctx = ctx.format(n=n, k=k)
     Rd = Decimal(R.numerator) / Decimal(R.denominator)
     sdd = Decimal(sd.numerator) / Decimal(sd.denominator)
     h = Z95 * sdd
     lo, hi = Rd - h, Rd + h
-    return sa(f"{ctx}。その性質をもつものの母比率 $p$ に対する信頼度 95% の信頼区間を求めなさい。答えは小数第4位を四捨五入して小数第3位まで求めること。",
+    return sa(f"{ctx}。{label}の割合（母比率）$p$ に対する信頼度 95% の信頼区間を求めなさい。答えは小数第4位を四捨五入して小数第3位まで求めること。",
               f"${rnd(lo, 3)}\\leqq p\\leqq{rnd(hi, 3)}$",
               f"標本比率 $R={dstr(Rd)}$、$\\sqrt{{\\dfrac{{R(1-R)}}{{n}}}}={dstr(sdd)}$。$1.96\\times{dstr(sdd)}={dstr(h)}$ より ${dstr(lo)}\\leqq p\\leqq{dstr(hi)}$。", d=3,
               ap="母比率の推定では、標本の大きさ $n$ が大きいとき、標本比率 $R$ を使って標準偏差を $\\sqrt{\\dfrac{R(1-R)}{n}}$ と近似し、$R\\pm1.96\\times$（標準偏差）の区間をつくる。",
@@ -499,7 +507,7 @@ def b_dot_projection(r):
               f"$k={ft(k)}$、$\\mathrm{{H}}\\left({ft(Hx)},\\,{ft(Hy)}\\right)$",
               f"$\\overrightarrow{{\\mathrm{{BH}}}}\\cdot\\overrightarrow{{\\mathrm{{OA}}}}=0$ より $k|\\overrightarrow{{\\mathrm{{OA}}}}|^2=\\overrightarrow{{\\mathrm{{OA}}}}\\cdot\\overrightarrow{{\\mathrm{{OB}}}}$、$k=\\dfrac{{{dot}}}{{{n2}}}$。", d=3,
               ap="垂直の条件は内積 $=0$ で表す。$\\overrightarrow{\\mathrm{BH}}=k\\overrightarrow{\\mathrm{OA}}-\\overrightarrow{\\mathrm{OB}}$ と OA が垂直、という式を立てる。",
-              steps=[f"$\\overrightarrow{{\\mathrm{{OA}}}}\\cdot\\overrightarrow{{\\mathrm{{OB}}}}={a1}\\cdot({b1})+{a2}\\cdot({b2})={dot}$、$|\\overrightarrow{{\\mathrm{{OA}}}}|^2={n2}$。",
+              steps=[f"$\\overrightarrow{{\\mathrm{{OA}}}}\\cdot\\overrightarrow{{\\mathrm{{OB}}}}=({a1})\\cdot({b1})+({a2})\\cdot({b2})={dot}$、$|\\overrightarrow{{\\mathrm{{OA}}}}|^2={n2}$。",
                      "$(k\\overrightarrow{\\mathrm{OA}}-\\overrightarrow{\\mathrm{OB}})\\cdot\\overrightarrow{\\mathrm{OA}}=0$ より $k|\\overrightarrow{\\mathrm{OA}}|^2-\\overrightarrow{\\mathrm{OA}}\\cdot\\overrightarrow{\\mathrm{OB}}=0$。",
                      f"$k=\\dfrac{{{dot}}}{{{n2}}}={ft(k)}$、$\\mathrm{{H}}\\left({ft(Hx)},\\,{ft(Hy)}\\right)$。"],
               alt=["直線 OA の方程式と、B を通り OA に垂直な直線の方程式を連立して交点を求めても同じ結果になる（図形と方程式）。"],
@@ -547,15 +555,15 @@ def c_orthocenter(r):
     det = D * D - A2 * B2
     s = F(D * (D - B2), det)
     t = F(D * (D - A2), det)
-    oh = term_coef(s, "\\vec{a}") + term_coef(t, "\\vec{b}", first=(s == 0))
+    oh = (term_coef(s, "\\vec{a}") + term_coef(t, "\\vec{b}", first=(s == 0))).replace("\\cdot \\vec", "\\vec")
     return desc(f"$\\triangle\\mathrm{{OAB}}$ において $\\mathrm{{OA}}={A},\\ \\mathrm{{OB}}={B},\\ \\mathrm{{AB}}={sq(AB2)}$ である。$\\overrightarrow{{\\mathrm{{OA}}}}=\\vec{{a}},\\ \\overrightarrow{{\\mathrm{{OB}}}}=\\vec{{b}}$ とし、$\\triangle\\mathrm{{OAB}}$ の垂心を H とする。\n(1) 内積 $\\vec{{a}}\\cdot\\vec{{b}}$ を求めなさい。\n(2) $\\overrightarrow{{\\mathrm{{OH}}}}=s\\vec{{a}}+t\\vec{{b}}$ と表すとき、$s,\\ t$ の値を求めなさい。垂心の性質をどのように式にしたかがわかるように記述すること。",
                 f"(1) $\\vec{{a}}\\cdot\\vec{{b}}={D}$　(2) $s={ft(s)},\\ t={ft(t)}$（$\\overrightarrow{{\\mathrm{{OH}}}}={oh}$）",
                 f"$\\mathrm{{AB}}^2=|\\vec{{b}}-\\vec{{a}}|^2$ から内積を求める。垂心は $\\mathrm{{AH}}\\perp\\mathrm{{OB}}$、$\\mathrm{{BH}}\\perp\\mathrm{{OA}}$ を満たす。",
                 [("$|\\vec{b}-\\vec{a}|^2$ を展開して内積を正しく求めている", 2), ("垂心の条件を2つの内積の式で表している", 3), ("連立方程式を解いて $s,\\ t$ を正しく求めている", 3)], d=4, p=8, lines=12,
                 ap="垂心は「各頂点から対辺に下ろした垂線の交点」（数学A 図形の性質）。2本の垂線について「垂直 ⇔ 内積 $=0$」を使えば、$s,\\ t$ の連立方程式になる。",
                 steps=[f"(1) $|\\vec{{b}}-\\vec{{a}}|^2=|\\vec{{b}}|^2-2\\vec{{a}}\\cdot\\vec{{b}}+|\\vec{{a}}|^2$ より ${AB2}={B2}-2\\vec{{a}}\\cdot\\vec{{b}}+{A2}$、$\\vec{{a}}\\cdot\\vec{{b}}={D}$。",
-                       f"(2) $\\mathrm{{AH}}\\perp\\mathrm{{OB}}$：$(s\\vec{{a}}+t\\vec{{b}}-\\vec{{a}})\\cdot\\vec{{b}}=0$ より ${D}s+{B2}t={D}$。",
-                       f"$\\mathrm{{BH}}\\perp\\mathrm{{OA}}$：$(s\\vec{{a}}+t\\vec{{b}}-\\vec{{b}})\\cdot\\vec{{a}}=0$ より ${A2}s+{D}t={D}$。",
+                       f"(2) $\\mathrm{{AH}}\\perp\\mathrm{{OB}}$：$(s\\vec{{a}}+t\\vec{{b}}-\\vec{{a}})\\cdot\\vec{{b}}=0$ より ${lin2(D, B2)}={D}$。",
+                       f"$\\mathrm{{BH}}\\perp\\mathrm{{OA}}$：$(s\\vec{{a}}+t\\vec{{b}}-\\vec{{b}})\\cdot\\vec{{a}}=0$ より ${lin2(A2, D)}={D}$。",
                        f"連立して $s={ft(s)},\\ t={ft(t)}$。"],
                 alt=[f"求めた $\\overrightarrow{{\\mathrm{{OH}}}}$ について、3本目の垂線の条件 $\\overrightarrow{{\\mathrm{{OH}}}}\\cdot(\\vec{{b}}-\\vec{{a}})=0$ も成り立つことを確かめると検算になる（垂心では3本の垂線が1点で交わる）。"],
                 pc=[("内積の計算", 2), ("垂直条件の立式", 3), ("連立方程式の解", 3)],
@@ -657,11 +665,13 @@ def c_test(r):
     mu = int(n * p0)
     k = mu + int(dk)
     rej = abs(z) > Z95
-    ctx = r.choice([("ある店のくじ（架空）", "当たりが出る", "当たりを引く"), ("ある種子（架空）", "発芽しない", "発芽しない種子がある"), ("ある製品の検査（架空）", "不良品である", "不良品が見つかる")])
+    ctx = r.choice([("ある店のくじ（架空）では", "当たりが出る", "くじを {n} 回引いたところ、当たりは {k} 回であった"),
+                    ("ある種子（架空）は", "発芽しない", "{n} 個の種子をまいたところ、発芽しなかったものは {k} 個であった"),
+                    ("ある工場（架空）の製品は", "不良品である", "製品を無作為に {n} 個選んで検査したところ、不良品は {k} 個であった")])
     concl = (f"棄却される。{ctx[1]}確率は ${ft(p0)}$ ではないといえる。" if rej else f"棄却されない。{ctx[1]}確率は ${ft(p0)}$ ではないとはいえない（判断を保留する）。")
-    return desc(f"{ctx[0]}で、{ctx[1]}確率は ${ft(p0)}$ とされている。無作為に ${n}$ 回（個）調べたところ、{ctx[2]}回数（個数）は ${k}$ であった。{ctx[1]}確率は ${ft(p0)}$ であるといえるか。帰無仮説を「確率は ${ft(p0)}$ である」として、有意水準 5% で両側検定しなさい。ただし、二項分布は正規分布で近似し、標準正規分布に従う $Z$ について $P(|Z|\\leqq1.96)=0.95$ を用いること。",
+    return desc(f"{ctx[0]}、{ctx[1]}確率が ${ft(p0)}$ であるとされている。{ctx[2].format(n=f'${n}$', k=f'${k}$')}。{ctx[1]}確率は ${ft(p0)}$ であるといえるか。帰無仮説を「確率は ${ft(p0)}$ である」として、有意水準 5% で両側検定しなさい。ただし、二項分布は正規分布で近似し、標準正規分布に従う $Z$ について $P(|Z|\\leqq1.96)=0.95$ を用いること。",
                 f"$Z={dstr(z)}$。$|Z|{'>' if rej else '\\leqq'}1.96$ なので帰無仮説は{concl}",
-                f"帰無仮説のもとで回数 $X$ は $B\\left({n},\\ {ft(p0)}\\right)$ に従い、近似的に $N({mu},\\,{sd}^2)$。$Z=\\dfrac{{{k}-{mu}}}{{{sd}}}={dstr(z)}$。",
+                f"帰無仮説のもとで回数（個数）$X$ は $B\\left({n},\\ {ft(p0)}\\right)$ に従い、近似的に $N({mu},\\,{sd}^2)$。$Z=\\dfrac{{{k}-{mu}}}{{{sd}}}={dstr(z)}$。",
                 [("帰無仮説のもとでの分布（期待値・標準偏差）を正しく求めている", 2), ("$Z$ の値を正しく計算し、棄却域と比較している", 3), ("結論を「棄却される／されない」とその意味を正確な言葉で述べている", 3)], d=4, p=8, lines=10,
                 ap="帰無仮説が正しいと仮定したときに、観測された結果が「めったに起こらない（確率 5% 未満の範囲）」かどうかを調べる。棄却域は $|Z|>1.96$。",
                 steps=[f"帰無仮説のもとで $E(X)={n}\\times{ft(p0)}={mu}$、$\\sigma(X)=\\sqrt{{{n}\\times{ft(p0)}\\times{ft(1 - p0)}}}={sd}$。",
