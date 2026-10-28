@@ -1,0 +1,384 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "JH-MATH-G2-U06-LESSON",
+  "title": "確率　授業プリント",
+  "subtitle": "データの活用｜場合の数・確率の求め方・樹形図・表",
+  "track": "jh_pack",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH2",
+  "unit_ids": [
+    "JH-MATH-G2-U06"
+  ],
+  "print_type": "lesson",
+  "pack_id": "JH-MATH-G2-U06-PACK",
+  "pair_set_id": "JH-MATH-G2-U06-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U07",
+        "point": "多数回の試行で求めた相対度数を確率とみなす考え方（統計的確率）。この単元では、場合の数をもとに確率を求める。",
+        "title": "データの活用"
+      },
+      {
+        "unit_id": "JH-MATH-G1-U01",
+        "point": "分数の計算と約分、倍数・約数・素数の判断。確率を既約分数で答えるときや、目の条件を調べるときに使う。",
+        "title": "正の数・負の数"
+      },
+      {
+        "unit_id": "JH-MATH-G1-U04",
+        "point": "座標の読み方。2つのさいころの目を点の座標とみなす問題で使う。",
+        "title": "比例と反比例"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "JH-MATH-G3-U08",
+        "point": "無作為に抽出するときの「どれも同様に確からしい」という考え方が、標本調査の土台になる。",
+        "title": "標本調査"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U04",
+        "point": "さいころの目で決まる点や直線と、関数のグラフを組み合わせた確率の問題に発展する。",
+        "title": "関数 y=ax^2"
+      },
+      {
+        "unit_id": "HS-MATHA-U01",
+        "point": "高校の場合の数と確率で、順列・組合せの公式や、和の法則・積の法則を使って確率を計算する。",
+        "title": "場合の数と確率"
+      }
+    ],
+    "readiness_check": [
+      "分数の約分ができる（確率は既約分数で答える）。",
+      "倍数・約数・素数を判断できる。",
+      "1年で学んだ「多数回の試行で、相対度数が一定の値に近づく」ことを知っている。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "「同様に確からしい」の意味を理解し、起こりうる場合の数をもとに確率を求めることができる。",
+      "樹形図や表を使って、もれや重なりなく場合の数を数えることができる。",
+      "「〜でない確率」「少なくとも〜の確率」を、起こらない確率 $1-p$ を使って求め、その理由を説明できる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：どちらが起こりやすい？",
+        "minutes": 10,
+        "activity": "2枚の硬貨で「表と裏が1枚ずつ」は 3 通りのうちの 1 つか、を考える"
+      },
+      {
+        "phase": "確率の意味と求め方",
+        "minutes": 20,
+        "activity": "同様に確からしい、確率 $p=\\dfrac{a}{n}$、確率の範囲 $0\\leqq p\\leqq 1$"
+      },
+      {
+        "phase": "樹形図と場合の数",
+        "minutes": 20,
+        "activity": "硬貨・並び方・代表の選び方を樹形図で数える（例題1）"
+      },
+      {
+        "phase": "表を使う：2つのさいころ",
+        "minutes": 20,
+        "activity": "36 通りの表で、和や差の条件を調べる（例題2）"
+      },
+      {
+        "phase": "起こらない確率",
+        "minutes": 20,
+        "activity": "$1-p$ の導出、「少なくとも」の確率（例題3）"
+      },
+      {
+        "phase": "まとめと確認",
+        "minutes": 10,
+        "activity": "確認問題と問題プリントの指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "「起こりやすさ」を数で表す",
+        "body": "1年では、ペットボトルのキャップを何回も投げて、表が出る割合（相対度数）を調べた。実験をしなくても、さいころや硬貨のように「どの結果が出ることも同じ程度に期待できる」ものなら、場合の数を数えるだけで起こりやすさを数で表すことができる。この単元では、その数（確率）の求め方と、もれなく数えるための道具（樹形図・表）を学ぶ。",
+        "bullets": [
+          "2枚の硬貨を投げると、「表・表」「表・裏」「裏・裏」の3通り……？",
+          "硬貨に名前をつけて区別すると、本当は何通りあるかを考えよう。"
+        ],
+        "teacher_points": [
+          {
+            "point": "2枚の硬貨を実際に何十回も投げさせ、「表と裏が1枚ずつ」の割合が $\\dfrac{1}{3}$ ではなく $\\dfrac{1}{2}$ に近いことをクラス全体の結果で確かめる。",
+            "ask": "「表・表」「表・裏」「裏・裏」の3つは、同じくらい起こりやすいか。",
+            "expect": "「表・裏」は、10円玉が表で100円玉が裏の場合と、その逆の場合の2通りあるので起こりやすい。",
+            "timing": "導入"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "確率の意味と求め方",
+        "body": "あることがらの起こることが期待される程度を表す数を、そのことがらの起こる確率という。どの結果が起こることも同じ程度に期待できるとき、それらは「同様に確からしい」という。",
+        "formula": "$$p=\\frac{a}{n}\\qquad\\left(\\frac{\\text{ことがら A の起こる場合の数}}{\\text{起こりうるすべての場合の数}}\\right)$$",
+        "conditions": [
+          "起こりうるすべての場合が $n$ 通りあり、そのどれが起こることも同様に確からしいときに使える。",
+          "確率 $p$ の範囲は $0\\leqq p\\leqq 1$。必ず起こることがらの確率は 1、決して起こらないことがらの確率は 0。",
+          "確率 $\\dfrac{1}{6}$ は「6回に1回必ず起こる」という意味ではない。多数回くり返すと、起こる割合が $\\dfrac{1}{6}$ に近づくという意味である。"
+        ],
+        "teacher_points": [
+          {
+            "point": "公式 $\\dfrac{a}{n}$ を使う前に「この $n$ 通りは同様に確からしいか」を必ず確かめる習慣をつけさせる。",
+            "caution": "2つのさいころの「和」の 2〜12 の 11 通りを同様に確からしいと考える誤りが非常に多い。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "起こらない確率",
+        "formula": "$$(\\text{A の起こらない確率})=1-(\\text{A の起こる確率})$$",
+        "conditions": [
+          "起こりうるすべての場合が同様に確からしいとき、いつでも成り立つ。",
+          "「少なくとも1つは〜」の確率は、「1つも〜でない」確率を 1 から引くと求めやすい。"
+        ],
+        "proof_steps": [
+          "起こりうるすべての場合の数を $n$、A の起こる場合の数を $a$ とする。",
+          "A の起こらない場合の数は $n-a$ である。",
+          "A の起こらない確率は $\\dfrac{n-a}{n}=\\dfrac{n}{n}-\\dfrac{a}{n}=1-\\dfrac{a}{n}$。",
+          "$\\dfrac{a}{n}=p$ なので、A の起こらない確率は $1-p$ である。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「少なくとも1枚は表」を直接数える方法と、$1-$「すべて裏」で求める方法を両方やらせ、一致することを確かめさせる。",
+            "ask": "3枚の硬貨で「少なくとも1枚は表」となる場合を直接数えると何通りか。",
+            "expect": "8 通りのうち、すべて裏の 1 通り以外なので 7 通り。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "場合の数の数え方（樹形図と積の考え）",
+        "proof_steps": [
+          "1枚目の硬貨の出方は表・裏の 2 通り。そのそれぞれについて、2枚目の出方も 2 通りある。",
+          "樹形図で枝分かれを順にかくと、2枚では $2\\times2=4$ 通り、3枚では $2\\times2\\times2=8$ 通りになる。",
+          "同じように、大小2つのさいころでは、大の6通りそれぞれに小の6通りがあるので $6\\times6=36$ 通り。",
+          "A，B，C の3人の並び方は、左はしが3通り、そのそれぞれで真ん中が2通り、右はしが1通りなので $3\\times2\\times1=6$ 通り。",
+          "4人から2人の代表を選ぶ（順番を考えない）ときは、「A と B」と「B と A」を同じものとみるので、並べた $4\\times3=12$ 通りを 2 でわって 6 通り。"
+        ],
+        "teacher_points": [
+          {
+            "point": "樹形図は「どの順にかくか（1枚目→2枚目…）」を最初に決め、同じ形の枝が並ぶことに気づかせる。",
+            "caution": "代表の選び方で、AB と BA を別々に数えてしまう誤りが多い。順番を区別するかどうかを問題文から読み取らせる。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　樹形図を使う",
+        "example": {
+          "problem": "A，B，C の3枚の硬貨を同時に投げるとき，表が2枚，裏が1枚出る確率を求めなさい。",
+          "steps": [
+            "樹形図をかくと、表裏の出方は全部で $2\\times2\\times2=8$ 通りで、どれも同様に確からしい。",
+            "表が2枚・裏が1枚になるのは（表，表，裏）（表，裏，表）（裏，表，表）の 3 通り。",
+            "確率は $\\dfrac{3}{8}$。"
+          ],
+          "answer": "$\\dfrac{3}{8}$",
+          "thinking": "硬貨に A，B，C と名前をつけて区別し、樹形図で 8 通りをすべて書き出す。",
+          "figure": {
+            "alt": "3枚の硬貨 A，B，C の表裏の出方の樹形図",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 190\" width=\"330\" height=\"190\" font-family=\"serif\" font-size=\"12\"><text x=\"90\" y=\"14\" text-anchor=\"middle\">A</text><text x=\"160\" y=\"14\" text-anchor=\"middle\">B</text><text x=\"230\" y=\"14\" text-anchor=\"middle\">C</text><line x1=\"20\" y1=\"104.0\" x2=\"81\" y2=\"64.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"90\" y=\"68.0\" text-anchor=\"middle\">表</text><line x1=\"20\" y1=\"104.0\" x2=\"81\" y2=\"144.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"90\" y=\"148.0\" text-anchor=\"middle\">裏</text><line x1=\"98\" y1=\"64.0\" x2=\"151\" y2=\"44.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"160\" y=\"48.0\" text-anchor=\"middle\">表</text><line x1=\"98\" y1=\"64.0\" x2=\"151\" y2=\"84.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"160\" y=\"88.0\" text-anchor=\"middle\">裏</text><line x1=\"98\" y1=\"144.0\" x2=\"151\" y2=\"124.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"160\" y=\"128.0\" text-anchor=\"middle\">表</text><line x1=\"98\" y1=\"144.0\" x2=\"151\" y2=\"164.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"160\" y=\"168.0\" text-anchor=\"middle\">裏</text><line x1=\"168\" y1=\"44.0\" x2=\"221\" y2=\"34.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"38.0\" text-anchor=\"middle\">表</text><line x1=\"168\" y1=\"44.0\" x2=\"221\" y2=\"54.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"58.0\" text-anchor=\"middle\">裏</text><line x1=\"168\" y1=\"84.0\" x2=\"221\" y2=\"74.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"78.0\" text-anchor=\"middle\">表</text><line x1=\"168\" y1=\"84.0\" x2=\"221\" y2=\"94.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"98.0\" text-anchor=\"middle\">裏</text><line x1=\"168\" y1=\"124.0\" x2=\"221\" y2=\"114.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"118.0\" text-anchor=\"middle\">表</text><line x1=\"168\" y1=\"124.0\" x2=\"221\" y2=\"134.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"138.0\" text-anchor=\"middle\">裏</text><line x1=\"168\" y1=\"164.0\" x2=\"221\" y2=\"154.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"158.0\" text-anchor=\"middle\">表</text><line x1=\"168\" y1=\"164.0\" x2=\"221\" y2=\"174.0\" stroke=\"#000\" stroke-width=\"0.9\"/><text x=\"230\" y=\"178.0\" text-anchor=\"middle\">裏</text><text x=\"248\" y=\"38.0\" font-size=\"11\">（表，表，表）</text><text x=\"248\" y=\"58.0\" font-size=\"11\">（表，表，裏）</text><text x=\"248\" y=\"78.0\" font-size=\"11\">（表，裏，表）</text><text x=\"248\" y=\"98.0\" font-size=\"11\">（表，裏，裏）</text><text x=\"248\" y=\"118.0\" font-size=\"11\">（裏，表，表）</text><text x=\"248\" y=\"138.0\" font-size=\"11\">（裏，表，裏）</text><text x=\"248\" y=\"158.0\" font-size=\"11\">（裏，裏，表）</text><text x=\"248\" y=\"178.0\" font-size=\"11\">（裏，裏，裏）</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "「表の枚数は 0，1，2，3 の 4 通りだから $\\dfrac{1}{4}$」という誤答を取り上げ、なぜ誤りかを説明させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "表の枚数は 0〜3 枚の 4 通りなので $\\dfrac{1}{4}$",
+            "correct": "4つの場合は同様に確からしくない。8 通りのうち 3 通りなので $\\dfrac{3}{8}$"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　表を使う（2つのさいころ）",
+        "example": {
+          "problem": "大小2つのさいころを同時に投げるとき，出た目の数の和が7になる確率を求めなさい。",
+          "steps": [
+            "大きいさいころの目を $a$、小さいさいころの目を $b$ として、36 通りの表をかく。",
+            "和が7になるのは $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$ の 6 通り（表の色のついたマス）。",
+            "確率は $\\dfrac{6}{36}=\\dfrac{1}{6}$。"
+          ],
+          "answer": "$\\dfrac{1}{6}$",
+          "thinking": "2つのさいころの問題では、縦に大、横に小の目をとった表をつくると、もれなく数えられる。",
+          "figure": {
+            "alt": "大小2つのさいころの目の和の表（和が7のマスに色）",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 212 212\" width=\"212\" height=\"212\" font-family=\"serif\" font-size=\"12\"><text x=\"46.0\" y=\"50.0\" text-anchor=\"middle\">2</text><text x=\"76.0\" y=\"50.0\" text-anchor=\"middle\">3</text><text x=\"106.0\" y=\"50.0\" text-anchor=\"middle\">4</text><text x=\"136.0\" y=\"50.0\" text-anchor=\"middle\">5</text><text x=\"166.0\" y=\"50.0\" text-anchor=\"middle\">6</text><rect x=\"181\" y=\"31\" width=\"30\" height=\"30\" fill=\"#d9d9d9\"/><text x=\"196.0\" y=\"50.0\" text-anchor=\"middle\">7</text><text x=\"46.0\" y=\"80.0\" text-anchor=\"middle\">3</text><text x=\"76.0\" y=\"80.0\" text-anchor=\"middle\">4</text><text x=\"106.0\" y=\"80.0\" text-anchor=\"middle\">5</text><text x=\"136.0\" y=\"80.0\" text-anchor=\"middle\">6</text><rect x=\"151\" y=\"61\" width=\"30\" height=\"30\" fill=\"#d9d9d9\"/><text x=\"166.0\" y=\"80.0\" text-anchor=\"middle\">7</text><text x=\"196.0\" y=\"80.0\" text-anchor=\"middle\">8</text><text x=\"46.0\" y=\"110.0\" text-anchor=\"middle\">4</text><text x=\"76.0\" y=\"110.0\" text-anchor=\"middle\">5</text><text x=\"106.0\" y=\"110.0\" text-anchor=\"middle\">6</text><rect x=\"121\" y=\"91\" width=\"30\" height=\"30\" fill=\"#d9d9d9\"/><text x=\"136.0\" y=\"110.0\" text-anchor=\"middle\">7</text><text x=\"166.0\" y=\"110.0\" text-anchor=\"middle\">8</text><text x=\"196.0\" y=\"110.0\" text-anchor=\"middle\">9</text><text x=\"46.0\" y=\"140.0\" text-anchor=\"middle\">5</text><text x=\"76.0\" y=\"140.0\" text-anchor=\"middle\">6</text><rect x=\"91\" y=\"121\" width=\"30\" height=\"30\" fill=\"#d9d9d9\"/><text x=\"106.0\" y=\"140.0\" text-anchor=\"middle\">7</text><text x=\"136.0\" y=\"140.0\" text-anchor=\"middle\">8</text><text x=\"166.0\" y=\"140.0\" text-anchor=\"middle\">9</text><text x=\"196.0\" y=\"140.0\" text-anchor=\"middle\">10</text><text x=\"46.0\" y=\"170.0\" text-anchor=\"middle\">6</text><rect x=\"61\" y=\"151\" width=\"30\" height=\"30\" fill=\"#d9d9d9\"/><text x=\"76.0\" y=\"170.0\" text-anchor=\"middle\">7</text><text x=\"106.0\" y=\"170.0\" text-anchor=\"middle\">8</text><text x=\"136.0\" y=\"170.0\" text-anchor=\"middle\">9</text><text x=\"166.0\" y=\"170.0\" text-anchor=\"middle\">10</text><text x=\"196.0\" y=\"170.0\" text-anchor=\"middle\">11</text><rect x=\"31\" y=\"181\" width=\"30\" height=\"30\" fill=\"#d9d9d9\"/><text x=\"46.0\" y=\"200.0\" text-anchor=\"middle\">7</text><text x=\"76.0\" y=\"200.0\" text-anchor=\"middle\">8</text><text x=\"106.0\" y=\"200.0\" text-anchor=\"middle\">9</text><text x=\"136.0\" y=\"200.0\" text-anchor=\"middle\">10</text><text x=\"166.0\" y=\"200.0\" text-anchor=\"middle\">11</text><text x=\"196.0\" y=\"200.0\" text-anchor=\"middle\">12</text><text x=\"46.0\" y=\"20.0\" text-anchor=\"middle\">1</text><text x=\"16.0\" y=\"50.0\" text-anchor=\"middle\">1</text><text x=\"76.0\" y=\"20.0\" text-anchor=\"middle\">2</text><text x=\"16.0\" y=\"80.0\" text-anchor=\"middle\">2</text><text x=\"106.0\" y=\"20.0\" text-anchor=\"middle\">3</text><text x=\"16.0\" y=\"110.0\" text-anchor=\"middle\">3</text><text x=\"136.0\" y=\"20.0\" text-anchor=\"middle\">4</text><text x=\"16.0\" y=\"140.0\" text-anchor=\"middle\">4</text><text x=\"166.0\" y=\"20.0\" text-anchor=\"middle\">5</text><text x=\"16.0\" y=\"170.0\" text-anchor=\"middle\">5</text><text x=\"196.0\" y=\"20.0\" text-anchor=\"middle\">6</text><text x=\"16.0\" y=\"200.0\" text-anchor=\"middle\">6</text><text x=\"22.599999999999998\" y=\"12.4\" text-anchor=\"middle\" font-size=\"9\">b</text><text x=\"9.4\" y=\"25.0\" text-anchor=\"middle\" font-size=\"9\">a</text><line x1=\"1\" y1=\"1\" x2=\"31\" y2=\"31\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"1\" y1=\"1\" x2=\"1\" y2=\"211\" stroke=\"#000\" stroke-width=\"1.4\"/><line x1=\"1\" y1=\"1\" x2=\"211\" y2=\"1\" stroke=\"#000\" stroke-width=\"1.4\"/><line x1=\"31\" y1=\"1\" x2=\"31\" y2=\"211\" stroke=\"#000\" stroke-width=\"1.4\"/><line x1=\"1\" y1=\"31\" x2=\"211\" y2=\"31\" stroke=\"#000\" stroke-width=\"1.4\"/><line x1=\"61\" y1=\"1\" x2=\"61\" y2=\"211\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"1\" y1=\"61\" x2=\"211\" y2=\"61\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"91\" y1=\"1\" x2=\"91\" y2=\"211\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"1\" y1=\"91\" x2=\"211\" y2=\"91\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"121\" y1=\"1\" x2=\"121\" y2=\"211\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"1\" y1=\"121\" x2=\"211\" y2=\"121\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"151\" y1=\"1\" x2=\"151\" y2=\"211\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"1\" y1=\"151\" x2=\"211\" y2=\"151\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"181\" y1=\"1\" x2=\"181\" y2=\"211\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"1\" y1=\"181\" x2=\"211\" y2=\"181\" stroke=\"#000\" stroke-width=\"0.8\"/><line x1=\"211\" y1=\"1\" x2=\"211\" y2=\"211\" stroke=\"#000\" stroke-width=\"1.4\"/><line x1=\"1\" y1=\"211\" x2=\"211\" y2=\"211\" stroke=\"#000\" stroke-width=\"1.4\"/></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "表の右上から左下への斜めの並びが、和が等しいマスであることに気づかせる。",
+            "ask": "和が 6 と 8 ではどちらが起こりやすいか。",
+            "expect": "どちらも 5 通りで同じ。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　起こらない確率を使う",
+        "example": {
+          "problem": "赤玉3個と白玉2個が入った袋から，同時に2個の玉を取り出すとき，少なくとも1個は白玉である確率を求めなさい。",
+          "steps": [
+            "玉に 赤1，赤2，赤3，白1，白2 と番号をつけて区別する。取り出し方は全部で 10 通り。",
+            "「少なくとも1個は白玉」でないのは、2個とも赤玉のとき：$\\{赤1,赤2\\},\\{赤1,赤3\\},\\{赤2,赤3\\}$ の 3 通り。",
+            "2個とも赤玉である確率は $\\dfrac{3}{10}$。",
+            "求める確率は $1-\\dfrac{3}{10}=\\dfrac{7}{10}$。"
+          ],
+          "answer": "$\\dfrac{7}{10}$",
+          "thinking": "「少なくとも1個は白」は、白が1個の場合と2個の場合がある。反対の「2個とも赤」の方が数えやすい。"
+        },
+        "teacher_points": [
+          {
+            "point": "同じ色の玉にも番号をつけて区別する理由（区別しないと同様に確からしくならない）を確認する。",
+            "caution": "同時に取り出すときは、{赤1，白1} と {白1，赤1} を同じものとして数える。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 確率の意味",
+              "lines": [
+                "同様に確からしい",
+                "$p=\\dfrac{a}{n}$（$a$：A の場合の数）",
+                "$0\\leqq p\\leqq 1$",
+                "$\\dfrac16$ ＝ 多数回で割合が近づく"
+              ]
+            },
+            {
+              "title": "② 数え方",
+              "lines": [
+                "樹形図：硬貨 $2\\times2\\times2=8$",
+                "表：さいころ2つ $6\\times6=36$",
+                "同じ色の玉にも番号",
+                "選ぶだけ（順番なし）は重なりに注意"
+              ]
+            },
+            {
+              "title": "③ 起こらない確率",
+              "lines": [
+                "(A でない)$=1-p$",
+                "少なくとも1つ → $1-$(1つもない)",
+                "直接数えて一致を確認",
+                "答えは既約分数"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "②では、例題1の樹形図と例題2の表を並べてかき、「同様に確からしい場合をすべて並べる道具」としてまとめる。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "確率を求める答案には「全部で〇通り、そのうち〇通り」を必ず書かせる。入試のマーク式でも、途中の数え方が正確さを支える。"
+          },
+          {
+            "point": "「同時に取り出す」「1個取り出してもどす」「もどさずに続けて取り出す」の違いを、同じ袋で比べさせる。",
+            "ask": "赤玉2個・白玉1個の袋から2個取り出すとき、もどす場合ともどさない場合で全部の場合の数はどう変わるか。",
+            "expect": "もどす場合は $3\\times3=9$ 通り、もどさない場合は $3\\times2=6$ 通り（同時なら 3 通り）。"
+          },
+          {
+            "point": "入試の確率問題は「操作」のルールを読んで表をつくる形が多い。例をもとにルールを自分で1回たどらせてから数えさせる。",
+            "timing": "例題2の後"
+          },
+          {
+            "point": "くじ引きの順番による有利・不利がないことを、樹形図で確かめさせると「同様に確からしい」の理解が深まる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "2つのさいころの和は 2〜12 の 11 通りなので、和が7の確率は $\\dfrac{1}{11}$",
+            "correct": "和の11通りは同様に確からしくない。36 通りで考えて $\\dfrac{6}{36}=\\dfrac16$"
+          },
+          {
+            "wrong": "確率が $\\dfrac16$ なら6回投げれば必ず1回出る",
+            "correct": "確率は多数回くり返したときの割合の目安で、6回で必ず出るわけではない"
+          },
+          {
+            "wrong": "「少なくとも1枚は表」は「1枚が表」の確率と同じ",
+            "correct": "表が2枚以上の場合もふくむ。$1-$(すべて裏) で求める"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "同様に確からしいとき、確率は $\\dfrac{\\text{A の起こる場合の数}}{\\text{すべての場合の数}}$。",
+          "確率は $0$ 以上 $1$ 以下。",
+          "樹形図や表で、もれや重なりなく数える。同じ色の玉やカードも区別する。",
+          "A の起こらない確率は $1-p$。「少なくとも」は起こらない方から考える。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "1つのさいころを投げるとき，6の約数の目が出る確率を求めなさい。",
+            "a": "6の約数は 1，2，3，6 の 4 通りなので $\\dfrac{4}{6}=\\dfrac{2}{3}$"
+          },
+          {
+            "q": "2枚の硬貨を投げるとき，少なくとも1枚は裏が出る確率を求めなさい。",
+            "a": "$1-\\dfrac{1}{4}=\\dfrac{3}{4}$"
+          },
+          {
+            "q": "大小2つのさいころを投げるとき，同じ目が出る確率を求めなさい。",
+            "a": "36 通りのうち 6 通りなので $\\dfrac{1}{6}$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "4663e941b81f33e8cd90a5e016bfbbf347de9a047ccd0e0da83f3457213de231"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T23:19:21+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "13180410b446141bc760a853b4944cc2fe8a799de3a8c2278c003a17e746a3f5"
+  }
+}

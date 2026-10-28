@@ -1,0 +1,430 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "JH-MATH-G3-U02-LESSON",
+  "title": "平方根　授業プリント",
+  "subtitle": "数と式｜平方根の意味・根号を含む式の計算・有理数と無理数・有理化",
+  "track": "jh_pack",
+  "stage": "junior_high",
+  "subject": "math",
+  "grade": "JH3",
+  "unit_ids": [
+    "JH-MATH-G3-U02"
+  ],
+  "print_type": "lesson",
+  "pack_id": "JH-MATH-G3-U02-PACK",
+  "pair_set_id": "JH-MATH-G3-U02-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "JH-MATH-G1-U01",
+        "point": "正の数・負の数の計算と累乗、素因数分解ができること。$\\sqrt{72}=\\sqrt{2^3\\times3^2}$ のように根号の中を整理するときに使う。",
+        "title": "正の数・負の数"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U01",
+        "point": "乗法公式と因数分解。$(\\sqrt{3}+1)^2$ の展開や、式の値を因数分解してから代入する計算に使う。",
+        "title": "式の展開と因数分解"
+      },
+      {
+        "unit_id": "JH-MATH-G1-U05",
+        "point": "正方形の面積と1辺の長さの関係。面積が $2$ cm² の正方形の1辺の長さとして $\\sqrt{2}$ を導入する。",
+        "title": "平面図形"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "JH-MATH-G3-U03",
+        "point": "二次方程式 $x^2=k$ や $(x+p)^2=q$ を平方根の考えで解き、解の公式で根号をふくむ解を表す。",
+        "title": "二次方程式"
+      },
+      {
+        "unit_id": "JH-MATH-G3-U07",
+        "point": "三平方の定理で、直角三角形の辺の長さや対角線の長さを $a\\sqrt{b}$ の形で求める。",
+        "title": "三平方の定理"
+      },
+      {
+        "unit_id": "HS-MATH1-U01",
+        "point": "高校の数と式で、実数・絶対値・分母の有理化（$\\dfrac{1}{\\sqrt{a}+\\sqrt{b}}$ の形）や二重根号へ発展する。",
+        "title": "数と式"
+      }
+    ],
+    "readiness_check": [
+      "正の数・負の数の乗法と累乗（$(-3)^2=9$、$-3^2=-9$）ができる。",
+      "自然数を素因数分解できる（$72=2^3\\times3^2$）。",
+      "分数の約分・通分と、分配法則・乗法公式による式の展開ができる。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "平方根の意味を理解し、正の数には平方根が2つあること、根号 $\\sqrt{\\ }$ を使った表し方を説明できる。",
+      "$\\sqrt{a}\\times\\sqrt{b}=\\sqrt{ab}$ などの性質を根拠に、根号をふくむ式の乗除・加減・分母の有理化ができる。",
+      "有理数と無理数の違いを理解し、平方根の大小比較や近似値を使った考察ができる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：面積が 2 の正方形",
+        "minutes": 10,
+        "activity": "方眼の上で面積 $2$ の正方形をかき、1辺の長さを考える"
+      },
+      {
+        "phase": "平方根の定義と根号",
+        "minutes": 15,
+        "activity": "平方根・根号の定義、$(\\sqrt{a})^2=a$、負の数の平方根がないこと"
+      },
+      {
+        "phase": "大小と有理数・無理数",
+        "minutes": 15,
+        "activity": "$a<b$ ならば $\\sqrt{a}<\\sqrt{b}$、有理数・無理数の区別、近似値"
+      },
+      {
+        "phase": "乗法・除法の性質と変形",
+        "minutes": 20,
+        "activity": "$\\sqrt{a}\\times\\sqrt{b}=\\sqrt{ab}$ の証明、$a\\sqrt{b}$ の形への変形（例題1）"
+      },
+      {
+        "phase": "分母の有理化と加減",
+        "minutes": 20,
+        "activity": "分母の有理化、同じ数の根号をふくむ項の加減（例題2・3）"
+      },
+      {
+        "phase": "式の値とまとめ",
+        "minutes": 20,
+        "activity": "乗法公式を使った計算と式の値（例題4）、確認問題"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "面積が 2 の正方形の1辺は？",
+        "body": "方眼の1目もりを $1$ cm とする。右の図のように、4つの正方形の対角線を結んでできる正方形 ABCD の面積は、大きな正方形（面積 $4$）の半分で $2$ cm² である。では、この正方形の1辺の長さは何 cm だろうか。$1^2=1$、$2^2=4$ なので、1辺の長さは $1$ と $2$ の間にあり、2乗すると $2$ になる数である。",
+        "bullets": [
+          "$1.4^2=1.96$、$1.5^2=2.25$ なので、1辺は $1.4$ と $1.5$ の間。",
+          "さらに調べると $1.41^2=1.9881$、$1.42^2=2.0164$。どこまで調べても終わらない。",
+          "このような数を、根号 $\\sqrt{\\ }$ を使って $\\sqrt{2}$ と表す。"
+        ],
+        "teacher_points": [
+          {
+            "point": "方眼紙で実際に面積 $2$ の正方形をかかせ、1辺を定規で測らせる（約 $1.4$ cm）。",
+            "ask": "面積が $2$ cm² の正方形の1辺は何 cm か。",
+            "expect": "$1.4$ cm くらい。ちょうどの数は書けない。",
+            "timing": "導入の最初"
+          },
+          {
+            "point": "電卓で $1.41421356\\cdots$ と表示させ、小数がどこまでも続くことに気づかせる。",
+            "caution": "「$\\sqrt{2}=1.41$」と等号で書かないよう、近似値であることを強調する。"
+          }
+        ],
+        "figure": {
+          "alt": "方眼の上の、面積が 2 の正方形（1目もりの正方形の対角線を1辺とする）",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\" font-family=\"serif\" font-size=\"12\"><line x1=\"64\" y1=\"112\" x2=\"112\" y2=\"64\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"112\" y1=\"64\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"16\" x2=\"16\" y2=\"64\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"64\" x2=\"64\" y2=\"112\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"16\" y1=\"112\" x2=\"112\" y2=\"112\" stroke=\"#000\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"112\" y1=\"112\" x2=\"112\" y2=\"16\" stroke=\"#000\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"112\" y1=\"16\" x2=\"16\" y2=\"16\" stroke=\"#000\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"16\" y1=\"16\" x2=\"16\" y2=\"112\" stroke=\"#000\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"16\" y1=\"64\" x2=\"112\" y2=\"64\" stroke=\"#000\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"64\" y1=\"112\" x2=\"64\" y2=\"16\" stroke=\"#000\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"60\" y=\"127\">A</text><text x=\"119\" y=\"68\">B</text><text x=\"60\" y=\"9\">C</text><text x=\"1\" y=\"68\">D</text></svg>"
+        }
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "平方根と根号",
+        "body": "2乗すると $a$ になる数を、$a$ の平方根という。正の数 $a$ の平方根は正と負の2つあり、絶対値が等しい。正の方を $\\sqrt{a}$、負の方を $-\\sqrt{a}$ と表し、まとめて $\\pm\\sqrt{a}$ と書く。記号 $\\sqrt{\\ }$ を根号といい、$\\sqrt{a}$ を「ルート $a$」と読む。",
+        "formula": "$$(\\sqrt{a})^2=a,\\qquad(-\\sqrt{a})^2=a\\qquad(a>0)$$",
+        "conditions": [
+          "$0$ の平方根は $0$ だけである（$\\sqrt{0}=0$）。",
+          "負の数を2乗すると正の数になるので、負の数の平方根はない（中学校の範囲）。",
+          "$\\sqrt{a}$ は正の数（$a>0$ のとき）。$\\sqrt{9}=3$ であり、$\\sqrt{9}=\\pm3$ ではない。",
+          "$a>0$ のとき $\\sqrt{a^2}=a$、$\\sqrt{(-a)^2}=a$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「$9$ の平方根」と「$\\sqrt{9}$」の違いを対比させる。",
+            "ask": "$9$ の平方根は何か。$\\sqrt{9}$ はいくつか。",
+            "expect": "$9$ の平方根は $\\pm3$、$\\sqrt{9}$ は $3$。",
+            "caution": "「$\\sqrt{9}=\\pm3$」と書く誤りがとても多い。"
+          }
+        ]
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "平方根の大小、有理数と無理数",
+        "body": "$a$、$b$ が正の数で $a<b$ ならば $\\sqrt{a}<\\sqrt{b}$ である（面積の大きい正方形ほど1辺も長い）。また、整数 $m$ と $0$ でない整数 $n$ を使って分数 $\\dfrac{m}{n}$ の形で表せる数を有理数、表せない数を無理数という。",
+        "conditions": [
+          "$\\sqrt{2}$、$\\sqrt{3}$、$\\sqrt{5}$、円周率 $\\pi$ は無理数。無理数を小数で表すと、循環しない無限小数になる。",
+          "$\\sqrt{4}=2$、$\\sqrt{0.09}=0.3$、$\\sqrt{\\dfrac{4}{9}}=\\dfrac{2}{3}$ のように、根号を使っていても有理数のものがある。",
+          "大小を比べるときは、それぞれを2乗して比べるか、$3=\\sqrt{9}$ のように根号の形にそろえる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$3$ と $\\sqrt{10}$、$2\\sqrt{3}$ と $3\\sqrt{2}$ を2乗して比べる方法を示す。",
+            "ask": "$2\\sqrt{3}$ と $3\\sqrt{2}$ はどちらが大きいか。",
+            "expect": "2乗すると $12$ と $18$ なので $3\\sqrt{2}$ の方が大きい。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "根号をふくむ数の乗法・除法",
+        "formula": "$$\\sqrt{a}\\times\\sqrt{b}=\\sqrt{ab},\\qquad \\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}},\\qquad \\sqrt{a^2b}=a\\sqrt{b}$$",
+        "conditions": [
+          "$a$、$b$ は正の数。",
+          "根号の中を素因数分解し、2乗の形になっている部分を根号の外に出す（$\\sqrt{72}=\\sqrt{6^2\\times2}=6\\sqrt{2}$）。",
+          "答えは、根号の中をできるだけ小さい自然数にして表す。",
+          "加法では $\\sqrt{a}+\\sqrt{b}=\\sqrt{a+b}$ は成り立たない（$\\sqrt{9}+\\sqrt{16}=7$、$\\sqrt{25}=5$）。"
+        ],
+        "proof_steps": [
+          "$\\sqrt{a}\\times\\sqrt{b}$ を2乗すると、$(\\sqrt{a}\\times\\sqrt{b})^2=(\\sqrt{a})^2\\times(\\sqrt{b})^2=a\\times b=ab$。",
+          "したがって $\\sqrt{a}\\times\\sqrt{b}$ は、2乗すると $ab$ になる数、つまり $ab$ の平方根である。",
+          "$\\sqrt{a}>0$、$\\sqrt{b}>0$ なので、$\\sqrt{a}\\times\\sqrt{b}>0$。$ab$ の平方根のうち正の方だから、$\\sqrt{a}\\times\\sqrt{b}=\\sqrt{ab}$。",
+          "同じように $\\left(\\dfrac{\\sqrt{a}}{\\sqrt{b}}\\right)^2=\\dfrac{a}{b}$ で正の数だから、$\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}$。",
+          "また $\\sqrt{a^2b}=\\sqrt{a^2}\\times\\sqrt{b}=a\\sqrt{b}$（$a>0$）。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「平方根の定義（2乗すると $ab$）」と「正の数であること」の2点で説明が完成することを強調する。",
+            "ask": "$\\sqrt{2}\\times\\sqrt{3}$ が $\\sqrt{6}$ になる理由を説明できるか。",
+            "expect": "2乗すると $6$ になる正の数だから。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "分母の有理化を導く",
+        "proof_steps": [
+          "$\\dfrac{a}{\\sqrt{b}}$ の分母と分子に $\\sqrt{b}$ をかける（分数の値は変わらない）。",
+          "分母は $\\sqrt{b}\\times\\sqrt{b}=(\\sqrt{b})^2=b$ となり、根号がなくなる。",
+          "よって $\\dfrac{a}{\\sqrt{b}}=\\dfrac{a\\sqrt{b}}{b}$。たとえば $\\dfrac{6}{\\sqrt{3}}=\\dfrac{6\\sqrt{3}}{3}=2\\sqrt{3}$。",
+          "分母に根号をふくまない形に直すことを、分母を有理化するという。近似値の計算（$\\dfrac{1}{\\sqrt{2}}=\\dfrac{\\sqrt{2}}{2}\\fallingdotseq\\dfrac{1.414}{2}$）が楽になる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "分母と分子に同じ数をかけても値が変わらないこと（小学校の分数の性質）を根拠として確認する。",
+            "caution": "分子だけに $\\sqrt{b}$ をかける誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　$a\\sqrt{b}$ の形に変形する",
+        "example": {
+          "problem": "$\\sqrt{72}$ と $\\sqrt{0.27}$ を、根号の中ができるだけ小さい自然数になるように変形しなさい。",
+          "steps": [
+            "$72=2^3\\times3^2=6^2\\times2$ なので $\\sqrt{72}=6\\sqrt{2}$。",
+            "$0.27=\\dfrac{27}{100}=\\dfrac{3^2\\times3}{10^2}$ なので $\\sqrt{0.27}=\\dfrac{3\\sqrt{3}}{10}$。"
+          ],
+          "answer": "$6\\sqrt{2}$、$\\dfrac{3\\sqrt{3}}{10}$",
+          "thinking": "根号の中を素因数分解し、同じ数が2つそろった組（2乗）を見つけて外に出す。"
+        },
+        "teacher_points": [
+          {
+            "point": "$72=4\\times18$ と分けて $2\\sqrt{18}$ で止まってしまう例を示し、根号の中に2乗の因数が残っていないかを必ず確かめさせる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\sqrt{72}=2\\sqrt{18}$ で終わりにする",
+            "correct": "$18=3^2\\times2$ なので、さらに $6\\sqrt{2}$ まで変形する"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　分母の有理化と乗除",
+        "example": {
+          "problem": "$\\sqrt{6}\\times\\sqrt{15}\\div\\sqrt{5}$ と $\\dfrac{10}{\\sqrt{5}}$ を計算しなさい。",
+          "steps": [
+            "$\\sqrt{6}\\times\\sqrt{15}\\div\\sqrt{5}=\\sqrt{\\dfrac{6\\times15}{5}}=\\sqrt{18}=3\\sqrt{2}$。",
+            "$\\dfrac{10}{\\sqrt{5}}=\\dfrac{10\\times\\sqrt{5}}{\\sqrt{5}\\times\\sqrt{5}}=\\dfrac{10\\sqrt{5}}{5}=2\\sqrt{5}$。"
+          ],
+          "answer": "$3\\sqrt{2}$、$2\\sqrt{5}$",
+          "thinking": "乗除はまとめて1つの根号の中で計算し、最後に $a\\sqrt{b}$ の形にする。"
+        },
+        "teacher_points": [
+          {
+            "point": "$\\dfrac{10}{\\sqrt{5}}$ は「$10=2\\times5=2\\times\\sqrt{5}\\times\\sqrt{5}$ なので約分できる」という見方も紹介する。",
+            "timing": "例題2のあと"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　根号をふくむ式の加減",
+        "example": {
+          "problem": "$\\sqrt{50}-\\sqrt{8}+\\dfrac{6}{\\sqrt{2}}$ を計算しなさい。",
+          "steps": [
+            "$\\sqrt{50}=5\\sqrt{2}$、$\\sqrt{8}=2\\sqrt{2}$、$\\dfrac{6}{\\sqrt{2}}=\\dfrac{6\\sqrt{2}}{2}=3\\sqrt{2}$。",
+            "$5\\sqrt{2}-2\\sqrt{2}+3\\sqrt{2}=(5-2+3)\\sqrt{2}=6\\sqrt{2}$。"
+          ],
+          "answer": "$6\\sqrt{2}$",
+          "thinking": "根号の中を同じ数にそろえると、文字式の同類項と同じように係数どうしを計算できる。"
+        },
+        "teacher_points": [
+          {
+            "point": "$\\sqrt{2}$ を文字 $x$ に置きかえると $5x-2x+3x=6x$ と同じ計算であることを示す。",
+            "ask": "$2\\sqrt{3}+3\\sqrt{2}$ はまとめられるか。",
+            "expect": "根号の中が違うのでまとめられない。"
+          }
+        ]
+      },
+      {
+        "id": "ex4",
+        "kind": "example",
+        "title": "例題4　乗法公式と式の値",
+        "example": {
+          "problem": "$x=\\sqrt{5}+2$ のとき、$x^2-4x+4$ の値を求めなさい。",
+          "steps": [
+            "$x^2-4x+4=(x-2)^2$ と因数分解する。",
+            "$x-2=\\sqrt{5}$ なので、$(x-2)^2=(\\sqrt{5})^2=5$。"
+          ],
+          "answer": "$5$",
+          "thinking": "そのまま代入すると計算が長くなる。式を因数分解して、$x-2$ の値を利用する（式の展開と因数分解の単元とのつながり）。"
+        },
+        "teacher_points": [
+          {
+            "point": "直接代入した計算 $(\\sqrt{5}+2)^2-4(\\sqrt{5}+2)+4$ と比べ、因数分解の効果を実感させる。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 平方根の意味",
+              "lines": [
+                "2乗して $a$ になる数 → $a$ の平方根",
+                "$a>0$：$\\pm\\sqrt{a}$（2つ）",
+                "$\\sqrt{9}=3$（$\\pm$ はつかない）",
+                "負の数の平方根はない",
+                "有理数：$\\dfrac{m}{n}$ で表せる数"
+              ]
+            },
+            {
+              "title": "② 乗除と変形",
+              "lines": [
+                "$\\sqrt{a}\\sqrt{b}=\\sqrt{ab}$（2乗して $ab$、正の数）",
+                "$\\sqrt{a^2b}=a\\sqrt{b}$",
+                "$\\sqrt{72}=6\\sqrt{2}$",
+                "有理化：$\\dfrac{a}{\\sqrt{b}}=\\dfrac{a\\sqrt{b}}{b}$"
+              ]
+            },
+            {
+              "title": "③ 加減と式の値",
+              "lines": [
+                "$\\sqrt{\\ }$ の中をそろえて係数を計算",
+                "$5\\sqrt{2}-2\\sqrt{2}+3\\sqrt{2}=6\\sqrt{2}$",
+                "$\\sqrt{a}+\\sqrt{b}\\neq\\sqrt{a+b}$",
+                "式の値：因数分解してから代入"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "③の「$\\sqrt{a}+\\sqrt{b}\\neq\\sqrt{a+b}$」には、$\\sqrt{9}+\\sqrt{16}=7$、$\\sqrt{25}=5$ の反例を赤で書きそえる。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "「平方根」と「根号のついた数」を区別させる。$a$ の平方根は2つ、$\\sqrt{a}$ は正の1つ。",
+            "caution": "$\\sqrt{(-3)^2}=-3$ とする誤りが入試でも多い。"
+          },
+          {
+            "point": "$a\\sqrt{b}$ の形にするときは、根号の中を素因数分解してから2乗の組を外に出す手順を毎回書かせる。",
+            "ask": "$\\sqrt{48}$ を変形しなさい。",
+            "expect": "$48=4^2\\times3$ なので $4\\sqrt{3}$。"
+          },
+          {
+            "point": "加減と乗除のルールの違いを表にまとめる。乗除は根号の中どうし、加減は係数どうし。",
+            "timing": "例題3のあと"
+          },
+          {
+            "point": "入試では答えを「根号の中をできるだけ小さい自然数」「分母に根号をふくまない」形で答えることを確認する。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\sqrt{2}+\\sqrt{3}=\\sqrt{5}$",
+            "correct": "加法では根号の中どうしをたせない。$\\sqrt{2}+\\sqrt{3}$ はこれ以上簡単にならない"
+          },
+          {
+            "wrong": "$16$ の平方根は $4$",
+            "correct": "$16$ の平方根は $\\pm4$。$\\sqrt{16}=4$ と区別する"
+          },
+          {
+            "wrong": "$\\dfrac{6}{\\sqrt{3}}=6\\sqrt{3}$",
+            "correct": "分母と分子の両方に $\\sqrt{3}$ をかけて $\\dfrac{6\\sqrt{3}}{3}=2\\sqrt{3}$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "正の数 $a$ の平方根は $\\pm\\sqrt{a}$ の2つ。$0$ の平方根は $0$、負の数の平方根はない。",
+          "$a<b$ ならば $\\sqrt{a}<\\sqrt{b}$。大小は2乗して比べる。分数で表せない数が無理数。",
+          "$\\sqrt{a}\\times\\sqrt{b}=\\sqrt{ab}$、$\\sqrt{a^2b}=a\\sqrt{b}$。答えは根号の中をできるだけ小さい自然数に。",
+          "分母の有理化：分母と分子に同じ根号をかける。",
+          "加減は根号の中をそろえて係数を計算する。式の値は因数分解を利用する。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\sqrt{75}$ を $a\\sqrt{b}$ の形に変形しなさい。",
+            "a": "$5\\sqrt{3}$"
+          },
+          {
+            "q": "$\\dfrac{12}{\\sqrt{6}}$ の分母を有理化しなさい。",
+            "a": "$2\\sqrt{6}$"
+          },
+          {
+            "q": "$\\sqrt{27}+\\sqrt{12}-\\sqrt{3}$ を計算しなさい。",
+            "a": "$3\\sqrt{3}+2\\sqrt{3}-\\sqrt{3}=4\\sqrt{3}$"
+          },
+          {
+            "q": "$4$ と $\\sqrt{15}$ はどちらが大きいか。",
+            "a": "$4=\\sqrt{16}$ なので $4$ の方が大きい"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "fd1daa06757f1521eb54ba98c00382540027891b25e63868c4d0263de763cc86"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T23:26:56+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "7f71387a4a2a216c16c26b2a0b1cd5a4ea1a562c7cd870789dda065b14c782dd"
+  }
+}
