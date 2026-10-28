@@ -174,14 +174,15 @@ def ab_fig(a, p, q, extra=(), extra_segs=()):
     """放物線 y=ax^2 上の2点 A(p, ap^2)、B(q, aq^2) と直線 AB の図。"""
     ya, yb = a * p * p, a * q * q
     xm = max(abs(p), abs(q)) + 1.2
-    ymax = float(max(ya, yb)) * 1.15 + 0.5
+    ext = float(max(abs(ya), abs(yb))) * 1.15 + 0.5
+    yr = (-ext * 0.12, ext) if a > 0 else (-ext, ext * 0.12)
     m, n = a * (p + q), -a * p * q
     xs = [-xm, xm]
     seg_pts = [(x, m * Fr(x).limit_denominator(1000) + n) for x in (p - (q - p) * Fr(1, 6), q + (q - p) * Fr(1, 6))]
     pts = [(p, ya, "A"), (q, yb, "B")] + list(extra)
     return figure(f"放物線 {Y(a)} と、放物線上の2点 A、B を通る直線",
                   parab_svg([(a, "")], pts=pts, segs=[(seg_pts[0], seg_pts[1])] + list(extra_segs),
-                            xr=(xs[0], xs[1]), yr=(-ymax * 0.12, ymax)))
+                            xr=(xs[0], xs[1]), yr=yr))
 
 
 # ----------------------------------------------------------------------
