@@ -1,0 +1,5698 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "CT-MATH2BC-U01-EX",
+  "title": "数学Ⅱ・B・C　微積分・指数対数・三角関数　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "grade": "HS3",
+  "unit_ids": [
+    "CT-MATH2BC-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "CT-MATH2BC-U01-PACK",
+  "pair_set_id": "CT-MATH2BC-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH2-U06",
+        "point": "導関数・増減表・定積分の計算と、放物線と直線で囲まれた面積の求め方",
+        "title": "微分法・積分法"
+      },
+      {
+        "unit_id": "HS-MATH2-U05",
+        "point": "対数の性質と常用対数（$\\log_{10}2,\\ \\log_{10}3$ を用いた近似計算）",
+        "title": "指数関数・対数関数"
+      },
+      {
+        "unit_id": "HS-MATH2-U04",
+        "point": "弧度法・三角関数のグラフ・加法定理と合成",
+        "title": "三角関数"
+      },
+      {
+        "unit_id": "HS-MATH1-U03",
+        "point": "二次関数の最大・最小（置き換えた後の変数の範囲を考える処理）",
+        "title": "二次関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "SS-MATH-U02",
+        "point": "共通テストの誘導で身につけた微積分の処理を、誘導のない記述式答案として書き切る",
+        "title": "数学　記述式計算問題"
+      },
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "三角・指数・対数関数の導関数を使った増減・極値の調べ方へ発展する",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATH3-U03",
+        "point": "面積の考え方を置換積分・部分積分による面積・体積の計算へ広げる",
+        "title": "積分法とその応用"
+      }
+    ],
+    "readiness_check": [
+      "三次関数を微分して増減表をかける（数学Ⅱ 微分法）。",
+      "定積分 $\\displaystyle\\int_\\alpha^\\beta f(x)\\,dx$ を計算できる。",
+      "$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ から $\\log_{10}6$ などを計算できる。",
+      "$a\\sin\\theta+b\\cos\\theta$ を合成できる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "CT-MATH2BC-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "大問の前半で、関数 $f(x)=-x^3+3x^2+45x+3$ の極値を求める。$f(x)$ が極大となる $x$ の値と極大値、極小となる $x$ の値と極小値をそれぞれ答えなさい。",
+      "answer": {
+        "value": "$x=5$ で極大値 $178$、$x=-3$ で極小値 $-78$",
+        "accepted": [
+          "極大値178(x=5), 極小値-78(x=-3)"
+        ]
+      },
+      "explanation": "$f'(x)=-3x^2+6x+45=-3(x+3)(x-5)$。$f'(x)$ の符号は $-\\to+\\to-$ と変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(-1)*(5)**3+(3)*(5)**2+(45)*(5)**1+(3)*(5)**0, (-1)*(-3)**3+(3)*(-3)**2+(45)*(-3)**1+(3)*(-3)**0]",
+        "expected": "[178, -78]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_extreme",
+      "explanation_detail": {
+        "approach": "極値は増減表で判定する。$f'(x)$ を因数分解して、符号が変わる $x$ を求める。",
+        "steps": [
+          "$f'(x)=-3x^2+6x+45$ を因数分解し、$f'(x)=0$ の解 $x=-3,\\ 5$ を求める。",
+          "$x^3$ の係数が負なので、$f'(x)$ の符号は $x<-3$ で負、$-3<x<5$ で正、$x>5$ で負。",
+          "極大：$x=5$、$f(5)=178$。極小：$x=-3$、$f(-3)=-78$。"
+        ],
+        "alternatives": [
+          "三次関数のグラフの概形（$x^3$ の係数の符号でN字型か逆N字型か）から、左右どちらの解が極大かを判断して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を正しく求めて因数分解している",
+            "points": 1
+          },
+          {
+            "point": "極大・極小を正しく判定し、値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のとき、極大と極小を逆にする。",
+          "$f(x)$ に代入すべきところを $f'(x)$ に代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "大問の前半で、関数 $f(x)=2x^3-6x-1$ の極値を求める。$f(x)$ が極大となる $x$ の値と極大値、極小となる $x$ の値と極小値をそれぞれ答えなさい。",
+      "answer": {
+        "value": "$x=-1$ で極大値 $3$、$x=1$ で極小値 $-5$",
+        "accepted": [
+          "極大値3(x=-1), 極小値-5(x=1)"
+        ]
+      },
+      "explanation": "$f'(x)=6x^2-6=6(x+1)(x-1)$。$f'(x)$ の符号は $+\\to-\\to+$ と変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(2)*(-1)**3+(0)*(-1)**2+(-6)*(-1)**1+(-1)*(-1)**0, (2)*(1)**3+(0)*(1)**2+(-6)*(1)**1+(-1)*(1)**0]",
+        "expected": "[3, -5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_extreme",
+      "explanation_detail": {
+        "approach": "極値は増減表で判定する。$f'(x)$ を因数分解して、符号が変わる $x$ を求める。",
+        "steps": [
+          "$f'(x)=6x^2-6$ を因数分解し、$f'(x)=0$ の解 $x=-1,\\ 1$ を求める。",
+          "$x^3$ の係数が正なので、$f'(x)$ の符号は $x<-1$ で正、$-1<x<1$ で負、$x>1$ で正。",
+          "極大：$x=-1$、$f(-1)=3$。極小：$x=1$、$f(1)=-5$。"
+        ],
+        "alternatives": [
+          "三次関数のグラフの概形（$x^3$ の係数の符号でN字型か逆N字型か）から、左右どちらの解が極大かを判断して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を正しく求めて因数分解している",
+            "points": 1
+          },
+          {
+            "point": "極大・極小を正しく判定し、値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のとき、極大と極小を逆にする。",
+          "$f(x)$ に代入すべきところを $f'(x)$ に代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "大問の前半で、関数 $f(x)=-2x^3+18x^2-48x+5$ の極値を求める。$f(x)$ が極大となる $x$ の値と極大値、極小となる $x$ の値と極小値をそれぞれ答えなさい。",
+      "answer": {
+        "value": "$x=4$ で極大値 $-27$、$x=2$ で極小値 $-35$",
+        "accepted": [
+          "極大値-27(x=4), 極小値-35(x=2)"
+        ]
+      },
+      "explanation": "$f'(x)=-6x^2+36x-48=-6(x-2)(x-4)$。$f'(x)$ の符号は $-\\to+\\to-$ と変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(-2)*(4)**3+(18)*(4)**2+(-48)*(4)**1+(5)*(4)**0, (-2)*(2)**3+(18)*(2)**2+(-48)*(2)**1+(5)*(2)**0]",
+        "expected": "[-27, -35]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_extreme",
+      "explanation_detail": {
+        "approach": "極値は増減表で判定する。$f'(x)$ を因数分解して、符号が変わる $x$ を求める。",
+        "steps": [
+          "$f'(x)=-6x^2+36x-48$ を因数分解し、$f'(x)=0$ の解 $x=2,\\ 4$ を求める。",
+          "$x^3$ の係数が負なので、$f'(x)$ の符号は $x<2$ で負、$2<x<4$ で正、$x>4$ で負。",
+          "極大：$x=4$、$f(4)=-27$。極小：$x=2$、$f(2)=-35$。"
+        ],
+        "alternatives": [
+          "三次関数のグラフの概形（$x^3$ の係数の符号でN字型か逆N字型か）から、左右どちらの解が極大かを判断して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を正しく求めて因数分解している",
+            "points": 1
+          },
+          {
+            "point": "極大・極小を正しく判定し、値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のとき、極大と極小を逆にする。",
+          "$f(x)$ に代入すべきところを $f'(x)$ に代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "大問の前半で、関数 $f(x)=2x^3-18x^2+48x-6$ の極値を求める。$f(x)$ が極大となる $x$ の値と極大値、極小となる $x$ の値と極小値をそれぞれ答えなさい。",
+      "answer": {
+        "value": "$x=2$ で極大値 $34$、$x=4$ で極小値 $26$",
+        "accepted": [
+          "極大値34(x=2), 極小値26(x=4)"
+        ]
+      },
+      "explanation": "$f'(x)=6x^2-36x+48=6(x-2)(x-4)$。$f'(x)$ の符号は $+\\to-\\to+$ と変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[(2)*(2)**3+(-18)*(2)**2+(48)*(2)**1+(-6)*(2)**0, (2)*(4)**3+(-18)*(4)**2+(48)*(4)**1+(-6)*(4)**0]",
+        "expected": "[34, 26]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_extreme",
+      "explanation_detail": {
+        "approach": "極値は増減表で判定する。$f'(x)$ を因数分解して、符号が変わる $x$ を求める。",
+        "steps": [
+          "$f'(x)=6x^2-36x+48$ を因数分解し、$f'(x)=0$ の解 $x=2,\\ 4$ を求める。",
+          "$x^3$ の係数が正なので、$f'(x)$ の符号は $x<2$ で正、$2<x<4$ で負、$x>4$ で正。",
+          "極大：$x=2$、$f(2)=34$。極小：$x=4$、$f(4)=26$。"
+        ],
+        "alternatives": [
+          "三次関数のグラフの概形（$x^3$ の係数の符号でN字型か逆N字型か）から、左右どちらの解が極大かを判断して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を正しく求めて因数分解している",
+            "points": 1
+          },
+          {
+            "point": "極大・極小を正しく判定し、値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x^3$ の係数が負のとき、極大と極小を逆にする。",
+          "$f(x)$ に代入すべきところを $f'(x)$ に代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $C:\\ y=x^3-2x^2+4x$ 上の、$x$ 座標が $-2$ である点を $\\mathrm{P}$ とする。点 $\\mathrm{P}$ における $C$ の接線 $\\ell$ の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=24x+24$",
+        "accepted": [
+          "y=24x+24"
+        ]
+      },
+      "explanation": "$y'=3x^2-4x+4$ より接線の傾きは $24$。点 $\\mathrm{P}(-2,\\,-24)$ を通るので $y-(-24)=24(x-(-2))$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(limit(diff((1)*x**3+(-2)*x**2+(4)*x**1+(0)*x**0, x), x, -2)*(x-(-2))+limit((1)*x**3+(-2)*x**2+(4)*x**1+(0)*x**0, x, -2))",
+        "expected": "(24)*x+(24)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_tangent",
+      "explanation_detail": {
+        "approach": "接線の方程式は「接点の座標」と「傾き＝その点での微分係数」の2つで決まる。",
+        "steps": [
+          "接点の $y$ 座標：$(-2)$ を代入して $-24$。",
+          "$y'=3x^2-4x+4$、$x=-2$ で傾き $24$。",
+          "$y-(-24)=24(x+2)$ を整理して $y=24x+24$。"
+        ],
+        "alternatives": [
+          "求めた直線の式と曲線の式を連立すると、$x=-2$ を重解にもつ三次方程式になることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接点の座標と傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを求めるときに $y'$ ではなく $y$ に代入してしまう。",
+          "$y-y_1=m(x-x_1)$ の $x_1$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $C:\\ y=-x^3-3x^2-2x+2$ 上の、$x$ 座標が $1$ である点を $\\mathrm{P}$ とする。点 $\\mathrm{P}$ における $C$ の接線 $\\ell$ の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=-11x+7$",
+        "accepted": [
+          "y=-11x+7"
+        ]
+      },
+      "explanation": "$y'=-3x^2-6x-2$ より接線の傾きは $-11$。点 $\\mathrm{P}(1,\\,-4)$ を通るので $y-(-4)=-11(x-(1))$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(limit(diff((-1)*x**3+(-3)*x**2+(-2)*x**1+(2)*x**0, x), x, 1)*(x-(1))+limit((-1)*x**3+(-3)*x**2+(-2)*x**1+(2)*x**0, x, 1))",
+        "expected": "(-11)*x+(7)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_tangent",
+      "explanation_detail": {
+        "approach": "接線の方程式は「接点の座標」と「傾き＝その点での微分係数」の2つで決まる。",
+        "steps": [
+          "接点の $y$ 座標：$(1)$ を代入して $-4$。",
+          "$y'=-3x^2-6x-2$、$x=1$ で傾き $-11$。",
+          "$y-(-4)=-11(x-1)$ を整理して $y=-11x+7$。"
+        ],
+        "alternatives": [
+          "求めた直線の式と曲線の式を連立すると、$x=1$ を重解にもつ三次方程式になることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接点の座標と傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを求めるときに $y'$ ではなく $y$ に代入してしまう。",
+          "$y-y_1=m(x-x_1)$ の $x_1$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $C:\\ y=2x^3+3x^2-2x$ 上の、$x$ 座標が $-1$ である点を $\\mathrm{P}$ とする。点 $\\mathrm{P}$ における $C$ の接線 $\\ell$ の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=-2x+1$",
+        "accepted": [
+          "y=-2x+1"
+        ]
+      },
+      "explanation": "$y'=6x^2+6x-2$ より接線の傾きは $-2$。点 $\\mathrm{P}(-1,\\,3)$ を通るので $y-(3)=-2(x-(-1))$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "expand(limit(diff((2)*x**3+(3)*x**2+(-2)*x**1+(0)*x**0, x), x, -1)*(x-(-1))+limit((2)*x**3+(3)*x**2+(-2)*x**1+(0)*x**0, x, -1))",
+        "expected": "(-2)*x+(1)",
+        "compare": "expand"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_tangent",
+      "explanation_detail": {
+        "approach": "接線の方程式は「接点の座標」と「傾き＝その点での微分係数」の2つで決まる。",
+        "steps": [
+          "接点の $y$ 座標：$(-1)$ を代入して $3$。",
+          "$y'=6x^2+6x-2$、$x=-1$ で傾き $-2$。",
+          "$y-(3)=-2(x+1)$ を整理して $y=-2x+1$。"
+        ],
+        "alternatives": [
+          "求めた直線の式と曲線の式を連立すると、$x=-1$ を重解にもつ三次方程式になることで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接点の座標と傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式を正しく整理している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きを求めるときに $y'$ ではなく $y$ に代入してしまう。",
+          "$y-y_1=m(x-x_1)$ の $x_1$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "常用対数表のかわりに $\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ の2つの値だけが与えられている。$3.6$ を $2,\\ 3,\\ 10$ の累乗の積で表すことにより、$\\log_{10}3.6$ の近似値を小数第4位まで求めなさい。",
+      "answer": {
+        "value": "0.5562"
+      },
+      "explanation": "$3.6=2^{2}\\cdot3^{2}\\cdot10^{-1}$ より、$\\log_{10}3.6=2\\log_{10}2+2\\log_{10}3+(-1)=0.5562$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(2)*0.3010+(2)*0.4771+(-1)",
+        "expected": "0.5562"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_log_value",
+      "explanation_detail": {
+        "approach": "与えられた対数の値は 2 と 3 だけなので、$N$ を $2^a3^b10^c$ の形に分解し、対数の性質で和に直す。",
+        "steps": [
+          "$3.6=2^{2}\\cdot3^{2}\\cdot10^{-1}$ と分解する。",
+          "$\\log_{10}3.6=2\\times0.3010+2\\times0.4771+(-1)$。",
+          "計算して $0.5562$。"
+        ],
+        "alternatives": [
+          "5 が含まれるときは $5=\\dfrac{10}{2}$、小数は $10^{-1}$ などで表すと、どんな数も 2・3・10 で分解できることを確かめる。",
+          "大きさの見当：$10^{0}\\leqq 3.6<10^{1}$ なので、求めた値が $0$ 以上 $1$ 未満であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2・3・10 の累乗の積に正しく分解している",
+            "points": 1
+          },
+          {
+            "point": "対数の性質を使って正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}5$ を $\\log_{10}2+\\log_{10}3$ のように誤って分解する。",
+          "小数の数で $10^{-1}$ の分の $-1$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "常用対数表のかわりに $\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ の2つの値だけが与えられている。$900$ を $2,\\ 3,\\ 10$ の累乗の積で表すことにより、$\\log_{10}900$ の近似値を小数第4位まで求めなさい。",
+      "answer": {
+        "value": "2.9542"
+      },
+      "explanation": "$900=3^{2}\\cdot10^{2}$ より、$\\log_{10}900=0\\log_{10}2+2\\log_{10}3+(2)=2.9542$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(0)*0.3010+(2)*0.4771+(2)",
+        "expected": "2.9542"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_log_value",
+      "explanation_detail": {
+        "approach": "与えられた対数の値は 2 と 3 だけなので、$N$ を $2^a3^b10^c$ の形に分解し、対数の性質で和に直す。",
+        "steps": [
+          "$900=3^{2}\\cdot10^{2}$ と分解する。",
+          "$\\log_{10}900=0\\times0.3010+2\\times0.4771+(2)$。",
+          "計算して $2.9542$。"
+        ],
+        "alternatives": [
+          "5 が含まれるときは $5=\\dfrac{10}{2}$、小数は $10^{-1}$ などで表すと、どんな数も 2・3・10 で分解できることを確かめる。",
+          "大きさの見当：$10^{2}\\leqq 900<10^{3}$ なので、求めた値が $2$ 以上 $3$ 未満であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2・3・10 の累乗の積に正しく分解している",
+            "points": 1
+          },
+          {
+            "point": "対数の性質を使って正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}5$ を $\\log_{10}2+\\log_{10}3$ のように誤って分解する。",
+          "小数の数で $10^{-1}$ の分の $-1$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "常用対数表のかわりに $\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ の2つの値だけが与えられている。$90$ を $2,\\ 3,\\ 10$ の累乗の積で表すことにより、$\\log_{10}90$ の近似値を小数第4位まで求めなさい。",
+      "answer": {
+        "value": "1.9542"
+      },
+      "explanation": "$90=3^{2}\\cdot10$ より、$\\log_{10}90=0\\log_{10}2+2\\log_{10}3+(1)=1.9542$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(0)*0.3010+(2)*0.4771+(1)",
+        "expected": "1.9542"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_log_value",
+      "explanation_detail": {
+        "approach": "与えられた対数の値は 2 と 3 だけなので、$N$ を $2^a3^b10^c$ の形に分解し、対数の性質で和に直す。",
+        "steps": [
+          "$90=3^{2}\\cdot10$ と分解する。",
+          "$\\log_{10}90=0\\times0.3010+2\\times0.4771+(1)$。",
+          "計算して $1.9542$。"
+        ],
+        "alternatives": [
+          "5 が含まれるときは $5=\\dfrac{10}{2}$、小数は $10^{-1}$ などで表すと、どんな数も 2・3・10 で分解できることを確かめる。",
+          "大きさの見当：$10^{1}\\leqq 90<10^{2}$ なので、求めた値が $1$ 以上 $2$ 未満であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2・3・10 の累乗の積に正しく分解している",
+            "points": 1
+          },
+          {
+            "point": "対数の性質を使って正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}5$ を $\\log_{10}2+\\log_{10}3$ のように誤って分解する。",
+          "小数の数で $10^{-1}$ の分の $-1$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "常用対数表のかわりに $\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ の2つの値だけが与えられている。$20$ を $2,\\ 3,\\ 10$ の累乗の積で表すことにより、$\\log_{10}20$ の近似値を小数第4位まで求めなさい。",
+      "answer": {
+        "value": "1.3010"
+      },
+      "explanation": "$20=2\\cdot10$ より、$\\log_{10}20=1\\log_{10}2+0\\log_{10}3+(1)=1.3010$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1)*0.3010+(0)*0.4771+(1)",
+        "expected": "1.3010"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_log_value",
+      "explanation_detail": {
+        "approach": "与えられた対数の値は 2 と 3 だけなので、$N$ を $2^a3^b10^c$ の形に分解し、対数の性質で和に直す。",
+        "steps": [
+          "$20=2\\cdot10$ と分解する。",
+          "$\\log_{10}20=1\\times0.3010+0\\times0.4771+(1)$。",
+          "計算して $1.3010$。"
+        ],
+        "alternatives": [
+          "5 が含まれるときは $5=\\dfrac{10}{2}$、小数は $10^{-1}$ などで表すと、どんな数も 2・3・10 で分解できることを確かめる。",
+          "大きさの見当：$10^{1}\\leqq 20<10^{2}$ なので、求めた値が $1$ 以上 $2$ 未満であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2・3・10 の累乗の積に正しく分解している",
+            "points": 1
+          },
+          {
+            "point": "対数の性質を使って正しく計算している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}5$ を $\\log_{10}2+\\log_{10}3$ のように誤って分解する。",
+          "小数の数で $10^{-1}$ の分の $-1$ を加え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$12^{40}$ が何桁の整数であるかを、常用対数を用いて調べたい。$\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ として、桁数を求めなさい。",
+      "answer": {
+        "value": "44"
+      },
+      "explanation": "$43\\leqq\\log_{10}12^{40}<44$ より $44$ 桁",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(40*(2*0.3010+1*0.4771))+1",
+        "expected": "44"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_digits",
+      "explanation_detail": {
+        "approach": "桁数や小数の位は「$10$ の何乗と何乗の間にあるか」で決まるので、常用対数をとって整数部分を調べる。",
+        "steps": [
+          "$\\log_{10}12=1.0791$（$2$ と $3$ の値から計算）。",
+          "$\\log_{10}12^{40}=40\\times1.0791=43.164$。",
+          "$10^{43}\\leqq 12^{40}<10^{44}$ なので $44$ 桁。"
+        ],
+        "alternatives": [
+          "$n$ 桁 $\\iff 10^{n-1}\\leqq N<10^n$ を思い出し、$12^{40}$ を $10^{43.164}$ と見て、$10^{43}$ と $10^{44}$ の間にあることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "整数部分から桁数（位）を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "桁数を $\\log_{10}N$ の整数部分そのもの（1 を加え忘れ）と答える。",
+          "近似値の積を途中で四捨五入し、整数部分が変わってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$\\left(\\dfrac{1}{2}\\right)^{72}$ を小数で表すと、小数第何位に初めて 0 でない数字が現れるか。$\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ として求めなさい。",
+      "answer": {
+        "value": "22"
+      },
+      "explanation": "$\\log_{10}\\left(\\dfrac{1}{2}\\right)^{72}=-21.672$ より小数第 $22$ 位",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(72*(1*0.3010+0*0.4771))+1",
+        "expected": "22"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_digits",
+      "explanation_detail": {
+        "approach": "桁数や小数の位は「$10$ の何乗と何乗の間にあるか」で決まるので、常用対数をとって整数部分を調べる。",
+        "steps": [
+          "$\\log_{10}2=0.3010$（$2$ と $3$ の値から計算）。",
+          "$\\log_{10}2^{72}=72\\times0.3010=21.672$。",
+          "$-22\\leqq -21.672<-21$ なので $10^{-22}\\leqq\\left(\\dfrac{1}{2}\\right)^{72}<10^{-21}$、小数第 $22$ 位。"
+        ],
+        "alternatives": [
+          "$\\left(\\dfrac{1}{2}\\right)^{72}=10^{-21.672}=10^{-22}\\times10^{0.328}$ と書くと、$1\\leqq10^{0.328}<10$ なので小数第 $22$ 位に初めて 0 でない数字が現れると確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "整数部分から桁数（位）を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$-21.672$ の整数部分を $-21$ と考え、位を1つ小さく答える。",
+          "$\\log_{10}\\dfrac{1}{2}$ の符号（負）を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "$\\left(\\dfrac{1}{24}\\right)^{23}$ を小数で表すと、小数第何位に初めて 0 でない数字が現れるか。$\\log_{10}2=0.3010$、$\\log_{10}3=0.4771$ として求めなさい。",
+      "answer": {
+        "value": "32"
+      },
+      "explanation": "$\\log_{10}\\left(\\dfrac{1}{24}\\right)^{23}=-31.7423$ より小数第 $32$ 位",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "floor(23*(3*0.3010+1*0.4771))+1",
+        "expected": "32"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_digits",
+      "explanation_detail": {
+        "approach": "桁数や小数の位は「$10$ の何乗と何乗の間にあるか」で決まるので、常用対数をとって整数部分を調べる。",
+        "steps": [
+          "$\\log_{10}24=1.3801$（$2$ と $3$ の値から計算）。",
+          "$\\log_{10}24^{23}=23\\times1.3801=31.7423$。",
+          "$-32\\leqq -31.7423<-31$ なので $10^{-32}\\leqq\\left(\\dfrac{1}{24}\\right)^{23}<10^{-31}$、小数第 $32$ 位。"
+        ],
+        "alternatives": [
+          "$\\left(\\dfrac{1}{24}\\right)^{23}=10^{-31.7423}=10^{-32}\\times10^{0.2577}$ と書くと、$1\\leqq10^{0.2577}<10$ なので小数第 $32$ 位に初めて 0 でない数字が現れると確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常用対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "整数部分から桁数（位）を正しく判断している",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$-31.7423$ の整数部分を $-31$ と考え、位を1つ小さく答える。",
+          "$\\log_{10}\\dfrac{1}{24}$ の符号（負）を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "会話文の中で、関数 $y=2\\sin \\dfrac{\\theta}{2}-1$ のグラフの特徴が話題になっている。この関数の最大値・最小値・周期（正の周期のうち最小のもの）の組として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "最大値 $2$、最小値 $-2$、周期 $4 \\pi$"
+        },
+        {
+          "label": "イ",
+          "text": "最大値 $1$、最小値 $-3$、周期 $\\pi$"
+        },
+        {
+          "label": "ウ",
+          "text": "最大値 $1$、最小値 $-3$、周期 $2 \\pi$"
+        },
+        {
+          "label": "エ",
+          "text": "最大値 $1$、最小値 $-3$、周期 $4 \\pi$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$-1\\leqq\\sin \\dfrac{\\theta}{2}\\leqq1$ より最大値 $1$、最小値 $-3$。周期は $\\dfrac{2\\pi}{\\dfrac{1}{2}}=4 \\pi$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_trig_graph",
+      "explanation_detail": {
+        "approach": "$y=A\\sin B\\theta+D$ では、$A$ が振幅、$D$ が上下の平行移動、$B$ が周期を決める。3つを別々に読む。",
+        "steps": [
+          "$\\sin$ の値の範囲 $[-1,\\,1]$ を $2$ 倍して $-1$ を加え、最大値 $1$、最小値 $-3$。",
+          "$\\theta$ の係数が $\\dfrac{1}{2}$ なので、周期は $2\\pi\\div\\dfrac{1}{2}=4 \\pi$。"
+        ],
+        "alternatives": [
+          "$\\theta=0$ から $\\theta=4 \\pi$ まで動かすと、$\\dfrac{\\theta}{2}$ がちょうど $0$ から $2\\pi$ まで動くことで周期を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大値・最小値を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "周期を正しく求めている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "定数項 $-1$ による上下の平行移動を無視している。最大値・最小値はともに $-1$ だけずれる。",
+          "misconception": "定数項の見落とし"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "周期を $2\\pi\\times\\dfrac{1}{2}$ と計算している。$\\theta$ の係数が大きいほどグラフは横に縮み、周期は短くなる。",
+          "misconception": "周期の公式の逆用"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "周期を $\\dfrac{\\pi}{B}$ としている。$\\sin,\\ \\cos$ の周期は $2\\pi$ がもとになる（$\\pi$ は $\\tan$ の周期）。",
+          "misconception": "正接の周期との混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "会話文の中で、関数 $y=3\\cos 4\\theta-2$ のグラフの特徴が話題になっている。この関数の最大値・最小値・周期（正の周期のうち最小のもの）の組として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "最大値 $3$、最小値 $-3$、周期 $\\frac{\\pi}{2}$"
+        },
+        {
+          "label": "イ",
+          "text": "最大値 $1$、最小値 $-5$、周期 $8 \\pi$"
+        },
+        {
+          "label": "ウ",
+          "text": "最大値 $1$、最小値 $-5$、周期 $\\frac{\\pi}{4}$"
+        },
+        {
+          "label": "エ",
+          "text": "最大値 $1$、最小値 $-5$、周期 $\\frac{\\pi}{2}$"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "$-1\\leqq\\cos 4\\theta\\leqq1$ より最大値 $1$、最小値 $-5$。周期は $\\dfrac{2\\pi}{4}=\\frac{\\pi}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_trig_graph",
+      "explanation_detail": {
+        "approach": "$y=A\\sin B\\theta+D$ では、$A$ が振幅、$D$ が上下の平行移動、$B$ が周期を決める。3つを別々に読む。",
+        "steps": [
+          "$\\cos$ の値の範囲 $[-1,\\,1]$ を $3$ 倍して $-2$ を加え、最大値 $1$、最小値 $-5$。",
+          "$\\theta$ の係数が $4$ なので、周期は $2\\pi\\div4=\\frac{\\pi}{2}$。"
+        ],
+        "alternatives": [
+          "$\\theta=0$ から $\\theta=\\frac{\\pi}{2}$ まで動かすと、$4\\theta$ がちょうど $0$ から $2\\pi$ まで動くことで周期を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大値・最小値を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "周期を正しく求めている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "定数項 $-2$ による上下の平行移動を無視している。最大値・最小値はともに $-2$ だけずれる。",
+          "misconception": "定数項の見落とし"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "周期を $2\\pi\\times4$ と計算している。$\\theta$ の係数が大きいほどグラフは横に縮み、周期は短くなる。",
+          "misconception": "周期の公式の逆用"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "周期を $\\dfrac{\\pi}{B}$ としている。$\\sin,\\ \\cos$ の周期は $2\\pi$ がもとになる（$\\pi$ は $\\tan$ の周期）。",
+          "misconception": "正接の周期との混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "会話文の中で、関数 $y=4\\cos 4\\theta+2$ のグラフの特徴が話題になっている。この関数の最大値・最小値・周期（正の周期のうち最小のもの）の組として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "最大値 $6$、最小値 $-2$、周期 $\\frac{\\pi}{2}$"
+        },
+        {
+          "label": "イ",
+          "text": "最大値 $6$、最小値 $-2$、周期 $\\frac{\\pi}{4}$"
+        },
+        {
+          "label": "ウ",
+          "text": "最大値 $4$、最小値 $-4$、周期 $\\frac{\\pi}{2}$"
+        },
+        {
+          "label": "エ",
+          "text": "最大値 $6$、最小値 $-2$、周期 $8 \\pi$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "$-1\\leqq\\cos 4\\theta\\leqq1$ より最大値 $6$、最小値 $-2$。周期は $\\dfrac{2\\pi}{4}=\\frac{\\pi}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_trig_graph",
+      "explanation_detail": {
+        "approach": "$y=A\\sin B\\theta+D$ では、$A$ が振幅、$D$ が上下の平行移動、$B$ が周期を決める。3つを別々に読む。",
+        "steps": [
+          "$\\cos$ の値の範囲 $[-1,\\,1]$ を $4$ 倍して $2$ を加え、最大値 $6$、最小値 $-2$。",
+          "$\\theta$ の係数が $4$ なので、周期は $2\\pi\\div4=\\frac{\\pi}{2}$。"
+        ],
+        "alternatives": [
+          "$\\theta=0$ から $\\theta=\\frac{\\pi}{2}$ まで動かすと、$4\\theta$ がちょうど $0$ から $2\\pi$ まで動くことで周期を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大値・最小値を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "周期を正しく求めている",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "周期を $\\dfrac{\\pi}{B}$ としている。$\\sin,\\ \\cos$ の周期は $2\\pi$ がもとになる（$\\pi$ は $\\tan$ の周期）。",
+          "misconception": "正接の周期との混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "定数項 $2$ による上下の平行移動を無視している。最大値・最小値はともに $2$ だけずれる。",
+          "misconception": "定数項の見落とし"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "周期を $2\\pi\\times4$ と計算している。$\\theta$ の係数が大きいほどグラフは横に縮み、周期は短くなる。",
+          "misconception": "周期の公式の逆用"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "定積分 $\\displaystyle\\int_{-1}^{5}(-x^2+4x+5)\\,dx$ の値を求めなさい。ただし、被積分関数を因数分解し、$\\dfrac{1}{6}$ 公式を利用して計算すること。",
+      "answer": {
+        "value": "36",
+        "display": "$36$"
+      },
+      "explanation": "$-x^2+4x+5=-1(x-\\alpha)(x-\\beta)$（$\\alpha=-1,\\ \\beta=5$）より、値は $-\\dfrac{-1\\cdot(5-(-1))^3}{6}=36$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((-1)*x**2+(4)*x**1+(5)*x**0, [x, -1, 5])",
+        "expected": "36"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_integral",
+      "explanation_detail": {
+        "approach": "被積分関数が積分区間の両端を解にもつことに気づけば、$\\displaystyle\\int_\\alpha^\\beta (x-\\alpha)(x-\\beta)dx=-\\dfrac{(\\beta-\\alpha)^3}{6}$ が使える。",
+        "steps": [
+          "$-x^2+4x+5=-1(x-(-1))(x-(5))$ と因数分解する。",
+          "$\\beta-\\alpha=6$。",
+          "値は $-1\\times\\left(-\\dfrac{6^3}{6}\\right)=36$。"
+        ],
+        "alternatives": [
+          "展開したまま原始関数を求め、上端・下端を代入して計算しても同じ値になる（検算として有効）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数分解して公式の形を見抜いている",
+            "points": 1
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式の負号を落とす。",
+          "$x^2$ の係数 $-1$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "定積分 $\\displaystyle\\int_{-2}^{-1}(-3x^2-9x-6)\\,dx$ の値を求めなさい。ただし、被積分関数を因数分解し、$\\dfrac{1}{6}$ 公式を利用して計算すること。",
+      "answer": {
+        "value": "1/2",
+        "display": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$-3x^2-9x-6=-3(x-\\alpha)(x-\\beta)$（$\\alpha=-2,\\ \\beta=-1$）より、値は $-\\dfrac{-3\\cdot(-1-(-2))^3}{6}=\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((-3)*x**2+(-9)*x**1+(-6)*x**0, [x, -2, -1])",
+        "expected": "Rational(1,2)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_integral",
+      "explanation_detail": {
+        "approach": "被積分関数が積分区間の両端を解にもつことに気づけば、$\\displaystyle\\int_\\alpha^\\beta (x-\\alpha)(x-\\beta)dx=-\\dfrac{(\\beta-\\alpha)^3}{6}$ が使える。",
+        "steps": [
+          "$-3x^2-9x-6=-3(x-(-2))(x-(-1))$ と因数分解する。",
+          "$\\beta-\\alpha=1$。",
+          "値は $-3\\times\\left(-\\dfrac{1^3}{6}\\right)=\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "展開したまま原始関数を求め、上端・下端を代入して計算しても同じ値になる（検算として有効）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数分解して公式の形を見抜いている",
+            "points": 1
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式の負号を落とす。",
+          "$x^2$ の係数 $-3$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "定積分 $\\displaystyle\\int_{-2}^{3}(-x^2+x+6)\\,dx$ の値を求めなさい。ただし、被積分関数を因数分解し、$\\dfrac{1}{6}$ 公式を利用して計算すること。",
+      "answer": {
+        "value": "125/6",
+        "display": "$\\dfrac{125}{6}$"
+      },
+      "explanation": "$-x^2+x+6=-1(x-\\alpha)(x-\\beta)$（$\\alpha=-2,\\ \\beta=3$）より、値は $-\\dfrac{-1\\cdot(3-(-2))^3}{6}=\\dfrac{125}{6}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate((-1)*x**2+(1)*x**1+(6)*x**0, [x, -2, 3])",
+        "expected": "Rational(125,6)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "CT-MATH2BC-U01-a_integral",
+      "explanation_detail": {
+        "approach": "被積分関数が積分区間の両端を解にもつことに気づけば、$\\displaystyle\\int_\\alpha^\\beta (x-\\alpha)(x-\\beta)dx=-\\dfrac{(\\beta-\\alpha)^3}{6}$ が使える。",
+        "steps": [
+          "$-x^2+x+6=-1(x-(-2))(x-(3))$ と因数分解する。",
+          "$\\beta-\\alpha=5$。",
+          "値は $-1\\times\\left(-\\dfrac{5^3}{6}\\right)=\\dfrac{125}{6}$。"
+        ],
+        "alternatives": [
+          "展開したまま原始関数を求め、上端・下端を代入して計算しても同じ値になる（検算として有効）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "因数分解して公式の形を見抜いている",
+            "points": 1
+          },
+          {
+            "point": "正しい値を求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式の負号を落とす。",
+          "$x^2$ の係数 $-1$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "放物線 $y=-2x^2+4x-2$ と直線 $y=2x-2$ で囲まれた部分の面積 $S$ を求めなさい。（共通テストでは、交点の $x$ 座標を求める小問の直後に問われる形が多い。）",
+      "answer": {
+        "value": "1/3",
+        "display": "$S=\\dfrac{1}{3}$"
+      },
+      "explanation": "交点は $x=0,\\ 1$。区間内では放物線が上にあり、$S=\\dfrac{2}{6}(1-(0))^3=\\dfrac{1}{3}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate(((-2)*x**2+(4)*x**1+(-2)*x**0)-((2)*x+(-2)), [x, 0, 1]))",
+        "expected": "Rational(1,3)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_area",
+      "explanation_detail": {
+        "approach": "2つのグラフの交点の $x$ 座標を求め、区間内でどちらが上かを確かめてから、(上)−(下) を積分する。差が $x^2$ の係数つきの $(x-\\alpha)(x-\\beta)$ になるので $\\dfrac{1}{6}$ 公式が使える。",
+        "steps": [
+          "連立して $(-2x^2+4x-2)-(2x-2)=-2x^2+2x=-2(x)(x-1)$。",
+          "交点の $x$ 座標は $x=0,\\ 1$。",
+          "区間内の点 $x=\\dfrac{1}{2}$ などで比べると放物線が上。",
+          "(上)−(下)$=-2(x)(x-1)$ より $S=\\dfrac{2}{6}\\cdot1^3=\\dfrac{1}{3}$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle S=\\left|\\int_{0}^{1}\\{(-2x^2+4x-2)-(2x-2)\\}dx\\right|$ を展開して直接計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して積分の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数 $2$ をかけ忘れる。",
+          "(下)−(上) で積分して負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "放物線 $y=-x^2+x-3$ と直線 $y=x-4$ で囲まれた部分の面積 $S$ を求めなさい。（共通テストでは、交点の $x$ 座標を求める小問の直後に問われる形が多い。）",
+      "answer": {
+        "value": "4/3",
+        "display": "$S=\\dfrac{4}{3}$"
+      },
+      "explanation": "交点は $x=-1,\\ 1$。区間内では放物線が上にあり、$S=\\dfrac{1}{6}(1-(-1))^3=\\dfrac{4}{3}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate(((-1)*x**2+(1)*x**1+(-3)*x**0)-((1)*x+(-4)), [x, -1, 1]))",
+        "expected": "Rational(4,3)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_area",
+      "explanation_detail": {
+        "approach": "2つのグラフの交点の $x$ 座標を求め、区間内でどちらが上かを確かめてから、(上)−(下) を積分する。差が $x^2$ の係数つきの $(x-\\alpha)(x-\\beta)$ になるので $\\dfrac{1}{6}$ 公式が使える。",
+        "steps": [
+          "連立して $(-x^2+x-3)-(x-4)=-x^2+1=-1(x+1)(x-1)$。",
+          "交点の $x$ 座標は $x=-1,\\ 1$。",
+          "区間内の点 $x=0$ などで比べると放物線が上。",
+          "(上)−(下)$=-(x+1)(x-1)$ より $S=\\dfrac{1}{6}\\cdot2^3=\\dfrac{4}{3}$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle S=\\left|\\int_{-1}^{1}\\{(-x^2+x-3)-(x-4)\\}dx\\right|$ を展開して直接計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して積分の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数 $1$ をかけ忘れる。",
+          "(下)−(上) で積分して負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "放物線 $y=x^2+x-6$ と直線 $y=2x-4$ で囲まれた部分の面積 $S$ を求めなさい。（共通テストでは、交点の $x$ 座標を求める小問の直後に問われる形が多い。）",
+      "answer": {
+        "value": "9/2",
+        "display": "$S=\\dfrac{9}{2}$"
+      },
+      "explanation": "交点は $x=-1,\\ 2$。区間内では直線が上にあり、$S=\\dfrac{1}{6}(2-(-1))^3=\\dfrac{9}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate(((1)*x**2+(1)*x**1+(-6)*x**0)-((2)*x+(-4)), [x, -1, 2]))",
+        "expected": "Rational(9,2)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_area",
+      "explanation_detail": {
+        "approach": "2つのグラフの交点の $x$ 座標を求め、区間内でどちらが上かを確かめてから、(上)−(下) を積分する。差が $x^2$ の係数つきの $(x-\\alpha)(x-\\beta)$ になるので $\\dfrac{1}{6}$ 公式が使える。",
+        "steps": [
+          "連立して $(x^2+x-6)-(2x-4)=x^2-x-2=1(x+1)(x-2)$。",
+          "交点の $x$ 座標は $x=-1,\\ 2$。",
+          "区間内の点 $x=\\dfrac{1}{2}$ などで比べると直線が上。",
+          "(上)−(下)$=-(x+1)(x-2)$ より $S=\\dfrac{1}{6}\\cdot3^3=\\dfrac{9}{2}$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle S=\\left|\\int_{-1}^{2}\\{(x^2+x-6)-(2x-4)\\}dx\\right|$ を展開して直接計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して積分の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数 $1$ をかけ忘れる。",
+          "(下)−(上) で積分して負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "放物線 $y=x^2-4x+12$ と直線 $y=3x$ で囲まれた部分の面積 $S$ を求めなさい。（共通テストでは、交点の $x$ 座標を求める小問の直後に問われる形が多い。）",
+      "answer": {
+        "value": "1/6",
+        "display": "$S=\\dfrac{1}{6}$"
+      },
+      "explanation": "交点は $x=3,\\ 4$。区間内では直線が上にあり、$S=\\dfrac{1}{6}(4-(3))^3=\\dfrac{1}{6}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Abs(integrate(((1)*x**2+(-4)*x**1+(12)*x**0)-((3)*x+(0)), [x, 3, 4]))",
+        "expected": "Rational(1,6)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_area",
+      "explanation_detail": {
+        "approach": "2つのグラフの交点の $x$ 座標を求め、区間内でどちらが上かを確かめてから、(上)−(下) を積分する。差が $x^2$ の係数つきの $(x-\\alpha)(x-\\beta)$ になるので $\\dfrac{1}{6}$ 公式が使える。",
+        "steps": [
+          "連立して $(x^2-4x+12)-(3x)=x^2-7x+12=1(x-3)(x-4)$。",
+          "交点の $x$ 座標は $x=3,\\ 4$。",
+          "区間内の点 $x=\\dfrac{7}{2}$ などで比べると直線が上。",
+          "(上)−(下)$=-(x-3)(x-4)$ より $S=\\dfrac{1}{6}\\cdot1^3=\\dfrac{1}{6}$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle S=\\left|\\int_{3}^{4}\\{(x^2-4x+12)-(3x)\\}dx\\right|$ を展開して直接計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点の $x$ 座標を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "上下関係を確認して積分の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "面積を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x^2$ の係数 $1$ をかけ忘れる。",
+          "(下)−(上) で積分して負の値を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^3+12x^2+18x$ の定義域を $-5\\leqq x\\leqq 1$ に制限する。このとき $f(x)$ の最大値と最小値、およびそれらをとる $x$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $32$（$x=1$）、最小値 $-40$（$x=-5$）"
+      },
+      "explanation": "$f'(x)=6(x+3)(x+1)$。区間内の極値をとる点と区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((2)*(-5)**3+(12)*(-5)**2+(18)*(-5)**1+(0)*(-5)**0, (2)*(-3)**3+(12)*(-3)**2+(18)*(-3)**1+(0)*(-3)**0, (2)*(-1)**3+(12)*(-1)**2+(18)*(-1)**1+(0)*(-1)**0, (2)*(1)**3+(12)*(1)**2+(18)*(1)**1+(0)*(1)**0), Min((2)*(-5)**3+(12)*(-5)**2+(18)*(-5)**1+(0)*(-5)**0, (2)*(-3)**3+(12)*(-3)**2+(18)*(-3)**1+(0)*(-3)**0, (2)*(-1)**3+(12)*(-1)**2+(18)*(-1)**1+(0)*(-1)**0, (2)*(1)**3+(12)*(1)**2+(18)*(1)**1+(0)*(1)**0)]",
+        "expected": "[32, -40]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_cubic_interval",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「区間の両端の値」の比較で決まる。極値だけで判断しない。",
+        "steps": [
+          "$f'(x)=6x^2+24x+18=6(x+3)(x+1)$。",
+          "区間内にある $f'(x)=0$ の解：$x=-3$、$x=-1$",
+          "候補の値：$f(-5)=-40$、$f(-3)=0$、$f(-1)=-8$、$f(1)=32$",
+          "最大値 $32$、最小値 $-40$。"
+        ],
+        "alternatives": [
+          "増減表を区間の範囲だけでかき、矢印の向きから最大・最小の候補を絞ってから値を計算する方法でもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め、区間内の極値をとる点を調べている",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大・最小とそのときの $x$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "極大値をそのまま最大値と答え、端点の値との比較を忘れる。",
+          "区間外にある極値の点を候補に入れてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=-2x^3+54x-1$ の定義域を $-5\\leqq x\\leqq 3$ に制限する。このとき $f(x)$ の最大値と最小値、およびそれらをとる $x$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $107$（$x=3$）、最小値 $-109$（$x=-3$）"
+      },
+      "explanation": "$f'(x)=-6(x+3)(x-3)$。区間内の極値をとる点と区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-2)*(-5)**3+(0)*(-5)**2+(54)*(-5)**1+(-1)*(-5)**0, (-2)*(-3)**3+(0)*(-3)**2+(54)*(-3)**1+(-1)*(-3)**0, (-2)*(3)**3+(0)*(3)**2+(54)*(3)**1+(-1)*(3)**0), Min((-2)*(-5)**3+(0)*(-5)**2+(54)*(-5)**1+(-1)*(-5)**0, (-2)*(-3)**3+(0)*(-3)**2+(54)*(-3)**1+(-1)*(-3)**0, (-2)*(3)**3+(0)*(3)**2+(54)*(3)**1+(-1)*(3)**0)]",
+        "expected": "[107, -109]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_cubic_interval",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「区間の両端の値」の比較で決まる。極値だけで判断しない。",
+        "steps": [
+          "$f'(x)=-6x^2+54=-6(x+3)(x-3)$。",
+          "区間内にある $f'(x)=0$ の解：$x=-3$、$x=3$",
+          "候補の値：$f(-5)=-21$、$f(-3)=-109$、$f(3)=107$",
+          "最大値 $107$、最小値 $-109$。"
+        ],
+        "alternatives": [
+          "増減表を区間の範囲だけでかき、矢印の向きから最大・最小の候補を絞ってから値を計算する方法でもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め、区間内の極値をとる点を調べている",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大・最小とそのときの $x$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "極大値をそのまま最大値と答え、端点の値との比較を忘れる。",
+          "区間外にある極値の点を候補に入れてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=2x^3-6x^2+3$ の定義域を $0\\leqq x\\leqq 2$ に制限する。このとき $f(x)$ の最大値と最小値、およびそれらをとる $x$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $3$（$x=0$）、最小値 $-5$（$x=2$）"
+      },
+      "explanation": "$f'(x)=6(x)(x-2)$。区間内の極値をとる点と区間の両端の値を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((2)*(0)**3+(-6)*(0)**2+(0)*(0)**1+(3)*(0)**0, (2)*(2)**3+(-6)*(2)**2+(0)*(2)**1+(3)*(2)**0), Min((2)*(0)**3+(-6)*(0)**2+(0)*(0)**1+(3)*(0)**0, (2)*(2)**3+(-6)*(2)**2+(0)*(2)**1+(3)*(2)**0)]",
+        "expected": "[3, -5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_cubic_interval",
+      "explanation_detail": {
+        "approach": "閉区間での最大・最小は「区間内の極値」と「区間の両端の値」の比較で決まる。極値だけで判断しない。",
+        "steps": [
+          "$f'(x)=6x^2-12x=6(x)(x-2)$。",
+          "区間内にある $f'(x)=0$ の解：$x=0$、$x=2$",
+          "候補の値：$f(0)=3$、$f(2)=-5$",
+          "最大値 $3$、最小値 $-5$。"
+        ],
+        "alternatives": [
+          "増減表を区間の範囲だけでかき、矢印の向きから最大・最小の候補を絞ってから値を計算する方法でもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f'(x)$ を求め、区間内の極値をとる点を調べている",
+            "points": 1
+          },
+          {
+            "point": "候補の点の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "最大・最小とそのときの $x$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "極大値をそのまま最大値と答え、端点の値との比較を忘れる。",
+          "区間外にある極値の点を候補に入れてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "光がある種類のフィルター（架空）を1枚通過するたびに、光の強さは 0.72 倍になるとする。最初の状態から数えて、初めて最初の $\\dfrac{1}{2}$ 倍より小さくなるのは何時間後か。$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ を用いて求めなさい。",
+      "answer": {
+        "value": "3",
+        "display": "3時間後"
+      },
+      "explanation": "$n$ 時間後に $(0.72)^n<\\dfrac{1}{2}$。両辺の常用対数をとって $n\\times(-0.1428)<-0.3010$。$\\log_{10}0.72<0$ で割るので不等号の向きが変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((-0.3010)/(-0.1428))+1",
+        "expected": "3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_growth",
+      "explanation_detail": {
+        "approach": "「初めて〜を超える（下回る）」は、指数不等式を満たす最小の自然数 $n$ を求める問題。常用対数をとって一次不等式にする。",
+        "steps": [
+          "条件は $(0.72)^n<\\dfrac{1}{2}$。",
+          "$\\log_{10}0.72=-0.1428$、$\\log_{10}\\dfrac{1}{2}=-0.3010$（2・3・10 に分解して計算）。",
+          "$n\\times(-0.1428)<-0.3010$ より $n>-0.3010\\div(-0.1428)=2.108\\cdots$（負の数で割ったので向きが変わる）。",
+          "最小の自然数は $n=3$。"
+        ],
+        "alternatives": [
+          "$n=2$ のとき $2\\times(-0.1428)$ は $-0.3010$ を下回らないことを確認し、$n=3$ が境目であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件を指数不等式で表している",
+            "points": 1
+          },
+          {
+            "point": "対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向きに注意して最小の自然数を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}0.72$ を計算するとき、小数点の位置の分（$10$ の累乗で割った分）を引き忘れる。",
+          "負の数で割ったときに不等号の向きを変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある地域で栽培している植物（架空）の株数は、1年ごとに 1.2 倍に増えるとする。最初の状態から数えて、初めて最初の $2$ 倍を超えるのは何年後か。$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ を用いて求めなさい。",
+      "answer": {
+        "value": "4",
+        "display": "4年後"
+      },
+      "explanation": "$n$ 年後に $(1.2)^n>2$。両辺の常用対数をとって $n\\times(0.0791)>0.3010$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((0.3010)/(0.0791))+1",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_growth",
+      "explanation_detail": {
+        "approach": "「初めて〜を超える（下回る）」は、指数不等式を満たす最小の自然数 $n$ を求める問題。常用対数をとって一次不等式にする。",
+        "steps": [
+          "条件は $(1.2)^n>2$。",
+          "$\\log_{10}1.2=0.0791$、$\\log_{10}2=0.3010$（2・3・10 に分解して計算）。",
+          "$n\\times(0.0791)>0.3010$ より $n>0.3010\\div(0.0791)=3.805\\cdots$。",
+          "最小の自然数は $n=4$。"
+        ],
+        "alternatives": [
+          "$n=3$ のとき $3\\times(0.0791)$ は $0.3010$ を超えないことを確認し、$n=4$ が境目であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件を指数不等式で表している",
+            "points": 1
+          },
+          {
+            "point": "対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向きに注意して最小の自然数を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}1.2$ を計算するとき、小数点の位置の分（$10$ の累乗で割った分）を引き忘れる。",
+          "割り算の結果の小数を四捨五入して、境目の自然数を1つ小さく答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある薬品（架空）の体内濃度は、1時間ごとに 0.96 倍に減少するとする。最初の状態から数えて、初めて最初の $\\dfrac{1}{3}$ 倍より小さくなるのは何時間後か。$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ を用いて求めなさい。",
+      "answer": {
+        "value": "27",
+        "display": "27時間後"
+      },
+      "explanation": "$n$ 時間後に $(0.96)^n<\\dfrac{1}{3}$。両辺の常用対数をとって $n\\times(-0.0179)<-0.4771$。$\\log_{10}0.96<0$ で割るので不等号の向きが変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((-0.4771)/(-0.0179))+1",
+        "expected": "27"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_growth",
+      "explanation_detail": {
+        "approach": "「初めて〜を超える（下回る）」は、指数不等式を満たす最小の自然数 $n$ を求める問題。常用対数をとって一次不等式にする。",
+        "steps": [
+          "条件は $(0.96)^n<\\dfrac{1}{3}$。",
+          "$\\log_{10}0.96=-0.0179$、$\\log_{10}\\dfrac{1}{3}=-0.4771$（2・3・10 に分解して計算）。",
+          "$n\\times(-0.0179)<-0.4771$ より $n>-0.4771\\div(-0.0179)=26.654\\cdots$（負の数で割ったので向きが変わる）。",
+          "最小の自然数は $n=27$。"
+        ],
+        "alternatives": [
+          "$n=26$ のとき $26\\times(-0.0179)$ は $-0.4771$ を下回らないことを確認し、$n=27$ が境目であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件を指数不等式で表している",
+            "points": 1
+          },
+          {
+            "point": "対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向きに注意して最小の自然数を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}0.96$ を計算するとき、小数点の位置の分（$10$ の累乗で割った分）を引き忘れる。",
+          "負の数で割ったときに不等号の向きを変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある薬品（架空）の体内濃度は、1時間ごとに 0.75 倍に減少するとする。最初の状態から数えて、初めて最初の $\\dfrac{1}{2}$ 倍より小さくなるのは何時間後か。$\\log_{10}2=0.3010,\\ \\log_{10}3=0.4771$ を用いて求めなさい。",
+      "answer": {
+        "value": "3",
+        "display": "3時間後"
+      },
+      "explanation": "$n$ 時間後に $(0.75)^n<\\dfrac{1}{2}$。両辺の常用対数をとって $n\\times(-0.1249)<-0.3010$。$\\log_{10}0.75<0$ で割るので不等号の向きが変わる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "floor((-0.3010)/(-0.1249))+1",
+        "expected": "3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_growth",
+      "explanation_detail": {
+        "approach": "「初めて〜を超える（下回る）」は、指数不等式を満たす最小の自然数 $n$ を求める問題。常用対数をとって一次不等式にする。",
+        "steps": [
+          "条件は $(0.75)^n<\\dfrac{1}{2}$。",
+          "$\\log_{10}0.75=-0.1249$、$\\log_{10}\\dfrac{1}{2}=-0.3010$（2・3・10 に分解して計算）。",
+          "$n\\times(-0.1249)<-0.3010$ より $n>-0.3010\\div(-0.1249)=2.410\\cdots$（負の数で割ったので向きが変わる）。",
+          "最小の自然数は $n=3$。"
+        ],
+        "alternatives": [
+          "$n=2$ のとき $2\\times(-0.1249)$ は $-0.3010$ を下回らないことを確認し、$n=3$ が境目であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件を指数不等式で表している",
+            "points": 1
+          },
+          {
+            "point": "対数の値を正しく計算している",
+            "points": 1
+          },
+          {
+            "point": "不等号の向きに注意して最小の自然数を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\log_{10}0.75$ を計算するとき、小数点の位置の分（$10$ の累乗で割った分）を引き忘れる。",
+          "負の数で割ったときに不等号の向きを変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sin\\theta+\\sqrt{3}\\cos\\theta\\ \\left(0\\leqq\\theta\\leqq\\dfrac{\\pi}{2}\\right)$ について、最大値と最小値、およびそれらをとる $\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $2$（$\\theta=\\frac{\\pi}{6}$）、最小値 $1$（$\\theta=\\frac{\\pi}{2}$）"
+      },
+      "explanation": "$y=2\\sin\\left(\\theta+\\frac{\\pi}{3}\\right)$ と合成し、$\\theta+\\frac{\\pi}{3}$ の範囲で考える。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((1)*sin(0)+(sqrt(3))*cos(0), (1)*sin(pi/6)+(sqrt(3))*cos(pi/6), (1)*sin(pi/2)+(sqrt(3))*cos(pi/2)), Min((1)*sin(0)+(sqrt(3))*cos(0), (1)*sin(pi/6)+(sqrt(3))*cos(pi/6), (1)*sin(pi/2)+(sqrt(3))*cos(pi/2))]",
+        "expected": "[2, 1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_trig_synth",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ が混ざった1次式は合成して1つの $\\sin$ にまとめる。その後、角の動く範囲を単位円で確認する。",
+        "steps": [
+          "$y=2\\sin\\left(\\theta+\\frac{\\pi}{3}\\right)$。",
+          "$0\\leqq\\theta\\leqq\\dfrac{\\pi}{2}$ より $\\theta+\\frac{\\pi}{3}$ は $\\frac{\\pi}{3}$ から $\\frac{5 \\pi}{6}$ まで動く。",
+          "候補の値：$\\theta=0$ で $\\sqrt{3}$、$\\theta=\\frac{\\pi}{6}$ で $2$、$\\theta=\\frac{\\pi}{2}$ で $1$",
+          "最大値 $2$、最小値 $1$。"
+        ],
+        "alternatives": [
+          "$y'=\\cos\\theta- \\sqrt{3}\\sin\\theta$ の符号を調べて増減から最大・最小を求めることもできる（数学Ⅲの方法）。端点と、合成で求めた角での値を比べるだけでも確認できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく合成している",
+            "points": 1
+          },
+          {
+            "point": "角の範囲を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値とそのときの $\\theta$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "角の範囲を確認せず、最大値 $2$・最小値 $-2$ と答える。",
+          "合成の角 $\\alpha$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sqrt{3}\\sin\\theta-\\cos\\theta\\ \\left(-\\dfrac{\\pi}{2}\\leqq\\theta\\leqq\\dfrac{\\pi}{2}\\right)$ について、最大値と最小値、およびそれらをとる $\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $\\sqrt{3}$（$\\theta=\\frac{\\pi}{2}$）、最小値 $-2$（$\\theta=- \\frac{\\pi}{3}$）"
+      },
+      "explanation": "$y=2\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)$ と合成し、$\\theta-\\frac{\\pi}{6}$ の範囲で考える。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((sqrt(3))*sin(-pi/2)+(-1)*cos(-pi/2), (sqrt(3))*sin(-pi/3)+(-1)*cos(-pi/3), (sqrt(3))*sin(pi/2)+(-1)*cos(pi/2)), Min((sqrt(3))*sin(-pi/2)+(-1)*cos(-pi/2), (sqrt(3))*sin(-pi/3)+(-1)*cos(-pi/3), (sqrt(3))*sin(pi/2)+(-1)*cos(pi/2))]",
+        "expected": "[sqrt(3), -2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_trig_synth",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ が混ざった1次式は合成して1つの $\\sin$ にまとめる。その後、角の動く範囲を単位円で確認する。",
+        "steps": [
+          "$y=2\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)$。",
+          "$-\\dfrac{\\pi}{2}\\leqq\\theta\\leqq\\dfrac{\\pi}{2}$ より $\\theta-\\frac{\\pi}{6}$ は $- \\frac{2 \\pi}{3}$ から $\\frac{\\pi}{3}$ まで動く。",
+          "候補の値：$\\theta=- \\frac{\\pi}{2}$ で $- \\sqrt{3}$、$\\theta=- \\frac{\\pi}{3}$ で $-2$、$\\theta=\\frac{\\pi}{2}$ で $\\sqrt{3}$",
+          "最大値 $\\sqrt{3}$、最小値 $-2$。"
+        ],
+        "alternatives": [
+          "$y'=\\sqrt{3}\\cos\\theta+\\sin\\theta$ の符号を調べて増減から最大・最小を求めることもできる（数学Ⅲの方法）。端点と、合成で求めた角での値を比べるだけでも確認できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく合成している",
+            "points": 1
+          },
+          {
+            "point": "角の範囲を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値とそのときの $\\theta$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "角の範囲を確認せず、最大値 $2$・最小値 $-2$ と答える。",
+          "合成の角 $\\alpha$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sqrt{3}\\sin\\theta-\\cos\\theta\\ \\left(\\dfrac{\\pi}{2}\\leqq\\theta\\leqq\\pi\\right)$ について、最大値と最小値、およびそれらをとる $\\theta$ の値を求めなさい。",
+      "answer": {
+        "value": "最大値 $2$（$\\theta=\\frac{2 \\pi}{3}$）、最小値 $1$（$\\theta=\\pi$）"
+      },
+      "explanation": "$y=2\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)$ と合成し、$\\theta-\\frac{\\pi}{6}$ の範囲で考える。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((sqrt(3))*sin(pi/2)+(-1)*cos(pi/2), (sqrt(3))*sin(2*pi/3)+(-1)*cos(2*pi/3), (sqrt(3))*sin(pi)+(-1)*cos(pi)), Min((sqrt(3))*sin(pi/2)+(-1)*cos(pi/2), (sqrt(3))*sin(2*pi/3)+(-1)*cos(2*pi/3), (sqrt(3))*sin(pi)+(-1)*cos(pi))]",
+        "expected": "[2, 1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_trig_synth",
+      "explanation_detail": {
+        "approach": "$\\sin$ と $\\cos$ が混ざった1次式は合成して1つの $\\sin$ にまとめる。その後、角の動く範囲を単位円で確認する。",
+        "steps": [
+          "$y=2\\sin\\left(\\theta-\\frac{\\pi}{6}\\right)$。",
+          "$\\dfrac{\\pi}{2}\\leqq\\theta\\leqq\\pi$ より $\\theta-\\frac{\\pi}{6}$ は $\\frac{\\pi}{3}$ から $\\frac{5 \\pi}{6}$ まで動く。",
+          "候補の値：$\\theta=\\frac{\\pi}{2}$ で $\\sqrt{3}$、$\\theta=\\frac{2 \\pi}{3}$ で $2$、$\\theta=\\pi$ で $1$",
+          "最大値 $2$、最小値 $1$。"
+        ],
+        "alternatives": [
+          "$y'=\\sqrt{3}\\cos\\theta+\\sin\\theta$ の符号を調べて増減から最大・最小を求めることもできる（数学Ⅲの方法）。端点と、合成で求めた角での値を比べるだけでも確認できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "正しく合成している",
+            "points": 1
+          },
+          {
+            "point": "角の範囲を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値とそのときの $\\theta$ を正しく答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "角の範囲を確認せず、最大値 $2$・最小値 $-2$ と答える。",
+          "合成の角 $\\alpha$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$0\\leqq\\theta<2\\pi$ のとき、関数 $y=\\cos2\\theta-6\\cos\\theta+2$ の最大値と最小値を求めなさい。（誘導：$t=\\cos\\theta$ とおき、$y$ を $t$ の式で表す。）",
+      "answer": {
+        "value": "最大値 $9$、最小値 $-3$"
+      },
+      "explanation": "$\\cos2\\theta=2\\cos^2\\theta-1$ より $y=2t^2-6t+1$、$-1\\leqq t\\leqq1$。頂点が範囲外にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((2)*(-1)**2+(-6)*(-1)+(1), (2)*(1)**2+(-6)*(1)+(1)), Min((2)*(-1)**2+(-6)*(-1)+(1), (2)*(1)**2+(-6)*(1)+(1))]",
+        "expected": "[9, -3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_trig_quad",
+      "explanation_detail": {
+        "approach": "2倍角の公式で $\\cos2\\theta$ を $\\cos\\theta$ で表すと、$t$ の二次関数になる。置き換えたら $t$ の範囲を必ず書く。",
+        "steps": [
+          "$\\cos2\\theta=2t^2-1$（$t=\\cos\\theta$）。",
+          "$y=2t^2-6t+1$、$-1\\leqq t\\leqq1$。",
+          "軸 $t=\\dfrac{3}{2}$（頂点が範囲外にある）。",
+          "候補：$t=-1$ で $9$、$t=1$ で $-3$",
+          "最大値 $9$、最小値 $-3$。"
+        ],
+        "alternatives": [
+          "$t$ の二次関数のグラフを $-1\\leqq t\\leqq1$ の部分だけかき、最も高い点と低い点を読み取って確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2倍角の公式で $t$ の二次関数に直している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の範囲を書いている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$t$ の範囲を考えずに頂点の値を答える。",
+          "$\\cos2\\theta=1-2\\sin^2\\theta$ と $2\\cos^2\\theta-1$ を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$0\\leqq\\theta<2\\pi$ のとき、関数 $y=\\cos2\\theta+2\\sin\\theta-1$ の最大値と最小値を求めなさい。（誘導：$t=\\sin\\theta$ とおき、$y$ を $t$ の式で表す。）",
+      "answer": {
+        "value": "最大値 $\\dfrac{1}{2}$、最小値 $-4$"
+      },
+      "explanation": "$\\cos2\\theta=1-2\\sin^2\\theta$ より $y=-2t^2+2t$、$-1\\leqq t\\leqq1$。頂点が範囲内にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-2)*(-1)**2+(2)*(-1)+(0), (-2)*(Rational(1,2))**2+(2)*(Rational(1,2))+(0), (-2)*(1)**2+(2)*(1)+(0)), Min((-2)*(-1)**2+(2)*(-1)+(0), (-2)*(Rational(1,2))**2+(2)*(Rational(1,2))+(0), (-2)*(1)**2+(2)*(1)+(0))]",
+        "expected": "[Rational(1,2), -4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_trig_quad",
+      "explanation_detail": {
+        "approach": "2倍角の公式で $\\cos2\\theta$ を $\\sin\\theta$ で表すと、$t$ の二次関数になる。置き換えたら $t$ の範囲を必ず書く。",
+        "steps": [
+          "$\\cos2\\theta=1-2t^2$（$t=\\sin\\theta$）。",
+          "$y=-2t^2+2t$、$-1\\leqq t\\leqq1$。",
+          "軸 $t=\\dfrac{1}{2}$（頂点が範囲内にある）。",
+          "候補：$t=-1$ で $-4$、$t=\\dfrac{1}{2}$ で $\\dfrac{1}{2}$、$t=1$ で $0$",
+          "最大値 $\\dfrac{1}{2}$、最小値 $-4$。"
+        ],
+        "alternatives": [
+          "$t$ の二次関数のグラフを $-1\\leqq t\\leqq1$ の部分だけかき、最も高い点と低い点を読み取って確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2倍角の公式で $t$ の二次関数に直している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の範囲を書いている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$t$ の範囲を考えずに頂点の値を答える。",
+          "$\\cos2\\theta=1-2\\sin^2\\theta$ と $2\\cos^2\\theta-1$ を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$0\\leqq\\theta<2\\pi$ のとき、関数 $y=\\cos2\\theta+4\\sin\\theta$ の最大値と最小値を求めなさい。（誘導：$t=\\sin\\theta$ とおき、$y$ を $t$ の式で表す。）",
+      "answer": {
+        "value": "最大値 $3$、最小値 $-5$"
+      },
+      "explanation": "$\\cos2\\theta=1-2\\sin^2\\theta$ より $y=-2t^2+4t+1$、$-1\\leqq t\\leqq1$。頂点が範囲内にある。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[Max((-2)*(-1)**2+(4)*(-1)+(1), (-2)*(1)**2+(4)*(1)+(1)), Min((-2)*(-1)**2+(4)*(-1)+(1), (-2)*(1)**2+(4)*(1)+(1))]",
+        "expected": "[3, -5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_trig_quad",
+      "explanation_detail": {
+        "approach": "2倍角の公式で $\\cos2\\theta$ を $\\sin\\theta$ で表すと、$t$ の二次関数になる。置き換えたら $t$ の範囲を必ず書く。",
+        "steps": [
+          "$\\cos2\\theta=1-2t^2$（$t=\\sin\\theta$）。",
+          "$y=-2t^2+4t+1$、$-1\\leqq t\\leqq1$。",
+          "軸 $t=1$（頂点が範囲内にある）。",
+          "候補：$t=-1$ で $-5$、$t=1$ で $3$",
+          "最大値 $3$、最小値 $-5$。"
+        ],
+        "alternatives": [
+          "$t$ の二次関数のグラフを $-1\\leqq t\\leqq1$ の部分だけかき、最も高い点と低い点を読み取って確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "2倍角の公式で $t$ の二次関数に直している",
+            "points": 1
+          },
+          {
+            "point": "$t$ の範囲を書いている",
+            "points": 1
+          },
+          {
+            "point": "最大値・最小値を正しく求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$t$ の範囲を考えずに頂点の値を答える。",
+          "$\\cos2\\theta=1-2\\sin^2\\theta$ と $2\\cos^2\\theta-1$ を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{2}(x-5)+\\log_{2}(x-68)=6$ を解きなさい。（真数条件の確認を答案に書くこと。）",
+      "answer": {
+        "value": "$x=69$",
+        "accepted": [
+          "x=69"
+        ]
+      },
+      "explanation": "真数条件 $x>68$。$(x-5)(x-68)=2^6=64$ の解 $x=69,\\ 4$ のうち、条件を満たすのは $x=69$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x-5)*(x-68)-64, x)",
+        "expected": "[69, 4]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_eq",
+      "explanation_detail": {
+        "approach": "対数の方程式は、最初に真数条件（真数 $>0$）で $x$ の範囲を確定させてから、対数をはずして解く。",
+        "steps": [
+          "真数条件：$x-5>0$ かつ $x-68>0$ より $x>68$。",
+          "左辺 $=\\log_{2}(x-5)(x-68)$ なので $(x-5)(x-68)=64$。",
+          "展開・整理して因数分解すると $(x-(69))(x-(4))=0$、$x=69,\\ 4$。",
+          "$x>68$ を満たすのは $x=69$。"
+        ],
+        "alternatives": [
+          "$x=4$ を元の式に代入すると、真数 $-1$ が負になり $\\log$ が定義されないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を正しく書いている",
+            "points": 1
+          },
+          {
+            "point": "対数をはずして二次方程式をつくっている",
+            "points": 1
+          },
+          {
+            "point": "条件に合う解だけを答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "二次方程式の解 $x=4$ も答えに含める。",
+          "$\\log_a M+\\log_a N=\\log_a(M+N)$ と誤って変形する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{2}(x+2)+\\log_{2}(x-61)=6$ を解きなさい。（真数条件の確認を答案に書くこと。）",
+      "answer": {
+        "value": "$x=62$",
+        "accepted": [
+          "x=62"
+        ]
+      },
+      "explanation": "真数条件 $x>61$。$(x+2)(x-61)=2^6=64$ の解 $x=62,\\ -3$ のうち、条件を満たすのは $x=62$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x+2)*(x-61)-64, x)",
+        "expected": "[62, -3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_eq",
+      "explanation_detail": {
+        "approach": "対数の方程式は、最初に真数条件（真数 $>0$）で $x$ の範囲を確定させてから、対数をはずして解く。",
+        "steps": [
+          "真数条件：$x+2>0$ かつ $x-61>0$ より $x>61$。",
+          "左辺 $=\\log_{2}(x+2)(x-61)$ なので $(x+2)(x-61)=64$。",
+          "展開・整理して因数分解すると $(x-(62))(x-(-3))=0$、$x=62,\\ -3$。",
+          "$x>61$ を満たすのは $x=62$。"
+        ],
+        "alternatives": [
+          "$x=-3$ を元の式に代入すると、真数 $-1$ が負になり $\\log$ が定義されないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を正しく書いている",
+            "points": 1
+          },
+          {
+            "point": "対数をはずして二次方程式をつくっている",
+            "points": 1
+          },
+          {
+            "point": "条件に合う解だけを答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "二次方程式の解 $x=-3$ も答えに含める。",
+          "$\\log_a M+\\log_a N=\\log_a(M+N)$ と誤って変形する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "方程式 $\\log_{2}(x-4)+\\log_{2}(x-7)=2$ を解きなさい。（真数条件の確認を答案に書くこと。）",
+      "answer": {
+        "value": "$x=8$",
+        "accepted": [
+          "x=8"
+        ]
+      },
+      "explanation": "真数条件 $x>7$。$(x-4)(x-7)=2^2=4$ の解 $x=8,\\ 3$ のうち、条件を満たすのは $x=8$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact",
+        "notes": "別解欄の表記も正解とする"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "solve((x-4)*(x-7)-4, x)",
+        "expected": "[8, 3]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-b_log_eq",
+      "explanation_detail": {
+        "approach": "対数の方程式は、最初に真数条件（真数 $>0$）で $x$ の範囲を確定させてから、対数をはずして解く。",
+        "steps": [
+          "真数条件：$x-4>0$ かつ $x-7>0$ より $x>7$。",
+          "左辺 $=\\log_{2}(x-4)(x-7)$ なので $(x-4)(x-7)=4$。",
+          "展開・整理して因数分解すると $(x-(8))(x-(3))=0$、$x=8,\\ 3$。",
+          "$x>7$ を満たすのは $x=8$。"
+        ],
+        "alternatives": [
+          "$x=3$ を元の式に代入すると、真数 $-1$ が負になり $\\log$ が定義されないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "真数条件を正しく書いている",
+            "points": 1
+          },
+          {
+            "point": "対数をはずして二次方程式をつくっている",
+            "points": 1
+          },
+          {
+            "point": "条件に合う解だけを答えている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "二次方程式の解 $x=3$ も答えに含める。",
+          "$\\log_a M+\\log_a N=\\log_a(M+N)$ と誤って変形する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$k$ を定数とする。$x$ の方程式 $2x^3-6x^2-2=k$ について、次の問いに答えなさい。\n(1) 異なる3つの実数解をもつような $k$ の値の範囲を求めなさい。\n(2) 異なる実数解がちょうど2個となる $k$ の値をすべて求めなさい。\n考え方がわかるように記述すること。",
+      "answer": {
+        "value": "(1) $-10<k<-2$　(2) $k=-2,\\ -10$"
+      },
+      "explanation": "$f(x)=2x^3-6x^2-2$ とおくと、実数解の個数は $y=f(x)$ と $y=k$ の共有点の個数。$f'(x)=6(x)(x-2)$ より極大値 $f(0)=-2$、極小値 $f(2)=-10$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "定数を分離し、グラフの共有点の個数に言いかえている",
+            "points": 2
+          },
+          {
+            "criterion": "$f'(x)$ を求めて増減を調べ、極大値・極小値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(1) の範囲を正しく答えている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) の値を正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(2)*(0)**3+(-6)*(0)**2+(0)*(0)**1+(-2)*(0)**0, (2)*(2)**3+(-6)*(2)**2+(0)*(2)**1+(-2)*(2)**0]",
+        "expected": "[-2, -10]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_three_roots",
+      "related_units": [
+        "HS-MATH2-U02",
+        "HS-MATH2-U06"
+      ],
+      "explanation_detail": {
+        "approach": "文字 $k$ を右辺に分離すると、$k$ を含まない曲線 $y=f(x)$ と、$x$ 軸に平行な直線 $y=k$ の共有点の問題になる（高次方程式の実数解の個数をグラフで数える）。",
+        "steps": [
+          "$f(x)=2x^3-6x^2-2$ とおく。",
+          "$f'(x)=6x^2-12x=6(x)(x-2)$。",
+          "増減表より、$x=0$ で極大値 $-2$、$x=2$ で極小値 $-10$。",
+          "(1) 直線 $y=k$ と3点で交わるのは $-10<k<-2$。",
+          "(2) 直線が極大・極小の点を通るとき接するので共有点は2個：$k=-2,\\ -10$。"
+        ],
+        "alternatives": [
+          "$g(x)=f(x)-k$ として、「極大値 $>0$ かつ 極小値 $<0$」という条件（極値の積が負）から (1) を導くこともできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定数分離による言いかえ",
+            "points": 2
+          },
+          {
+            "point": "増減と極値",
+            "points": 3
+          },
+          {
+            "point": "(1) の範囲",
+            "points": 2
+          },
+          {
+            "point": "(2) の値",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)=0$ の解（$x$ 座標）を $k$ の範囲の端と取り違える。",
+          "(1) で等号を含めてしまう（接する場合は解が2個）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$k$ を定数とする。$x$ の方程式 $2x^3-12x^2+18x=k$ について、次の問いに答えなさい。\n(1) 異なる3つの実数解をもつような $k$ の値の範囲を求めなさい。\n(2) 異なる実数解がちょうど2個となる $k$ の値をすべて求めなさい。\n考え方がわかるように記述すること。",
+      "answer": {
+        "value": "(1) $0<k<8$　(2) $k=8,\\ 0$"
+      },
+      "explanation": "$f(x)=2x^3-12x^2+18x$ とおくと、実数解の個数は $y=f(x)$ と $y=k$ の共有点の個数。$f'(x)=6(x-1)(x-3)$ より極大値 $f(1)=8$、極小値 $f(3)=0$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "定数を分離し、グラフの共有点の個数に言いかえている",
+            "points": 2
+          },
+          {
+            "criterion": "$f'(x)$ を求めて増減を調べ、極大値・極小値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(1) の範囲を正しく答えている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) の値を正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(2)*(1)**3+(-12)*(1)**2+(18)*(1)**1+(0)*(1)**0, (2)*(3)**3+(-12)*(3)**2+(18)*(3)**1+(0)*(3)**0]",
+        "expected": "[8, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_three_roots",
+      "related_units": [
+        "HS-MATH2-U02",
+        "HS-MATH2-U06"
+      ],
+      "explanation_detail": {
+        "approach": "文字 $k$ を右辺に分離すると、$k$ を含まない曲線 $y=f(x)$ と、$x$ 軸に平行な直線 $y=k$ の共有点の問題になる（高次方程式の実数解の個数をグラフで数える）。",
+        "steps": [
+          "$f(x)=2x^3-12x^2+18x$ とおく。",
+          "$f'(x)=6x^2-24x+18=6(x-1)(x-3)$。",
+          "増減表より、$x=1$ で極大値 $8$、$x=3$ で極小値 $0$。",
+          "(1) 直線 $y=k$ と3点で交わるのは $0<k<8$。",
+          "(2) 直線が極大・極小の点を通るとき接するので共有点は2個：$k=8,\\ 0$。"
+        ],
+        "alternatives": [
+          "$g(x)=f(x)-k$ として、「極大値 $>0$ かつ 極小値 $<0$」という条件（極値の積が負）から (1) を導くこともできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定数分離による言いかえ",
+            "points": 2
+          },
+          {
+            "point": "増減と極値",
+            "points": 3
+          },
+          {
+            "point": "(1) の範囲",
+            "points": 2
+          },
+          {
+            "point": "(2) の値",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)=0$ の解（$x$ 座標）を $k$ の範囲の端と取り違える。",
+          "(1) で等号を含めてしまう（接する場合は解が2個）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$k$ を定数とする。$x$ の方程式 $2x^3+3x^2-1=k$ について、次の問いに答えなさい。\n(1) 異なる3つの実数解をもつような $k$ の値の範囲を求めなさい。\n(2) 異なる実数解がちょうど2個となる $k$ の値をすべて求めなさい。\n考え方がわかるように記述すること。",
+      "answer": {
+        "value": "(1) $-1<k<0$　(2) $k=0,\\ -1$"
+      },
+      "explanation": "$f(x)=2x^3+3x^2-1$ とおくと、実数解の個数は $y=f(x)$ と $y=k$ の共有点の個数。$f'(x)=6(x+1)(x)$ より極大値 $f(-1)=0$、極小値 $f(0)=-1$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "定数を分離し、グラフの共有点の個数に言いかえている",
+            "points": 2
+          },
+          {
+            "criterion": "$f'(x)$ を求めて増減を調べ、極大値・極小値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "(1) の範囲を正しく答えている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) の値を正しく答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[(2)*(-1)**3+(3)*(-1)**2+(0)*(-1)**1+(-1)*(-1)**0, (2)*(0)**3+(3)*(0)**2+(0)*(0)**1+(-1)*(0)**0]",
+        "expected": "[0, -1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_three_roots",
+      "related_units": [
+        "HS-MATH2-U02",
+        "HS-MATH2-U06"
+      ],
+      "explanation_detail": {
+        "approach": "文字 $k$ を右辺に分離すると、$k$ を含まない曲線 $y=f(x)$ と、$x$ 軸に平行な直線 $y=k$ の共有点の問題になる（高次方程式の実数解の個数をグラフで数える）。",
+        "steps": [
+          "$f(x)=2x^3+3x^2-1$ とおく。",
+          "$f'(x)=6x^2+6x=6(x+1)(x)$。",
+          "増減表より、$x=-1$ で極大値 $0$、$x=0$ で極小値 $-1$。",
+          "(1) 直線 $y=k$ と3点で交わるのは $-1<k<0$。",
+          "(2) 直線が極大・極小の点を通るとき接するので共有点は2個：$k=0,\\ -1$。"
+        ],
+        "alternatives": [
+          "$g(x)=f(x)-k$ として、「極大値 $>0$ かつ 極小値 $<0$」という条件（極値の積が負）から (1) を導くこともできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定数分離による言いかえ",
+            "points": 2
+          },
+          {
+            "point": "増減と極値",
+            "points": 3
+          },
+          {
+            "point": "(1) の範囲",
+            "points": 2
+          },
+          {
+            "point": "(2) の値",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)=0$ の解（$x$ 座標）を $k$ の範囲の端と取り違える。",
+          "(1) で等号を含めてしまう（接する場合は解が2個）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "放物線 $C:\\ y=x^2-1$ と、点 $\\mathrm{A}(1,\\,1)$ を通る傾き $m$ の直線 $\\ell$ を考える。\n太郎：「点 A は放物線の上側（内側）にあるから、$m$ がどんな値でも $\\ell$ は $C$ と2点で交わりそうだね。」\n花子：「囲まれた部分の面積 $S$ を $m$ で表して、最小値を調べてみよう。」\n$\\ell$ と $C$ が常に2点で交わることを示し、$S$ の最小値とそのときの $m$ の値を求めなさい。",
+      "answer": {
+        "value": "$m=2$ のとき最小値 $S=\\dfrac{4}{3}$"
+      },
+      "explanation": "交点の $x$ 座標 $\\alpha<\\beta$ について $(\\beta-\\alpha)^2=(m-2)^2+4$。$S=\\dfrac{(\\beta-\\alpha)^3}{6}$ は $m=2$ で最小。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "判別式を計算し、常に2点で交わることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "$S=\\dfrac{(\\beta-\\alpha)^3}{6}$ を用い、$(\\beta-\\alpha)^2$ を $m$ で表している",
+            "points": 3
+          },
+          {
+            "criterion": "最小となる $m$ と最小値を正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "Rational(1,6)*(4)**Rational(3,2)",
+        "expected": "Rational(4,3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_area_min",
+      "explanation_detail": {
+        "approach": "面積は交点の $x$ 座標の差 $\\beta-\\alpha$ だけで決まる（$\\dfrac{1}{6}$ 公式）。$(\\beta-\\alpha)^2$ を解と係数の関係で $m$ の式にすれば、二次関数の最小値の問題になる。",
+        "steps": [
+          "$\\ell:\\ y=m(x-1)+1$。$C$ の式と連立して整理すると $x^2-mx+(1)m-2=0$。",
+          "判別式 $D=m^2-4(1m-2)=(m-2)^2+4>0$ なので、常に異なる2点で交わる。",
+          "解と係数の関係より $(\\beta-\\alpha)^2=D=(m-2)^2+4$。",
+          "$S=\\dfrac{(\\beta-\\alpha)^3}{6}=\\dfrac{D^{3/2}}{6}$ は $D$ が最小のとき最小。$m=2$ で $D=4$。",
+          "最小値 $S=\\dfrac{(4)^{3/2}}{6}=\\dfrac{4}{3}$。"
+        ],
+        "alternatives": [
+          "$m=2$ は、点 A の真下にある $C$ 上の点 $(1,\\,0)$ における接線の傾き $2\\times(1)$ と等しい。つまり、最小になるのは $\\ell$ がその接線と平行になるときだと図形的に解釈できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常に2点で交わることの証明",
+            "points": 2
+          },
+          {
+            "point": "$(\\beta-\\alpha)^2$ の式",
+            "points": 3
+          },
+          {
+            "point": "最小値と $m$",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$S$ を $m$ で表す前に $\\alpha,\\ \\beta$ を解の公式で求めて計算が複雑になり、時間を失う。",
+          "$D^{3/2}$ の計算で $(4h)^{3/2}$ を $4h^{3/2}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "放物線 $C:\\ y=x^2-2$ と、点 $\\mathrm{A}(0,\\,14)$ を通る傾き $m$ の直線 $\\ell$ を考える。\n太郎：「点 A は放物線の上側（内側）にあるから、$m$ がどんな値でも $\\ell$ は $C$ と2点で交わりそうだね。」\n花子：「囲まれた部分の面積 $S$ を $m$ で表して、最小値を調べてみよう。」\n$\\ell$ と $C$ が常に2点で交わることを示し、$S$ の最小値とそのときの $m$ の値を求めなさい。",
+      "answer": {
+        "value": "$m=0$ のとき最小値 $S=\\dfrac{256}{3}$"
+      },
+      "explanation": "交点の $x$ 座標 $\\alpha<\\beta$ について $(\\beta-\\alpha)^2=(m-0)^2+64$。$S=\\dfrac{(\\beta-\\alpha)^3}{6}$ は $m=0$ で最小。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "判別式を計算し、常に2点で交わることを示している",
+            "points": 2
+          },
+          {
+            "criterion": "$S=\\dfrac{(\\beta-\\alpha)^3}{6}$ を用い、$(\\beta-\\alpha)^2$ を $m$ で表している",
+            "points": 3
+          },
+          {
+            "criterion": "最小となる $m$ と最小値を正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "Rational(1,6)*(64)**Rational(3,2)",
+        "expected": "Rational(256,3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_area_min",
+      "explanation_detail": {
+        "approach": "面積は交点の $x$ 座標の差 $\\beta-\\alpha$ だけで決まる（$\\dfrac{1}{6}$ 公式）。$(\\beta-\\alpha)^2$ を解と係数の関係で $m$ の式にすれば、二次関数の最小値の問題になる。",
+        "steps": [
+          "$\\ell:\\ y=m(x)+14$。$C$ の式と連立して整理すると $x^2-mx+(0)m-16=0$。",
+          "判別式 $D=m^2-4(0m-16)=(m-0)^2+64>0$ なので、常に異なる2点で交わる。",
+          "解と係数の関係より $(\\beta-\\alpha)^2=D=(m-0)^2+64$。",
+          "$S=\\dfrac{(\\beta-\\alpha)^3}{6}=\\dfrac{D^{3/2}}{6}$ は $D$ が最小のとき最小。$m=0$ で $D=64$。",
+          "最小値 $S=\\dfrac{(64)^{3/2}}{6}=\\dfrac{256}{3}$。"
+        ],
+        "alternatives": [
+          "$m=0$ は、点 A の真下にある $C$ 上の点 $(0,\\,-2)$ における接線の傾き $2\\times(0)$ と等しい。つまり、最小になるのは $\\ell$ がその接線と平行になるときだと図形的に解釈できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "常に2点で交わることの証明",
+            "points": 2
+          },
+          {
+            "point": "$(\\beta-\\alpha)^2$ の式",
+            "points": 3
+          },
+          {
+            "point": "最小値と $m$",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$S$ を $m$ で表す前に $\\alpha,\\ \\beta$ を解の公式で求めて計算が複雑になり、時間を失う。",
+          "$D^{3/2}$ の計算で $(4h)^{3/2}$ を $4h^{3/2}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$0\\leqq\\theta<2\\pi$ のとき、関数 $y=2\\cos^3\\theta-3\\cos^2\\theta-2$ の最大値と最小値を求めなさい。$t=\\cos\\theta$ とおいて考え、$t$ の範囲に注意して記述すること。",
+      "answer": {
+        "value": "最大値 $-2$、最小値 $-7$"
+      },
+      "explanation": "$y=2t^3-3t^2-2\\ (-1\\leqq t\\leqq1)$。$\\dfrac{dy}{dt}=6t(t-1)$ より、候補 $t=-1, 0, 1$ の値を比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$t=\\cos\\theta$ とおき、$-1\\leqq t\\leqq1$ を明記している",
+            "points": 2
+          },
+          {
+            "criterion": "$t$ で微分して増減を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "端点を含めて比較し、最大値・最小値を正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Max((2)*(-1)**3+(-3)*(-1)**2+(-2), (2)*(0)**3+(-3)*(0)**2+(-2), (2)*(1)**3+(-3)*(1)**2+(-2)), Min((2)*(-1)**3+(-3)*(-1)**2+(-2), (2)*(0)**3+(-3)*(0)**2+(-2), (2)*(1)**3+(-3)*(1)**2+(-2))]",
+        "expected": "[-2, -7]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_trig_cubic",
+      "related_units": [
+        "HS-MATH2-U04",
+        "HS-MATH2-U06"
+      ],
+      "explanation_detail": {
+        "approach": "三角関数の3次式は、$t=\\cos\\theta$ とおくと $t$ の三次関数になる（三角関数と微分法の融合）。定義域は $t$ の範囲 $-1\\leqq t\\leqq1$。",
+        "steps": [
+          "$t=\\cos\\theta$ とおくと $-1\\leqq t\\leqq1$、$y=2t^3-3t^2-2$。",
+          "$\\dfrac{dy}{dt}=6t^2-6t=6t(t-1)$、$t=0,\\ 1$ で極値。",
+          "候補の値：$t=-1$ で $-7$、$t=0$ で $-2$、$t=1$ で $-3$",
+          "最大値 $-2$、最小値 $-7$。"
+        ],
+        "alternatives": [
+          "$-1\\leqq t\\leqq1$ における増減表をかき、矢印の向きから候補を絞ってから値を比べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "置き換えと $t$ の範囲",
+            "points": 2
+          },
+          {
+            "point": "増減の調べ方",
+            "points": 3
+          },
+          {
+            "point": "最大値・最小値",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$t$ の範囲を書かず、$t$ の三次関数の極値をそのまま最大・最小とする。",
+          "端点 $t=\\pm1$ の値を比較に入れ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$0\\leqq\\theta<2\\pi$ のとき、関数 $y=-4\\cos^3\\theta-3\\cos^2\\theta-1$ の最大値と最小値を求めなさい。$t=\\cos\\theta$ とおいて考え、$t$ の範囲に注意して記述すること。",
+      "answer": {
+        "value": "最大値 $0$、最小値 $-8$"
+      },
+      "explanation": "$y=-4t^3-3t^2-1\\ (-1\\leqq t\\leqq1)$。$\\dfrac{dy}{dt}=-12t(t+\\dfrac{1}{2})$ より、候補 $t=-1, -\\dfrac{1}{2}, 0, 1$ の値を比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$t=\\cos\\theta$ とおき、$-1\\leqq t\\leqq1$ を明記している",
+            "points": 2
+          },
+          {
+            "criterion": "$t$ で微分して増減を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "端点を含めて比較し、最大値・最小値を正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[Max((-4)*(-1)**3+(-3)*(-1)**2+(-1), (-4)*(Rational(-1,2))**3+(-3)*(Rational(-1,2))**2+(-1), (-4)*(0)**3+(-3)*(0)**2+(-1), (-4)*(1)**3+(-3)*(1)**2+(-1)), Min((-4)*(-1)**3+(-3)*(-1)**2+(-1), (-4)*(Rational(-1,2))**3+(-3)*(Rational(-1,2))**2+(-1), (-4)*(0)**3+(-3)*(0)**2+(-1), (-4)*(1)**3+(-3)*(1)**2+(-1))]",
+        "expected": "[0, -8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_trig_cubic",
+      "related_units": [
+        "HS-MATH2-U04",
+        "HS-MATH2-U06"
+      ],
+      "explanation_detail": {
+        "approach": "三角関数の3次式は、$t=\\cos\\theta$ とおくと $t$ の三次関数になる（三角関数と微分法の融合）。定義域は $t$ の範囲 $-1\\leqq t\\leqq1$。",
+        "steps": [
+          "$t=\\cos\\theta$ とおくと $-1\\leqq t\\leqq1$、$y=-4t^3-3t^2-1$。",
+          "$\\dfrac{dy}{dt}=-12t^2-6t=-12t(t+\\dfrac{1}{2})$、$t=0,\\ -\\dfrac{1}{2}$ で極値。",
+          "候補の値：$t=-1$ で $0$、$t=-\\dfrac{1}{2}$ で $-\\dfrac{5}{4}$、$t=0$ で $-1$、$t=1$ で $-8$",
+          "最大値 $0$、最小値 $-8$。"
+        ],
+        "alternatives": [
+          "$-1\\leqq t\\leqq1$ における増減表をかき、矢印の向きから候補を絞ってから値を比べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "置き換えと $t$ の範囲",
+            "points": 2
+          },
+          {
+            "point": "増減の調べ方",
+            "points": 3
+          },
+          {
+            "point": "最大値・最小値",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$t$ の範囲を書かず、$t$ の三次関数の極値をそのまま最大・最小とする。",
+          "端点 $t=\\pm1$ の値を比較に入れ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある実験（架空の資料）で2つの量 $x,\\ y$ を測定したところ、下の表の結果（$(x,\\ y)=$ $(1,\\ 6)$、$(10,\\ 6000)$、$(100,\\ 6000000)$）を得た。横軸に $X=\\log_{10}x$、縦軸に $Y=\\log_{10}y$ をとって点をかくと、3点は一直線上に並んだ。\n(1) $Y$ を $X$ の一次式で表しなさい。\n(2) $y$ を $x$ の式で表しなさい。また、両対数をとると直線になる理由を説明しなさい。",
+      "table": {
+        "rows": [
+          [
+            "$1$",
+            "$6$"
+          ],
+          [
+            "$10$",
+            "$6000$"
+          ],
+          [
+            "$100$",
+            "$6000000$"
+          ]
+        ],
+        "header": [
+          "$x$",
+          "$y$"
+        ],
+        "caption": "測定結果（架空の資料）"
+      },
+      "answer": {
+        "value": "(1) $Y=3X+\\log_{10}6$　(2) $y=6x^{3}$。$y=Cx^b$ の両辺の常用対数をとると $\\log_{10}y=b\\log_{10}x+\\log_{10}C$ となり、$X,\\ Y$ の一次式だから。"
+      },
+      "explanation": "傾き $b=\\dfrac{\\log_{10}6000000-\\log_{10}6}{2-0}=3$、$X=0$ のとき $Y=\\log_{10}6$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2点から直線の傾きを対数の性質で正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$Y$ 切片が $\\log_{10}6$ であることを求め、(1) を答えている",
+            "points": 2
+          },
+          {
+            "criterion": "$y$ を $x$ の式で表し、直線になる理由を対数の性質で説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(log(6000000, 10)-log(6, 10))/(2)",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_loglog",
+      "related_units": [
+        "HS-MATH2-U05",
+        "HS-MATH1-U05"
+      ],
+      "explanation_detail": {
+        "approach": "べき関数 $y=Cx^b$ は、両辺の対数をとると $\\log y=b\\log x+\\log C$ と一次式になる（データの分析で学ぶ「変数変換して直線にのせる」考え方と対数の融合）。",
+        "steps": [
+          "$X=0$ のとき $Y=\\log_{10}6$、$X=2$ のとき $Y=\\log_{10}6000000$。",
+          "傾き $=\\dfrac{\\log_{10}6000000-\\log_{10}6}{2}=\\dfrac{\\log_{10}10^{6}}{2}=3$。",
+          "$Y=3X+\\beta$ に $X=0,\\ Y=\\log_{10}6$ を代入して $\\beta=\\log_{10}6$。",
+          "$\\log_{10}y=3\\log_{10}x+\\log_{10}6=\\log_{10}6x^{3}$ より $y=6x^{3}$。"
+        ],
+        "alternatives": [
+          "表の残りの点 $x=10$ を $y=6x^{3}$ に代入すると $y=6000$ となり、3点すべてが式を満たすことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾き",
+            "points": 3
+          },
+          {
+            "point": "切片と (1)",
+            "points": 2
+          },
+          {
+            "point": "(2) の式と理由",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "傾きを $\\dfrac{y_2-y_1}{x_2-x_1}$（対数をとる前の値）で計算する。",
+          "$\\log_{10}6$ を切片として求めたのに、$y=x^b+6$ のように足し算で表す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある実験（架空の資料）で2つの量 $x,\\ y$ を測定したところ、下の表の結果（$(x,\\ y)=$ $(1,\\ 8)$、$(100,\\ 8000)$、$(10000,\\ 8000000)$）を得た。横軸に $X=\\log_{10}x$、縦軸に $Y=\\log_{10}y$ をとって点をかくと、3点は一直線上に並んだ。\n(1) $Y$ を $X$ の一次式で表しなさい。\n(2) $y$ を $x$ の式で表しなさい。また、両対数をとると直線になる理由を説明しなさい。",
+      "table": {
+        "rows": [
+          [
+            "$1$",
+            "$8$"
+          ],
+          [
+            "$100$",
+            "$8000$"
+          ],
+          [
+            "$10000$",
+            "$8000000$"
+          ]
+        ],
+        "header": [
+          "$x$",
+          "$y$"
+        ],
+        "caption": "測定結果（架空の資料）"
+      },
+      "answer": {
+        "value": "(1) $Y=\\dfrac{3}{2}X+\\log_{10}8$　(2) $y=8x^{\\dfrac{3}{2}}$。$y=Cx^b$ の両辺の常用対数をとると $\\log_{10}y=b\\log_{10}x+\\log_{10}C$ となり、$X,\\ Y$ の一次式だから。"
+      },
+      "explanation": "傾き $b=\\dfrac{\\log_{10}8000000-\\log_{10}8}{4-0}=\\dfrac{3}{2}$、$X=0$ のとき $Y=\\log_{10}8$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2点から直線の傾きを対数の性質で正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$Y$ 切片が $\\log_{10}8$ であることを求め、(1) を答えている",
+            "points": 2
+          },
+          {
+            "criterion": "$y$ を $x$ の式で表し、直線になる理由を対数の性質で説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(log(8000000, 10)-log(8, 10))/(4)",
+        "expected": "Rational(3,2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_loglog",
+      "related_units": [
+        "HS-MATH2-U05",
+        "HS-MATH1-U05"
+      ],
+      "explanation_detail": {
+        "approach": "べき関数 $y=Cx^b$ は、両辺の対数をとると $\\log y=b\\log x+\\log C$ と一次式になる（データの分析で学ぶ「変数変換して直線にのせる」考え方と対数の融合）。",
+        "steps": [
+          "$X=0$ のとき $Y=\\log_{10}8$、$X=4$ のとき $Y=\\log_{10}8000000$。",
+          "傾き $=\\dfrac{\\log_{10}8000000-\\log_{10}8}{4}=\\dfrac{\\log_{10}10^{6}}{4}=\\dfrac{3}{2}$。",
+          "$Y=\\dfrac{3}{2}X+\\beta$ に $X=0,\\ Y=\\log_{10}8$ を代入して $\\beta=\\log_{10}8$。",
+          "$\\log_{10}y=\\dfrac{3}{2}\\log_{10}x+\\log_{10}8=\\log_{10}8x^{\\dfrac{3}{2}}$ より $y=8x^{\\dfrac{3}{2}}$。"
+        ],
+        "alternatives": [
+          "表の残りの点 $x=100$ を $y=8x^{\\dfrac{3}{2}}$ に代入すると $y=8000$ となり、3点すべてが式を満たすことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾き",
+            "points": 3
+          },
+          {
+            "point": "切片と (1)",
+            "points": 2
+          },
+          {
+            "point": "(2) の式と理由",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "傾きを $\\dfrac{y_2-y_1}{x_2-x_1}$（対数をとる前の値）で計算する。",
+          "$\\log_{10}8$ を切片として求めたのに、$y=x^b+8$ のように足し算で表す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある実験（架空の資料）で2つの量 $x,\\ y$ を測定したところ、下の表の結果（$(x,\\ y)=$ $(1,\\ 8)$、$(10,\\ 0.08)$、$(100,\\ 0.0008)$）を得た。横軸に $X=\\log_{10}x$、縦軸に $Y=\\log_{10}y$ をとって点をかくと、3点は一直線上に並んだ。\n(1) $Y$ を $X$ の一次式で表しなさい。\n(2) $y$ を $x$ の式で表しなさい。また、両対数をとると直線になる理由を説明しなさい。",
+      "table": {
+        "rows": [
+          [
+            "$1$",
+            "$8$"
+          ],
+          [
+            "$10$",
+            "$0.08$"
+          ],
+          [
+            "$100$",
+            "$0.0008$"
+          ]
+        ],
+        "header": [
+          "$x$",
+          "$y$"
+        ],
+        "caption": "測定結果（架空の資料）"
+      },
+      "answer": {
+        "value": "(1) $Y=-2X+\\log_{10}8$　(2) $y=8x^{-2}$。$y=Cx^b$ の両辺の常用対数をとると $\\log_{10}y=b\\log_{10}x+\\log_{10}C$ となり、$X,\\ Y$ の一次式だから。"
+      },
+      "explanation": "傾き $b=\\dfrac{\\log_{10}0.0008-\\log_{10}8}{2-0}=-2$、$X=0$ のとき $Y=\\log_{10}8$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "2点から直線の傾きを対数の性質で正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$Y$ 切片が $\\log_{10}8$ であることを求め、(1) を答えている",
+            "points": 2
+          },
+          {
+            "criterion": "$y$ を $x$ の式で表し、直線になる理由を対数の性質で説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(log(Rational(1,1250), 10)-log(8, 10))/(2)",
+        "expected": "-2",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "CT-MATH2BC-U01-c_loglog",
+      "related_units": [
+        "HS-MATH2-U05",
+        "HS-MATH1-U05"
+      ],
+      "explanation_detail": {
+        "approach": "べき関数 $y=Cx^b$ は、両辺の対数をとると $\\log y=b\\log x+\\log C$ と一次式になる（データの分析で学ぶ「変数変換して直線にのせる」考え方と対数の融合）。",
+        "steps": [
+          "$X=0$ のとき $Y=\\log_{10}8$、$X=2$ のとき $Y=\\log_{10}0.0008$。",
+          "傾き $=\\dfrac{\\log_{10}0.0008-\\log_{10}8}{2}=\\dfrac{\\log_{10}10^{-4}}{2}=-2$。",
+          "$Y=-2X+\\beta$ に $X=0,\\ Y=\\log_{10}8$ を代入して $\\beta=\\log_{10}8$。",
+          "$\\log_{10}y=-2\\log_{10}x+\\log_{10}8=\\log_{10}8x^{-2}$ より $y=8x^{-2}$。"
+        ],
+        "alternatives": [
+          "表の残りの点 $x=10$ を $y=8x^{-2}$ に代入すると $y=0.08$ となり、3点すべてが式を満たすことで確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾き",
+            "points": 3
+          },
+          {
+            "point": "切片と (1)",
+            "points": 2
+          },
+          {
+            "point": "(2) の式と理由",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "傾きを $\\dfrac{y_2-y_1}{x_2-x_1}$（対数をとる前の値）で計算する。",
+          "$\\log_{10}8$ を切片として求めたのに、$y=x^b+8$ のように足し算で表す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "大問の(1)で「関数 $f(x)=x^3+3x^2+3x+3$ の極値を調べよ」と問われた。\n［ある生徒の解答］\n$f'(x)=3x^2+6x+3=3(x+1)^2$。$f'(x)=0$ より $x=-1$。よって $f(x)$ は $x=-1$ で極値 $2$ をとる。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "$f'(x)=3(x+1)^2$ は $x\\neq-1$ で常に正。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(diff((1)*x**3+(3)*x**2+(3)*x**1+(3)*x**0, x))",
+        "expected": "3*(x-(-1))**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_no_extreme",
+      "explanation_detail": {
+        "approach": "極値は「$f'(x)=0$」ではなく「$f'(x)$ の符号の変化」で判定する。",
+        "steps": [
+          "$f'(x)=3(x+1)^2$。",
+          "$x<-1$ でも $x>-1$ でも $f'(x)$ は正。",
+          "符号が変わらないので $x=-1$ は極値をとる点ではない。$f(x)$ は単調に増加し、極値なし。"
+        ],
+        "alternatives": [
+          "$f(x)=(x+1)^3+2$ と変形でき、$y=x^3$ のグラフを平行移動したものなので極値をもたないと確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)=0$ の解を求めた後、必ず増減表で符号を確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=3x^2+6x+3=3(x+1)^2$。$f'(x)=0$ より $x=-1$。よって $f(x)$ は $x=-1$ で極値 $2$ をとる。",
+        "error_step": "「$f'(x)=0$ より $x=-1$ で極値」と結論した部分",
+        "error_type": "concept",
+        "why_tempting": "$f'(a)=0$ を極値の条件として覚えてしまい、符号の変化を確かめる手順（増減表）を省いている。2乗の形が出たのに符号を考えていない。",
+        "correction": "$f'(x)=3(x+1)^2$ は $x=-1$ の前後で符号が変わらない（常に $f'(x)\\geqq0$）。$f(x)$ は常に増加し、極値をもたない。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "大問の(1)で「関数 $f(x)=-x^3+9x^2-27x+22$ の極値を調べよ」と問われた。\n［ある生徒の解答］\n$f'(x)=-3x^2+18x-27=-3(x-3)^2$。$f'(x)=0$ より $x=3$。よって $f(x)$ は $x=3$ で極値 $-5$ をとる。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "$f'(x)=-3(x-3)^2$ は $x\\neq3$ で常に負。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(diff((-1)*x**3+(9)*x**2+(-27)*x**1+(22)*x**0, x))",
+        "expected": "-3*(x-(3))**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_no_extreme",
+      "explanation_detail": {
+        "approach": "極値は「$f'(x)=0$」ではなく「$f'(x)$ の符号の変化」で判定する。",
+        "steps": [
+          "$f'(x)=-3(x-3)^2$。",
+          "$x<3$ でも $x>3$ でも $f'(x)$ は負。",
+          "符号が変わらないので $x=3$ は極値をとる点ではない。$f(x)$ は単調に減少し、極値なし。"
+        ],
+        "alternatives": [
+          "$f(x)=-(x-3)^3-5$ と変形でき、$y=-x^3$ のグラフを平行移動したものなので極値をもたないと確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)=0$ の解を求めた後、必ず増減表で符号を確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=-3x^2+18x-27=-3(x-3)^2$。$f'(x)=0$ より $x=3$。よって $f(x)$ は $x=3$ で極値 $-5$ をとる。",
+        "error_step": "「$f'(x)=0$ より $x=3$ で極値」と結論した部分",
+        "error_type": "concept",
+        "why_tempting": "$f'(a)=0$ を極値の条件として覚えてしまい、符号の変化を確かめる手順（増減表）を省いている。2乗の形が出たのに符号を考えていない。",
+        "correction": "$f'(x)=-3(x-3)^2$ は $x=3$ の前後で符号が変わらない（常に $f'(x)\\leqq0$）。$f(x)$ は常に減少し、極値をもたない。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "大問の(1)で「関数 $f(x)=-2x^3-6x^2-6x-7$ の極値を調べよ」と問われた。\n［ある生徒の解答］\n$f'(x)=-6x^2-12x-6=-6(x+1)^2$。$f'(x)=0$ より $x=-1$。よって $f(x)$ は $x=-1$ で極値 $-5$ をとる。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "$f'(x)=-6(x+1)^2$ は $x\\neq-1$ で常に負。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "expand(diff((-2)*x**3+(-6)*x**2+(-6)*x**1+(-7)*x**0, x))",
+        "expected": "-6*(x-(-1))**2",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_no_extreme",
+      "explanation_detail": {
+        "approach": "極値は「$f'(x)=0$」ではなく「$f'(x)$ の符号の変化」で判定する。",
+        "steps": [
+          "$f'(x)=-6(x+1)^2$。",
+          "$x<-1$ でも $x>-1$ でも $f'(x)$ は負。",
+          "符号が変わらないので $x=-1$ は極値をとる点ではない。$f(x)$ は単調に減少し、極値なし。"
+        ],
+        "alternatives": [
+          "$f(x)=-2(x+1)^3-5$ と変形でき、$y=-2x^3$ のグラフを平行移動したものなので極値をもたないと確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)=0$ の解を求めた後、必ず増減表で符号を確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=-6x^2-12x-6=-6(x+1)^2$。$f'(x)=0$ より $x=-1$。よって $f(x)$ は $x=-1$ で極値 $-5$ をとる。",
+        "error_step": "「$f'(x)=0$ より $x=-1$ で極値」と結論した部分",
+        "error_type": "concept",
+        "why_tempting": "$f'(a)=0$ を極値の条件として覚えてしまい、符号の変化を確かめる手順（増減表）を省いている。2乗の形が出たのに符号を考えていない。",
+        "correction": "$f'(x)=-6(x+1)^2$ は $x=-1$ の前後で符号が変わらない（常に $f'(x)\\leqq0$）。$f(x)$ は常に減少し、極値をもたない。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=-x^2+4x$ と $x$ 軸、および直線 $x=6$ で囲まれた2つの部分の面積の和 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\left|\\displaystyle\\int_0^{6}(-x^2+4x)\\,dx\\right|=\\left|-\\left(\\dfrac{6^3}{3}-\\dfrac{4\\cdot6^2}{2}\\right)\\right|=0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=\\dfrac{64}{3}$"
+      },
+      "explanation": "曲線は $x=4$ で $x$ 軸と交わり、上下が入れかわる。上下が入れかわる区間ごとに積分して和をとる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((-1)*x**2+(4)*x**1+(0)*x**0, [x, 0, 4]))+Abs(integrate((-1)*x**2+(4)*x**1+(0)*x**0, [x, 4, 6]))",
+        "expected": "Rational(64,3)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_area_sign",
+      "explanation_detail": {
+        "approach": "面積は「上下関係が変わらない区間ごと」に定積分する。まず $x$ 軸との交点を求めて区間を分ける。",
+        "steps": [
+          "$y=-x^2+4x=-x(x-4)$ は $x=0,\\ 4$ で $x$ 軸と交わる。",
+          "$0\\leqq x\\leqq4$ では $y\\geqq0$：面積 $\\dfrac{32}{3}$（$\\dfrac{1}{6}$ 公式）。",
+          "$4\\leqq x\\leqq6$ では $y\\leqq0$：面積 $\\dfrac{32}{3}$。",
+          "$S=\\dfrac{64}{3}$。"
+        ],
+        "alternatives": [
+          "グラフの略図をかき、$x$ 軸の上と下にある部分を色分けすると、まとめて積分すると打ち消し合うことが一目でわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間内で $x$ 軸と交わるかどうかを確認せずに積分する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\left|\\displaystyle\\int_0^{6}(-x^2+4x)\\,dx\\right|=\\left|-\\left(\\dfrac{6^3}{3}-\\dfrac{4\\cdot6^2}{2}\\right)\\right|=0$",
+        "error_step": "区間 $0\\leqq x\\leqq6$ をまとめて積分した部分",
+        "error_type": "sign",
+        "why_tempting": "定積分を「面積を求める計算」と思いこみ、$x$ 軸の下にある部分では定積分が負になることを忘れている。絶対値をつければ面積になると考えてしまう。",
+        "correction": "$0\\leqq x\\leqq4$ と $4\\leqq x\\leqq6$ で曲線と $x$ 軸の上下が入れかわるので分けて積分し、$S=\\dfrac{32}{3}+\\dfrac{32}{3}=\\dfrac{64}{3}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=x^2-x$ と $x$ 軸、および直線 $x=2$ で囲まれた2つの部分の面積の和 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\left|\\displaystyle\\int_0^{2}(x^2-x)\\,dx\\right|=\\left|\\left(\\dfrac{2^3}{3}-\\dfrac{1\\cdot2^2}{2}\\right)\\right|=\\dfrac{2}{3}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=1$"
+      },
+      "explanation": "曲線は $x=1$ で $x$ 軸と交わり、上下が入れかわる。上下が入れかわる区間ごとに積分して和をとる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((1)*x**2+(-1)*x**1+(0)*x**0, [x, 0, 1]))+Abs(integrate((1)*x**2+(-1)*x**1+(0)*x**0, [x, 1, 2]))",
+        "expected": "1"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_area_sign",
+      "explanation_detail": {
+        "approach": "面積は「上下関係が変わらない区間ごと」に定積分する。まず $x$ 軸との交点を求めて区間を分ける。",
+        "steps": [
+          "$y=x^2-x=x(x-1)$ は $x=0,\\ 1$ で $x$ 軸と交わる。",
+          "$0\\leqq x\\leqq1$ では $y\\leqq0$：面積 $\\dfrac{1}{6}$（$\\dfrac{1}{6}$ 公式）。",
+          "$1\\leqq x\\leqq2$ では $y\\geqq0$：面積 $\\dfrac{5}{6}$。",
+          "$S=1$。"
+        ],
+        "alternatives": [
+          "グラフの略図をかき、$x$ 軸の上と下にある部分を色分けすると、まとめて積分すると打ち消し合うことが一目でわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間内で $x$ 軸と交わるかどうかを確認せずに積分する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\left|\\displaystyle\\int_0^{2}(x^2-x)\\,dx\\right|=\\left|\\left(\\dfrac{2^3}{3}-\\dfrac{1\\cdot2^2}{2}\\right)\\right|=\\dfrac{2}{3}$",
+        "error_step": "区間 $0\\leqq x\\leqq2$ をまとめて積分した部分",
+        "error_type": "sign",
+        "why_tempting": "定積分を「面積を求める計算」と思いこみ、$x$ 軸の下にある部分では定積分が負になることを忘れている。絶対値をつければ面積になると考えてしまう。",
+        "correction": "$0\\leqq x\\leqq1$ と $1\\leqq x\\leqq2$ で曲線と $x$ 軸の上下が入れかわるので分けて積分し、$S=\\dfrac{1}{6}+\\dfrac{5}{6}=1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=x^2-4x$ と $x$ 軸、および直線 $x=6$ で囲まれた2つの部分の面積の和 $S$ を求めなさい。\n［ある生徒の解答］\n$S=\\left|\\displaystyle\\int_0^{6}(x^2-4x)\\,dx\\right|=\\left|\\left(\\dfrac{6^3}{3}-\\dfrac{4\\cdot6^2}{2}\\right)\\right|=0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$S=\\dfrac{64}{3}$"
+      },
+      "explanation": "曲線は $x=4$ で $x$ 軸と交わり、上下が入れかわる。上下が入れかわる区間ごとに積分して和をとる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Abs(integrate((1)*x**2+(-4)*x**1+(0)*x**0, [x, 0, 4]))+Abs(integrate((1)*x**2+(-4)*x**1+(0)*x**0, [x, 4, 6]))",
+        "expected": "Rational(64,3)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_area_sign",
+      "explanation_detail": {
+        "approach": "面積は「上下関係が変わらない区間ごと」に定積分する。まず $x$ 軸との交点を求めて区間を分ける。",
+        "steps": [
+          "$y=x^2-4x=x(x-4)$ は $x=0,\\ 4$ で $x$ 軸と交わる。",
+          "$0\\leqq x\\leqq4$ では $y\\leqq0$：面積 $\\dfrac{32}{3}$（$\\dfrac{1}{6}$ 公式）。",
+          "$4\\leqq x\\leqq6$ では $y\\geqq0$：面積 $\\dfrac{32}{3}$。",
+          "$S=\\dfrac{64}{3}$。"
+        ],
+        "alternatives": [
+          "グラフの略図をかき、$x$ 軸の上と下にある部分を色分けすると、まとめて積分すると打ち消し合うことが一目でわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間内で $x$ 軸と交わるかどうかを確認せずに積分する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\left|\\displaystyle\\int_0^{6}(x^2-4x)\\,dx\\right|=\\left|\\left(\\dfrac{6^3}{3}-\\dfrac{4\\cdot6^2}{2}\\right)\\right|=0$",
+        "error_step": "区間 $0\\leqq x\\leqq6$ をまとめて積分した部分",
+        "error_type": "sign",
+        "why_tempting": "定積分を「面積を求める計算」と思いこみ、$x$ 軸の下にある部分では定積分が負になることを忘れている。絶対値をつければ面積になると考えてしまう。",
+        "correction": "$0\\leqq x\\leqq4$ と $4\\leqq x\\leqq6$ で曲線と $x$ 軸の上下が入れかわるので分けて積分し、$S=\\dfrac{32}{3}+\\dfrac{32}{3}=\\dfrac{64}{3}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "不等式 $\\log_{\\frac{1}{2}}(x-4)>-1$ を解きなさい。\n［ある生徒の解答］\n$\\log_{\\frac{1}{2}}(x-4)>-1=\\log_{\\frac{1}{2}}2$ より $x-4>2$。よって $x>6$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$4<x<6$"
+      },
+      "explanation": "$y=\\log_{\\frac{1}{2}}x$ は減少関数なので、真数の大小は対数の大小と逆になる。真数条件 $x-4>0$ も同時に必要。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)**(-1)+(4)",
+        "expected": "6",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_log_base",
+      "explanation_detail": {
+        "approach": "対数をはずす前に「底と1の大小」と「真数条件」の2つを確認する。",
+        "steps": [
+          "真数条件：$x-4>0$。",
+          "$-1=\\log_{\\frac{1}{2}}2$ と右辺を同じ底の対数で表す。",
+          "底 $\\dfrac{1}{2}<1$ より、$x-4<2$。",
+          "真数条件と合わせて $4<x<6$。"
+        ],
+        "alternatives": [
+          "底の変換で $\\log_{\\frac{1}{2}}X=-\\log_2X$ と直し、$\\log_2(x-4)<1$ として底が1より大きい形で解いても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が1より小さいときに不等号の向きを変え忘れる。",
+          "真数条件を最後の範囲に反映させ忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\log_{\\frac{1}{2}}(x-4)>-1=\\log_{\\frac{1}{2}}2$ より $x-4>2$。よって $x>6$。",
+        "error_step": "対数をはずして真数の大小に直した部分",
+        "error_type": "condition",
+        "why_tempting": "底が1より大きい場合と同じ感覚で、対数をはずすときに不等号の向きをそのままにしている。底 $\\dfrac{1}{2}$ の関数 $y=\\log_{\\frac{1}{2}}x$ は減少関数である。",
+        "correction": "底 $\\dfrac{1}{2}<1$ なので不等号の向きが変わり $x-4<2$。真数条件 $x-4>0$ と合わせて $4<x<6$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "不等式 $\\log_{\\frac{1}{2}}(x)<-1$ を解きなさい。\n［ある生徒の解答］\n$\\log_{\\frac{1}{2}}(x)<-1=\\log_{\\frac{1}{2}}2$ より $x<2$。真数条件と合わせて $0<x<2$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$x>2$"
+      },
+      "explanation": "$y=\\log_{\\frac{1}{2}}x$ は減少関数なので、真数の大小は対数の大小と逆になる。このとき真数条件は自動的に満たされる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)**(-1)+(0)",
+        "expected": "2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_log_base",
+      "explanation_detail": {
+        "approach": "対数をはずす前に「底と1の大小」と「真数条件」の2つを確認する。",
+        "steps": [
+          "真数条件：$x>0$。",
+          "$-1=\\log_{\\frac{1}{2}}2$ と右辺を同じ底の対数で表す。",
+          "底 $\\dfrac{1}{2}<1$ より、$x>2$。",
+          "真数条件と合わせて $x>2$。"
+        ],
+        "alternatives": [
+          "底の変換で $\\log_{\\frac{1}{2}}X=-\\log_2X$ と直し、$\\log_2(x)>1$ として底が1より大きい形で解いても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "底が1より小さいときに不等号の向きを変え忘れる。",
+          "真数条件を最後の範囲に反映させ忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\log_{\\frac{1}{2}}(x)<-1=\\log_{\\frac{1}{2}}2$ より $x<2$。真数条件と合わせて $0<x<2$。",
+        "error_step": "対数をはずして真数の大小に直した部分",
+        "error_type": "condition",
+        "why_tempting": "底が1より大きい場合と同じ感覚で、対数をはずすときに不等号の向きをそのままにしている。底 $\\dfrac{1}{2}$ の関数 $y=\\log_{\\frac{1}{2}}x$ は減少関数である。",
+        "correction": "底 $\\dfrac{1}{2}<1$ なので不等号の向きが変わり $x>2$。これは真数条件も満たすので $x>2$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\sqrt{3}\\sin\\theta+\\cos\\theta\\ \\left(0\\leqq\\theta\\leqq\\dfrac{\\pi}{2}\\right)$ の最大値と最小値を求めなさい。\n［ある生徒の解答］\n$y=2\\sin\\left(\\theta+\\frac{\\pi}{6}\\right)$ で、$-1\\leqq\\sin\\left(\\theta+\\frac{\\pi}{6}\\right)\\leqq1$ だから、最大値 $2$、最小値 $-2$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最大値 $2$（$\\theta=\\frac{\\pi}{3}$）、最小値 $1$（$\\theta=0$）"
+      },
+      "explanation": "合成した角 $\\theta+\\alpha$ の範囲を単位円上で確認すると、$\\sin$ の値は一部の範囲しかとらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[Max((sqrt(3))*sin(0)+(1)*cos(0), (sqrt(3))*sin(pi/3)+(1)*cos(pi/3), (sqrt(3))*sin(pi/2)+(1)*cos(pi/2)), Min((sqrt(3))*sin(0)+(1)*cos(0), (sqrt(3))*sin(pi/3)+(1)*cos(pi/3), (sqrt(3))*sin(pi/2)+(1)*cos(pi/2))]",
+        "expected": "[2, 1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_trig_range",
+      "explanation_detail": {
+        "approach": "角に範囲の制限があるときは、合成した角の範囲を単位円上に図示してから最大・最小を読む。",
+        "steps": [
+          "合成：$y=2\\sin\\left(\\theta+\\frac{\\pi}{6}\\right)$。",
+          "角の範囲：$\\frac{\\pi}{6}\\leqq\\theta+\\frac{\\pi}{6}\\leqq\\frac{2 \\pi}{3}$。",
+          "候補：$\\theta=0$ で $1$、$\\theta=\\frac{\\pi}{3}$ で $2$、$\\theta=\\frac{\\pi}{2}$ で $\\sqrt{3}$",
+          "最大値 $2$、最小値 $1$。"
+        ],
+        "alternatives": [
+          "区間の両端と、区間内で $\\sin$ が $\\pm1$ になる角での値をすべて計算して比べると確実に求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\theta$ の範囲を $\\theta+\\alpha$ の範囲に直し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=2\\sin\\left(\\theta+\\frac{\\pi}{6}\\right)$ で、$-1\\leqq\\sin\\left(\\theta+\\frac{\\pi}{6}\\right)\\leqq1$ だから、最大値 $2$、最小値 $-2$。",
+        "error_step": "$\\sin$ の値の範囲を $-1$ から $1$ とした部分",
+        "error_type": "condition",
+        "why_tempting": "合成までは正しくできたので安心し、$\\theta$ に範囲の制限があることを見落としている。$\\sin$ がどんな角でも $-1$ から $1$ のすべての値をとれると思いこんでいる。",
+        "correction": "$\\theta+\\frac{\\pi}{6}$ は $\\frac{\\pi}{6}$ から $\\frac{2 \\pi}{3}$ まで動く。この範囲で最大値 $2$、最小値 $1$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "CT-MATH2BC-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "CT-MATH2BC-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=-\\sin\\theta+\\sqrt{3}\\cos\\theta\\ \\left(-\\dfrac{\\pi}{2}\\leqq\\theta\\leqq\\dfrac{\\pi}{2}\\right)$ の最大値と最小値を求めなさい。\n［ある生徒の解答］\n$y=2\\sin\\left(\\theta+\\frac{2 \\pi}{3}\\right)$ で、$-1\\leqq\\sin\\left(\\theta+\\frac{2 \\pi}{3}\\right)\\leqq1$ だから、最大値 $2$、最小値 $-2$。\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "最大値 $2$（$\\theta=- \\frac{\\pi}{6}$）、最小値 $-1$（$\\theta=\\frac{\\pi}{2}$）"
+      },
+      "explanation": "合成した角 $\\theta+\\alpha$ の範囲を単位円上で確認すると、$\\sin$ の値は一部の範囲しかとらない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[Max((-1)*sin(-pi/2)+(sqrt(3))*cos(-pi/2), (-1)*sin(-pi/6)+(sqrt(3))*cos(-pi/6), (-1)*sin(pi/2)+(sqrt(3))*cos(pi/2)), Min((-1)*sin(-pi/2)+(sqrt(3))*cos(-pi/2), (-1)*sin(-pi/6)+(sqrt(3))*cos(-pi/6), (-1)*sin(pi/2)+(sqrt(3))*cos(pi/2))]",
+        "expected": "[2, -1]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "CT-MATH2BC-U01-d_trig_range",
+      "explanation_detail": {
+        "approach": "角に範囲の制限があるときは、合成した角の範囲を単位円上に図示してから最大・最小を読む。",
+        "steps": [
+          "合成：$y=2\\sin\\left(\\theta+\\frac{2 \\pi}{3}\\right)$。",
+          "角の範囲：$\\frac{\\pi}{6}\\leqq\\theta+\\frac{2 \\pi}{3}\\leqq\\frac{7 \\pi}{6}$。",
+          "候補：$\\theta=- \\frac{\\pi}{2}$ で $1$、$\\theta=- \\frac{\\pi}{6}$ で $2$、$\\theta=\\frac{\\pi}{2}$ で $-1$",
+          "最大値 $2$、最小値 $-1$。"
+        ],
+        "alternatives": [
+          "区間の両端と、区間内で $\\sin$ が $\\pm1$ になる角での値をすべて計算して比べると確実に求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\theta$ の範囲を $\\theta+\\alpha$ の範囲に直し忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y=2\\sin\\left(\\theta+\\frac{2 \\pi}{3}\\right)$ で、$-1\\leqq\\sin\\left(\\theta+\\frac{2 \\pi}{3}\\right)\\leqq1$ だから、最大値 $2$、最小値 $-2$。",
+        "error_step": "$\\sin$ の値の範囲を $-1$ から $1$ とした部分",
+        "error_type": "condition",
+        "why_tempting": "合成までは正しくできたので安心し、$\\theta$ に範囲の制限があることを見落としている。$\\sin$ がどんな角でも $-1$ から $1$ のすべての値をとれると思いこんでいる。",
+        "correction": "$\\theta+\\frac{2 \\pi}{3}$ は $\\frac{\\pi}{6}$ から $\\frac{7 \\pi}{6}$ まで動く。この範囲で最大値 $2$、最小値 $-1$。"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "7e3db834e50b8844d653baa334e0d7ba162859d9ec5199e4639a45a459f86c0a"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-28T11:34:39+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "cbfa6203385f25e91fcc27c2f3776a075bffdfe21102c4e086f7bd47f642d732"
+  }
+}

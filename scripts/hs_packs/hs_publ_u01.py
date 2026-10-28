@@ -182,14 +182,14 @@ FALSE_ST = [
 
 # 満足度表の場面
 SCENES = [
-    ("地域の公園の整備", "整備案"),
-    ("部活動の練習場所の割り振り", "割り振り案"),
-    ("町内会の予算の使い道", "予算案"),
-    ("文化祭のクラス企画", "企画案"),
-    ("路線バスのダイヤの見直し", "見直し案"),
-    ("図書館の開館時間の変更", "変更案"),
+    ("地域の公園の整備", "整備案", "住民"),
+    ("部活動の練習場所の割り振り", "割り振り案", "各部の代表者"),
+    ("町内会の予算の使い道", "予算案", "町内会の会員"),
+    ("文化祭のクラス企画", "企画案", "クラスの生徒"),
+    ("路線バスのダイヤの見直し", "見直し案", "利用者"),
+    ("図書館の開館時間の変更", "変更案", "利用者"),
 ]
-OPTS = ["案ア", "案イ", "案ウ"]
+OPTS = ["第1案", "第2案", "第3案"]
 PEOPLE3 = ["Ａさん", "Ｂさん", "Ｃさん"]
 PEOPLE4 = ["Ａさん", "Ｂさん", "Ｃさん", "Ｄさん"]
 
@@ -379,7 +379,7 @@ def defense(r):
 
 @gen("basic_check", 3, ["computation", "application"])
 def util_sum(r):
-    scene, _ = r.choice(SCENES)
+    scene, _, who = r.choice(SCENES)
     k = r.choice([3, 4])
     people = PEOPLE3 if k == 3 else PEOPLE4
     rows, sums, mins, iu, im = score_table(r, k)
@@ -387,7 +387,7 @@ def util_sum(r):
     what = r.choice(["sum", "min"])
     vals = "+".join(str(v) for v in rows[j])
     if what == "sum":
-        return num(f"次の表は、{scene}について、各案が住民にもたらす満足度を表した架空の資料である。功利主義の考え方で各案を比べるために、{OPTS[j]}の満足度の合計を求めなさい。",
+        return num(f"次の表は、{scene}について、各案が{who}にもたらす満足度を表した架空の資料である。功利主義の考え方で各案を比べるために、{OPTS[j]}の満足度の合計を求めなさい。",
                    str(sums[j]), f"${vals}={sums[j]}$。", d=1, k=DI, tbl=score_tbl(rows, people, scene),
                    ap="功利主義は関係者全員の幸福を同じ重みで足し合わせて比べる。表の行を一つ選び、すべての人の値を足す。",
                    steps=[f"{OPTS[j]}の行を読む：{', '.join(str(v) for v in rows[j])}。", f"${vals}={sums[j]}$。"],
@@ -395,7 +395,7 @@ def util_sum(r):
                    pc=[("表から正しく値を読み取っている", 1), ("合計を正しく計算している", 1)],
                    pit=["一人分を読み落とす。", "列（人）の合計と行（案）の合計を取り違える。"],
                    chk=(vals, str(sums[j])))
-    return num(f"次の表は、{scene}について、各案が住民にもたらす満足度を表した架空の資料である。最も不利な立場の人に注目する考え方で比べるために、{OPTS[j]}で満足度が最も低い人の値を答えなさい。",
+    return num(f"次の表は、{scene}について、各案が{who}にもたらす満足度を表した架空の資料である。最も不利な立場の人に注目する考え方で比べるために、{OPTS[j]}で満足度が最も低い人の値を答えなさい。",
                str(mins[j]), f"{OPTS[j]}の値 {', '.join(str(v) for v in rows[j])} のうち最小は {mins[j]}。", d=1, k=DI, tbl=score_tbl(rows, people, scene),
                ap="ロールズの考え方に通じるマキシミン原理では、各案の「最も低い値」に注目する。行の中の最小値を探す。",
                steps=[f"{OPTS[j]}の行を読む：{', '.join(str(v) for v in rows[j])}。", f"最小値は {mins[j]}。"],
@@ -462,7 +462,7 @@ def theory_of(r):
 
 @gen("standard_practice", 4, ["computation", "application"])
 def choose_option(r):
-    scene, label = r.choice(SCENES)
+    scene, label, who = r.choice(SCENES)
     k = r.choice([3, 4])
     people = PEOPLE3 if k == 3 else PEOPLE4
     rows, sums, mins, iu, im = score_table(r, k, need_split=True)
@@ -481,7 +481,7 @@ def choose_option(r):
                          "基準の取り違え" if j == iu else "計算・比較の誤り") for j in range(3) if j != im}
         expl = "最小値は " + "、".join(f"{o} {m}" for o, m in zip(OPTS, mins)) + f"。最大は{right}。"
         steps = [f"{o}の最小値：{m}" for o, m in zip(OPTS, mins)] + [f"最小値が最大の{right}を選ぶ。"]
-    return mc(f"{scene}について、{label}を一つ選ぶことになった。次の表は、各案が住民にもたらす満足度を示した架空の資料である。{cname}に従うと、どの案が選ばれるか。",
+    return mc(f"{scene}について、{label}を一つ選ぶことになった。次の表は、各案が{who}にもたらす満足度を示した架空の資料である。{cname}に従うと、どの案が選ばれるか。",
               [right] + [o for o in OPTS if o != right], expl, d=3, k=DI, why=why, tbl=score_tbl(rows, people, scene),
               ap="基準を「合計」「最小値」のどちらで比べるかを先に確定させ、すべての案に同じ操作をしてから比べる。",
               steps=steps,
@@ -710,7 +710,7 @@ def err_who(r):
 
 @gen("error_correction", 2, ["common_error", "computation"])
 def err_calc(r):
-    scene, label = r.choice(SCENES)
+    scene, label, who = r.choice(SCENES)
     while True:
         rows, sums, mins, iu, im = score_table(r, 3)
         # 「6以上の人数」で数えた多数決の結論が、合計の結論と異なる表を選ぶ
@@ -721,7 +721,7 @@ def err_calc(r):
     wrong = f"満足度が6以上の人が最も多いのは{OPTS[iv]}（{cnt[iv]}人）なので、功利主義の考え方では{OPTS[iv]}が選ばれる。"
     fix = "各案の合計は " + "、".join(f"{o} {s}" for o, s in zip(OPTS, sums)) + f"なので、功利主義の考え方では合計が最大の{OPTS[iu]}が選ばれる。"
     vals = "+".join(str(v) for v in rows[iu])
-    return err_item(f"{scene}について三つの{label}がある。住民Ａ・Ｂ・Ｃの満足度（架空の資料、0〜10）は、" + "、".join(f"{o}が（{', '.join(str(v) for v in row)}）" for o, row in zip(OPTS, rows)) + "である。功利主義の考え方に従うと、どの案が選ばれるか。",
+    return err_item(f"{scene}について三つの{label}がある。{who}Ａ・Ｂ・Ｃの満足度（架空の資料、0〜10）は、" + "、".join(f"{o}が（{', '.join(str(v) for v in row)}）" for o, row in zip(OPTS, rows)) + "である。功利主義の考え方に従うと、どの案が選ばれるか。",
                     wrong, "比べる量の選び方", "concept",
                     "「最大多数の最大幸福」という言葉から、満足している人の数（多数決）で比べればよいと思いこみやすい。",
                     fix, "功利主義は、関係者全員の満足度（幸福）を同じ重みで足し合わせた総量で比べる。人数で比べるのは多数決である。",
