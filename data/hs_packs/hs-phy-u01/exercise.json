@@ -1,0 +1,5560 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-PHY-U01-EX",
+  "title": "力学（運動量・円運動・単振動・万有引力）　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-PHY-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-PHY-U01-PACK",
+  "pair_set_id": "HS-PHY-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-PHYB-U01",
+        "point": "運動方程式",
+        "title": "運動の表し方と運動の法則"
+      },
+      {
+        "unit_id": "HS-PHYB-U02",
+        "point": "エネルギー保存",
+        "title": "仕事とエネルギー"
+      },
+      {
+        "unit_id": "HS-MATH2-U04",
+        "point": "三角関数",
+        "title": "三角関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-PHY-U04",
+        "point": "荷電粒子の運動",
+        "title": "電磁気"
+      }
+    ],
+    "readiness_check": [
+      "運動方程式 $ma=F$ を、物体ごとに力を図示して立てられる（物理基礎）。",
+      "運動エネルギー・位置エネルギーと力学的エネルギー保存則を使える（物理基礎）。",
+      "弧度法と三角関数 $\\sin\\omega t$、$\\cos\\omega t$ のグラフをかける（数学Ⅱ）。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-PHY-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 0.20 kg のボールが、速さ 10 m/s で壁に垂直に当たり、逆向きに速さ 10 m/s ではね返った。ボールが壁から受けた力積の大きさは何 N·s か。",
+      "answer": {
+        "value": "4.0",
+        "unit": "N·s"
+      },
+      "explanation": "はね返った向きを正とすると、運動量の変化は $mw-m(-v)=m(v+w)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1/5)*((10)-(-(10)))",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_basic",
+      "explanation_detail": {
+        "approach": "向きが逆になる運動では、正の向きを決めて速度を符号つきで表す。運動量の変化は「後−前」。",
+        "steps": [
+          "はね返った向きを正とすると、衝突前の速度 $-10\\,\\mathrm{m/s}$、衝突後 $+10\\,\\mathrm{m/s}$。",
+          "力積＝$m(v'-v)=0.20\\times\\{10-(-10)\\}=4.0\\,\\mathrm{N\\cdot s}$。"
+        ],
+        "alternatives": [
+          "運動量のベクトルを矢印でかくと、変化 $\\Delta\\vec{p}$ は2本の矢印の長さの和になることが図からわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度を符号つきで扱っている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "速さの差 $m(v-w)$ を計算してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 60 kg の物体が、一直線上を速さ 3.0 m/s で運動している。この物体の運動量の大きさは何 kg·m/s か。",
+      "answer": {
+        "value": "180",
+        "unit": "kg·m/s"
+      },
+      "explanation": "$p=mv$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(60)*(3)",
+        "expected": "180"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_basic",
+      "explanation_detail": {
+        "approach": "運動量は「質量×速度」。運動の勢いを表す量で、向きは速度と同じ。",
+        "steps": [
+          "$p=mv=60\\times3.0$。",
+          "$p=180\\,\\mathrm{kg\\cdot m/s}$。"
+        ],
+        "alternatives": [
+          "単位 $\\mathrm{kg\\cdot m/s}$ が「質量×速度」の組み立てになっているかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$p=mv$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "運動エネルギー $\\dfrac12mv^2$ と混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 0.15 kg のボールが、速さ 10 m/s で壁に垂直に当たり、逆向きに速さ 10 m/s ではね返った。ボールが壁から受けた力積の大きさは何 N·s か。",
+      "answer": {
+        "value": "3.0",
+        "unit": "N·s"
+      },
+      "explanation": "はね返った向きを正とすると、運動量の変化は $mw-m(-v)=m(v+w)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(3/20)*((10)-(-(10)))",
+        "expected": "3"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_basic",
+      "explanation_detail": {
+        "approach": "向きが逆になる運動では、正の向きを決めて速度を符号つきで表す。運動量の変化は「後−前」。",
+        "steps": [
+          "はね返った向きを正とすると、衝突前の速度 $-10\\,\\mathrm{m/s}$、衝突後 $+10\\,\\mathrm{m/s}$。",
+          "力積＝$m(v'-v)=0.15\\times\\{10-(-10)\\}=3.0\\,\\mathrm{N\\cdot s}$。"
+        ],
+        "alternatives": [
+          "運動量のベクトルを矢印でかくと、変化 $\\Delta\\vec{p}$ は2本の矢印の長さの和になることが図からわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度を符号つきで扱っている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "速さの差 $m(v-w)$ を計算してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 0.40 kg のボールが速さ 20 m/s で壁に垂直に当たり、逆向きに速さ 10 m/s ではね返った。ボールと壁が接触していた時間を 0.010 s とするとき、ボールが壁から受けた平均の力の大きさは何 N か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.2\\times10^{3}$",
+        "unit": "N"
+      },
+      "explanation": "平均の力 $\\overline{F}=\\dfrac{\\Delta p}{\\Delta t}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(2/5)*((20)+(10))/(1/100)",
+        "expected": "1200",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_basic",
+      "explanation_detail": {
+        "approach": "まず運動量の変化（＝力積）を符号に注意して求め、接触時間で割る。",
+        "steps": [
+          "運動量の変化の大きさ $0.40\\times(20+10)=12\\,\\mathrm{kg\\cdot m/s}$。",
+          "$\\overline{F}=\\dfrac{12}{0.010}=1.2\\times10^{3}\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "接触時間が短いほど平均の力が大きくなる（反比例）ことから、答えの大きさの見当をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量の変化を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "平均の力が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "はね返りの速さを引いてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上を速さ 4.0 m/s で進む小球が、鉛直な壁に垂直に衝突してはね返った。壁と小球の間の反発係数を 0.25 とするとき、はね返った直後の小球の速さは何 m/s か。",
+      "answer": {
+        "value": "1.0",
+        "unit": "m/s"
+      },
+      "explanation": "壁との衝突では $v'=ev$（向きは逆）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(1/4)*(4)",
+        "expected": "1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-collision_basic",
+      "explanation_detail": {
+        "approach": "壁は動かないので、反発係数は「はね返る速さ÷当たる速さ」。",
+        "steps": [
+          "$v'=ev=0.25\\times4.0$。",
+          "$v'=1.0\\,\\mathrm{m/s}$（向きは衝突前と逆）。"
+        ],
+        "alternatives": [
+          "反発係数の定義式で壁の速度を 0 とおくと $e=-\\dfrac{v'}{v}$。符号から向きが逆とわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$v'=ev$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{v}{e}$ と割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上を速さ 4.0 m/s で進む小球が、鉛直な壁に垂直に衝突してはね返った。壁と小球の間の反発係数を 0.60 とするとき、はね返った直後の小球の速さは何 m/s か。",
+      "answer": {
+        "value": "2.4",
+        "unit": "m/s"
+      },
+      "explanation": "壁との衝突では $v'=ev$（向きは逆）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(3/5)*(4)",
+        "expected": "12/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-collision_basic",
+      "explanation_detail": {
+        "approach": "壁は動かないので、反発係数は「はね返る速さ÷当たる速さ」。",
+        "steps": [
+          "$v'=ev=0.60\\times4.0$。",
+          "$v'=2.4\\,\\mathrm{m/s}$（向きは衝突前と逆）。"
+        ],
+        "alternatives": [
+          "反発係数の定義式で壁の速度を 0 とおくと $e=-\\dfrac{v'}{v}$。符号から向きが逆とわかる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$v'=ev$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{v}{e}$ と割ってしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上で、速さ 5.0 m/s で進む質量 1.0 kg の台車 A が、静止している質量 3.0 kg の台車 B に衝突し、両者は一体となって進んだ。一体となった後の速さは何 m/s か。",
+      "answer": {
+        "value": "1.25",
+        "unit": "m/s"
+      },
+      "explanation": "運動量保存：$m_{\\mathrm{A}}v=(m_{\\mathrm{A}}+m_{\\mathrm{B}})V$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(1*5,4)",
+        "expected": "5/4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-collision_basic",
+      "explanation_detail": {
+        "approach": "衝突では内力だけがはたらくので運動量が保存される。一体となる＝衝突後の速度が等しい（$e=0$）。",
+        "steps": [
+          "$1\\times5=(1+3)V$。",
+          "$V=\\dfrac{5}{4}=1.25\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "運動エネルギーの保存を使うと誤った値になることを確かめ、完全非弾性衝突ではエネルギーが失われることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量保存の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "運動エネルギー保存の式を立てる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "回転台が1分間に 90 回の割合で一様に回転している。回転の周期は何 s か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.67",
+        "unit": "s"
+      },
+      "explanation": "$T=\\dfrac{60}{n}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "Rational(60,90)",
+        "expected": "2/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-circular_basic",
+      "explanation_detail": {
+        "approach": "1分（60 s）に $n$ 回転するので、1回転にかかる時間は $\\dfrac{60}{n}$ 秒。",
+        "steps": [
+          "$T=\\dfrac{60\\,\\mathrm{s}}{90}$。",
+          "$T=0.67\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "回転数 $\\dfrac{90}{60}$ 回/s の逆数として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "周期の意味を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "回転数そのものを周期と答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "一定の速さで円運動する物体が、周期 5.0 s で回転している。角速度は何 rad/s か。円周率を $\\pi=3.14$ として計算してもよい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "1.3",
+        "unit": "rad/s"
+      },
+      "explanation": "$\\omega=\\dfrac{2\\pi}{T}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*pi/(5)",
+        "expected": "2*pi/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-circular_basic",
+      "explanation_detail": {
+        "approach": "1周（$2\\pi$ rad）を周期 $T$ で回るので、1秒あたりの回転角は $\\dfrac{2\\pi}{T}$。",
+        "steps": [
+          "$\\omega=\\dfrac{2\\pi}{5.0}$。",
+          "$\\omega\\fallingdotseq1.3\\,\\mathrm{rad/s}$。"
+        ],
+        "alternatives": [
+          "回転数 $n=\\dfrac{1}{T}$ を求めて $\\omega=2\\pi n$ としても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\omega=\\dfrac{2\\pi}{T}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$2\\pi$ を忘れて $\\dfrac{1}{T}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "半径 3.0 m の円周上を、角速度 2.0 rad/s で等速円運動する物体の速さは何 m/s か。",
+      "answer": {
+        "value": "6.0",
+        "unit": "m/s"
+      },
+      "explanation": "$v=r\\omega$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(3)*(2)",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-circular_basic",
+      "explanation_detail": {
+        "approach": "1秒に回る角が $\\omega$ rad なので、進む弧の長さは $r\\omega$。",
+        "steps": [
+          "$v=r\\omega=3.0\\times2.0$。",
+          "$v=6.0\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "周期 $T=\\dfrac{2\\pi}{\\omega}$ を求め、$v=\\dfrac{2\\pi r}{T}$ としても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$v=r\\omega$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{\\omega}{r}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "半径 1.2 m の円周上を、速さ 10 m/s で等速円運動する物体の加速度の大きさは何 m/s² か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "83",
+        "unit": "m/s²"
+      },
+      "explanation": "$a=\\dfrac{v^2}{r}$（中心向き）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(10)**2/(6/5)",
+        "expected": "250/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-circular_basic",
+      "explanation_detail": {
+        "approach": "速さが一定でも向きが変わるので加速度がある。大きさは $\\dfrac{v^2}{r}$、向きは中心向き。",
+        "steps": [
+          "$a=\\dfrac{v^2}{r}=\\dfrac{10^2}{1.2}$。",
+          "$a=83\\,\\mathrm{m/s^2}$。"
+        ],
+        "alternatives": [
+          "$\\omega=\\dfrac{v}{r}$ を求めて $a=r\\omega^2$ としても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$a=\\dfrac{v^2}{r}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "速さが一定なので加速度は 0 と答える。",
+          "$\\dfrac{v}{r}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "時刻 $t=0$ に原点を正の向きに通過し、振幅 0.050 m、周期 $T$ で単振動する物体がある（$x=A\\sin\\dfrac{2\\pi}{T}t$）。時刻 $t=\\dfrac{T}{8}$ における物体の位置 $x$ は何 m か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.035",
+        "unit": "m"
+      },
+      "explanation": "$x=A\\sin\\dfrac{2\\pi}{T}t$ に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1/20)*sin(2*pi/8)",
+        "expected": "sqrt(2)/40",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-shm_basic",
+      "explanation_detail": {
+        "approach": "位相 $\\dfrac{2\\pi}{T}t$ を先に計算し、三角関数の値を使う。",
+        "steps": [
+          "位相は $\\dfrac{2\\pi}{T}\\times\\dfrac{T}{8}=\\dfrac{2\\pi}{8}$。",
+          "$x=0.050\\times\\sin\\dfrac{2\\pi}{8}\\fallingdotseq0.035\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "等速円運動の図で、半径 $A$ の円周上の点が角 $\\dfrac{2\\pi}{8}$ だけ回ったときの高さを読み取ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "位相を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "位相を度数法と弧度法で混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "振幅 0.20 m、角振動数 2.0 rad/s で単振動する物体の速さの最大値は何 m/s か。",
+      "answer": {
+        "value": "0.40",
+        "unit": "m/s"
+      },
+      "explanation": "$v_{\\max}=A\\omega$（振動の中心で最大）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1/5)*(2)",
+        "expected": "2/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-shm_basic",
+      "explanation_detail": {
+        "approach": "単振動は半径 $A$、角速度 $\\omega$ の等速円運動の正射影。円運動の速さ $A\\omega$ が速さの最大値。",
+        "steps": [
+          "$v_{\\max}=A\\omega=0.20\\times2.0$。",
+          "$v_{\\max}=0.40\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "$v=A\\omega\\cos\\omega t$ の最大値として求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$A\\omega$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$A\\omega^2$（加速度の最大値）と混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "単振動する物体の周期が 0.25 s である。振動数は何 Hz か。",
+      "answer": {
+        "value": "4.0",
+        "unit": "Hz"
+      },
+      "explanation": "$f=\\dfrac{1}{T}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1/(1/4)",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-shm_basic",
+      "explanation_detail": {
+        "approach": "振動数は1秒あたりの振動の回数。周期の逆数。",
+        "steps": [
+          "$f=\\dfrac{1}{0.25}$。",
+          "$f=4.0\\,\\mathrm{Hz}$。"
+        ],
+        "alternatives": [
+          "1秒間に周期 0.25 s の振動が何回入るかを割り算で考える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f=\\dfrac{1}{T}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "角振動数 $\\dfrac{2\\pi}{T}$ と混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "2つの物体の間にはたらく万有引力について、一方の質量を 3 倍、中心間の距離を 3 倍にすると、万有引力の大きさはもとの何倍になるか。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\dfrac{4}{9}$ 倍"
+        },
+        {
+          "label": "イ",
+          "text": "$27$ 倍"
+        },
+        {
+          "label": "ウ",
+          "text": "$\\dfrac{1}{3}$ 倍"
+        },
+        {
+          "label": "エ",
+          "text": "$1$ 倍"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "$F=G\\dfrac{Mm}{r^2}$ より $\\dfrac{3\\times1}{3^2}=\\dfrac{1}{3}$ 倍。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(3*1,3**2)",
+        "expected": "1/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-gravity_basic",
+      "explanation_detail": {
+        "approach": "万有引力は質量の積に比例し、距離の2乗に反比例する。変化する量ごとに倍率をかけ合わせる。",
+        "steps": [
+          "質量の積は $3\\times1=3$ 倍。",
+          "距離の2乗は $3^2=9$ 倍なので、引力は $\\dfrac{1}{9}$ 倍。",
+          "合わせて $\\dfrac{1}{3}$ 倍。"
+        ],
+        "alternatives": [
+          "もとの量を $M=m=r=1$ とおき、変化後の値を $F=G\\dfrac{Mm}{r^2}$ に代入して比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "逆2乗則を用いている",
+            "points": 1
+          },
+          {
+            "point": "正しい倍率を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "引力は2つの質量の「積」に比例する。和にしている。",
+          "misconception": "質量の積と和の混同"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "距離が大きくなると引力は小さくなる。距離の2乗をかけてしまっている。",
+          "misconception": "距離と引力の関係の逆転"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "万有引力は距離の2乗に反比例する。距離の1乗で割っている。",
+          "misconception": "逆2乗則の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "2つの物体の間にはたらく万有引力について、中心間の距離を 3 倍にすると、万有引力の大きさはもとの何倍になるか。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$\\dfrac{1}{3}$ 倍"
+        },
+        {
+          "label": "イ",
+          "text": "$\\dfrac{1}{9}$ 倍"
+        },
+        {
+          "label": "ウ",
+          "text": "$9$ 倍"
+        },
+        {
+          "label": "エ",
+          "text": "$\\dfrac{2}{9}$ 倍"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "$F=G\\dfrac{Mm}{r^2}$ より $\\dfrac{1\\times1}{3^2}=\\dfrac{1}{9}$ 倍。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1*1,3**2)",
+        "expected": "1/9",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-gravity_basic",
+      "explanation_detail": {
+        "approach": "万有引力は質量の積に比例し、距離の2乗に反比例する。変化する量ごとに倍率をかけ合わせる。",
+        "steps": [
+          "質量の積は $1\\times1=1$ 倍。",
+          "距離の2乗は $3^2=9$ 倍なので、引力は $\\dfrac{1}{9}$ 倍。",
+          "合わせて $\\dfrac{1}{9}$ 倍。"
+        ],
+        "alternatives": [
+          "もとの量を $M=m=r=1$ とおき、変化後の値を $F=G\\dfrac{Mm}{r^2}$ に代入して比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "逆2乗則を用いている",
+            "points": 1
+          },
+          {
+            "point": "正しい倍率を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "万有引力は距離の2乗に反比例する。距離の1乗で割っている。",
+          "misconception": "逆2乗則の誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "距離が大きくなると引力は小さくなる。距離の2乗をかけてしまっている。",
+          "misconception": "距離と引力の関係の逆転"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "引力は2つの質量の「積」に比例する。和にしている。",
+          "misconception": "質量の積と和の混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "太陽のまわりを円軌道で公転する惑星 X の軌道半径は、地球の軌道半径の $4$ 倍である。X の公転周期は地球の公転周期の何倍か。",
+      "answer": {
+        "value": "8.0",
+        "unit": "倍"
+      },
+      "explanation": "ケプラーの第3法則 $\\dfrac{T^2}{r^3}=$ 一定。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "((4))**Rational(3,2)",
+        "expected": "8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-gravity_basic",
+      "explanation_detail": {
+        "approach": "周期の2乗が軌道半径の3乗に比例する。$T\\propto r^{\\frac{3}{2}}$。",
+        "steps": [
+          "$\\left(\\dfrac{T_{\\mathrm{X}}}{T}\\right)^2=\\left(4\\right)^3$。",
+          "$\\dfrac{T_{\\mathrm{X}}}{T}=\\left(4\\right)^{\\frac{3}{2}}=8.0$ 倍。"
+        ],
+        "alternatives": [
+          "円軌道の速さ $v=\\sqrt{\\dfrac{GM}{r}}$ と $T=\\dfrac{2\\pi r}{v}$ から $T\\propto r^{\\frac32}$ を導いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "第3法則を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "周期が軌道半径に比例すると考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "ケプラーの法則について、正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "惑星は太陽から遠いところほど速く動く"
+        },
+        {
+          "label": "イ",
+          "text": "惑星は太陽を中心とする円軌道を、一定の速さで公転する"
+        },
+        {
+          "label": "ウ",
+          "text": "公転周期は、惑星の質量が大きいほど長い"
+        },
+        {
+          "label": "エ",
+          "text": "惑星の公転周期の2乗は、楕円軌道の半長軸の3乗に比例する"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "正しいのは「惑星の公転周期の2乗は、楕円軌道の半長軸の3乗に比例する」。第1法則より軌道は太陽を焦点の1つとする楕円で、第2法則より太陽に近いほど速い。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "保存される量（運動量・エネルギー）と、運動方程式で決まる量（加速度・周期）を区別して判断する。",
+        "steps": [
+          "各選択肢を、運動量保存則・運動方程式・周期の式などの法則に照らして確認する。",
+          "法則と矛盾しないのは「惑星の公転周期の2乗は、楕円軌道の半長軸の3乗に比例する」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定して、極端な場合（質量 0、$e=0$、半径が非常に大きい など）を考えて矛盾を見つける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "面積速度一定より、太陽に近いところで速く、遠いところで遅い。",
+          "misconception": "面積速度一定の誤解"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "第1法則より軌道は太陽を焦点の1つとする楕円で、第2法則より太陽に近いほど速い。",
+          "misconception": "円軌道・等速の思い込み"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "第3法則の比例定数は太陽の質量で決まり、惑星の質量によらない。",
+          "misconception": "質量依存の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "等速円運動している糸の付いた小球で、糸が突然切れた。その直後の小球の運動として正しいものを選びなさい（なめらかな水平面上）。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "切れた瞬間の速度の向き（円の接線方向）に等速直線運動をする"
+        },
+        {
+          "label": "イ",
+          "text": "円の中心から外向き（半径方向）に飛んでいく"
+        },
+        {
+          "label": "ウ",
+          "text": "しばらく円運動を続けてから直進する"
+        },
+        {
+          "label": "エ",
+          "text": "円の中心に向かって進む"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "正しいのは「切れた瞬間の速度の向き（円の接線方向）に等速直線運動をする」。糸が切れると水平方向の力は 0 になり、慣性の法則により切れた瞬間の速度（接線方向）を保つ。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "保存される量（運動量・エネルギー）と、運動方程式で決まる量（加速度・周期）を区別して判断する。",
+        "steps": [
+          "各選択肢を、運動量保存則・運動方程式・周期の式などの法則に照らして確認する。",
+          "法則と矛盾しないのは「切れた瞬間の速度の向き（円の接線方向）に等速直線運動をする」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定して、極端な場合（質量 0、$e=0$、半径が非常に大きい など）を考えて矛盾を見つける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "糸が切れると水平方向の力は 0 になり、慣性の法則により切れた瞬間の速度（接線方向）を保つ。",
+          "misconception": "遠心力で外に飛ぶという誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "円運動を続けるには向心力が必要。力がなくなった瞬間から直進する。",
+          "misconception": "円運動の慣性という誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "中心向きの力（張力）がなくなるので、中心に向かう理由はない。",
+          "misconception": "力と運動の向きの混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "単振り子の周期について、正しいものを選びなさい。ただし振れ角は小さいものとする。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "糸の長さを4倍にすると、周期は4倍になる"
+        },
+        {
+          "label": "イ",
+          "text": "おもりの質量を4倍にすると、周期は2倍になる"
+        },
+        {
+          "label": "ウ",
+          "text": "重力加速度が小さい月面では、周期は短くなる"
+        },
+        {
+          "label": "エ",
+          "text": "糸の長さを4倍にすると、周期は2倍になる"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "正しいのは「糸の長さを4倍にすると、周期は2倍になる」。$T=2\\pi\\sqrt{\\dfrac{L}{g}}$ はおもりの質量によらない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-concept_mc",
+      "explanation_detail": {
+        "approach": "保存される量（運動量・エネルギー）と、運動方程式で決まる量（加速度・周期）を区別して判断する。",
+        "steps": [
+          "各選択肢を、運動量保存則・運動方程式・周期の式などの法則に照らして確認する。",
+          "法則と矛盾しないのは「糸の長さを4倍にすると、周期は2倍になる」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいと仮定して、極端な場合（質量 0、$e=0$、半径が非常に大きい など）を考えて矛盾を見つける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠となる法則を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "周期は長さの平方根に比例する。$\\sqrt4=2$ 倍。",
+          "misconception": "比例関係の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$T=2\\pi\\sqrt{\\dfrac{L}{g}}$ はおもりの質量によらない。",
+          "misconception": "質量依存の誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "$g$ が小さいほど周期は長くなる（分母に $g$）。",
+          "misconception": "g との関係の逆転"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "図のように、なめらかな水平面上で右向きに速さ 10 m/s で進む質量 1.0 kg の球 A が、静止している質量 3.0 kg の球 B に正面衝突した。この衝突は弾性衝突（反発係数 1）であった。衝突後の B の速度は何 m/s か。右向きを正とし、向きは符号で表しなさい。",
+      "figure": {
+        "alt": "右向きに進む球 A（1.0 kg）と球 B（3.0 kg）の衝突前の図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\" width=\"300\" height=\"100\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"10\" y1=\"70\" x2=\"290\" y2=\"70\" stroke=\"#000\"/><circle cx=\"80\" cy=\"55\" r=\"15\" fill=\"#cfdcec\" stroke=\"#000\"/><circle cx=\"210\" cy=\"55\" r=\"15\" fill=\"#f3d9c6\" stroke=\"#000\"/><text x=\"80\" y=\"59\" text-anchor=\"middle\">A</text><text x=\"210\" y=\"59\" text-anchor=\"middle\">B</text><text x=\"80\" y=\"90\" text-anchor=\"middle\">1.0 kg</text><text x=\"210\" y=\"90\" text-anchor=\"middle\">3.0 kg</text><line x1=\"70\" y1=\"25\" x2=\"120\" y2=\"25\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"95.0\" y=\"19.0\" text-anchor=\"middle\">10 m/s</text><text x=\"210\" y=\"28\" text-anchor=\"middle\">静止</text></svg>"
+      },
+      "answer": {
+        "value": "5.0",
+        "unit": "m/s"
+      },
+      "explanation": "運動量保存則と反発係数の式を連立する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((10)-((1))*-1*(10-(0)))/(1+3)",
+        "expected": "5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-collision_1d",
+      "explanation_detail": {
+        "approach": "未知数は衝突後の2つの速度。運動量保存則と反発係数の式の2本を、右向き正で立てて連立する。",
+        "steps": [
+          "運動量保存：$1\\times10+3\\times(0)=1v_{\\mathrm{A}}'+3v_{\\mathrm{B}}'$。",
+          "反発係数：$v_{\\mathrm{B}}'-v_{\\mathrm{A}}'=1.0\\times\\{10-(0)\\}$。",
+          "連立して $v_{\\mathrm{A}}'=-5\\,\\mathrm{m/s}$、$v_{\\mathrm{B}}'=5\\,\\mathrm{m/s}$。求める速度は $5.0\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "求めた2つの速度を運動量保存の式に代入し、衝突前の運動量の和に一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量保存の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "反発係数の式を符号に注意して立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "反発係数の式で速度の差の順序を逆にする。",
+          "B の速度の向き（符号）を考えずに代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "図のように、なめらかな水平面上で右向きに速さ 5.0 m/s で進む質量 2.0 kg の球 A が、静止している質量 1.0 kg の球 B に正面衝突した。A と B の間の反発係数は 0.20 である。衝突後の B の速度は何 m/s か。右向きを正とし、向きは符号で表しなさい。",
+      "figure": {
+        "alt": "右向きに進む球 A（2.0 kg）と球 B（1.0 kg）の衝突前の図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\" width=\"300\" height=\"100\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"10\" y1=\"70\" x2=\"290\" y2=\"70\" stroke=\"#000\"/><circle cx=\"80\" cy=\"55\" r=\"15\" fill=\"#cfdcec\" stroke=\"#000\"/><circle cx=\"210\" cy=\"55\" r=\"15\" fill=\"#f3d9c6\" stroke=\"#000\"/><text x=\"80\" y=\"59\" text-anchor=\"middle\">A</text><text x=\"210\" y=\"59\" text-anchor=\"middle\">B</text><text x=\"80\" y=\"90\" text-anchor=\"middle\">2.0 kg</text><text x=\"210\" y=\"90\" text-anchor=\"middle\">1.0 kg</text><line x1=\"70\" y1=\"25\" x2=\"120\" y2=\"25\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"95.0\" y=\"19.0\" text-anchor=\"middle\">5.0 m/s</text><text x=\"210\" y=\"28\" text-anchor=\"middle\">静止</text></svg>"
+      },
+      "answer": {
+        "value": "4.0",
+        "unit": "m/s"
+      },
+      "explanation": "運動量保存則と反発係数の式を連立する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((10)-((1/5))*-2*(5-(0)))/(2+1)",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-collision_1d",
+      "explanation_detail": {
+        "approach": "未知数は衝突後の2つの速度。運動量保存則と反発係数の式の2本を、右向き正で立てて連立する。",
+        "steps": [
+          "運動量保存：$2\\times5+1\\times(0)=2v_{\\mathrm{A}}'+1v_{\\mathrm{B}}'$。",
+          "反発係数：$v_{\\mathrm{B}}'-v_{\\mathrm{A}}'=0.20\\times\\{5-(0)\\}$。",
+          "連立して $v_{\\mathrm{A}}'=3\\,\\mathrm{m/s}$、$v_{\\mathrm{B}}'=4\\,\\mathrm{m/s}$。求める速度は $4.0\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "求めた2つの速度を運動量保存の式に代入し、衝突前の運動量の和に一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量保存の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "反発係数の式を符号に注意して立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "反発係数の式で速度の差の順序を逆にする。",
+          "B の速度の向き（符号）を考えずに代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "図のように、なめらかな水平面上で右向きに速さ 4.0 m/s で進む質量 5.0 kg の球 A が、静止している質量 3.0 kg の球 B に正面衝突した。A と B の間の反発係数は 0.80 である。衝突後の A の速度は何 m/s か。右向きを正とし、向きは符号で表しなさい。",
+      "figure": {
+        "alt": "右向きに進む球 A（5.0 kg）と球 B（3.0 kg）の衝突前の図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\" width=\"300\" height=\"100\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"10\" y1=\"70\" x2=\"290\" y2=\"70\" stroke=\"#000\"/><circle cx=\"80\" cy=\"55\" r=\"15\" fill=\"#cfdcec\" stroke=\"#000\"/><circle cx=\"210\" cy=\"55\" r=\"15\" fill=\"#f3d9c6\" stroke=\"#000\"/><text x=\"80\" y=\"59\" text-anchor=\"middle\">A</text><text x=\"210\" y=\"59\" text-anchor=\"middle\">B</text><text x=\"80\" y=\"90\" text-anchor=\"middle\">5.0 kg</text><text x=\"210\" y=\"90\" text-anchor=\"middle\">3.0 kg</text><line x1=\"70\" y1=\"25\" x2=\"120\" y2=\"25\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"95.0\" y=\"19.0\" text-anchor=\"middle\">4.0 m/s</text><text x=\"210\" y=\"28\" text-anchor=\"middle\">静止</text></svg>"
+      },
+      "answer": {
+        "value": "1.3",
+        "unit": "m/s"
+      },
+      "explanation": "運動量保存則と反発係数の式を連立する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((20)-((4/5))*3*(4-(0)))/(5+3)",
+        "expected": "13/10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-collision_1d",
+      "explanation_detail": {
+        "approach": "未知数は衝突後の2つの速度。運動量保存則と反発係数の式の2本を、右向き正で立てて連立する。",
+        "steps": [
+          "運動量保存：$5\\times4+3\\times(0)=5v_{\\mathrm{A}}'+3v_{\\mathrm{B}}'$。",
+          "反発係数：$v_{\\mathrm{B}}'-v_{\\mathrm{A}}'=0.80\\times\\{4-(0)\\}$。",
+          "連立して $v_{\\mathrm{A}}'=1.3\\,\\mathrm{m/s}$、$v_{\\mathrm{B}}'=4.5\\,\\mathrm{m/s}$。求める速度は $1.3\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "求めた2つの速度を運動量保存の式に代入し、衝突前の運動量の和に一致するかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量保存の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "反発係数の式を符号に注意して立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "反発係数の式で速度の差の順序を逆にする。",
+          "B の速度の向き（符号）を考えずに代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "図のように、なめらかな水平面上で右向きに速さ 5.0 m/s で進む質量 1.0 kg の球 A が、静止している質量 4.0 kg の球 B に正面衝突した。衝突後、A と B は一体となって進んだ。衝突によって失われた運動エネルギーは何 J か。",
+      "figure": {
+        "alt": "右向きに進む球 A（1.0 kg）と球 B（4.0 kg）の衝突前の図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\" width=\"300\" height=\"100\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"10\" y1=\"70\" x2=\"290\" y2=\"70\" stroke=\"#000\"/><circle cx=\"80\" cy=\"55\" r=\"15\" fill=\"#cfdcec\" stroke=\"#000\"/><circle cx=\"210\" cy=\"55\" r=\"15\" fill=\"#f3d9c6\" stroke=\"#000\"/><text x=\"80\" y=\"59\" text-anchor=\"middle\">A</text><text x=\"210\" y=\"59\" text-anchor=\"middle\">B</text><text x=\"80\" y=\"90\" text-anchor=\"middle\">1.0 kg</text><text x=\"210\" y=\"90\" text-anchor=\"middle\">4.0 kg</text><line x1=\"70\" y1=\"25\" x2=\"120\" y2=\"25\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"95.0\" y=\"19.0\" text-anchor=\"middle\">5.0 m/s</text><text x=\"210\" y=\"28\" text-anchor=\"middle\">静止</text></svg>"
+      },
+      "answer": {
+        "value": "10",
+        "unit": "J"
+      },
+      "explanation": "運動量保存で一体後の速さを求め、運動エネルギーの差をとる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1*5**2,2)-(1+4)*Rational(5,5)**2/2",
+        "expected": "10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-collision_1d",
+      "explanation_detail": {
+        "approach": "衝突の前後で保存されるのは運動量。運動エネルギーは完全非弾性衝突で最も多く失われる。",
+        "steps": [
+          "運動量保存：$1\\times5=(1+4)V$ より $V=1.00\\,\\mathrm{m/s}$。",
+          "衝突前 $\\dfrac12\\times1\\times5^2=12.5\\,\\mathrm{J}$、衝突後 $\\dfrac12\\times5\\times V^2=2.50\\,\\mathrm{J}$。",
+          "失われた運動エネルギー $=10\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "公式 $\\Delta K=\\dfrac12\\cdot\\dfrac{m_1m_2}{m_1+m_2}v^2=\\dfrac12\\times\\dfrac{4}{5}\\times5^2$ で直接求めても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量保存で一体後の速さを求めている",
+            "points": 2
+          },
+          {
+            "point": "運動エネルギーの差をとっている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "運動エネルギーが保存されるとして速さを求める。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上を速さ 2.0 m/s で進む質量 40 kg の台車に、真上から質量 10 kg の砂袋を静かに落としたところ、砂袋は台車の上で止まり、台車と一体となって進んだ。一体となった後の速さは何 m/s か。",
+      "answer": {
+        "value": "1.6",
+        "unit": "m/s"
+      },
+      "explanation": "水平方向の運動量が保存される。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(40*2,40+10)",
+        "expected": "8/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-split_recoil",
+      "explanation_detail": {
+        "approach": "砂袋は鉛直に落ちてくるので水平方向の運動量は 0。鉛直方向には床からの力（外力）があるが、水平方向には外力がない。",
+        "steps": [
+          "水平方向の運動量保存：$40\\times2+10\\times0=(40+10)V$。",
+          "$V=1.6\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "鉛直方向は床から抗力（外力）を受けるので保存しないが、水平方向だけを考えればよいことを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水平方向の運動量保存を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "砂袋の落下の速さも運動量に加えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上に静止していた質量 6.0 kg の物体が、内部の火薬の爆発によって2つに分裂した。質量 4.0 kg の部分が東向きに速さ 2.0 m/s で動き出したとき、残りの部分の速さは何 m/s か。",
+      "answer": {
+        "value": "4.0",
+        "unit": "m/s"
+      },
+      "explanation": "分裂前の運動量 0 が保存される。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(4*2,6-4)",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-split_recoil",
+      "explanation_detail": {
+        "approach": "分裂は内力による。初めの運動量は 0 なので、分裂後の2つの運動量は大きさが等しく逆向き。",
+        "steps": [
+          "東向きを正とし、残りの部分の速度を $V$ とすると $0=4\\times2+2V$。",
+          "$V=-4.0\\,\\mathrm{m/s}$、速さは $4.0\\,\\mathrm{m/s}$（西向き）。"
+        ],
+        "alternatives": [
+          "速さは質量に反比例する（$m_1v_1=m_2v_2$）ことから比で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量保存（和が 0）の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "残りの質量を正しく用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "残りの質量を全体の質量 6 kg とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 4.95 kg の木片を軽い糸で天井からつるし、静止させた。質量 50 g の弾丸を水平に速さ 500 m/s で木片に打ち込んだところ、弾丸は木片の中で止まり、両者は一体となって振れた。一体となった木片が最初の位置から上がる最大の高さは何 m か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "1.3",
+        "unit": "m"
+      },
+      "explanation": "衝突は運動量保存、そのあとの振れは力学的エネルギー保存。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((1/20)*500/(5))**2/(2*9.8)",
+        "expected": "125/98",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-split_recoil",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "2段階に分ける。打ち込む瞬間（衝突）は運動量保存、そのあと上がっていく間は力学的エネルギー保存。",
+        "steps": [
+          "運動量保存：$0.05\\times500=(0.05+4.95)V$ より $V=5.00\\,\\mathrm{m/s}$。",
+          "力学的エネルギー保存：$\\dfrac12(m+M)V^2=(m+M)gh$ より $h=\\dfrac{V^2}{2g}$。",
+          "$h\\fallingdotseq1.3\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "弾丸の運動エネルギーから一気に $h$ を求めると誤りになることを確かめ、衝突で失われるエネルギーを見積もる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "衝突で運動量保存を用いている",
+            "points": 2
+          },
+          {
+            "point": "振れでエネルギー保存を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "衝突の前後で力学的エネルギーが保存されるとして計算する。",
+          "質量の g を kg に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平な床に、小球が床と $45^\\circ$ の角をなす向きに速さ 2.0 m/s で当たり、はね返った。床と小球の間の反発係数を 0.40 とするとき、はね返った直後の小球の速さは何 m/s か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "1.5",
+        "unit": "m/s"
+      },
+      "explanation": "床に平行な成分は不変、垂直な成分は $e$ 倍。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(((2)*cos(deg(45)))**2+((2/5)*(2)*sin(deg(45)))**2)",
+        "expected": "sqrt(58)/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_2d",
+      "related_units": [
+        "HS-MATHC-U01"
+      ],
+      "explanation_detail": {
+        "approach": "なめらかな床は水平方向に力を及ぼさないので、水平成分は変わらない。床に垂直な成分だけが $e$ 倍で逆向きになる。",
+        "steps": [
+          "衝突前：水平成分 $2.0\\cos45^\\circ$、鉛直成分 $2.0\\sin45^\\circ$。",
+          "衝突後：水平成分 $2.0\\times\\dfrac{\\sqrt{2}}{2}$、鉛直成分 $0.40\\times2.0\\times\\dfrac{\\sqrt{2}}{2}$（上向き）。",
+          "速さ $=\\sqrt{(\\text{水平})^2+(\\text{鉛直})^2}\\fallingdotseq1.5\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "$e=1$ なら速さが変わらないこと、$e=0$ なら水平成分だけが残ることを確かめ、答えがその間にあることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度を床に平行・垂直に分解している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さ全体に $e$ をかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平な床に、小球が床と $60^\\circ$ の角をなす向きに速さ 6.0 m/s で当たり、はね返った。床と小球の間の反発係数を 0.80 とするとき、はね返った直後の小球の速さは何 m/s か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "5.1",
+        "unit": "m/s"
+      },
+      "explanation": "床に平行な成分は不変、垂直な成分は $e$ 倍。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(((6)*cos(deg(60)))**2+((4/5)*(6)*sin(deg(60)))**2)",
+        "expected": "3*sqrt(73)/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_2d",
+      "related_units": [
+        "HS-MATHC-U01"
+      ],
+      "explanation_detail": {
+        "approach": "なめらかな床は水平方向に力を及ぼさないので、水平成分は変わらない。床に垂直な成分だけが $e$ 倍で逆向きになる。",
+        "steps": [
+          "衝突前：水平成分 $6.0\\cos60^\\circ$、鉛直成分 $6.0\\sin60^\\circ$。",
+          "衝突後：水平成分 $6.0\\times\\dfrac{1}{2}$、鉛直成分 $0.80\\times6.0\\times\\dfrac{\\sqrt{3}}{2}$（上向き）。",
+          "速さ $=\\sqrt{(\\text{水平})^2+(\\text{鉛直})^2}\\fallingdotseq5.1\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "$e=1$ なら速さが変わらないこと、$e=0$ なら水平成分だけが残ることを確かめ、答えがその間にあることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度を床に平行・垂直に分解している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さ全体に $e$ をかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平な床に、小球が床と $45^\\circ$ の角をなす向きに速さ 6.0 m/s で当たり、はね返った。床と小球の間の反発係数を 0.50 とするとき、はね返った直後の小球の速さは何 m/s か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "4.7",
+        "unit": "m/s"
+      },
+      "explanation": "床に平行な成分は不変、垂直な成分は $e$ 倍。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(((6)*cos(deg(45)))**2+((1/2)*(6)*sin(deg(45)))**2)",
+        "expected": "3*sqrt(10)/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U01-momentum_2d",
+      "related_units": [
+        "HS-MATHC-U01"
+      ],
+      "explanation_detail": {
+        "approach": "なめらかな床は水平方向に力を及ぼさないので、水平成分は変わらない。床に垂直な成分だけが $e$ 倍で逆向きになる。",
+        "steps": [
+          "衝突前：水平成分 $6.0\\cos45^\\circ$、鉛直成分 $6.0\\sin45^\\circ$。",
+          "衝突後：水平成分 $6.0\\times\\dfrac{\\sqrt{2}}{2}$、鉛直成分 $0.50\\times6.0\\times\\dfrac{\\sqrt{2}}{2}$（上向き）。",
+          "速さ $=\\sqrt{(\\text{水平})^2+(\\text{鉛直})^2}\\fallingdotseq4.7\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "$e=1$ なら速さが変わらないこと、$e=0$ なら水平成分だけが残ることを確かめ、答えがその間にあることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度を床に平行・垂直に分解している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さ全体に $e$ をかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水平な回転円板の中心から 20 cm の位置に小物体を置き、円板の回転の角速度を少しずつ大きくした。小物体と円板の間の静止摩擦係数を 0.40 とするとき、小物体が滑り出さない最大の角速度は何 rad/s か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "4.4",
+        "unit": "rad/s"
+      },
+      "explanation": "$mr\\omega^2\\leqq\\mu mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt((2/5)*9.8/(1/5))",
+        "expected": "7*sqrt(10)/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-circular_apps",
+      "explanation_detail": {
+        "approach": "円板とともに回る小物体の向心力は静止摩擦力。角速度が大きいほど必要な向心力が大きくなる。",
+        "steps": [
+          "中心向きの運動方程式：$mr\\omega^2=f\\leqq\\mu mg$。",
+          "$\\omega^2\\leqq\\dfrac{\\mu g}{r}$。",
+          "$\\omega_{\\max}=\\sqrt{\\dfrac{0.40\\times9.8}{0.2}}\\fallingdotseq4.4\\,\\mathrm{rad/s}$。"
+        ],
+        "alternatives": [
+          "中心から遠いほど滑りやすい（$\\omega_{\\max}$ が小さい）ことを式から読み取り、経験と照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "向心力を静止摩擦力としている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "半径を cm のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水平な回転円板の中心から 50 cm の位置に小物体を置き、円板の回転の角速度を少しずつ大きくした。小物体と円板の間の静止摩擦係数を 0.50 とするとき、小物体が滑り出さない最大の角速度は何 rad/s か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "3.1",
+        "unit": "rad/s"
+      },
+      "explanation": "$mr\\omega^2\\leqq\\mu mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt((1/2)*9.8/(1/2))",
+        "expected": "7*sqrt(5)/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-circular_apps",
+      "explanation_detail": {
+        "approach": "円板とともに回る小物体の向心力は静止摩擦力。角速度が大きいほど必要な向心力が大きくなる。",
+        "steps": [
+          "中心向きの運動方程式：$mr\\omega^2=f\\leqq\\mu mg$。",
+          "$\\omega^2\\leqq\\dfrac{\\mu g}{r}$。",
+          "$\\omega_{\\max}=\\sqrt{\\dfrac{0.50\\times9.8}{0.5}}\\fallingdotseq3.1\\,\\mathrm{rad/s}$。"
+        ],
+        "alternatives": [
+          "中心から遠いほど滑りやすい（$\\omega_{\\max}$ が小さい）ことを式から読み取り、経験と照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "向心力を静止摩擦力としている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "半径を cm のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水平な回転円板の中心から 40 cm の位置に小物体を置き、円板の回転の角速度を少しずつ大きくした。小物体と円板の間の静止摩擦係数を 0.20 とするとき、小物体が滑り出さない最大の角速度は何 rad/s か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "2.2",
+        "unit": "rad/s"
+      },
+      "explanation": "$mr\\omega^2\\leqq\\mu mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt((1/5)*9.8/(2/5))",
+        "expected": "7*sqrt(10)/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-circular_apps",
+      "explanation_detail": {
+        "approach": "円板とともに回る小物体の向心力は静止摩擦力。角速度が大きいほど必要な向心力が大きくなる。",
+        "steps": [
+          "中心向きの運動方程式：$mr\\omega^2=f\\leqq\\mu mg$。",
+          "$\\omega^2\\leqq\\dfrac{\\mu g}{r}$。",
+          "$\\omega_{\\max}=\\sqrt{\\dfrac{0.20\\times9.8}{0.4}}\\fallingdotseq2.2\\,\\mathrm{rad/s}$。"
+        ],
+        "alternatives": [
+          "中心から遠いほど滑りやすい（$\\omega_{\\max}$ が小さい）ことを式から読み取り、経験と照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "向心力を静止摩擦力としている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "半径を cm のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水平な道路上の半径 50 m のカーブを、自動車が等速円運動で曲がる。タイヤと路面の間の静止摩擦係数を 0.40 とするとき、横滑りせずに曲がれる最大の速さは何 m/s か。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。",
+      "answer": {
+        "value": "14",
+        "unit": "m/s"
+      },
+      "explanation": "向心力は静止摩擦力。$m\\dfrac{v^2}{r}\\leqq\\mu mg$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt((2/5)*9.8*(50))",
+        "expected": "14"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-circular_apps",
+      "explanation_detail": {
+        "approach": "水平なカーブで中心向きにはたらく実在の力は、路面からの静止摩擦力だけ。その最大値が $\\mu mg$。",
+        "steps": [
+          "中心向きの運動方程式：$m\\dfrac{v^2}{r}=f$（$f$ は静止摩擦力）。",
+          "$f\\leqq\\mu N=\\mu mg$ より $v^2\\leqq\\mu gr$。",
+          "$v_{\\max}=\\sqrt{0.40\\times9.8\\times50}\\fallingdotseq14\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "答えが質量によらないことを確かめる（大型車でも条件は同じ）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "向心力が静止摩擦力であるとしている",
+            "points": 2
+          },
+          {
+            "point": "最大摩擦力の条件で値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "動摩擦力を使う。",
+          "遠心力と摩擦力のつり合いと、運動方程式を混ぜて二重に数える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある軽いばねにおもりをつけたばね振り子の周期は 0.40 s であった。おもりの質量を4倍にとりかえると、周期は何 s になるか。",
+      "answer": {
+        "value": "0.80",
+        "unit": "s"
+      },
+      "explanation": "$T\\propto\\sqrt{m}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(2/5)*sqrt((4))",
+        "expected": "4/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-shm_apps",
+      "explanation_detail": {
+        "approach": "$T=2\\pi\\sqrt{\\dfrac{m}{k}}$ より、ばねが同じなら周期は質量の平方根に比例する。",
+        "steps": [
+          "$\\dfrac{T'}{T}=\\sqrt{\\dfrac{m'}{m}}=\\sqrt{4}=2.0$。",
+          "$T'=0.40\\times2.0=0.80\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "ばね定数を逆算してから新しい周期を計算しても同じになるが、比で考えると速い。"
+        ],
+        "partial_credit": [
+          {
+            "point": "周期が質量の平方根に比例することを用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "周期が質量に比例するとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "なめらかな水平面上で、ばね定数 160 N/m の軽いばねに質量 0.40 kg の物体をつけ、つり合いの位置から 5.0 cm 引いて静かにはなした。物体の速さの最大値は何 m/s か。",
+      "answer": {
+        "value": "1.0",
+        "unit": "m/s"
+      },
+      "explanation": "$v_{\\max}=A\\omega=A\\sqrt{\\dfrac{k}{m}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(1/20)*sqrt((160)/(2/5))",
+        "expected": "1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "multiple_solutions",
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-shm_apps",
+      "explanation_detail": {
+        "approach": "引いた距離が振幅。速さはつり合いの位置で最大となり $A\\omega$。",
+        "steps": [
+          "$\\omega=\\sqrt{\\dfrac{160}{0.40}}=20.0\\,\\mathrm{rad/s}$。",
+          "$v_{\\max}=A\\omega=0.05\\times20.0\\fallingdotseq1.0\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "弾性エネルギーの保存 $\\dfrac12kA^2=\\dfrac12mv_{\\max}{}^2$ から求めても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "振幅を正しく読み取っている",
+            "points": 1
+          },
+          {
+            "point": "$A\\omega$ またはエネルギー保存を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "振幅を cm のまま使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "振幅 13 cm、角振動数 2.0 rad/s で単振動している物体が、振動の中心から 12 cm の位置を通過するときの速さは何 m/s か。",
+      "answer": {
+        "value": "0.10",
+        "unit": "m/s"
+      },
+      "explanation": "$v=\\omega\\sqrt{A^2-x^2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2)*sqrt(Rational(13**2-12**2,10000))",
+        "expected": "1/10"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-shm_apps",
+      "explanation_detail": {
+        "approach": "単振動のエネルギー保存 $\\dfrac12mv^2+\\dfrac12Kx^2=\\dfrac12KA^2$ と $K=m\\omega^2$ から $v=\\omega\\sqrt{A^2-x^2}$。",
+        "steps": [
+          "$\\sqrt{A^2-x^2}=\\sqrt{13^2-12^2}=5\\,\\mathrm{cm}=0.05\\,\\mathrm{m}$。",
+          "$v=2.0\\times0.05=0.10\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "等速円運動の図で、半径 $A$ の円の上で $x$ 軸への射影が $x$ となる点を考え、速度の成分を三角比で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$v=\\omega\\sqrt{A^2-x^2}$ を用いている",
+            "points": 2
+          },
+          {
+            "point": "単位を m に直して値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "cm のまま答える。",
+          "$\\omega(A-x)$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "地表すれすれを等速円運動する人工衛星の速さ（第1宇宙速度）は何 m/s か。地球の半径を $6.4\\times10^6\\,\\mathrm{m}$、地表での重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし、地球の自転の影響は無視する。空気抵抗は無視する。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$7.9\\times10^{3}$",
+        "unit": "m/s"
+      },
+      "explanation": "$m\\dfrac{v^2}{R}=mg$ より $v=\\sqrt{gR}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(9.8*Rational(64,10)*10**6)",
+        "expected": "5600*sqrt(2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-orbit_apps",
+      "explanation_detail": {
+        "approach": "地表すれすれなら軌道半径は $R$、向心力は重力 $mg$。",
+        "steps": [
+          "$m\\dfrac{v^2}{R}=mg$。",
+          "$v=\\sqrt{gR}=\\sqrt{9.8\\times6.4\\times10^6}$。",
+          "$v\\fallingdotseq7.9\\times10^{3}\\,\\mathrm{m/s}$（約 7.9 km/s）。"
+        ],
+        "alternatives": [
+          "$GM=gR^2$ を使い、$v=\\sqrt{\\dfrac{GM}{R}}$ に代入しても同じ式になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "重力を向心力として運動方程式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "指数の計算で平方根をとり誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "図のように、地表からの高さが地球の半径の2倍の円軌道を回る人工衛星がある。この人工衛星の速さは何 m/s か。地球の半径を $6.4\\times10^6\\,\\mathrm{m}$、地表での重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし、地球の自転の影響は無視する。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "地球を中心とする半径 r の円軌道を回る人工衛星",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 290 220\" width=\"290\" height=\"220\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><circle cx=\"130\" cy=\"110\" r=\"38\" fill=\"#cfdcec\" stroke=\"#000\"/><text x=\"118\" y=\"114\">地球</text><circle cx=\"130\" cy=\"110\" r=\"90\" fill=\"none\" stroke=\"#000\" stroke-dasharray=\"5 3\"/><circle cx=\"220\" cy=\"110\" r=\"6\" fill=\"#f3d9c6\" stroke=\"#000\"/><text x=\"228\" y=\"128\">人工衛星</text><line x1=\"130\" y1=\"110\" x2=\"214\" y2=\"110\" stroke=\"#000\"/><text x=\"160\" y=\"104\">r</text><line x1=\"220\" y1=\"110\" x2=\"220\" y2=\"50\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"230.0\" y=\"80.0\" text-anchor=\"middle\">v</text></svg>"
+      },
+      "answer": {
+        "value": "$4.6\\times10^{3}$",
+        "unit": "m/s"
+      },
+      "explanation": "$v=\\sqrt{\\dfrac{GM}{r}}=\\sqrt{\\dfrac{gR}{3}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(9.8*(Rational(64,10)*10**6)**2/(3*Rational(64,10)*10**6))",
+        "expected": "5600*sqrt(6)/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-orbit_apps",
+      "explanation_detail": {
+        "approach": "軌道半径は地球の中心から測って $r=3R$。$G$ と $M$ がないので $GM=gR^2$ を使う。",
+        "steps": [
+          "$r=R+2R=3R$。",
+          "$m\\dfrac{v^2}{r}=G\\dfrac{Mm}{r^2}$ と $GM=gR^2$ より $v=\\sqrt{\\dfrac{gR^2}{3R}}=\\sqrt{\\dfrac{gR}{3}}$。",
+          "$v\\fallingdotseq4.6\\times10^{3}\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "第1宇宙速度 $\\sqrt{gR}\\fallingdotseq7.9\\times10^3\\,\\mathrm{m/s}$ の $\\dfrac{1}{\\sqrt{3}}$ 倍として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "軌道半径を地球の中心から測っている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "軌道半径を地表からの高さとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "地表から物体を打ち出し、地球の引力圏から無限遠まで飛び去らせるのに必要な最小の速さ（第2宇宙速度）は何 m/s か。地球の半径を $6.4\\times10^6\\,\\mathrm{m}$、地表での重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とし、地球の自転の影響は無視する。空気抵抗は無視する。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.1\\times10^{4}$",
+        "unit": "m/s"
+      },
+      "explanation": "$\\dfrac12mv^2-G\\dfrac{Mm}{R}\\geqq0$ より $v\\geqq\\sqrt{2gR}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "sqrt(2*9.8*Rational(64,10)*10**6)",
+        "expected": "11200",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U01-orbit_apps",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "無限遠（$U=0$）に達したとき運動エネルギーが 0 以上であればよい。力学的エネルギー保存を使う。",
+        "steps": [
+          "地表：$\\dfrac12mv^2-G\\dfrac{Mm}{R}$、無限遠：$\\dfrac12mv_\\infty{}^2+0\\geqq0$。",
+          "$v^2\\geqq\\dfrac{2GM}{R}=2gR$。",
+          "$v_{\\min}=\\sqrt{2\\times9.8\\times6.4\\times10^6}\\fallingdotseq1.1\\times10^{4}\\,\\mathrm{m/s}$（約 11 km/s）。"
+        ],
+        "alternatives": [
+          "第1宇宙速度 $\\sqrt{gR}$ の $\\sqrt2$ 倍になることから確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "万有引力の位置エネルギーで力学的エネルギー保存を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "位置エネルギーを $mgh$ で計算する（地表付近でしか使えない）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "なめらかな水平面上で、ばね定数 $k$ のばねにつけた質量 $m$ の物体が、$x=A\\sin\\omega t$ で表される単振動をしている。（1）加速度 $a$ を $x$ を用いて表しなさい（$v=A\\omega\\cos\\omega t$、$a=-A\\omega^2\\sin\\omega t$ を用いてよい）。（2）運動方程式と比べて $\\omega$ を $m,\\ k$ で表し、周期が振幅によらないことを説明しなさい。",
+      "answer": {
+        "value": "（1）$a=-A\\omega^2\\sin\\omega t=-\\omega^2x$。（2）物体にはたらく力はばねの弾性力 $-kx$ なので、運動方程式は $ma=-kx$。（1）と比べると $-m\\omega^2x=-kx$ がすべての $x$ で成り立つので $\\omega=\\sqrt{\\dfrac{k}{m}}$。周期 $T=\\dfrac{2\\pi}{\\omega}=2\\pi\\sqrt{\\dfrac{m}{k}}$ は $A$ を含まないので、振幅によらない。"
+      },
+      "explanation": "単振動の加速度は $-\\omega^2x$。運動方程式の係数と比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）$a=-\\omega^2x$ を示している",
+            "points": 2
+          },
+          {
+            "criterion": "（2）運動方程式 $ma=-kx$ を立て、係数比較で $\\omega$ を求めている",
+            "points": 4
+          },
+          {
+            "criterion": "周期が振幅を含まないことを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "2*pi/sqrt(Rational(9,4))",
+        "expected": "4*pi/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-derive_c",
+      "explanation_detail": {
+        "approach": "単振動の条件は「加速度が変位に比例し逆向き」。比例定数が $\\omega^2$。",
+        "steps": [
+          "$a=-\\omega^2x$。",
+          "$ma=-kx$ と比べて $m\\omega^2=k$。",
+          "$T=2\\pi\\sqrt{\\dfrac{m}{k}}$、$A$ を含まない。"
+        ],
+        "alternatives": [
+          "次元解析：$\\sqrt{\\dfrac{m}{k}}$ の単位は $\\sqrt{\\dfrac{\\mathrm{kg}}{\\mathrm{N/m}}}=\\mathrm{s}$ で、時間の次元をもつことで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）係数比較",
+            "points": 4
+          },
+          {
+            "point": "振幅",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\omega=\\sqrt{\\dfrac{m}{k}}$ と逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "半径 $r$ の円周上を速さ $v$ で等速円運動する物体の加速度について、短い時間 $\\Delta t$ の間の速度の変化を考えることにより、加速度の大きさが $\\dfrac{v^2}{r}$ で、向きが円の中心向きであることを説明しなさい。",
+      "answer": {
+        "value": "時間 $\\Delta t$ の間に物体は角 $\\Delta\\theta=\\dfrac{v\\Delta t}{r}$ だけ回り、速度ベクトルも同じ角だけ向きを変える。速度の変化 $\\Delta\\vec{v}$ は2辺が $v$、頂角 $\\Delta\\theta$ の二等辺三角形の底辺で、$\\Delta\\theta$ が小さいとき大きさ $v\\Delta\\theta$。よって $a=\\dfrac{v\\Delta\\theta}{\\Delta t}=\\dfrac{v^2}{r}$。$\\Delta t\\to0$ で底辺は速度に垂直になるので、加速度は円の中心を向く。"
+      },
+      "explanation": "速度ベクトルの始点をそろえ、変化分を二等辺三角形の底辺として扱う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "回転角と速度の向きの変化が等しいことを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "$|\\Delta\\vec{v}|\\fallingdotseq v\\Delta\\theta$ から $a=\\dfrac{v^2}{r}$ を導いている",
+            "points": 4
+          },
+          {
+            "criterion": "向きが中心向きであることを説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "expand(v*(v/r))",
+        "expected": "v**2/r",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-derive_c",
+      "explanation_detail": {
+        "approach": "速さが一定でも速度の向きが変わる。その変化の割合が加速度。",
+        "steps": [
+          "$\\Delta\\theta=\\omega\\Delta t$。",
+          "$|\\Delta\\vec{v}|\\fallingdotseq v\\Delta\\theta$。",
+          "$a=v\\omega=\\dfrac{v^2}{r}$、中心向き。"
+        ],
+        "alternatives": [
+          "位置を $(r\\cos\\omega t,\\ r\\sin\\omega t)$ と表し、2回微分して $\\vec{a}=-\\omega^2\\vec{r}$ を得る方法でも示せる（数学Ⅲ）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "角",
+            "points": 2
+          },
+          {
+            "point": "大きさ",
+            "points": 4
+          },
+          {
+            "point": "向き",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さが一定なので加速度は 0 と書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "なめらかな水平面上で、速さ $v$ で進む質量 $m_1$ の物体が静止している質量 $m_2$ の物体に衝突し、一体となった。（1）一体となった後の速さを求めなさい。（2）衝突で失われた運動エネルギー $\\Delta K$ を求め、$\\Delta K=\\dfrac{m_1m_2}{2(m_1+m_2)}v^2$ と表せることを示しなさい。（3）失われたエネルギーはどうなったと考えられるか述べなさい。",
+      "answer": {
+        "value": "（1）運動量保存 $m_1v=(m_1+m_2)V$ より $V=\\dfrac{m_1v}{m_1+m_2}$。（2）$\\Delta K=\\dfrac12m_1v^2-\\dfrac12(m_1+m_2)V^2=\\dfrac12m_1v^2-\\dfrac{m_1{}^2v^2}{2(m_1+m_2)}=\\dfrac{m_1v^2\\{(m_1+m_2)-m_1\\}}{2(m_1+m_2)}=\\dfrac{m_1m_2}{2(m_1+m_2)}v^2$。（3）物体の変形や、熱・音のエネルギーに変わった。"
+      },
+      "explanation": "運動量保存で $V$ を求め、運動エネルギーの差を通分して整理する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）運動量保存から $V$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）運動エネルギーの差を正しく整理している",
+            "points": 4
+          },
+          {
+            "criterion": "（3）熱・音・変形などへの変換を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "simplify(Rational(1,2)*a*v**2-Rational(1,2)*(a+b)*(a*v/(a+b))**2-a*b*v**2/(2*(a+b)))",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "computation",
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-derive_c",
+      "explanation_detail": {
+        "approach": "保存されるのは運動量だけ。運動エネルギーは差をとって減少量を計算する。",
+        "steps": [
+          "$V=\\dfrac{m_1v}{m_1+m_2}$。",
+          "$\\Delta K$ を通分。",
+          "熱・音・変形。"
+        ],
+        "alternatives": [
+          "重心とともに動く立場で見ると、衝突前の相対運動のエネルギー $\\dfrac12\\cdot\\dfrac{m_1m_2}{m_1+m_2}v^2$ がすべて失われる、と解釈できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 4
+          },
+          {
+            "point": "（3）",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "通分の際に $m_1{}^2$ の約分を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "質量 0.99 kg の木片が、軽い糸で天井からつるされて静止している。質量 10 g の弾丸を水平に速さ 100 m/s で打ち込んだところ、弾丸は木片の中で止まり、両者は一体となって振れ上がった。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）弾丸が木片の中で止まった直後の、一体となった木片の速さ $V$ を求めなさい。（2）木片が上がる最大の高さ $h$ を求めなさい。（3）打ち込む前の弾丸の運動エネルギーのうち、一体となった直後に運動エネルギーとして残っている割合を求め、この衝突で力学的エネルギー保存則を使ってはいけない理由を述べなさい。数値は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$V\\fallingdotseq1.0\\,\\mathrm{m/s}$　（2）$h\\fallingdotseq0.051\\,\\mathrm{m}$　（3）割合 $\\dfrac{m}{m+M}\\fallingdotseq0.010$（約 1.0 %）。弾丸が木片にめり込む間に、木片を変形させたり熱が発生したりして運動エネルギーの大部分が失われる（非弾性衝突）ので、衝突の前後では力学的エネルギーは保存されない。衝突の前後は運動量保存、衝突後に振れ上がる間は力学的エネルギー保存を用いる。"
+      },
+      "explanation": "衝突（運動量保存）と振れ上がり（力学的エネルギー保存）の2段階に分ける。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）運動量保存の式を立てて $V$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）振れ上がりで力学的エネルギー保存を用いて $h$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）割合を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）衝突で運動エネルギーが失われる理由と、法則の使い分けを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "((1/100)*100/((1/100)+(99/100)))**2/(2*9.8)",
+        "expected": "5/98",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-ballistic_c",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "打ち込む瞬間は非常に短い時間の衝突で、糸の張力・重力の力積は無視できる → 水平方向の運動量保存。",
+        "steps": [
+          "（1）$0.01\\times100=(0.01+0.99)V$、$V=1.00\\,\\mathrm{m/s}$。",
+          "（2）$\\dfrac12(m+M)V^2=(m+M)gh$ より $h=\\dfrac{V^2}{2g}\\fallingdotseq0.051\\,\\mathrm{m}$。",
+          "（3）$\\dfrac{K_1}{K_0}=\\dfrac{\\frac12(m+M)V^2}{\\frac12mv^2}=\\dfrac{m}{m+M}=0.010$。"
+        ],
+        "alternatives": [
+          "（3）は $V=\\dfrac{mv}{m+M}$ を代入して文字式のまま整理すると $\\dfrac{m}{m+M}$ となり、数値を使わずに求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）割合",
+            "points": 2
+          },
+          {
+            "point": "（3）理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "弾丸の運動エネルギーがすべて位置エネルギーになるとして $h$ を求める。",
+          "g を kg に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "質量 1.98 kg の木片が、軽い糸で天井からつるされて静止している。質量 20 g の弾丸を水平に速さ 250 m/s で打ち込んだところ、弾丸は木片の中で止まり、両者は一体となって振れ上がった。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）弾丸が木片の中で止まった直後の、一体となった木片の速さ $V$ を求めなさい。（2）木片が上がる最大の高さ $h$ を求めなさい。（3）打ち込む前の弾丸の運動エネルギーのうち、一体となった直後に運動エネルギーとして残っている割合を求め、この衝突で力学的エネルギー保存則を使ってはいけない理由を述べなさい。数値は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$V\\fallingdotseq2.5\\,\\mathrm{m/s}$　（2）$h\\fallingdotseq0.32\\,\\mathrm{m}$　（3）割合 $\\dfrac{m}{m+M}\\fallingdotseq0.010$（約 1.0 %）。弾丸が木片にめり込む間に、木片を変形させたり熱が発生したりして運動エネルギーの大部分が失われる（非弾性衝突）ので、衝突の前後では力学的エネルギーは保存されない。衝突の前後は運動量保存、衝突後に振れ上がる間は力学的エネルギー保存を用いる。"
+      },
+      "explanation": "衝突（運動量保存）と振れ上がり（力学的エネルギー保存）の2段階に分ける。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）運動量保存の式を立てて $V$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）振れ上がりで力学的エネルギー保存を用いて $h$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）割合を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）衝突で運動エネルギーが失われる理由と、法則の使い分けを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "((1/50)*250/((1/50)+(99/50)))**2/(2*9.8)",
+        "expected": "125/392",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-ballistic_c",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "打ち込む瞬間は非常に短い時間の衝突で、糸の張力・重力の力積は無視できる → 水平方向の運動量保存。",
+        "steps": [
+          "（1）$0.02\\times250=(0.02+1.98)V$、$V=2.50\\,\\mathrm{m/s}$。",
+          "（2）$\\dfrac12(m+M)V^2=(m+M)gh$ より $h=\\dfrac{V^2}{2g}\\fallingdotseq0.32\\,\\mathrm{m}$。",
+          "（3）$\\dfrac{K_1}{K_0}=\\dfrac{\\frac12(m+M)V^2}{\\frac12mv^2}=\\dfrac{m}{m+M}=0.010$。"
+        ],
+        "alternatives": [
+          "（3）は $V=\\dfrac{mv}{m+M}$ を代入して文字式のまま整理すると $\\dfrac{m}{m+M}$ となり、数値を使わずに求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）割合",
+            "points": 2
+          },
+          {
+            "point": "（3）理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "弾丸の運動エネルギーがすべて位置エネルギーになるとして $h$ を求める。",
+          "g を kg に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "質量 1.99 kg の木片が、軽い糸で天井からつるされて静止している。質量 10 g の弾丸を水平に速さ 100 m/s で打ち込んだところ、弾丸は木片の中で止まり、両者は一体となって振れ上がった。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）弾丸が木片の中で止まった直後の、一体となった木片の速さ $V$ を求めなさい。（2）木片が上がる最大の高さ $h$ を求めなさい。（3）打ち込む前の弾丸の運動エネルギーのうち、一体となった直後に運動エネルギーとして残っている割合を求め、この衝突で力学的エネルギー保存則を使ってはいけない理由を述べなさい。数値は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$V\\fallingdotseq0.50\\,\\mathrm{m/s}$　（2）$h\\fallingdotseq0.013\\,\\mathrm{m}$　（3）割合 $\\dfrac{m}{m+M}\\fallingdotseq0.0050$（約 0.50 %）。弾丸が木片にめり込む間に、木片を変形させたり熱が発生したりして運動エネルギーの大部分が失われる（非弾性衝突）ので、衝突の前後では力学的エネルギーは保存されない。衝突の前後は運動量保存、衝突後に振れ上がる間は力学的エネルギー保存を用いる。"
+      },
+      "explanation": "衝突（運動量保存）と振れ上がり（力学的エネルギー保存）の2段階に分ける。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）運動量保存の式を立てて $V$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）振れ上がりで力学的エネルギー保存を用いて $h$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）割合を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）衝突で運動エネルギーが失われる理由と、法則の使い分けを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "((1/100)*100/((1/100)+(199/100)))**2/(2*9.8)",
+        "expected": "5/392",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U01-ballistic_c",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "打ち込む瞬間は非常に短い時間の衝突で、糸の張力・重力の力積は無視できる → 水平方向の運動量保存。",
+        "steps": [
+          "（1）$0.01\\times100=(0.01+1.99)V$、$V=0.500\\,\\mathrm{m/s}$。",
+          "（2）$\\dfrac12(m+M)V^2=(m+M)gh$ より $h=\\dfrac{V^2}{2g}\\fallingdotseq0.013\\,\\mathrm{m}$。",
+          "（3）$\\dfrac{K_1}{K_0}=\\dfrac{\\frac12(m+M)V^2}{\\frac12mv^2}=\\dfrac{m}{m+M}=0.0050$。"
+        ],
+        "alternatives": [
+          "（3）は $V=\\dfrac{mv}{m+M}$ を代入して文字式のまま整理すると $\\dfrac{m}{m+M}$ となり、数値を使わずに求められる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）割合",
+            "points": 2
+          },
+          {
+            "point": "（3）理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "弾丸の運動エネルギーがすべて位置エネルギーになるとして $h$ を求める。",
+          "g を kg に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "図のように、なめらかな曲面の、床からの高さ 1.0 m の位置に質量 0.50 kg の小球を置いて静かにはなすと、小球は曲面をすべり降り、床の上で半径 0.40 m のなめらかな円形ループの内側に入った。ループの最高点を P とする。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）図のループで、小球が P に達したとすると、そこでの速さ $v$ の2乗はいくらになるか、力学的エネルギー保存則を用いて求めなさい。（2）P で小球がループから受ける垂直抗力 $N$ を、円運動の運動方程式から求めなさい。（3）小球が P を通過できるための高さ $h$ の条件を求め、この場合に通過できるかどうかを判断しなさい。",
+      "figure": {
+        "alt": "高さ h の曲面からすべり降りた小球が、半径 r の円形ループに入る。ループの最高点が P",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 200\" width=\"330\" height=\"200\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><path d=\"M 10 30 Q 60 190 150 190 L 230 190\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><circle cx=\"230\" cy=\"140\" r=\"50\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"38\" r=\"7\" fill=\"#cfdcec\" stroke=\"#000\"/><line x1=\"300\" y1=\"30\" x2=\"300\" y2=\"190\" stroke=\"#555\"/><text x=\"306\" y=\"110\">h</text><line x1=\"230\" y1=\"140\" x2=\"230\" y2=\"90\" stroke=\"#000\" stroke-dasharray=\"3 3\"/><text x=\"234\" y=\"120\">r</text><text x=\"226\" y=\"84\">P</text><line x1=\"0\" y1=\"190\" x2=\"320\" y2=\"190\" stroke=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "（1）$v^2=2g(h-2r)=3.92\\,\\mathrm{m^2/s^2}$　（2）$N=m\\dfrac{v^2}{r}-mg=0$。（3）$N\\geqq0$ より $h\\geqq\\dfrac52r=1.0\\,\\mathrm{m}$。$h=1.0\\,\\mathrm{m}$ はちょうどこの条件の境目（$N=0$）なので、小球は P をぎりぎり通過できる。"
+      },
+      "explanation": "エネルギー保存で速さ、円運動の運動方程式で垂直抗力、$N\\geqq0$ が離れない条件。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）力学的エネルギー保存で $v^2$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）P で中心向きの運動方程式 $m\\dfrac{v^2}{r}=N+mg$ を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）$N\\geqq0$ から $h\\geqq\\dfrac52r$ を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）与えられた $h$ で正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "2*9.8*((1)-2*(2/5))",
+        "expected": "98/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U01-loop_c",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "P の高さは $2r$。P では垂直抗力も重力も中心（下）向き。ループから離れない条件は $N\\geqq0$。",
+        "steps": [
+          "（1）$mgh=mg\\cdot2r+\\dfrac12mv^2$ より $v^2=2g(h-2r)$。",
+          "（2）$m\\dfrac{v^2}{r}=N+mg$ より $N=\\dfrac{2mg(h-2r)}{r}-mg=\\dfrac{mg(2h-5r)}{r}$。",
+          "（3）$N\\geqq0\\iff h\\geqq\\dfrac52r$。"
+        ],
+        "alternatives": [
+          "最高点で必要な最小の速さ $\\sqrt{gr}$（$N=0$）を先に求め、エネルギー保存からその速さを得るのに必要な高さを逆算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）条件",
+            "points": 2
+          },
+          {
+            "point": "（3）判断",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "P で速さが 0 より大きければ通過できる、と考える（$h>2r$ としてしまう）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "図のように、なめらかな曲面の、床からの高さ 4.0 m の位置に質量 0.50 kg の小球を置いて静かにはなすと、小球は曲面をすべり降り、床の上で半径 1.0 m のなめらかな円形ループの内側に入った。ループの最高点を P とする。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）図のループで、小球が P に達したとすると、そこでの速さ $v$ の2乗はいくらになるか、力学的エネルギー保存則を用いて求めなさい。（2）P で小球がループから受ける垂直抗力 $N$ を、円運動の運動方程式から求めなさい。（3）小球が P を通過できるための高さ $h$ の条件を求め、この場合に通過できるかどうかを判断しなさい。",
+      "figure": {
+        "alt": "高さ h の曲面からすべり降りた小球が、半径 r の円形ループに入る。ループの最高点が P",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 200\" width=\"330\" height=\"200\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><path d=\"M 10 30 Q 60 190 150 190 L 230 190\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><circle cx=\"230\" cy=\"140\" r=\"50\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"38\" r=\"7\" fill=\"#cfdcec\" stroke=\"#000\"/><line x1=\"300\" y1=\"30\" x2=\"300\" y2=\"190\" stroke=\"#555\"/><text x=\"306\" y=\"110\">h</text><line x1=\"230\" y1=\"140\" x2=\"230\" y2=\"90\" stroke=\"#000\" stroke-dasharray=\"3 3\"/><text x=\"234\" y=\"120\">r</text><text x=\"226\" y=\"84\">P</text><line x1=\"0\" y1=\"190\" x2=\"320\" y2=\"190\" stroke=\"#000\"/></svg>"
+      },
+      "answer": {
+        "value": "（1）$v^2=2g(h-2r)=39.2\\,\\mathrm{m^2/s^2}$　（2）$N=m\\dfrac{v^2}{r}-mg\\fallingdotseq15\\,\\mathrm{N}$。（3）$N\\geqq0$ より $h\\geqq\\dfrac52r=2.5\\,\\mathrm{m}$。$h=4.0\\,\\mathrm{m}$ はこれを満たすので、小球は最高点 P を通過できる。"
+      },
+      "explanation": "エネルギー保存で速さ、円運動の運動方程式で垂直抗力、$N\\geqq0$ が離れない条件。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）力学的エネルギー保存で $v^2$ を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）P で中心向きの運動方程式 $m\\dfrac{v^2}{r}=N+mg$ を立てている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）$N\\geqq0$ から $h\\geqq\\dfrac52r$ を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "（3）与えられた $h$ で正しく判断している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "2*9.8*((4)-2*(1))",
+        "expected": "196/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U01-loop_c",
+      "related_units": [
+        "HS-PHYB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "P の高さは $2r$。P では垂直抗力も重力も中心（下）向き。ループから離れない条件は $N\\geqq0$。",
+        "steps": [
+          "（1）$mgh=mg\\cdot2r+\\dfrac12mv^2$ より $v^2=2g(h-2r)$。",
+          "（2）$m\\dfrac{v^2}{r}=N+mg$ より $N=\\dfrac{2mg(h-2r)}{r}-mg=\\dfrac{mg(2h-5r)}{r}$。",
+          "（3）$N\\geqq0\\iff h\\geqq\\dfrac52r$。"
+        ],
+        "alternatives": [
+          "最高点で必要な最小の速さ $\\sqrt{gr}$（$N=0$）を先に求め、エネルギー保存からその速さを得るのに必要な高さを逆算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）条件",
+            "points": 2
+          },
+          {
+            "point": "（3）判断",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "P で速さが 0 より大きければ通過できる、と考える（$h>2r$ としてしまう）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "高さ 2.0 m の位置から小球を静かにはなしたところ、小球は水平な床で何度もはね返り、やがて静止した。床と小球の間の反発係数を 0.40 とし、空気抵抗と小球の大きさは無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）$n$ 回目にはね返った直後の速さを、最初に床に当たる直前の速さ $v_0$ と $e$ を用いて表しなさい。（2）小球が静止するまでに移動した道のりの合計を求めなさい。（3）小球が静止するまでの時間を求めなさい。（2）（3）は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$e^nv_0$　（2）$h+2\\sum_{n=1}^{\\infty}e^{2n}h=h\\dfrac{1+e^2}{1-e^2}\\fallingdotseq2.8\\,\\mathrm{m}$　（3）$t_0=\\sqrt{\\dfrac{2h}{g}}$ として $t_0+2\\sum_{n=1}^{\\infty}e^nt_0=t_0\\dfrac{1+e}{1-e}\\fallingdotseq1.5\\,\\mathrm{s}$"
+      },
+      "explanation": "はね返るたびに速さは $e$ 倍、高さは $e^2$ 倍、往復時間は $e$ 倍。無限等比級数の和を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）はね返りごとに速さが $e$ 倍になることを用いている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）高さが $e^2$ 倍の等比数列になることを用いて無限等比級数で和を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）往復時間が $e$ 倍の等比数列になることを用いて和を求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "sqrt(2*(2)/9.8)*(1+(2/5))/(1-(2/5))",
+        "expected": "2*sqrt(5)/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U01-bounce_c",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "1回はね返ると速さ $e$ 倍 → 上がる高さ $e^2$ 倍、上がって戻る時間 $\\dfrac{2v}{g}$ も $e$ 倍。公比が1未満なので無限等比級数が収束する。",
+        "steps": [
+          "（1）$v_n=e^nv_0$。",
+          "（2）$n$ 回目のはね返り後に上下する道のり $2e^{2n}h$。和 $h+\\dfrac{2e^2h}{1-e^2}$。",
+          "（3）$n$ 回目のはね返り後の往復時間 $2e^nt_0$（$t_0=0.639\\,\\mathrm{s}$）。和 $t_0+\\dfrac{2et_0}{1-e}$。"
+        ],
+        "alternatives": [
+          "（2）は「失われる力学的エネルギー」で考えることはできない（エネルギーの総量 $mgh$ からは道のりが決まらない）ことを確認し、等比級数による方法の必要性を説明してもよい。",
+          "（3）は $e\\to1$ で時間が無限大、$e\\to0$ で $t_0$ になることで式を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "2回目以降の道のりを往復の2倍にし忘れる。",
+          "時間を高さと同じ公比 $e^2$ で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "高さ 4.9 m の位置から小球を静かにはなしたところ、小球は水平な床で何度もはね返り、やがて静止した。床と小球の間の反発係数を 0.50 とし、空気抵抗と小球の大きさは無視する。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。（1）$n$ 回目にはね返った直後の速さを、最初に床に当たる直前の速さ $v_0$ と $e$ を用いて表しなさい。（2）小球が静止するまでに移動した道のりの合計を求めなさい。（3）小球が静止するまでの時間を求めなさい。（2）（3）は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$e^nv_0$　（2）$h+2\\sum_{n=1}^{\\infty}e^{2n}h=h\\dfrac{1+e^2}{1-e^2}\\fallingdotseq8.2\\,\\mathrm{m}$　（3）$t_0=\\sqrt{\\dfrac{2h}{g}}$ として $t_0+2\\sum_{n=1}^{\\infty}e^nt_0=t_0\\dfrac{1+e}{1-e}\\fallingdotseq3.0\\,\\mathrm{s}$"
+      },
+      "explanation": "はね返るたびに速さは $e$ 倍、高さは $e^2$ 倍、往復時間は $e$ 倍。無限等比級数の和を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）はね返りごとに速さが $e$ 倍になることを用いている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）高さが $e^2$ 倍の等比数列になることを用いて無限等比級数で和を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）往復時間が $e$ 倍の等比数列になることを用いて和を求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "sqrt(2*(49/10)/9.8)*(1+(1/2))/(1-(1/2))",
+        "expected": "3",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U01-bounce_c",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "1回はね返ると速さ $e$ 倍 → 上がる高さ $e^2$ 倍、上がって戻る時間 $\\dfrac{2v}{g}$ も $e$ 倍。公比が1未満なので無限等比級数が収束する。",
+        "steps": [
+          "（1）$v_n=e^nv_0$。",
+          "（2）$n$ 回目のはね返り後に上下する道のり $2e^{2n}h$。和 $h+\\dfrac{2e^2h}{1-e^2}$。",
+          "（3）$n$ 回目のはね返り後の往復時間 $2e^nt_0$（$t_0=1.00\\,\\mathrm{s}$）。和 $t_0+\\dfrac{2et_0}{1-e}$。"
+        ],
+        "alternatives": [
+          "（2）は「失われる力学的エネルギー」で考えることはできない（エネルギーの総量 $mgh$ からは道のりが決まらない）ことを確認し、等比級数による方法の必要性を説明してもよい。",
+          "（3）は $e\\to1$ で時間が無限大、$e\\to0$ で $t_0$ になることで式を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "2回目以降の道のりを往復の2倍にし忘れる。",
+          "時間を高さと同じ公比 $e^2$ で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "なめらかな水平面上で、右向きに速さ 4.0 m/s で進む球 A が静止している球 B に正面衝突したところ、A は左向きに速さ 0.20 m/s ではね返り、B は右向きに速さ 1.4 m/s で進んだ。反発係数を求めなさい。\n［ある生徒の解答］\n$e=\\dfrac{\\text{B の速さ}-\\text{A の速さ}}{\\text{衝突前の速さ}}=\\dfrac{1.4-0.2}{4}=0.3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.40$"
+      },
+      "explanation": "反発係数の式には符号つきの速度を代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "((7/5)-((-1/5)))/4",
+        "expected": "2/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-err_momentum",
+      "explanation_detail": {
+        "approach": "離れる速さ（相対速度の大きさ）は、2球が逆向きに動くときは速さの和になる。",
+        "steps": [
+          "右向き正：$v_{\\mathrm{A}}=4$、$v_{\\mathrm{A}}'=-0.2$、$v_{\\mathrm{B}}'=1.4$。",
+          "$e=\\dfrac{1.4+0.2}{4}=0.40$。"
+        ],
+        "alternatives": [
+          "求めた $e$ と運動量保存の式から衝突後の速度を計算し直し、問題文の値（A：左向き 0.2 m/s）が再現されるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "衝突後の向きを図にかいてから式を立てる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$e=\\dfrac{\\text{B の速さ}-\\text{A の速さ}}{\\text{衝突前の速さ}}=\\dfrac{1.4-0.2}{4}=0.3$",
+        "error_step": "A の衝突後の速度を、向き（符号）を考えずに速さで代入した部分",
+        "error_type": "sign",
+        "why_tempting": "反発係数を「速さの差÷速さ」と覚え、衝突後に A が逆向きに動くと速度の符号が変わることを見落としている。",
+        "correction": "右向きを正とすると $v_{\\mathrm{A}}'=-0.2$。$e=-\\dfrac{v_{\\mathrm{A}}'-v_{\\mathrm{B}}'}{v_{\\mathrm{A}}-v_{\\mathrm{B}}}=\\dfrac{1.4-(-0.2)}{4}=0.40$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "質量 0.50 kg のボールが、速さ 12 m/s で壁に垂直に当たり、速さ 8.0 m/s で逆向きにはね返った。ボールが壁から受けた力積の大きさを求めなさい。\n［ある生徒の解答］\n力積＝運動量の変化＝$0.50\\times8.0-0.50\\times12=-2$。大きさは $2\\,\\mathrm{N\\cdot s}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$10\\,\\mathrm{N\\cdot s}$"
+      },
+      "explanation": "運動量・力積はベクトル。逆向きの速度は符号を変えて代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(1/2)*((8)+(12))",
+        "expected": "10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-err_momentum",
+      "explanation_detail": {
+        "approach": "速度・運動量の矢印を図にかき、向きの異なる矢印の差をとる。",
+        "steps": [
+          "正の向き（はね返った向き）を決める。",
+          "$\\Delta p=0.50\\times8.0-0.50\\times(-12)=10\\,\\mathrm{N\\cdot s}$。"
+        ],
+        "alternatives": [
+          "もし生徒の答えが正しいなら、壁に当たって止まる（$v'=0$）場合より力積が小さくなり、はね返るほうが受ける力積が小さいという不自然な結論になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "はね返りでは速さの「和」になると確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "力積＝運動量の変化＝$0.50\\times8.0-0.50\\times12=-2$。大きさは $2\\,\\mathrm{N\\cdot s}$",
+        "error_step": "衝突前後の速度を、向きを考えずに速さのまま代入した部分",
+        "error_type": "sign",
+        "why_tempting": "運動量の変化を「後−前」と覚えているが、速度が向きをもつ量であることを意識せず、速さの数値をそのまま使っている。",
+        "correction": "はね返った向きを正とすると、衝突前の速度は $-12$。力積 $=0.50\\times8.0-0.50\\times(-12)=10\\,\\mathrm{N\\cdot s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "なめらかな水平面上で、右向きに速さ 10 m/s で進む球 A が静止している球 B に正面衝突したところ、A は左向きに速さ 0.50 m/s ではね返り、B は右向きに速さ 3.5 m/s で進んだ。反発係数を求めなさい。\n［ある生徒の解答］\n$e=\\dfrac{\\text{B の速さ}-\\text{A の速さ}}{\\text{衝突前の速さ}}=\\dfrac{3.5-0.5}{10}=0.3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.40$"
+      },
+      "explanation": "反発係数の式には符号つきの速度を代入する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "((7/2)-((-1/2)))/10",
+        "expected": "2/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-err_momentum",
+      "explanation_detail": {
+        "approach": "離れる速さ（相対速度の大きさ）は、2球が逆向きに動くときは速さの和になる。",
+        "steps": [
+          "右向き正：$v_{\\mathrm{A}}=10$、$v_{\\mathrm{A}}'=-0.5$、$v_{\\mathrm{B}}'=3.5$。",
+          "$e=\\dfrac{3.5+0.5}{10}=0.40$。"
+        ],
+        "alternatives": [
+          "求めた $e$ と運動量保存の式から衝突後の速度を計算し直し、問題文の値（A：左向き 0.5 m/s）が再現されるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "衝突後の向きを図にかいてから式を立てる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$e=\\dfrac{\\text{B の速さ}-\\text{A の速さ}}{\\text{衝突前の速さ}}=\\dfrac{3.5-0.5}{10}=0.3$",
+        "error_step": "A の衝突後の速度を、向き（符号）を考えずに速さで代入した部分",
+        "error_type": "sign",
+        "why_tempting": "反発係数を「速さの差÷速さ」と覚え、衝突後に A が逆向きに動くと速度の符号が変わることを見落としている。",
+        "correction": "右向きを正とすると $v_{\\mathrm{A}}'=-0.5$。$e=-\\dfrac{v_{\\mathrm{A}}'-v_{\\mathrm{B}}'}{v_{\\mathrm{A}}-v_{\\mathrm{B}}}=\\dfrac{3.5-(-0.5)}{10}=0.40$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "質量 1.0 kg の物体が半径 5.0 m の円周上を速さ 4.0 m/s で等速円運動している。物体にはたらく向心力の大きさを求めなさい。\n［ある生徒の解答］\n$F=m\\dfrac{v}{r}=1.0\\times\\dfrac{4.0}{5.0}=0.80\\,\\mathrm{N}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3.2\\,\\mathrm{N}$"
+      },
+      "explanation": "$a=r\\omega^2=\\dfrac{v^2}{r}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(1)*(4)**2/(5)",
+        "expected": "16/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-err_circular",
+      "explanation_detail": {
+        "approach": "単位で確かめる：$\\dfrac{v}{r}$ の単位は $\\mathrm{s^{-1}}$ で、加速度（$\\mathrm{m/s^2}$）にならない。",
+        "steps": [
+          "$a=\\dfrac{v^2}{r}=\\dfrac{4.0^2}{5.0}=3.2\\,\\mathrm{m/s^2}$。",
+          "$F=ma=3.2\\,\\mathrm{N}$。"
+        ],
+        "alternatives": [
+          "$\\omega=\\dfrac{v}{r}$ を求めてから $a=r\\omega^2$ で計算し、同じ値になるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式は単位とともに覚える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$F=m\\dfrac{v}{r}=1.0\\times\\dfrac{4.0}{5.0}=0.80\\,\\mathrm{N}$",
+        "error_step": "向心加速度を $\\dfrac{v}{r}$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "$v=r\\omega$ の $\\omega=\\dfrac{v}{r}$ と向心加速度 $\\dfrac{v^2}{r}$ を混同している。",
+        "correction": "向心加速度は $\\dfrac{v^2}{r}$。$F=m\\dfrac{v^2}{r}=1.0\\times\\dfrac{4.0^2}{5.0}=3.2\\,\\mathrm{N}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "半径 0.10 m の円板が、1分間に 120 回の割合で一様に回転している。円板の縁の点の速さを求めなさい。\n［ある生徒の解答］\n1秒あたりの回転数は $\\dfrac{120}{60}=2$ なので $\\omega=2\\,\\mathrm{rad/s}$。$v=r\\omega=0.10\\times2=0.2\\,\\mathrm{m/s}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.3\\,\\mathrm{m/s}$"
+      },
+      "explanation": "1回転は $2\\pi$ rad。$\\omega=2\\pi n$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(1/10)*2*pi*120/60",
+        "expected": "2*pi/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-err_circular",
+      "explanation_detail": {
+        "approach": "単位（回/s と rad/s）を書いて計算する。",
+        "steps": [
+          "$n=2\\,\\text{回/s}$。",
+          "$\\omega=2\\pi n\\fallingdotseq13\\,\\mathrm{rad/s}$、$v=r\\omega\\fallingdotseq1.3\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "1秒間に縁の点が進む距離は「円周 $2\\pi r$ × 回転数」なので、$2\\pi\\times0.10\\times2$ と直接計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "回転数・周期・角速度の関係を整理しておく。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1秒あたりの回転数は $\\dfrac{120}{60}=2$ なので $\\omega=2\\,\\mathrm{rad/s}$。$v=r\\omega=0.10\\times2=0.2\\,\\mathrm{m/s}$",
+        "error_step": "回転数をそのまま角速度とした部分",
+        "error_type": "formula",
+        "why_tempting": "回転数（回/s）と角速度（rad/s）の単位の違いを意識せず、1回転が $2\\pi$ rad であることを忘れている。",
+        "correction": "$\\omega=2\\pi\\times\\dfrac{120}{60}\\fallingdotseq13\\,\\mathrm{rad/s}$。$v=r\\omega\\fallingdotseq1.3\\,\\mathrm{m/s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "半径 0.50 m の円板が、1分間に 30 回の割合で一様に回転している。円板の縁の点の速さを求めなさい。\n［ある生徒の解答］\n1秒あたりの回転数は $\\dfrac{30}{60}=0.5$ なので $\\omega=0.5\\,\\mathrm{rad/s}$。$v=r\\omega=0.50\\times0.5=0.25\\,\\mathrm{m/s}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.6\\,\\mathrm{m/s}$"
+      },
+      "explanation": "1回転は $2\\pi$ rad。$\\omega=2\\pi n$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(1/2)*2*pi*30/60",
+        "expected": "pi/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-err_circular",
+      "explanation_detail": {
+        "approach": "単位（回/s と rad/s）を書いて計算する。",
+        "steps": [
+          "$n=0.5\\,\\text{回/s}$。",
+          "$\\omega=2\\pi n\\fallingdotseq3.1\\,\\mathrm{rad/s}$、$v=r\\omega\\fallingdotseq1.6\\,\\mathrm{m/s}$。"
+        ],
+        "alternatives": [
+          "1秒間に縁の点が進む距離は「円周 $2\\pi r$ × 回転数」なので、$2\\pi\\times0.50\\times0.5$ と直接計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "回転数・周期・角速度の関係を整理しておく。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "1秒あたりの回転数は $\\dfrac{30}{60}=0.5$ なので $\\omega=0.5\\,\\mathrm{rad/s}$。$v=r\\omega=0.50\\times0.5=0.25\\,\\mathrm{m/s}$",
+        "error_step": "回転数をそのまま角速度とした部分",
+        "error_type": "formula",
+        "why_tempting": "回転数（回/s）と角速度（rad/s）の単位の違いを意識せず、1回転が $2\\pi$ rad であることを忘れている。",
+        "correction": "$\\omega=2\\pi\\times\\dfrac{30}{60}\\fallingdotseq3.1\\,\\mathrm{rad/s}$。$v=r\\omega\\fallingdotseq1.6\\,\\mathrm{m/s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ばね定数 10 N/m の軽いばねに質量 0.40 kg のおもりをつけて単振動させた。周期を求めなさい。\n［ある生徒の解答］\n$T=2\\pi\\sqrt{\\dfrac{k}{m}}=2\\pi\\sqrt{\\dfrac{10}{0.40}}\\fallingdotseq31\\,\\mathrm{s}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.3\\,\\mathrm{s}$"
+      },
+      "explanation": "重いおもりほど動かしにくく周期が長いので、$m$ は分子。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*pi*sqrt((2/5)/(10))",
+        "expected": "2*pi/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-err_shm",
+      "explanation_detail": {
+        "approach": "次元で確かめる：$\\sqrt{\\dfrac{k}{m}}$ の単位は $\\mathrm{s^{-1}}$ で、時間にならない。",
+        "steps": [
+          "$\\omega=\\sqrt{\\dfrac{k}{m}}$。",
+          "$T=\\dfrac{2\\pi}{\\omega}=2\\pi\\sqrt{\\dfrac{m}{k}}\\fallingdotseq1.3\\,\\mathrm{s}$。"
+        ],
+        "alternatives": [
+          "おもりを重くすると振動がゆっくりになる、という経験と式が合うかどうかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\omega$ と $T$ の関係を必ず経由する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$T=2\\pi\\sqrt{\\dfrac{k}{m}}=2\\pi\\sqrt{\\dfrac{10}{0.40}}\\fallingdotseq31\\,\\mathrm{s}$",
+        "error_step": "$\\sqrt{\\dfrac{k}{m}}$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "角振動数 $\\omega=\\sqrt{\\dfrac{k}{m}}$ と周期の式を混同し、分母と分子を逆にしている。",
+        "correction": "$T=\\dfrac{2\\pi}{\\omega}=2\\pi\\sqrt{\\dfrac{m}{k}}=2\\pi\\sqrt{\\dfrac{0.40}{10}}\\fallingdotseq1.3\\,\\mathrm{s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "長さ 1.6 m の糸に質量 100 g のおもりをつけた単振り子と、同じ長さの糸に質量 400 g のおもりをつけた単振り子がある。それぞれの周期を求めなさい（振れ角は小さいとする）。重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。\n［ある生徒の解答］\nおもりが重いほど重力が大きく、速く引き戻されるので、400 g の振り子の周期は 100 g の振り子の周期の $\\dfrac12$ になる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "どちらも $2.5\\,\\mathrm{s}$"
+      },
+      "explanation": "単振り子の復元力 $\\dfrac{mg}{L}x$ の $m$ と運動方程式の $m$ が約分される。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*pi*sqrt((8/5)/9.8)",
+        "expected": "4*sqrt(2)*pi/7",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U01-err_shm",
+      "explanation_detail": {
+        "approach": "運動方程式を立て、質量が約分されるかどうかを確かめる。",
+        "steps": [
+          "運動方程式：$ma=-\\dfrac{mg}{L}x$。",
+          "$\\omega=\\sqrt{\\dfrac{g}{L}}$、$T\\fallingdotseq2.5\\,\\mathrm{s}$（質量によらない）。"
+        ],
+        "alternatives": [
+          "自由落下で重い物も軽い物も同じ加速度で落ちることと同じ理由である、と結びつけて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "素朴な直観より運動方程式を優先する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "おもりが重いほど重力が大きく、速く引き戻されるので、400 g の振り子の周期は 100 g の振り子の周期の $\\dfrac12$ になる",
+        "error_step": "周期がおもりの質量によるとした部分",
+        "error_type": "concept",
+        "why_tempting": "重力（復元力）が質量に比例することだけに注目し、質量が大きいと加速しにくい（慣性が大きい）ことを考えていない。",
+        "correction": "$T=2\\pi\\sqrt{\\dfrac{L}{g}}$ は質量を含まない。どちらも $T=2\\pi\\sqrt{\\dfrac{1.6}{9.8}}\\fallingdotseq2.5\\,\\mathrm{s}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "太陽のまわりを円軌道で公転する惑星 X の軌道半径は、地球の軌道半径の 9 倍である。X の公転周期は何年か。地球の公転周期を1年とする。\n［ある生徒の解答］\nケプラーの第3法則より、周期は軌道半径に比例するので 9 年\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$27$ 年"
+      },
+      "explanation": "ケプラーの第3法則は「周期の2乗が半径の3乗に比例」。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "9**Rational(3,2)",
+        "expected": "27",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-err_gravity",
+      "explanation_detail": {
+        "approach": "法則を式（$\\dfrac{T^2}{r^3}=$ 一定）で書いてから代入する。",
+        "steps": [
+          "$\\left(\\dfrac{T}{1}\\right)^2=\\left(\\dfrac{9r}{r}\\right)^3=729$。",
+          "$T=\\sqrt{729}=27$ 年。"
+        ],
+        "alternatives": [
+          "軌道が大きいと円周が 9 倍になるだけでなく、速さも $\\dfrac{1}{\\sqrt{9}}$ 倍に遅くなるので、周期は $\\dfrac{9}{1/\\sqrt{9}}=27$ 倍になる、と別の道筋で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2乗・3乗の関係を言葉だけで覚えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "ケプラーの第3法則より、周期は軌道半径に比例するので 9 年",
+        "error_step": "周期が軌道半径に比例するとした部分",
+        "error_type": "formula",
+        "why_tempting": "「軌道が大きいほど周期が長い」という定性的な関係だけを覚えていて、2乗・3乗の関係を使っていない。",
+        "correction": "$T^2\\propto r^3$ より $T=\\left(9\\right)^{\\frac{3}{2}}=27$ 年"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U01",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "太陽のまわりを円軌道で公転する惑星 X の軌道半径は、地球の軌道半径の 4 倍である。X の公転周期は何年か。地球の公転周期を1年とする。\n［ある生徒の解答］\nケプラーの第3法則より、周期は軌道半径に比例するので 4 年\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$8$ 年"
+      },
+      "explanation": "ケプラーの第3法則は「周期の2乗が半径の3乗に比例」。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "4**Rational(3,2)",
+        "expected": "8",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U01-err_gravity",
+      "explanation_detail": {
+        "approach": "法則を式（$\\dfrac{T^2}{r^3}=$ 一定）で書いてから代入する。",
+        "steps": [
+          "$\\left(\\dfrac{T}{1}\\right)^2=\\left(\\dfrac{4r}{r}\\right)^3=64$。",
+          "$T=\\sqrt{64}=8$ 年。"
+        ],
+        "alternatives": [
+          "軌道が大きいと円周が 4 倍になるだけでなく、速さも $\\dfrac{1}{\\sqrt{4}}$ 倍に遅くなるので、周期は $\\dfrac{4}{1/\\sqrt{4}}=8$ 倍になる、と別の道筋で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2乗・3乗の関係を言葉だけで覚えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "ケプラーの第3法則より、周期は軌道半径に比例するので 4 年",
+        "error_step": "周期が軌道半径に比例するとした部分",
+        "error_type": "formula",
+        "why_tempting": "「軌道が大きいほど周期が長い」という定性的な関係だけを覚えていて、2乗・3乗の関係を使っていない。",
+        "correction": "$T^2\\propto r^3$ より $T=\\left(4\\right)^{\\frac{3}{2}}=8$ 年"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "8d14032033d4f5f5b457b7f5d9a5dc79a68e019fa08695a5cc5bfa96cea8e01d"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 8 問（Q021, Q022, Q023, Q037, Q047, Q048, Q051, Q053）",
+      "content_hash": "f989478439b36c2f1ea7dbd9775e4dc4b0a1b02220b3832774a904d6f7681b63"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 1 問（Q036）",
+      "content_hash": "72cfcde67f0aa18368bbedae17c323fb82c416c87d63b00fe7be7f0ea127c6cb"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:13:27+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "c097fb1f37553295b49df3248688835eefcc77af25c02775563701e7655da0d6"
+  }
+}

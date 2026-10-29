@@ -1,0 +1,464 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH3-U01-LESSON",
+  "title": "極限　授業プリント",
+  "subtitle": "極限｜数列の極限・無限等比級数・関数の極限・連続性",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_3",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-MATH3-U01"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATH3-U01-PACK",
+  "pair_set_id": "HS-MATH3-U01-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "数列・漸化式",
+        "title": "数列"
+      },
+      {
+        "unit_id": "HS-MATH2-U05",
+        "point": "指数関数",
+        "title": "指数関数・対数関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "微分係数の定義",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATH3-U03",
+        "point": "区分求積",
+        "title": "積分法とその応用"
+      }
+    ],
+    "readiness_check": [
+      "分数式の約分、分母の有理化（数学Ⅰ・数学Ⅱ）ができる。",
+      "等比数列の和の公式 $S_n=\\dfrac{a(1-r^n)}{1-r}$ と漸化式 $a_{n+1}=pa_n+q$ の解き方（数学B）を使える。",
+      "弧度法と三角関数の値・グラフ（数学Ⅱ）を使える。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "数列の収束・発散を定義に基づいて判定し、$\\infty-\\infty$ や $\\dfrac{\\infty}{\\infty}$ の形の極限を式変形によって求められる。",
+      "数列 $\\{r^n\\}$ の極限を $r$ の値で分類し、無限等比級数が収束する条件とその和を求められる。",
+      "関数の極限（片側極限・$x\\to\\pm\\infty$）と $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ を用いて極限を計算し、関数の連続性と中間値の定理を説明できる。"
+    ],
+    "duration_minutes": 200,
+    "flow": [
+      {
+        "phase": "導入：限りなく近づくとは",
+        "minutes": 10,
+        "activity": "$0.999\\cdots$ は $1$ に等しいか、を問いかけ、極限の考え方を導入する"
+      },
+      {
+        "phase": "数列の極限",
+        "minutes": 40,
+        "activity": "収束・発散の定義、極限の性質、不定形の処理（例題1）"
+      },
+      {
+        "phase": "$\\{r^n\\}$ と無限等比級数",
+        "minutes": 40,
+        "activity": "$\\{r^n\\}$ の極限の分類とその証明、無限等比級数の和、収束条件（例題2）"
+      },
+      {
+        "phase": "関数の極限",
+        "minutes": 45,
+        "activity": "$x\\to a$・片側極限・$x\\to\\pm\\infty$、はさみうちの原理、$\\dfrac{\\sin x}{x}$ の極限の証明と例題3"
+      },
+      {
+        "phase": "連続性",
+        "minutes": 35,
+        "activity": "連続の定義、中間値の定理と方程式の実数解の存在（例題4）"
+      },
+      {
+        "phase": "演習とまとめ",
+        "minutes": 30,
+        "activity": "確認問題、典型的な誤りの検討、問題プリントの課題指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "「限りなく近づく」を数学のことばにする",
+        "body": "$0.9,\\ 0.99,\\ 0.999,\\ \\cdots$ と $9$ を1つずつ増やしていくと、値は $1$ との差が $\\dfrac{1}{10^n}$ となり、いくらでも $1$ に近づく。このとき、数列は $1$ に収束するといい、循環小数 $0.\\dot{9}$ はこの極限値 $1$ を表すと約束する。極限は、微分（接線の傾き）や積分（面積）の土台となる考え方であり、数学Ⅲではこれを数列と関数の両方について学ぶ。",
+        "bullets": [
+          "数列の極限：$n$ を限りなく大きくしたときの $a_n$ のふるまい。",
+          "関数の極限：$x$ を $a$ に限りなく近づけたときの $f(x)$ のふるまい。",
+          "極限は「代入」ではなく「近づける」操作であり、$\\infty$ は数ではない。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$0.\\dot{9}=1$ に納得できるかを挙手で確認し、「差がいくらでも小さくできる」ことを説明の軸にする。",
+            "ask": "$1$ と $0.999\\cdots$ の差はいくつか。",
+            "expect": "どんな正の数よりも小さいので $0$ としか言えない。",
+            "timing": "導入の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "数列の極限",
+        "body": "数列 $\\{a_n\\}$ において、$n$ を限りなく大きくするとき、$a_n$ がある値 $\\alpha$ に限りなく近づくならば、$\\{a_n\\}$ は $\\alpha$ に収束するといい、$\\displaystyle\\lim_{n\\to\\infty}a_n=\\alpha$ と書く。収束しない数列は発散するという。発散には、正の無限大に発散（$\\infty$）、負の無限大に発散（$-\\infty$）、どちらでもない振動の3通りがある。",
+        "formula": "$$\\lim_{n\\to\\infty}a_n=\\alpha,\\ \\lim_{n\\to\\infty}b_n=\\beta\\ \\Longrightarrow\\ \\lim_{n\\to\\infty}(ka_n+lb_n)=k\\alpha+l\\beta,\\quad \\lim_{n\\to\\infty}a_nb_n=\\alpha\\beta,\\quad \\lim_{n\\to\\infty}\\dfrac{a_n}{b_n}=\\dfrac{\\alpha}{\\beta}\\ (\\beta\\neq0)$$",
+        "conditions": [
+          "これらの性質は $\\{a_n\\},\\ \\{b_n\\}$ がともに収束するときに使える。$\\infty-\\infty$、$\\dfrac{\\infty}{\\infty}$、$0\\times\\infty$ の形（不定形）は、式を変形してから極限を考える。",
+          "はさみうちの原理：$a_n\\leqq c_n\\leqq b_n$ で $\\displaystyle\\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}b_n=\\alpha$ ならば $\\displaystyle\\lim_{n\\to\\infty}c_n=\\alpha$。",
+          "$a_n\\leqq b_n$ で $\\displaystyle\\lim_{n\\to\\infty}a_n=\\infty$ ならば $\\displaystyle\\lim_{n\\to\\infty}b_n=\\infty$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$\\infty-\\infty$ を $0$、$\\dfrac{\\infty}{\\infty}$ を $1$ とする誤りの反例（$n^2-n$、$\\dfrac{2n}{n}$）を示し、不定形は式変形が必要であることを納得させる。",
+            "ask": "$\\displaystyle\\lim_{n\\to\\infty}(n^2-n)$ は $\\infty-\\infty=0$ と言えるか。",
+            "expect": "$n(n-1)\\to\\infty$ なので言えない。",
+            "caution": "$\\infty$ を数のように計算する誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　不定形の極限",
+        "example": {
+          "problem": "(1) $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{3n^2-n+2}{2n^2+5}$　(2) $\\displaystyle\\lim_{n\\to\\infty}(\\sqrt{n^2+4n}-n)$ を求めよ。",
+          "steps": [
+            "(1) 分母の最高次 $n^2$ で分子・分母を割ると $\\dfrac{3-\\dfrac{1}{n}+\\dfrac{2}{n^2}}{2+\\dfrac{5}{n^2}}\\to\\dfrac{3}{2}$。",
+            "(2) $\\sqrt{n^2+4n}-n=\\dfrac{(\\sqrt{n^2+4n}-n)(\\sqrt{n^2+4n}+n)}{\\sqrt{n^2+4n}+n}=\\dfrac{4n}{\\sqrt{n^2+4n}+n}$。",
+            "分子・分母を $n$ で割ると $\\dfrac{4}{\\sqrt{1+\\dfrac{4}{n}}+1}\\to\\dfrac{4}{2}=2$。"
+          ],
+          "answer": "(1) $\\dfrac{3}{2}$　(2) $2$",
+          "thinking": "(1) は $\\dfrac{\\infty}{\\infty}$、(2) は $\\infty-\\infty$ の不定形。(1) は最高次で割り、(2) は分子の有理化で $\\dfrac{\\infty}{\\infty}$ の形に直す。"
+        },
+        "teacher_points": [
+          {
+            "point": "(2) で「$\\sqrt{n^2+4n}$ はほぼ $n$ だから $0$」と答える生徒に、$n=100$ のときの値 $\\sqrt{10400}-100\\fallingdotseq1.98$ を電卓で確かめさせる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "(2) を $\\infty-\\infty=0$ とする",
+            "correct": "有理化して $\\dfrac{4n}{\\sqrt{n^2+4n}+n}$ とすると $2$ に収束する"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "数列 $\\{r^n\\}$ の極限",
+        "formula": "$$r>1\\ \\text{のとき}\\ \\lim_{n\\to\\infty}r^n=\\infty,\\quad r=1\\ \\text{のとき}\\ 1,\\quad |r|<1\\ \\text{のとき}\\ 0,\\quad r\\leqq-1\\ \\text{のとき振動}$$",
+        "conditions": [
+          "$\\{r^n\\}$ が収束するための必要十分条件は $-1<r\\leqq1$。",
+          "$r=1$ では収束（極限値 $1$）、$r=-1$ では $-1,\\ 1,\\ -1,\\ \\cdots$ と振動する。",
+          "底の異なる指数を含む式は、最も大きい底の累乗で分子・分母を割ると $\\left(\\dfrac{b}{a}\\right)^n\\to0$ が使える形になる。"
+        ],
+        "proof_steps": [
+          "$r>1$ のとき、$r=1+h\\ (h>0)$ とおくと、二項定理より $r^n=(1+h)^n\\geqq1+nh$。$n\\to\\infty$ のとき $1+nh\\to\\infty$ なので $r^n\\to\\infty$。",
+          "$0<|r|<1$ のとき、$\\dfrac{1}{|r|}>1$ だから前段より $\\dfrac{1}{|r|^n}\\to\\infty$、よって $|r^n|=|r|^n\\to0$ であり $r^n\\to0$。$r=0$ のときは明らか。",
+          "$r<-1$ のとき、$|r|^n\\to\\infty$ で符号が交互に変わるので振動する。$r=-1$ のときも $\\pm1$ を交互にとり振動する。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$r=1$ と $r=-1$ の場合を板書の表で区別させ、収束条件が $-1<r\\leqq1$（右端だけ等号）になる理由を言わせる。",
+            "ask": "$r=-1$ と $r=1$ で $\\{r^n\\}$ のふるまいはどう違うか。",
+            "expect": "$r=1$ は常に $1$ で収束、$r=-1$ は $\\pm1$ を往復して振動。",
+            "timing": "定理の直後"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "無限等比級数の和の導出",
+        "proof_steps": [
+          "初項 $a\\ (\\neq0)$、公比 $r$ の等比数列の初項から第 $n$ 項までの和は、$r\\neq1$ のとき $S_n=\\dfrac{a(1-r^n)}{1-r}$。",
+          "$|r|<1$ のとき $r^n\\to0$ だから $\\displaystyle\\lim_{n\\to\\infty}S_n=\\dfrac{a}{1-r}$。これが無限等比級数 $\\displaystyle\\sum_{n=1}^{\\infty}ar^{n-1}$ の和である。",
+          "$r>1$ または $r\\leqq-1$ のときは $\\{r^n\\}$ が発散するので $\\{S_n\\}$ も発散する。$r=1$ のときは $S_n=na$ で発散する。",
+          "$a=0$ のときは、すべての項が $0$ なので $r$ によらず和は $0$ に収束する。"
+        ],
+        "body": "無限級数の和とは、部分和 $S_n$ の極限のことである。「無限個を足す」操作を、部分和という有限の和の極限として定める点が大切である。",
+        "teacher_points": [
+          {
+            "point": "収束条件は「$a=0$ または $-1<r<1$」であることを強調する。$\\{r^n\\}$ の収束条件（$-1<r\\leqq1$）と $r=1$ の扱いが違う理由を部分和 $S_n=na$ で確認させる。",
+            "caution": "初項に変数を含む級数で $a=0$ の場合を落とす誤りが非常に多い。"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　無限等比級数の収束条件",
+        "example": {
+          "problem": "無限等比級数 $x+x(1-x)+x(1-x)^2+\\cdots$ が収束するような $x$ の値の範囲を求め、そのときの和を求めよ。",
+          "steps": [
+            "初項 $x$、公比 $1-x$ の無限等比級数である。",
+            "$x=0$ のとき、すべての項が $0$ で収束し、和は $0$。",
+            "$x\\neq0$ のとき、収束条件は $-1<1-x<1$、すなわち $0<x<2$。和は $\\dfrac{x}{1-(1-x)}=1$。",
+            "以上をまとめて、収束する範囲は $0\\leqq x<2$。"
+          ],
+          "answer": "$0\\leqq x<2$。和は $x=0$ のとき $0$、$0<x<2$ のとき $1$",
+          "thinking": "初項が $x$ を含むので、初項が $0$ になる場合を別に考える。"
+        },
+        "teacher_points": [
+          {
+            "point": "答えの範囲 $0\\leqq x<2$ のうち $x=0$ がどこから来たかを、生徒に説明させる。"
+          }
+        ]
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "関数の極限と片側極限",
+        "body": "$x$ が $a$ と異なる値をとりながら $a$ に限りなく近づくとき、$f(x)$ が値 $\\alpha$ に限りなく近づくならば $\\displaystyle\\lim_{x\\to a}f(x)=\\alpha$ と書く。$x$ が $a$ より大きい値をとりながら近づくときの極限を右側極限 $\\displaystyle\\lim_{x\\to a+0}f(x)$、小さい値をとりながら近づくときを左側極限 $\\displaystyle\\lim_{x\\to a-0}f(x)$ という。",
+        "formula": "$$\\lim_{x\\to a}f(x)=\\alpha\\iff\\lim_{x\\to a+0}f(x)=\\lim_{x\\to a-0}f(x)=\\alpha$$",
+        "conditions": [
+          "数列と同様に、和・差・積・商の極限の性質と、はさみうちの原理が成り立つ。",
+          "$x\\to-\\infty$ の極限では、$x<0$ なので $\\sqrt{x^2}=|x|=-x$ となることに注意する（$x=-t$ と置きかえると $t\\to\\infty$ の問題になる）。",
+          "$\\displaystyle\\lim_{x\\to a}\\dfrac{f(x)}{g(x)}$ が有限の値で $\\displaystyle\\lim_{x\\to a}g(x)=0$ ならば、$\\displaystyle\\lim_{x\\to a}f(x)=0$ でなければならない。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$y=\\dfrac{1}{x}$ のグラフで、$x\\to+0$ と $x\\to-0$ で行き先が違うことを確認し、「左右の極限が一致しないときは極限はない」とまとめる。",
+            "ask": "$\\displaystyle\\lim_{x\\to0}\\dfrac{1}{x}$ は $\\infty$ と答えてよいか。",
+            "expect": "右から $\\infty$、左から $-\\infty$ なので極限はない。"
+          }
+        ],
+        "figure": {
+          "alt": "y=1/x のグラフ（x→+0 で ∞、x→-0 で -∞）",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 172 172\" width=\"172\" height=\"172\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"158\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"32\" y1=\"158\" x2=\"32\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"50\" y1=\"158\" x2=\"50\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"68\" y1=\"158\" x2=\"68\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"86\" y1=\"158\" x2=\"86\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"158\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"122\" y1=\"158\" x2=\"122\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"140\" y1=\"158\" x2=\"140\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"158\" y1=\"158\" x2=\"158\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"158\" x2=\"158\" y2=\"158\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"140\" x2=\"158\" y2=\"140\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"122\" x2=\"158\" y2=\"122\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"158\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"86\" x2=\"158\" y2=\"86\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"68\" x2=\"158\" y2=\"68\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"50\" x2=\"158\" y2=\"50\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"32\" x2=\"158\" y2=\"32\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"158\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"86\" x2=\"164\" y2=\"86\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"86\" y1=\"158\" x2=\"86\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"160\" y=\"99\" font-style=\"italic\">x</text><text x=\"91\" y=\"12\" font-style=\"italic\">y</text><text x=\"75\" y=\"98\">O</text><text x=\"11\" y=\"98\" font-size=\"8\" fill=\"#555\">-4</text><text x=\"29\" y=\"98\" font-size=\"8\" fill=\"#555\">-3</text><text x=\"47\" y=\"98\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"65\" y=\"98\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"101\" y=\"98\" font-size=\"8\" fill=\"#555\">1</text><text x=\"119\" y=\"98\" font-size=\"8\" fill=\"#555\">2</text><text x=\"137\" y=\"98\" font-size=\"8\" fill=\"#555\">3</text><text x=\"155\" y=\"98\" font-size=\"8\" fill=\"#555\">4</text><text x=\"73\" y=\"161\" font-size=\"8\" fill=\"#555\">-4</text><text x=\"73\" y=\"143\" font-size=\"8\" fill=\"#555\">-3</text><text x=\"73\" y=\"125\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"73\" y=\"107\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"73\" y=\"71\" font-size=\"8\" fill=\"#555\">1</text><text x=\"73\" y=\"53\" font-size=\"8\" fill=\"#555\">2</text><text x=\"73\" y=\"35\" font-size=\"8\" fill=\"#555\">3</text><text x=\"73\" y=\"17\" font-size=\"8\" fill=\"#555\">4</text><clipPath id=\"k41\"><rect x=\"14\" y=\"14\" width=\"144\" height=\"144\"/></clipPath><path d=\"M14,90.5 L14.72,90.55 L15.44,90.59 L16.16,90.64 L16.88,90.69 L17.6,90.74 L18.32,90.79 L19.04,90.84 L19.76,90.89 L20.48,90.95 L21.2,91 L21.92,91.06 L22.64,91.11 L23.36,91.17 L24.08,91.23 L24.8,91.29 L25.52,91.36 L26.24,91.42 L26.96,91.49 L27.68,91.56 L28.4,91.62 L29.12,91.7 L29.84,91.77 L30.56,91.84 L31.28,91.92 L32,92 L32.72,92.08 L33.44,92.16 L34.16,92.25 L34.88,92.34 L35.6,92.43 L36.32,92.52 L37.04,92.62 L37.76,92.72 L38.48,92.82 L39.2,92.92 L39.92,93.03 L40.64,93.14 L41.36,93.26 L42.08,93.38 L42.8,93.5 L43.52,93.63 L44.24,93.76 L44.96,93.89 L45.68,94.04 L46.4,94.18 L47.12,94.33 L47.84,94.49 L48.56,94.65 L49.28,94.82 L50,95 L50.72,95.18 L51.44,95.38 L52.16,95.57 L52.88,95.78 L53.6,96 L54.32,96.23 L55.04,96.47 L55.76,96.71 L56.48,96.98 L57.2,97.25 L57.92,97.54 L58.64,97.84 L59.36,98.16 L60.08,98.5 L60.8,98.86 L61.52,99.24 L62.24,99.64 L62.96,100.06 L63.68,100.52 L64.4,101 L65.12,101.52 L65.84,102.07 L66.56,102.67 L67.28,103.31 L68,104 L68.72,104.75 L69.44,105.57 L70.16,106.45 L70.88,107.43 L71.6,108.5 L72.32,109.68 L73.04,111 L73.76,112.47 L74.48,114.12 L75.2,116 L75.92,118.14 L76.64,120.62 L77.36,123.5 L78.08,126.91 L78.8,131 L79.52,136 L80.24,142.25 L80.96,150.29 L81.68,161 L82.4,176 M89.6,-4 L90.32,11 L91.04,21.71 L91.76,29.75 L92.48,36 L93.2,41 L93.92,45.09 L94.64,48.5 L95.36,51.38 L96.08,53.86 L96.8,56 L97.52,57.87 L98.24,59.53 L98.96,61 L99.68,62.32 L100.4,63.5 L101.12,64.57 L101.84,65.55 L102.56,66.43 L103.28,67.25 L104,68 L104.72,68.69 L105.44,69.33 L106.16,69.93 L106.88,70.48 L107.6,71 L108.32,71.48 L109.04,71.94 L109.76,72.36 L110.48,72.76 L111.2,73.14 L111.92,73.5 L112.64,73.84 L113.36,74.16 L114.08,74.46 L114.8,74.75 L115.52,75.02 L116.24,75.29 L116.96,75.53 L117.68,75.77 L118.4,76 L119.12,76.22 L119.84,76.43 L120.56,76.62 L121.28,76.82 L122,77 L122.72,77.18 L123.44,77.35 L124.16,77.51 L124.88,77.67 L125.6,77.82 L126.32,77.96 L127.04,78.11 L127.76,78.24 L128.48,78.37 L129.2,78.5 L129.92,78.62 L130.64,78.74 L131.36,78.86 L132.08,78.97 L132.8,79.08 L133.52,79.18 L134.24,79.28 L134.96,79.38 L135.68,79.48 L136.4,79.57 L137.12,79.66 L137.84,79.75 L138.56,79.84 L139.28,79.92 L140,80 L140.72,80.08 L141.44,80.16 L142.16,80.23 L142.88,80.3 L143.6,80.38 L144.32,80.44 L145.04,80.51 L145.76,80.58 L146.48,80.64 L147.2,80.71 L147.92,80.77 L148.64,80.83 L149.36,80.89 L150.08,80.94 L150.8,81 L151.52,81.05 L152.24,81.11 L152.96,81.16 L153.68,81.21 L154.4,81.26 L155.12,81.31 L155.84,81.36 L156.56,81.41 L157.28,81.45 L158,81.5\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k41)\"/></svg>"
+        }
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "$\\dfrac{\\sin x}{x}$ の極限",
+        "formula": "$$\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$$",
+        "conditions": [
+          "$x$ の単位は弧度法（ラジアン）。度数法ではこの式は成り立たない。",
+          "これから $\\displaystyle\\lim_{x\\to0}\\dfrac{\\tan x}{x}=1$、$\\displaystyle\\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}=\\dfrac{1}{2}$ が導かれる。",
+          "$\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin ax}{bx}=\\dfrac{a}{b}$ のように、$\\sin$ の中身と分母をそろえてから使う。"
+        ],
+        "proof_steps": [
+          "$0<x<\\dfrac{\\pi}{2}$ とする。半径 $1$、中心角 $x$ の扇形 OAB と、A における接線と直線 OB の交点を T とする。",
+          "面積を比べると $\\triangle\\mathrm{OAB}<\\text{扇形 OAB}<\\triangle\\mathrm{OAT}$ より $\\dfrac{1}{2}\\sin x<\\dfrac{1}{2}x<\\dfrac{1}{2}\\tan x$。",
+          "各辺を $\\dfrac{1}{2}\\sin x\\ (>0)$ で割って逆数をとると $\\cos x<\\dfrac{\\sin x}{x}<1$。",
+          "$x\\to+0$ のとき $\\cos x\\to1$ なので、はさみうちの原理より $\\dfrac{\\sin x}{x}\\to1$。",
+          "$\\dfrac{\\sin x}{x}$ は偶関数（$x$ を $-x$ にしても値が変わらない）なので、$x\\to-0$ のときも $1$ に近づく。"
+        ],
+        "teacher_points": [
+          {
+            "point": "証明の図で、3つの図形の面積の大小を生徒に言わせてから式にする。弧度法でないと扇形の面積が $\\dfrac{1}{2}x$ にならないことに触れる。",
+            "ask": "扇形 OAB の面積が $\\dfrac{1}{2}x$ になるのはなぜか。",
+            "expect": "半径 $r$、中心角 $\\theta$（ラジアン）の扇形の面積は $\\dfrac{1}{2}r^2\\theta$ だから。",
+            "timing": "証明の第2段"
+          }
+        ],
+        "figure": {
+          "alt": "単位円の扇形 OAB と接線上の点 T（面積の大小関係）",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\" width=\"240\" height=\"240\" font-family=\"serif\" font-size=\"12\"><circle cx=\"120\" cy=\"120\" r=\"104\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"120\" y1=\"120\" x2=\"224\" y2=\"120\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"120\" y1=\"120\" x2=\"224\" y2=\"32.4\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"224\" y1=\"120\" x2=\"224\" y2=\"32.4\" stroke=\"#000\" stroke-width=\"1.2\"/><line x1=\"224\" y1=\"120\" x2=\"199.54\" y2=\"53\" stroke=\"#000\" stroke-width=\"1.2\"/><text x=\"106.31\" y=\"129.21\">O</text><text x=\"227.03\" y=\"132.46\">A</text><text x=\"198.41\" y=\"46.38\">B</text><text x=\"226.03\" y=\"27.2\">T</text></svg>"
+        }
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　三角関数を含む極限",
+        "example": {
+          "problem": "(1) $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin 3x}{2x}$　(2) $\\displaystyle\\lim_{x\\to0}\\dfrac{1-\\cos x}{x^2}$ を求めよ。",
+          "steps": [
+            "(1) $\\dfrac{\\sin 3x}{2x}=\\dfrac{3}{2}\\cdot\\dfrac{\\sin 3x}{3x}$。$x\\to0$ のとき $3x\\to0$ なので $\\dfrac{3}{2}\\cdot1=\\dfrac{3}{2}$。",
+            "(2) 分子・分母に $1+\\cos x$ をかけると $\\dfrac{1-\\cos^2x}{x^2(1+\\cos x)}=\\left(\\dfrac{\\sin x}{x}\\right)^2\\cdot\\dfrac{1}{1+\\cos x}$。",
+            "$x\\to0$ のとき $1^2\\cdot\\dfrac{1}{2}=\\dfrac{1}{2}$。"
+          ],
+          "answer": "(1) $\\dfrac{3}{2}$　(2) $\\dfrac{1}{2}$",
+          "thinking": "$\\dfrac{\\sin\\bigcirc}{\\bigcirc}$ の形（中身と分母が同じ）をつくる。$1-\\cos x$ は $1+\\cos x$ をかけて $\\sin^2x$ にする。"
+        },
+        "teacher_points": [
+          {
+            "point": "(1) で「$\\dfrac{\\sin 3x}{2x}=\\dfrac{3}{2}$ は $\\sin$ を消して $3x$ と $2x$ を約分した」と誤解する生徒がいるので、$\\dfrac{\\sin 3x}{3x}$ をつくる理由を確認する。"
+          }
+        ]
+      },
+      {
+        "id": "df3",
+        "kind": "definition",
+        "title": "関数の連続性と中間値の定理",
+        "body": "関数 $f(x)$ が $x=a$ で定義されていて $\\displaystyle\\lim_{x\\to a}f(x)=f(a)$ が成り立つとき、$f(x)$ は $x=a$ で連続であるという。区間のすべての点で連続な関数を、その区間で連続な関数という。多項式関数、分数関数（分母が $0$ でない範囲）、三角関数・指数関数・対数関数は定義域で連続である。",
+        "formula": "$$\\text{中間値の定理：}f(x)\\ \\text{が}\\ a\\leqq x\\leqq b\\ \\text{で連続で}\\ f(a)f(b)<0\\ \\Longrightarrow\\ f(c)=0\\ \\text{となる}\\ c\\ (a<c<b)\\ \\text{が少なくとも1つある}$$",
+        "conditions": [
+          "連続であるためには、(i) $f(a)$ が定義されている、(ii) $\\displaystyle\\lim_{x\\to a}f(x)$ が存在する、(iii) 両者が等しい、の3つがすべて必要。",
+          "中間値の定理は「閉区間で連続」が前提。途中で不連続な関数（例：$y=\\dfrac{1}{x}$ を $-1\\leqq x\\leqq1$ で考える）では成り立たない。",
+          "中間値の定理が保証するのは解の存在だけで、解の個数や値は分からない。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$y=\\dfrac{1}{x}$ で $f(-1)=-1<0<1=f(1)$ なのに $f(x)=0$ の解がないことを示し、「連続」という前提の必要性を考えさせる。",
+            "ask": "$f(-1)f(1)<0$ なのに解がないのはなぜか。",
+            "expect": "$x=0$ で定義されておらず、区間で連続でないから。",
+            "timing": "中間値の定理の直後"
+          }
+        ]
+      },
+      {
+        "id": "ex4",
+        "kind": "example",
+        "title": "例題4　方程式の実数解の存在",
+        "example": {
+          "problem": "方程式 $x^3+x-1=0$ は $0<x<1$ の範囲に少なくとも1つの実数解をもつことを示せ。",
+          "steps": [
+            "$f(x)=x^3+x-1$ とおくと、$f(x)$ は多項式関数なので $0\\leqq x\\leqq1$ で連続である。",
+            "$f(0)=-1<0$、$f(1)=1>0$。",
+            "中間値の定理より、$f(c)=0$ となる $c$ が $0<c<1$ の範囲に少なくとも1つ存在する。"
+          ],
+          "answer": "（証明終）$0<x<1$ に少なくとも1つの実数解をもつ",
+          "thinking": "「連続であること」と「両端の値の符号が異なること」の2つを示せば、中間値の定理が使える。"
+        },
+        "teacher_points": [
+          {
+            "point": "答案で「連続である」と書くことを忘れると減点されることを伝え、定理の前提を書く習慣をつけさせる。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 数列の極限",
+              "lines": [
+                "収束・発散（$\\infty$、$-\\infty$、振動）",
+                "不定形は式変形：最高次で割る・有理化",
+                "例1 $\\dfrac{3}{2}$、$2$",
+                "はさみうちの原理"
+              ]
+            },
+            {
+              "title": "② $r^n$ と無限等比級数",
+              "lines": [
+                "$\\{r^n\\}$ 収束 $\\iff -1<r\\leqq1$",
+                "$\\displaystyle\\sum_{n=1}^{\\infty}ar^{n-1}=\\dfrac{a}{1-r}\\ (|r|<1)$",
+                "収束 $\\iff a=0$ または $|r|<1$",
+                "例2 $0\\leqq x<2$"
+              ]
+            },
+            {
+              "title": "③ 関数の極限・連続",
+              "lines": [
+                "片側極限 $x\\to a\\pm0$",
+                "$\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$（弧度法）",
+                "連続 $\\iff\\displaystyle\\lim_{x\\to a}f(x)=f(a)$",
+                "中間値の定理（連続＋符号の変化）"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "②の収束条件は、$\\{r^n\\}$（$-1<r\\leqq1$）と級数（$|r|<1$ または $a=0$）を上下に並べて書き、違いを色チョークで示す。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "極限を求める前に「どの不定形か」を言わせる習慣をつけると、変形の方針（最高次で割る・有理化・因数分解）が自然に決まる。",
+            "ask": "この極限は何の形か。",
+            "expect": "$\\dfrac{\\infty}{\\infty}$ の形なので最高次で割る、など。"
+          },
+          {
+            "point": "$x\\to-\\infty$ のときに $\\sqrt{x^2}=x$ としてしまう誤りが多い。$x=-t$ の置きかえを標準の手順として指導する。",
+            "caution": "符号の誤りに気づかないまま $\\dfrac{a}{2}$ と答える答案が典型。"
+          },
+          {
+            "point": "無限等比級数の収束条件では、初項が $0$ になる場合を必ず検討させる。答えの範囲の端（等号の有無）を、実際に値を代入して確かめさせる。",
+            "timing": "例題2の後"
+          },
+          {
+            "point": "はさみうちの原理を使う答案では、不等式を立てる根拠（$-1\\leqq\\sin\\theta\\leqq1$ など）と、両側の極限が一致することの両方を書かせる。"
+          },
+          {
+            "point": "中間値の定理では「連続」「符号が異なる」の2つの条件を答案に明記させる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "$\\infty-\\infty=0$、$\\dfrac{\\infty}{\\infty}=1$ と計算する",
+            "correct": "不定形なので式変形してから極限を考える"
+          },
+          {
+            "wrong": "$\\{r^n\\}$ が収束する条件を $-1<r<1$ とする",
+            "correct": "$r=1$ でも収束するので $-1<r\\leqq1$"
+          },
+          {
+            "wrong": "$\\displaystyle\\lim_{x\\to\\infty}\\dfrac{\\sin x}{x}=1$",
+            "correct": "$\\dfrac{\\sin x}{x}\\to1$ は $x\\to0$ のとき。$x\\to\\infty$ でははさみうちにより $0$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "不定形（$\\infty-\\infty$、$\\dfrac{\\infty}{\\infty}$、$\\dfrac{0}{0}$ など）は、最高次で割る・有理化・因数分解で形を変えてから極限を求める。",
+          "$\\{r^n\\}$ は $-1<r\\leqq1$ で収束。無限等比級数は $a=0$ または $|r|<1$ で収束し、和は $\\dfrac{a}{1-r}$。",
+          "$\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$（弧度法）。連続 $\\iff\\displaystyle\\lim_{x\\to a}f(x)=f(a)$。中間値の定理で解の存在が示せる。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\displaystyle\\lim_{n\\to\\infty}\\dfrac{2^n+3^{n+1}}{3^n}$ を求めよ。",
+            "a": "$\\left(\\dfrac{2}{3}\\right)^n+3\\to3$"
+          },
+          {
+            "q": "無限等比級数 $1-\\dfrac{1}{2}+\\dfrac{1}{4}-\\cdots$ の和は？",
+            "a": "公比 $-\\dfrac{1}{2}$ より $\\dfrac{1}{1-\\left(-\\frac{1}{2}\\right)}=\\dfrac{2}{3}$"
+          },
+          {
+            "q": "$\\displaystyle\\lim_{x\\to0}\\dfrac{\\tan 2x}{x}$ を求めよ。",
+            "a": "$2\\cdot\\dfrac{\\sin 2x}{2x}\\cdot\\dfrac{1}{\\cos 2x}\\to2$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "d909a3e76a2ab5de6e2407bd596d232453dbfc273fcc97e6296e5c359671a9b0"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:14:12+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "d94586c4beae2f342b81fece4ac7ef95c301bfc3d0ffefbf0a42d629d3c64d7d"
+  }
+}

@@ -1,0 +1,5454 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH3-U01-EX",
+  "title": "極限　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_3",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-MATH3-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH3-U01-PACK",
+  "pair_set_id": "HS-MATH3-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATHB-U01",
+        "point": "数列・漸化式",
+        "title": "数列"
+      },
+      {
+        "unit_id": "HS-MATH2-U05",
+        "point": "指数関数",
+        "title": "指数関数・対数関数"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "微分係数の定義",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATH3-U03",
+        "point": "区分求積",
+        "title": "積分法とその応用"
+      }
+    ],
+    "readiness_check": [
+      "分数式の約分、分母の有理化（数学Ⅰ・数学Ⅱ）ができる。",
+      "等比数列の和の公式 $S_n=\\dfrac{a(1-r^n)}{1-r}$ と漸化式 $a_{n+1}=pa_n+q$ の解き方（数学B）を使える。",
+      "弧度法と三角関数の値・グラフ（数学Ⅱ）を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH3-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{-4n+3}{n+4}$ を求めなさい。",
+      "answer": {
+        "value": "$-4$"
+      },
+      "explanation": "分子・分母の最高次（ともに $n$）の係数の比 $-4$ に収束する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((-4)*n**1+(3)*n**0)/((1)*n**1+(4)*n**0), n, oo)",
+        "expected": "-4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-seq_rational",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\infty}{\\infty}$ の不定形。分母の最高次の項で分子・分母を割り、$\\dfrac{1}{n^k}\\to0$ が使える形にする。",
+        "steps": [
+          "分母の最高次の項 $n$ で分子・分母を割ると $\\dfrac{-4+\\dfrac{3}{n}}{1+\\dfrac{4}{n}}$。",
+          "$\\dfrac{1}{n}\\to0$ などを用いると、極限は $\\dfrac{-4}{1}=-4$。"
+        ],
+        "alternatives": [
+          "分子・分母の最高次の項だけを比べる（$-4n$ と $n$）と、極限の見当がつく。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母の最高次で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{\\infty}{\\infty}=1$ と考えてしまう。",
+          "分子の最高次で割ってしまい、分母に $\\dfrac{1}{n}$ が残って $\\dfrac{\\cdots}{0}$ の形で迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{2n-3}{-2n}$ を求めなさい。",
+      "answer": {
+        "value": "$-1$"
+      },
+      "explanation": "分子・分母の最高次（ともに $n$）の係数の比 $-1$ に収束する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((2)*n**1+(-3)*n**0)/((-2)*n**1+(0)*n**0), n, oo)",
+        "expected": "-1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-seq_rational",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\infty}{\\infty}$ の不定形。分母の最高次の項で分子・分母を割り、$\\dfrac{1}{n^k}\\to0$ が使える形にする。",
+        "steps": [
+          "分母の最高次の項 $n$ で分子・分母を割ると $\\dfrac{2-\\dfrac{3}{n}}{-2}$。",
+          "$\\dfrac{1}{n}\\to0$ などを用いると、極限は $\\dfrac{2}{-2}=-1$。"
+        ],
+        "alternatives": [
+          "分子・分母の最高次の項だけを比べる（$2n$ と $-2n$）と、極限の見当がつく。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母の最高次で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{\\infty}{\\infty}=1$ と考えてしまう。",
+          "分子の最高次で割ってしまい、分母に $\\dfrac{1}{n}$ が残って $\\dfrac{\\cdots}{0}$ の形で迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{-2n^2-5n-3}{2n^3+3n^2-n+3}$ を求めなさい。",
+      "answer": {
+        "value": "$0$"
+      },
+      "explanation": "分子の次数が分母の次数より低いので $0$ に収束する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((-2)*n**2+(-5)*n**1+(-3)*n**0)/((2)*n**3+(3)*n**2+(-1)*n**1+(3)*n**0), n, oo)",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-seq_rational",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\infty}{\\infty}$ の不定形。分母の最高次の項で分子・分母を割り、$\\dfrac{1}{n^k}\\to0$ が使える形にする。",
+        "steps": [
+          "分母の最高次の項 $n^3$ で分子・分母を割ると $\\dfrac{-\\dfrac{2}{n}-\\dfrac{5}{n^2}-\\dfrac{3}{n^3}}{2+\\dfrac{3}{n}-\\dfrac{1}{n^2}+\\dfrac{3}{n^3}}$。",
+          "分子の各項は $0$ に、分母は $2$ に近づくので、極限は $0$。"
+        ],
+        "alternatives": [
+          "分子・分母の最高次の項だけを比べる（$-2n^2$ と $2n^3$）と、極限の見当がつく。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母の最高次で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{\\infty}{\\infty}=1$ と考えてしまう。",
+          "分子の最高次で割ってしまい、分母に $\\dfrac{1}{n}$ が残って $\\dfrac{\\cdots}{0}$ の形で迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{n-3}{-n-4}$ を求めなさい。",
+      "answer": {
+        "value": "$-1$"
+      },
+      "explanation": "分子・分母の最高次（ともに $n$）の係数の比 $-1$ に収束する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((1)*n**1+(-3)*n**0)/((-1)*n**1+(-4)*n**0), n, oo)",
+        "expected": "-1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-seq_rational",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\infty}{\\infty}$ の不定形。分母の最高次の項で分子・分母を割り、$\\dfrac{1}{n^k}\\to0$ が使える形にする。",
+        "steps": [
+          "分母の最高次の項 $n$ で分子・分母を割ると $\\dfrac{1-\\dfrac{3}{n}}{-1-\\dfrac{4}{n}}$。",
+          "$\\dfrac{1}{n}\\to0$ などを用いると、極限は $\\dfrac{1}{-1}=-1$。"
+        ],
+        "alternatives": [
+          "分子・分母の最高次の項だけを比べる（$n$ と $-n$）と、極限の見当がつく。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母の最高次で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{\\infty}{\\infty}=1$ と考えてしまう。",
+          "分子の最高次で割ってしまい、分母に $\\dfrac{1}{n}$ が残って $\\dfrac{\\cdots}{0}$ の形で迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{2n^2-n-3}{n^3+5n^2-3}$ を求めなさい。",
+      "answer": {
+        "value": "$0$"
+      },
+      "explanation": "分子の次数が分母の次数より低いので $0$ に収束する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((2)*n**2+(-1)*n**1+(-3)*n**0)/((1)*n**3+(5)*n**2+(0)*n**1+(-3)*n**0), n, oo)",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-seq_rational",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\infty}{\\infty}$ の不定形。分母の最高次の項で分子・分母を割り、$\\dfrac{1}{n^k}\\to0$ が使える形にする。",
+        "steps": [
+          "分母の最高次の項 $n^3$ で分子・分母を割ると $\\dfrac{\\dfrac{2}{n}-\\dfrac{1}{n^2}-\\dfrac{3}{n^3}}{1+\\dfrac{5}{n}-\\dfrac{3}{n^3}}$。",
+          "分子の各項は $0$ に、分母は $1$ に近づくので、極限は $0$。"
+        ],
+        "alternatives": [
+          "分子・分母の最高次の項だけを比べる（$2n^2$ と $n^3$）と、極限の見当がつく。答えの検算に使える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分母の最高次で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限を正しく求めている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{\\infty}{\\infty}=1$ と考えてしまう。",
+          "分子の最高次で割ってしまい、分母に $\\dfrac{1}{n}$ が残って $\\dfrac{\\cdots}{0}$ の形で迷う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{2\\cdot 7^{n+2}-2\\cdot 2^{n}}{7^{n}+2\\cdot 2^{n}}$ を求めなさい。",
+      "answer": {
+        "value": "$98$"
+      },
+      "explanation": "分子・分母を $7^n$ で割ると、$0<\\dfrac{2}{7}<1$ より $\\left(\\dfrac{2}{7}\\right)^n\\to0$ となり、極限は $98$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((2)*7**(n+2)+(-2)*2**(n+0))/((1)*7**(n+0)+(2)*2**n), n, oo)",
+        "expected": "98"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geom_power",
+      "explanation_detail": {
+        "approach": "底が最も大きい累乗（ここでは $7^n$）で分子・分母を割り、$|r|<1$ のとき $r^n\\to0$ を使う。",
+        "steps": [
+          "分子・分母を $7^n$ で割る。",
+          "$\\dfrac{98-2\\left(\\dfrac{2}{7}\\right)^n}{1+2\\left(\\dfrac{2}{7}\\right)^n}$。",
+          "$0<\\dfrac{2}{7}<1$ より $\\left(\\dfrac{2}{7}\\right)^n\\to0$。",
+          "極限は $98$。"
+        ],
+        "alternatives": [
+          "$n$ が大きいとき、$7^n$ の項が他の項に比べて圧倒的に大きいことから、$7^n$ の項だけを比べて見当をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大の底の累乗で割っている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$7^{n+1}=7^n\\cdot7$ の変形を忘れて係数を誤る。",
+          "小さい方の底で割ってしまい、$\\left(\\dfrac{7}{2}\\right)^n\\to\\infty$ の扱いに困る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "数列 $\\left\\{\\left(\\dfrac{x-3}{2}\\right)^n\\right\\}$ が収束するような $x$ の値の範囲として正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "$1<x\\leqq 5$"
+        },
+        {
+          "label": "イ",
+          "text": "$1<x<5$"
+        },
+        {
+          "label": "ウ",
+          "text": "$x\\leqq 5$"
+        },
+        {
+          "label": "エ",
+          "text": "$1\\leqq x\\leqq 5$"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "$\\{r^n\\}$ が収束する条件は $-1<r\\leqq1$。$-1<\\dfrac{x-3}{2}\\leqq1$ より $1<x\\leqq 5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[solve(Eq((x-3)/2, 1), x), solve(Eq((x-3)/2, -1), x)]",
+        "expected": "[[5], [1]]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geom_power",
+      "explanation_detail": {
+        "approach": "$\\{r^n\\}$ が収束するための必要十分条件 $-1<r\\leqq1$ に、公比 $r$ を当てはめる。右端だけ等号がつくことに注意。",
+        "steps": [
+          "$r=\\dfrac{x-3}{2}$ とおく。",
+          "$\\{r^n\\}$ が収束する $\\iff -1<r\\leqq1$。",
+          "$-2<x-3\\leqq 2$ より $1<x\\leqq 5$。"
+        ],
+        "alternatives": [
+          "端の値を代入して確かめる：$x=5$ なら $r=1$ で収束、$x=1$ なら $r=-1$ で振動。"
+        ],
+        "partial_credit": [
+          {
+            "point": "収束条件 $-1<r\\leqq1$ を使っている",
+            "points": 1
+          },
+          {
+            "point": "$x$ の範囲が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "無限等比級数の収束条件 $|r|<1$ と混同する。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "公比が $1$ のとき（$x=5$）は、すべての項が $1$ で $1$ に収束する。この場合を落としている。",
+          "misconception": "$r=1$ の場合の見落とし"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "公比が $-1$ 以下のときは振動する。下側の条件を落としている。",
+          "misconception": "収束条件の片側の見落とし"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "公比が $-1$ のとき（$x=1$）は、$-1,\\ 1,\\ -1,\\ \\cdots$ と振動して収束しない。",
+          "misconception": "$r=-1$ の場合の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{3\\cdot 3^{n}-2}{4^{n+1}-3\\cdot 3^{n}}$ を求めなさい。",
+      "answer": {
+        "value": "$0$"
+      },
+      "explanation": "分子・分母を $4^n$ で割ると、$0<\\dfrac{3}{4}<1$ より $\\left(\\dfrac{3}{4}\\right)^n\\to0$ となり、極限は $0$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((3)*3**(n+0)+(-2))/((1)*4**(n+1)+(-3)*3**n), n, oo)",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geom_power",
+      "explanation_detail": {
+        "approach": "底が最も大きい累乗（ここでは $4^n$）で分子・分母を割り、$|r|<1$ のとき $r^n\\to0$ を使う。",
+        "steps": [
+          "分子・分母を $4^n$ で割る。",
+          "$\\dfrac{3\\left(\\dfrac{3}{4}\\right)^n-2\\left(\\dfrac{1}{4}\\right)^n}{4-3\\left(\\dfrac{3}{4}\\right)^n}$。",
+          "$0<\\dfrac{3}{4}<1$ より $\\left(\\dfrac{3}{4}\\right)^n\\to0$。",
+          "極限は $0$。"
+        ],
+        "alternatives": [
+          "$n$ が大きいとき、$4^n$ の項が他の項に比べて圧倒的に大きいことから、$4^n$ の項だけを比べて見当をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大の底の累乗で割っている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$4^{n+1}=4^n\\cdot4$ の変形を忘れて係数を誤る。",
+          "小さい方の底で割ってしまい、$\\left(\\dfrac{4}{3}\\right)^n\\to\\infty$ の扱いに困る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{-3\\cdot 5^{n+1}-3^{n+1}}{5^{n}-3^{n}}$ を求めなさい。",
+      "answer": {
+        "value": "$-15$"
+      },
+      "explanation": "分子・分母を $5^n$ で割ると、$0<\\dfrac{3}{5}<1$ より $\\left(\\dfrac{3}{5}\\right)^n\\to0$ となり、極限は $-15$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((-3)*5**(n+1)+(-1)*3**(n+1))/((1)*5**(n+0)+(-1)*3**n), n, oo)",
+        "expected": "-15"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geom_power",
+      "explanation_detail": {
+        "approach": "底が最も大きい累乗（ここでは $5^n$）で分子・分母を割り、$|r|<1$ のとき $r^n\\to0$ を使う。",
+        "steps": [
+          "分子・分母を $5^n$ で割る。",
+          "$\\dfrac{-15-3\\left(\\dfrac{3}{5}\\right)^n}{1-\\left(\\dfrac{3}{5}\\right)^n}$。",
+          "$0<\\dfrac{3}{5}<1$ より $\\left(\\dfrac{3}{5}\\right)^n\\to0$。",
+          "極限は $-15$。"
+        ],
+        "alternatives": [
+          "$n$ が大きいとき、$5^n$ の項が他の項に比べて圧倒的に大きいことから、$5^n$ の項だけを比べて見当をつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "最大の底の累乗で割っている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$5^{n+1}=5^n\\cdot5$ の変形を忘れて係数を誤る。",
+          "小さい方の底で割ってしまい、$\\left(\\dfrac{5}{3}\\right)^n\\to\\infty$ の扱いに困る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "無限等比級数 $\\displaystyle\\sum_{n=1}^{\\infty}3\\left(\\dfrac{1}{4}\\right)^{n-1}$ の和を求めなさい。",
+      "answer": {
+        "value": "$4$"
+      },
+      "explanation": "初項 $3$、公比 $\\dfrac{1}{4}$ で $|\\dfrac{1}{4}|<1$ なので収束し、和は $\\dfrac{3}{1-(\\dfrac{1}{4})}=4$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation((3)*(Rational(1,4))**(n-1), [n, 1, oo])",
+        "expected": "4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-inf_geo_sum",
+      "explanation_detail": {
+        "approach": "初項 $a$ と公比 $r$ を読み取り、$|r|<1$ を確かめてから $\\dfrac{a}{1-r}$ を使う。",
+        "steps": [
+          "初項 $3$、公比 $\\dfrac{1}{4}$。",
+          "$|\\dfrac{1}{4}|<1$ なので収束する。",
+          "和は $\\dfrac{3}{1-(\\dfrac{1}{4})}=4$。"
+        ],
+        "alternatives": [
+          "部分和 $S_n=\\dfrac{3\\{1-(\\dfrac{1}{4})^n\\}}{1-(\\dfrac{1}{4})}$ で $n\\to\\infty$ とすると $(\\dfrac{1}{4})^n\\to0$ から同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "収束の確認（$|r|<1$）をしている",
+            "points": 1
+          },
+          {
+            "point": "和が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公比が負のとき $1-r$ を $1+|r|$ ではなく $1-|r|$ と計算してしまう。",
+          "収束条件を確かめずに公式を使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "無限等比級数 $\\displaystyle\\sum_{n=1}^{\\infty}9\\left(\\dfrac{1}{5}\\right)^{n-1}$ の和を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{45}{4}$"
+      },
+      "explanation": "初項 $9$、公比 $\\dfrac{1}{5}$ で $|\\dfrac{1}{5}|<1$ なので収束し、和は $\\dfrac{9}{1-(\\dfrac{1}{5})}=\\dfrac{45}{4}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation((9)*(Rational(1,5))**(n-1), [n, 1, oo])",
+        "expected": "Rational(45,4)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-inf_geo_sum",
+      "explanation_detail": {
+        "approach": "初項 $a$ と公比 $r$ を読み取り、$|r|<1$ を確かめてから $\\dfrac{a}{1-r}$ を使う。",
+        "steps": [
+          "初項 $9$、公比 $\\dfrac{1}{5}$。",
+          "$|\\dfrac{1}{5}|<1$ なので収束する。",
+          "和は $\\dfrac{9}{1-(\\dfrac{1}{5})}=\\dfrac{45}{4}$。"
+        ],
+        "alternatives": [
+          "部分和 $S_n=\\dfrac{9\\{1-(\\dfrac{1}{5})^n\\}}{1-(\\dfrac{1}{5})}$ で $n\\to\\infty$ とすると $(\\dfrac{1}{5})^n\\to0$ から同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "収束の確認（$|r|<1$）をしている",
+            "points": 1
+          },
+          {
+            "point": "和が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公比が負のとき $1-r$ を $1+|r|$ ではなく $1-|r|$ と計算してしまう。",
+          "収束条件を確かめずに公式を使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "循環小数 $0.\\dot{0}\\dot{5}$ を、無限等比級数の和として考えて分数で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{99}$"
+      },
+      "explanation": "$0.\\dot{0}\\dot{5}=\\dfrac{5}{100}+\\dfrac{5}{100^2}+\\cdots$ は初項 $\\dfrac{5}{100}$、公比 $\\dfrac{1}{100}$ の無限等比級数。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(Rational(5,100)*Rational(1,100)**(n-1), [n, 1, oo])",
+        "expected": "Rational(5,99)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-inf_geo_sum",
+      "explanation_detail": {
+        "approach": "循環する2桁 $05$ を1つのかたまりと見ると、$\\dfrac{1}{100}$ ずつ小さくなる項の和になる。",
+        "steps": [
+          "$0.\\dot{0}\\dot{5}=0.05+0.0005+\\cdots$。",
+          "初項 $\\dfrac{5}{100}$、公比 $\\dfrac{1}{100}$（$|r|<1$ なので収束）。",
+          "和は $\\dfrac{\\frac{5}{100}}{1-\\frac{1}{100}}=\\dfrac{5}{99}=\\dfrac{5}{99}$。"
+        ],
+        "alternatives": [
+          "$x=0.\\dot{0}\\dot{5}$ とおき、$100x-x=5$ から $x=\\dfrac{5}{99}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項と公比を正しく捉えている",
+            "points": 1
+          },
+          {
+            "point": "分数が正しい（約分済み）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公比を $\\dfrac{1}{10}$ としてしまう（2桁で循環する）。",
+          "約分を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "循環小数 $0.\\dot{0}\\dot{7}$ を、無限等比級数の和として考えて分数で表しなさい。",
+      "answer": {
+        "value": "$\\dfrac{7}{99}$"
+      },
+      "explanation": "$0.\\dot{0}\\dot{7}=\\dfrac{7}{100}+\\dfrac{7}{100^2}+\\cdots$ は初項 $\\dfrac{7}{100}$、公比 $\\dfrac{1}{100}$ の無限等比級数。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "summation(Rational(7,100)*Rational(1,100)**(n-1), [n, 1, oo])",
+        "expected": "Rational(7,99)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-inf_geo_sum",
+      "explanation_detail": {
+        "approach": "循環する2桁 $07$ を1つのかたまりと見ると、$\\dfrac{1}{100}$ ずつ小さくなる項の和になる。",
+        "steps": [
+          "$0.\\dot{0}\\dot{7}=0.07+0.0007+\\cdots$。",
+          "初項 $\\dfrac{7}{100}$、公比 $\\dfrac{1}{100}$（$|r|<1$ なので収束）。",
+          "和は $\\dfrac{\\frac{7}{100}}{1-\\frac{1}{100}}=\\dfrac{7}{99}=\\dfrac{7}{99}$。"
+        ],
+        "alternatives": [
+          "$x=0.\\dot{0}\\dot{7}$ とおき、$100x-x=7$ から $x=\\dfrac{7}{99}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項と公比を正しく捉えている",
+            "points": 1
+          },
+          {
+            "point": "分数が正しい（約分済み）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公比を $\\dfrac{1}{10}$ としてしまう（2桁で循環する）。",
+          "約分を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 2}\\dfrac{\\sqrt{x-1}-1}{x-2}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\dfrac{0}{0}$ の不定形なので、約分（または有理化）してから代入する。極限は $\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit((sqrt(x+(-1))-1)/(x-(2)), x, 2)",
+        "expected": "Rational(1,2)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-func_limit_factor",
+      "explanation_detail": {
+        "approach": "代入して $\\dfrac{0}{0}$ になったら、分子・分母に共通因数 $(x-a)$ が隠れている。因数分解か有理化で取り出して約分する。",
+        "steps": [
+          "$\\dfrac{0}{0}$ の不定形。分子を有理化する。",
+          "分子・分母に $\\sqrt{x-1}+1$ をかけると、分子は $(x-1)-1=x-2$。",
+          "約分して $\\dfrac{1}{\\sqrt{x-1}+1}$、$x=2$ を代入して $\\dfrac{1}{1+1}=\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "$x$ に $2$ に近い値（例：$2\\pm0.01$）を代入して電卓で計算し、$\\dfrac{1}{2}$ に近いことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "約分・有理化の変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{0}{0}$ を $0$ や $1$ と答えてしまう。",
+          "約分する前に代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 4}\\dfrac{2x^2-12x+16}{x^2-4x}$ を求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "$\\dfrac{0}{0}$ の不定形なので、約分（または有理化）してから代入する。極限は $1$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((2)*x**2+(-12)*x**1+(16)*x**0)/((1)*x**2+(-4)*x**1+(0)*x**0), x, 4)",
+        "expected": "1"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-func_limit_factor",
+      "explanation_detail": {
+        "approach": "代入して $\\dfrac{0}{0}$ になったら、分子・分母に共通因数 $(x-a)$ が隠れている。因数分解か有理化で取り出して約分する。",
+        "steps": [
+          "$x=4$ を代入すると分子・分母ともに $0$ になる（$\\dfrac{0}{0}$ の不定形）。",
+          "因数分解すると $\\dfrac{2(x-4)(x-2)}{(x-4)(x)}$。",
+          "共通因数を約分して $\\dfrac{2(x-2)}{x}$、$x=4$ を代入して $1$。"
+        ],
+        "alternatives": [
+          "$x$ に $4$ に近い値（例：$4\\pm0.01$）を代入して電卓で計算し、$1$ に近いことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "約分・有理化の変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{0}{0}$ を $0$ や $1$ と答えてしまう。",
+          "約分する前に代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 11}\\dfrac{\\sqrt{x-2}-3}{x-11}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{6}$"
+      },
+      "explanation": "$\\dfrac{0}{0}$ の不定形なので、約分（または有理化）してから代入する。極限は $\\dfrac{1}{6}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit((sqrt(x+(-2))-3)/(x-(11)), x, 11)",
+        "expected": "Rational(1,6)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-func_limit_factor",
+      "explanation_detail": {
+        "approach": "代入して $\\dfrac{0}{0}$ になったら、分子・分母に共通因数 $(x-a)$ が隠れている。因数分解か有理化で取り出して約分する。",
+        "steps": [
+          "$\\dfrac{0}{0}$ の不定形。分子を有理化する。",
+          "分子・分母に $\\sqrt{x-2}+3$ をかけると、分子は $(x-2)-9=x-11$。",
+          "約分して $\\dfrac{1}{\\sqrt{x-2}+3}$、$x=11$ を代入して $\\dfrac{1}{3+3}=\\dfrac{1}{6}$。"
+        ],
+        "alternatives": [
+          "$x$ に $11$ に近い値（例：$11\\pm0.01$）を代入して電卓で計算し、$\\dfrac{1}{6}$ に近いことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "約分・有理化の変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{0}{0}$ を $0$ や $1$ と答えてしまう。",
+          "約分する前に代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 1}\\dfrac{-x^2+x}{x^2-4x+3}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$\\dfrac{0}{0}$ の不定形なので、約分（または有理化）してから代入する。極限は $\\dfrac{1}{2}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(((-1)*x**2+(1)*x**1+(0)*x**0)/((1)*x**2+(-4)*x**1+(3)*x**0), x, 1)",
+        "expected": "Rational(1,2)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-func_limit_factor",
+      "explanation_detail": {
+        "approach": "代入して $\\dfrac{0}{0}$ になったら、分子・分母に共通因数 $(x-a)$ が隠れている。因数分解か有理化で取り出して約分する。",
+        "steps": [
+          "$x=1$ を代入すると分子・分母ともに $0$ になる（$\\dfrac{0}{0}$ の不定形）。",
+          "因数分解すると $\\dfrac{-(x-1)(x)}{(x-1)(x-3)}$。",
+          "共通因数を約分して $\\dfrac{-(x)}{x-3}$、$x=1$ を代入して $\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "$x$ に $1$ に近い値（例：$1\\pm0.01$）を代入して電卓で計算し、$\\dfrac{1}{2}$ に近いことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "約分・有理化の変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{0}{0}$ を $0$ や $1$ と答えてしまう。",
+          "約分する前に代入してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin x}{\\sin 6x}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{6}$"
+      },
+      "explanation": "$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ が使える形に変形する。極限は $\\dfrac{1}{6}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(sin(1*x)/sin(6*x), x, 0)",
+        "expected": "Rational(1,6)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-trig_limit",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\sin\\bigcirc}{\\bigcirc}$（$\\sin$ の中身と分母が同じ式）の形をつくり、$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ を使う。",
+        "steps": [
+          "$\\dfrac{\\sin x}{\\sin 6x}=\\dfrac{\\sin x}{x}\\cdot\\dfrac{6x}{\\sin 6x}\\cdot\\dfrac{x}{6x}$ と変形する。",
+          "前の2つの因数はともに $1$ に近づく。",
+          "極限は $\\dfrac{1}{6}=\\dfrac{1}{6}$。"
+        ],
+        "alternatives": [
+          "$x=0.01$ などを代入して電卓で値を求め、答えに近いことを確かめる（弧度法で計算する）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式が使える形に変形している",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin$ の中身と分母をそろえずに $1$ と答える。",
+          "$\\sin x$ を「$x$ と約分できる」と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 0}\\dfrac{\\tan 5x}{x}$ を求めなさい。",
+      "answer": {
+        "value": "$5$"
+      },
+      "explanation": "$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ が使える形に変形する。極限は $5$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit(tan(5*x)/(1*x), x, 0)",
+        "expected": "5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-trig_limit",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\sin\\bigcirc}{\\bigcirc}$（$\\sin$ の中身と分母が同じ式）の形をつくり、$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ を使う。",
+        "steps": [
+          "$\\dfrac{\\tan 5x}{x}=\\dfrac{5}{1}\\cdot\\dfrac{\\sin 5x}{5x}\\cdot\\dfrac{1}{\\cos 5x}$ と変形する。",
+          "$\\dfrac{\\sin 5x}{5x}\\to1$、$\\cos 5x\\to1$。",
+          "極限は $5$。"
+        ],
+        "alternatives": [
+          "$x=0.01$ などを代入して電卓で値を求め、答えに近いことを確かめる（弧度法で計算する）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式が使える形に変形している",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin$ の中身と分母をそろえずに $1$ と答える。",
+          "$\\sin 5x$ を「$5x$ と約分できる」と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 0}\\dfrac{1-\\cos 4x}{x^2}$ を求めなさい。",
+      "answer": {
+        "value": "$8$"
+      },
+      "explanation": "$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ が使える形に変形する。極限は $8$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "limit((1-cos(4*x))/x**2, x, 0)",
+        "expected": "8"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-trig_limit",
+      "explanation_detail": {
+        "approach": "$\\dfrac{\\sin\\bigcirc}{\\bigcirc}$（$\\sin$ の中身と分母が同じ式）の形をつくり、$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ を使う。",
+        "steps": [
+          "分子・分母に $1+\\cos 4x$ をかけると $\\dfrac{\\sin^2 4x}{x^2(1+\\cos 4x)}$。",
+          "$=\\left(\\dfrac{\\sin 4x}{4x}\\right)^2\\cdot\\dfrac{16}{1+\\cos 4x}$。",
+          "$x\\to0$ のとき $1\\cdot\\dfrac{16}{2}=8$。"
+        ],
+        "alternatives": [
+          "$x=0.01$ などを代入して電卓で値を求め、答えに近いことを確かめる（弧度法で計算する）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式が使える形に変形している",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sin$ の中身と分母をそろえずに $1$ と答える。",
+          "$\\sin 4x$ を「$4x$ と約分できる」と考えてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}(\\sqrt{9n^2+n}-3n)$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{6}$"
+      },
+      "explanation": "有理化して不定形を解消すると、極限は $\\dfrac{1}{6}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(9*n**2+1*n)-3*n, n, oo)",
+        "expected": "Rational(1,6)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "common_error"
+      ],
+      "variant_group": "HS-MATH3-U01-sqrt_diff",
+      "explanation_detail": {
+        "approach": "根号を含む $\\infty-\\infty$ の不定形は、$(\\sqrt{A}-\\sqrt{B})(\\sqrt{A}+\\sqrt{B})=A-B$ を使って有理化し、$\\dfrac{\\infty}{\\infty}$ の形に直してから $n$ で割る。",
+        "steps": [
+          "分子・分母に $\\sqrt{9n^2+n}+3n$ をかけると、分子は $n$。",
+          "分子・分母を $n$ で割ると $\\dfrac{1}{\\sqrt{9+\\dfrac{1}{n}}+3}$。",
+          "$n\\to\\infty$ として $\\dfrac{1}{6}=\\dfrac{1}{6}$。"
+        ],
+        "alternatives": [
+          "$n=10^4$ などを代入して電卓で計算し、$\\dfrac{1}{6}$ に近い値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化して不定形を解消している",
+            "points": 2
+          },
+          {
+            "point": "$n$ で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\infty-\\infty=0$ や $\\infty\\times0=0$ としてしまう。",
+          "有理化の後、$\\sqrt{n^2+\\cdots}$ を $n$ で割るときに $\\sqrt{\\ }$ の中を $n^2$ で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}(\\sqrt{4n^2+7n}-2n)$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{7}{4}$"
+      },
+      "explanation": "有理化して不定形を解消すると、極限は $\\dfrac{7}{4}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(4*n**2+7*n)-2*n, n, oo)",
+        "expected": "Rational(7,4)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "common_error"
+      ],
+      "variant_group": "HS-MATH3-U01-sqrt_diff",
+      "explanation_detail": {
+        "approach": "根号を含む $\\infty-\\infty$ の不定形は、$(\\sqrt{A}-\\sqrt{B})(\\sqrt{A}+\\sqrt{B})=A-B$ を使って有理化し、$\\dfrac{\\infty}{\\infty}$ の形に直してから $n$ で割る。",
+        "steps": [
+          "分子・分母に $\\sqrt{4n^2+7n}+2n$ をかけると、分子は $7n$。",
+          "分子・分母を $n$ で割ると $\\dfrac{7}{\\sqrt{4+\\dfrac{7}{n}}+2}$。",
+          "$n\\to\\infty$ として $\\dfrac{7}{4}=\\dfrac{7}{4}$。"
+        ],
+        "alternatives": [
+          "$n=10^4$ などを代入して電卓で計算し、$\\dfrac{7}{4}$ に近い値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化して不定形を解消している",
+            "points": 2
+          },
+          {
+            "point": "$n$ で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\infty-\\infty=0$ や $\\infty\\times0=0$ としてしまう。",
+          "有理化の後、$\\sqrt{n^2+\\cdots}$ を $n$ で割るときに $\\sqrt{\\ }$ の中を $n^2$ で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}(\\sqrt{n^2+4n}-\\sqrt{n^2+6n})$ を求めなさい。",
+      "answer": {
+        "value": "$-1$"
+      },
+      "explanation": "有理化して不定形を解消すると、極限は $-1$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(n**2+4*n)-sqrt(n**2+6*n), n, oo)",
+        "expected": "-1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "common_error"
+      ],
+      "variant_group": "HS-MATH3-U01-sqrt_diff",
+      "explanation_detail": {
+        "approach": "根号を含む $\\infty-\\infty$ の不定形は、$(\\sqrt{A}-\\sqrt{B})(\\sqrt{A}+\\sqrt{B})=A-B$ を使って有理化し、$\\dfrac{\\infty}{\\infty}$ の形に直してから $n$ で割る。",
+        "steps": [
+          "分子・分母に $\\sqrt{n^2+4n}+\\sqrt{n^2+6n}$ をかけると、分子は $(4-6)n=-2n$。",
+          "分子・分母を $n$ で割ると $\\dfrac{-2}{\\sqrt{1+\\dfrac{4}{n}}+\\sqrt{1+\\dfrac{6}{n}}}$。",
+          "$n\\to\\infty$ として $\\dfrac{-2}{2}=-1$。"
+        ],
+        "alternatives": [
+          "$n=10^4$ などを代入して電卓で計算し、$-1$ に近い値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化して不定形を解消している",
+            "points": 2
+          },
+          {
+            "point": "$n$ で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\infty-\\infty=0$ や $\\infty\\times0=0$ としてしまう。",
+          "有理化の後、$\\sqrt{n^2+\\cdots}$ を $n$ で割るときに $\\sqrt{\\ }$ の中を $n^2$ で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}n(\\sqrt{n^2+5}-n)$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{2}$"
+      },
+      "explanation": "有理化して不定形を解消すると、極限は $\\dfrac{5}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(n*(sqrt(n**2+5)-n), n, oo)",
+        "expected": "Rational(5,2)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "common_error"
+      ],
+      "variant_group": "HS-MATH3-U01-sqrt_diff",
+      "explanation_detail": {
+        "approach": "根号を含む $\\infty-\\infty$ の不定形は、$(\\sqrt{A}-\\sqrt{B})(\\sqrt{A}+\\sqrt{B})=A-B$ を使って有理化し、$\\dfrac{\\infty}{\\infty}$ の形に直してから $n$ で割る。",
+        "steps": [
+          "$\\sqrt{n^2+5}-n=\\dfrac{5}{\\sqrt{n^2+5}+n}$ と有理化する。",
+          "$n(\\sqrt{n^2+5}-n)=\\dfrac{5n}{\\sqrt{n^2+5}+n}=\\dfrac{5}{\\sqrt{1+\\dfrac{5}{n^2}}+1}$。",
+          "$n\\to\\infty$ として $\\dfrac{5}{2}$。"
+        ],
+        "alternatives": [
+          "$n=10^4$ などを代入して電卓で計算し、$\\dfrac{5}{2}$ に近い値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "有理化して不定形を解消している",
+            "points": 2
+          },
+          {
+            "point": "$n$ で割る変形をしている",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\infty-\\infty=0$ や $\\infty\\times0=0$ としてしまう。",
+          "有理化の後、$\\sqrt{n^2+\\cdots}$ を $n$ で割るときに $\\sqrt{\\ }$ の中を $n^2$ で割ることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "無限等比級数 $5x+5x\\cdot \\dfrac{3-x}{3}+5x\\left(\\dfrac{3-x}{3}\\right)^2+\\cdots$ が収束するような $x$ の値の範囲を求めなさい。また、そのときの和を求めなさい。",
+      "answer": {
+        "value": "$0\\leqq x<6$。和は $x=0$ のとき $0$、$0<x<6$ のとき $15$"
+      },
+      "explanation": "初項 $5x$ が $0$ になる $x=0$ の場合を別に考える。$x\\neq0$ のときは $-1<\\dfrac{3-x}{3}<1$ より $0<x<6$、和は $15$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(Eq((3-x)/3, -1), x), simplify((5*x)/(1-(3-x)/3))]",
+        "expected": "[[6], 15]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geo_series_x",
+      "explanation_detail": {
+        "approach": "初項に $x$ を含むので、初項 $=0$ の場合と、初項 $\\neq0$ で $|\\text{公比}|<1$ の場合に分ける。",
+        "steps": [
+          "初項 $5x$、公比 $\\dfrac{3-x}{3}$。",
+          "$x=0$ のとき、すべての項が $0$ なので収束し、和は $0$。",
+          "$x\\neq0$ のとき、収束条件は $-1<\\dfrac{3-x}{3}<1$、すなわち $0<x<6$。",
+          "このとき和は $\\dfrac{5x}{1-\\dfrac{3-x}{3}}=\\dfrac{5x}{\\frac{x}{3}}=15$。",
+          "まとめて $0\\leqq x<6$。"
+        ],
+        "alternatives": [
+          "$x=0$ を代入した級数が $0+0+0+\\cdots$ となることを実際に書いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項が $0$ の場合を検討している",
+            "points": 1
+          },
+          {
+            "point": "公比の条件から範囲を求めている",
+            "points": 1
+          },
+          {
+            "point": "範囲と和が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x=0$ の場合を落として $0<x<6$ と答える。",
+          "和を $x$ の式のまま答え、約分を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "無限等比級数 $5+5\\cdot \\dfrac{x+3}{5}+5\\left(\\dfrac{x+3}{5}\\right)^2+\\cdots$ が収束するような $x$ の値の範囲を求めなさい。また、そのときの和を求めなさい。",
+      "answer": {
+        "value": "$-8<x<2$、和は $\\dfrac{25}{2-x}$"
+      },
+      "explanation": "初項 $5\\neq0$、公比 $\\dfrac{x+3}{5}$。収束条件は $-1<\\dfrac{x+3}{5}<1$。和は $\\dfrac{5}{1-\\dfrac{x+3}{5}}=\\dfrac{25}{2-x}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(Eq((x+3)/5, 1), x), solve(Eq((x+3)/5, -1), x), simplify((5)/(1-(x+3)/5))]",
+        "expected": "[[2], [-8], (25)/(2-x)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geo_series_x",
+      "explanation_detail": {
+        "approach": "無限等比級数は「初項 $=0$ または $|\\text{公比}|<1$」のとき収束する。初項が $0$ でないので、公比の条件だけを調べる。",
+        "steps": [
+          "初項 $5$、公比 $\\dfrac{x+3}{5}$。初項は $0$ でない。",
+          "収束条件は $-1<\\dfrac{x+3}{5}<1$、すなわち $-5<x+3<5$ より $-8<x<2$。",
+          "和は $\\dfrac{5}{1-\\dfrac{x+3}{5}}=\\dfrac{25}{5-(x+3)}=\\dfrac{25}{2-x}$。"
+        ],
+        "alternatives": [
+          "範囲の端 $x=2$ を代入すると公比 $1$ で部分和が $5n$ となり発散することから、等号がつかないことを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "収束条件 $|r|<1$ を立てている",
+            "points": 1
+          },
+          {
+            "point": "$x$ の範囲が正しい",
+            "points": 2
+          },
+          {
+            "point": "和が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "数列 $\\{r^n\\}$ の収束条件 $-1<r\\leqq1$ と混同して等号をつける。",
+          "和の分母 $1-r$ の計算で、$x$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "無限等比級数 $4x+4x\\cdot \\dfrac{2-x}{2}+4x\\left(\\dfrac{2-x}{2}\\right)^2+\\cdots$ が収束するような $x$ の値の範囲を求めなさい。また、そのときの和を求めなさい。",
+      "answer": {
+        "value": "$0\\leqq x<4$。和は $x=0$ のとき $0$、$0<x<4$ のとき $8$"
+      },
+      "explanation": "初項 $4x$ が $0$ になる $x=0$ の場合を別に考える。$x\\neq0$ のときは $-1<\\dfrac{2-x}{2}<1$ より $0<x<4$、和は $8$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(Eq((2-x)/2, -1), x), simplify((4*x)/(1-(2-x)/2))]",
+        "expected": "[[4], 8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geo_series_x",
+      "explanation_detail": {
+        "approach": "初項に $x$ を含むので、初項 $=0$ の場合と、初項 $\\neq0$ で $|\\text{公比}|<1$ の場合に分ける。",
+        "steps": [
+          "初項 $4x$、公比 $\\dfrac{2-x}{2}$。",
+          "$x=0$ のとき、すべての項が $0$ なので収束し、和は $0$。",
+          "$x\\neq0$ のとき、収束条件は $-1<\\dfrac{2-x}{2}<1$、すなわち $0<x<4$。",
+          "このとき和は $\\dfrac{4x}{1-\\dfrac{2-x}{2}}=\\dfrac{4x}{\\frac{x}{2}}=8$。",
+          "まとめて $0\\leqq x<4$。"
+        ],
+        "alternatives": [
+          "$x=0$ を代入した級数が $0+0+0+\\cdots$ となることを実際に書いて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "初項が $0$ の場合を検討している",
+            "points": 1
+          },
+          {
+            "point": "公比の条件から範囲を求めている",
+            "points": 1
+          },
+          {
+            "point": "範囲と和が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x=0$ の場合を落として $0<x<4$ と答える。",
+          "和を $x$ の式のまま答え、約分を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "無限等比級数 $-3-3\\cdot \\dfrac{x}{5}-3\\left(\\dfrac{x}{5}\\right)^2+\\cdots$ が収束するような $x$ の値の範囲を求めなさい。また、そのときの和を求めなさい。",
+      "answer": {
+        "value": "$-5<x<5$、和は $-\\dfrac{15}{5-x}$"
+      },
+      "explanation": "初項 $-3\\neq0$、公比 $\\dfrac{x}{5}$。収束条件は $-1<\\dfrac{x}{5}<1$。和は $\\dfrac{-3}{1-\\dfrac{x}{5}}=-\\dfrac{15}{5-x}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(Eq((x)/5, 1), x), solve(Eq((x)/5, -1), x), simplify((-3)/(1-(x)/5))]",
+        "expected": "[[5], [-5], (-15)/(5-x)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-geo_series_x",
+      "explanation_detail": {
+        "approach": "無限等比級数は「初項 $=0$ または $|\\text{公比}|<1$」のとき収束する。初項が $0$ でないので、公比の条件だけを調べる。",
+        "steps": [
+          "初項 $-3$、公比 $\\dfrac{x}{5}$。初項は $0$ でない。",
+          "収束条件は $-1<\\dfrac{x}{5}<1$、すなわち $-5<x<5$ より $-5<x<5$。",
+          "和は $\\dfrac{-3}{1-\\dfrac{x}{5}}=\\dfrac{-15}{5-(x)}=-\\dfrac{15}{5-x}$。"
+        ],
+        "alternatives": [
+          "範囲の端 $x=5$ を代入すると公比 $1$ で部分和が $-3n$ となり発散することから、等号がつかないことを確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "収束条件 $|r|<1$ を立てている",
+            "points": 1
+          },
+          {
+            "point": "$x$ の範囲が正しい",
+            "points": 2
+          },
+          {
+            "point": "和が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "数列 $\\{r^n\\}$ の収束条件 $-1<r\\leqq1$ と混同して等号をつける。",
+          "和の分母 $1-r$ の計算で、$x$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$a_1=0$、$a_{n+1}=-\\dfrac{2}{3}a_n+5\\ (n=1,\\,2,\\,3,\\,\\cdots)$ で定められる数列 $\\{a_n\\}$ の一般項を求め、極限 $\\displaystyle\\lim_{n\\to\\infty}a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=3-3\\left(-\\dfrac{2}{3}\\right)^{n-1}$、$\\displaystyle\\lim_{n\\to\\infty}a_n=3$"
+      },
+      "explanation": "特性方程式 $\\alpha=-\\dfrac{2}{3}\\alpha+5$ の解 $\\alpha=3$ を用いて $a_{n+1}-(3)=-\\dfrac{2}{3}(a_n-(3))$。$\\left|-\\dfrac{2}{3}\\right|<1$ より $\\left(-\\dfrac{2}{3}\\right)^{n-1}\\to0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(((3)+(-3)*(Rational(-2,3))**n)-(Rational(-2,3))*((3)+(-3)*(Rational(-2,3))**(n-1))-(5)), (3)+(-3)*(Rational(-2,3))**0, (3)+limit((-3)*Abs(Rational(-2,3))**(n-1), n, oo)]",
+        "expected": "[0, 0, 3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U01-recurrence_limit",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "数学Bの漸化式 $a_{n+1}=pa_n+q$ の解き方（$\\alpha=p\\alpha+q$ の解 $\\alpha$ を引く）で一般項を求め、$|p|<1$ なら $p^{n-1}\\to0$ を使う。",
+        "steps": [
+          "$\\alpha=-\\dfrac{2}{3}\\alpha+5$ を解くと $\\alpha=3$。",
+          "$a_{n+1}-(3)=-\\dfrac{2}{3}\\{a_n-(3)\\}$ より、数列 $\\{a_n-(3)\\}$ は初項 $-3$、公比 $-\\dfrac{2}{3}$ の等比数列。",
+          "$a_n=3-3\\left(-\\dfrac{2}{3}\\right)^{n-1}$。",
+          "$\\left|-\\dfrac{2}{3}\\right|<1$ より $\\left(-\\dfrac{2}{3}\\right)^{n-1}\\to0$ なので、$\\displaystyle\\lim_{n\\to\\infty}a_n=3$。"
+        ],
+        "alternatives": [
+          "極限 $\\alpha$ が存在すると仮定すれば、漸化式の両辺で $n\\to\\infty$ として $\\alpha=-\\dfrac{2}{3}\\alpha+5$ から $\\alpha=3$ と見当がつく（ただし収束することは一般項から示す必要がある）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特性方程式を用いて変形している",
+            "points": 1
+          },
+          {
+            "point": "一般項が正しい",
+            "points": 2
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列の初項を $a_1$ のままにして、$a_1-\\alpha$ としない。",
+          "$\\left(-\\dfrac{2}{3}\\right)^{n-1}$ の指数を $n$ にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$a_1=3$、$a_{n+1}=\\dfrac{2}{5}a_n-9\\ (n=1,\\,2,\\,3,\\,\\cdots)$ で定められる数列 $\\{a_n\\}$ の一般項を求め、極限 $\\displaystyle\\lim_{n\\to\\infty}a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=-15+18\\left(\\dfrac{2}{5}\\right)^{n-1}$、$\\displaystyle\\lim_{n\\to\\infty}a_n=-15$"
+      },
+      "explanation": "特性方程式 $\\alpha=\\dfrac{2}{5}\\alpha-9$ の解 $\\alpha=-15$ を用いて $a_{n+1}-(-15)=\\dfrac{2}{5}(a_n-(-15))$。$\\left|\\dfrac{2}{5}\\right|<1$ より $\\left(\\dfrac{2}{5}\\right)^{n-1}\\to0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(((-15)+(18)*(Rational(2,5))**n)-(Rational(2,5))*((-15)+(18)*(Rational(2,5))**(n-1))-(-9)), (-15)+(18)*(Rational(2,5))**0, (-15)+limit((18)*Abs(Rational(2,5))**(n-1), n, oo)]",
+        "expected": "[0, 3, -15]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U01-recurrence_limit",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "数学Bの漸化式 $a_{n+1}=pa_n+q$ の解き方（$\\alpha=p\\alpha+q$ の解 $\\alpha$ を引く）で一般項を求め、$|p|<1$ なら $p^{n-1}\\to0$ を使う。",
+        "steps": [
+          "$\\alpha=\\dfrac{2}{5}\\alpha-9$ を解くと $\\alpha=-15$。",
+          "$a_{n+1}-(-15)=\\dfrac{2}{5}\\{a_n-(-15)\\}$ より、数列 $\\{a_n-(-15)\\}$ は初項 $18$、公比 $\\dfrac{2}{5}$ の等比数列。",
+          "$a_n=-15+18\\left(\\dfrac{2}{5}\\right)^{n-1}$。",
+          "$\\left|\\dfrac{2}{5}\\right|<1$ より $\\left(\\dfrac{2}{5}\\right)^{n-1}\\to0$ なので、$\\displaystyle\\lim_{n\\to\\infty}a_n=-15$。"
+        ],
+        "alternatives": [
+          "極限 $\\alpha$ が存在すると仮定すれば、漸化式の両辺で $n\\to\\infty$ として $\\alpha=\\dfrac{2}{5}\\alpha-9$ から $\\alpha=-15$ と見当がつく（ただし収束することは一般項から示す必要がある）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特性方程式を用いて変形している",
+            "points": 1
+          },
+          {
+            "point": "一般項が正しい",
+            "points": 2
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列の初項を $a_1$ のままにして、$a_1-\\alpha$ としない。",
+          "$\\left(\\dfrac{2}{5}\\right)^{n-1}$ の指数を $n$ にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$a_1=7$、$a_{n+1}=\\dfrac{1}{2}a_n-1\\ (n=1,\\,2,\\,3,\\,\\cdots)$ で定められる数列 $\\{a_n\\}$ の一般項を求め、極限 $\\displaystyle\\lim_{n\\to\\infty}a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=-2+9\\left(\\dfrac{1}{2}\\right)^{n-1}$、$\\displaystyle\\lim_{n\\to\\infty}a_n=-2$"
+      },
+      "explanation": "特性方程式 $\\alpha=\\dfrac{1}{2}\\alpha-1$ の解 $\\alpha=-2$ を用いて $a_{n+1}-(-2)=\\dfrac{1}{2}(a_n-(-2))$。$\\left|\\dfrac{1}{2}\\right|<1$ より $\\left(\\dfrac{1}{2}\\right)^{n-1}\\to0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(((-2)+(9)*(Rational(1,2))**n)-(Rational(1,2))*((-2)+(9)*(Rational(1,2))**(n-1))-(-1)), (-2)+(9)*(Rational(1,2))**0, (-2)+limit((9)*Abs(Rational(1,2))**(n-1), n, oo)]",
+        "expected": "[0, 7, -2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U01-recurrence_limit",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "数学Bの漸化式 $a_{n+1}=pa_n+q$ の解き方（$\\alpha=p\\alpha+q$ の解 $\\alpha$ を引く）で一般項を求め、$|p|<1$ なら $p^{n-1}\\to0$ を使う。",
+        "steps": [
+          "$\\alpha=\\dfrac{1}{2}\\alpha-1$ を解くと $\\alpha=-2$。",
+          "$a_{n+1}-(-2)=\\dfrac{1}{2}\\{a_n-(-2)\\}$ より、数列 $\\{a_n-(-2)\\}$ は初項 $9$、公比 $\\dfrac{1}{2}$ の等比数列。",
+          "$a_n=-2+9\\left(\\dfrac{1}{2}\\right)^{n-1}$。",
+          "$\\left|\\dfrac{1}{2}\\right|<1$ より $\\left(\\dfrac{1}{2}\\right)^{n-1}\\to0$ なので、$\\displaystyle\\lim_{n\\to\\infty}a_n=-2$。"
+        ],
+        "alternatives": [
+          "極限 $\\alpha$ が存在すると仮定すれば、漸化式の両辺で $n\\to\\infty$ として $\\alpha=\\dfrac{1}{2}\\alpha-1$ から $\\alpha=-2$ と見当がつく（ただし収束することは一般項から示す必要がある）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特性方程式を用いて変形している",
+            "points": 1
+          },
+          {
+            "point": "一般項が正しい",
+            "points": 2
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列の初項を $a_1$ のままにして、$a_1-\\alpha$ としない。",
+          "$\\left(\\dfrac{1}{2}\\right)^{n-1}$ の指数を $n$ にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$a_1=4$、$a_{n+1}=\\dfrac{1}{3}a_n-4\\ (n=1,\\,2,\\,3,\\,\\cdots)$ で定められる数列 $\\{a_n\\}$ の一般項を求め、極限 $\\displaystyle\\lim_{n\\to\\infty}a_n$ を求めなさい。",
+      "answer": {
+        "value": "$a_n=-6+10\\left(\\dfrac{1}{3}\\right)^{n-1}$、$\\displaystyle\\lim_{n\\to\\infty}a_n=-6$"
+      },
+      "explanation": "特性方程式 $\\alpha=\\dfrac{1}{3}\\alpha-4$ の解 $\\alpha=-6$ を用いて $a_{n+1}-(-6)=\\dfrac{1}{3}(a_n-(-6))$。$\\left|\\dfrac{1}{3}\\right|<1$ より $\\left(\\dfrac{1}{3}\\right)^{n-1}\\to0$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(((-6)+(10)*(Rational(1,3))**n)-(Rational(1,3))*((-6)+(10)*(Rational(1,3))**(n-1))-(-4)), (-6)+(10)*(Rational(1,3))**0, (-6)+limit((10)*Abs(Rational(1,3))**(n-1), n, oo)]",
+        "expected": "[0, 4, -6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U01-recurrence_limit",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "数学Bの漸化式 $a_{n+1}=pa_n+q$ の解き方（$\\alpha=p\\alpha+q$ の解 $\\alpha$ を引く）で一般項を求め、$|p|<1$ なら $p^{n-1}\\to0$ を使う。",
+        "steps": [
+          "$\\alpha=\\dfrac{1}{3}\\alpha-4$ を解くと $\\alpha=-6$。",
+          "$a_{n+1}-(-6)=\\dfrac{1}{3}\\{a_n-(-6)\\}$ より、数列 $\\{a_n-(-6)\\}$ は初項 $10$、公比 $\\dfrac{1}{3}$ の等比数列。",
+          "$a_n=-6+10\\left(\\dfrac{1}{3}\\right)^{n-1}$。",
+          "$\\left|\\dfrac{1}{3}\\right|<1$ より $\\left(\\dfrac{1}{3}\\right)^{n-1}\\to0$ なので、$\\displaystyle\\lim_{n\\to\\infty}a_n=-6$。"
+        ],
+        "alternatives": [
+          "極限 $\\alpha$ が存在すると仮定すれば、漸化式の両辺で $n\\to\\infty$ として $\\alpha=\\dfrac{1}{3}\\alpha-4$ から $\\alpha=-6$ と見当がつく（ただし収束することは一般項から示す必要がある）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "特性方程式を用いて変形している",
+            "points": 1
+          },
+          {
+            "point": "一般項が正しい",
+            "points": 2
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "等比数列の初項を $a_1$ のままにして、$a_1-\\alpha$ としない。",
+          "$\\left(\\dfrac{1}{3}\\right)^{n-1}$ の指数を $n$ にしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\lim_{x\\to 1}\\dfrac{x^2+ax+b}{x-1}=6$ が成り立つように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=4,\\ b=-5$"
+      },
+      "explanation": "分母 $\\to0$ で極限が有限なので、分子 $\\to0$ が必要。$b=-1-a$ を代入して約分し、極限を $6$ に等しくおく。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(1)**2+(4)*(1)+(-5), limit((x**2+(4)*x+(-5))/(x-(1)), x, 1)]",
+        "expected": "[0, 6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-limit_param",
+      "explanation_detail": {
+        "approach": "$x\\to1$ で分母 $\\to0$ なのに極限が有限の値になるには、分子も $0$ に近づかなければならない（必要条件）。そこから $a,\\ b$ の関係を出し、実際に極限を計算して決める。",
+        "steps": [
+          "$\\displaystyle\\lim_{x\\to 1}(x-1)=0$ で極限が有限なので、$\\displaystyle\\lim_{x\\to 1}(x^2+ax+b)=0$ が必要。よって $1+a+b=0$。",
+          "$b=-1-a$ を代入すると、分子は $(x-1)(x+a+1)$ と因数分解できる。",
+          "約分して $x+a+1\\to 2+a$。これが $6$ に等しいので $a=4$、$b=-5$。",
+          "（逆に $a=4,\\ b=-5$ のとき $\\dfrac{(x-1)(x+5)}{x-1}=x+5\\to 6$ となり、条件を満たす。）"
+        ],
+        "alternatives": [
+          "極限値が $6$ なので、分子は $(x-1)(x+5)$ の形でなければならない、と因数から直接考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子 $\\to0$ が必要であることを述べている",
+            "points": 1
+          },
+          {
+            "point": "約分して極限を計算している",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b$ が正しく、十分性を確認している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「分子 $\\to0$」という必要条件に気づかず、手が止まる。",
+          "求めた $a,\\ b$ で本当に極限が成り立つか（十分性）を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\lim_{x\\to -3}\\dfrac{x^2+ax+b}{x+3}=-4$ が成り立つように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=2,\\ b=-3$"
+      },
+      "explanation": "分母 $\\to0$ で極限が有限なので、分子 $\\to0$ が必要。$b=-9+3a$ を代入して約分し、極限を $-4$ に等しくおく。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-3)**2+(2)*(-3)+(-3), limit((x**2+(2)*x+(-3))/(x-(-3)), x, -3)]",
+        "expected": "[0, -4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-limit_param",
+      "explanation_detail": {
+        "approach": "$x\\to-3$ で分母 $\\to0$ なのに極限が有限の値になるには、分子も $0$ に近づかなければならない（必要条件）。そこから $a,\\ b$ の関係を出し、実際に極限を計算して決める。",
+        "steps": [
+          "$\\displaystyle\\lim_{x\\to -3}(x+3)=0$ で極限が有限なので、$\\displaystyle\\lim_{x\\to -3}(x^2+ax+b)=0$ が必要。よって $9-3a+b=0$。",
+          "$b=-9+3a$ を代入すると、分子は $(x+3)(x+a-3)$ と因数分解できる。",
+          "約分して $x+a-3\\to -6+a$。これが $-4$ に等しいので $a=2$、$b=-3$。",
+          "（逆に $a=2,\\ b=-3$ のとき $\\dfrac{(x+3)(x-1)}{x+3}=x-1\\to -4$ となり、条件を満たす。）"
+        ],
+        "alternatives": [
+          "極限値が $-4$ なので、分子は $(x+3)(x-1)$ の形でなければならない、と因数から直接考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子 $\\to0$ が必要であることを述べている",
+            "points": 1
+          },
+          {
+            "point": "約分して極限を計算している",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b$ が正しく、十分性を確認している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "「分子 $\\to0$」という必要条件に気づかず、手が止まる。",
+          "求めた $a,\\ b$ で本当に極限が成り立つか（十分性）を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\lim_{x\\to 3}\\dfrac{a\\sqrt{x-2}-b}{x-3}=-3$ が成り立つように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=-6,\\ b=-6$"
+      },
+      "explanation": "分子 $\\to0$ が必要なので $b=1a$。有理化して極限を計算すると $\\dfrac{a}{2}$ となり、これが $-3$ に等しい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-6)*sqrt(3+(-2))-(-6), limit(((-6)*sqrt(x+(-2))-(-6))/(x-(3)), x, 3)]",
+        "expected": "[0, -3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-limit_param",
+      "explanation_detail": {
+        "approach": "分母 $\\to0$ で極限が有限なので、分子 $\\to0$ が必要。$b$ を $a$ で表してから有理化する。",
+        "steps": [
+          "$\\displaystyle\\lim_{x\\to 3}(x-3)=0$ なので、$\\displaystyle\\lim_{x\\to 3}(a\\sqrt{x-2}-b)=0$ が必要。$\\sqrt{3-2}=1$ より $b=1a$。",
+          "このとき $\\dfrac{a(\\sqrt{x-2}-1)}{x-3}=\\dfrac{a}{\\sqrt{x-2}+1}$（分子を有理化して約分）。",
+          "$x\\to 3$ として $\\dfrac{a}{2}=-3$ より $a=-6$、$b=-6$。"
+        ],
+        "alternatives": [
+          "$a=-6,\\ b=-6$ を代入し、$x=3$ に近い値で電卓計算して $-3$ に近いことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子 $\\to0$ から $b$ を $a$ で表している",
+            "points": 1
+          },
+          {
+            "point": "有理化して極限を計算している",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "有理化の際に係数 $a$ を落とす。",
+          "必要条件だけで $a,\\ b$ を決めようとして、もう1つの式が立たない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "等式 $\\displaystyle\\lim_{x\\to 1}\\dfrac{a\\sqrt{x}-b}{x-1}=-3$ が成り立つように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=-6,\\ b=-6$"
+      },
+      "explanation": "分子 $\\to0$ が必要なので $b=1a$。有理化して極限を計算すると $\\dfrac{a}{2}$ となり、これが $-3$ に等しい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[(-6)*sqrt(1+(0))-(-6), limit(((-6)*sqrt(x+(0))-(-6))/(x-(1)), x, 1)]",
+        "expected": "[0, -3]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-limit_param",
+      "explanation_detail": {
+        "approach": "分母 $\\to0$ で極限が有限なので、分子 $\\to0$ が必要。$b$ を $a$ で表してから有理化する。",
+        "steps": [
+          "$\\displaystyle\\lim_{x\\to 1}(x-1)=0$ なので、$\\displaystyle\\lim_{x\\to 1}(a\\sqrt{x}-b)=0$ が必要。$\\sqrt{1}=1$ より $b=1a$。",
+          "このとき $\\dfrac{a(\\sqrt{x}-1)}{x-1}=\\dfrac{a}{\\sqrt{x}+1}$（分子を有理化して約分）。",
+          "$x\\to 1$ として $\\dfrac{a}{2}=-3$ より $a=-6$、$b=-6$。"
+        ],
+        "alternatives": [
+          "$a=-6,\\ b=-6$ を代入し、$x=1$ に近い値で電卓計算して $-3$ に近いことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分子 $\\to0$ から $b$ を $a$ で表している",
+            "points": 1
+          },
+          {
+            "point": "有理化して極限を計算している",
+            "points": 1
+          },
+          {
+            "point": "$a,\\ b$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "有理化の際に係数 $a$ を落とす。",
+          "必要条件だけで $a,\\ b$ を決めようとして、もう1つの式が立たない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to -\\infty}(\\sqrt{x^2+6x-2}+x)$ を求めなさい。",
+      "answer": {
+        "value": "$-3$"
+      },
+      "explanation": "$x=-t$ とおくと $t\\to\\infty$ で $\\sqrt{t^2-6t-2}-t\\to -3$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(x**2+(6)*x+(-2))+x, x, -oo)",
+        "expected": "-3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-one_sided",
+      "explanation_detail": {
+        "approach": "$x\\to-\\infty$ では $x<0$ なので $\\sqrt{x^2}=-x$。$x=-t$ と置きかえて $t\\to\\infty$ の極限に直すと安全である。",
+        "steps": [
+          "$x=-t$ とおくと、$x\\to-\\infty$ のとき $t\\to\\infty$。",
+          "式は $\\sqrt{t^2-6t-2}-t$。",
+          "有理化して $\\dfrac{-6t-2}{\\sqrt{t^2-6t-2}+t}$、分子・分母を $t$ で割って $t\\to\\infty$ とすると $\\dfrac{-6}{2}=-3$。"
+        ],
+        "alternatives": [
+          "$x<0$ のとき $\\sqrt{x^2+\\cdots}=|x|\\sqrt{1+\\cdots}=-x\\sqrt{1+\\cdots}$ として、置きかえずに計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x=-t$ の置きかえ（または $\\sqrt{x^2}=-x$）を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "有理化して計算している",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x>0$ のときと同じように計算して $\\dfrac{6}{2}$ と答える（符号の誤り）。",
+          "$\\sqrt{x^2}=x$ としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to -\\infty}(\\sqrt{x^2+7x-1}+x)$ を求めなさい。",
+      "answer": {
+        "value": "$-\\dfrac{7}{2}$"
+      },
+      "explanation": "$x=-t$ とおくと $t\\to\\infty$ で $\\sqrt{t^2-7t-1}-t\\to -\\dfrac{7}{2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(x**2+(7)*x+(-1))+x, x, -oo)",
+        "expected": "Rational(-7,2)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-one_sided",
+      "explanation_detail": {
+        "approach": "$x\\to-\\infty$ では $x<0$ なので $\\sqrt{x^2}=-x$。$x=-t$ と置きかえて $t\\to\\infty$ の極限に直すと安全である。",
+        "steps": [
+          "$x=-t$ とおくと、$x\\to-\\infty$ のとき $t\\to\\infty$。",
+          "式は $\\sqrt{t^2-7t-1}-t$。",
+          "有理化して $\\dfrac{-7t-1}{\\sqrt{t^2-7t-1}+t}$、分子・分母を $t$ で割って $t\\to\\infty$ とすると $\\dfrac{-7}{2}=-\\dfrac{7}{2}$。"
+        ],
+        "alternatives": [
+          "$x<0$ のとき $\\sqrt{x^2+\\cdots}=|x|\\sqrt{1+\\cdots}=-x\\sqrt{1+\\cdots}$ として、置きかえずに計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x=-t$ の置きかえ（または $\\sqrt{x^2}=-x$）を正しく扱っている",
+            "points": 2
+          },
+          {
+            "point": "有理化して計算している",
+            "points": 1
+          },
+          {
+            "point": "極限が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$x>0$ のときと同じように計算して $\\dfrac{7}{2}$ と答える（符号の誤り）。",
+          "$\\sqrt{x^2}=x$ としてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=\\dfrac{3x^2-5x}{|x|}$ について、$\\displaystyle\\lim_{x\\to+0}f(x)$ と $\\displaystyle\\lim_{x\\to-0}f(x)$ を求めなさい。また、$\\displaystyle\\lim_{x\\to0}f(x)$ は存在するか答えなさい。",
+      "answer": {
+        "value": "$\\displaystyle\\lim_{x\\to+0}f(x)=-5$、$\\displaystyle\\lim_{x\\to-0}f(x)=5$。一致しないので $\\displaystyle\\lim_{x\\to0}f(x)$ は存在しない"
+      },
+      "explanation": "$x>0$ では $|x|=x$ で $f(x)=3x-5$、$x<0$ では $|x|=-x$ で $f(x)=-3x+5$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[limit((3*x**2+(-5)*x)/Abs(x), x, 0, \"+\"), limit((3*x**2+(-5)*x)/Abs(x), x, 0, \"-\")]",
+        "expected": "[-5, 5]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-one_sided",
+      "explanation_detail": {
+        "approach": "絶対値は中身の符号で場合分けする。$x\\to+0$ では $x>0$、$x\\to-0$ では $x<0$ として $|x|$ を外す。",
+        "steps": [
+          "$x>0$ のとき $f(x)=\\dfrac{x(3x-5)}{x}=3x-5\\to -5$。",
+          "$x<0$ のとき $f(x)=\\dfrac{x(3x-5)}{-x}=-3x+5\\to 5$。",
+          "$-5\\neq 5$ なので、$x\\to0$ の極限は存在しない。"
+        ],
+        "alternatives": [
+          "$y=f(x)$ のグラフをかくと、$x=0$ の左右で2本の直線に分かれ、$y$ 軸上での高さが異なることが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x\\to+0$ の極限が正しい",
+            "points": 1
+          },
+          {
+            "point": "$x\\to-0$ の極限が正しい",
+            "points": 1
+          },
+          {
+            "point": "極限が存在しないと結論している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$|x|$ をそのまま $x$ として約分してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=\\dfrac{x^2-2x}{|x|}$ について、$\\displaystyle\\lim_{x\\to+0}f(x)$ と $\\displaystyle\\lim_{x\\to-0}f(x)$ を求めなさい。また、$\\displaystyle\\lim_{x\\to0}f(x)$ は存在するか答えなさい。",
+      "answer": {
+        "value": "$\\displaystyle\\lim_{x\\to+0}f(x)=-2$、$\\displaystyle\\lim_{x\\to-0}f(x)=2$。一致しないので $\\displaystyle\\lim_{x\\to0}f(x)$ は存在しない"
+      },
+      "explanation": "$x>0$ では $|x|=x$ で $f(x)=x-2$、$x<0$ では $|x|=-x$ で $f(x)=-x+2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[limit((1*x**2+(-2)*x)/Abs(x), x, 0, \"+\"), limit((1*x**2+(-2)*x)/Abs(x), x, 0, \"-\")]",
+        "expected": "[-2, 2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-one_sided",
+      "explanation_detail": {
+        "approach": "絶対値は中身の符号で場合分けする。$x\\to+0$ では $x>0$、$x\\to-0$ では $x<0$ として $|x|$ を外す。",
+        "steps": [
+          "$x>0$ のとき $f(x)=\\dfrac{x(x-2)}{x}=x-2\\to -2$。",
+          "$x<0$ のとき $f(x)=\\dfrac{x(x-2)}{-x}=-x+2\\to 2$。",
+          "$-2\\neq 2$ なので、$x\\to0$ の極限は存在しない。"
+        ],
+        "alternatives": [
+          "$y=f(x)$ のグラフをかくと、$x=0$ の左右で2本の直線に分かれ、$y$ 軸上での高さが異なることが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$x\\to+0$ の極限が正しい",
+            "points": 1
+          },
+          {
+            "point": "$x\\to-0$ の極限が正しい",
+            "points": 1
+          },
+          {
+            "point": "極限が存在しないと結論している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$|x|$ をそのまま $x$ として約分してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}(5^n+6^n)^{\\frac{1}{n}}$ を求めなさい。求め方も示すこと。",
+      "answer": {
+        "value": "$6$"
+      },
+      "explanation": "はさみうちの原理を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切な不等式を根拠とともに立てている",
+            "points": 3
+          },
+          {
+            "criterion": "両側の極限を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "はさみうちの原理により結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[6, limit(2**(1/n)*6, n, oo), limit((5**n+6**n)**(1/n), n, oo)]",
+        "expected": "[6, 6, 6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-squeeze",
+      "explanation_detail": {
+        "approach": "最も大きい底 $6^n$ が全体を支配する。和を $6^n$ と $2\\cdot6^n$ ではさみ、$\\dfrac{1}{n}$ 乗する。",
+        "steps": [
+          "$5$ はいずれも $0$ より大きく $6$ より小さいので、$6^n<5^n+6^n<2\\cdot 6^n$。",
+          "各辺を $\\dfrac{1}{n}$ 乗すると $6<(5^n+6^n)^{\\frac{1}{n}}<2^{\\frac{1}{n}}\\cdot 6$。",
+          "$n\\to\\infty$ のとき $2^{\\frac{1}{n}}\\to1$ なので、右端は $6$ に収束する。",
+          "はさみうちの原理より、極限は $6$。"
+        ],
+        "alternatives": [
+          "$(5^n+6^n)^{\\frac{1}{n}}=6\\left(\\left(\\dfrac{5}{6}\\right)^n+1\\right)^{\\frac{1}{n}}$ と変形し、かっこの中が $1$ と $2$ の間にあることを使ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式",
+            "points": 3
+          },
+          {
+            "point": "両側の極限",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "振動する部分（$\\sin$、ガウス記号など）の極限を勝手に決めてしまう。",
+          "不等式で割る数の符号を確かめず、不等号の向きを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}(3^n+7^n+8^n)^{\\frac{1}{n}}$ を求めなさい。求め方も示すこと。",
+      "answer": {
+        "value": "$8$"
+      },
+      "explanation": "はさみうちの原理を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切な不等式を根拠とともに立てている",
+            "points": 3
+          },
+          {
+            "criterion": "両側の極限を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "はさみうちの原理により結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[8, limit(3**(1/n)*8, n, oo), limit((3**n+7**n+8**n)**(1/n), n, oo)]",
+        "expected": "[8, 8, 8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-squeeze",
+      "explanation_detail": {
+        "approach": "最も大きい底 $8^n$ が全体を支配する。和を $8^n$ と $3\\cdot8^n$ ではさみ、$\\dfrac{1}{n}$ 乗する。",
+        "steps": [
+          "$3,\\ 7$ はいずれも $0$ より大きく $8$ より小さいので、$8^n<3^n+7^n+8^n<3\\cdot 8^n$。",
+          "各辺を $\\dfrac{1}{n}$ 乗すると $8<(3^n+7^n+8^n)^{\\frac{1}{n}}<3^{\\frac{1}{n}}\\cdot 8$。",
+          "$n\\to\\infty$ のとき $3^{\\frac{1}{n}}\\to1$ なので、右端は $8$ に収束する。",
+          "はさみうちの原理より、極限は $8$。"
+        ],
+        "alternatives": [
+          "$(3^n+7^n+8^n)^{\\frac{1}{n}}=8\\left(\\left(\\dfrac{3}{8}\\right)^n+\\left(\\dfrac{7}{8}\\right)^n+1\\right)^{\\frac{1}{n}}$ と変形し、かっこの中が $1$ と $3$ の間にあることを使ってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式",
+            "points": 3
+          },
+          {
+            "point": "両側の極限",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "振動する部分（$\\sin$、ガウス記号など）の極限を勝手に決めてしまう。",
+          "不等式で割る数の符号を確かめず、不等号の向きを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{5n-\\sin n}{2n+3}$ を求めなさい。求め方も示すこと。",
+      "answer": {
+        "value": "$\\dfrac{5}{2}$"
+      },
+      "explanation": "はさみうちの原理を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "適切な不等式を根拠とともに立てている",
+            "points": 3
+          },
+          {
+            "criterion": "両側の極限を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "はさみうちの原理により結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[limit((5*n-1)/(2*n+3), n, oo), limit((5*n+1)/(2*n+3), n, oo)]",
+        "expected": "[Rational(5,2), Rational(5,2)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-squeeze",
+      "explanation_detail": {
+        "approach": "$\\sin n$ は振動して極限をもたないが、$-1\\leqq\\sin n\\leqq1$ で上下から押さえられる。不等式を作ってはさみうちの原理を使う。",
+        "steps": [
+          "$-1\\leqq\\sin n\\leqq1$ より、$5n-1\\leqq 5n-\\sin n\\leqq 5n+1$。",
+          "各辺を $2n+3\\ (>0)$ で割ると $\\dfrac{5n-1}{2n+3}\\leqq(\\text{与式})\\leqq\\dfrac{5n+1}{2n+3}$。",
+          "両端はともに $n\\to\\infty$ で $\\dfrac{5}{2}=\\dfrac{5}{2}$ に収束する。",
+          "はさみうちの原理より、極限は $\\dfrac{5}{2}$。"
+        ],
+        "alternatives": [
+          "分子・分母を $n$ で割ると $\\dfrac{5-1\\cdot\\dfrac{\\sin n}{n}}{2+\\dfrac{3}{n}}$。$\\left|\\dfrac{\\sin n}{n}\\right|\\leqq\\dfrac{1}{n}\\to0$ を示してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "不等式",
+            "points": 3
+          },
+          {
+            "point": "両側の極限",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "振動する部分（$\\sin$、ガウス記号など）の極限を勝手に決めてしまう。",
+          "不等式で割る数の符号を確かめず、不等号の向きを誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1辺の長さが $10$ の正方形 $Q_1$ がある。$Q_1$ の4辺の中点を順に結んでできる正方形を $Q_2$ とし、以下同様に $Q_3,\\ Q_4,\\ \\cdots$ をつくる。$Q_1,\\ Q_2,\\ Q_3,\\ \\cdots$ の面積の総和を求めなさい。",
+      "answer": {
+        "value": "$200$"
+      },
+      "explanation": "相似な図形（または一定の比での運動）の繰り返しを無限等比級数として表す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "図形（運動）の規則から公比を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "無限等比級数として式を立て、収束を確認している",
+            "points": 3
+          },
+          {
+            "criterion": "和が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "summation(100*Rational(1,2)**(n-1), [n, 1, oo])",
+        "expected": "200"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-series_figure",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "新しい正方形の1辺は、もとの正方形の角にできる直角二等辺三角形の斜辺。長さの比（公比）を三平方の定理で求める。",
+        "steps": [
+          "$Q_n$ の1辺を $l$ とすると、$Q_{n+1}$ の1辺は直角をはさむ2辺が $\\dfrac{l}{2}$ の直角二等辺三角形の斜辺で $\\dfrac{l}{\\sqrt{2}}$。",
+          "よって面積は $\\dfrac{1}{2}$ 倍になる。",
+          "面積は初項 $100$、公比 $\\dfrac{1}{2}$ の無限等比級数で、収束する。",
+          "総和は $\\dfrac{100}{1-\\frac{1}{2}}=200$。"
+        ],
+        "alternatives": [
+          "$Q_2$ の面積は、$Q_1$ から四すみの直角二等辺三角形4つを除いたもので、$Q_1$ の半分になることを図で確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公比",
+            "points": 3
+          },
+          {
+            "point": "立式と収束の確認",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最初の項（$T_1$ や最初の落下）を入れ忘れる。",
+          "長さの比と面積の比を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1辺の長さが $3$ の正方形 $Q_1$ がある。$Q_1$ の4辺の中点を順に結んでできる正方形を $Q_2$ とし、以下同様に $Q_3,\\ Q_4,\\ \\cdots$ をつくる。$Q_1,\\ Q_2,\\ Q_3,\\ \\cdots$ の周の長さの総和を求めなさい。",
+      "answer": {
+        "value": "$24+12\\sqrt{2}$"
+      },
+      "explanation": "相似な図形（または一定の比での運動）の繰り返しを無限等比級数として表す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "図形（運動）の規則から公比を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "無限等比級数として式を立て、収束を確認している",
+            "points": 3
+          },
+          {
+            "criterion": "和が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "summation(12*(1/sqrt(2))**(n-1), [n, 1, oo])",
+        "expected": "12*sqrt(2) + 24"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-series_figure",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "新しい正方形の1辺は、もとの正方形の角にできる直角二等辺三角形の斜辺。長さの比（公比）を三平方の定理で求める。",
+        "steps": [
+          "三平方の定理より、$Q_{n+1}$ の1辺は $Q_n$ の1辺の $\\dfrac{1}{\\sqrt{2}}$ 倍。",
+          "周の長さは初項 $12$、公比 $\\dfrac{1}{\\sqrt{2}}$ の無限等比級数で、$\\dfrac{1}{\\sqrt{2}}<1$ より収束する。",
+          "総和は $\\dfrac{12}{1-\\frac{1}{\\sqrt{2}}}=\\dfrac{12\\sqrt{2}}{\\sqrt{2}-1}=12\\sqrt{2}(\\sqrt{2}+1)=24+12\\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "$Q_2$ の面積は、$Q_1$ から四すみの直角二等辺三角形4つを除いたもので、$Q_1$ の半分になることを図で確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公比",
+            "points": 3
+          },
+          {
+            "point": "立式と収束の確認",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最初の項（$T_1$ や最初の落下）を入れ忘れる。",
+          "長さの比と面積の比を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "1辺の長さが $8$ の正方形 $Q_1$ がある。$Q_1$ の4辺の中点を順に結んでできる正方形を $Q_2$ とし、以下同様に $Q_3,\\ Q_4,\\ \\cdots$ をつくる。$Q_1,\\ Q_2,\\ Q_3,\\ \\cdots$ の面積の総和を求めなさい。",
+      "answer": {
+        "value": "$128$"
+      },
+      "explanation": "相似な図形（または一定の比での運動）の繰り返しを無限等比級数として表す。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "図形（運動）の規則から公比を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "無限等比級数として式を立て、収束を確認している",
+            "points": 3
+          },
+          {
+            "criterion": "和が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "summation(64*Rational(1,2)**(n-1), [n, 1, oo])",
+        "expected": "128"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-series_figure",
+      "related_units": [
+        "HS-MATH1-U04"
+      ],
+      "explanation_detail": {
+        "approach": "新しい正方形の1辺は、もとの正方形の角にできる直角二等辺三角形の斜辺。長さの比（公比）を三平方の定理で求める。",
+        "steps": [
+          "$Q_n$ の1辺を $l$ とすると、$Q_{n+1}$ の1辺は直角をはさむ2辺が $\\dfrac{l}{2}$ の直角二等辺三角形の斜辺で $\\dfrac{l}{\\sqrt{2}}$。",
+          "よって面積は $\\dfrac{1}{2}$ 倍になる。",
+          "面積は初項 $64$、公比 $\\dfrac{1}{2}$ の無限等比級数で、収束する。",
+          "総和は $\\dfrac{64}{1-\\frac{1}{2}}=128$。"
+        ],
+        "alternatives": [
+          "$Q_2$ の面積は、$Q_1$ から四すみの直角二等辺三角形4つを除いたもので、$Q_1$ の半分になることを図で確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公比",
+            "points": 3
+          },
+          {
+            "point": "立式と収束の確認",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最初の項（$T_1$ や最初の落下）を入れ忘れる。",
+          "長さの比と面積の比を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=\\displaystyle\\lim_{n\\to \\infty}\\dfrac{-2x^{2n+1}+x^{2n}+ax^2+bx+3}{x^{2n}+1}$ がすべての実数 $x$ で連続となるように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=-2,\\ b=-2$"
+      },
+      "explanation": "$|x|>1$ では $f(x)=-2x+1$、$|x|<1$ では $f(x)=ax^2+bx+3$、$x=\\pm1$ では2つの式の平均。$x=\\pm1$ で連続となる条件を立てる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$|x|<1,\\ |x|>1,\\ x=\\pm1$ に分けて $f(x)$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$x=1,\\ -1$ での連続の条件を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$a,\\ b$ の値が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve([a+b+(3)-(-1), a-b+(3)-(3)], [a, b])",
+        "expected": "{a: -2, b: -2}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-continuity_param",
+      "explanation_detail": {
+        "approach": "$x^{2n}$ の極限は $|x|<1$ で $0$、$|x|=1$ で $1$、$|x|>1$ で $\\infty$。場合分けして $f(x)$ を求め、境目 $x=\\pm1$ での連続性を調べる。",
+        "steps": [
+          "$|x|<1$ のとき $x^{2n}\\to0$ なので $f(x)=ax^2+bx+3$。",
+          "$|x|>1$ のとき分子・分母を $x^{2n}$ で割ると $\\dfrac{\\left(-2x+1\\right)+\\dfrac{ax^2+bx+3}{x^{2n}}}{1+\\dfrac{1}{x^{2n}}}\\to -2x+1$。",
+          "$x=1$ のとき $f(1)=\\dfrac{-1+a+b+3}{2}$、$x=-1$ のとき $f(-1)=\\dfrac{3+a-b+3}{2}$。",
+          "$x=1$ で連続 $\\iff$ 左右の極限 $a+b+3$ と $-1$ が等しい（このとき $f(1)$ も同じ値）。$x=-1$ でも同様に $a-b+3=3$。",
+          "連立して $a=-2,\\ b=-2$。（$|x|\\neq1$ では多項式なので連続。）"
+        ],
+        "alternatives": [
+          "$a=-2,\\ b=-2$ を代入し、$x=1$ の左右の極限と $f(1)$ がすべて $-1$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け",
+            "points": 3
+          },
+          {
+            "point": "連続の条件",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x=\\pm1$ のときの値を求めずに、$|x|<1$ と $|x|>1$ の式をつなげるだけで終える。",
+          "$|x|>1$ で $x^{2n}$ で割ることに気づかず、$\\infty$ のまま扱う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=\\displaystyle\\lim_{n\\to \\infty}\\dfrac{x^{2n+1}-3x^{2n}+ax^2+bx+3}{x^{2n}+1}$ がすべての実数 $x$ で連続となるように、定数 $a,\\ b$ の値を定めなさい。",
+      "answer": {
+        "value": "$a=-6,\\ b=1$"
+      },
+      "explanation": "$|x|>1$ では $f(x)=x-3$、$|x|<1$ では $f(x)=ax^2+bx+3$、$x=\\pm1$ では2つの式の平均。$x=\\pm1$ で連続となる条件を立てる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$|x|<1,\\ |x|>1,\\ x=\\pm1$ に分けて $f(x)$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$x=1,\\ -1$ での連続の条件を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$a,\\ b$ の値が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "solve([a+b+(3)-(-2), a-b+(3)-(-4)], [a, b])",
+        "expected": "{a: -6, b: 1}",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U01-continuity_param",
+      "explanation_detail": {
+        "approach": "$x^{2n}$ の極限は $|x|<1$ で $0$、$|x|=1$ で $1$、$|x|>1$ で $\\infty$。場合分けして $f(x)$ を求め、境目 $x=\\pm1$ での連続性を調べる。",
+        "steps": [
+          "$|x|<1$ のとき $x^{2n}\\to0$ なので $f(x)=ax^2+bx+3$。",
+          "$|x|>1$ のとき分子・分母を $x^{2n}$ で割ると $\\dfrac{\\left(x-3\\right)+\\dfrac{ax^2+bx+3}{x^{2n}}}{1+\\dfrac{1}{x^{2n}}}\\to x-3$。",
+          "$x=1$ のとき $f(1)=\\dfrac{-2+a+b+3}{2}$、$x=-1$ のとき $f(-1)=\\dfrac{-4+a-b+3}{2}$。",
+          "$x=1$ で連続 $\\iff$ 左右の極限 $a+b+3$ と $-2$ が等しい（このとき $f(1)$ も同じ値）。$x=-1$ でも同様に $a-b+3=-4$。",
+          "連立して $a=-6,\\ b=1$。（$|x|\\neq1$ では多項式なので連続。）"
+        ],
+        "alternatives": [
+          "$a=-6,\\ b=1$ を代入し、$x=1$ の左右の極限と $f(1)$ がすべて $-2$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "場合分け",
+            "points": 3
+          },
+          {
+            "point": "連続の条件",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$x=\\pm1$ のときの値を求めずに、$|x|<1$ と $|x|>1$ の式をつなげるだけで終える。",
+          "$|x|>1$ で $x^{2n}$ で割ることに気づかず、$\\infty$ のまま扱う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "方程式 $x^3-3x-9=0$ は $2<x<3$ の範囲に少なくとも1つの実数解をもつことを示しなさい。",
+      "answer": {
+        "value": "（証明）$f(x)=x^3-3x-9$ とおく。$f(x)$ は多項式関数なので、$2\\leqq x\\leqq 3$ で連続である。$f(2)=-7$、$f(3)=9$ で、$f(2)f(3)<0$。中間値の定理より、$f(c)=0$ となる $c$ が $2<c<3$ に少なくとも1つ存在する。（証明終）"
+      },
+      "explanation": "中間値の定理を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "関数が区間で連続であることを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "区間の両端の値の符号を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "中間値の定理により結論を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[(2)**3+(-3)*(2)+(-9), (3)**3+(-3)*(3)+(-9)]",
+        "expected": "[-7, 9]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-ivt",
+      "explanation_detail": {
+        "approach": "中間値の定理の2つの前提「区間で連続」「両端の値が異符号」を確認すれば、解の存在が言える。",
+        "steps": [
+          "$f(x)=x^3-3x-9$ とおく。$f(x)$ は多項式関数なので、$2\\leqq x\\leqq 3$ で連続である。",
+          "$f(2)=-7$、$f(3)=9$ で、$f(2)f(3)<0$。",
+          "中間値の定理より、$f(c)=0$ となる $c$ が $2<c<3$ に少なくとも1つ存在する。"
+        ],
+        "alternatives": [
+          "$y=f(x)$ のグラフが区間の両端で $x$ 軸の上下に分かれ、途切れずにつながっているので $x$ 軸と交わる、と図で説明してもよい（答案では定理の名前と前提を書く）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "連続性",
+            "points": 2
+          },
+          {
+            "point": "符号の確認",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "「連続である」ことを書き落とす。",
+          "$f(a)f(b)<0$ だけ示して、何の定理を使ったかを書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "方程式 $\\cos x=x$ は $0<x<\\dfrac{\\pi}{2}$ の範囲に少なくとも1つの実数解をもつことを示しなさい。",
+      "answer": {
+        "value": "（証明）$f(x)=\\cos x-x$ とおくと、$f(x)$ は $0\\leqq x\\leqq\\dfrac{\\pi}{2}$ で連続である。$f(0)=1>0$、$f\\left(\\dfrac{\\pi}{2}\\right)=-\\dfrac{\\pi}{2}<0$。中間値の定理より、$f(c)=0$ となる $c$ が $0<c<\\dfrac{\\pi}{2}$ に少なくとも1つ存在する。（証明終）"
+      },
+      "explanation": "中間値の定理を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "関数が区間で連続であることを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "区間の両端の値の符号を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "中間値の定理により結論を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[cos(0)-0, cos(pi/2)-1*pi/2]",
+        "expected": "[1, -1*pi/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-ivt",
+      "explanation_detail": {
+        "approach": "中間値の定理の2つの前提「区間で連続」「両端の値が異符号」を確認すれば、解の存在が言える。",
+        "steps": [
+          "$f(x)=\\cos x-x$ とおくと、$f(x)$ は $0\\leqq x\\leqq\\dfrac{\\pi}{2}$ で連続である。",
+          "$f(0)=1>0$、$f\\left(\\dfrac{\\pi}{2}\\right)=-\\dfrac{\\pi}{2}<0$。",
+          "中間値の定理より、$f(c)=0$ となる $c$ が $0<c<\\dfrac{\\pi}{2}$ に少なくとも1つ存在する。"
+        ],
+        "alternatives": [
+          "$y=f(x)$ のグラフが区間の両端で $x$ 軸の上下に分かれ、途切れずにつながっているので $x$ 軸と交わる、と図で説明してもよい（答案では定理の名前と前提を書く）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "連続性",
+            "points": 2
+          },
+          {
+            "point": "符号の確認",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "「連続である」ことを書き落とす。",
+          "$f(a)f(b)<0$ だけ示して、何の定理を使ったかを書かない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to -\\infty}(\\sqrt{x^2-5x}+x)$ を求めなさい。\n［ある生徒の解答］\n$\\sqrt{x^2-5x}+x=\\dfrac{-5x}{\\sqrt{x^2-5x}-x}$。分子・分母を $x$ で割ると $\\dfrac{-5}{\\sqrt{1-\\frac{5}{x}}-1}$。よって分母 $\\to0$ となり、極限は存在しない\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{5}{2}$"
+      },
+      "explanation": "$x\\to-\\infty$ では $x<0$ なので $\\sqrt{x^2}=-x$。$x=-t$ と置きかえるとよい。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(x**2+(-5)*x)+x, x, -oo)",
+        "expected": "Rational(5,2)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-err_indeterminate",
+      "explanation_detail": {
+        "approach": "$x\\to-\\infty$ の極限は $x=-t$ と置きかえて $t\\to\\infty$ の問題にする。",
+        "steps": [
+          "$x=-t$ とおくと $t\\to\\infty$ で、式は $\\sqrt{t^2+5t}-t$。",
+          "有理化して $\\dfrac{5t}{\\sqrt{t^2+5t}+t}$。",
+          "$t$ で割って $t\\to\\infty$ とすると $\\dfrac{5}{2}$。"
+        ],
+        "alternatives": [
+          "$x=-10000$ を代入して電卓で計算すると約 $2.50$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{x^2}=x$ としてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\sqrt{x^2-5x}+x=\\dfrac{-5x}{\\sqrt{x^2-5x}-x}$。分子・分母を $x$ で割ると $\\dfrac{-5}{\\sqrt{1-\\frac{5}{x}}-1}$。よって分母 $\\to0$ となり、極限は存在しない",
+        "error_step": "分子・分母を $x$ で割るとき、$\\dfrac{\\sqrt{x^2+\\cdots}}{x}=\\sqrt{1+\\cdots}$ とした部分",
+        "error_type": "sign",
+        "why_tempting": "$x>0$ のときの変形 $\\dfrac{\\sqrt{x^2}}{x}=1$ を、$x<0$ の場合にもそのまま使ってしまう。$x<0$ では $\\sqrt{x^2}=-x$。",
+        "correction": "$x<0$ では $\\dfrac{\\sqrt{x^2-5x}}{x}=-\\sqrt{1-\\frac{5}{x}}$ なので、$\\dfrac{-5}{-\\sqrt{1-\\frac{5}{x}}-1}\\to \\dfrac{5}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to -\\infty}(\\sqrt{x^2-x}+x)$ を求めなさい。\n［ある生徒の解答］\n$\\sqrt{x^2-x}+x=\\dfrac{-x}{\\sqrt{x^2-x}-x}$。分子・分母を $x$ で割ると $\\dfrac{-1}{\\sqrt{1-\\frac{1}{x}}-1}$。よって分母 $\\to0$ となり、極限は存在しない\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{2}$"
+      },
+      "explanation": "$x\\to-\\infty$ では $x<0$ なので $\\sqrt{x^2}=-x$。$x=-t$ と置きかえるとよい。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(x**2+(-1)*x)+x, x, -oo)",
+        "expected": "Rational(1,2)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-err_indeterminate",
+      "explanation_detail": {
+        "approach": "$x\\to-\\infty$ の極限は $x=-t$ と置きかえて $t\\to\\infty$ の問題にする。",
+        "steps": [
+          "$x=-t$ とおくと $t\\to\\infty$ で、式は $\\sqrt{t^2+t}-t$。",
+          "有理化して $\\dfrac{t}{\\sqrt{t^2+t}+t}$。",
+          "$t$ で割って $t\\to\\infty$ とすると $\\dfrac{1}{2}$。"
+        ],
+        "alternatives": [
+          "$x=-10000$ を代入して電卓で計算すると約 $0.50$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{x^2}=x$ としてしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\sqrt{x^2-x}+x=\\dfrac{-x}{\\sqrt{x^2-x}-x}$。分子・分母を $x$ で割ると $\\dfrac{-1}{\\sqrt{1-\\frac{1}{x}}-1}$。よって分母 $\\to0$ となり、極限は存在しない",
+        "error_step": "分子・分母を $x$ で割るとき、$\\dfrac{\\sqrt{x^2+\\cdots}}{x}=\\sqrt{1+\\cdots}$ とした部分",
+        "error_type": "sign",
+        "why_tempting": "$x>0$ のときの変形 $\\dfrac{\\sqrt{x^2}}{x}=1$ を、$x<0$ の場合にもそのまま使ってしまう。$x<0$ では $\\sqrt{x^2}=-x$。",
+        "correction": "$x<0$ では $\\dfrac{\\sqrt{x^2-x}}{x}=-\\sqrt{1-\\frac{1}{x}}$ なので、$\\dfrac{-1}{-\\sqrt{1-\\frac{1}{x}}-1}\\to \\dfrac{1}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}(\\sqrt{n^2+2n}-n)$ を求めなさい。\n［ある生徒の解答］\n$n\\to\\infty$ のとき $\\sqrt{n^2+2n}\\to\\infty$、$n\\to\\infty$ なので、$\\infty-\\infty=0$。よって極限は $0$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "$\\infty-\\infty$ は不定形。有理化して $\\dfrac{\\infty}{\\infty}$ の形に直してから極限を求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(n**2+(2)*n)-n, n, oo)",
+        "expected": "1"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U01-err_indeterminate",
+      "explanation_detail": {
+        "approach": "不定形 $\\infty-\\infty$ は、根号を含むなら有理化する。",
+        "steps": [
+          "分子・分母に $\\sqrt{n^2+2n}+n$ をかけると $\\dfrac{2n}{\\sqrt{n^2+2n}+n}$。",
+          "分子・分母を $n$ で割る。",
+          "$n\\to\\infty$ として $1$。"
+        ],
+        "alternatives": [
+          "$n=10000$ を代入すると約 $1.00$ となり、$0$ ではないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\infty$ を数のように計算する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n\\to\\infty$ のとき $\\sqrt{n^2+2n}\\to\\infty$、$n\\to\\infty$ なので、$\\infty-\\infty=0$。よって極限は $0$",
+        "error_step": "$\\infty-\\infty=0$ とした部分",
+        "error_type": "concept",
+        "why_tempting": "どちらも $\\infty$ に発散するので、打ち消し合って $0$ になると考えてしまう。$\\infty$ は数ではない。",
+        "correction": "有理化して $\\dfrac{2n}{\\sqrt{n^2+2n}+n}=\\dfrac{2}{\\sqrt{1+\\frac{2}{n}}+1}\\to 1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "無限等比級数 $4x+4x\\left(1-\\dfrac{x}{3}\\right)+4x\\left(1-\\dfrac{x}{3}\\right)^2+\\cdots$ が収束するような $x$ の値の範囲と、そのときの和を求めなさい。\n［ある生徒の解答］\n公比 $1-\\dfrac{x}{3}$ について $-1<1-\\dfrac{x}{3}<1$ より $0<x<6$。和は $\\dfrac{4x}{1-\\left(1-\\dfrac{x}{3}\\right)}=12$。答え：$0<x<6$ のとき和 $12$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0\\leqq x<6$。和は $x=0$ のとき $0$、$0<x<6$ のとき $12$"
+      },
+      "explanation": "無限等比級数は「初項 $=0$」または「$|r|<1$」で収束する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[solve(Eq(1-x/3, -1), x), simplify((4*x)/(1-(1-x/3)))]",
+        "expected": "[[6], 12]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-err_series",
+      "explanation_detail": {
+        "approach": "初項に文字を含むときは、まず「初項 $=0$」の場合を分けて考える。",
+        "steps": [
+          "初項 $4x=0$、すなわち $x=0$ のとき、和は $0$。",
+          "$x\\neq0$ のとき、$-1<1-\\dfrac{x}{3}<1$ より $0<x<6$、和は $12$。",
+          "合わせて $0\\leqq x<6$。"
+        ],
+        "alternatives": [
+          "$x=0$ を問題の級数に代入すると $0+0+0+\\cdots=0$ となり、収束することが直接確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "初項 $=0$ の場合を落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "公比 $1-\\dfrac{x}{3}$ について $-1<1-\\dfrac{x}{3}<1$ より $0<x<6$。和は $\\dfrac{4x}{1-\\left(1-\\dfrac{x}{3}\\right)}=12$。答え：$0<x<6$ のとき和 $12$",
+        "error_step": "初項が $0$ になる場合（$x=0$）を検討していない部分",
+        "error_type": "condition",
+        "why_tempting": "収束条件を「$|r|<1$」だけと覚えていて、初項 $=0$ ならば公比によらず収束することを見落としている。",
+        "correction": "$x=0$ のときはすべての項が $0$ で収束し和は $0$。よって範囲は $0\\leqq x<6$、和は $x=0$ のとき $0$、$0<x<6$ のとき $12$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "無限等比級数 $3x+3x\\left(1-\\dfrac{x}{3}\\right)+3x\\left(1-\\dfrac{x}{3}\\right)^2+\\cdots$ が収束するような $x$ の値の範囲と、そのときの和を求めなさい。\n［ある生徒の解答］\n公比 $1-\\dfrac{x}{3}$ について $-1<1-\\dfrac{x}{3}<1$ より $0<x<6$。和は $\\dfrac{3x}{1-\\left(1-\\dfrac{x}{3}\\right)}=9$。答え：$0<x<6$ のとき和 $9$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0\\leqq x<6$。和は $x=0$ のとき $0$、$0<x<6$ のとき $9$"
+      },
+      "explanation": "無限等比級数は「初項 $=0$」または「$|r|<1$」で収束する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[solve(Eq(1-x/3, -1), x), simplify((3*x)/(1-(1-x/3)))]",
+        "expected": "[[6], 9]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-err_series",
+      "explanation_detail": {
+        "approach": "初項に文字を含むときは、まず「初項 $=0$」の場合を分けて考える。",
+        "steps": [
+          "初項 $3x=0$、すなわち $x=0$ のとき、和は $0$。",
+          "$x\\neq0$ のとき、$-1<1-\\dfrac{x}{3}<1$ より $0<x<6$、和は $9$。",
+          "合わせて $0\\leqq x<6$。"
+        ],
+        "alternatives": [
+          "$x=0$ を問題の級数に代入すると $0+0+0+\\cdots=0$ となり、収束することが直接確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "初項 $=0$ の場合を落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "公比 $1-\\dfrac{x}{3}$ について $-1<1-\\dfrac{x}{3}<1$ より $0<x<6$。和は $\\dfrac{3x}{1-\\left(1-\\dfrac{x}{3}\\right)}=9$。答え：$0<x<6$ のとき和 $9$",
+        "error_step": "初項が $0$ になる場合（$x=0$）を検討していない部分",
+        "error_type": "condition",
+        "why_tempting": "収束条件を「$|r|<1$」だけと覚えていて、初項 $=0$ ならば公比によらず収束することを見落としている。",
+        "correction": "$x=0$ のときはすべての項が $0$ で収束し和は $0$。よって範囲は $0\\leqq x<6$、和は $x=0$ のとき $0$、$0<x<6$ のとき $9$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "無限等比級数 $-5-\\dfrac{25}{2}-\\dfrac{125}{4}+\\cdots$ の収束・発散を調べ、収束するときはその和を求めなさい。\n［ある生徒の解答］\n初項 $-5$、公比 $\\dfrac{5}{2}$ なので、和は $\\dfrac{-5}{1-\\dfrac{5}{2}}=\\dfrac{10}{3}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "発散する（和はない）"
+      },
+      "explanation": "公比 $\\dfrac{5}{2}$ は $|r|<1$ を満たさないので発散する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "atan(limit((-5)*((Rational(5,2))**n-1)/((Rational(5,2))-1), n, oo))",
+        "expected": "-pi/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U01-err_series",
+      "explanation_detail": {
+        "approach": "和の公式を使う前に、必ず $|r|<1$（または初項 $=0$）を確かめる。",
+        "steps": [
+          "初項 $-5$、公比 $\\dfrac{5}{2}$。",
+          "$|\\dfrac{5}{2}|\\geqq1$ なので、収束条件を満たさない。",
+          "部分和は負の無限大に発散し、級数は発散する。"
+        ],
+        "alternatives": [
+          "項がどんどん大きくなる（絶対値が増える）ので、和が有限の値 $\\dfrac{10}{3}$ になるはずがない、と考えても誤りに気づける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "収束条件の確認を省く。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "初項 $-5$、公比 $\\dfrac{5}{2}$ なので、和は $\\dfrac{-5}{1-\\dfrac{5}{2}}=\\dfrac{10}{3}$",
+        "error_step": "収束条件 $|r|<1$ を確かめずに和の公式を使った部分",
+        "error_type": "condition",
+        "why_tempting": "公式 $\\dfrac{a}{1-r}$ を「無限等比級数の和の公式」と丸暗記し、$|r|<1$ という前提を忘れている。",
+        "correction": "公比 $\\dfrac{5}{2}>1$ なので部分和 $S_n=\\dfrac{-5\\{(\\dfrac{5}{2})^n-1\\}}{\\dfrac{5}{2}-1}$ は負の無限大に発散する。級数は発散する"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{3\\cdot 6^{n}-7^{n}}{6^{n}+7^{n}}$ を求めなさい。\n［ある生徒の解答］\n分子・分母を $6^n$ で割ると $\\dfrac{3-\\left(\\dfrac{7}{6}\\right)^n}{1+\\left(\\dfrac{7}{6}\\right)^n}$。$\\left(\\dfrac{7}{6}\\right)^n\\to0$ なので、極限は $3$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-1$"
+      },
+      "explanation": "底の大きい $7^n$ で割ると、$\\left(\\dfrac{6}{7}\\right)^n\\to0$（$0<\\dfrac{6}{7}<1$）が使える。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(((3)*6**(n+0)+(-1)*7**(n+0))/((1)*6**n+(1)*7**n), n, oo)",
+        "expected": "-1"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-err_power_ratio",
+      "explanation_detail": {
+        "approach": "累乗の比の極限では、底が最も大きい項で割る。",
+        "steps": [
+          "$7>6$ なので、分子・分母を $7^n$ で割る。",
+          "$\\dfrac{3\\left(\\dfrac{6}{7}\\right)^n-1}{\\left(\\dfrac{6}{7}\\right)^n+1}$。",
+          "$0<\\dfrac{6}{7}<1$ より $\\left(\\dfrac{6}{7}\\right)^n\\to0$、極限は $-1$。"
+        ],
+        "alternatives": [
+          "$n=20$ くらいで $7^n$ が $6^n$ よりはるかに大きいことを電卓で確かめると、$7^n$ の項が支配的だと分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公比が $1$ より大きいか小さいかを確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "分子・分母を $6^n$ で割ると $\\dfrac{3-\\left(\\dfrac{7}{6}\\right)^n}{1+\\left(\\dfrac{7}{6}\\right)^n}$。$\\left(\\dfrac{7}{6}\\right)^n\\to0$ なので、極限は $3$",
+        "error_step": "$\\left(\\dfrac{7}{6}\\right)^n\\to0$ とした部分",
+        "error_type": "concept",
+        "why_tempting": "「$r^n\\to0$」という形を見るとすぐ $0$ にしてしまい、$r=\\dfrac{7}{6}>1$ であることを確かめていない。",
+        "correction": "$7>6$ なので $7^n$ で割る。$\\dfrac{3\\left(\\dfrac{6}{7}\\right)^n-1}{\\left(\\dfrac{6}{7}\\right)^n+1}\\to -1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to \\infty}\\dfrac{-3\\cdot 5^{n+1}-3\\cdot 6^{n}}{5^{n}+6^{n}}$ を求めなさい。\n［ある生徒の解答］\n分子・分母を $5^n$ で割ると $\\dfrac{-15-3\\left(\\dfrac{6}{5}\\right)^n}{1+\\left(\\dfrac{6}{5}\\right)^n}$。$\\left(\\dfrac{6}{5}\\right)^n\\to0$ なので、極限は $-15$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-3$"
+      },
+      "explanation": "底の大きい $6^n$ で割ると、$\\left(\\dfrac{5}{6}\\right)^n\\to0$（$0<\\dfrac{5}{6}<1$）が使える。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(((-3)*5**(n+1)+(-3)*6**(n+0))/((1)*5**n+(1)*6**n), n, oo)",
+        "expected": "-3"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-err_power_ratio",
+      "explanation_detail": {
+        "approach": "累乗の比の極限では、底が最も大きい項で割る。",
+        "steps": [
+          "$6>5$ なので、分子・分母を $6^n$ で割る。",
+          "$\\dfrac{-15\\left(\\dfrac{5}{6}\\right)^n-3}{\\left(\\dfrac{5}{6}\\right)^n+1}$。",
+          "$0<\\dfrac{5}{6}<1$ より $\\left(\\dfrac{5}{6}\\right)^n\\to0$、極限は $-3$。"
+        ],
+        "alternatives": [
+          "$n=20$ くらいで $6^n$ が $5^n$ よりはるかに大きいことを電卓で確かめると、$6^n$ の項が支配的だと分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公比が $1$ より大きいか小さいかを確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "分子・分母を $5^n$ で割ると $\\dfrac{-15-3\\left(\\dfrac{6}{5}\\right)^n}{1+\\left(\\dfrac{6}{5}\\right)^n}$。$\\left(\\dfrac{6}{5}\\right)^n\\to0$ なので、極限は $-15$",
+        "error_step": "$\\left(\\dfrac{6}{5}\\right)^n\\to0$ とした部分",
+        "error_type": "concept",
+        "why_tempting": "「$r^n\\to0$」という形を見るとすぐ $0$ にしてしまい、$r=\\dfrac{6}{5}>1$ であることを確かめていない。",
+        "correction": "$6>5$ なので $6^n$ で割る。$\\dfrac{-15\\left(\\dfrac{5}{6}\\right)^n-3}{\\left(\\dfrac{5}{6}\\right)^n+1}\\to -3$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to 0}\\dfrac{1-\\cos 5x}{x^2}$ を求めなさい。\n［ある生徒の解答］\n$\\dfrac{1-\\cos 5x}{x^2}=\\dfrac{\\sin^2 5x}{x^2(1+\\cos 5x)}=\\left(\\dfrac{\\sin 5x}{x}\\right)^2\\cdot\\dfrac{1}{1+\\cos 5x}\\to1\\cdot\\dfrac{1}{2}=\\dfrac{1}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{25}{2}$"
+      },
+      "explanation": "$\\dfrac{\\sin 5x}{5x}$ の形にそろえると、係数 $5$ が外に出る。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit((1-cos(5*x))/x**2, x, 0)",
+        "expected": "Rational(25,2)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-err_trig",
+      "explanation_detail": {
+        "approach": "$\\sin$ の中身と分母を必ずそろえる。",
+        "steps": [
+          "分子・分母に $1+\\cos 5x$ をかけて $\\dfrac{\\sin^2 5x}{x^2(1+\\cos 5x)}$。",
+          "$=\\left(\\dfrac{\\sin 5x}{5x}\\right)^2\\cdot\\dfrac{25}{1+\\cos 5x}$。",
+          "$x\\to0$ として $25\\cdot\\dfrac{1}{2}=\\dfrac{25}{2}$。"
+        ],
+        "alternatives": [
+          "$1-\\cos\\theta=2\\sin^2\\dfrac{\\theta}{2}$ を使って $\\dfrac{2\\sin^2\\frac{5x}{2}}{x^2}$ と変形しても $\\dfrac{25}{2}$ が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身と分母をそろえない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{1-\\cos 5x}{x^2}=\\dfrac{\\sin^2 5x}{x^2(1+\\cos 5x)}=\\left(\\dfrac{\\sin 5x}{x}\\right)^2\\cdot\\dfrac{1}{1+\\cos 5x}\\to1\\cdot\\dfrac{1}{2}=\\dfrac{1}{2}$",
+        "error_step": "$\\dfrac{\\sin 5x}{x}\\to1$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "$\\sin$ の中身と分母がそろっていないのに、$\\dfrac{\\sin\\bigcirc}{\\bigcirc}\\to1$ を当てはめている。",
+        "correction": "$\\dfrac{\\sin 5x}{x}=5\\cdot\\dfrac{\\sin 5x}{5x}\\to 5$ なので、極限は $5^2\\cdot\\dfrac{1}{2}=\\dfrac{25}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U01",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{x\\to \\infty}\\dfrac{\\sin 5x}{5x}$ を求めなさい。\n［ある生徒の解答］\n$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ を用いて、$\\dfrac{\\sin 5x}{5x}\\to1$。よって極限は $1$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0$"
+      },
+      "explanation": "$x\\to\\infty$ では $\\sin {kx}$ は $-1$ と $1$ の間を振動し、分母は $\\infty$ に発散する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[limit(1/(5*x), x, oo), limit(-1/(5*x), x, oo)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U01-err_trig",
+      "explanation_detail": {
+        "approach": "公式を使う前に、変数がどこに近づくかを確かめる。",
+        "steps": [
+          "$x>0$ のとき $-\\dfrac{1}{5x}\\leqq\\dfrac{\\sin 5x}{5x}\\leqq\\dfrac{1}{5x}$。",
+          "両端は $x\\to\\infty$ で $0$ に収束する。",
+          "はさみうちの原理より極限は $0$。"
+        ],
+        "alternatives": [
+          "$x=1000$ などを代入すると値はほぼ $0$ になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "公式の前提（$\\theta\\to0$）を確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\displaystyle\\lim_{\\theta\\to0}\\dfrac{\\sin\\theta}{\\theta}=1$ を用いて、$\\dfrac{\\sin 5x}{5x}\\to1$。よって極限は $1$",
+        "error_step": "$x\\to\\infty$ なのに $\\theta\\to0$ の公式を使った部分",
+        "error_type": "condition",
+        "why_tempting": "「$\\dfrac{\\sin\\bigcirc}{\\bigcirc}=1$」という形だけを覚えていて、$\\bigcirc\\to0$ という条件を確かめていない。",
+        "correction": "$\\left|\\dfrac{\\sin 5x}{5x}\\right|\\leqq\\dfrac{1}{5x}\\to0$ なので、はさみうちの原理より極限は $0$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "31cfba97f71f7351e3c265c40aa194470414a16f2c854ccdc4188070522a5251"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 27 問（Q007, Q025, Q027, Q029, Q030, Q031, Q032, Q033, Q034, Q035 他）",
+      "content_hash": "b64f40ad01e6849ae73f78976fb887e4dd01ad8011b337ed8657c4aea1b87a8e"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q029, Q030, Q031, Q032）",
+      "content_hash": "6dab37e893c2a56697565fa76ba2d66c764a77d77f167dbf5597ad3f41c22ea8"
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 7 問（Q006, Q009, Q028, Q054, Q055, Q057, Q058）",
+      "content_hash": "8c4ca495112ec86b08dada8b21cbb109cf444d46b32a1b2b9c227a8f25e82b8f"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:14:12+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "fa022773c9bb0dfafa1f3dce2e0cf692bceda1325909144061a0b941dcd23c2c"
+  }
+}
