@@ -496,7 +496,7 @@ def waggle(r):
     mode = r.choice(["dir", "dir", "dist"])
     if mode == "dir":
         sun = r.choice(range(8))
-        th = r.choice(range(1, 8))
+        th = r.choice(range(1, 5))
         side = r.choice(["右", "左"])
         food = (sun + th) % 8 if side == "右" else (sun - th) % 8
         ang = th * 45
