@@ -59,6 +59,9 @@ def bestn(x):
 
 
 def numq(stem, x, expr, e, unit, n=None, **kw):
+    """整数で厳密に表せる 10000 未満の値はそのまま、それ以外は有効数字 n 桁で答えにする。"""
+    if n is None and sp.nsimplify(x).is_integer and abs(x) < 10000:
+        n = max(2, len(str(abs(int(x)))))
     n = n or bestn(x)
     s = sig(x, n)
     exact = is_exact(s, x)
@@ -81,6 +84,10 @@ def P(x):
 def sci(mant, e):
     """表示用 mant×10^e の LaTeX と厳密値。"""
     return f"{mant}\\times10^{{{e}}}", Q(mant) * sp.Integer(10) ** e
+
+
+def iv(n):
+    return f"{n}.0" if abs(n) < 10 else f"{n}"
 
 
 def Ktx(T):
@@ -871,8 +878,8 @@ def piston_c(r):
     W = p * S * dh
     Qv = sp.Rational(5, 2) * W
     dU = sp.Rational(3, 2) * W
-    return desc(f"図のように、断面積 {Sc} cm² の鉛直なシリンダーに、質量 {Mk}.0 kg のなめらかに動くピストンで{MONO}を閉じこめた。大気圧を $1.0\\times10^5\\,\\mathrm{{Pa}}$、" + "重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。"
-                + f"図の気体をゆっくり加熱したところ、ピストンは {dhc}.0 cm 上昇した。（1）気体の圧力を、ピストンにはたらく力のつり合いから求めなさい。（2）気体が外部にした仕事を求めなさい。（3）気体が吸収した熱量と内部エネルギーの増加を求め、吸収した熱量が仕事より大きくなる理由を述べなさい。数値は有効数字2桁で答えなさい。",
+    return desc(f"図のように、断面積 {Sc} cm² の鉛直なシリンダーに、質量 {iv(Mk)} kg のなめらかに動くピストンで{MONO}を閉じこめた。大気圧を $1.0\\times10^5\\,\\mathrm{{Pa}}$、" + "重力加速度の大きさを $9.8\\,\\mathrm{m/s^2}$ とする。"
+                + f"図の気体をゆっくり加熱したところ、ピストンは {iv(dhc)} cm 上昇した。（1）気体の圧力を、ピストンにはたらく力のつり合いから求めなさい。（2）気体が外部にした仕事を求めなさい。（3）気体が吸収した熱量と内部エネルギーの増加を求め、吸収した熱量が仕事より大きくなる理由を述べなさい。数値は有効数字2桁で答えなさい。",
                 f"（1）$p=p_0+\\dfrac{{Mg}}{{S}}\\fallingdotseq{t(p, 2)}\\,\\mathrm{{Pa}}$　（2）$W'=pS\\Delta h\\fallingdotseq{t(W, 2)}\\,\\mathrm{{J}}$　（3）$Q=\\dfrac52W'\\fallingdotseq{t(Qv, 2)}\\,\\mathrm{{J}}$、$\\Delta U=\\dfrac32W'\\fallingdotseq{t(dU, 2)}\\,\\mathrm{{J}}$。吸収した熱の一部はピストンを押し上げる仕事に、残りは内部エネルギーの増加（温度上昇）に使われるので、$Q=\\Delta U+W'>W'$ となる。",
                 "ピストンのつり合いで圧力、定圧変化として仕事と熱量。",
                 [("（1）ピストンにはたらく力（大気・重力・気体）のつり合いを立てている", 2), ("（2）$W'=p\\Delta V$ を単位をそろえて求めている", 2), ("（3）$Q=\\dfrac52W'$、$\\Delta U=\\dfrac32W'$ を導いている", 2), ("（3）$Q>W'$ の理由を第一法則で述べている", 2)], d=4, p=8, lines=10,
@@ -1026,8 +1033,8 @@ def err_kinetic(r):
     T = r.choice([300, 400, 600])
     v = sp.sqrt(3 * R * T / M)
     bad = sp.sqrt(3 * R * T / Mg)
-    return err_item(f"温度 {T} K の{name}分子の二乗平均速度を求めなさい。{name}のモル質量は {dec(Mg)} g/mol、" + RS,
-                    f"$\\sqrt{{\\dfrac{{3RT}}{{M}}}}=\\sqrt{{\\dfrac{{3\\times8.31\\times{T}}}{{{dec(Mg)}}}}}\\fallingdotseq{t(bad, 2)}\\,\\mathrm{{m/s}}$",
+    return err_item(f"温度 {T} K の{name}分子の二乗平均速度を求めなさい。{name}のモル質量は {iv(int(Mg)) if Mg < 10 else dec(Mg)} g/mol、" + RS,
+                    f"$\\sqrt{{\\dfrac{{3RT}}{{M}}}}=\\sqrt{{\\dfrac{{3\\times8.31\\times{T}}}{{{iv(int(Mg)) if Mg < 10 else dec(Mg)}}}}}\\fallingdotseq{t(bad, 2)}\\,\\mathrm{{m/s}}$",
                     "モル質量を g/mol のまま代入した部分", "unit",
                     "化学で使い慣れた g/mol の数値をそのまま使い、$R$ が SI 単位（kg）を前提にしていることを忘れている。",
                     f"$M={Mtx}\\,\\mathrm{{kg/mol}}$。$\\sqrt{{\\dfrac{{3\\times8.31\\times{T}}}{{{Mtx}}}}}\\fallingdotseq{t(v, 2)}\\,\\mathrm{{m/s}}$",

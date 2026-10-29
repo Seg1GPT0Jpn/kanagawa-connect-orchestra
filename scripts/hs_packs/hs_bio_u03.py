@@ -348,7 +348,7 @@ def restriction(r):
     shape = "環状のプラスミド" if circular else "直線状の DNA"
     pos = "・".join(f"{kb(s)} kb" for s in sites)
     mode = r.choice(["count", "long", "short"])
-    pre = f"長さ {kb(L)} kb の{shape}を、ある制限酵素で完全に切断した。この酵素の切断部位は、{'ある基準点から一方向に測って' if circular else '一端から測って'} {pos} の位置にある。"
+    pre = f"長さ {kb(L)} kb の{shape}{' ' if shape.endswith('DNA') else ''}を、ある制限酵素で完全に切断した。この酵素の切断部位は、{'ある基準点から一方向に測って' if circular else '一端から測って'} {pos} の位置にある。"
     srt = sorted(fr_)
     steps = [f"{shape}で切断部位は {k} か所 → 断片は {len(fr_)} 本。", "断片の長さ：" + "、".join(f"{kb(x)} kb" for x in fr_) + "。", f"合計 {kb(sum(fr_))} kb で全長と一致する。"]
     alt = [("環状では端がないので、切断部位の数と断片の数が等しい。" if circular else "直線状では両端があるので、断片の数は切断部位の数より1多い。") + "図にかいて数えても確かめられる。"]
@@ -540,7 +540,7 @@ def ms_reverse(n, m):
         heavy, mid, light = 0, 2 * heavy + mid, mid + 2 * light
     g = gcd(gcd(heavy, mid), light)
     h, mi, li = heavy // g, mid // g, light // g
-    ans = f"重い：中間：軽い＝{h}：{mi}：{li}"
+    ans = f"重い：中間：軽い＝{h}：{mi}：{li}" if h else f"重い DNA はなく、中間：軽い＝{mi}：{li}"
     # ¹⁵N 培地 n 回後：中間 2、重い 2^n－2。¹⁴N に m 回：
     expl = f"¹⁵N で {n} 回分裂後、DNA {2 ** n} 分子のうち中間（もとの ¹⁴N 鎖を含む）2、重い {2 ** n - 2}。その後 ¹⁴N で複製すると、重い DNA はなくなり、¹⁵N の鎖 {2 * (2 ** n) - 2} 本はそれぞれ中間の DNA に1本ずつ入る。"
     rub = [("¹⁵N 培地での分裂後の組成を正しく求めている", 3), ("¹⁴N 培地にもどした後の組成を、鎖の数に注目して求めている", 3), ("正しい比", 2)]

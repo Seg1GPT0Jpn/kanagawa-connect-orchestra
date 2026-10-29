@@ -1975,7 +1975,7 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "numeric",
-      "stem": "長さ 10.0 kb の直線状の DNAを、ある制限酵素で完全に切断した。この酵素の切断部位は、一端から測って 2.5 kb・6.0 kb・7.2 kb の位置にある。生じる断片のうち最も長いものは何 kb か。",
+      "stem": "長さ 10.0 kb の直線状の DNA を、ある制限酵素で完全に切断した。この酵素の切断部位は、一端から測って 2.5 kb・6.0 kb・7.2 kb の位置にある。生じる断片のうち最も長いものは何 kb か。",
       "answer": {
         "value": "3.5",
         "unit": "kb"
@@ -2055,7 +2055,7 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "numeric",
-      "stem": "長さ 6.5 kb の直線状の DNAを、ある制限酵素で完全に切断した。この酵素の切断部位は、一端から測って 0.8 kb・4.2 kb の位置にある。生じる断片のうち最も長いものは何 kb か。",
+      "stem": "長さ 6.5 kb の直線状の DNA を、ある制限酵素で完全に切断した。この酵素の切断部位は、一端から測って 0.8 kb・4.2 kb の位置にある。生じる断片のうち最も長いものは何 kb か。",
       "answer": {
         "value": "3.4",
         "unit": "kb"
@@ -2135,7 +2135,7 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "numeric",
-      "stem": "長さ 11.5 kb の直線状の DNAを、ある制限酵素で完全に切断した。この酵素の切断部位は、一端から測って 1.5 kb・5.0 kb・7.5 kb・9.2 kb の位置にある。生じる断片のうち最も長いものは何 kb か。",
+      "stem": "長さ 11.5 kb の直線状の DNA を、ある制限酵素で完全に切断した。この酵素の切断部位は、一端から測って 1.5 kb・5.0 kb・7.5 kb・9.2 kb の位置にある。生じる断片のうち最も長いものは何 kb か。",
       "answer": {
         "value": "3.5",
         "unit": "kb"
@@ -4121,7 +4121,7 @@
       "question_type": "descriptive",
       "stem": "¹⁴N の培地で十分に培養した大腸菌を ¹⁵N の培地に移して 3 回分裂させ、その後 ¹⁴N の培地にもどして 1 回分裂させた（最初とは逆向きの実験）。DNA は半保存的に複製されるとして、最後に得られる DNA を重い（¹⁵N のみ）・中間・軽い（¹⁴N のみ）に分けたときの分子数の比を求め、考え方を説明しなさい。",
       "answer": {
-        "value": "重い：中間：軽い＝0：7：1"
+        "value": "重い DNA はなく、中間：軽い＝7：1"
       },
       "explanation": "¹⁵N で 3 回分裂後、DNA 8 分子のうち中間（もとの ¹⁴N 鎖を含む）2、重い 6。その後 ¹⁴N で複製すると、重い DNA はなくなり、¹⁵N の鎖 14 本はそれぞれ中間の DNA に1本ずつ入る。",
       "scoring": {
@@ -4167,7 +4167,7 @@
           "¹⁵N 培地で 3 回：全 8 分子。もとの ¹⁴N 鎖2本は中間の DNA 2分子に入り、残り 6 分子は重い。",
           "¹⁵N の鎖は全部で 14 本。¹⁴N 培地では新しい鎖はすべて ¹⁴N なので、¹⁵N の鎖1本につき中間の DNA が1分子になる。",
           "¹⁴N で 1 回後：全 16 分子、中間 14、軽い 2、重い 0。",
-          "比：重い：中間：軽い＝0：7：1。"
+          "比：重い DNA はなく、中間：軽い＝7：1。"
         ],
         "alternatives": [
           "世代ごとに重い・中間・軽いの分子数を表にして、漸化式（重い' ＝ …）で順に計算しても確かめられる。"
@@ -5947,14 +5947,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "5f0ad81da488fd4aa9d65d1c54eed65f9531afc6ebf46b658cf3cf236a0bd6f7"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q021, Q022, Q023, Q043）",
+      "content_hash": "276122271a6045d871b5a908e40fb08308b598e6ea15c560bc2fab539a671e33"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-29T04:22:45+00:00",
+    "validated_at": "2026-10-29T04:24:06+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "09e1d244beb4749f0caa1acbaad1df88945b93a4cb57e3646a5aa41876a5a257"
+    "content_hash": "c97e601343810cddd0911add21d1e23d3e359b179250a64dcaed129d21959254"
   }
 }

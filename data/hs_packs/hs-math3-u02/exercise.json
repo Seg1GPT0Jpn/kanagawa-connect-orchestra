@@ -1,0 +1,5409 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH3-U02-EX",
+  "title": "微分法とその応用　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_3",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-MATH3-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH3-U02-PACK",
+  "pair_set_id": "HS-MATH3-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH3-U01",
+        "point": "関数の極限",
+        "title": "極限"
+      },
+      {
+        "unit_id": "HS-MATH2-U06",
+        "point": "数学Ⅱの微分",
+        "title": "微分法・積分法"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-MATH3-U03",
+        "point": "積分との関係",
+        "title": "積分法とその応用"
+      },
+      {
+        "unit_id": "HS-PHY-U01",
+        "point": "単振動の解析",
+        "title": "力学（運動量・円運動・単振動・万有引力）"
+      }
+    ],
+    "readiness_check": [
+      "関数の極限、特に $\\displaystyle\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ と、片側極限・$x\\to\\pm\\infty$ の極限（数学Ⅲ 極限）を使える。",
+      "多項式関数の微分、接線の方程式、増減表（数学Ⅱ）をかける。",
+      "指数・対数の性質（数学Ⅱ）と三角関数の加法定理（数学Ⅱ）を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH3-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=3\\log_{10}x$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{3}{x\\log 10}$"
+      },
+      "explanation": "底の変換 $\\log_ax=\\dfrac{\\log x}{\\log a}$ より $(\\log_ax)'=\\dfrac{1}{x\\log a}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(3*log(x)/log(10), x)-(3/(x*log(10))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-deriv_basic",
+      "explanation_detail": {
+        "approach": "基本の導関数（$x^r$、三角関数、指数関数、対数関数）のどれにあたるかを見分け、中身があれば合成関数の微分法を使う。",
+        "steps": [
+          "底の変換で $\\log_{10}x=\\dfrac{\\log x}{\\log 10}$。",
+          "$\\log 10$ は定数なので、$(\\log x)'=\\dfrac{1}{x}$ を用いる。",
+          "$y'=\\dfrac{3}{x\\log 10}$。"
+        ],
+        "alternatives": [
+          "定義 $\\displaystyle\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$ に戻って確かめることもできる。また、$x=1$ など具体的な値で、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めて近い値になるかを調べられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "用いる公式が正しい",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\{\\log(ax+b)\\}'$ を $\\dfrac{1}{ax+b}$ として、中身の微分を落とす。",
+          "底が $e$ でない対数で $\\log a$ を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sin (5x+2)$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=5\\cos (5x+2)$"
+      },
+      "explanation": "三角関数の導関数と合成関数の微分法（中身 $5x+2$ の微分 $5$ をかける）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sin(5*x+(2)), x)-(5*cos(5*x+(2))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-deriv_basic",
+      "explanation_detail": {
+        "approach": "基本の導関数（$x^r$、三角関数、指数関数、対数関数）のどれにあたるかを見分け、中身があれば合成関数の微分法を使う。",
+        "steps": [
+          "$u=5x+2$ とおくと $u'=5$。",
+          "$(\\sin u)'$ の公式に当てはめ、$u'$ をかける。",
+          "$y'=5\\cos (5x+2)$。"
+        ],
+        "alternatives": [
+          "定義 $\\displaystyle\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$ に戻って確かめることもできる。また、$x=1$ など具体的な値で、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めて近い値になるかを調べられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "用いる公式が正しい",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の微分 $5$ をかけ忘れる。",
+          "$(\\cos x)'=\\sin x$ と符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\dfrac{5}{x}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=-\\dfrac{5}{x^2}$"
+      },
+      "explanation": "$x^r$ の形に直して $(x^r)'=rx^{r-1}$ を使う（$r$ は有理数）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(5/x, x)-(-5/x**2))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-deriv_basic",
+      "explanation_detail": {
+        "approach": "基本の導関数（$x^r$、三角関数、指数関数、対数関数）のどれにあたるかを見分け、中身があれば合成関数の微分法を使う。",
+        "steps": [
+          "根号・分数を $x^r$ の形（$\\sqrt{x}=x^{\\frac{1}{2}},\\ \\dfrac{1}{x^2}=x^{-2}$ など）に直す。",
+          "$(x^r)'=rx^{r-1}$ を用いる。",
+          "もとの形に戻して $y'=-\\dfrac{5}{x^2}$。"
+        ],
+        "alternatives": [
+          "定義 $\\displaystyle\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$ に戻って確かめることもできる。また、$x=1$ など具体的な値で、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めて近い値になるかを調べられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "用いる公式が正しい",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\sqrt{x}$ を $x^{\\frac{1}{2}}$ に直さず、公式が使えないと思い込む。",
+          "負の指数の計算で $r-1$ を誤る（$x^{-2}$ の微分を $-2x^{-1}$ とするなど）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sin (5x-1)$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=5\\cos (5x-1)$"
+      },
+      "explanation": "三角関数の導関数と合成関数の微分法（中身 $5x-1$ の微分 $5$ をかける）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sin(5*x+(-1)), x)-(5*cos(5*x+(-1))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-deriv_basic",
+      "explanation_detail": {
+        "approach": "基本の導関数（$x^r$、三角関数、指数関数、対数関数）のどれにあたるかを見分け、中身があれば合成関数の微分法を使う。",
+        "steps": [
+          "$u=5x-1$ とおくと $u'=5$。",
+          "$(\\sin u)'$ の公式に当てはめ、$u'$ をかける。",
+          "$y'=5\\cos (5x-1)$。"
+        ],
+        "alternatives": [
+          "定義 $\\displaystyle\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$ に戻って確かめることもできる。また、$x=1$ など具体的な値で、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めて近い値になるかを調べられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "用いる公式が正しい",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の微分 $5$ をかけ忘れる。",
+          "$(\\cos x)'=\\sin x$ と符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\tan 4x$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{4}{\\cos^2 4x}$"
+      },
+      "explanation": "三角関数の導関数と合成関数の微分法（中身 $4x$ の微分 $4$ をかける）。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(tan(4*x+(0)), x)-(4/cos(4*x+(0))**2))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-deriv_basic",
+      "explanation_detail": {
+        "approach": "基本の導関数（$x^r$、三角関数、指数関数、対数関数）のどれにあたるかを見分け、中身があれば合成関数の微分法を使う。",
+        "steps": [
+          "$u=4x$ とおくと $u'=4$。",
+          "$(\\tan u)'$ の公式に当てはめ、$u'$ をかける。",
+          "$y'=\\dfrac{4}{\\cos^2 4x}$。"
+        ],
+        "alternatives": [
+          "定義 $\\displaystyle\\lim_{h\\to0}\\dfrac{f(x+h)-f(x)}{h}$ に戻って確かめることもできる。また、$x=1$ など具体的な値で、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めて近い値になるかを調べられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "用いる公式が正しい",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の微分 $4$ をかけ忘れる。",
+          "$(\\cos x)'=\\sin x$ と符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "合成関数の微分法を用いて、関数 $y=\\cos^4 x$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=-4\\cos^{3}x\\sin x$"
+      },
+      "explanation": "外側の関数を微分し、中身の導関数をかける：$\\{f(g(x))\\}'=f'(g(x))\\,g'(x)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(cos(x)**4, x)-(-4*cos(x)**3*sin(x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-chain_rule",
+      "explanation_detail": {
+        "approach": "「外側」と「中身」に分けて $u=(\\text{中身})$ とおき、$\\dfrac{dy}{dx}=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ を使う。",
+        "steps": [
+          "$u=\\cos x$ とおくと $y=u^4$。",
+          "$y'=4u^{3}\\cdot(\\cos x)'$。",
+          "よって $y'=-4\\cos^{3}x\\sin x$。"
+        ],
+        "alternatives": [
+          "展開できる場合（低い累乗など）は展開してから微分し、結果が一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の導関数をかけている",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。",
+          "累乗の指数を下ろした後、指数を1減らし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "合成関数の微分法を用いて、関数 $y=\\sqrt{5x-3}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{5}{2\\sqrt{5x-3}}$"
+      },
+      "explanation": "外側の関数を微分し、中身の導関数をかける：$\\{f(g(x))\\}'=f'(g(x))\\,g'(x)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sqrt(5*x+(-3)), x)-(5/(2*sqrt(5*x+(-3)))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-chain_rule",
+      "explanation_detail": {
+        "approach": "「外側」と「中身」に分けて $u=(\\text{中身})$ とおき、$\\dfrac{dy}{dx}=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ を使う。",
+        "steps": [
+          "$u=5x-3$ とおくと $y=\\sqrt{u}$、$u'=5$。",
+          "$y'=\\dfrac{1}{2\\sqrt{u}}\\cdot 5$。",
+          "よって $y'=\\dfrac{5}{2\\sqrt{5x-3}}$。"
+        ],
+        "alternatives": [
+          "展開できる場合（低い累乗など）は展開してから微分し、結果が一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の導関数をかけている",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。",
+          "累乗の指数を下ろした後、指数を1減らし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "合成関数の微分法を用いて、関数 $y=e^{3x^2}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=6xe^{3x^2}$"
+      },
+      "explanation": "外側の関数を微分し、中身の導関数をかける：$\\{f(g(x))\\}'=f'(g(x))\\,g'(x)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(exp(3*x**2), x)-(6*x*exp(3*x**2)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-chain_rule",
+      "explanation_detail": {
+        "approach": "「外側」と「中身」に分けて $u=(\\text{中身})$ とおき、$\\dfrac{dy}{dx}=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ を使う。",
+        "steps": [
+          "$u=3x^2$ とおくと $y=e^u$、$u'=6x$。",
+          "$y'=e^u\\cdot u'=6xe^{3x^2}$。",
+          "よって $y'=6xe^{3x^2}$。"
+        ],
+        "alternatives": [
+          "展開できる場合（低い累乗など）は展開してから微分し、結果が一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の導関数をかけている",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。",
+          "累乗の指数を下ろした後、指数を1減らし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "合成関数の微分法を用いて、関数 $y=\\sqrt{x^2+9}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{x}{\\sqrt{x^2+9}}$"
+      },
+      "explanation": "外側の関数を微分し、中身の導関数をかける：$\\{f(g(x))\\}'=f'(g(x))\\,g'(x)$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sqrt(x**2+9), x)-(x/sqrt(x**2+9)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-chain_rule",
+      "explanation_detail": {
+        "approach": "「外側」と「中身」に分けて $u=(\\text{中身})$ とおき、$\\dfrac{dy}{dx}=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ を使う。",
+        "steps": [
+          "$u=x^2+9$ とおくと $y=u^{\\frac{1}{2}}$。",
+          "$y'=\\dfrac{1}{2}u^{-\\frac{1}{2}}\\cdot2x=\\dfrac{x}{\\sqrt{x^2+9}}$。",
+          "よって $y'=\\dfrac{x}{\\sqrt{x^2+9}}$。"
+        ],
+        "alternatives": [
+          "展開できる場合（低い累乗など）は展開してから微分し、結果が一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "中身の導関数をかけている",
+            "points": 1
+          },
+          {
+            "point": "導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。",
+          "累乗の指数を下ろした後、指数を1減らし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=xe^{-x}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=(1-x)e^{-x}$"
+      },
+      "explanation": "積の微分法を用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**1*exp(-1*x), x)-(x**0*(-1*x+1)*exp(-1*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "関数が2つの関数の積になっている。$(fg)'=f'g+fg'$ を使う。",
+        "steps": [
+          "積の微分法：$(x)'e^{-x}+x(e^{-x})'$。",
+          "$(e^{-x})'=-e^{-x}$ を用いて整理する。",
+          "$y'=(1-x)e^{-x}$。"
+        ],
+        "alternatives": [
+          "対数微分法（両辺の自然対数をとって微分）でも確かめられる（$y>0$ の範囲）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "積の微分法を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "整理した導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(fg)'=f'g'$ としてしまう。",
+          "整理の途中で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=xe^{2x}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=(2x+1)e^{2x}$"
+      },
+      "explanation": "積の微分法を用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**1*exp(2*x), x)-(x**0*(2*x+1)*exp(2*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "関数が2つの関数の積になっている。$(fg)'=f'g+fg'$ を使う。",
+        "steps": [
+          "積の微分法：$(x)'e^{2x}+x(e^{2x})'$。",
+          "$(e^{2x})'=2e^{2x}$ を用いて整理する。",
+          "$y'=(2x+1)e^{2x}$。"
+        ],
+        "alternatives": [
+          "対数微分法（両辺の自然対数をとって微分）でも確かめられる（$y>0$ の範囲）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "積の微分法を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "整理した導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(fg)'=f'g'$ としてしまう。",
+          "整理の途中で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=x^3e^{-3x}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=x^2(3-3x)e^{-3x}$"
+      },
+      "explanation": "積の微分法を用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**3*exp(-3*x), x)-(x**2*(-3*x+3)*exp(-3*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "関数が2つの関数の積になっている。$(fg)'=f'g+fg'$ を使う。",
+        "steps": [
+          "積の微分法：$(x^3)'e^{-3x}+x^3(e^{-3x})'$。",
+          "$(e^{-3x})'=-3e^{-3x}$ を用いて整理する。",
+          "$y'=x^2(3-3x)e^{-3x}$。"
+        ],
+        "alternatives": [
+          "対数微分法（両辺の自然対数をとって微分）でも確かめられる（$y>0$ の範囲）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "積の微分法を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "整理した導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(fg)'=f'g'$ としてしまう。",
+          "整理の途中で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\dfrac{x}{x^2+9}$ を微分しなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{9-x^2}{(x^2+9)^2}$"
+      },
+      "explanation": "商の微分法を用いる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x/(x**2+9), x)-((9-x**2)/(x**2+9)**2))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-product_quotient",
+      "explanation_detail": {
+        "approach": "関数が2つの関数の商になっている。$\\left(\\dfrac{f}{g}\\right)'=\\dfrac{f'g-fg'}{g^2}$ を使う。",
+        "steps": [
+          "商の微分法：$\\dfrac{1\\cdot(x^2+9)-x\\cdot2x}{(x^2+9)^2}$。",
+          "$y'=\\dfrac{9-x^2}{(x^2+9)^2}$。"
+        ],
+        "alternatives": [
+          "商は $f\\cdot g^{-1}$ と積に直して微分しても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "商の微分法を正しく適用している",
+            "points": 1
+          },
+          {
+            "point": "整理した導関数が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "商の微分法の分子を $f'g+fg'$ と、積の公式と混同する。",
+          "整理の途中で符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=e^{x}$ 上の点 $\\left(1,\\,e\\right)$ における接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=ex$"
+      },
+      "explanation": "$y'$ に $x=1$ を代入して接線の傾き $e$ を求める。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[limit(diff(exp(x), x), x, 1), E*(1)+(0)-(E)]",
+        "expected": "[E, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-tangent_line",
+      "explanation_detail": {
+        "approach": "接線の傾きは導関数に接点の $x$ 座標を代入した値。法線は接線に垂直なので、傾きは $-\\dfrac{1}{f'(a)}$。",
+        "steps": [
+          "$y'$ を求め、$x=1$ を代入すると接線の傾きは $e$。",
+          "$y-e=e\\left(x-1\\right)$ より $y=ex$。"
+        ],
+        "alternatives": [
+          "求めた直線に $x=1$ を代入して $y=e$ となり、接点を通ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きに導関数の式をそのまま使ってしまう。",
+          "接点の $y$ 座標の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\sqrt{x}$ 上の点 $\\left(9,\\,3\\right)$ における接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=\\dfrac{1}{6}x+\\dfrac{3}{2}$"
+      },
+      "explanation": "$y'$ に $x=9$ を代入して接線の傾き $\\dfrac{1}{6}$ を求める。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[limit(diff(sqrt(x), x), x, 9), 1/6*(9)+(3/2)-(3)]",
+        "expected": "[1/6, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-tangent_line",
+      "explanation_detail": {
+        "approach": "接線の傾きは導関数に接点の $x$ 座標を代入した値。法線は接線に垂直なので、傾きは $-\\dfrac{1}{f'(a)}$。",
+        "steps": [
+          "$y'$ を求め、$x=9$ を代入すると接線の傾きは $\\dfrac{1}{6}$。",
+          "$y-3=\\dfrac{1}{6}\\left(x-9\\right)$ より $y=\\dfrac{1}{6}x+\\dfrac{3}{2}$。"
+        ],
+        "alternatives": [
+          "求めた直線に $x=9$ を代入して $y=3$ となり、接点を通ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きに導関数の式をそのまま使ってしまう。",
+          "接点の $y$ 座標の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=2\\log x$ 上の点 $\\left(1,\\,0\\right)$ における接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=2x-2$"
+      },
+      "explanation": "$y'$ に $x=1$ を代入して接線の傾き $2$ を求める。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[limit(diff(2*log(x), x), x, 1), 2*(1)+(-2)-(0)]",
+        "expected": "[2, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-tangent_line",
+      "explanation_detail": {
+        "approach": "接線の傾きは導関数に接点の $x$ 座標を代入した値。法線は接線に垂直なので、傾きは $-\\dfrac{1}{f'(a)}$。",
+        "steps": [
+          "$y'$ を求め、$x=1$ を代入すると接線の傾きは $2$。",
+          "$y-0=2\\left(x-1\\right)$ より $y=2x-2$。"
+        ],
+        "alternatives": [
+          "求めた直線に $x=1$ を代入して $y=0$ となり、接点を通ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きに導関数の式をそのまま使ってしまう。",
+          "接点の $y$ 座標の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\dfrac{1}{x}$ 上の点 $\\left(3,\\,\\dfrac{1}{3}\\right)$ における接線の方程式を求めなさい。",
+      "answer": {
+        "value": "$y=- \\dfrac{1}{9}x+\\dfrac{2}{3}$"
+      },
+      "explanation": "$y'$ に $x=3$ を代入して接線の傾き $- \\dfrac{1}{9}$ を求める。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "[limit(diff(1/x, x), x, 3), -1/9*(3)+(2/3)-(1/3)]",
+        "expected": "[-1/9, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-tangent_line",
+      "explanation_detail": {
+        "approach": "接線の傾きは導関数に接点の $x$ 座標を代入した値。法線は接線に垂直なので、傾きは $-\\dfrac{1}{f'(a)}$。",
+        "steps": [
+          "$y'$ を求め、$x=3$ を代入すると接線の傾きは $- \\dfrac{1}{9}$。",
+          "$y-\\dfrac{1}{3}=- \\dfrac{1}{9}\\left(x-3\\right)$ より $y=- \\dfrac{1}{9}x+\\dfrac{2}{3}$。"
+        ],
+        "alternatives": [
+          "求めた直線に $x=3$ を代入して $y=\\dfrac{1}{3}$ となり、接点を通ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "接線の傾きを正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "接線の方程式が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "傾きに導関数の式をそのまま使ってしまう。",
+          "接点の $y$ 座標の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sin^2 2x$ の第2次導関数 $y''$ を求めなさい。",
+      "answer": {
+        "value": "$y''=8\\cos 4x$"
+      },
+      "explanation": "$y'=2\\sin 4x$ をもう一度微分する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sin(2*x)**2, x, 2)-(8*cos(4*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-second_deriv",
+      "explanation_detail": {
+        "approach": "まず $y'$ を求めて整理し、それをもう一度微分する。整理してから微分すると計算が楽になる。",
+        "steps": [
+          "$y'=2\\sin 4x$。",
+          "もう一度微分して $y''=8\\cos 4x$。"
+        ],
+        "alternatives": [
+          "$y''$ の符号から、グラフの凹凸（$y''>0$ なら下に凸）を読み取ると、答えの妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y'$ が正しい",
+            "points": 1
+          },
+          {
+            "point": "$y''$ が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y'$ を整理せずに微分して計算を誤る。",
+          "積の微分法の項を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=x^4\\log x$ の第2次導関数 $y''$ を求めなさい。",
+      "answer": {
+        "value": "$y''=x^2(12\\log x+7)$"
+      },
+      "explanation": "$y'=x^3(4\\log x+1)$ をもう一度微分する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**4*log(x), x, 2)-(x**2*(12*log(x)+7)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-second_deriv",
+      "explanation_detail": {
+        "approach": "まず $y'$ を求めて整理し、それをもう一度微分する。整理してから微分すると計算が楽になる。",
+        "steps": [
+          "$y'=x^3(4\\log x+1)$。",
+          "もう一度微分して $y''=x^2(12\\log x+7)$。"
+        ],
+        "alternatives": [
+          "$y''$ の符号から、グラフの凹凸（$y''>0$ なら下に凸）を読み取ると、答えの妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y'$ が正しい",
+            "points": 1
+          },
+          {
+            "point": "$y''$ が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y'$ を整理せずに微分して計算を誤る。",
+          "積の微分法の項を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=\\sin 4x+\\cos 2x$ の第2次導関数 $y''$ を求めなさい。",
+      "answer": {
+        "value": "$y''=-16\\sin 4x-4\\cos 2x$"
+      },
+      "explanation": "$y'=4\\cos 4x-2\\sin 2x$ をもう一度微分する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sin(4*x)+cos(2*x), x, 2)-(-16*sin(4*x)-4*cos(2*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-second_deriv",
+      "explanation_detail": {
+        "approach": "まず $y'$ を求めて整理し、それをもう一度微分する。整理してから微分すると計算が楽になる。",
+        "steps": [
+          "$y'=4\\cos 4x-2\\sin 2x$。",
+          "もう一度微分して $y''=-16\\sin 4x-4\\cos 2x$。"
+        ],
+        "alternatives": [
+          "$y''$ の符号から、グラフの凹凸（$y''>0$ なら下に凸）を読み取ると、答えの妥当性を確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y'$ が正しい",
+            "points": 1
+          },
+          {
+            "point": "$y''$ が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$y'$ を整理せずに微分して計算を誤る。",
+          "積の微分法の項を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "媒介変数 $t$ を用いて $x=2\\cos t,\\ y=3\\sin t$ と表された曲線について、$\\dfrac{dy}{dx}$ を $t$ の式で表し、$t=\\dfrac{\\pi}{6}$ における値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{dy}{dx}=-\\dfrac{3\\cos t}{2\\sin t}$、$t=\\dfrac{\\pi}{6}$ のとき $- \\dfrac{3 \\sqrt{3}}{2}$"
+      },
+      "explanation": "媒介変数表示・陰関数・逆関数の微分法を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(diff(3*sin(t), t)/diff(2*cos(t), t), t, pi/6)",
+        "expected": "-3*sqrt(3)/2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-param_implicit",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "媒介変数表示の曲線では $\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}$。これは楕円（数学C）の接線の傾きを表す。",
+        "steps": [
+          "$\\dfrac{dx}{dt}=-2\\sin t$、$\\dfrac{dy}{dt}=3\\cos t$。",
+          "$\\dfrac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}=-\\dfrac{3\\cos t}{2\\sin t}$。",
+          "$t=\\dfrac{\\pi}{6}$ を代入して $- \\dfrac{3 \\sqrt{3}}{2}$。"
+        ],
+        "alternatives": [
+          "媒介変数を消去すると楕円 $\\dfrac{x^2}{4}+\\dfrac{y^2}{9}=1$。陰関数の微分で $\\dfrac{dy}{dx}=-\\dfrac{9x}{4y}$ を求め、点の座標を代入しても一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "微分の方法（式の立て方）が正しい",
+            "points": 2
+          },
+          {
+            "point": "導関数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{dy}{dx}$ を $\\dfrac{dx/dt}{dy/dt}$ と逆にする。",
+          "$y^2$ を $x$ で微分して $2y$ とし、$\\dfrac{dy}{dx}$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $4x^2+3y^2=43$ 上の点 $(2,\\,-3)$ における接線の傾き $\\dfrac{dy}{dx}$ を、両辺を $x$ で微分することによって求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{8}{9}$"
+      },
+      "explanation": "媒介変数表示・陰関数・逆関数の微分法を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(limit(-diff(4*x**2+(3)*y**2, x)/diff(4*x**2+(3)*y**2, y), x, 2), y, -3)",
+        "expected": "Rational(8,9)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-param_implicit",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$y$ を $x$ の関数とみて、合成関数の微分法 $\\dfrac{d}{dx}y^2=2y\\dfrac{dy}{dx}$ を使い、両辺を $x$ で微分する。",
+        "steps": [
+          "両辺を $x$ で微分する。$y$ は $x$ の関数なので $(y^2)'=2y\\cdot\\dfrac{dy}{dx}$。",
+          "$8x+6y\\dfrac{dy}{dx}=0$ より $\\dfrac{dy}{dx}=-\\dfrac{4x}{3y}$（$y\\neq0$）。",
+          "$x=2,\\ y=-3$ を代入して $\\dfrac{8}{9}$。"
+        ],
+        "alternatives": [
+          "楕円（数学C）の接線の公式 $4x_0x+3y_0y=43$ に点を代入した直線の傾きと一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "微分の方法（式の立て方）が正しい",
+            "points": 2
+          },
+          {
+            "point": "導関数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{dy}{dx}$ を $\\dfrac{dx/dt}{dy/dt}$ と逆にする。",
+          "$y^2$ を $x$ で微分して $2y$ とし、$\\dfrac{dy}{dx}$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $3x^2-y^2=26$ 上の点 $(-3,\\,-1)$ における接線の傾き $\\dfrac{dy}{dx}$ を、両辺を $x$ で微分することによって求めなさい。",
+      "answer": {
+        "value": "$9$"
+      },
+      "explanation": "媒介変数表示・陰関数・逆関数の微分法を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(limit(-diff(3*x**2+(-1)*y**2, x)/diff(3*x**2+(-1)*y**2, y), x, -3), y, -1)",
+        "expected": "9"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-param_implicit",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$y$ を $x$ の関数とみて、合成関数の微分法 $\\dfrac{d}{dx}y^2=2y\\dfrac{dy}{dx}$ を使い、両辺を $x$ で微分する。",
+        "steps": [
+          "両辺を $x$ で微分する。$y$ は $x$ の関数なので $(y^2)'=2y\\cdot\\dfrac{dy}{dx}$。",
+          "$6x-2y\\dfrac{dy}{dx}=0$ より $\\dfrac{dy}{dx}=\\dfrac{3x}{1y}$（$y\\neq0$）。",
+          "$x=-3,\\ y=-1$ を代入して $9$。"
+        ],
+        "alternatives": [
+          "双曲線（数学C）の接線の公式 $3x_0x-y_0y=26$ に点を代入した直線の傾きと一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "微分の方法（式の立て方）が正しい",
+            "points": 2
+          },
+          {
+            "point": "導関数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{dy}{dx}$ を $\\dfrac{dx/dt}{dy/dt}$ と逆にする。",
+          "$y^2$ を $x$ で微分して $2y$ とし、$\\dfrac{dy}{dx}$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $3x^2-2y^2=25$ 上の点 $(3,\\,1)$ における接線の傾き $\\dfrac{dy}{dx}$ を、両辺を $x$ で微分することによって求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{9}{2}$"
+      },
+      "explanation": "媒介変数表示・陰関数・逆関数の微分法を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "limit(limit(-diff(3*x**2+(-2)*y**2, x)/diff(3*x**2+(-2)*y**2, y), x, 3), y, 1)",
+        "expected": "Rational(9,2)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-param_implicit",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "$y$ を $x$ の関数とみて、合成関数の微分法 $\\dfrac{d}{dx}y^2=2y\\dfrac{dy}{dx}$ を使い、両辺を $x$ で微分する。",
+        "steps": [
+          "両辺を $x$ で微分する。$y$ は $x$ の関数なので $(y^2)'=2y\\cdot\\dfrac{dy}{dx}$。",
+          "$6x-4y\\dfrac{dy}{dx}=0$ より $\\dfrac{dy}{dx}=\\dfrac{3x}{2y}$（$y\\neq0$）。",
+          "$x=3,\\ y=1$ を代入して $\\dfrac{9}{2}$。"
+        ],
+        "alternatives": [
+          "双曲線（数学C）の接線の公式 $3x_0x-2y_0y=25$ に点を代入した直線の傾きと一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "微分の方法（式の立て方）が正しい",
+            "points": 2
+          },
+          {
+            "point": "導関数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{dy}{dx}$ を $\\dfrac{dx/dt}{dy/dt}$ と逆にする。",
+          "$y^2$ を $x$ で微分して $2y$ とし、$\\dfrac{dy}{dx}$ をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=xe^{-x}$ の極値を求めなさい。",
+      "answer": {
+        "value": "$x=1$ で極大値 $\\dfrac{1}{e}$（他に極値はない）"
+      },
+      "explanation": "導関数の符号の変化を増減表で調べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(x*exp(-1*x), x), x), limit(x*exp(-1*x), x, 1)]",
+        "expected": "[[1], exp(-1)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-extrema_trans",
+      "explanation_detail": {
+        "approach": "$y'$ を因数分解（または1つの分数にまとめ）し、正の因数（$e^x$ など）を除いて符号を決める部分を見つける。増減表で極大・極小を判定する。",
+        "steps": [
+          "$y'=e^{-x}+x\\cdot(-1)e^{-x}=(1-x)e^{-x}$。",
+          "$e^{-x}>0$ なので、$y'$ の符号は $-x+1$ の符号と一致する。$y'=0$ より $x=1$。",
+          "$x=1$ の前後で $y'$ は正から負に変わるので極大。",
+          "極大値は $1e^{-1}=\\dfrac{1}{e}$。"
+        ],
+        "alternatives": [
+          "第2次導関数 $y''$ の符号（$y''<0$ なら極大、$y''>0$ なら極小）で判定してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$e^{-x}$ などの正の因数の符号を気にして増減表が混乱する。",
+          "極値をとる $x$ だけ答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=e^x+9e^{-x}$ の極値を求めなさい。",
+      "answer": {
+        "value": "$x=\\log 3$ で極小値 $6$（他に極値はない）"
+      },
+      "explanation": "導関数の符号の変化を増減表で調べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[limit(diff(exp(x)+9*exp(-x), x), x, log(3)), limit(exp(x)+9*exp(-x), x, log(3))]",
+        "expected": "[0, 6]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-extrema_trans",
+      "explanation_detail": {
+        "approach": "$y'$ を因数分解（または1つの分数にまとめ）し、正の因数（$e^x$ など）を除いて符号を決める部分を見つける。増減表で極大・極小を判定する。",
+        "steps": [
+          "$y'=e^x-9e^{-x}=\\dfrac{e^{2x}-9}{e^x}$。",
+          "$y'=0$ より $e^{2x}=9$、$e^x=3$、$x=\\log 3$。",
+          "$x<\\log 3$ で $y'<0$、$x>\\log 3$ で $y'>0$。",
+          "極小値は $3+\\dfrac{9}{3}=6$。"
+        ],
+        "alternatives": [
+          "第2次導関数 $y''$ の符号（$y''<0$ なら極大、$y''>0$ なら極小）で判定してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$e^{-x}$ などの正の因数の符号を気にして増減表が混乱する。",
+          "極値をとる $x$ だけ答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=x^2e^{-x}$ の極値を求めなさい。",
+      "answer": {
+        "value": "$x=0$ で極小値 $0$、$x=2$ で極大値 $\\dfrac{4}{e^{2}}$"
+      },
+      "explanation": "導関数の符号の変化を増減表で調べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(x**2*exp(-1*x), x), x), limit(x**2*exp(-1*x), x, 2)]",
+        "expected": "[[0, 2], 4*exp(-2)]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-extrema_trans",
+      "explanation_detail": {
+        "approach": "$y'$ を因数分解（または1つの分数にまとめ）し、正の因数（$e^x$ など）を除いて符号を決める部分を見つける。増減表で極大・極小を判定する。",
+        "steps": [
+          "$y'=2xe^{-x}-x^2e^{-x}=x(2-x)e^{-x}$。",
+          "$y'=0$ より $x=0,\\ 2$。",
+          "$x<0$ で $y'<0$、$0<x<2$ で $y'>0$、$x>2$ で $y'<0$。",
+          "$x=0$ で極小値 $0$、$x=2$ で極大値 $\\dfrac{4}{e^{2}}$。"
+        ],
+        "alternatives": [
+          "第2次導関数 $y''$ の符号（$y''<0$ なら極大、$y''>0$ なら極小）で判定してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$e^{-x}$ などの正の因数の符号を気にして増減表が混乱する。",
+          "極値をとる $x$ だけ答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $y=x^2e^{-3x}$ の極値を求めなさい。",
+      "answer": {
+        "value": "$x=0$ で極小値 $0$、$x=\\dfrac{2}{3}$ で極大値 $\\dfrac{4}{9 e^{2}}$"
+      },
+      "explanation": "導関数の符号の変化を増減表で調べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(x**2*exp(-3*x), x), x), limit(x**2*exp(-3*x), x, Rational(2,3))]",
+        "expected": "[[0, Rational(2,3)], 4*exp(-2)/9]",
+        "compare": "set",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-extrema_trans",
+      "explanation_detail": {
+        "approach": "$y'$ を因数分解（または1つの分数にまとめ）し、正の因数（$e^x$ など）を除いて符号を決める部分を見つける。増減表で極大・極小を判定する。",
+        "steps": [
+          "$y'=2xe^{-3x}-3x^2e^{-3x}=x(2-3x)e^{-3x}$。",
+          "$y'=0$ より $x=0,\\ \\dfrac{2}{3}$。",
+          "$x<0$ で $y'<0$、$0<x<\\dfrac{2}{3}$ で $y'>0$、$x>\\dfrac{2}{3}$ で $y'<0$。",
+          "$x=0$ で極小値 $0$、$x=\\dfrac{2}{3}$ で極大値 $\\dfrac{4}{9 e^{2}}$。"
+        ],
+        "alternatives": [
+          "第2次導関数 $y''$ の符号（$y''<0$ なら極大、$y''>0$ なら極小）で判定してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "導関数を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "増減表で符号の変化を調べている",
+            "points": 1
+          },
+          {
+            "point": "極値とそのときの $x$ が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$e^{-x}$ などの正の因数の符号を気にして増減表が混乱する。",
+          "極値をとる $x$ だけ答えて、極値（関数の値）を答えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=e^{-\\frac{x^2}{8}}$ の変曲点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$\\left(2,\\,\\dfrac{1}{\\sqrt{e}}\\right)$、$\\left(-2,\\,\\dfrac{1}{\\sqrt{e}}\\right)$"
+      },
+      "explanation": "$y''=0$ となる点のうち、前後で $y''$ の符号が変わる点が変曲点。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(exp(-x**2/8), x, 2), x), limit(exp(-x**2/8), x, 2)]",
+        "expected": "[[-2, 2], exp(Rational(-1,2))]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U02-inflection",
+      "explanation_detail": {
+        "approach": "第2次導関数 $y''$ を求め、$y''=0$ の解の前後で符号が変わるかを確かめる（符号が変わらなければ変曲点ではない）。",
+        "steps": [
+          "$y'=-\\dfrac{x}{4}e^{-\\frac{x^2}{8}}$。",
+          "$y''=\\dfrac{x^2-4}{16}e^{-\\frac{x^2}{8}}$。",
+          "$y''=0$ より $x=\\pm 2$。前後で $y''$ の符号が変わる。",
+          "$y=e^{-\\frac{1}{2}}=\\dfrac{1}{\\sqrt{e}}$。変曲点は $\\left(2,\\,\\dfrac{1}{\\sqrt{e}}\\right)$、$\\left(-2,\\,\\dfrac{1}{\\sqrt{e}}\\right)$。"
+        ],
+        "alternatives": [
+          "グラフの対称性（偶関数ならば $y$ 軸対称）を使うと、片側の変曲点から他方が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y''$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号の変化を確認している",
+            "points": 1
+          },
+          {
+            "point": "変曲点の座標が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y''=0$ を解いただけで、符号の変化を確かめない。",
+          "変曲点の $y$ 座標を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\log(x^2+4)$ の変曲点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$(2,\\,\\log 8)$、$(-2,\\,\\log 8)$"
+      },
+      "explanation": "$y''=0$ となる点のうち、前後で $y''$ の符号が変わる点が変曲点。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(log(x**2+4), x, 2), x), limit(log(x**2+4), x, 2)]",
+        "expected": "[[-2, 2], log(8)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U02-inflection",
+      "explanation_detail": {
+        "approach": "第2次導関数 $y''$ を求め、$y''=0$ の解の前後で符号が変わるかを確かめる（符号が変わらなければ変曲点ではない）。",
+        "steps": [
+          "$y'=\\dfrac{2x}{x^2+4}$。",
+          "$y''=\\dfrac{2(x^2+4)-2x\\cdot2x}{(x^2+4)^2}=\\dfrac{2(4-x^2)}{(x^2+4)^2}$。",
+          "$y''=0$ より $x=\\pm 2$。前後で符号が変わる。",
+          "$y=\\log 8$。変曲点は $(2,\\,\\log 8)$、$(-2,\\,\\log 8)$。"
+        ],
+        "alternatives": [
+          "グラフの対称性（偶関数ならば $y$ 軸対称）を使うと、片側の変曲点から他方が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y''$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号の変化を確認している",
+            "points": 1
+          },
+          {
+            "point": "変曲点の座標が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y''=0$ を解いただけで、符号の変化を確かめない。",
+          "変曲点の $y$ 座標を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=e^{-\\frac{x^2}{18}}$ の変曲点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$\\left(3,\\,\\dfrac{1}{\\sqrt{e}}\\right)$、$\\left(-3,\\,\\dfrac{1}{\\sqrt{e}}\\right)$"
+      },
+      "explanation": "$y''=0$ となる点のうち、前後で $y''$ の符号が変わる点が変曲点。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(exp(-x**2/18), x, 2), x), limit(exp(-x**2/18), x, 3)]",
+        "expected": "[[-3, 3], exp(Rational(-1,2))]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U02-inflection",
+      "explanation_detail": {
+        "approach": "第2次導関数 $y''$ を求め、$y''=0$ の解の前後で符号が変わるかを確かめる（符号が変わらなければ変曲点ではない）。",
+        "steps": [
+          "$y'=-\\dfrac{x}{9}e^{-\\frac{x^2}{18}}$。",
+          "$y''=\\dfrac{x^2-9}{81}e^{-\\frac{x^2}{18}}$。",
+          "$y''=0$ より $x=\\pm 3$。前後で $y''$ の符号が変わる。",
+          "$y=e^{-\\frac{1}{2}}=\\dfrac{1}{\\sqrt{e}}$。変曲点は $\\left(3,\\,\\dfrac{1}{\\sqrt{e}}\\right)$、$\\left(-3,\\,\\dfrac{1}{\\sqrt{e}}\\right)$。"
+        ],
+        "alternatives": [
+          "グラフの対称性（偶関数ならば $y$ 軸対称）を使うと、片側の変曲点から他方が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y''$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号の変化を確認している",
+            "points": 1
+          },
+          {
+            "point": "変曲点の座標が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y''=0$ を解いただけで、符号の変化を確かめない。",
+          "変曲点の $y$ 座標を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\log(x^2+16)$ の変曲点の座標をすべて求めなさい。",
+      "answer": {
+        "value": "$(4,\\,\\log 32)$、$(-4,\\,\\log 32)$"
+      },
+      "explanation": "$y''=0$ となる点のうち、前後で $y''$ の符号が変わる点が変曲点。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[solve(diff(log(x**2+16), x, 2), x), limit(log(x**2+16), x, 4)]",
+        "expected": "[[-4, 4], log(32)]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U02-inflection",
+      "explanation_detail": {
+        "approach": "第2次導関数 $y''$ を求め、$y''=0$ の解の前後で符号が変わるかを確かめる（符号が変わらなければ変曲点ではない）。",
+        "steps": [
+          "$y'=\\dfrac{2x}{x^2+16}$。",
+          "$y''=\\dfrac{2(x^2+16)-2x\\cdot2x}{(x^2+16)^2}=\\dfrac{2(16-x^2)}{(x^2+16)^2}$。",
+          "$y''=0$ より $x=\\pm 4$。前後で符号が変わる。",
+          "$y=\\log 32$。変曲点は $(4,\\,\\log 32)$、$(-4,\\,\\log 32)$。"
+        ],
+        "alternatives": [
+          "グラフの対称性（偶関数ならば $y$ 軸対称）を使うと、片側の変曲点から他方が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$y''$ を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "符号の変化を確認している",
+            "points": 1
+          },
+          {
+            "point": "変曲点の座標が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$y''=0$ を解いただけで、符号の変化を確かめない。",
+          "変曲点の $y$ 座標を求め忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "座標平面上を動く点 P の時刻 $t$ における座標が $x=6\\cos 2t,\\ y=6\\sin 2t$ であるとき、P の速さと加速度の大きさを求めなさい。",
+      "answer": {
+        "value": "速さ $12$、加速度の大きさ $24$"
+      },
+      "explanation": "位置を時刻で微分すると速度、さらに微分すると加速度。平面では成分ごとに微分する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(sqrt(diff(6*cos(2*t), t)**2+diff(6*sin(2*t), t)**2)), simplify(sqrt(diff(6*cos(2*t), t, 2)**2+diff(6*sin(2*t), t, 2)**2))]",
+        "expected": "[12, 24]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-velocity",
+      "related_units": [
+        "HS-PHY-U01"
+      ],
+      "explanation_detail": {
+        "approach": "成分ごとに微分してベクトルの大きさを求める。$\\sin^2+\\cos^2=1$ で $t$ が消える。",
+        "steps": [
+          "$\\dfrac{dx}{dt}=-12\\sin 2t,\\ \\dfrac{dy}{dt}=12\\cos 2t$。",
+          "速さは $\\sqrt{144(\\sin^2 2t+\\cos^2 2t)}=12$。",
+          "$\\dfrac{d^2x}{dt^2}=-24\\cos 2t,\\ \\dfrac{d^2y}{dt^2}=-24\\sin 2t$ より、加速度の大きさは $24$。"
+        ],
+        "alternatives": [
+          "物理の等速円運動の公式 $v=r\\omega,\\ a=r\\omega^2$（$r=6,\\ \\omega=2$）と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度（成分）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "加速度または速さの式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さを $\\dfrac{dx}{dt}+\\dfrac{dy}{dt}$ と成分の和で求める。",
+          "速度（符号つき）と速さ（大きさ）を区別しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "数直線上を動く点 P の時刻 $t$ における座標が $x=t^3+3t^2-t$ であるとき、$t=2$ における P の速度、速さ、加速度を求めなさい。",
+      "answer": {
+        "value": "速度 $23$、速さ $23$、加速度 $18$"
+      },
+      "explanation": "位置を時刻で微分すると速度、さらに微分すると加速度。平面では成分ごとに微分する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[limit(diff(t**3+(3)*t**2+(-1)*t, t), t, 2), limit(diff(t**3+(3)*t**2+(-1)*t, t, 2), t, 2)]",
+        "expected": "[23, 18]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-velocity",
+      "related_units": [
+        "HS-PHYB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "速度は位置の時間微分、加速度は速度の時間微分。速さは速度の絶対値。",
+        "steps": [
+          "$v=\\dfrac{dx}{dt}=3t^2+6t-1$。",
+          "$\\alpha=\\dfrac{dv}{dt}=6t+6$。",
+          "$t=2$ を代入して $v=23$、速さ $|v|=23$、$\\alpha=18$。"
+        ],
+        "alternatives": [
+          "物理の等加速度運動 $x=v_0t+\\dfrac{1}{2}at^2$ のように、位置を2回微分すると加速度になることと対応させて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度（成分）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "加速度または速さの式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さを $\\dfrac{dx}{dt}+\\dfrac{dy}{dt}$ と成分の和で求める。",
+          "速度（符号つき）と速さ（大きさ）を区別しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "数直線上を動く点 P の時刻 $t$ における座標が $x=t^3-4t^2+9t$ であるとき、$t=3$ における P の速度、速さ、加速度を求めなさい。",
+      "answer": {
+        "value": "速度 $12$、速さ $12$、加速度 $10$"
+      },
+      "explanation": "位置を時刻で微分すると速度、さらに微分すると加速度。平面では成分ごとに微分する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[limit(diff(t**3+(-4)*t**2+(9)*t, t), t, 3), limit(diff(t**3+(-4)*t**2+(9)*t, t, 2), t, 3)]",
+        "expected": "[12, 10]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-velocity",
+      "related_units": [
+        "HS-PHYB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "速度は位置の時間微分、加速度は速度の時間微分。速さは速度の絶対値。",
+        "steps": [
+          "$v=\\dfrac{dx}{dt}=3t^2-8t+9$。",
+          "$\\alpha=\\dfrac{dv}{dt}=6t-8$。",
+          "$t=3$ を代入して $v=12$、速さ $|v|=12$、$\\alpha=10$。"
+        ],
+        "alternatives": [
+          "物理の等加速度運動 $x=v_0t+\\dfrac{1}{2}at^2$ のように、位置を2回微分すると加速度になることと対応させて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度（成分）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "加速度または速さの式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さを $\\dfrac{dx}{dt}+\\dfrac{dy}{dt}$ と成分の和で求める。",
+          "速度（符号つき）と速さ（大きさ）を区別しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "座標平面上を動く点 P の時刻 $t$ における座標が $x=2\\cos 4t,\\ y=2\\sin 4t$ であるとき、P の速さと加速度の大きさを求めなさい。",
+      "answer": {
+        "value": "速さ $8$、加速度の大きさ $32$"
+      },
+      "explanation": "位置を時刻で微分すると速度、さらに微分すると加速度。平面では成分ごとに微分する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(sqrt(diff(2*cos(4*t), t)**2+diff(2*sin(4*t), t)**2)), simplify(sqrt(diff(2*cos(4*t), t, 2)**2+diff(2*sin(4*t), t, 2)**2))]",
+        "expected": "[8, 32]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "application",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-velocity",
+      "related_units": [
+        "HS-PHY-U01"
+      ],
+      "explanation_detail": {
+        "approach": "成分ごとに微分してベクトルの大きさを求める。$\\sin^2+\\cos^2=1$ で $t$ が消える。",
+        "steps": [
+          "$\\dfrac{dx}{dt}=-8\\sin 4t,\\ \\dfrac{dy}{dt}=8\\cos 4t$。",
+          "速さは $\\sqrt{64(\\sin^2 4t+\\cos^2 4t)}=8$。",
+          "$\\dfrac{d^2x}{dt^2}=-32\\cos 4t,\\ \\dfrac{d^2y}{dt^2}=-32\\sin 4t$ より、加速度の大きさは $32$。"
+        ],
+        "alternatives": [
+          "物理の等速円運動の公式 $v=r\\omega,\\ a=r\\omega^2$（$r=2,\\ \\omega=4$）と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "速度（成分）を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "加速度または速さの式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "速さを $\\dfrac{dx}{dt}+\\dfrac{dy}{dt}$ と成分の和で求める。",
+          "速度（符号つき）と速さ（大きさ）を区別しない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=e^x$ と区間 $0\\leqq x\\leqq 2$ について、平均値の定理 $\\dfrac{f(2)-f(0)}{2-0}=f'(c),\\ 0<c<2$ を満たす $c$ の値を求めなさい。",
+      "answer": {
+        "value": "$c=\\log\\left(\\dfrac{e^2-1}{2}\\right)$"
+      },
+      "explanation": "平均変化率を計算し、$f'(c)$ と等しいとおいて $c$ を求める。区間内にあるものを選ぶ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify(limit(diff(exp(x), x), x, log(-1/2 + exp(2)/2))-((exp(2))-(1))/((2)-(0)))",
+        "expected": "0"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-mean_value",
+      "explanation_detail": {
+        "approach": "平均値の定理は「2点を結ぶ直線と平行な接線が区間内にある」ことを主張する。平均変化率を求め、$f'(c)$ と等しくなる $c$ を区間の中から選ぶ。",
+        "steps": [
+          "$\\dfrac{e^{2}-e^0}{2-0}=\\dfrac{e^2-1}{2}$。",
+          "$f'(c)=e^c$ とおいて $c=\\log\\left(\\dfrac{e^2-1}{2}\\right)$。",
+          "$0<c<2$ を満たす。"
+        ],
+        "alternatives": [
+          "グラフ上で2端点を結ぶ直線をかき、これと平行な接線の接点の $x$ 座標が $c$ であることを図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均変化率を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$f'(c)$ との方程式を立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "区間内の解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$c$ が区間 $a<c<b$ に入っているかを確かめない。",
+          "平均変化率の分母・分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=\\dfrac{1}{x}$ と区間 $3\\leqq x\\leqq 7$ について、平均値の定理 $\\dfrac{f(7)-f(3)}{7-3}=f'(c),\\ 3<c<7$ を満たす $c$ の値を求めなさい。",
+      "answer": {
+        "value": "$c=\\sqrt{21}$"
+      },
+      "explanation": "平均変化率を計算し、$f'(c)$ と等しいとおいて $c$ を求める。区間内にあるものを選ぶ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify(limit(diff(1/x, x), x, sqrt(21))-((1/7)-(1/3))/((7)-(3)))",
+        "expected": "0"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-mean_value",
+      "explanation_detail": {
+        "approach": "平均値の定理は「2点を結ぶ直線と平行な接線が区間内にある」ことを主張する。平均変化率を求め、$f'(c)$ と等しくなる $c$ を区間の中から選ぶ。",
+        "steps": [
+          "$\\dfrac{\\frac{1}{7}-\\frac{1}{3}}{7-3}=-\\dfrac{1}{21}$。",
+          "$f'(c)=-\\dfrac{1}{c^2}=-\\dfrac{1}{21}$ より $c^2=21$。",
+          "$3<c<7$ より $c=\\sqrt{21}$。"
+        ],
+        "alternatives": [
+          "グラフ上で2端点を結ぶ直線をかき、これと平行な接線の接点の $x$ 座標が $c$ であることを図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均変化率を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$f'(c)$ との方程式を立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "区間内の解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$c$ が区間 $a<c<b$ に入っているかを確かめない。",
+          "平均変化率の分母・分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=\\sqrt{x}$ と区間 $1\\leqq x\\leqq 9$ について、平均値の定理 $\\dfrac{f(9)-f(1)}{9-1}=f'(c),\\ 1<c<9$ を満たす $c$ の値を求めなさい。",
+      "answer": {
+        "value": "$c=4$"
+      },
+      "explanation": "平均変化率を計算し、$f'(c)$ と等しいとおいて $c$ を求める。区間内にあるものを選ぶ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify(limit(diff(sqrt(x), x), x, 4)-((3)-(1))/((9)-(1)))",
+        "expected": "0"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-mean_value",
+      "explanation_detail": {
+        "approach": "平均値の定理は「2点を結ぶ直線と平行な接線が区間内にある」ことを主張する。平均変化率を求め、$f'(c)$ と等しくなる $c$ を区間の中から選ぶ。",
+        "steps": [
+          "$\\dfrac{\\sqrt{9}-\\sqrt{1}}{9-1}=\\dfrac{2}{8}=\\dfrac{1}{4}$。",
+          "$f'(c)=\\dfrac{1}{2\\sqrt{c}}=\\dfrac{1}{4}$ より $\\sqrt{c}=2$、$c=4$。",
+          "$1<4<9$ を満たす。"
+        ],
+        "alternatives": [
+          "グラフ上で2端点を結ぶ直線をかき、これと平行な接線の接点の $x$ 座標が $c$ であることを図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均変化率を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$f'(c)$ との方程式を立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "区間内の解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$c$ が区間 $a<c<b$ に入っているかを確かめない。",
+          "平均変化率の分母・分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "関数 $f(x)=x^3$ と区間 $0\\leqq x\\leqq 2$ について、平均値の定理 $\\dfrac{f(2)-f(0)}{2-0}=f'(c),\\ 0<c<2$ を満たす $c$ の値を求めなさい。",
+      "answer": {
+        "value": "$c=\\dfrac{2 \\sqrt{3}}{3}$"
+      },
+      "explanation": "平均変化率を計算し、$f'(c)$ と等しいとおいて $c$ を求める。区間内にあるものを選ぶ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "simplify(limit(diff(x**3, x), x, 2*sqrt(3)/3)-((8)-(0))/((2)-(0)))",
+        "expected": "0"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "condition_check",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-mean_value",
+      "explanation_detail": {
+        "approach": "平均値の定理は「2点を結ぶ直線と平行な接線が区間内にある」ことを主張する。平均変化率を求め、$f'(c)$ と等しくなる $c$ を区間の中から選ぶ。",
+        "steps": [
+          "$\\dfrac{f(2)-f(0)}{2-0}=4$。",
+          "$f'(c)=3c^2=4$ より $c=\\pm \\dfrac{2 \\sqrt{3}}{3}$。",
+          "$0<c<2$ より $c=\\dfrac{2 \\sqrt{3}}{3}$。"
+        ],
+        "alternatives": [
+          "グラフ上で2端点を結ぶ直線をかき、これと平行な接線の接点の $x$ 座標が $c$ であることを図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平均変化率を正しく求めている",
+            "points": 1
+          },
+          {
+            "point": "$f'(c)$ との方程式を立てて解いている",
+            "points": 2
+          },
+          {
+            "point": "区間内の解を選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$c$ が区間 $a<c<b$ に入っているかを確かめない。",
+          "平均変化率の分母・分子を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$x>0$ のとき、不等式 $x-\\dfrac{x^2}{2}<\\log(1+x)<x$ が成り立つことを証明しなさい。",
+      "answer": {
+        "value": "（証明）$f(x)=x-\\log(1+x)$ とおくと $f'(x)=1-\\dfrac{1}{1+x}=\\dfrac{x}{1+x}>0\\ (x>0)$。$f(0)=0$ なので $x>0$ で $f(x)>0$、すなわち $\\log(1+x)<x$。$g(x)=\\log(1+x)-x+\\dfrac{x^2}{2}$ とおくと $g'(x)=\\dfrac{1}{1+x}-1+x=\\dfrac{x^2}{1+x}>0\\ (x>0)$。$g(0)=0$ なので $x>0$ で $g(x)>0$、すなわち $x-\\dfrac{x^2}{2}<\\log(1+x)$。以上より、$x>0$ のとき $x-\\dfrac{x^2}{2}<\\log(1+x)<x$。（証明終）"
+      },
+      "explanation": "差をとった関数の増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "右側の不等式を差の関数で示している",
+            "points": 3
+          },
+          {
+            "criterion": "左側の不等式を差の関数で示している",
+            "points": 3
+          },
+          {
+            "criterion": "$f(0)=0$ と単調性から結論を述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(x-log(1+x), x)-(x/(1+x))), limit(x-log(1+x), x, 0)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-ineq_proof",
+      "explanation_detail": {
+        "approach": "不等式 $A\\geqq B$ は、$f(x)=A-B$ の最小値が $0$ 以上であることを示せばよい。$f'(x)$ の符号から増減を調べる。",
+        "steps": [
+          "$f(x)=x-\\log(1+x)$ とおくと $f'(x)=1-\\dfrac{1}{1+x}=\\dfrac{x}{1+x}>0\\ (x>0)$。$f(0)=0$ なので $x>0$ で $f(x)>0$、すなわち $\\log(1+x)<x$。",
+          "$g(x)=\\log(1+x)-x+\\dfrac{x^2}{2}$ とおくと $g'(x)=\\dfrac{1}{1+x}-1+x=\\dfrac{x^2}{1+x}>0\\ (x>0)$。",
+          "$g(0)=0$ なので $x>0$ で $g(x)>0$、すなわち $x-\\dfrac{x^2}{2}<\\log(1+x)$。",
+          "以上より、$x>0$ のとき $x-\\dfrac{x^2}{2}<\\log(1+x)<x$。"
+        ],
+        "alternatives": [
+          "$\\log(1+x)=\\displaystyle\\int_0^x\\dfrac{dt}{1+t}$ と表し、$1-t<\\dfrac{1}{1+t}<1\\ (t>0)$ を積分しても示せる（積分法の単元）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "右側",
+            "points": 3
+          },
+          {
+            "point": "左側",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)\\geqq 0$ を示しただけで、出発点 $f(0)$ や最小値の値を確かめない。",
+          "定義域（$x>0$ など）を考えずに符号を判断する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "すべての実数 $x$ について、不等式 $e^x\\geqq e^{2}(x-1)$ が成り立つことを証明しなさい。",
+      "answer": {
+        "value": "（証明）$f(x)=e^x-e^{2}(x-1)$ とおく。$f'(x)=e^x-e^{2}$。$x<2$ で $f'(x)<0$、$x>2$ で $f'(x)>0$。$f(x)$ は $x=2$ で最小で、最小値は $f(2)=e^{2}-e^{2}\\cdot1=0$。よって $f(x)\\geqq 0$ であり、$e^x\\geqq e^{2}(x-1)$（等号は $x=2$ のとき）。（証明終）"
+      },
+      "explanation": "差をとった関数の増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "差の関数を設定し、導関数を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "増減（最小値）を正しく調べている",
+            "points": 3
+          },
+          {
+            "criterion": "結論を不等式として述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(exp(x)-exp(2)*(x+1-(2)), x)-(exp(x)-exp(2))), limit(exp(x)-exp(2)*(x+1-(2)), x, 2)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-ineq_proof",
+      "explanation_detail": {
+        "approach": "不等式 $A\\geqq B$ は、$f(x)=A-B$ の最小値が $0$ 以上であることを示せばよい。$f'(x)$ の符号から増減を調べる。",
+        "steps": [
+          "$f(x)=e^x-e^{2}(x-1)$ とおく。",
+          "$f'(x)=e^x-e^{2}$。$x<2$ で $f'(x)<0$、$x>2$ で $f'(x)>0$。",
+          "$f(x)$ は $x=2$ で最小で、最小値は $f(2)=e^{2}-e^{2}\\cdot1=0$。",
+          "よって $f(x)\\geqq 0$ であり、$e^x\\geqq e^{2}(x-1)$（等号は $x=2$ のとき）。"
+        ],
+        "alternatives": [
+          "右辺は曲線 $y=e^x$ の $x=2$ における接線。$y=e^x$ は下に凸（$y''=e^x>0$）なので、グラフは接線より上にある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差の関数と導関数",
+            "points": 3
+          },
+          {
+            "point": "増減・最小値",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)\\geqq 0$ を示しただけで、出発点 $f(0)$ や最小値の値を確かめない。",
+          "定義域（$x>0$ など）を考えずに符号を判断する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "すべての実数 $x$ について、不等式 $e^x\\geqq x+1$ が成り立つことを証明しなさい。",
+      "answer": {
+        "value": "（証明）$f(x)=e^x-(x+1)$ とおく。$f'(x)=e^x-1$。$x<0$ で $f'(x)<0$、$x>0$ で $f'(x)>0$。$f(x)$ は $x=0$ で最小で、最小値は $f(0)=e^{0}-e^{0}\\cdot1=0$。よって $f(x)\\geqq 0$ であり、$e^x\\geqq x+1$（等号は $x=0$ のとき）。（証明終）"
+      },
+      "explanation": "差をとった関数の増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "差の関数を設定し、導関数を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "増減（最小値）を正しく調べている",
+            "points": 3
+          },
+          {
+            "criterion": "結論を不等式として述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(exp(x)-exp(0)*(x+1-(0)), x)-(exp(x)-exp(0))), limit(exp(x)-exp(0)*(x+1-(0)), x, 0)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-ineq_proof",
+      "explanation_detail": {
+        "approach": "不等式 $A\\geqq B$ は、$f(x)=A-B$ の最小値が $0$ 以上であることを示せばよい。$f'(x)$ の符号から増減を調べる。",
+        "steps": [
+          "$f(x)=e^x-(x+1)$ とおく。",
+          "$f'(x)=e^x-1$。$x<0$ で $f'(x)<0$、$x>0$ で $f'(x)>0$。",
+          "$f(x)$ は $x=0$ で最小で、最小値は $f(0)=e^{0}-e^{0}\\cdot1=0$。",
+          "よって $f(x)\\geqq 0$ であり、$e^x\\geqq x+1$（等号は $x=0$ のとき）。"
+        ],
+        "alternatives": [
+          "右辺は曲線 $y=e^x$ の $x=0$ における接線。$y=e^x$ は下に凸（$y''=e^x>0$）なので、グラフは接線より上にある。"
+        ],
+        "partial_credit": [
+          {
+            "point": "差の関数と導関数",
+            "points": 3
+          },
+          {
+            "point": "増減・最小値",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$f'(x)\\geqq 0$ を示しただけで、出発点 $f(0)$ や最小値の値を確かめない。",
+          "定義域（$x>0$ など）を考えずに符号を判断する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$k$ を実数の定数とする。方程式 $x^4e^{-x}=k$ の異なる実数解の個数を、$k$ の値によって分類しなさい。ただし、$\\displaystyle\\lim_{x\\to\\infty}x^ne^{-x}=0$（$n$ は自然数）を用いてよい。",
+      "answer": {
+        "value": "$k<0$ のとき0個、$k=0$ のとき1個、$0<k<\\dfrac{256}{e^{4}}$ のとき3個、$k=\\dfrac{256}{e^{4}}$ のとき2個、$k>\\dfrac{256}{e^{4}}$ のとき1個"
+      },
+      "explanation": "定数 $k$ を分離し、$y=f(x)$ のグラフと直線 $y=k$ の共有点を数える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$k$ を分離して $y=f(x)$ と $y=k$ の共有点の問題に言いかえている",
+            "points": 2
+          },
+          {
+            "criterion": "増減と極値・端の極限を正しく調べている",
+            "points": 4
+          },
+          {
+            "criterion": "$k$ による分類が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[limit(x**4*exp(-1*x), x, 4), limit(x**4*exp(-1*x), x, oo)]",
+        "expected": "[256*exp(-4), 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-count_roots",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "文字定数 $k$ を片側に集めて $k=f(x)$ とし、$y=f(x)$ のグラフ（増減・極値・極限）をかいて、水平な直線 $y=k$ との共有点を数える。端のふるまいは極限（数学Ⅲ 極限）で調べる。",
+        "steps": [
+          "$f(x)=x^4e^{-x}$ とおくと、方程式の実数解の個数は、曲線 $y=f(x)$ と直線 $y=k$ の共有点の個数に等しい。",
+          "$f'(x)=x^3(4-x)e^{-x}$。",
+          "$x=0$ で極小値 $0$、$x=4$ で極大値 $\\dfrac{256}{e^{4}}$ をとる。$x\\to-\\infty$ で $f(x)\\to\\infty$、$x\\to\\infty$ で $f(x)\\to+0$。",
+          "直線 $y=k$ を上下に動かして共有点を数えると、$k<0$ のとき0個、$k=0$ のとき1個、$0<k<\\dfrac{256}{e^{4}}$ のとき3個、$k=\\dfrac{256}{e^{4}}$ のとき2個、$k>\\dfrac{256}{e^{4}}$ のとき1個。"
+        ],
+        "alternatives": [
+          "グラフをかかずに、増減表と中間値の定理を区間ごとに使って解の個数を数えることもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定数分離",
+            "points": 2
+          },
+          {
+            "point": "増減と極限",
+            "points": 4
+          },
+          {
+            "point": "分類",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "端の極限（$x\\to\\pm\\infty$ や $x\\to+0$）を調べず、グラフの形を誤る。",
+          "境界の $k$（極値と等しいとき）の個数を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$k$ を実数の定数とする。方程式 $x^3e^{-x}=k$ の異なる実数解の個数を、$k$ の値によって分類しなさい。ただし、$\\displaystyle\\lim_{x\\to\\infty}x^ne^{-x}=0$（$n$ は自然数）を用いてよい。",
+      "answer": {
+        "value": "$k\\leqq 0$ のとき1個、$0<k<\\dfrac{27}{e^{3}}$ のとき2個、$k=\\dfrac{27}{e^{3}}$ のとき1個、$k>\\dfrac{27}{e^{3}}$ のとき0個"
+      },
+      "explanation": "定数 $k$ を分離し、$y=f(x)$ のグラフと直線 $y=k$ の共有点を数える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$k$ を分離して $y=f(x)$ と $y=k$ の共有点の問題に言いかえている",
+            "points": 2
+          },
+          {
+            "criterion": "増減と極値・端の極限を正しく調べている",
+            "points": 4
+          },
+          {
+            "criterion": "$k$ による分類が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[limit(x**3*exp(-1*x), x, 3), limit(x**3*exp(-1*x), x, oo)]",
+        "expected": "[27*exp(-3), 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-count_roots",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "文字定数 $k$ を片側に集めて $k=f(x)$ とし、$y=f(x)$ のグラフ（増減・極値・極限）をかいて、水平な直線 $y=k$ との共有点を数える。端のふるまいは極限（数学Ⅲ 極限）で調べる。",
+        "steps": [
+          "$f(x)=x^3e^{-x}$ とおくと、方程式の実数解の個数は、曲線 $y=f(x)$ と直線 $y=k$ の共有点の個数に等しい。",
+          "$f'(x)=x^2(3-x)e^{-x}$。",
+          "$x<3$ で増加、$x>3$ で減少し、$x=3$ で極大値（最大値）$\\dfrac{27}{e^{3}}$ をとる。$x\\to-\\infty$ で $f(x)\\to-\\infty$、$x\\to\\infty$ で $f(x)\\to+0$。",
+          "直線 $y=k$ を上下に動かして共有点を数えると、$k\\leqq 0$ のとき1個、$0<k<\\dfrac{27}{e^{3}}$ のとき2個、$k=\\dfrac{27}{e^{3}}$ のとき1個、$k>\\dfrac{27}{e^{3}}$ のとき0個。"
+        ],
+        "alternatives": [
+          "グラフをかかずに、増減表と中間値の定理を区間ごとに使って解の個数を数えることもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定数分離",
+            "points": 2
+          },
+          {
+            "point": "増減と極限",
+            "points": 4
+          },
+          {
+            "point": "分類",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "端の極限（$x\\to\\pm\\infty$ や $x\\to+0$）を調べず、グラフの形を誤る。",
+          "境界の $k$（極値と等しいとき）の個数を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "$k$ を実数の定数とする。方程式 $\\log x=kx^2$ の異なる実数解の個数を、$k$ の値によって分類しなさい。ただし、$\\displaystyle\\lim_{x\\to\\infty}\\dfrac{\\log x}{x}=0$ を用いてよい。",
+      "answer": {
+        "value": "$k\\leqq 0$ のとき1個、$0<k<\\dfrac{1}{2 e}$ のとき2個、$k=\\dfrac{1}{2 e}$ のとき1個、$k>\\dfrac{1}{2 e}$ のとき0個"
+      },
+      "explanation": "定数 $k$ を分離し、$y=f(x)$ のグラフと直線 $y=k$ の共有点を数える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$k$ を分離して $y=f(x)$ と $y=k$ の共有点の問題に言いかえている",
+            "points": 2
+          },
+          {
+            "criterion": "増減と極値・端の極限を正しく調べている",
+            "points": 4
+          },
+          {
+            "criterion": "$k$ による分類が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 12
+      },
+      "calc_check": {
+        "expression": "[solve(diff(log(x)/x**2, x), x), limit(log(x)/x**2, x, exp(Rational(1,2)))]",
+        "expected": "[[exp(Rational(1,2))], exp(-1)/2]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U02-count_roots",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "文字定数 $k$ を片側に集めて $k=f(x)$ とし、$y=f(x)$ のグラフ（増減・極値・極限）をかいて、水平な直線 $y=k$ との共有点を数える。端のふるまいは極限（数学Ⅲ 極限）で調べる。",
+        "steps": [
+          "方程式を $k=f(x)$ の形に変形し、曲線 $y=f(x)$ と直線 $y=k$ の共有点の個数を調べる（定数分離）。",
+          "$f(x)=\\dfrac{\\log x}{x^2}$ とおくと（$x>0$）、$f'(x)=\\dfrac{1-2\\log x}{x^3}$。",
+          "$0<x<\\sqrt{e}$ で増加、$x>\\sqrt{e}$ で減少し、最大値 $f(\\sqrt{e})=\\dfrac{1}{2 e}$。$x\\to+0$ で $f(x)\\to-\\infty$、$x\\to\\infty$ で $f(x)\\to+0$。",
+          "直線 $y=k$ を上下に動かして共有点を数えると、$k\\leqq 0$ のとき1個、$0<k<\\dfrac{1}{2 e}$ のとき2個、$k=\\dfrac{1}{2 e}$ のとき1個、$k>\\dfrac{1}{2 e}$ のとき0個。"
+        ],
+        "alternatives": [
+          "グラフをかかずに、増減表と中間値の定理を区間ごとに使って解の個数を数えることもできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "定数分離",
+            "points": 2
+          },
+          {
+            "point": "増減と極限",
+            "points": 4
+          },
+          {
+            "point": "分類",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "端の極限（$x\\to\\pm\\infty$ や $x\\to+0$）を調べず、グラフの形を誤る。",
+          "境界の $k$（極値と等しいとき）の個数を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\dfrac{x^2+4}{x}$ の極値と、グラフの漸近線の方程式をすべて求めなさい。",
+      "answer": {
+        "value": "$x=-2$ で極大値 $-4$、$x=2$ で極小値 $4$。漸近線は $x=0$ と $y=x$"
+      },
+      "explanation": "$y=x+\\dfrac{4}{x}$ と変形する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帯分数式に変形している（割り算）",
+            "points": 2
+          },
+          {
+            "criterion": "導関数から極値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "2本の漸近線を極限を用いて正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[limit((x**2+4)/(x)-(x+(0)), x, oo), limit((x**2+(4))/(x-(0)), x, 2), limit((x**2+(4))/(x-(0)), x, -2)]",
+        "expected": "[0, 4, -4]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-asymptote_graph",
+      "explanation_detail": {
+        "approach": "分子の次数が分母以上なので、割り算して $y=(\\text{1次式})+\\dfrac{\\text{定数}}{x-q}$ の形にする。斜めの漸近線はこの1次式、縦の漸近線は分母 $=0$ の直線。",
+        "steps": [
+          "$x^2+4=(x)(x)+4$ より $y=x+\\dfrac{4}{x}$。",
+          "$y'=1-\\dfrac{4}{(x)^2}=\\dfrac{(x)^2-4}{(x)^2}$。$y'=0$ より $x=\\pm 2$、$x=2,\\ -2$。",
+          "$x<-2$ で $y'>0$、$-2<x<0$ で $y'<0$、$0<x<2$ で $y'<0$、$x>2$ で $y'>0$。",
+          "$x=-2$ で極大値 $-4$、$x=2$ で極小値 $4$。",
+          "$\\displaystyle\\lim_{x\\to 0+0}y=\\infty,\\ \\lim_{x\\to 0-0}y=-\\infty$ より直線 $x=0$ は漸近線。",
+          "$\\displaystyle\\lim_{x\\to\\pm\\infty}\\left\\{y-\\left(x\\right)\\right\\}=\\lim_{x\\to\\pm\\infty}\\dfrac{4}{x}=0$ より直線 $y=x$ も漸近線。"
+        ],
+        "alternatives": [
+          "グラフは点 $(0,\\,0)$（2本の漸近線の交点）に関して対称であり、極大値と極小値の平均が $0$ になることで検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変形",
+            "points": 2
+          },
+          {
+            "point": "極値",
+            "points": 3
+          },
+          {
+            "point": "漸近線",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "極大値が極小値より小さくなることに戸惑い、計算ミスと思い込む（不連続点をはさむので起こりうる）。",
+          "斜めの漸近線を見落とし、$x=0$ だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\dfrac{x^2+16}{x}$ の極値と、グラフの漸近線の方程式をすべて求めなさい。",
+      "answer": {
+        "value": "$x=-4$ で極大値 $-8$、$x=4$ で極小値 $8$。漸近線は $x=0$ と $y=x$"
+      },
+      "explanation": "$y=x+\\dfrac{16}{x}$ と変形する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "帯分数式に変形している（割り算）",
+            "points": 2
+          },
+          {
+            "criterion": "導関数から極値を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "2本の漸近線を極限を用いて正しく求めている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[limit((x**2+16)/(x)-(x+(0)), x, oo), limit((x**2+(16))/(x-(0)), x, 4), limit((x**2+(16))/(x-(0)), x, -4)]",
+        "expected": "[0, 8, -8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-asymptote_graph",
+      "explanation_detail": {
+        "approach": "分子の次数が分母以上なので、割り算して $y=(\\text{1次式})+\\dfrac{\\text{定数}}{x-q}$ の形にする。斜めの漸近線はこの1次式、縦の漸近線は分母 $=0$ の直線。",
+        "steps": [
+          "$x^2+16=(x)(x)+16$ より $y=x+\\dfrac{16}{x}$。",
+          "$y'=1-\\dfrac{16}{(x)^2}=\\dfrac{(x)^2-16}{(x)^2}$。$y'=0$ より $x=\\pm 4$、$x=4,\\ -4$。",
+          "$x<-4$ で $y'>0$、$-4<x<0$ で $y'<0$、$0<x<4$ で $y'<0$、$x>4$ で $y'>0$。",
+          "$x=-4$ で極大値 $-8$、$x=4$ で極小値 $8$。",
+          "$\\displaystyle\\lim_{x\\to 0+0}y=\\infty,\\ \\lim_{x\\to 0-0}y=-\\infty$ より直線 $x=0$ は漸近線。",
+          "$\\displaystyle\\lim_{x\\to\\pm\\infty}\\left\\{y-\\left(x\\right)\\right\\}=\\lim_{x\\to\\pm\\infty}\\dfrac{16}{x}=0$ より直線 $y=x$ も漸近線。"
+        ],
+        "alternatives": [
+          "グラフは点 $(0,\\,0)$（2本の漸近線の交点）に関して対称であり、極大値と極小値の平均が $0$ になることで検算できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変形",
+            "points": 2
+          },
+          {
+            "point": "極値",
+            "points": 3
+          },
+          {
+            "point": "漸近線",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "極大値が極小値より小さくなることに戸惑い、計算ミスと思い込む（不連続点をはさむので起こりうる）。",
+          "斜めの漸近線を見落とし、$x=0$ だけを答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=4e^{-4x}\\ (x>0)$ 上の点 P$(t,\\,4e^{-4t})$ から $x$ 軸、$y$ 軸に垂線 PQ、PR を下ろす。長方形 OQPR の面積の最大値と、そのときの $t$ の値を求めなさい。",
+      "answer": {
+        "value": "$t=\\dfrac{1}{4}$ のとき最大値 $\\dfrac{1}{e}$"
+      },
+      "explanation": "求める量を1変数の関数で表し、変域内で増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "求める量を1つの変数で表し、変域を示している",
+            "points": 3
+          },
+          {
+            "criterion": "導関数を求め増減を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "最大値（最小値）とそのときの値が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "limit(4*x*exp(-4*x), x, Rational(1,4))",
+        "expected": "exp(-1)"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-optimization",
+      "explanation_detail": {
+        "approach": "面積を $t$ の関数で表し、$t>0$ の範囲で増減を調べる。",
+        "steps": [
+          "面積 $S(t)=4te^{-4t}\\ (t>0)$。",
+          "$S'(t)=4(1-4t)e^{-4t}$。$S'(t)=0$ より $t=\\dfrac{1}{4}$。",
+          "$0<t<\\dfrac{1}{4}$ で $S'>0$、$t>\\dfrac{1}{4}$ で $S'<0$ なので、$t=\\dfrac{1}{4}$ で最大。",
+          "最大値は $\\dfrac{1}{e}$。"
+        ],
+        "alternatives": [
+          "変域の端での値（$0$ に近づく、など）と比べて、極値が最大（最小）であることを確認する説明もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "立式と変域",
+            "points": 3
+          },
+          {
+            "point": "増減",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "変域を考えず、変域外の解を候補にする。",
+          "極値を求めただけで、それが最大（最小）であることを示さない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "半径 $3$ の球に内接する直円柱の体積の最大値と、そのときの円柱の高さを求めなさい。",
+      "answer": {
+        "value": "高さ $2 \\sqrt{3}$ のとき最大値 $12 \\sqrt{3} \\pi$"
+      },
+      "explanation": "求める量を1変数の関数で表し、変域内で増減を調べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "求める量を1つの変数で表し、変域を示している",
+            "points": 3
+          },
+          {
+            "criterion": "導関数を求め増減を調べている",
+            "points": 3
+          },
+          {
+            "criterion": "最大値（最小値）とそのときの値が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "limit(2*pi*(9*x-x**3), x, sqrt(3))",
+        "expected": "12*sqrt(3)*pi"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U02-optimization",
+      "explanation_detail": {
+        "approach": "変数を1つ（高さの半分 $x$）に決め、三平方の定理で底面の半径を $x$ で表す。体積を $x$ の3次関数にして増減を調べる。",
+        "steps": [
+          "円柱の高さを $2x\\ (0<x<3)$ とすると、底面の半径 $r$ は $r^2=9-x^2$。",
+          "体積 $V=\\pi(9-x^2)\\cdot2x=2\\pi(9x-x^3)$。",
+          "$V'=2\\pi(9-3x^2)$、$V'=0$ より $x=\\sqrt{3}$。この前後で $V'$ は正から負に変わり、極大かつ最大。",
+          "最大値 $V=12 \\sqrt{3} \\pi$、高さ $2x=2 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "変域の端での値（$0$ に近づく、など）と比べて、極値が最大（最小）であることを確認する説明もできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "立式と変域",
+            "points": 3
+          },
+          {
+            "point": "増減",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "変域を考えず、変域外の解を候補にする。",
+          "極値を求めただけで、それが最大（最小）であることを示さない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\cos (3x-3)$ を微分しなさい。\n［ある生徒の解答］\n$y'=-\\sin (3x-3)$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y'=-3\\sin (3x-3)$"
+      },
+      "explanation": "合成関数の微分法：外側を微分したものに、中身の導関数をかける。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(cos(3*x+(-3)), x)-(-3*sin(3*x+(-3))))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-err_chain",
+      "explanation_detail": {
+        "approach": "微分する前に「中身」があるかを確かめ、$u$ とおいて計算する。",
+        "steps": [
+          "$u=3x-3$ とおく。",
+          "$\\dfrac{dy}{du}$ と $\\dfrac{du}{dx}$ を求める。",
+          "積をとって $y'=-3\\sin (3x-3)$。"
+        ],
+        "alternatives": [
+          "$x$ に具体的な値（例：$x=1$）を入れ、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めると、生徒の答えとは一致しないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=-\\sin (3x-3)$",
+        "error_step": "中身の関数の導関数をかけていない部分",
+        "error_type": "formula",
+        "why_tempting": "外側の関数の公式（$(\\sin u)'=\\cos u$ など）だけを当てはめ、合成関数であることを意識していない。",
+        "correction": "$u=3x-3$ とおくと $y'=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ なので $y'=-3\\sin (3x-3)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\log(5x+7)$ を微分しなさい。\n［ある生徒の解答］\n$y'=\\dfrac{1}{5x+7}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{5}{5x+7}$"
+      },
+      "explanation": "合成関数の微分法：外側を微分したものに、中身の導関数をかける。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(log(5*x+(7)), x)-(5/(5*x+(7))))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-err_chain",
+      "explanation_detail": {
+        "approach": "微分する前に「中身」があるかを確かめ、$u$ とおいて計算する。",
+        "steps": [
+          "$u=5x+7$ とおく。",
+          "$\\dfrac{dy}{du}$ と $\\dfrac{du}{dx}$ を求める。",
+          "積をとって $y'=\\dfrac{5}{5x+7}$。"
+        ],
+        "alternatives": [
+          "$x$ に具体的な値（例：$x=1$）を入れ、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めると、生徒の答えとは一致しないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=\\dfrac{1}{5x+7}$",
+        "error_step": "中身の関数の導関数をかけていない部分",
+        "error_type": "formula",
+        "why_tempting": "外側の関数の公式（$(\\sin u)'=\\cos u$ など）だけを当てはめ、合成関数であることを意識していない。",
+        "correction": "$u=5x+7$ とおくと $y'=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ なので $y'=\\dfrac{5}{5x+7}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\log(6x+4)$ を微分しなさい。\n［ある生徒の解答］\n$y'=\\dfrac{1}{6x+4}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y'=\\dfrac{6}{6x+4}$"
+      },
+      "explanation": "合成関数の微分法：外側を微分したものに、中身の導関数をかける。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(log(6*x+(4)), x)-(6/(6*x+(4))))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-err_chain",
+      "explanation_detail": {
+        "approach": "微分する前に「中身」があるかを確かめ、$u$ とおいて計算する。",
+        "steps": [
+          "$u=6x+4$ とおく。",
+          "$\\dfrac{dy}{du}$ と $\\dfrac{du}{dx}$ を求める。",
+          "積をとって $y'=\\dfrac{6}{6x+4}$。"
+        ],
+        "alternatives": [
+          "$x$ に具体的な値（例：$x=1$）を入れ、$\\dfrac{f(1.001)-f(1)}{0.001}$ を電卓で求めると、生徒の答えとは一致しないことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "中身の導関数をかけ忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=\\dfrac{1}{6x+4}$",
+        "error_step": "中身の関数の導関数をかけていない部分",
+        "error_type": "formula",
+        "why_tempting": "外側の関数の公式（$(\\sin u)'=\\cos u$ など）だけを当てはめ、合成関数であることを意識していない。",
+        "correction": "$u=6x+4$ とおくと $y'=\\dfrac{dy}{du}\\cdot\\dfrac{du}{dx}$ なので $y'=\\dfrac{6}{6x+4}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=x^{2x}\\ (x>0)$ を微分しなさい。\n［ある生徒の解答］\n$y'=2x\\cdot x^{2x-1}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y'=x^{2x}(2\\log x+2)$"
+      },
+      "explanation": "底と指数の両方に変数があるときは、対数微分法を使う。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**(2*x), x)-(x**(2*x)*(2*log(x)+2)))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-err_rules",
+      "explanation_detail": {
+        "approach": "$(x^n)'=nx^{n-1}$ は指数 $n$ が定数のときだけ使える。",
+        "steps": [
+          "$y>0$ なので両辺の自然対数をとって $\\log y=2x\\log x$。",
+          "両辺を $x$ で微分：$\\dfrac{y'}{y}=2\\log x+2x\\cdot\\dfrac{1}{x}$。",
+          "$y'=x^{2x}(2\\log x+2)$。"
+        ],
+        "alternatives": [
+          "$x^{2x}=e^{2x\\log x}$ と表して合成関数の微分法を使っても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数に変数があることを見落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=2x\\cdot x^{2x-1}$",
+        "error_step": "累乗の公式 $(x^n)'=nx^{n-1}$ を、指数が変数の場合に使った部分",
+        "error_type": "concept",
+        "why_tempting": "$x^{2x}$ を見て累乗関数と思い込み、指数にも変数 $x$ があることを見落としている。",
+        "correction": "両辺の自然対数をとると $\\log y=2x\\log x$。両辺を $x$ で微分して $\\dfrac{y'}{y}=2\\log x+2$、よって $y'=x^{2x}(2\\log x+2)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=\\dfrac{4x+2}{3x-2}$ を微分しなさい。\n［ある生徒の解答］\n$y'=\\dfrac{(4x+2)\\cdot 3-(4)(3x-2)}{(3x-2)^2}=\\dfrac{14}{(3x-2)^2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y'=-\\dfrac{14}{(3x-2)^2}$"
+      },
+      "explanation": "分子は「分子の微分 × 分母 － 分子 × 分母の微分」。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff((4*x+(2))/(3*x+(-2)), x)-(-14)/(3*x+(-2))**2)",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-err_rules",
+      "explanation_detail": {
+        "approach": "$\\left(\\dfrac{1}{g}\\right)'=-\\dfrac{g'}{g^2}$ と積の微分法から公式を導き直せるようにしておく。",
+        "steps": [
+          "$f=4x+2,\\ g=3x-2$、$f'=4,\\ g'=3$。",
+          "分子：$f'g-fg'=-14$。",
+          "$y'=-\\dfrac{14}{(3x-2)^2}$。"
+        ],
+        "alternatives": [
+          "$y=\\dfrac{4}{3}+\\dfrac{\\dfrac{14}{3}}{3x-2}$ と変形してから微分しても $-\\dfrac{14}{(3x-2)^2}$ が得られる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "分子の順序を逆にする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=\\dfrac{(4x+2)\\cdot 3-(4)(3x-2)}{(3x-2)^2}=\\dfrac{14}{(3x-2)^2}$",
+        "error_step": "商の微分法の分子で、引く順序を逆にした部分",
+        "error_type": "sign",
+        "why_tempting": "商の微分法の分子 $f'g-fg'$ の順序をあいまいに覚えていて、$fg'-f'g$ としてしまった。",
+        "correction": "$\\left(\\dfrac{f}{g}\\right)'=\\dfrac{f'g-fg'}{g^2}$ より $y'=\\dfrac{(4)(3x-2)-(4x+2)\\cdot 3}{(3x-2)^2}=-\\dfrac{14}{(3x-2)^2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $y=x^{3x}\\ (x>0)$ を微分しなさい。\n［ある生徒の解答］\n$y'=3x\\cdot x^{3x-1}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y'=x^{3x}(3\\log x+3)$"
+      },
+      "explanation": "底と指数の両方に変数があるときは、対数微分法を使う。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**(3*x), x)-(x**(3*x)*(3*log(x)+3)))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U02-err_rules",
+      "explanation_detail": {
+        "approach": "$(x^n)'=nx^{n-1}$ は指数 $n$ が定数のときだけ使える。",
+        "steps": [
+          "$y>0$ なので両辺の自然対数をとって $\\log y=3x\\log x$。",
+          "両辺を $x$ で微分：$\\dfrac{y'}{y}=3\\log x+3x\\cdot\\dfrac{1}{x}$。",
+          "$y'=x^{3x}(3\\log x+3)$。"
+        ],
+        "alternatives": [
+          "$x^{3x}=e^{3x\\log x}$ と表して合成関数の微分法を使っても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数に変数があることを見落とす。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'=3x\\cdot x^{3x-1}$",
+        "error_step": "累乗の公式 $(x^n)'=nx^{n-1}$ を、指数が変数の場合に使った部分",
+        "error_type": "concept",
+        "why_tempting": "$x^{3x}$ を見て累乗関数と思い込み、指数にも変数 $x$ があることを見落としている。",
+        "correction": "両辺の自然対数をとると $\\log y=3x\\log x$。両辺を $x$ で微分して $\\dfrac{y'}{y}=3\\log x+3$、よって $y'=x^{3x}(3\\log x+3)$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=x+\\cos x-2\\ (0<x<2\\pi)$ の極値を調べなさい。\n［ある生徒の解答］\n$f'(x)=1-\\sin x$。$f'(x)=0$ より $x=\\dfrac{\\pi}{2}$。よって $x=\\dfrac{\\pi}{2}$ で極大値 $\\dfrac{\\pi}{2}-2$ をとる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "$\\sin x\\leqq 1$ より $f'(x)\\geqq 0$ がつねに成り立つ。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(diff(x+cos(x), x), x, pi/2)",
+        "expected": "0",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U02-err_extremum",
+      "explanation_detail": {
+        "approach": "増減表を必ずかき、前後の矢印の向きを確かめる。",
+        "steps": [
+          "$f'(x)=1-\\sin x$。",
+          "$x\\neq\\dfrac{\\pi}{2}$ のとき $\\sin x<1$ なので $f'(x)>0$。",
+          "$f(x)$ は $0<x<2\\pi$ で増加し、極値をもたない。"
+        ],
+        "alternatives": [
+          "$f\\left(\\dfrac{\\pi}{3}\\right)<f\\left(\\dfrac{\\pi}{2}\\right)<f\\left(\\dfrac{2\\pi}{3}\\right)$ を数値で確かめると、$x=\\dfrac{\\pi}{2}$ が極大でないことが分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "増減表をかかない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=1-\\sin x$。$f'(x)=0$ より $x=\\dfrac{\\pi}{2}$。よって $x=\\dfrac{\\pi}{2}$ で極大値 $\\dfrac{\\pi}{2}-2$ をとる",
+        "error_step": "$f'(x)=0$ の点の前後の符号を調べずに極大とした部分",
+        "error_type": "condition",
+        "why_tempting": "$f'(x)=0$ の解が1つ見つかると、それを極値と決めつけてしまう。",
+        "correction": "$f'(x)=1-\\sin x\\geqq 0$ で、$x=\\dfrac{\\pi}{2}$ の前後でも $f'(x)>0$。$f(x)$ は増加し、極値をもたない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "関数 $f(x)=x-\\sin x+1$ は極値をもつか調べなさい。\n［ある生徒の解答］\n$f'(x)=1-\\cos x$。$f'(x)=0$ より $\\cos x=1$、$x=0$ などで極値 $f(0)=1$ をとる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "極値をもたない"
+      },
+      "explanation": "極値の判定には、$f'(x)=0$ の点の前後で $f'(x)$ の符号が変わるかを調べる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(1*x-1*sin(x)+(1), x)-1*(1-cos(x)))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U02-err_extremum",
+      "explanation_detail": {
+        "approach": "$f'(a)=0$ は極値の必要条件にすぎない。",
+        "steps": [
+          "$f'(x)=(1-\\cos x)$。",
+          "$1-\\cos x\\geqq 0$ で、等号は $x=2n\\pi$（$n$ は整数）のときだけ。",
+          "前後で符号が変わらないので、$f(x)$ は単調に増加し、極値をもたない。"
+        ],
+        "alternatives": [
+          "グラフ $y=x-\\sin x$ は、原点のまわりで $y=x^3$ のように平らになりながら増加し続ける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "前後の符号を確かめない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$f'(x)=1-\\cos x$。$f'(x)=0$ より $\\cos x=1$、$x=0$ などで極値 $f(0)=1$ をとる",
+        "error_step": "$f'(x)=0$ となる点をそのまま極値をとる点とした部分",
+        "error_type": "condition",
+        "why_tempting": "「極値をとる点では $f'(x)=0$」を逆向きに使い、$f'(x)=0$ ならば極値と思い込んでいる。",
+        "correction": "$f'(x)=(1-\\cos x)\\geqq 0$ で、$f'(x)=0$ となる点の前後でも符号は変わらない。$f(x)$ は常に増加し、極値をもたない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=\\log x$ 上の点 $(e,\\,1)$ における法線の方程式を求めなさい。\n［ある生徒の解答］\n$y'$ に $x=e$ を代入して接線の傾きは $\\dfrac{1}{e}$。法線の傾きは $- \\dfrac{1}{e}$ なので、法線は $y=- \\dfrac{1}{e}x+2$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$y=- ex+1 + e^{2}$"
+      },
+      "explanation": "2直線が垂直 $\\iff$ 傾きの積が $-1$。法線の傾きは $-\\dfrac{1}{f'(a)}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "[limit(diff(log(x), x), x, E)*(-E), (-E)*(E)+(1 + exp(2))-(1)]",
+        "expected": "[-1, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-err_normal_speed",
+      "explanation_detail": {
+        "approach": "傾きの積が $-1$ になっているかで検算する習慣をつける。",
+        "steps": [
+          "接線の傾き $f'(e)=\\dfrac{1}{e}$。",
+          "法線の傾き $-\\dfrac{1}{\\dfrac{1}{e}}=- e$。",
+          "$y-1=- e(x-e)$ より $y=- ex+1 + e^{2}$。"
+        ],
+        "alternatives": [
+          "接線の傾き $\\dfrac{1}{e}$ と法線の傾き $- e$ の積が $-1$ になることを確かめる（生徒の答えでは積が $- \\dfrac{1}{e^{2}}$）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "逆数にし忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$y'$ に $x=e$ を代入して接線の傾きは $\\dfrac{1}{e}$。法線の傾きは $- \\dfrac{1}{e}$ なので、法線は $y=- \\dfrac{1}{e}x+2$",
+        "error_step": "法線の傾きを $-f'(a)$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "「垂直」を「傾きの符号を変える」と覚えてしまい、逆数にすることを忘れている。",
+        "correction": "法線の傾きは $-\\dfrac{1}{\\dfrac{1}{e}}=- e$ なので、法線は $y=- ex+1 + e^{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U02",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "座標平面上を動く点 P の時刻 $t$ における座標が $x=4\\cos 2t,\\ y=4\\sin 2t$ のとき、$t=\\dfrac{\\pi}{12}$ における P の速さを求めなさい。\n［ある生徒の解答］\n$\\dfrac{dx}{dt}=-8\\sin 2t,\\ \\dfrac{dy}{dt}=8\\cos 2t$。$t=\\dfrac{\\pi}{12}$ のとき、速さは $\\dfrac{dx}{dt}+\\dfrac{dy}{dt}=-4 + 4 \\sqrt{3}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$8$"
+      },
+      "explanation": "平面上の速さは $|\\vec{v}|=\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "limit(sqrt(diff(4*cos(2*t), t)**2+diff(4*sin(2*t), t)**2), t, pi/12)",
+        "expected": "8"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U02-err_normal_speed",
+      "explanation_detail": {
+        "approach": "速さはベクトルの大きさ。成分は三平方の定理で合成する。",
+        "steps": [
+          "$\\vec{v}=(-8\\sin 2t,\\ 8\\cos 2t)$。",
+          "$|\\vec{v}|=\\sqrt{64(\\sin^2 2t+\\cos^2 2t)}=8$。",
+          "$t=\\dfrac{\\pi}{12}$ でも速さは $8$。"
+        ],
+        "alternatives": [
+          "等速円運動（半径 $4$、角速度 $2$）の速さ $r\\omega=8$ と一致する（生徒の答えは時刻によって変わってしまう）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "速度の成分を足してしまう。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\dfrac{dx}{dt}=-8\\sin 2t,\\ \\dfrac{dy}{dt}=8\\cos 2t$。$t=\\dfrac{\\pi}{12}$ のとき、速さは $\\dfrac{dx}{dt}+\\dfrac{dy}{dt}=-4 + 4 \\sqrt{3}$",
+        "error_step": "速さを速度の成分の和とした部分",
+        "error_type": "concept",
+        "why_tempting": "速さを「$x$ 方向と $y$ 方向の速度を足したもの」と考え、ベクトルの大きさとして求めていない。",
+        "correction": "速さは速度ベクトルの大きさ $\\sqrt{\\left(\\dfrac{dx}{dt}\\right)^2+\\left(\\dfrac{dy}{dt}\\right)^2}=8$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "a7e6f3a1dd428d4b3589e0ef06b9c3bd2f0dc14186aeb180eadd2a0333291041"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 10 問（Q010, Q012, Q025, Q027, Q028, Q044, Q045, Q049, Q055, Q059）",
+      "content_hash": "da282e3e5b11f15500df35f36c0cc88069bd0818f3b828e67b08e3e2c7c64669"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:27:24+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "85eae1c561b7267f3dc64aa8c110b0708ddb09a683c914e6f2adcb8f1dc1c521"
+  }
+}
