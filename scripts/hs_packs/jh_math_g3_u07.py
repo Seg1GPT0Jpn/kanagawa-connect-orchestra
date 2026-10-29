@@ -817,7 +817,7 @@ def c_coord(r):
     hi_y = int(max(y1, y2)) + 1
     afn = (lambda t, a=a: float(a) * t * t)
     fig = figure("放物線 y=ax² 上の2点", plane(xr=(lo_x, hi_x), yr=(-1, hi_y), unit=max(10, int(220 / max(hi_x - lo_x, hi_y + 1))), ticks=False, grid=False,
-                                            curves=[(afn, "")], points=[(x1, float(y1), "A"), (x2, float(y2), "B")],
+                                            curves=[(afn, "")], points=[(x1, float(y1), "A")] + ([(x2, float(y2), "B")] if kind == "ab" else []),
                                             segments=[((x1, float(y1)), (x2, float(y2)))] if kind == "ab" else [((0, 0), (x1, float(y1)))]))
     eq = f"y={'' if a == 1 else ftex(a)}x^2"
     if kind == "ab":
@@ -830,7 +830,7 @@ def c_coord(r):
     else:
         sq = x1 * x1 + y1 * y1
         stem = (f"右の図のように，関数 ${eq}$ のグラフ上に点 A があり，点 A の $x$ 座標は ${x1}$ である。原点を O とするとき，線分 OA の長さを求めなさい。"
-                f"ただし，座標の1目もりを 1 cm とする。（点 B は $x$ 座標が ${x2}$ のグラフ上の点で，この問いでは使わない。）")
+                "ただし，座標の1目もりを 1 cm とする。")
         st = [f"A$({x1},\\,{ftex(y1)})$。", f"OA$^2={x1}^2+\\left({ftex(y1)}\\right)^2={ftex(Fr(sq))}$。", f"OA$={rtex(sq)}$ cm。"]
         expr = f"sqrt(({x1})**2+({fpy(y1)})**2)"
     return MARKR(stem, sq, st[-1], expr, d=4, p=8, fig=fig,
@@ -901,8 +901,8 @@ def d_hyp_err(r):
         sol = f"BC$^2={c}^2+{a}^2={bad}$ なので，BC$={rtex(bad)}$ cm"
         right = f"斜辺は直角に対する辺 AC である。斜辺の2乗から他の辺の2乗を引いて BC$^2={c}^2-{a}^2$ とするべきである。"
     else:
-        stem = f"〔問題〕3辺の長さが AB$={a}$ cm，BC$=$ ? cm，CA$={c}$ cm の直角三角形 ABC があり，${A('ABC')}=90^\\circ$ である。辺 BC の長さを求めなさい。"
-        sol = f"最後の辺 BC を斜辺と考えて，BC$^2={a}^2+{c}^2={bad}$，BC$={rtex(bad)}$ cm"
+        stem = f"〔問題〕AB$={a}$ cm，CA$={c}$ cm，${A('ABC')}=90^\\circ$ の直角三角形 ABC がある。残りの辺 BC の長さを求めなさい。"
+        sol = f"まだわかっていない辺 BC を斜辺と考えて，BC$^2={a}^2+{c}^2={bad}$，BC$={rtex(bad)}$ cm"
         right = f"∠B が直角なので，斜辺は ∠B に対する辺 CA である。BC$^2={c}^2-{a}^2$ とするべきである。"
     fix = f"BC$={rtex(good)}$ cm"
     cands = [("三平方の定理は，直角をはさむ2辺がわかっているときにしか使えない。", "斜辺と他の1辺がわかっていれば，引き算で残りの辺が求められる。", "定理の使い方の誤解"),
