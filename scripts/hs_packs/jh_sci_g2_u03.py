@@ -1181,8 +1181,8 @@ ERR_C = [
 @gen("error_correction", 5, ["common_error", "condition_check"])
 def d_concept(r):
     x = r.choice(ERR_C)
-    wr = [(w, ("Kさんの考えは誤りなので、「正しい」とする説明は適さない。" if "正しい" in w else "この説明に書かれた内容は事実と異なる。") + f"正しくは、{x['fix']}", "電流と磁界の規則の理解の誤り") for w in x["wr"]]
     who = r.choice(["Kさん", "Kさんの班"])
+    wr = [(w.replace("Kさんの考え", f"{who}の考え"), (f"{who}の考えは誤りなので、「正しい」とする説明は適さない。" if "正しい" in w else "この説明に書かれた内容は事実と異なる。") + f"正しくは、{x['fix']}", "電流と磁界の規則の理解の誤り") for w in x["wr"]]
     return mc4(f"{who}は、電流とその利用の学習で、次のように考えた。\n［{who}の考え］{x['sol']}\nこの考えの誤りを説明したものとして{ASK4}",
                x["right"], wr, f"{x['right']}正しくは、{x['fix']}", d=3,
                ap="考えの根拠になっている規則が、学んだ規則（電流の保存、並列の抵抗、電子の向き、誘導電流の条件、力の向き、電力と抵抗）と合っているかを確かめる。",

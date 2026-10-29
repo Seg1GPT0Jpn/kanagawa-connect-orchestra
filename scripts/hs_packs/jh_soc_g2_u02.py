@@ -962,8 +962,8 @@ ERR_C = [
 @kgen("error_correction", 5, ["common_error", "condition_check"])
 def d_concept(r):
     x = r.choice(ERR_C)
-    wr = [(w, ("Kさんの考えには誤りがあるので，「正しい」とする説明は適さない。" if "正しい" in w else "この説明も事実と異なる。") + f"正しくは，{x['fix']}", "地域の特色の理解の誤り") for w in x["wr"]]
     who = r.choice(["Kさん", "Kさんの班"])
+    wr = [(w.replace("Kさんの", who + "の"), ("考えには誤りがあるので，「正しい」とする説明は適さない。" if "正しい" in w else "この説明も事実と異なる。") + f"正しくは，{x['fix']}", "地域の特色の理解の誤り") for w in x["wr"]]
     return mc4(f"{who}は，日本の諸地域の学習で，次のように考えた。\n［{who}の考え］{x['sol']}\nこの考えの誤りを正しく直したものとして，{ASK4}",
                x["right"], wr, f"{x['right']}", d=3,
                ap="考えの中の「地域」「季節・方角」「自然条件」「産業」のどれが事実と合わないかを確かめる。",
