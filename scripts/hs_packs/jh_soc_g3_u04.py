@@ -719,24 +719,27 @@ def b_amend(r):
 
 
 COMPARE = [
-    ("主権者", "天皇", "国民", "国民", "天皇"),
-    ("憲法の形式", "欽定憲法", "民定憲法", "民定憲法", "欽定憲法"),
-    ("天皇の地位", "神聖で侵してはならない元首", "日本国・日本国民統合の象徴", "日本国・日本国民統合の象徴", "神聖で侵してはならない元首"),
-    ("国民の権利", "法律の範囲内で認められる臣民の権利", "侵すことのできない永久の権利", "侵すことのできない永久の権利", "法律の範囲内で認められる臣民の権利"),
-    ("軍隊・戦争", "天皇が軍隊を統率し，国民に兵役の義務がある", "戦争を放棄し，戦力をもたない", "戦争を放棄し，戦力をもたない", "天皇が軍隊を統率し，国民に兵役の義務がある"),
-    ("議会", "帝国議会（貴族院・衆議院）", "国会（衆議院・参議院）", "国会（衆議院・参議院）", "帝国議会（貴族院・衆議院）"),
-    ("発布・公布", "1889年2月11日に発布", "1946年11月3日に公布", "1874年1月に発布", "1951年9月に公布"),
+    # (観点, 大日本帝国憲法, 日本国憲法, 大日本帝国憲法の欄の誤答, 日本国憲法の欄の誤答, 空らんにできるか)
+    ("主権者", "天皇", "国民", "", "", False),
+    ("憲法の形式", "欽定憲法", "民定憲法", "", "", False),
+    ("天皇の地位", "神聖で侵してはならない元首", "日本国・日本国民統合の象徴", "政治の権限をもたない儀礼的な存在", "統治権をすべて握る元首", True),
+    ("国民の権利", "法律の範囲内で認められる臣民の権利", "侵すことのできない永久の権利", "生まれながらにもつ永久の権利", "天皇が恩恵として与えた権利", True),
+    ("軍隊・戦争", "天皇が軍隊を統率し，国民に兵役の義務がある", "戦争を放棄し，戦力をもたない", "軍隊をもたず，兵役の義務もない", "国民に兵役の義務がある", True),
+    ("議会", "帝国議会（貴族院・衆議院）", "国会（衆議院・参議院）", "貴族院だけの一院制の議会", "衆議院だけの一院制の国会", True),
+    ("内閣", "天皇を補佐し，天皇に対して責任を負う", "国会に対して連帯して責任を負う", "国民の直接選挙で選ばれた首相が組織する", "国民の直接選挙で選ばれた首相が組織する", True),
+    ("発布・公布", "1889年2月11日に発布", "1946年11月3日に公布", "1874年1月に発布", "1951年9月に公布", True),
 ]
 
 
 @kgen("standard_practice", 4, ["condition_check", "concept"])
 def b_compare(r):
-    rows = r.sample(COMPARE, 4)
-    blanks = r.sample(range(4), 2)
+    bl = r.sample([x for x in COMPARE if x[5]], 2)
+    rows = sorted(bl + r.sample([x for x in COMPARE if x not in bl], 2), key=COMPARE.index)
+    blanks = [rows.index(x) for x in bl]
     cells = []
     marks = iter("あい")
     keys = {}
-    for i, (kan, old, new, _, _) in enumerate(rows):
+    for i, (kan, old, new, _, _, _) in enumerate(rows):
         if i in blanks:
             side = r.choice(["old", "new"])
             m = next(marks)
@@ -748,7 +751,7 @@ def b_compare(r):
     heads, opts, correct, bad = [], [], [], []
     for m in "あい":
         i, side = keys[m]
-        kan, old, new, old_w, new_w = rows[i]
+        kan, old, new, old_w, new_w, _ = rows[i]
         right, wrong = (old, old_w) if side == "old" else (new, new_w)
         o = [right, wrong]
         if r.random() < 0.5:
@@ -877,12 +880,13 @@ def c_survey(r):
         tbl = table([[f"{y}年", str(t), str(f)] for y, t, f in zip(years, tot, fem)], header=["年", "議員の総数〔人〕", "女性議員の数〔人〕"],
                     caption="表　架空のかもめ市の市議会議員の数（架空の資料）")
         # X：割合の比較
-        thr = r.choice([10, 15, 20, 25])
         k = r.randrange(3)
+        base5 = int(share[k] // 5) * 5
+        thr = r.choice([x for x in (base5, base5 + 5) if x > 0 and abs(x - share[k]) > 0.5] or [base5 + 5])
         x_true = share[k] >= thr
         X = (f"{years[k]}年の女性議員の割合は，{thr}％以上である。", x_true, f"{fem[k]}÷{tot[k]}×100＝約{dec(share[k])}％である。")
         ratio = fem[2] / fem[0]
-        mult = r.choice([2, 3])
+        mult = r.choice([2, 3] if ratio < 2.6 else [2, 3, 4])
         y_true = fem[2] >= mult * fem[0]
         Y = (f"2025年の女性議員の数は，2005年の{mult}倍以上である。", y_true, f"{fem[2]}÷{fem[0]}＝約{dec(ratio, 2)}倍である。")
         if r.random() < 0.5:
@@ -919,7 +923,7 @@ def c_survey(r):
     diff = v2[i] - v1[i]
     p = max(abs(diff) - r.randrange(1, 3), 1) if flags[0] else abs(diff) + r.randrange(1, 4)
     word = "増えた" if diff > 0 else "減った"
-    data_st.append((f"「{items[i]}」に関心がある人の割合は，2015年から2025年にかけて{p}ポイント以上{word}。", abs(diff) >= p, f"{v2[i]}−{v1[i]}＝{diff}ポイントである。"))
+    data_st.append((f"「{items[i]}」に関心がある人の割合は，2015年から2025年にかけて{p}ポイント以上{word}。", abs(diff) >= p, f"{v1[i]}％から{v2[i]}％へ{abs(diff)}ポイント{word}。"))
     # d2：2025年の最大
     j = v2.index(max(v2))
     jj = j if flags[1] else r.choice([x for x in range(4) if x != j])
