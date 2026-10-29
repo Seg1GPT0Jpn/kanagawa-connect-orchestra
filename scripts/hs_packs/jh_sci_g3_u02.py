@@ -1120,9 +1120,9 @@ ERR_CONCEPT = [
 
 @gen("error_correction", 5, ["common_error", "condition_check"])
 def d_concept(r):
-    x = r.choice(ERR_CONCEPT)
-    others = [y for y in ERR_CONCEPT if y is not x]
-    r.shuffle(others)
+    i = r.randrange(len(ERR_CONCEPT))
+    x = ERR_CONCEPT[i]
+    others = [ERR_CONCEPT[(i + k) % len(ERR_CONCEPT)] for k in (3, 5, 7)]
     wr = [("Kさんのノートの内容は正しい。", f"Kさんのノートの内容は誤りである。{x['right']}", "誤答の見落とし")]
     for y in others[:3]:
         wr.append((y["right"], "この説明は内容としては正しいが、Kさんの考えの誤りを説明したものではない。", "誤りの箇所の取り違え"))

@@ -784,7 +784,7 @@ def b_buoy_graph(r):
     H = r.choice([4, 5, 6])
     fig = figure(f"物体を水に沈めていったときのばねばかりの値のグラフ。深さ 0 cm で {dec(W)} N、深さ {H} cm まで一定の割合で減って {dec(W - B)} N になり、それより深いところでは {dec(W - B)} N で一定。",
                  buoy_svg(W, B, H), caption="図　深さとばねばかりの値")
-    setup = (f"Kさんは、高さ {H} cm の直方体の物体をばねばかりにつるし、底面を水平に保ったまま水に沈めていき、水面から物体の底面までの深さとばねばかりの値の関係を調べた。図はその結果である。"
+    setup = (f"Kさんは、空気中でばねばかりが {dec(W)} N を示す高さ {H} cm の直方体の物体をばねばかりにつるし、底面を水平に保ったまま水に沈めていき、水面から物体の底面までの深さとばねばかりの値の関係を調べた。図はその結果である。"
              "ただし、物体は容器の底にはつかないものとする。")
     q = r.choice(["full", "half", "plateau"])
     if q == "full":
@@ -918,7 +918,7 @@ def c_collision(r):
                    chk=(f"{rq(kk)}*{m}*{h}", rq(d), None, "intermediate"))
     if q == "height":
         m = r.choice(masses)
-        target_h = r.choice([30, 35, 40, 45, 50])
+        target_h = r.choice([h_ for h_ in (30, 35, 40, 45, 50) if (kk * m * h_ * 10).denominator == 1] or [30])
         d = kk * m * target_h
         right = f"{target_h} cm"
         wr = [(f"{x} cm", f"質量 {m} g の小球では、移動距離は高さに比例する。{dec(d, 2)} cm にするには高さ {target_h} cm が必要。", "比例関係の当てはめの誤り")
@@ -975,7 +975,7 @@ def c_cross(r):
                    chk=(f"Rational({m},100)*{rq(h)}/({rq(V)}*{rq(I)}*{t})*100", str(eff), None, "intermediate"))
     if k == "vt":
         a = r.choice([Fraction(x, 10) for x in (5, 10, 15, 20, 25, 30)])  # 1 秒あたりの速さの増加 m/s
-        t1, t2 = r.sample([1, 2, 3, 4, 5, 6], 2)
+        t1, t2 = sorted(r.sample([1, 2, 3, 4, 5, 6], 2))
         v1, v2 = a * t1, a * t2
         t3 = r.choice([x for x in (2, 3, 4, 5, 6, 7, 8) if x not in (t1, t2)])
         v3 = a * t3
@@ -1155,9 +1155,9 @@ ERR_CONCEPT = [
 
 @gen("error_correction", 5, ["common_error", "condition_check"])
 def d_concept(r):
-    x = r.choice(ERR_CONCEPT)
-    others = [y for y in ERR_CONCEPT if y is not x]
-    r.shuffle(others)
+    i = r.randrange(len(ERR_CONCEPT))
+    x = ERR_CONCEPT[i]
+    others = [ERR_CONCEPT[(i + k) % len(ERR_CONCEPT)] for k in (3, 5, 7)]
     wr = [("Kさんのノートの内容は正しい。", f"Kさんのノートの内容は誤りである。{x['right']}", "誤答の見落とし")]
     for y in others[:3]:
         wr.append((y["right"], "この説明は内容としては正しいが、Kさんのノートの誤りを説明したものではない。", "誤りの箇所の取り違え"))
