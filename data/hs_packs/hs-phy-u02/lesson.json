@@ -1,0 +1,435 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-PHY-U02-LESSON",
+  "title": "熱力学　授業プリント",
+  "subtitle": "熱｜気体の状態方程式・気体分子運動論・熱力学第一法則",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-PHY-U02"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-PHY-U02-PACK",
+  "pair_set_id": "HS-PHY-U02-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-PHYB-U02",
+        "point": "熱と仕事",
+        "title": "仕事とエネルギー"
+      },
+      {
+        "unit_id": "HS-CHEB-U02",
+        "point": "物質量",
+        "title": "物質量と化学反応式"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-CHE-U01",
+        "point": "気体の法則",
+        "title": "物質の状態（気体・溶液）"
+      }
+    ],
+    "readiness_check": [
+      "絶対温度 $T=t+273$、熱量 $Q=mc\\Delta T$ と内部エネルギーの考え方を説明できる（物理基礎）。",
+      "物質量（mol）とアボガドロ定数、モル質量の計算ができる（化学基礎）。",
+      "運動量と力積の関係 $m\\Delta v=F\\Delta t$ を使える（物理 力学）。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "ボイル・シャルルの法則と気体の状態方程式 $pV=nRT$ を用いて、気体の圧力・体積・温度・物質量の関係を求められる。",
+      "気体分子の運動から圧力を導き、絶対温度が分子の平均運動エネルギーに比例することを説明できる。",
+      "熱力学第一法則 $\\Delta U=Q+W$ を定積・定圧・等温・断熱変化に適用し、$p$−$V$ グラフから仕事と熱効率を求められる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：自転車の空気入れはなぜ熱くなる？",
+        "minutes": 5,
+        "activity": "圧縮すると温度が上がる現象を示し、仕事と熱と内部エネルギーの関係を予告する"
+      },
+      {
+        "phase": "気体の法則と状態方程式",
+        "minutes": 20,
+        "activity": "ボイルの法則・シャルルの法則・ボイル・シャルルの法則、$pV=nRT$、例題1"
+      },
+      {
+        "phase": "気体分子運動論",
+        "minutes": 20,
+        "activity": "壁に当たる分子の力積から圧力を導く、平均運動エネルギーと絶対温度、二乗平均速度（例題2）"
+      },
+      {
+        "phase": "内部エネルギーと第一法則",
+        "minutes": 15,
+        "activity": "単原子分子の内部エネルギー $\\dfrac32nRT$、$\\Delta U=Q+W$ と符号の約束"
+      },
+      {
+        "phase": "気体の状態変化",
+        "minutes": 20,
+        "activity": "定積・定圧・等温・断熱、モル比熱とマイヤーの関係、$p$−$V$ グラフの面積＝仕事"
+      },
+      {
+        "phase": "熱機関と熱効率",
+        "minutes": 10,
+        "activity": "サイクルと熱効率（例題3）、熱力学第二法則の考え方"
+      },
+      {
+        "phase": "まとめ",
+        "minutes": 10,
+        "activity": "4つの状態変化の $Q,\\ W,\\ \\Delta U$ を表に整理し、課題を指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "目に見えない分子の運動で、気体のふるまいを説明する",
+        "body": "自転車のタイヤに空気入れで空気を押しこむと、空気入れの筒が熱くなる。気体に仕事をすると温度が上がるのはなぜだろうか。気体は膨大な数の分子からなり、分子は絶えず飛び回って容器の壁に衝突している。この単元では、圧力・温度という目に見える量を分子の運動と結びつけ、熱と仕事によるエネルギーのやりとり（熱力学第一法則）を気体の状態変化に当てはめる。",
+        "bullets": [
+          "マクロな量（圧力・体積・温度）は、状態方程式 $pV=nRT$ で結ばれる。",
+          "ミクロな分子運動から、圧力と温度の意味（分子の運動エネルギー）がわかる。",
+          "気体が受け取る熱と仕事の和が、内部エネルギーの増加になる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "注射器の先をふさいでピストンを押し込み、手ごたえ（圧力）が増すことと、急激に押すと中の空気が温まることを体験させる。",
+            "ask": "ピストンを押すと、なぜ押し返す力が大きくなるのだろうか。分子の立場で説明してみよう。",
+            "expect": "同じ数の分子が狭い空間に入るので、壁に当たる回数が増える。",
+            "timing": "授業の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "気体の状態方程式",
+        "body": "一定量の気体の圧力 $p$〔Pa〕、体積 $V$〔m³〕、絶対温度 $T$〔K〕の間には、ボイルの法則（$T$ 一定で $pV=$ 一定）とシャルルの法則（$p$ 一定で $\\dfrac{V}{T}=$ 一定）をまとめたボイル・シャルルの法則が成り立つ。物質量 $n$〔mol〕を含めると状態方程式になる。",
+        "formula": "$$\\dfrac{pV}{T}=\\text{一定},\\qquad pV=nRT\\qquad(R\\fallingdotseq8.31\\,\\mathrm{J/(mol\\cdot K)})$$",
+        "conditions": [
+          "温度は必ず絶対温度 $T=t+273$〔K〕を用いる。セルシウス温度のまま比を計算してはいけない。",
+          "単位をそろえる：$1\\,\\mathrm{L}=1\\times10^{-3}\\,\\mathrm{m^3}$、$1\\,\\mathrm{kPa}=1\\times10^3\\,\\mathrm{Pa}$。",
+          "状態方程式に厳密に従う気体を理想気体という。実在の気体も、高温・低圧ではほぼ理想気体とみなせる。",
+          "分子数 $N$ を用いると $pV=Nk_{\\mathrm{B}}T$（$k_{\\mathrm{B}}=\\dfrac{R}{N_{\\mathrm{A}}}\\fallingdotseq1.38\\times10^{-23}\\,\\mathrm{J/K}$：ボルツマン定数）。"
+        ],
+        "teacher_points": [
+          {
+            "point": "ボイル・シャルルの法則で解ける問題（物質量が一定）と、状態方程式が必要な問題（物質量が変わる・物質量を問う）を区別させる。",
+            "ask": "容器の弁を開いて気体の一部が逃げた場合、ボイル・シャルルの法則は使えるか。",
+            "expect": "物質量が変わるので使えない。状態方程式で前後の $n$ を比べる。"
+          },
+          {
+            "point": "比の計算でセルシウス温度を使う誤りを、$0\\,{}^\\circ\\mathrm{C}$ から $27\\,{}^\\circ\\mathrm{C}$ への変化で体積が「無限大倍」になるおかしさから気づかせる。",
+            "caution": "℃ を K に直し忘れる誤りは非常に多い。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "気体分子運動論：圧力と温度の意味",
+        "formula": "$$p=\\dfrac{Nm\\overline{v^2}}{3V},\\qquad \\dfrac12m\\overline{v^2}=\\dfrac32k_{\\mathrm{B}}T,\\qquad \\sqrt{\\overline{v^2}}=\\sqrt{\\dfrac{3RT}{M}}$$",
+        "conditions": [
+          "$N$ は分子数、$m$ は分子1個の質量、$\\overline{v^2}$ は速さの2乗の平均、$M$ はモル質量〔kg/mol〕。",
+          "分子どうしの衝突や分子の大きさを無視し、壁との衝突は弾性衝突とみなす。",
+          "分子1個あたりの平均運動エネルギーは絶対温度に比例し、気体の種類によらない。",
+          "単原子分子理想気体の内部エネルギーは、分子の運動エネルギーの総和 $U=\\dfrac32nRT$。"
+        ],
+        "body": "絶対温度とは、分子の熱運動の激しさ（平均運動エネルギー）を表す量である。同じ温度なら、軽い分子ほど速く運動している。",
+        "proof_steps": [
+          "1辺 $L$ の立方体容器の中で、速度の $x$ 成分 $v_x$ の分子が壁 S に弾性衝突すると、運動量は $mv_x$ から $-mv_x$ に変わる。壁が受ける力積は $2mv_x$。",
+          "この分子は時間 $\\dfrac{2L}{v_x}$ ごとに壁 S に当たるので、時間 $t$ の間に壁が受ける力積は $2mv_x\\times\\dfrac{v_xt}{2L}=\\dfrac{mv_x{}^2}{L}t$。平均の力は $\\dfrac{mv_x{}^2}{L}$。",
+          "$N$ 個の分子について和をとると $F=\\dfrac{Nm\\overline{v_x{}^2}}{L}$。方向にかたよりがないので $\\overline{v_x{}^2}=\\dfrac13\\overline{v^2}$。",
+          "$p=\\dfrac{F}{L^2}=\\dfrac{Nm\\overline{v^2}}{3L^3}=\\dfrac{Nm\\overline{v^2}}{3V}$。これと $pV=Nk_{\\mathrm{B}}T$ を比べて $\\dfrac12m\\overline{v^2}=\\dfrac32k_{\\mathrm{B}}T$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "導出の各段階で「どの物理法則を使ったか」（運動量と力積、平均、等方性）を確認しながら進める。",
+            "ask": "気体の温度を4倍にすると、分子の二乗平均速度は何倍になるか。",
+            "expect": "$\\sqrt4=2$ 倍。",
+            "timing": "導出の直後"
+          }
+        ],
+        "figure": {
+          "alt": "1辺 L の立方体容器の中を飛び回る分子。速度の x 成分 v_x の分子が壁 S に衝突する",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 165\" width=\"230\" height=\"165\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><rect x=\"20\" y=\"20\" width=\"160\" height=\"120\" fill=\"#f7f7f7\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"186\" y=\"84\">壁 S</text><text x=\"90\" y=\"156\">L</text><circle cx=\"60\" cy=\"50\" r=\"4\" fill=\"#1f4e79\"/><circle cx=\"120\" cy=\"90\" r=\"4\" fill=\"#1f4e79\"/><circle cx=\"80\" cy=\"110\" r=\"4\" fill=\"#1f4e79\"/><circle cx=\"150\" cy=\"45\" r=\"4\" fill=\"#1f4e79\"/><circle cx=\"45\" cy=\"95\" r=\"4\" fill=\"#1f4e79\"/><line x1=\"150\" y1=\"45\" x2=\"176\" y2=\"45\" stroke=\"#000\" marker-end=\"url(#ah)\"/><text x=\"150\" y=\"38\">v_x</text></svg>",
+          "caption": "壁が受ける力積の総和が圧力になる"
+        }
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "熱力学第一法則",
+        "formula": "$$\\Delta U=Q+W\\qquad(W'=-W:\\ \\text{気体が外部にした仕事})$$",
+        "conditions": [
+          "$Q$：気体が吸収した熱量（放出なら負）。$W$：気体が外部からされた仕事（膨張すると負）。",
+          "定圧変化で気体が外部にする仕事は $W'=p\\Delta V$。一般には $p$−$V$ グラフと $V$ 軸で囲まれた面積に等しい。",
+          "単原子分子理想気体の内部エネルギーの変化は、どの変化でも $\\Delta U=\\dfrac32nR\\Delta T$（温度だけで決まる）。",
+          "等温変化：$\\Delta U=0$ で $Q=W'$。断熱変化：$Q=0$ で $\\Delta U=W$（断熱圧縮で温度上昇、断熱膨張で温度低下）。"
+        ],
+        "body": "第一法則はエネルギー保存則を、熱を含めて表したものである。気体を「エネルギーの財布」と考え、入ってくる熱と仕事の和が財布の中身（内部エネルギー）の増加になる、と読む。",
+        "teacher_points": [
+          {
+            "point": "符号の約束（$W$ はされた仕事）を、教科書・問題集によって $W'$（した仕事）で書く場合があることを示し、どちらで書いても「気体に入るエネルギー」を正として考えればよいとまとめる。",
+            "caution": "$\\Delta U=Q+W'$ と、した仕事を足してしまう誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "モル比熱とマイヤーの関係",
+        "proof_steps": [
+          "定積変化（$\\Delta V=0$）では仕事は 0 なので $Q=\\Delta U=\\dfrac32nR\\Delta T$。よって定積モル比熱 $C_V=\\dfrac{Q}{n\\Delta T}=\\dfrac32R$。",
+          "定圧変化では、気体がする仕事 $W'=p\\Delta V=nR\\Delta T$（状態方程式より）。",
+          "第一法則 $Q=\\Delta U+W'=\\dfrac32nR\\Delta T+nR\\Delta T=\\dfrac52nR\\Delta T$。よって定圧モル比熱 $C_p=\\dfrac52R$。",
+          "どの理想気体でも $C_p=C_V+R$（マイヤーの関係）。定圧では膨張して仕事をする分だけ、余分に熱が必要になる。"
+        ],
+        "body": "単原子分子理想気体では $C_V=\\dfrac32R\\fallingdotseq12.5\\,\\mathrm{J/(mol\\cdot K)}$、$C_p=\\dfrac52R\\fallingdotseq20.8\\,\\mathrm{J/(mol\\cdot K)}$。",
+        "teacher_points": [
+          {
+            "point": "同じ温度上昇でも定圧のほうが多くの熱を必要とする理由を、ピストンを押し上げる仕事に注目して説明させる。",
+            "ask": "定積と定圧で、気体を 1 K 上げるのに必要な熱量はどちらが大きいか。なぜか。",
+            "expect": "定圧。膨張して外部に仕事をする分だけ余分に熱が必要。"
+          }
+        ],
+        "figure": {
+          "alt": "鉛直なシリンダーに閉じこめた気体。なめらかに動くピストンの上は大気圧 p₀。下から加熱すると定圧で膨張する",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 200\" width=\"240\" height=\"200\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"170\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"170\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"60\" y1=\"170\" x2=\"180\" y2=\"170\" stroke=\"#000\" stroke-width=\"2\"/><rect x=\"61\" y=\"70\" width=\"118\" height=\"16\" fill=\"#9fb3c8\" stroke=\"#000\"/><text x=\"110\" y=\"82\">ピストン</text><rect x=\"61\" y=\"86\" width=\"118\" height=\"83\" fill=\"#eef3f8\"/><text x=\"100\" y=\"135\">気体</text><line x1=\"120\" y1=\"60\" x2=\"120\" y2=\"30\" stroke=\"#000\" marker-end=\"url(#ah)\"/><text x=\"126\" y=\"44\">p₀</text><path d=\"M 70 190 q 8 -10 16 0 q 8 10 16 0 q 8 -10 16 0\" fill=\"none\" stroke=\"#c0392b\"/><text x=\"122\" y=\"194\">加熱</text></svg>",
+          "caption": "定圧変化：加えた熱の一部が仕事になる"
+        }
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "熱機関と熱効率",
+        "body": "熱を受け取って仕事をし、もとの状態に戻ることをくり返す装置を熱機関という。1サイクルの間に高温の物体から熱 $Q_{\\text{in}}$ を吸収し、外部に正味の仕事 $W'$ をし、低温の物体に熱 $Q_{\\text{out}}$ を放出するとき、熱効率は次の式で表される。",
+        "formula": "$$e=\\dfrac{W'}{Q_{\\text{in}}}=\\dfrac{Q_{\\text{in}}-Q_{\\text{out}}}{Q_{\\text{in}}}\\qquad(e<1)$$",
+        "conditions": [
+          "1サイクルではもとの状態に戻るので $\\Delta U=0$、$W'=Q_{\\text{in}}-Q_{\\text{out}}$。",
+          "正味の仕事は、$p$−$V$ グラフでサイクルが囲む面積に等しい（時計回りなら外部に正の仕事）。",
+          "$Q_{\\text{in}}$ は、サイクルのうち熱を吸収する過程の熱量の和。放出する過程の熱は含めない。",
+          "熱力学第二法則：熱を100%仕事に変える熱機関はつくれない。熱は自然には低温から高温へ移らない（不可逆変化）。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$Q_{\\text{in}}$ に放熱過程を含めてしまう誤りを防ぐため、各過程の $Q$ の符号を表にまとめさせる。"
+          }
+        ],
+        "figure": {
+          "alt": "p−V グラフ上の長方形のサイクル A→B→C→D→A。囲まれた面積が1サイクルの正味の仕事",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 238 178\" width=\"238\" height=\"178\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"164\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"44\" y1=\"164\" x2=\"44\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"164\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"164\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"134\" y1=\"164\" x2=\"134\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"164\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"194\" y1=\"164\" x2=\"194\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"224\" y1=\"164\" x2=\"224\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"164\" x2=\"224\" y2=\"164\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"134\" x2=\"224\" y2=\"134\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"224\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"224\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"44\" x2=\"224\" y2=\"44\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"224\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><polygon points=\"44,134 44,74 164,74 164,134\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"14\" y1=\"164\" x2=\"230\" y2=\"164\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"164\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"226\" y=\"177\" font-style=\"italic\">V</text><text x=\"19\" y=\"12\" font-style=\"italic\">p</text><text x=\"3\" y=\"176\">O</text><text x=\"41\" y=\"176\" font-size=\"8\" fill=\"#555\">1</text><text x=\"71\" y=\"176\" font-size=\"8\" fill=\"#555\">2</text><text x=\"101\" y=\"176\" font-size=\"8\" fill=\"#555\">3</text><text x=\"131\" y=\"176\" font-size=\"8\" fill=\"#555\">4</text><text x=\"161\" y=\"176\" font-size=\"8\" fill=\"#555\">5</text><text x=\"191\" y=\"176\" font-size=\"8\" fill=\"#555\">6</text><text x=\"221\" y=\"176\" font-size=\"8\" fill=\"#555\">7</text><text x=\"1\" y=\"137\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"107\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"47\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">5</text><line x1=\"44\" y1=\"134\" x2=\"44\" y2=\"74\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"44\" y1=\"74\" x2=\"164\" y2=\"74\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"164\" y1=\"74\" x2=\"164\" y2=\"134\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"164\" y1=\"134\" x2=\"44\" y2=\"134\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"44\" cy=\"134\" r=\"2.3\" fill=\"#000\"/><text x=\"48\" y=\"130\">A</text><circle cx=\"44\" cy=\"74\" r=\"2.3\" fill=\"#000\"/><text x=\"48\" y=\"70\">B</text><circle cx=\"164\" cy=\"74\" r=\"2.3\" fill=\"#000\"/><text x=\"168\" y=\"70\">C</text><circle cx=\"164\" cy=\"134\" r=\"2.3\" fill=\"#000\"/><text x=\"168\" y=\"130\">D</text></svg>",
+          "caption": "サイクルが囲む面積＝正味の仕事"
+        }
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　状態方程式",
+        "example": {
+          "problem": "容積 $8.31\\,\\mathrm{L}$ の容器に、温度 $27\\,{}^\\circ\\mathrm{C}$、圧力 $3.0\\times10^5\\,\\mathrm{Pa}$ の気体が入っている。気体の物質量を求めよ。また、容器を密閉したまま温度を $127\\,{}^\\circ\\mathrm{C}$ にすると、圧力はいくらになるか。気体定数を $8.31\\,\\mathrm{J/(mol\\cdot K)}$ とする。",
+          "steps": [
+            "$T=27+273=300\\,\\mathrm{K}$、$V=8.31\\times10^{-3}\\,\\mathrm{m^3}$。",
+            "$n=\\dfrac{pV}{RT}=\\dfrac{3.0\\times10^5\\times8.31\\times10^{-3}}{8.31\\times300}=1.0\\,\\mathrm{mol}$。",
+            "体積一定なので $\\dfrac{p}{T}=$ 一定。$p'=3.0\\times10^5\\times\\dfrac{400}{300}=4.0\\times10^5\\,\\mathrm{Pa}$。"
+          ],
+          "answer": "物質量 $1.0\\,\\mathrm{mol}$、圧力 $4.0\\times10^5\\,\\mathrm{Pa}$",
+          "thinking": "単位を SI（Pa、m³、K）にそろえてから代入する。物質量一定ならボイル・シャルルの法則で比をとる。"
+        },
+        "misconceptions": [
+          {
+            "wrong": "温度が $27\\,{}^\\circ\\mathrm{C}$ から $127\\,{}^\\circ\\mathrm{C}$ になったので、圧力は約4.7倍になる",
+            "correct": "比は絶対温度でとる。$\\dfrac{400}{300}$ 倍"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　二乗平均速度",
+        "example": {
+          "problem": "温度 $300\\,\\mathrm{K}$ のヘリウム（モル質量 $4.0\\times10^{-3}\\,\\mathrm{kg/mol}$）と酸素（モル質量 $3.2\\times10^{-2}\\,\\mathrm{kg/mol}$）について、分子の二乗平均速度 $\\sqrt{\\overline{v^2}}$ をそれぞれ求めよ。気体定数を $8.31\\,\\mathrm{J/(mol\\cdot K)}$ とする。",
+          "steps": [
+            "$\\dfrac12m\\overline{v^2}=\\dfrac32k_{\\mathrm{B}}T$ の両辺にアボガドロ定数をかけると $\\dfrac12M\\overline{v^2}=\\dfrac32RT$、$\\sqrt{\\overline{v^2}}=\\sqrt{\\dfrac{3RT}{M}}$。",
+            "ヘリウム：$\\sqrt{\\dfrac{3\\times8.31\\times300}{4.0\\times10^{-3}}}\\fallingdotseq1.4\\times10^3\\,\\mathrm{m/s}$。",
+            "酸素：$\\sqrt{\\dfrac{3\\times8.31\\times300}{3.2\\times10^{-2}}}\\fallingdotseq4.8\\times10^2\\,\\mathrm{m/s}$（ヘリウムの $\\dfrac{1}{\\sqrt8}$ 倍）。"
+          ],
+          "answer": "ヘリウム 約 $1.4\\times10^3\\,\\mathrm{m/s}$、酸素 約 $4.8\\times10^2\\,\\mathrm{m/s}$",
+          "thinking": "同じ温度では平均運動エネルギーが等しい。質量が8倍なら速さは $\\dfrac{1}{\\sqrt8}$ 倍。"
+        },
+        "misconceptions": [
+          {
+            "wrong": "モル質量を g/mol のまま代入する",
+            "correct": "SI 単位では kg/mol。$4.0\\,\\mathrm{g/mol}=4.0\\times10^{-3}\\,\\mathrm{kg/mol}$"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　サイクルの熱効率",
+        "example": {
+          "problem": "$1.0\\,\\mathrm{mol}$ の単原子分子理想気体を、図の長方形のサイクル A→B→C→D→A で変化させる。A は圧力 $1.0\\times10^5\\,\\mathrm{Pa}$、体積 $1.0\\times10^{-3}\\,\\mathrm{m^3}$、B は圧力 $3.0\\times10^5\\,\\mathrm{Pa}$（体積は A と同じ）、C は体積 $5.0\\times10^{-3}\\,\\mathrm{m^3}$（圧力は B と同じ）である。このサイクルの熱効率を求めよ。",
+          "steps": [
+            "正味の仕事＝長方形の面積 $=(3.0-1.0)\\times10^5\\times(5.0-1.0)\\times10^{-3}=800\\,\\mathrm{J}$。",
+            "A→B（定積・温度上昇）：$Q_{\\mathrm{AB}}=\\dfrac32V\\Delta p=\\dfrac32\\times1.0\\times10^{-3}\\times2.0\\times10^5=300\\,\\mathrm{J}$（吸収）。",
+            "B→C（定圧膨張）：$Q_{\\mathrm{BC}}=\\dfrac52p\\Delta V=\\dfrac52\\times3.0\\times10^5\\times4.0\\times10^{-3}=3000\\,\\mathrm{J}$（吸収）。C→D・D→A は放熱。",
+            "$e=\\dfrac{800}{300+3000}\\fallingdotseq0.24$。"
+          ],
+          "answer": "約 $0.24$（24 %）",
+          "thinking": "$nR\\Delta T=\\Delta(pV)$ を使うと、温度を求めなくても熱量が計算できる。吸収する過程だけを $Q_{\\text{in}}$ に入れる。",
+          "figure": {
+            "alt": "p−V グラフ上の長方形のサイクル A(1,1)→B(1,3)→C(5,3)→D(5,1)。目盛りは p が 10⁵ Pa、V が 10⁻³ m³",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 238 178\" width=\"238\" height=\"178\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"164\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"44\" y1=\"164\" x2=\"44\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"74\" y1=\"164\" x2=\"74\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"104\" y1=\"164\" x2=\"104\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"134\" y1=\"164\" x2=\"134\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"164\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"194\" y1=\"164\" x2=\"194\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"224\" y1=\"164\" x2=\"224\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"164\" x2=\"224\" y2=\"164\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"134\" x2=\"224\" y2=\"134\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"104\" x2=\"224\" y2=\"104\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"74\" x2=\"224\" y2=\"74\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"44\" x2=\"224\" y2=\"44\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"224\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><polygon points=\"44,134 44,74 164,74 164,134\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"14\" y1=\"164\" x2=\"230\" y2=\"164\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"164\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"226\" y=\"177\" font-style=\"italic\">V</text><text x=\"19\" y=\"12\" font-style=\"italic\">p</text><text x=\"3\" y=\"176\">O</text><text x=\"41\" y=\"176\" font-size=\"8\" fill=\"#555\">1</text><text x=\"71\" y=\"176\" font-size=\"8\" fill=\"#555\">2</text><text x=\"101\" y=\"176\" font-size=\"8\" fill=\"#555\">3</text><text x=\"131\" y=\"176\" font-size=\"8\" fill=\"#555\">4</text><text x=\"161\" y=\"176\" font-size=\"8\" fill=\"#555\">5</text><text x=\"191\" y=\"176\" font-size=\"8\" fill=\"#555\">6</text><text x=\"221\" y=\"176\" font-size=\"8\" fill=\"#555\">7</text><text x=\"1\" y=\"137\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"107\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"77\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"47\" font-size=\"8\" fill=\"#555\">4</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">5</text><line x1=\"44\" y1=\"134\" x2=\"44\" y2=\"74\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"44\" y1=\"74\" x2=\"164\" y2=\"74\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"164\" y1=\"74\" x2=\"164\" y2=\"134\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"164\" y1=\"134\" x2=\"44\" y2=\"134\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"44\" cy=\"134\" r=\"2.3\" fill=\"#000\"/><text x=\"48\" y=\"130\">A</text><circle cx=\"44\" cy=\"74\" r=\"2.3\" fill=\"#000\"/><text x=\"48\" y=\"70\">B</text><circle cx=\"164\" cy=\"74\" r=\"2.3\" fill=\"#000\"/><text x=\"168\" y=\"70\">C</text><circle cx=\"164\" cy=\"134\" r=\"2.3\" fill=\"#000\"/><text x=\"168\" y=\"130\">D</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "各過程の $Q$、$W'$、$\\Delta U$ を表にまとめ、1サイクルで $\\Delta U$ の和が 0、$Q$ の和が $W'$ の和に等しいことを確かめさせる。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 気体の法則",
+              "lines": [
+                "$T=t+273$（必ず K）",
+                "ボイル：$pV=$ 一定",
+                "シャルル：$\\dfrac{V}{T}=$ 一定",
+                "$pV=nRT$、$R=8.31$",
+                "$pV=Nk_{\\mathrm{B}}T$"
+              ]
+            },
+            {
+              "title": "② 分子運動論",
+              "lines": [
+                "力積 $2mv_x$、間隔 $\\dfrac{2L}{v_x}$",
+                "$p=\\dfrac{Nm\\overline{v^2}}{3V}$",
+                "$\\dfrac12m\\overline{v^2}=\\dfrac32k_{\\mathrm{B}}T$",
+                "$\\sqrt{\\overline{v^2}}=\\sqrt{\\dfrac{3RT}{M}}$（$M$ は kg/mol）",
+                "$U=\\dfrac32nRT$（単原子）"
+              ]
+            },
+            {
+              "title": "③ 第一法則",
+              "lines": [
+                "$\\Delta U=Q+W$（$W$：された仕事）",
+                "$W'=p\\Delta V$＝グラフの面積",
+                "定積 $C_V=\\dfrac32R$、定圧 $C_p=\\dfrac52R$",
+                "等温 $\\Delta U=0$、断熱 $Q=0$",
+                "$e=\\dfrac{W'}{Q_{\\text{in}}}$"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "状態変化の問題では、まず状態ごとに $(p,\\ V,\\ T)$ の表をつくらせ、次に過程ごとに $(Q,\\ W',\\ \\Delta U)$ の表をつくらせる。2つの表で整理すると見通しがよい。",
+            "timing": "例題3の前"
+          },
+          {
+            "point": "$\\Delta U=\\dfrac32nR\\Delta T$ は定積変化だけの式ではなく、どの変化でも使えることを強調する（内部エネルギーは温度だけで決まる）。",
+            "ask": "定圧変化で温度が $10\\,\\mathrm{K}$ 上がったとき、$\\Delta U$ は定積で $10\\,\\mathrm{K}$ 上がったときと比べてどうか。",
+            "expect": "同じ。違うのは $Q$ と $W'$。"
+          },
+          {
+            "point": "断熱圧縮で温度が上がる理由を、分子の立場（動いてくるピストンにはね返されると分子の速さが増す）でも説明させる。"
+          },
+          {
+            "point": "熱効率の計算では、放熱過程の熱を $Q_{\\text{in}}$ に含めないよう、各過程の $Q$ の符号を確認させる。",
+            "caution": "$Q$ の総和（＝正味の仕事）を分母にする誤りもある。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "温度が2倍になると体積も2倍になる（℃ のまま）",
+            "correct": "比例するのは絶対温度。$10\\,{}^\\circ\\mathrm{C}\\to20\\,{}^\\circ\\mathrm{C}$ では $\\dfrac{293}{283}$ 倍にすぎない"
+          },
+          {
+            "wrong": "等温変化では熱の出入りがない",
+            "correct": "等温変化では $\\Delta U=0$ なので、した仕事と同じだけ熱を吸収している。熱の出入りがないのは断熱変化"
+          },
+          {
+            "wrong": "同じ温度なら、重い分子ほど運動エネルギーが大きい",
+            "correct": "平均運動エネルギーは温度だけで決まり、分子の種類によらない。重い分子は遅く動く"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "気体の圧力・体積・絶対温度・物質量は $pV=nRT$ で結ばれる。温度は必ず K で扱う。",
+          "圧力は分子が壁に与える力積の総和であり、絶対温度は分子1個の平均運動エネルギー $\\dfrac32k_{\\mathrm{B}}T$ に比例する。",
+          "熱力学第一法則 $\\Delta U=Q+W$ を、定積・定圧・等温・断熱の各変化に当てはめる。単原子分子では $\\Delta U=\\dfrac32nR\\Delta T$。",
+          "熱機関の熱効率は $e=\\dfrac{W'}{Q_{\\text{in}}}$ で、$p$−$V$ グラフでサイクルが囲む面積が正味の仕事。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$27\\,{}^\\circ\\mathrm{C}$ は何 K か。",
+            "a": "$300\\,\\mathrm{K}$"
+          },
+          {
+            "q": "温度一定で気体の体積を $\\dfrac12$ にすると、圧力は何倍になるか。",
+            "a": "2倍"
+          },
+          {
+            "q": "絶対温度を4倍にすると、分子の二乗平均速度は何倍になるか。",
+            "a": "2倍"
+          },
+          {
+            "q": "断熱変化で、気体が外部から $200\\,\\mathrm{J}$ の仕事をされた。内部エネルギーの変化は？",
+            "a": "$+200\\,\\mathrm{J}$（温度は上がる）"
+          },
+          {
+            "q": "$1.0\\,\\mathrm{mol}$ の単原子分子理想気体の温度を、定積で $10\\,\\mathrm{K}$ 上げるのに必要な熱量は？（$R=8.31$）",
+            "a": "$\\dfrac32\\times8.31\\times10\\fallingdotseq1.2\\times10^2\\,\\mathrm{J}$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "d99e06ec2f0f1ca8af49f1fe1dada992b38b2b4e31c48df7dc9f67187146a1e4"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:23:09+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "11614877b422125e9b32eb71a58146aa33e84423e45bc8615aba7d374174163e"
+  }
+}

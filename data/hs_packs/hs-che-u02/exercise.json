@@ -1,0 +1,5729 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-CHE-U02-EX",
+  "title": "化学反応とエネルギー・化学平衡　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "chemistry",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-CHE-U02"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-CHE-U02-PACK",
+  "pair_set_id": "HS-CHE-U02-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-CHEB-U03",
+        "point": "酸と塩基",
+        "title": "酸と塩基・酸化還元"
+      },
+      {
+        "unit_id": "HS-CHE-U01",
+        "point": "物質の状態",
+        "title": "物質の状態（気体・溶液）"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-CHE-U03",
+        "point": "無機物質の反応",
+        "title": "無機物質"
+      }
+    ],
+    "readiness_check": [
+      "物質量・モル濃度・化学反応式の量的関係（化学基礎）と、気体の状態方程式（前単元）を使える。",
+      "pH の定義と強酸・強塩基の pH の計算、中和と塩の性質（化学基礎「酸と塩基・酸化還元」）を説明できる。",
+      "常用対数（$\\log_{10}2=0.30$ など）と、2次方程式・平方根の計算ができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-CHE-U02-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "水酸化ナトリウム NaOH（式量 40）の固体 1.0 g を水に溶かして 50 g の水溶液にしたところ、温度が 5.3 K 上昇した。水溶液の比熱を 4.2 J/(g·K) とし、発生した熱はすべて水溶液の温度上昇に使われたものとして、NaOH の溶解エンタルピー（kJ/mol）を求めなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "-45",
+        "unit": "kJ/mol"
+      },
+      "explanation": "$q=mc\\Delta t$ で熱量を求め、1 mol あたりに換算する。発熱なので負。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-(50*4.2*53/10)/(1/40)/1000",
+        "expected": "-1113/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-heat_amount",
+      "explanation_detail": {
+        "approach": "熱量 $q=mc\\Delta t$（質量は水溶液全体）。溶解エンタルピーは 1 mol あたりで、発熱なら $\\Delta H<0$。",
+        "steps": [
+          "$q=50\\times4.2\\times5.3=1113$ J。",
+          "NaOH：$\\dfrac{1.0}{40}=0.025$ mol。",
+          "$\\Delta H=-\\dfrac{1113}{0.025}\\times10^{-3}\\fallingdotseq-45$ kJ/mol。"
+        ],
+        "alternatives": [
+          "単位で確かめる：g × J/(g·K) × K ＝ J。最後に kJ に直す。"
+        ],
+        "partial_credit": [
+          {
+            "point": "熱量を求めている",
+            "points": 1
+          },
+          {
+            "point": "1 mol あたり・符号が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "発熱なのに ΔH を正の値で答える。",
+          "J と kJ の換算を忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の熱化学反応式について、エタンを完全燃焼させて 312 kJ の熱を得るには、エタンが何 g 必要か。\n$$\\mathrm{C_2H_6}\\text{(気)}+\\dfrac{7}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow 2\\mathrm{CO_2}\\text{(気)}+3\\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-1562\\ \\mathrm{kJ}$$\nエタンの分子量は 30 とする。",
+      "answer": {
+        "value": "6.0",
+        "unit": "g"
+      },
+      "explanation": "必要な物質量 $\\dfrac{312}{1562}=0.20$ mol。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1562/5/(1562)*30",
+        "expected": "6"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-heat_amount",
+      "explanation_detail": {
+        "approach": "得たい熱量を 1 mol あたりの発熱量で割ると、必要な物質量が分かる。",
+        "steps": [
+          "$n=\\dfrac{312}{1562}=0.20$ mol。",
+          "$w=0.20\\times30=6.0$ g。"
+        ],
+        "alternatives": [
+          "比例式 $1\\ \\mathrm{mol}:1562\\ \\mathrm{kJ}=n:312\\ \\mathrm{kJ}$ で求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "質量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "熱量の比を質量の比と考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.50 mol/L の塩酸 100 mL と 0.50 mol/L の水酸化ナトリウム水溶液 100 mL を混合したところ、温度が 3.4 K 上昇した。水溶液の密度を 1.0 g/cm³、比熱を 4.2 J/(g·K) とし、熱の出入りはないものとして、中和エンタルピー（kJ/mol）を求めなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "-57",
+        "unit": "kJ/mol"
+      },
+      "explanation": "混合液全体の質量で熱量を求め、生じた水 1 mol あたりに換算する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-(2*100*4.2*17/5)/(1/2*100/1000)/1000",
+        "expected": "-1428/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-heat_amount",
+      "explanation_detail": {
+        "approach": "中和エンタルピーは水 1 mol が生じるときの値。生じた水の物質量＝反応した $\\mathrm{H^+}$ の物質量。",
+        "steps": [
+          "質量：$200$ g、熱量 $q=200\\times4.2\\times3.4=2856$ J。",
+          "生じた水：$0.50\\times\\dfrac{100}{1000}=0.050$ mol。",
+          "$\\Delta H=-\\dfrac{2856\\times10^{-3}}{0.050}\\fallingdotseq-57$ kJ/mol。"
+        ],
+        "alternatives": [
+          "強酸と強塩基の中和エンタルピーは、酸・塩基の種類によらずほぼ一定（約 $-56$ kJ/mol）であることと比べて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "熱量を求めている",
+            "points": 1
+          },
+          {
+            "point": "1 mol あたり・符号が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一方の溶液の質量だけで熱量を計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の熱化学反応式について、エチレン 2.8 g が完全燃焼したときに放出される熱量は何 kJ か。\n$$\\mathrm{C_2H_4}\\text{(気)}+3\\mathrm{O_2}\\text{(気)}\\longrightarrow 2\\mathrm{CO_2}\\text{(気)}+2\\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-1412\\ \\mathrm{kJ}$$\nエチレンの分子量は 28 とする。有効数字3桁で答えなさい。",
+      "answer": {
+        "value": "141",
+        "unit": "kJ"
+      },
+      "explanation": "物質量 $0.10$ mol に $|\\Delta H|=1412$ kJ/mol をかける。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "14/5/(28)*(1412)",
+        "expected": "706/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-heat_amount",
+      "explanation_detail": {
+        "approach": "熱化学反応式の $\\Delta H$ は、式の係数どおりの物質量（ここでは燃料 1 mol）が反応したときの値。物質量に比例させる。",
+        "steps": [
+          "$n=\\dfrac{2.8}{28}=0.10$ mol。",
+          "放出される熱量：$0.10\\times1412=141$ kJ。"
+        ],
+        "alternatives": [
+          "$\\Delta H$ で答える場合は、放出なので負の値 $-141$ kJ になることも確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "熱量が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量に直接 $\\Delta H$ をかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の熱化学反応式について述べた文のうち、正しいものを選びなさい。\n$$\\mathrm{N_2}\\text{(気)}+\\mathrm{O_2}\\text{(気)}\\longrightarrow 2\\mathrm{NO}\\text{(気)}\\quad \\Delta H=180\\ \\mathrm{kJ}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "逆向きの反応の $\\Delta H$ は $+180$ kJ である。"
+        },
+        {
+          "label": "イ",
+          "text": "すべての係数を $2$ 倍した式の $\\Delta H$ は $+180$ kJ のままである。"
+        },
+        {
+          "label": "ウ",
+          "text": "すべての係数を $2$ 倍した式の $\\Delta H$ は $+360$ kJ である。"
+        },
+        {
+          "label": "エ",
+          "text": "生成物のエンタルピーの和は反応物のエンタルピーの和より 180 kJ 小さい。"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "正しいのは「すべての係数を $2$ 倍した式の $\\Delta H$ は $+360$ kJ である。」。$\\Delta H$ は（生成物のエンタルピー）−（反応物のエンタルピー）で、反応する量に比例し、逆反応では符号が変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-enthalpy_meaning",
+      "explanation_detail": {
+        "approach": "$\\Delta H<0$ は発熱、$\\Delta H>0$ は吸熱。$\\Delta H$ は係数どおりの物質量についての値で、式を逆にすると符号が逆、何倍かすると同じ倍率になる。",
+        "steps": [
+          "$\\Delta H=+180$ kJ なので吸熱反応。",
+          "逆反応の ΔH は符号を逆にする。",
+          "係数を k 倍すると ΔH も k 倍。",
+          "各文をこの3点で判定する。"
+        ],
+        "alternatives": [
+          "エンタルピー図（反応物と生成物の高さ）をかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ΔH の符号の意味を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "ΔH の符号と発熱・吸熱を逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "逆反応では符号が逆になり $-180$ kJ。",
+          "misconception": "逆反応で符号を変えない誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "ΔH は物質量に比例するので $+360$ kJ になる。",
+          "misconception": "ΔH が反応する量に比例することを忘れる誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "ΔH＝（生成物）−（反応物）＝$+180$ kJ なので逆。",
+          "misconception": "ΔH の定義の向きの誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の熱化学反応式について述べた文のうち、正しいものを選びなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\dfrac{1}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow \\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-286\\ \\mathrm{kJ}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "逆向きの反応の $\\Delta H$ は $-286$ kJ である。"
+        },
+        {
+          "label": "イ",
+          "text": "生成物のエンタルピーの和は反応物のエンタルピーの和より 286 kJ 大きい。"
+        },
+        {
+          "label": "ウ",
+          "text": "この反応は発熱反応であり、生成物のエンタルピーの和は反応物のエンタルピーの和より 286 kJ 小さい。"
+        },
+        {
+          "label": "エ",
+          "text": "この反応は吸熱反応である。"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "正しいのは「この反応は発熱反応であり、生成物のエンタルピーの和は反応物のエンタルピーの和より 286 kJ 小さい。」。$\\Delta H$ は（生成物のエンタルピー）−（反応物のエンタルピー）で、反応する量に比例し、逆反応では符号が変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-enthalpy_meaning",
+      "explanation_detail": {
+        "approach": "$\\Delta H<0$ は発熱、$\\Delta H>0$ は吸熱。$\\Delta H$ は係数どおりの物質量についての値で、式を逆にすると符号が逆、何倍かすると同じ倍率になる。",
+        "steps": [
+          "$\\Delta H=-286$ kJ なので発熱反応。",
+          "逆反応の ΔH は符号を逆にする。",
+          "係数を k 倍すると ΔH も k 倍。",
+          "各文をこの3点で判定する。"
+        ],
+        "alternatives": [
+          "エンタルピー図（反応物と生成物の高さ）をかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ΔH の符号の意味を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "ΔH の符号と発熱・吸熱を逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "逆反応では符号が逆になり $+286$ kJ。",
+          "misconception": "逆反応で符号を変えない誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "ΔH＝（生成物）−（反応物）＝$-286$ kJ なので逆。",
+          "misconception": "ΔH の定義の向きの誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "$\\Delta H<0$ なので発熱反応。",
+          "misconception": "ΔH の符号と発熱・吸熱の対応の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の熱化学反応式について述べた文のうち、正しいものを選びなさい。\n$$\\mathrm{H_2O}\\text{(液)}\\longrightarrow \\mathrm{H_2O}\\text{(気)}\\quad \\Delta H=44\\ \\mathrm{kJ}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "すべての係数を $\\dfrac{1}{2}$ 倍した式の $\\Delta H$ は $+44$ kJ のままである。"
+        },
+        {
+          "label": "イ",
+          "text": "すべての係数を $\\dfrac{1}{2}$ 倍した式の $\\Delta H$ は $+22$ kJ である。"
+        },
+        {
+          "label": "ウ",
+          "text": "生成物のエンタルピーの和は反応物のエンタルピーの和より 44 kJ 小さい。"
+        },
+        {
+          "label": "エ",
+          "text": "逆向きの反応の $\\Delta H$ は $+44$ kJ である。"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "正しいのは「すべての係数を $\\dfrac{1}{2}$ 倍した式の $\\Delta H$ は $+22$ kJ である。」。$\\Delta H$ は（生成物のエンタルピー）−（反応物のエンタルピー）で、反応する量に比例し、逆反応では符号が変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-enthalpy_meaning",
+      "explanation_detail": {
+        "approach": "$\\Delta H<0$ は発熱、$\\Delta H>0$ は吸熱。$\\Delta H$ は係数どおりの物質量についての値で、式を逆にすると符号が逆、何倍かすると同じ倍率になる。",
+        "steps": [
+          "$\\Delta H=+44$ kJ なので吸熱反応。",
+          "逆反応の ΔH は符号を逆にする。",
+          "係数を k 倍すると ΔH も k 倍。",
+          "各文をこの3点で判定する。"
+        ],
+        "alternatives": [
+          "エンタルピー図（反応物と生成物の高さ）をかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ΔH の符号の意味を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "ΔH の符号と発熱・吸熱を逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "ΔH は物質量に比例するので $+22$ kJ になる。",
+          "misconception": "ΔH が反応する量に比例することを忘れる誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "ΔH＝（生成物）−（反応物）＝$+44$ kJ なので逆。",
+          "misconception": "ΔH の定義の向きの誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "逆反応では符号が逆になり $-44$ kJ。",
+          "misconception": "逆反応で符号を変えない誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の熱化学反応式について述べた文のうち、正しいものを選びなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\dfrac{1}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow \\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-286\\ \\mathrm{kJ}$$",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "逆向きの反応の $\\Delta H$ は $+286$ kJ である。"
+        },
+        {
+          "label": "イ",
+          "text": "この反応は吸熱反応である。"
+        },
+        {
+          "label": "ウ",
+          "text": "すべての係数を $2$ 倍した式の $\\Delta H$ は $-286$ kJ のままである。"
+        },
+        {
+          "label": "エ",
+          "text": "生成物のエンタルピーの和は反応物のエンタルピーの和より 286 kJ 大きい。"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "正しいのは「逆向きの反応の $\\Delta H$ は $+286$ kJ である。」。$\\Delta H$ は（生成物のエンタルピー）−（反応物のエンタルピー）で、反応する量に比例し、逆反応では符号が変わる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-enthalpy_meaning",
+      "explanation_detail": {
+        "approach": "$\\Delta H<0$ は発熱、$\\Delta H>0$ は吸熱。$\\Delta H$ は係数どおりの物質量についての値で、式を逆にすると符号が逆、何倍かすると同じ倍率になる。",
+        "steps": [
+          "$\\Delta H=-286$ kJ なので発熱反応。",
+          "逆反応の ΔH は符号を逆にする。",
+          "係数を k 倍すると ΔH も k 倍。",
+          "各文をこの3点で判定する。"
+        ],
+        "alternatives": [
+          "エンタルピー図（反応物と生成物の高さ）をかいて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ΔH の符号の意味を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "ΔH の符号と発熱・吸熱を逆に覚えている。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "$\\Delta H<0$ なので発熱反応。",
+          "misconception": "ΔH の符号と発熱・吸熱の対応の誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "ΔH は物質量に比例するので $-572$ kJ になる。",
+          "misconception": "ΔH が反応する量に比例することを忘れる誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "ΔH＝（生成物）−（反応物）＝$-286$ kJ なので逆。",
+          "misconception": "ΔH の定義の向きの誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "五酸化二窒素 $\\mathrm{N_2O_5}$ の分解反応で、その濃度が 0.40 mol/L から 0.30 mol/L まで減少するのに 40 秒かかった。この間の五酸化二窒素の平均の分解速度は何 mol/(L·s) か。",
+      "answer": {
+        "value": "0.0025",
+        "unit": "mol/(L·s)"
+      },
+      "explanation": "$v=-\\dfrac{\\Delta c}{\\Delta t}=\\dfrac{0.40-0.30}{40}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(2/5-(3/10))/(40)",
+        "expected": "1/400"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-rate_basic",
+      "explanation_detail": {
+        "approach": "反応速度は単位時間あたりの濃度の変化量。反応物では減少量を正の値で表す。",
+        "steps": [
+          "濃度の減少量：$0.40-0.30=0.10$ mol/L。",
+          "$v=\\dfrac{0.10}{40}=0.0025$ mol/(L·s)。"
+        ],
+        "alternatives": [
+          "単位で確かめる：mol/L ÷ s ＝ mol/(L·s)。"
+        ],
+        "partial_credit": [
+          {
+            "point": "濃度変化を求めている",
+            "points": 1
+          },
+          {
+            "point": "速度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "濃度そのものを時間で割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 $\\mathrm{N_2}+3\\mathrm{H_2}\\longrightarrow2\\mathrm{NH_3}$ において、ある時間における窒素の減少速度が $8.0\\times10^{-2}$ mol/(L·s) であった。このときのアンモニアの生成速度は何 mol/(L·s) か。",
+      "answer": {
+        "value": "0.16",
+        "unit": "mol/(L·s)"
+      },
+      "explanation": "速度の比は係数の比 1：2。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2/25*2/(1)",
+        "expected": "4/25"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-rate_basic",
+      "explanation_detail": {
+        "approach": "同じ反応では、各物質の濃度の変化量の比は化学反応式の係数の比に等しい。",
+        "steps": [
+          "係数の比 窒素：アンモニア＝1：2。",
+          "$8.0\\times10^{-2}\\times\\dfrac{2}{1}=1.6\\times10^{-1}$ mol/(L·s)。"
+        ],
+        "alternatives": [
+          "反応式の係数で割った値 $\\dfrac{1}{\\text{係数}}\\times\\dfrac{\\Delta c}{\\Delta t}$ がどの物質でも等しい、と考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "係数の比を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を逆に用いる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 $2\\mathrm{N_2O_5}\\longrightarrow4\\mathrm{NO_2}+\\mathrm{O_2}$ において、ある時間における五酸化二窒素の減少速度が $6.0\\times10^{-3}$ mol/(L·s) であった。このときの二酸化窒素の生成速度は何 mol/(L·s) か。",
+      "answer": {
+        "value": "0.012",
+        "unit": "mol/(L·s)"
+      },
+      "explanation": "速度の比は係数の比 2：4。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3/500*4/(2)",
+        "expected": "3/250"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-rate_basic",
+      "explanation_detail": {
+        "approach": "同じ反応では、各物質の濃度の変化量の比は化学反応式の係数の比に等しい。",
+        "steps": [
+          "係数の比 五酸化二窒素：二酸化窒素＝2：4。",
+          "$6.0\\times10^{-3}\\times\\dfrac{4}{2}=1.2\\times10^{-2}$ mol/(L·s)。"
+        ],
+        "alternatives": [
+          "反応式の係数で割った値 $\\dfrac{1}{\\text{係数}}\\times\\dfrac{\\Delta c}{\\Delta t}$ がどの物質でも等しい、と考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "係数の比を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数の比を逆に用いる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 A＋B → C の反応速度が $v=k[\\mathrm{A}]^{2}[\\mathrm{B}]$ で表されるとき、温度を変えずに [A] を$\\dfrac{1}{2}$倍、[B] を3倍にすると、反応速度は何倍になるか。分数の場合は小数で答えなさい。",
+      "answer": {
+        "value": "0.750"
+      },
+      "explanation": "$(0.50)^{2}\\times(3.0)^{1}=0.75$ 倍。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(1/2)**2*Rational(3)**1",
+        "expected": "3/4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-rate_basic",
+      "explanation_detail": {
+        "approach": "速度式の各濃度を何倍かして代入する。次数が指数になる。温度一定なので $k$ は変わらない。",
+        "steps": [
+          "[A] の寄与：$(0.50)^{2}$ 倍。",
+          "[B] の寄与：$(3.0)^{1}$ 倍。",
+          "合計：$0.75$ 倍。"
+        ],
+        "alternatives": [
+          "具体的な濃度（例えば [A]＝[B]＝1）を代入して、前後の速度を比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "次数を指数として用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "次数を無視して濃度の倍率をそのまま掛ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 $\\mathrm{N_2O_4}\\rightleftharpoons 2\\mathrm{NO_2}$ が容積 0.50 L の容器内で平衡状態にあり、$\\mathrm{N_2O_4}$ 0.10 mol、$\\mathrm{NO_2}$ 0.60 mol が存在している。この温度での平衡定数 $K$ を求めなさい。単位は mol/L である。",
+      "answer": {
+        "value": "7.2",
+        "unit": "mol/L"
+      },
+      "explanation": "$K=\\dfrac{[\\mathrm{NO_2}]^2}{[\\mathrm{N_2O_4}]}$ に、各物質のモル濃度（物質量÷体積）を代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "((3/5/(1/2))**2)/((1/10/(1/2))**1)",
+        "expected": "36/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-eq_constant",
+      "explanation_detail": {
+        "approach": "平衡定数の式に、平衡時のモル濃度を代入する。物質量のまま代入してよいのは、両辺の係数の和が等しいときだけ。",
+        "steps": [
+          "$K=\\dfrac{[\\mathrm{NO_2}]^2}{[\\mathrm{N_2O_4}]}$。",
+          "各濃度：$[\\mathrm{N_2O_4}]=0.20$、$[\\mathrm{NO_2}]=1.2$（mol/L）。",
+          "$K=7.2$ mol/L。"
+        ],
+        "alternatives": [
+          "単位は（濃度の単位）の（右辺の係数の和−左辺の係数の和）乗になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡定数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "物質量のまま代入する（体積で割り忘れる）。",
+          "係数を指数にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 $\\mathrm{H_2}+\\mathrm{I_2}\\rightleftharpoons 2\\mathrm{HI}$ が容積 0.50 L の容器内で平衡状態にあり、$\\mathrm{H_2}$ 0.20 mol、$\\mathrm{I_2}$ 0.30 mol、$\\mathrm{HI}$ 0.40 mol が存在している。この温度での平衡定数 $K$ を求めなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "2.7"
+      },
+      "explanation": "$K=\\dfrac{[\\mathrm{HI}]^2}{[\\mathrm{H_2}][\\mathrm{I_2}]}$ に、各物質のモル濃度（物質量÷体積）を代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "((2/5/(1/2))**2)/((1/5/(1/2))**1*(3/10/(1/2))**1)",
+        "expected": "8/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-eq_constant",
+      "explanation_detail": {
+        "approach": "平衡定数の式に、平衡時のモル濃度を代入する。物質量のまま代入してよいのは、両辺の係数の和が等しいときだけ。",
+        "steps": [
+          "$K=\\dfrac{[\\mathrm{HI}]^2}{[\\mathrm{H_2}][\\mathrm{I_2}]}$。",
+          "各濃度：$[\\mathrm{H_2}]=0.40$、$[\\mathrm{I_2}]=0.60$、$[\\mathrm{HI}]=0.80$（mol/L）。",
+          "$K=2.7$。"
+        ],
+        "alternatives": [
+          "単位は（濃度の単位）の（右辺の係数の和−左辺の係数の和）乗になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡定数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "物質量のまま代入する（体積で割り忘れる）。",
+          "係数を指数にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 $2\\mathrm{SO_2}+\\mathrm{O_2}\\rightleftharpoons 2\\mathrm{SO_3}$ が容積 10 L の容器内で平衡状態にあり、$\\mathrm{SO_2}$ 0.50 mol、$\\mathrm{O_2}$ 0.20 mol、$\\mathrm{SO_3}$ 0.30 mol が存在している。この温度での平衡定数 $K$ を求めなさい。単位は L/mol である。",
+      "answer": {
+        "value": "18",
+        "unit": "L/mol"
+      },
+      "explanation": "$K=\\dfrac{[\\mathrm{SO_3}]^2}{[\\mathrm{SO_2}]^2[\\mathrm{O_2}]}$ に、各物質のモル濃度（物質量÷体積）を代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "((3/10/(10))**2)/((1/2/(10))**2*(1/5/(10))**1)",
+        "expected": "18"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-eq_constant",
+      "explanation_detail": {
+        "approach": "平衡定数の式に、平衡時のモル濃度を代入する。物質量のまま代入してよいのは、両辺の係数の和が等しいときだけ。",
+        "steps": [
+          "$K=\\dfrac{[\\mathrm{SO_3}]^2}{[\\mathrm{SO_2}]^2[\\mathrm{O_2}]}$。",
+          "各濃度：$[\\mathrm{SO_2}]=0.050$、$[\\mathrm{O_2}]=0.020$、$[\\mathrm{SO_3}]=0.030$（mol/L）。",
+          "$K=18$ L/mol。"
+        ],
+        "alternatives": [
+          "単位は（濃度の単位）の（右辺の係数の和−左辺の係数の和）乗になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡定数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "物質量のまま代入する（体積で割り忘れる）。",
+          "係数を指数にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "反応 $\\mathrm{N_2}+3\\mathrm{H_2}\\rightleftharpoons 2\\mathrm{NH_3}$ が容積 0.50 L の容器内で平衡状態にあり、$\\mathrm{N_2}$ 0.30 mol、$\\mathrm{H_2}$ 0.40 mol、$\\mathrm{NH_3}$ 0.30 mol が存在している。この温度での平衡定数 $K$ を求めなさい。単位は (L/mol)^2 である。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "1.2",
+        "unit": "(L/mol)^2"
+      },
+      "explanation": "$K=\\dfrac{[\\mathrm{NH_3}]^2}{[\\mathrm{N_2}][\\mathrm{H_2}]^3}$ に、各物質のモル濃度（物質量÷体積）を代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "((3/10/(1/2))**2)/((3/10/(1/2))**1*(2/5/(1/2))**3)",
+        "expected": "75/64",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-eq_constant",
+      "explanation_detail": {
+        "approach": "平衡定数の式に、平衡時のモル濃度を代入する。物質量のまま代入してよいのは、両辺の係数の和が等しいときだけ。",
+        "steps": [
+          "$K=\\dfrac{[\\mathrm{NH_3}]^2}{[\\mathrm{N_2}][\\mathrm{H_2}]^3}$。",
+          "各濃度：$[\\mathrm{N_2}]=0.60$、$[\\mathrm{H_2}]=0.80$、$[\\mathrm{NH_3}]=0.60$（mol/L）。",
+          "$K=1.2$ (L/mol)^2。"
+        ],
+        "alternatives": [
+          "単位は（濃度の単位）の（右辺の係数の和−左辺の係数の和）乗になることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡定数の式が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "物質量のまま代入する（体積で割り忘れる）。",
+          "係数を指数にし忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の可逆反応が平衡状態にある（正反応の $\\Delta H=+172$ kJ）。\n$$\\mathrm{C}\\text{(黒鉛)}+\\mathrm{CO_2}\\rightleftharpoons2\\mathrm{CO}$$\nここで温度を上げると、平衡はどうなるか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "移動しない"
+        },
+        {
+          "label": "イ",
+          "text": "左に移動する（$\\mathrm{CO}$ が減る）"
+        },
+        {
+          "label": "ウ",
+          "text": "右に移動する（$\\mathrm{CO}$ が増える）"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "吸熱反応の向きに移動する。よって平衡は右に移動する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-le_chatelier",
+      "explanation_detail": {
+        "approach": "ルシャトリエの原理：加えられた変化をやわらげる向きに平衡が移動する。温度は ΔH の符号、圧力は両辺の気体分子の数、触媒・体積一定の貴ガスは影響なし。",
+        "steps": [
+          "変化：温度を上げる。",
+          "判断の根拠：吸熱反応の向きに移動する。",
+          "結論：右に移動。"
+        ],
+        "alternatives": [
+          "濃度商 $Q$ と平衡定数 $K$ の大小で考える：変化直後に $Q<K$ なら右、$Q>K$ なら左へ移動する（温度変化では $K$ 自体が変わる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適用すべき原理を判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "触媒で平衡が右に移動すると考える。",
+          "固体の物質や、体積一定で加えた貴ガスの影響を考えてしまう。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "温度を上げると、吸熱反応の向きに移動するので、平衡は右に移動する。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "温度を上げると、吸熱反応の向きに移動するので、平衡は右に移動する。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の可逆反応が平衡状態にある（正反応の $\\Delta H=-92$ kJ）。\n$$\\mathrm{N_2}+3\\mathrm{H_2}\\rightleftharpoons2\\mathrm{NH_3}$$\nここで体積を一定に保ってアルゴンを加えると、平衡はどうなるか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "左に移動する（$\\mathrm{NH_3}$ が減る）"
+        },
+        {
+          "label": "イ",
+          "text": "右に移動する（$\\mathrm{NH_3}$ が増える）"
+        },
+        {
+          "label": "ウ",
+          "text": "移動しない"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "体積一定では各成分の分圧（濃度）が変わらない。よって平衡は移動しない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-le_chatelier",
+      "explanation_detail": {
+        "approach": "ルシャトリエの原理：加えられた変化をやわらげる向きに平衡が移動する。温度は ΔH の符号、圧力は両辺の気体分子の数、触媒・体積一定の貴ガスは影響なし。",
+        "steps": [
+          "変化：体積を一定に保ってアルゴンを加える。",
+          "判断の根拠：体積一定では各成分の分圧（濃度）が変わらない。",
+          "結論：移動しない。"
+        ],
+        "alternatives": [
+          "濃度商 $Q$ と平衡定数 $K$ の大小で考える：変化直後に $Q<K$ なら右、$Q>K$ なら左へ移動する（温度変化では $K$ 自体が変わる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適用すべき原理を判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "触媒で平衡が右に移動すると考える。",
+          "固体の物質や、体積一定で加えた貴ガスの影響を考えてしまう。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "体積を一定に保ってアルゴンを加えると、体積一定では各成分の分圧（濃度）が変わらないので、平衡は移動しない。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "体積を一定に保ってアルゴンを加えると、体積一定では各成分の分圧（濃度）が変わらないので、平衡は移動しない。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の可逆反応が平衡状態にある（正反応の $\\Delta H=+57$ kJ）。\n$$\\mathrm{N_2O_4}\\rightleftharpoons2\\mathrm{NO_2}$$\nここで全圧を一定に保ってアルゴンを加えると、平衡はどうなるか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "移動しない"
+        },
+        {
+          "label": "イ",
+          "text": "左に移動する（$\\mathrm{NO_2}$ が減る）"
+        },
+        {
+          "label": "ウ",
+          "text": "右に移動する（$\\mathrm{NO_2}$ が増える）"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "全圧一定で体積が増え、各成分の分圧の和が下がるので、気体分子の総数が増える向きに移動する。よって平衡は右に移動する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-le_chatelier",
+      "explanation_detail": {
+        "approach": "ルシャトリエの原理：加えられた変化をやわらげる向きに平衡が移動する。温度は ΔH の符号、圧力は両辺の気体分子の数、触媒・体積一定の貴ガスは影響なし。",
+        "steps": [
+          "変化：全圧を一定に保ってアルゴンを加える。",
+          "判断の根拠：全圧一定で体積が増え、各成分の分圧の和が下がるので、気体分子の総数が増える向きに移動する。",
+          "結論：右に移動。"
+        ],
+        "alternatives": [
+          "濃度商 $Q$ と平衡定数 $K$ の大小で考える：変化直後に $Q<K$ なら右、$Q>K$ なら左へ移動する（温度変化では $K$ 自体が変わる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適用すべき原理を判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "触媒で平衡が右に移動すると考える。",
+          "固体の物質や、体積一定で加えた貴ガスの影響を考えてしまう。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "全圧を一定に保ってアルゴンを加えると、全圧一定で体積が増え、各成分の分圧の和が下がるので、気体分子の総数が増える向きに移動するので、平衡は右に移動する。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "全圧を一定に保ってアルゴンを加えると、全圧一定で体積が増え、各成分の分圧の和が下がるので、気体分子の総数が増える向きに移動するので、平衡は右に移動する。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の可逆反応が平衡状態にある（正反応の $\\Delta H=-92$ kJ）。\n$$\\mathrm{N_2}+3\\mathrm{H_2}\\rightleftharpoons2\\mathrm{NH_3}$$\nここで温度を上げると、平衡はどうなるか。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "右に移動する（$\\mathrm{NH_3}$ が増える）"
+        },
+        {
+          "label": "イ",
+          "text": "移動しない"
+        },
+        {
+          "label": "ウ",
+          "text": "左に移動する（$\\mathrm{NH_3}$ が減る）"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "吸熱反応の向きに移動する。よって平衡は左に移動する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-le_chatelier",
+      "explanation_detail": {
+        "approach": "ルシャトリエの原理：加えられた変化をやわらげる向きに平衡が移動する。温度は ΔH の符号、圧力は両辺の気体分子の数、触媒・体積一定の貴ガスは影響なし。",
+        "steps": [
+          "変化：温度を上げる。",
+          "判断の根拠：吸熱反応の向きに移動する。",
+          "結論：左に移動。"
+        ],
+        "alternatives": [
+          "濃度商 $Q$ と平衡定数 $K$ の大小で考える：変化直後に $Q<K$ なら右、$Q>K$ なら左へ移動する（温度変化では $K$ 自体が変わる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適用すべき原理を判断している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "触媒で平衡が右に移動すると考える。",
+          "固体の物質や、体積一定で加えた貴ガスの影響を考えてしまう。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "温度を上げると、吸熱反応の向きに移動するので、平衡は左に移動する。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "温度を上げると、吸熱反応の向きに移動するので、平衡は左に移動する。",
+          "misconception": "ルシャトリエの原理の適用の誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の熱化学反応式①、②を用いて、$\\mathrm{C}\\text{(黒鉛)}+\\dfrac{1}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow \\mathrm{CO}\\text{(気)}$ の反応エンタルピー $\\Delta H$ を求めなさい。\n① $\\mathrm{C}\\text{(黒鉛)}+\\mathrm{O_2}\\text{(気)}\\longrightarrow \\mathrm{CO_2}\\text{(気)}\\quad \\Delta H=-394\\ \\mathrm{kJ}$\n② $\\mathrm{CO}\\text{(気)}+\\dfrac{1}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow \\mathrm{CO_2}\\text{(気)}\\quad \\Delta H=-283\\ \\mathrm{kJ}$",
+      "answer": {
+        "value": "-111",
+        "unit": "kJ"
+      },
+      "explanation": "①−② で目的の式が得られる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-394-(-283)",
+        "expected": "-111"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-hess",
+      "explanation_detail": {
+        "approach": "目的の式に現れない物質（ここでは共通の生成物）が消えるように、2つの式を引き算する。",
+        "steps": [
+          "目的の式は ①−②。",
+          "$\\Delta H=-394-(-283)=-111$ kJ。"
+        ],
+        "alternatives": [
+          "エンタルピー図に3つの状態を書き、高さの差として求めてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "組み合わせ方が正しい",
+            "points": 2
+          },
+          {
+            "point": "値と符号が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "引き算の順序を逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{C_2H_2}\\text{(気)}+\\mathrm{H_2}\\text{(気)}\\longrightarrow \\mathrm{C_2H_4}\\text{(気)}$$\n生成エンタルピー（kJ/mol）は アセチレン（気）$227$、エチレン（気）$52$ とし、単体の生成エンタルピーは 0 とする。",
+      "answer": {
+        "value": "-175",
+        "unit": "kJ"
+      },
+      "explanation": "ΔH＝（生成物の生成エンタルピーの和）−（反応物の生成エンタルピーの和）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((1)*(52))-((1)*(227)+(1)*(0))",
+        "expected": "-175"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-hess",
+      "explanation_detail": {
+        "approach": "ヘスの法則より、反応物をいったん単体にもどしてから生成物をつくる経路で考える。係数を掛けるのを忘れない。",
+        "steps": [
+          "生成物：$1\\times(52)=52$ kJ。",
+          "反応物：$1\\times(227)+1\\times(0)=227$ kJ。",
+          "$\\Delta H=52-(227)=-175$ kJ。"
+        ],
+        "alternatives": [
+          "生成エンタルピーの熱化学反応式を書いて、目的の式になるように足し引きしても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "係数を掛けている",
+            "points": 1
+          },
+          {
+            "point": "値と符号が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "反応物 − 生成物 と逆に計算する。",
+          "係数を掛け忘れる。",
+          "H₂O の液体と気体の値を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{C}\\text{(黒鉛)}+\\mathrm{CO_2}\\text{(気)}\\longrightarrow 2\\mathrm{CO}\\text{(気)}$$\n生成エンタルピー（kJ/mol）は 二酸化炭素（気）$-394$、一酸化炭素（気）$-111$ とし、単体の生成エンタルピーは 0 とする。",
+      "answer": {
+        "value": "172",
+        "unit": "kJ"
+      },
+      "explanation": "ΔH＝（生成物の生成エンタルピーの和）−（反応物の生成エンタルピーの和）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((2)*(-111))-((1)*(0)+(1)*(-394))",
+        "expected": "172"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-hess",
+      "explanation_detail": {
+        "approach": "ヘスの法則より、反応物をいったん単体にもどしてから生成物をつくる経路で考える。係数を掛けるのを忘れない。",
+        "steps": [
+          "生成物：$2\\times(-111)=-222$ kJ。",
+          "反応物：$1\\times(0)+1\\times(-394)=-394$ kJ。",
+          "$\\Delta H=-222-(-394)=172$ kJ。"
+        ],
+        "alternatives": [
+          "生成エンタルピーの熱化学反応式を書いて、目的の式になるように足し引きしても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "係数を掛けている",
+            "points": 1
+          },
+          {
+            "point": "値と符号が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "反応物 − 生成物 と逆に計算する。",
+          "係数を掛け忘れる。",
+          "H₂O の液体と気体の値を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{C_2H_4}\\text{(気)}+\\mathrm{H_2O}\\text{(液)}\\longrightarrow \\mathrm{C_2H_5OH}\\text{(液)}$$\n生成エンタルピー（kJ/mol）は エチレン（気）$52$、水（液）$-286$、エタノール（液）$-277$ とし、単体の生成エンタルピーは 0 とする。",
+      "answer": {
+        "value": "-43",
+        "unit": "kJ"
+      },
+      "explanation": "ΔH＝（生成物の生成エンタルピーの和）−（反応物の生成エンタルピーの和）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "((1)*(-277))-((1)*(52)+(1)*(-286))",
+        "expected": "-43"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-hess",
+      "explanation_detail": {
+        "approach": "ヘスの法則より、反応物をいったん単体にもどしてから生成物をつくる経路で考える。係数を掛けるのを忘れない。",
+        "steps": [
+          "生成物：$1\\times(-277)=-277$ kJ。",
+          "反応物：$1\\times(52)+1\\times(-286)=-234$ kJ。",
+          "$\\Delta H=-277-(-234)=-43$ kJ。"
+        ],
+        "alternatives": [
+          "生成エンタルピーの熱化学反応式を書いて、目的の式になるように足し引きしても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "公式を正しく用いている",
+            "points": 2
+          },
+          {
+            "point": "係数を掛けている",
+            "points": 1
+          },
+          {
+            "point": "値と符号が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "反応物 − 生成物 と逆に計算する。",
+          "係数を掛け忘れる。",
+          "H₂O の液体と気体の値を取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の熱化学反応式①〜③を用いて、$\\mathrm{C_2H_2}\\text{(気)}+\\mathrm{H_2}\\text{(気)}\\longrightarrow \\mathrm{C_2H_4}\\text{(気)}$ の反応エンタルピー $\\Delta H$ を求めなさい。\n① $\\mathrm{C_2H_2}\\text{(気)}+\\dfrac{5}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow 2\\mathrm{CO_2}\\text{(気)}+\\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-1301\\ \\mathrm{kJ}$\n② $\\mathrm{C_2H_4}\\text{(気)}+3\\mathrm{O_2}\\text{(気)}\\longrightarrow 2\\mathrm{CO_2}\\text{(気)}+2\\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-1412\\ \\mathrm{kJ}$\n③ $\\mathrm{H_2}\\text{(気)}+\\dfrac{1}{2}\\mathrm{O_2}\\text{(気)}\\longrightarrow \\mathrm{H_2O}\\text{(液)}\\quad \\Delta H=-286\\ \\mathrm{kJ}$",
+      "answer": {
+        "value": "-175",
+        "unit": "kJ"
+      },
+      "explanation": "①＋③−② で目的の式が得られる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(-1301)+(-286)-(-1412)",
+        "expected": "-175"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-hess",
+      "explanation_detail": {
+        "approach": "目的の式の左辺にある物質は与式の左辺から、右辺にある物質は与式の右辺から取り出すように、式を足し引きする。",
+        "steps": [
+          "アセチレンは目的の式の左辺 → ①をそのまま使う。水素も左辺 → ③をそのまま使う。",
+          "エチレンは右辺 → ②を逆向き（−②）にする。",
+          "$\\Delta H=(-1301)+(-286)-(-1412)=-175$ kJ。"
+        ],
+        "alternatives": [
+          "燃焼エンタルピーから求める公式：（反応物の燃焼エンタルピーの和）−（生成物の燃焼エンタルピーの和）を使っても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "組み合わせ方が正しい",
+            "points": 2
+          },
+          {
+            "point": "値と符号が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "式の向きを逆にしたときに ΔH の符号を変え忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピーは $\\Delta H=-103$ kJ である。結合エネルギー（kJ/mol）を $\\mathrm{H{-}H}$ 436、$\\mathrm{Br{-}Br}$ 193 として、$\\mathrm{H{-}Br}$ の結合エネルギーを求めなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\mathrm{Br_2}\\text{(気)}\\longrightarrow2\\mathrm{HBr}\\text{(気)}$$",
+      "answer": {
+        "value": "366",
+        "unit": "kJ/mol"
+      },
+      "explanation": "H-Br はできる結合で 2 本。ΔH＝（切れる）−（できる）に代入して解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(-103-(629)+(0))/(-2)",
+        "expected": "366"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-bond_energy",
+      "explanation_detail": {
+        "approach": "ΔH＝（切れる結合の和）−（できる結合の和）の式で、求める結合エネルギーを $x$ とおく。",
+        "steps": [
+          "$\\mathrm{H{-}Br}$ の結合エネルギーを $x$ とおく（できる結合で 2 本）。",
+          "$(629)-(0+2x)=-103$。",
+          "$x=366$ kJ/mol。"
+        ],
+        "alternatives": [
+          "求めた値を使って ΔH を計算し直し、与えられた値に一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "結合の本数を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピーは $\\Delta H=-103$ kJ である。結合エネルギー（kJ/mol）を $\\mathrm{Br{-}Br}$ 193、$\\mathrm{H{-}Br}$ 366 として、$\\mathrm{H{-}H}$ の結合エネルギーを求めなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\mathrm{Br_2}\\text{(気)}\\longrightarrow2\\mathrm{HBr}\\text{(気)}$$",
+      "answer": {
+        "value": "436",
+        "unit": "kJ/mol"
+      },
+      "explanation": "H-H は切れる結合で 1 本。ΔH＝（切れる）−（できる）に代入して解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(-103-(193)+(732))/(1)",
+        "expected": "436"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-bond_energy",
+      "explanation_detail": {
+        "approach": "ΔH＝（切れる結合の和）−（できる結合の和）の式で、求める結合エネルギーを $x$ とおく。",
+        "steps": [
+          "$\\mathrm{H{-}H}$ の結合エネルギーを $x$ とおく（切れる結合で 1 本）。",
+          "$(193+1x)-(732)=-103$。",
+          "$x=436$ kJ/mol。"
+        ],
+        "alternatives": [
+          "求めた値を使って ΔH を計算し直し、与えられた値に一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "結合の本数を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピー $\\Delta H$ を、結合エネルギー（kJ/mol）$\\mathrm{H{-}H}$ 436、$\\mathrm{Br{-}Br}$ 193、$\\mathrm{H{-}Br}$ 366 を用いて求めなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\mathrm{Br_2}\\text{(気)}\\longrightarrow2\\mathrm{HBr}\\text{(気)}$$",
+      "answer": {
+        "value": "-103",
+        "unit": "kJ"
+      },
+      "explanation": "ΔH＝（切れる結合の結合エネルギーの和）−（できる結合の結合エネルギーの和）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(436*1+193*1)-(366*2)",
+        "expected": "-103"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-bond_energy",
+      "explanation_detail": {
+        "approach": "反応物の結合をすべて切って原子にする（吸熱）→ 原子から生成物の結合をつくる（発熱）、という経路で考える。",
+        "steps": [
+          "切れる結合：$\\mathrm{H{-}H}$×1＋$\\mathrm{Br{-}Br}$×1＝629 kJ。",
+          "できる結合：$\\mathrm{H{-}Br}$×2＝732 kJ。",
+          "$\\Delta H=629-732=-103$ kJ。"
+        ],
+        "alternatives": [
+          "エンタルピー図で、反応物 → ばらばらの原子（＋629 kJ）→ 生成物（−732 kJ）とたどる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "切れる結合・できる結合を正しく数えている",
+            "points": 2
+          },
+          {
+            "point": "値と符号が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "できる − 切れる と逆に計算する。",
+          "分子中の結合の数（$\\mathrm{NH_3}$ の N−H は3本など）を数え誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "次の反応の反応エンタルピーは $\\Delta H=-93$ kJ である。結合エネルギー（kJ/mol）を $\\mathrm{H{-}H}$ 436、$\\mathrm{N{-}H}$ 391 として、$\\mathrm{N{\\equiv}N}$ の結合エネルギーを求めなさい。\n$$\\mathrm{N_2}\\text{(気)}+3\\mathrm{H_2}\\text{(気)}\\longrightarrow2\\mathrm{NH_3}\\text{(気)}$$",
+      "answer": {
+        "value": "945",
+        "unit": "kJ/mol"
+      },
+      "explanation": "N≡N は切れる結合で 1 本。ΔH＝（切れる）−（できる）に代入して解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(-93-(1308)+(2346))/(1)",
+        "expected": "945"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-bond_energy",
+      "explanation_detail": {
+        "approach": "ΔH＝（切れる結合の和）−（できる結合の和）の式で、求める結合エネルギーを $x$ とおく。",
+        "steps": [
+          "$\\mathrm{N{\\equiv}N}$ の結合エネルギーを $x$ とおく（切れる結合で 1 本）。",
+          "$(1308+1x)-(2346)=-93$。",
+          "$x=945$ kJ/mol。"
+        ],
+        "alternatives": [
+          "求めた値を使って ΔH を計算し直し、与えられた値に一致するか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "結合の本数を掛け忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 10 L の容器に四酸化二窒素 $\\mathrm{N_2O_4}$ を 0.20 mol 入れて一定温度に保つと、$\\mathrm{N_2O_4}\\rightleftharpoons2\\mathrm{NO_2}$ の平衡に達し、$\\mathrm{N_2O_4}$ の 25 % が解離した。この温度の平衡定数 $K$（mol/L）を求めなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.0067",
+        "unit": "mol/L"
+      },
+      "explanation": "$[\\mathrm{N_2O_4}]=\\dfrac{0.20(1-0.25)}{10}$、$[\\mathrm{NO_2}]=\\dfrac{2\\times0.20\\times0.25}{10}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2*1/5*1/4/(10))**2/(1/5*(1-1/4)/(10))",
+        "expected": "1/150",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-eq_calc",
+      "explanation_detail": {
+        "approach": "解離度 α から平衡時の物質量を表し、体積で割って濃度にする（両辺の係数の和が異なるので体積は約分されない）。",
+        "steps": [
+          "平衡時：$\\mathrm{N_2O_4}$ $0.15$ mol、$\\mathrm{NO_2}$ $0.10$ mol。",
+          "濃度：$0.015$ mol/L、$0.010$ mol/L。",
+          "$K=\\dfrac{(0.010)^2}{0.015}=0.0067$ mol/L。"
+        ],
+        "alternatives": [
+          "一般式 $K=\\dfrac{4n\\alpha^2}{V(1-\\alpha)}$ を導いてから代入してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡時の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "濃度に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "物質量のまま代入する。",
+          "$\\mathrm{NO_2}$ が $2n\\alpha$ になることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "酢酸 1.0 mol とエタノール 2.0 mol を混合し、少量の濃硫酸を加えて一定温度に保つと、$\\mathrm{CH_3COOH}+\\mathrm{C_2H_5OH}\\rightleftharpoons\\mathrm{CH_3COOC_2H_5}+\\mathrm{H_2O}$ の平衡に達した。この温度の平衡定数を 4.0 として、生成した酢酸エチルの物質量を求めなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.85",
+        "unit": "mol"
+      },
+      "explanation": "生成した酢酸エチルを $x$ mol として2次方程式を解き、条件に合う解を選ぶ。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(4*(1+2)-sqrt(16*(1+2)**2-48*2))/6",
+        "expected": "2 - 2*sqrt(3)/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-eq_calc",
+      "explanation_detail": {
+        "approach": "反応前・変化量・平衡時の表をつくり、$\\dfrac{x^2}{(1.0-x)(2.0-x)}=4.0$ を解く（体積は約分される）。",
+        "steps": [
+          "平衡時：酢酸 $1.0-x$、エタノール $2.0-x$、酢酸エチル $x$、水 $x$（mol）。",
+          "$x^2=4.0(1.0-x)(2.0-x)$ を整理して $3x^2-12x+8.0=0$。",
+          "$0<x<1.0$ を満たす解は $x\\fallingdotseq0.85$ mol。"
+        ],
+        "alternatives": [
+          "もう一方の解が $x>1.0$ となり、平衡時の物質量が負になるので不適であることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡時の物質量を表している",
+            "points": 1
+          },
+          {
+            "point": "2次方程式を立てている",
+            "points": 1
+          },
+          {
+            "point": "適する解を選び値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの解のうち不適なものを選ぶ。",
+          "水を平衡定数の式から除く（この反応では溶媒ではないので含める）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 5.0 L の容器に水素と（気体の）ヨウ素を 2.0 mol ずつ入れて一定温度に保ったところ、$\\mathrm{H_2}+\\mathrm{I_2}\\rightleftharpoons2\\mathrm{HI}$ の平衡に達した。この温度の平衡定数を 36 として、生成したヨウ化水素の物質量を求めなさい。",
+      "answer": {
+        "value": "3.0",
+        "unit": "mol"
+      },
+      "explanation": "反応した $\\mathrm{H_2}$ を $x$ mol として平衡定数の式に代入する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*sqrt(36)*2/(2+sqrt(36))",
+        "expected": "3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-eq_calc",
+      "explanation_detail": {
+        "approach": "反応前・変化量・平衡時の表をつくる。両辺の係数の和が等しいので、体積は約分され物質量のまま代入できる。",
+        "steps": [
+          "平衡時：$\\mathrm{H_2}=2.0-x$、$\\mathrm{I_2}=2.0-x$、$\\mathrm{HI}=2x$（mol）。",
+          "$\\dfrac{(2x)^2}{(2.0-x)^2}=36$。",
+          "$\\dfrac{2x}{2.0-x}=6$ より $x=1.50$。",
+          "HI：$2x=3.0$ mol。"
+        ],
+        "alternatives": [
+          "求めた値を代入して $K$ に戻るか確かめる：$\\dfrac{(3.0)^2}{(0.50)^2}=36$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡時の物質量を文字で表している",
+            "points": 1
+          },
+          {
+            "point": "平衡定数の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "HI の係数 2 を忘れて $x$ を答える。",
+          "負の平方根を選ぶ。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 2.0 L の容器に四酸化二窒素 $\\mathrm{N_2O_4}$ を 0.20 mol 入れて一定温度に保つと、$\\mathrm{N_2O_4}\\rightleftharpoons2\\mathrm{NO_2}$ の平衡に達し、$\\mathrm{N_2O_4}$ の 50 % が解離した。この温度の平衡定数 $K$（mol/L）を求めなさい。",
+      "answer": {
+        "value": "0.20",
+        "unit": "mol/L"
+      },
+      "explanation": "$[\\mathrm{N_2O_4}]=\\dfrac{0.20(1-0.50)}{2.0}$、$[\\mathrm{NO_2}]=\\dfrac{2\\times0.20\\times0.50}{2.0}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(2*1/5*1/2/(2))**2/(1/5*(1-1/2)/(2))",
+        "expected": "1/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U02-eq_calc",
+      "explanation_detail": {
+        "approach": "解離度 α から平衡時の物質量を表し、体積で割って濃度にする（両辺の係数の和が異なるので体積は約分されない）。",
+        "steps": [
+          "平衡時：$\\mathrm{N_2O_4}$ $0.10$ mol、$\\mathrm{NO_2}$ $0.20$ mol。",
+          "濃度：$0.050$ mol/L、$0.10$ mol/L。",
+          "$K=\\dfrac{(0.10)^2}{0.050}=0.20$ mol/L。"
+        ],
+        "alternatives": [
+          "一般式 $K=\\dfrac{4n\\alpha^2}{V(1-\\alpha)}$ を導いてから代入してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平衡時の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "濃度に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "物質量のまま代入する。",
+          "$\\mathrm{NO_2}$ が $2n\\alpha$ になることを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度 0.20 mol/L の1価の弱酸 HA の電離度を求めなさい。電離定数は $K_{\\mathrm{a}}=8.0\\times10^{-5}$ mol/L とし、電離度は 1 に比べて十分小さいものとする。",
+      "answer": {
+        "value": "0.020"
+      },
+      "explanation": "$\\alpha\\fallingdotseq\\sqrt{\\dfrac{K_{\\mathrm{a}}}{c}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(1/12500/(1/5))",
+        "expected": "1/50"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-weak_acid",
+      "explanation_detail": {
+        "approach": "$K_{\\mathrm{a}}=\\dfrac{c\\alpha^2}{1-\\alpha}\\fallingdotseq c\\alpha^2$ を $\\alpha$ について解く。",
+        "steps": [
+          "$\\alpha^2=\\dfrac{8.0\\times10^{-5}}{0.20}=4.0\\times10^{-4}$。",
+          "$\\alpha=0.020$。"
+        ],
+        "alternatives": [
+          "$1-\\alpha\\fallingdotseq1$ の近似を使わずに2次方程式を解いても、ほぼ同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "近似式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha=\\dfrac{K_{\\mathrm{a}}}{c}$ と平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度 0.20 mol/L の1価の弱酸 HA の電離度を求めなさい。電離定数は $K_{\\mathrm{a}}=2.0\\times10^{-7}$ mol/L とし、電離度は 1 に比べて十分小さいものとする。",
+      "answer": {
+        "value": "0.0010"
+      },
+      "explanation": "$\\alpha\\fallingdotseq\\sqrt{\\dfrac{K_{\\mathrm{a}}}{c}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(1/5000000/(1/5))",
+        "expected": "1/1000"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-weak_acid",
+      "explanation_detail": {
+        "approach": "$K_{\\mathrm{a}}=\\dfrac{c\\alpha^2}{1-\\alpha}\\fallingdotseq c\\alpha^2$ を $\\alpha$ について解く。",
+        "steps": [
+          "$\\alpha^2=\\dfrac{2.0\\times10^{-7}}{0.20}=1.0\\times10^{-6}$。",
+          "$\\alpha=0.0010$。"
+        ],
+        "alternatives": [
+          "$1-\\alpha\\fallingdotseq1$ の近似を使わずに2次方程式を解いても、ほぼ同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "近似式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha=\\dfrac{K_{\\mathrm{a}}}{c}$ と平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度 0.050 mol/L の1価の弱酸 HA の電離度を求めなさい。電離定数は $K_{\\mathrm{a}}=1.8\\times10^{-6}$ mol/L とし、電離度は 1 に比べて十分小さいものとする。",
+      "answer": {
+        "value": "0.0060"
+      },
+      "explanation": "$\\alpha\\fallingdotseq\\sqrt{\\dfrac{K_{\\mathrm{a}}}{c}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(9/5000000/(1/20))",
+        "expected": "3/500"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-weak_acid",
+      "explanation_detail": {
+        "approach": "$K_{\\mathrm{a}}=\\dfrac{c\\alpha^2}{1-\\alpha}\\fallingdotseq c\\alpha^2$ を $\\alpha$ について解く。",
+        "steps": [
+          "$\\alpha^2=\\dfrac{1.8\\times10^{-6}}{0.050}=3.6\\times10^{-5}$。",
+          "$\\alpha=0.0060$。"
+        ],
+        "alternatives": [
+          "$1-\\alpha\\fallingdotseq1$ の近似を使わずに2次方程式を解いても、ほぼ同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "近似式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha=\\dfrac{K_{\\mathrm{a}}}{c}$ と平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "濃度 0.010 mol/L の1価の弱酸 HA の電離度を求めなさい。電離定数は $K_{\\mathrm{a}}=1.6\\times10^{-5}$ mol/L とし、電離度は 1 に比べて十分小さいものとする。",
+      "answer": {
+        "value": "0.040"
+      },
+      "explanation": "$\\alpha\\fallingdotseq\\sqrt{\\dfrac{K_{\\mathrm{a}}}{c}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(1/62500/(1/100))",
+        "expected": "1/25"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-weak_acid",
+      "explanation_detail": {
+        "approach": "$K_{\\mathrm{a}}=\\dfrac{c\\alpha^2}{1-\\alpha}\\fallingdotseq c\\alpha^2$ を $\\alpha$ について解く。",
+        "steps": [
+          "$\\alpha^2=\\dfrac{1.6\\times10^{-5}}{0.010}=1.6\\times10^{-3}$。",
+          "$\\alpha=0.040$。"
+        ],
+        "alternatives": [
+          "$1-\\alpha\\fallingdotseq1$ の近似を使わずに2次方程式を解いても、ほぼ同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "近似式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\alpha=\\dfrac{K_{\\mathrm{a}}}{c}$ と平方根をとり忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "表は、反応 A＋B → C の初速度を、A と B の濃度を変えて測定した結果である。\n(1) 速度式 $v=k[\\mathrm{A}]^x[\\mathrm{B}]^y$ の $x,\\ y$ を求めなさい。\n(2) 速度定数 $k$ を単位とともに求めなさい。\n(3) [A]＝0.15 mol/L、[B]＝0.25 mol/L のときの初速度を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "1",
+            "0.10",
+            "0.10",
+            "1.0\\times10^{-3}"
+          ],
+          [
+            "2",
+            "0.20",
+            "0.10",
+            "1.0\\times10^{-3}"
+          ],
+          [
+            "3",
+            "0.10",
+            "0.30",
+            "9.0\\times10^{-3}"
+          ]
+        ],
+        "header": [
+          "実験",
+          "[A]（mol/L）",
+          "[B]（mol/L）",
+          "初速度 v（mol/(L·s)）"
+        ],
+        "caption": "A＋B → C の初速度の測定（一定温度）"
+      },
+      "answer": {
+        "value": "(1) $x=0$、$y=2$（$v=k[\\mathrm{B}]^{2}$）　(2) $k=0.10$ L/(mol·s)　(3) $6.3\\times10^{-3}$ mol/(L·s)"
+      },
+      "explanation": "実験1と2の比から A の次数、実験1と3の比から B の次数が分かる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1/1000/((Rational(1,10))**0*(Rational(1,10))**2)",
+        "expected": "1/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U02-rate_data",
+      "explanation_detail": {
+        "approach": "一方の濃度だけを変えた2つの実験を比べ、濃度の倍率と速度の倍率の関係（倍率の何乗か）から次数を決める。",
+        "steps": [
+          "実験1→2：[A] が 2 倍で v が $1.0$ 倍 → $x=0$。",
+          "実験1→3：[B] が 3 倍で v が $9.0$ 倍 → $y=2$。",
+          "実験1の値を代入：$k=\\dfrac{1.0\\times10^{-3}}{(0.10)^2}=0.10$ L/(mol·s)。",
+          "(3) $v=0.10\\times0.25^2=6.3\\times10^{-3}$ mol/(L·s)。"
+        ],
+        "alternatives": [
+          "実験2や実験3の値で $k$ を求めても同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "次数を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "$k$ と単位が正しい",
+            "points": 1
+          },
+          {
+            "point": "初速度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学反応式の係数（1, 1）をそのまま次数とする。",
+          "k の単位を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "表は、反応 A＋B → C の初速度を、A と B の濃度を変えて測定した結果である。\n(1) 速度式 $v=k[\\mathrm{A}]^x[\\mathrm{B}]^y$ の $x,\\ y$ を求めなさい。\n(2) 速度定数 $k$ を単位とともに求めなさい。\n(3) [A]＝0.15 mol/L、[B]＝0.40 mol/L のときの初速度を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "1",
+            "0.10",
+            "0.10",
+            "1.0\\times10^{-3}"
+          ],
+          [
+            "2",
+            "0.20",
+            "0.10",
+            "4.0\\times10^{-3}"
+          ],
+          [
+            "3",
+            "0.10",
+            "0.30",
+            "1.0\\times10^{-3}"
+          ]
+        ],
+        "header": [
+          "実験",
+          "[A]（mol/L）",
+          "[B]（mol/L）",
+          "初速度 v（mol/(L·s)）"
+        ],
+        "caption": "A＋B → C の初速度の測定（一定温度）"
+      },
+      "answer": {
+        "value": "(1) $x=2$、$y=0$（$v=k[\\mathrm{A}]^{2}$）　(2) $k=0.10$ L/(mol·s)　(3) $2.3\\times10^{-3}$ mol/(L·s)"
+      },
+      "explanation": "実験1と2の比から A の次数、実験1と3の比から B の次数が分かる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1/1000/((Rational(1,10))**2*(Rational(1,10))**0)",
+        "expected": "1/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U02-rate_data",
+      "explanation_detail": {
+        "approach": "一方の濃度だけを変えた2つの実験を比べ、濃度の倍率と速度の倍率の関係（倍率の何乗か）から次数を決める。",
+        "steps": [
+          "実験1→2：[A] が 2 倍で v が $4.0$ 倍 → $x=2$。",
+          "実験1→3：[B] が 3 倍で v が $1.0$ 倍 → $y=0$。",
+          "実験1の値を代入：$k=\\dfrac{1.0\\times10^{-3}}{(0.10)^2}=0.10$ L/(mol·s)。",
+          "(3) $v=0.10\\times0.15^2=2.3\\times10^{-3}$ mol/(L·s)。"
+        ],
+        "alternatives": [
+          "実験2や実験3の値で $k$ を求めても同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "次数を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "$k$ と単位が正しい",
+            "points": 1
+          },
+          {
+            "point": "初速度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学反応式の係数（1, 1）をそのまま次数とする。",
+          "k の単位を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "表は、反応 A＋B → C の初速度を、A と B の濃度を変えて測定した結果である。\n(1) 速度式 $v=k[\\mathrm{A}]^x[\\mathrm{B}]^y$ の $x,\\ y$ を求めなさい。\n(2) 速度定数 $k$ を単位とともに求めなさい。\n(3) [A]＝0.20 mol/L、[B]＝0.050 mol/L のときの初速度を求めなさい。",
+      "table": {
+        "rows": [
+          [
+            "1",
+            "0.10",
+            "0.10",
+            "1.0\\times10^{-3}"
+          ],
+          [
+            "2",
+            "0.20",
+            "0.10",
+            "1.0\\times10^{-3}"
+          ],
+          [
+            "3",
+            "0.10",
+            "0.40",
+            "4.0\\times10^{-3}"
+          ]
+        ],
+        "header": [
+          "実験",
+          "[A]（mol/L）",
+          "[B]（mol/L）",
+          "初速度 v（mol/(L·s)）"
+        ],
+        "caption": "A＋B → C の初速度の測定（一定温度）"
+      },
+      "answer": {
+        "value": "(1) $x=0$、$y=1$（$v=k[\\mathrm{B}]$）　(2) $k=0.010$ /s　(3) $5.0\\times10^{-4}$ mol/(L·s)"
+      },
+      "explanation": "実験1と2の比から A の次数、実験1と3の比から B の次数が分かる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1/1000/((Rational(1,10))**0*(Rational(1,10))**1)",
+        "expected": "1/100",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U02-rate_data",
+      "explanation_detail": {
+        "approach": "一方の濃度だけを変えた2つの実験を比べ、濃度の倍率と速度の倍率の関係（倍率の何乗か）から次数を決める。",
+        "steps": [
+          "実験1→2：[A] が 2 倍で v が $1.0$ 倍 → $x=0$。",
+          "実験1→3：[B] が 4 倍で v が $4.0$ 倍 → $y=1$。",
+          "実験1の値を代入：$k=\\dfrac{1.0\\times10^{-3}}{(0.10)}=0.010$ /s。",
+          "(3) $v=0.010\\times0.050=5.0\\times10^{-4}$ mol/(L·s)。"
+        ],
+        "alternatives": [
+          "実験2や実験3の値で $k$ を求めても同じ値になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "次数を正しく決めている",
+            "points": 2
+          },
+          {
+            "point": "$k$ と単位が正しい",
+            "points": 1
+          },
+          {
+            "point": "初速度が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "化学反応式の係数（1, 1）をそのまま次数とする。",
+          "k の単位を書き忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "酢酸 0.050 mol と酢酸ナトリウム 0.10 mol を水に溶かして 1.0 L とした水溶液がある。酢酸の電離定数を $K_{\\mathrm{a}}=2.0\\times10^{-5}$ mol/L、$\\log_{10}2=0.30$、$\\log_{10}3=0.48$ とする。\n(1) この水溶液の pH を小数第2位まで求めなさい。\n(2) この水溶液に塩化水素 0.050 mol を加えた（体積変化は無視）。pH を小数第2位まで求め、pH がほとんど変化しない理由をイオン反応式を用いて説明しなさい。",
+      "answer": {
+        "value": "(1) $[\\mathrm{H^+}]=K_{\\mathrm{a}}\\times\\dfrac{0.050}{0.10}=1.0\\times10^{-5}$ mol/L、pH 5.00。(2) $\\mathrm{CH_3COO^-}+\\mathrm{H^+}\\longrightarrow\\mathrm{CH_3COOH}$ により、加えた $\\mathrm{H^+}$ の大部分が酢酸イオンと結びついて酢酸になる。酢酸 $0.10$ mol、酢酸イオン $0.050$ mol となり、$[\\mathrm{H^+}]=4.0\\times10^{-5}$ mol/L、pH 4.40。（同じ量の塩化水素を純水 1.0 L に加えると pH は約 1.3 になるので、変化はずっと小さい。）"
+      },
+      "explanation": "緩衝液では、多量にある酢酸イオンが加えた $\\mathrm{H^+}$ を受け取り、弱酸である酢酸に変える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 緩衝液の $[\\mathrm{H^+}]$ の式を用いて pH を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 加えた $\\mathrm{H^+}$ が酢酸イオンと反応することを、イオン反応式で示している",
+            "points": 3
+          },
+          {
+            "criterion": "(2) 反応後の物質量から pH を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "純水の場合との比較など、変化が小さいことを示している",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[2*10**(-5)*1/20/(1/10), 2*10**(-5)*(1/20+1/20)/(1/10-1/20)]",
+        "expected": "[1/100000, 1/25000]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U02-buffer",
+      "related_units": [
+        "HS-CHEB-U03"
+      ],
+      "explanation_detail": {
+        "approach": "酢酸ナトリウムは完全に電離し、酢酸イオンが多量にあるため酢酸の電離はおさえられる。$[\\mathrm{CH_3COOH}]$ と $[\\mathrm{CH_3COO^-}]$ は加えた量のままとみなし、$[\\mathrm{H^+}]=K_{\\mathrm{a}}\\dfrac{[\\mathrm{CH_3COOH}]}{[\\mathrm{CH_3COO^-}]}$（pH の定義と強酸の扱いは化学基礎の内容）。",
+        "steps": [
+          "(1) $[\\mathrm{H^+}]=2.0\\times10^{-5}\\times\\dfrac{0.050}{0.10}=1.0\\times10^{-5}$ mol/L、pH＝5.00。",
+          "(2) 加えた $\\mathrm{H^+}$ 0.050 mol は $\\mathrm{CH_3COO^-}$ と反応：酢酸 $0.10$ mol、酢酸イオン $0.050$ mol。",
+          "$[\\mathrm{H^+}]=2.0\\times10^{-5}\\times\\dfrac{0.10}{0.050}=4.0\\times10^{-5}$ mol/L、pH＝4.40。"
+        ],
+        "alternatives": [
+          "$\\mathrm{pH}=\\mathrm{p}K_{\\mathrm{a}}+\\log_{10}\\dfrac{[\\mathrm{CH_3COO^-}]}{[\\mathrm{CH_3COOH}]}$ の形で計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 2
+          },
+          {
+            "point": "イオン反応式",
+            "points": 3
+          },
+          {
+            "point": "(2) の pH",
+            "points": 2
+          },
+          {
+            "point": "比較",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加えた $\\mathrm{H^+}$ がそのまま残ると考える。",
+          "酢酸の濃度を $c$、酢酸イオンを $c\\alpha$ のように弱酸単独の式で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "酢酸 0.15 mol と酢酸ナトリウム 0.050 mol を水に溶かして 1.0 L とした水溶液がある。酢酸の電離定数を $K_{\\mathrm{a}}=2.0\\times10^{-5}$ mol/L、$\\log_{10}2=0.30$、$\\log_{10}3=0.48$ とする。\n(1) この水溶液の pH を小数第2位まで求めなさい。\n(2) この水溶液に塩化水素 0.010 mol を加えた（体積変化は無視）。pH を小数第2位まで求め、pH がほとんど変化しない理由をイオン反応式を用いて説明しなさい。",
+      "answer": {
+        "value": "(1) $[\\mathrm{H^+}]=K_{\\mathrm{a}}\\times\\dfrac{0.15}{0.050}=6.0\\times10^{-5}$ mol/L、pH 4.22。(2) $\\mathrm{CH_3COO^-}+\\mathrm{H^+}\\longrightarrow\\mathrm{CH_3COOH}$ により、加えた $\\mathrm{H^+}$ の大部分が酢酸イオンと結びついて酢酸になる。酢酸 $0.16$ mol、酢酸イオン $0.040$ mol となり、$[\\mathrm{H^+}]=8.0\\times10^{-5}$ mol/L、pH 4.10。（同じ量の塩化水素を純水 1.0 L に加えると pH は約 2.0 になるので、変化はずっと小さい。）"
+      },
+      "explanation": "緩衝液では、多量にある酢酸イオンが加えた $\\mathrm{H^+}$ を受け取り、弱酸である酢酸に変える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 緩衝液の $[\\mathrm{H^+}]$ の式を用いて pH を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 加えた $\\mathrm{H^+}$ が酢酸イオンと反応することを、イオン反応式で示している",
+            "points": 3
+          },
+          {
+            "criterion": "(2) 反応後の物質量から pH を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "純水の場合との比較など、変化が小さいことを示している",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[2*10**(-5)*3/20/(1/20), 2*10**(-5)*(3/20+1/100)/(1/20-1/100)]",
+        "expected": "[3/50000, 1/12500]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U02-buffer",
+      "related_units": [
+        "HS-CHEB-U03"
+      ],
+      "explanation_detail": {
+        "approach": "酢酸ナトリウムは完全に電離し、酢酸イオンが多量にあるため酢酸の電離はおさえられる。$[\\mathrm{CH_3COOH}]$ と $[\\mathrm{CH_3COO^-}]$ は加えた量のままとみなし、$[\\mathrm{H^+}]=K_{\\mathrm{a}}\\dfrac{[\\mathrm{CH_3COOH}]}{[\\mathrm{CH_3COO^-}]}$（pH の定義と強酸の扱いは化学基礎の内容）。",
+        "steps": [
+          "(1) $[\\mathrm{H^+}]=2.0\\times10^{-5}\\times\\dfrac{0.15}{0.050}=6.0\\times10^{-5}$ mol/L、pH＝4.22。",
+          "(2) 加えた $\\mathrm{H^+}$ 0.010 mol は $\\mathrm{CH_3COO^-}$ と反応：酢酸 $0.16$ mol、酢酸イオン $0.040$ mol。",
+          "$[\\mathrm{H^+}]=2.0\\times10^{-5}\\times\\dfrac{0.16}{0.040}=8.0\\times10^{-5}$ mol/L、pH＝4.10。"
+        ],
+        "alternatives": [
+          "$\\mathrm{pH}=\\mathrm{p}K_{\\mathrm{a}}+\\log_{10}\\dfrac{[\\mathrm{CH_3COO^-}]}{[\\mathrm{CH_3COOH}]}$ の形で計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 2
+          },
+          {
+            "point": "イオン反応式",
+            "points": 3
+          },
+          {
+            "point": "(2) の pH",
+            "points": 2
+          },
+          {
+            "point": "比較",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加えた $\\mathrm{H^+}$ がそのまま残ると考える。",
+          "酢酸の濃度を $c$、酢酸イオンを $c\\alpha$ のように弱酸単独の式で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "酢酸 0.20 mol と酢酸ナトリウム 0.10 mol を水に溶かして 1.0 L とした水溶液がある。酢酸の電離定数を $K_{\\mathrm{a}}=2.0\\times10^{-5}$ mol/L、$\\log_{10}2=0.30$、$\\log_{10}3=0.48$ とする。\n(1) この水溶液の pH を小数第2位まで求めなさい。\n(2) この水溶液に塩化水素 0.050 mol を加えた（体積変化は無視）。pH を小数第2位まで求め、pH がほとんど変化しない理由をイオン反応式を用いて説明しなさい。",
+      "answer": {
+        "value": "(1) $[\\mathrm{H^+}]=K_{\\mathrm{a}}\\times\\dfrac{0.20}{0.10}=4.0\\times10^{-5}$ mol/L、pH 4.40。(2) $\\mathrm{CH_3COO^-}+\\mathrm{H^+}\\longrightarrow\\mathrm{CH_3COOH}$ により、加えた $\\mathrm{H^+}$ の大部分が酢酸イオンと結びついて酢酸になる。酢酸 $0.25$ mol、酢酸イオン $0.050$ mol となり、$[\\mathrm{H^+}]=1.0\\times10^{-4}$ mol/L、pH 4.00。（同じ量の塩化水素を純水 1.0 L に加えると pH は約 1.3 になるので、変化はずっと小さい。）"
+      },
+      "explanation": "緩衝液では、多量にある酢酸イオンが加えた $\\mathrm{H^+}$ を受け取り、弱酸である酢酸に変える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 緩衝液の $[\\mathrm{H^+}]$ の式を用いて pH を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 加えた $\\mathrm{H^+}$ が酢酸イオンと反応することを、イオン反応式で示している",
+            "points": 3
+          },
+          {
+            "criterion": "(2) 反応後の物質量から pH を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "純水の場合との比較など、変化が小さいことを示している",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[2*10**(-5)*1/5/(1/10), 2*10**(-5)*(1/5+1/20)/(1/10-1/20)]",
+        "expected": "[1/25000, 1/10000]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U02-buffer",
+      "related_units": [
+        "HS-CHEB-U03"
+      ],
+      "explanation_detail": {
+        "approach": "酢酸ナトリウムは完全に電離し、酢酸イオンが多量にあるため酢酸の電離はおさえられる。$[\\mathrm{CH_3COOH}]$ と $[\\mathrm{CH_3COO^-}]$ は加えた量のままとみなし、$[\\mathrm{H^+}]=K_{\\mathrm{a}}\\dfrac{[\\mathrm{CH_3COOH}]}{[\\mathrm{CH_3COO^-}]}$（pH の定義と強酸の扱いは化学基礎の内容）。",
+        "steps": [
+          "(1) $[\\mathrm{H^+}]=2.0\\times10^{-5}\\times\\dfrac{0.20}{0.10}=4.0\\times10^{-5}$ mol/L、pH＝4.40。",
+          "(2) 加えた $\\mathrm{H^+}$ 0.050 mol は $\\mathrm{CH_3COO^-}$ と反応：酢酸 $0.25$ mol、酢酸イオン $0.050$ mol。",
+          "$[\\mathrm{H^+}]=2.0\\times10^{-5}\\times\\dfrac{0.25}{0.050}=1.0\\times10^{-4}$ mol/L、pH＝4.00。"
+        ],
+        "alternatives": [
+          "$\\mathrm{pH}=\\mathrm{p}K_{\\mathrm{a}}+\\log_{10}\\dfrac{[\\mathrm{CH_3COO^-}]}{[\\mathrm{CH_3COOH}]}$ の形で計算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 2
+          },
+          {
+            "point": "イオン反応式",
+            "points": 3
+          },
+          {
+            "point": "(2) の pH",
+            "points": 2
+          },
+          {
+            "point": "比較",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "加えた $\\mathrm{H^+}$ がそのまま残ると考える。",
+          "酢酸の濃度を $c$、酢酸イオンを $c\\alpha$ のように弱酸単独の式で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "図は、ある気体反応 A → B の進行に伴うエンタルピーの変化を表したもので、触媒がないときの活性化エネルギーは 60 kJ/mol、反応エンタルピーは $\\Delta H=-25$ kJ/mol である。触媒を加えると活性化エネルギーは 40 kJ/mol になった。\n(1) 触媒がないとき、逆反応 B → A の活性化エネルギーは何 kJ/mol か。\n(2) 触媒を加えたとき、逆反応の活性化エネルギーと反応エンタルピー、平衡の位置はどうなるか。理由とともに答えなさい。\n(3) 温度を上げると反応速度が大きくなる理由を、分子のエネルギーの分布にふれて説明しなさい。",
+      "figure": {
+        "alt": "反応の進行に伴うエンタルピーの変化。反応物から遷移状態まで 60 kJ（活性化エネルギー Ea）上がり、生成物は反応物より 25 kJ 低い（発熱反応、ΔH＜0）。触媒を用いた経路（低い山）の活性化エネルギーは 40 kJ。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 238 238\" width=\"238\" height=\"238\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"224\" x2=\"230\" y2=\"224\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"224\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"226\" y=\"237\" font-style=\"italic\">反応の進行</text><text x=\"19\" y=\"12\" font-style=\"italic\">H</text><text x=\"3\" y=\"236\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"210\" height=\"210\"/></clipPath><path d=\"M14,171.41 L15.05,171.41 L16.1,171.41 L17.15,171.41 L18.2,171.41 L19.25,171.41 L20.3,171.41 L21.35,171.41 L22.4,171.41 L23.45,171.41 L24.5,171.41 L25.55,171.41 L26.6,171.41 L27.65,171.41 L28.7,171.41 L29.75,171.41 L30.8,171.41 L31.85,171.41 L32.9,171.41 L33.95,171.41 L35,171.41 L36.05,171.41 L37.1,171.41 L38.15,171.41 L39.2,171.41 L40.25,171.41 L41.3,171.41 L42.35,171.41 L43.4,171.41 L44.45,171.41 L45.5,171.41 L46.55,171.41 L47.6,171.41 L48.65,171.41 L49.7,171.41 L50.75,171.41 L51.8,171.41 L52.85,171.41 L53.9,171.41 L54.95,171.37 L56,171.2 L57.05,170.92 L58.1,170.52 L59.15,170 L60.2,169.37 L61.25,168.63 L62.3,167.78 L63.35,166.82 L64.4,165.76 L65.45,164.59 L66.5,163.33 L67.55,161.98 L68.6,160.53 L69.65,159 L70.7,157.39 L71.75,155.71 L72.8,153.95 L73.85,152.13 L74.9,150.24 L75.95,148.31 L77,146.32 L78.05,144.3 L79.1,142.23 L80.15,140.14 L81.2,138.02 L82.25,135.89 L83.3,133.74 L84.35,131.59 L85.4,129.45 L86.45,127.31 L87.5,125.18 L88.55,123.08 L89.6,121.01 L90.65,118.97 L91.7,116.97 L92.75,115.01 L93.8,113.11 L94.85,111.27 L95.9,109.49 L96.95,107.78 L98,106.14 L99.05,104.59 L100.1,103.11 L101.15,101.73 L102.2,100.43 L103.25,99.24 L104.3,98.14 L105.35,97.15 L106.4,96.26 L107.45,95.48 L108.5,94.82 L109.55,94.26 L110.6,93.82 L111.65,93.5 L112.7,93.3 L113.75,93.21 L114.8,93.25 L115.85,93.47 L116.9,93.84 L117.95,94.39 L119,95.09 L120.05,95.96 L121.1,96.99 L122.15,98.17 L123.2,99.51 L124.25,100.99 L125.3,102.62 L126.35,104.39 L127.4,106.29 L128.45,108.32 L129.5,110.47 L130.55,112.74 L131.6,115.11 L132.65,117.59 L133.7,120.15 L134.75,122.81 L135.8,125.54 L136.85,128.34 L137.9,131.21 L138.95,134.12 L140,137.09 L141.05,140.08 L142.1,143.1 L143.15,146.14 L144.2,149.18 L145.25,152.23 L146.3,155.26 L147.35,158.27 L148.4,161.25 L149.45,164.2 L150.5,167.09 L151.55,169.94 L152.6,172.71 L153.65,175.42 L154.7,178.04 L155.75,180.58 L156.8,183.01 L157.85,185.35 L158.9,187.57 L159.95,189.67 L161,191.65 L162.05,193.51 L163.1,195.22 L164.15,196.79 L165.2,198.22 L166.25,199.5 L167.3,200.63 L168.35,201.59 L169.4,202.4 L170.45,203.05 L171.5,203.53 L172.55,203.84 L173.6,203.99 L174.65,204 L175.7,204 L176.75,204 L177.8,204 L178.85,204 L179.9,204 L180.95,204 L182,204 L183.05,204 L184.1,204 L185.15,204 L186.2,204 L187.25,204 L188.3,204 L189.35,204 L190.4,204 L191.45,204 L192.5,204 L193.55,204 L194.6,204 L195.65,204 L196.7,204 L197.75,204 L198.8,204 L199.85,204 L200.9,204 L201.95,204 L203,204 L204.05,204 L205.1,204 L206.15,204 L207.2,204 L208.25,204 L209.3,204 L210.35,204 L211.4,204 L212.45,204 L213.5,204 L214.55,204 L215.6,204 L216.65,204 L217.7,204 L218.75,204 L219.8,204 L220.85,204 L221.9,204 L222.95,204 L224,204\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><clipPath id=\"k9\"><rect x=\"14\" y=\"14\" width=\"210\" height=\"210\"/></clipPath><path d=\"M14,171.41 L15.05,171.41 L16.1,171.41 L17.15,171.41 L18.2,171.41 L19.25,171.41 L20.3,171.41 L21.35,171.41 L22.4,171.41 L23.45,171.41 L24.5,171.41 L25.55,171.41 L26.6,171.41 L27.65,171.41 L28.7,171.41 L29.75,171.41 L30.8,171.41 L31.85,171.41 L32.9,171.41 L33.95,171.41 L35,171.41 L36.05,171.41 L37.1,171.41 L38.15,171.41 L39.2,171.41 L40.25,171.41 L41.3,171.41 L42.35,171.41 L43.4,171.41 L44.45,171.41 L45.5,171.41 L46.55,171.41 L47.6,171.41 L48.65,171.41 L49.7,171.41 L50.75,171.41 L51.8,171.41 L52.85,171.41 L53.9,171.41 L54.95,171.38 L56,171.27 L57.05,171.08 L58.1,170.82 L59.15,170.47 L60.2,170.05 L61.25,169.56 L62.3,168.99 L63.35,168.35 L64.4,167.64 L65.45,166.87 L66.5,166.03 L67.55,165.12 L68.6,164.16 L69.65,163.14 L70.7,162.07 L71.75,160.94 L72.8,159.77 L73.85,158.56 L74.9,157.3 L75.95,156.01 L77,154.69 L78.05,153.34 L79.1,151.96 L80.15,150.56 L81.2,149.15 L82.25,147.73 L83.3,146.3 L84.35,144.87 L85.4,143.43 L86.45,142.01 L87.5,140.59 L88.55,139.19 L89.6,137.81 L90.65,136.45 L91.7,135.12 L92.75,133.81 L93.8,132.55 L94.85,131.32 L95.9,130.13 L96.95,128.99 L98,127.9 L99.05,126.86 L100.1,125.88 L101.15,124.96 L102.2,124.09 L103.25,123.3 L104.3,122.57 L105.35,121.9 L106.4,121.31 L107.45,120.79 L108.5,120.35 L109.55,119.98 L110.6,119.69 L111.65,119.47 L112.7,119.34 L113.75,119.28 L114.8,119.31 L115.85,119.47 L116.9,119.76 L117.95,120.18 L119,120.72 L120.05,121.38 L121.1,122.17 L122.15,123.07 L123.2,124.1 L124.25,125.23 L125.3,126.48 L126.35,127.83 L127.4,129.28 L128.45,130.83 L129.5,132.48 L130.55,134.21 L131.6,136.03 L132.65,137.92 L133.7,139.88 L134.75,141.91 L135.8,144 L136.85,146.15 L137.9,148.34 L138.95,150.57 L140,152.83 L141.05,155.12 L142.1,157.43 L143.15,159.75 L144.2,162.08 L145.25,164.41 L146.3,166.73 L147.35,169.03 L148.4,171.31 L149.45,173.56 L150.5,175.78 L151.55,177.95 L152.6,180.07 L153.65,182.14 L154.7,184.15 L155.75,186.09 L156.8,187.95 L157.85,189.74 L158.9,191.44 L159.95,193.04 L161,194.56 L162.05,195.97 L163.1,197.29 L164.15,198.49 L165.2,199.58 L166.25,200.56 L167.3,201.42 L168.35,202.16 L169.4,202.78 L170.45,203.27 L171.5,203.64 L172.55,203.88 L173.6,203.99 L174.65,204 L175.7,204 L176.75,204 L177.8,204 L178.85,204 L179.9,204 L180.95,204 L182,204 L183.05,204 L184.1,204 L185.15,204 L186.2,204 L187.25,204 L188.3,204 L189.35,204 L190.4,204 L191.45,204 L192.5,204 L193.55,204 L194.6,204 L195.65,204 L196.7,204 L197.75,204 L198.8,204 L199.85,204 L200.9,204 L201.95,204 L203,204 L204.05,204 L205.1,204 L206.15,204 L207.2,204 L208.25,204 L209.3,204 L210.35,204 L211.4,204 L212.45,204 L213.5,204 L214.55,204 L215.6,204 L216.65,204 L217.7,204 L218.75,204 L219.8,204 L220.85,204 L221.9,204 L222.95,204 L224,204\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k9)\"/><line x1=\"38\" y1=\"171.41\" x2=\"38\" y2=\"93.21\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"34\" y1=\"93.21\" x2=\"114\" y2=\"93.21\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"198\" y1=\"171.41\" x2=\"198\" y2=\"204\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"54\" y1=\"171.41\" x2=\"202\" y2=\"171.41\" stroke=\"#333\" stroke-width=\"1\"/><text x=\"20\" y=\"164.41\">反応物</text><text x=\"180\" y=\"197\">生成物</text><text x=\"98\" y=\"85.21\">遷移状態</text><text x=\"102\" y=\"131.27\">触媒あり</text><text x=\"41\" y=\"132.31\">Ea</text><text x=\"201\" y=\"187.71\">ΔH</text></svg>",
+        "caption": "反応の進行とエンタルピー（概形）"
+      },
+      "answer": {
+        "value": "(1) 逆反応では生成物から遷移状態までの差なので $60-(-25)=85$ kJ/mol。(2) 逆反応の活性化エネルギーは $40-(-25)=65$ kJ/mol に小さくなる。反応物と生成物のエンタルピーは変わらないので $\\Delta H$ は $-25$ kJ/mol のまま。触媒は正反応と逆反応を同じように速めるので、平衡の位置は変わらない（平衡に達するまでの時間が短くなる）。(3) 温度を上げると分子の運動エネルギーの分布が高エネルギー側に広がり、活性化エネルギー以上のエネルギーをもつ分子の割合が大きく増えるため、反応できる衝突が増える。"
+      },
+      "explanation": "活性化エネルギーは山の高さ、ΔH は両端の高さの差。触媒は山だけを低くする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 逆反応の活性化エネルギーを正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) ΔH と平衡が変わらない理由を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "(2) 逆反応の活性化エネルギーの値",
+            "points": 1
+          },
+          {
+            "criterion": "(3) 活性化エネルギー以上の分子の割合の増加で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[60-(-25), 40-(-25)]",
+        "expected": "[85, 65]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-energy_diagram",
+      "explanation_detail": {
+        "approach": "図で、反応物・遷移状態・生成物の3つの高さを確認する。逆反応は生成物から遷移状態へ上がる。",
+        "steps": [
+          "遷移状態は反応物より 60 kJ 高く、生成物は反応物より 25 kJ 低い。",
+          "逆反応の活性化エネルギー：$60-(-25)=85$ kJ/mol。",
+          "触媒あり：$40-(-25)=65$ kJ/mol。ΔH は不変。",
+          "温度上昇で、$E_{\\mathrm{a}}$ をこえる分子の割合が増える。"
+        ],
+        "alternatives": [
+          "正反応と逆反応の活性化エネルギーの差が ΔH になる（$E_{\\mathrm{a,正}}-E_{\\mathrm{a,逆}}=\\Delta H$）ことを使って確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 2
+          },
+          {
+            "point": "(2) 理由",
+            "points": 3
+          },
+          {
+            "point": "(2) 値",
+            "points": 1
+          },
+          {
+            "point": "(3)",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "逆反応の活性化エネルギーを正反応と同じとする。",
+          "触媒で ΔH も小さくなると考える。",
+          "温度上昇の効果を「衝突回数の増加」だけで説明する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "図は、ある気体反応 A → B の進行に伴うエンタルピーの変化を表したもので、触媒がないときの活性化エネルギーは 60 kJ/mol、反応エンタルピーは $\\Delta H=-90$ kJ/mol である。触媒を加えると活性化エネルギーは 20 kJ/mol になった。\n(1) 触媒がないとき、逆反応 B → A の活性化エネルギーは何 kJ/mol か。\n(2) 触媒を加えたとき、逆反応の活性化エネルギーと反応エンタルピー、平衡の位置はどうなるか。理由とともに答えなさい。\n(3) 温度を上げると反応速度が大きくなる理由を、分子のエネルギーの分布にふれて説明しなさい。",
+      "figure": {
+        "alt": "反応の進行に伴うエンタルピーの変化。反応物から遷移状態まで 60 kJ（活性化エネルギー Ea）上がり、生成物は反応物より 90 kJ 低い（発熱反応、ΔH＜0）。触媒を用いた経路（低い山）の活性化エネルギーは 20 kJ。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 238 238\" width=\"238\" height=\"238\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"224\" x2=\"230\" y2=\"224\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"224\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"226\" y=\"237\" font-style=\"italic\">反応の進行</text><text x=\"19\" y=\"12\" font-style=\"italic\">H</text><text x=\"3\" y=\"236\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"210\" height=\"210\"/></clipPath><path d=\"M14,149.14 L15.05,149.14 L16.1,149.14 L17.15,149.14 L18.2,149.14 L19.25,149.14 L20.3,149.14 L21.35,149.14 L22.4,149.14 L23.45,149.14 L24.5,149.14 L25.55,149.14 L26.6,149.14 L27.65,149.14 L28.7,149.14 L29.75,149.14 L30.8,149.14 L31.85,149.14 L32.9,149.14 L33.95,149.14 L35,149.14 L36.05,149.14 L37.1,149.14 L38.15,149.14 L39.2,149.14 L40.25,149.14 L41.3,149.14 L42.35,149.14 L43.4,149.14 L44.45,149.14 L45.5,149.14 L46.55,149.14 L47.6,149.14 L48.65,149.14 L49.7,149.14 L50.75,149.14 L51.8,149.14 L52.85,149.14 L53.9,149.14 L54.95,149.12 L56,149.04 L57.05,148.91 L58.1,148.72 L59.15,148.48 L60.2,148.19 L61.25,147.84 L62.3,147.44 L63.35,146.99 L64.4,146.5 L65.45,145.95 L66.5,145.36 L67.55,144.73 L68.6,144.06 L69.65,143.34 L70.7,142.59 L71.75,141.8 L72.8,140.98 L73.85,140.12 L74.9,139.24 L75.95,138.34 L77,137.41 L78.05,136.46 L79.1,135.5 L80.15,134.52 L81.2,133.53 L82.25,132.53 L83.3,131.53 L84.35,130.52 L85.4,129.52 L86.45,128.52 L87.5,127.52 L88.55,126.54 L89.6,125.57 L90.65,124.62 L91.7,123.68 L92.75,122.77 L93.8,121.88 L94.85,121.02 L95.9,120.19 L96.95,119.39 L98,118.62 L99.05,117.89 L100.1,117.2 L101.15,116.56 L102.2,115.95 L103.25,115.39 L104.3,114.88 L105.35,114.42 L106.4,114 L107.45,113.64 L108.5,113.32 L109.55,113.07 L110.6,112.86 L111.65,112.71 L112.7,112.61 L113.75,112.57 L114.8,112.61 L115.85,112.79 L116.9,113.1 L117.95,113.55 L119,114.13 L120.05,114.85 L121.1,115.69 L122.15,116.67 L123.2,117.77 L124.25,119 L125.3,120.34 L126.35,121.8 L127.4,123.37 L128.45,125.04 L129.5,126.82 L130.55,128.69 L131.6,130.65 L132.65,132.69 L133.7,134.81 L134.75,137 L135.8,139.26 L136.85,141.57 L137.9,143.93 L138.95,146.34 L140,148.78 L141.05,151.25 L142.1,153.75 L143.15,156.25 L144.2,158.76 L145.25,161.28 L146.3,163.78 L147.35,166.26 L148.4,168.72 L149.45,171.15 L150.5,173.55 L151.55,175.89 L152.6,178.18 L153.65,180.41 L154.7,182.58 L155.75,184.67 L156.8,186.68 L157.85,188.61 L158.9,190.44 L159.95,192.18 L161,193.81 L162.05,195.34 L163.1,196.75 L164.15,198.05 L165.2,199.23 L166.25,200.29 L167.3,201.22 L168.35,202.01 L169.4,202.68 L170.45,203.21 L171.5,203.61 L172.55,203.87 L173.6,203.99 L174.65,204 L175.7,204 L176.75,204 L177.8,204 L178.85,204 L179.9,204 L180.95,204 L182,204 L183.05,204 L184.1,204 L185.15,204 L186.2,204 L187.25,204 L188.3,204 L189.35,204 L190.4,204 L191.45,204 L192.5,204 L193.55,204 L194.6,204 L195.65,204 L196.7,204 L197.75,204 L198.8,204 L199.85,204 L200.9,204 L201.95,204 L203,204 L204.05,204 L205.1,204 L206.15,204 L207.2,204 L208.25,204 L209.3,204 L210.35,204 L211.4,204 L212.45,204 L213.5,204 L214.55,204 L215.6,204 L216.65,204 L217.7,204 L218.75,204 L219.8,204 L220.85,204 L221.9,204 L222.95,204 L224,204\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><clipPath id=\"k9\"><rect x=\"14\" y=\"14\" width=\"210\" height=\"210\"/></clipPath><path d=\"M14,149.14 L15.05,149.14 L16.1,149.14 L17.15,149.14 L18.2,149.14 L19.25,149.14 L20.3,149.14 L21.35,149.14 L22.4,149.14 L23.45,149.14 L24.5,149.14 L25.55,149.14 L26.6,149.14 L27.65,149.14 L28.7,149.14 L29.75,149.14 L30.8,149.14 L31.85,149.14 L32.9,149.14 L33.95,149.14 L35,149.14 L36.05,149.14 L37.1,149.14 L38.15,149.14 L39.2,149.14 L40.25,149.14 L41.3,149.14 L42.35,149.14 L43.4,149.14 L44.45,149.14 L45.5,149.14 L46.55,149.14 L47.6,149.14 L48.65,149.14 L49.7,149.14 L50.75,149.14 L51.8,149.14 L52.85,149.14 L53.9,149.14 L54.95,149.14 L56,149.11 L57.05,149.07 L58.1,149 L59.15,148.92 L60.2,148.82 L61.25,148.71 L62.3,148.58 L63.35,148.43 L64.4,148.26 L65.45,148.08 L66.5,147.88 L67.55,147.67 L68.6,147.45 L69.65,147.21 L70.7,146.96 L71.75,146.69 L72.8,146.42 L73.85,146.14 L74.9,145.84 L75.95,145.54 L77,145.23 L78.05,144.92 L79.1,144.59 L80.15,144.27 L81.2,143.94 L82.25,143.61 L83.3,143.27 L84.35,142.94 L85.4,142.6 L86.45,142.27 L87.5,141.94 L88.55,141.61 L89.6,141.29 L90.65,140.97 L91.7,140.66 L92.75,140.35 L93.8,140.06 L94.85,139.77 L95.9,139.49 L96.95,139.22 L98,138.97 L99.05,138.73 L100.1,138.5 L101.15,138.28 L102.2,138.08 L103.25,137.89 L104.3,137.72 L105.35,137.57 L106.4,137.43 L107.45,137.31 L108.5,137.2 L109.55,137.12 L110.6,137.05 L111.65,137 L112.7,136.97 L113.75,136.95 L114.8,136.98 L115.85,137.11 L116.9,137.34 L117.95,137.67 L119,138.09 L120.05,138.62 L121.1,139.24 L122.15,139.96 L123.2,140.77 L124.25,141.67 L125.3,142.65 L126.35,143.72 L127.4,144.87 L128.45,146.1 L129.5,147.4 L130.55,148.77 L131.6,150.21 L132.65,151.71 L133.7,153.26 L134.75,154.87 L135.8,156.52 L136.85,158.22 L137.9,159.95 L138.95,161.71 L140,163.51 L141.05,165.32 L142.1,167.15 L143.15,168.98 L144.2,170.83 L145.25,172.67 L146.3,174.5 L147.35,176.33 L148.4,178.13 L149.45,179.91 L150.5,181.67 L151.55,183.39 L152.6,185.07 L153.65,186.7 L154.7,188.29 L155.75,189.82 L156.8,191.3 L157.85,192.71 L158.9,194.06 L159.95,195.33 L161,196.53 L162.05,197.65 L163.1,198.69 L164.15,199.64 L165.2,200.5 L166.25,201.28 L167.3,201.96 L168.35,202.54 L169.4,203.03 L170.45,203.42 L171.5,203.71 L172.55,203.9 L173.6,203.99 L174.65,204 L175.7,204 L176.75,204 L177.8,204 L178.85,204 L179.9,204 L180.95,204 L182,204 L183.05,204 L184.1,204 L185.15,204 L186.2,204 L187.25,204 L188.3,204 L189.35,204 L190.4,204 L191.45,204 L192.5,204 L193.55,204 L194.6,204 L195.65,204 L196.7,204 L197.75,204 L198.8,204 L199.85,204 L200.9,204 L201.95,204 L203,204 L204.05,204 L205.1,204 L206.15,204 L207.2,204 L208.25,204 L209.3,204 L210.35,204 L211.4,204 L212.45,204 L213.5,204 L214.55,204 L215.6,204 L216.65,204 L217.7,204 L218.75,204 L219.8,204 L220.85,204 L221.9,204 L222.95,204 L224,204\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k9)\"/><line x1=\"38\" y1=\"149.14\" x2=\"38\" y2=\"112.57\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"34\" y1=\"112.57\" x2=\"114\" y2=\"112.57\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"198\" y1=\"149.14\" x2=\"198\" y2=\"204\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"54\" y1=\"149.14\" x2=\"202\" y2=\"149.14\" stroke=\"#333\" stroke-width=\"1\"/><text x=\"20\" y=\"142.14\">反応物</text><text x=\"180\" y=\"197\">生成物</text><text x=\"98\" y=\"104.57\">遷移状態</text><text x=\"102\" y=\"148.95\">触媒あり</text><text x=\"41\" y=\"130.86\">Ea</text><text x=\"201\" y=\"176.57\">ΔH</text></svg>",
+        "caption": "反応の進行とエンタルピー（概形）"
+      },
+      "answer": {
+        "value": "(1) 逆反応では生成物から遷移状態までの差なので $60-(-90)=150$ kJ/mol。(2) 逆反応の活性化エネルギーは $20-(-90)=110$ kJ/mol に小さくなる。反応物と生成物のエンタルピーは変わらないので $\\Delta H$ は $-90$ kJ/mol のまま。触媒は正反応と逆反応を同じように速めるので、平衡の位置は変わらない（平衡に達するまでの時間が短くなる）。(3) 温度を上げると分子の運動エネルギーの分布が高エネルギー側に広がり、活性化エネルギー以上のエネルギーをもつ分子の割合が大きく増えるため、反応できる衝突が増える。"
+      },
+      "explanation": "活性化エネルギーは山の高さ、ΔH は両端の高さの差。触媒は山だけを低くする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 逆反応の活性化エネルギーを正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) ΔH と平衡が変わらない理由を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "(2) 逆反応の活性化エネルギーの値",
+            "points": 1
+          },
+          {
+            "criterion": "(3) 活性化エネルギー以上の分子の割合の増加で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[60-(-90), 20-(-90)]",
+        "expected": "[150, 110]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-energy_diagram",
+      "explanation_detail": {
+        "approach": "図で、反応物・遷移状態・生成物の3つの高さを確認する。逆反応は生成物から遷移状態へ上がる。",
+        "steps": [
+          "遷移状態は反応物より 60 kJ 高く、生成物は反応物より 90 kJ 低い。",
+          "逆反応の活性化エネルギー：$60-(-90)=150$ kJ/mol。",
+          "触媒あり：$20-(-90)=110$ kJ/mol。ΔH は不変。",
+          "温度上昇で、$E_{\\mathrm{a}}$ をこえる分子の割合が増える。"
+        ],
+        "alternatives": [
+          "正反応と逆反応の活性化エネルギーの差が ΔH になる（$E_{\\mathrm{a,正}}-E_{\\mathrm{a,逆}}=\\Delta H$）ことを使って確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 2
+          },
+          {
+            "point": "(2) 理由",
+            "points": 3
+          },
+          {
+            "point": "(2) 値",
+            "points": 1
+          },
+          {
+            "point": "(3)",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "逆反応の活性化エネルギーを正反応と同じとする。",
+          "触媒で ΔH も小さくなると考える。",
+          "温度上昇の効果を「衝突回数の増加」だけで説明する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "図は、ある気体反応 A → B の進行に伴うエンタルピーの変化を表したもので、触媒がないときの活性化エネルギーは 150 kJ/mol、反応エンタルピーは $\\Delta H=-90$ kJ/mol である。触媒を加えると活性化エネルギーは 120 kJ/mol になった。\n(1) 触媒がないとき、逆反応 B → A の活性化エネルギーは何 kJ/mol か。\n(2) 触媒を加えたとき、逆反応の活性化エネルギーと反応エンタルピー、平衡の位置はどうなるか。理由とともに答えなさい。\n(3) 温度を上げると反応速度が大きくなる理由を、分子のエネルギーの分布にふれて説明しなさい。",
+      "figure": {
+        "alt": "反応の進行に伴うエンタルピーの変化。反応物から遷移状態まで 150 kJ（活性化エネルギー Ea）上がり、生成物は反応物より 90 kJ 低い（発熱反応、ΔH＜0）。触媒を用いた経路（低い山）の活性化エネルギーは 120 kJ。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 238 238\" width=\"238\" height=\"238\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"224\" x2=\"230\" y2=\"224\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"224\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"226\" y=\"237\" font-style=\"italic\">反応の進行</text><text x=\"19\" y=\"12\" font-style=\"italic\">H</text><text x=\"3\" y=\"236\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"210\" height=\"210\"/></clipPath><path d=\"M14,164.66 L15.05,164.66 L16.1,164.66 L17.15,164.66 L18.2,164.66 L19.25,164.66 L20.3,164.66 L21.35,164.66 L22.4,164.66 L23.45,164.66 L24.5,164.66 L25.55,164.66 L26.6,164.66 L27.65,164.66 L28.7,164.66 L29.75,164.66 L30.8,164.66 L31.85,164.66 L32.9,164.66 L33.95,164.66 L35,164.66 L36.05,164.66 L37.1,164.66 L38.15,164.66 L39.2,164.66 L40.25,164.66 L41.3,164.66 L42.35,164.66 L43.4,164.66 L44.45,164.66 L45.5,164.66 L46.55,164.66 L47.6,164.66 L48.65,164.66 L49.7,164.66 L50.75,164.66 L51.8,164.66 L52.85,164.66 L53.9,164.66 L54.95,164.62 L56,164.48 L57.05,164.24 L58.1,163.9 L59.15,163.47 L60.2,162.94 L61.25,162.32 L62.3,161.61 L63.35,160.8 L64.4,159.91 L65.45,158.94 L66.5,157.88 L67.55,156.74 L68.6,155.53 L69.65,154.25 L70.7,152.9 L71.75,151.49 L72.8,150.01 L73.85,148.48 L74.9,146.91 L75.95,145.28 L77,143.62 L78.05,141.92 L79.1,140.19 L80.15,138.43 L81.2,136.66 L82.25,134.87 L83.3,133.07 L84.35,131.27 L85.4,129.47 L86.45,127.67 L87.5,125.89 L88.55,124.13 L89.6,122.39 L90.65,120.68 L91.7,119.01 L92.75,117.37 L93.8,115.77 L94.85,114.23 L95.9,112.74 L96.95,111.3 L98,109.93 L99.05,108.62 L100.1,107.39 L101.15,106.23 L102.2,105.14 L103.25,104.14 L104.3,103.22 L105.35,102.39 L106.4,101.64 L107.45,100.99 L108.5,100.43 L109.55,99.97 L110.6,99.6 L111.65,99.33 L112.7,99.16 L113.75,99.08 L114.8,99.13 L115.85,99.33 L116.9,99.69 L117.95,100.2 L119,100.87 L120.05,101.69 L121.1,102.67 L122.15,103.79 L123.2,105.05 L124.25,106.46 L125.3,108 L126.35,109.67 L127.4,111.47 L128.45,113.39 L129.5,115.43 L130.55,117.58 L131.6,119.82 L132.65,122.17 L133.7,124.6 L134.75,127.12 L135.8,129.7 L136.85,132.36 L137.9,135.07 L138.95,137.83 L140,140.63 L141.05,143.47 L142.1,146.33 L143.15,149.21 L144.2,152.09 L145.25,154.97 L146.3,157.84 L147.35,160.7 L148.4,163.52 L149.45,166.31 L150.5,169.05 L151.55,171.74 L152.6,174.37 L153.65,176.93 L154.7,179.42 L155.75,181.82 L156.8,184.13 L157.85,186.34 L158.9,188.44 L159.95,190.43 L161,192.31 L162.05,194.06 L163.1,195.69 L164.15,197.18 L165.2,198.53 L166.25,199.74 L167.3,200.8 L168.35,201.72 L169.4,202.49 L170.45,203.1 L171.5,203.55 L172.55,203.85 L173.6,203.99 L174.65,204 L175.7,204 L176.75,204 L177.8,204 L178.85,204 L179.9,204 L180.95,204 L182,204 L183.05,204 L184.1,204 L185.15,204 L186.2,204 L187.25,204 L188.3,204 L189.35,204 L190.4,204 L191.45,204 L192.5,204 L193.55,204 L194.6,204 L195.65,204 L196.7,204 L197.75,204 L198.8,204 L199.85,204 L200.9,204 L201.95,204 L203,204 L204.05,204 L205.1,204 L206.15,204 L207.2,204 L208.25,204 L209.3,204 L210.35,204 L211.4,204 L212.45,204 L213.5,204 L214.55,204 L215.6,204 L216.65,204 L217.7,204 L218.75,204 L219.8,204 L220.85,204 L221.9,204 L222.95,204 L224,204\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><clipPath id=\"k9\"><rect x=\"14\" y=\"14\" width=\"210\" height=\"210\"/></clipPath><path d=\"M14,164.66 L15.05,164.66 L16.1,164.66 L17.15,164.66 L18.2,164.66 L19.25,164.66 L20.3,164.66 L21.35,164.66 L22.4,164.66 L23.45,164.66 L24.5,164.66 L25.55,164.66 L26.6,164.66 L27.65,164.66 L28.7,164.66 L29.75,164.66 L30.8,164.66 L31.85,164.66 L32.9,164.66 L33.95,164.66 L35,164.66 L36.05,164.66 L37.1,164.66 L38.15,164.66 L39.2,164.66 L40.25,164.66 L41.3,164.66 L42.35,164.66 L43.4,164.66 L44.45,164.66 L45.5,164.66 L46.55,164.66 L47.6,164.66 L48.65,164.66 L49.7,164.66 L50.75,164.66 L51.8,164.66 L52.85,164.66 L53.9,164.66 L54.95,164.62 L56,164.51 L57.05,164.32 L58.1,164.05 L59.15,163.71 L60.2,163.29 L61.25,162.79 L62.3,162.22 L63.35,161.57 L64.4,160.86 L65.45,160.08 L66.5,159.24 L67.55,158.33 L68.6,157.36 L69.65,156.33 L70.7,155.25 L71.75,154.12 L72.8,152.94 L73.85,151.72 L74.9,150.46 L75.95,149.16 L77,147.83 L78.05,146.47 L79.1,145.08 L80.15,143.68 L81.2,142.26 L82.25,140.83 L83.3,139.39 L84.35,137.95 L85.4,136.51 L86.45,135.07 L87.5,133.65 L88.55,132.24 L89.6,130.85 L90.65,129.48 L91.7,128.14 L92.75,126.83 L93.8,125.55 L94.85,124.31 L95.9,123.12 L96.95,121.97 L98,120.88 L99.05,119.83 L100.1,118.84 L101.15,117.91 L102.2,117.05 L103.25,116.24 L104.3,115.51 L105.35,114.84 L106.4,114.25 L107.45,113.72 L108.5,113.28 L109.55,112.91 L110.6,112.61 L111.65,112.4 L112.7,112.26 L113.75,112.2 L114.8,112.24 L115.85,112.41 L116.9,112.72 L117.95,113.17 L119,113.76 L120.05,114.48 L121.1,115.33 L122.15,116.31 L123.2,117.42 L124.25,118.65 L125.3,120 L126.35,121.46 L127.4,123.04 L128.45,124.72 L129.5,126.5 L130.55,128.38 L131.6,130.35 L132.65,132.4 L133.7,134.53 L134.75,136.73 L135.8,138.99 L136.85,141.31 L137.9,143.69 L138.95,146.1 L140,148.55 L141.05,151.04 L142.1,153.54 L143.15,156.06 L144.2,158.58 L145.25,161.1 L146.3,163.61 L147.35,166.11 L148.4,168.58 L149.45,171.02 L150.5,173.42 L151.55,175.78 L152.6,178.08 L153.65,180.32 L154.7,182.49 L155.75,184.59 L156.8,186.61 L157.85,188.54 L158.9,190.39 L159.95,192.13 L161,193.77 L162.05,195.3 L163.1,196.73 L164.15,198.03 L165.2,199.21 L166.25,200.27 L167.3,201.2 L168.35,202.01 L169.4,202.68 L170.45,203.21 L171.5,203.61 L172.55,203.87 L173.6,203.99 L174.65,204 L175.7,204 L176.75,204 L177.8,204 L178.85,204 L179.9,204 L180.95,204 L182,204 L183.05,204 L184.1,204 L185.15,204 L186.2,204 L187.25,204 L188.3,204 L189.35,204 L190.4,204 L191.45,204 L192.5,204 L193.55,204 L194.6,204 L195.65,204 L196.7,204 L197.75,204 L198.8,204 L199.85,204 L200.9,204 L201.95,204 L203,204 L204.05,204 L205.1,204 L206.15,204 L207.2,204 L208.25,204 L209.3,204 L210.35,204 L211.4,204 L212.45,204 L213.5,204 L214.55,204 L215.6,204 L216.65,204 L217.7,204 L218.75,204 L219.8,204 L220.85,204 L221.9,204 L222.95,204 L224,204\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k9)\"/><line x1=\"38\" y1=\"164.66\" x2=\"38\" y2=\"99.08\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"34\" y1=\"99.08\" x2=\"114\" y2=\"99.08\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"198\" y1=\"164.66\" x2=\"198\" y2=\"204\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"54\" y1=\"164.66\" x2=\"202\" y2=\"164.66\" stroke=\"#333\" stroke-width=\"1\"/><text x=\"20\" y=\"157.66\">反応物</text><text x=\"180\" y=\"197\">生成物</text><text x=\"98\" y=\"91.08\">遷移状態</text><text x=\"102\" y=\"124.2\">触媒あり</text><text x=\"41\" y=\"131.87\">Ea</text><text x=\"201\" y=\"184.33\">ΔH</text></svg>",
+        "caption": "反応の進行とエンタルピー（概形）"
+      },
+      "answer": {
+        "value": "(1) 逆反応では生成物から遷移状態までの差なので $150-(-90)=240$ kJ/mol。(2) 逆反応の活性化エネルギーは $120-(-90)=210$ kJ/mol に小さくなる。反応物と生成物のエンタルピーは変わらないので $\\Delta H$ は $-90$ kJ/mol のまま。触媒は正反応と逆反応を同じように速めるので、平衡の位置は変わらない（平衡に達するまでの時間が短くなる）。(3) 温度を上げると分子の運動エネルギーの分布が高エネルギー側に広がり、活性化エネルギー以上のエネルギーをもつ分子の割合が大きく増えるため、反応できる衝突が増える。"
+      },
+      "explanation": "活性化エネルギーは山の高さ、ΔH は両端の高さの差。触媒は山だけを低くする。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 逆反応の活性化エネルギーを正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) ΔH と平衡が変わらない理由を述べている",
+            "points": 3
+          },
+          {
+            "criterion": "(2) 逆反応の活性化エネルギーの値",
+            "points": 1
+          },
+          {
+            "criterion": "(3) 活性化エネルギー以上の分子の割合の増加で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "[150-(-90), 120-(-90)]",
+        "expected": "[240, 210]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-energy_diagram",
+      "explanation_detail": {
+        "approach": "図で、反応物・遷移状態・生成物の3つの高さを確認する。逆反応は生成物から遷移状態へ上がる。",
+        "steps": [
+          "遷移状態は反応物より 150 kJ 高く、生成物は反応物より 90 kJ 低い。",
+          "逆反応の活性化エネルギー：$150-(-90)=240$ kJ/mol。",
+          "触媒あり：$120-(-90)=210$ kJ/mol。ΔH は不変。",
+          "温度上昇で、$E_{\\mathrm{a}}$ をこえる分子の割合が増える。"
+        ],
+        "alternatives": [
+          "正反応と逆反応の活性化エネルギーの差が ΔH になる（$E_{\\mathrm{a,正}}-E_{\\mathrm{a,逆}}=\\Delta H$）ことを使って確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1)",
+            "points": 2
+          },
+          {
+            "point": "(2) 理由",
+            "points": 3
+          },
+          {
+            "point": "(2) 値",
+            "points": 1
+          },
+          {
+            "point": "(3)",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "逆反応の活性化エネルギーを正反応と同じとする。",
+          "触媒で ΔH も小さくなると考える。",
+          "温度上昇の効果を「衝突回数の増加」だけで説明する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "アンモニアの工業的製法（ハーバー・ボッシュ法）では、鉄を主成分とする触媒を用い、約 400〜500 ℃、$1\\times10^{7}$〜$3\\times10^{7}$ Pa 程度の高圧で反応させる。\n(1) 平衡の面から、アンモニアの生成に有利な温度・圧力の条件を理由とともに答えなさい。\n(2) それにもかかわらず、低温ではなく 400〜500 ℃ 程度で反応させる理由を、反応速度と触媒の役割にふれて説明しなさい。",
+      "answer": {
+        "value": "(1) 正反応は発熱反応なので低温ほど、また気体分子の数が減る反応（4 分子 → 2 分子）なので高圧ほど平衡が右に移動し、有利である。(2) 低温では平衡は有利でも反応速度が非常に小さく、平衡に達するまでに時間がかかりすぎる。そこで触媒を用いて活性化エネルギーを下げたうえで、ある程度高い温度にして速度を確保している。触媒は平衡の位置を変えないので、温度は収率と速度のかね合いで決まる。"
+      },
+      "explanation": "平衡（どこまで進むか）と速度（どれだけ速く進むか）を分けて考える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 低温を発熱反応で説明している",
+            "points": 2
+          },
+          {
+            "criterion": "(1) 高圧を気体分子数の減少で説明している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 低温では速度が小さいことを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 触媒は平衡を変えず速度を上げることを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-lc_explain",
+      "explanation_detail": {
+        "approach": "ルシャトリエの原理で平衡の移動を判断し、反応速度（温度・触媒）の観点を別に考える。触媒は平衡を変えない。",
+        "steps": [
+          "正反応の ΔH の符号から、温度による平衡移動の向きを決める。",
+          "両辺の気体分子の数から、圧力による移動の向きを決める。",
+          "速度の観点（温度・触媒）を加えて、条件の選び方や観察結果を説明する。"
+        ],
+        "alternatives": [
+          "平衡定数の式で、濃度商 $Q$ と $K$ を比べる方法で平衡移動の向きを確かめてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1) 低温を発熱反応で説明している",
+            "points": 2
+          },
+          {
+            "point": "(1) 高圧を気体分子数の減少で説明している",
+            "points": 2
+          },
+          {
+            "point": "(2) 低温では速度が小さいことを述べている",
+            "points": 2
+          },
+          {
+            "point": "(2) 触媒は平衡を変えず速度を上げることを述べている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "平衡の有利さと反応の速さを区別せずに説明する。",
+          "触媒で平衡が移動すると書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "次の文章を読んで、問いに答えなさい。\nアンモニアの工業的製法（ハーバー・ボッシュ法）では、鉄を主成分とする触媒を用い、約 400〜500 ℃、$1\\times10^{7}$〜$3\\times10^{7}$ Pa 程度の高圧で反応させる。\n(1) 平衡の面から、アンモニアの生成に有利な温度・圧力の条件を理由とともに答えなさい。\n(2) それにもかかわらず、低温ではなく 400〜500 ℃ 程度で反応させる理由を、反応速度と触媒の役割にふれて説明しなさい。",
+      "answer": {
+        "value": "(1) 正反応は発熱反応なので低温ほど、また気体分子の数が減る反応（4 分子 → 2 分子）なので高圧ほど平衡が右に移動し、有利である。(2) 低温では平衡は有利でも反応速度が非常に小さく、平衡に達するまでに時間がかかりすぎる。そこで触媒を用いて活性化エネルギーを下げたうえで、ある程度高い温度にして速度を確保している。触媒は平衡の位置を変えないので、温度は収率と速度のかね合いで決まる。"
+      },
+      "explanation": "平衡（どこまで進むか）と速度（どれだけ速く進むか）を分けて考える。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 低温を発熱反応で説明している",
+            "points": 2
+          },
+          {
+            "criterion": "(1) 高圧を気体分子数の減少で説明している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 低温では速度が小さいことを述べている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 触媒は平衡を変えず速度を上げることを述べている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-lc_explain",
+      "explanation_detail": {
+        "approach": "ルシャトリエの原理で平衡の移動を判断し、反応速度（温度・触媒）の観点を別に考える。触媒は平衡を変えない。",
+        "steps": [
+          "正反応の ΔH の符号から、温度による平衡移動の向きを決める。",
+          "両辺の気体分子の数から、圧力による移動の向きを決める。",
+          "速度の観点（温度・触媒）を加えて、条件の選び方や観察結果を説明する。"
+        ],
+        "alternatives": [
+          "平衡定数の式で、濃度商 $Q$ と $K$ を比べる方法で平衡移動の向きを確かめてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "(1) 低温を発熱反応で説明している",
+            "points": 2
+          },
+          {
+            "point": "(1) 高圧を気体分子数の減少で説明している",
+            "points": 2
+          },
+          {
+            "point": "(2) 低温では速度が小さいことを述べている",
+            "points": 2
+          },
+          {
+            "point": "(2) 触媒は平衡を変えず速度を上げることを述べている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "平衡の有利さと反応の速さを区別せずに説明する。",
+          "触媒で平衡が移動すると書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "25 ℃ における塩化銀 AgCl の溶解度積を $K_{\\mathrm{sp}}=1.8\\times10^{-10}\\ (\\mathrm{mol/L})^2$ とする。\n(1) $4.0\\times10^{-6}$ mol/L の硝酸銀水溶液 200 mL と $5.0\\times10^{-5}$ mol/L の塩化ナトリウム水溶液 200 mL を混合したとき、塩化銀の沈殿は生じるか。計算の根拠とともに答えなさい（体積は和になるものとする）。\n(2) 0.10 mol/L の塩化ナトリウム水溶液に溶ける塩化銀の最大の物質量は、水溶液 1 L あたり何 mol か。また、純水に溶ける量と比べて小さくなる理由を説明しなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "(1) 混合直後 $[\\mathrm{Ag^+}]=2.0\\times10^{-6}$ mol/L、$[\\mathrm{Cl^-}]=2.5\\times10^{-5}$ mol/L、積は $5.0\\times10^{-11}$ $(\\mathrm{mol/L})^2$。これは $K_{\\mathrm{sp}}$ より小さいので沈殿は生じない。(2) $[\\mathrm{Cl^-}]\\fallingdotseq0.10$ mol/L とみなすと、$[\\mathrm{Ag^+}]=\\dfrac{1.8\\times10^{-10}}{0.10}=1.8\\times10^{-9}$ mol/L なので $1.8\\times10^{-9}$ mol。塩化物イオンが多量にあると、$\\mathrm{AgCl}\\rightleftharpoons\\mathrm{Ag^+}+\\mathrm{Cl^-}$ の平衡が左に移動し（共通イオン効果）、溶ける量が小さくなる（純水では約 $1.3\\times10^{-5}$ mol）。"
+      },
+      "explanation": "イオン濃度の積と $K_{\\mathrm{sp}}$ を比べる。共通イオンがあると溶解度が下がる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 混合後の濃度（体積が2倍で半分）を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(1) 積と $K_{\\mathrm{sp}}$ を比べて判断している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 溶ける量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 共通イオン効果で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "[1/250000/2*1/20000/2, Rational(18,10)*10**(-10)/(1/10)]",
+        "expected": "[1/20000000000, 9/5000000000]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-ksp",
+      "explanation_detail": {
+        "approach": "混合すると体積が2倍になり、各イオンの濃度は半分になる。$[\\mathrm{Ag^+}][\\mathrm{Cl^-}]>K_{\\mathrm{sp}}$ なら沈殿が生じる。",
+        "steps": [
+          "(1) $[\\mathrm{Ag^+}]=4.0\\times10^{-6}\\times\\dfrac{1}{2}=2.0\\times10^{-6}$、$[\\mathrm{Cl^-}]=2.5\\times10^{-5}$ mol/L。",
+          "積 $5.0\\times10^{-11}$ と $1.8\\times10^{-10}$ を比較。",
+          "(2) $[\\mathrm{Ag^+}]\\times0.10=1.8\\times10^{-10}$ より $1.8\\times10^{-9}$ mol/L。",
+          "ルシャトリエの原理（共通イオン効果）で理由を述べる。"
+        ],
+        "alternatives": [
+          "純水への溶解度 $\\sqrt{1.8\\times10^{-10}}\\fallingdotseq1.3\\times10^{-5}$ mol/L を求め、数値で比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "混合後の濃度",
+            "points": 2
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "溶解量",
+            "points": 2
+          },
+          {
+            "point": "理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "混合による濃度の変化（半分になる）を考えない。",
+          "溶けた AgCl からの $\\mathrm{Cl^-}$ を足して計算を複雑にする（無視できる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "25 ℃ における塩化銀 AgCl の溶解度積を $K_{\\mathrm{sp}}=1.8\\times10^{-10}\\ (\\mathrm{mol/L})^2$ とする。\n(1) $1.0\\times10^{-6}$ mol/L の硝酸銀水溶液 200 mL と $2.0\\times10^{-6}$ mol/L の塩化ナトリウム水溶液 200 mL を混合したとき、塩化銀の沈殿は生じるか。計算の根拠とともに答えなさい（体積は和になるものとする）。\n(2) 0.010 mol/L の塩化ナトリウム水溶液に溶ける塩化銀の最大の物質量は、水溶液 1 L あたり何 mol か。また、純水に溶ける量と比べて小さくなる理由を説明しなさい。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "(1) 混合直後 $[\\mathrm{Ag^+}]=5.0\\times10^{-7}$ mol/L、$[\\mathrm{Cl^-}]=1.0\\times10^{-6}$ mol/L、積は $5.0\\times10^{-13}$ $(\\mathrm{mol/L})^2$。これは $K_{\\mathrm{sp}}$ より小さいので沈殿は生じない。(2) $[\\mathrm{Cl^-}]\\fallingdotseq0.010$ mol/L とみなすと、$[\\mathrm{Ag^+}]=\\dfrac{1.8\\times10^{-10}}{0.010}=1.8\\times10^{-8}$ mol/L なので $1.8\\times10^{-8}$ mol。塩化物イオンが多量にあると、$\\mathrm{AgCl}\\rightleftharpoons\\mathrm{Ag^+}+\\mathrm{Cl^-}$ の平衡が左に移動し（共通イオン効果）、溶ける量が小さくなる（純水では約 $1.3\\times10^{-5}$ mol）。"
+      },
+      "explanation": "イオン濃度の積と $K_{\\mathrm{sp}}$ を比べる。共通イオンがあると溶解度が下がる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 混合後の濃度（体積が2倍で半分）を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(1) 積と $K_{\\mathrm{sp}}$ を比べて判断している",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 溶ける量を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 共通イオン効果で説明している",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "[1/1000000/2*1/500000/2, Rational(18,10)*10**(-10)/(1/100)]",
+        "expected": "[1/2000000000000, 9/500000000]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-ksp",
+      "explanation_detail": {
+        "approach": "混合すると体積が2倍になり、各イオンの濃度は半分になる。$[\\mathrm{Ag^+}][\\mathrm{Cl^-}]>K_{\\mathrm{sp}}$ なら沈殿が生じる。",
+        "steps": [
+          "(1) $[\\mathrm{Ag^+}]=1.0\\times10^{-6}\\times\\dfrac{1}{2}=5.0\\times10^{-7}$、$[\\mathrm{Cl^-}]=1.0\\times10^{-6}$ mol/L。",
+          "積 $5.0\\times10^{-13}$ と $1.8\\times10^{-10}$ を比較。",
+          "(2) $[\\mathrm{Ag^+}]\\times0.010=1.8\\times10^{-10}$ より $1.8\\times10^{-8}$ mol/L。",
+          "ルシャトリエの原理（共通イオン効果）で理由を述べる。"
+        ],
+        "alternatives": [
+          "純水への溶解度 $\\sqrt{1.8\\times10^{-10}}\\fallingdotseq1.3\\times10^{-5}$ mol/L を求め、数値で比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "混合後の濃度",
+            "points": 2
+          },
+          {
+            "point": "判断",
+            "points": 2
+          },
+          {
+            "point": "溶解量",
+            "points": 2
+          },
+          {
+            "point": "理由",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "混合による濃度の変化（半分になる）を考えない。",
+          "溶けた AgCl からの $\\mathrm{Cl^-}$ を足して計算を複雑にする（無視できる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "生成エンタルピー（kJ/mol）を 二酸化炭素（気）$-394$、一酸化炭素（気）$-111$ として、次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{C}\\text{(黒鉛)}+\\mathrm{CO_2}\\text{(気)}\\longrightarrow 2\\mathrm{CO}\\text{(気)}$$\n［ある生徒の解答］\n$\\Delta H=((-111))-((0)+(-394))=283$ kJ\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$172$ kJ"
+      },
+      "explanation": "生成エンタルピーは 1 mol あたりの値なので、反応式の係数（物質量）を掛けてから足す。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(-222)-(-394)",
+        "expected": "172",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-err_hess",
+      "explanation_detail": {
+        "approach": "単位で確かめる：kJ/mol × mol（係数）＝ kJ。",
+        "steps": [
+          "生成物：$-222$ kJ（係数を掛ける）。",
+          "反応物：$-394$ kJ。",
+          "$\\Delta H=172$ kJ。"
+        ],
+        "alternatives": [
+          "係数を掛けた和を表にして整理すると見落としを防げる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "係数を掛け忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Delta H=((-111))-((0)+(-394))=283$ kJ",
+        "error_step": "係数を掛けずに足し合わせた部分",
+        "error_type": "calculation",
+        "why_tempting": "生成エンタルピーが「1 mol あたり」の値であることを意識せず、物質ごとに1回ずつ足している。",
+        "correction": "係数を掛けて $\\Delta H=172$ kJ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "結合エネルギー（kJ/mol）を $\\mathrm{H{-}H}$ 436、$\\mathrm{Br{-}Br}$ 193、$\\mathrm{H{-}Br}$ 366 として、次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\mathrm{Br_2}\\text{(気)}\\longrightarrow2\\mathrm{HBr}\\text{(気)}$$\n［ある生徒の解答］\n$\\Delta H=（\\text{できる結合}）-（\\text{切れる結合}）=732-629=+103$ kJ\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-103$ kJ"
+      },
+      "explanation": "結合を切るには吸熱（＋）、結合ができると発熱（−）。ΔH＝（切れる結合の和）−（できる結合の和）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "629-732",
+        "expected": "-103",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-err_hess",
+      "explanation_detail": {
+        "approach": "原子にばらばらにする経路をエンタルピー図にかき、どちらが上向き（吸熱）かを確認する。",
+        "steps": [
+          "切れる結合の和：629 kJ。",
+          "できる結合の和：732 kJ。",
+          "$\\Delta H=629-732=-103$ kJ。"
+        ],
+        "alternatives": [
+          "身近な発熱反応（燃焼など）で ΔH が負になるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "生成エンタルピーの公式の形と混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Delta H=（\\text{できる結合}）-（\\text{切れる結合}）=732-629=+103$ kJ",
+        "error_step": "引き算の順序",
+        "error_type": "sign",
+        "why_tempting": "「生成物 − 反応物」という生成エンタルピーの形をそのまま結合エネルギーに当てはめている。結合エネルギーは結合を切るのに必要なエネルギー（正の値）であることを見落としている。",
+        "correction": "$\\Delta H=（\\text{切れる結合}）-（\\text{できる結合}）=629-732=-103$ kJ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "結合エネルギー（kJ/mol）を $\\mathrm{H{-}H}$ 436、$\\mathrm{Cl{-}Cl}$ 243、$\\mathrm{H{-}Cl}$ 432 として、次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{H_2}\\text{(気)}+\\mathrm{Cl_2}\\text{(気)}\\longrightarrow2\\mathrm{HCl}\\text{(気)}$$\n［ある生徒の解答］\n$\\Delta H=（\\text{できる結合}）-（\\text{切れる結合}）=864-679=+185$ kJ\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-185$ kJ"
+      },
+      "explanation": "結合を切るには吸熱（＋）、結合ができると発熱（−）。ΔH＝（切れる結合の和）−（できる結合の和）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "679-864",
+        "expected": "-185",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-err_hess",
+      "explanation_detail": {
+        "approach": "原子にばらばらにする経路をエンタルピー図にかき、どちらが上向き（吸熱）かを確認する。",
+        "steps": [
+          "切れる結合の和：679 kJ。",
+          "できる結合の和：864 kJ。",
+          "$\\Delta H=679-864=-185$ kJ。"
+        ],
+        "alternatives": [
+          "身近な発熱反応（燃焼など）で ΔH が負になるかを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "生成エンタルピーの公式の形と混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Delta H=（\\text{できる結合}）-（\\text{切れる結合}）=864-679=+185$ kJ",
+        "error_step": "引き算の順序",
+        "error_type": "sign",
+        "why_tempting": "「生成物 − 反応物」という生成エンタルピーの形をそのまま結合エネルギーに当てはめている。結合エネルギーは結合を切るのに必要なエネルギー（正の値）であることを見落としている。",
+        "correction": "$\\Delta H=（\\text{切れる結合}）-（\\text{できる結合}）=679-864=-185$ kJ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "生成エンタルピー（kJ/mol）を アセチレン（気）$227$、エタン（気）$-84$ として、次の反応の反応エンタルピー $\\Delta H$ を求めなさい。\n$$\\mathrm{C_2H_2}\\text{(気)}+2\\mathrm{H_2}\\text{(気)}\\longrightarrow \\mathrm{C_2H_6}\\text{(気)}$$\n［ある生徒の解答］\n$\\Delta H=（\\text{反応物}）-（\\text{生成物}）=227-(-84)=+311$ kJ\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-311$ kJ"
+      },
+      "explanation": "生成エンタルピーは単体を基準にしたエンタルピーなので、ΔH＝（生成物の和）−（反応物の和）。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(-84)-(227)",
+        "expected": "-311",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U02-err_hess",
+      "explanation_detail": {
+        "approach": "エンタルピー図で、単体の基準から反応物・生成物の高さを書き、矢印の向きで符号を確かめる。",
+        "steps": [
+          "生成物の和：$-84$ kJ。",
+          "反応物の和：$227$ kJ。",
+          "$\\Delta H=-84-(227)=-311$ kJ。"
+        ],
+        "alternatives": [
+          "生成エンタルピーの熱化学反応式を書いて目的の式を組み立て、同じ結果になるか確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "生成エンタルピーと燃焼エンタルピーで引く順序を混同する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Delta H=（\\text{反応物}）-（\\text{生成物}）=227-(-84)=+311$ kJ",
+        "error_step": "引き算の順序",
+        "error_type": "sign",
+        "why_tempting": "燃焼エンタルピーから求めるときの「反応物 − 生成物」の形と混同し、生成エンタルピーでも同じ順に引いている。",
+        "correction": "$\\Delta H=（\\text{生成物}）-（\\text{反応物}）=-84-(227)=-311$ kJ"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "容積 2.0 L の容器内で、一定温度において $\\mathrm{C}\\text{(黒鉛)}+\\mathrm{CO_2}\\rightleftharpoons2\\mathrm{CO}$ が平衡状態にあり、黒鉛 1.0 mol、$\\mathrm{CO_2}$ 0.20 mol、CO 0.60 mol が存在する。平衡定数 $K$ を求めなさい。\n［ある生徒の解答］\n$K=\\dfrac{[\\mathrm{CO}]^2}{[\\mathrm{C}][\\mathrm{CO_2}]}$ に、黒鉛も物質量÷体積で代入して $K=0.90$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.90$ mol/L"
+      },
+      "explanation": "固体（や溶媒として多量にある液体）の濃度は一定とみなせるので、平衡定数の式に含めない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(3/5/(2))**2/(1/5/(2))",
+        "expected": "9/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-err_equilibrium",
+      "explanation_detail": {
+        "approach": "平衡定数の式を書くとき、各物質の状態（固体・気体）を確認する。",
+        "steps": [
+          "$[\\mathrm{CO}]=0.30$、$[\\mathrm{CO_2}]=0.10$ mol/L。",
+          "$K=\\dfrac{(0.30)^2}{0.10}=0.90$ mol/L。"
+        ],
+        "alternatives": [
+          "黒鉛を少し加えても平衡が移動しないことと、式に含めないことが対応していると確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "固体を式に含める。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$K=\\dfrac{[\\mathrm{CO}]^2}{[\\mathrm{C}][\\mathrm{CO_2}]}$ に、黒鉛も物質量÷体積で代入して $K=0.90$",
+        "error_step": "黒鉛を平衡定数の式に含めた部分",
+        "error_type": "concept",
+        "why_tempting": "反応式に出てくるすべての物質を機械的に式に入れてしまい、固体の濃度が一定とみなせることを考えていない。",
+        "correction": "固体の黒鉛は式に含めず $K=\\dfrac{[\\mathrm{CO}]^2}{[\\mathrm{CO_2}]}=0.90$ mol/L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "可逆反応 $\\mathrm{N_2}+3\\mathrm{H_2}\\rightleftharpoons2\\mathrm{NH_3}$ が平衡状態にある。ここに触媒を加えると、$\\mathrm{NH_3}$ の物質量はどうなるか。理由とともに答えなさい。\n［ある生徒の解答］\n触媒を加えると正反応が速くなるので、平衡が右に移動し、$\\mathrm{NH_3}$ が増える\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "変わらない（平衡は移動しない）"
+      },
+      "explanation": "触媒は反応エンタルピーも平衡定数も変えない。平衡に達するまでの時間が短くなるだけである。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-err_equilibrium",
+      "explanation_detail": {
+        "approach": "触媒の効果を「速さ」と「平衡」の2つの軸に分けて考える。",
+        "steps": [
+          "触媒は活性化エネルギーの小さい別の経路をつくる。",
+          "正反応・逆反応ともに同じ経路を通るので、両方が速くなる。",
+          "平衡定数は変わらず、平衡は移動しない。"
+        ],
+        "alternatives": [
+          "エネルギー図で、触媒により山だけが低くなり、両端の高さ（ΔH）は変わらないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "触媒で生成物が増えると考える。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "触媒を加えると正反応が速くなるので、平衡が右に移動し、$\\mathrm{NH_3}$ が増える",
+        "error_step": "触媒が平衡を移動させるとした部分",
+        "error_type": "concept",
+        "why_tempting": "「触媒は反応を速くする」ことから、正反応だけが速くなると考え、平衡の移動と結びつけている。",
+        "correction": "触媒は正反応と逆反応の活性化エネルギーを同じだけ下げ、両方を同じように速くするので平衡は移動せず、$\\mathrm{NH_3}$ の物質量は変わらない"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "容積 2.0 L の容器内で、一定温度において $\\mathrm{C}\\text{(黒鉛)}+\\mathrm{CO_2}\\rightleftharpoons2\\mathrm{CO}$ が平衡状態にあり、黒鉛 2.0 mol、$\\mathrm{CO_2}$ 0.40 mol、CO 0.80 mol が存在する。平衡定数 $K$ を求めなさい。\n［ある生徒の解答］\n$K=\\dfrac{[\\mathrm{CO}]^2}{[\\mathrm{C}][\\mathrm{CO_2}]}$ に、黒鉛も物質量÷体積で代入して $K=0.40$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.80$ mol/L"
+      },
+      "explanation": "固体（や溶媒として多量にある液体）の濃度は一定とみなせるので、平衡定数の式に含めない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(4/5/(2))**2/(2/5/(2))",
+        "expected": "4/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U02-err_equilibrium",
+      "explanation_detail": {
+        "approach": "平衡定数の式を書くとき、各物質の状態（固体・気体）を確認する。",
+        "steps": [
+          "$[\\mathrm{CO}]=0.40$、$[\\mathrm{CO_2}]=0.20$ mol/L。",
+          "$K=\\dfrac{(0.40)^2}{0.20}=0.80$ mol/L。"
+        ],
+        "alternatives": [
+          "黒鉛を少し加えても平衡が移動しないことと、式に含めないことが対応していると確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "固体を式に含める。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$K=\\dfrac{[\\mathrm{CO}]^2}{[\\mathrm{C}][\\mathrm{CO_2}]}$ に、黒鉛も物質量÷体積で代入して $K=0.40$",
+        "error_step": "黒鉛を平衡定数の式に含めた部分",
+        "error_type": "concept",
+        "why_tempting": "反応式に出てくるすべての物質を機械的に式に入れてしまい、固体の濃度が一定とみなせることを考えていない。",
+        "correction": "固体の黒鉛は式に含めず $K=\\dfrac{[\\mathrm{CO}]^2}{[\\mathrm{CO_2}]}=0.80$ mol/L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "濃度 0.20 mol/L の1価の弱酸 HA の水溶液の pH は 3.70 であった。この水溶液を水で 100 倍にうすめたときの pH を求めなさい。電離定数は $K_{\\mathrm{a}}=2.0\\times10^{-7}$ mol/L とし、うすめた後も電離度は 1 に比べて十分小さいものとする。\n［ある生徒の解答］\n10 倍うすめるごとに pH は 1 大きくなるので、pH＝3.70＋2＝5.70\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "pH 4.70"
+      },
+      "explanation": "弱酸ではうすめると電離度が大きくなるので、$[\\mathrm{H^+}]$ は $\\sqrt{c}$ に比例して減る。100 倍にうすめても $[\\mathrm{H^+}]$ は $\\dfrac{1}{10}$ 倍。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(1/500*1/5000000)",
+        "expected": "1/50000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-err_weak_acid",
+      "explanation_detail": {
+        "approach": "弱酸の希釈では電離度 $\\alpha=\\sqrt{K_{\\mathrm{a}}/c}$ も変わることを思い出す。",
+        "steps": [
+          "うすめた後 $c=2.0\\times10^{-3}$ mol/L。",
+          "$[\\mathrm{H^+}]=\\sqrt{2.0\\times10^{-3}\\times2.0\\times10^{-7}}=2.0\\times10^{-5}$ mol/L。",
+          "pH＝4.70。"
+        ],
+        "alternatives": [
+          "電離度が $0.0010$ から $0.010$ に大きくなることを計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "強酸の希釈規則を弱酸に使う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "10 倍うすめるごとに pH は 1 大きくなるので、pH＝3.70＋2＝5.70",
+        "error_step": "強酸の希釈の規則を当てはめた部分",
+        "error_type": "concept",
+        "why_tempting": "強酸で成り立つ「10 倍うすめると pH が 1 大きくなる」という規則を、弱酸にも成り立つと考えている。",
+        "correction": "$[\\mathrm{H^+}]=\\sqrt{cK_{\\mathrm{a}}}$ は $c$ が $\\dfrac{1}{100}$ になると $\\dfrac{1}{10}$ 倍になるので、pH は 1 だけ大きくなり 4.70"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "濃度 0.050 mol/L の1価の弱酸 HA の水溶液の pH は 4.00 であった。この水溶液を水で 100 倍にうすめたときの pH を求めなさい。電離定数は $K_{\\mathrm{a}}=2.0\\times10^{-7}$ mol/L とし、うすめた後も電離度は 1 に比べて十分小さいものとする。\n［ある生徒の解答］\n10 倍うすめるごとに pH は 1 大きくなるので、pH＝4.00＋2＝6.00\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "pH 5.00"
+      },
+      "explanation": "弱酸ではうすめると電離度が大きくなるので、$[\\mathrm{H^+}]$ は $\\sqrt{c}$ に比例して減る。100 倍にうすめても $[\\mathrm{H^+}]$ は $\\dfrac{1}{10}$ 倍。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(1/2000*1/5000000)",
+        "expected": "1/100000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-err_weak_acid",
+      "explanation_detail": {
+        "approach": "弱酸の希釈では電離度 $\\alpha=\\sqrt{K_{\\mathrm{a}}/c}$ も変わることを思い出す。",
+        "steps": [
+          "うすめた後 $c=5.0\\times10^{-4}$ mol/L。",
+          "$[\\mathrm{H^+}]=\\sqrt{5.0\\times10^{-4}\\times2.0\\times10^{-7}}=1.0\\times10^{-5}$ mol/L。",
+          "pH＝5.00。"
+        ],
+        "alternatives": [
+          "電離度が $0.0020$ から $0.020$ に大きくなることを計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "強酸の希釈規則を弱酸に使う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "10 倍うすめるごとに pH は 1 大きくなるので、pH＝4.00＋2＝6.00",
+        "error_step": "強酸の希釈の規則を当てはめた部分",
+        "error_type": "concept",
+        "why_tempting": "強酸で成り立つ「10 倍うすめると pH が 1 大きくなる」という規則を、弱酸にも成り立つと考えている。",
+        "correction": "$[\\mathrm{H^+}]=\\sqrt{cK_{\\mathrm{a}}}$ は $c$ が $\\dfrac{1}{100}$ になると $\\dfrac{1}{10}$ 倍になるので、pH は 1 だけ大きくなり 5.00"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U02-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U02",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "濃度 0.20 mol/L の1価の弱酸 HA の水溶液の pH は 3.52 であった。この水溶液を水で 100 倍にうすめたときの pH を求めなさい。電離定数は $K_{\\mathrm{a}}=4.5\\times10^{-7}$ mol/L とし、うすめた後も電離度は 1 に比べて十分小さいものとする。\n［ある生徒の解答］\n10 倍うすめるごとに pH は 1 大きくなるので、pH＝3.52＋2＝5.52\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "pH 4.52"
+      },
+      "explanation": "弱酸ではうすめると電離度が大きくなるので、$[\\mathrm{H^+}]$ は $\\sqrt{c}$ に比例して減る。100 倍にうすめても $[\\mathrm{H^+}]$ は $\\dfrac{1}{10}$ 倍。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "sqrt(1/500*9/20000000)",
+        "expected": "3/100000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U02-err_weak_acid",
+      "explanation_detail": {
+        "approach": "弱酸の希釈では電離度 $\\alpha=\\sqrt{K_{\\mathrm{a}}/c}$ も変わることを思い出す。",
+        "steps": [
+          "うすめた後 $c=2.0\\times10^{-3}$ mol/L。",
+          "$[\\mathrm{H^+}]=\\sqrt{2.0\\times10^{-3}\\times4.5\\times10^{-7}}=3.0\\times10^{-5}$ mol/L。",
+          "pH＝4.52。"
+        ],
+        "alternatives": [
+          "電離度が $0.0015$ から $0.015$ に大きくなることを計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "強酸の希釈規則を弱酸に使う。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "10 倍うすめるごとに pH は 1 大きくなるので、pH＝3.52＋2＝5.52",
+        "error_step": "強酸の希釈の規則を当てはめた部分",
+        "error_type": "concept",
+        "why_tempting": "強酸で成り立つ「10 倍うすめると pH が 1 大きくなる」という規則を、弱酸にも成り立つと考えている。",
+        "correction": "$[\\mathrm{H^+}]=\\sqrt{cK_{\\mathrm{a}}}$ は $c$ が $\\dfrac{1}{100}$ になると $\\dfrac{1}{10}$ 倍になるので、pH は 1 だけ大きくなり 4.52"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "4e72af6be50c62d53a8ae52ab058a6247a6ea1feae84cfb3be6c628a61317984"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 2 問（Q047, Q048）",
+      "content_hash": "e55e43833efa31c1a7f7492924d47b86812406f8e6f566c496cd097e396798fd"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:23:30+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "5c2e13fc076e69582b26ec3dacc297e0b1a7d040ff9230ba54409f2bc3df3c5a"
+  }
+}
