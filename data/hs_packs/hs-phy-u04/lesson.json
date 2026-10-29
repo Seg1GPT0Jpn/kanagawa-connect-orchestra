@@ -1,0 +1,453 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-PHY-U04-LESSON",
+  "title": "電磁気　授業プリント",
+  "subtitle": "電気と磁気｜電場と電位・コンデンサー・電磁誘導・交流回路",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-PHY-U04"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-PHY-U04-PACK",
+  "pair_set_id": "HS-PHY-U04-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-PHYB-U03",
+        "point": "電気回路",
+        "title": "波・電気"
+      },
+      {
+        "unit_id": "HS-PHY-U01",
+        "point": "力学",
+        "title": "力学（運動量・円運動・単振動・万有引力）"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-PHY-U05",
+        "point": "原子",
+        "title": "原子"
+      }
+    ],
+    "readiness_check": [
+      "オームの法則・合成抵抗・電力 $P=VI$ を使える（物理基礎）。",
+      "仕事とエネルギーの関係、等速円運動の運動方程式 $m\\dfrac{v^2}{r}=F$ を使える（物理 力学）。",
+      "三角関数 $\\sin\\omega t$ のグラフと、位相のずれ $\\dfrac{\\pi}{2}$ の意味を説明できる（数学Ⅱ）。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "電場と電位を定義し、点電荷・一様な電場について $E=k\\dfrac{Q}{r^2}$、$V=k\\dfrac{Q}{r}$、$V=Ed$ を使って力と仕事を求められる。",
+      "コンデンサーの電気容量 $C=\\varepsilon\\dfrac{S}{d}$、接続、静電エネルギー $\\dfrac12CV^2$ を、電池との接続の有無に注意して使える。",
+      "ローレンツ力・電流が磁場から受ける力と、ファラデーの電磁誘導の法則・レンツの法則で、誘導起電力の大きさと向きを求められる。",
+      "交流回路で、コイルとコンデンサーのリアクタンスと位相のずれ、共振周波数を説明できる。"
+    ],
+    "duration_minutes": 100,
+    "flow": [
+      {
+        "phase": "導入：静電気と発電機",
+        "minutes": 5,
+        "activity": "下じきで髪の毛が引きつけられる現象と、手回し発電機を示し、「電荷が場をつくる」「磁場の変化が電場をつくる」を予告する"
+      },
+      {
+        "phase": "電場と電位",
+        "minutes": 20,
+        "activity": "クーロンの法則、電場の定義と重ね合わせ、電位と仕事、一様な電場 $V=Ed$（例題1）"
+      },
+      {
+        "phase": "コンデンサー",
+        "minutes": 20,
+        "activity": "$Q=CV$、平行板コンデンサーの電気容量、誘電体、接続、静電エネルギー（例題2）"
+      },
+      {
+        "phase": "電流と磁場・ローレンツ力",
+        "minutes": 15,
+        "activity": "電流が磁場から受ける力 $IBl$、ローレンツ力 $qvB$、磁場中の荷電粒子の円運動"
+      },
+      {
+        "phase": "電磁誘導",
+        "minutes": 20,
+        "activity": "磁束、ファラデーの法則、レンツの法則、導体棒の誘導起電力 $vBl$（例題3）、自己誘導"
+      },
+      {
+        "phase": "交流回路",
+        "minutes": 10,
+        "activity": "抵抗・コイル・コンデンサーの電流と電圧の位相、リアクタンス、共振"
+      },
+      {
+        "phase": "まとめ",
+        "minutes": 10,
+        "activity": "電場・磁場の式を対比した板書で整理し、課題を指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "目に見えない「場」で電気と磁気を統一する",
+        "body": "離れた電荷どうしが力を及ぼし合うのは、電荷がまわりの空間に電場をつくり、その電場が他の電荷に力を及ぼすからだと考える。同じように、電流は磁場をつくり、磁場は運動する電荷に力を及ぼす。さらに、磁場が変化すると電場が生じ（電磁誘導）、発電機や変圧器が動く。この単元では「場」の考え方を軸に、電気と磁気の現象を数量的に扱う。",
+        "bullets": [
+          "電場 $\\vec{E}$：単位正電荷が受ける力。電位 $V$：単位正電荷あたりの位置エネルギー。",
+          "磁場の変化 → 誘導起電力。発電・送電・電磁波の基礎となる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "手回し発電機に豆電球をつなぎ、つないだ瞬間にハンドルが重くなることを体験させる。",
+            "ask": "電球をつなぐとハンドルが重くなるのはなぜか。",
+            "expect": "電気エネルギーを取り出す分だけ仕事が必要になる（レンツの法則とエネルギー保存）。",
+            "timing": "授業の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "電場と電位",
+        "body": "電場の中に置いた電荷 $q$ が受ける力を $\\vec{F}$ とするとき、$\\vec{E}=\\dfrac{\\vec{F}}{q}$ を電場という。基準点から点 P まで電荷 $q$ をゆっくり運ぶのに必要な仕事を $W$ とするとき、$V=\\dfrac{W}{q}$ を P の電位という。",
+        "formula": "$$F=k\\dfrac{q_1q_2}{r^2},\\qquad E=k\\dfrac{Q}{r^2},\\qquad V=k\\dfrac{Q}{r},\\qquad V=Ed,\\qquad W=qV_{\\mathrm{AB}}$$",
+        "conditions": [
+          "電場はベクトル（向きを含めて足し合わせる）、電位はスカラー（符号つきの数として足し合わせる）。",
+          "点電荷の電位は無限遠を基準（0 V）とする。負の電荷のまわりの電位は負。",
+          "一様な電場では、電場の向きに距離 $d$ 進むと電位が $Ed$ だけ下がる。電場の単位 N/C は V/m と同じ。",
+          "電荷 $q$ が電位差 $V$ の間を移動するとき電場がする仕事は $qV$。電子が 1 V で加速されて得るエネルギーを 1 eV $=1.6\\times10^{-19}\\,\\mathrm{J}$ という。"
+        ],
+        "teacher_points": [
+          {
+            "point": "電位を「高さ」、電場を「坂の傾き」にたとえ、$V=Ed$ が重力の $mgh$ と同じ形であることを対比させる。",
+            "ask": "正の電荷は電位の高い所から低い所へ動くか、その逆か。",
+            "expect": "高い所から低い所へ（重力でボールが坂を下るのと同じ）。"
+          },
+          {
+            "point": "2つの点電荷による電場・電位を求める問題で、電場は矢印をかいて合成、電位は数値の和、と手順を区別させる。",
+            "caution": "電位をベクトルのように扱い、異符号の電荷で大きさを足してしまう誤りが多い。"
+          }
+        ],
+        "figure": {
+          "alt": "平行板の間の一様な電場。+Q の極板から −Q の極板に向かう平行な電気力線、極板間の距離 d",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 250 180\" width=\"250\" height=\"180\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"150\" stroke=\"#000\" stroke-width=\"3\"/><line x1=\"200\" y1=\"30\" x2=\"200\" y2=\"150\" stroke=\"#000\" stroke-width=\"3\"/><text x=\"26\" y=\"24\">+Q</text><text x=\"192\" y=\"24\">−Q</text><line x1=\"48\" y1=\"50\" x2=\"190\" y2=\"50\" stroke=\"#1f4e79\" marker-end=\"url(#ah)\"/><line x1=\"48\" y1=\"80\" x2=\"190\" y2=\"80\" stroke=\"#1f4e79\" marker-end=\"url(#ah)\"/><line x1=\"48\" y1=\"110\" x2=\"190\" y2=\"110\" stroke=\"#1f4e79\" marker-end=\"url(#ah)\"/><line x1=\"48\" y1=\"140\" x2=\"190\" y2=\"140\" stroke=\"#1f4e79\" marker-end=\"url(#ah)\"/><text x=\"110\" y=\"44\">E</text><text x=\"112\" y=\"172\">d</text><line x1=\"40\" y1=\"162\" x2=\"200\" y2=\"162\" stroke=\"#555\"/></svg>"
+        }
+      },
+      {
+        "id": "df2",
+        "kind": "definition",
+        "title": "コンデンサー",
+        "body": "2枚の導体板を向かい合わせたものをコンデンサーという。極板間の電位差 $V$ と蓄えられる電気量 $Q$ は比例し、比例定数 $C$ を電気容量という。",
+        "formula": "$$Q=CV,\\qquad C=\\varepsilon\\dfrac{S}{d},\\qquad U=\\dfrac12QV=\\dfrac12CV^2=\\dfrac{Q^2}{2C}$$",
+        "conditions": [
+          "$\\varepsilon$ は極板間の物質の誘電率。真空では $\\varepsilon_0\\fallingdotseq8.85\\times10^{-12}\\,\\mathrm{F/m}$、比誘電率 $\\varepsilon_r$ の誘電体では $\\varepsilon=\\varepsilon_r\\varepsilon_0$。",
+          "並列接続：$C=C_1+C_2$（電圧が共通）。直列接続：$\\dfrac1C=\\dfrac{1}{C_1}+\\dfrac{1}{C_2}$（電気量が共通）。抵抗の合成と逆になる。",
+          "電池につないだまま極板を動かすと $V$ が一定。電池から切り離して動かすと $Q$ が一定。",
+          "静電エネルギーは $\\dfrac12QV$。電池が供給したエネルギー $QV$ の半分は、充電の過程で導線の抵抗でジュール熱になる。"
+        ],
+        "teacher_points": [
+          {
+            "point": "「電池につないだまま」か「切り離した後」かで、一定に保たれる量（$V$ か $Q$ か）を最初に判断させる。",
+            "ask": "充電後に電池を切り離し、極板間隔を2倍にすると、電圧はどうなるか。",
+            "expect": "$C$ が半分、$Q$ 一定なので $V$ は2倍。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "静電エネルギー $U=\\dfrac12QV$ の導出",
+        "proof_steps": [
+          "電気量 $q$ がたまって電位差が $v=\\dfrac{q}{C}$ のとき、さらに微小な電気量 $\\Delta q$ を運ぶのに必要な仕事は $v\\Delta q$。",
+          "$v$−$q$ グラフは原点を通る傾き $\\dfrac{1}{C}$ の直線で、$v\\Delta q$ は細い長方形の面積。",
+          "$0$ から $Q$ まで運ぶ仕事の合計は三角形の面積 $\\dfrac12QV$。これが静電エネルギー $U$ になる。",
+          "$Q=CV$ を用いて $U=\\dfrac12CV^2=\\dfrac{Q^2}{2C}$ とも書ける。"
+        ],
+        "body": "ばねの弾性エネルギー $\\dfrac12kx^2$ が $F$−$x$ グラフの三角形の面積であるのと同じ考え方である。",
+        "teacher_points": [
+          {
+            "point": "ばねの弾性エネルギーの導出（物理基礎）と並べて板書し、「比例する量のグラフの面積は $\\dfrac12$ がつく」とまとめる。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "電流が磁場から受ける力とローレンツ力",
+        "formula": "$$F=IBl\\sin\\theta,\\qquad f=qvB\\sin\\theta,\\qquad r=\\dfrac{mv}{qB},\\quad T=\\dfrac{2\\pi m}{qB}$$",
+        "conditions": [
+          "$B$ は磁束密度〔T〕、$\\theta$ は電流（または速度）と磁場のなす角。向きはフレミングの左手の法則で決まる（正電荷の場合）。",
+          "ローレンツ力は常に速度に垂直なので仕事をしない。荷電粒子の速さは変わらず、磁場に垂直に入射すると等速円運動をする。",
+          "円運動の周期 $T=\\dfrac{2\\pi m}{qB}$ は速さによらない（サイクロトロンの原理）。",
+          "導線の中の多数の電子が受けるローレンツ力の合計が、電流が受ける力 $IBl$ である。"
+        ],
+        "proof_steps": [
+          "磁場に垂直に速さ $v$ で入射した荷電粒子は、ローレンツ力 $qvB$ を向心力として等速円運動をする。",
+          "運動方程式 $m\\dfrac{v^2}{r}=qvB$ より $r=\\dfrac{mv}{qB}$。",
+          "周期 $T=\\dfrac{2\\pi r}{v}=\\dfrac{2\\pi m}{qB}$。$v$ を含まない。"
+        ],
+        "teacher_points": [
+          {
+            "point": "ローレンツ力が仕事をしないことを、力と速度が常に垂直（$W=Fs\\cos90^\\circ=0$）から確認させる。",
+            "timing": "円運動の導出の前"
+          }
+        ],
+        "figure": {
+          "alt": "紙面の表から裏へ向かう一様な磁場の中で、速さ v の正電荷が円運動する",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 180\" width=\"260\" height=\"180\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"240\" height=\"160\" fill=\"#f4f7fb\" stroke=\"#999\"/><text x=\"30\" y=\"30\" fill=\"#888\">×</text><text x=\"30\" y=\"70\" fill=\"#888\">×</text><text x=\"30\" y=\"110\" fill=\"#888\">×</text><text x=\"30\" y=\"150\" fill=\"#888\">×</text><text x=\"70\" y=\"30\" fill=\"#888\">×</text><text x=\"70\" y=\"70\" fill=\"#888\">×</text><text x=\"70\" y=\"110\" fill=\"#888\">×</text><text x=\"70\" y=\"150\" fill=\"#888\">×</text><text x=\"110\" y=\"30\" fill=\"#888\">×</text><text x=\"110\" y=\"70\" fill=\"#888\">×</text><text x=\"110\" y=\"110\" fill=\"#888\">×</text><text x=\"110\" y=\"150\" fill=\"#888\">×</text><text x=\"150\" y=\"30\" fill=\"#888\">×</text><text x=\"150\" y=\"70\" fill=\"#888\">×</text><text x=\"150\" y=\"110\" fill=\"#888\">×</text><text x=\"150\" y=\"150\" fill=\"#888\">×</text><text x=\"190\" y=\"30\" fill=\"#888\">×</text><text x=\"190\" y=\"70\" fill=\"#888\">×</text><text x=\"190\" y=\"110\" fill=\"#888\">×</text><text x=\"190\" y=\"150\" fill=\"#888\">×</text><text x=\"230\" y=\"30\" fill=\"#888\">×</text><text x=\"230\" y=\"70\" fill=\"#888\">×</text><text x=\"230\" y=\"110\" fill=\"#888\">×</text><text x=\"230\" y=\"150\" fill=\"#888\">×</text><circle cx=\"130\" cy=\"95\" r=\"55\" fill=\"none\" stroke=\"#1f4e79\" stroke-dasharray=\"4 3\"/><circle cx=\"130\" cy=\"150\" r=\"5\" fill=\"#c0392b\"/><text x=\"138\" y=\"164\">q, m</text><line x1=\"130\" y1=\"150\" x2=\"175\" y2=\"150\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"160\" y=\"144\">v</text><text x=\"200\" y=\"28\">B（紙面の表から裏へ）</text></svg>"
+        }
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "電磁誘導の法則",
+        "formula": "$$V=-N\\dfrac{\\Delta\\Phi}{\\Delta t},\\qquad \\Phi=BS,\\qquad V=vBl\\ \\text{（磁場を横切る導体棒）}$$",
+        "conditions": [
+          "コイルを貫く磁束 $\\Phi$〔Wb〕が変化すると、コイルに誘導起電力が生じる（ファラデーの電磁誘導の法則）。$N$ は巻数。",
+          "負号は、誘導電流が磁束の変化を妨げる向きに流れることを表す（レンツの法則）。",
+          "磁場に垂直に速さ $v$ で動く長さ $l$ の導体棒には、起電力 $vBl$ が生じる。棒の中の電荷が受けるローレンツ力から導ける。",
+          "コイル自身の電流の変化による誘導起電力（自己誘導）は $V=-L\\dfrac{\\Delta I}{\\Delta t}$。コイルに蓄えられるエネルギーは $\\dfrac12LI^2$。"
+        ],
+        "body": "レンツの法則はエネルギー保存則の現れである。もし誘導電流が磁束の変化を助ける向きに流れたら、磁石をわずかに動かすだけで電流がどんどん増え、エネルギーが無からつくられてしまう。",
+        "proof_steps": [
+          "導体棒が時間 $\\Delta t$ に $v\\Delta t$ 進むと、回路の面積は $lv\\Delta t$ 増え、磁束は $\\Delta\\Phi=Blv\\Delta t$ 増える。",
+          "ファラデーの法則より、起電力の大きさは $\\dfrac{\\Delta\\Phi}{\\Delta t}=vBl$。",
+          "別の見方：棒の中の電荷 $q$ はローレンツ力 $qvB$ を棒に沿って受ける。電荷を長さ $l$ 運ぶ仕事 $qvBl$ を $q$ で割ると、起電力 $vBl$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "同じ $vBl$ を「磁束の変化」と「ローレンツ力」の2つの見方で導き、どちらでも説明できるようにさせる。",
+            "ask": "導体棒を動かし続けるのに力が必要なのはなぜか。",
+            "expect": "誘導電流が磁場から運動を妨げる向きの力 $IBl$ を受けるから。"
+          }
+        ],
+        "figure": {
+          "alt": "一様な磁場中の平行な導体レールの上を、長さ l の導体棒が速さ v で動く。レールの左端に抵抗 R",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 170\" width=\"330\" height=\"170\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"20\" y1=\"40\" x2=\"290\" y2=\"40\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"20\" y1=\"140\" x2=\"290\" y2=\"140\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"20\" y1=\"40\" x2=\"20\" y2=\"140\" stroke=\"#000\"/><rect x=\"12\" y=\"70\" width=\"16\" height=\"40\" fill=\"#fff\" stroke=\"#000\"/><text x=\"32\" y=\"94\">R</text><line x1=\"180\" y1=\"34\" x2=\"180\" y2=\"146\" stroke=\"#c0392b\" stroke-width=\"4\"/><text x=\"186\" y=\"160\">導体棒（長さ l）</text><line x1=\"186\" y1=\"90\" x2=\"240\" y2=\"90\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"214\" y=\"84\">v</text><circle cx=\"70\" cy=\"65\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"70\" cy=\"65\" r=\"1.5\" fill=\"#555\"/><circle cx=\"70\" cy=\"115\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"70\" cy=\"115\" r=\"1.5\" fill=\"#555\"/><circle cx=\"120\" cy=\"65\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"120\" cy=\"65\" r=\"1.5\" fill=\"#555\"/><circle cx=\"120\" cy=\"115\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"120\" cy=\"115\" r=\"1.5\" fill=\"#555\"/><circle cx=\"240\" cy=\"65\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"240\" cy=\"65\" r=\"1.5\" fill=\"#555\"/><circle cx=\"240\" cy=\"115\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"240\" cy=\"115\" r=\"1.5\" fill=\"#555\"/><text x=\"246\" y=\"70\">磁場 B（紙面の裏から表へ）</text></svg>"
+        }
+      },
+      {
+        "id": "df3",
+        "kind": "definition",
+        "title": "交流回路",
+        "body": "交流電圧 $v=V_0\\sin\\omega t$ を抵抗・コイル・コンデンサーに加えると、それぞれ電流と電圧の位相の関係が異なる。電流の流れにくさを表す量をリアクタンスという。",
+        "formula": "$$X_L=\\omega L,\\qquad X_C=\\dfrac{1}{\\omega C},\\qquad V_{\\mathrm{e}}=\\dfrac{V_0}{\\sqrt2},\\qquad f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$$",
+        "conditions": [
+          "抵抗：電流と電圧は同位相。コイル：電流は電圧より位相が $\\dfrac{\\pi}{2}$ 遅れる。コンデンサー：電流は電圧より位相が $\\dfrac{\\pi}{2}$ 進む。",
+          "コイルとコンデンサーでは、1周期の平均の消費電力は 0（エネルギーをためては返す）。電力を消費するのは抵抗だけ。",
+          "直列 RLC 回路のインピーダンス $Z=\\sqrt{R^2+\\left(\\omega L-\\dfrac{1}{\\omega C}\\right)^2}$ は、$\\omega L=\\dfrac{1}{\\omega C}$ で最小（共振）。",
+          "$\\omega=2\\pi f$。周波数が高いほどコイルは電流を通しにくく、コンデンサーは通しやすい。"
+        ],
+        "teacher_points": [
+          {
+            "point": "コイルは「電流の変化をきらう」、コンデンサーは「電荷がたまると押し返す」と直観的に説明し、周波数依存性と結びつける。",
+            "caution": "$X_C=\\omega C$ と逆に覚える誤りが多い。直流（$\\omega=0$）でコンデンサーに電流が流れないことで確かめさせる。"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　点電荷の電場と電位",
+        "example": {
+          "problem": "$x$ 軸上の原点に $+4.0\\times10^{-9}\\,\\mathrm{C}$、$x=0.60\\,\\mathrm{m}$ に $-4.0\\times10^{-9}\\,\\mathrm{C}$ の点電荷を置いた。2つの電荷の中点 M（$x=0.30\\,\\mathrm{m}$）での電場の強さと向き、および電位を求めよ。クーロンの法則の比例定数を $9.0\\times10^9\\,\\mathrm{N\\cdot m^2/C^2}$ とする。",
+          "steps": [
+            "正電荷による M の電場：$9.0\\times10^9\\times\\dfrac{4.0\\times10^{-9}}{0.30^2}=400\\,\\mathrm{N/C}$（$+x$ 向き、正電荷から遠ざかる向き）。",
+            "負電荷による M の電場：大きさ $400\\,\\mathrm{N/C}$、向きは負電荷に向かう $+x$ 向き。",
+            "合成：$800\\,\\mathrm{N/C}$、$+x$ 向き。",
+            "電位：$9.0\\times10^9\\times\\dfrac{4.0\\times10^{-9}}{0.30}+9.0\\times10^9\\times\\dfrac{-4.0\\times10^{-9}}{0.30}=120-120=0\\,\\mathrm{V}$。"
+          ],
+          "answer": "電場 $8.0\\times10^2\\,\\mathrm{N/C}$（$+x$ 向き）、電位 $0\\,\\mathrm{V}$",
+          "thinking": "電場は矢印で向きを確かめてから合成、電位は符号つきの数の和。"
+        },
+        "misconceptions": [
+          {
+            "wrong": "電場が 0 でないので電位も 0 ではない",
+            "correct": "電位が 0 でも電場は 0 とは限らない。電場は電位の「傾き」"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　コンデンサーの極板間隔を変える",
+        "example": {
+          "problem": "電気容量 $2.0\\,\\mu\\mathrm{F}$ の平行板コンデンサーを $10\\,\\mathrm{V}$ の電池で充電した。（1）電池につないだまま極板間隔を2倍にした場合、（2）電池から切り離してから極板間隔を2倍にした場合のそれぞれについて、極板間の電圧・電気量・静電エネルギーを求めよ。",
+          "steps": [
+            "はじめ：$Q=CV=2.0\\times10^{-5}\\,\\mathrm{C}$、$U=\\dfrac12CV^2=1.0\\times10^{-4}\\,\\mathrm{J}$。間隔2倍で $C'=1.0\\,\\mu\\mathrm{F}$。",
+            "（1）$V$ 一定 $=10\\,\\mathrm{V}$、$Q'=C'V=1.0\\times10^{-5}\\,\\mathrm{C}$、$U'=\\dfrac12C'V^2=5.0\\times10^{-5}\\,\\mathrm{J}$。",
+            "（2）$Q$ 一定 $=2.0\\times10^{-5}\\,\\mathrm{C}$、$V'=\\dfrac{Q}{C'}=20\\,\\mathrm{V}$、$U'=\\dfrac{Q^2}{2C'}=2.0\\times10^{-4}\\,\\mathrm{J}$。"
+          ],
+          "answer": "（1）$10\\,\\mathrm{V}$、$1.0\\times10^{-5}\\,\\mathrm{C}$、$5.0\\times10^{-5}\\,\\mathrm{J}$　（2）$20\\,\\mathrm{V}$、$2.0\\times10^{-5}\\,\\mathrm{C}$、$2.0\\times10^{-4}\\,\\mathrm{J}$",
+          "thinking": "まず一定に保たれる量を決める。（2）でエネルギーが増えたのは、引き合う極板を引き離す仕事をしたから。"
+        },
+        "teacher_points": [
+          {
+            "point": "（2）でエネルギーが増える理由を問い、極板が引き合っていることと外力の仕事を結びつける。"
+          }
+        ]
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　導体棒の誘導起電力",
+        "example": {
+          "problem": "磁束密度 $0.50\\,\\mathrm{T}$ の一様な磁場に垂直な水平面内に、間隔 $0.40\\,\\mathrm{m}$ の平行な導体レールを置き、一端を $2.0\\,\\Omega$ の抵抗でつないだ。レールの上で導体棒を一定の速さ $3.0\\,\\mathrm{m/s}$ で動かす。誘導起電力、流れる電流、棒を動かすのに必要な力、抵抗での消費電力を求めよ。レールと棒の抵抗は無視する。",
+          "steps": [
+            "$V=vBl=3.0\\times0.50\\times0.40=0.60\\,\\mathrm{V}$。",
+            "$I=\\dfrac{V}{R}=0.30\\,\\mathrm{A}$。",
+            "電流が磁場から受ける力 $IBl=0.30\\times0.50\\times0.40=0.060\\,\\mathrm{N}$（運動を妨げる向き）。等速なので外力も $0.060\\,\\mathrm{N}$。",
+            "消費電力 $RI^2=0.18\\,\\mathrm{W}$。外力の仕事率 $Fv=0.060\\times3.0=0.18\\,\\mathrm{W}$ と一致する。"
+          ],
+          "answer": "起電力 $0.60\\,\\mathrm{V}$、電流 $0.30\\,\\mathrm{A}$、力 $0.060\\,\\mathrm{N}$、電力 $0.18\\,\\mathrm{W}$",
+          "thinking": "外力がした仕事が電気エネルギーを経てジュール熱になる。仕事率と消費電力の一致で検算できる。",
+          "figure": {
+            "alt": "磁場中のレール上を導体棒が速さ v で動き、抵抗 R に電流が流れる",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 170\" width=\"330\" height=\"170\" font-family=\"serif\" font-size=\"12\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"20\" y1=\"40\" x2=\"290\" y2=\"40\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"20\" y1=\"140\" x2=\"290\" y2=\"140\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"20\" y1=\"40\" x2=\"20\" y2=\"140\" stroke=\"#000\"/><rect x=\"12\" y=\"70\" width=\"16\" height=\"40\" fill=\"#fff\" stroke=\"#000\"/><text x=\"32\" y=\"94\">R</text><line x1=\"180\" y1=\"34\" x2=\"180\" y2=\"146\" stroke=\"#c0392b\" stroke-width=\"4\"/><text x=\"186\" y=\"160\">導体棒（長さ l）</text><line x1=\"186\" y1=\"90\" x2=\"240\" y2=\"90\" stroke=\"#000\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"214\" y=\"84\">v</text><circle cx=\"70\" cy=\"65\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"70\" cy=\"65\" r=\"1.5\" fill=\"#555\"/><circle cx=\"70\" cy=\"115\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"70\" cy=\"115\" r=\"1.5\" fill=\"#555\"/><circle cx=\"120\" cy=\"65\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"120\" cy=\"65\" r=\"1.5\" fill=\"#555\"/><circle cx=\"120\" cy=\"115\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"120\" cy=\"115\" r=\"1.5\" fill=\"#555\"/><circle cx=\"240\" cy=\"65\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"240\" cy=\"65\" r=\"1.5\" fill=\"#555\"/><circle cx=\"240\" cy=\"115\" r=\"5\" fill=\"none\" stroke=\"#555\"/><circle cx=\"240\" cy=\"115\" r=\"1.5\" fill=\"#555\"/><text x=\"246\" y=\"70\">磁場 B（紙面の裏から表へ）</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "$Fv=RI^2$ の一致を確かめさせ、レンツの法則がエネルギー保存と結びついていることを強調する。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 電場・電位・コンデンサー",
+              "lines": [
+                "$F=k\\dfrac{q_1q_2}{r^2}$、$E=k\\dfrac{Q}{r^2}$（ベクトル）",
+                "$V=k\\dfrac{Q}{r}$（スカラー）、$V=Ed$",
+                "$W=qV$、1 eV",
+                "$Q=CV$、$C=\\varepsilon\\dfrac{S}{d}$",
+                "並列 $C_1+C_2$、直列 $\\dfrac1C=\\sum\\dfrac1{C_i}$",
+                "$U=\\dfrac12CV^2$"
+              ]
+            },
+            {
+              "title": "② 磁場と力",
+              "lines": [
+                "$F=IBl$（左手）",
+                "$f=qvB$、仕事をしない",
+                "$r=\\dfrac{mv}{qB}$、$T=\\dfrac{2\\pi m}{qB}$"
+              ]
+            },
+            {
+              "title": "③ 電磁誘導・交流",
+              "lines": [
+                "$V=-N\\dfrac{\\Delta\\Phi}{\\Delta t}$（レンツ）",
+                "$V=vBl$",
+                "$V=-L\\dfrac{\\Delta I}{\\Delta t}$、$\\dfrac12LI^2$",
+                "$X_L=\\omega L$（$\\dfrac{\\pi}{2}$ 遅れ）",
+                "$X_C=\\dfrac{1}{\\omega C}$（$\\dfrac{\\pi}{2}$ 進み）",
+                "$f_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "電場と重力場、電位と高さ、静電エネルギーと弾性エネルギーなど、力学との対応表を示し、新しい式を既知の構造で理解させる。",
+            "timing": "電場の導入時"
+          },
+          {
+            "point": "コンデンサーの問題は「何が一定か（$Q$ か $V$ か）」→「$C$ の変化」→「他の量」の順で解かせる。",
+            "ask": "誘電体を挿入すると、電池につないだままなら電気量はどうなるか。",
+            "expect": "$C$ が $\\varepsilon_r$ 倍、$V$ 一定なので $Q$ も $\\varepsilon_r$ 倍。"
+          },
+          {
+            "point": "電磁誘導の向きは「磁束が増えるならそれを打ち消す向きの磁場をつくる電流」と、磁束の変化の向きを最初に確認させる。"
+          },
+          {
+            "point": "交流ではリアクタンスの周波数依存性を、直流（$\\omega=0$）と非常に高い周波数の極端な場合で確かめさせる。",
+            "caution": "実効値と最大値を混同しやすい。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "電位が 0 の点では電場も 0 である",
+            "correct": "電場は電位の傾き。中点の電位が 0 でも、異符号の電荷の間では電場は大きい"
+          },
+          {
+            "wrong": "ローレンツ力は荷電粒子を加速して速さを増やす",
+            "correct": "ローレンツ力は速度に垂直で仕事をしないので、速さは変わらない"
+          },
+          {
+            "wrong": "誘導電流は磁束を打ち消す向きに流れる",
+            "correct": "打ち消すのは磁束の「変化」。磁束が減るときは、もとの磁束と同じ向きの磁場をつくる向きに流れる"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "電荷は電場をつくる。電場はベクトル、電位はスカラーで、$W=qV$、一様な電場では $V=Ed$。",
+          "コンデンサーは $Q=CV$、$C=\\varepsilon\\dfrac{S}{d}$、$U=\\dfrac12CV^2$。電池との接続で一定に保たれる量が変わる。",
+          "磁場は運動する電荷に $qvB$、電流に $IBl$ の力を及ぼす。磁束の変化は誘導起電力 $N\\dfrac{\\Delta\\Phi}{\\Delta t}$ を生む。",
+          "交流回路ではコイル $\\omega L$、コンデンサー $\\dfrac{1}{\\omega C}$ のリアクタンスがあり、位相が $\\dfrac{\\pi}{2}$ ずれる。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "強さ $2.0\\times10^3\\,\\mathrm{N/C}$ の電場の中で、$3.0\\times10^{-6}\\,\\mathrm{C}$ の電荷が受ける力は？",
+            "a": "$6.0\\times10^{-3}\\,\\mathrm{N}$"
+          },
+          {
+            "q": "$5.0\\,\\mu\\mathrm{F}$ のコンデンサーに $20\\,\\mathrm{V}$ をかけたときの電気量は？",
+            "a": "$1.0\\times10^{-4}\\,\\mathrm{C}$"
+          },
+          {
+            "q": "$2.0\\,\\mu\\mathrm{F}$ と $3.0\\,\\mu\\mathrm{F}$ を直列につないだ合成容量は？",
+            "a": "$1.2\\,\\mu\\mathrm{F}$"
+          },
+          {
+            "q": "磁束密度 $0.20\\,\\mathrm{T}$ の磁場に垂直な長さ $0.50\\,\\mathrm{m}$ の導線に $3.0\\,\\mathrm{A}$ 流したとき受ける力は？",
+            "a": "$0.30\\,\\mathrm{N}$"
+          },
+          {
+            "q": "周波数を2倍にすると、コンデンサーのリアクタンスは何倍か。",
+            "a": "$\\dfrac12$ 倍"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "11d6f91839391d92eb3ed76132421f491d87102d0a7d8f038260592c406e97d0"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T08:55:59+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "85e5acaacef31e352fc81e74ecbf2d28e9074501e8eba0a9a4bac23393f014b0"
+  }
+}

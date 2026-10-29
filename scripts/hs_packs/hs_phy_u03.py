@@ -705,7 +705,7 @@ def water_interf(r):
     kind = r.choice(["strong", "weak", "strong_anti"])
     while True:
         d = r.choice([6, 8, 9, 10, 12, 14])
-        lam = r.choice([2, 3, 4, sp.Rational(5, 2)])
+        lam = sp.Rational(r.choice([2, 3, 4, sp.Rational(5, 2)]))
         q = sp.Rational(d) / lam
         if q.q != 1 and (2 * q).q != 1:
             break
