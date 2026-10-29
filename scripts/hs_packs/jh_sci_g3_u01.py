@@ -624,7 +624,7 @@ def b_neutral_count(r):
     Cl = N
     ask = r.choice(["H", "OH", "Na", "Cl", "total"])
     val = {"H": H, "OH": OH, "Na": Na, "Cl": Cl, "total": H + OH + Na + Cl}[ask]
-    nm = {"H": "水素イオン H⁺", "OH": "水酸化物イオン OH⁻", "Na": "ナトリウムイオン Na⁺", "Cl": "塩化物イオン Cl⁻", "total": "イオンの総数"}[ask]
+    nm = {"H": "水素イオン H⁺ の数", "OH": "水酸化物イオン OH⁻ の数", "Na": "ナトリウムイオン Na⁺ の数", "Cl": "塩化物イオン Cl⁻ の数", "total": "イオンの総数"}[ask]
     right = f"{val} 個"
     cand = [N - b * x, b * x, N, 2 * N, N + b * x, abs(N - b * x), 0, H + Na, val + b, 2 * b * x]
     wr = []
