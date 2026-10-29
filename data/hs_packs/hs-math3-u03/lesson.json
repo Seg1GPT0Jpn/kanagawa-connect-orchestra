@@ -1,0 +1,432 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH3-U03-LESSON",
+  "title": "積分法とその応用　授業プリント",
+  "subtitle": "積分法｜置換積分・部分積分・定積分と面積・体積・曲線の長さ",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_3",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-MATH3-U03"
+  ],
+  "print_type": "lesson",
+  "pack_id": "HS-MATH3-U03-PACK",
+  "pair_set_id": "HS-MATH3-U03-EX",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "導関数",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATH2-U06",
+        "point": "定積分と面積",
+        "title": "微分法・積分法"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "SS-MATH-U02",
+        "point": "二次試験の求積問題",
+        "title": "数学　記述式計算問題"
+      }
+    ],
+    "readiness_check": [
+      "三角・指数・対数関数の導関数、合成関数・積の微分法（数学Ⅲ 微分法）を使える。",
+      "定積分の計算と、2曲線の間の面積の求め方（数学Ⅱ）を使える。",
+      "$\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$ などの和の公式（数学B）と数列の極限（数学Ⅲ 極限）を使える。"
+    ]
+  },
+  "lesson": {
+    "goals": [
+      "置換積分法・部分積分法を合成関数・積の微分法から導き、三角・指数・対数関数を含む不定積分・定積分を計算できる。",
+      "区分求積法によって定積分を和の極限として理解し、面積・体積を定積分で表して求められる。",
+      "曲線の長さの公式を導き、媒介変数表示された曲線や $y=f(x)$ の曲線の長さを求められる。"
+    ],
+    "duration_minutes": 200,
+    "flow": [
+      {
+        "phase": "導入：微分の逆として積分を広げる",
+        "minutes": 10,
+        "activity": "微分法で得た公式を逆に読み、積分できる関数を増やすことを確認する"
+      },
+      {
+        "phase": "基本公式・置換積分法",
+        "minutes": 40,
+        "activity": "基本公式の表、置換積分法の導出、$f'(x)/f(x)$ の形、定積分の置換（例題1・2）"
+      },
+      {
+        "phase": "部分積分法",
+        "minutes": 25,
+        "activity": "積の微分法からの導出と、$x e^x$・$\\log x$ の積分（例題1）"
+      },
+      {
+        "phase": "区分求積法と面積",
+        "minutes": 40,
+        "activity": "和の極限としての定積分、面積の計算（例題3）"
+      },
+      {
+        "phase": "体積",
+        "minutes": 40,
+        "activity": "断面積の積分 $V=\\displaystyle\\int_a^bS(x)\\,dx$、回転体の体積（例題4）"
+      },
+      {
+        "phase": "曲線の長さとまとめ",
+        "minutes": 45,
+        "activity": "曲線の長さの公式とサイクロイド（例題5）、確認問題、課題指示"
+      }
+    ],
+    "sections": [
+      {
+        "id": "in1",
+        "kind": "intro",
+        "title": "微分の公式を逆に読む",
+        "body": "数学Ⅲの微分法で、$(\\sin x)'=\\cos x$、$(e^x)'=e^x$、$(\\log|x|)'=\\dfrac{1}{x}$ などを学んだ。これらを逆に読めば、$\\cos x$、$e^x$、$\\dfrac{1}{x}$ の原始関数が分かる。さらに、合成関数の微分法を逆にした置換積分法、積の微分法を逆にした部分積分法を使うと、積分できる関数が大きく広がる。積分は面積だけでなく、体積や曲線の長さを求める強力な道具になる。",
+        "bullets": [
+          "微分の公式 → 不定積分の基本公式",
+          "合成関数の微分法 → 置換積分法、積の微分法 → 部分積分法",
+          "定積分 = 細かく分けた量の和の極限（区分求積法）"
+        ],
+        "teacher_points": [
+          {
+            "point": "$\\displaystyle\\int\\dfrac{1}{x}\\,dx$ が数学Ⅱの公式 $\\dfrac{x^{n+1}}{n+1}$ では求められない（$n=-1$ で分母が $0$）ことを確認し、新しい公式の必要性を示す。",
+            "ask": "$\\displaystyle\\int x^{-1}\\,dx$ に数学Ⅱの公式を当てはめるとどうなるか。",
+            "expect": "$\\dfrac{x^0}{0}$ となって意味をもたない。",
+            "timing": "導入の冒頭"
+          }
+        ]
+      },
+      {
+        "id": "df1",
+        "kind": "definition",
+        "title": "不定積分の基本公式",
+        "body": "$F'(x)=f(x)$ のとき $\\displaystyle\\int f(x)\\,dx=F(x)+C$（$C$ は積分定数）。微分の公式から次が得られる。",
+        "formula": "$$\\int x^r\\,dx=\\dfrac{x^{r+1}}{r+1}+C\\ (r\\neq-1),\\quad \\int\\dfrac{dx}{x}=\\log|x|+C,\\quad \\int e^x\\,dx=e^x+C,\\quad \\int a^x\\,dx=\\dfrac{a^x}{\\log a}+C$$",
+        "conditions": [
+          "$\\displaystyle\\int\\sin x\\,dx=-\\cos x+C$、$\\displaystyle\\int\\cos x\\,dx=\\sin x+C$、$\\displaystyle\\int\\dfrac{dx}{\\cos^2x}=\\tan x+C$。",
+          "$F'(x)=f(x)$ のとき $\\displaystyle\\int f(ax+b)\\,dx=\\dfrac{1}{a}F(ax+b)+C$（$a\\neq0$）。",
+          "$\\displaystyle\\int\\dfrac{g'(x)}{g(x)}\\,dx=\\log|g(x)|+C$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "答えを微分してもとの関数に戻るかで必ず検算させる。特に $\\displaystyle\\int\\sin x\\,dx$ の符号を間違えやすい。",
+            "caution": "$\\displaystyle\\int\\sin x\\,dx=\\cos x+C$ とする誤りが多い。"
+          }
+        ]
+      },
+      {
+        "id": "th1",
+        "kind": "theorem",
+        "title": "置換積分法と部分積分法",
+        "formula": "$$\\int f(g(x))g'(x)\\,dx=\\int f(t)\\,dt\\ \\ (t=g(x)),\\qquad \\int f(x)g'(x)\\,dx=f(x)g(x)-\\int f'(x)g(x)\\,dx$$",
+        "conditions": [
+          "定積分で置換するときは、積分区間も新しい変数の区間に取りかえる：$\\displaystyle\\int_a^bf(g(x))g'(x)\\,dx=\\int_{g(a)}^{g(b)}f(t)\\,dt$。",
+          "$\\sqrt{a^2-x^2}$ を含むときは $x=a\\sin\\theta$、$\\dfrac{1}{x^2+a^2}$ を含むときは $x=a\\tan\\theta$ と置換する。",
+          "部分積分法では、微分すると簡単になる方（$x^n$、$\\log x$ など）を $f(x)$ に選ぶ。"
+        ],
+        "proof_steps": [
+          "置換積分：$F'(t)=f(t)$ とすると、合成関数の微分法より $\\{F(g(x))\\}'=f(g(x))g'(x)$。",
+          "よって $\\displaystyle\\int f(g(x))g'(x)\\,dx=F(g(x))+C=\\int f(t)\\,dt$（$t=g(x)$）。形式的には $dt=g'(x)\\,dx$ と書ける。",
+          "部分積分：積の微分法 $\\{f(x)g(x)\\}'=f'(x)g(x)+f(x)g'(x)$ の両辺を積分すると $f(x)g(x)=\\displaystyle\\int f'(x)g(x)\\,dx+\\int f(x)g'(x)\\,dx$。",
+          "移項して $\\displaystyle\\int f(x)g'(x)\\,dx=f(x)g(x)-\\int f'(x)g(x)\\,dx$。"
+        ],
+        "teacher_points": [
+          {
+            "point": "置換積分は「合成関数の微分法の逆」、部分積分は「積の微分法の逆」であることを、公式を並べて板書し対応させる。",
+            "ask": "$\\displaystyle\\int 2x(x^2+1)^3\\,dx$ はどの微分の公式の逆か。",
+            "expect": "$(x^2+1)^4$ を合成関数の微分法で微分したもの（の $\\dfrac14$ 倍）。"
+          },
+          {
+            "point": "定積分の置換で積分区間を取りかえ忘れる誤りが非常に多い。$x$ と $t$ の対応表をかかせる。",
+            "caution": "区間を $x$ のまま使ってしまう。",
+            "timing": "例題2の前"
+          }
+        ]
+      },
+      {
+        "id": "ex1",
+        "kind": "example",
+        "title": "例題1　置換積分法・部分積分法",
+        "example": {
+          "problem": "次の不定積分を求めよ。(1) $\\displaystyle\\int x(x^2+1)^3\\,dx$　(2) $\\displaystyle\\int xe^x\\,dx$　(3) $\\displaystyle\\int\\log x\\,dx$",
+          "steps": [
+            "(1) $t=x^2+1$ とおくと $dt=2x\\,dx$。$\\displaystyle\\int t^3\\cdot\\dfrac{1}{2}\\,dt=\\dfrac{t^4}{8}+C=\\dfrac{(x^2+1)^4}{8}+C$。",
+            "(2) $f=x,\\ g'=e^x$ として $xe^x-\\displaystyle\\int e^x\\,dx=xe^x-e^x+C=(x-1)e^x+C$。",
+            "(3) $\\log x=(\\log x)\\cdot(x)'$ と見て $x\\log x-\\displaystyle\\int\\dfrac{1}{x}\\cdot x\\,dx=x\\log x-x+C$。"
+          ],
+          "answer": "(1) $\\dfrac{(x^2+1)^4}{8}+C$　(2) $(x-1)e^x+C$　(3) $x\\log x-x+C$",
+          "thinking": "(1) は中身 $x^2+1$ の導関数 $2x$ が外にあるので置換。(2)(3) は積（(3) は $1\\times\\log x$）なので部分積分。"
+        },
+        "teacher_points": [
+          {
+            "point": "(3) で「$1$ を $x'$ と見る」発想を強調し、$\\displaystyle\\int\\log x\\,dx$ は結果を覚えるのではなく導けるようにさせる。"
+          }
+        ]
+      },
+      {
+        "id": "ex2",
+        "kind": "example",
+        "title": "例題2　三角関数による置換",
+        "example": {
+          "problem": "定積分 $\\displaystyle\\int_0^1\\sqrt{1-x^2}\\,dx$ を求めよ。",
+          "steps": [
+            "$x=\\sin\\theta$ とおくと $dx=\\cos\\theta\\,d\\theta$。$x:0\\to1$ のとき $\\theta:0\\to\\dfrac{\\pi}{2}$。",
+            "$0\\leqq\\theta\\leqq\\dfrac{\\pi}{2}$ で $\\cos\\theta\\geqq0$ なので $\\sqrt{1-\\sin^2\\theta}=\\cos\\theta$。",
+            "$\\displaystyle\\int_0^{\\frac{\\pi}{2}}\\cos^2\\theta\\,d\\theta=\\int_0^{\\frac{\\pi}{2}}\\dfrac{1+\\cos2\\theta}{2}\\,d\\theta=\\dfrac{\\pi}{4}$。"
+          ],
+          "answer": "$\\dfrac{\\pi}{4}$",
+          "thinking": "$\\sqrt{1-x^2}$ は $x=\\sin\\theta$ で根号が外れる。区間の取りかえと、$\\cos\\theta$ の符号に注意する。"
+        },
+        "teacher_points": [
+          {
+            "point": "答えが半径 $1$ の四分円の面積 $\\dfrac{\\pi}{4}$ に一致することを図で確かめさせ、置換の結果に納得させる。"
+          }
+        ]
+      },
+      {
+        "id": "th2",
+        "kind": "theorem",
+        "title": "区分求積法",
+        "formula": "$$\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)=\\int_0^1f(x)\\,dx$$",
+        "conditions": [
+          "$f(x)$ が $0\\leqq x\\leqq1$ で連続のとき成り立つ。和の範囲を $k=0$ から $n-1$ にしても同じ極限になる。",
+          "一般に $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{b-a}{n}\\sum_{k=1}^{n}f\\left(a+\\dfrac{b-a}{n}k\\right)=\\int_a^bf(x)\\,dx$。",
+          "和の極限を求めるには、$\\dfrac{1}{n}$ をくくり出し、残りを $\\dfrac{k}{n}$ だけの式に直す。"
+        ],
+        "proof_steps": [
+          "区間 $[0,\\,1]$ を $n$ 等分し、幅 $\\dfrac{1}{n}$、高さ $f\\left(\\dfrac{k}{n}\\right)$ の長方形を $k=1,\\,2,\\,\\cdots,\\,n$ について並べる。",
+          "長方形の面積の和 $\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ は、$n$ を大きくするとグラフの下の部分の面積に近づく。",
+          "$f(x)\\geqq0$ のとき、この面積は $\\displaystyle\\int_0^1f(x)\\,dx$ である（一般の連続関数でも、符号つき面積として同様に成り立つ）。"
+        ],
+        "teacher_points": [
+          {
+            "point": "$\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n^3}\\sum_{k=1}^{n}k^2$ を、和の公式で計算した結果と区分求積法の結果（$\\dfrac{1}{3}$）が一致することを確かめさせる。",
+            "ask": "$\\dfrac{1}{n^3}\\displaystyle\\sum k^2$ を $\\dfrac{1}{n}\\displaystyle\\sum f\\left(\\dfrac{k}{n}\\right)$ の形に直すと、$f(x)$ は何か。",
+            "expect": "$f(x)=x^2$"
+          }
+        ],
+        "figure": {
+          "alt": "y=x^2 の下に並べた幅 1/n の長方形（区分求積法）",
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 208 208\" width=\"208\" height=\"208\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"194\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"194\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"194\" x2=\"194\" y2=\"194\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"44\" x2=\"194\" y2=\"44\" stroke=\"#ddd\" stroke-width=\"0.6\"/><polygon points=\"14,194 44,194 44,188 14,188\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><polygon points=\"44,194 74,194 74,170 44,170\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><polygon points=\"74,194 104,194 104,140 74,140\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><polygon points=\"104,194 134,194 134,98 104,98\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><polygon points=\"134,194 164,194 164,44 134,44\" fill=\"#cfdcec\" fill-opacity=\"0.6\" stroke=\"#333\" stroke-width=\"1\"/><line x1=\"14\" y1=\"194\" x2=\"200\" y2=\"194\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"194\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"196\" y=\"207\" font-style=\"italic\">x</text><text x=\"19\" y=\"12\" font-style=\"italic\">y</text><text x=\"3\" y=\"206\">O</text><clipPath id=\"k16\"><rect x=\"14\" y=\"14\" width=\"180\" height=\"180\"/></clipPath><path d=\"M14,194 L14.9,193.99 L15.8,193.98 L16.7,193.95 L17.6,193.91 L18.5,193.87 L19.4,193.81 L20.3,193.74 L21.2,193.65 L22.1,193.56 L23,193.46 L23.9,193.35 L24.8,193.22 L25.7,193.09 L26.6,192.94 L27.5,192.78 L28.4,192.62 L29.3,192.44 L30.2,192.25 L31.1,192.05 L32,191.84 L32.9,191.62 L33.8,191.39 L34.7,191.14 L35.6,190.89 L36.5,190.62 L37.4,190.35 L38.3,190.06 L39.2,189.77 L40.1,189.46 L41,189.14 L41.9,188.81 L42.8,188.47 L43.7,188.12 L44.6,187.76 L45.5,187.38 L46.4,187 L47.3,186.61 L48.2,186.2 L49.1,185.79 L50,185.36 L50.9,184.92 L51.8,184.47 L52.7,184.02 L53.6,183.55 L54.5,183.06 L55.4,182.57 L56.3,182.07 L57.2,181.56 L58.1,181.03 L59,180.5 L59.9,179.95 L60.8,179.4 L61.7,178.83 L62.6,178.25 L63.5,177.66 L64.4,177.07 L65.3,176.46 L66.2,175.83 L67.1,175.2 L68,174.56 L68.9,173.91 L69.8,173.24 L70.7,172.57 L71.6,171.88 L72.5,171.18 L73.4,170.48 L74.3,169.76 L75.2,169.03 L76.1,168.29 L77,167.54 L77.9,166.78 L78.8,166.01 L79.7,165.22 L80.6,164.43 L81.5,163.62 L82.4,162.81 L83.3,161.98 L84.2,161.15 L85.1,160.3 L86,159.44 L86.9,158.57 L87.8,157.69 L88.7,156.8 L89.6,155.9 L90.5,154.98 L91.4,154.06 L92.3,153.13 L93.2,152.18 L94.1,151.23 L95,150.26 L95.9,149.28 L96.8,148.29 L97.7,147.3 L98.6,146.29 L99.5,145.26 L100.4,144.23 L101.3,143.19 L102.2,142.14 L103.1,141.07 L104,140 L104.9,138.91 L105.8,137.82 L106.7,136.71 L107.6,135.59 L108.5,134.46 L109.4,133.33 L110.3,132.18 L111.2,131.01 L112.1,129.84 L113,128.66 L113.9,127.47 L114.8,126.26 L115.7,125.05 L116.6,123.82 L117.5,122.58 L118.4,121.34 L119.3,120.08 L120.2,118.81 L121.1,117.53 L122,116.24 L122.9,114.94 L123.8,113.63 L124.7,112.3 L125.6,110.97 L126.5,109.62 L127.4,108.27 L128.3,106.9 L129.2,105.53 L130.1,104.14 L131,102.74 L131.9,101.33 L132.8,99.91 L133.7,98.48 L134.6,97.04 L135.5,95.58 L136.4,94.12 L137.3,92.65 L138.2,91.16 L139.1,89.67 L140,88.16 L140.9,86.64 L141.8,85.11 L142.7,83.58 L143.6,82.03 L144.5,80.46 L145.4,78.89 L146.3,77.31 L147.2,75.72 L148.1,74.11 L149,72.5 L149.9,70.87 L150.8,69.24 L151.7,67.59 L152.6,65.93 L153.5,64.26 L154.4,62.59 L155.3,60.9 L156.2,59.19 L157.1,57.48 L158,55.76 L158.9,54.03 L159.8,52.28 L160.7,50.53 L161.6,48.76 L162.5,46.98 L163.4,45.2 L164.3,43.4 L165.2,41.59 L166.1,39.77 L167,37.94 L167.9,36.1 L168.8,34.25 L169.7,32.38 L170.6,30.51 L171.5,28.62 L172.4,26.73 L173.3,24.82 L174.2,22.91 L175.1,20.98 L176,19.04 L176.9,17.09 L177.8,15.13 L178.7,13.16 L179.6,11.18 L180.5,9.18 L181.4,7.18 L182.3,5.17 L183.2,3.14 L184.1,1.11 L185,-0.94 L185.9,-3 L186.8,-5.07 L187.7,-7.14 L188.6,-9.23 L189.5,-11.33 L190.4,-13.45 L191.3,-15.57 L192.2,-17.7 L193.1,-19.85 L194,-22\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k16)\"/></svg>"
+        }
+      },
+      {
+        "id": "ex3",
+        "kind": "example",
+        "title": "例題3　面積",
+        "example": {
+          "problem": "曲線 $y=\\log x$ と $x$ 軸、直線 $x=e$ で囲まれた部分の面積を求めよ。",
+          "steps": [
+            "$y=\\log x$ は $x=1$ で $x$ 軸と交わり、$1\\leqq x\\leqq e$ で $y\\geqq0$。",
+            "$S=\\displaystyle\\int_1^e\\log x\\,dx=\\Bigl[x\\log x-x\\Bigr]_1^e=(e-e)-(0-1)=1$。"
+          ],
+          "answer": "$1$",
+          "thinking": "まず $x$ 軸との交点と上下関係を確かめ、例題1(3) の原始関数を使う。",
+          "figure": {
+            "alt": "y=log x と x 軸、x=e で囲まれた部分",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 178 153\" width=\"178\" height=\"153\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"139\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"64\" y1=\"139\" x2=\"64\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"114\" y1=\"139\" x2=\"114\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"164\" y1=\"139\" x2=\"164\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"139\" x2=\"164\" y2=\"139\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"89\" x2=\"164\" y2=\"89\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"39\" x2=\"164\" y2=\"39\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"89\" x2=\"170\" y2=\"89\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"139\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"166\" y=\"102\" font-style=\"italic\">x</text><text x=\"19\" y=\"12\" font-style=\"italic\">y</text><text x=\"3\" y=\"101\">O</text><text x=\"61\" y=\"101\" font-size=\"8\" fill=\"#555\">1</text><text x=\"111\" y=\"101\" font-size=\"8\" fill=\"#555\">2</text><text x=\"161\" y=\"101\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"142\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"1\" y=\"42\" font-size=\"8\" fill=\"#555\">1</text><clipPath id=\"k19\"><rect x=\"14\" y=\"14\" width=\"150\" height=\"125\"/></clipPath><path d=\"M17,229.67 L17.75,218.51 L18.5,209.4 L19.25,201.69 L20,195.01 L20.75,189.12 L21.5,183.86 L22.25,179.09 L23,174.74 L23.75,170.74 L24.5,167.03 L25.25,163.58 L26,160.36 L26.75,157.32 L27.5,154.47 L28.25,151.76 L29,149.2 L29.75,146.76 L30.5,144.43 L31.25,142.21 L32,140.08 L32.75,138.04 L33.5,136.08 L34.25,134.19 L35,132.38 L35.75,130.62 L36.5,128.93 L37.25,127.29 L38,125.7 L38.75,124.16 L39.5,122.67 L40.25,121.22 L41,119.81 L41.75,118.44 L42.5,117.11 L43.25,115.81 L44,114.54 L44.75,113.31 L45.5,112.1 L46.25,110.93 L47,109.78 L47.75,108.65 L48.5,107.55 L49.25,106.48 L50,105.43 L50.75,104.39 L51.5,103.38 L52.25,102.39 L53,101.42 L53.75,100.47 L54.5,99.54 L55.25,98.62 L56,97.72 L56.75,96.83 L57.5,95.96 L58.25,95.11 L59,94.27 L59.75,93.44 L60.5,92.63 L61.25,91.83 L62,91.04 L62.75,90.27 L63.5,89.5 L64.25,88.75 L65,88.01 L65.75,87.28 L66.5,86.56 L67.25,85.85 L68,85.15 L68.75,84.46 L69.5,83.78 L70.25,83.11 L71,82.45 L71.75,81.79 L72.5,81.15 L73.25,80.51 L74,79.88 L74.75,79.26 L75.5,78.65 L76.25,78.04 L77,77.44 L77.75,76.85 L78.5,76.27 L79.25,75.69 L80,75.12 L80.75,74.55 L81.5,73.99 L82.25,73.44 L83,72.9 L83.75,72.36 L84.5,71.82 L85.25,71.29 L86,70.77 L86.75,70.25 L87.5,69.74 L88.25,69.23 L89,68.73 L89.75,68.23 L90.5,67.74 L91.25,67.25 L92,66.77 L92.75,66.29 L93.5,65.81 L94.25,65.34 L95,64.88 L95.75,64.42 L96.5,63.96 L97.25,63.51 L98,63.06 L98.75,62.62 L99.5,62.18 L100.25,61.74 L101,61.31 L101.75,60.88 L102.5,60.45 L103.25,60.03 L104,59.61 L104.75,59.2 L105.5,58.78 L106.25,58.38 L107,57.97 L107.75,57.57 L108.5,57.17 L109.25,56.78 L110,56.38 L110.75,55.99 L111.5,55.61 L112.25,55.23 L113,54.85 L113.75,54.47 L114.5,54.09 L115.25,53.72 L116,53.35 L116.75,52.99 L117.5,52.62 L118.25,52.26 L119,51.9 L119.75,51.55 L120.5,51.19 L121.25,50.84 L122,50.49 L122.75,50.15 L123.5,49.8 L124.25,49.46 L125,49.12 L125.75,48.79 L126.5,48.45 L127.25,48.12 L128,47.79 L128.75,47.46 L129.5,47.14 L130.25,46.81 L131,46.49 L131.75,46.17 L132.5,45.86 L133.25,45.54 L134,45.23 L134.75,44.92 L135.5,44.61 L136.25,44.3 L137,43.99 L137.75,43.69 L138.5,43.39 L139.25,43.09 L140,42.79 L140.75,42.49 L141.5,42.2 L142.25,41.9 L143,41.61 L143.75,41.32 L144.5,41.03 L145.25,40.75 L146,40.46 L146.75,40.18 L147.5,39.9 L148.25,39.62 L149,39.34 L149.75,39.06 L150.5,38.78 L151.25,38.51 L152,38.24 L152.75,37.97 L153.5,37.7 L154.25,37.43 L155,37.16 L155.75,36.9 L156.5,36.63 L157.25,36.37 L158,36.11 L158.75,35.85 L159.5,35.59 L160.25,35.34 L161,35.08 L161.75,34.83 L162.5,34.57 L163.25,34.32 L164,34.07\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k19)\"/><circle cx=\"64\" cy=\"89\" r=\"2.3\" fill=\"#000\"/><text x=\"68\" y=\"85\">1</text><circle cx=\"149.91\" cy=\"39\" r=\"2.3\" fill=\"#000\"/><text x=\"153.91\" y=\"35\">(e,1)</text></svg>"
+          }
+        },
+        "teacher_points": [
+          {
+            "point": "$y$ 軸方向に積分して $\\displaystyle\\int_0^1(e-e^y)\\,dy=1$ としても求められることを紹介し、逆関数の見方を示す。"
+          }
+        ]
+      },
+      {
+        "id": "dv1",
+        "kind": "derivation",
+        "title": "体積と曲線の長さの公式",
+        "proof_steps": [
+          "立体を $x$ 軸に垂直な平面で切った断面積を $S(x)$ とする。$x$ から $x+\\Delta x$ までの薄い部分の体積はおよそ $S(x)\\Delta x$。",
+          "これを足し合わせて $\\Delta x\\to0$ とすると $V=\\displaystyle\\int_a^bS(x)\\,dx$。$y=f(x)$ を $x$ 軸のまわりに回転した立体では $S(x)=\\pi\\{f(x)\\}^2$ なので $V=\\pi\\displaystyle\\int_a^b\\{f(x)\\}^2\\,dx$。",
+          "曲線 $x=f(t),\\ y=g(t)$ の微小部分の長さは、三平方の定理よりおよそ $\\sqrt{(\\Delta x)^2+(\\Delta y)^2}=\\sqrt{\\left(\\dfrac{\\Delta x}{\\Delta t}\\right)^2+\\left(\\dfrac{\\Delta y}{\\Delta t}\\right)^2}\\,\\Delta t$。",
+          "足し合わせて $\\Delta t\\to0$ とすると $L=\\displaystyle\\int_\\alpha^\\beta\\sqrt{\\left(\\dfrac{dx}{dt}\\right)^2+\\left(\\dfrac{dy}{dt}\\right)^2}\\,dt$。$y=f(x)$ のときは $L=\\displaystyle\\int_a^b\\sqrt{1+\\{f'(x)\\}^2}\\,dx$。"
+        ],
+        "body": "「小さく分けて足し合わせ、極限をとる」という区分求積法の考え方が、面積・体積・長さに共通している。",
+        "teacher_points": [
+          {
+            "point": "半径 $r$ の球の体積を、断面積 $\\pi(r^2-x^2)$ の積分として求めさせ、公式 $\\dfrac{4}{3}\\pi r^3$ が導かれることを確認する。",
+            "ask": "球を中心から距離 $x$ の平面で切った断面の半径は？",
+            "expect": "$\\sqrt{r^2-x^2}$"
+          }
+        ]
+      },
+      {
+        "id": "ex4",
+        "kind": "example",
+        "title": "例題4　回転体の体積",
+        "example": {
+          "problem": "曲線 $y=\\sin x\\ (0\\leqq x\\leqq\\pi)$ と $x$ 軸で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めよ。",
+          "steps": [
+            "$V=\\pi\\displaystyle\\int_0^{\\pi}\\sin^2x\\,dx$。",
+            "$\\sin^2x=\\dfrac{1-\\cos2x}{2}$ より $\\displaystyle\\int_0^{\\pi}\\sin^2x\\,dx=\\Bigl[\\dfrac{x}{2}-\\dfrac{\\sin2x}{4}\\Bigr]_0^{\\pi}=\\dfrac{\\pi}{2}$。",
+            "$V=\\dfrac{\\pi^2}{2}$。"
+          ],
+          "answer": "$\\dfrac{\\pi^2}{2}$",
+          "thinking": "回転体の断面は半径 $\\sin x$ の円。$\\sin^2x$ は半角の公式で次数を下げて積分する。"
+        },
+        "teacher_points": [
+          {
+            "point": "$\\pi$ をかけ忘れる、$\\sin^2x$ をそのまま積分できずに止まる、の2点を机間指導で確認する。"
+          }
+        ]
+      },
+      {
+        "id": "ex5",
+        "kind": "example",
+        "title": "例題5　曲線の長さ",
+        "example": {
+          "problem": "サイクロイド $x=a(t-\\sin t),\\ y=a(1-\\cos t)\\ (0\\leqq t\\leqq2\\pi,\\ a>0)$ の長さを求めよ。",
+          "steps": [
+            "$\\dfrac{dx}{dt}=a(1-\\cos t),\\ \\dfrac{dy}{dt}=a\\sin t$。",
+            "$\\left(\\dfrac{dx}{dt}\\right)^2+\\left(\\dfrac{dy}{dt}\\right)^2=2a^2(1-\\cos t)=4a^2\\sin^2\\dfrac{t}{2}$。",
+            "$0\\leqq t\\leqq2\\pi$ で $\\sin\\dfrac{t}{2}\\geqq0$ なので $L=\\displaystyle\\int_0^{2\\pi}2a\\sin\\dfrac{t}{2}\\,dt=\\Bigl[-4a\\cos\\dfrac{t}{2}\\Bigr]_0^{2\\pi}=8a$。"
+          ],
+          "answer": "$8a$",
+          "thinking": "根号の中を半角の公式で完全平方にする。$\\sqrt{A^2}=|A|$ なので符号を確かめる。"
+        },
+        "teacher_points": [
+          {
+            "point": "転がる円の半径 $a$ に対し、1回転で進む距離が $2\\pi a$、描く曲線の長さが $8a$ であることを比べさせる。"
+          }
+        ]
+      },
+      {
+        "id": "bd1",
+        "kind": "board_plan",
+        "title": "板書案",
+        "board": {
+          "columns": [
+            {
+              "title": "① 積分の計算",
+              "lines": [
+                "基本公式（微分の逆）",
+                "置換：$\\displaystyle\\int f(g(x))g'(x)\\,dx=\\int f(t)\\,dt$",
+                "部分：$\\displaystyle\\int fg'=fg-\\int f'g$",
+                "定積分の置換は区間も変える"
+              ]
+            },
+            {
+              "title": "② 区分求積・面積",
+              "lines": [
+                "$\\displaystyle\\lim\\dfrac{1}{n}\\sum f\\left(\\dfrac{k}{n}\\right)=\\int_0^1f(x)\\,dx$",
+                "面積 $=\\displaystyle\\int(\\text{上}-\\text{下})\\,dx$",
+                "例3 $\\displaystyle\\int_1^e\\log x\\,dx=1$"
+              ]
+            },
+            {
+              "title": "③ 体積・長さ",
+              "lines": [
+                "$V=\\displaystyle\\int_a^bS(x)\\,dx$",
+                "回転体 $V=\\pi\\displaystyle\\int_a^by^2\\,dx$",
+                "$L=\\displaystyle\\int\\sqrt{\\dot{x}^2+\\dot{y}^2}\\,dt$",
+                "例5 サイクロイド $8a$"
+              ]
+            }
+          ]
+        },
+        "teacher_points": [
+          {
+            "point": "③の各公式の横に「何を細かく分けたか（断面・弧の微小部分）」を小さく図示し、②の区分求積の考え方から矢印で結ぶ。"
+          }
+        ]
+      },
+      {
+        "id": "gd1",
+        "kind": "teacher_guide",
+        "title": "指導ガイド（口頭で補う要点）",
+        "teacher_points": [
+          {
+            "point": "置換積分では「中身の導関数が外にあるか」を見る習慣をつけさせる。なければ係数を調整するか、別の方法を考える。",
+            "ask": "$\\displaystyle\\int xe^{x^2}\\,dx$ で $t=x^2$ とおくと何が残るか。",
+            "expect": "$\\dfrac{1}{2}e^t\\,dt$"
+          },
+          {
+            "point": "部分積分の $f$ と $g'$ の選び方は「微分して簡単になる方を $f$」。$\\log x$ と多項式の積では $\\log x$ を $f$ にすることを確認する。"
+          },
+          {
+            "point": "面積・体積の問題では、必ず図をかいて交点・上下関係・回転軸を確認してから式を立てさせる。",
+            "timing": "例題3・4の前"
+          },
+          {
+            "point": "回転体の体積で、2曲線の間の部分は $\\pi\\displaystyle\\int(f^2-g^2)\\,dx$ であり $\\pi\\displaystyle\\int(f-g)^2\\,dx$ ではないことを、ドーナツ型の断面で説明する。",
+            "caution": "$(f-g)^2$ とする誤りが多い。"
+          },
+          {
+            "point": "曲線の長さでは $\\sqrt{A^2}=|A|$ に注意させ、区間で $A$ の符号が変わるときは区間を分けさせる。"
+          }
+        ],
+        "misconceptions": [
+          {
+            "wrong": "定積分で置換したのに積分区間を $x$ のままにする",
+            "correct": "$t=g(x)$ に対応する区間 $g(a)$ から $g(b)$ に取りかえる"
+          },
+          {
+            "wrong": "$\\displaystyle\\int\\log x\\,dx=\\dfrac{1}{x}+C$",
+            "correct": "それは微分。部分積分で $x\\log x-x+C$"
+          },
+          {
+            "wrong": "2曲線の間の回転体を $\\pi\\displaystyle\\int(f-g)^2\\,dx$ とする",
+            "correct": "外側の円から内側の円を除くので $\\pi\\displaystyle\\int(f^2-g^2)\\,dx$"
+          }
+        ]
+      },
+      {
+        "id": "sm1",
+        "kind": "summary",
+        "title": "まとめ",
+        "bullets": [
+          "置換積分法は合成関数の微分法の逆、部分積分法は積の微分法の逆。定積分の置換では区間も取りかえる。",
+          "区分求積法 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)=\\int_0^1f(x)\\,dx$ が、面積・体積・長さの公式の土台になる。",
+          "体積 $V=\\displaystyle\\int_a^bS(x)\\,dx$、回転体 $V=\\pi\\displaystyle\\int_a^by^2\\,dx$、曲線の長さ $L=\\displaystyle\\int\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\,dt$。"
+        ]
+      },
+      {
+        "id": "ck1",
+        "kind": "check",
+        "title": "確認問題",
+        "check_items": [
+          {
+            "q": "$\\displaystyle\\int\\dfrac{2x}{x^2+3}\\,dx$ を求めよ。",
+            "a": "$\\log(x^2+3)+C$"
+          },
+          {
+            "q": "$\\displaystyle\\int_0^{\\pi}x\\sin x\\,dx$ を求めよ。",
+            "a": "$\\Bigl[-x\\cos x+\\sin x\\Bigr]_0^{\\pi}=\\pi$"
+          },
+          {
+            "q": "$y=\\sqrt{x}\\ (0\\leqq x\\leqq4)$ を $x$ 軸のまわりに回転した立体の体積は？",
+            "a": "$\\pi\\displaystyle\\int_0^4x\\,dx=8\\pi$"
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [],
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成。自動検査（スキーマ・構成）実施予定。",
+      "content_hash": "e67be2c42ebacc56a10a47ef4e92a37c712d20c20f60e547e2f545b7e260cb06"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T08:48:26+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "46ed8c9e6cd2b07e6b5b9348095a4c686ed7132d4a06284238f49dcf5e72d922"
+  }
+}

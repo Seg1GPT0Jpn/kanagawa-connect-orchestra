@@ -1,0 +1,5378 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-MATH3-U03-EX",
+  "title": "積分法とその応用　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "math",
+  "course": "math_3",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-MATH3-U03"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-MATH3-U03-PACK",
+  "pair_set_id": "HS-MATH3-U03-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-MATH3-U02",
+        "point": "導関数",
+        "title": "微分法とその応用"
+      },
+      {
+        "unit_id": "HS-MATH2-U06",
+        "point": "定積分と面積",
+        "title": "微分法・積分法"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "SS-MATH-U02",
+        "point": "二次試験の求積問題",
+        "title": "数学　記述式計算問題"
+      }
+    ],
+    "readiness_check": [
+      "三角・指数・対数関数の導関数、合成関数・積の微分法（数学Ⅲ 微分法）を使える。",
+      "定積分の計算と、2曲線の間の面積の求め方（数学Ⅱ）を使える。",
+      "$\\displaystyle\\sum_{k=1}^{n}k^2=\\dfrac{n(n+1)(2n+1)}{6}$ などの和の公式（数学B）と数列の極限（数学Ⅲ 極限）を使える。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。",
+    "答えが分数になるときは既約分数、根号を含むときは根号の中をできるだけ小さい自然数にしなさい。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-MATH3-U03-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int \\dfrac{1}{\\sqrt{x}}\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$2\\sqrt{x}+C$（$C$ は積分定数）"
+      },
+      "explanation": "基本公式（微分の公式の逆）を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(2*sqrt(x), x)-(1/sqrt(x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-basic_indef",
+      "explanation_detail": {
+        "approach": "根号や分数を $x^r$ の形に直し、$\\displaystyle\\int x^r\\,dx=\\dfrac{x^{r+1}}{r+1}+C$ を使う。",
+        "steps": [
+          "被積分関数を基本公式が使える形に直す。",
+          "$2\\sqrt{x}+C$。"
+        ],
+        "alternatives": [
+          "答え $2\\sqrt{x}$ を微分すると $\\dfrac{1}{\\sqrt{x}}$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int\\sin x\\,dx=\\cos x$ と符号を誤る。",
+          "中身の1次式の係数で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int \\sin (5x+1)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-\\dfrac{1}{5}\\cos (5x+1)+C$（$C$ は積分定数）"
+      },
+      "explanation": "基本公式（微分の公式の逆）を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(-cos(5*x+(1))/5, x)-(sin(5*x+(1))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-basic_indef",
+      "explanation_detail": {
+        "approach": "$\\displaystyle\\int\\sin x\\,dx=-\\cos x+C$、$\\displaystyle\\int\\cos x\\,dx=\\sin x+C$。中身が1次式なので係数で割る。",
+        "steps": [
+          "被積分関数を基本公式が使える形に直す。",
+          "$-\\dfrac{1}{5}\\cos (5x+1)+C$。"
+        ],
+        "alternatives": [
+          "答え $-\\dfrac{1}{5}\\cos (5x+1)$ を微分すると $\\sin (5x+1)$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int\\sin x\\,dx=\\cos x$ と符号を誤る。",
+          "中身の1次式の係数で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int 4\\cdot 2^x\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{4\\cdot 2^x}{\\log 2}+C$（$C$ は積分定数）"
+      },
+      "explanation": "基本公式（微分の公式の逆）を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(4*2**x/log(2), x)-(4*2**x))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-basic_indef",
+      "explanation_detail": {
+        "approach": "$(a^x)'=a^x\\log a$ を逆に使い、$\\displaystyle\\int a^x\\,dx=\\dfrac{a^x}{\\log a}+C$。",
+        "steps": [
+          "被積分関数を基本公式が使える形に直す。",
+          "$\\dfrac{4\\cdot 2^x}{\\log 2}+C$。"
+        ],
+        "alternatives": [
+          "答え $\\dfrac{4\\cdot 2^x}{\\log 2}$ を微分すると $4\\cdot 2^x$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int\\sin x\\,dx=\\cos x$ と符号を誤る。",
+          "中身の1次式の係数で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int \\cos (x+1)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\sin (x+1)+C$（$C$ は積分定数）"
+      },
+      "explanation": "基本公式（微分の公式の逆）を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sin(1*x+(1))/1, x)-(cos(1*x+(1))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-basic_indef",
+      "explanation_detail": {
+        "approach": "$\\displaystyle\\int\\sin x\\,dx=-\\cos x+C$、$\\displaystyle\\int\\cos x\\,dx=\\sin x+C$。中身が1次式なので係数で割る。",
+        "steps": [
+          "被積分関数を基本公式が使える形に直す。",
+          "$\\sin (x+1)+C$。"
+        ],
+        "alternatives": [
+          "答え $\\sin (x+1)$ を微分すると $\\cos (x+1)$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int\\sin x\\,dx=\\cos x$ と符号を誤る。",
+          "中身の1次式の係数で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "不定積分 $\\displaystyle\\int \\sin (x+3)\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-\\cos (x+3)+C$（$C$ は積分定数）"
+      },
+      "explanation": "基本公式（微分の公式の逆）を使う。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(-cos(1*x+(3))/1, x)-(sin(1*x+(3))))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-basic_indef",
+      "explanation_detail": {
+        "approach": "$\\displaystyle\\int\\sin x\\,dx=-\\cos x+C$、$\\displaystyle\\int\\cos x\\,dx=\\sin x+C$。中身が1次式なので係数で割る。",
+        "steps": [
+          "被積分関数を基本公式が使える形に直す。",
+          "$-\\cos (x+3)+C$。"
+        ],
+        "alternatives": [
+          "答え $-\\cos (x+3)$ を微分すると $\\sin (x+3)$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "積分定数 $C$ を書いている",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int\\sin x\\,dx=\\cos x$ と符号を誤る。",
+          "中身の1次式の係数で割るのを忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "置換積分法を用いて、不定積分 $\\displaystyle\\int \\dfrac{8x}{4x^2+9}\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\log(4x^2+9)+C$"
+      },
+      "explanation": "中身を $t$ とおき、$dt$ を $dx$ で表して置きかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(log(4*x**2+9), x)-(8*x/(4*x**2+9)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-substitution",
+      "explanation_detail": {
+        "approach": "被積分関数の中に「ある関数 $g(x)$」と「その導関数 $g'(x)$」が組で現れているかを探し、$t=g(x)$ とおく。",
+        "steps": [
+          "分子 $8x$ は分母 $4x^2+9$ の導関数。",
+          "$\\displaystyle\\int \\dfrac{g'(x)}{g(x)}\\,dx=\\log|g(x)|+C$ で、$4x^2+9>0$ より絶対値は不要。",
+          "$x$ に戻して $\\log(4x^2+9)+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して $\\dfrac{8x}{4x^2+9}$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をして $dx$ を $dt$ で表している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$dx$ を $dt$ に置きかえるときの係数を落とす。",
+          "最後に $x$ の式に戻し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "置換積分法を用いて、不定積分 $\\displaystyle\\int \\sin^4 x\\cos x\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\sin^{5}x}{5}+C$"
+      },
+      "explanation": "中身を $t$ とおき、$dt$ を $dx$ で表して置きかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(sin(x)**5/5, x)-(sin(x)**4*cos(x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-substitution",
+      "explanation_detail": {
+        "approach": "被積分関数の中に「ある関数 $g(x)$」と「その導関数 $g'(x)$」が組で現れているかを探し、$t=g(x)$ とおく。",
+        "steps": [
+          "$t=\\sin x$ とおくと $dt=\\cos x\\,dx$。",
+          "$\\displaystyle\\int t^4\\,dt=\\dfrac{t^{5}}{5}+C$。",
+          "$x$ に戻して $\\dfrac{\\sin^{5}x}{5}+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して $\\sin^4 x\\cos x$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をして $dx$ を $dt$ で表している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$dx$ を $dt$ に置きかえるときの係数を落とす。",
+          "最後に $x$ の式に戻し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "置換積分法を用いて、不定積分 $\\displaystyle\\int (4x-1)^4\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{(4x-1)^{5}}{20}+C$"
+      },
+      "explanation": "中身を $t$ とおき、$dt$ を $dx$ で表して置きかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff((4*x+(-1))**5/20, x)-((4*x+(-1))**4))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-substitution",
+      "explanation_detail": {
+        "approach": "被積分関数の中に「ある関数 $g(x)$」と「その導関数 $g'(x)$」が組で現れているかを探し、$t=g(x)$ とおく。",
+        "steps": [
+          "$t=4x-1$ とおくと $dt=4\\,dx$。",
+          "$\\displaystyle\\int t^4\\cdot\\dfrac{1}{4}\\,dt=\\dfrac{t^{5}}{20}+C$。",
+          "$x$ に戻して $\\dfrac{(4x-1)^{5}}{20}+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して $(4x-1)^4$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をして $dx$ を $dt$ で表している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$dx$ を $dt$ に置きかえるときの係数を落とす。",
+          "最後に $x$ の式に戻し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "置換積分法を用いて、不定積分 $\\displaystyle\\int \\dfrac{\\log x}{x}\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{(\\log x)^{2}}{2}+C$"
+      },
+      "explanation": "中身を $t$ とおき、$dt$ を $dx$ で表して置きかえる。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(log(x)**2/2, x)-(log(x)**1/x))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-substitution",
+      "explanation_detail": {
+        "approach": "被積分関数の中に「ある関数 $g(x)$」と「その導関数 $g'(x)$」が組で現れているかを探し、$t=g(x)$ とおく。",
+        "steps": [
+          "$t=\\log x$ とおくと $dt=\\dfrac{1}{x}\\,dx$。",
+          "$\\displaystyle\\int t^1\\,dt=\\dfrac{t^{2}}{2}+C$。",
+          "$x$ に戻して $\\dfrac{(\\log x)^{2}}{2}+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して $\\dfrac{\\log x}{x}$ に戻ることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をして $dx$ を $dt$ で表している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$dx$ を $dt$ に置きかえるときの係数を落とす。",
+          "最後に $x$ の式に戻し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "部分積分法を用いて、不定積分 $\\displaystyle\\int x\\sin 2x\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-\\dfrac{1}{2}x\\cos 2x+\\dfrac{1}{4}\\sin 2x+C$"
+      },
+      "explanation": "$\\displaystyle\\int fg'\\,dx=fg-\\int f'g\\,dx$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(-Rational(1,2)*x*cos(2*x)+Rational(1,4)*sin(2*x), x)-(x*sin(2*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-by_parts",
+      "explanation_detail": {
+        "approach": "微分すると簡単になる方（$x^n$ や $\\log x$）を $f$、積分しやすい方を $g'$ にとって部分積分する。",
+        "steps": [
+          "$f=x,\\ g'=\\sin 2x$ とすると $g=-\\dfrac{1}{2}\\cos 2x$。",
+          "$-\\dfrac{1}{2}x\\cos 2x+\\displaystyle\\int \\dfrac{1}{2}\\cos 2x\\,dx$。",
+          "整理して $-\\dfrac{1}{2}x\\cos 2x+\\dfrac{1}{4}\\sin 2x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して被積分関数に戻ることを確かめる（積の微分法を使う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f,\\ g'$ を適切に選んで部分積分している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f$ と $g'$ の選び方を逆にして、かえって複雑になる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "部分積分法を用いて、不定積分 $\\displaystyle\\int x\\sin 3x\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-\\dfrac{1}{3}x\\cos 3x+\\dfrac{1}{9}\\sin 3x+C$"
+      },
+      "explanation": "$\\displaystyle\\int fg'\\,dx=fg-\\int f'g\\,dx$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(-Rational(1,3)*x*cos(3*x)+Rational(1,9)*sin(3*x), x)-(x*sin(3*x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-by_parts",
+      "explanation_detail": {
+        "approach": "微分すると簡単になる方（$x^n$ や $\\log x$）を $f$、積分しやすい方を $g'$ にとって部分積分する。",
+        "steps": [
+          "$f=x,\\ g'=\\sin 3x$ とすると $g=-\\dfrac{1}{3}\\cos 3x$。",
+          "$-\\dfrac{1}{3}x\\cos 3x+\\displaystyle\\int \\dfrac{1}{3}\\cos 3x\\,dx$。",
+          "整理して $-\\dfrac{1}{3}x\\cos 3x+\\dfrac{1}{9}\\sin 3x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して被積分関数に戻ることを確かめる（積の微分法を使う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f,\\ g'$ を適切に選んで部分積分している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f$ と $g'$ の選び方を逆にして、かえって複雑になる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "部分積分法を用いて、不定積分 $\\displaystyle\\int x^2e^{-x}\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$-(x^2+2x+2)e^{-x}+C$"
+      },
+      "explanation": "$\\displaystyle\\int fg'\\,dx=fg-\\int f'g\\,dx$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(-(x**2+2*x+2)*exp(-x), x)-(x**2*exp(-x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-by_parts",
+      "explanation_detail": {
+        "approach": "微分すると簡単になる方（$x^n$ や $\\log x$）を $f$、積分しやすい方を $g'$ にとって部分積分する。",
+        "steps": [
+          "$f=x^2,\\ g'=e^{-x}$ として $-x^2e^{-x}+2\\displaystyle\\int xe^{-x}\\,dx$。",
+          "もう一度部分積分して $\\displaystyle\\int xe^{-x}\\,dx=-(x+1)e^{-x}+C$。",
+          "整理して $-(x^2+2x+2)e^{-x}+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して被積分関数に戻ることを確かめる（積の微分法を使う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f,\\ g'$ を適切に選んで部分積分している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f$ と $g'$ の選び方を逆にして、かえって複雑になる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "部分積分法を用いて、不定積分 $\\displaystyle\\int x^4\\log x\\,dx$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{x^{5}}{5}\\log x-\\dfrac{x^{5}}{25}+C$"
+      },
+      "explanation": "$\\displaystyle\\int fg'\\,dx=fg-\\int f'g\\,dx$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "simplify(diff(x**5/5*log(x)-x**5/25, x)-(x**4*log(x)))",
+        "expected": "0"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-by_parts",
+      "explanation_detail": {
+        "approach": "微分すると簡単になる方（$x^n$ や $\\log x$）を $f$、積分しやすい方を $g'$ にとって部分積分する。",
+        "steps": [
+          "$f=\\log x,\\ g'=x^4$ とすると $g=\\dfrac{x^{5}}{5}$。",
+          "$\\dfrac{x^{5}}{5}\\log x-\\displaystyle\\int \\dfrac{x^{4}}{5}\\,dx$。",
+          "整理して $\\dfrac{x^{5}}{5}\\log x-\\dfrac{x^{5}}{25}+C$。"
+        ],
+        "alternatives": [
+          "答えを微分して被積分関数に戻ることを確かめる（積の微分法を使う）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$f,\\ g'$ を適切に選んで部分積分している",
+            "points": 1
+          },
+          {
+            "point": "原始関数が正しい（積分定数を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$f$ と $g'$ の選び方を逆にして、かえって複雑になる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{4}\\sqrt{x}\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{16}{3}$"
+      },
+      "explanation": "原始関数を求め、上端の値から下端の値を引く。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(x), [x, 0, 4])",
+        "expected": "Rational(16,3)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-definite_basic",
+      "explanation_detail": {
+        "approach": "基本公式で原始関数 $F(x)$ を求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。",
+        "steps": [
+          "$\\Bigl[\\dfrac{2}{3}x\\sqrt{x}\\Bigr]_0^{4}=\\dfrac{2}{3}\\cdot 4\\cdot 2=\\dfrac{16}{3}$。"
+        ],
+        "alternatives": [
+          "被積分関数のグラフをかき、面積として値の大きさの見当をつけて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos$ の原始関数の符号を誤る。",
+          "上端と下端を逆に引く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{2}^{4}\\dfrac{dx}{x^2}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{4}$"
+      },
+      "explanation": "原始関数を求め、上端の値から下端の値を引く。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate(1/x**2, [x, 2, 4])",
+        "expected": "Rational(1,4)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-definite_basic",
+      "explanation_detail": {
+        "approach": "基本公式で原始関数 $F(x)$ を求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。",
+        "steps": [
+          "$\\Bigl[-\\dfrac{1}{x}\\Bigr]_{2}^{4}=-\\dfrac{1}{4}+\\dfrac{1}{2}=\\dfrac{1}{4}$。"
+        ],
+        "alternatives": [
+          "被積分関数のグラフをかき、面積として値の大きさの見当をつけて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos$ の原始関数の符号を誤る。",
+          "上端と下端を逆に引く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{\\frac{\\pi}{6}}\\cos 3x\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{1}{3}$"
+      },
+      "explanation": "原始関数を求め、上端の値から下端の値を引く。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate(cos(3*x), [x, 0, pi/6])",
+        "expected": "Rational(1,3)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-definite_basic",
+      "explanation_detail": {
+        "approach": "基本公式で原始関数 $F(x)$ を求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。",
+        "steps": [
+          "$\\Bigl[\\dfrac{1}{3}\\sin 3x\\Bigr]_0^{\\dfrac{\\pi}{6}}=\\dfrac{1}{3}$。"
+        ],
+        "alternatives": [
+          "被積分関数のグラフをかき、面積として値の大きさの見当をつけて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos$ の原始関数の符号を誤る。",
+          "上端と下端を逆に引く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{1}^{e^2}\\dfrac{1}{x}\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$2$"
+      },
+      "explanation": "原始関数を求め、上端の値から下端の値を引く。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "integrate(1/x, [x, 1, exp(2)])",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-definite_basic",
+      "explanation_detail": {
+        "approach": "基本公式で原始関数 $F(x)$ を求め、$F(\\text{上端})-F(\\text{下端})$ を計算する。",
+        "steps": [
+          "$\\Bigl[\\log x\\Bigr]_1^{e^2}=\\log e^2-\\log 1=2$。"
+        ],
+        "alternatives": [
+          "被積分関数のグラフをかき、面積として値の大きさの見当をつけて検算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原始関数が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\cos$ の原始関数の符号を誤る。",
+          "上端と下端を逆に引く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "区分求積法を用いて、極限 $\\displaystyle\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\dfrac{n}{n^2+k^2}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi}{4}$"
+      },
+      "explanation": "$\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ の形に直すと $f(x)=\\dfrac{1}{1+x^2}$。極限は $\\displaystyle\\int_0^1\\dfrac{1}{1+x^2}\\,dx=\\dfrac{\\pi}{4}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(1/(1+x**2), [x, 0, 1])",
+        "expected": "pi/4"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-riemann_sum",
+      "related_units": [
+        "HS-MATH3-U01",
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "和を $\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ の形（$\\dfrac{1}{n}$ をくくり出し、残りを $\\dfrac{k}{n}$ だけで表す）に直し、$\\displaystyle\\int_0^1f(x)\\,dx$ に置きかえる。",
+        "steps": [
+          "$\\dfrac{1}{n}$ をくくり出し、残りの各項を $\\dfrac{k}{n}$ の式で表す。",
+          "$f(x)=\\dfrac{1}{1+x^2}$ として $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)=\\int_0^1\\dfrac{1}{1+x^2}\\,dx$。",
+          "定積分を計算して $\\dfrac{\\pi}{4}$。"
+        ],
+        "alternatives": [
+          "$\\displaystyle\\sum k^m$ の場合は、和の公式（数学B）で和を求めてから $n\\to\\infty$ としても同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に正しく変形している",
+            "points": 1
+          },
+          {
+            "point": "定積分の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{1}{n}$ をくくり出さずに $f$ を決めてしまう。",
+          "積分区間を $0$ から $n$ のようにしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "区分求積法を用いて、極限 $\\displaystyle\\lim_{n\\to\\infty}\\sum_{k=1}^{n}\\dfrac{1}{n+k}$ を求めなさい。",
+      "answer": {
+        "value": "$\\log 2$"
+      },
+      "explanation": "$\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ の形に直すと $f(x)=\\dfrac{1}{1+x}$。極限は $\\displaystyle\\int_0^1\\dfrac{1}{1+x}\\,dx=\\log 2$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(1/(1+x), [x, 0, 1])",
+        "expected": "log(2)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-riemann_sum",
+      "related_units": [
+        "HS-MATH3-U01",
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "和を $\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ の形（$\\dfrac{1}{n}$ をくくり出し、残りを $\\dfrac{k}{n}$ だけで表す）に直し、$\\displaystyle\\int_0^1f(x)\\,dx$ に置きかえる。",
+        "steps": [
+          "$\\dfrac{1}{n}$ をくくり出し、残りの各項を $\\dfrac{k}{n}$ の式で表す。",
+          "$f(x)=\\dfrac{1}{1+x}$ として $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)=\\int_0^1\\dfrac{1}{1+x}\\,dx$。",
+          "定積分を計算して $\\log 2$。"
+        ],
+        "alternatives": [
+          "$n=100$ などで和を数値計算すると、極限の値に近いことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に正しく変形している",
+            "points": 1
+          },
+          {
+            "point": "定積分の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{1}{n}$ をくくり出さずに $f$ を決めてしまう。",
+          "積分区間を $0$ から $n$ のようにしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "区分求積法を用いて、極限 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sum_{k=1}^{n}\\sqrt{\\dfrac{k}{n}}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{2}{3}$"
+      },
+      "explanation": "$\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ の形に直すと $f(x)=\\sqrt{x}$。極限は $\\displaystyle\\int_0^1\\sqrt{x}\\,dx=\\dfrac{2}{3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(x), [x, 0, 1])",
+        "expected": "Rational(2,3)"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-riemann_sum",
+      "related_units": [
+        "HS-MATH3-U01",
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "和を $\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)$ の形（$\\dfrac{1}{n}$ をくくり出し、残りを $\\dfrac{k}{n}$ だけで表す）に直し、$\\displaystyle\\int_0^1f(x)\\,dx$ に置きかえる。",
+        "steps": [
+          "$\\dfrac{1}{n}$ をくくり出し、残りの各項を $\\dfrac{k}{n}$ の式で表す。",
+          "$f(x)=\\sqrt{x}$ として $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sum_{k=1}^{n}f\\left(\\dfrac{k}{n}\\right)=\\int_0^1\\sqrt{x}\\,dx$。",
+          "定積分を計算して $\\dfrac{2}{3}$。"
+        ],
+        "alternatives": [
+          "$n=100$ などで和を数値計算すると、極限の値に近いことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に正しく変形している",
+            "points": 1
+          },
+          {
+            "point": "定積分の値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{1}{n}$ をくくり出さずに $f$ を決めてしまう。",
+          "積分区間を $0$ から $n$ のようにしてしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{1}\\sqrt{1-x^2}\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi}{4}$"
+      },
+      "explanation": "置換積分法を用いる。積分区間も新しい変数に対応させる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(1-x**2), [x, 0, 1])",
+        "expected": "pi/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-def_subst",
+      "explanation_detail": {
+        "approach": "$\\sqrt{a^2-x^2}$ は $x=a\\sin\\theta$ で根号が外れる。半径 $1$ の四分円の面積と一致するはず。",
+        "steps": [
+          "$x=1\\sin\\theta$ とおくと $dx=1\\cos\\theta\\,d\\theta$、$x:0\\to 1$ のとき $\\theta:0\\to\\dfrac{\\pi}{2}$。",
+          "$0\\leqq\\theta\\leqq\\dfrac{\\pi}{2}$ で $\\cos\\theta\\geqq0$ より $\\sqrt{1-1\\sin^2\\theta}=1\\cos\\theta$。",
+          "$1\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\cos^2\\theta\\,d\\theta=1\\cdot\\dfrac{\\pi}{4}=\\dfrac{\\pi}{4}$。"
+        ],
+        "alternatives": [
+          "置換した後の区間を使わず、いったん不定積分を $x$ の式に戻してから元の区間で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をしている",
+            "points": 1
+          },
+          {
+            "point": "積分区間を正しく取りかえている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "積分区間を $x$ の区間のまま使う。",
+          "$\\sqrt{\\cos^2\\theta}=\\cos\\theta$ とするとき、符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{2}xe^{x^2}\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{e^{4}}{2}-\\dfrac{1}{2}$"
+      },
+      "explanation": "置換積分法を用いる。積分区間も新しい変数に対応させる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(x*exp(x**2), [x, 0, 2])",
+        "expected": "-1/2 + exp(4)/2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-def_subst",
+      "explanation_detail": {
+        "approach": "$x$ と $x^2$ の導関数 $2x$ の組に注目して $t=x^2$ とおく。区間も $t$ の区間に変える。",
+        "steps": [
+          "$t=x^2$ とおくと $dt=2x\\,dx$、$x:0\\to 2$ のとき $t:0\\to 4$。",
+          "$\\dfrac{1}{2}\\displaystyle\\int_{0}^{4}e^t\\,dt=\\dfrac{1}{2}(e^{4}-1)$。"
+        ],
+        "alternatives": [
+          "置換した後の区間を使わず、いったん不定積分を $x$ の式に戻してから元の区間で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をしている",
+            "points": 1
+          },
+          {
+            "point": "積分区間を正しく取りかえている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "積分区間を $x$ の区間のまま使う。",
+          "$\\sqrt{\\cos^2\\theta}=\\cos\\theta$ とするとき、符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{2}\\sqrt{4-x^2}\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\pi$"
+      },
+      "explanation": "置換積分法を用いる。積分区間も新しい変数に対応させる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(4-x**2), [x, 0, 2])",
+        "expected": "pi"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-def_subst",
+      "explanation_detail": {
+        "approach": "$\\sqrt{a^2-x^2}$ は $x=a\\sin\\theta$ で根号が外れる。半径 $2$ の四分円の面積と一致するはず。",
+        "steps": [
+          "$x=2\\sin\\theta$ とおくと $dx=2\\cos\\theta\\,d\\theta$、$x:0\\to 2$ のとき $\\theta:0\\to\\dfrac{\\pi}{2}$。",
+          "$0\\leqq\\theta\\leqq\\dfrac{\\pi}{2}$ で $\\cos\\theta\\geqq0$ より $\\sqrt{4-4\\sin^2\\theta}=2\\cos\\theta$。",
+          "$4\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\cos^2\\theta\\,d\\theta=4\\cdot\\dfrac{\\pi}{4}=\\pi$。"
+        ],
+        "alternatives": [
+          "置換した後の区間を使わず、いったん不定積分を $x$ の式に戻してから元の区間で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をしている",
+            "points": 1
+          },
+          {
+            "point": "積分区間を正しく取りかえている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "積分区間を $x$ の区間のまま使う。",
+          "$\\sqrt{\\cos^2\\theta}=\\cos\\theta$ とするとき、符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{4\\sqrt{3}}\\dfrac{dx}{x^2+16}$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi}{12}$"
+      },
+      "explanation": "置換積分法を用いる。積分区間も新しい変数に対応させる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(1/(x**2+16), [x, 0, 4*sqrt(3)])",
+        "expected": "pi/12"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-def_subst",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{x^2+a^2}$ は $x=a\\tan\\theta$ と置換すると、$1+\\tan^2\\theta=\\dfrac{1}{\\cos^2\\theta}$ により簡単になる。",
+        "steps": [
+          "$x=4\\tan\\theta$ とおくと $dx=\\dfrac{4}{\\cos^2\\theta}\\,d\\theta$、$x:0\\to 4\\sqrt{3}$ のとき $\\theta:0\\to \\dfrac{\\pi}{3}$。",
+          "$x^2+16=\\dfrac{16}{\\cos^2\\theta}$ より、被積分関数と $dx$ の積は $\\dfrac{1}{4}\\,d\\theta$。",
+          "$\\dfrac{1}{4}\\cdot \\dfrac{\\pi}{3}=\\dfrac{\\pi}{12}$。"
+        ],
+        "alternatives": [
+          "置換した後の区間を使わず、いったん不定積分を $x$ の式に戻してから元の区間で計算しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "適切な置換をしている",
+            "points": 1
+          },
+          {
+            "point": "積分区間を正しく取りかえている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "積分区間を $x$ の区間のまま使う。",
+          "$\\sqrt{\\cos^2\\theta}=\\cos\\theta$ とするとき、符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{1}^{e}(\\log x)^2\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$e-2$"
+      },
+      "explanation": "部分積分法 $\\displaystyle\\int_a^bfg'\\,dx=\\Bigl[fg\\Bigr]_a^b-\\int_a^bf'g\\,dx$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(log(x)**2, [x, 1, E])",
+        "expected": "-2 + E"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH3-U03-def_parts",
+      "explanation_detail": {
+        "approach": "定積分の部分積分では、$\\Bigl[fg\\Bigr]_a^b$ の部分をその場で計算すると式が短くなる。",
+        "steps": [
+          "$\\Bigl[x(\\log x)^2\\Bigr]_1^e-\\displaystyle\\int_1^e2\\log x\\,dx$。",
+          "$=e-2\\Bigl[x\\log x-x\\Bigr]_1^e=e-2\\cdot1=e-2$。"
+        ],
+        "alternatives": [
+          "先に不定積分（原始関数）を部分積分で求めてから、上端・下端を代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分積分の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "各部分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Bigl[fg\\Bigr]_a^b$ の計算で下端の値を引き忘れる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{1}^{e}\\log x\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "部分積分法 $\\displaystyle\\int_a^bfg'\\,dx=\\Bigl[fg\\Bigr]_a^b-\\int_a^bf'g\\,dx$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(log(x), [x, 1, exp(1)])",
+        "expected": "1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH3-U03-def_parts",
+      "explanation_detail": {
+        "approach": "定積分の部分積分では、$\\Bigl[fg\\Bigr]_a^b$ の部分をその場で計算すると式が短くなる。",
+        "steps": [
+          "$\\Bigl[x\\log x-x\\Bigr]_1^{e}$。",
+          "$=(e\\cdot 1-e)-(0-1)=1$。"
+        ],
+        "alternatives": [
+          "先に不定積分（原始関数）を部分積分で求めてから、上端・下端を代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分積分の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "各部分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Bigl[fg\\Bigr]_a^b$ の計算で下端の値を引き忘れる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{1}^{e}x\\log x\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{e^{2}}{4}+\\dfrac{1}{4}$"
+      },
+      "explanation": "部分積分法 $\\displaystyle\\int_a^bfg'\\,dx=\\Bigl[fg\\Bigr]_a^b-\\int_a^bf'g\\,dx$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(x**1*log(x), [x, 1, E])",
+        "expected": "1/4 + exp(2)/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH3-U03-def_parts",
+      "explanation_detail": {
+        "approach": "定積分の部分積分では、$\\Bigl[fg\\Bigr]_a^b$ の部分をその場で計算すると式が短くなる。",
+        "steps": [
+          "$\\Bigl[\\dfrac{x^{2}}{2}\\log x\\Bigr]_1^e-\\dfrac{1}{2}\\displaystyle\\int_1^ex\\,dx$。",
+          "$=\\dfrac{e^{2}}{2}-\\dfrac{e^{2}-1}{4}=\\dfrac{e^{2}}{4}+\\dfrac{1}{4}$。"
+        ],
+        "alternatives": [
+          "先に不定積分（原始関数）を部分積分で求めてから、上端・下端を代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分積分の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "各部分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Bigl[fg\\Bigr]_a^b$ の計算で下端の値を引き忘れる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{1}xe^{x}\\,dx$ の値を求めなさい。",
+      "answer": {
+        "value": "$1$"
+      },
+      "explanation": "部分積分法 $\\displaystyle\\int_a^bfg'\\,dx=\\Bigl[fg\\Bigr]_a^b-\\int_a^bf'g\\,dx$ を用いる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(x*exp(1*x), [x, 0, 1])",
+        "expected": "1"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "multiple_solutions"
+      ],
+      "variant_group": "HS-MATH3-U03-def_parts",
+      "explanation_detail": {
+        "approach": "定積分の部分積分では、$\\Bigl[fg\\Bigr]_a^b$ の部分をその場で計算すると式が短くなる。",
+        "steps": [
+          "$\\Bigl[xe^{x}\\Bigr]_0^1-1\\displaystyle\\int_{0}^{1}e^{x}\\,dx$。",
+          "$=1$。"
+        ],
+        "alternatives": [
+          "先に不定積分（原始関数）を部分積分で求めてから、上端・下端を代入しても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "部分積分の式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "各部分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\Bigl[fg\\Bigr]_a^b$ の計算で下端の値を引き忘れる。",
+          "$-\\displaystyle\\int f'g\\,dx$ の符号を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "2曲線 $y=\\sin x,\\ y=\\cos x\\ \\left(\\dfrac{\\pi}{4}\\leqq x\\leqq\\dfrac{5}{4}\\pi\\right)$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$2 \\sqrt{2}$"
+      },
+      "explanation": "面積は「上の関数－下の関数」の定積分。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sin(x)-cos(x), [x, pi/4, 5*pi/4])",
+        "expected": "2*sqrt(2)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-area",
+      "related_units": [
+        "HS-MATH2-U04"
+      ],
+      "explanation_detail": {
+        "approach": "交点を三角方程式で求め、区間内でどちらが上かを確かめてから積分する。",
+        "steps": [
+          "交点は $\\tan x=1$ より $x=\\dfrac{\\pi}{4},\\ \\dfrac{5}{4}\\pi$。その間では $\\sin x\\geqq\\cos x$。",
+          "$S=\\displaystyle\\int_{\\frac{\\pi}{4}}^{\\frac{5}{4}\\pi}(\\sin x-\\cos x)\\,dx=\\Bigl[-\\cos x-\\sin x\\Bigr]_{\\frac{\\pi}{4}}^{\\frac{5}{4}\\pi}$。",
+          "$=\\sqrt{2}-(-\\sqrt{2})=2\\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "図をかき、長方形や三角形などで大まかに見積もった値と比べて、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点・上下関係を確かめて積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "定積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上下関係を確かめずに積分し、負の値を出す。",
+          "積分区間（交点）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "$\\dfrac{\\pi}{4}\\leqq x\\leqq\\dfrac{5}{4}\\pi$ の範囲で、2曲線 $y=\\sin x$、$y=\\cos x$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$2 \\sqrt{2}$"
+      },
+      "explanation": "面積は「上の関数－下の関数」の定積分。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sin(x)-cos(x), [x, pi/4, 5*pi/4])",
+        "expected": "2*sqrt(2)"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-area",
+      "related_units": [
+        "HS-MATH2-U04"
+      ],
+      "explanation_detail": {
+        "approach": "交点を三角方程式で求め、区間内でどちらが上かを確かめてから積分する。",
+        "steps": [
+          "交点は $\\tan x=1$ より $x=\\dfrac{\\pi}{4},\\ \\dfrac{5}{4}\\pi$。その間では $\\sin x\\geqq\\cos x$。",
+          "$S=\\displaystyle\\int_{\\frac{\\pi}{4}}^{\\frac{5}{4}\\pi}(\\sin x-\\cos x)\\,dx=\\Bigl[-\\cos x-\\sin x\\Bigr]_{\\frac{\\pi}{4}}^{\\frac{5}{4}\\pi}$。",
+          "$=\\sqrt{2}-(-\\sqrt{2})=2\\sqrt{2}$。"
+        ],
+        "alternatives": [
+          "図をかき、長方形や三角形などで大まかに見積もった値と比べて、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点・上下関係を確かめて積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "定積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上下関係を確かめずに積分し、負の値を出す。",
+          "積分区間（交点）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\sqrt{x}$ と直線 $y=\\dfrac{x}{4}$ で囲まれた部分の面積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{32}{3}$"
+      },
+      "explanation": "面積は「上の関数－下の関数」の定積分。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(x)-x/4, [x, 0, 16])",
+        "expected": "32/3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-area",
+      "related_units": [
+        "HS-MATH2-U06"
+      ],
+      "explanation_detail": {
+        "approach": "交点を求めて積分区間を決め、「上の関数－下の関数」を積分する。",
+        "steps": [
+          "交点：$\\sqrt{x}=\\dfrac{x}{4}$ より $x=0,\\ 16$。",
+          "$0<x<16$ では $\\sqrt{x}>\\dfrac{x}{4}$。",
+          "$S=\\displaystyle\\int_{0}^{16}\\left(\\sqrt{x}-\\dfrac{x}{4}\\right)dx=\\Bigl[\\dfrac{2}{3}x\\sqrt{x}-\\dfrac{x^2}{8}\\Bigr]_0^{16}=\\dfrac{32}{3}$。"
+        ],
+        "alternatives": [
+          "図をかき、長方形や三角形などで大まかに見積もった値と比べて、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点・上下関係を確かめて積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "定積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上下関係を確かめずに積分し、負の値を出す。",
+          "積分区間（交点）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "楕円 $\\dfrac{x^2}{16}+y^2=1$ で囲まれた部分の面積を、定積分を用いて求めなさい。",
+      "answer": {
+        "value": "$4 \\pi$"
+      },
+      "explanation": "面積は「上の関数－下の関数」の定積分。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "4*Rational(1,4)*integrate(sqrt(16-x**2), [x, 0, 4])",
+        "expected": "4*pi"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-area",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "楕円は $x$ 軸・$y$ 軸に関して対称。第1象限の部分を求めて4倍する。根号の積分は円の面積に帰着する（または $x=a\\sin\\theta$ と置換）。",
+        "steps": [
+          "$y\\geqq0$ の部分は $y=\\dfrac{1}{4}\\sqrt{16-x^2}$。対称性から面積は第1象限の部分の4倍。",
+          "$S=4\\cdot\\dfrac{1}{4}\\displaystyle\\int_{0}^{4}\\sqrt{16-x^2}\\,dx$。",
+          "定積分は半径 $4$ の四分円の面積 $\\dfrac{16\\pi}{4}$ なので、$S=4 \\pi$。"
+        ],
+        "alternatives": [
+          "図をかき、長方形や三角形などで大まかに見積もった値と比べて、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "交点・上下関係を確かめて積分の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "定積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "面積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "上下関係を確かめずに積分し、負の値を出す。",
+          "積分区間（交点）を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=x^2$ と $x$ 軸、直線 $x=2$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{32 \\pi}{5}$"
+      },
+      "explanation": "回転体の体積 $V=\\pi\\displaystyle\\int_a^b\\{f(x)\\}^2\\,dx$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "pi*integrate(x**4, [x, 0, 2])",
+        "expected": "32*pi/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH3-U03-volume",
+      "explanation_detail": {
+        "approach": "$x$ 軸に垂直な平面で切った断面は半径 $|f(x)|$ の円。断面積 $\\pi\\{f(x)\\}^2$ を積分する。",
+        "steps": [
+          "$V=\\pi\\displaystyle\\int_{0}^{2}(x^2)^2\\,dx=\\pi\\displaystyle\\int_{0}^{2}x^4\\,dx$。",
+          "$=\\pi\\cdot\\dfrac{32}{5}=\\dfrac{32 \\pi}{5}$。"
+        ],
+        "alternatives": [
+          "円柱や円錐で外側・内側から見積もり、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "体積を定積分で正しく表している",
+            "points": 2
+          },
+          {
+            "point": "積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\pi$ をかけ忘れる。",
+          "$\\{f(x)\\}^2$ ではなく $f(x)$ を積分してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "放物線 $y=x^2$ と $x$ 軸、直線 $x=3$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{243 \\pi}{5}$"
+      },
+      "explanation": "回転体の体積 $V=\\pi\\displaystyle\\int_a^b\\{f(x)\\}^2\\,dx$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "pi*integrate(x**4, [x, 0, 3])",
+        "expected": "243*pi/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH3-U03-volume",
+      "explanation_detail": {
+        "approach": "$x$ 軸に垂直な平面で切った断面は半径 $|f(x)|$ の円。断面積 $\\pi\\{f(x)\\}^2$ を積分する。",
+        "steps": [
+          "$V=\\pi\\displaystyle\\int_{0}^{3}(x^2)^2\\,dx=\\pi\\displaystyle\\int_{0}^{3}x^4\\,dx$。",
+          "$=\\pi\\cdot\\dfrac{243}{5}=\\dfrac{243 \\pi}{5}$。"
+        ],
+        "alternatives": [
+          "円柱や円錐で外側・内側から見積もり、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "体積を定積分で正しく表している",
+            "points": 2
+          },
+          {
+            "point": "積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\pi$ をかけ忘れる。",
+          "$\\{f(x)\\}^2$ ではなく $f(x)$ を積分してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=e^x$ と $x$ 軸、$y$ 軸、直線 $x=1$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi(e^{2}-1)}{2}$"
+      },
+      "explanation": "回転体の体積 $V=\\pi\\displaystyle\\int_a^b\\{f(x)\\}^2\\,dx$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "pi*integrate(exp(2*x), [x, 0, 1])",
+        "expected": "pi*(-1 + exp(2))/2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH3-U03-volume",
+      "explanation_detail": {
+        "approach": "$x$ 軸に垂直な平面で切った断面は半径 $|f(x)|$ の円。断面積 $\\pi\\{f(x)\\}^2$ を積分する。",
+        "steps": [
+          "$V=\\pi\\displaystyle\\int_{0}^{1}e^{2x}\\,dx=\\pi\\Bigl[\\dfrac{e^{2x}}{2}\\Bigr]_0^{1}$。",
+          "$=\\dfrac{\\pi(e^{2}-1)}{2}$。"
+        ],
+        "alternatives": [
+          "円柱や円錐で外側・内側から見積もり、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "体積を定積分で正しく表している",
+            "points": 2
+          },
+          {
+            "point": "積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\pi$ をかけ忘れる。",
+          "$\\{f(x)\\}^2$ ではなく $f(x)$ を積分してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=e^x$ と $x$ 軸、$y$ 軸、直線 $x=2$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi(e^{4}-1)}{2}$"
+      },
+      "explanation": "回転体の体積 $V=\\pi\\displaystyle\\int_a^b\\{f(x)\\}^2\\,dx$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "pi*integrate(exp(2*x), [x, 0, 2])",
+        "expected": "pi*(-1 + exp(4))/2"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-MATH3-U03-volume",
+      "explanation_detail": {
+        "approach": "$x$ 軸に垂直な平面で切った断面は半径 $|f(x)|$ の円。断面積 $\\pi\\{f(x)\\}^2$ を積分する。",
+        "steps": [
+          "$V=\\pi\\displaystyle\\int_{0}^{2}e^{2x}\\,dx=\\pi\\Bigl[\\dfrac{e^{2x}}{2}\\Bigr]_0^{2}$。",
+          "$=\\dfrac{\\pi(e^{4}-1)}{2}$。"
+        ],
+        "alternatives": [
+          "円柱や円錐で外側・内側から見積もり、答えの大きさが妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "体積を定積分で正しく表している",
+            "points": 2
+          },
+          {
+            "point": "積分の計算が正しい",
+            "points": 1
+          },
+          {
+            "point": "体積が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\pi$ をかけ忘れる。",
+          "$\\{f(x)\\}^2$ ではなく $f(x)$ を積分してしまう。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\dfrac{2}{3}x\\sqrt{x}\\ (0\\leqq x\\leqq 3)$ の長さを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{14}{3}$"
+      },
+      "explanation": "曲線の長さ $L=\\displaystyle\\int\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\,dt$（$y=f(x)$ なら $\\displaystyle\\int\\sqrt{1+(y')^2}\\,dx$）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(1+diff(Rational(2,3)*x**Rational(3,2), x)**2), [x, 0, 3])",
+        "expected": "14/3"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-arc_length",
+      "related_units": [
+        "HS-MATH3-U02"
+      ],
+      "explanation_detail": {
+        "approach": "根号の中を計算し、三角関数の公式や $(e^x+e^{-x})^2$ の形を使って完全平方にしてから根号を外す。$\\sqrt{A^2}=|A|$ の符号に注意する。",
+        "steps": [
+          "$y'=\\sqrt{x}$ より $\\sqrt{1+(y')^2}=\\sqrt{1+x}$。",
+          "$L=\\displaystyle\\int_{0}^{3}\\sqrt{1+x}\\,dx=\\Bigl[\\dfrac{2}{3}(1+x)\\sqrt{1+x}\\Bigr]_0^{3}$。",
+          "$=\\dfrac{2}{3}(8-1)=\\dfrac{14}{3}$。"
+        ],
+        "alternatives": [
+          "曲線の始点と終点を結ぶ線分の長さより長くなっているかを確かめると、答えの妥当性が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "長さの公式に正しく当てはめている",
+            "points": 1
+          },
+          {
+            "point": "根号の中を整理して外している",
+            "points": 2
+          },
+          {
+            "point": "長さが正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "根号の中の2乗の和を計算せず、各成分を別々に積分して足す。",
+          "$\\sqrt{A^2}=A$ として符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "サイクロイド $x=4(t-\\sin t),\\ y=4(1-\\cos t)\\ (0\\leqq t\\leqq 2\\pi)$ の長さを求めなさい。",
+      "answer": {
+        "value": "$32$"
+      },
+      "explanation": "曲線の長さ $L=\\displaystyle\\int\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\,dt$（$y=f(x)$ なら $\\displaystyle\\int\\sqrt{1+(y')^2}\\,dx$）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(4*(t-sin(t)), t)**2+diff(4*(1-cos(t)), t)**2-64*sin(t/2)**2), integrate(8*sin(t/2), [t, 0, 2*pi])]",
+        "expected": "[0, 32]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-arc_length",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "根号の中を計算し、三角関数の公式や $(e^x+e^{-x})^2$ の形を使って完全平方にしてから根号を外す。$\\sqrt{A^2}=|A|$ の符号に注意する。",
+        "steps": [
+          "$\\left(\\dfrac{dx}{dt}\\right)^2+\\left(\\dfrac{dy}{dt}\\right)^2=16\\{(1-\\cos t)^2+\\sin^2t\\}=32(1-\\cos t)=64\\sin^2\\dfrac{t}{2}$。",
+          "$0\\leqq t\\leqq 2\\pi$ で $\\sin\\dfrac{t}{2}\\geqq0$ より $L=\\displaystyle\\int_{0}^{2\\pi}8\\sin\\dfrac{t}{2}\\,dt=\\Bigl[-16\\cos\\dfrac{t}{2}\\Bigr]_0^{2\\pi}=32$。"
+        ],
+        "alternatives": [
+          "曲線の始点と終点を結ぶ線分の長さより長くなっているかを確かめると、答えの妥当性が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "長さの公式に正しく当てはめている",
+            "points": 1
+          },
+          {
+            "point": "根号の中を整理して外している",
+            "points": 2
+          },
+          {
+            "point": "長さが正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "根号の中の2乗の和を計算せず、各成分を別々に積分して足す。",
+          "$\\sqrt{A^2}=A$ として符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $y=\\dfrac{e^x+e^{-x}}{2}\\ (0\\leqq x\\leqq\\log 4)$ の長さを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{15}{8}$"
+      },
+      "explanation": "曲線の長さ $L=\\displaystyle\\int\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\,dt$（$y=f(x)$ なら $\\displaystyle\\int\\sqrt{1+(y')^2}\\,dx$）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(1+diff((exp(x)+exp(-x))/2, x)**2-((exp(x)+exp(-x))/2)**2), integrate((exp(x)+exp(-x))/2, [x, 0, log(4)])]",
+        "expected": "[0, 15/8]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-arc_length",
+      "related_units": [
+        "HS-MATH2-U05"
+      ],
+      "explanation_detail": {
+        "approach": "根号の中を計算し、三角関数の公式や $(e^x+e^{-x})^2$ の形を使って完全平方にしてから根号を外す。$\\sqrt{A^2}=|A|$ の符号に注意する。",
+        "steps": [
+          "$y'=\\dfrac{e^x-e^{-x}}{2}$、$1+(y')^2=\\left(\\dfrac{e^x+e^{-x}}{2}\\right)^2$。",
+          "$L=\\displaystyle\\int_{0}^{\\log 4}\\dfrac{e^x+e^{-x}}{2}\\,dx=\\Bigl[\\dfrac{e^x-e^{-x}}{2}\\Bigr]_0^{\\log 4}$。",
+          "$=\\dfrac{1}{2}\\left(4-\\dfrac{1}{4}\\right)=\\dfrac{15}{8}$。"
+        ],
+        "alternatives": [
+          "曲線の始点と終点を結ぶ線分の長さより長くなっているかを確かめると、答えの妥当性が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "長さの公式に正しく当てはめている",
+            "points": 1
+          },
+          {
+            "point": "根号の中を整理して外している",
+            "points": 2
+          },
+          {
+            "point": "長さが正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "根号の中の2乗の和を計算せず、各成分を別々に積分して足す。",
+          "$\\sqrt{A^2}=A$ として符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "short_answer",
+      "stem": "曲線 $x=e^t\\cos t,\\ y=e^t\\sin t\\ (0\\leqq t\\leqq 2)$ の長さを求めなさい。",
+      "answer": {
+        "value": "$\\sqrt{2}(e^{2}-1)$"
+      },
+      "explanation": "曲線の長さ $L=\\displaystyle\\int\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\,dt$（$y=f(x)$ なら $\\displaystyle\\int\\sqrt{1+(y')^2}\\,dx$）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(exp(t)*cos(t), t)**2+diff(exp(t)*sin(t), t)**2-2*exp(2*t)), integrate(sqrt(2)*exp(t), [t, 0, 2])]",
+        "expected": "[0, sqrt(2)*(-1 + exp(2))]",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-arc_length",
+      "related_units": [
+        "HS-MATHC-U02"
+      ],
+      "explanation_detail": {
+        "approach": "根号の中を計算し、三角関数の公式や $(e^x+e^{-x})^2$ の形を使って完全平方にしてから根号を外す。$\\sqrt{A^2}=|A|$ の符号に注意する。",
+        "steps": [
+          "$\\dfrac{dx}{dt}=e^t(\\cos t-\\sin t),\\ \\dfrac{dy}{dt}=e^t(\\sin t+\\cos t)$。",
+          "2乗の和は $e^{2t}\\{(\\cos t-\\sin t)^2+(\\sin t+\\cos t)^2\\}=2e^{2t}$。",
+          "$L=\\displaystyle\\int_{0}^{2}\\sqrt{2}e^t\\,dt=\\sqrt{2}(e^{2}-1)$。"
+        ],
+        "alternatives": [
+          "曲線の始点と終点を結ぶ線分の長さより長くなっているかを確かめると、答えの妥当性が分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "長さの公式に正しく当てはめている",
+            "points": 1
+          },
+          {
+            "point": "根号の中を整理して外している",
+            "points": 2
+          },
+          {
+            "point": "長さが正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "根号の中の2乗の和を計算せず、各成分を別々に積分して足す。",
+          "$\\sqrt{A^2}=A$ として符号を確かめない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "等式 $\\displaystyle\\int_{a}^{x}f(t)\\,dt=e^{x}-e$ がすべての $x$ について成り立つような関数 $f(x)$ と、定数 $a$ の値を求めなさい。",
+      "answer": {
+        "value": "$f(x)=e^{x}$、$a=1$"
+      },
+      "explanation": "定積分の性質（微分・定数）を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "両辺を微分して $f(x)$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$x=a$ を代入して $a$ の方程式を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$f(x)$ と $a$ が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(exp(1*x)-exp(1), x)-(exp(x))), limit(exp(1*x)-exp(1), x, 1)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-integral_eq",
+      "explanation_detail": {
+        "approach": "上端が変数の定積分は、微分すると被積分関数になる：$\\dfrac{d}{dx}\\displaystyle\\int_a^xf(t)\\,dt=f(x)$。また $x=a$ を代入すると左辺は $0$。",
+        "steps": [
+          "両辺を $x$ で微分すると、$\\dfrac{d}{dx}\\displaystyle\\int_{a}^{x}f(t)\\,dt=f(x)$ より $f(x)=e^{x}$。",
+          "もとの等式に $x=a$ を代入すると、左辺は $\\displaystyle\\int_a^af(t)\\,dt=0$ なので $e^{a}-e=0$。",
+          "これを解いて $a=1$。"
+        ],
+        "alternatives": [
+          "求めた $f(x)$ を実際に $a$ から $x$ まで積分し、右辺と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "方程式",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int_a^xf(t)\\,dt$ を微分するとき、$f(t)$ のまま $t$ を残す。",
+          "定数 $A$ とおくべき定積分を、$x$ の関数と思い込む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "等式 $\\displaystyle\\int_{a}^{x}f(t)\\,dt=\\sin x-\\dfrac{1}{2}$ がすべての $x$ について成り立つような関数 $f(x)$ と、定数 $a$ の値を求めなさい。ただし、$0<a<\\dfrac{\\pi}{2}$ とする。",
+      "answer": {
+        "value": "$f(x)=\\cos x$、$a=\\dfrac{\\pi}{6}$"
+      },
+      "explanation": "定積分の性質（微分・定数）を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "両辺を微分して $f(x)$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$x=a$ を代入して $a$ の方程式を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$f(x)$ と $a$ が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(sin(x)-Rational(1,2), x)-(cos(x))), limit(sin(x)-Rational(1,2), x, pi/6)]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-integral_eq",
+      "explanation_detail": {
+        "approach": "上端が変数の定積分は、微分すると被積分関数になる：$\\dfrac{d}{dx}\\displaystyle\\int_a^xf(t)\\,dt=f(x)$。また $x=a$ を代入すると左辺は $0$。",
+        "steps": [
+          "両辺を $x$ で微分すると、$\\dfrac{d}{dx}\\displaystyle\\int_{a}^{x}f(t)\\,dt=f(x)$ より $f(x)=\\cos x$。",
+          "もとの等式に $x=a$ を代入すると、左辺は $\\displaystyle\\int_a^af(t)\\,dt=0$ なので $\\sin a-\\dfrac{1}{2}=0$。",
+          "これを解いて $a=\\dfrac{\\pi}{6}$。"
+        ],
+        "alternatives": [
+          "求めた $f(x)$ を実際に $a$ から $x$ まで積分し、右辺と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "方程式",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int_a^xf(t)\\,dt$ を微分するとき、$f(t)$ のまま $t$ を残す。",
+          "定数 $A$ とおくべき定積分を、$x$ の関数と思い込む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "等式 $\\displaystyle\\int_{a}^{x}f(t)\\,dt=\\log x-2$ がすべての $x$（ただし $x>0$）について成り立つような関数 $f(x)$ と、定数 $a$ の値を求めなさい。",
+      "answer": {
+        "value": "$f(x)=\\dfrac{1}{x}$、$a=e^2$"
+      },
+      "explanation": "定積分の性質（微分・定数）を使う。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "両辺を微分して $f(x)$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "$x=a$ を代入して $a$ の方程式を立てている",
+            "points": 3
+          },
+          {
+            "criterion": "$f(x)$ と $a$ が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "[simplify(diff(log(x)-2, x)-(1/x)), limit(log(x)-2, x, exp(2))]",
+        "expected": "[0, 0]",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-integral_eq",
+      "explanation_detail": {
+        "approach": "上端が変数の定積分は、微分すると被積分関数になる：$\\dfrac{d}{dx}\\displaystyle\\int_a^xf(t)\\,dt=f(x)$。また $x=a$ を代入すると左辺は $0$。",
+        "steps": [
+          "両辺を $x$ で微分すると、$\\dfrac{d}{dx}\\displaystyle\\int_{a}^{x}f(t)\\,dt=f(x)$ より $f(x)=\\dfrac{1}{x}$。",
+          "もとの等式に $x=a$ を代入すると、左辺は $\\displaystyle\\int_a^af(t)\\,dt=0$ なので $\\log a-2=0$。",
+          "これを解いて $a=e^2$。"
+        ],
+        "alternatives": [
+          "求めた $f(x)$ を実際に $a$ から $x$ まで積分し、右辺と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "方針",
+            "points": 3
+          },
+          {
+            "point": "方程式",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\displaystyle\\int_a^xf(t)\\,dt$ を微分するとき、$f(t)$ のまま $t$ を残す。",
+          "定数 $A$ とおくべき定積分を、$x$ の関数と思い込む。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$n$ を $2$ 以上の自然数とする。不等式 $1+\\dfrac{1}{2^3}+\\dfrac{1}{3^3}+\\cdots+\\dfrac{1}{n^3}<\\dfrac{3}{2}-\\dfrac{1}{2n^2}$ を、定積分を用いて証明しなさい。",
+      "answer": {
+        "value": "（証明）$k\\geqq2$ のとき、$k-1\\leqq x\\leqq k$ で $\\dfrac{1}{x^3}\\geqq\\dfrac{1}{k^3}$（等号は $x=k$ のときのみ）なので $\\dfrac{1}{k^3}<\\displaystyle\\int_{k-1}^{k}\\dfrac{dx}{x^3}$。$k=2$ から $n$ まで加えると $\\displaystyle\\sum_{k=2}^{n}\\dfrac{1}{k^3}<\\int_1^n\\dfrac{dx}{x^3}=\\dfrac{1}{2}-\\dfrac{1}{2n^2}$。両辺に $1$ を加えて結論を得る。（証明終）"
+      },
+      "explanation": "階段状の長方形の面積と、曲線の下の面積を比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "各項を1つの区間での定積分と比べる不等式を、理由とともに立てている",
+            "points": 3
+          },
+          {
+            "criterion": "和をとって定積分を計算している",
+            "points": 3
+          },
+          {
+            "criterion": "結論を正しく導いている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "integrate(1/x**3, [x, 1, n])",
+        "expected": "Rational(1,2)-1/(2*n**2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-ineq_integral",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "和 $\\displaystyle\\sum f(k)$（数学Bの $\\Sigma$）は、幅 $1$ の長方形の面積の和。単調な関数 $y=f(x)$ のグラフの下の面積（定積分）と比べて不等式を作る。",
+        "steps": [
+          "$k\\geqq2$ のとき、$k-1\\leqq x\\leqq k$ で $\\dfrac{1}{x^3}\\geqq\\dfrac{1}{k^3}$（等号は $x=k$ のときのみ）なので $\\dfrac{1}{k^3}<\\displaystyle\\int_{k-1}^{k}\\dfrac{dx}{x^3}$。",
+          "$k=2$ から $n$ まで加えると $\\displaystyle\\sum_{k=2}^{n}\\dfrac{1}{k^3}<\\int_1^n\\dfrac{dx}{x^3}=\\dfrac{1}{2}-\\dfrac{1}{2n^2}$。",
+          "両辺に $1$ を加えて結論を得る。"
+        ],
+        "alternatives": [
+          "図をかき、幅 $1$ の長方形がグラフの上にはみ出すか、下に収まるかを確かめてから不等式の向きを決めると間違えにくい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "項ごとの不等式",
+            "points": 3
+          },
+          {
+            "point": "和と定積分",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "長方形をどちら側に置くかを誤り、不等号の向きが逆になる。",
+          "和の始まり（$k=1$ か $k=2$ か）と積分区間がずれる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$n$ を自然数とする。不等式 $\\sqrt{1}+\\sqrt{2}+\\cdots+\\sqrt{n}>\\dfrac{2}{3}n\\sqrt{n}$ を、定積分を用いて証明しなさい。",
+      "answer": {
+        "value": "（証明）$k-1\\leqq x\\leqq k$ で $\\sqrt{x}\\leqq\\sqrt{k}$（等号は $x=k$ のときのみ）なので $\\displaystyle\\int_{k-1}^{k}\\sqrt{x}\\,dx<\\sqrt{k}$。$k=1$ から $n$ まで加えると $\\displaystyle\\int_0^n\\sqrt{x}\\,dx=\\dfrac{2}{3}n\\sqrt{n}<\\sum_{k=1}^{n}\\sqrt{k}$。（証明終）"
+      },
+      "explanation": "階段状の長方形の面積と、曲線の下の面積を比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "各項を1つの区間での定積分と比べる不等式を、理由とともに立てている",
+            "points": 3
+          },
+          {
+            "criterion": "和をとって定積分を計算している",
+            "points": 3
+          },
+          {
+            "criterion": "結論を正しく導いている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(x), [x, 0, n])",
+        "expected": "Rational(2,3)*n**Rational(3,2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-ineq_integral",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "和 $\\displaystyle\\sum f(k)$（数学Bの $\\Sigma$）は、幅 $1$ の長方形の面積の和。単調な関数 $y=f(x)$ のグラフの下の面積（定積分）と比べて不等式を作る。",
+        "steps": [
+          "$k-1\\leqq x\\leqq k$ で $\\sqrt{x}\\leqq\\sqrt{k}$（等号は $x=k$ のときのみ）なので $\\displaystyle\\int_{k-1}^{k}\\sqrt{x}\\,dx<\\sqrt{k}$。",
+          "$k=1$ から $n$ まで加えると $\\displaystyle\\int_0^n\\sqrt{x}\\,dx=\\dfrac{2}{3}n\\sqrt{n}<\\sum_{k=1}^{n}\\sqrt{k}$。"
+        ],
+        "alternatives": [
+          "図をかき、幅 $1$ の長方形がグラフの上にはみ出すか、下に収まるかを確かめてから不等式の向きを決めると間違えにくい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "項ごとの不等式",
+            "points": 3
+          },
+          {
+            "point": "和と定積分",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "長方形をどちら側に置くかを誤り、不等号の向きが逆になる。",
+          "和の始まり（$k=1$ か $k=2$ か）と積分区間がずれる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "$n$ を $3$ 以上の自然数とする。不等式 $1+\\dfrac{1}{2^3}+\\dfrac{1}{3^3}+\\cdots+\\dfrac{1}{n^3}<\\dfrac{3}{2}-\\dfrac{1}{2n^2}$ を、定積分を用いて証明しなさい。",
+      "answer": {
+        "value": "（証明）$k\\geqq2$ のとき、$k-1\\leqq x\\leqq k$ で $\\dfrac{1}{x^3}\\geqq\\dfrac{1}{k^3}$（等号は $x=k$ のときのみ）なので $\\dfrac{1}{k^3}<\\displaystyle\\int_{k-1}^{k}\\dfrac{dx}{x^3}$。$k=2$ から $n$ まで加えると $\\displaystyle\\sum_{k=2}^{n}\\dfrac{1}{k^3}<\\int_1^n\\dfrac{dx}{x^3}=\\dfrac{1}{2}-\\dfrac{1}{2n^2}$。両辺に $1$ を加えて結論を得る。（証明終）"
+      },
+      "explanation": "階段状の長方形の面積と、曲線の下の面積を比べる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "各項を1つの区間での定積分と比べる不等式を、理由とともに立てている",
+            "points": 3
+          },
+          {
+            "criterion": "和をとって定積分を計算している",
+            "points": 3
+          },
+          {
+            "criterion": "結論を正しく導いている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "integrate(1/x**3, [x, 1, n])",
+        "expected": "Rational(1,2)-1/(2*n**2)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "cross_unit"
+      ],
+      "variant_group": "HS-MATH3-U03-ineq_integral",
+      "related_units": [
+        "HS-MATHB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "和 $\\displaystyle\\sum f(k)$（数学Bの $\\Sigma$）は、幅 $1$ の長方形の面積の和。単調な関数 $y=f(x)$ のグラフの下の面積（定積分）と比べて不等式を作る。",
+        "steps": [
+          "$k\\geqq2$ のとき、$k-1\\leqq x\\leqq k$ で $\\dfrac{1}{x^3}\\geqq\\dfrac{1}{k^3}$（等号は $x=k$ のときのみ）なので $\\dfrac{1}{k^3}<\\displaystyle\\int_{k-1}^{k}\\dfrac{dx}{x^3}$。",
+          "$k=2$ から $n$ まで加えると $\\displaystyle\\sum_{k=2}^{n}\\dfrac{1}{k^3}<\\int_1^n\\dfrac{dx}{x^3}=\\dfrac{1}{2}-\\dfrac{1}{2n^2}$。",
+          "両辺に $1$ を加えて結論を得る。"
+        ],
+        "alternatives": [
+          "図をかき、幅 $1$ の長方形がグラフの上にはみ出すか、下に収まるかを確かめてから不等式の向きを決めると間違えにくい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "項ごとの不等式",
+            "points": 3
+          },
+          {
+            "point": "和と定積分",
+            "points": 3
+          },
+          {
+            "point": "結論",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "長方形をどちら側に置くかを誤り、不等号の向きが逆になる。",
+          "和の始まり（$k=1$ か $k=2$ か）と積分区間がずれる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=\\sqrt{x}$ と直線 $y=\\dfrac{x}{2}$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{8 \\pi}{3}$"
+      },
+      "explanation": "断面積を求めて積分する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "断面の形と断面積を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "体積を定積分で表している（区間を含む）",
+            "points": 3
+          },
+          {
+            "criterion": "体積が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "pi*integrate(x-x**2/4, [x, 0, 4])",
+        "expected": "8*pi/3"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U03-volume_adv",
+      "explanation_detail": {
+        "approach": "2曲線の間の部分を回転すると、断面は穴のあいた円（ドーナツ形）。外側の円の面積から内側の円の面積を引く。",
+        "steps": [
+          "交点の $x$ 座標は $0,\\ 4$。$0\\leqq x\\leqq 4$ で $\\sqrt{x}\\geqq \\dfrac{x}{2}\\geqq0$。",
+          "断面はドーナツ形（外半径 $\\sqrt{x}$、内半径 $\\dfrac{x}{2}$）なので、断面積は $\\pi\\left\\{x-\\dfrac{x^2}{4}\\right\\}$。",
+          "$V=\\pi\\displaystyle\\int_{0}^{4}\\left(x-\\dfrac{x^2}{4}\\right)dx=\\pi\\left(\\dfrac{16}{2}-\\dfrac{16}{3}\\right)=\\dfrac{8 \\pi}{3}$。"
+        ],
+        "alternatives": [
+          "対称性（偶関数）を使って区間の半分で計算し、2倍してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "断面積",
+            "points": 3
+          },
+          {
+            "point": "立式",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "ドーナツ形の断面を $\\pi(f-g)^2$ としてしまう。",
+          "積分変数（$x$ か $y$ か）と区間の対応を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "底面が半径 $3$ の円 $x^2+y^2\\leqq 9$ である立体がある。この立体を $x$ 軸に垂直な平面で切った断面は、つねに底面の弦を1辺とする正三角形である。この立体の体積を求めなさい。",
+      "answer": {
+        "value": "$36 \\sqrt{3}$"
+      },
+      "explanation": "断面積を求めて積分する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "断面の形と断面積を正しく求めている",
+            "points": 3
+          },
+          {
+            "criterion": "体積を定積分で表している（区間を含む）",
+            "points": 3
+          },
+          {
+            "criterion": "体積が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(3)*(9-t**2), [t, -3, 3])",
+        "expected": "36*sqrt(3)"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "application",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U03-volume_adv",
+      "explanation_detail": {
+        "approach": "回転体でなくても、断面積 $S(x)$ が分かれば $V=\\displaystyle\\int S(x)\\,dx$ で体積が求まる。弦の長さを三平方の定理で表す。",
+        "steps": [
+          "$x$ 軸に垂直な平面 $x=t\\ (-3\\leqq t\\leqq 3)$ で切ると、弦の長さは $2\\sqrt{9-t^2}$。",
+          "1辺 $l$ の正三角形の面積は $\\dfrac{\\sqrt{3}}{4}l^2$ なので、断面積 $S(t)=\\sqrt{3}(9-t^2)$。",
+          "$V=\\displaystyle\\int_{-3}^{3}\\sqrt{3}(9-t^2)\\,dt=2\\sqrt{3}\\left(27-\\dfrac{27}{3}\\right)=36 \\sqrt{3}$。"
+        ],
+        "alternatives": [
+          "対称性（偶関数）を使って区間の半分で計算し、2倍してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "断面積",
+            "points": 3
+          },
+          {
+            "point": "立式",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "ドーナツ形の断面を $\\pi(f-g)^2$ としてしまう。",
+          "積分変数（$x$ か $y$ か）と区間の対応を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n\\sqrt{n}}\\left(\\sqrt{1}+\\sqrt{2}+\\cdots+\\sqrt{n}\\right)$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{2}{3}$"
+      },
+      "explanation": "和を $\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に直し、区分求積法を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "和を $\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に変形している",
+            "points": 3
+          },
+          {
+            "criterion": "対応する定積分（区間を含む）を正しく立てている",
+            "points": 3
+          },
+          {
+            "criterion": "極限値が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "integrate(sqrt(x), [x, 0, 1])",
+        "expected": "Rational(2,3)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U03-riemann_adv",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "数列の和の極限（数学Ⅲ 極限）で、和の公式が使えないものは区分求積法で定積分に直す。積の形は対数をとって和に直す。",
+        "steps": [
+          "与式 $=\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}\\sqrt{\\dfrac{k}{n}}$。",
+          "区分求積法より $\\displaystyle\\int_0^1\\sqrt{x}\\,dx=\\dfrac{2}{3}$。"
+        ],
+        "alternatives": [
+          "$n=1000$ 程度で和を数値計算すると、求めた値に近いことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変形",
+            "points": 3
+          },
+          {
+            "point": "定積分",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "和の項数が $n$ でないとき（$2n$ 項など）、積分区間を $[0,\\,1]$ のままにする。",
+          "積の形のまま区分求積法を使おうとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "極限 $\\displaystyle\\lim_{n\\to\\infty}\\dfrac{1}{n}\\sqrt[n]{(n+1)(n+2)\\cdots(2n)}$ を求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{4}{e}$"
+      },
+      "explanation": "和を $\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に直し、区分求積法を用いる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "和を $\\dfrac{1}{n}\\sum f\\left(\\frac{k}{n}\\right)$ の形に変形している",
+            "points": 3
+          },
+          {
+            "criterion": "対応する定積分（区間を含む）を正しく立てている",
+            "points": 3
+          },
+          {
+            "criterion": "極限値が正しい",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "exp(integrate(log(1+x), [x, 0, 1]))",
+        "expected": "4/E",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-MATH3-U03-riemann_adv",
+      "related_units": [
+        "HS-MATH3-U01"
+      ],
+      "explanation_detail": {
+        "approach": "数列の和の極限（数学Ⅲ 極限）で、和の公式が使えないものは区分求積法で定積分に直す。積の形は対数をとって和に直す。",
+        "steps": [
+          "与式を $a_n$ とおくと $a_n=\\sqrt[n]{\\left(1+\\dfrac{1}{n}\\right)\\left(1+\\dfrac{2}{n}\\right)\\cdots\\left(1+\\dfrac{n}{n}\\right)}$。",
+          "自然対数をとると $\\log a_n=\\dfrac{1}{n}\\displaystyle\\sum_{k=1}^{n}\\log\\left(1+\\dfrac{k}{n}\\right)$。",
+          "区分求積法より $\\displaystyle\\lim_{n\\to\\infty}\\log a_n=\\int_0^1\\log(1+x)\\,dx=\\Bigl[(1+x)\\log(1+x)-x\\Bigr]_0^1=2\\log2-1$。",
+          "$\\log$ は連続なので $\\displaystyle\\lim_{n\\to\\infty}a_n=e^{2\\log2-1}=\\dfrac{4}{e}$。"
+        ],
+        "alternatives": [
+          "$n=1000$ 程度で和を数値計算すると、求めた値に近いことが確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "変形",
+            "points": 3
+          },
+          {
+            "point": "定積分",
+            "points": 3
+          },
+          {
+            "point": "答え",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "和の項数が $n$ でないとき（$2n$ 項など）、積分区間を $[0,\\,1]$ のままにする。",
+          "積の形のまま区分求積法を使おうとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "不定積分 $\\displaystyle\\int (2x+2)^5\\,dx$ を求めなさい。\n［ある生徒の解答］\n$\\displaystyle\\int(2x+2)^5\\,dx=\\dfrac{(2x+2)^{6}}{6}+C$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{(2x+2)^{6}}{12}+C$"
+      },
+      "explanation": "$\\displaystyle\\int f(ax+b)\\,dx=\\dfrac{1}{a}F(ax+b)+C$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff((2*x+(2))**6/12, x)-(2*x+(2))**5)",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-err_subst",
+      "explanation_detail": {
+        "approach": "答えを微分してもとの関数に戻るか確かめる。",
+        "steps": [
+          "$t=2x+2$ とおくと $dt=2\\,dx$。",
+          "$\\displaystyle\\int t^5\\cdot\\dfrac{1}{2}\\,dt=\\dfrac{t^{6}}{12}+C$。",
+          "$\\dfrac{(2x+2)^{6}}{12}+C$。"
+        ],
+        "alternatives": [
+          "生徒の答えを微分すると $2(2x+2)^5$ となり、もとの関数の $2$ 倍になってしまう。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "微分して検算しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\displaystyle\\int(2x+2)^5\\,dx=\\dfrac{(2x+2)^{6}}{6}+C$",
+        "error_step": "$dx$ を $dt$ に置きかえるときの係数 $\\dfrac{1}{2}$ を落とした部分",
+        "error_type": "calculation",
+        "why_tempting": "$x^n$ の積分公式をそのまま当てはめ、中身が $2x+2$ であることによる係数を考えていない。",
+        "correction": "$t=2x+2$ とおくと $dx=\\dfrac{1}{2}dt$ なので $\\dfrac{(2x+2)^{6}}{12}+C$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "不定積分 $\\displaystyle\\int (4x+2)^3\\,dx$ を求めなさい。\n［ある生徒の解答］\n$\\displaystyle\\int(4x+2)^3\\,dx=\\dfrac{(4x+2)^{4}}{4}+C$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{(4x+2)^{4}}{16}+C$"
+      },
+      "explanation": "$\\displaystyle\\int f(ax+b)\\,dx=\\dfrac{1}{a}F(ax+b)+C$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff((4*x+(2))**4/16, x)-(4*x+(2))**3)",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-err_subst",
+      "explanation_detail": {
+        "approach": "答えを微分してもとの関数に戻るか確かめる。",
+        "steps": [
+          "$t=4x+2$ とおくと $dt=4\\,dx$。",
+          "$\\displaystyle\\int t^3\\cdot\\dfrac{1}{4}\\,dt=\\dfrac{t^{4}}{16}+C$。",
+          "$\\dfrac{(4x+2)^{4}}{16}+C$。"
+        ],
+        "alternatives": [
+          "生徒の答えを微分すると $4(4x+2)^3$ となり、もとの関数の $4$ 倍になってしまう。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "微分して検算しない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\displaystyle\\int(4x+2)^3\\,dx=\\dfrac{(4x+2)^{4}}{4}+C$",
+        "error_step": "$dx$ を $dt$ に置きかえるときの係数 $\\dfrac{1}{4}$ を落とした部分",
+        "error_type": "calculation",
+        "why_tempting": "$x^n$ の積分公式をそのまま当てはめ、中身が $4x+2$ であることによる係数を考えていない。",
+        "correction": "$t=4x+2$ とおくと $dx=\\dfrac{1}{4}dt$ なので $\\dfrac{(4x+2)^{4}}{16}+C$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{3}x(x^2+1)^2\\,dx$ を求めなさい。\n［ある生徒の解答］\n$t=x^2+1$ とおくと $dt=2x\\,dx$。$\\displaystyle\\int_{0}^{3}x(x^2+1)^2\\,dx=\\dfrac{1}{2}\\displaystyle\\int_{0}^{3}t^2\\,dt=\\dfrac{27}{6}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{333}{2}$"
+      },
+      "explanation": "定積分の置換では、$x$ の区間を $t=g(x)$ によって $t$ の区間に変える。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "integrate(x*(x**2+1)**2, [x, 0, 3])",
+        "expected": "333/2"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-MATH3-U03-err_subst",
+      "explanation_detail": {
+        "approach": "置換したら「$x$ と $t$ の対応表」をかいて区間を取りかえる。",
+        "steps": [
+          "$t=x^2+1$ とおくと $dt=2x\\,dx$。$x:0\\to 3$ のとき $t:1\\to 10$。",
+          "$\\dfrac{1}{2}\\displaystyle\\int_{1}^{10}t^2\\,dt=\\dfrac{1000-1}{6}=\\dfrac{333}{2}$。"
+        ],
+        "alternatives": [
+          "いったん不定積分を求めて $x$ の式に戻し、$x$ の区間で計算しても同じ値になる（生徒の値とは異なる）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間を取りかえ忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$t=x^2+1$ とおくと $dt=2x\\,dx$。$\\displaystyle\\int_{0}^{3}x(x^2+1)^2\\,dx=\\dfrac{1}{2}\\displaystyle\\int_{0}^{3}t^2\\,dt=\\dfrac{27}{6}$",
+        "error_step": "置換した後も積分区間を $x$ の区間のまま使った部分",
+        "error_type": "condition",
+        "why_tempting": "被積分関数だけを $t$ に置きかえ、積分区間も $t$ の値に対応させる必要があることを忘れている。",
+        "correction": "$t$ の区間に取りかえて計算すると $\\dfrac{333}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "不定積分 $\\displaystyle\\int x\\sin x\\,dx$ を求めなさい。\n［ある生徒の解答］\n$\\displaystyle\\int x\\sin x\\,dx=x\\left(-\\cos x\\right)-\\displaystyle\\int \\left(-\\cos x\\right)dx=-x\\cos x-\\sin x+C$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$-x\\cos x+\\sin x+C$"
+      },
+      "explanation": "部分積分の第2項 $-\\displaystyle\\int f'g\\,dx$ では、$g$ に負号があると $+$ になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "simplify(diff(-1*x*cos(1*x)+1*sin(1*x), x)-x*sin(1*x))",
+        "expected": "0"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-err_parts",
+      "explanation_detail": {
+        "approach": "負号を含む部分は、かっこを付けて書いてから外す。",
+        "steps": [
+          "$f=x,\\ g'=\\sin x$、$g=-\\cos x$。",
+          "$x\\left(-\\cos x\\right)+\\displaystyle\\int \\cos x\\,dx$。",
+          "$-x\\cos x+\\sin x+C$。"
+        ],
+        "alternatives": [
+          "答えを微分すると $x\\sin x$ に戻ることを確かめる（生徒の答えを微分すると余分な項が残る）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "符号の処理を急ぐ。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\displaystyle\\int x\\sin x\\,dx=x\\left(-\\cos x\\right)-\\displaystyle\\int \\left(-\\cos x\\right)dx=-x\\cos x-\\sin x+C$",
+        "error_step": "$-\\displaystyle\\int\\left(-\\cos x\\right)dx$ を計算する部分の符号",
+        "error_type": "sign",
+        "why_tempting": "$-\\displaystyle\\int(-\\cdots)\\,dx$ と負の符号が重なる部分で、符号の処理を誤っている。",
+        "correction": "$-\\displaystyle\\int \\left(-\\cos x\\right)dx=+\\displaystyle\\int \\cos x\\,dx=\\sin x$ なので $-x\\cos x+\\sin x+C$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}x\\cos x\\,dx$ を求めなさい。\n［ある生徒の解答］\n$\\Bigl[x\\sin x\\Bigr]_0^{\\dfrac{\\pi}{2}}-\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\sin x\\,dx=\\Bigl[x\\sin x+\\cos x\\Bigr]_0^{\\dfrac{\\pi}{2}}$ の上端だけを代入して $\\dfrac{\\pi}{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi}{2}-1$"
+      },
+      "explanation": "$\\Bigl[F(x)\\Bigr]_a^b=F(b)-F(a)$。$\\cos 0=1$ なので下端の値は $0$ にならない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "integrate(x*cos(1*x), [x, 0, pi/2])",
+        "expected": "-1 + pi/2"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-err_parts",
+      "explanation_detail": {
+        "approach": "下端が $0$ でも、$\\cos 0=1$、$e^0=1$ のように値が $0$ にならない関数に注意する。",
+        "steps": [
+          "原始関数 $F(x)=x\\sin x+\\cos x$。",
+          "$F\\left(\\dfrac{\\pi}{2}\\right)=\\dfrac{\\pi}{2}$、$F(0)=1$。",
+          "$F\\left(\\dfrac{\\pi}{2}\\right)-F(0)=\\dfrac{\\pi}{2}-1$。"
+        ],
+        "alternatives": [
+          "グラフの面積として見積もると、値は生徒の答えより小さいはずだと分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "下端の代入を省略する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Bigl[x\\sin x\\Bigr]_0^{\\dfrac{\\pi}{2}}-\\displaystyle\\int_{0}^{\\frac{\\pi}{2}}\\sin x\\,dx=\\Bigl[x\\sin x+\\cos x\\Bigr]_0^{\\dfrac{\\pi}{2}}$ の上端だけを代入して $\\dfrac{\\pi}{2}$",
+        "error_step": "下端 $x=0$ での値を引いていない部分",
+        "error_type": "calculation",
+        "why_tempting": "下端 $0$ を代入すると $0$ になると思い込み、$\\cos 0=1$ の項を見落としている。",
+        "correction": "下端の値 $\\cos 0=1$ を引いて $\\dfrac{\\pi}{2}-1$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "定積分 $\\displaystyle\\int_{0}^{\\frac{\\pi}{6}}x\\cos 3x\\,dx$ を求めなさい。\n［ある生徒の解答］\n$\\Bigl[\\dfrac{1}{3}x\\sin 3x\\Bigr]_0^{\\dfrac{\\pi}{6}}-\\displaystyle\\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{3}\\sin 3x\\,dx=\\Bigl[\\dfrac{1}{3}x\\sin 3x+\\dfrac{1}{9}\\cos 3x\\Bigr]_0^{\\dfrac{\\pi}{6}}$ の上端だけを代入して $\\dfrac{\\pi}{18}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{\\pi}{18}-\\dfrac{1}{9}$"
+      },
+      "explanation": "$\\Bigl[F(x)\\Bigr]_a^b=F(b)-F(a)$。$\\cos 0=1$ なので下端の値は $0$ にならない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "integrate(x*cos(3*x), [x, 0, pi/6])",
+        "expected": "-1/9 + pi/18"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-MATH3-U03-err_parts",
+      "explanation_detail": {
+        "approach": "下端が $0$ でも、$\\cos 0=1$、$e^0=1$ のように値が $0$ にならない関数に注意する。",
+        "steps": [
+          "原始関数 $F(x)=\\dfrac{1}{3}x\\sin 3x+\\dfrac{1}{9}\\cos 3x$。",
+          "$F\\left(\\dfrac{\\pi}{6}\\right)=\\dfrac{\\pi}{18}$、$F(0)=\\dfrac{1}{9}$。",
+          "$F\\left(\\dfrac{\\pi}{6}\\right)-F(0)=\\dfrac{\\pi}{18}-\\dfrac{1}{9}$。"
+        ],
+        "alternatives": [
+          "グラフの面積として見積もると、値は生徒の答えより小さいはずだと分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "下端の代入を省略する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\Bigl[\\dfrac{1}{3}x\\sin 3x\\Bigr]_0^{\\dfrac{\\pi}{6}}-\\displaystyle\\int_{0}^{\\frac{\\pi}{6}}\\dfrac{1}{3}\\sin 3x\\,dx=\\Bigl[\\dfrac{1}{3}x\\sin 3x+\\dfrac{1}{9}\\cos 3x\\Bigr]_0^{\\dfrac{\\pi}{6}}$ の上端だけを代入して $\\dfrac{\\pi}{18}$",
+        "error_step": "下端 $x=0$ での値を引いていない部分",
+        "error_type": "calculation",
+        "why_tempting": "下端 $0$ を代入すると $0$ になると思い込み、$\\cos 0=1$ の項を見落としている。",
+        "correction": "下端の値 $\\dfrac{1}{9}\\cos 0=\\dfrac{1}{9}$ を引いて $\\dfrac{\\pi}{18}-\\dfrac{1}{9}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=\\log x$ と $x$ 軸、および2直線 $x=\\dfrac{1}{e}$、$x=e$ で囲まれた2つの部分の面積の和を求めなさい。\n［ある生徒の解答］\n$S=\\displaystyle\\int_{\\frac{1}{e}}^{e}\\log x\\,dx=\\Bigl[x\\log x-x\\Bigr]_{\\dfrac{1}{e}}^{e}=\\dfrac{2}{e}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$2-\\dfrac{2}{e}$"
+      },
+      "explanation": "面積は $\\displaystyle\\int|f(x)|\\,dx$。グラフが $x$ 軸を横切る点で区間を分ける。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-integrate(log(x), [x, exp(-1), 1])+integrate(log(x), [x, 1, exp(1)])",
+        "expected": "2 - 2*exp(-1)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U03-err_area",
+      "explanation_detail": {
+        "approach": "原始関数 $x\\log x-x$ はそのまま使えるが、区間を分けて符号を調整する。",
+        "steps": [
+          "$x<1$ で $\\log x<0$、$x>1$ で $\\log x>0$。",
+          "$-\\displaystyle\\int_{\\frac{1}{e}}^{1}\\log x\\,dx=1-\\dfrac{2}{e}$、$\\displaystyle\\int_{1}^{e}\\log x\\,dx=1$。",
+          "和は $2-\\dfrac{2}{e}$。"
+        ],
+        "alternatives": [
+          "グラフをかけば、$x=1$ の左側に $x$ 軸より下の部分があることがすぐ分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間を分けない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\displaystyle\\int_{\\frac{1}{e}}^{e}\\log x\\,dx=\\Bigl[x\\log x-x\\Bigr]_{\\dfrac{1}{e}}^{e}=\\dfrac{2}{e}$",
+        "error_step": "$x=1$ で区間を分けずに定積分をそのまま面積とした部分",
+        "error_type": "concept",
+        "why_tempting": "$\\dfrac{1}{e^k}\\leqq x<1$ では $\\log x<0$ であり、定積分の値が負になって打ち消されることを考えていない。",
+        "correction": "$x=1$ で区間を分け、$-\\displaystyle\\int_{\\frac{1}{e}}^{1}\\log x\\,dx+\\displaystyle\\int_{1}^{e}\\log x\\,dx=2-\\dfrac{2}{e}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=\\log x$ と $x$ 軸、および2直線 $x=\\dfrac{1}{e^2}$、$x=e^2$ で囲まれた2つの部分の面積の和を求めなさい。\n［ある生徒の解答］\n$S=\\displaystyle\\int_{\\frac{1}{e^2}}^{e^2}\\log x\\,dx=\\Bigl[x\\log x-x\\Bigr]_{\\dfrac{1}{e^2}}^{e^2}=\\dfrac{3}{e^{2}}+e^{2}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$e^{2}+2-\\dfrac{3}{e^{2}}$"
+      },
+      "explanation": "面積は $\\displaystyle\\int|f(x)|\\,dx$。グラフが $x$ 軸を横切る点で区間を分ける。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "-integrate(log(x), [x, exp(-2), 1])+integrate(log(x), [x, 1, exp(2)])",
+        "expected": "-3*exp(-2) + 2 + exp(2)"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U03-err_area",
+      "explanation_detail": {
+        "approach": "原始関数 $x\\log x-x$ はそのまま使えるが、区間を分けて符号を調整する。",
+        "steps": [
+          "$x<1$ で $\\log x<0$、$x>1$ で $\\log x>0$。",
+          "$-\\displaystyle\\int_{\\frac{1}{e^2}}^{1}\\log x\\,dx=1-\\dfrac{3}{e^{2}}$、$\\displaystyle\\int_{1}^{e^2}\\log x\\,dx=e^{2}+1$。",
+          "和は $e^{2}+2-\\dfrac{3}{e^{2}}$。"
+        ],
+        "alternatives": [
+          "グラフをかけば、$x=1$ の左側に $x$ 軸より下の部分があることがすぐ分かる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "区間を分けない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$S=\\displaystyle\\int_{\\frac{1}{e^2}}^{e^2}\\log x\\,dx=\\Bigl[x\\log x-x\\Bigr]_{\\dfrac{1}{e^2}}^{e^2}=\\dfrac{3}{e^{2}}+e^{2}$",
+        "error_step": "$x=1$ で区間を分けずに定積分をそのまま面積とした部分",
+        "error_type": "concept",
+        "why_tempting": "$\\dfrac{1}{e^k}\\leqq x<1$ では $\\log x<0$ であり、定積分の値が負になって打ち消されることを考えていない。",
+        "correction": "$x=1$ で区間を分け、$-\\displaystyle\\int_{\\frac{1}{e^2}}^{1}\\log x\\,dx+\\displaystyle\\int_{1}^{e^2}\\log x\\,dx=e^{2}+2-\\dfrac{3}{e^{2}}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=\\sqrt{x}$ と直線 $y=\\dfrac{x}{2}$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。\n［ある生徒の解答］\n$V=\\pi\\displaystyle\\int_{0}^{4}\\left(\\sqrt{x}-\\dfrac{x}{2}\\right)^2dx=\\dfrac{8 \\pi}{15}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{8 \\pi}{3}$"
+      },
+      "explanation": "断面積は「外側の円の面積－内側の円の面積」$=\\pi(f^2-g^2)$ であり、$\\pi(f-g)^2$ ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "pi*integrate(x-x**2/4, [x, 0, 4])",
+        "expected": "8*pi/3"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U03-err_volume",
+      "explanation_detail": {
+        "approach": "回転体では、断面の図（ドーナツ形）を必ずかいてから断面積を式にする。",
+        "steps": [
+          "交点の $x$ 座標は $0,\\ 4$。",
+          "断面は外半径 $\\sqrt{x}$、内半径 $\\dfrac{x}{2}$ のドーナツ形。",
+          "$V=\\pi\\displaystyle\\int_{0}^{4}\\left(x-\\dfrac{x^2}{4}\\right)dx=\\dfrac{8 \\pi}{3}$。"
+        ],
+        "alternatives": [
+          "外側の立体（$y=\\sqrt{x}$ の回転体）の体積から内側の円錐の体積を引いても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(f-g)^2$ とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$V=\\pi\\displaystyle\\int_{0}^{4}\\left(\\sqrt{x}-\\dfrac{x}{2}\\right)^2dx=\\dfrac{8 \\pi}{15}$",
+        "error_step": "体積を $\\pi\\displaystyle\\int(f-g)^2\\,dx$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "面積の「上－下」の考えを回転体にもそのまま当てはめ、半径の差を2乗してしまっている。",
+        "correction": "断面はドーナツ形なので $V=\\pi\\displaystyle\\int_{0}^{4}\\left\\{x-\\left(\\dfrac{x}{2}\\right)^2\\right\\}dx=\\dfrac{8 \\pi}{3}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-MATH3-U03-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "math",
+      "unit_id": "HS-MATH3-U03",
+      "skills": [
+        "calculation",
+        "proof"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "曲線 $y=\\sqrt{x}$ と直線 $y=\\dfrac{x}{3}$ で囲まれた部分を、$x$ 軸のまわりに1回転してできる立体の体積を求めなさい。\n［ある生徒の解答］\n$V=\\pi\\displaystyle\\int_{0}^{9}\\left(\\sqrt{x}-\\dfrac{x}{3}\\right)^2dx=\\dfrac{27 \\pi}{10}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$\\dfrac{27 \\pi}{2}$"
+      },
+      "explanation": "断面積は「外側の円の面積－内側の円の面積」$=\\pi(f^2-g^2)$ であり、$\\pi(f-g)^2$ ではない。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "pi*integrate(x-x**2/9, [x, 0, 9])",
+        "expected": "27*pi/2"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-MATH3-U03-err_volume",
+      "explanation_detail": {
+        "approach": "回転体では、断面の図（ドーナツ形）を必ずかいてから断面積を式にする。",
+        "steps": [
+          "交点の $x$ 座標は $0,\\ 9$。",
+          "断面は外半径 $\\sqrt{x}$、内半径 $\\dfrac{x}{3}$ のドーナツ形。",
+          "$V=\\pi\\displaystyle\\int_{0}^{9}\\left(x-\\dfrac{x^2}{9}\\right)dx=\\dfrac{27 \\pi}{2}$。"
+        ],
+        "alternatives": [
+          "外側の立体（$y=\\sqrt{x}$ の回転体）の体積から内側の円錐の体積を引いても同じ値になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$(f-g)^2$ とする。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$V=\\pi\\displaystyle\\int_{0}^{9}\\left(\\sqrt{x}-\\dfrac{x}{3}\\right)^2dx=\\dfrac{27 \\pi}{10}$",
+        "error_step": "体積を $\\pi\\displaystyle\\int(f-g)^2\\,dx$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "面積の「上－下」の考えを回転体にもそのまま当てはめ、半径の差を2乗してしまっている。",
+        "correction": "断面はドーナツ形なので $V=\\pi\\displaystyle\\int_{0}^{9}\\left\\{x-\\left(\\dfrac{x}{3}\\right)^2\\right\\}dx=\\dfrac{27 \\pi}{2}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "3867105917a47dcbd41fa0e73063b5936875e471175588706d107a9b0e99c734"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 15 問（Q016, Q022, Q025, Q027, Q032, Q035, Q036, Q041, Q042, Q055 他）",
+      "content_hash": "01bbca1ec1756da6cccf4383573abcf6b6c443bf87e58e96a3b1940e1476f965"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 2 問（Q057, Q058）",
+      "content_hash": "b918deb702d3379ba19a706f72447c1feab23ca714b685d8d573b394ce6fcce0"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T08:48:26+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "7e82a59b32bf8572cd7c20f9009b4ee34ffc8a1f2fcc0b3f4252b8f56568bab0"
+  }
+}

@@ -33,6 +33,13 @@ def rnd(expr, nd):
     return e, (f"{float(v):.{nd}f}" if nd > 0 else str(int(v)))
 
 
+def sci(x, nd=3):
+    """3.86×10¹⁷ の形に整える。"""
+    sup = str.maketrans("0123456789-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻")
+    m, e = f"{x:.{nd - 1}e}".split("e")
+    return f"{m}×10{str(int(e)).translate(sup)}"
+
+
 def val(expr):
     return float(_sp.sympify(expr, rational=True))
 
@@ -382,7 +389,7 @@ def eq_temp(r):
         return num(f"架空の{pl}の公転軌道での太陽定数（中心星の放射について同様に定義したもの）を {S} W/m²、アルベドを {g(A)} とする。シュテファン・ボルツマン定数を 5.67×10⁻⁸ W/(m²·K⁴) として、{pl}の放射平衡温度を整数〔K〕で求めなさい。",
                    s, f"σT⁴＝S(1－A)/4＝{S}×{g(round(1 - A, 2))}÷4＝{g(S * (1 - A) / 4)} W/m²。T＝({g(S * (1 - A) / 4)}÷5.67×10⁻⁸)^(1/4)≒{s} K。", d=3, p=4, unit="K",
                    ap="吸収する平均のエネルギー S(1－A)/4 と、放射するエネルギー σT⁴ が等しいとおく。",
-                   steps=[f"S(1－A)/4＝{g(S * (1 - A) / 4)} W/m²。", f"T⁴＝{g(S * (1 - A) / 4)}/(5.67×10⁻⁸)≒{S * (1 - A) / 4 / 5.67e-8:.3e}。", f"T≒{s} K。"],
+                   steps=[f"S(1－A)/4＝{g(S * (1 - A) / 4)} W/m²。", f"T⁴＝{g(S * (1 - A) / 4)}/(5.67×10⁻⁸)≒{sci(S * (1 - A) / 4 / 5.67e-8)}。", f"T≒{s} K。"],
                    alt=[f"地球（S＝1370、A＝0.30）の約 255 K を基準に、T∝(S(1－A))^(1/4) を使って比で見積もり、計算結果が妥当かを確かめる。"],
                    pc=[("つり合いの式を立てている", 2), ("4乗根を正しく計算している", 1), ("正しい値", 1)],
                    pit=["4 で割り忘れる。", "(1－A) ではなく A をかける。"], chk=(e, s))
@@ -464,8 +471,8 @@ def geostrophic(r):
     return num(f"北緯 {phi}° の上空で、等圧線が {dx} km の間隔で {dp} hPa ずつ並んでいる。空気の密度を {g(rho)} kg/m³、地球の自転の角速度を 7.29×10⁻⁵ rad/s として、摩擦が無視できるときの地衡風の速さを整数〔m/s〕で求めなさい。",
                s, f"f＝2Ω sin{phi}°、v＝Δp/(ρ f Δx)＝{dp * 100}÷({g(rho)}×2×7.29×10⁻⁵×sin{phi}°×{dx * 1000})≒{s} m/s。", d=3, p=4, unit="m/s",
                ap="気圧傾度力（1 kg あたり Δp/(ρΔx)）と転向力（fv）のつり合いから v を求める。単位を Pa と m に直す。",
-               steps=[f"Δp＝{dp} hPa＝{dp * 100} Pa、Δx＝{dx * 1000} m。", f"f＝2×7.29×10⁻⁵×sin{phi}°≒{2 * 7.29e-5 * math.sin(math.radians(phi)):.3e} /s。",
-                      f"v＝{dp * 100}÷({g(rho)}×{2 * 7.29e-5 * math.sin(math.radians(phi)):.3e}×{dx * 1000})≒{s} m/s。"],
+               steps=[f"Δp＝{dp} hPa＝{dp * 100} Pa、Δx＝{dx * 1000} m。", f"f＝2×7.29×10⁻⁵×sin{phi}°≒{sci(2 * 7.29e-5 * math.sin(math.radians(phi)))} /s。",
+                      f"v＝{dp * 100}÷({g(rho)}×{sci(2 * 7.29e-5 * math.sin(math.radians(phi)))}×{dx * 1000})≒{s} m/s。"],
                alt=["等圧線の間隔が半分になると風速は 2 倍、緯度が高くなると（sin φ が大きくなると）風速は小さくなる、という関係で答えの妥当性を確かめる。"],
                pc=[("つり合いの式を立てている", 2), ("単位をそろえている", 1), ("正しい値", 1)],
                pit=["hPa を Pa に、km を m に直し忘れる。", "sin φ をかけ忘れる。"], chk=(e, s))
