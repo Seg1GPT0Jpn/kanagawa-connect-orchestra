@@ -181,7 +181,7 @@ def decomp_svg():
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170" width="360" height="170" font-family="serif" font-size="11">'
             '<g transform="rotate(8 120 60)"><rect x="40" y="48" width="150" height="26" rx="12" fill="#f5f9ff" stroke="#000"/>'
             '<rect x="60" y="58" width="60" height="14" fill="#eee" stroke="#999"/></g>'
-            '<text x="58" y="40">炭酸水素ナトリウム</text>'
+            '<text x="58" y="28">炭酸水素ナトリウム</text>'
             '<path d="M190,82 L250,82 L250,120" fill="none" stroke="#000" stroke-width="2"/>'
             '<rect x="232" y="100" width="36" height="58" rx="6" fill="#fff" stroke="#000"/><rect x="233" y="125" width="34" height="32" fill="#e8f2e8"/>'
             '<text x="274" y="140">石灰水</text>'

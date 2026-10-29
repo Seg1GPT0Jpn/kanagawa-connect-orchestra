@@ -155,7 +155,7 @@ def circ_svg():
 
 
 def villi_svg():
-    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" width="300" height="140" font-family="serif" font-size="11">'
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 140" width="380" height="140" font-family="serif" font-size="11">'
             '<path d="M20,120 L20,60 Q35,20 50,60 L50,120 M60,120 L60,60 Q75,20 90,60 L90,120 M100,120 L100,60 Q115,20 130,60 L130,120" fill="#fde" stroke="#000"/>'
             '<path d="M28,110 L28,62 Q35,40 42,62 L42,110" fill="none" stroke="#c00"/>'
             '<line x1="35" y1="48" x2="35" y2="110" stroke="#393"/>'
