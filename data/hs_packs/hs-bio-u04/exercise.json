@@ -3550,29 +3550,29 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "multiple_choice",
-      "stem": "ミツバチが鉛直な巣板の上で8の字ダンスを踊った。ダンスの直進部分の向きは、鉛直上向きから右回りに 225° の方向であった。このとき太陽は巣から見て南の方角にあった。えさ場は巣から見てどの方角にあると考えられるか。",
+      "stem": "ミツバチが鉛直な巣板の上で8の字ダンスを踊った。ダンスの直進部分の向きは、鉛直上向きから左回りに 90° の方向であった。このとき太陽は巣から見て南の方角にあった。えさ場は巣から見てどの方角にあると考えられるか。",
       "choices": [
         {
           "label": "ア",
-          "text": "西"
-        },
-        {
-          "label": "イ",
           "text": "南東"
         },
         {
+          "label": "イ",
+          "text": "北"
+        },
+        {
           "label": "ウ",
-          "text": "南"
+          "text": "北東"
         },
         {
           "label": "エ",
-          "text": "北東"
+          "text": "東"
         }
       ],
       "answer": {
         "value": "エ"
       },
-      "explanation": "鉛直上向きは太陽の方向を表す。南から右回りに 225° 回すと北東。",
+      "explanation": "鉛直上向きは太陽の方向を表す。南から左回りに 90° 回すと東。",
       "scoring": {
         "points": 4,
         "method": "exact"
@@ -3582,8 +3582,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "Mod(4+5, 8)",
-        "expected": "1",
+        "expression": "Mod(4-2, 8)",
+        "expected": "2",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -3596,8 +3596,8 @@
         "approach": "鉛直上向き＝太陽の方角。ダンスの角度を、太陽の方角から同じ向きに同じ角度だけ回す。",
         "steps": [
           "鉛直上向き → 太陽の方角（南）。",
-          "そこから右回り（上から見て時計回り）に 225°。",
-          "方角は北東。"
+          "そこから左回り（上から見て反時計回り）に 90°。",
+          "方角は東。"
         ],
         "alternatives": [
           "8方位を円にかき、太陽の位置に印をつけてから角度を回して確かめる。"
@@ -3620,17 +3620,17 @@
       "distractor_analysis": [
         {
           "label": "ア",
-          "why_wrong": "太陽の方角（南）から右回りに 225° 回した方角ではない。",
+          "why_wrong": "太陽の方角（南）から左回りに 90° 回した方角ではない。",
           "misconception": "ダンスの角度と方角の対応の誤り"
         },
         {
           "label": "イ",
-          "why_wrong": "太陽の方角（南）から右回りに 225° 回した方角ではない。",
+          "why_wrong": "太陽の方角（南）から左回りに 90° 回した方角ではない。",
           "misconception": "ダンスの角度と方角の対応の誤り"
         },
         {
           "label": "ウ",
-          "why_wrong": "太陽の方角（南）から右回りに 225° 回した方角ではない。",
+          "why_wrong": "太陽の方角（南）から左回りに 90° 回した方角ではない。",
           "misconception": "ダンスの角度と方角の対応の誤り"
         }
       ],
@@ -3855,29 +3855,29 @@
       ],
       "evaluation_aspect": "thinking_judgment_expression",
       "question_type": "multiple_choice",
-      "stem": "ミツバチが鉛直な巣板の上で8の字ダンスを踊った。ダンスの直進部分の向きは、鉛直上向きから左回りに 315° の方向であった。このとき太陽は巣から見て南東の方角にあった。えさ場は巣から見てどの方角にあると考えられるか。",
+      "stem": "ミツバチが鉛直な巣板の上で8の字ダンスを踊った。ダンスの直進部分の向きは、鉛直上向きから右回りに 135° の方向であった。このとき太陽は巣から見て南東の方角にあった。えさ場は巣から見てどの方角にあると考えられるか。",
       "choices": [
         {
           "label": "ア",
-          "text": "南西"
-        },
-        {
-          "label": "イ",
-          "text": "北東"
-        },
-        {
-          "label": "ウ",
           "text": "西"
         },
         {
+          "label": "イ",
+          "text": "東"
+        },
+        {
+          "label": "ウ",
+          "text": "南西"
+        },
+        {
           "label": "エ",
-          "text": "南"
+          "text": "北東"
         }
       ],
       "answer": {
-        "value": "エ"
+        "value": "ア"
       },
-      "explanation": "鉛直上向きは太陽の方向を表す。南東から左回りに 315° 回すと南。",
+      "explanation": "鉛直上向きは太陽の方向を表す。南東から右回りに 135° 回すと西。",
       "scoring": {
         "points": 4,
         "method": "exact"
@@ -3887,8 +3887,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "Mod(3-7, 8)",
-        "expected": "4",
+        "expression": "Mod(3+3, 8)",
+        "expected": "6",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -3901,8 +3901,8 @@
         "approach": "鉛直上向き＝太陽の方角。ダンスの角度を、太陽の方角から同じ向きに同じ角度だけ回す。",
         "steps": [
           "鉛直上向き → 太陽の方角（南東）。",
-          "そこから左回り（上から見て反時計回り）に 315°。",
-          "方角は南。"
+          "そこから右回り（上から見て時計回り）に 135°。",
+          "方角は西。"
         ],
         "alternatives": [
           "8方位を円にかき、太陽の位置に印をつけてから角度を回して確かめる。"
@@ -3924,18 +3924,18 @@
       },
       "distractor_analysis": [
         {
-          "label": "ア",
-          "why_wrong": "太陽の方角（南東）から左回りに 315° 回した方角ではない。",
-          "misconception": "ダンスの角度と方角の対応の誤り"
-        },
-        {
           "label": "イ",
-          "why_wrong": "太陽の方角（南東）から左回りに 315° 回した方角ではない。",
+          "why_wrong": "太陽の方角（南東）から右回りに 135° 回した方角ではない。",
           "misconception": "ダンスの角度と方角の対応の誤り"
         },
         {
           "label": "ウ",
-          "why_wrong": "太陽の方角（南東）から左回りに 315° 回した方角ではない。",
+          "why_wrong": "太陽の方角（南東）から右回りに 135° 回した方角ではない。",
+          "misconception": "ダンスの角度と方角の対応の誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "太陽の方角（南東）から右回りに 135° 回した方角ではない。",
           "misconception": "ダンスの角度と方角の対応の誤り"
         }
       ],
@@ -6112,14 +6112,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "5d18fea5cec35f3519f8e26c040b48cfba705421caf67367fea781f9855d49f6"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 2 問（Q037, Q040）",
+      "content_hash": "1b9fc8c960d6de78b60ddd981b4b685264608e44cc54b217ffce9d1b8bf3060d"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-29T04:31:49+00:00",
+    "validated_at": "2026-10-29T04:33:00+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "73bbed4dbee1bbd38a032e4d81a8d1d87ec6eae9966af2e7f60d4b5205d07f0b"
+    "content_hash": "f1ae0471f88e22e1cc73e33aa9206245518ee7ede43beaea1a1bacb117c1a744"
   }
 }

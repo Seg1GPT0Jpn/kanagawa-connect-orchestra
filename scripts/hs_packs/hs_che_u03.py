@@ -136,7 +136,7 @@ def _esc(t):
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def flow_svg(rows, top="混合水溶液", w=440):
+def flow_svg(rows, top="混合水溶液", w=540):
     """rows=[(操作, 沈殿)] を縦の流れ図にする。"""
     h = 40 + 46 * len(rows)
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" font-family="sans-serif" font-size="10.5">',
@@ -145,11 +145,12 @@ def flow_svg(rows, top="混合水溶液", w=440):
     y = 28
     for i, (op, ppt) in enumerate(rows):
         out.append(f'<line x1="40" y1="{y}" x2="40" y2="{y + 40}" stroke="#000" marker-end="url(#fa)"/>')
-        out.append(f'<text x="48" y="{y + 16}" font-size="9.5">操作{i + 1}：{_esc(op[:30])}</text>')
-        if len(op) > 30:
-            out.append(f'<text x="48" y="{y + 28}" font-size="9.5">{_esc(op[30:60])}</text>')
-        out.append(f'<line x1="40" y1="{y + 34}" x2="300" y2="{y + 34}" stroke="#666" stroke-dasharray="3 2"/>')
-        out.append(f'<rect x="300" y="{y + 24}" width="{w - 306}" height="20" fill="#fff" stroke="#333"/><text x="305" y="{y + 38}">{_esc(ppt)}</text>')
+        line1 = f"操作{i + 1}：" + op
+        out.append(f'<text x="48" y="{y + 14}" font-size="9.5">{_esc(line1[:28])}</text>')
+        if len(line1) > 28:
+            out.append(f'<text x="58" y="{y + 26}" font-size="9.5">{_esc(line1[28:56])}</text>')
+        out.append(f'<line x1="40" y1="{y + 34}" x2="350" y2="{y + 34}" stroke="#666" stroke-dasharray="3 2"/>')
+        out.append(f'<rect x="350" y="{y + 24}" width="{w - 356}" height="20" fill="#fff" stroke="#333"/><text x="355" y="{y + 38}">{_esc(ppt)}</text>')
         y += 46
     out.append("</svg>")
     return "".join(out)
