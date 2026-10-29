@@ -1168,11 +1168,11 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "numeric",
-      "stem": "$\\dfrac{\\sqrt{2}}{\\sqrt{5}}$ の分母を有理化しなさい。",
+      "stem": "$\\dfrac{8}{4\\sqrt{7}}$ の分母を有理化しなさい。",
       "answer": {
-        "value": "$\\dfrac{\\sqrt{10}}{5}$"
+        "value": "$\\dfrac{2\\sqrt{7}}{7}$"
       },
-      "explanation": "分母と分子に $\\sqrt{5}$ をかけて $\\dfrac{\\sqrt{2}\\times\\sqrt{5}}{5}=\\dfrac{\\sqrt{10}}{5}$。 よって $\\dfrac{\\sqrt{10}}{5}$。",
+      "explanation": "分母と分子に $\\sqrt{7}$ をかけて $\\dfrac{8\\sqrt{7}}{4\\times7}=\\dfrac{8\\sqrt{7}}{28}$。 よって $\\dfrac{2\\sqrt{7}}{7}$。",
       "scoring": {
         "points": 2,
         "method": "exact"
@@ -1182,8 +1182,8 @@
         "score": 2
       },
       "calc_check": {
-        "expression": "sqrt(2)/sqrt(5)",
-        "expected": "(1)*sqrt(10)/(5)",
+        "expression": "8/(4*sqrt(7))",
+        "expected": "(2)*sqrt(7)/(7)",
         "target": "answer"
       },
       "exercise_level": "basic_check",
@@ -1195,8 +1195,8 @@
       "explanation_detail": {
         "approach": "分母と分子に同じ数（分母の根号）をかけても値は変わらない。$\\sqrt{b}\\times\\sqrt{b}=b$ で分母の根号が消える。",
         "steps": [
-          "分母と分子に $\\sqrt{5}$ をかける：$\\dfrac{\\sqrt{2}\\times\\sqrt{5}}{5}=\\dfrac{\\sqrt{10}}{5}$。",
-          "根号の中と約分を整理して $\\dfrac{\\sqrt{10}}{5}$。"
+          "分母と分子に $\\sqrt{7}$ をかける：$\\dfrac{8\\sqrt{7}}{4\\times7}=\\dfrac{8\\sqrt{7}}{28}$。",
+          "約分して $\\dfrac{2\\sqrt{7}}{7}$。"
         ],
         "alternatives": [
           "答えの近似値と、もとの式の近似値を電卓で比べて等しいことを確かめる。"
@@ -1219,9 +1219,9 @@
       "mark_answer": {
         "form": "frac_root",
         "values": [
-          1,
-          10,
-          5
+          2,
+          7,
+          7
         ]
       },
       "verification": {
@@ -4850,29 +4850,29 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "〔問題〕$5\\sqrt{7}+2\\sqrt{2}$ を計算しなさい。\n〔Kさんの解答〕\n$5\\sqrt{7}+2\\sqrt{2}=7\\sqrt{9}$\nKさんの解答の誤りを説明したものとして最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
+      "stem": "〔問題〕$5\\sqrt{3}+2\\sqrt{10}$ を計算しなさい。\n〔Kさんの解答〕\n$5\\sqrt{3}+2\\sqrt{10}=7\\sqrt{13}$\nKさんの解答の誤りを説明したものとして最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
       "choices": [
         {
           "label": "1",
-          "text": "$(a+b)^2$ を展開するときに、まん中の項 $2ab$ を忘れている。"
-        },
-        {
-          "label": "2",
           "text": "Kさんの解答に誤りはない。"
         },
         {
+          "label": "2",
+          "text": "根号の外に出す数を、2乗のまま（平方根をとらずに）書いている。"
+        },
+        {
           "label": "3",
-          "text": "根号の中どうしをかけるべきところで、根号の中どうしをたしている。"
+          "text": "根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。"
         },
         {
           "label": "4",
-          "text": "根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。"
+          "text": "分母を有理化するとき、分子だけに根号をかけ、分母にかけていない。"
         }
       ],
       "answer": {
-        "value": "4"
+        "value": "3"
       },
-      "explanation": "正しくは 根号の中が異なるので，$5\\sqrt{7}+2\\sqrt{2}$ のままで，これ以上計算できない。",
+      "explanation": "正しくは 根号の中が異なるので，$5\\sqrt{3}+2\\sqrt{10}$ のままで，これ以上計算できない。",
       "scoring": {
         "points": 6,
         "method": "exact"
@@ -4882,8 +4882,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "5*sqrt(7)+2*sqrt(2)",
-        "expected": "5*sqrt(7)+2*sqrt(2)",
+        "expression": "5*sqrt(3)+2*sqrt(10)",
+        "expected": "5*sqrt(3)+2*sqrt(10)",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -4896,7 +4896,7 @@
         "approach": "Kさんの式の両辺を近似値（$\\sqrt{2}\\fallingdotseq1.41$ など）で計算して、等しくなるかどうかを確かめると、誤りが見つかる。",
         "steps": [
           "Kさんの解答の誤り：根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。",
-          "正しい計算：根号の中が異なるので，$5\\sqrt{7}+2\\sqrt{2}$ のままで，これ以上計算できない。"
+          "正しい計算：根号の中が異なるので，$5\\sqrt{3}+2\\sqrt{10}$ のままで，これ以上計算できない。"
         ],
         "alternatives": [
           "乗法・除法は根号の中どうし、加法・減法は根号の中をそろえて係数どうし、というルールの違いを確かめる。"
@@ -4919,26 +4919,26 @@
       "distractor_analysis": [
         {
           "label": "1",
-          "why_wrong": "Kさんの解答では、このような計算はしていない。",
-          "misconception": "誤りの箇所の見落とし"
-        },
-        {
-          "label": "2",
           "why_wrong": "答えを2乗したり近似値で確かめたりすると、もとの式の値と一致しない。",
           "misconception": "検算不足"
         },
         {
-          "label": "3",
+          "label": "2",
+          "why_wrong": "Kさんの解答では、このような計算はしていない。",
+          "misconception": "誤りの箇所の見落とし"
+        },
+        {
+          "label": "4",
           "why_wrong": "Kさんの解答では、このような計算はしていない。",
           "misconception": "誤りの箇所の見落とし"
         }
       ],
       "error_analysis": {
-        "erroneous_solution": "$5\\sqrt{7}+2\\sqrt{2}=7\\sqrt{9}$",
+        "erroneous_solution": "$5\\sqrt{3}+2\\sqrt{10}=7\\sqrt{13}$",
         "error_step": "根号の中が異なる項の加法",
         "error_type": "concept",
         "why_tempting": "文字式の $2a+3a=5a$ のような計算を、根号の中が異なる項にも当てはめてしまう。",
-        "correction": "根号の中が異なるので，$5\\sqrt{7}+2\\sqrt{2}$ のままで，これ以上計算できない"
+        "correction": "根号の中が異なるので，$5\\sqrt{3}+2\\sqrt{10}$ のままで，これ以上計算できない"
       },
       "verification": {
         "status": "auto_checked",
@@ -4969,29 +4969,29 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "〔問題〕$3\\sqrt{3}+2\\sqrt{7}$ を計算しなさい。\n〔Kさんの解答〕\n$3\\sqrt{3}+2\\sqrt{7}=5\\sqrt{10}$\nKさんの解答の誤りを説明したものとして最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
+      "stem": "〔問題〕$3\\sqrt{2}+2\\sqrt{5}$ を計算しなさい。\n〔Kさんの解答〕\n$3\\sqrt{2}+2\\sqrt{5}=5\\sqrt{7}$\nKさんの解答の誤りを説明したものとして最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
       "choices": [
         {
           "label": "1",
-          "text": "根号の外に出す数を、2乗のまま（平方根をとらずに）書いている。"
+          "text": "根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。"
         },
         {
           "label": "2",
-          "text": "分母を有理化するとき、分子だけに根号をかけ、分母にかけていない。"
-        },
-        {
-          "label": "3",
           "text": "Kさんの解答に誤りはない。"
         },
         {
+          "label": "3",
+          "text": "分母を有理化するとき、分子だけに根号をかけ、分母にかけていない。"
+        },
+        {
           "label": "4",
-          "text": "根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。"
+          "text": "$(a+b)^2$ を展開するときに、まん中の項 $2ab$ を忘れている。"
         }
       ],
       "answer": {
-        "value": "4"
+        "value": "1"
       },
-      "explanation": "正しくは 根号の中が異なるので，$3\\sqrt{3}+2\\sqrt{7}$ のままで，これ以上計算できない。",
+      "explanation": "正しくは 根号の中が異なるので，$3\\sqrt{2}+2\\sqrt{5}$ のままで，これ以上計算できない。",
       "scoring": {
         "points": 6,
         "method": "exact"
@@ -5001,8 +5001,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "3*sqrt(3)+2*sqrt(7)",
-        "expected": "3*sqrt(3)+2*sqrt(7)",
+        "expression": "3*sqrt(2)+2*sqrt(5)",
+        "expected": "3*sqrt(2)+2*sqrt(5)",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -5015,7 +5015,7 @@
         "approach": "Kさんの式の両辺を近似値（$\\sqrt{2}\\fallingdotseq1.41$ など）で計算して、等しくなるかどうかを確かめると、誤りが見つかる。",
         "steps": [
           "Kさんの解答の誤り：根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。",
-          "正しい計算：根号の中が異なるので，$3\\sqrt{3}+2\\sqrt{7}$ のままで，これ以上計算できない。"
+          "正しい計算：根号の中が異なるので，$3\\sqrt{2}+2\\sqrt{5}$ のままで，これ以上計算できない。"
         ],
         "alternatives": [
           "乗法・除法は根号の中どうし、加法・減法は根号の中をそろえて係数どうし、というルールの違いを確かめる。"
@@ -5037,27 +5037,27 @@
       },
       "distractor_analysis": [
         {
-          "label": "1",
-          "why_wrong": "Kさんの解答では、このような計算はしていない。",
-          "misconception": "誤りの箇所の見落とし"
-        },
-        {
           "label": "2",
-          "why_wrong": "Kさんの解答では、このような計算はしていない。",
-          "misconception": "誤りの箇所の見落とし"
+          "why_wrong": "答えを2乗したり近似値で確かめたりすると、もとの式の値と一致しない。",
+          "misconception": "検算不足"
         },
         {
           "label": "3",
-          "why_wrong": "答えを2乗したり近似値で確かめたりすると、もとの式の値と一致しない。",
-          "misconception": "検算不足"
+          "why_wrong": "Kさんの解答では、このような計算はしていない。",
+          "misconception": "誤りの箇所の見落とし"
+        },
+        {
+          "label": "4",
+          "why_wrong": "Kさんの解答では、このような計算はしていない。",
+          "misconception": "誤りの箇所の見落とし"
         }
       ],
       "error_analysis": {
-        "erroneous_solution": "$3\\sqrt{3}+2\\sqrt{7}=5\\sqrt{10}$",
+        "erroneous_solution": "$3\\sqrt{2}+2\\sqrt{5}=5\\sqrt{7}$",
         "error_step": "根号の中が異なる項の加法",
         "error_type": "concept",
         "why_tempting": "文字式の $2a+3a=5a$ のような計算を、根号の中が異なる項にも当てはめてしまう。",
-        "correction": "根号の中が異なるので，$3\\sqrt{3}+2\\sqrt{7}$ のままで，これ以上計算できない"
+        "correction": "根号の中が異なるので，$3\\sqrt{2}+2\\sqrt{5}$ のままで，これ以上計算できない"
       },
       "verification": {
         "status": "auto_checked",
@@ -5207,29 +5207,29 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "〔問題〕$3\\sqrt{7}+4\\sqrt{2}$ を計算しなさい。\n〔Kさんの解答〕\n$3\\sqrt{7}+4\\sqrt{2}=7\\sqrt{9}$\nKさんの解答の誤りを説明したものとして最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
+      "stem": "〔問題〕$3\\sqrt{3}+4\\sqrt{10}$ を計算しなさい。\n〔Kさんの解答〕\n$3\\sqrt{3}+4\\sqrt{10}=7\\sqrt{13}$\nKさんの解答の誤りを説明したものとして最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
       "choices": [
         {
           "label": "1",
-          "text": "根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。"
+          "text": "分母を有理化するとき、分子だけに根号をかけ、分母にかけていない。"
         },
         {
           "label": "2",
-          "text": "Kさんの解答に誤りはない。"
+          "text": "$(a+b)^2$ を展開するときに、まん中の項 $2ab$ を忘れている。"
         },
         {
           "label": "3",
-          "text": "根号の中どうしをかけるべきところで、根号の中どうしをたしている。"
+          "text": "根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。"
         },
         {
           "label": "4",
-          "text": "$(a+b)^2$ を展開するときに、まん中の項 $2ab$ を忘れている。"
+          "text": "Kさんの解答に誤りはない。"
         }
       ],
       "answer": {
-        "value": "1"
+        "value": "3"
       },
-      "explanation": "正しくは 根号の中が異なるので，$3\\sqrt{7}+4\\sqrt{2}$ のままで，これ以上計算できない。",
+      "explanation": "正しくは 根号の中が異なるので，$3\\sqrt{3}+4\\sqrt{10}$ のままで，これ以上計算できない。",
       "scoring": {
         "points": 6,
         "method": "exact"
@@ -5239,8 +5239,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "3*sqrt(7)+4*sqrt(2)",
-        "expected": "3*sqrt(7)+4*sqrt(2)",
+        "expression": "3*sqrt(3)+4*sqrt(10)",
+        "expected": "3*sqrt(3)+4*sqrt(10)",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -5253,7 +5253,7 @@
         "approach": "Kさんの式の両辺を近似値（$\\sqrt{2}\\fallingdotseq1.41$ など）で計算して、等しくなるかどうかを確かめると、誤りが見つかる。",
         "steps": [
           "Kさんの解答の誤り：根号の中が異なる項の係数どうしと根号の中どうしをまとめている。根号の中が異なる項はまとめられない。",
-          "正しい計算：根号の中が異なるので，$3\\sqrt{7}+4\\sqrt{2}$ のままで，これ以上計算できない。"
+          "正しい計算：根号の中が異なるので，$3\\sqrt{3}+4\\sqrt{10}$ のままで，これ以上計算できない。"
         ],
         "alternatives": [
           "乗法・除法は根号の中どうし、加法・減法は根号の中をそろえて係数どうし、というルールの違いを確かめる。"
@@ -5275,27 +5275,27 @@
       },
       "distractor_analysis": [
         {
-          "label": "2",
-          "why_wrong": "答えを2乗したり近似値で確かめたりすると、もとの式の値と一致しない。",
-          "misconception": "検算不足"
+          "label": "1",
+          "why_wrong": "Kさんの解答では、このような計算はしていない。",
+          "misconception": "誤りの箇所の見落とし"
         },
         {
-          "label": "3",
+          "label": "2",
           "why_wrong": "Kさんの解答では、このような計算はしていない。",
           "misconception": "誤りの箇所の見落とし"
         },
         {
           "label": "4",
-          "why_wrong": "Kさんの解答では、このような計算はしていない。",
-          "misconception": "誤りの箇所の見落とし"
+          "why_wrong": "答えを2乗したり近似値で確かめたりすると、もとの式の値と一致しない。",
+          "misconception": "検算不足"
         }
       ],
       "error_analysis": {
-        "erroneous_solution": "$3\\sqrt{7}+4\\sqrt{2}=7\\sqrt{9}$",
+        "erroneous_solution": "$3\\sqrt{3}+4\\sqrt{10}=7\\sqrt{13}$",
         "error_step": "根号の中が異なる項の加法",
         "error_type": "concept",
         "why_tempting": "文字式の $2a+3a=5a$ のような計算を、根号の中が異なる項にも当てはめてしまう。",
-        "correction": "根号の中が異なるので，$3\\sqrt{7}+4\\sqrt{2}$ のままで，これ以上計算できない"
+        "correction": "根号の中が異なるので，$3\\sqrt{3}+4\\sqrt{10}$ のままで，これ以上計算できない"
       },
       "verification": {
         "status": "auto_checked",
@@ -5326,7 +5326,7 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "〔問題〕$\\sqrt{125}-\\dfrac{15}{\\sqrt{5}}+\\sqrt{5}$ を計算しなさい。\n〔Kさんの解答〕\n1行目　$\\sqrt{125}=25\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$\n2行目　$\\dfrac{15}{\\sqrt{5}}=\\dfrac{15\\sqrt{5}}{5}=3\\sqrt{5}$\n3行目　（与式）$=25\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}$\n4行目　$=23\\sqrt{5}$\nKさんの解答で，誤りが最初に生じた行として最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
+      "stem": "〔問題〕$\\sqrt{125}-\\dfrac{5}{\\sqrt{5}}+\\sqrt{80}$ を計算しなさい。\n〔Kさんの解答〕\n1行目　$\\sqrt{125}=5\\sqrt{5}$，$\\sqrt{80}=4\\sqrt{5}$\n2行目　$\\dfrac{5}{\\sqrt{5}}=\\dfrac{5\\sqrt{5}}{5}=\\sqrt{5}$\n3行目　（与式）$=5\\sqrt{5}+\\sqrt{5}+4\\sqrt{5}$\n4行目　$=10\\sqrt{5}$\nKさんの解答で，誤りが最初に生じた行として最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
       "choices": [
         {
           "label": "1",
@@ -5346,9 +5346,9 @@
         }
       ],
       "answer": {
-        "value": "1"
+        "value": "3"
       },
-      "explanation": "誤りが最初に生じたのは1行目。正しくは $5\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}=3\\sqrt{5}$。",
+      "explanation": "誤りが最初に生じたのは3行目。正しくは $5\\sqrt{5}-\\sqrt{5}+4\\sqrt{5}=8\\sqrt{5}$。",
       "scoring": {
         "points": 6,
         "method": "exact"
@@ -5358,8 +5358,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "sqrt(125)-15/sqrt(5)+sqrt(5)",
-        "expected": "(3)*sqrt(5)/(1)",
+        "expression": "sqrt(125)-5/sqrt(5)+sqrt(80)",
+        "expected": "(8)*sqrt(5)/(1)",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -5371,9 +5371,9 @@
       "explanation_detail": {
         "approach": "1行ずつ、自分で正しく計算した結果と比べる。$a\\sqrt{b}$ の変形は2乗して、有理化は分母をかけ直して確かめられる。",
         "steps": [
-          "$\\sqrt{125}=5\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$。",
-          "$\\dfrac{15}{\\sqrt{5}}=3\\sqrt{5}$。",
-          "$5\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}=3\\sqrt{5}$。"
+          "$\\sqrt{125}=5\\sqrt{5}$，$\\sqrt{80}=4\\sqrt{5}$。",
+          "$\\dfrac{5}{\\sqrt{5}}=\\sqrt{5}$。",
+          "$5\\sqrt{5}-\\sqrt{5}+4\\sqrt{5}=8\\sqrt{5}$。"
         ],
         "alternatives": [
           "各行の式を近似値で計算し、もとの式の近似値と一致しなくなる最初の行を探す。"
@@ -5395,13 +5395,13 @@
       },
       "distractor_analysis": [
         {
-          "label": "2",
-          "why_wrong": "2行目は、分母と分子に同じ根号をかけて正しく有理化している。",
+          "label": "1",
+          "why_wrong": "1行目は、根号の中の2乗の因数を正しく外に出している。",
           "misconception": "誤りの箇所の見落とし"
         },
         {
-          "label": "3",
-          "why_wrong": "3行目は、問題の式の符号のとおりに正しく並べている。",
+          "label": "2",
+          "why_wrong": "2行目は、分母と分子に同じ根号をかけて正しく有理化している。",
           "misconception": "誤りの箇所の見落とし"
         },
         {
@@ -5411,11 +5411,11 @@
         }
       ],
       "error_analysis": {
-        "erroneous_solution": "1行目　$\\sqrt{125}=25\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$\n2行目　$\\dfrac{15}{\\sqrt{5}}=\\dfrac{15\\sqrt{5}}{5}=3\\sqrt{5}$\n3行目　（与式）$=25\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}$\n4行目　$=23\\sqrt{5}$",
-        "error_step": "1行目（根号の外に出す数）",
-        "error_type": "calculation",
-        "why_tempting": "$25$ の平方根をとって $5$ にすることを忘れやすい。",
-        "correction": "$5\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}=3\\sqrt{5}$"
+        "erroneous_solution": "1行目　$\\sqrt{125}=5\\sqrt{5}$，$\\sqrt{80}=4\\sqrt{5}$\n2行目　$\\dfrac{5}{\\sqrt{5}}=\\dfrac{5\\sqrt{5}}{5}=\\sqrt{5}$\n3行目　（与式）$=5\\sqrt{5}+\\sqrt{5}+4\\sqrt{5}$\n4行目　$=10\\sqrt{5}$",
+        "error_step": "3行目（項の符号）",
+        "error_type": "sign",
+        "why_tempting": "変形した項を書き写すときに、もとの式の「−」を落とす。",
+        "correction": "$5\\sqrt{5}-\\sqrt{5}+4\\sqrt{5}=8\\sqrt{5}$"
       },
       "verification": {
         "status": "auto_checked",
@@ -5446,7 +5446,127 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "〔問題〕$\\sqrt{80}-\\dfrac{15}{\\sqrt{5}}+\\sqrt{5}$ を計算しなさい。\n〔Kさんの解答〕\n1行目　$\\sqrt{80}=4\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$\n2行目　$\\dfrac{15}{\\sqrt{5}}=15\\sqrt{5}$\n3行目　（与式）$=4\\sqrt{5}-15\\sqrt{5}+\\sqrt{5}$\n4行目　$=-10\\sqrt{5}$\nKさんの解答で，誤りが最初に生じた行として最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
+      "stem": "〔問題〕$\\sqrt{20}-\\dfrac{20}{\\sqrt{5}}+\\sqrt{80}$ を計算しなさい。\n〔Kさんの解答〕\n1行目　$\\sqrt{20}=2\\sqrt{5}$，$\\sqrt{80}=4\\sqrt{5}$\n2行目　$\\dfrac{20}{\\sqrt{5}}=\\dfrac{20\\sqrt{5}}{5}=4\\sqrt{5}$\n3行目　（与式）$=2\\sqrt{5}+4\\sqrt{5}+4\\sqrt{5}$\n4行目　$=10\\sqrt{5}$\nKさんの解答で，誤りが最初に生じた行として最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
+      "choices": [
+        {
+          "label": "1",
+          "text": "1行目"
+        },
+        {
+          "label": "2",
+          "text": "2行目"
+        },
+        {
+          "label": "3",
+          "text": "3行目"
+        },
+        {
+          "label": "4",
+          "text": "4行目"
+        }
+      ],
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "誤りが最初に生じたのは3行目。正しくは $2\\sqrt{5}-4\\sqrt{5}+4\\sqrt{5}=2\\sqrt{5}$。",
+      "scoring": {
+        "points": 6,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "sqrt(20)-20/sqrt(5)+sqrt(80)",
+        "expected": "(2)*sqrt(5)/(1)",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "written_reasoning"
+      ],
+      "variant_group": "JH-MATH-G3-U02-d_err_line",
+      "explanation_detail": {
+        "approach": "1行ずつ、自分で正しく計算した結果と比べる。$a\\sqrt{b}$ の変形は2乗して、有理化は分母をかけ直して確かめられる。",
+        "steps": [
+          "$\\sqrt{20}=2\\sqrt{5}$，$\\sqrt{80}=4\\sqrt{5}$。",
+          "$\\dfrac{20}{\\sqrt{5}}=4\\sqrt{5}$。",
+          "$2\\sqrt{5}-4\\sqrt{5}+4\\sqrt{5}=2\\sqrt{5}$。"
+        ],
+        "alternatives": [
+          "各行の式を近似値で計算し、もとの式の近似値と一致しなくなる最初の行を探す。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの行を正しく指摘している",
+            "points": 3
+          },
+          {
+            "point": "正しい答えを求めている",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "根号の外に出す数を2乗のまま書く。",
+          "有理化で分子だけに根号をかける。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "1",
+          "why_wrong": "1行目は、根号の中の2乗の因数を正しく外に出している。",
+          "misconception": "誤りの箇所の見落とし"
+        },
+        {
+          "label": "2",
+          "why_wrong": "2行目は、分母と分子に同じ根号をかけて正しく有理化している。",
+          "misconception": "誤りの箇所の見落とし"
+        },
+        {
+          "label": "4",
+          "why_wrong": "4行目は、3行目の係数を正しく計算している。",
+          "misconception": "誤りの箇所の見落とし"
+        }
+      ],
+      "error_analysis": {
+        "erroneous_solution": "1行目　$\\sqrt{20}=2\\sqrt{5}$，$\\sqrt{80}=4\\sqrt{5}$\n2行目　$\\dfrac{20}{\\sqrt{5}}=\\dfrac{20\\sqrt{5}}{5}=4\\sqrt{5}$\n3行目　（与式）$=2\\sqrt{5}+4\\sqrt{5}+4\\sqrt{5}$\n4行目　$=10\\sqrt{5}$",
+        "error_step": "3行目（項の符号）",
+        "error_type": "sign",
+        "why_tempting": "変形した項を書き写すときに、もとの式の「−」を落とす。",
+        "correction": "$2\\sqrt{5}-4\\sqrt{5}+4\\sqrt{5}=2\\sqrt{5}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-28",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-MATH-G3-U02-EX-Q057",
+      "number": "問12(イ)",
+      "section": "Q12",
+      "grade": "JH3",
+      "subject": "math",
+      "unit_id": "JH-MATH-G3-U02",
+      "skills": [
+        "calculation"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "〔問題〕$\\sqrt{45}-\\dfrac{5}{\\sqrt{5}}+\\sqrt{20}$ を計算しなさい。\n〔Kさんの解答〕\n1行目　$\\sqrt{45}=3\\sqrt{5}$，$\\sqrt{20}=2\\sqrt{5}$\n2行目　$\\dfrac{5}{\\sqrt{5}}=5\\sqrt{5}$\n3行目　（与式）$=3\\sqrt{5}-5\\sqrt{5}+2\\sqrt{5}$\n4行目　$=0$\nKさんの解答で，誤りが最初に生じた行として最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
       "choices": [
         {
           "label": "1",
@@ -5468,7 +5588,7 @@
       "answer": {
         "value": "2"
       },
-      "explanation": "誤りが最初に生じたのは2行目。正しくは $4\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}=2\\sqrt{5}$。",
+      "explanation": "誤りが最初に生じたのは2行目。正しくは $3\\sqrt{5}-\\sqrt{5}+2\\sqrt{5}=4\\sqrt{5}$。",
       "scoring": {
         "points": 6,
         "method": "exact"
@@ -5478,8 +5598,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "sqrt(80)-15/sqrt(5)+sqrt(5)",
-        "expected": "(2)*sqrt(5)/(1)",
+        "expression": "sqrt(45)-5/sqrt(5)+sqrt(20)",
+        "expected": "(4)*sqrt(5)/(1)",
         "target": "intermediate"
       },
       "exercise_level": "error_correction",
@@ -5491,9 +5611,9 @@
       "explanation_detail": {
         "approach": "1行ずつ、自分で正しく計算した結果と比べる。$a\\sqrt{b}$ の変形は2乗して、有理化は分母をかけ直して確かめられる。",
         "steps": [
-          "$\\sqrt{80}=4\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$。",
-          "$\\dfrac{15}{\\sqrt{5}}=3\\sqrt{5}$。",
-          "$4\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}=2\\sqrt{5}$。"
+          "$\\sqrt{45}=3\\sqrt{5}$，$\\sqrt{20}=2\\sqrt{5}$。",
+          "$\\dfrac{5}{\\sqrt{5}}=\\sqrt{5}$。",
+          "$3\\sqrt{5}-\\sqrt{5}+2\\sqrt{5}=4\\sqrt{5}$。"
         ],
         "alternatives": [
           "各行の式を近似値で計算し、もとの式の近似値と一致しなくなる最初の行を探す。"
@@ -5531,131 +5651,11 @@
         }
       ],
       "error_analysis": {
-        "erroneous_solution": "1行目　$\\sqrt{80}=4\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$\n2行目　$\\dfrac{15}{\\sqrt{5}}=15\\sqrt{5}$\n3行目　（与式）$=4\\sqrt{5}-15\\sqrt{5}+\\sqrt{5}$\n4行目　$=-10\\sqrt{5}$",
+        "erroneous_solution": "1行目　$\\sqrt{45}=3\\sqrt{5}$，$\\sqrt{20}=2\\sqrt{5}$\n2行目　$\\dfrac{5}{\\sqrt{5}}=5\\sqrt{5}$\n3行目　（与式）$=3\\sqrt{5}-5\\sqrt{5}+2\\sqrt{5}$\n4行目　$=0$",
         "error_step": "2行目（分母の有理化）",
         "error_type": "calculation",
         "why_tempting": "分子にだけ根号をかけてしまう。",
-        "correction": "$4\\sqrt{5}-3\\sqrt{5}+\\sqrt{5}=2\\sqrt{5}$"
-      },
-      "verification": {
-        "status": "auto_checked",
-        "checked_by": "validate_questions.py v2.0.0",
-        "checked_at": "2026-10-28",
-        "methods": [
-          "schema",
-          "answer_consistency",
-          "duplicate",
-          "calc_check"
-        ],
-        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
-      },
-      "copyright": {
-        "status": "original",
-        "holder": "かながわコネクト教材プロジェクト"
-      }
-    },
-    {
-      "id": "JH-MATH-G3-U02-EX-Q057",
-      "number": "問12(イ)",
-      "section": "Q12",
-      "grade": "JH3",
-      "subject": "math",
-      "unit_id": "JH-MATH-G3-U02",
-      "skills": [
-        "calculation"
-      ],
-      "evaluation_aspect": "knowledge_skill",
-      "question_type": "multiple_choice",
-      "stem": "〔問題〕$\\sqrt{45}-\\dfrac{10}{\\sqrt{5}}+\\sqrt{5}$ を計算しなさい。\n〔Kさんの解答〕\n1行目　$\\sqrt{45}=9\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$\n2行目　$\\dfrac{10}{\\sqrt{5}}=\\dfrac{10\\sqrt{5}}{5}=2\\sqrt{5}$\n3行目　（与式）$=9\\sqrt{5}-2\\sqrt{5}+\\sqrt{5}$\n4行目　$=8\\sqrt{5}$\nKさんの解答で，誤りが最初に生じた行として最も適するものを，次の1〜4の中から1つ選び，その番号を答えなさい。",
-      "choices": [
-        {
-          "label": "1",
-          "text": "1行目"
-        },
-        {
-          "label": "2",
-          "text": "2行目"
-        },
-        {
-          "label": "3",
-          "text": "3行目"
-        },
-        {
-          "label": "4",
-          "text": "4行目"
-        }
-      ],
-      "answer": {
-        "value": "1"
-      },
-      "explanation": "誤りが最初に生じたのは1行目。正しくは $3\\sqrt{5}-2\\sqrt{5}+\\sqrt{5}=2\\sqrt{5}$。",
-      "scoring": {
-        "points": 6,
-        "method": "exact"
-      },
-      "difficulty": {
-        "level": "standard",
-        "score": 3
-      },
-      "calc_check": {
-        "expression": "sqrt(45)-10/sqrt(5)+sqrt(5)",
-        "expected": "(2)*sqrt(5)/(1)",
-        "target": "intermediate"
-      },
-      "exercise_level": "error_correction",
-      "perspectives": [
-        "common_error",
-        "written_reasoning"
-      ],
-      "variant_group": "JH-MATH-G3-U02-d_err_line",
-      "explanation_detail": {
-        "approach": "1行ずつ、自分で正しく計算した結果と比べる。$a\\sqrt{b}$ の変形は2乗して、有理化は分母をかけ直して確かめられる。",
-        "steps": [
-          "$\\sqrt{45}=3\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$。",
-          "$\\dfrac{10}{\\sqrt{5}}=2\\sqrt{5}$。",
-          "$3\\sqrt{5}-2\\sqrt{5}+\\sqrt{5}=2\\sqrt{5}$。"
-        ],
-        "alternatives": [
-          "各行の式を近似値で計算し、もとの式の近似値と一致しなくなる最初の行を探す。"
-        ],
-        "partial_credit": [
-          {
-            "point": "誤りの行を正しく指摘している",
-            "points": 3
-          },
-          {
-            "point": "正しい答えを求めている",
-            "points": 3
-          }
-        ],
-        "pitfalls": [
-          "根号の外に出す数を2乗のまま書く。",
-          "有理化で分子だけに根号をかける。"
-        ]
-      },
-      "distractor_analysis": [
-        {
-          "label": "2",
-          "why_wrong": "2行目は、分母と分子に同じ根号をかけて正しく有理化している。",
-          "misconception": "誤りの箇所の見落とし"
-        },
-        {
-          "label": "3",
-          "why_wrong": "3行目は、問題の式の符号のとおりに正しく並べている。",
-          "misconception": "誤りの箇所の見落とし"
-        },
-        {
-          "label": "4",
-          "why_wrong": "4行目は、3行目の係数を正しく計算している。",
-          "misconception": "誤りの箇所の見落とし"
-        }
-      ],
-      "error_analysis": {
-        "erroneous_solution": "1行目　$\\sqrt{45}=9\\sqrt{5}$，$\\sqrt{5}=\\sqrt{5}$\n2行目　$\\dfrac{10}{\\sqrt{5}}=\\dfrac{10\\sqrt{5}}{5}=2\\sqrt{5}$\n3行目　（与式）$=9\\sqrt{5}-2\\sqrt{5}+\\sqrt{5}$\n4行目　$=8\\sqrt{5}$",
-        "error_step": "1行目（根号の外に出す数）",
-        "error_type": "calculation",
-        "why_tempting": "$9$ の平方根をとって $3$ にすることを忘れやすい。",
-        "correction": "$3\\sqrt{5}-2\\sqrt{5}+\\sqrt{5}=2\\sqrt{5}$"
+        "correction": "$3\\sqrt{5}-\\sqrt{5}+2\\sqrt{5}=4\\sqrt{5}$"
       },
       "verification": {
         "status": "auto_checked",
@@ -6045,14 +6045,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
       "content_hash": "477e8797dda315121709918c52251f8bf0fab4f56f284b26f4544d35c881e618"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-28",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 7 問（Q012, Q051, Q052, Q054, Q055, Q056, Q057）",
+      "content_hash": "9b9de2801e8f3df29cc9457528f52da76d385eb85eb9e6f6c4a586d153e7cda3"
     }
   ],
   "validation": {
-    "validated_at": "2026-10-28T23:26:56+00:00",
+    "validated_at": "2026-10-28T23:46:29+00:00",
     "validator_version": "2.0.0",
     "result": "pass",
     "errors": 0,
     "warnings": 0,
-    "content_hash": "020f5780d5bf8929fde1a1102cd25cd4ac8793270d8bf0cb044e99c0749645b1"
+    "content_hash": "f636c10853285b8626f79e09598de567e48a7faaabfbd6a74403f08910590dab"
   }
 }
