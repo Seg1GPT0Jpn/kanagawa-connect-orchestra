@@ -535,7 +535,7 @@ def b_aging(r):
         o = r.choice(range(5, 41, 1)) * 1000
         tot = y0 + w + o
         p = o * 100 / tot
-        if (o * 1000) % tot == 0 and all(abs(p - t) >= 1.5 for t in (7, 14, 21)):
+        if all(abs(p - t) >= 1.5 for t in (7, 14, 21)) and len({_pct(p), _pct(o * 100 / w), _pct(y0 * 100 / tot), _pct(w * 100 / tot)}) == 4:
             break
     tbl = table([["0〜14歳", str(y0)], ["15〜64歳", str(w)], ["65歳以上", str(o)]], header=["年齢", "人口〔人〕"], caption="表　架空の市Qの年齢別人口（架空の資料）")
     mode = r.choice(["rate", "kubun"])
@@ -545,19 +545,19 @@ def b_aging(r):
         wr = [(f"{_pct(o * 100 / w)}％", "65歳以上の人口を15〜64歳の人口でわっている。高齢化率は総人口でわる。", "割合のわる数の誤り"),
               (f"{_pct(y0 * 100 / tot)}％", "これは0〜14歳の人口の割合である。", "年齢区分の取り違え"),
               (f"{_pct(w * 100 / tot)}％", "これは15〜64歳の人口の割合である。", "年齢区分の取り違え")]
-        q = "市Qの高齢化率"
-        chk = (f"Rational({o}*100,{tot})", _pct(p), None, "intermediate")
+        q = "市Qの高齢化率（小数第2位を四捨五入）"
+        chk = (f"Rational({o}*100,{tot})", f"Rational({o * 100},{tot})", None, "intermediate")
     else:
         right = f"{kb}にあたる"
         cands = ["超高齢社会にあたる", "高齢社会にあたる", "高齢化社会にあたる", "高齢化社会にいたっていない社会にあたる"]
         wr = [(c, f"高齢化率は{_pct(p)}％なので，{kb}にあたる。", "区分の基準の取り違え") for c in cands if c != right]
         q = "市Qの高齢化率（7％をこえると高齢化社会，14％をこえると高齢社会，21％をこえると超高齢社会）から判断できる区分"
-        chk = (f"Rational({o}*100,{tot})", _pct(p), None, "intermediate")
+        chk = (f"Rational({o}*100,{tot})", f"Rational({o * 100},{tot})", None, "intermediate")
     return mc4(f"Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる{q}として{ASK4B}",
-               right, wr, f"総人口は{y0}＋{w}＋{o}＝{tot}人。高齢化率＝{o}÷{tot}×100＝{_pct(p)}（％）で，{kb}にあたる。",
+               right, wr, f"総人口は{y0}＋{w}＋{o}＝{tot}人。高齢化率＝{o}÷{tot}×100{'＝' if (o * 1000) % tot == 0 else '≒'}{_pct(p)}（％）で，{kb}にあたる。",
                d=3, tbl=tbl,
                ap="まず3つの年齢区分を足して総人口を求め，65歳以上の人口を総人口でわる。",
-               steps=[f"総人口：{y0}＋{w}＋{o}＝{tot}（人）。", f"高齢化率：{o}÷{tot}×100＝{_pct(p)}（％）。", f"区分：{kb}。"],
+               steps=[f"総人口：{y0}＋{w}＋{o}＝{tot}（人）。", f"高齢化率：{o}÷{tot}×100{'＝' if (o * 1000) % tot == 0 else '≒'}{_pct(p)}（％）。", f"区分：{kb}。"],
                alt=["総人口の7％・14％・21％にあたる人数を先に求め，65歳以上の人数と比べても判断できる。"],
                pc=[("総人口を正しく求めている", 2), ("高齢化率を正しく計算している", 2)],
                pit=["15〜64歳の人口でわってしまう。", "総人口を求めずに，表の一部の人口でわってしまう。"],

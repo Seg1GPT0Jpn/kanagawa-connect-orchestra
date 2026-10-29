@@ -2615,15 +2615,15 @@
         "rows": [
           [
             "0〜14歳",
-            "14000"
+            "22000"
           ],
           [
             "15〜64歳",
-            "70000"
+            "74000"
           ],
           [
             "65歳以上",
-            "16000"
+            "11000"
           ]
         ],
         "header": [
@@ -2639,11 +2639,11 @@
         },
         {
           "label": "2",
-          "text": "高齢社会にあたる"
+          "text": "高齢化社会にあたる"
         },
         {
           "label": "3",
-          "text": "高齢化社会にあたる"
+          "text": "高齢社会にあたる"
         },
         {
           "label": "4",
@@ -2653,7 +2653,7 @@
       "answer": {
         "value": "2"
       },
-      "explanation": "総人口は14000＋70000＋16000＝100000人。高齢化率＝16000÷100000×100＝16（％）で，高齢社会にあたる。",
+      "explanation": "総人口は22000＋74000＋11000＝107000人。高齢化率＝11000÷107000×100≒10.3（％）で，高齢化社会にあたる。",
       "scoring": {
         "points": 4,
         "method": "exact"
@@ -2663,8 +2663,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "Rational(16000*100,100000)",
-        "expected": "16",
+        "expression": "Rational(11000*100,107000)",
+        "expected": "Rational(1100000,107000)",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -2676,9 +2676,9 @@
       "explanation_detail": {
         "approach": "まず3つの年齢区分を足して総人口を求め，65歳以上の人口を総人口でわる。",
         "steps": [
-          "総人口：14000＋70000＋16000＝100000（人）。",
-          "高齢化率：16000÷100000×100＝16（％）。",
-          "区分：高齢社会。"
+          "総人口：22000＋74000＋11000＝107000（人）。",
+          "高齢化率：11000÷107000×100≒10.3（％）。",
+          "区分：高齢化社会。"
         ],
         "alternatives": [
           "総人口の7％・14％・21％にあたる人数を先に求め，65歳以上の人数と比べても判断できる。"
@@ -2701,17 +2701,17 @@
       "distractor_analysis": [
         {
           "label": "1",
-          "why_wrong": "高齢化率は16％なので，高齢社会にあたる。",
+          "why_wrong": "高齢化率は10.3％なので，高齢化社会にあたる。",
           "misconception": "区分の基準の取り違え"
         },
         {
           "label": "3",
-          "why_wrong": "高齢化率は16％なので，高齢社会にあたる。",
+          "why_wrong": "高齢化率は10.3％なので，高齢化社会にあたる。",
           "misconception": "区分の基準の取り違え"
         },
         {
           "label": "4",
-          "why_wrong": "高齢化率は16％なので，高齢社会にあたる。",
+          "why_wrong": "高齢化率は10.3％なので，高齢化社会にあたる。",
           "misconception": "区分の基準の取り違え"
         }
       ],
@@ -2744,20 +2744,20 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる市Qの高齢化率として最も適するものを，あとの1～4の中から一つ選び，その番号を答えなさい。",
+      "stem": "Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる市Qの高齢化率（7％をこえると高齢化社会，14％をこえると高齢社会，21％をこえると超高齢社会）から判断できる区分として最も適するものを，あとの1～4の中から一つ選び，その番号を答えなさい。",
       "table": {
         "rows": [
           [
             "0〜14歳",
-            "20000"
+            "10000"
           ],
           [
             "15〜64歳",
-            "64000"
+            "50000"
           ],
           [
             "65歳以上",
-            "16000"
+            "12000"
           ]
         ],
         "header": [
@@ -2769,25 +2769,25 @@
       "choices": [
         {
           "label": "1",
-          "text": "16％"
+          "text": "高齢化社会にあたる"
         },
         {
           "label": "2",
-          "text": "25％"
+          "text": "高齢化社会にいたっていない社会にあたる"
         },
         {
           "label": "3",
-          "text": "64％"
+          "text": "超高齢社会にあたる"
         },
         {
           "label": "4",
-          "text": "20％"
+          "text": "高齢社会にあたる"
         }
       ],
       "answer": {
-        "value": "1"
+        "value": "4"
       },
-      "explanation": "総人口は20000＋64000＋16000＝100000人。高齢化率＝16000÷100000×100＝16（％）で，高齢社会にあたる。",
+      "explanation": "総人口は10000＋50000＋12000＝72000人。高齢化率＝12000÷72000×100≒16.7（％）で，高齢社会にあたる。",
       "scoring": {
         "points": 4,
         "method": "exact"
@@ -2797,8 +2797,8 @@
         "score": 3
       },
       "calc_check": {
-        "expression": "Rational(16000*100,100000)",
-        "expected": "16",
+        "expression": "Rational(12000*100,72000)",
+        "expected": "Rational(1200000,72000)",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -2810,8 +2810,8 @@
       "explanation_detail": {
         "approach": "まず3つの年齢区分を足して総人口を求め，65歳以上の人口を総人口でわる。",
         "steps": [
-          "総人口：20000＋64000＋16000＝100000（人）。",
-          "高齢化率：16000÷100000×100＝16（％）。",
+          "総人口：10000＋50000＋12000＝72000（人）。",
+          "高齢化率：12000÷72000×100≒16.7（％）。",
           "区分：高齢社会。"
         ],
         "alternatives": [
@@ -2834,19 +2834,19 @@
       },
       "distractor_analysis": [
         {
+          "label": "1",
+          "why_wrong": "高齢化率は16.7％なので，高齢社会にあたる。",
+          "misconception": "区分の基準の取り違え"
+        },
+        {
           "label": "2",
-          "why_wrong": "65歳以上の人口を15〜64歳の人口でわっている。高齢化率は総人口でわる。",
-          "misconception": "割合のわる数の誤り"
+          "why_wrong": "高齢化率は16.7％なので，高齢社会にあたる。",
+          "misconception": "区分の基準の取り違え"
         },
         {
           "label": "3",
-          "why_wrong": "これは15〜64歳の人口の割合である。",
-          "misconception": "年齢区分の取り違え"
-        },
-        {
-          "label": "4",
-          "why_wrong": "これは0〜14歳の人口の割合である。",
-          "misconception": "年齢区分の取り違え"
+          "why_wrong": "高齢化率は16.7％なので，高齢社会にあたる。",
+          "misconception": "区分の基準の取り違え"
         }
       ],
       "verification": {
@@ -2878,141 +2878,7 @@
       ],
       "evaluation_aspect": "knowledge_skill",
       "question_type": "multiple_choice",
-      "stem": "Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる市Qの高齢化率（7％をこえると高齢化社会，14％をこえると高齢社会，21％をこえると超高齢社会）から判断できる区分として最も適するものを，あとの1～4の中から一つ選び，その番号を答えなさい。",
-      "table": {
-        "rows": [
-          [
-            "0〜14歳",
-            "12000"
-          ],
-          [
-            "15〜64歳",
-            "72000"
-          ],
-          [
-            "65歳以上",
-            "36000"
-          ]
-        ],
-        "header": [
-          "年齢",
-          "人口〔人〕"
-        ],
-        "caption": "表　架空の市Qの年齢別人口（架空の資料）"
-      },
-      "choices": [
-        {
-          "label": "1",
-          "text": "高齢化社会にあたる"
-        },
-        {
-          "label": "2",
-          "text": "高齢社会にあたる"
-        },
-        {
-          "label": "3",
-          "text": "高齢化社会にいたっていない社会にあたる"
-        },
-        {
-          "label": "4",
-          "text": "超高齢社会にあたる"
-        }
-      ],
-      "answer": {
-        "value": "4"
-      },
-      "explanation": "総人口は12000＋72000＋36000＝120000人。高齢化率＝36000÷120000×100＝30（％）で，超高齢社会にあたる。",
-      "scoring": {
-        "points": 4,
-        "method": "exact"
-      },
-      "difficulty": {
-        "level": "standard",
-        "score": 3
-      },
-      "calc_check": {
-        "expression": "Rational(36000*100,120000)",
-        "expected": "30",
-        "target": "intermediate"
-      },
-      "exercise_level": "standard_practice",
-      "perspectives": [
-        "computation",
-        "application"
-      ],
-      "variant_group": "JH-SOC-G3-U03-b_aging",
-      "explanation_detail": {
-        "approach": "まず3つの年齢区分を足して総人口を求め，65歳以上の人口を総人口でわる。",
-        "steps": [
-          "総人口：12000＋72000＋36000＝120000（人）。",
-          "高齢化率：36000÷120000×100＝30（％）。",
-          "区分：超高齢社会。"
-        ],
-        "alternatives": [
-          "総人口の7％・14％・21％にあたる人数を先に求め，65歳以上の人数と比べても判断できる。"
-        ],
-        "partial_credit": [
-          {
-            "point": "総人口を正しく求めている",
-            "points": 2
-          },
-          {
-            "point": "高齢化率を正しく計算している",
-            "points": 2
-          }
-        ],
-        "pitfalls": [
-          "15〜64歳の人口でわってしまう。",
-          "総人口を求めずに，表の一部の人口でわってしまう。"
-        ]
-      },
-      "distractor_analysis": [
-        {
-          "label": "1",
-          "why_wrong": "高齢化率は30％なので，超高齢社会にあたる。",
-          "misconception": "区分の基準の取り違え"
-        },
-        {
-          "label": "2",
-          "why_wrong": "高齢化率は30％なので，超高齢社会にあたる。",
-          "misconception": "区分の基準の取り違え"
-        },
-        {
-          "label": "3",
-          "why_wrong": "高齢化率は30％なので，超高齢社会にあたる。",
-          "misconception": "区分の基準の取り違え"
-        }
-      ],
-      "verification": {
-        "status": "auto_checked",
-        "checked_by": "validate_questions.py v2.0.0",
-        "checked_at": "2026-10-29",
-        "methods": [
-          "schema",
-          "answer_consistency",
-          "duplicate",
-          "calc_check"
-        ],
-        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
-      },
-      "copyright": {
-        "status": "original",
-        "holder": "かながわコネクト教材プロジェクト"
-      }
-    },
-    {
-      "id": "JH-SOC-G3-U03-EX-Q028",
-      "number": "問6(ウ)",
-      "section": "Q6",
-      "grade": "JH3",
-      "subject": "social",
-      "unit_id": "JH-SOC-G3-U03",
-      "skills": [
-        "knowledge"
-      ],
-      "evaluation_aspect": "knowledge_skill",
-      "question_type": "multiple_choice",
-      "stem": "Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる市Qの高齢化率として最も適するものを，あとの1～4の中から一つ選び，その番号を答えなさい。",
+      "stem": "Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる市Qの高齢化率（小数第2位を四捨五入）として最も適するものを，あとの1～4の中から一つ選び，その番号を答えなさい。",
       "table": {
         "rows": [
           [
@@ -3037,7 +2903,7 @@
       "choices": [
         {
           "label": "1",
-          "text": "20.8％"
+          "text": "28.4％"
         },
         {
           "label": "2",
@@ -3049,7 +2915,7 @@
         },
         {
           "label": "4",
-          "text": "28.4％"
+          "text": "20.8％"
         }
       ],
       "answer": {
@@ -3066,7 +2932,7 @@
       },
       "calc_check": {
         "expression": "Rational(21000*100,120000)",
-        "expected": "17.5",
+        "expected": "Rational(2100000,120000)",
         "target": "intermediate"
       },
       "exercise_level": "standard_practice",
@@ -3103,8 +2969,8 @@
       "distractor_analysis": [
         {
           "label": "1",
-          "why_wrong": "これは0〜14歳の人口の割合である。",
-          "misconception": "年齢区分の取り違え"
+          "why_wrong": "65歳以上の人口を15〜64歳の人口でわっている。高齢化率は総人口でわる。",
+          "misconception": "割合のわる数の誤り"
         },
         {
           "label": "2",
@@ -3113,8 +2979,142 @@
         },
         {
           "label": "4",
-          "why_wrong": "65歳以上の人口を15〜64歳の人口でわっている。高齢化率は総人口でわる。",
-          "misconception": "割合のわる数の誤り"
+          "why_wrong": "これは0〜14歳の人口の割合である。",
+          "misconception": "年齢区分の取り違え"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "JH-SOC-G3-U03-EX-Q028",
+      "number": "問6(ウ)",
+      "section": "Q6",
+      "grade": "JH3",
+      "subject": "social",
+      "unit_id": "JH-SOC-G3-U03",
+      "skills": [
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "Kさんは，少子高齢化について調べるために，次の表を作成した。表から求められる市Qの高齢化率（7％をこえると高齢化社会，14％をこえると高齢社会，21％をこえると超高齢社会）から判断できる区分として最も適するものを，あとの1～4の中から一つ選び，その番号を答えなさい。",
+      "table": {
+        "rows": [
+          [
+            "0〜14歳",
+            "11000"
+          ],
+          [
+            "15〜64歳",
+            "76000"
+          ],
+          [
+            "65歳以上",
+            "26000"
+          ]
+        ],
+        "header": [
+          "年齢",
+          "人口〔人〕"
+        ],
+        "caption": "表　架空の市Qの年齢別人口（架空の資料）"
+      },
+      "choices": [
+        {
+          "label": "1",
+          "text": "高齢社会にあたる"
+        },
+        {
+          "label": "2",
+          "text": "高齢化社会にあたる"
+        },
+        {
+          "label": "3",
+          "text": "超高齢社会にあたる"
+        },
+        {
+          "label": "4",
+          "text": "高齢化社会にいたっていない社会にあたる"
+        }
+      ],
+      "answer": {
+        "value": "3"
+      },
+      "explanation": "総人口は11000＋76000＋26000＝113000人。高齢化率＝26000÷113000×100≒23（％）で，超高齢社会にあたる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(26000*100,113000)",
+        "expected": "Rational(2600000,113000)",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "JH-SOC-G3-U03-b_aging",
+      "explanation_detail": {
+        "approach": "まず3つの年齢区分を足して総人口を求め，65歳以上の人口を総人口でわる。",
+        "steps": [
+          "総人口：11000＋76000＋26000＝113000（人）。",
+          "高齢化率：26000÷113000×100≒23（％）。",
+          "区分：超高齢社会。"
+        ],
+        "alternatives": [
+          "総人口の7％・14％・21％にあたる人数を先に求め，65歳以上の人数と比べても判断できる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "総人口を正しく求めている",
+            "points": 2
+          },
+          {
+            "point": "高齢化率を正しく計算している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "15〜64歳の人口でわってしまう。",
+          "総人口を求めずに，表の一部の人口でわってしまう。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "1",
+          "why_wrong": "高齢化率は23％なので，超高齢社会にあたる。",
+          "misconception": "区分の基準の取り違え"
+        },
+        {
+          "label": "2",
+          "why_wrong": "高齢化率は23％なので，超高齢社会にあたる。",
+          "misconception": "区分の基準の取り違え"
+        },
+        {
+          "label": "4",
+          "why_wrong": "高齢化率は23％なので，超高齢社会にあたる。",
+          "misconception": "区分の基準の取り違え"
         }
       ],
       "verification": {
@@ -6912,6 +6912,21 @@
       "author": "generate_highschool_unit.py",
       "changes": "修正 3 問（Q017, Q018, Q020）",
       "content_hash": "8186014ee29313b5c5d4871890ec1c822a2fa47efa7489e4d3f073b490ecb648"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "修正 4 問（Q025, Q026, Q027, Q028）",
+      "content_hash": "fafdf96931d7a9606b6307630ca147e504ababa5e435750f9eb436d4a7d57de1"
     }
-  ]
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T04:08:19+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "5a9399a8118de2bbbfc192b401bbe6532e821fd0f57000649f9cc7dd506298b9"
+  }
 }

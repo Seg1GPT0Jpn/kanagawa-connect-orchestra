@@ -1,0 +1,5558 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-CHE-U01-EX",
+  "title": "物質の状態（気体・溶液）　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "chemistry",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-CHE-U01"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-CHE-U01-PACK",
+  "pair_set_id": "HS-CHE-U01-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-CHEB-U02",
+        "point": "物質量",
+        "title": "物質量と化学反応式"
+      }
+    ],
+    "extensions": [
+      {
+        "unit_id": "HS-CHE-U02",
+        "point": "化学平衡",
+        "title": "化学反応とエネルギー・化学平衡"
+      }
+    ],
+    "readiness_check": [
+      "物質量・モル質量・モル濃度の計算ができる（化学基礎「物質量と化学反応式」）。",
+      "絶対温度 $T\\,[\\mathrm{K}]=t\\,[{}^\\circ\\mathrm{C}]+273$ と、圧力の単位 Pa（$1\\ \\mathrm{Pa}=1\\ \\mathrm{N/m^2}$）を知っている。",
+      "反比例・比例の式の扱い、指数（$10^{5}$ など）の計算ができる。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-CHE-U01-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0 ℃、$3.0\\times10^{5}$ Pa で 3.0 L を占める気体を、47 ℃、$4.0\\times10^{5}$ Pa にすると、体積は何 L になるか。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "2.6",
+        "unit": "L"
+      },
+      "explanation": "$\\dfrac{p_1V_1}{T_1}=\\dfrac{p_2V_2}{T_2}$ より $V_2=\\dfrac{p_1V_1T_2}{p_2T_1}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "300000*3*(47+273)/((0+273)*400000)",
+        "expected": "240/91",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-boyle_charles",
+      "explanation_detail": {
+        "approach": "物質量が一定なので、ボイル・シャルルの法則 $\\dfrac{pV}{T}=$ 一定 を使う。",
+        "steps": [
+          "$T_1=273$ K、$T_2=320$ K。",
+          "$V_2=\\dfrac{3.0\\times10^{5}\\times3.0\\times320}{4.0\\times10^{5}\\times273}=2.6$ L。"
+        ],
+        "alternatives": [
+          "圧力の変化による倍率と、温度の変化による倍率を別々に求めてかけ合わせる（2段階の変化）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ボイル・シャルルの法則の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "温度を K に直し忘れる。",
+          "圧力の比を逆にかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "圧力を一定に保ったまま、227 ℃ で 2.0 L の気体を 327 ℃ にした。体積は何 L になるか。",
+      "answer": {
+        "value": "2.4",
+        "unit": "L"
+      },
+      "explanation": "シャルルの法則 $\\dfrac{V_1}{T_1}=\\dfrac{V_2}{T_2}$ より、$V_2=2.0\\times\\dfrac{600}{500}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "2*(327+273)/(227+273)",
+        "expected": "12/5"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-boyle_charles",
+      "explanation_detail": {
+        "approach": "圧力一定なので、体積は絶対温度に比例する。温度は K に直してから比をとる。",
+        "steps": [
+          "$T_1=227+273=500$ K、$T_2=327+273=600$ K。",
+          "$V_2=2.0\\times\\dfrac{600}{500}=2.4$ L。"
+        ],
+        "alternatives": [
+          "状態方程式 $pV=nRT$ で $p,\\ n$ が一定なので $V\\propto T$、と考えても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "絶対温度に直している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "セルシウス温度の比で計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "27 ℃、$2.0\\times10^{5}$ Pa で 3.0 L を占める気体を、77 ℃、$2.0\\times10^{5}$ Pa にすると、体積は何 L になるか。",
+      "answer": {
+        "value": "3.5",
+        "unit": "L"
+      },
+      "explanation": "$\\dfrac{p_1V_1}{T_1}=\\dfrac{p_2V_2}{T_2}$ より $V_2=\\dfrac{p_1V_1T_2}{p_2T_1}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "200000*3*(77+273)/((27+273)*200000)",
+        "expected": "7/2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-boyle_charles",
+      "explanation_detail": {
+        "approach": "物質量が一定なので、ボイル・シャルルの法則 $\\dfrac{pV}{T}=$ 一定 を使う。",
+        "steps": [
+          "$T_1=300$ K、$T_2=350$ K。",
+          "$V_2=\\dfrac{2.0\\times10^{5}\\times3.0\\times350}{2.0\\times10^{5}\\times300}=3.5$ L。"
+        ],
+        "alternatives": [
+          "圧力の変化による倍率と、温度の変化による倍率を別々に求めてかけ合わせる（2段階の変化）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ボイル・シャルルの法則の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "温度を K に直し忘れる。",
+          "圧力の比を逆にかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "127 ℃、$2.0\\times10^{5}$ Pa で 4.0 L を占める気体を、47 ℃、$5.0\\times10^{4}$ Pa にすると、体積は何 L になるか。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "13",
+        "unit": "L"
+      },
+      "explanation": "$\\dfrac{p_1V_1}{T_1}=\\dfrac{p_2V_2}{T_2}$ より $V_2=\\dfrac{p_1V_1T_2}{p_2T_1}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "200000*4*(47+273)/((127+273)*50000)",
+        "expected": "64/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-boyle_charles",
+      "explanation_detail": {
+        "approach": "物質量が一定なので、ボイル・シャルルの法則 $\\dfrac{pV}{T}=$ 一定 を使う。",
+        "steps": [
+          "$T_1=400$ K、$T_2=320$ K。",
+          "$V_2=\\dfrac{2.0\\times10^{5}\\times4.0\\times320}{5.0\\times10^{4}\\times400}=13$ L。"
+        ],
+        "alternatives": [
+          "圧力の変化による倍率と、温度の変化による倍率を別々に求めてかけ合わせる（2段階の変化）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ボイル・シャルルの法則の式を立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "温度を K に直し忘れる。",
+          "圧力の比を逆にかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "227 ℃、$8.3\\times10^{4}$ Pa で 8.3 L を占める気体の物質量は何 mol か。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.17",
+        "unit": "mol"
+      },
+      "explanation": "$n=\\dfrac{pV}{RT}=\\dfrac{8.3\\times10^{4}\\times8.3}{8.3\\times10^{3}\\times500}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "83000*83/10/(8.3*10**3*(227+273))",
+        "expected": "83/500",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-ideal_gas",
+      "explanation_detail": {
+        "approach": "状態方程式 $pV=nRT$ を $n$ について解く。温度は絶対温度に直す。",
+        "steps": [
+          "$T=227+273=500$ K。",
+          "$n=\\dfrac{8.3\\times10^{4}\\times8.3}{8.3\\times10^{3}\\times500}=0.17$ mol。"
+        ],
+        "alternatives": [
+          "単位で確かめる：$\\dfrac{\\mathrm{Pa\\cdot L}}{\\mathrm{Pa\\cdot L/(K\\cdot mol)}\\times\\mathrm{K}}=\\mathrm{mol}$。"
+        ],
+        "partial_credit": [
+          {
+            "point": "状態方程式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "セルシウス温度のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.20 mol の気体を 8.3 L の容器に入れ、87 ℃ に保った。容器内の圧力は何 Pa か。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$7.2\\times10^{4}$",
+        "unit": "Pa"
+      },
+      "explanation": "$p=\\dfrac{nRT}{V}=\\dfrac{0.20\\times8.3\\times10^{3}\\times360}{8.3}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1/5*8.3*10**3*(87+273)/(83/10)",
+        "expected": "72000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-ideal_gas",
+      "explanation_detail": {
+        "approach": "状態方程式を $p$ について解く：$p=\\dfrac{nRT}{V}$。",
+        "steps": [
+          "$T=360$ K。",
+          "$p=\\dfrac{0.20\\times8.3\\times10^{3}\\times360}{8.3}=7.2\\times10^{4}$ Pa。"
+        ],
+        "alternatives": [
+          "標準状態（273 K、$1.013\\times10^5$ Pa）で 1 mol が 22.4 L であることと比べ、桁が妥当か確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "状態方程式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数の計算で桁を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.50 mol の気体は、27 ℃、$1.0\\times10^{5}$ Pa で何 L を占めるか。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "12",
+        "unit": "L"
+      },
+      "explanation": "$V=\\dfrac{nRT}{p}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1/2*8.3*10**3*(27+273)/(100000)",
+        "expected": "249/20",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-ideal_gas",
+      "explanation_detail": {
+        "approach": "状態方程式を $V$ について解く。$R$ の単位から、体積は L で求まる。",
+        "steps": [
+          "$T=300$ K。",
+          "$V=\\dfrac{0.50\\times8.3\\times10^{3}\\times300}{1.0\\times10^{5}}=12$ L。"
+        ],
+        "alternatives": [
+          "圧力が大きいほど、温度が低いほど体積は小さくなることから、答えの大小を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "状態方程式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "体積を m³ や mL と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "0.25 mol の気体は、87 ℃、$8.3\\times10^{4}$ Pa で何 L を占めるか。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。",
+      "answer": {
+        "value": "9.0",
+        "unit": "L"
+      },
+      "explanation": "$V=\\dfrac{nRT}{p}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "1/4*8.3*10**3*(87+273)/(83000)",
+        "expected": "9"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-ideal_gas",
+      "explanation_detail": {
+        "approach": "状態方程式を $V$ について解く。$R$ の単位から、体積は L で求まる。",
+        "steps": [
+          "$T=360$ K。",
+          "$V=\\dfrac{0.25\\times8.3\\times10^{3}\\times360}{8.3\\times10^{4}}=9.0$ L。"
+        ],
+        "alternatives": [
+          "圧力が大きいほど、温度が低いほど体積は小さくなることから、答えの大小を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "状態方程式に正しく代入している",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "体積を m³ や mL と取り違える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある気体 11.2 g を 2.0 L の容器に入れて -73 ℃ に保つと、圧力は $3.3\\times10^{5}$ Pa であった。この気体の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "28"
+      },
+      "explanation": "$M=\\dfrac{wRT}{pV}$ に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "56/5*8.3*10**3*(-73+273)/(330000*2)",
+        "expected": "4648/165",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-ideal_gas",
+      "explanation_detail": {
+        "approach": "$pV=\\dfrac{w}{M}RT$ を分子量 $M$ について解く。",
+        "steps": [
+          "$T=200$ K。",
+          "$M=\\dfrac{11.2\\times8.3\\times10^{3}\\times200}{3.3\\times10^{5}\\times2.0}\\fallingdotseq28$。"
+        ],
+        "alternatives": [
+          "先に物質量 $n=\\dfrac{pV}{RT}$ を求め、$M=\\dfrac{w}{n}$ としてもよい。分子量 28 の気体として、たとえば窒素が考えられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$w$ と $n$ を取り違え、質量をそのまま物質量として代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "窒素 $\\mathrm{N_2}$ 0.20 mol とアルゴン $\\mathrm{Ar}$ 0.050 mol からなる混合気体の全圧が $1.0\\times10^{5}$ Pa であるとき、アルゴンの分圧は何 Pa か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$2.0\\times10^{4}$",
+        "unit": "Pa"
+      },
+      "explanation": "モル分率 $\\dfrac{0.050}{0.25}$ を全圧にかける。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "100000*1/20/(1/5+1/20)",
+        "expected": "20000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-partial_pressure",
+      "explanation_detail": {
+        "approach": "分圧＝全圧×モル分率。モル分率はその成分の物質量÷全物質量。",
+        "steps": [
+          "アルゴンのモル分率：$\\dfrac{0.050}{0.20+0.050}=\\dfrac{0.050}{0.25}$。",
+          "分圧：$1.0\\times10^{5}\\times\\dfrac{0.050}{0.25}=2.0\\times10^{4}$ Pa。"
+        ],
+        "alternatives": [
+          "もう一方の成分の分圧も求め、2つの分圧の和が全圧になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "モル分率を求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "物質量の比ではなく質量の比で分ける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "酸素 $\\mathrm{O_2}$ とメタン $\\mathrm{CH_4}$ を物質量の比 0.60：0.50 で混合した気体の平均分子量を求めなさい。分子量は $\\mathrm{O_2}=32$、$\\mathrm{CH_4}=16$ とする。有効数字3桁で答えなさい。",
+      "answer": {
+        "value": "24.7"
+      },
+      "explanation": "各成分の分子量にモル分率をかけて足す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(3/5*32+1/2*16)/(3/5+1/2)",
+        "expected": "272/11",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-partial_pressure",
+      "explanation_detail": {
+        "approach": "平均分子量は、混合気体 1 mol あたりの質量。分子量×モル分率の和で求める。",
+        "steps": [
+          "モル分率：酸素 $\\dfrac{0.60}{1.1}$、メタン $\\dfrac{0.50}{1.1}$。",
+          "$\\overline{M}=32\\times\\dfrac{0.60}{1.1}+16\\times\\dfrac{0.50}{1.1}=24.7$。"
+        ],
+        "alternatives": [
+          "混合気体 1.1 mol の全質量 $0.60\\times32+0.50\\times16=27.2$ g を全物質量で割る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "モル分率を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2つの分子量を単純に平均する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 2.0 L の容器に窒素 1.0 mol と二酸化炭素 0.30 mol を入れ、227 ℃ に保った。容器内の全圧は何 Pa か。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$2.7\\times10^{6}$",
+        "unit": "Pa"
+      },
+      "explanation": "全物質量 1.3 mol を状態方程式に代入する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1+3/10)*8.3*10**3*(227+273)/(2)",
+        "expected": "2697500",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-partial_pressure",
+      "explanation_detail": {
+        "approach": "混合気体全体にも状態方程式が成り立つ。全物質量を使えば全圧が求まる（各分圧の和でもよい）。",
+        "steps": [
+          "全物質量：$1.0+0.30=1.3$ mol。",
+          "$p=\\dfrac{1.3\\times8.3\\times10^{3}\\times500}{2.0}=2.7\\times10^{6}$ Pa。"
+        ],
+        "alternatives": [
+          "成分ごとに分圧を求めて足しても同じ結果になる（分圧の法則）。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全物質量を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "一方の成分の物質量だけで計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "窒素 $\\mathrm{N_2}$ とヘリウム $\\mathrm{He}$ を物質量の比 1.0：0.50 で混合した気体の平均分子量を求めなさい。分子量は $\\mathrm{N_2}=28$、$\\mathrm{He}=4$ とする。",
+      "answer": {
+        "value": "20.0"
+      },
+      "explanation": "各成分の分子量にモル分率をかけて足す。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1*28+1/2*4)/(1+1/2)",
+        "expected": "20"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-partial_pressure",
+      "explanation_detail": {
+        "approach": "平均分子量は、混合気体 1 mol あたりの質量。分子量×モル分率の和で求める。",
+        "steps": [
+          "モル分率：窒素 $\\dfrac{1.0}{1.5}$、ヘリウム $\\dfrac{0.50}{1.5}$。",
+          "$\\overline{M}=28\\times\\dfrac{1.0}{1.5}+4\\times\\dfrac{0.50}{1.5}=20.0$。"
+        ],
+        "alternatives": [
+          "混合気体 1.5 mol の全質量 $1.0\\times28+0.50\\times4=30$ g を全物質量で割る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "モル分率を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "2つの分子量を単純に平均する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "蒸気圧と沸騰について述べた次の文のうち、誤っているものを1つ選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "液体の飽和蒸気圧は、温度が高いほど大きい。"
+        },
+        {
+          "label": "イ",
+          "text": "一定温度では、液体の飽和蒸気圧は容器の体積や液体の量に関係しない。"
+        },
+        {
+          "label": "ウ",
+          "text": "気液平衡の状態では、単位時間あたりに蒸発する分子の数と凝縮する分子の数が等しい。"
+        },
+        {
+          "label": "エ",
+          "text": "一定温度で容器の体積を小さくすると、液体の飽和蒸気圧は大きくなる。"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "誤っているのは「一定温度で容器の体積を小さくすると、液体の飽和蒸気圧は大きくなる。」。飽和蒸気圧は温度だけで決まる。体積を小さくすると蒸気の一部が凝縮するだけで、蒸気の圧力は変わらない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_concept",
+      "explanation_detail": {
+        "approach": "飽和蒸気圧は温度だけで決まり、外圧と等しくなる温度で沸騰する。この原則に反する文を探す。",
+        "steps": [
+          "各文の主張を、飽和蒸気圧の定義と照らし合わせる。",
+          "「一定温度で容器の体積を小さくすると、液体の飽和蒸気圧は大きくなる。」は原則に反する。",
+          "飽和蒸気圧は温度だけで決まる。体積を小さくすると蒸気の一部が凝縮するだけで、蒸気の圧力は変わらない。"
+        ],
+        "alternatives": [
+          "具体例で確かめる：圧力鍋（外圧が高い）では 100 ℃ をこえても沸騰しない。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの根拠を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "飽和蒸気圧と、容器内の蒸気の圧力を区別していない。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "この文は正しい。蒸気圧と沸騰の基本的な性質に合っている。",
+          "misconception": "正しい記述を誤りと判断している"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "この文は正しい。飽和蒸気圧は温度だけで決まる性質である。",
+          "misconception": "正しい記述を誤りと判断している"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "この文は正しい。蒸気圧と沸騰の基本的な性質に合っている。",
+          "misconception": "正しい記述を誤りと判断している"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "蒸気圧と沸騰について述べた次の文のうち、正しいものを1つ選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "不揮発性の物質を溶かすと、溶液の蒸気圧は純溶媒より高くなる。"
+        },
+        {
+          "label": "イ",
+          "text": "不揮発性の物質を溶かした溶液の蒸気圧は、同じ温度の純溶媒の蒸気圧より低い。"
+        },
+        {
+          "label": "ウ",
+          "text": "一定温度で容器の体積を小さくすると、液体の飽和蒸気圧は大きくなる。"
+        },
+        {
+          "label": "エ",
+          "text": "沸騰しているとき、液体の飽和蒸気圧は外圧より大きい。"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "正しいのは「不揮発性の物質を溶かした溶液の蒸気圧は、同じ温度の純溶媒の蒸気圧より低い。」。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_concept",
+      "explanation_detail": {
+        "approach": "飽和蒸気圧は「温度だけで決まる」「外圧と等しくなると沸騰」の2点を軸に、各文を判定する。",
+        "steps": [
+          "各文が、温度以外の条件（体積・量）で飽和蒸気圧が変わると述べていないか確認する。",
+          "沸点と外圧、分子間力と蒸気圧の向きを確認する。",
+          "正しい文を選ぶ。"
+        ],
+        "alternatives": [
+          "蒸気圧曲線のグラフをかいて、外圧の水平線との交点（沸点）がどう動くかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "飽和蒸気圧の性質を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "気液平衡を「何も起こっていない状態」と考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "溶質粒子があると溶媒分子が蒸発しにくくなり、蒸気圧は低くなる（蒸気圧降下）。",
+          "misconception": "蒸気圧降下の向きの誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "飽和蒸気圧は温度だけで決まる。体積を小さくすると蒸気の一部が凝縮するだけで、蒸気の圧力は変わらない。",
+          "misconception": "飽和蒸気圧が体積に依存するという誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "沸騰は飽和蒸気圧が外圧に等しくなったときに起こり、沸騰中の温度は一定に保たれる。",
+          "misconception": "沸騰の条件の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "蒸気圧と沸騰について述べた次の文のうち、正しいものを1つ選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "気液平衡の状態では、蒸発も凝縮も起こっていない。"
+        },
+        {
+          "label": "イ",
+          "text": "外圧を低くすると、液体の沸点は低くなる。"
+        },
+        {
+          "label": "ウ",
+          "text": "分子間力の大きい液体ほど、同じ温度での飽和蒸気圧は大きい。"
+        },
+        {
+          "label": "エ",
+          "text": "容器内の液体の量を2倍にすると、同じ温度での飽和蒸気圧も2倍になる。"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "正しいのは「外圧を低くすると、液体の沸点は低くなる。」。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_concept",
+      "explanation_detail": {
+        "approach": "飽和蒸気圧は「温度だけで決まる」「外圧と等しくなると沸騰」の2点を軸に、各文を判定する。",
+        "steps": [
+          "各文が、温度以外の条件（体積・量）で飽和蒸気圧が変わると述べていないか確認する。",
+          "沸点と外圧、分子間力と蒸気圧の向きを確認する。",
+          "正しい文を選ぶ。"
+        ],
+        "alternatives": [
+          "蒸気圧曲線のグラフをかいて、外圧の水平線との交点（沸点）がどう動くかで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "飽和蒸気圧の性質を理解している",
+            "points": 1
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "気液平衡を「何も起こっていない状態」と考える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "気液平衡は、蒸発と凝縮が同じ速さで起こり続けている動的な平衡である。",
+          "misconception": "平衡を「反応の停止」と考える誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "分子間力が大きいほど分子は液体から飛び出しにくく、飽和蒸気圧は小さい。",
+          "misconception": "分子間力と蒸発しやすさの関係の取り違え"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "飽和蒸気圧は液体の量に関係しない。",
+          "misconception": "飽和蒸気圧が量に比例するという誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "尿素 $\\mathrm{CO(NH_2)_2}$（分子量 60） 7.2 g を水 400 g に溶かした水溶液の沸点上昇度は何 K か。水のモル沸点上昇を 0.52 K·kg/mol とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.16",
+        "unit": "K"
+      },
+      "explanation": "$\\Delta t_{\\mathrm{b}}=K_{\\mathrm{b}}\\times0.30=0.16$ K。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "0.52*36/5/(60)/(400/1000)*1",
+        "expected": "39/250",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_basic",
+      "explanation_detail": {
+        "approach": "沸点上昇度は溶質粒子の質量モル濃度に比例する。電解質は電離後の粒子の数で考える。",
+        "steps": [
+          "$m=0.30$ mol/kg。",
+          "$\\Delta t_{\\mathrm{b}}=0.52\\times0.30=0.16$ K。"
+        ],
+        "alternatives": [
+          "沸点そのものを問われたら、100 ℃ にこの値を加える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "粒子の質量モル濃度を求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶媒の質量を kg に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "尿素 $\\mathrm{CO(NH_2)_2}$（分子量 60） 9.0 g を水 500 g に溶かした水溶液の質量モル濃度は何 mol/kg か。",
+      "answer": {
+        "value": "0.30",
+        "unit": "mol/kg"
+      },
+      "explanation": "溶質 $\\dfrac{9.0}{60}=0.15$ mol を溶媒 0.50 kg で割る。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "9/(60)/(500/1000)",
+        "expected": "3/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_basic",
+      "explanation_detail": {
+        "approach": "質量モル濃度＝溶質の物質量÷溶媒の質量（kg）。分母は溶液ではなく溶媒。",
+        "steps": [
+          "溶質：$\\dfrac{9.0}{60}=0.15$ mol。",
+          "溶媒：500 g＝0.50 kg。",
+          "$m=0.30$ mol/kg。"
+        ],
+        "alternatives": [
+          "溶媒 1 kg あたりに換算する：1000 g は 500 g の 2 倍なので、溶質の物質量も同じ倍率にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶液の質量（溶質＋溶媒）で割る。",
+          "g のまま割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "塩化カリウム $\\mathrm{KCl}$（式量 74.5） 0.745 g を水 100 g に溶かした水溶液の凝固点は何 ℃ か（完全に電離するものとする）。水の凝固点を 0 ℃、モル凝固点降下を 1.85 K·kg/mol とする。",
+      "answer": {
+        "value": "-0.37",
+        "unit": "℃"
+      },
+      "explanation": "$\\Delta t_{\\mathrm{f}}=1.85\\times0.20=0.37$ K だけ 0 ℃ より低い。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "-1.85*149/200/(149/2)/(100/1000)*2",
+        "expected": "-37/100"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_basic",
+      "explanation_detail": {
+        "approach": "凝固点降下度 $\\Delta t_{\\mathrm{f}}=K_{\\mathrm{f}}m$ を求め、0 ℃ から引く。",
+        "steps": [
+          "粒子の質量モル濃度：$0.20$ mol/kg。",
+          "$\\Delta t_{\\mathrm{f}}=1.85\\times0.20=0.37$ K。",
+          "凝固点：$0-0.37=-0.37$ ℃。"
+        ],
+        "alternatives": [
+          "凝固点は必ず 0 ℃ より低くなる（負の値になる）ことで符号を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "凝固点降下度を求めている",
+            "points": 1
+          },
+          {
+            "point": "凝固点が正しい（符号を含む）",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "凝固点降下度をそのまま凝固点として正の値で答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "塩化カルシウム $\\mathrm{CaCl_2}$（式量 111） 1.11 g を水 100 g に溶かした水溶液の質量モル濃度は何 mol/kg か。",
+      "answer": {
+        "value": "0.10",
+        "unit": "mol/kg"
+      },
+      "explanation": "溶質 $\\dfrac{1.11}{111}=0.010$ mol を溶媒 0.10 kg で割る。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "111/100/(111)/(100/1000)",
+        "expected": "1/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_basic",
+      "explanation_detail": {
+        "approach": "質量モル濃度＝溶質の物質量÷溶媒の質量（kg）。分母は溶液ではなく溶媒。",
+        "steps": [
+          "溶質：$\\dfrac{1.11}{111}=0.010$ mol。",
+          "溶媒：100 g＝0.10 kg。",
+          "$m=0.10$ mol/kg。"
+        ],
+        "alternatives": [
+          "溶媒 1 kg あたりに換算する：1000 g は 100 g の 10 倍なので、溶質の物質量も同じ倍率にする。"
+        ],
+        "partial_credit": [
+          {
+            "point": "溶質の物質量を求めている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶液の質量（溶質＋溶媒）で割る。",
+          "g のまま割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "沸点が 97 ℃ より低い揮発性の液体 X を、容積 200 mL のフラスコに少量入れ、小さな穴をあけたアルミニウム箔でふたをして 97 ℃ の湯に浸した。X が完全に蒸発し、余分な蒸気が追い出された後、フラスコを室温まで冷やして凝縮した X の質量を測ると 0.56 g であった。大気圧は $1.0\\times10^{5}$ Pa とし、フラスコ内の空気の影響は無視する。X の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "86"
+      },
+      "explanation": "97 ℃ でフラスコは X の蒸気で満たされ、その圧力は大気圧に等しい。$M=\\dfrac{wRT}{pV}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "14/25*8.3*10**3*370/(100000*200/1000)",
+        "expected": "21497/250",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-dumas",
+      "explanation_detail": {
+        "approach": "湯に浸している間、フラスコ内は X の蒸気だけで満たされ、圧力は大気圧、温度は湯の温度、体積はフラスコの容積。冷やして凝縮した質量はこの蒸気の質量に等しい。",
+        "steps": [
+          "$p=1.0\\times10^{5}$ Pa、$V=0.20$ L、$T=370$ K、$w=0.56$ g。",
+          "$M=\\dfrac{0.56\\times8.3\\times10^{3}\\times370}{1.0\\times10^{5}\\times0.20}\\fallingdotseq86$。"
+        ],
+        "alternatives": [
+          "分子量 86 付近の揮発性液体としては、ヘキサン $\\mathrm{C_6H_{14}}$ などが考えられる。",
+          "物質量 $n=\\dfrac{pV}{RT}$ を先に求めてから $M=\\dfrac{w}{n}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "蒸気の $p,\\ V,\\ T$ を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "式を立てて分子量を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "温度を室温（冷やした後）で代入する。",
+          "体積を mL のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "沸点が 97 ℃ より低い揮発性の液体 X を、容積 250 mL のフラスコに少量入れ、小さな穴をあけたアルミニウム箔でふたをして 97 ℃ の湯に浸した。X が完全に蒸発し、余分な蒸気が追い出された後、フラスコを室温まで冷やして凝縮した X の質量を測ると 0.608 g であった。大気圧は $1.01\\times10^{5}$ Pa とし、フラスコ内の空気の影響は無視する。X の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "74"
+      },
+      "explanation": "97 ℃ でフラスコは X の蒸気で満たされ、その圧力は大気圧に等しい。$M=\\dfrac{wRT}{pV}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "76/125*8.3*10**3*370/(101000*250/1000)",
+        "expected": "933584/12625",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-dumas",
+      "explanation_detail": {
+        "approach": "湯に浸している間、フラスコ内は X の蒸気だけで満たされ、圧力は大気圧、温度は湯の温度、体積はフラスコの容積。冷やして凝縮した質量はこの蒸気の質量に等しい。",
+        "steps": [
+          "$p=1.01\\times10^{5}$ Pa、$V=0.25$ L、$T=370$ K、$w=0.608$ g。",
+          "$M=\\dfrac{0.608\\times8.3\\times10^{3}\\times370}{1.01\\times10^{5}\\times0.25}\\fallingdotseq74$。"
+        ],
+        "alternatives": [
+          "分子量 74 付近の揮発性液体としては、ジエチルエーテル $\\mathrm{C_2H_5OC_2H_5}$ などが考えられる。",
+          "物質量 $n=\\dfrac{pV}{RT}$ を先に求めてから $M=\\dfrac{w}{n}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "蒸気の $p,\\ V,\\ T$ を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "式を立てて分子量を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "温度を室温（冷やした後）で代入する。",
+          "体積を mL のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "沸点が 97 ℃ より低い揮発性の液体 X を、容積 415 mL のフラスコに少量入れ、小さな穴をあけたアルミニウム箔でふたをして 97 ℃ の湯に浸した。X が完全に蒸発し、余分な蒸気が追い出された後、フラスコを室温まで冷やして凝縮した X の質量を測ると 1.05 g であった。大気圧は $1.0\\times10^{5}$ Pa とし、フラスコ内の空気の影響は無視する。X の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "78"
+      },
+      "explanation": "97 ℃ でフラスコは X の蒸気で満たされ、その圧力は大気圧に等しい。$M=\\dfrac{wRT}{pV}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "21/20*8.3*10**3*370/(100000*415/1000)",
+        "expected": "777/10",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-dumas",
+      "explanation_detail": {
+        "approach": "湯に浸している間、フラスコ内は X の蒸気だけで満たされ、圧力は大気圧、温度は湯の温度、体積はフラスコの容積。冷やして凝縮した質量はこの蒸気の質量に等しい。",
+        "steps": [
+          "$p=1.0\\times10^{5}$ Pa、$V=0.415$ L、$T=370$ K、$w=1.05$ g。",
+          "$M=\\dfrac{1.05\\times8.3\\times10^{3}\\times370}{1.0\\times10^{5}\\times0.415}\\fallingdotseq78$。"
+        ],
+        "alternatives": [
+          "分子量 78 付近の揮発性液体としては、ベンゼン $\\mathrm{C_6H_6}$ などが考えられる。",
+          "物質量 $n=\\dfrac{pV}{RT}$ を先に求めてから $M=\\dfrac{w}{n}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "蒸気の $p,\\ V,\\ T$ を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "式を立てて分子量を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "温度を室温（冷やした後）で代入する。",
+          "体積を mL のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "沸点が 87 ℃ より低い揮発性の液体 X を、容積 250 mL のフラスコに少量入れ、小さな穴をあけたアルミニウム箔でふたをして 87 ℃ の湯に浸した。X が完全に蒸発し、余分な蒸気が追い出された後、フラスコを室温まで冷やして凝縮した X の質量を測ると 0.49 g であった。大気圧は $1.01\\times10^{5}$ Pa とし、フラスコ内の空気の影響は無視する。X の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "58"
+      },
+      "explanation": "87 ℃ でフラスコは X の蒸気で満たされ、その圧力は大気圧に等しい。$M=\\dfrac{wRT}{pV}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "49/100*8.3*10**3*360/(101000*250/1000)",
+        "expected": "146412/2525",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-dumas",
+      "explanation_detail": {
+        "approach": "湯に浸している間、フラスコ内は X の蒸気だけで満たされ、圧力は大気圧、温度は湯の温度、体積はフラスコの容積。冷やして凝縮した質量はこの蒸気の質量に等しい。",
+        "steps": [
+          "$p=1.01\\times10^{5}$ Pa、$V=0.25$ L、$T=360$ K、$w=0.49$ g。",
+          "$M=\\dfrac{0.49\\times8.3\\times10^{3}\\times360}{1.01\\times10^{5}\\times0.25}\\fallingdotseq58$。"
+        ],
+        "alternatives": [
+          "分子量 58 付近の揮発性液体としては、アセトン $\\mathrm{CH_3COCH_3}$ などが考えられる。",
+          "物質量 $n=\\dfrac{pV}{RT}$ を先に求めてから $M=\\dfrac{w}{n}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "蒸気の $p,\\ V,\\ T$ を正しく読み取っている",
+            "points": 2
+          },
+          {
+            "point": "式を立てて分子量を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "温度を室温（冷やした後）で代入する。",
+          "体積を mL のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 4.0 L の容器 A に$1.5\\times10^{5}$ Pa の窒素を、容積 3.0 L の容器 B に$1.0\\times10^{5}$ Pa のアルゴンを入れ、温度を一定に保ったままコックを開いて両方の気体を混合した。コック部分の体積は無視する。混合後の全圧は何 Pa か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.3\\times10^{5}$",
+        "unit": "Pa"
+      },
+      "explanation": "各分圧を求めて足す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(150000*4+100000*3)/(4+3)",
+        "expected": "900000/7",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-mixing",
+      "explanation_detail": {
+        "approach": "それぞれの気体の分圧をボイルの法則で求め、分圧の法則で足し合わせる。",
+        "steps": [
+          "窒素：$p_1V_1=p_{\\mathrm{A}}(V_1+V_2)$ より $p_{\\mathrm{A}}=\\dfrac{1.5\\times10^{5}\\times4.0}{7.0}=8.6\\times10^{4}$ Pa。",
+          "アルゴン：$p_{\\mathrm{B}}=\\dfrac{1.0\\times10^{5}\\times3.0}{7.0}=4.3\\times10^{4}$ Pa。",
+          "全圧：$8.6\\times10^{4}+4.3\\times10^{4}=1.3\\times10^{5}$ Pa。"
+        ],
+        "alternatives": [
+          "$p_{\\text{全}}(V_1+V_2)=p_1V_1+p_2V_2$ と一気に立ててもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各分圧を求めている",
+            "points": 2
+          },
+          {
+            "point": "全圧が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの圧力を単純に足す、または単純平均する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 4.0 L の容器 A に$3.0\\times10^{5}$ Pa のヘリウムを、容積 3.0 L の容器 B に$5.0\\times10^{4}$ Pa の酸素を入れ、温度を一定に保ったままコックを開いて両方の気体を混合した。コック部分の体積は無視する。混合後のヘリウムの分圧は何 Pa か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.7\\times10^{5}$",
+        "unit": "Pa"
+      },
+      "explanation": "各気体は温度一定のまま全体積に広がる（ボイルの法則）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "300000*4/(4+3)",
+        "expected": "1200000/7",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-mixing",
+      "explanation_detail": {
+        "approach": "混合後の分圧は、その気体だけが全体積に広がったときの圧力。温度一定なのでボイルの法則を使う。",
+        "steps": [
+          "ヘリウム：$p_1V_1=p_{\\mathrm{A}}(V_1+V_2)$ より $p_{\\mathrm{A}}=\\dfrac{3.0\\times10^{5}\\times4.0}{7.0}=1.7\\times10^{5}$ Pa。"
+        ],
+        "alternatives": [
+          "物質量の比で考える：同温では $pV$ が物質量に比例するので、$pV$ の値は混合の前後で保たれる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "全体積に広がると考えている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "もとの圧力のまま変わらないと考える。",
+          "体積を容器 A の分だけで考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 3.0 L の容器 A に$4.0\\times10^{5}$ Pa の酸素を、容積 6.0 L の容器 B に$2.0\\times10^{5}$ Pa のアルゴンを入れ、227 ℃ に保ったままコックを開いて両方の気体を混合した。コック部分の体積は無視する。その後、全体を 127 ℃ にした。このときの全圧は何 Pa か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$2.1\\times10^{5}$",
+        "unit": "Pa"
+      },
+      "explanation": "混合後の全圧を求め、体積一定で絶対温度に比例させる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(400000*3+200000*6)/(3+6)*(127+273)/(227+273)",
+        "expected": "640000/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-mixing",
+      "explanation_detail": {
+        "approach": "まず温度一定で混合後の全圧を求め、次に体積一定で温度を変える（圧力は絶対温度に比例）。",
+        "steps": [
+          "酸素：$p_1V_1=p_{\\mathrm{A}}(V_1+V_2)$ より $p_{\\mathrm{A}}=\\dfrac{4.0\\times10^{5}\\times3.0}{9.0}=1.3\\times10^{5}$ Pa。",
+          "アルゴン：$p_{\\mathrm{B}}=\\dfrac{2.0\\times10^{5}\\times6.0}{9.0}=1.3\\times10^{5}$ Pa。",
+          "227 ℃ での全圧：$2.7\\times10^{5}$ Pa。",
+          "127 ℃：$2.7\\times10^{5}\\times\\dfrac{400}{500}=2.1\\times10^{5}$ Pa。"
+        ],
+        "alternatives": [
+          "全物質量を $\\dfrac{p_1V_1+p_2V_2}{RT_1}$ で求め、状態方程式に $T_2$ を代入しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "混合後の全圧を求めている",
+            "points": 2
+          },
+          {
+            "point": "温度変化を正しく扱っている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "温度の比をセルシウス温度でとる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 2.0 L の容器 A に$1.0\\times10^{5}$ Pa の窒素を、容積 2.0 L の容器 B に$3.0\\times10^{5}$ Pa のヘリウムを入れ、温度を一定に保ったままコックを開いて両方の気体を混合した。コック部分の体積は無視する。混合後の全圧は何 Pa か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$2.0\\times10^{5}$",
+        "unit": "Pa"
+      },
+      "explanation": "各分圧を求めて足す。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(100000*2+300000*2)/(2+2)",
+        "expected": "200000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-mixing",
+      "explanation_detail": {
+        "approach": "それぞれの気体の分圧をボイルの法則で求め、分圧の法則で足し合わせる。",
+        "steps": [
+          "窒素：$p_1V_1=p_{\\mathrm{A}}(V_1+V_2)$ より $p_{\\mathrm{A}}=\\dfrac{1.0\\times10^{5}\\times2.0}{4.0}=5.0\\times10^{4}$ Pa。",
+          "ヘリウム：$p_{\\mathrm{B}}=\\dfrac{3.0\\times10^{5}\\times2.0}{4.0}=1.5\\times10^{5}$ Pa。",
+          "全圧：$5.0\\times10^{4}+1.5\\times10^{5}=2.0\\times10^{5}$ Pa。"
+        ],
+        "alternatives": [
+          "$p_{\\text{全}}(V_1+V_2)=p_1V_1+p_2V_2$ と一気に立ててもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "各分圧を求めている",
+            "points": 2
+          },
+          {
+            "point": "全圧が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "2つの圧力を単純に足す、または単純平均する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 5.0 L の真空容器に水 0.10 mol を入れ、67 ℃ に保った。容器内の圧力は何 Pa か。67 ℃ の水の飽和蒸気圧は $2.7\\times10^{4}$ Pa とし、液体の水の体積は無視する。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$2.7\\times10^{4}$",
+        "unit": "Pa"
+      },
+      "explanation": "すべて気体と仮定した圧力と飽和蒸気圧を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Min(1/10*8.3*10**3*340/(5), 27000)",
+        "expected": "27000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_container",
+      "explanation_detail": {
+        "approach": "すべて水蒸気と仮定して状態方程式で圧力を求め、飽和蒸気圧より大きければ液体が残るので、圧力は飽和蒸気圧に等しい。",
+        "steps": [
+          "すべて気体と仮定：$p=\\dfrac{0.10\\times8.3\\times10^{3}\\times340}{5.0}=5.6\\times10^{4}$ Pa。",
+          "飽和蒸気圧 $2.7\\times10^{4}$ Pa をこえるので、一部が液体として残る。圧力は $2.7\\times10^{4}$ Pa。"
+        ],
+        "alternatives": [
+          "逆に、飽和蒸気圧で気体として存在できる最大の物質量 $n_{\\max}=\\dfrac{p_{\\text{飽和}}V}{RT}$ を求め、入れた量と比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "すべて気体と仮定した圧力を求めている",
+            "points": 2
+          },
+          {
+            "point": "飽和蒸気圧と比較して判断している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "飽和蒸気圧との比較をせずに状態方程式の値を答える。",
+          "比較の向きを逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 10 L の真空容器に水 0.020 mol を入れ、77 ℃ に保った。容器内の圧力は何 Pa か。77 ℃ の水の飽和蒸気圧は $4.2\\times10^{4}$ Pa とし、液体の水の体積は無視する。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$5.8\\times10^{3}$",
+        "unit": "Pa"
+      },
+      "explanation": "すべて気体と仮定した圧力と飽和蒸気圧を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Min(1/50*8.3*10**3*350/(10), 42000)",
+        "expected": "5810",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_container",
+      "explanation_detail": {
+        "approach": "すべて水蒸気と仮定して状態方程式で圧力を求め、飽和蒸気圧より大きければ液体が残るので、圧力は飽和蒸気圧に等しい。",
+        "steps": [
+          "すべて気体と仮定：$p=\\dfrac{0.020\\times8.3\\times10^{3}\\times350}{10}=5.8\\times10^{3}$ Pa。",
+          "飽和蒸気圧 $4.2\\times10^{4}$ Pa 以下なので、すべて気体で存在できる。圧力は $5.8\\times10^{3}$ Pa。"
+        ],
+        "alternatives": [
+          "逆に、飽和蒸気圧で気体として存在できる最大の物質量 $n_{\\max}=\\dfrac{p_{\\text{飽和}}V}{RT}$ を求め、入れた量と比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "すべて気体と仮定した圧力を求めている",
+            "points": 2
+          },
+          {
+            "point": "飽和蒸気圧と比較して判断している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "飽和蒸気圧との比較をせずに状態方程式の値を答える。",
+          "比較の向きを逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "容積 5.0 L の真空容器に窒素 0.050 mol と水 0.10 mol を入れ、47 ℃ に保った。容器内の全圧は何 Pa か。47 ℃ の水の飽和蒸気圧は $1.1\\times10^{4}$ Pa とし、液体の水の体積と、窒素の水への溶解は無視する。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$3.8\\times10^{4}$",
+        "unit": "Pa"
+      },
+      "explanation": "窒素の分圧と水蒸気の分圧を別々に求めて足す。水蒸気は飽和蒸気圧と比べて判断する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "1/20*8.3*10**3*320/(5)+Min(1/10*8.3*10**3*320/(5), 11000)",
+        "expected": "37560",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_container",
+      "explanation_detail": {
+        "approach": "窒素は常に気体。水はすべて蒸発したと仮定した圧力と飽和蒸気圧を比べ、液体が残るかを判断してから分圧を足す。",
+        "steps": [
+          "窒素の分圧：$\\dfrac{0.050\\times8.3\\times10^{3}\\times320}{5.0}=2.7\\times10^{4}$ Pa。",
+          "水がすべて気体なら：$5.3\\times10^{4}$ Pa。",
+          "飽和蒸気圧 $1.1\\times10^{4}$ Pa より大きいので液体が残り、水蒸気の分圧は $1.1\\times10^{4}$ Pa。",
+          "全圧：$3.8\\times10^{4}$ Pa。"
+        ],
+        "alternatives": [
+          "飽和蒸気圧は他の気体（窒素）の有無に関係しないので、水だけを入れた場合と同じ判断ができる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "窒素の分圧を求めている",
+            "points": 1
+          },
+          {
+            "point": "水が液体として残るかを正しく判断している",
+            "points": 2
+          },
+          {
+            "point": "全圧が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "水がすべて気体であるとして計算する。",
+          "窒素があると水の飽和蒸気圧が変わると考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "容積 2.0 L の真空容器に水 0.10 mol を入れ、27 ℃ に保った。容器内の圧力は何 Pa か。27 ℃ の水の飽和蒸気圧は $3.6\\times10^{3}$ Pa とし、液体の水の体積は無視する。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$3.6\\times10^{3}$",
+        "unit": "Pa"
+      },
+      "explanation": "すべて気体と仮定した圧力と飽和蒸気圧を比べる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Min(1/10*8.3*10**3*300/(2), 3600)",
+        "expected": "3600",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-vapor_container",
+      "explanation_detail": {
+        "approach": "すべて水蒸気と仮定して状態方程式で圧力を求め、飽和蒸気圧より大きければ液体が残るので、圧力は飽和蒸気圧に等しい。",
+        "steps": [
+          "すべて気体と仮定：$p=\\dfrac{0.10\\times8.3\\times10^{3}\\times300}{2.0}=1.2\\times10^{5}$ Pa。",
+          "飽和蒸気圧 $3.6\\times10^{3}$ Pa をこえるので、一部が液体として残る。圧力は $3.6\\times10^{3}$ Pa。"
+        ],
+        "alternatives": [
+          "逆に、飽和蒸気圧で気体として存在できる最大の物質量 $n_{\\max}=\\dfrac{p_{\\text{飽和}}V}{RT}$ を求め、入れた量と比べてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "すべて気体と仮定した圧力を求めている",
+            "points": 2
+          },
+          {
+            "point": "飽和蒸気圧と比較して判断している",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "飽和蒸気圧との比較をせずに状態方程式の値を答える。",
+          "比較の向きを逆にする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "あるタンパク質 1.0 g を水に溶かして 100 mL とした水溶液の浸透圧は、37 ℃ で $3.2\\times10^{3}$ Pa であった。このタンパク質の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$8.0\\times10^{3}$"
+      },
+      "explanation": "$\\Pi V=\\dfrac{w}{M}RT$ より $M=\\dfrac{wRT}{\\Pi V}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "1*8.3*10**3*310/(3200*100/1000)",
+        "expected": "64325/8",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-osmotic",
+      "explanation_detail": {
+        "approach": "$\\Pi V=nRT$ に $n=\\dfrac{w}{M}$ を代入して $M$ について解く。$V$ は L。",
+        "steps": [
+          "$V=0.10$ L、$T=310$ K。",
+          "$M=\\dfrac{1.0\\times8.3\\times10^{3}\\times310}{3.2\\times10^{3}\\times0.10}\\fallingdotseq8.0\\times10^{3}$。"
+        ],
+        "alternatives": [
+          "凝固点降下では降下度が非常に小さく測定が難しい。浸透圧は高分子でも十分に測れる大きさになることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "体積を mL のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "37 ℃ で、0.020 mol/L の塩化カリウム水溶液の浸透圧は何 Pa か（完全に電離するものとする）。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.0\\times10^{5}$",
+        "unit": "Pa"
+      },
+      "explanation": "$\\Pi=2cRT$（粒子は 2 倍）。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1/50*2*8.3*10**3*310",
+        "expected": "102920",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-osmotic",
+      "explanation_detail": {
+        "approach": "ファントホッフの法則 $\\Pi=cRT$。電解質は電離後の粒子のモル濃度を使う。",
+        "steps": [
+          "粒子のモル濃度：$0.020\\times2=0.040$ mol/L。",
+          "$\\Pi=0.040\\times8.3\\times10^{3}\\times310=1.0\\times10^{5}$ Pa。"
+        ],
+        "alternatives": [
+          "状態方程式 $pV=nRT$ と同じ形 $\\Pi V=nRT$ で、$V=1$ L あたりで考えてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "粒子のモル濃度を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "電解質の電離を考えない。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "あるタンパク質 1.5 g を水に溶かして 200 mL とした水溶液の浸透圧は、27 ℃ で $1.9\\times10^{3}$ Pa であった。このタンパク質の分子量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$9.8\\times10^{3}$"
+      },
+      "explanation": "$\\Pi V=\\dfrac{w}{M}RT$ より $M=\\dfrac{wRT}{\\Pi V}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "3/2*8.3*10**3*300/(1900*200/1000)",
+        "expected": "186750/19",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-osmotic",
+      "explanation_detail": {
+        "approach": "$\\Pi V=nRT$ に $n=\\dfrac{w}{M}$ を代入して $M$ について解く。$V$ は L。",
+        "steps": [
+          "$V=0.20$ L、$T=300$ K。",
+          "$M=\\dfrac{1.5\\times8.3\\times10^{3}\\times300}{1.9\\times10^{3}\\times0.20}\\fallingdotseq9.8\\times10^{3}$。"
+        ],
+        "alternatives": [
+          "凝固点降下では降下度が非常に小さく測定が難しい。浸透圧は高分子でも十分に測れる大きさになることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式を正しく立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "体積を mL のまま代入する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の水溶液のうち、同じ温度での蒸気圧が最も低いものを選びなさい。ただし、電解質は水溶液中で完全に電離するものとする。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0.050 mol/kg のスクロース水溶液"
+        },
+        {
+          "label": "イ",
+          "text": "0.30 mol/kg の塩化カルシウム水溶液"
+        },
+        {
+          "label": "ウ",
+          "text": "0.050 mol/kg の塩化ナトリウム水溶液"
+        },
+        {
+          "label": "エ",
+          "text": "0.30 mol/kg の塩化カリウム水溶液"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "0.30 mol/kg の塩化カルシウム水溶液は、溶質粒子の質量モル濃度が $0.90$ mol/kg。粒子の質量モル濃度が最も大きいので、蒸気圧降下が最も大きい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_compare",
+      "explanation_detail": {
+        "approach": "希薄溶液の性質は溶質の種類によらず、溶質粒子の質量モル濃度で決まる。電解質は電離で粒子が増える（NaCl・KCl は2倍、CaCl₂ は3倍）。",
+        "steps": [
+          "各水溶液の溶質粒子の質量モル濃度（質量モル濃度×電離で生じる粒子の数）を求める：塩化ナトリウム 0.10、塩化カリウム 0.60、スクロース 0.050、塩化カルシウム 0.90（mol/kg）。",
+          "沸点上昇・凝固点降下・蒸気圧降下は、この値に比例する。",
+          "条件に合うのは0.30 mol/kg の塩化カルシウム水溶液。"
+        ],
+        "alternatives": [
+          "粒子の数だけを比べる問題なので、$K_{\\mathrm{b}}$ や $K_{\\mathrm{f}}$ の値は不要であることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "粒子の質量モル濃度を比べている",
+            "points": 2
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "質量モル濃度の数値だけを比べ、電離による粒子の増加を無視する。",
+          "「凝固点が高い」と「凝固点降下度が大きい」を取り違える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.050\\times1=0.050$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.050\\times2=0.10$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.30\\times2=0.60$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の水溶液のうち、凝固点が最も高いものを選びなさい。ただし、電解質は水溶液中で完全に電離するものとする。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0.15 mol/kg のグルコース水溶液"
+        },
+        {
+          "label": "イ",
+          "text": "0.30 mol/kg の塩化ナトリウム水溶液"
+        },
+        {
+          "label": "ウ",
+          "text": "0.10 mol/kg のスクロース水溶液"
+        },
+        {
+          "label": "エ",
+          "text": "0.20 mol/kg の塩化カリウム水溶液"
+        }
+      ],
+      "answer": {
+        "value": "ウ"
+      },
+      "explanation": "0.10 mol/kg のスクロース水溶液は、溶質粒子の質量モル濃度が $0.10$ mol/kg。粒子の質量モル濃度が最も小さいので、凝固点降下度が最小（凝固点が最も高い）になる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_compare",
+      "explanation_detail": {
+        "approach": "希薄溶液の性質は溶質の種類によらず、溶質粒子の質量モル濃度で決まる。電解質は電離で粒子が増える（NaCl・KCl は2倍、CaCl₂ は3倍）。",
+        "steps": [
+          "各水溶液の溶質粒子の質量モル濃度（質量モル濃度×電離で生じる粒子の数）を求める：塩化カリウム 0.40、スクロース 0.10、塩化ナトリウム 0.60、グルコース 0.15（mol/kg）。",
+          "沸点上昇・凝固点降下・蒸気圧降下は、この値に比例する。",
+          "条件に合うのは0.10 mol/kg のスクロース水溶液。"
+        ],
+        "alternatives": [
+          "粒子の数だけを比べる問題なので、$K_{\\mathrm{b}}$ や $K_{\\mathrm{f}}$ の値は不要であることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "粒子の質量モル濃度を比べている",
+            "points": 2
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "質量モル濃度の数値だけを比べ、電離による粒子の増加を無視する。",
+          "「凝固点が高い」と「凝固点降下度が大きい」を取り違える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.15\\times1=0.15$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.30\\times2=0.60$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.20\\times2=0.40$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "multiple_choice",
+      "stem": "次の水溶液のうち、同じ温度での蒸気圧が最も低いものを選びなさい。ただし、電解質は水溶液中で完全に電離するものとする。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "0.15 mol/kg のスクロース水溶液"
+        },
+        {
+          "label": "イ",
+          "text": "0.15 mol/kg の塩化カルシウム水溶液"
+        },
+        {
+          "label": "ウ",
+          "text": "0.20 mol/kg の塩化ナトリウム水溶液"
+        },
+        {
+          "label": "エ",
+          "text": "0.20 mol/kg の尿素水溶液"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "0.15 mol/kg の塩化カルシウム水溶液は、溶質粒子の質量モル濃度が $0.45$ mol/kg。粒子の質量モル濃度が最も大きいので、蒸気圧降下が最も大きい。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "concept",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U01-colligative_compare",
+      "explanation_detail": {
+        "approach": "希薄溶液の性質は溶質の種類によらず、溶質粒子の質量モル濃度で決まる。電解質は電離で粒子が増える（NaCl・KCl は2倍、CaCl₂ は3倍）。",
+        "steps": [
+          "各水溶液の溶質粒子の質量モル濃度（質量モル濃度×電離で生じる粒子の数）を求める：塩化カルシウム 0.45、塩化ナトリウム 0.40、尿素 0.20、スクロース 0.15（mol/kg）。",
+          "沸点上昇・凝固点降下・蒸気圧降下は、この値に比例する。",
+          "条件に合うのは0.15 mol/kg の塩化カルシウム水溶液。"
+        ],
+        "alternatives": [
+          "粒子の数だけを比べる問題なので、$K_{\\mathrm{b}}$ や $K_{\\mathrm{f}}$ の値は不要であることを確認する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "粒子の質量モル濃度を比べている",
+            "points": 2
+          },
+          {
+            "point": "正しく選んでいる",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "質量モル濃度の数値だけを比べ、電離による粒子の増加を無視する。",
+          "「凝固点が高い」と「凝固点降下度が大きい」を取り違える。"
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.15\\times1=0.15$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.20\\times2=0.40$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "溶質粒子の質量モル濃度は $0.20\\times1=0.20$ mol/kg で、条件に合うものではない。",
+          "misconception": "粒子の数（電離）を考えない誤り"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある非電解質 0.50 g をベンゼン 100 g に溶かした溶液の凝固点は、純粋なベンゼン（凝固点 5.5 ℃）より 0.21 K 低かった。この非電解質の分子量を求めなさい。ベンゼンのモル凝固点降下を 5.12 K·kg/mol とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "120"
+      },
+      "explanation": "$\\Delta t_{\\mathrm{f}}=K_{\\mathrm{f}}\\times\\dfrac{w/M}{W/1000}$ を $M$ について解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "128/25*1/2/(21/100*100/1000)",
+        "expected": "2560/21",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-molar_mass_fp",
+      "explanation_detail": {
+        "approach": "凝固点降下度から質量モル濃度を求め、溶媒の質量から溶質の物質量を出し、質量÷物質量で分子量を求める。",
+        "steps": [
+          "$m=\\dfrac{0.21}{5.12}$ mol/kg。",
+          "溶質の物質量：$m\\times0.10$ mol。",
+          "$M=\\dfrac{0.50}{m\\times0.10}=\\dfrac{5.12\\times0.50}{0.21\\times0.10}\\fallingdotseq120$。"
+        ],
+        "alternatives": [
+          "1つの式 $M=\\dfrac{K_{\\mathrm{f}}w}{\\Delta t_{\\mathrm{f}}W'}$（$W'$ は溶媒の kg）にまとめて代入してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量モル濃度を求めている",
+            "points": 2
+          },
+          {
+            "point": "分子量が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "溶媒の質量を g のまま使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "numeric",
+      "stem": "ある非電解質 0.50 g を水 50 g に溶かした溶液の凝固点は、純粋な水（凝固点 0 ℃）より 0.20 K 低かった。この非電解質の分子量を求めなさい。水のモル凝固点降下を 1.85 K·kg/mol とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "93"
+      },
+      "explanation": "$\\Delta t_{\\mathrm{f}}=K_{\\mathrm{f}}\\times\\dfrac{w/M}{W/1000}$ を $M$ について解く。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "37/20*1/2/(1/5*50/1000)",
+        "expected": "185/2",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-molar_mass_fp",
+      "explanation_detail": {
+        "approach": "凝固点降下度から質量モル濃度を求め、溶媒の質量から溶質の物質量を出し、質量÷物質量で分子量を求める。",
+        "steps": [
+          "$m=\\dfrac{0.20}{1.85}$ mol/kg。",
+          "溶質の物質量：$m\\times0.050$ mol。",
+          "$M=\\dfrac{0.50}{m\\times0.050}=\\dfrac{1.85\\times0.50}{0.20\\times0.050}\\fallingdotseq93$。"
+        ],
+        "alternatives": [
+          "1つの式 $M=\\dfrac{K_{\\mathrm{f}}w}{\\Delta t_{\\mathrm{f}}W'}$（$W'$ は溶媒の kg）にまとめて代入してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量モル濃度を求めている",
+            "points": 2
+          },
+          {
+            "point": "分子量が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "溶媒の質量を g のまま使う。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "亜鉛（$\\mathrm{Zn}$）に希塩酸を加える反応で発生した水素を水上置換で捕集した。捕集びんの内と外の水面の高さを一致させて体積を測ると、30 ℃ で 249 mL であった。大気圧は $1.01\\times10^{5}$ Pa、30 ℃ の水の飽和蒸気圧は $4.2\\times10^{3}$ Pa とする。反応は $\\mathrm{Zn}+2\\mathrm{HCl}\\longrightarrow\\mathrm{ZnCl_2}+\\mathrm{H_2}$ で表される。\n(1) 水面の高さを一致させる理由と、水素の分圧の求め方を説明しなさい。\n(2) 反応した亜鉛の質量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。原子量は H＝1.0、O＝16、Mg＝24、Zn＝65 とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "(1) 内外の水面の高さをそろえると、捕集びん内の気体の全圧が大気圧に等しくなる。捕集びん内には水素と水蒸気が混合しているので、水素の分圧＝大気圧−水の飽和蒸気圧＝$9.68\\times10^{4}$ Pa。(2) 水素：$n=\\dfrac{9.68\\times10^{4}\\times0.249}{8.3\\times10^{3}\\times303}\\fallingdotseq9.58\\times10^{-3}$ mol。亜鉛はその 1 倍で、質量は約 $0.62$ g。"
+      },
+      "explanation": "水上置換で集めた気体は水蒸気との混合気体。目的の気体の分圧に状態方程式を適用する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水面をそろえると全圧が大気圧になることを説明している",
+            "points": 2
+          },
+          {
+            "criterion": "分圧＝大気圧−水蒸気圧であることを説明している",
+            "points": 2
+          },
+          {
+            "criterion": "気体の物質量を状態方程式で求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比を用いて質量を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "(101000-4200)*249/1000/(8.3*10**3*303)*1*65",
+        "expected": "1573/2525",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U01-over_water",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "捕集した気体は水素と飽和水蒸気の混合気体（分圧の法則）。水面をそろえると全圧が大気圧になる。物質量から反応式の係数の比で亜鉛の量を求める（物質量の計算は化学基礎の内容）。",
+        "steps": [
+          "水素の分圧：$1.01\\times10^{5}-4.2\\times10^{3}=9.68\\times10^{4}$ Pa。",
+          "$V=0.249$ L、$T=303$ K。",
+          "$n=\\dfrac{pV}{RT}\\fallingdotseq9.58\\times10^{-3}$ mol。",
+          "係数の比より亜鉛は $1n$ mol、質量 $1n\\times65\\fallingdotseq0.62$ g。"
+        ],
+        "alternatives": [
+          "水面の高さがそろっていない場合、内側の水面が高ければ内部の圧力は大気圧より水柱の分だけ低い、と考えると理由が説明しやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水面",
+            "points": 2
+          },
+          {
+            "point": "分圧",
+            "points": 2
+          },
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "質量",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "水蒸気圧を引かずに、大気圧をそのまま気体の圧力とする。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "亜鉛（$\\mathrm{Zn}$）に希塩酸を加える反応で発生した水素を水上置換で捕集した。捕集びんの内と外の水面の高さを一致させて体積を測ると、20 ℃ で 332 mL であった。大気圧は $1.02\\times10^{5}$ Pa、20 ℃ の水の飽和蒸気圧は $2.3\\times10^{3}$ Pa とする。反応は $\\mathrm{Zn}+2\\mathrm{HCl}\\longrightarrow\\mathrm{ZnCl_2}+\\mathrm{H_2}$ で表される。\n(1) 水面の高さを一致させる理由と、水素の分圧の求め方を説明しなさい。\n(2) 反応した亜鉛の質量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。原子量は H＝1.0、O＝16、Mg＝24、Zn＝65 とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "(1) 内外の水面の高さをそろえると、捕集びん内の気体の全圧が大気圧に等しくなる。捕集びん内には水素と水蒸気が混合しているので、水素の分圧＝大気圧−水の飽和蒸気圧＝$9.97\\times10^{4}$ Pa。(2) 水素：$n=\\dfrac{9.97\\times10^{4}\\times0.332}{8.3\\times10^{3}\\times293}\\fallingdotseq1.36\\times10^{-2}$ mol。亜鉛はその 1 倍で、質量は約 $0.88$ g。"
+      },
+      "explanation": "水上置換で集めた気体は水蒸気との混合気体。目的の気体の分圧に状態方程式を適用する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水面をそろえると全圧が大気圧になることを説明している",
+            "points": 2
+          },
+          {
+            "criterion": "分圧＝大気圧−水蒸気圧であることを説明している",
+            "points": 2
+          },
+          {
+            "criterion": "気体の物質量を状態方程式で求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比を用いて質量を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "(102000-2300)*332/1000/(8.3*10**3*293)*1*65",
+        "expected": "12961/14650",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U01-over_water",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "捕集した気体は水素と飽和水蒸気の混合気体（分圧の法則）。水面をそろえると全圧が大気圧になる。物質量から反応式の係数の比で亜鉛の量を求める（物質量の計算は化学基礎の内容）。",
+        "steps": [
+          "水素の分圧：$1.02\\times10^{5}-2.3\\times10^{3}=9.97\\times10^{4}$ Pa。",
+          "$V=0.332$ L、$T=293$ K。",
+          "$n=\\dfrac{pV}{RT}\\fallingdotseq1.36\\times10^{-2}$ mol。",
+          "係数の比より亜鉛は $1n$ mol、質量 $1n\\times65\\fallingdotseq0.88$ g。"
+        ],
+        "alternatives": [
+          "水面の高さがそろっていない場合、内側の水面が高ければ内部の圧力は大気圧より水柱の分だけ低い、と考えると理由が説明しやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水面",
+            "points": 2
+          },
+          {
+            "point": "分圧",
+            "points": 2
+          },
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "質量",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "水蒸気圧を引かずに、大気圧をそのまま気体の圧力とする。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "マグネシウム（$\\mathrm{Mg}$）に希塩酸を加える反応で発生した水素を水上置換で捕集した。捕集びんの内と外の水面の高さを一致させて体積を測ると、30 ℃ で 498 mL であった。大気圧は $1.00\\times10^{5}$ Pa、30 ℃ の水の飽和蒸気圧は $4.2\\times10^{3}$ Pa とする。反応は $\\mathrm{Mg}+2\\mathrm{HCl}\\longrightarrow\\mathrm{MgCl_2}+\\mathrm{H_2}$ で表される。\n(1) 水面の高さを一致させる理由と、水素の分圧の求め方を説明しなさい。\n(2) 反応したマグネシウムの質量を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。原子量は H＝1.0、O＝16、Mg＝24、Zn＝65 とし、有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "(1) 内外の水面の高さをそろえると、捕集びん内の気体の全圧が大気圧に等しくなる。捕集びん内には水素と水蒸気が混合しているので、水素の分圧＝大気圧−水の飽和蒸気圧＝$9.58\\times10^{4}$ Pa。(2) 水素：$n=\\dfrac{9.58\\times10^{4}\\times0.498}{8.3\\times10^{3}\\times303}\\fallingdotseq1.90\\times10^{-2}$ mol。マグネシウムはその 1 倍で、質量は約 $0.46$ g。"
+      },
+      "explanation": "水上置換で集めた気体は水蒸気との混合気体。目的の気体の分圧に状態方程式を適用する。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "水面をそろえると全圧が大気圧になることを説明している",
+            "points": 2
+          },
+          {
+            "criterion": "分圧＝大気圧−水蒸気圧であることを説明している",
+            "points": 2
+          },
+          {
+            "criterion": "気体の物質量を状態方程式で求めている",
+            "points": 2
+          },
+          {
+            "criterion": "係数の比を用いて質量を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "(100000-4200)*498/1000/(8.3*10**3*303)*1*24",
+        "expected": "5748/12625",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-CHE-U01-over_water",
+      "related_units": [
+        "HS-CHEB-U02"
+      ],
+      "explanation_detail": {
+        "approach": "捕集した気体は水素と飽和水蒸気の混合気体（分圧の法則）。水面をそろえると全圧が大気圧になる。物質量から反応式の係数の比でマグネシウムの量を求める（物質量の計算は化学基礎の内容）。",
+        "steps": [
+          "水素の分圧：$1.00\\times10^{5}-4.2\\times10^{3}=9.58\\times10^{4}$ Pa。",
+          "$V=0.498$ L、$T=303$ K。",
+          "$n=\\dfrac{pV}{RT}\\fallingdotseq1.90\\times10^{-2}$ mol。",
+          "係数の比よりマグネシウムは $1n$ mol、質量 $1n\\times24\\fallingdotseq0.46$ g。"
+        ],
+        "alternatives": [
+          "水面の高さがそろっていない場合、内側の水面が高ければ内部の圧力は大気圧より水柱の分だけ低い、と考えると理由が説明しやすい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "水面",
+            "points": 2
+          },
+          {
+            "point": "分圧",
+            "points": 2
+          },
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "質量",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "水蒸気圧を引かずに、大気圧をそのまま気体の圧力とする。",
+          "mL を L に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある非電解質 1.0 g を水 50 g に溶かした溶液をゆっくり冷却し、温度変化を記録すると図のような冷却曲線が得られた。\n(1) 点B付近で、凝固点より低い温度になっても液体のままである状態を何というか。\n(2) 凝固が始まった後（C以降）も温度が下がり続ける理由を説明しなさい。\n(3) この溶液の凝固点は図の点A〜Dのどの温度か。また、その温度が純粋な水の凝固点より 0.11 K 低かったとき、この非電解質の分子量を求めなさい。水のモル凝固点降下は 1.85 K·kg/mol とし、有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "溶液の冷却曲線（概形）。温度が下がり続けて点Bで最低になり（過冷却）、凝固が始まると点Cまで上がる。その後はゆるやかに下がり続ける（点D）。C以降の直線を左へ延長した線と、はじめの冷却の線との交点が点A。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 248 228\" width=\"248\" height=\"228\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"214\" x2=\"240\" y2=\"214\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"214\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"236\" y=\"227\" font-style=\"italic\">時間</text><text x=\"19\" y=\"12\" font-style=\"italic\">温度</text><text x=\"3\" y=\"226\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"220\" height=\"200\"/></clipPath><path d=\"M14,34 L15.1,35.54 L16.2,37.08 L17.3,38.62 L18.4,40.16 L19.5,41.7 L20.6,43.24 L21.7,44.78 L22.8,46.32 L23.9,47.86 L25,49.4 L26.1,50.94 L27.2,52.48 L28.3,54.02 L29.4,55.56 L30.5,57.1 L31.6,58.64 L32.7,60.18 L33.8,61.72 L34.9,63.26 L36,64.8 L37.1,66.34 L38.2,67.88 L39.3,69.42 L40.4,70.96 L41.5,72.5 L42.6,74.04 L43.7,75.58 L44.8,77.12 L45.9,78.66 L47,80.2 L48.1,81.74 L49.2,83.28 L50.3,84.82 L51.4,86.36 L52.5,87.9 L53.6,89.44 L54.7,90.98 L55.8,92.52 L56.9,94.06 L58,95.6 L59.1,97.14 L60.2,98.68 L61.3,100.22 L62.4,101.76 L63.5,103.3 L64.6,104.84 L65.7,106.38 L66.8,107.92 L67.9,109.46 L69,111 L70.1,112.54 L71.2,114.08 L72.3,115.62 L73.4,117.16 L74.5,118.7 L75.6,120.24 L76.7,121.78 L77.8,123.32 L78.9,124.86 L80,126.4 L81.1,127.94 L82.2,129.48 L83.3,131.02 L84.4,132.56 L85.5,134.1 L86.6,135.64 L87.7,137.18 L88.8,138.72 L89.9,140.26 L91,141.8 L92.1,143.34 L93.2,144.88 L94.3,144.35 L95.4,138.3 L96.5,132.25 L97.6,126.2 L98.7,120.15 L99.8,114.1 L100.9,108.05 L102,102 L103.1,102.31 L104.2,102.62 L105.3,102.92 L106.4,103.23 L107.5,103.54 L108.6,103.85 L109.7,104.16 L110.8,104.46 L111.9,104.77 L113,105.08 L114.1,105.39 L115.2,105.7 L116.3,106 L117.4,106.31 L118.5,106.62 L119.6,106.93 L120.7,107.24 L121.8,107.54 L122.9,107.85 L124,108.16 L125.1,108.47 L126.2,108.78 L127.3,109.08 L128.4,109.39 L129.5,109.7 L130.6,110.01 L131.7,110.32 L132.8,110.62 L133.9,110.93 L135,111.24 L136.1,111.55 L137.2,111.86 L138.3,112.16 L139.4,112.47 L140.5,112.78 L141.6,113.09 L142.7,113.4 L143.8,113.7 L144.9,114.01 L146,114.32 L147.1,114.63 L148.2,114.94 L149.3,115.24 L150.4,115.55 L151.5,115.86 L152.6,116.17 L153.7,116.48 L154.8,116.78 L155.9,117.09 L157,117.4 L158.1,117.71 L159.2,118.02 L160.3,118.32 L161.4,118.63 L162.5,118.94 L163.6,119.25 L164.7,119.56 L165.8,119.86 L166.9,120.17 L168,120.48 L169.1,120.79 L170.2,121.1 L171.3,121.4 L172.4,121.71 L173.5,122.02 L174.6,122.33 L175.7,122.64 L176.8,122.94 L177.9,123.25 L179,123.56 L180.1,123.87 L181.2,124.18 L182.3,124.48 L183.4,124.79 L184.5,125.1 L185.6,125.41 L186.7,125.72 L187.8,126.02 L188.9,126.33 L190,126.64 L191.1,126.95 L192.2,127.26 L193.3,127.56 L194.4,127.87 L195.5,128.18 L196.6,128.49 L197.7,128.8 L198.8,129.1 L199.9,129.41 L201,129.72 L202.1,130.03 L203.2,130.34 L204.3,130.64 L205.4,130.95 L206.5,131.26 L207.6,131.57 L208.7,131.88 L209.8,132.18 L210.9,132.49 L212,132.8 L213.1,133.11 L214.2,133.42 L215.3,133.72 L216.4,134.03 L217.5,134.34 L218.6,134.65 L219.7,134.96 L220.8,135.26 L221.9,135.57 L223,135.88 L224.1,136.19 L225.2,136.5 L226.3,136.8 L227.4,137.11 L228.5,137.42 L229.6,137.73 L230.7,138.04 L231.8,138.34 L232.9,138.65 L234,138.96\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><line x1=\"54\" y1=\"90\" x2=\"102\" y2=\"102\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"94\" cy=\"146\" r=\"2.3\" fill=\"#000\"/><text x=\"98\" y=\"142\">B</text><circle cx=\"102\" cy=\"102\" r=\"2.3\" fill=\"#000\"/><text x=\"106\" y=\"98\">C</text><circle cx=\"62.6\" cy=\"102\" r=\"2.3\" fill=\"#000\"/><text x=\"66.6\" y=\"98\">A</text><circle cx=\"224\" cy=\"136.16\" r=\"2.3\" fill=\"#000\"/><text x=\"228\" y=\"132.16\">D</text><text x=\"114\" y=\"74\">（Cから先は溶媒だけが凝固）</text></svg>",
+        "caption": "溶液の冷却曲線（概形）"
+      },
+      "answer": {
+        "value": "(1) 過冷却。(2) 凝固では溶媒だけが固体になるので、残った溶液の濃度（質量モル濃度）が大きくなり、凝固点がさらに下がり続けるから。(3) 点A（C以降の直線を延長し、はじめの冷却の線と交わる点の温度）。$M=\\dfrac{1.85\\times1.0}{0.11\\times0.050}\\fallingdotseq340$。"
+      },
+      "explanation": "過冷却がなければ凝固はAの温度で始まっていたはず、と考えて延長線から凝固点を読む。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 過冷却と答えている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 溶媒のみが凝固し溶液が濃くなることを説明している",
+            "points": 3
+          },
+          {
+            "criterion": "(3) 凝固点を点Aと判断している",
+            "points": 2
+          },
+          {
+            "criterion": "(3) 分子量を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "37/20*1/(11/100*50/1000)",
+        "expected": "3700/11",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U01-cooling_curve",
+      "explanation_detail": {
+        "approach": "純溶媒の冷却曲線（凝固中は温度一定）と比べる。溶液では、凝固が進むと溶液が濃くなることに注目する。",
+        "steps": [
+          "Bは凝固点より低いのに液体のまま（過冷却）。凝固が始まると凝固熱でCまで温度が上がる。",
+          "溶媒だけが固体になるので、残りの溶液の質量モル濃度が増え、凝固点が下がり続ける。",
+          "過冷却がなければ凝固はA（延長線との交点）で始まるので、凝固点はAの温度。",
+          "$m=\\dfrac{0.11}{1.85}$ mol/kg、$M=\\dfrac{1.0}{m\\times0.050}\\fallingdotseq340$。"
+        ],
+        "alternatives": [
+          "純溶媒の冷却曲線を並べてかき、凝固中の水平部分が溶液では右下がりになることを図で示して説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "過冷却",
+            "points": 1
+          },
+          {
+            "point": "理由",
+            "points": 3
+          },
+          {
+            "point": "凝固点の読み取り",
+            "points": 2
+          },
+          {
+            "point": "分子量",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最低点Bを凝固点と読む。",
+          "Cの温度を凝固点と読む（Aよりわずかに低い）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある非電解質 1.0 g を水 100 g に溶かした溶液をゆっくり冷却し、温度変化を記録すると図のような冷却曲線が得られた。\n(1) 点B付近で、凝固点より低い温度になっても液体のままである状態を何というか。\n(2) 凝固が始まった後（C以降）も温度が下がり続ける理由を説明しなさい。\n(3) この溶液の凝固点は図の点A〜Dのどの温度か。また、その温度が純粋な水の凝固点より 0.10 K 低かったとき、この非電解質の分子量を求めなさい。水のモル凝固点降下は 1.85 K·kg/mol とし、有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "溶液の冷却曲線（概形）。温度が下がり続けて点Bで最低になり（過冷却）、凝固が始まると点Cまで上がる。その後はゆるやかに下がり続ける（点D）。C以降の直線を左へ延長した線と、はじめの冷却の線との交点が点A。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 248 228\" width=\"248\" height=\"228\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"214\" x2=\"240\" y2=\"214\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"214\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"236\" y=\"227\" font-style=\"italic\">時間</text><text x=\"19\" y=\"12\" font-style=\"italic\">温度</text><text x=\"3\" y=\"226\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"220\" height=\"200\"/></clipPath><path d=\"M14,34 L15.1,35.54 L16.2,37.08 L17.3,38.62 L18.4,40.16 L19.5,41.7 L20.6,43.24 L21.7,44.78 L22.8,46.32 L23.9,47.86 L25,49.4 L26.1,50.94 L27.2,52.48 L28.3,54.02 L29.4,55.56 L30.5,57.1 L31.6,58.64 L32.7,60.18 L33.8,61.72 L34.9,63.26 L36,64.8 L37.1,66.34 L38.2,67.88 L39.3,69.42 L40.4,70.96 L41.5,72.5 L42.6,74.04 L43.7,75.58 L44.8,77.12 L45.9,78.66 L47,80.2 L48.1,81.74 L49.2,83.28 L50.3,84.82 L51.4,86.36 L52.5,87.9 L53.6,89.44 L54.7,90.98 L55.8,92.52 L56.9,94.06 L58,95.6 L59.1,97.14 L60.2,98.68 L61.3,100.22 L62.4,101.76 L63.5,103.3 L64.6,104.84 L65.7,106.38 L66.8,107.92 L67.9,109.46 L69,111 L70.1,112.54 L71.2,114.08 L72.3,115.62 L73.4,117.16 L74.5,118.7 L75.6,120.24 L76.7,121.78 L77.8,123.32 L78.9,124.86 L80,126.4 L81.1,127.94 L82.2,129.48 L83.3,131.02 L84.4,132.56 L85.5,134.1 L86.6,135.64 L87.7,137.18 L88.8,138.72 L89.9,140.26 L91,141.8 L92.1,143.34 L93.2,144.88 L94.3,144.35 L95.4,138.3 L96.5,132.25 L97.6,126.2 L98.7,120.15 L99.8,114.1 L100.9,108.05 L102,102 L103.1,102.31 L104.2,102.62 L105.3,102.92 L106.4,103.23 L107.5,103.54 L108.6,103.85 L109.7,104.16 L110.8,104.46 L111.9,104.77 L113,105.08 L114.1,105.39 L115.2,105.7 L116.3,106 L117.4,106.31 L118.5,106.62 L119.6,106.93 L120.7,107.24 L121.8,107.54 L122.9,107.85 L124,108.16 L125.1,108.47 L126.2,108.78 L127.3,109.08 L128.4,109.39 L129.5,109.7 L130.6,110.01 L131.7,110.32 L132.8,110.62 L133.9,110.93 L135,111.24 L136.1,111.55 L137.2,111.86 L138.3,112.16 L139.4,112.47 L140.5,112.78 L141.6,113.09 L142.7,113.4 L143.8,113.7 L144.9,114.01 L146,114.32 L147.1,114.63 L148.2,114.94 L149.3,115.24 L150.4,115.55 L151.5,115.86 L152.6,116.17 L153.7,116.48 L154.8,116.78 L155.9,117.09 L157,117.4 L158.1,117.71 L159.2,118.02 L160.3,118.32 L161.4,118.63 L162.5,118.94 L163.6,119.25 L164.7,119.56 L165.8,119.86 L166.9,120.17 L168,120.48 L169.1,120.79 L170.2,121.1 L171.3,121.4 L172.4,121.71 L173.5,122.02 L174.6,122.33 L175.7,122.64 L176.8,122.94 L177.9,123.25 L179,123.56 L180.1,123.87 L181.2,124.18 L182.3,124.48 L183.4,124.79 L184.5,125.1 L185.6,125.41 L186.7,125.72 L187.8,126.02 L188.9,126.33 L190,126.64 L191.1,126.95 L192.2,127.26 L193.3,127.56 L194.4,127.87 L195.5,128.18 L196.6,128.49 L197.7,128.8 L198.8,129.1 L199.9,129.41 L201,129.72 L202.1,130.03 L203.2,130.34 L204.3,130.64 L205.4,130.95 L206.5,131.26 L207.6,131.57 L208.7,131.88 L209.8,132.18 L210.9,132.49 L212,132.8 L213.1,133.11 L214.2,133.42 L215.3,133.72 L216.4,134.03 L217.5,134.34 L218.6,134.65 L219.7,134.96 L220.8,135.26 L221.9,135.57 L223,135.88 L224.1,136.19 L225.2,136.5 L226.3,136.8 L227.4,137.11 L228.5,137.42 L229.6,137.73 L230.7,138.04 L231.8,138.34 L232.9,138.65 L234,138.96\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><line x1=\"54\" y1=\"90\" x2=\"102\" y2=\"102\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"94\" cy=\"146\" r=\"2.3\" fill=\"#000\"/><text x=\"98\" y=\"142\">B</text><circle cx=\"102\" cy=\"102\" r=\"2.3\" fill=\"#000\"/><text x=\"106\" y=\"98\">C</text><circle cx=\"62.6\" cy=\"102\" r=\"2.3\" fill=\"#000\"/><text x=\"66.6\" y=\"98\">A</text><circle cx=\"224\" cy=\"136.16\" r=\"2.3\" fill=\"#000\"/><text x=\"228\" y=\"132.16\">D</text><text x=\"114\" y=\"74\">（Cから先は溶媒だけが凝固）</text></svg>",
+        "caption": "溶液の冷却曲線（概形）"
+      },
+      "answer": {
+        "value": "(1) 過冷却。(2) 凝固では溶媒だけが固体になるので、残った溶液の濃度（質量モル濃度）が大きくなり、凝固点がさらに下がり続けるから。(3) 点A（C以降の直線を延長し、はじめの冷却の線と交わる点の温度）。$M=\\dfrac{1.85\\times1.0}{0.10\\times0.10}\\fallingdotseq190$。"
+      },
+      "explanation": "過冷却がなければ凝固はAの温度で始まっていたはず、と考えて延長線から凝固点を読む。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 過冷却と答えている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 溶媒のみが凝固し溶液が濃くなることを説明している",
+            "points": 3
+          },
+          {
+            "criterion": "(3) 凝固点を点Aと判断している",
+            "points": 2
+          },
+          {
+            "criterion": "(3) 分子量を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "37/20*1/(1/10*100/1000)",
+        "expected": "185",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U01-cooling_curve",
+      "explanation_detail": {
+        "approach": "純溶媒の冷却曲線（凝固中は温度一定）と比べる。溶液では、凝固が進むと溶液が濃くなることに注目する。",
+        "steps": [
+          "Bは凝固点より低いのに液体のまま（過冷却）。凝固が始まると凝固熱でCまで温度が上がる。",
+          "溶媒だけが固体になるので、残りの溶液の質量モル濃度が増え、凝固点が下がり続ける。",
+          "過冷却がなければ凝固はA（延長線との交点）で始まるので、凝固点はAの温度。",
+          "$m=\\dfrac{0.10}{1.85}$ mol/kg、$M=\\dfrac{1.0}{m\\times0.10}\\fallingdotseq190$。"
+        ],
+        "alternatives": [
+          "純溶媒の冷却曲線を並べてかき、凝固中の水平部分が溶液では右下がりになることを図で示して説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "過冷却",
+            "points": 1
+          },
+          {
+            "point": "理由",
+            "points": 3
+          },
+          {
+            "point": "凝固点の読み取り",
+            "points": 2
+          },
+          {
+            "point": "分子量",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最低点Bを凝固点と読む。",
+          "Cの温度を凝固点と読む（Aよりわずかに低い）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある非電解質 1.0 g をベンゼン 100 g に溶かした溶液をゆっくり冷却し、温度変化を記録すると図のような冷却曲線が得られた。\n(1) 点B付近で、凝固点より低い温度になっても液体のままである状態を何というか。\n(2) 凝固が始まった後（C以降）も温度が下がり続ける理由を説明しなさい。\n(3) この溶液の凝固点は図の点A〜Dのどの温度か。また、その温度が純粋なベンゼンの凝固点より 0.33 K 低かったとき、この非電解質の分子量を求めなさい。ベンゼンのモル凝固点降下は 5.12 K·kg/mol とし、有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "溶液の冷却曲線（概形）。温度が下がり続けて点Bで最低になり（過冷却）、凝固が始まると点Cまで上がる。その後はゆるやかに下がり続ける（点D）。C以降の直線を左へ延長した線と、はじめの冷却の線との交点が点A。",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 248 228\" width=\"248\" height=\"228\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"214\" x2=\"240\" y2=\"214\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"214\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"236\" y=\"227\" font-style=\"italic\">時間</text><text x=\"19\" y=\"12\" font-style=\"italic\">温度</text><text x=\"3\" y=\"226\">O</text><clipPath id=\"k7\"><rect x=\"14\" y=\"14\" width=\"220\" height=\"200\"/></clipPath><path d=\"M14,34 L15.1,35.54 L16.2,37.08 L17.3,38.62 L18.4,40.16 L19.5,41.7 L20.6,43.24 L21.7,44.78 L22.8,46.32 L23.9,47.86 L25,49.4 L26.1,50.94 L27.2,52.48 L28.3,54.02 L29.4,55.56 L30.5,57.1 L31.6,58.64 L32.7,60.18 L33.8,61.72 L34.9,63.26 L36,64.8 L37.1,66.34 L38.2,67.88 L39.3,69.42 L40.4,70.96 L41.5,72.5 L42.6,74.04 L43.7,75.58 L44.8,77.12 L45.9,78.66 L47,80.2 L48.1,81.74 L49.2,83.28 L50.3,84.82 L51.4,86.36 L52.5,87.9 L53.6,89.44 L54.7,90.98 L55.8,92.52 L56.9,94.06 L58,95.6 L59.1,97.14 L60.2,98.68 L61.3,100.22 L62.4,101.76 L63.5,103.3 L64.6,104.84 L65.7,106.38 L66.8,107.92 L67.9,109.46 L69,111 L70.1,112.54 L71.2,114.08 L72.3,115.62 L73.4,117.16 L74.5,118.7 L75.6,120.24 L76.7,121.78 L77.8,123.32 L78.9,124.86 L80,126.4 L81.1,127.94 L82.2,129.48 L83.3,131.02 L84.4,132.56 L85.5,134.1 L86.6,135.64 L87.7,137.18 L88.8,138.72 L89.9,140.26 L91,141.8 L92.1,143.34 L93.2,144.88 L94.3,144.35 L95.4,138.3 L96.5,132.25 L97.6,126.2 L98.7,120.15 L99.8,114.1 L100.9,108.05 L102,102 L103.1,102.31 L104.2,102.62 L105.3,102.92 L106.4,103.23 L107.5,103.54 L108.6,103.85 L109.7,104.16 L110.8,104.46 L111.9,104.77 L113,105.08 L114.1,105.39 L115.2,105.7 L116.3,106 L117.4,106.31 L118.5,106.62 L119.6,106.93 L120.7,107.24 L121.8,107.54 L122.9,107.85 L124,108.16 L125.1,108.47 L126.2,108.78 L127.3,109.08 L128.4,109.39 L129.5,109.7 L130.6,110.01 L131.7,110.32 L132.8,110.62 L133.9,110.93 L135,111.24 L136.1,111.55 L137.2,111.86 L138.3,112.16 L139.4,112.47 L140.5,112.78 L141.6,113.09 L142.7,113.4 L143.8,113.7 L144.9,114.01 L146,114.32 L147.1,114.63 L148.2,114.94 L149.3,115.24 L150.4,115.55 L151.5,115.86 L152.6,116.17 L153.7,116.48 L154.8,116.78 L155.9,117.09 L157,117.4 L158.1,117.71 L159.2,118.02 L160.3,118.32 L161.4,118.63 L162.5,118.94 L163.6,119.25 L164.7,119.56 L165.8,119.86 L166.9,120.17 L168,120.48 L169.1,120.79 L170.2,121.1 L171.3,121.4 L172.4,121.71 L173.5,122.02 L174.6,122.33 L175.7,122.64 L176.8,122.94 L177.9,123.25 L179,123.56 L180.1,123.87 L181.2,124.18 L182.3,124.48 L183.4,124.79 L184.5,125.1 L185.6,125.41 L186.7,125.72 L187.8,126.02 L188.9,126.33 L190,126.64 L191.1,126.95 L192.2,127.26 L193.3,127.56 L194.4,127.87 L195.5,128.18 L196.6,128.49 L197.7,128.8 L198.8,129.1 L199.9,129.41 L201,129.72 L202.1,130.03 L203.2,130.34 L204.3,130.64 L205.4,130.95 L206.5,131.26 L207.6,131.57 L208.7,131.88 L209.8,132.18 L210.9,132.49 L212,132.8 L213.1,133.11 L214.2,133.42 L215.3,133.72 L216.4,134.03 L217.5,134.34 L218.6,134.65 L219.7,134.96 L220.8,135.26 L221.9,135.57 L223,135.88 L224.1,136.19 L225.2,136.5 L226.3,136.8 L227.4,137.11 L228.5,137.42 L229.6,137.73 L230.7,138.04 L231.8,138.34 L232.9,138.65 L234,138.96\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#k7)\"/><line x1=\"54\" y1=\"90\" x2=\"102\" y2=\"102\" stroke=\"#333\" stroke-width=\"1\"/><circle cx=\"94\" cy=\"146\" r=\"2.3\" fill=\"#000\"/><text x=\"98\" y=\"142\">B</text><circle cx=\"102\" cy=\"102\" r=\"2.3\" fill=\"#000\"/><text x=\"106\" y=\"98\">C</text><circle cx=\"62.6\" cy=\"102\" r=\"2.3\" fill=\"#000\"/><text x=\"66.6\" y=\"98\">A</text><circle cx=\"224\" cy=\"136.16\" r=\"2.3\" fill=\"#000\"/><text x=\"228\" y=\"132.16\">D</text><text x=\"114\" y=\"74\">（Cから先は溶媒だけが凝固）</text></svg>",
+        "caption": "溶液の冷却曲線（概形）"
+      },
+      "answer": {
+        "value": "(1) 過冷却。(2) 凝固では溶媒だけが固体になるので、残った溶液の濃度（質量モル濃度）が大きくなり、凝固点がさらに下がり続けるから。(3) 点A（C以降の直線を延長し、はじめの冷却の線と交わる点の温度）。$M=\\dfrac{5.12\\times1.0}{0.33\\times0.10}\\fallingdotseq160$。"
+      },
+      "explanation": "過冷却がなければ凝固はAの温度で始まっていたはず、と考えて延長線から凝固点を読む。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 過冷却と答えている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 溶媒のみが凝固し溶液が濃くなることを説明している",
+            "points": 3
+          },
+          {
+            "criterion": "(3) 凝固点を点Aと判断している",
+            "points": 2
+          },
+          {
+            "criterion": "(3) 分子量を正しく求めている",
+            "points": 2
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "128/25*1/(33/100*100/1000)",
+        "expected": "5120/33",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-CHE-U01-cooling_curve",
+      "explanation_detail": {
+        "approach": "純溶媒の冷却曲線（凝固中は温度一定）と比べる。溶液では、凝固が進むと溶液が濃くなることに注目する。",
+        "steps": [
+          "Bは凝固点より低いのに液体のまま（過冷却）。凝固が始まると凝固熱でCまで温度が上がる。",
+          "溶媒だけが固体になるので、残りの溶液の質量モル濃度が増え、凝固点が下がり続ける。",
+          "過冷却がなければ凝固はA（延長線との交点）で始まるので、凝固点はAの温度。",
+          "$m=\\dfrac{0.33}{5.12}$ mol/kg、$M=\\dfrac{1.0}{m\\times0.10}\\fallingdotseq160$。"
+        ],
+        "alternatives": [
+          "純溶媒の冷却曲線を並べてかき、凝固中の水平部分が溶液では右下がりになることを図で示して説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "過冷却",
+            "points": 1
+          },
+          {
+            "point": "理由",
+            "points": 3
+          },
+          {
+            "point": "凝固点の読み取り",
+            "points": 2
+          },
+          {
+            "point": "分子量",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "最低点Bを凝固点と読む。",
+          "Cの温度を凝固点と読む（Aよりわずかに低い）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "15 ℃ で、分圧 $1.0\\times10^{5}$ Pa の窒素は水 1.0 L に $0.70\\times10^{-3}$ mol 溶けるものとする。空気（窒素と酸素の物質量の比 4：1）を、全圧 $5.0\\times10^{5}$ Pa で 15 ℃ の水 1.0 L に接触させて十分な時間がたった。\n(1) 水に溶けた窒素の質量は何 mg か。原子量は N＝14、O＝16 とし、有効数字2桁で答えなさい。\n(2) 溶けた窒素の体積を、そのときの窒素の分圧・温度のもとで測ると、分圧が2倍になっても変わらない。この理由をヘンリーの法則と状態方程式を用いて説明しなさい。",
+      "answer": {
+        "value": "(1) 窒素の分圧は $5.0\\times10^{5}\\times\\dfrac{4}{5}=4.0\\times10^{5}$ Pa。溶ける物質量は分圧に比例し、$0.70\\times10^{-3}\\times\\dfrac{4.0\\times10^{5}}{1.0\\times10^{5}}\\times1.0=2.8\\times10^{-3}$ mol、質量は約 $78$ mg。(2) 分圧が2倍になると溶ける物質量は2倍になるが、その分圧のもとで体積を測ると $V=\\dfrac{nRT}{p}$ より、$n$ と $p$ がともに2倍なので体積は変わらない。"
+      },
+      "explanation": "ヘンリーの法則：溶ける気体の物質量は分圧に比例。体積は測る圧力によって変わる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "分圧を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "溶ける物質量を分圧に比例させて求めている",
+            "points": 2
+          },
+          {
+            "criterion": "質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 物質量と圧力がともに2倍で体積一定となることを説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "7/10000*400000/10**5*1*28*1000",
+        "expected": "392/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-henry",
+      "explanation_detail": {
+        "approach": "まず空気中の分圧をモル分率で求め、ヘンリーの法則（物質量は分圧に比例）を使う。体積については状態方程式 $V=\\dfrac{nRT}{p}$ で考える。",
+        "steps": [
+          "分圧：$4.0\\times10^{5}$ Pa。",
+          "溶ける物質量：$0.70\\times10^{-3}\\times\\dfrac{4.0\\times10^{5}}{1.0\\times10^{5}}\\times1.0=2.8\\times10^{-3}$ mol。",
+          "質量：$2.8\\times10^{-3}\\times28\\times10^{3}\\fallingdotseq78$ mg。",
+          "(2) $V=\\dfrac{nRT}{p}$ で $n\\propto p$ なので $V$ は一定。"
+        ],
+        "alternatives": [
+          "標準状態に換算した体積で表すと、溶ける体積は分圧に比例する。どの条件で体積を測るかで表し方が変わる、とまとめてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分圧",
+            "points": 2
+          },
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "質量",
+            "points": 1
+          },
+          {
+            "point": "説明",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "全圧をそのまま使い、分圧を求めない。",
+          "水の体積をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "25 ℃ で、分圧 $1.0\\times10^{5}$ Pa の窒素は水 1.0 L に $0.70\\times10^{-3}$ mol 溶けるものとする。空気（窒素と酸素の物質量の比 4：1）を、全圧 $1.0\\times10^{5}$ Pa で 25 ℃ の水 1.0 L に接触させて十分な時間がたった。\n(1) 水に溶けた窒素の質量は何 mg か。原子量は N＝14、O＝16 とし、有効数字2桁で答えなさい。\n(2) 溶けた窒素の体積を、そのときの窒素の分圧・温度のもとで測ると、分圧が2倍になっても変わらない。この理由をヘンリーの法則と状態方程式を用いて説明しなさい。",
+      "answer": {
+        "value": "(1) 窒素の分圧は $1.0\\times10^{5}\\times\\dfrac{4}{5}=8.0\\times10^{4}$ Pa。溶ける物質量は分圧に比例し、$0.70\\times10^{-3}\\times\\dfrac{8.0\\times10^{4}}{1.0\\times10^{5}}\\times1.0=5.6\\times10^{-4}$ mol、質量は約 $16$ mg。(2) 分圧が2倍になると溶ける物質量は2倍になるが、その分圧のもとで体積を測ると $V=\\dfrac{nRT}{p}$ より、$n$ と $p$ がともに2倍なので体積は変わらない。"
+      },
+      "explanation": "ヘンリーの法則：溶ける気体の物質量は分圧に比例。体積は測る圧力によって変わる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "分圧を正しく求めている",
+            "points": 2
+          },
+          {
+            "criterion": "溶ける物質量を分圧に比例させて求めている",
+            "points": 2
+          },
+          {
+            "criterion": "質量を正しく求めている",
+            "points": 1
+          },
+          {
+            "criterion": "(2) 物質量と圧力がともに2倍で体積一定となることを説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "7/10000*80000/10**5*1*28*1000",
+        "expected": "392/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "application"
+      ],
+      "variant_group": "HS-CHE-U01-henry",
+      "explanation_detail": {
+        "approach": "まず空気中の分圧をモル分率で求め、ヘンリーの法則（物質量は分圧に比例）を使う。体積については状態方程式 $V=\\dfrac{nRT}{p}$ で考える。",
+        "steps": [
+          "分圧：$8.0\\times10^{4}$ Pa。",
+          "溶ける物質量：$0.70\\times10^{-3}\\times\\dfrac{8.0\\times10^{4}}{1.0\\times10^{5}}\\times1.0=5.6\\times10^{-4}$ mol。",
+          "質量：$5.6\\times10^{-4}\\times28\\times10^{3}\\fallingdotseq16$ mg。",
+          "(2) $V=\\dfrac{nRT}{p}$ で $n\\propto p$ なので $V$ は一定。"
+        ],
+        "alternatives": [
+          "標準状態に換算した体積で表すと、溶ける体積は分圧に比例する。どの条件で体積を測るかで表し方が変わる、とまとめてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "分圧",
+            "points": 2
+          },
+          {
+            "point": "物質量",
+            "points": 2
+          },
+          {
+            "point": "質量",
+            "points": 1
+          },
+          {
+            "point": "説明",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "全圧をそのまま使い、分圧を求めない。",
+          "水の体積をかけ忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "実在気体の $Z=\\dfrac{pV}{nRT}$ の値は、理想気体では常に 1 である。メタンとヘリウムを比べると、高圧の条件で 1 からのずれが大きいのはメタンである。\n(1) 実在気体が理想気体からずれる2つの原因を挙げなさい。\n(2) 高圧でずれが大きくなる理由と、メタンのずれがヘリウムより大きい理由を説明しなさい。\n(3) 実在気体を理想気体に近づけるには、温度と圧力をどのようにすればよいか。",
+      "answer": {
+        "value": "(1) 分子自身に体積があること、分子間に引力（分子間力）がはたらくこと。(2) 低温では分子の熱運動が穏やかになり、分子間力の影響が相対的に大きくなる。高圧では分子どうしが接近し、分子間力の影響と、気体全体の体積に占める分子自身の体積の割合が大きくなる。メタンはヘリウムより分子が大きく分子間力も大きいので、ヘリウムよりずれが大きい。(3) 高温・低圧にする。"
+      },
+      "explanation": "理想気体は「分子の体積 0・分子間力なし」と仮定したモデル。実在気体はこの2点で異なる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 分子の体積と分子間力の2つを挙げている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 高圧で影響が大きくなる理由を説明している",
+            "points": 3
+          },
+          {
+            "criterion": "(2) メタンの分子間力・大きさに触れている",
+            "points": 2
+          },
+          {
+            "criterion": "(3) 高温・低圧と答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-real_gas",
+      "explanation_detail": {
+        "approach": "理想気体のモデルの2つの仮定（分子の体積が 0、分子間力がない）が、どの条件で成り立たなくなるかを考える。",
+        "steps": [
+          "理想気体の仮定：分子の体積 0、分子間力なし。",
+          "低温：熱運動が弱く、分子間力で引き合う影響が目立つ（$Z<1$ になりやすい）。",
+          "高圧：分子間の距離が小さく、分子の体積と分子間力の影響が大きい。",
+          "メタンはヘリウムより分子が大きく分子間力も大きい。",
+          "高温・低圧では両方の影響が小さくなる。"
+        ],
+        "alternatives": [
+          "分子間力が大きいと壁に衝突する勢いが弱まり、圧力が理想気体より小さくなる（$Z<1$）。分子の体積の影響が大きいと、分子が動ける空間が小さく $Z>1$ になる、と2つの効果に分けて説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原因",
+            "points": 2
+          },
+          {
+            "point": "条件の説明",
+            "points": 3
+          },
+          {
+            "point": "物質の比較",
+            "points": 2
+          },
+          {
+            "point": "条件",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「低温・高圧ほど理想気体に近い」と逆に覚えている。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "実在気体の $Z=\\dfrac{pV}{nRT}$ の値は、理想気体では常に 1 である。メタンとヘリウムを比べると、低温の条件で 1 からのずれが大きいのはメタンである。\n(1) 実在気体が理想気体からずれる2つの原因を挙げなさい。\n(2) 低温でずれが大きくなる理由と、メタンのずれがヘリウムより大きい理由を説明しなさい。\n(3) 実在気体を理想気体に近づけるには、温度と圧力をどのようにすればよいか。",
+      "answer": {
+        "value": "(1) 分子自身に体積があること、分子間に引力（分子間力）がはたらくこと。(2) 低温では分子の熱運動が穏やかになり、分子間力の影響が相対的に大きくなる。高圧では分子どうしが接近し、分子間力の影響と、気体全体の体積に占める分子自身の体積の割合が大きくなる。メタンはヘリウムより分子が大きく分子間力も大きいので、ヘリウムよりずれが大きい。(3) 高温・低圧にする。"
+      },
+      "explanation": "理想気体は「分子の体積 0・分子間力なし」と仮定したモデル。実在気体はこの2点で異なる。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "(1) 分子の体積と分子間力の2つを挙げている",
+            "points": 2
+          },
+          {
+            "criterion": "(2) 低温で影響が大きくなる理由を説明している",
+            "points": 3
+          },
+          {
+            "criterion": "(2) メタンの分子間力・大きさに触れている",
+            "points": 2
+          },
+          {
+            "criterion": "(3) 高温・低圧と答えている",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-real_gas",
+      "explanation_detail": {
+        "approach": "理想気体のモデルの2つの仮定（分子の体積が 0、分子間力がない）が、どの条件で成り立たなくなるかを考える。",
+        "steps": [
+          "理想気体の仮定：分子の体積 0、分子間力なし。",
+          "低温：熱運動が弱く、分子間力で引き合う影響が目立つ（$Z<1$ になりやすい）。",
+          "高圧：分子間の距離が小さく、分子の体積と分子間力の影響が大きい。",
+          "メタンはヘリウムより分子が大きく分子間力も大きい。",
+          "高温・低圧では両方の影響が小さくなる。"
+        ],
+        "alternatives": [
+          "分子間力が大きいと壁に衝突する勢いが弱まり、圧力が理想気体より小さくなる（$Z<1$）。分子の体積の影響が大きいと、分子が動ける空間が小さく $Z>1$ になる、と2つの効果に分けて説明してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "原因",
+            "points": 2
+          },
+          {
+            "point": "条件の説明",
+            "points": 3
+          },
+          {
+            "point": "物質の比較",
+            "points": 2
+          },
+          {
+            "point": "条件",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "「低温・高圧ほど理想気体に近い」と逆に覚えている。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "圧力一定で、27 ℃ で 2.0 L の気体を 327 ℃ にしたときの体積を求めなさい。\n［ある生徒の解答］\n体積は温度に比例するので、$2.0\\times\\dfrac{327}{27}=24$ L\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$4.0$ L"
+      },
+      "explanation": "シャルルの法則で体積が比例するのは絶対温度 $T=t+273$ である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "2*(327+273)/(27+273)",
+        "expected": "4",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_units",
+      "explanation_detail": {
+        "approach": "気体の法則に温度を代入するときは、必ず K に直す。",
+        "steps": [
+          "$T_1=300$ K、$T_2=600$ K。",
+          "$V_2=2.0\\times\\dfrac{600}{300}=4.0$ L。"
+        ],
+        "alternatives": [
+          "0 ℃ から 1 ℃ に温めると体積が無限倍になってしまう、という不合理から、セルシウス温度の比が使えないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "セルシウス温度の比で計算する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "体積は温度に比例するので、$2.0\\times\\dfrac{327}{27}=24$ L",
+        "error_step": "温度の比をセルシウス温度でとった部分",
+        "error_type": "unit",
+        "why_tempting": "「体積は温度に比例する」という言葉だけを覚えていて、その温度が絶対温度であることを確認していない。",
+        "correction": "$2.0\\times\\dfrac{600}{300}=4.0$ L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "圧力一定で、27 ℃ で 6.0 L の気体を 327 ℃ にしたときの体積を求めなさい。\n［ある生徒の解答］\n体積は温度に比例するので、$6.0\\times\\dfrac{327}{27}=73$ L\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$12$ L"
+      },
+      "explanation": "シャルルの法則で体積が比例するのは絶対温度 $T=t+273$ である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "6*(327+273)/(27+273)",
+        "expected": "12",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_units",
+      "explanation_detail": {
+        "approach": "気体の法則に温度を代入するときは、必ず K に直す。",
+        "steps": [
+          "$T_1=300$ K、$T_2=600$ K。",
+          "$V_2=6.0\\times\\dfrac{600}{300}=12$ L。"
+        ],
+        "alternatives": [
+          "0 ℃ から 1 ℃ に温めると体積が無限倍になってしまう、という不合理から、セルシウス温度の比が使えないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "セルシウス温度の比で計算する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "体積は温度に比例するので、$6.0\\times\\dfrac{327}{27}=73$ L",
+        "error_step": "温度の比をセルシウス温度でとった部分",
+        "error_type": "unit",
+        "why_tempting": "「体積は温度に比例する」という言葉だけを覚えていて、その温度が絶対温度であることを確認していない。",
+        "correction": "$6.0\\times\\dfrac{600}{300}=12$ L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "0.020 mol の気体を容積 830 mL の容器に入れて 127 ℃ に保ったときの圧力を求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。\n［ある生徒の解答］\n$p=\\dfrac{0.020\\times8.3\\times10^{3}\\times400}{830}=80$ Pa\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$8.0\\times10^{4}$ Pa"
+      },
+      "explanation": "$R=8.3\\times10^{3}$ Pa·L/(K·mol) を使うときは体積を L で代入する。830 mL＝0.83 L。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1/50*8.3*10**3*(127+273)/(830/1000)",
+        "expected": "80000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_units",
+      "explanation_detail": {
+        "approach": "代入前に単位をそろえる欄（$p$［Pa］、$V$［L］、$T$［K］）を作る。",
+        "steps": [
+          "$V=0.83$ L。",
+          "$p=\\dfrac{0.020\\times8.3\\times10^{3}\\times400}{0.83}=8.0\\times10^{4}$ Pa。"
+        ],
+        "alternatives": [
+          "誤答は 1000 分の1の値。小さな容器ほど圧力は大きくなるはずだ、という感覚と照らし合わせる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "mL のまま代入する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$p=\\dfrac{0.020\\times8.3\\times10^{3}\\times400}{830}=80$ Pa",
+        "error_step": "体積に代入した値",
+        "error_type": "unit",
+        "why_tempting": "温度は K に直したが、体積の単位を $R$ の単位（L）に合わせることを見落としている。",
+        "correction": "$V=0.83$ L を代入して $p=8.0\\times10^{4}$ Pa"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "圧力一定で、227 ℃ で 4.0 L の気体を 27 ℃ にしたときの体積を求めなさい。\n［ある生徒の解答］\n体積は温度に比例するので、$4.0\\times\\dfrac{27}{227}=0.48$ L\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$2.4$ L"
+      },
+      "explanation": "シャルルの法則で体積が比例するのは絶対温度 $T=t+273$ である。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "4*(27+273)/(227+273)",
+        "expected": "12/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_units",
+      "explanation_detail": {
+        "approach": "気体の法則に温度を代入するときは、必ず K に直す。",
+        "steps": [
+          "$T_1=500$ K、$T_2=300$ K。",
+          "$V_2=4.0\\times\\dfrac{300}{500}=2.4$ L。"
+        ],
+        "alternatives": [
+          "0 ℃ から 1 ℃ に温めると体積が無限倍になってしまう、という不合理から、セルシウス温度の比が使えないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "セルシウス温度の比で計算する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "体積は温度に比例するので、$4.0\\times\\dfrac{27}{227}=0.48$ L",
+        "error_step": "温度の比をセルシウス温度でとった部分",
+        "error_type": "unit",
+        "why_tempting": "「体積は温度に比例する」という言葉だけを覚えていて、その温度が絶対温度であることを確認していない。",
+        "correction": "$4.0\\times\\dfrac{300}{500}=2.4$ L"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "尿素 $\\mathrm{CO(NH_2)_2}$（分子量 60） 9.6 g を含む水溶液が全体で 409.6 g ある。この水溶液の沸点上昇度を求めなさい。水のモル沸点上昇は 0.52 K·kg/mol とし、有効数字2桁で答えなさい。\n［ある生徒の解答］\n$m=\\dfrac{9.6/60}{0.4096}$ mol/kg として、$\\Delta t_{\\mathrm{b}}=0.52\\times m\\fallingdotseq0.20$ K\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.21$ K"
+      },
+      "explanation": "質量モル濃度は「溶媒」1 kg あたりの溶質の物質量。溶液の質量から溶質の質量を引いて溶媒の質量を求める。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "0.52*48/5/(60)/(400/1000)",
+        "expected": "26/125",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-err_colligative",
+      "explanation_detail": {
+        "approach": "質量モル濃度の定義（溶質 mol ÷ 溶媒 kg）に戻って分母を確認する。",
+        "steps": [
+          "溶媒：$409.6-9.6=400$ g。",
+          "$m=\\dfrac{0.16}{0.40}=0.40$ mol/kg。",
+          "$\\Delta t_{\\mathrm{b}}=0.21$ K。"
+        ],
+        "alternatives": [
+          "溶質の質量が小さい希薄溶液では差が小さく見逃しやすいが、定義どおりに計算する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "溶液の質量で割る。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$m=\\dfrac{9.6/60}{0.4096}$ mol/kg として、$\\Delta t_{\\mathrm{b}}=0.52\\times m\\fallingdotseq0.20$ K",
+        "error_step": "質量モル濃度の分母",
+        "error_type": "concept",
+        "why_tempting": "モル濃度（溶液の体積あたり）と混同し、質量モル濃度の分母も「溶液」の質量だと考えている。",
+        "correction": "溶媒は $409.6-9.6=400$ g なので $m=0.40$ mol/kg、$\\Delta t_{\\mathrm{b}}=0.52\\times0.40\\fallingdotseq0.21$ K"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "塩化カリウム $\\mathrm{KCl}$（式量 74.5） 7.45 g を水 250 g に溶かした水溶液の凝固点降下度を求めなさい。塩化カリウムは完全に電離し、水のモル凝固点降下は 1.85 K·kg/mol とする。\n［ある生徒の解答］\n$m=\\dfrac{7.45/74.5}{0.25}=0.40$ mol/kg なので、$\\Delta t_{\\mathrm{f}}=1.85\\times0.40=0.74$ K\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.5$ K"
+      },
+      "explanation": "塩化カリウムは電離して 2 個のイオンになるので、粒子の質量モル濃度は $0.80$ mol/kg。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1.85*149/20/(149/2)/(250/1000)*2",
+        "expected": "37/25",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-err_colligative",
+      "explanation_detail": {
+        "approach": "溶質が電解質かどうかを最初に確認し、電離式から粒子の数を数える。",
+        "steps": [
+          "$m=0.40$ mol/kg。",
+          "粒子の質量モル濃度：$0.40\\times2=0.80$ mol/kg。",
+          "$\\Delta t_{\\mathrm{f}}=1.85\\times0.80=1.5$ K。"
+        ],
+        "alternatives": [
+          "電離式をかいて確かめる：1 mol から 2 mol のイオンが生じる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電解質の電離を考えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$m=\\dfrac{7.45/74.5}{0.25}=0.40$ mol/kg なので、$\\Delta t_{\\mathrm{f}}=1.85\\times0.40=0.74$ K",
+        "error_step": "質量モル濃度をそのまま用いた部分",
+        "error_type": "concept",
+        "why_tempting": "質量モル濃度の計算に集中し、凝固点降下が溶質「粒子」の数で決まることと、電解質が電離して粒子が増えることを見落としている。",
+        "correction": "電離で粒子は 2 倍になるので $\\Delta t_{\\mathrm{f}}=1.85\\times0.40\\times2=1.5$ K"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "塩化カルシウム $\\mathrm{CaCl_2}$（式量 111） 3.33 g を水 200 g に溶かした水溶液の凝固点降下度を求めなさい。塩化カルシウムは完全に電離し、水のモル凝固点降下は 1.85 K·kg/mol とする。\n［ある生徒の解答］\n$m=\\dfrac{3.33/111}{0.20}=0.15$ mol/kg なので、$\\Delta t_{\\mathrm{f}}=1.85\\times0.15=0.28$ K\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$0.83$ K"
+      },
+      "explanation": "塩化カルシウムは電離して 3 個のイオンになるので、粒子の質量モル濃度は $0.45$ mol/kg。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "1.85*333/100/(111)/(200/1000)*3",
+        "expected": "333/400",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-CHE-U01-err_colligative",
+      "explanation_detail": {
+        "approach": "溶質が電解質かどうかを最初に確認し、電離式から粒子の数を数える。",
+        "steps": [
+          "$m=0.15$ mol/kg。",
+          "粒子の質量モル濃度：$0.15\\times3=0.45$ mol/kg。",
+          "$\\Delta t_{\\mathrm{f}}=1.85\\times0.45=0.83$ K。"
+        ],
+        "alternatives": [
+          "電離式をかいて確かめる：1 mol から 3 mol のイオンが生じる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電解質の電離を考えない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$m=\\dfrac{3.33/111}{0.20}=0.15$ mol/kg なので、$\\Delta t_{\\mathrm{f}}=1.85\\times0.15=0.28$ K",
+        "error_step": "質量モル濃度をそのまま用いた部分",
+        "error_type": "concept",
+        "why_tempting": "質量モル濃度の計算に集中し、凝固点降下が溶質「粒子」の数で決まることと、電解質が電離して粒子が増えることを見落としている。",
+        "correction": "電離で粒子は 3 倍になるので $\\Delta t_{\\mathrm{f}}=1.85\\times0.15\\times3=0.83$ K"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "容積 2.0 L の真空容器に水 0.040 mol を入れ、27 ℃ に保ったときの容器内の圧力を求めなさい。27 ℃ の水の飽和蒸気圧は $3.6\\times10^{3}$ Pa とし、液体の体積は無視する。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。\n［ある生徒の解答］\n$p=\\dfrac{nRT}{V}=\\dfrac{0.040\\times8.3\\times10^{3}\\times300}{2.0}=5.0\\times10^{4}$ Pa\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3.6\\times10^{3}$ Pa"
+      },
+      "explanation": "水蒸気の圧力は飽和蒸気圧をこえられない。すべて気体と仮定した値が飽和蒸気圧より大きければ、一部が凝縮して蒸気の圧力は飽和蒸気圧になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Min(1/25*8.3*10**3*300/(2), 3600)",
+        "expected": "3600",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_vapor",
+      "explanation_detail": {
+        "approach": "状態方程式で圧力を出したら、必ず飽和蒸気圧と比べる。",
+        "steps": [
+          "すべて気体と仮定すると $5.0\\times10^{4}$ Pa。",
+          "飽和蒸気圧 $3.6\\times10^{3}$ Pa と比べると大きい。",
+          "液体が共存するので $3.6\\times10^{3}$ Pa。"
+        ],
+        "alternatives": [
+          "逆に、気体として存在できる最大量 $\\dfrac{3.6\\times10^{3}\\times2.0}{8.3\\times10^{3}\\times300}$ mol を求め、0.040 mol より少ないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "飽和蒸気圧との比較を忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$p=\\dfrac{nRT}{V}=\\dfrac{0.040\\times8.3\\times10^{3}\\times300}{2.0}=5.0\\times10^{4}$ Pa",
+        "error_step": "状態方程式で求めた値をそのまま答えた部分",
+        "error_type": "condition",
+        "why_tempting": "状態方程式は気体についての式であることを忘れ、入れた水がすべて気体になると無条件に仮定している。",
+        "correction": "$5.0\\times10^{4}$ Pa は飽和蒸気圧 $3.6\\times10^{3}$ Pa をこえるので液体が残り、圧力は $3.6\\times10^{3}$ Pa"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "容積 2.0 L の真空容器に水 0.10 mol を入れ、77 ℃ に保ったときの容器内の圧力を求めなさい。77 ℃ の水の飽和蒸気圧は $4.2\\times10^{4}$ Pa とし、液体の体積は無視する。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。\n［ある生徒の解答］\n$p=\\dfrac{nRT}{V}=\\dfrac{0.10\\times8.3\\times10^{3}\\times350}{2.0}=1.5\\times10^{5}$ Pa\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$4.2\\times10^{4}$ Pa"
+      },
+      "explanation": "水蒸気の圧力は飽和蒸気圧をこえられない。すべて気体と仮定した値が飽和蒸気圧より大きければ、一部が凝縮して蒸気の圧力は飽和蒸気圧になる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Min(1/10*8.3*10**3*350/(2), 42000)",
+        "expected": "42000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_vapor",
+      "explanation_detail": {
+        "approach": "状態方程式で圧力を出したら、必ず飽和蒸気圧と比べる。",
+        "steps": [
+          "すべて気体と仮定すると $1.5\\times10^{5}$ Pa。",
+          "飽和蒸気圧 $4.2\\times10^{4}$ Pa と比べると大きい。",
+          "液体が共存するので $4.2\\times10^{4}$ Pa。"
+        ],
+        "alternatives": [
+          "逆に、気体として存在できる最大量 $\\dfrac{4.2\\times10^{4}\\times2.0}{8.3\\times10^{3}\\times350}$ mol を求め、0.10 mol より少ないことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "飽和蒸気圧との比較を忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$p=\\dfrac{nRT}{V}=\\dfrac{0.10\\times8.3\\times10^{3}\\times350}{2.0}=1.5\\times10^{5}$ Pa",
+        "error_step": "状態方程式で求めた値をそのまま答えた部分",
+        "error_type": "condition",
+        "why_tempting": "状態方程式は気体についての式であることを忘れ、入れた水がすべて気体になると無条件に仮定している。",
+        "correction": "$1.5\\times10^{5}$ Pa は飽和蒸気圧 $4.2\\times10^{4}$ Pa をこえるので液体が残り、圧力は $4.2\\times10^{4}$ Pa"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-CHE-U01-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-CHE-U01",
+      "skills": [
+        "calculation",
+        "knowledge"
+      ],
+      "evaluation_aspect": "knowledge_skill",
+      "question_type": "descriptive",
+      "stem": "亜鉛に希塩酸を加えて発生した水素を水上置換で集め、水面をそろえて体積を測ると 25 ℃ で 415 mL であった。大気圧は $1.01\\times10^{5}$ Pa、25 ℃ の水の飽和蒸気圧は $3.2\\times10^{3}$ Pa とする。集めた水素の物質量を有効数字3桁で求めなさい。気体定数を $R=8.3\\times10^{3}\\ \\mathrm{Pa\\cdot L/(K\\cdot mol)}$ とする。\n［ある生徒の解答］\n$n=\\dfrac{1.01\\times10^{5}\\times0.415}{8.3\\times10^{3}\\times298}\\fallingdotseq1.69\\times10^{-2}$ mol\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.64\\times10^{-2}$ mol"
+      },
+      "explanation": "水上置換で集めた気体には飽和水蒸気が含まれる。大気圧＝水素の分圧＋水の飽和蒸気圧。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい考え方・途中の式を示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(101000-3200)*415/1000/(8.3*10**3*298)",
+        "expected": "489/29800",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-CHE-U01-err_vapor",
+      "explanation_detail": {
+        "approach": "水上置換では「全圧＝大気圧」「目的の気体の分圧＝大気圧−水蒸気圧」の2段階で考える。",
+        "steps": [
+          "水素の分圧：$1.01\\times10^{5}-3.2\\times10^{3}=9.78\\times10^{4}$ Pa。",
+          "$n=\\dfrac{9.78\\times10^{4}\\times0.415}{8.3\\times10^{3}\\times298}\\fallingdotseq1.64\\times10^{-2}$ mol。"
+        ],
+        "alternatives": [
+          "分圧の法則の式 $p_{\\text{全}}=p_{\\mathrm{H_2}}+p_{\\mathrm{H_2O}}$ を先に書いてから代入する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい考え方",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "水蒸気圧を引き忘れる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=\\dfrac{1.01\\times10^{5}\\times0.415}{8.3\\times10^{3}\\times298}\\fallingdotseq1.69\\times10^{-2}$ mol",
+        "error_step": "水素の圧力を大気圧とした部分",
+        "error_type": "condition",
+        "why_tempting": "「水面をそろえたので圧力は大気圧」という手順は覚えているが、捕集した気体が水蒸気との混合気体であることを見落としている。",
+        "correction": "水素の分圧は $1.01\\times10^{5}-3.2\\times10^{3}$ Pa なので $n\\fallingdotseq1.64\\times10^{-2}$ mol"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "4feb856179ae80575eafaa9788ecce4d48871c23937dfc40c763ca45e7bb18d3"
+    }
+  ]
+}
