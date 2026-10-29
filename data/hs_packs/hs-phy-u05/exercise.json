@@ -1,0 +1,5494 @@
+{
+  "schema_version": "2.0.0",
+  "set_id": "HS-PHY-U05-EX",
+  "title": "原子　問題プリント",
+  "subtitle": "A 基本確認 20問・B 標準演習 20問・C 思考力・記述 10問・D 典型誤答訂正 10問",
+  "track": "hs_pack",
+  "stage": "high_school",
+  "subject": "science",
+  "course": "physics",
+  "grade": "HS3",
+  "unit_ids": [
+    "HS-PHY-U05"
+  ],
+  "print_type": "exercise",
+  "pack_id": "HS-PHY-U05-PACK",
+  "pair_set_id": "HS-PHY-U05-LESSON",
+  "unit_context": {
+    "prerequisites": [
+      {
+        "unit_id": "HS-PHY-U03",
+        "point": "波動",
+        "title": "波動"
+      },
+      {
+        "unit_id": "HS-PHY-U04",
+        "point": "電磁気",
+        "title": "電磁気"
+      }
+    ],
+    "extensions": [],
+    "readiness_check": [
+      "光の干渉・回折（ヤングの実験、回折格子）で波長を求められる（物理 波動）。",
+      "電位差で加速された電荷のエネルギー $eV$、運動エネルギー・運動量を使える（物理 電磁気・力学）。",
+      "指数 $\\left(\\dfrac12\\right)^n$ と対数の計算ができる（数学Ⅱ）。原子番号・質量数・同位体を説明できる（化学基礎）。"
+    ]
+  },
+  "exercise_plan": {
+    "basic_check": 20,
+    "standard_practice": 20,
+    "thinking_writing": 10,
+    "error_correction": 10
+  },
+  "instructions": [
+    "A から順に取り組み、B 以降は解答解説冊子の「思考の糸口」を読んでから解き直しましょう。",
+    "C・D は途中の考え方を答案として書きなさい。部分点の基準は解答解説冊子にあります。"
+  ],
+  "sections": [
+    {
+      "id": "LV-A",
+      "title": "A　基本確認",
+      "instructions": "定義・公式をその場で使えるかを確かめる。全問を短時間で解けるまでくり返す。"
+    },
+    {
+      "id": "LV-B",
+      "title": "B　標準演習",
+      "instructions": "定期考査・共通テストの標準レベル。解法の選択理由を言えるようにする。"
+    },
+    {
+      "id": "LV-C",
+      "title": "C　思考力・記述応用",
+      "instructions": "場合分け・論証・融合問題。途中の考え方を答案として書く。"
+    },
+    {
+      "id": "LV-D",
+      "title": "D　典型誤答訂正",
+      "instructions": "よくある誤答例のどこが誤りかを指摘し、正しく直す。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS-PHY-U05-EX-Q001",
+      "number": "A-01",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "真空中での波長が $2.0\\times10^{-7}\\,\\mathrm{m}$ の光の光子1個の運動量の大きさは何 kg·m/s か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$3.3\\times10^{-27}$",
+        "unit": "kg·m/s"
+      },
+      "explanation": "$p=\\dfrac{h}{\\lambda}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)/(1/5000000)",
+        "expected": "33/10000000000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-photon_basic",
+      "explanation_detail": {
+        "approach": "光子の運動量は $p=\\dfrac{E}{c}=\\dfrac{h}{\\lambda}$。",
+        "steps": [
+          "$p=\\dfrac{6.6\\times10^{-34}}{2.0\\times10^{-7}}$。",
+          "$p\\fallingdotseq3.3\\times10^{-27}\\,\\mathrm{kg\\cdot m/s}$。"
+        ],
+        "alternatives": [
+          "光子のエネルギー $E$ を求めて $\\dfrac{E}{c}$ としても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$p=\\dfrac{h}{\\lambda}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$h\\lambda$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q002",
+      "number": "A-02",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "真空中での波長が $5.0\\times10^{-7}\\,\\mathrm{m}$ の光の光子1個のエネルギーは何 J か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$4.0\\times10^{-19}$",
+        "unit": "J"
+      },
+      "explanation": "$E=\\dfrac{hc}{\\lambda}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)*3*10**8/(1/2000000)",
+        "expected": "99/250000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-photon_basic",
+      "explanation_detail": {
+        "approach": "$c=\\nu\\lambda$ より $\\nu=\\dfrac{c}{\\lambda}$。光子のエネルギーは波長に反比例する。",
+        "steps": [
+          "$E=\\dfrac{hc}{\\lambda}=\\dfrac{6.6\\times10^{-34}\\times3.0\\times10^8}{5.0\\times10^{-7}}$。",
+          "$E\\fallingdotseq4.0\\times10^{-19}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "先に振動数 $\\nu=\\dfrac{c}{\\lambda}$ を求め、$h\\nu$ で計算しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$E=\\dfrac{hc}{\\lambda}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{h\\lambda}{c}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q003",
+      "number": "A-03",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "真空中での波長が $4.0\\times10^{-7}\\,\\mathrm{m}$ の光の光子1個のエネルギーは何 J か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$5.0\\times10^{-19}$",
+        "unit": "J"
+      },
+      "explanation": "$E=\\dfrac{hc}{\\lambda}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)*3*10**8/(1/2500000)",
+        "expected": "99/200000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-photon_basic",
+      "explanation_detail": {
+        "approach": "$c=\\nu\\lambda$ より $\\nu=\\dfrac{c}{\\lambda}$。光子のエネルギーは波長に反比例する。",
+        "steps": [
+          "$E=\\dfrac{hc}{\\lambda}=\\dfrac{6.6\\times10^{-34}\\times3.0\\times10^8}{4.0\\times10^{-7}}$。",
+          "$E\\fallingdotseq5.0\\times10^{-19}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "先に振動数 $\\nu=\\dfrac{c}{\\lambda}$ を求め、$h\\nu$ で計算しても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$E=\\dfrac{hc}{\\lambda}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{h\\lambda}{c}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q004",
+      "number": "A-04",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "振動数 $6.0\\times10^{14}\\,\\mathrm{Hz}$ の光の光子1個のエネルギーは何 J か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$4.0\\times10^{-19}$",
+        "unit": "J"
+      },
+      "explanation": "$E=h\\nu$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)*(600000000000000)",
+        "expected": "99/250000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-photon_basic",
+      "explanation_detail": {
+        "approach": "光子1個のエネルギーは振動数に比例し、比例定数がプランク定数。",
+        "steps": [
+          "$E=h\\nu=6.6\\times10^{-34}\\times6.0\\times10^{14}$。",
+          "$E\\fallingdotseq4.0\\times10^{-19}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "eV に換算して（$1.6\\times10^{-19}$ で割って）、可視光ならおよそ 2〜3 eV になることを目安に確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$E=h\\nu$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数の計算を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q005",
+      "number": "A-05",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "仕事関数 2.3 eV の金属に、光子1個のエネルギーが 1.8 eV の光を当てた。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "電子は飛び出さない"
+        },
+        {
+          "label": "イ",
+          "text": "長い時間当て続ければ電子が飛び出す"
+        },
+        {
+          "label": "ウ",
+          "text": "光を十分に強くすれば電子が飛び出す"
+        },
+        {
+          "label": "エ",
+          "text": "飛び出す電子の運動エネルギーの最大値は 0.5 eV である"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "光子のエネルギー 1.8 eV が仕事関数 2.3 eV 以下なので、電子は飛び出さない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-photoelectric_basic",
+      "explanation_detail": {
+        "approach": "光子1個のエネルギーと仕事関数を比べる。光の強さや当てる時間は関係しない。",
+        "steps": [
+          "$h\\nu=1.8\\,\\mathrm{eV}\\leqq W=2.3\\,\\mathrm{eV}$。",
+          "電子は飛び出さない。"
+        ],
+        "alternatives": [
+          "限界振動数 $\\nu_0=\\dfrac{W}{h}$ と光の振動数を比べても同じ判断になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "光子のエネルギーと仕事関数を比べている",
+            "points": 1
+          },
+          {
+            "point": "正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "電子は光子1個のエネルギーを一度に受け取る。エネルギーをためることはできない。",
+          "misconception": "波動説による誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "光を強くしても光子1個のエネルギーは変わらないので、電子は飛び出さない。",
+          "misconception": "光の強さと光子のエネルギーの混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "運動エネルギーが負になることはない。光子のエネルギーが仕事関数より小さいと電子は飛び出さない。",
+          "misconception": "限界振動数の無理解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q006",
+      "number": "A-06",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "仕事関数 1.9 eV の金属の限界振動数は何 Hz か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$4.6\\times10^{14}$",
+        "unit": "Hz"
+      },
+      "explanation": "$h\\nu_0=W$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(19/10)*(1/6250000000000000000)/(33/50000000000000000000000000000000000)",
+        "expected": "15200000000000000/33",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-photoelectric_basic",
+      "explanation_detail": {
+        "approach": "限界振動数は、光子のエネルギーがちょうど仕事関数に等しくなる振動数。",
+        "steps": [
+          "$W=1.9\\times1.6\\times10^{-19}\\,\\mathrm{J}$。",
+          "$\\nu_0=\\dfrac{W}{h}\\fallingdotseq4.6\\times10^{14}\\,\\mathrm{Hz}$。"
+        ],
+        "alternatives": [
+          "$K$−$\\nu$ グラフで、直線が横軸と交わる点として限界振動数が読み取れることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$h\\nu_0=W$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "eV を J に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q007",
+      "number": "A-07",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "仕事関数 4.3 eV の金属に、光子1個のエネルギーが 1.8 eV の光を当てた。正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "電子は飛び出さない"
+        },
+        {
+          "label": "イ",
+          "text": "飛び出す電子の運動エネルギーの最大値は 2.5 eV である"
+        },
+        {
+          "label": "ウ",
+          "text": "長い時間当て続ければ電子が飛び出す"
+        },
+        {
+          "label": "エ",
+          "text": "光を十分に強くすれば電子が飛び出す"
+        }
+      ],
+      "answer": {
+        "value": "ア"
+      },
+      "explanation": "光子のエネルギー 1.8 eV が仕事関数 4.3 eV 以下なので、電子は飛び出さない。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-photoelectric_basic",
+      "explanation_detail": {
+        "approach": "光子1個のエネルギーと仕事関数を比べる。光の強さや当てる時間は関係しない。",
+        "steps": [
+          "$h\\nu=1.8\\,\\mathrm{eV}\\leqq W=4.3\\,\\mathrm{eV}$。",
+          "電子は飛び出さない。"
+        ],
+        "alternatives": [
+          "限界振動数 $\\nu_0=\\dfrac{W}{h}$ と光の振動数を比べても同じ判断になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "光子のエネルギーと仕事関数を比べている",
+            "points": 1
+          },
+          {
+            "point": "正しく判断している",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "イ",
+          "why_wrong": "運動エネルギーが負になることはない。光子のエネルギーが仕事関数より小さいと電子は飛び出さない。",
+          "misconception": "限界振動数の無理解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "電子は光子1個のエネルギーを一度に受け取る。エネルギーをためることはできない。",
+          "misconception": "波動説による誤解"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "光を強くしても光子1個のエネルギーは変わらないので、電子は飛び出さない。",
+          "misconception": "光の強さと光子のエネルギーの混同"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q008",
+      "number": "A-08",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "仕事関数 1.9 eV の金属に、光子1個のエネルギーが 6.0 eV の光を当てた。飛び出す電子の運動エネルギーの最大値は何 eV か。",
+      "answer": {
+        "value": "4.1",
+        "unit": "eV"
+      },
+      "explanation": "$K_{\\max}=h\\nu-W$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(6)-(19/10)",
+        "expected": "41/10"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-photoelectric_basic",
+      "explanation_detail": {
+        "approach": "光子のエネルギーのうち、仕事関数の分は金属から出るのに使われ、残りが運動エネルギーになる。",
+        "steps": [
+          "$K_{\\max}=6.0-1.9$。",
+          "$K_{\\max}=4.1\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "エネルギー保存：光子のエネルギー ＝ 仕事関数 ＋ 運動エネルギー、と収支で考える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "光電方程式を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "仕事関数を足す。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q009",
+      "number": "A-09",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "電子を加速する電圧を9倍にすると、電子の物質波の波長は何倍になるか。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.33",
+        "unit": "倍"
+      },
+      "explanation": "$\\lambda\\propto\\dfrac{1}{\\sqrt{V}}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1/sqrt((9))",
+        "expected": "1/3",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-matter_basic",
+      "explanation_detail": {
+        "approach": "$\\lambda=\\dfrac{h}{\\sqrt{2meV}}$ より、波長は電圧の平方根に反比例する。",
+        "steps": [
+          "$\\lambda\\propto\\dfrac{1}{\\sqrt V}$。",
+          "$\\dfrac{1}{\\sqrt{9}}=0.33$ 倍。"
+        ],
+        "alternatives": [
+          "運動エネルギーが $k$ 倍 → 速さ（運動量）が $\\sqrt k$ 倍 → 波長が $\\dfrac{1}{\\sqrt k}$ 倍、と順に考える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方根の反比例を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電圧に反比例するとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q010",
+      "number": "A-10",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "速さ $1.0\\times10^{7}\\,\\mathrm{m/s}$ で運動する電子の物質波の波長は何 m か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。電子の質量を $9.1\\times10^{-31}\\,\\mathrm{kg}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$7.3\\times10^{-11}$",
+        "unit": "m"
+      },
+      "explanation": "$\\lambda=\\dfrac{h}{mv}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)/((91/100000000000000000000000000000000)*(10000000))",
+        "expected": "33/455000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-matter_basic",
+      "explanation_detail": {
+        "approach": "ド・ブロイ波長は運動量に反比例する。",
+        "steps": [
+          "$\\lambda=\\dfrac{6.6\\times10^{-34}}{9.1\\times10^{-31}\\times1.0\\times10^{7}}$。",
+          "$\\lambda\\fallingdotseq7.3\\times10^{-11}\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "運動量 $mv$ を先に求め、$\\dfrac{h}{p}$ としてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$\\lambda=\\dfrac{h}{mv}$ を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{mv}{h}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q011",
+      "number": "A-11",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "電子を加速する電圧を$\\dfrac14$ 倍にすると、電子の物質波の波長は何倍になるか。",
+      "answer": {
+        "value": "2",
+        "unit": "倍"
+      },
+      "explanation": "$\\lambda\\propto\\dfrac{1}{\\sqrt{V}}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "1/sqrt((1/4))",
+        "expected": "2"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-matter_basic",
+      "explanation_detail": {
+        "approach": "$\\lambda=\\dfrac{h}{\\sqrt{2meV}}$ より、波長は電圧の平方根に反比例する。",
+        "steps": [
+          "$\\lambda\\propto\\dfrac{1}{\\sqrt V}$。",
+          "$\\dfrac{1}{\\sqrt{\\dfrac{1}{4}}}=2.0$ 倍。"
+        ],
+        "alternatives": [
+          "運動エネルギーが $k$ 倍 → 速さ（運動量）が $\\sqrt k$ 倍 → 波長が $\\dfrac{1}{\\sqrt k}$ 倍、と順に考える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "平方根の反比例を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電圧に反比例するとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q012",
+      "number": "A-12",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "原子核 ${}^{226}_{88}\\mathrm{Ra}$ に含まれる中性子の数はいくつか。",
+      "answer": {
+        "value": "138",
+        "unit": "個"
+      },
+      "explanation": "中性子数 $=A-Z$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "226-88",
+        "expected": "138"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-nucleus_basic",
+      "explanation_detail": {
+        "approach": "左上が質量数（陽子＋中性子）、左下が原子番号（陽子の数）。",
+        "steps": [
+          "$A=226$、$Z=88$。",
+          "中性子数 $=226-88=138$。"
+        ],
+        "alternatives": [
+          "陽子の数と中性子の数を足すと質量数に戻ることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量数と原子番号の意味を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量数をそのまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q013",
+      "number": "A-13",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "原子核 ${}^{232}_{90}\\mathrm{Th}$ に含まれる中性子の数はいくつか。",
+      "answer": {
+        "value": "142",
+        "unit": "個"
+      },
+      "explanation": "中性子数 $=A-Z$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "232-90",
+        "expected": "142"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-nucleus_basic",
+      "explanation_detail": {
+        "approach": "左上が質量数（陽子＋中性子）、左下が原子番号（陽子の数）。",
+        "steps": [
+          "$A=232$、$Z=90$。",
+          "中性子数 $=232-90=142$。"
+        ],
+        "alternatives": [
+          "陽子の数と中性子の数を足すと質量数に戻ることで確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量数と原子番号の意味を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "質量数をそのまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q014",
+      "number": "A-14",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "原子核 ${}^{232}_{90}\\mathrm{Th}$ が β崩壊を1回すると、新しい原子核の原子番号はいくつになるか。",
+      "answer": {
+        "value": "91"
+      },
+      "explanation": "β崩壊では中性子が陽子に変わるので原子番号が1増える。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "90+1",
+        "expected": "91"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-nucleus_basic",
+      "explanation_detail": {
+        "approach": "β線は電子。原子核内の中性子1個が陽子に変わり、電子が放出される。質量数は変わらない。",
+        "steps": [
+          "β崩壊：$A$ 不変、$Z\\to Z+1$。",
+          "原子番号 $=90+1=91$（質量数は 232 のまま）。"
+        ],
+        "alternatives": [
+          "電荷の保存：放出された電子の電荷 $-e$ の分だけ原子核の電荷が $+e$ 増える、と確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "β崩壊の変化を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "原子番号を1減らす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q015",
+      "number": "A-15",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "半減期 10 年の放射性同位体の原子核が、はじめ $6.4\\times10^{20}$ 個ある。30 年後に崩壊せずに残っている原子核は何個か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$8.0\\times10^{19}$",
+        "unit": "個"
+      },
+      "explanation": "$N=N_0\\left(\\dfrac12\\right)^{\\frac{t}{T}}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(640000000000000000000)/2**3",
+        "expected": "80000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_basic",
+      "explanation_detail": {
+        "approach": "半減期の回数だけ半分にする。",
+        "steps": [
+          "$\\dfrac{t}{T}=3$。",
+          "$N=6.4\\times10^{20}\\times\\left(\\dfrac12\\right)^3=8.0\\times10^{19}$ 個。"
+        ],
+        "alternatives": [
+          "崩壊した数（$N_0-N$）を求めて、はじめの数から引いても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "半減期の式を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$N_0\\times\\dfrac{1}{4}$ のように割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q016",
+      "number": "A-16",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "半減期 3 年の放射性同位体の原子核の数が、はじめの $\\dfrac{1}{8}$ になるのは何年後か。",
+      "answer": {
+        "value": "9"
+      },
+      "explanation": "$\\left(\\dfrac12\\right)^{\\frac{t}{T}}=\\dfrac{1}{2^k}$ より $t=kT$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "3*3",
+        "expected": "9"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_basic",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{8}=\\left(\\dfrac12\\right)^{3}$ なので、半減期の 3 倍。",
+        "steps": [
+          "$\\dfrac{1}{8}=\\left(\\dfrac12\\right)^3$。",
+          "$t=3\\times3=9$ 年。"
+        ],
+        "alternatives": [
+          "半減期ごとの残りの割合を表にして（$1,\\ \\dfrac12,\\ \\dfrac14,\\cdots$）たどってもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "指数の関係を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{1}{8}$ の分母に半減期をかける。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q017",
+      "number": "A-17",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "半減期 30 日の放射性同位体の原子核が、はじめ $4.0\\times10^{20}$ 個ある。90 日後に崩壊せずに残っている原子核は何個か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$5.0\\times10^{19}$",
+        "unit": "個"
+      },
+      "explanation": "$N=N_0\\left(\\dfrac12\\right)^{\\frac{t}{T}}$。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(400000000000000000000)/2**3",
+        "expected": "50000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_basic",
+      "explanation_detail": {
+        "approach": "半減期の回数だけ半分にする。",
+        "steps": [
+          "$\\dfrac{t}{T}=3$。",
+          "$N=4.0\\times10^{20}\\times\\left(\\dfrac12\\right)^3=5.0\\times10^{19}$ 個。"
+        ],
+        "alternatives": [
+          "崩壊した数（$N_0-N$）を求めて、はじめの数から引いても同じ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "半減期の式を用いている",
+            "points": 1
+          },
+          {
+            "point": "値が正しい",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$N_0\\times\\dfrac{1}{4}$ のように割る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q018",
+      "number": "A-18",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "原子核の質量について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "原子核の質量は、陽子と中性子の質量の和より大きい"
+        },
+        {
+          "label": "イ",
+          "text": "質量欠損はエネルギーに変わることはない"
+        },
+        {
+          "label": "ウ",
+          "text": "原子核の質量は、陽子と中性子の質量の和にちょうど等しい"
+        },
+        {
+          "label": "エ",
+          "text": "原子核の質量は、それを構成する陽子と中性子の質量の和より小さい"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "正しいのは「原子核の質量は、それを構成する陽子と中性子の質量の和より小さい」。質量欠損があり、和より小さい。その差が結合エネルギーに対応する。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-concept_mc",
+      "explanation_detail": {
+        "approach": "光子1個・電子1個・原子核1個といった「ひとつぶ」の単位で起こることと、その数（強さ・量）を区別して判断する。",
+        "steps": [
+          "各選択肢を、光電方程式・物質波の式・崩壊の規則・半減期の定義に照らして確認する。",
+          "正しいのは「原子核の質量は、それを構成する陽子と中性子の質量の和より小さい」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいとすると、観測される実験結果がどう変わるかを考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "核子が結合するとエネルギーを放出するので、質量は減る。",
+          "misconception": "質量とエネルギーの関係の誤解"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "$E=\\Delta mc^2$ により、質量とエネルギーは等価である。",
+          "misconception": "質量とエネルギーの等価性の無理解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "質量欠損があり、和より小さい。その差が結合エネルギーに対応する。",
+          "misconception": "質量欠損の見落とし"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q019",
+      "number": "A-19",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "光電効果について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "光を当ててから電子が飛び出すまでに、エネルギーをためる時間が必要である"
+        },
+        {
+          "label": "イ",
+          "text": "光を強くすると、飛び出す電子の運動エネルギーの最大値が大きくなる"
+        },
+        {
+          "label": "ウ",
+          "text": "仕事関数は当てる光の振動数によって変わる"
+        },
+        {
+          "label": "エ",
+          "text": "当てる光の振動数が限界振動数より小さいと、光をどれだけ強くしても電子は飛び出さない"
+        }
+      ],
+      "answer": {
+        "value": "エ"
+      },
+      "explanation": "正しいのは「当てる光の振動数が限界振動数より小さいと、光をどれだけ強くしても電子は飛び出さない」。最大運動エネルギーは振動数で決まり、光の強さによらない。強くすると電子の数が増える。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-concept_mc",
+      "explanation_detail": {
+        "approach": "光子1個・電子1個・原子核1個といった「ひとつぶ」の単位で起こることと、その数（強さ・量）を区別して判断する。",
+        "steps": [
+          "各選択肢を、光電方程式・物質波の式・崩壊の規則・半減期の定義に照らして確認する。",
+          "正しいのは「当てる光の振動数が限界振動数より小さいと、光をどれだけ強くしても電子は飛び出さない」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいとすると、観測される実験結果がどう変わるかを考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "光子1個のエネルギーを電子が一度に受け取るので、光を当てるとすぐに飛び出す。",
+          "misconception": "波動説による誤解"
+        },
+        {
+          "label": "イ",
+          "why_wrong": "最大運動エネルギーは振動数で決まり、光の強さによらない。強くすると電子の数が増える。",
+          "misconception": "光の強さと光子のエネルギーの混同"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "仕事関数は金属の種類で決まる定数。",
+          "misconception": "仕事関数の意味の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q020",
+      "number": "A-20",
+      "section": "LV-A",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "multiple_choice",
+      "stem": "半減期について正しいものを選びなさい。",
+      "choices": [
+        {
+          "label": "ア",
+          "text": "半減期の2倍の時間がたつと、すべて崩壊する"
+        },
+        {
+          "label": "イ",
+          "text": "半減期の2倍の時間がたつと、はじめの $\\dfrac14$ が残る"
+        },
+        {
+          "label": "ウ",
+          "text": "温度を上げると半減期は短くなる"
+        },
+        {
+          "label": "エ",
+          "text": "原子核の数が多いほど半減期は長い"
+        }
+      ],
+      "answer": {
+        "value": "イ"
+      },
+      "explanation": "正しいのは「半減期の2倍の時間がたつと、はじめの $\\dfrac14$ が残る」。半減期ごとに「残りの」半分が崩壊するので、2倍の時間では $\\dfrac14$ が残る。",
+      "scoring": {
+        "points": 2,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "exercise_level": "basic_check",
+      "perspectives": [
+        "concept",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-concept_mc",
+      "explanation_detail": {
+        "approach": "光子1個・電子1個・原子核1個といった「ひとつぶ」の単位で起こることと、その数（強さ・量）を区別して判断する。",
+        "steps": [
+          "各選択肢を、光電方程式・物質波の式・崩壊の規則・半減期の定義に照らして確認する。",
+          "正しいのは「半減期の2倍の時間がたつと、はじめの $\\dfrac14$ が残る」。"
+        ],
+        "alternatives": [
+          "誤りの選択肢が正しいとすると、観測される実験結果がどう変わるかを考えて消去する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "判断の根拠を確認している",
+            "points": 1
+          },
+          {
+            "point": "正しい選択肢を選んでいる",
+            "points": 1
+          }
+        ]
+      },
+      "distractor_analysis": [
+        {
+          "label": "ア",
+          "why_wrong": "半減期ごとに「残りの」半分が崩壊するので、2倍の時間では $\\dfrac14$ が残る。",
+          "misconception": "線形減少の誤解"
+        },
+        {
+          "label": "ウ",
+          "why_wrong": "半減期は原子核の性質で決まり、温度や圧力、化学的状態によらない。",
+          "misconception": "化学反応との混同"
+        },
+        {
+          "label": "エ",
+          "why_wrong": "半減期は原子核の種類で決まり、数によらない。",
+          "misconception": "半減期の決まり方の誤解"
+        }
+      ],
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q021",
+      "number": "B-01",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある金属に振動数 $\\nu$ の光を当て、飛び出す電子の運動エネルギーの最大値 $K$ を調べたところ、図のような直線のグラフが得られた。図の直線は、$K$ 軸（単位 $10^{-19}\\,\\mathrm{J}$）を $-3.3$ で、$\\nu$ 軸（単位 $10^{14}\\,\\mathrm{Hz}$）を 5 で切る。図からこの金属の限界振動数は何 Hz か。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "光電子の運動エネルギーの最大値 K〔×10⁻¹⁹ J〕と振動数 ν〔×10¹⁴ Hz〕の関係。直線は縦軸を −3.3、横軸を 5 で切る",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 236 230.8\" width=\"236\" height=\"230.8\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"216.8\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"40\" y1=\"216.8\" x2=\"40\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"66\" y1=\"216.8\" x2=\"66\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"92\" y1=\"216.8\" x2=\"92\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"118\" y1=\"216.8\" x2=\"118\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"144\" y1=\"216.8\" x2=\"144\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"170\" y1=\"216.8\" x2=\"170\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"196\" y1=\"216.8\" x2=\"196\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"222\" y1=\"216.8\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"196\" x2=\"222\" y2=\"196\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"170\" x2=\"222\" y2=\"170\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"144\" x2=\"222\" y2=\"144\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"222\" y2=\"118\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"92\" x2=\"222\" y2=\"92\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"66\" x2=\"222\" y2=\"66\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"40\" x2=\"222\" y2=\"40\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"228\" y2=\"118\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"216.8\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"224\" y=\"131\" font-style=\"italic\">ν</text><text x=\"19\" y=\"12\" font-style=\"italic\">K</text><text x=\"3\" y=\"130\">O</text><text x=\"37\" y=\"130\" font-size=\"8\" fill=\"#555\">1</text><text x=\"63\" y=\"130\" font-size=\"8\" fill=\"#555\">2</text><text x=\"89\" y=\"130\" font-size=\"8\" fill=\"#555\">3</text><text x=\"115\" y=\"130\" font-size=\"8\" fill=\"#555\">4</text><text x=\"141\" y=\"130\" font-size=\"8\" fill=\"#555\">5</text><text x=\"167\" y=\"130\" font-size=\"8\" fill=\"#555\">6</text><text x=\"193\" y=\"130\" font-size=\"8\" fill=\"#555\">7</text><text x=\"219\" y=\"130\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"199\" font-size=\"8\" fill=\"#555\">-3</text><text x=\"1\" y=\"173\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"1\" y=\"147\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"1\" y=\"95\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"69\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"43\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">4</text><clipPath id=\"c39\"><rect x=\"14\" y=\"14\" width=\"208\" height=\"202.8\"/></clipPath><line x1=\"14\" y1=\"203.8\" x2=\"222\" y2=\"66.52\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c39)\"/><circle cx=\"144\" cy=\"118\" r=\"2.3\" fill=\"#000\"/><text x=\"148\" y=\"114\">ν₀</text></svg>"
+      },
+      "answer": {
+        "value": "$5.0\\times10^{14}$",
+        "unit": "Hz"
+      },
+      "explanation": "横軸との交点が限界振動数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "5*10**14",
+        "expected": "500000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-photo_graph",
+      "explanation_detail": {
+        "approach": "$K=0$ となる振動数＝ちょうど電子が飛び出し始める振動数。",
+        "steps": [
+          "$K=0$ の点を読む。",
+          "$\\nu_0=5\\times10^{14}\\,\\mathrm{Hz}$。"
+        ],
+        "alternatives": [
+          "$\\nu_0=\\dfrac{W}{h}$ で計算して確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "横軸との交点を読んでいる",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "縦軸切片を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q022",
+      "number": "B-02",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある金属に振動数 $\\nu$ の光を当て、飛び出す電子の運動エネルギーの最大値 $K$ を調べたところ、図のような直線のグラフが得られた。図の直線は、$K$ 軸（単位 $10^{-19}\\,\\mathrm{J}$）を $-4.62$ で、$\\nu$ 軸（単位 $10^{14}\\,\\mathrm{Hz}$）を 7 で切る。図のグラフからプランク定数を求めると何 J·s か。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "光電子の運動エネルギーの最大値 K〔×10⁻¹⁹ J〕と振動数 ν〔×10¹⁴ Hz〕の関係。直線は縦軸を −4.62、横軸を 7 で切る",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 288 265.12\" width=\"288\" height=\"265.12\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"251.12\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"40\" y1=\"251.12\" x2=\"40\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"66\" y1=\"251.12\" x2=\"66\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"92\" y1=\"251.12\" x2=\"92\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"118\" y1=\"251.12\" x2=\"118\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"144\" y1=\"251.12\" x2=\"144\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"170\" y1=\"251.12\" x2=\"170\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"196\" y1=\"251.12\" x2=\"196\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"222\" y1=\"251.12\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"248\" y1=\"251.12\" x2=\"248\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"274\" y1=\"251.12\" x2=\"274\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"248\" x2=\"274\" y2=\"248\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"222\" x2=\"274\" y2=\"222\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"196\" x2=\"274\" y2=\"196\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"170\" x2=\"274\" y2=\"170\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"144\" x2=\"274\" y2=\"144\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"274\" y2=\"118\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"92\" x2=\"274\" y2=\"92\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"66\" x2=\"274\" y2=\"66\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"40\" x2=\"274\" y2=\"40\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"274\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"280\" y2=\"118\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"251.12\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"276\" y=\"131\" font-style=\"italic\">ν</text><text x=\"19\" y=\"12\" font-style=\"italic\">K</text><text x=\"3\" y=\"130\">O</text><text x=\"37\" y=\"130\" font-size=\"8\" fill=\"#555\">1</text><text x=\"63\" y=\"130\" font-size=\"8\" fill=\"#555\">2</text><text x=\"89\" y=\"130\" font-size=\"8\" fill=\"#555\">3</text><text x=\"115\" y=\"130\" font-size=\"8\" fill=\"#555\">4</text><text x=\"141\" y=\"130\" font-size=\"8\" fill=\"#555\">5</text><text x=\"167\" y=\"130\" font-size=\"8\" fill=\"#555\">6</text><text x=\"193\" y=\"130\" font-size=\"8\" fill=\"#555\">7</text><text x=\"219\" y=\"130\" font-size=\"8\" fill=\"#555\">8</text><text x=\"245\" y=\"130\" font-size=\"8\" fill=\"#555\">9</text><text x=\"271\" y=\"130\" font-size=\"8\" fill=\"#555\">10</text><text x=\"1\" y=\"251\" font-size=\"8\" fill=\"#555\">-5</text><text x=\"1\" y=\"225\" font-size=\"8\" fill=\"#555\">-4</text><text x=\"1\" y=\"199\" font-size=\"8\" fill=\"#555\">-3</text><text x=\"1\" y=\"173\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"1\" y=\"147\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"1\" y=\"95\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"69\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"43\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">4</text><clipPath id=\"c47\"><rect x=\"14\" y=\"14\" width=\"260\" height=\"237.12\"/></clipPath><line x1=\"14\" y1=\"238.12\" x2=\"274\" y2=\"66.52\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c47)\"/><circle cx=\"196\" cy=\"118\" r=\"2.3\" fill=\"#000\"/><text x=\"200\" y=\"114\">ν₀</text></svg>"
+      },
+      "answer": {
+        "value": "$6.6\\times10^{-34}$",
+        "unit": "J·s"
+      },
+      "explanation": "直線の傾きがプランク定数。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(231/50)*10**(-19)/(7*10**14)",
+        "expected": "33/50000000000000000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-photo_graph",
+      "explanation_detail": {
+        "approach": "傾き＝縦の変化÷横の変化。$\\nu_0$ から 0 まで戻ると $K$ は $W$ だけ下がる。",
+        "steps": [
+          "傾き $=\\dfrac{0-(-4.62\\times10^{-19})}{7\\times10^{14}-0}$。",
+          "$h\\fallingdotseq6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$。"
+        ],
+        "alternatives": [
+          "別の金属で実験しても傾きは同じになる（直線が平行移動するだけ）ことを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "傾きがプランク定数であることを用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "傾きの単位の指数を誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q023",
+      "number": "B-03",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある金属に振動数 $\\nu$ の光を当て、飛び出す電子の運動エネルギーの最大値 $K$ を調べたところ、図のような直線のグラフが得られた。図の直線は、$K$ 軸（単位 $10^{-19}\\,\\mathrm{J}$）を $-2.64$ で、$\\nu$ 軸（単位 $10^{14}\\,\\mathrm{Hz}$）を 4 で切る。図の金属に振動数 $8\\times10^{14}\\,\\mathrm{Hz}$ の光を当てたとき、飛び出す電子の運動エネルギーの最大値は何 J か。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "光電子の運動エネルギーの最大値 K〔×10⁻¹⁹ J〕と振動数 ν〔×10¹⁴ Hz〕の関係。直線は縦軸を −2.64、横軸を 4 で切る",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 236 213.64\" width=\"236\" height=\"213.64\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"199.64\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"40\" y1=\"199.64\" x2=\"40\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"66\" y1=\"199.64\" x2=\"66\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"92\" y1=\"199.64\" x2=\"92\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"118\" y1=\"199.64\" x2=\"118\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"144\" y1=\"199.64\" x2=\"144\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"170\" y1=\"199.64\" x2=\"170\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"196\" y1=\"199.64\" x2=\"196\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"222\" y1=\"199.64\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"196\" x2=\"222\" y2=\"196\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"170\" x2=\"222\" y2=\"170\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"144\" x2=\"222\" y2=\"144\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"222\" y2=\"118\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"92\" x2=\"222\" y2=\"92\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"66\" x2=\"222\" y2=\"66\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"40\" x2=\"222\" y2=\"40\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"228\" y2=\"118\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"199.64\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"224\" y=\"131\" font-style=\"italic\">ν</text><text x=\"19\" y=\"12\" font-style=\"italic\">K</text><text x=\"3\" y=\"130\">O</text><text x=\"37\" y=\"130\" font-size=\"8\" fill=\"#555\">1</text><text x=\"63\" y=\"130\" font-size=\"8\" fill=\"#555\">2</text><text x=\"89\" y=\"130\" font-size=\"8\" fill=\"#555\">3</text><text x=\"115\" y=\"130\" font-size=\"8\" fill=\"#555\">4</text><text x=\"141\" y=\"130\" font-size=\"8\" fill=\"#555\">5</text><text x=\"167\" y=\"130\" font-size=\"8\" fill=\"#555\">6</text><text x=\"193\" y=\"130\" font-size=\"8\" fill=\"#555\">7</text><text x=\"219\" y=\"130\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"199\" font-size=\"8\" fill=\"#555\">-3</text><text x=\"1\" y=\"173\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"1\" y=\"147\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"1\" y=\"95\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"69\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"43\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">4</text><clipPath id=\"c39\"><rect x=\"14\" y=\"14\" width=\"208\" height=\"185.64\"/></clipPath><line x1=\"14\" y1=\"186.64\" x2=\"222\" y2=\"49.36\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c39)\"/><circle cx=\"118\" cy=\"118\" r=\"2.3\" fill=\"#000\"/><text x=\"122\" y=\"114\">ν₀</text></svg>"
+      },
+      "answer": {
+        "value": "$2.6\\times10^{-19}$",
+        "unit": "J"
+      },
+      "explanation": "直線の式 $K=h(\\nu-\\nu_0)$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(66/25)*10**(-19)/(4*10**14)*8*10**14-(66/25)*10**(-19)",
+        "expected": "33/125000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-photo_graph",
+      "explanation_detail": {
+        "approach": "傾き $h$ と限界振動数から、$K=h(\\nu-\\nu_0)$ で求める。",
+        "steps": [
+          "$h=\\dfrac{2.64\\times10^{-19}}{4\\times10^{14}}$。",
+          "$K=h(8-4)\\times10^{14}\\fallingdotseq2.6\\times10^{-19}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "グラフ上で直線を延長し、$\\nu=8$ の位置の $K$ を比例で読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$h\\nu$ をそのまま答える（仕事関数を引き忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q024",
+      "number": "B-04",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある金属に振動数 $\\nu$ の光を当て、飛び出す電子の運動エネルギーの最大値 $K$ を調べたところ、図のような直線のグラフが得られた。図の直線は、$K$ 軸（単位 $10^{-19}\\,\\mathrm{J}$）を $-1.98$ で、$\\nu$ 軸（単位 $10^{14}\\,\\mathrm{Hz}$）を 3 で切る。図の金属に振動数 $6\\times10^{14}\\,\\mathrm{Hz}$ の光を当てたとき、飛び出す電子の運動エネルギーの最大値は何 J か。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "光電子の運動エネルギーの最大値 K〔×10⁻¹⁹ J〕と振動数 ν〔×10¹⁴ Hz〕の関係。直線は縦軸を −1.98、横軸を 3 で切る",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 236 196.48\" width=\"236\" height=\"196.48\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ar\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"14\" y1=\"182.48\" x2=\"14\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"40\" y1=\"182.48\" x2=\"40\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"66\" y1=\"182.48\" x2=\"66\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"92\" y1=\"182.48\" x2=\"92\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"118\" y1=\"182.48\" x2=\"118\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"144\" y1=\"182.48\" x2=\"144\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"170\" y1=\"182.48\" x2=\"170\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"196\" y1=\"182.48\" x2=\"196\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"222\" y1=\"182.48\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"170\" x2=\"222\" y2=\"170\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"144\" x2=\"222\" y2=\"144\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"222\" y2=\"118\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"92\" x2=\"222\" y2=\"92\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"66\" x2=\"222\" y2=\"66\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"40\" x2=\"222\" y2=\"40\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"14\" x2=\"222\" y2=\"14\" stroke=\"#ddd\" stroke-width=\"0.6\"/><line x1=\"14\" y1=\"118\" x2=\"228\" y2=\"118\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><line x1=\"14\" y1=\"182.48\" x2=\"14\" y2=\"8\" stroke=\"#000\" stroke-width=\"1\" marker-end=\"url(#ar)\"/><text x=\"224\" y=\"131\" font-style=\"italic\">ν</text><text x=\"19\" y=\"12\" font-style=\"italic\">K</text><text x=\"3\" y=\"130\">O</text><text x=\"37\" y=\"130\" font-size=\"8\" fill=\"#555\">1</text><text x=\"63\" y=\"130\" font-size=\"8\" fill=\"#555\">2</text><text x=\"89\" y=\"130\" font-size=\"8\" fill=\"#555\">3</text><text x=\"115\" y=\"130\" font-size=\"8\" fill=\"#555\">4</text><text x=\"141\" y=\"130\" font-size=\"8\" fill=\"#555\">5</text><text x=\"167\" y=\"130\" font-size=\"8\" fill=\"#555\">6</text><text x=\"193\" y=\"130\" font-size=\"8\" fill=\"#555\">7</text><text x=\"219\" y=\"130\" font-size=\"8\" fill=\"#555\">8</text><text x=\"1\" y=\"173\" font-size=\"8\" fill=\"#555\">-2</text><text x=\"1\" y=\"147\" font-size=\"8\" fill=\"#555\">-1</text><text x=\"1\" y=\"95\" font-size=\"8\" fill=\"#555\">1</text><text x=\"1\" y=\"69\" font-size=\"8\" fill=\"#555\">2</text><text x=\"1\" y=\"43\" font-size=\"8\" fill=\"#555\">3</text><text x=\"1\" y=\"17\" font-size=\"8\" fill=\"#555\">4</text><clipPath id=\"c37\"><rect x=\"14\" y=\"14\" width=\"208\" height=\"168.48\"/></clipPath><line x1=\"14\" y1=\"169.48\" x2=\"222\" y2=\"32.2\" stroke=\"#1f4e79\" stroke-width=\"1.5\" clip-path=\"url(#c37)\"/><circle cx=\"92\" cy=\"118\" r=\"2.3\" fill=\"#000\"/><text x=\"96\" y=\"114\">ν₀</text></svg>"
+      },
+      "answer": {
+        "value": "$2.0\\times10^{-19}$",
+        "unit": "J"
+      },
+      "explanation": "直線の式 $K=h(\\nu-\\nu_0)$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(99/50)*10**(-19)/(3*10**14)*6*10**14-(99/50)*10**(-19)",
+        "expected": "99/500000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-photo_graph",
+      "explanation_detail": {
+        "approach": "傾き $h$ と限界振動数から、$K=h(\\nu-\\nu_0)$ で求める。",
+        "steps": [
+          "$h=\\dfrac{1.98\\times10^{-19}}{3\\times10^{14}}$。",
+          "$K=h(6-3)\\times10^{14}\\fallingdotseq2.0\\times10^{-19}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "グラフ上で直線を延長し、$\\nu=6$ の位置の $K$ を比例で読み取る。"
+        ],
+        "partial_credit": [
+          {
+            "point": "直線の式を立てている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$h\\nu$ をそのまま答える（仕事関数を引き忘れる）。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q025",
+      "number": "B-05",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "波長 $1.0\\times10^{-10}\\,\\mathrm{m}$ の X 線を結晶に当てたところ、結晶面と $30^\\circ$ の角をなす方向で1次の強い反射が観測された。結晶面の間隔は何 m か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.0\\times10^{-10}$",
+        "unit": "m"
+      },
+      "explanation": "$2d\\sin\\theta=\\lambda$ より $d=\\dfrac{\\lambda}{2\\sin\\theta}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "(1/10000000000)/(2*sin(deg(30)))",
+        "expected": "1/10000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U05-bragg",
+      "related_units": [
+        "HS-PHY-U03"
+      ],
+      "explanation_detail": {
+        "approach": "ブラッグの条件を $d$ について解く。",
+        "steps": [
+          "$2d\\sin30^\\circ=\\lambda$。",
+          "$d=\\lambda=1.0\\times10^{-10}\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "求めた間隔が原子の大きさ程度（$10^{-10}\\,\\mathrm{m}$）であることで答えの妥当性を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "条件を変形している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\sin30^\\circ$ を 1 とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q026",
+      "number": "B-06",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "電圧 400 V で加速した電子線を、結晶面の間隔が $3.0\\times10^{-10}\\,\\mathrm{m}$ の結晶に当てた。1次の強い反射が起こる方向と結晶面のなす角を $\\theta$ とするとき、$\\sin\\theta$ の値を求めなさい。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。電子の質量を $9.1\\times10^{-31}\\,\\mathrm{kg}$ とする。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "0.10"
+      },
+      "explanation": "電子の物質波の波長を求め、ブラッグの条件に代入する。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)/sqrt(2*(91/100000000000000000000000000000000)*(1/6250000000000000000)*400)/(2*(3/10000000000))",
+        "expected": "11*sqrt(182)/1456",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U05-bragg",
+      "related_units": [
+        "HS-PHY-U03"
+      ],
+      "explanation_detail": {
+        "approach": "電子線の回折は物質波の干渉。波長 $\\dfrac{h}{\\sqrt{2meV}}$ を求めてから X 線と同じ条件を使う。",
+        "steps": [
+          "$\\lambda=\\dfrac{h}{\\sqrt{2meV}}\\fallingdotseq6.1\\times10^{-11}\\,\\mathrm{m}$。",
+          "$\\sin\\theta=\\dfrac{\\lambda}{2d}\\fallingdotseq0.10$。"
+        ],
+        "alternatives": [
+          "電子線と X 線で同じ回折像が得られる（デビッソン・ジャーマーの実験など）ことが、電子の波動性の証拠になったことと結びつける。"
+        ],
+        "partial_credit": [
+          {
+            "point": "物質波の波長を求めている",
+            "points": 2
+          },
+          {
+            "point": "ブラッグの条件で値を求めている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "電子は粒子なので回折しないと考える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q027",
+      "number": "B-07",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "結晶面の間隔が $3.0\\times10^{-10}\\,\\mathrm{m}$ の結晶に X 線を当てたところ、結晶面と $30^\\circ$ の角をなす方向で、2 次の強い反射が観測された。X 線の波長は何 m か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.5\\times10^{-10}$",
+        "unit": "m"
+      },
+      "explanation": "ブラッグの条件 $2d\\sin\\theta=n\\lambda$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "2*(3/10000000000)*sin(deg(30))/2",
+        "expected": "3/20000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U05-bragg",
+      "related_units": [
+        "HS-PHY-U03"
+      ],
+      "explanation_detail": {
+        "approach": "隣り合う結晶面で反射する X 線の経路差は $2d\\sin\\theta$。これが波長の整数倍のとき強め合う。",
+        "steps": [
+          "$2d\\sin30^\\circ=2\\times3.0\\times10^{-10}\\times\\dfrac12=3.0\\times10^{-10}$。",
+          "$\\lambda=\\dfrac{3.0\\times10^{-10}}{2}\\fallingdotseq1.5\\times10^{-10}\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "波動で学んだ薄膜の干渉（光路差 $2nd$）と同じく、往復の経路差から条件をつくる考え方であることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "ブラッグの条件を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "経路差を $d\\sin\\theta$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q028",
+      "number": "B-08",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$（$n=1,2,3,\\cdots$）で表される。$n=2$ の状態のエネルギーは何 eV か。",
+      "figure": {
+        "alt": "水素原子のエネルギー準位図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 190\" width=\"300\" height=\"190\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"40\" y1=\"170\" x2=\"220\" y2=\"170\" stroke=\"#000\"/><text x=\"226\" y=\"174\">n=1</text><line x1=\"40\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"#000\"/><text x=\"226\" y=\"84\">n=2</text><line x1=\"40\" y1=\"47\" x2=\"220\" y2=\"47\" stroke=\"#000\"/><text x=\"226\" y=\"51\">n=3</text><line x1=\"40\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#000\"/><text x=\"226\" y=\"39\">n=4</text><line x1=\"40\" y1=\"28\" x2=\"220\" y2=\"28\" stroke=\"#000\"/><text x=\"226\" y=\"32\">n=5</text><line x1=\"40\" y1=\"14\" x2=\"220\" y2=\"14\" stroke=\"#000\" stroke-dasharray=\"4 3\"/><text x=\"226\" y=\"18\">n=∞（0 eV）</text><line x1=\"90\" y1=\"47\" x2=\"90\" y2=\"78\" stroke=\"#c0392b\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"168\" stroke=\"#1f4e79\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"8\" y=\"174\">−13.6</text><text x=\"8\" y=\"84\">−3.4</text><text x=\"8\" y=\"51\">−1.5</text></svg>"
+      },
+      "answer": {
+        "value": "-3.4",
+        "unit": "eV"
+      },
+      "explanation": "$E_n=-\\dfrac{13.6}{n^2}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "-Rational(136,10)/2**2",
+        "expected": "-17/5"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-bohr",
+      "explanation_detail": {
+        "approach": "式に $n$ を代入する。負の値は電子が原子核に束縛されていることを表す。",
+        "steps": [
+          "$E_2=-\\dfrac{13.6}{2^2}$。",
+          "$E_2\\fallingdotseq-3.4\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "$n$ が大きくなるほど 0 に近づく（準位の間隔が狭くなる）ことを準位図で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "式に代入している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$n$ を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q029",
+      "number": "B-09",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$（$n=1,2,3,\\cdots$）で表される。図の準位で、電子が $n=2$ から $n=1$ に移るとき放出される光の波長は何 m か。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "水素原子のエネルギー準位図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 190\" width=\"300\" height=\"190\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"40\" y1=\"170\" x2=\"220\" y2=\"170\" stroke=\"#000\"/><text x=\"226\" y=\"174\">n=1</text><line x1=\"40\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"#000\"/><text x=\"226\" y=\"84\">n=2</text><line x1=\"40\" y1=\"47\" x2=\"220\" y2=\"47\" stroke=\"#000\"/><text x=\"226\" y=\"51\">n=3</text><line x1=\"40\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#000\"/><text x=\"226\" y=\"39\">n=4</text><line x1=\"40\" y1=\"28\" x2=\"220\" y2=\"28\" stroke=\"#000\"/><text x=\"226\" y=\"32\">n=5</text><line x1=\"40\" y1=\"14\" x2=\"220\" y2=\"14\" stroke=\"#000\" stroke-dasharray=\"4 3\"/><text x=\"226\" y=\"18\">n=∞（0 eV）</text><line x1=\"90\" y1=\"47\" x2=\"90\" y2=\"78\" stroke=\"#c0392b\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"168\" stroke=\"#1f4e79\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"8\" y=\"174\">−13.6</text><text x=\"8\" y=\"84\">−3.4</text><text x=\"8\" y=\"51\">−1.5</text></svg>"
+      },
+      "answer": {
+        "value": "$1.2\\times10^{-7}$",
+        "unit": "m"
+      },
+      "explanation": "$\\lambda=\\dfrac{hc}{\\Delta E}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)*3*10**8/((-Rational(136,10)/2**2+Rational(136,10)/1**2)*(1/6250000000000000000))",
+        "expected": "33/272000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-bohr",
+      "explanation_detail": {
+        "approach": "エネルギー差を J に直し、$\\dfrac{hc}{\\lambda}=\\Delta E$ から波長を求める。",
+        "steps": [
+          "$\\Delta E\\fallingdotseq10.2\\,\\mathrm{eV}=1.63\\times10^{-18}\\,\\mathrm{J}$。",
+          "$\\lambda=\\dfrac{hc}{\\Delta E}\\fallingdotseq1.2\\times10^{-7}\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "$n'=2$ への遷移なら可視光（バルマー系列）、$n'=1$ なら紫外線になることで、答えの範囲を確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "エネルギー差を求めている",
+            "points": 2
+          },
+          {
+            "point": "波長が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "eV を J に直し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q030",
+      "number": "B-10",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$（$n=1,2,3,\\cdots$）で表される。$n=3$ の状態にある水素原子を電離させる（電子を $n=\\infty$ の状態まで移す）のに必要な最小のエネルギーは何 eV か。有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "水素原子のエネルギー準位図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 190\" width=\"300\" height=\"190\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"40\" y1=\"170\" x2=\"220\" y2=\"170\" stroke=\"#000\"/><text x=\"226\" y=\"174\">n=1</text><line x1=\"40\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"#000\"/><text x=\"226\" y=\"84\">n=2</text><line x1=\"40\" y1=\"47\" x2=\"220\" y2=\"47\" stroke=\"#000\"/><text x=\"226\" y=\"51\">n=3</text><line x1=\"40\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#000\"/><text x=\"226\" y=\"39\">n=4</text><line x1=\"40\" y1=\"28\" x2=\"220\" y2=\"28\" stroke=\"#000\"/><text x=\"226\" y=\"32\">n=5</text><line x1=\"40\" y1=\"14\" x2=\"220\" y2=\"14\" stroke=\"#000\" stroke-dasharray=\"4 3\"/><text x=\"226\" y=\"18\">n=∞（0 eV）</text><line x1=\"90\" y1=\"47\" x2=\"90\" y2=\"78\" stroke=\"#c0392b\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"168\" stroke=\"#1f4e79\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"8\" y=\"174\">−13.6</text><text x=\"8\" y=\"84\">−3.4</text><text x=\"8\" y=\"51\">−1.5</text></svg>"
+      },
+      "answer": {
+        "value": "1.5",
+        "unit": "eV"
+      },
+      "explanation": "$E_\\infty-E_n=0-E_n$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(136,10)/3**2",
+        "expected": "68/45",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "application"
+      ],
+      "variant_group": "HS-PHY-U05-bohr",
+      "explanation_detail": {
+        "approach": "電離＝電子が原子から離れて $E=0$ の状態になること。",
+        "steps": [
+          "$E_3=-\\dfrac{13.6}{9}\\,\\mathrm{eV}$。",
+          "必要なエネルギー $=0-E_3=1.5\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "準位図で、その準位から一番上の破線（0 eV）までの間隔として読む。"
+        ],
+        "partial_credit": [
+          {
+            "point": "電離の意味を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "負の値のまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q031",
+      "number": "B-11",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "${}^{222}_{86}\\mathrm{Rn}$ は、α崩壊とβ崩壊をくり返して、安定な ${}^{206}_{82}\\mathrm{Pb}$ になる。この間に起こるβ崩壊の回数は何回か。",
+      "answer": {
+        "value": "4",
+        "unit": "回"
+      },
+      "explanation": "質量数の変化からα崩壊の回数、原子番号の変化からβ崩壊の回数を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*(222-206)/4-(86-82)",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-decay_series",
+      "explanation_detail": {
+        "approach": "質量数を変えるのはα崩壊だけ（1回で4減る）。原子番号はα崩壊で2減り、β崩壊で1増える。",
+        "steps": [
+          "質量数：$222-206=16=4\\times4$ より α崩壊 4 回。",
+          "原子番号：$86-2\\times4+x=82$ より β崩壊 $x=4$ 回。"
+        ],
+        "alternatives": [
+          "求めた回数で、質量数 $222-4\\times4=206$、原子番号 $86-2\\times4+4=82$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量数の変化からα崩壊の回数を求めている",
+            "points": 2
+          },
+          {
+            "point": "原子番号の変化を正しく式にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "β崩壊で原子番号が減るとする。",
+          "α崩壊で原子番号が4減るとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q032",
+      "number": "B-12",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "${}^{238}_{92}\\mathrm{U}$ は、α崩壊とβ崩壊をくり返して、安定な ${}^{206}_{82}\\mathrm{Pb}$ になる。この間に起こるβ崩壊の回数は何回か。",
+      "answer": {
+        "value": "6",
+        "unit": "回"
+      },
+      "explanation": "質量数の変化からα崩壊の回数、原子番号の変化からβ崩壊の回数を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*(238-206)/4-(92-82)",
+        "expected": "6"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-decay_series",
+      "explanation_detail": {
+        "approach": "質量数を変えるのはα崩壊だけ（1回で4減る）。原子番号はα崩壊で2減り、β崩壊で1増える。",
+        "steps": [
+          "質量数：$238-206=32=4\\times8$ より α崩壊 8 回。",
+          "原子番号：$92-2\\times8+x=82$ より β崩壊 $x=6$ 回。"
+        ],
+        "alternatives": [
+          "求めた回数で、質量数 $238-4\\times8=206$、原子番号 $92-2\\times8+6=82$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量数の変化からα崩壊の回数を求めている",
+            "points": 2
+          },
+          {
+            "point": "原子番号の変化を正しく式にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "β崩壊で原子番号が減るとする。",
+          "α崩壊で原子番号が4減るとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q033",
+      "number": "B-13",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "${}^{226}_{88}\\mathrm{Ra}$ は、α崩壊とβ崩壊をくり返して、安定な ${}^{206}_{82}\\mathrm{Pb}$ になる。この間に起こるβ崩壊の回数は何回か。",
+      "answer": {
+        "value": "4",
+        "unit": "回"
+      },
+      "explanation": "質量数の変化からα崩壊の回数、原子番号の変化からβ崩壊の回数を決める。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "2*(226-206)/4-(88-82)",
+        "expected": "4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-decay_series",
+      "explanation_detail": {
+        "approach": "質量数を変えるのはα崩壊だけ（1回で4減る）。原子番号はα崩壊で2減り、β崩壊で1増える。",
+        "steps": [
+          "質量数：$226-206=20=4\\times5$ より α崩壊 5 回。",
+          "原子番号：$88-2\\times5+x=82$ より β崩壊 $x=4$ 回。"
+        ],
+        "alternatives": [
+          "求めた回数で、質量数 $226-4\\times5=206$、原子番号 $88-2\\times5+4=82$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "質量数の変化からα崩壊の回数を求めている",
+            "points": 2
+          },
+          {
+            "point": "原子番号の変化を正しく式にしている",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "β崩壊で原子番号が減るとする。",
+          "α崩壊で原子番号が4減るとする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q034",
+      "number": "B-14",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 $1.0\\times10^{-28}\\,\\mathrm{kg}$ に相当するエネルギーは何 J か。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$9.0\\times10^{-12}$",
+        "unit": "J"
+      },
+      "explanation": "$E=mc^2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(1/10000000000000000000000000000)*(3*10**8)**2",
+        "expected": "9/1000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U05-mass_energy",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "質量とエネルギーの等価性。光の速さの2乗が非常に大きいので、わずかな質量でも莫大なエネルギーになる。",
+        "steps": [
+          "$E=mc^2=1.0\\times10^{-28}\\times(3.0\\times10^8)^2$。",
+          "$E=9.0\\times10^{-12}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "$c^2=9.0\\times10^{16}\\,\\mathrm{m^2/s^2}$ を先に計算しておくと指数の扱いが楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$E=mc^2$ を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$c$ を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q035",
+      "number": "B-15",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 $2.0\\times10^{-6}\\,\\mathrm{kg}$ に相当するエネルギーは何 J か。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$1.8\\times10^{11}$",
+        "unit": "J"
+      },
+      "explanation": "$E=mc^2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(1/500000)*(3*10**8)**2",
+        "expected": "180000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U05-mass_energy",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "質量とエネルギーの等価性。光の速さの2乗が非常に大きいので、わずかな質量でも莫大なエネルギーになる。",
+        "steps": [
+          "$E=mc^2=2.0\\times10^{-6}\\times(3.0\\times10^8)^2$。",
+          "$E=1.8\\times10^{11}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "$c^2=9.0\\times10^{16}\\,\\mathrm{m^2/s^2}$ を先に計算しておくと指数の扱いが楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$E=mc^2$ を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$c$ を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q036",
+      "number": "B-16",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "質量 $5.0\\times10^{-3}\\,\\mathrm{kg}$ に相当するエネルギーは何 J か。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "$4.5\\times10^{14}$",
+        "unit": "J"
+      },
+      "explanation": "$E=mc^2$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 1
+      },
+      "calc_check": {
+        "expression": "(1/200)*(3*10**8)**2",
+        "expected": "450000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "cross_unit"
+      ],
+      "variant_group": "HS-PHY-U05-mass_energy",
+      "related_units": [
+        "HS-CHEB-U01"
+      ],
+      "explanation_detail": {
+        "approach": "質量とエネルギーの等価性。光の速さの2乗が非常に大きいので、わずかな質量でも莫大なエネルギーになる。",
+        "steps": [
+          "$E=mc^2=5.0\\times10^{-3}\\times(3.0\\times10^8)^2$。",
+          "$E=4.5\\times10^{14}\\,\\mathrm{J}$。"
+        ],
+        "alternatives": [
+          "$c^2=9.0\\times10^{16}\\,\\mathrm{m^2/s^2}$ を先に計算しておくと指数の扱いが楽になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "$E=mc^2$ を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$c$ を2乗し忘れる。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q037",
+      "number": "B-17",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "同じ数の原子核 A（半減期 2 日）と B（半減期 4 日）がある。8 日後に残っている A の数は、B の数の何倍か。小数で答えなさい。",
+      "answer": {
+        "value": "0.25",
+        "unit": "倍"
+      },
+      "explanation": "それぞれ $\\left(\\dfrac12\\right)^{\\frac{t}{T}}$ を求めて比をとる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)**Rational(8,2)/Rational(1,2)**Rational(8,4)",
+        "expected": "1/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_apps",
+      "explanation_detail": {
+        "approach": "半減期が短いほど速く減る。経過時間がそれぞれの半減期の何倍かを求める。",
+        "steps": [
+          "A：$\\left(\\dfrac12\\right)^{4}$、B：$\\left(\\dfrac12\\right)^{2}$。",
+          "比 $=\\left(\\dfrac12\\right)^{2}=0.25$ 倍。"
+        ],
+        "alternatives": [
+          "減衰のグラフを2本かき、8 日の位置で高さを比べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "それぞれの残りの割合を求めている",
+            "points": 2
+          },
+          {
+            "point": "比が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "半減期の比をそのまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q038",
+      "number": "B-18",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "同じ数の原子核 A（半減期 3 日）と B（半減期 6 日）がある。12 日後に残っている A の数は、B の数の何倍か。小数で答えなさい。",
+      "answer": {
+        "value": "0.25",
+        "unit": "倍"
+      },
+      "explanation": "それぞれ $\\left(\\dfrac12\\right)^{\\frac{t}{T}}$ を求めて比をとる。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "Rational(1,2)**Rational(12,3)/Rational(1,2)**Rational(12,6)",
+        "expected": "1/4"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_apps",
+      "explanation_detail": {
+        "approach": "半減期が短いほど速く減る。経過時間がそれぞれの半減期の何倍かを求める。",
+        "steps": [
+          "A：$\\left(\\dfrac12\\right)^{4}$、B：$\\left(\\dfrac12\\right)^{2}$。",
+          "比 $=\\left(\\dfrac12\\right)^{2}=0.25$ 倍。"
+        ],
+        "alternatives": [
+          "減衰のグラフを2本かき、12 日の位置で高さを比べる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "それぞれの残りの割合を求めている",
+            "points": 2
+          },
+          {
+            "point": "比が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "半減期の比をそのまま答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q039",
+      "number": "B-19",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "半減期 8 年の放射性同位体がある。32 年の間に崩壊した原子核の数は、はじめの数の何 % か。有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "94",
+        "unit": "%"
+      },
+      "explanation": "崩壊した割合 $=1-\\left(\\dfrac12\\right)^{\\frac{t}{T}}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "calc_check": {
+        "expression": "(1-Rational(1,2**4))*100",
+        "expected": "375/4",
+        "target": "intermediate"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_apps",
+      "explanation_detail": {
+        "approach": "問われているのは「残っている数」ではなく「崩壊した数」。",
+        "steps": [
+          "残りの割合 $\\left(\\dfrac12\\right)^4=\\dfrac{1}{16}$。",
+          "崩壊した割合 $=1-\\dfrac{1}{16}=94\\,\\%$。"
+        ],
+        "alternatives": [
+          "半減期ごとに崩壊する数を足し合わせる（$\\dfrac12+\\dfrac14+\\cdots$）と同じ結果になる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "崩壊した割合と残りの割合を区別している",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "残っている割合を答える。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q040",
+      "number": "B-20",
+      "section": "LV-B",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "numeric",
+      "stem": "ある放射性同位体の原子核の数が、60 日で、はじめの $\\dfrac{1}{4}$ になった。この同位体の半減期は何日か。",
+      "answer": {
+        "value": "30",
+        "unit": "日"
+      },
+      "explanation": "$\\left(\\dfrac12\\right)^{\\frac{t}{T}}=\\dfrac{1}{2^k}$ より $T=\\dfrac{t}{k}$。",
+      "scoring": {
+        "points": 4,
+        "method": "exact"
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "calc_check": {
+        "expression": "Rational(60,2)",
+        "expected": "30"
+      },
+      "exercise_level": "standard_practice",
+      "perspectives": [
+        "computation",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-halflife_apps",
+      "explanation_detail": {
+        "approach": "$\\dfrac{1}{4}=\\left(\\dfrac12\\right)^2$ なので、60 日は半減期の 2 倍。",
+        "steps": [
+          "$\\dfrac{t}{T}=2$。",
+          "$T=\\dfrac{60}{2}=30$ 日。"
+        ],
+        "alternatives": [
+          "求めた半減期ごとに半分にしていき、60 日で $\\dfrac{1}{4}$ になることを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "指数の関係を用いている",
+            "points": 2
+          },
+          {
+            "point": "値が正しい",
+            "points": 2
+          }
+        ],
+        "pitfalls": [
+          "$\\dfrac{60}{4}$ とする。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q041",
+      "number": "C-01",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "光電効果の実験で、（ア）限界振動数より小さい振動数の光では、どんなに強い光を当てても電子が飛び出さない、（イ）飛び出す電子の運動エネルギーの最大値は光の強さによらず振動数で決まる、という2つの事実が知られている。それぞれが光を波と考えると説明できない理由と、光子の考えでどう説明されるかを述べなさい。",
+      "answer": {
+        "value": "光を波と考えると、光のエネルギーは振幅（強さ）で決まり、強い光や長い時間の照射で電子は十分なエネルギーを受け取れるはずなので、（ア）振動数が小さくても強い光なら電子は飛び出し、（イ）強い光ほど速い電子が出ると予想され、実験と合わない。光子の考えでは、振動数 $\\nu$ の光はエネルギー $h\\nu$ の光子の集まりで、電子は光子1個のエネルギーを一度に受け取る。（ア）$h\\nu<W$ なら1個の光子では電子は出られず、光子の数（強さ）を増やしても同じ。（イ）電子の運動エネルギーの最大値は $h\\nu-W$ で振動数だけで決まり、強さは光子の数、すなわち飛び出す電子の数を決める。"
+      },
+      "explanation": "波：エネルギーは強さで決まる。光子：エネルギーは振動数で決まり、1対1で受け渡される。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "波動説での予想と実験の食い違いを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "（ア）を光子1個のエネルギーと仕事関数で説明している",
+            "points": 2
+          },
+          {
+            "criterion": "（イ）を光電方程式と、強さ＝光子の数で説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-derive_c",
+      "explanation_detail": {
+        "approach": "「1個の光子」と「1個の電子」のエネルギーのやりとりで考える。",
+        "steps": [
+          "波動説の予想。",
+          "（ア）$h\\nu<W$。",
+          "（イ）$K_{\\max}=h\\nu-W$、強さ＝数。"
+        ],
+        "alternatives": [
+          "弱い光でもすぐに電子が飛び出す（時間の遅れがない）という事実も、波動説では説明しにくい例として加えてよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "波動説",
+            "points": 3
+          },
+          {
+            "point": "（ア）",
+            "points": 2
+          },
+          {
+            "point": "（イ）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "強さと振動数の役割を逆に書く。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q042",
+      "number": "C-02",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "光電管の陰極に振動数 $\\nu$ の光を当て、陽極の電位を陰極より $V$ だけ低くしていくと、$V=V_0$ で光電流が 0 になった。$eV_0=h\\nu-W$ となることを、電子の運動エネルギーと電場がする仕事の関係から説明しなさい。また、この関係を用いて、異なる振動数での阻止電圧の測定からプランク定数を求める方法を述べなさい。",
+      "answer": {
+        "value": "陰極から飛び出した電子のうち、運動エネルギーが最大の電子は $K_{\\max}=h\\nu-W$ をもつ。陽極の電位が $V$ だけ低いと、電子（電荷 $-e$）は陽極に達するまでに電場から $-eV$ の仕事をされ、運動エネルギーが $eV$ 減る。最も速い電子もちょうど陽極に達しなくなるとき光電流が 0 になるので、$eV_0=K_{\\max}=h\\nu-W$。この式は $V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$ と書けるので、いくつかの振動数で阻止電圧を測定して $V_0$−$\\nu$ グラフをかくと直線になり、その傾き $\\dfrac{h}{e}$ に電気素量 $e$ をかければ $h$ が求められる。"
+      },
+      "explanation": "最も速い電子を止める電圧が阻止電圧。グラフの傾きは $\\dfrac{h}{e}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "電場の仕事 $eV$ で運動エネルギーが減ることを述べている",
+            "points": 3
+          },
+          {
+            "criterion": "$eV_0=h\\nu-W$ を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "$V_0$−$\\nu$ グラフの傾きから $h$ を求める方法を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 9
+      },
+      "calc_check": {
+        "expression": "expand((a*v-w)/b)",
+        "expected": "a*v/b-w/b",
+        "compare": "expand",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-derive_c",
+      "related_units": [
+        "HS-PHY-U04"
+      ],
+      "explanation_detail": {
+        "approach": "電磁気で学んだ「電位差 $V$ の間で電荷 $q$ がされる仕事 $qV$」を使う。",
+        "steps": [
+          "最大の運動エネルギー $h\\nu-W$。",
+          "$eV_0=K_{\\max}$。",
+          "$V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$。"
+        ],
+        "alternatives": [
+          "グラフの横軸切片から限界振動数、縦軸切片から $-\\dfrac{W}{e}$（仕事関数）も同時に求められることを付け加える。"
+        ],
+        "partial_credit": [
+          {
+            "point": "仕事",
+            "points": 3
+          },
+          {
+            "point": "導出",
+            "points": 2
+          },
+          {
+            "point": "方法",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "光電流が 0 になるのはすべての電子の運動エネルギーが 0 になるとき、と誤解する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q043",
+      "number": "C-03",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "proof",
+      "stem": "質量 $m$、電気量 $-e$ の電子を、静止状態から電圧 $V$ で加速した。電子の物質波の波長が $\\lambda=\\dfrac{h}{\\sqrt{2meV}}$ となることを示しなさい。また、質量 0.15 kg のボールを 40 m/s で投げたときの物質波の波長を計算し（$h=6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$）、日常の物体で波動性が観測されない理由を述べなさい。",
+      "answer": {
+        "value": "電場がした仕事が運動エネルギーになるので $\\dfrac12mv^2=eV$。運動量は $p=mv=\\sqrt{2m\\cdot\\dfrac12mv^2}=\\sqrt{2meV}$。物質波の波長は $\\lambda=\\dfrac{h}{p}=\\dfrac{h}{\\sqrt{2meV}}$。ボールでは $\\lambda=\\dfrac{6.6\\times10^{-34}}{0.15\\times40}=1.1\\times10^{-34}\\,\\mathrm{m}$。この波長は原子核よりはるかに小さく、どのようなすき間や障害物よりも極端に短いので、回折や干渉は観測できない。"
+      },
+      "explanation": "$p=\\sqrt{2mK}$、$K=eV$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "$\\dfrac12mv^2=eV$ から運動量を表している",
+            "points": 3
+          },
+          {
+            "criterion": "波長の式を導いている",
+            "points": 2
+          },
+          {
+            "criterion": "ボールの波長を計算し、観測されない理由を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 8
+      },
+      "calc_check": {
+        "expression": "Rational(66,10)*10**(-34)/(Rational(15,100)*40)",
+        "expected": "Rational(11,10)*10**(-34)",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "written_reasoning",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-derive_c",
+      "explanation_detail": {
+        "approach": "運動エネルギーと運動量の関係 $K=\\dfrac{p^2}{2m}$ を使う。",
+        "steps": [
+          "$K=eV$。",
+          "$p=\\sqrt{2meV}$。",
+          "$\\lambda=\\dfrac{h}{p}$。"
+        ],
+        "alternatives": [
+          "加速電圧が4倍になると波長が $\\dfrac12$ になることを式から確かめ、電子顕微鏡で高い電圧を使う理由と結びつけてもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "運動量",
+            "points": 3
+          },
+          {
+            "point": "導出",
+            "points": 2
+          },
+          {
+            "point": "ボール",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$p=2meV$ と平方根を落とす。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q044",
+      "number": "C-04",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある金属に振動数の異なる光を当て、阻止電圧 $V_0$ を測定したところ、表の結果（$8\\times10^{14}\\,\\mathrm{Hz}$ で $1.3\\,\\mathrm{V}$、$10\\times10^{14}\\,\\mathrm{Hz}$ で $2.1\\,\\mathrm{V}$、$12\\times10^{14}\\,\\mathrm{Hz}$ で $3.0\\,\\mathrm{V}$）が得られた。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。（1）表の結果から $V_0$ と振動数 $\\nu$ の関係を表すグラフはどのような形になるか、光電方程式をもとに述べなさい。（2）表の1行目と3行目のデータからプランク定数を求めなさい。（3）この金属の仕事関数を eV で求め、（2）とは別の方法（グラフの切片）で求める手順を述べなさい。数値は有効数字2桁で答えなさい。",
+      "table": {
+        "rows": [
+          [
+            "8.0×10¹⁴",
+            "1.3"
+          ],
+          [
+            "10×10¹⁴",
+            "2.1"
+          ],
+          [
+            "12×10¹⁴",
+            "3.0"
+          ]
+        ],
+        "header": [
+          "振動数 ν〔Hz〕",
+          "阻止電圧 V₀〔V〕"
+        ],
+        "caption": "光電効果の測定結果"
+      },
+      "answer": {
+        "value": "（1）$eV_0=h\\nu-W$ より $V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$ なので、傾き $\\dfrac{h}{e}$ の右上がりの直線になる（横軸との交点が限界振動数）。（2）$h=e\\dfrac{\\Delta V_0}{\\Delta\\nu}\\fallingdotseq6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$。（3）$W=h\\nu-eV_0$ に1行目の値を代入して約 2.0 eV。別の方法として、グラフの直線を延長して $\\nu=0$ での縦軸切片 $-\\dfrac{W}{e}$ を読み、符号を変えれば仕事関数（eV 単位）が得られる。"
+      },
+      "explanation": "$V_0$−$\\nu$ グラフは傾き $\\dfrac{h}{e}$ の直線。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）直線になることと傾きの意味を述べている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）2点の傾きからプランク定数を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）仕事関数を求め、切片を用いる方法を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(1/6250000000000000000)*((59/20)-(13/10))/((12-8)*10**14)",
+        "expected": "33/50000000000000000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U05-photo_exp_c",
+      "explanation_detail": {
+        "approach": "光電方程式を $V_0$ について解くと、一次関数の形になる。",
+        "steps": [
+          "$V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$。",
+          "$\\dfrac{\\Delta V_0}{\\Delta\\nu}=\\dfrac{3.0-1.3}{(12-8)\\times10^{14}}$、$h=e\\times$（傾き）。",
+          "$W=h\\nu-eV_0$。"
+        ],
+        "alternatives": [
+          "3点すべてを方眼紙にプロットして最も合う直線を引き、その傾きから $h$ を求めると、測定誤差の影響を小さくできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "傾きに $e$ をかけ忘れる。",
+          "仕事関数を J と eV で混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q045",
+      "number": "C-05",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある金属に振動数の異なる光を当て、阻止電圧 $V_0$ を測定したところ、表の結果（$8\\times10^{14}\\,\\mathrm{Hz}$ で $0.30\\,\\mathrm{V}$、$10\\times10^{14}\\,\\mathrm{Hz}$ で $1.1\\,\\mathrm{V}$、$12\\times10^{14}\\,\\mathrm{Hz}$ で $2.0\\,\\mathrm{V}$）が得られた。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。（1）表の結果から $V_0$ と振動数 $\\nu$ の関係を表すグラフはどのような形になるか、光電方程式をもとに述べなさい。（2）表の1行目と3行目のデータからプランク定数を求めなさい。（3）この金属の仕事関数を eV で求め、（2）とは別の方法（グラフの切片）で求める手順を述べなさい。数値は有効数字2桁で答えなさい。",
+      "table": {
+        "rows": [
+          [
+            "8.0×10¹⁴",
+            "0.30"
+          ],
+          [
+            "10×10¹⁴",
+            "1.1"
+          ],
+          [
+            "12×10¹⁴",
+            "2.0"
+          ]
+        ],
+        "header": [
+          "振動数 ν〔Hz〕",
+          "阻止電圧 V₀〔V〕"
+        ],
+        "caption": "光電効果の測定結果"
+      },
+      "answer": {
+        "value": "（1）$eV_0=h\\nu-W$ より $V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$ なので、傾き $\\dfrac{h}{e}$ の右上がりの直線になる（横軸との交点が限界振動数）。（2）$h=e\\dfrac{\\Delta V_0}{\\Delta\\nu}\\fallingdotseq6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$。（3）$W=h\\nu-eV_0$ に1行目の値を代入して約 3.0 eV。別の方法として、グラフの直線を延長して $\\nu=0$ での縦軸切片 $-\\dfrac{W}{e}$ を読み、符号を変えれば仕事関数（eV 単位）が得られる。"
+      },
+      "explanation": "$V_0$−$\\nu$ グラフは傾き $\\dfrac{h}{e}$ の直線。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）直線になることと傾きの意味を述べている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）2点の傾きからプランク定数を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）仕事関数を求め、切片を用いる方法を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(1/6250000000000000000)*((39/20)-(3/10))/((12-8)*10**14)",
+        "expected": "33/50000000000000000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U05-photo_exp_c",
+      "explanation_detail": {
+        "approach": "光電方程式を $V_0$ について解くと、一次関数の形になる。",
+        "steps": [
+          "$V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$。",
+          "$\\dfrac{\\Delta V_0}{\\Delta\\nu}=\\dfrac{2.0-0.30}{(12-8)\\times10^{14}}$、$h=e\\times$（傾き）。",
+          "$W=h\\nu-eV_0$。"
+        ],
+        "alternatives": [
+          "3点すべてを方眼紙にプロットして最も合う直線を引き、その傾きから $h$ を求めると、測定誤差の影響を小さくできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "傾きに $e$ をかけ忘れる。",
+          "仕事関数を J と eV で混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q046",
+      "number": "C-06",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "ある金属に振動数の異なる光を当て、阻止電圧 $V_0$ を測定したところ、表の結果（$6\\times10^{14}\\,\\mathrm{Hz}$ で $0.48\\,\\mathrm{V}$、$8\\times10^{14}\\,\\mathrm{Hz}$ で $1.3\\,\\mathrm{V}$、$10\\times10^{14}\\,\\mathrm{Hz}$ で $2.1\\,\\mathrm{V}$）が得られた。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。（1）表の結果から $V_0$ と振動数 $\\nu$ の関係を表すグラフはどのような形になるか、光電方程式をもとに述べなさい。（2）表の1行目と3行目のデータからプランク定数を求めなさい。（3）この金属の仕事関数を eV で求め、（2）とは別の方法（グラフの切片）で求める手順を述べなさい。数値は有効数字2桁で答えなさい。",
+      "table": {
+        "rows": [
+          [
+            "6.0×10¹⁴",
+            "0.48"
+          ],
+          [
+            "8.0×10¹⁴",
+            "1.3"
+          ],
+          [
+            "10×10¹⁴",
+            "2.1"
+          ]
+        ],
+        "header": [
+          "振動数 ν〔Hz〕",
+          "阻止電圧 V₀〔V〕"
+        ],
+        "caption": "光電効果の測定結果"
+      },
+      "answer": {
+        "value": "（1）$eV_0=h\\nu-W$ より $V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$ なので、傾き $\\dfrac{h}{e}$ の右上がりの直線になる（横軸との交点が限界振動数）。（2）$h=e\\dfrac{\\Delta V_0}{\\Delta\\nu}\\fallingdotseq6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$。（3）$W=h\\nu-eV_0$ に1行目の値を代入して約 2.0 eV。別の方法として、グラフの直線を延長して $\\nu=0$ での縦軸切片 $-\\dfrac{W}{e}$ を読み、符号を変えれば仕事関数（eV 単位）が得られる。"
+      },
+      "explanation": "$V_0$−$\\nu$ グラフは傾き $\\dfrac{h}{e}$ の直線。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）直線になることと傾きの意味を述べている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）2点の傾きからプランク定数を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）仕事関数を求め、切片を用いる方法を述べている",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 5
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(1/6250000000000000000)*((17/8)-(19/40))/((10-6)*10**14)",
+        "expected": "33/50000000000000000000000000000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "multiple_solutions",
+        "computation",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U05-photo_exp_c",
+      "explanation_detail": {
+        "approach": "光電方程式を $V_0$ について解くと、一次関数の形になる。",
+        "steps": [
+          "$V_0=\\dfrac{h}{e}\\nu-\\dfrac{W}{e}$。",
+          "$\\dfrac{\\Delta V_0}{\\Delta\\nu}=\\dfrac{2.1-0.48}{(10-6)\\times10^{14}}$、$h=e\\times$（傾き）。",
+          "$W=h\\nu-eV_0$。"
+        ],
+        "alternatives": [
+          "3点すべてを方眼紙にプロットして最も合う直線を引き、その傾きから $h$ を求めると、測定誤差の影響を小さくできる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "傾きに $e$ をかけ忘れる。",
+          "仕事関数を J と eV で混同する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q047",
+      "number": "C-07",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$ で表される。水素を放電管に封入して光らせ、回折格子で分光すると、可視光の領域にいくつかの輝線が見えた。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。（1）図のエネルギー準位図で、電子が $n=4$ から $n=2$ に移るとき放出される光子のエネルギー（eV）と光の波長を求めなさい。（2）同じ $n=4$ から $n=1$ に移るときの光は、（1）の光と比べて波長が長いか短いか、理由とともに答えなさい。（3）水素の光が回折格子で連続スペクトルではなく何本かの輝線に分かれる理由を述べなさい。数値は有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "水素原子のエネルギー準位図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 190\" width=\"300\" height=\"190\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"40\" y1=\"170\" x2=\"220\" y2=\"170\" stroke=\"#000\"/><text x=\"226\" y=\"174\">n=1</text><line x1=\"40\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"#000\"/><text x=\"226\" y=\"84\">n=2</text><line x1=\"40\" y1=\"47\" x2=\"220\" y2=\"47\" stroke=\"#000\"/><text x=\"226\" y=\"51\">n=3</text><line x1=\"40\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#000\"/><text x=\"226\" y=\"39\">n=4</text><line x1=\"40\" y1=\"28\" x2=\"220\" y2=\"28\" stroke=\"#000\"/><text x=\"226\" y=\"32\">n=5</text><line x1=\"40\" y1=\"14\" x2=\"220\" y2=\"14\" stroke=\"#000\" stroke-dasharray=\"4 3\"/><text x=\"226\" y=\"18\">n=∞（0 eV）</text><line x1=\"90\" y1=\"47\" x2=\"90\" y2=\"78\" stroke=\"#c0392b\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"168\" stroke=\"#1f4e79\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"8\" y=\"174\">−13.6</text><text x=\"8\" y=\"84\">−3.4</text><text x=\"8\" y=\"51\">−1.5</text></svg>"
+      },
+      "answer": {
+        "value": "（1）$\\Delta E=13.6\\left(\\dfrac14-\\dfrac{1}{16}\\right)\\fallingdotseq2.6\\,\\mathrm{eV}$、$\\lambda=\\dfrac{hc}{\\Delta E}\\fallingdotseq4.9\\times10^{-7}\\,\\mathrm{m}$。（2）短い。$n=1$ への遷移ではエネルギー差が大きく、光子のエネルギー $\\dfrac{hc}{\\lambda}$ が大きいので波長は短い（紫外線）。（3）エネルギー準位がとびとびの値しかとらないので、放出される光子のエネルギー（波長）もとびとびの値に限られ、回折格子では波長ごとに決まった方向にだけ明線ができるから。"
+      },
+      "explanation": "振動数条件 $\\dfrac{hc}{\\lambda}=E_n-E_{n'}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）エネルギー差と波長を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（2）エネルギー差と波長の関係から判断している",
+            "points": 2
+          },
+          {
+            "criterion": "（3）とびとびの準位と回折格子の分光を結びつけて説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)*3*10**8/((51/20)*(1/6250000000000000000))",
+        "expected": "33/68000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-balmer_c",
+      "related_units": [
+        "HS-PHY-U03"
+      ],
+      "explanation_detail": {
+        "approach": "eV を J に直してから波長を計算する。波長はエネルギー差に反比例。",
+        "steps": [
+          "（1）$\\Delta E\\fallingdotseq2.55\\,\\mathrm{eV}=4.08\\times10^{-19}\\,\\mathrm{J}$。",
+          "$\\lambda\\fallingdotseq4.9\\times10^{-7}\\,\\mathrm{m}$。",
+          "（2）$\\Delta E$ 大 → $\\lambda$ 小。"
+        ],
+        "alternatives": [
+          "（1）の波長が可視光（約 $4\\times10^{-7}$〜$7\\times10^{-7}\\,\\mathrm{m}$）の範囲に入ることで、問題文の「可視光の輝線」と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 3
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "上の準位のエネルギーだけで計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q048",
+      "number": "C-08",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$ で表される。水素を放電管に封入して光らせ、回折格子で分光すると、可視光の領域にいくつかの輝線が見えた。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。真空中の光の速さを $3.0\\times10^8\\,\\mathrm{m/s}$ とする。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。（1）図のエネルギー準位図で、電子が $n=5$ から $n=2$ に移るとき放出される光子のエネルギー（eV）と光の波長を求めなさい。（2）同じ $n=5$ から $n=1$ に移るときの光は、（1）の光と比べて波長が長いか短いか、理由とともに答えなさい。（3）水素の光が回折格子で連続スペクトルではなく何本かの輝線に分かれる理由を述べなさい。数値は有効数字2桁で答えなさい。",
+      "figure": {
+        "alt": "水素原子のエネルギー準位図",
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 190\" width=\"300\" height=\"190\" font-family=\"serif\" font-size=\"11\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6 z\" fill=\"#000\"/></marker></defs><line x1=\"40\" y1=\"170\" x2=\"220\" y2=\"170\" stroke=\"#000\"/><text x=\"226\" y=\"174\">n=1</text><line x1=\"40\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"#000\"/><text x=\"226\" y=\"84\">n=2</text><line x1=\"40\" y1=\"47\" x2=\"220\" y2=\"47\" stroke=\"#000\"/><text x=\"226\" y=\"51\">n=3</text><line x1=\"40\" y1=\"35\" x2=\"220\" y2=\"35\" stroke=\"#000\"/><text x=\"226\" y=\"39\">n=4</text><line x1=\"40\" y1=\"28\" x2=\"220\" y2=\"28\" stroke=\"#000\"/><text x=\"226\" y=\"32\">n=5</text><line x1=\"40\" y1=\"14\" x2=\"220\" y2=\"14\" stroke=\"#000\" stroke-dasharray=\"4 3\"/><text x=\"226\" y=\"18\">n=∞（0 eV）</text><line x1=\"90\" y1=\"47\" x2=\"90\" y2=\"78\" stroke=\"#c0392b\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"168\" stroke=\"#1f4e79\" stroke-width=\"1.5\" marker-end=\"url(#ah)\"/><text x=\"8\" y=\"174\">−13.6</text><text x=\"8\" y=\"84\">−3.4</text><text x=\"8\" y=\"51\">−1.5</text></svg>"
+      },
+      "answer": {
+        "value": "（1）$\\Delta E=13.6\\left(\\dfrac14-\\dfrac{1}{25}\\right)\\fallingdotseq2.9\\,\\mathrm{eV}$、$\\lambda=\\dfrac{hc}{\\Delta E}\\fallingdotseq4.3\\times10^{-7}\\,\\mathrm{m}$。（2）短い。$n=1$ への遷移ではエネルギー差が大きく、光子のエネルギー $\\dfrac{hc}{\\lambda}$ が大きいので波長は短い（紫外線）。（3）エネルギー準位がとびとびの値しかとらないので、放出される光子のエネルギー（波長）もとびとびの値に限られ、回折格子では波長ごとに決まった方向にだけ明線ができるから。"
+      },
+      "explanation": "振動数条件 $\\dfrac{hc}{\\lambda}=E_n-E_{n'}$。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）エネルギー差と波長を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（2）エネルギー差と波長の関係から判断している",
+            "points": 2
+          },
+          {
+            "criterion": "（3）とびとびの準位と回折格子の分光を結びつけて説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)*3*10**8/((357/125)*(1/6250000000000000000))",
+        "expected": "33/76160000",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "written_reasoning",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-balmer_c",
+      "related_units": [
+        "HS-PHY-U03"
+      ],
+      "explanation_detail": {
+        "approach": "eV を J に直してから波長を計算する。波長はエネルギー差に反比例。",
+        "steps": [
+          "（1）$\\Delta E\\fallingdotseq2.86\\,\\mathrm{eV}=4.57\\times10^{-19}\\,\\mathrm{J}$。",
+          "$\\lambda\\fallingdotseq4.3\\times10^{-7}\\,\\mathrm{m}$。",
+          "（2）$\\Delta E$ 大 → $\\lambda$ 小。"
+        ],
+        "alternatives": [
+          "（1）の波長が可視光（約 $4\\times10^{-7}$〜$7\\times10^{-7}\\,\\mathrm{m}$）の範囲に入ることで、問題文の「可視光の輝線」と一致することを確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 3
+          },
+          {
+            "point": "（2）",
+            "points": 2
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "上の準位のエネルギーだけで計算する。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q049",
+      "number": "C-09",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "半減期 8 日の放射性同位体がある。（1）24 日後に残っている原子核の数は、はじめの数の何分の1か。（2）残っている数がはじめの $\\dfrac{1}{10}$ になるまでの時間 $t$ を、$\\log_{10}2=0.301$ を用いて求めなさい。（3）（2）の時間は半減期の何倍か。また、$\\dfrac{1}{8}$ と $\\dfrac{1}{16}$ の間にあることを用いて、答えが妥当であることを説明しなさい。（2）は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$\\left(\\dfrac12\\right)^3=\\dfrac{1}{8}$。（2）$\\left(\\dfrac12\\right)^{\\frac{t}{T}}=\\dfrac{1}{10}$ の両辺の常用対数をとると $\\dfrac{t}{T}\\log_{10}2=1$、$t=\\dfrac{T}{0.301}\\fallingdotseq27$ 日。（3）約 3.3 倍。$\\dfrac{1}{8}$ になるのが3倍、$\\dfrac{1}{16}$ になるのが4倍の時間で、$\\dfrac{1}{10}$ はその間にあるので、3倍と4倍の間の 3.3 倍は妥当である。"
+      },
+      "explanation": "指数の式を対数で解く。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）半減期の回数から割合を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）対数を用いて $t$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）倍率を求め、$\\dfrac18$ と $\\dfrac1{16}$ の間にあることで妥当性を説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "8/Rational(301,1000)",
+        "expected": "8000/301",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U05-dating_c",
+      "related_units": [
+        "HS-MATH2-U05"
+      ],
+      "explanation_detail": {
+        "approach": "$\\left(\\dfrac12\\right)^x=\\dfrac{1}{10}$ ⇔ $x\\log_{10}2=1$。",
+        "steps": [
+          "（1）$\\dfrac{24}{8}=3$。",
+          "（2）$\\dfrac{t}{T}=\\dfrac{1}{\\log_{10}2}=\\dfrac{1}{0.301}$。",
+          "（3）$3<3.3<4$。"
+        ],
+        "alternatives": [
+          "$2^{10}=1024\\fallingdotseq10^3$ から $\\log_{10}2\\fallingdotseq0.3$ を確かめ、$\\dfrac{t}{T}\\fallingdotseq\\dfrac{10}{3}$ と概算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$\\left(\\dfrac12\\right)^{t/T}$ を $\\dfrac{t}{2T}$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q050",
+      "number": "C-10",
+      "section": "LV-C",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "半減期 30 年の放射性同位体がある。（1）120 年後に残っている原子核の数は、はじめの数の何分の1か。（2）残っている数がはじめの $\\dfrac{1}{10}$ になるまでの時間 $t$ を、$\\log_{10}2=0.301$ を用いて求めなさい。（3）（2）の時間は半減期の何倍か。また、$\\dfrac{1}{8}$ と $\\dfrac{1}{16}$ の間にあることを用いて、答えが妥当であることを説明しなさい。（2）は有効数字2桁で答えなさい。",
+      "answer": {
+        "value": "（1）$\\left(\\dfrac12\\right)^4=\\dfrac{1}{16}$。（2）$\\left(\\dfrac12\\right)^{\\frac{t}{T}}=\\dfrac{1}{10}$ の両辺の常用対数をとると $\\dfrac{t}{T}\\log_{10}2=1$、$t=\\dfrac{T}{0.301}\\fallingdotseq1.0\\times10^{2}$ 年。（3）約 3.3 倍。$\\dfrac{1}{8}$ になるのが3倍、$\\dfrac{1}{16}$ になるのが4倍の時間で、$\\dfrac{1}{10}$ はその間にあるので、3倍と4倍の間の 3.3 倍は妥当である。"
+      },
+      "explanation": "指数の式を対数で解く。",
+      "scoring": {
+        "points": 8,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "（1）半減期の回数から割合を求めている",
+            "points": 2
+          },
+          {
+            "criterion": "（2）対数を用いて $t$ を求めている",
+            "points": 3
+          },
+          {
+            "criterion": "（3）倍率を求め、$\\dfrac18$ と $\\dfrac1{16}$ の間にあることで妥当性を説明している",
+            "points": 3
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "advanced",
+        "score": 4
+      },
+      "answer_space": {
+        "lines": 10
+      },
+      "calc_check": {
+        "expression": "30/Rational(301,1000)",
+        "expected": "30000/301",
+        "target": "intermediate"
+      },
+      "exercise_level": "thinking_writing",
+      "perspectives": [
+        "cross_unit",
+        "condition_check",
+        "written_reasoning"
+      ],
+      "variant_group": "HS-PHY-U05-dating_c",
+      "related_units": [
+        "HS-MATH2-U05"
+      ],
+      "explanation_detail": {
+        "approach": "$\\left(\\dfrac12\\right)^x=\\dfrac{1}{10}$ ⇔ $x\\log_{10}2=1$。",
+        "steps": [
+          "（1）$\\dfrac{120}{30}=4$。",
+          "（2）$\\dfrac{t}{T}=\\dfrac{1}{\\log_{10}2}=\\dfrac{1}{0.301}$。",
+          "（3）$3<3.3<4$。"
+        ],
+        "alternatives": [
+          "$2^{10}=1024\\fallingdotseq10^3$ から $\\log_{10}2\\fallingdotseq0.3$ を確かめ、$\\dfrac{t}{T}\\fallingdotseq\\dfrac{10}{3}$ と概算してもよい。"
+        ],
+        "partial_credit": [
+          {
+            "point": "（1）",
+            "points": 2
+          },
+          {
+            "point": "（2）",
+            "points": 3
+          },
+          {
+            "point": "（3）",
+            "points": 3
+          }
+        ],
+        "pitfalls": [
+          "$\\left(\\dfrac12\\right)^{t/T}$ を $\\dfrac{t}{2T}$ と誤る。"
+        ]
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q051",
+      "number": "D-01",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "仕事関数 3.0 eV の金属に光子1個のエネルギーが 4.0 eV の光を当てたところ、光電子の運動エネルギーの最大値は 1.0 eV であった。同じ振動数で光の強さを2倍にすると、運動エネルギーの最大値は何 eV になるか。\n［ある生徒の解答］\n光のエネルギーが2倍になるので、運動エネルギーの最大値も2倍の $2.0\\,\\mathrm{eV}$ になる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.0\\,\\mathrm{eV}$（変わらない）"
+      },
+      "explanation": "光の強さは光子の数を決め、光子1個のエネルギーは振動数で決まる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(4)-(3)",
+        "expected": "1",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-err_photo",
+      "explanation_detail": {
+        "approach": "光電方程式に「強さ」が含まれていないことを確認する。",
+        "steps": [
+          "$K_{\\max}=h\\nu-W$ は振動数だけで決まる。",
+          "$K_{\\max}=1.0\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "阻止電圧を測ると、強さを変えても同じ値で光電流が 0 になることが実験で確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "強さ＝光子の数。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "光のエネルギーが2倍になるので、運動エネルギーの最大値も2倍の $2.0\\,\\mathrm{eV}$ になる",
+        "error_step": "強さを2倍にすると電子のエネルギーも2倍になるとした部分",
+        "error_type": "concept",
+        "why_tempting": "光を波と考える日常的な感覚（強い光ほどエネルギーが大きい）から、光子1個のエネルギーと光全体のエネルギーを区別していない。",
+        "correction": "振動数が同じなので光子1個のエネルギーは変わらず、$K_{\\max}=4.0-3.0=1.0\\,\\mathrm{eV}$ のまま。強さ2倍で光電子の数が2倍になる"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q052",
+      "number": "D-02",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "仕事関数 2.3 eV の金属に光子1個のエネルギーが 3.5 eV の光を当てたところ、光電子の運動エネルギーの最大値は 1.2 eV であった。同じ振動数で光の強さを2倍にすると、運動エネルギーの最大値は何 eV になるか。\n［ある生徒の解答］\n光のエネルギーが2倍になるので、運動エネルギーの最大値も2倍の $2.4\\,\\mathrm{eV}$ になる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.2\\,\\mathrm{eV}$（変わらない）"
+      },
+      "explanation": "光の強さは光子の数を決め、光子1個のエネルギーは振動数で決まる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(7/2)-(23/10)",
+        "expected": "6/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-err_photo",
+      "explanation_detail": {
+        "approach": "光電方程式に「強さ」が含まれていないことを確認する。",
+        "steps": [
+          "$K_{\\max}=h\\nu-W$ は振動数だけで決まる。",
+          "$K_{\\max}=1.2\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "阻止電圧を測ると、強さを変えても同じ値で光電流が 0 になることが実験で確かめられる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "強さ＝光子の数。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "光のエネルギーが2倍になるので、運動エネルギーの最大値も2倍の $2.4\\,\\mathrm{eV}$ になる",
+        "error_step": "強さを2倍にすると電子のエネルギーも2倍になるとした部分",
+        "error_type": "concept",
+        "why_tempting": "光を波と考える日常的な感覚（強い光ほどエネルギーが大きい）から、光子1個のエネルギーと光全体のエネルギーを区別していない。",
+        "correction": "振動数が同じなので光子1個のエネルギーは変わらず、$K_{\\max}=3.5-2.3=1.2\\,\\mathrm{eV}$ のまま。強さ2倍で光電子の数が2倍になる"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q053",
+      "number": "D-03",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "仕事関数 2.3 eV の金属の限界振動数を求めなさい。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。電気素量を $1.6\\times10^{-19}\\,\\mathrm{C}$ とする。\n［ある生徒の解答］\n$\\nu_0=\\dfrac{h}{W}=\\dfrac{6.6\\times10^{-34}}{2.3\\times1.6\\times10^{-19}}\\fallingdotseq1.8\\times10^{-15}\\,\\mathrm{Hz}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$5.6\\times10^{14}\\,\\mathrm{Hz}$"
+      },
+      "explanation": "限界振動数の光子のエネルギーが仕事関数に等しい。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "standard",
+        "score": 3
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(23/10)*(1/6250000000000000000)/(33/50000000000000000000000000000000000)",
+        "expected": "18400000000000000/33",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "concept"
+      ],
+      "variant_group": "HS-PHY-U05-err_photo",
+      "explanation_detail": {
+        "approach": "単位で確かめる：$\\dfrac{\\mathrm{J\\cdot s}}{\\mathrm{J}}=\\mathrm{s}$ で振動数（$\\mathrm{s^{-1}}$）にならない。",
+        "steps": [
+          "$h\\nu_0=W$。",
+          "$\\nu_0=\\dfrac{W}{h}\\fallingdotseq5.6\\times10^{14}\\,\\mathrm{Hz}$。"
+        ],
+        "alternatives": [
+          "可視光〜紫外線の振動数（$10^{14}$〜$10^{15}\\,\\mathrm{Hz}$）程度になるはず、という桁の見当で確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "単位で点検する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$\\nu_0=\\dfrac{h}{W}=\\dfrac{6.6\\times10^{-34}}{2.3\\times1.6\\times10^{-19}}\\fallingdotseq1.8\\times10^{-15}\\,\\mathrm{Hz}$",
+        "error_step": "$\\nu_0=\\dfrac{h}{W}$ とした部分",
+        "error_type": "formula",
+        "why_tempting": "$h\\nu_0=W$ を変形するときに分母と分子を取り違えている。",
+        "correction": "$h\\nu_0=W$ より $\\nu_0=\\dfrac{W}{h}=\\dfrac{2.3\\times1.6\\times10^{-19}}{6.6\\times10^{-34}}\\fallingdotseq5.6\\times10^{14}\\,\\mathrm{Hz}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q054",
+      "number": "D-04",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "速さ $2.0\\times10^{6}\\,\\mathrm{m/s}$ の電子の物質波の波長を求めなさい。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。電子の質量を $9.1\\times10^{-31}\\,\\mathrm{kg}$ とする。\n［ある生徒の解答］\n電子の運動エネルギー $K=\\dfrac12mv^2\\fallingdotseq1.8\\times10^{-18}\\,\\mathrm{J}$。$\\lambda=\\dfrac{h}{K}\\fallingdotseq3.6\\times10^{-16}\\,\\mathrm{m}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$3.6\\times10^{-10}\\,\\mathrm{m}$"
+      },
+      "explanation": "物質波の波長は運動量 $p=mv$ で決まる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)/((91/100000000000000000000000000000000)*(2000000))",
+        "expected": "33/91000000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-err_matter",
+      "explanation_detail": {
+        "approach": "単位で確かめる：$\\dfrac{\\mathrm{J\\cdot s}}{\\mathrm{J}}=\\mathrm{s}$ で、長さにならない。",
+        "steps": [
+          "$p=mv\\fallingdotseq1.8\\times10^{-24}\\,\\mathrm{kg\\cdot m/s}$。",
+          "$\\lambda=\\dfrac{h}{p}\\fallingdotseq3.6\\times10^{-10}\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "光子の運動量 $p=\\dfrac{h}{\\lambda}$ と同じ関係を逆に使っている、と対応させて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$p$ と $K$ を区別する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "電子の運動エネルギー $K=\\dfrac12mv^2\\fallingdotseq1.8\\times10^{-18}\\,\\mathrm{J}$。$\\lambda=\\dfrac{h}{K}\\fallingdotseq3.6\\times10^{-16}\\,\\mathrm{m}$",
+        "error_step": "運動量の代わりに運動エネルギーで割った部分",
+        "error_type": "formula",
+        "why_tempting": "粒子の「勢い」として運動エネルギーと運動量を区別せずに使っている。",
+        "correction": "$\\lambda=\\dfrac{h}{mv}=\\dfrac{6.6\\times10^{-34}}{9.1\\times10^{-31}\\times2.0\\times10^{6}}\\fallingdotseq3.6\\times10^{-10}\\,\\mathrm{m}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q055",
+      "number": "D-05",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "速さ $5.0\\times10^{6}\\,\\mathrm{m/s}$ の電子の物質波の波長を求めなさい。プランク定数を $6.6\\times10^{-34}\\,\\mathrm{J\\cdot s}$ とする。電子の質量を $9.1\\times10^{-31}\\,\\mathrm{kg}$ とする。\n［ある生徒の解答］\n電子の運動エネルギー $K=\\dfrac12mv^2\\fallingdotseq1.1\\times10^{-17}\\,\\mathrm{J}$。$\\lambda=\\dfrac{h}{K}\\fallingdotseq5.8\\times10^{-17}\\,\\mathrm{m}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$1.5\\times10^{-10}\\,\\mathrm{m}$"
+      },
+      "explanation": "物質波の波長は運動量 $p=mv$ で決まる。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "(33/50000000000000000000000000000000000)/((91/100000000000000000000000000000000)*(5000000))",
+        "expected": "33/227500000000",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-err_matter",
+      "explanation_detail": {
+        "approach": "単位で確かめる：$\\dfrac{\\mathrm{J\\cdot s}}{\\mathrm{J}}=\\mathrm{s}$ で、長さにならない。",
+        "steps": [
+          "$p=mv\\fallingdotseq4.6\\times10^{-24}\\,\\mathrm{kg\\cdot m/s}$。",
+          "$\\lambda=\\dfrac{h}{p}\\fallingdotseq1.5\\times10^{-10}\\,\\mathrm{m}$。"
+        ],
+        "alternatives": [
+          "光子の運動量 $p=\\dfrac{h}{\\lambda}$ と同じ関係を逆に使っている、と対応させて確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "$p$ と $K$ を区別する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "電子の運動エネルギー $K=\\dfrac12mv^2\\fallingdotseq1.1\\times10^{-17}\\,\\mathrm{J}$。$\\lambda=\\dfrac{h}{K}\\fallingdotseq5.8\\times10^{-17}\\,\\mathrm{m}$",
+        "error_step": "運動量の代わりに運動エネルギーで割った部分",
+        "error_type": "formula",
+        "why_tempting": "粒子の「勢い」として運動エネルギーと運動量を区別せずに使っている。",
+        "correction": "$\\lambda=\\dfrac{h}{mv}=\\dfrac{6.6\\times10^{-34}}{9.1\\times10^{-31}\\times5.0\\times10^{6}}\\fallingdotseq1.5\\times10^{-10}\\,\\mathrm{m}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q056",
+      "number": "D-06",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "原子核 ${}^{232}_{90}\\mathrm{Th}$ が β崩壊を1回したあとの、質量数と原子番号を求めなさい。\n［ある生徒の解答］\nβ線（電子）が出ていくので、質量数も原子番号も1ずつ減って、質量数 231、原子番号 89\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "質量数 232、原子番号 91"
+      },
+      "explanation": "β崩壊：$A$ 不変、$Z+1$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "90+1",
+        "expected": "91",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-err_decay",
+      "explanation_detail": {
+        "approach": "反応式の両辺で質量数と電荷の和が等しいかを確かめる。",
+        "steps": [
+          "電子の質量数 0、電荷 $-1$。",
+          "保存則より質量数 232、原子番号 90+1=91。"
+        ],
+        "alternatives": [
+          "${}^{232}_{90}\\mathrm{Th}\\to{}^{232}_{91}\\mathrm{X}+{}^{0}_{-1}\\mathrm{e}$ と書くと、左下の和 $90=91+(-1)$ が成り立つ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電荷の保存で確かめる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "β線（電子）が出ていくので、質量数も原子番号も1ずつ減って、質量数 231、原子番号 89",
+        "error_step": "β崩壊で質量数・原子番号が減るとした部分",
+        "error_type": "concept",
+        "why_tempting": "「粒子が出ていくと減る」と考え、β崩壊では原子核内の中性子が陽子に変わること、電子の質量数は 0 であることを考えていない。",
+        "correction": "中性子1個が陽子と電子に変わり電子が出るので、質量数は不変 232、原子番号は1増えて 91"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q057",
+      "number": "D-07",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "原子核 ${}^{238}_{92}\\mathrm{U}$ が α崩壊を1回したあとの、質量数と原子番号を求めなさい。\n［ある生徒の解答］\nα粒子はヘリウム原子核（質量数4）なので、質量数も原子番号も4ずつ減って、質量数 234、原子番号 88\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "質量数 234、原子番号 90"
+      },
+      "explanation": "α崩壊：$A-4$、$Z-2$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "92-2",
+        "expected": "90",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-err_decay",
+      "explanation_detail": {
+        "approach": "α粒子の構成（陽子2、中性子2）から確認する。",
+        "steps": [
+          "α粒子：陽子2個、中性子2個。",
+          "質量数 234、原子番号 90。"
+        ],
+        "alternatives": [
+          "中性子の数は $238-92=146$ から $234-90=144$ になり、2個減ったことと一致する。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "α粒子の陽子数を確認する。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "α粒子はヘリウム原子核（質量数4）なので、質量数も原子番号も4ずつ減って、質量数 234、原子番号 88",
+        "error_step": "原子番号も4減るとした部分",
+        "error_type": "concept",
+        "why_tempting": "α粒子の質量数4は覚えているが、原子番号（陽子の数）が2であることを考えていない。",
+        "correction": "α粒子は ${}^{4}_{2}\\mathrm{He}$。質量数は4減って 234、原子番号は2減って 90"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q058",
+      "number": "D-08",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "原子核 ${}^{226}_{88}\\mathrm{Ra}$ が β崩壊を1回したあとの、質量数と原子番号を求めなさい。\n［ある生徒の解答］\nβ線（電子）が出ていくので、質量数も原子番号も1ずつ減って、質量数 225、原子番号 87\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "質量数 226、原子番号 89"
+      },
+      "explanation": "β崩壊：$A$ 不変、$Z+1$。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "88+1",
+        "expected": "89",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "condition_check"
+      ],
+      "variant_group": "HS-PHY-U05-err_decay",
+      "explanation_detail": {
+        "approach": "反応式の両辺で質量数と電荷の和が等しいかを確かめる。",
+        "steps": [
+          "電子の質量数 0、電荷 $-1$。",
+          "保存則より質量数 226、原子番号 88+1=89。"
+        ],
+        "alternatives": [
+          "${}^{226}_{88}\\mathrm{Ra}\\to{}^{226}_{89}\\mathrm{X}+{}^{0}_{-1}\\mathrm{e}$ と書くと、左下の和 $88=89+(-1)$ が成り立つ。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "電荷の保存で確かめる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "β線（電子）が出ていくので、質量数も原子番号も1ずつ減って、質量数 225、原子番号 87",
+        "error_step": "β崩壊で質量数・原子番号が減るとした部分",
+        "error_type": "concept",
+        "why_tempting": "「粒子が出ていくと減る」と考え、β崩壊では原子核内の中性子が陽子に変わること、電子の質量数は 0 であることを考えていない。",
+        "correction": "中性子1個が陽子と電子に変わり電子が出るので、質量数は不変 226、原子番号は1増えて 89"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q059",
+      "number": "D-09",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$ である。電子が $n=2$ から $n=1$ に移るときに放出される光子のエネルギーを求めなさい。\n［ある生徒の解答］\n$n=2$ の準位のエネルギーの大きさ $\\dfrac{13.6}{4}\\fallingdotseq3.4\\,\\mathrm{eV}$ が光子のエネルギーになる\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$10.2\\,\\mathrm{eV}$"
+      },
+      "explanation": "振動数条件：光子のエネルギーは2つの準位の差。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(136,10)*(Rational(1,1)-Rational(1,4))",
+        "expected": "51/5",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-err_bohr",
+      "explanation_detail": {
+        "approach": "エネルギー準位図で矢印の長さ（差）を確認する。",
+        "steps": [
+          "$E_2=-\\dfrac{13.6}{4}$、$E_1=-\\dfrac{13.6}{1}$。",
+          "差 $\\fallingdotseq10.2\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "生徒の値は電離エネルギー（$n=2$ から $n=\\infty$ へ）であり、別の量だと確かめる。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "差をとる。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$n=2$ の準位のエネルギーの大きさ $\\dfrac{13.6}{4}\\fallingdotseq3.4\\,\\mathrm{eV}$ が光子のエネルギーになる",
+        "error_step": "移る前の準位のエネルギーを光子のエネルギーとした部分",
+        "error_type": "concept",
+        "why_tempting": "電子が「準位から飛び出す」イメージで、2つの準位の差をとることを忘れている。",
+        "correction": "$h\\nu=E_2-E_1=13.6\\left(\\dfrac{1}{1}-\\dfrac{1}{4}\\right)\\fallingdotseq10.2\\,\\mathrm{eV}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    },
+    {
+      "id": "HS-PHY-U05-EX-Q060",
+      "number": "D-10",
+      "section": "LV-D",
+      "grade": "HS3",
+      "subject": "science",
+      "unit_id": "HS-PHY-U05",
+      "skills": [
+        "calculation",
+        "thinking"
+      ],
+      "evaluation_aspect": "thinking_judgment_expression",
+      "question_type": "descriptive",
+      "stem": "水素原子のエネルギー準位は $E_n=-\\dfrac{13.6}{n^2}\\,\\mathrm{eV}$ である。電子が $n=4$ から $n=2$ に移るときに放出される光子のエネルギーを求めなさい。\n［ある生徒の解答］\n$13.6\\left(\\dfrac{1}{2}-\\dfrac{1}{4}\\right)\\fallingdotseq3.4\\,\\mathrm{eV}$\n上の解答の誤りを指摘し、正しい答えを求めなさい。",
+      "answer": {
+        "value": "$2.55\\,\\mathrm{eV}$"
+      },
+      "explanation": "エネルギー準位は $n^2$ に反比例する。",
+      "scoring": {
+        "points": 6,
+        "method": "rubric",
+        "rubric": [
+          {
+            "criterion": "誤りの箇所と理由を正しく指摘している",
+            "points": 2
+          },
+          {
+            "criterion": "正しい解答を途中式とともに示している",
+            "points": 3
+          },
+          {
+            "criterion": "最終的な答えが正しい",
+            "points": 1
+          }
+        ]
+      },
+      "difficulty": {
+        "level": "basic",
+        "score": 2
+      },
+      "answer_space": {
+        "lines": 6
+      },
+      "calc_check": {
+        "expression": "Rational(136,10)*(Rational(1,4)-Rational(1,16))",
+        "expected": "51/20",
+        "target": "intermediate"
+      },
+      "exercise_level": "error_correction",
+      "perspectives": [
+        "common_error",
+        "computation"
+      ],
+      "variant_group": "HS-PHY-U05-err_bohr",
+      "explanation_detail": {
+        "approach": "代入する前に式を書き、指数を確認する。",
+        "steps": [
+          "$\\dfrac{1}{4}-\\dfrac{1}{16}$ を計算。",
+          "$\\times13.6\\fallingdotseq2.55\\,\\mathrm{eV}$。"
+        ],
+        "alternatives": [
+          "$n=2$ の準位が $-3.4\\,\\mathrm{eV}$（$-13.6$ の $\\dfrac14$）であることを覚えておき、計算の検算に使う。"
+        ],
+        "partial_credit": [
+          {
+            "point": "誤りの指摘",
+            "points": 2
+          },
+          {
+            "point": "正しい途中式",
+            "points": 3
+          },
+          {
+            "point": "正しい答え",
+            "points": 1
+          }
+        ],
+        "pitfalls": [
+          "指数を落とさない。"
+        ]
+      },
+      "error_analysis": {
+        "erroneous_solution": "$13.6\\left(\\dfrac{1}{2}-\\dfrac{1}{4}\\right)\\fallingdotseq3.4\\,\\mathrm{eV}$",
+        "error_step": "$n$ を2乗していない部分",
+        "error_type": "calculation",
+        "why_tempting": "式の形（逆数の差）は合っているが、$n^2$ の2乗を落としている。",
+        "correction": "$13.6\\left(\\dfrac{1}{2^2}-\\dfrac{1}{4^2}\\right)\\fallingdotseq2.55\\,\\mathrm{eV}$"
+      },
+      "verification": {
+        "status": "auto_checked",
+        "checked_by": "validate_questions.py v2.0.0",
+        "checked_at": "2026-10-29",
+        "methods": [
+          "schema",
+          "answer_consistency",
+          "duplicate",
+          "calc_check"
+        ],
+        "notes": "AI による作成。教科担当者による内容レビュー（expert_review）待ち。"
+      },
+      "copyright": {
+        "status": "original",
+        "holder": "かながわコネクト教材プロジェクト"
+      }
+    }
+  ],
+  "total_points": 260,
+  "copyright": {
+    "status": "original",
+    "holder": "かながわコネクト教材プロジェクト",
+    "license": "教育目的での複製可・再配布不可（著作権者の許諾が必要）"
+  },
+  "revision_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-29",
+      "author": "generate_highschool_unit.py",
+      "changes": "初版作成（60問）。自動検査（スキーマ・重複・検算）実施予定。",
+      "content_hash": "88b597ad16e8ef7de18b2c3c3a89b499ea88d32536fb1ae7b45b2675b9a4a8d3"
+    }
+  ],
+  "validation": {
+    "validated_at": "2026-10-29T09:03:15+00:00",
+    "validator_version": "2.0.0",
+    "result": "pass",
+    "errors": 0,
+    "warnings": 0,
+    "content_hash": "208f18036dd02960045ab08c5bf11de776369ce7786a2e9fc3c3c77e6acead71"
+  }
+}

@@ -28,7 +28,7 @@ def dec(x):
 
 
 def sig(x, n=2):
-    x = sp.nsimplify(x)
+    x = sp.sympify(x)
     if x == 0:
         return "0"
     d = Decimal(str(sp.N(x, 40)))
@@ -44,7 +44,7 @@ def sig(x, n=2):
 
 def is_exact(s, x):
     try:
-        return "times" not in s and sp.Rational(s) == sp.nsimplify(x)
+        return "times" not in s and sp.Rational(s) == sp.sympify(x)
     except (TypeError, ValueError):
         return False
 
@@ -57,7 +57,7 @@ def bestn(x):
 
 def numq(stem, x, expr, e, unit, n=None, **kw):
     """整数で厳密に表せる 10000 未満の値はそのまま、それ以外は有効数字 n 桁で答えにする。"""
-    raw = sp.nsimplify(x).is_integer and (unit in ("個", "次", "回", "度") or 10 <= abs(x) < 10000)
+    raw = sp.sympify(x).is_integer and (unit in ("個", "次", "回", "度") or 10 <= abs(x) < 10000)
     if n is None and raw:
         n = max(2, len(str(abs(int(x)))))
     n = n or bestn(x)
@@ -72,13 +72,13 @@ def numq(stem, x, expr, e, unit, n=None, **kw):
 
 
 def t(x, n=None):
-    if n is None and sp.nsimplify(x).is_integer and 10 <= abs(x) < 10000:
+    if n is None and sp.sympify(x).is_integer and 10 <= abs(x) < 10000:
         return str(int(x))
     return sig(x, n or bestn(x))
 
 
 def P(x):
-    return f"({sp.nsimplify(x)})"
+    return f"({sp.sympify(x)})"
 
 
 def iv(n):
@@ -917,7 +917,7 @@ def young_c(r):
                        "（3）$\\lambda$ が大きいほど $\\Delta x$ は大きい。"],
                 alt=["（2）は、$\\sin\\theta$ と $\\tan\\theta$ の差が $\\theta^3$ 程度の大きさしかないことを、三角関数のグラフ（原点付近で $y=x$ に接する）から説明してもよい。"],
                 pc=[("（1）", 2), ("（2）値", 2), ("（2）近似", 2), ("（3）", 2)], pit=["mm を m に直し忘れる。", "近似の理由を「L が大きいから」だけで済ませる。"],
-                chk=(f"{P(Lr)}*{P(lam)}/{P(d)}", str(sp.nsimplify(dx)), None, "intermediate"))
+                chk=(f"{P(Lr)}*{P(lam)}/{P(d)}", str(sp.sympify(dx)), None, "intermediate"))
 
 
 @gen("thinking_writing", 2, ["condition_check", "written_reasoning", "computation"])

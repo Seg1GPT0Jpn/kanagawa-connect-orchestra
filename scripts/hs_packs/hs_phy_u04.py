@@ -32,7 +32,7 @@ def dec(x):
 
 
 def sig(x, n=2):
-    x = sp.nsimplify(x)
+    x = sp.sympify(x)
     if x == 0:
         return "0"
     d = Decimal(str(sp.N(x, 40)))
@@ -48,7 +48,7 @@ def sig(x, n=2):
 
 def is_exact(s, x):
     try:
-        return "times" not in s and sp.Rational(s) == sp.nsimplify(x)
+        return "times" not in s and sp.Rational(s) == sp.sympify(x)
     except (TypeError, ValueError):
         return False
 
@@ -76,7 +76,7 @@ def t(x, n=None):
 
 
 def P(x):
-    return f"({sp.nsimplify(x)})"
+    return f"({sp.sympify(x)})"
 
 
 def iv(n):

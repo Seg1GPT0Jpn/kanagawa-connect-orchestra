@@ -31,7 +31,7 @@ def dec(x):
 
 
 def sig(x, n=2):
-    x = sp.nsimplify(x)
+    x = sp.sympify(x)
     if x == 0:
         return "0"
     d = Decimal(str(sp.N(x, 40)))
@@ -47,7 +47,7 @@ def sig(x, n=2):
 
 def is_exact(s, x):
     try:
-        return "times" not in s and sp.Rational(s) == sp.nsimplify(x)
+        return "times" not in s and sp.Rational(s) == sp.sympify(x)
     except (TypeError, ValueError):
         return False
 
@@ -60,7 +60,7 @@ def bestn(x):
 
 def numq(stem, x, expr, e, unit, n=None, **kw):
     """整数で厳密に表せる 10000 未満の値はそのまま、それ以外は有効数字 n 桁で答えにする。"""
-    if n is None and sp.nsimplify(x).is_integer and abs(x) < 10000:
+    if n is None and sp.sympify(x).is_integer and abs(x) < 10000:
         n = max(2, len(str(abs(int(x)))))
     n = n or bestn(x)
     s = sig(x, n)
@@ -78,7 +78,7 @@ def t(x, n=None):
 
 
 def P(x):
-    return f"({sp.nsimplify(x)})"
+    return f"({sp.sympify(x)})"
 
 
 def sci(mant, e):
@@ -890,7 +890,7 @@ def piston_c(r):
                        "（3）定圧なので $W'=nR\\Delta T$、$\\Delta U=\\dfrac32nR\\Delta T=\\dfrac32W'$、$Q=\\Delta U+W'=\\dfrac52W'$。"],
                 alt=["（2）は、ピストンの位置エネルギーの増加 $Mg\\Delta h$ と大気を押しのける仕事 $p_0S\\Delta h$ の和として求めても同じ値になる。"],
                 pc=[("（1）", 2), ("（2）", 2), ("（3）値", 2), ("（3）理由", 2)], pit=["気体の圧力を大気圧と同じとする（ピストンの重さを忘れる）。", "cm² を m² に直し忘れる。"],
-                chk=(f"(10**5+{Mk}*Rational(98,10)/{P(S)})*{P(S)}*{P(dh)}", str(sp.nsimplify(W)), None, "intermediate"))
+                chk=(f"(10**5+{Mk}*Rational(98,10)/{P(S)})*{P(S)}*{P(dh)}", str(sp.sympify(W)), None, "intermediate"))
 
 
 @gen("thinking_writing", 2, ["condition_check", "written_reasoning", "concept"])

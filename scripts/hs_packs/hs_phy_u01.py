@@ -31,7 +31,7 @@ def dec(x):
 
 def sig(x, n=2):
     """有効数字 n 桁に四捨五入した表記。桁が大きい・小さいときは a×10^k の LaTeX を返す。"""
-    x = sp.nsimplify(x)
+    x = sp.sympify(x)
     if x == 0:
         return "0"
     d = Decimal(str(sp.N(x, 40)))
@@ -47,7 +47,7 @@ def sig(x, n=2):
 
 def is_exact(s, x):
     try:
-        return "times" not in s and sp.Rational(s) == sp.nsimplify(x)
+        return "times" not in s and sp.Rational(s) == sp.sympify(x)
     except (TypeError, ValueError):
         return False
 
@@ -76,7 +76,7 @@ def t(x, n=None):
 
 
 def P(x):
-    return f"({sp.nsimplify(x)})"
+    return f"({sp.sympify(x)})"
 
 
 def iv(n):
@@ -1079,7 +1079,7 @@ def ballistic_c(r):
                        f"（3）$\\dfrac{{K_1}}{{K_0}}=\\dfrac{{\\frac12(m+M)V^2}}{{\\frac12mv^2}}=\\dfrac{{m}}{{m+M}}={t(ratio, 2)}$。"],
                 alt=["（3）は $V=\\dfrac{mv}{m+M}$ を代入して文字式のまま整理すると $\\dfrac{m}{m+M}$ となり、数値を使わずに求められる。"],
                 pc=[("（1）", 2), ("（2）", 2), ("（3）割合", 2), ("（3）理由", 2)], pit=["弾丸の運動エネルギーがすべて位置エネルギーになるとして $h$ を求める。", "g を kg に直し忘れる。"],
-                chk=(f"({P(m)}*{vb}/({P(m)}+{P(M)}))**2/(2*9.8)", str(sp.nsimplify(h)), None, "intermediate"))
+                chk=(f"({P(m)}*{vb}/({P(m)}+{P(M)}))**2/(2*9.8)", str(sp.sympify(h)), None, "intermediate"))
 
 
 @gen("thinking_writing", 2, ["condition_check", "written_reasoning", "cross_unit"], rel=["HS-PHYB-U02"])
@@ -1115,7 +1115,7 @@ def loop_c(r):
                 steps=["（1）$mgh=mg\\cdot2r+\\dfrac12mv^2$ より $v^2=2g(h-2r)$。", "（2）$m\\dfrac{v^2}{r}=N+mg$ より $N=\\dfrac{2mg(h-2r)}{r}-mg=\\dfrac{mg(2h-5r)}{r}$。", "（3）$N\\geqq0\\iff h\\geqq\\dfrac52r$。"],
                 alt=["最高点で必要な最小の速さ $\\sqrt{gr}$（$N=0$）を先に求め、エネルギー保存からその速さを得るのに必要な高さを逆算してもよい。"],
                 pc=[("（1）", 2), ("（2）", 2), ("（3）条件", 2), ("（3）判断", 2)], pit=["P で速さが 0 より大きければ通過できる、と考える（$h>2r$ としてしまう）。"],
-                chk=(f"2*9.8*({P(h)}-2*{P(rr)})", str(sp.nsimplify(v2)), None, "intermediate"))
+                chk=(f"2*9.8*({P(h)}-2*{P(rr)})", str(sp.sympify(v2)), None, "intermediate"))
 
 
 @gen("thinking_writing", 2, ["multiple_solutions", "cross_unit", "written_reasoning"], rel=["HS-MATH3-U01"])
@@ -1135,7 +1135,7 @@ def bounce_c(r):
                 alt=["（2）は「失われる力学的エネルギー」で考えることはできない（エネルギーの総量 $mgh$ からは道のりが決まらない）ことを確認し、等比級数による方法の必要性を説明してもよい。",
                      "（3）は $e\\to1$ で時間が無限大、$e\\to0$ で $t_0$ になることで式を確かめる。"],
                 pc=[("（1）", 2), ("（2）", 3), ("（3）", 3)], pit=["2回目以降の道のりを往復の2倍にし忘れる。", "時間を高さと同じ公比 $e^2$ で計算する。"],
-                chk=(f"sqrt(2*{P(h)}/9.8)*(1+{P(e)})/(1-{P(e)})", str(sp.nsimplify(Ttot)), None, "intermediate"))
+                chk=(f"sqrt(2*{P(h)}/9.8)*(1+{P(e)})/(1-{P(e)})", str(sp.sympify(Ttot)), None, "intermediate"))
 
 
 # ======================================================================
@@ -1222,7 +1222,7 @@ def err_circular(r):
                         [f"$n={dec(sp.Rational(n, 60))}\\,\\text{{回/s}}$。", f"$\\omega=2\\pi n\\fallingdotseq{t(w)}\\,\\mathrm{{rad/s}}$、$v=r\\omega\\fallingdotseq{t(v)}\\,\\mathrm{{m/s}}$。"],
                         "単位（回/s と rad/s）を書いて計算する。",
                         [f"1秒間に縁の点が進む距離は「円周 $2\\pi r$ × 回転数」なので、$2\\pi\\times{rs}\\times{dec(sp.Rational(n, 60))}$ と直接計算して確かめる。"],
-                        ["回転数・周期・角速度の関係を整理しておく。"], chk=(f"{P(rr)}*2*pi*{n}/60", str(sp.nsimplify(v)), None, "intermediate"), d=2)
+                        ["回転数・周期・角速度の関係を整理しておく。"], chk=(f"{P(rr)}*2*pi*{n}/60", str(sp.sympify(v)), None, "intermediate"), d=2)
     if kind == "top":
         ms = r.choice(["0.10", "0.20", "0.50"])
         Ls = r.choice(["0.50", "1.0"])
@@ -1287,7 +1287,7 @@ def err_shm(r):
                         [f"$\\omega=\\sqrt{{\\dfrac{{k}}{{m}}}}$。", f"$T=\\dfrac{{2\\pi}}{{\\omega}}=2\\pi\\sqrt{{\\dfrac{{m}}{{k}}}}\\fallingdotseq{t(T)}\\,\\mathrm{{s}}$。"],
                         "次元で確かめる：$\\sqrt{\\dfrac{k}{m}}$ の単位は $\\mathrm{s^{-1}}$ で、時間にならない。",
                         ["おもりを重くすると振動がゆっくりになる、という経験と式が合うかどうかで確かめる。"], ["$\\omega$ と $T$ の関係を必ず経由する。"],
-                        chk=(f"2*pi*sqrt({P(m)}/{P(k)})", str(sp.nsimplify(T)), None, "intermediate"))
+                        chk=(f"2*pi*sqrt({P(m)}/{P(k)})", str(sp.sympify(T)), None, "intermediate"))
     Ls = r.choice(["0.80", "1.2", "2.5", "1.6"])
     L = Q(Ls)
     T = 2 * sp.pi * sp.sqrt(L / G)
@@ -1300,7 +1300,7 @@ def err_shm(r):
                     ["運動方程式：$ma=-\\dfrac{mg}{L}x$。", f"$\\omega=\\sqrt{{\\dfrac{{g}}{{L}}}}$、$T\\fallingdotseq{t(T)}\\,\\mathrm{{s}}$（質量によらない）。"],
                     "運動方程式を立て、質量が約分されるかどうかを確かめる。",
                     ["自由落下で重い物も軽い物も同じ加速度で落ちることと同じ理由である、と結びつけて確かめる。"], ["素朴な直観より運動方程式を優先する。"],
-                    chk=(f"2*pi*sqrt({P(L)}/9.8)", str(sp.nsimplify(T)), None, "intermediate"))
+                    chk=(f"2*pi*sqrt({P(L)}/9.8)", str(sp.sympify(T)), None, "intermediate"))
 
 
 @gen("error_correction", 2, ["common_error", "condition_check"])
