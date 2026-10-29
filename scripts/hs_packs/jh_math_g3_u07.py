@@ -257,7 +257,8 @@ def box_fig(a, b, c, extra_segs=(), extra_dashed=(), extra_pts=None, alt="直方
         P |= {n: pr(*xyz) for n, xyz in extra_pts.items()}
     segs = [("A", "B"), ("B", "C"), ("C", "D"), ("D", "A"), ("E", "F"), ("F", "G"), ("A", "E"), ("B", "F"), ("C", "G")] + list(extra_segs)
     dashed = [("H", "E"), ("H", "G"), ("H", "D")] + list(extra_dashed)
-    return figure(alt, geo(P, segs=segs, dashed=dashed, scale=30))
+    off = {"A": (-0.3, 0.0), "B": (0.2, -0.32), "C": (0.3, 0.15), "D": (-0.25, 0.25), "E": (-0.3, -0.15), "F": (0.15, -0.35), "G": (0.32, -0.1), "H": (-0.32, 0.12)}
+    return figure(alt, geo(P, segs=segs, dashed=dashed, scale=30, off=off))
 
 
 def pyr_fig(kind="square", alt="正四角錐"):
