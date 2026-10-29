@@ -842,7 +842,7 @@ def c_data(r):
     if r.random() < 0.5:
         # 一票の格差（X・Y・Z の正誤）
         while True:
-            vot = [r.randrange(180, 520) * 1000 for _ in range(4)]
+            vot = [r.randrange(150, 560) * 1000 for _ in range(4)]
             if len(set(vot)) == 4:
                 break
         names = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ"]
@@ -850,7 +850,7 @@ def c_data(r):
                     caption="表　ある議会の議員を各1人選ぶ4つの選挙区の有権者数（架空の資料）")
         gap = Fraction(max(vot), min(vot))
         mx, mn = names[vot.index(max(vot))], names[vot.index(min(vot))]
-        thr = r.choice([2, 2, Fraction(5, 2), 3])
+        thr = r.choice([t for t in (Fraction(3, 2), Fraction(2), Fraction(5, 2), Fraction(3)) if abs(t - gap) <= Fraction(3, 5) and t != gap] or [Fraction(2)])
         x_true = gap >= thr
         X = (f"表の4つの選挙区の一票の格差（最大の選挙区と最小の選挙区の有権者数の比）は，{dec(float(thr))}倍以上である。", x_true,
              f"{max(vot) // 1000}÷{min(vot) // 1000}＝約{dec(float(gap), 2)}倍である。")
@@ -905,7 +905,8 @@ def c_data(r):
     d.append((f"今回の選挙で投票率が最も低い年代は，{ages[cl]}である。", cl == lo, f"今回最も低いのは{ages[lo]}（{t2[lo]}％）である。"))
     up = sum(1 for a, b in zip(t1, t2) if b > a)
     cnt = up if flags[2] else (up + 1 if up < 4 else up - 1)
-    d.append((f"前回より今回の投票率が高い年代は，4つのうち{cnt}つである。" if cnt > 0 else "前回より今回の投票率が高い年代は，一つもない。", cnt == up, f"高くなった年代は{up}つである。"))
+    ctxt = {0: "前回より今回の投票率が高い年代は，一つもない。", 4: "4つの年代のすべてで，前回より今回の投票率が高い。"}.get(cnt, f"前回より今回の投票率が高い年代は，4つのうち{cnt}つである。")
+    d.append((ctxt, cnt == up, "高くなった年代は一つもない。" if up == 0 else f"高くなった年代は{up}つである。"))
     nt = sum(1 for s in d if s[1])
     tk = [(x, True, "") for x in r.sample(TRUE, 3 - nt)]
     fk = [(f, False, f"正しくは，{fx}") for f, fx in r.sample(FALSE, nt)]
