@@ -90,4 +90,36 @@
       reveals.forEach((el) => io.observe(el));
     }
   }
+
+  /* ---------- Share（リンクのコピー・共有） ---------- */
+  const shareStatus = document.querySelector("[data-share-status]");
+  document.querySelectorAll("[data-share-url]").forEach((button) => {
+    const url = button.getAttribute("data-share-url");
+    const text = button.getAttribute("data-share-text") || "";
+    if (navigator.share) button.textContent = "リンクを送る・コピー";
+    button.addEventListener("click", async () => {
+      const say = (msg) => {
+        if (shareStatus) shareStatus.textContent = msg;
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: document.title, text: text, url: url });
+          return;
+        } catch (e) {
+          if (e && e.name === "AbortError") return; // 自分で閉じたとき
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        say("リンクをコピーしました。メッセージなどに貼り付けて送れます。");
+      } catch (e) {
+        window.prompt("このリンクをコピーしてください", url);
+      }
+    });
+  });
+
+  /* ---------- Print（募集チラシ） ---------- */
+  document.querySelectorAll("[data-print]").forEach((button) => {
+    button.addEventListener("click", () => window.print());
+  });
 })();

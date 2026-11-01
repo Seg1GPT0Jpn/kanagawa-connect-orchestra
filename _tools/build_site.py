@@ -27,6 +27,12 @@ PDF = "docs/recruitment-guidelines.pdf"
 LASTMOD = "2026-11-01"
 # 参加費の想定（未確定。資金集めの状況で変わる）
 FEE_PLAN = "1回の演奏会ごとに約6,000円を想定しています（資金集めの状況によっては約8,000〜10,000円）"
+# お知らせ（新しい順。ホームには先頭の5件を表示）
+NEWS = [
+    ("2026-11-01", "ホームページを更新しました（参加費の想定・よくある質問・保護者の方へ・募集チラシなど）", "recruit.html"),
+    ("2026-11-01", "サブメイン曲の2曲目の曲目候補の募集を始めました", "suggest.html"),
+    ("2026-11-01", "第1回演奏会のアンコール1曲目が決まりました（曲名は当日のお楽しみ）", "concert.html"),
+]
 LASTMOD_JA = f"{int(LASTMOD[:4])}年{int(LASTMOD[5:7])}月{int(LASTMOD[8:])}日"
 
 NAV = [
@@ -39,7 +45,7 @@ NAV = [
 ]
 
 # フッターにのみ表示するリンク
-FOOTER_EXTRA = [("suggest.html", "曲目候補の提案"), ("sponsor.html", "ご支援・協賛"), ("sponsors.html", "協賛者一覧"),
+FOOTER_EXTRA = [("suggest.html", "曲目候補の提案"), ("flyer.html", "募集チラシ（印刷用）"), ("sponsor.html", "ご支援・協賛"), ("sponsors.html", "協賛者一覧"),
                 ("report.html", "会計報告")]
 
 NEW_TAB = '<span class="visually-hidden">（新しいタブで開きます）</span>'
@@ -124,6 +130,42 @@ def program_call_section(id_prefix="program-call", cls="section--tinted"):
 
 def planned(text="予定"):
     return f'<span class="badge badge--planned">{text}</span>'
+
+
+def ja_date(d):
+    return f"{int(d[:4])}年{int(d[5:7])}月{int(d[8:])}日"
+
+
+def news_list(items):
+    lis = "\n".join(
+        f'          <li><time datetime="{d}">{ja_date(d)}</time><a href="{h}">{t}</a></li>' for d, t, h in items)
+    return f'''        <ul class="news-list">
+{lis}
+        </ul>'''
+
+
+SHARE_TEXT = "かながわコネクトオーケストラ｜学生中心・初心者歓迎のオーケストラが団員を募集中です"
+
+
+def share_section(path="recruit.html", cls=""):
+    from urllib.parse import quote
+    url = f"{BASE}/{path}"
+    line = f"https://social-plugins.line.me/lineit/share?url={quote(url, safe='')}"
+    x = f"https://twitter.com/intent/tweet?text={quote(SHARE_TEXT, safe='')}&amp;url={quote(url, safe='')}"
+    return f'''    <section class="section{(' ' + cls) if cls else ''}" aria-labelledby="share-title">
+      <div class="container container--narrow text-center">
+{title("Share", "share-title", "友だちにも教えてください")}
+        <p>「一緒にやりたい」と思う友だちや、楽器をやっている知り合いはいませんか？<br class="u-pc">このページを送ったり、募集チラシを印刷して配ったりしていただけるとうれしいです。</p>
+        <div class="btn-group btn-group--center share-buttons">
+          <a class="btn btn--outline" href="{line}" target="_blank" rel="noopener noreferrer">LINEで送る{NEW_TAB}</a>
+          <a class="btn btn--outline" href="{x}" target="_blank" rel="noopener noreferrer">Xでシェア{NEW_TAB}</a>
+          <button class="btn btn--outline js-only" type="button" data-share-url="{url}" data-share-text="{SHARE_TEXT}">リンクをコピー</button>
+          {btn("flyer.html", "募集チラシ（印刷用）")}
+        </div>
+        <p class="small muted" data-share-status role="status" aria-live="polite"></p>
+      </div>
+    </section>
+'''
 
 
 def row(dt, dd):
@@ -379,7 +421,7 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
       </div>
     </section>
 
-    <section class="section" aria-labelledby="now-title">
+    <section class="section section--tinted" aria-labelledby="now-title">
       <div class="container container--narrow">
 {title("Now", "now-title", "いま決まっていること・<br>まだ決まっていないこと")}
         <dl class="info-list">
@@ -394,6 +436,14 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
         <div class="section-more">
           {btn("concert.html", "演奏会の決定状況を見る")}
         </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="news-home-title">
+      <div class="container container--narrow">
+{title("News", "news-home-title", "お知らせ")}
+{news_list(NEWS[:5])}
+        <p class="note">最新情報は<a href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">公式Instagram{NEW_TAB}</a>でもお知らせしています。</p>
       </div>
     </section>
 
@@ -623,7 +673,15 @@ FAQ = [
 ]
 faq_html = "\n".join(details(q, a) for q, a in FAQ)
 
+RECRUIT_TOC = [("flow-title", "参加までの流れ"), ("faq-title", "よくある質問"), ("outline-title", "募集概要"),
+               ("instrument-title", "募集楽器"), ("safety-title", "安心して参加するために"), ("guardians", "保護者の方へ"),
+               ("rules-title", "参加ルール")]
+recruit_toc = "".join(f'<li><a href="#{a}">{t}</a></li>' for a, t in RECRUIT_TOC)
+
 recruit_body = page_header("Recruitment", "団員募集", "これから一緒に、<br>オーケストラをつくりませんか？") + f'''
+    <nav class="page-toc container" aria-label="このページの目次">
+      <ul>{recruit_toc}</ul>
+    </nav>
     <section class="section" aria-labelledby="welcome-title">
       <div class="container container--narrow">
 {title("Welcome", "welcome-title", "完成した団体に加わるのではなく、<br>一緒につくるオーケストラです")}
@@ -774,6 +832,7 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
       </div>
     </section>
 
+{share_section("recruit.html", "section--tinted")}
 {cta_band()}'''
 
 # ================================================================ CONCERT
@@ -894,6 +953,7 @@ contact_body = page_header("Contact", "お問い合わせ", "ご用件に合わ�
     <section class="section" aria-labelledby="routes-title">
       <div class="container">
 {title("Contact", "routes-title", "お問い合わせ窓口")}
+        <p class="text-center">お問い合わせの前に、<a href="recruit.html#faq-title">団員募集のよくある質問</a>もご覧ください。</p>
         <div class="contact-grid">
           <div class="card contact-card">
             <p class="card__eyebrow">参加のご相談</p>
@@ -922,7 +982,7 @@ contact_body = page_header("Contact", "お問い合わせ", "ご用件に合わ�
 {title("Privacy", "privacy-title", "個人情報の取り扱いについて")}
         <p>参加希望フォームでいただいた情報は、団体の活動に関するご連絡や参加確認などの目的で使用します。本人の同意なく第三者へ提供したり、SNSなどで公開したりすることはありません。</p>
         <p>未成年の方の正式な活動参加にあたっては、必要に応じて保護者の方への確認を行います。</p>
-        <p class="note">※ 団員募集の詳細は<a href="recruit.html">団員募集ページ</a>をご覧ください。</p>
+        <p class="note">※ 団員募集の詳細は<a href="recruit.html">団員募集ページ</a>をご覧ください。参加費・楽器・初心者の参加などは<a href="recruit.html#faq-title">よくある質問</a>にまとめています。</p>
       </div>
     </section>
 '''
@@ -1587,6 +1647,56 @@ def admin_gate(page_title, what):
 
 
 sponsor_admin_body = admin_gate("協賛の管理", "協賛の記録")
+# ================================================================ FLYER（印刷用の募集チラシ）
+flyer_body = page_header("Flyer", "募集チラシ（印刷用）", "学校や教室で配れる、<br>A4サイズの募集チラシです。") + f'''
+    <div class="container flyer-tools">
+      <p class="text-center">下のチラシをそのまま印刷できます（A4・縦）。QRコードから団員募集ページを開けます。</p>
+      <div class="btn-group btn-group--center">
+        <button class="btn btn--primary js-only" type="button" data-print>このチラシを印刷する</button>
+      </div>
+    </div>
+    <article class="flyer" aria-label="団員募集チラシ">
+      <div class="flyer__head">
+        <img src="images/logo-160.png" width="64" height="64" alt="">
+        <p class="flyer__name">{SITE}</p>
+        <p class="flyer__catch">団員募集中</p>
+        <p class="flyer__concept">{CONCEPT}</p>
+      </div>
+      <ul class="flyer__chips">
+        <li>学生中心</li><li>年齢不問</li><li>初心者歓迎</li><li>経験者歓迎</li><li>オーケストラ未経験OK</li>
+      </ul>
+      <p class="flyer__hot">弦楽器（ヴァイオリン・ヴィオラ・チェロ・コントラバス）を特に募集しています</p>
+      <dl class="flyer__info">
+        <div><dt>募集楽器</dt><dd>{INSTR_SHORT}（その他の楽器もご相談ください）</dd></div>
+        <div><dt>活動</dt><dd>神奈川県を中心に、2026年12月頃から合奏開始予定。通常は月1〜2回、1回約3時間</dd></div>
+        <div><dt>第1回演奏会</dt><dd>メイン：ドヴォルザーク 交響曲第7番（予定）</dd></div>
+        <div><dt>参加費</dt><dd>1回の演奏会ごとに約6,000〜10,000円を想定（未確定）</dd></div>
+        <div><dt>はじめての方</dt><dd>楽譜が読めない方も、読めるようになるまでサポートします</dd></div>
+      </dl>
+      <div class="flyer__foot">
+        <img class="flyer__qr" src="images/qr-recruit.svg" width="140" height="140" alt="団員募集ページのQRコード">
+        <div>
+          <p class="flyer__cta">「ちょっと興味がある」段階でも大丈夫。<br>まずはQRコードから団員募集ページへ</p>
+          <p class="flyer__url">{BASE.replace("https://", "")}/recruit.html</p>
+          <p class="flyer__url">Instagram {INSTAGRAM_ID}</p>
+        </div>
+      </div>
+    </article>
+'''
+
+
+def faq_ld(items):
+    import re
+    def plain(h):
+        return re.sub(r"<[^>]+>", "", h).strip()
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{"@type": "Question", "name": q,
+                        "acceptedAnswer": {"@type": "Answer", "text": plain(a)}} for q, a in items],
+    }
+
+
 report_admin_body = admin_gate("会計報告の作成", "会計報告")
 
 
@@ -1599,7 +1709,7 @@ PAGES = [
      about_body, breadcrumb_ld("私たちについて", "about.html")),
     ("recruit.html", "団員募集",
      "かながわコネクトオーケストラの団員募集。学生を中心に、年齢・経験・所属を問わず募集しています。オーケストラ未経験の方、吹奏楽経験者、経験豊富な方も歓迎です。",
-     recruit_body, breadcrumb_ld("団員募集", "recruit.html")),
+     recruit_body, [breadcrumb_ld("団員募集", "recruit.html"), faq_ld(FAQ)]),
     ("concert.html", "第1回演奏会",
      "かながわコネクトオーケストラ第1回演奏会のご案内。メインプログラムとしてドヴォルザーク 交響曲第7番を予定しています。開催日・会場は決定次第お知らせします。",
      concert_body, breadcrumb_ld("第1回演奏会", "concert.html")),
@@ -1625,6 +1735,9 @@ PAGES = [
      "かながわコネクトオーケストラの会計報告。協賛金などの収入と、会場費・楽譜代などの支出、年度末残高を年1回公開します。",
      report_body, breadcrumb_ld("会計報告", "report.html"),
      '\n  <script src="js/report.bundle.js" defer></script>'),
+    ("flyer.html", "募集チラシ（印刷用）",
+     "かながわコネクトオーケストラの団員募集チラシ（A4・印刷用）。学校や教室で配れるQRコード付きのチラシです。",
+     flyer_body, breadcrumb_ld("募集チラシ（印刷用）", "flyer.html")),
     ("sponsor-policy.html", "協賛制度規定",
      "かながわコネクトオーケストラの協賛制度規定（案）。協賛の種類、掲載、資金の管理、会計報告、取消・返金、個人情報の取り扱いについて定めています。",
      policy_body, breadcrumb_ld("協賛制度規定", "sponsor-policy.html")),
