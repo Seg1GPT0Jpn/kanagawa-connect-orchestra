@@ -7,6 +7,10 @@ rules_version = '2';
 //    Firestore ルールは「このファイルの内容」に置き換わります。
 //    コンソールで別のルールを使っている場合は、先に統合してください。
 //
+// ※ GitHub Actions は main でこのファイルが変わったときだけルールを公開します。
+//    firebase deploy が権限（Service Usage）不足で止まったときは、
+//    _tools/deploy_firestore_rules.cjs で Firebase Rules API から直接公開します。
+//
 // ※ 協賛・会計の判定は _tools/firebase/src/sponsor-logic.js と同じ条件です。
 //    変更したときは両方と _tools/firebase/test/ を更新し、
 //    `npm test`（_tools/firebase で実行）が通ることを確認してからデプロイしてください。
