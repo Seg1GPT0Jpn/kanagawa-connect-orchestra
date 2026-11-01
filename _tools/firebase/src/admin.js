@@ -9,8 +9,9 @@ import {
   collection, query, orderBy, getDocs, deleteDoc, doc,
 } from "firebase/firestore/lite";
 import {
-  getApp, getDb, isLocal, COLLECTION, CATEGORIES, PARTICIPATION, EMULATOR_PORTS,
+  getApp, getDb, isLocal, COLLECTION, SIGNUP_COLLECTION, CATEGORIES, PARTICIPATION, EMULATOR_PORTS,
 } from "./firebase-init.js";
+import { TOPICS } from "./notify-logic.js";
 
 const root = document.querySelector("[data-admin]");
 
@@ -30,6 +31,12 @@ if (root) {
 
   let items = [];
   let filter = "all";
+  let signups = [];
+  const signupRows = $("[data-signup-rows]");
+  const signupCount = $("[data-signup-count]");
+  const signupEmpty = $("[data-signup-empty]");
+  const signupTopic = $("[data-signup-topic]");
+  const signupStatus = $("[data-signup-status]");
 
   const show = (name) => {
     Object.entries(views).forEach(([key, el]) => {
@@ -103,6 +110,77 @@ if (root) {
     }));
   }
 
+  // ---------- お知らせの受け取り登録 ----------
+  function signupList() {
+    const t = signupTopic.value;
+    return t === "all" ? signups : signups.filter((it) => (it.topics || []).includes(t));
+  }
+
+  function renderSignups() {
+    const list = signupList();
+    signupCount.textContent = `${list.length}件`;
+    signupEmpty.hidden = list.length > 0;
+    signupRows.replaceChildren(...list.map((it) => {
+      const tr = document.createElement("tr");
+      tr.append(cell(it.email));
+      tr.append(cell((it.topics || []).map((t) => TOPICS[t] || t).join("／")));
+      tr.append(cell(fmtDate(it.timestamp), "admin-table__date"));
+      const ops = document.createElement("td");
+      const del = document.createElement("button");
+      del.type = "button";
+      del.className = "admin-table__delete";
+      del.textContent = "削除";
+      del.setAttribute("aria-label", `${it.email} の登録を削除`);
+      del.addEventListener("click", () => removeSignup(it));
+      ops.append(del);
+      tr.append(ops);
+      return tr;
+    }));
+  }
+
+  async function loadSignups() {
+    signupStatus.textContent = "";
+    try {
+      const db = await getDb();
+      const snap = await getDocs(query(collection(db, SIGNUP_COLLECTION), orderBy("timestamp", "desc")));
+      signups = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      renderSignups();
+    } catch (err) {
+      console.error(err);
+      signupStatus.textContent = "お知らせの登録を読み込めませんでした。";
+    }
+  }
+
+  async function removeSignup(it) {
+    if (!window.confirm(`${it.email} の登録を削除します（配信停止の依頼があったときなど）。元に戻せません。よろしいですか？`)) return;
+    try {
+      const db = await getDb();
+      await deleteDoc(doc(db, SIGNUP_COLLECTION, it.id));
+      signups = signups.filter((x) => x.id !== it.id);
+      renderSignups();
+      signupStatus.textContent = "1件削除しました。";
+    } catch (err) {
+      console.error(err);
+      signupStatus.textContent = "削除できませんでした。";
+    }
+  }
+
+  async function copySignupEmails() {
+    // 同じメールアドレスの重複登録は1つにまとめる
+    const emails = [...new Set(signupList().map((it) => it.email.toLowerCase()))];
+    if (!emails.length) {
+      signupStatus.textContent = "コピーするメールアドレスがありません。";
+      return;
+    }
+    const text = emails.join(", ");
+    try {
+      await navigator.clipboard.writeText(text);
+      signupStatus.textContent = `${emails.length}件のメールアドレスをコピーしました。送るときは必ず「BCC」に貼り付けてください（宛先やCCに入れると、ほかの人のアドレスが見えてしまいます）。`;
+    } catch (err) {
+      window.prompt("このメールアドレスをコピーしてください（BCCに貼り付け）", text);
+    }
+  }
+
   async function load() {
     setStatus("読み込み中…");
     try {
@@ -111,6 +189,7 @@ if (root) {
       items = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
       show("panel");
       render();
+      loadSignups();
       setStatus(`最終更新：${new Date().toLocaleTimeString("ja-JP")}`);
     } catch (err) {
       if (err && err.code === "permission-denied") {
@@ -196,10 +275,14 @@ if (root) {
     root.querySelectorAll("[data-signout]").forEach((btn) => btn.addEventListener("click", () => signOut(auth)));
     root.querySelector("[data-reload]").addEventListener("click", load);
     root.querySelector("[data-csv]").addEventListener("click", downloadCsv);
+    signupTopic.addEventListener("change", renderSignups);
+    root.querySelector("[data-signup-copy]").addEventListener("click", copySignupEmails);
 
     onAuthStateChanged(auth, (user) => {
       items = [];
+      signups = [];
       rowsEl.replaceChildren();
+      signupRows.replaceChildren();
       root.querySelectorAll("[data-admin-email]").forEach((el) => {
         el.textContent = user ? user.email : "";
       });

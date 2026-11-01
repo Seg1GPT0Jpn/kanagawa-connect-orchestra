@@ -184,3 +184,30 @@ describe("会計報告の集計（テスト要件7・8）", () => {
     assert.equal(confirmedSponsorshipTotal(recs, "2026-04-01", "2027-03-31"), 3000);
   });
 });
+
+// ================================================================ お知らせの受け取り登録
+import { buildSignup, TOPICS } from "../src/notify-logic.js";
+
+describe("お知らせの受け取り登録の入力チェック", () => {
+  it("正しい入力なら、メール・種類・同意だけを返す", () => {
+    const { errors, data } = buildSignup({ email: "  a@example.com ", topics: ["concert", "concert", "recruit"], consent: true });
+    assert.deepEqual(errors, []);
+    assert.deepEqual(data, { email: "a@example.com", topics: ["concert", "recruit"], consent: true });
+  });
+
+  it("メールなし・形式ちがい・長すぎはエラー", () => {
+    assert.equal(buildSignup({ email: "", topics: ["concert"], consent: true }).errors[0].id, "nt-email");
+    assert.equal(buildSignup({ email: "abc", topics: ["concert"], consent: true }).errors[0].id, "nt-email");
+    assert.equal(buildSignup({ email: `${"a".repeat(250)}@x.jp`, topics: ["concert"], consent: true }).errors[0].id, "nt-email");
+  });
+
+  it("種類を選ばない・知らない種類だけ・同意なしはエラー", () => {
+    assert.deepEqual(buildSignup({ email: "a@example.com", topics: [], consent: true }).errors.map((e) => e.id), ["nt-topics"]);
+    assert.deepEqual(buildSignup({ email: "a@example.com", topics: ["spam"], consent: true }).errors.map((e) => e.id), ["nt-topics"]);
+    assert.deepEqual(buildSignup({ email: "a@example.com", topics: ["concert"], consent: false }).errors.map((e) => e.id), ["nt-consent"]);
+  });
+
+  it("種類はルールと同じ3つ", () => {
+    assert.deepEqual(Object.keys(TOPICS).sort(), ["concert", "recruit", "session"]);
+  });
+});

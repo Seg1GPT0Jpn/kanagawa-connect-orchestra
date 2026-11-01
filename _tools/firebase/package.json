@@ -3,7 +3,7 @@
   "private": true,
   "description": "曲目候補フォーム・協賛制度・会計報告の JavaScript を js/ に書き出すためのビルド設定とテスト（公開対象外）",
   "scripts": {
-    "build": "esbuild src/suggest.js src/admin.js src/sponsor-page.js src/sponsors-list.js src/report.js src/sponsor-admin.js src/report-admin.js --bundle --minify --format=iife --target=es2019 --legal-comments=none --outdir=../../js --entry-names=[name].bundle",
+    "build": "esbuild src/suggest.js src/notify.js src/admin.js src/sponsor-page.js src/sponsors-list.js src/report.js src/sponsor-admin.js src/report-admin.js --bundle --minify --format=iife --target=es2019 --legal-comments=none --outdir=../../js --entry-names=[name].bundle",
     "emulators": "cd ../.. && firebase emulators:start --project demo-kco --only hosting,firestore,auth",
     "test": "npm run test:logic && npm run test:rules",
     "test:logic": "node --test test/logic.test.js",

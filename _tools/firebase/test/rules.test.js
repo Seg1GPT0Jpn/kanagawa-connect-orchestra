@@ -529,3 +529,33 @@ describe("既存の曲目候補フォーム（テスト要件11）", () => {
     await assertFails(addDoc(collection(db, "programSuggestions"), suggestion({ extra: 1 })));
   });
 });
+
+// ================================================================ お知らせの受け取り登録
+describe("お知らせの受け取り登録", () => {
+  const signup = (o = {}) => ({
+    timestamp: serverTimestamp(), email: "fan@example.com", topics: ["concert"], consent: true, ...o,
+  });
+
+  it("誰でも登録でき、読めて消せるのは運営管理者だけ", async () => {
+    const ref = await assertSucceeds(addDoc(collection(as(env, null), "updateSignups"), signup()));
+    await assertFails(getDoc(doc(as(env, null), "updateSignups", ref.id)));
+    await assertFails(getDocs(collection(as(env, STRANGER), "updateSignups")));
+    await assertFails(getDoc(doc(as(env, REVIEWER), "updateSignups", ref.id)));
+    await assertSucceeds(getDocs(collection(as(env, ADMIN), "updateSignups")));
+    await assertFails(updateDoc(doc(as(env, ADMIN), "updateSignups", ref.id), { topics: ["recruit"] }));
+    await assertFails(deleteDoc(doc(as(env, null), "updateSignups", ref.id)));
+    await assertSucceeds(deleteDoc(doc(as(env, ADMIN), "updateSignups", ref.id)));
+  });
+
+  it("決められた項目・種類・同意がそろっていないと登録できない", async () => {
+    const db = as(env, null);
+    await assertSucceeds(addDoc(collection(db, "updateSignups"), signup({ topics: ["concert", "session", "recruit"] })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ topics: [] })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ topics: ["spam"] })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ topics: "concert" })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ consent: false })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ email: "not-an-email" })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ name: "名前" })));
+    await assertFails(addDoc(collection(db, "updateSignups"), signup({ timestamp: new Date(2020, 0, 1) })));
+  });
+});

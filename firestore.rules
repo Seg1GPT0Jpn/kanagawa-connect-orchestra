@@ -107,6 +107,26 @@ service cloud.firestore {
       allow update: if false;
     }
 
+    // ---------------------------------------------------------------- お知らせの受け取り登録
+
+    // メールアドレスと、受け取りたいお知らせの種類だけを保存する（名前・年齢・学校名などは受け取らない）
+    function isValidSignup(d) {
+      return d.keys().hasAll(['timestamp', 'email', 'topics', 'consent'])
+        && d.keys().hasOnly(['timestamp', 'email', 'topics', 'consent'])
+        && d.timestamp == request.time
+        && isEmail(d.email)
+        && d.topics is list
+        && d.topics.size() >= 1 && d.topics.size() <= 3
+        && d.topics.hasOnly(['concert', 'session', 'recruit'])
+        && d.consent == true;
+    }
+
+    match /updateSignups/{signupId} {
+      allow create: if isValidSignup(request.resource.data);
+      allow read, delete: if isAdmin();
+      allow update: if false;
+    }
+
     // ---------------------------------------------------------------- 協賛：設定
 
     function settingsPath() {

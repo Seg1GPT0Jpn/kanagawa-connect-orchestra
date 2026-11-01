@@ -134,6 +134,38 @@
             </table>
           </div>
           <p class="text-center muted" data-admin-empty hidden>このカテゴリーの提案はまだありません。</p>
+
+          <section class="admin-signups" aria-labelledby="signups-title">
+            <h2 class="admin-signups__title" id="signups-title">お知らせの受け取り登録</h2>
+            <p class="small">「お知らせをメールで受け取る」ページから登録された人の一覧です。お知らせを送るときは、メールアドレスをまとめてコピーして、<strong>必ずBCC</strong>に貼り付けてください。配信停止の依頼があったら、その人の登録を削除してください。</p>
+            <div class="admin-toolbar">
+              <label class="admin-signups__filter">種類：
+                <select data-signup-topic>
+                  <option value="all">すべて</option>
+                  <option value="concert">演奏会の日程・会場が決まったとき</option>
+                  <option value="session">説明会・見学会の案内</option>
+                  <option value="recruit">団員募集の大切なお知らせ</option>
+                </select>
+              </label>
+              <span class="admin-count" data-signup-count aria-live="polite"></span>
+              <button class="btn btn--outline btn--sm" type="button" data-signup-copy>メールアドレスをまとめてコピー（BCC用）</button>
+            </div>
+            <div class="table-wrap" role="region" aria-label="お知らせの受け取り登録の一覧（横にスクロールできます）" tabindex="0">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th scope="col">メールアドレス</th>
+                    <th scope="col">受け取りたいお知らせ</th>
+                    <th scope="col">登録日</th>
+                    <th scope="col"><span class="visually-hidden">操作</span></th>
+                  </tr>
+                </thead>
+                <tbody data-signup-rows></tbody>
+              </table>
+            </div>
+            <p class="text-center muted" data-signup-empty hidden>この種類の登録はまだありません。</p>
+            <p class="admin-status" data-signup-status role="status"></p>
+          </section>
         </div>
 
         <p class="admin-status" data-admin-status role="status"></p>
@@ -160,6 +192,7 @@
           <li><a href="concert.html">第1回演奏会</a></li>
           <li><a href="activity.html">活動について</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="notify.html">お知らせをメールで受け取る</a></li>
           <li><a href="suggest.html">曲目候補の提案</a></li>
           <li><a href="flyer.html">募集チラシ（印刷用）</a></li>
           <li><a href="sponsor.html">ご支援・協賛</a></li>
