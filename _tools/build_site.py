@@ -29,7 +29,7 @@ LASTMOD = "2026-11-01"
 FEE_PLAN = "1回の演奏会ごとに約6,000円を想定しています（資金集めの状況によっては約8,000〜10,000円）"
 # お知らせ（新しい順。ホームには先頭の5件を表示）
 NEWS = [
-    ("2026-11-01", "ホームページを更新しました（参加費の想定・よくある質問・保護者の方へ・募集チラシなど）", "recruit.html"),
+    ("2026-11-01", "ホームページを更新しました（参加費の想定・よくある質問・保護者の方へ・参加の3段階・募集チラシなど）", "recruit.html"),
     ("2026-11-01", "サブメイン曲の2曲目の曲目候補の募集を始めました", "suggest.html"),
     ("2026-11-01", "第1回演奏会のアンコール1曲目が決まりました（曲名は当日のお楽しみ）", "concert.html"),
 ]
@@ -413,6 +413,10 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
         <h1 class="hero__title" id="hero-title"><span>すべてのひとの</span><span>ための</span><span>オーケストラ</span></h1>
         <p class="hero__lead">{PHILOSOPHY}</p>
         <p class="hero__desc">学生を中心に活動する、年齢・経験を問わないオーケストラです。<br class="u-pc">神奈川県を中心に、2026年12月頃から活動を始める予定です。</p>
+        <ul class="hero__facts" aria-label="募集のポイント">
+          <li>初心者歓迎</li><li>小学生〜社会人</li><li>年齢・所属不問</li><li>神奈川県中心</li><li>2026年12月頃 合奏開始予定</li>
+        </ul>
+        <p class="hero__note">楽器が久しぶりの方、合奏が初めての方も大丈夫。参加を決めていなくても、相談だけでも歓迎です。</p>
         <p class="hero__status"><span class="badge badge--gold">団員募集中</span><span>{INSTR_SHORT}（特に弦楽器）</span></p>
         <div class="btn-group btn-group--center">
           {btn("recruit.html", "団員募集を見る", "primary")}
@@ -443,7 +447,9 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
       <div class="container container--narrow">
 {title("News", "news-home-title", "お知らせ")}
 {news_list(NEWS[:5])}
-        <p class="note">最新情報は<a href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">公式Instagram{NEW_TAB}</a>でもお知らせしています。</p>
+        <a class="ig-banner" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">
+          {ICON_IG}<span class="ig-banner__text"><strong>公式Instagram</strong><span>活動の様子や最新情報はこちらでも発信しています（{INSTAGRAM_ID}）</span></span>{NEW_TAB}
+        </a>
       </div>
     </section>
 
@@ -608,6 +614,14 @@ about_body = page_header("About", "私たちについて", "年齢や経験に�
 {row("活動地域", "神奈川県を中心に活動予定")}
 {row("活動開始", "2026年12月頃から合奏開始予定")}
         </dl>
+        <div class="card u-mt-md" id="management">
+          <h3 class="card__title">運営について</h3>
+          <ul class="check-list">
+            <li>学生の運営メンバーが中心となって運営しています。</li>
+            <li>お金の管理や会計報告は、保護者などの成人の確認者がチェックします。未成年のメンバーだけでお金のことを決めることはありません。</li>
+            <li>連絡の窓口：<a href="mailto:{MAIL}">{MAIL.replace("@", "<wbr>@")}</a>（参加のご相談は<a href="{FORM}" target="_blank" rel="noopener noreferrer">参加希望フォーム{NEW_TAB}</a>）</li>
+          </ul>
+        </div>
         <p class="note">活動を支えていただける協賛制度を準備しています。{'<a href="sponsor.html">ご支援・協賛のご案内</a>'}／{'<a href="report.html">会計報告</a>'}</p>
       </div>
     </section>
@@ -637,7 +651,7 @@ RULES = [
     ("基本的な姿勢", "<p>互いを尊重し、年齢・性別・経験・技術・所属による不当な扱いや、頭ごなしの否定をしません。困っている人を助け合い、建設的に意見を交わします。「上手な人が偉い」ではなく、全員で音楽をつくります。</p>"),
     ("練習への参加", "<p>可能な限り練習に参加し、欠席・遅刻・早退は早めに連絡してください。自分のパートを練習し、合奏を妨げない行動を基本とします。学校・仕事・体調などによるやむを得ない欠席を責めることはありません。</p>"),
     ("演奏会への参加・人数調整", "<p>編成・参加状況・曲の難易度などを考慮して出演者を決定します。初心者という理由だけで一律に除外することはありません。希望者が多い楽器は、曲ごとの担当変更や交代制など、納得感のある方法で公平に調整します。</p>"),
-    ("初心者への配慮・意見交換", "<p>「初心者だから来ない方がいい」などの否定的な言動は固く禁止します。意見の違いがある場合も、人格否定や威圧的な態度、SNSでの攻撃は厳禁とし、建設的な対話を徹底します。</p>"),
+    ("初心者への配慮・意見交換", "<p>「初心者だから来ない方がいい」といった、人を否定する言葉は使わないでください。意見がちがうときも、相手の人格を否定したり、威圧したり、SNSで攻撃したりせず、話し合いで解決しましょう。</p>"),
     ("禁止事項", """<ul class="dash-list">
                 <li><strong>他人を傷つける行為：</strong>暴力・脅迫・差別的言動、侮辱・人格否定・執拗な嫌がらせ、いじめ・仲間外れ</li>
                 <li><strong>ハラスメント行為：</strong>セクシュアルハラスメント、パワーハラスメント、年齢・経験・立場を利用した威圧</li>
@@ -660,11 +674,16 @@ FAQ = [
     ("経験者にとっても、やりがいのある活動になりますか？", "<p>第1回演奏会では、ドヴォルザークの交響曲第7番をメインプログラムとして予定しています。一人ひとりが音楽づくりに関わり、質の高い演奏を目指すオーケストラです。</p>"),
     ("学生でなくても参加できますか？", "<p>はい。学生を中心に活動するオーケストラですが、学生以外の方の参加も歓迎しています。小学生から社会人まで、幅広い年代の参加を想定しています。</p>"),
     ("神奈川県外に住んでいますが、参加できますか？", "<p>はい、神奈川県外からの参加も歓迎します。活動は神奈川県を中心に予定しています。</p>"),
-    ("参加費はかかりますか？", f"<p>{FEE_PLAN}。まだ確定ではありません。{FEE_TEXT}</p>"),
+    ("参加費はかかりますか？", f"<p>{FEE_PLAN}。まだ確定ではありません。{FEE_TEXT}金額が決まる前に、参加費をお願いすることはありません。</p>"),
     ("楽器は自分で用意する必要がありますか？", "<p>打楽器は団体で用意します。弦楽器・管楽器の方は、ご自身の楽器をお持ちください。楽器のことで困っている場合は、参加希望フォームからご相談ください。</p>"),
     ("楽譜が読めない・楽器を始めたばかりでも大丈夫ですか？", "<p>大丈夫です。まわりのメンバーと一緒にがんばりましょう。楽譜が読めない方には、ある程度読めるようになるまで、できる限りサポートします。演奏が難しい場合は、演奏会で演奏する曲を少なめにすることも考えます。</p>"),
     ("初心者でも演奏会に出られますか？", "<p>はい、出られます。人数が多くなりやすいパート（フルート・オーボエ・チューバなど）は、曲によってお休みする「降り番」をお願いすることがあります。それ以外のパートは、できるだけ多くの曲に出られるようにします。</p>"),
     ("途中からの参加や、ほかの団体との掛け持ちはできますか？", "<p>どちらも大丈夫です。演奏会に出るには、演奏会までの練習に3回以上参加し、そのうち最後の2回は必ず参加していただく形を予定しています。</p>"),
+    ("学校の部活動や習いごとと両立できますか？", "<p>練習は通常、月1〜2回（1回約3時間）を想定しています。演奏会の前は月2〜4回程度に増える予定です。練習日が決まったら早めにお知らせするので、ご自身の予定に合わせてご検討ください。</p>"),
+    ("毎回、休まずに参加しないといけませんか？", "<p>できる限り参加していただきたいですが、学校・仕事・体調などによるやむを得ない欠席を責めることはありません。欠席するときは早めに連絡してください。演奏会に出るには、練習に3回以上（最後の2回は必ず）参加していただく形を予定しています。</p>"),
+    ("ひとりで参加するのが不安です。", "<p>立ち上げたばかりのオーケストラなので、ほとんどの人が「はじめまして」から始まります。不安なことは参加希望フォームやメールで気軽にご相談ください。</p>"),
+    ("小・中・高校生ですが、ひとりで申し込めますか？", "<p>参加希望フォームはご本人から送っていただけます。未成年の方が正式に参加するときは、保護者の方の同意をフォームで確認します。</p>"),
+    ("楽器を持っていません。貸し出しはありますか？", "<p>打楽器は団体で用意します。弦楽器・管楽器の貸し出しは、現在は予定していません（今後検討します）。楽器のことで困っている場合は、ご相談ください。</p>"),
     ("説明会はありますか？", "<p>オンラインでの説明会を検討中です。決まったら、このサイトと公式Instagramでお知らせします。それまでは、参加希望フォームやメールで気軽にご質問ください。</p>"),
     ("保護者も練習を見学できますか？", "<p>はい、保護者の方の見学は可能です。詳しくは参加希望フォームまたはメールでご相談ください。</p>"),
     ("募集楽器にない楽器でも参加できますか？", "<p>その他の楽器についても、参加を希望される場合はご相談ください。</p>"),
@@ -728,6 +747,31 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
       </div>
     </section>
 
+
+    <section class="section section--tinted" aria-labelledby="levels-title">
+      <div class="container">
+{title("Three steps", "levels-title", "「団員になる」「合奏に参加する」<br>「演奏会に出る」の違い")}
+        <p class="text-center">参加できることと、演奏会ですべての曲に出られることは、同じではありません。<br class="u-pc">初心者の方にも経験者の方にも納得していただけるよう、3つに分けてご説明します。</p>
+        <div class="levels">
+          <div class="level-card">
+            <p class="level-card__num" aria-hidden="true">1</p>
+            <h3 class="level-card__title">団員になる</h3>
+            <p>年齢・経験・所属を問わず、どなたでもなれます。楽器を始めたばかりの方や、楽譜を読むのが苦手な方も大丈夫です。</p>
+          </div>
+          <div class="level-card">
+            <p class="level-card__num" aria-hidden="true">2</p>
+            <h3 class="level-card__title">合奏（練習）に参加する</h3>
+            <p>団員なら誰でも参加できます。最初はできるところから。楽譜が読めない方には、読めるようになるまでできる限りサポートします。</p>
+          </div>
+          <div class="level-card">
+            <p class="level-card__num" aria-hidden="true">3</p>
+            <h3 class="level-card__title">演奏会に出る</h3>
+            <p>初心者も出られます。演奏会までの練習に3回以上（最後の2回は必ず）参加することを条件にする予定です。人数が多いパートは曲ごとにお休み（降り番）をお願いすることがあり、難しい場合は出る曲を少なめにすることもあります。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="audience-title">
       <div class="container">
 {title("For everyone", "audience-title", "初心者も、経験者も。")}
@@ -743,6 +787,28 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
             <p>第1回演奏会のメインプログラムは、ドヴォルザークの交響曲第7番を予定しています。一人ひとりが「この曲で何を表現したいか」を考え、質の高い音楽を目指します。</p>
           </div>
         </div>
+        <div class="card u-mt-md worries">
+          <h3 class="card__title">こんな方も歓迎です</h3>
+          <ul class="check-list">
+            <li>オーケストラに参加したことがない</li>
+            <li>吹奏楽しか経験がない</li>
+            <li>合奏についていけるか不安</li>
+            <li>周りに知り合いがいない</li>
+            <li>難しい曲を演奏できるか分からない</li>
+          </ul>
+          <p>分からないことは、まわりのメンバーと相談しながら一緒に成長していきましょう。</p>
+        </div>
+        <details class="glossary u-mt-md">
+          <summary>はじめての方へ：オーケストラの言葉ミニ辞典</summary>
+          <dl class="glossary__list">
+            <div><dt>合奏（ごうそう）</dt><dd>全員がそろって一緒に演奏する練習のこと。</dd></div>
+            <div><dt>パート</dt><dd>楽器ごとの担当。たとえば「ヴァイオリンのパート」。</dd></div>
+            <div><dt>セクション練習</dt><dd>弦楽器だけ・管楽器だけなど、グループに分かれて行う練習。</dd></div>
+            <div><dt>降り番（おりばん）</dt><dd>その曲ではお休みすること。人数が多いパートで交代しながら出番を分けます。</dd></div>
+            <div><dt>譜読み（ふよみ）</dt><dd>新しい曲の楽譜を読んで、音やリズムを確かめること。</dd></div>
+            <div><dt>チューニング</dt><dd>演奏の前に、みんなで楽器の音の高さをそろえること。</dd></div>
+          </dl>
+        </details>
       </div>
     </section>
 
@@ -888,6 +954,15 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
           <p>チェコの作曲家アントニン・ドヴォルザーク（1841–1904）による交響曲です。ロンドンのフィルハーモニック協会の依頼で作曲され、1885年にロンドンで初演されました。全4楽章の作品で、引き締まった構成と、情熱的で重厚な、劇的な音楽が特徴です。</p>
         </div>
         <div class="card u-mt-md">
+          <h3 class="card__title">聴きどころ（4つの楽章）</h3>
+          <dl class="movements">
+            <div><dt>第1楽章</dt><dd>低い弦楽器による暗く静かな始まりから、緊張感のある力強い音楽へ。曲全体の雰囲気が決まる楽章です。</dd></div>
+            <div><dt>第2楽章</dt><dd>木管楽器の穏やかな歌から始まる、ゆったりとした楽章。ホルンなどの温かい響きにも注目です。</dd></div>
+            <div><dt>第3楽章</dt><dd>舞曲風のスケルツォ。リズムが交差する独特の躍動感と、のびやかな中間部の対比が魅力です。</dd></div>
+            <div><dt>第4楽章</dt><dd>嵐のような激しさを持つフィナーレ。最後はニ長調の和音で力強く曲を閉じます。</dd></div>
+          </dl>
+        </div>
+        <div class="card u-mt-md">
           <h3 class="card__title">この曲に挑戦する理由</h3>
           <p>この作品は、経験者にとっても挑みがいのある交響曲です。第1回演奏会でこの曲に取り組むこと自体が、私たちの音楽的な目標のひとつです。</p>
           <p>初めてオーケストラに参加する方も、経験を重ねてきた方も、それぞれの経験を持ち寄り、一つの音楽をつくりあげていきます。</p>
@@ -918,6 +993,7 @@ activity_body = page_header("Activity", "活動について", "2026年12月頃�
 {row("練習日・曜日", pending("今後決定予定です"))}
 {row("練習会場", pending("今後決定予定です"))}
 {row("当面の目標", "第1回演奏会（メインプログラム：ドヴォルザーク 交響曲第7番を予定）")}
+{row("欠席について", "学校・仕事・体調などによるやむを得ない欠席を責めることはありません。早めにご連絡ください。")}
         </dl>
         <p class="note">※ 未定の項目は、決定次第お知らせします。</p>
       </div>
@@ -939,9 +1015,10 @@ activity_body = page_header("Activity", "活動について", "2026年12月頃�
       <div class="container container--narrow">
 {title("Roadmap", "roadmap-title", "これからの予定")}
         <ol class="steps">
-          <li class="steps__now" aria-current="step"><span class="steps__title">団員募集 <span class="badge badge--gold">いまここ</span></span><span class="steps__text">学生を中心に、年齢・経験・所属を問わずメンバーを募集しています。</span></li>
-          <li><span class="steps__title">合奏開始（2026年12月頃予定）</span><span class="steps__text">具体的な練習日・会場は今後決定予定です。</span></li>
-          <li><span class="steps__title">第1回演奏会</span><span class="steps__text">ドヴォルザークの交響曲第7番をメインプログラムとして予定しています。開催日・会場は決定次第お知らせします。</span></li>
+          <li class="steps__now" aria-current="step"><span class="steps__title">団員募集・準備 <span class="badge badge--gold">いまここ</span></span><span class="steps__text">団員の募集、練習会場さがし、運営の準備を進めています。</span></li>
+          <li><span class="steps__title">合奏開始 <span class="badge badge--planned">2026年12月頃予定</span></span><span class="steps__text">練習環境を整えて、オーケストラとしての活動を始めます。具体的な練習日・会場は今後決定予定です。</span></li>
+          <li><span class="steps__title">合奏・音楽づくり <span class="badge badge--planned">合奏開始後</span></span><span class="steps__text">パートごとの練習と合奏を重ねながら、みんなで音楽をつくっていきます。</span></li>
+          <li><span class="steps__title">第1回演奏会 <span class="badge badge--planned">日程未定</span></span><span class="steps__text">ドヴォルザークの交響曲第7番をメインプログラムに予定しています。開催日・会場は決定次第お知らせします。</span></li>
         </ol>
       </div>
     </section>
@@ -981,7 +1058,13 @@ contact_body = page_header("Contact", "お問い合わせ", "ご用件に合わ�
       <div class="container container--narrow">
 {title("Privacy", "privacy-title", "個人情報の取り扱いについて")}
         <p>参加希望フォームでいただいた情報は、団体の活動に関するご連絡や参加確認などの目的で使用します。本人の同意なく第三者へ提供したり、SNSなどで公開したりすることはありません。</p>
-        <p>未成年の方の正式な活動参加にあたっては、必要に応じて保護者の方への確認を行います。</p>
+        <p>未成年の方の正式な活動参加にあたっては、保護者の方の同意を確認します。</p>
+        <ul class="dash-list">
+          <li><strong>見られる人：</strong>運営メンバーのうち、連絡や参加確認を担当する人だけが確認します。</li>
+          <li><strong>保管する期間：</strong>活動のご連絡に必要な間だけ保管し、参加しないことになった場合などは、必要がなくなった時点で削除します。</li>
+          <li><strong>削除の依頼：</strong>ご自身の情報の削除を希望される場合は、<a href="mailto:{MAIL}">メール</a>でご連絡ください。</li>
+          <li><strong>写真：</strong>本人（未成年の方は保護者の方も）の同意なく、顔写真や個人が分かる情報を公開しません。撮影や掲載を断っても、活動で不利になることはありません。</li>
+        </ul>
         <p class="note">※ 団員募集の詳細は<a href="recruit.html">団員募集ページ</a>をご覧ください。参加費・楽器・初心者の参加などは<a href="recruit.html#faq-title">よくある質問</a>にまとめています。</p>
       </div>
     </section>
@@ -1011,7 +1094,7 @@ nf_body = f'''    <div class="page-header">
 # 過去の提案のカテゴリ（opening・submain・encore1）は、管理画面・ルールでそのまま扱える
 SONG_CATS = [("submain2", "サブメイン曲2"), ("encore2", "アンコール曲2")]
 
-REASON_HINT = "例：好きな曲だから／オーケストラで演奏してみたいから／みんなで盛り上がれそうだから／この楽団に合っていると思うから／以前演奏して印象に残っているから"
+REASON_HINT = "例：好きな曲だから／オーケストラで演奏してみたいから／みんなで盛り上がれそうだから／この楽団に合っていると思うから／以前演奏して印象に残っているから（住所・学校名・電話番号などの個人情報は書かないでください）"
 
 cat_checks = "\n".join(
     f'''            <label class="choice"><input type="checkbox" name="category" value="{k}"><span>{ja}</span></label>'''
@@ -1456,6 +1539,14 @@ sponsor_body = page_header("Support", "ご支援・協賛のご案内", "音楽�
 {uses_html}
         </ul>
         <p class="note">※ 団体の資金は個人の資金と分けて管理し、収入・支出・手数料・残高を記録します。領収書・請求書・振込記録なども保存します。</p>
+        <h3 class="sub-title u-mt-lg">協賛金の流れ</h3>
+        <ol class="money-flow">
+          <li>協賛金を受け入れる<span>受け入れは、成人の協力者による管理体制の確認後に始めます</span></li>
+          <li>団体の資金として管理<span>個人のお金と分けて記録し、成人の確認者がチェックします</span></li>
+          <li>活動費に使う<span>会場費・楽譜代・広報費など</span></li>
+          <li>会計報告を公開<span>年1回、このサイトで公開します</span></li>
+        </ol>
+        <p class="note">受け入れ開始前でも、協賛についてのご質問は<a href="mailto:{MAIL}">メール</a>で受け付けています。</p>
       </div>
     </section>
 

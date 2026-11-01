@@ -2655,3 +2655,211 @@ body:has(.mobile-cta) {
     margin: 12mm;
   }
 }
+
+/* =========================================================
+   ヒーローの要点・Instagram・参加の3段階・ミニ辞典・楽章・協賛金の流れ
+   ========================================================= */
+
+.hero__facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0 auto var(--space-sm);
+  max-width: 40rem;
+}
+
+.hero__facts li {
+  padding: 0.15rem 0.75rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.hero__note {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  max-width: 34rem;
+  margin: 0 auto var(--space-sm);
+  word-break: auto-phrase;
+}
+
+.ig-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: var(--space-md);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--color-navy);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.ig-banner .icon {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+.ig-banner__text {
+  display: grid;
+  gap: 0.1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.ig-banner__text strong {
+  font-size: 1rem;
+  color: var(--color-gold-soft);
+}
+
+.ig-banner:hover,
+.ig-banner:focus-visible {
+  background: var(--color-navy-soft);
+}
+
+.levels {
+  display: grid;
+  gap: 1rem;
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 800px) {
+  .levels {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.level-card {
+  position: relative;
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.level-card__num {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-ivory);
+  font-family: var(--font-serif);
+  margin-bottom: 0.5rem;
+}
+
+.level-card__title {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.level-card p:not(.level-card__num) {
+  font-size: 0.92rem;
+}
+
+.glossary {
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius);
+  padding: 0.25rem 1.25rem;
+}
+
+.glossary summary {
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.glossary__list div,
+.movements div {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-top: 1px dashed var(--color-gold-soft);
+  font-size: 0.92rem;
+}
+
+.glossary__list dt,
+.movements dt {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.glossary__list {
+  padding-bottom: 0.75rem;
+}
+
+@media (max-width: 420px) {
+  .glossary__list div,
+  .movements div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.sub-title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.money-flow {
+  list-style: none;
+  counter-reset: flow;
+  display: grid;
+  gap: 1.6rem;
+  padding: 0;
+}
+
+.money-flow li {
+  counter-increment: flow;
+  position: relative;
+  padding: 0.9rem 1rem 0.9rem 3.25rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.money-flow li::before {
+  content: counter(flow);
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-size: 0.85rem;
+}
+
+.money-flow li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1.35rem;
+  border: 0.5rem solid transparent;
+  border-top-color: var(--color-gold);
+  transform: translateX(-50%);
+}
+
+.money-flow li span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
