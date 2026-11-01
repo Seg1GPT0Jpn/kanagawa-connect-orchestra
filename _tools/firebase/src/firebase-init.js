@@ -10,7 +10,8 @@ export const COLLECTION = "programSuggestions";
 
 export const CATEGORIES = {
   opening: "オープニング",
-  submain: "サブメイン",
+  submain: "サブメイン1",
+  submain2: "サブメイン2",
   encore1: "アンコール1",
   encore2: "アンコール2",
 };

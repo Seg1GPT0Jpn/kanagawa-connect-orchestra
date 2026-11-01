@@ -93,7 +93,7 @@ service cloud.firestore {
         && d.name is string && d.name.size() >= 1 && d.name.size() <= 50
         && d.email is string && d.email.size() <= 254
         && d.email.matches('^[^@\\s]+@[^@\\s]+[.][^@\\s]+$')
-        && d.category in ['opening', 'submain', 'encore1', 'encore2']
+        && d.category in ['opening', 'submain', 'submain2', 'encore1', 'encore2']
         && d.title is string && d.title.size() >= 1 && d.title.size() <= 200
         && d.composer is string && d.composer.size() <= 100
         && d.reason is string && d.reason.size() <= 1000

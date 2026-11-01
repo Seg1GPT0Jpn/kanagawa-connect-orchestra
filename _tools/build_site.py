@@ -24,7 +24,7 @@ MAIL = "kanagawaorchestra2026renraku@gmail.com"
 # 団員専用アプリ（別の Firebase プロジェクト。加入が確定した団員だけがログインできる）
 MEMBER_APP = "https://kanagawa-connect-official.web.app/"
 PDF = "docs/recruitment-guidelines.pdf"
-LASTMOD = "2026-10-20"
+LASTMOD = "2026-11-01"
 
 NAV = [
     ("index.html", "ホーム"),
@@ -84,12 +84,14 @@ def badge_open(text="募集中"):
 
 
 def program_list():
-    """第1回演奏会のプログラム構成（演奏順）。アンコールは曲目候補を募集中。"""
+    """第1回演奏会のプログラム構成（演奏順）。サブメイン2・アンコール2は曲目候補を募集中。
+    アンコール1は決定済みだが、アンコールなので曲名は公表しない（当日のお楽しみ）。"""
     return f'''        <ol class="program-list">
           <li><span class="program-list__part">オープニング</span><span class="program-list__detail">ブラームス：ハンガリー舞曲第5番 {planned()}</span></li>
-          <li><span class="program-list__part">サブメイン</span><span class="program-list__detail">ドヴォルザーク：序曲「謝肉祭」 作品92 {planned()}</span></li>
+          <li><span class="program-list__part">サブメイン1</span><span class="program-list__detail">ドヴォルザーク：序曲「謝肉祭」 作品92 {planned()}</span></li>
+          <li><span class="program-list__part">サブメイン2</span><span class="program-list__detail">曲目候補 {badge_open()}</span></li>
           <li class="program-list__main"><span class="program-list__part">メインプログラム</span><span class="program-list__detail">ドヴォルザーク：交響曲第7番 {planned()}</span></li>
-          <li><span class="program-list__part">アンコール1</span><span class="program-list__detail">曲目候補 {badge_open()}</span></li>
+          <li><span class="program-list__part">アンコール1</span><span class="program-list__detail">当日のお楽しみ {planned("決定")}</span></li>
           <li><span class="program-list__part">アンコール2</span><span class="program-list__detail">曲目候補 {badge_open()}</span></li>
         </ol>'''
 
@@ -100,8 +102,8 @@ def program_call_section(id_prefix="program-call", cls="section--tinted"):
       <div class="container container--narrow">
 {title("Program", f"{id_prefix}-title", "演奏会の曲目を、<br>一緒に決めませんか？")}
         <p>第1回演奏会では、ドヴォルザーク交響曲第7番をメインプログラムとして取り上げる予定です。</p>
-        <p>オープニングにはブラームスの「ハンガリー舞曲第5番」、サブメインにはドヴォルザークの序曲「謝肉祭」を予定しています。</p>
-        <p>アンコール曲については、これから参加する皆さんの意見も聞きながら決めていきます。</p>
+        <p>オープニングにはブラームスの「ハンガリー舞曲第5番」、サブメインの1曲目にはドヴォルザークの序曲「謝肉祭」を予定しています。</p>
+        <p>アンコールの1曲目は決まりました（曲名は当日のお楽しみです）。サブメインの2曲目とアンコールの2曲目については、これから参加する皆さんの意見も聞きながら決めていきます。</p>
         <ul class="quote-list">
           <li>『この曲をオーケストラで演奏してみたい！』</li>
           <li>『この曲ならみんなで楽しめそう！』</li>
@@ -413,7 +415,7 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
           <p class="concert-feature__work" lang="en">Symphony No. 7</p>
           <p class="concert-feature__ja">ドヴォルザーク：交響曲第7番 ニ短調 作品70</p>
         </div>
-        <p>メインプログラムとして予定しています。オープニングはブラームスの「ハンガリー舞曲第5番」、サブメインはドヴォルザークの序曲「謝肉祭」を予定しています。アンコールの曲目は、参加する皆さんの意見も聞きながら決めていきます。</p>
+        <p>メインプログラムとして予定しています。オープニングはブラームスの「ハンガリー舞曲第5番」、サブメインの1曲目はドヴォルザークの序曲「謝肉祭」を予定しています。サブメインの2曲目とアンコールの2曲目は、参加する皆さんの意見も聞きながら決めていきます（アンコールの1曲目は決定済み・当日のお楽しみです）。</p>
         <p class="small muted">開催日・会場は決定次第お知らせします。</p>
         <div class="section-more">
           {btn("concert.html", "第1回演奏会について", "outline-light")}
@@ -748,9 +750,11 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
         <p class="text-center">演奏会の情報は、決まったものから順にお知らせします。</p>
         <dl class="info-list">
 {row("オープニング", "ブラームス：ハンガリー舞曲第5番 " + planned())}
-{row("サブメイン", "ドヴォルザーク：序曲「謝肉祭」 作品92 " + planned())}
+{row("サブメイン1", "ドヴォルザーク：序曲「謝肉祭」 作品92 " + planned())}
+{row("サブメイン2", "曲目候補 " + badge_open() + '<br><span class="small">曲目候補を募集しています。皆さんからいただいた候補を参考に、今後決定します。</span>')}
 {row("メインプログラム", "ドヴォルザーク：交響曲第7番 " + planned())}
-{row("アンコール", "アンコール1・アンコール2 " + badge_open() + '<br><span class="small">曲目候補を募集しています。皆さんからいただいた候補を参考に、今後決定します。</span>')}
+{row("アンコール1", "当日のお楽しみ " + planned("決定") + '<br><span class="small">曲目は決まりました。アンコールのため、曲名は演奏会当日まで公表しません。</span>')}
+{row("アンコール2", "曲目候補 " + badge_open() + '<br><span class="small">曲目候補を募集しています。皆さんからいただいた候補を参考に、今後決定します。</span>')}
 {row("開催日", pending("決定次第お知らせします"))}
 {row("会場", pending("決定次第お知らせします"))}
 {row("チケット", pending("決定次第お知らせします"))}
@@ -887,9 +891,10 @@ nf_body = f'''    <div class="page-header">
 '''
 
 # ================================================================ SUGGEST（曲目候補の提案）
-# オープニング（ハンガリー舞曲第5番）とサブメイン（序曲「謝肉祭」）は決まったため、アンコールだけ募集する。
-# 過去の提案のカテゴリ（opening）は、管理画面・ルールでそのまま扱える
-SONG_CATS = [("encore1", "アンコール曲1"), ("encore2", "アンコール曲2")]
+# オープニング（ハンガリー舞曲第5番）・サブメイン1（序曲「謝肉祭」）・アンコール1（非公表）は決まったため、
+# サブメイン2とアンコール2だけ募集する。
+# 過去の提案のカテゴリ（opening・submain・encore1）は、管理画面・ルールでそのまま扱える
+SONG_CATS = [("submain2", "サブメイン曲2"), ("encore2", "アンコール曲2")]
 
 REASON_HINT = "例：好きな曲だから／オーケストラで演奏してみたいから／みんなで盛り上がれそうだから／この楽団に合っていると思うから／以前演奏して印象に残っているから"
 
@@ -934,8 +939,8 @@ suggest_body = page_header("Program suggestions", "曲目候補の提案", "演�
       <div class="container container--narrow">
 {title("Together", "suggest-intro-title", "演奏する人が、演奏会をつくる")}
         <p>第1回演奏会では、ドヴォルザーク交響曲第7番をメインプログラムとして取り上げる予定です。</p>
-        <p>オープニングにはブラームスの「ハンガリー舞曲第5番」、サブメインにはドヴォルザークの序曲「謝肉祭」を予定しています。</p>
-        <p>アンコール曲については、これから参加する皆さんの意見も聞きながら決めていきます。</p>
+        <p>オープニングにはブラームスの「ハンガリー舞曲第5番」、サブメインの1曲目にはドヴォルザークの序曲「謝肉祭」を予定しています。</p>
+        <p>アンコールの1曲目は決まりました（曲名は当日のお楽しみです）。サブメインの2曲目とアンコールの2曲目については、これから参加する皆さんの意見も聞きながら決めていきます。</p>
         <ul class="quote-list">
           <li>『この曲をオーケストラで演奏してみたい！』</li>
           <li>『この曲ならみんなで楽しめそう！』</li>
@@ -1023,7 +1028,7 @@ suggest_body = page_header("Program suggestions", "曲目候補の提案", "演�
 # ================================================================ ADMIN（曲目候補の管理画面・非公開）
 admin_filters = "\n".join(
     f'''            <button type="button" class="filter-btn" data-filter="{k}" aria-pressed="{'true' if k == 'all' else 'false'}">{ja}<span class="filter-btn__count" data-count>0</span></button>'''
-    for k, ja in [("all", "すべて"), ("opening", "オープニング"), ("submain", "サブメイン"), ("encore1", "アンコール1"), ("encore2", "アンコール2")])
+    for k, ja in [("all", "すべて"), ("opening", "オープニング"), ("submain", "サブメイン1"), ("submain2", "サブメイン2"), ("encore1", "アンコール1"), ("encore2", "アンコール2")])
 
 admin_body = '''    <div class="page-header page-header--compact">
       <div class="container">
@@ -1550,7 +1555,7 @@ PAGES = [
      "かながわコネクトオーケストラへのお問い合わせ窓口。参加希望は参加希望フォーム、その他のご連絡はメールで受け付けています。",
      contact_body, breadcrumb_ld("お問い合わせ", "contact.html")),
     ("suggest.html", "曲目候補の提案",
-     "かながわコネクトオーケストラ第1回演奏会の曲目候補を募集しています。アンコールで演奏してみたい曲を教えてください。参加希望フォームを送っていない方も提案できます。",
+     "かながわコネクトオーケストラ第1回演奏会の曲目候補（サブメイン2曲目・アンコール2曲目）を募集しています。演奏してみたい曲を教えてください。参加希望フォームを送っていない方も提案できます。",
      suggest_body, breadcrumb_ld("曲目候補の提案", "suggest.html"),
      '\n  <script src="js/suggest.bundle.js" defer></script>'),
     ("sponsor.html", "ご支援・協賛のご案内",

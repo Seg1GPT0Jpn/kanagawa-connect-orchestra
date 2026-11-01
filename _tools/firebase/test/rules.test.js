@@ -522,6 +522,8 @@ describe("既存の曲目候補フォーム（テスト要件11）", () => {
     const batch = writeBatch(db);
     batch.set(doc(collection(db, "programSuggestions")), suggestion());
     batch.set(doc(collection(db, "programSuggestions")), suggestion({ category: "encore1" }));
+    batch.set(doc(collection(db, "programSuggestions")), suggestion({ category: "submain2" }));
+    batch.set(doc(collection(db, "programSuggestions")), suggestion({ category: "encore2" }));
     await assertSucceeds(batch.commit());
     await assertFails(addDoc(collection(db, "programSuggestions"), suggestion({ category: "main" })));
     await assertFails(addDoc(collection(db, "programSuggestions"), suggestion({ extra: 1 })));
