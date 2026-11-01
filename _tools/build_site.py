@@ -25,6 +25,9 @@ MAIL = "kanagawaorchestra2026renraku@gmail.com"
 MEMBER_APP = "https://kanagawa-connect-official.web.app/"
 PDF = "docs/recruitment-guidelines.pdf"
 LASTMOD = "2026-11-01"
+# 参加費の想定（未確定。資金集めの状況で変わる）
+FEE_PLAN = "1回の演奏会ごとに約6,000円を想定しています（資金集めの状況によっては約8,000〜10,000円）"
+LASTMOD_JA = f"{int(LASTMOD[:4])}年{int(LASTMOD[5:7])}月{int(LASTMOD[8:])}日"
 
 NAV = [
     ("index.html", "ホーム"),
@@ -192,6 +195,12 @@ def page_header(en, ja, lead=None):
 
 # ---------------------------------------------------------------- layout
 
+HEADER_CTA = f'<a class="btn btn--primary header-cta" href="{FORM}" target="_blank" rel="noopener noreferrer">参加の相談<span class="visually-hidden">（Googleフォーム・新しいタブで開きます）</span></a>'
+MOBILE_CTA = f'''  <div class="mobile-cta">
+    <a class="btn btn--gold" href="{FORM}" target="_blank" rel="noopener noreferrer">参加の相談（フォーム）{ICON_EXT}<span class="visually-hidden">（Googleフォーム・新しいタブで開きます）</span></a>
+  </div>'''
+
+
 def header(current, root=""):
     items = []
     for page, ja in NAV:
@@ -204,7 +213,7 @@ def header(current, root=""):
       <a class="site-logo" href="{href("index.html", root)}">
         <img class="site-logo__mark" src="{root}images/logo-160.png" width="40" height="40" alt="">
         <span>{SITE}</span>
-      </a>
+      </a>{"" if "admin" in current else chr(10) + "      " + HEADER_CTA}
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav">
         <span class="visually-hidden" data-nav-label>メニューを開く</span>
         <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -218,7 +227,7 @@ def header(current, root=""):
       </nav>
     </div>
   </header>
-'''
+{"" if "admin" in current else MOBILE_CTA + chr(10)}'''
 
 
 def footer(root=""):
@@ -362,10 +371,28 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
         <h1 class="hero__title" id="hero-title"><span>すべてのひとの</span><span>ための</span><span>オーケストラ</span></h1>
         <p class="hero__lead">{PHILOSOPHY}</p>
         <p class="hero__desc">学生を中心に活動する、年齢・経験を問わないオーケストラです。<br class="u-pc">神奈川県を中心に、2026年12月頃から活動を始める予定です。</p>
-        <p class="hero__status"><span class="badge badge--gold">団員募集中</span><span>{INSTR_SHORT}</span></p>
+        <p class="hero__status"><span class="badge badge--gold">団員募集中</span><span>{INSTR_SHORT}（特に弦楽器）</span></p>
         <div class="btn-group btn-group--center">
           {btn("recruit.html", "団員募集を見る", "primary")}
           {btn_form("outline")}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="now-title">
+      <div class="container container--narrow">
+{title("Now", "now-title", "いま決まっていること・<br>まだ決まっていないこと")}
+        <dl class="info-list">
+{row("合奏開始", "2026年12月頃 " + planned())}
+{row("練習日・会場", pending("未定（決まり次第お知らせします）"))}
+{row("参加費", "1回の演奏会ごとに約6,000〜10,000円を想定 " + pending("未確定"))}
+{row("演奏会の日程・会場", pending("未定（決まり次第お知らせします）"))}
+{row("曲目", "4曲が決定（アンコール1曲は当日のお楽しみ）。サブメイン2・アンコール2の曲目候補を " + badge_open())}
+{row("団員", badge_open() + " 全楽器を募集中。特に弦楽器を募集しています")}
+        </dl>
+        <p class="note">最終更新日：<time datetime="{LASTMOD}">{LASTMOD_JA}</time></p>
+        <div class="section-more">
+          {btn("concert.html", "演奏会の決定状況を見る")}
         </div>
       </div>
     </section>
@@ -542,9 +569,11 @@ INSTR = [("弦楽器", ["ヴァイオリン", "ヴィオラ", "チェロ", "コ�
          ("木管楽器", ["フルート", "オーボエ", "クラリネット", "ファゴット"]),
          ("金管楽器", ["ホルン", "トランペット", "トロンボーン", "ユーフォニアム", "チューバ"]),
          ("打楽器", ["パーカッション"])]
+INSTR_HOT = {"弦楽器"}
 instr_html = "\n".join(
-    f'''          <div class="instrument-card">
+    f'''          <div class="instrument-card{' instrument-card--hot' if g in INSTR_HOT else ''}">
             <h3 class="instrument-card__title">{g}</h3>
+            <p class="instrument-card__status">{badge_open("特に募集") if g in INSTR_HOT else planned("募集中")}</p>
             <ul>{"".join("<li>" + i + "</li>" for i in items)}</ul>
           </div>''' for g, items in INSTR)
 
@@ -581,8 +610,15 @@ FAQ = [
     ("経験者にとっても、やりがいのある活動になりますか？", "<p>第1回演奏会では、ドヴォルザークの交響曲第7番をメインプログラムとして予定しています。一人ひとりが音楽づくりに関わり、質の高い演奏を目指すオーケストラです。</p>"),
     ("学生でなくても参加できますか？", "<p>はい。学生を中心に活動するオーケストラですが、学生以外の方の参加も歓迎しています。小学生から社会人まで、幅広い年代の参加を想定しています。</p>"),
     ("神奈川県外に住んでいますが、参加できますか？", "<p>はい、神奈川県外からの参加も歓迎します。活動は神奈川県を中心に予定しています。</p>"),
-    ("参加費はかかりますか？", f"<p>金額は現在検討中で、今後決定予定です。{FEE_TEXT}</p>"),
+    ("参加費はかかりますか？", f"<p>{FEE_PLAN}。まだ確定ではありません。{FEE_TEXT}</p>"),
+    ("楽器は自分で用意する必要がありますか？", "<p>打楽器は団体で用意します。弦楽器・管楽器の方は、ご自身の楽器をお持ちください。楽器のことで困っている場合は、参加希望フォームからご相談ください。</p>"),
+    ("楽譜が読めない・楽器を始めたばかりでも大丈夫ですか？", "<p>大丈夫です。まわりのメンバーと一緒にがんばりましょう。楽譜が読めない方には、ある程度読めるようになるまで、できる限りサポートします。演奏が難しい場合は、演奏会で演奏する曲を少なめにすることも考えます。</p>"),
+    ("初心者でも演奏会に出られますか？", "<p>はい、出られます。人数が多くなりやすいパート（フルート・オーボエ・チューバなど）は、曲によってお休みする「降り番」をお願いすることがあります。それ以外のパートは、できるだけ多くの曲に出られるようにします。</p>"),
+    ("途中からの参加や、ほかの団体との掛け持ちはできますか？", "<p>どちらも大丈夫です。演奏会に出るには、演奏会までの練習に3回以上参加し、そのうち最後の2回は必ず参加していただく形を予定しています。</p>"),
+    ("説明会はありますか？", "<p>オンラインでの説明会を検討中です。決まったら、このサイトと公式Instagramでお知らせします。それまでは、参加希望フォームやメールで気軽にご質問ください。</p>"),
+    ("保護者も練習を見学できますか？", "<p>はい、保護者の方の見学は可能です。詳しくは参加希望フォームまたはメールでご相談ください。</p>"),
     ("募集楽器にない楽器でも参加できますか？", "<p>その他の楽器についても、参加を希望される場合はご相談ください。</p>"),
+    ("弦楽器は足りていますか？", "<p>弦楽器（ヴァイオリン・ヴィオラ・チェロ・コントラバス）は、どのパートも特に募集しています。久しぶりの方、始めたばかりの方も歓迎です。</p>"),
     ("フォームを送ったら、必ず入団しなければいけませんか？", "<p>いいえ。フォームの回答は正式な入団手続きではありません。活動のご案内や参加相談を経て、正式な参加となります。「まだ参加を決めていない」段階での回答も歓迎です。</p>"),
 ]
 faq_html = "\n".join(details(q, a) for q, a in FAQ)
@@ -608,6 +644,28 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
         <div class="btn-group btn-group--center">
           {btn_form("primary")}
           {btn_pdf()}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="flow-title">
+      <div class="container container--narrow">
+{title("How to join", "flow-title", "参加までの流れ")}
+        <ol class="steps">
+{steps_html}
+        </ol>
+        <div class="section-more">
+          {btn_form("primary")}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+{title("FAQ", "faq-title", "よくある質問")}
+        <p class="text-center small muted">気になる質問を押すと、答えが開きます。</p>
+        <div class="accordion">
+{faq_html}
         </div>
       </div>
     </section>
@@ -642,7 +700,7 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
 {row("練習頻度", "通常は月1〜2回程度を想定しています。演奏会前は月2〜4回程度に増える予定です。")}
 {row("練習時間", "1回あたり約3時間を想定しています。演奏会前はセクション練習なども柔軟に行います。")}
 {row("練習日・会場", pending("今後決定予定です。決定次第お知らせします"))}
-{row("参加費", pending("金額は現在検討中です") + '<br><span class="small">' + FEE_TEXT + '</span>')}
+{row("参加費", FEE_PLAN + "。" + pending("まだ確定ではありません") + '<br><span class="small">' + FEE_TEXT + '</span>')}
         </dl>
         <p class="note">※ 実際の演奏会への参加については、楽器編成・人数・練習状況などを踏まえて調整する場合があります。</p>
       </div>
@@ -651,7 +709,7 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
     <section class="section" aria-labelledby="instrument-title">
       <div class="container">
 {title("Instruments", "instrument-title", "募集楽器")}
-        <p class="text-center">現在、以下の楽器を中心に募集しています。<br>その他の楽器についても、参加を希望される場合はご相談ください。</p>
+        <p class="text-center">現在、以下の楽器を中心に募集しています。<strong>弦楽器はすべてのパートを特に募集しています。</strong><br>その他の楽器についても、参加を希望される場合はご相談ください。</p>
         <div class="instrument-grid">
 {instr_html}
         </div>
@@ -675,24 +733,22 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
       </div>
     </section>
 
-    <section class="section" aria-labelledby="flow-title">
-      <div class="container container--narrow">
-{title("How to join", "flow-title", "参加までの流れ")}
-        <ol class="steps">
-{steps_html}
-        </ol>
-        <div class="section-more">
-          {btn_form("primary")}
-        </div>
-      </div>
-    </section>
-
     <section class="section section--tinted" aria-labelledby="safety-title">
       <div class="container">
 {title("Safety &amp; privacy", "safety-title", "安心して参加いただくために")}
         <div class="grid-2">
-{card("未成年の方へ", "<p>小・中・高校生の参加も歓迎です。安心して活動できる環境づくりのため、正式な活動参加にあたっては、必要に応じて保護者の方への確認や同意をお願いします。未成年の運営メンバーだけに判断を委ねず、成人の協力を得て、安全面・金銭面を適切に管理します。</p>")}
+{card("未成年の方へ", "<p>小・中・高校生の参加も歓迎です。安心して活動できる環境づくりのため、正式な活動参加にあたっては、保護者の方への確認や同意をお願いします。未成年の運営メンバーだけに判断を委ねず、成人の協力を得て、安全面・金銭面を適切に管理します。</p>")}
 {card("個人情報の取り扱い", "<p>参加希望フォームでいただいた情報は、団体の活動に関するご連絡や参加確認などの目的で使用します。本人の同意なく第三者へ提供したり、SNSなどで公開したりすることはありません。必要以上の情報は集めない方針です。</p>")}
+        </div>
+        <div class="card u-mt-md" id="guardians">
+          <h3 class="card__title">保護者の方へ</h3>
+          <ul class="check-list">
+            <li>未成年の方の参加は、参加希望フォームで保護者の方の同意を確認します。</li>
+            <li>保護者の方の練習見学は可能です。</li>
+            <li>連絡の窓口は、学生の運営メンバーが担当しています。ご質問は<a href="mailto:{MAIL}">メール</a>でお気軽にどうぞ。</li>
+            <li>お金の管理は、成人の確認者がチェックします。使い道と金額は事前にお知らせします。</li>
+            <li>写真や個人情報は、本人（未成年の方は保護者の方も）の同意なく公開しません。詳しくは<a href="contact.html#privacy-title">個人情報の取り扱い</a>をご覧ください。</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -706,15 +762,6 @@ recruit_body = page_header("Recruitment", "団員募集", "これから一緒に
         </div>
         <div class="section-more">
           {btn_pdf()}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--tinted" aria-labelledby="faq-title">
-      <div class="container container--narrow">
-{title("FAQ", "faq-title", "よくある質問")}
-        <div class="accordion">
-{faq_html}
         </div>
       </div>
     </section>
@@ -758,7 +805,7 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
 {row("開催日", pending("決定次第お知らせします"))}
 {row("会場", pending("決定次第お知らせします"))}
 {row("チケット", pending("決定次第お知らせします"))}
-{row("出演者の参加費", pending("今後決定予定です") + '<br><span class="small">演奏会の開催条件などを踏まえて決定し、参加前に明確にお知らせします。</span>')}
+{row("出演者の参加費", FEE_PLAN + "。" + pending("まだ確定ではありません") + '<br><span class="small">演奏会の開催条件などを踏まえて決定し、参加前に明確にお知らせします。</span>')}
 {row("出演", SITE)}
         </dl>
         <p class="note">※ 演奏会の日程・会場・具体的な曲目・参加条件などは、団員数や楽器編成、練習環境などが整った段階で正式決定します。</p>
@@ -768,10 +815,18 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
 {program_call_section("program-call")}
     <section class="section" aria-labelledby="dvorak-title">
       <div class="container container--narrow">
-{title("About the work", "dvorak-title", "メインプログラムについて")}
+{title("About the works", "dvorak-title", "演奏する曲について")}
+        <div class="card u-mb-md">
+          <h3 class="card__title">ブラームス　ハンガリー舞曲第5番（オープニング）</h3>
+          <p>もともとはピアノ連弾のために書かれた曲で、ハンガリーの（ロマの）旋律をもとにしています。テンポが急に速くなったり遅くなったりする、ドラマチックな変化が魅力です。</p>
+        </div>
+        <div class="card u-mb-md">
+          <h3 class="card__title">ドヴォルザーク　序曲「謝肉祭」 作品92（サブメイン1）</h3>
+          <p>1891年に書かれた、「自然と人生と愛」という3つの序曲の2曲目です。打楽器が活躍するにぎやかなお祭りの音楽で、途中には静かでおだやかな部分もあります。</p>
+        </div>
         <div class="card">
-          <h3 class="card__title">ドヴォルザーク　交響曲第7番 ニ短調 作品70</h3>
-          <p>チェコの作曲家アントニン・ドヴォルザーク（1841–1904）による交響曲です。1885年にロンドンで初演された全4楽章の作品で、引き締まった構成と、情熱的で劇的な音楽が特徴です。</p>
+          <h3 class="card__title">ドヴォルザーク　交響曲第7番 ニ短調 作品70（メインプログラム）</h3>
+          <p>チェコの作曲家アントニン・ドヴォルザーク（1841–1904）による交響曲です。ロンドンのフィルハーモニック協会の依頼で作曲され、1885年にロンドンで初演されました。全4楽章の作品で、引き締まった構成と、情熱的で重厚な、劇的な音楽が特徴です。</p>
         </div>
         <div class="card u-mt-md">
           <h3 class="card__title">この曲に挑戦する理由</h3>
@@ -825,7 +880,7 @@ activity_body = page_header("Activity", "活動について", "2026年12月頃�
       <div class="container container--narrow">
 {title("Roadmap", "roadmap-title", "これからの予定")}
         <ol class="steps">
-          <li><span class="steps__title">団員募集（現在）</span><span class="steps__text">学生を中心に、年齢・経験・所属を問わずメンバーを募集しています。</span></li>
+          <li class="steps__now" aria-current="step"><span class="steps__title">団員募集 <span class="badge badge--gold">いまここ</span></span><span class="steps__text">学生を中心に、年齢・経験・所属を問わずメンバーを募集しています。</span></li>
           <li><span class="steps__title">合奏開始（2026年12月頃予定）</span><span class="steps__text">具体的な練習日・会場は今後決定予定です。</span></li>
           <li><span class="steps__title">第1回演奏会</span><span class="steps__text">ドヴォルザークの交響曲第7番をメインプログラムとして予定しています。開催日・会場は決定次第お知らせします。</span></li>
         </ol>
