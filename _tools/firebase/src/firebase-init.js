@@ -8,6 +8,9 @@ import { getFirestore, connectFirestoreEmulator } from "firebase/firestore/lite"
 
 export const COLLECTION = "programSuggestions";
 
+// お知らせの受け取り登録（メールアドレスと、受け取りたいお知らせの種類だけ）
+export const SIGNUP_COLLECTION = "updateSignups";
+
 export const CATEGORIES = {
   opening: "オープニング",
   submain: "サブメイン1",

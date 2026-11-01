@@ -27,8 +27,14 @@ PDF = "docs/recruitment-guidelines.pdf"
 LASTMOD = "2026-11-01"
 # 参加費の想定（未確定。資金集めの状況で変わる）
 FEE_PLAN = "1回の演奏会ごとに約6,000円を想定しています（資金集めの状況によっては約8,000〜10,000円）"
+# お知らせの受け取り登録の種類（_tools/firebase/src/notify-logic.js・firestore.rules と同じ）
+NOTIFY_TOPICS = [("concert", "演奏会の日程・会場が決まったとき"),
+                 ("session", "説明会・見学会の案内"),
+                 ("recruit", "団員募集の大切なお知らせ")]
+
 # お知らせ（新しい順。ホームには先頭の5件を表示）
 NEWS = [
+    ("2026-11-01", "演奏会の日程などをメールで受け取れる「お知らせの受け取り登録」を始めました", "notify.html"),
     ("2026-11-01", "ホームページを更新しました（参加費の想定・よくある質問・保護者の方へ・参加の3段階・募集チラシなど）", "recruit.html"),
     ("2026-11-01", "サブメイン曲の2曲目の曲目候補の募集を始めました", "suggest.html"),
     ("2026-11-01", "第1回演奏会のアンコール1曲目が決まりました（曲名は当日のお楽しみ）", "concert.html"),
@@ -45,7 +51,7 @@ NAV = [
 ]
 
 # フッターにのみ表示するリンク
-FOOTER_EXTRA = [("suggest.html", "曲目候補の提案"), ("flyer.html", "募集チラシ（印刷用）"), ("sponsor.html", "ご支援・協賛"), ("sponsors.html", "協賛者一覧"),
+FOOTER_EXTRA = [("notify.html", "お知らせをメールで受け取る"), ("suggest.html", "曲目候補の提案"), ("flyer.html", "募集チラシ（印刷用）"), ("sponsor.html", "ご支援・協賛"), ("sponsors.html", "協賛者一覧"),
                 ("report.html", "会計報告")]
 
 NEW_TAB = '<span class="visually-hidden">（新しいタブで開きます）</span>'
@@ -450,6 +456,9 @@ index_body = f'''    <section class="hero" aria-labelledby="hero-title">
         <a class="ig-banner" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">
           {ICON_IG}<span class="ig-banner__text"><strong>公式Instagram</strong><span>活動の様子や最新情報はこちらでも発信しています（{INSTAGRAM_ID}）</span></span>{NEW_TAB}
         </a>
+        <div class="section-more">
+          {btn("notify.html", "お知らせをメールで受け取る")}
+        </div>
       </div>
     </section>
 
@@ -927,7 +936,7 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
 {row("メインプログラム", "ドヴォルザーク：交響曲第7番 " + planned())}
 {row("アンコール1", "当日のお楽しみ " + planned("決定") + '<br><span class="small">曲目は決まりました。アンコールのため、曲名は演奏会当日まで公表しません。</span>')}
 {row("アンコール2", "曲目候補 " + badge_open() + '<br><span class="small">曲目候補を募集しています。皆さんからいただいた候補を参考に、今後決定します。</span>')}
-{row("開催日", pending("決定次第お知らせします"))}
+{row("開催日", pending("決定次第このページでお知らせします") + '<br><span class="small"><a href="notify.html">決まったらメールで知らせてほしい方はこちら</a></span>')}
 {row("会場", pending("決定次第お知らせします"))}
 {row("チケット", pending("決定次第お知らせします"))}
 {row("出演者の参加費", FEE_PLAN + "。" + pending("まだ確定ではありません") + '<br><span class="small">演奏会の開催条件などを踏まえて決定し、参加前に明確にお知らせします。</span>')}
@@ -973,8 +982,11 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
     <section class="section section--tinted" aria-labelledby="news-title">
       <div class="container container--narrow text-center">
 {title("News", "news-title", "最新情報について")}
-        <p>演奏会の最新情報は、本サイトと公式Instagramでお知らせします。</p>
-        <a class="btn btn--outline" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">{ICON_IG}公式Instagram{NEW_TAB}</a>
+        <p>演奏会の最新情報は、本サイトと公式Instagramでお知らせします。<br class="u-pc">日程・会場が決まったときにメールで知りたい方は、お知らせの受け取りに登録してください。</p>
+        <div class="btn-group btn-group--center">
+          {btn("notify.html", "日程が決まったらメールで知らせてもらう", "primary")}
+          <a class="btn btn--outline" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">{ICON_IG}公式Instagram{NEW_TAB}</a>
+        </div>
       </div>
     </section>
 
@@ -1290,6 +1302,36 @@ admin_body = '''    <div class="page-header page-header--compact">
             </table>
           </div>
           <p class="text-center muted" data-admin-empty hidden>このカテゴリーの提案はまだありません。</p>
+
+          <section class="admin-signups" aria-labelledby="signups-title">
+            <h2 class="admin-signups__title" id="signups-title">お知らせの受け取り登録</h2>
+            <p class="small">「お知らせをメールで受け取る」ページから登録された人の一覧です。お知らせを送るときは、メールアドレスをまとめてコピーして、<strong>必ずBCC</strong>に貼り付けてください。配信停止の依頼があったら、その人の登録を削除してください。</p>
+            <div class="admin-toolbar">
+              <label class="admin-signups__filter">種類：
+                <select data-signup-topic>
+                  <option value="all">すべて</option>
+''' + "\n".join(f'                  <option value="{k}">{v}</option>' for k, v in NOTIFY_TOPICS) + '''
+                </select>
+              </label>
+              <span class="admin-count" data-signup-count aria-live="polite"></span>
+              <button class="btn btn--outline btn--sm" type="button" data-signup-copy>メールアドレスをまとめてコピー（BCC用）</button>
+            </div>
+            <div class="table-wrap" role="region" aria-label="お知らせの受け取り登録の一覧（横にスクロールできます）" tabindex="0">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th scope="col">メールアドレス</th>
+                    <th scope="col">受け取りたいお知らせ</th>
+                    <th scope="col">登録日</th>
+                    <th scope="col"><span class="visually-hidden">操作</span></th>
+                  </tr>
+                </thead>
+                <tbody data-signup-rows></tbody>
+              </table>
+            </div>
+            <p class="text-center muted" data-signup-empty hidden>この種類の登録はまだありません。</p>
+            <p class="admin-status" data-signup-status role="status"></p>
+          </section>
         </div>
 
         <p class="admin-status" data-admin-status role="status"></p>
@@ -1738,6 +1780,82 @@ def admin_gate(page_title, what):
 
 
 sponsor_admin_body = admin_gate("協賛の管理", "協賛の記録")
+# ================================================================ NOTIFY（お知らせの受け取り登録）
+notify_checks = "\n".join(
+    f'''              <label class="choice"><input type="checkbox" name="topic" value="{k}"{' checked' if k == "concert" else ''}><span>{v}</span></label>'''
+    for k, v in NOTIFY_TOPICS)
+
+notify_body = page_header("Updates by email", "お知らせをメールで受け取る", "演奏会の日程が決まったときなどに、<br>メールでお知らせします。") + f'''
+    <section class="section" aria-labelledby="notify-form-title">
+      <div class="container container--narrow">
+{title("Sign up", "notify-form-title", "メールアドレスを登録する")}
+        <p class="text-center">演奏会の日程・会場が決まったときや、説明会・見学会を開くときに、運営からメールでお知らせします。<br class="u-pc">参加を決めていない方、演奏会を聴きに来たい方も登録できます。</p>
+        <noscript>
+          <p class="form-alert">この登録にはJavaScriptが必要です。JavaScriptを有効にしてご利用ください。</p>
+        </noscript>
+
+        <form class="form card" data-notify-form novalidate>
+          <div class="form-error-summary" data-error-summary role="alert" tabindex="-1" hidden>
+            <p class="form-error-summary__title">入力内容を確認してください</p>
+            <ul></ul>
+          </div>
+
+          <div class="field">
+            <label for="nt-email">メールアドレス<span class="req">必須</span></label>
+            <p class="field__hint" id="nt-email-hint">お名前・年齢・学校名などは必要ありません。</p>
+            <input type="email" id="nt-email" name="email" maxlength="254" autocomplete="email" inputmode="email" required aria-describedby="nt-email-hint nt-email-error">
+            <p class="field__error" id="nt-email-error" hidden></p>
+          </div>
+
+          <fieldset class="field" id="nt-topics" aria-describedby="nt-topics-error">
+            <legend>受け取りたいお知らせ<span class="req">必須</span></legend>
+            <div class="choices">
+{notify_checks}
+            </div>
+            <p class="field__error" id="nt-topics-error" hidden></p>
+          </fieldset>
+
+          <div class="hp" aria-hidden="true">
+            <label>このフィールドは空欄のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="field">
+            <div class="choices">
+              <label class="choice"><input type="checkbox" id="nt-consent" name="consent" aria-describedby="nt-consent-error"><span>下の「メールアドレスの取り扱い」を確認しました</span></label>
+            </div>
+            <p class="field__error" id="nt-consent-error" hidden></p>
+          </div>
+
+          <div class="form-privacy">
+            <p><strong>メールアドレスの取り扱い</strong></p>
+            <ul class="dash-list">
+              <li>選んだ種類のお知らせを送るためだけに使います。サイト上で公開したり、ほかの人に渡したりしません。</li>
+              <li>見られるのは運営の管理者だけです。お知らせは、ほかの登録者のアドレスが見えない形（BCC）で送ります。</li>
+              <li>配信をやめたいときや、登録を消したいときは、<a href="mailto:{MAIL}">{MAIL.replace("@", "<wbr>@")}</a> までご連絡ください。</li>
+              <li>未成年の方は、保護者の方と相談してから登録してください。</li>
+            </ul>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">登録する</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div class="thanks card" data-thanks tabindex="-1" hidden>
+          <p class="thanks__mark" aria-hidden="true">♪</p>
+          <h2 class="thanks__title">登録ありがとうございます！</h2>
+          <p>お知らせできることが決まったら、運営からメールでご連絡します。最新情報は、このサイトと公式Instagramでもお知らせしています。</p>
+          <div class="btn-group btn-group--center">
+            {btn("./", "ホームに戻る")}
+            {btn("recruit.html", "団員募集を見る", "primary")}
+          </div>
+        </div>
+      </div>
+    </section>
+'''
+
+
 # ================================================================ FLYER（印刷用の募集チラシ）
 flyer_body = page_header("Flyer", "募集チラシ（印刷用）", "学校や教室で配れる、<br>A4サイズの募集チラシです。") + f'''
     <div class="container flyer-tools">
@@ -1826,6 +1944,10 @@ PAGES = [
      "かながわコネクトオーケストラの会計報告。協賛金などの収入と、会場費・楽譜代などの支出、年度末残高を年1回公開します。",
      report_body, breadcrumb_ld("会計報告", "report.html"),
      '\n  <script src="js/report.bundle.js" defer></script>'),
+    ("notify.html", "お知らせをメールで受け取る",
+     "かながわコネクトオーケストラからのお知らせ（演奏会の日程・会場の決定、説明会・見学会の案内など）をメールで受け取る登録ページです。",
+     notify_body, breadcrumb_ld("お知らせをメールで受け取る", "notify.html"),
+     '\n  <script src="js/notify.bundle.js" defer></script>'),
     ("flyer.html", "募集チラシ（印刷用）",
      "かながわコネクトオーケストラの団員募集チラシ（A4・印刷用）。学校や教室で配れるQRコード付きのチラシです。",
      flyer_body, breadcrumb_ld("募集チラシ（印刷用）", "flyer.html")),
