@@ -2411,3 +2411,247 @@ body:has(.mobile-cta) {
     padding-bottom: 0;
   }
 }
+
+/* =========================================================
+   お知らせ・ページ内目次・共有・募集チラシ（flyer.html）
+   ========================================================= */
+
+.no-js .js-only {
+  display: none;
+}
+
+.news-list {
+  list-style: none;
+  border-top: 1px solid var(--color-gold-soft);
+}
+
+.news-list li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.9rem 0.25rem;
+  border-bottom: 1px solid var(--color-gold-soft);
+}
+
+.news-list time {
+  font-size: 0.85rem;
+  color: var(--color-gold-text);
+  font-weight: 700;
+}
+
+.news-list a {
+  color: var(--color-navy);
+}
+
+@media (min-width: 640px) {
+  .news-list li {
+    grid-template-columns: 9rem 1fr;
+    align-items: baseline;
+  }
+}
+
+.page-toc {
+  margin-top: 0.5rem;
+}
+
+.page-toc ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.page-toc a {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--color-gold-soft);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.page-toc a:hover,
+.page-toc a:focus-visible {
+  border-color: var(--color-navy);
+}
+
+/* 固定ヘッダーの下に見出しが隠れないように */
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.share-buttons .btn {
+  min-width: 12rem;
+}
+
+.flyer-tools {
+  margin: var(--space-md) auto;
+}
+
+.flyer {
+  max-width: 720px;
+  margin: 0 auto var(--space-lg);
+  padding: 2rem 1.5rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-navy);
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+
+.flyer__head {
+  text-align: center;
+}
+
+.flyer__head img {
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+}
+
+.flyer__name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-navy);
+  letter-spacing: 0.1em;
+}
+
+.flyer__catch {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(2rem, 9vw, 3.2rem);
+  color: var(--color-navy);
+  line-height: 1.3;
+  margin: 0.25rem 0;
+}
+
+.flyer__concept {
+  color: var(--color-gold-text);
+  font-family: var(--font-serif);
+}
+
+.flyer__chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.flyer__chips li {
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.flyer__hot {
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-navy);
+  border-top: 1px solid var(--color-gold);
+  border-bottom: 1px solid var(--color-gold);
+  padding: 0.5rem 0;
+}
+
+.flyer__info {
+  margin: 1rem 0;
+}
+
+.flyer__info div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--color-gold-soft);
+  font-size: 0.92rem;
+}
+
+.flyer__info dt {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.flyer__foot {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.flyer__qr {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.flyer__cta {
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.6;
+}
+
+.flyer__url {
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+@media print {
+  body:has(.flyer) .page-header,
+  body:has(.flyer) .breadcrumb,
+  body:has(.flyer) .flyer-tools {
+    display: none !important;
+  }
+
+  body:has(.flyer) {
+    background: #fff;
+  }
+
+  .flyer {
+    max-width: none;
+    margin: 0;
+    border: 2px solid #1c2a48;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .flyer {
+    padding: 2rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .flyer__catch {
+    font-size: 3.4rem;
+  }
+
+  .flyer__chips li,
+  .flyer__info div,
+  .flyer__url {
+    font-size: 1.02rem;
+  }
+
+  .flyer__info div {
+    padding: 0.55rem 0;
+  }
+
+  .flyer__qr {
+    width: 160px;
+    height: 160px;
+  }
+
+  .share-buttons,
+  .page-toc {
+    display: none;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+}
