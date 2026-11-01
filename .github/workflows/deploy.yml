@@ -123,6 +123,9 @@ jobs:
         if: github.event_name != 'pull_request' && steps.rules.outputs.changed == 'true'
         run: |
           _tools/firebase/node_modules/.bin/firebase deploy --only firestore:rules --project kanagawa-connect-orchestra --non-interactive || {
-            echo "::error::サイトは公開済みですが、Firestore ルールの公開に失敗しました（権限不足の可能性）。README.md の「自動公開の設定」を参照してください。"
-            exit 1
+            echo "firebase deploy でルールを公開できなかったので、Firebase Rules API で直接公開します。"
+            node _tools/deploy_firestore_rules.cjs kanagawa-connect-orchestra || {
+              echo "::error::サイトは公開済みですが、Firestore ルールの公開に失敗しました（権限不足の可能性）。README.md の「自動公開の設定」を参照してください。"
+              exit 1
+            }
           }
