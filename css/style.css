@@ -2322,3 +2322,92 @@ strong {
 .history-list__note {
   white-space: pre-wrap;
 }
+
+/* =========================================================
+   参加の相談ボタン（ヘッダー・スマホ下部）／決定状況・楽器の募集状況
+   ========================================================= */
+
+.u-mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.header-cta {
+  display: none;
+  min-height: 40px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.mobile-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
+  background: rgba(28, 42, 72, 0.96);
+  box-shadow: 0 -6px 18px rgba(28, 42, 72, 0.18);
+}
+
+.mobile-cta .btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.6rem 1rem;
+}
+
+body:has(.mobile-cta) {
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 640px) {
+  .header-cta {
+    display: inline-flex;
+  }
+
+  .mobile-cta {
+    display: none;
+  }
+
+  body:has(.mobile-cta) {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-cta {
+    order: 3;
+    margin-left: 0.5rem;
+  }
+}
+
+.instrument-card__status {
+  margin: -0.15rem 0 0.4rem;
+}
+
+.instrument-card--hot {
+  border-color: var(--color-navy);
+  box-shadow: inset 0 3px 0 var(--color-navy);
+}
+
+.steps li.steps__now {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 1px var(--color-navy);
+}
+
+.steps li.steps__now::before {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+@media print {
+  .mobile-cta,
+  .header-cta {
+    display: none !important;
+  }
+
+  body:has(.mobile-cta) {
+    padding-bottom: 0;
+  }
+}
