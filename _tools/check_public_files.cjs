@@ -15,7 +15,7 @@ const files = listFiles(path.join(root, cfg.hosting.public), cfg.hosting.ignore)
 
 const bad = files.filter(f =>
   f.split('/').some(seg => seg.startsWith('.')) ||
-  /^(_tools|kco-member-app|practice-app|orchestra-management|node_modules)\//.test(f) ||
+  /^(_tools|kco-member-app|practice-app|participation-survey|orchestra-management|node_modules)\//.test(f) ||
   /(^|\/)(firebase\.json|firestore\.rules|README\.md)$|\.(gs|log)$/.test(f));
 
 console.log('公開されるファイル：' + files.length + '件');
