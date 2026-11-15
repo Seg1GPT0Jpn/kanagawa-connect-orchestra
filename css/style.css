@@ -2885,3 +2885,17 @@ body:has(.mobile-cta) {
   background: var(--color-white);
   font: inherit;
 }
+
+/* Googleフォームの埋め込み（スマホで横にはみ出さないよう幅100%・最大640px） */
+.form-embed {
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+}
+
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  border: 0;
+  background: #fff;
+}
