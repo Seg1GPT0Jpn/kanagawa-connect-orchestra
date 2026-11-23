@@ -2899,3 +2899,19 @@ body:has(.mobile-cta) {
   border: 0;
   background: #fff;
 }
+
+/* 投票の要点（締切など） */
+.vote-points {
+  max-width: 640px;
+  margin: 1rem auto 1.25rem;
+  padding: 0.9rem 1rem 0.9rem 2rem;
+  background: #fff;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+/* 最終決戦の投票フォームの高さ（実測：幅640pxで約1,220px、スマホ幅で約1,580px） */
+.form-embed--vote iframe { height: 1620px; }
+@media (min-width: 700px) {
+  .form-embed--vote iframe { height: 1260px; }
+}

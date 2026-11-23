@@ -24,7 +24,7 @@ MAIL = "kanagawaorchestra2026renraku@gmail.com"
 # 団員専用アプリ（別の Firebase プロジェクト。加入が確定した団員だけがログインできる）
 MEMBER_APP = "https://kanagawa-connect-official.web.app/"
 PDF = "docs/recruitment-guidelines.pdf"
-LASTMOD = "2026-11-15"
+LASTMOD = "2026-11-23"
 # 参加費の想定（未確定。資金集めの状況で変わる）
 FEE_PLAN = "1回の演奏会ごとに約6,000円を想定しています（資金集めの状況によっては約8,000〜10,000円）"
 # お知らせの受け取り登録の種類（_tools/firebase/src/notify-logic.js・firestore.rules と同じ）
@@ -34,6 +34,7 @@ NOTIFY_TOPICS = [("concert", "演奏会の日程・会場が決まったとき")
 
 # お知らせ（新しい順。ホームには先頭の5件を表示）
 NEWS = [
+    ("2026-11-23", "サブメイン曲の2曲目の投票は、上位4曲による最終決戦に進みました（締切：11月27日（金）23:59）", "concert.html#vote"),
     ("2026-11-15", "サブメイン曲の2曲目の投票を始めました", "concert.html#vote"),
     ("2026-11-01", "演奏会の日程などをメールで受け取れる「お知らせの受け取り登録」を始めました", "notify.html"),
     ("2026-11-01", "ホームページを更新しました（参加費の想定・よくある質問・保護者の方へ・参加の3段階・募集チラシなど）", "recruit.html"),
@@ -57,9 +58,11 @@ FOOTER_EXTRA = [("notify.html", "お知らせをメールで受け取る"), ("fl
 
 NEW_TAB = '<span class="visually-hidden">（新しいタブで開きます）</span>'
 
-# サブメイン2曲目の投票（Googleフォーム）
-VOTE_FORM_URL = "https://forms.gle/yoYbxeFBHeKtnppKA"
-VOTE_EMBED_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfNjePYcO1vwsqA-cPYQNcNNnf-M7aN2MCqQK4BhzbgQELMJw/viewform?embedded=true"
+# サブメイン2曲目の投票（Googleフォーム）。予選（forms.gle/yoYbxeFBHeKtnppKA）は終了し、上位4曲の最終決戦
+VOTE_FORM_URL = "https://forms.gle/GxSLfeQNjQtbH33k7"
+VOTE_EMBED_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeJT6GIkksvhB2jeJqekzzghlDETL2ejubr-E3fmaV-m5dfzg/viewform?embedded=true"
+VOTE_DEADLINE = "11月27日（金）23:59"
+VOTE_RESULT = "11月28日（土）"
 ICON_EXT = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'
 ICON_DL = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'
 ICON_IG = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.6"/></svg>'
@@ -931,7 +934,7 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
         <dl class="info-list">
 {row("オープニング", "ブラームス：ハンガリー舞曲第5番 " + planned())}
 {row("サブメイン1", "ドヴォルザーク：序曲「謝肉祭」 作品92 " + planned())}
-{row("サブメイン2", '<a href="#vote">投票で決定</a> ' + badge_open("投票受付中") + '<br><span class="small">このページの下の「サブメイン2曲目の投票」から投票できます。</span>')}
+{row("サブメイン2", '<a href="#vote">投票で決定</a> ' + badge_open("最終決戦の投票受付中") + f'<br><span class="small">予選の上位4曲で最終決戦を行っています（締切：{VOTE_DEADLINE}／結果発表：{VOTE_RESULT}）。このページの下から投票できます。</span>')}
 {row("メインプログラム", "ドヴォルザーク：交響曲第7番 " + planned())}
 {row("アンコール1", "当日のお楽しみ " + planned("決定") + '<br><span class="small">曲目は決まりました。アンコールのため、曲名は演奏会当日まで公表しません。</span>')}
 {row("アンコール2", pending("検討中") + '<br><span class="small">決まり次第お知らせします。</span>')}
@@ -947,14 +950,19 @@ concert_body = page_header("Concert", "第1回演奏会", "学生が中心とな
 
     <section class="section section--tinted" id="vote" aria-labelledby="vote-title">
       <div class="container container--narrow">
-{title("Vote", "vote-title", "サブメイン2曲目の投票")}
-        <p class="text-center">サブメインの2曲目を、投票で決めます。<br class="u-pc">下のフォームから投票してください。</p>
+{title("Vote", "vote-title", "サブメイン2曲目の投票<br>（最終決戦）")}
+        <p class="text-center">予選では、39名の方にご投票いただきました。ありがとうございました！<br class="u-pc">予選の上位4曲で、最終決戦を行います。</p>
+        <ul class="vote-points">
+          <li>どなたでも投票できます（1人1回、1曲を選んでください）</li>
+          <li>締切：{VOTE_DEADLINE}</li>
+          <li>結果発表：{VOTE_RESULT}</li>
+        </ul>
         <div class="btn-group btn-group--center">
           <a class="btn btn--primary" href="{VOTE_FORM_URL}" target="_blank" rel="noopener noreferrer">投票フォームを開く{NEW_TAB}</a>
         </div>
         <p class="note text-center">フォームがうまく表示されないときは、上のボタンから開いてください。</p>
-        <div class="form-embed">
-          <iframe src="{VOTE_EMBED_URL}" width="100%" height="1630" title="サブメイン2曲目の投票フォーム" loading="lazy" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        <div class="form-embed form-embed--vote">
+          <iframe src="{VOTE_EMBED_URL}" width="100%" height="1620" title="サブメイン2曲目の投票フォーム（最終決戦）" loading="lazy" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
         </div>
       </div>
     </section>
